@@ -65,9 +65,14 @@
 
             c.innerHTML = `
         <div class="page-header" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
-            <div>
-                <h1 class="fade-in">📊 Kết quả Đánh giá</h1>
-                <p style="color:var(--text-secondary);">${data.facility_name} • ${formatDate(data.completed_at)}</p>
+            <div style="display:flex; align-items:center; gap:20px;">
+                <div id="qr-code-container" style="display:flex; align-items:center;">
+                    <div style="width:80px; height:80px; border-radius:8px; background:rgba(255,255,255,0.1); border:1px solid var(--border-color); display:flex; align-items:center; justify-content:center; font-size:0.8rem; color:var(--text-muted)">QR</div>
+                </div>
+                <div>
+                    <h1 class="fade-in">📊 Kết quả Đánh giá</h1>
+                    <p style="color:var(--text-secondary);">${data.facility_name} • ${formatDate(data.completed_at)}</p>
+                </div>
             </div>
             <div style="display:flex; gap:8px; flex-wrap:wrap;">
                 <button class="btn btn-outline" onclick="exportPDF('${data.id}')">📄 Xuất PDF</button>
@@ -138,6 +143,31 @@
             // Auto-trigger AI analysis if not already done
             if (!data.ai_analysis) {
                 setTimeout(() => requestAI(data.id), 500);
+            }
+
+            // Load QR Code
+            setTimeout(() => loadQRCode(data.id), 200);
+        }
+
+        async function loadQRCode(id) {
+            try {
+                // Determine base URL since api.js might not export it directly
+                const token = localStorage.getItem('token');
+                const baseUrl = typeof API_BASE_URL !== 'undefined' ? API_BASE_URL : '/api';
+                const response = await fetch(`${baseUrl}/export/qrcode/${id}`, {
+                    headers: { 'Authorization': `Bearer ${token}` }
+                });
+                
+                if (response.ok) {
+                    const blob = await response.blob();
+                    const url = URL.createObjectURL(blob);
+                    const container = document.getElementById('qr-code-container');
+                    if(container) {
+                        container.innerHTML = `<img src="${url}" alt="QR" style="width:80px; height:80px; border-radius:8px; border:4px solid white; background:white; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">`;
+                    }
+                }
+            } catch (err) {
+                console.error("Failed to load QR code:", err);
             }
         }
 

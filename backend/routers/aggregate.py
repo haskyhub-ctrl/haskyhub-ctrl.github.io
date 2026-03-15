@@ -385,3 +385,94 @@ def list_assessments_for_aggregate(
             "organization": user.organization if user else "N/A",
         })
     return results
+
+@router.get("/dashboard")
+def get_dashboard_kpis(
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db),
+):
+    """Get Key Performance Indicators (KPIs) for the Executive Dashboard."""
+    require_role("admin", "superadmin")(current_user)
+
+    # 1. Total Facilities Assessed
+    completed_assessments = db.query(Assessment).filter(Assessment.status == "completed").all()
+    total_assessments = len(completed_assessments)
+    
+    unique_facilities = len(set(a.user_id for a in completed_assessments))
+    total_users = db.query(User).filter(User.role == "user").count()
+    coverage_rate = (unique_facilities / total_users * 100) if total_users > 0 else 0
+
+    # 2. Risk Distribution
+    risk_counts = {"safe": 0, "low": 0, "medium": 0, "high": 0, "critical": 0}
+    for a in completed_assessments:
+        if a.risk_level in risk_counts:
+            risk_counts[a.risk_level] += 1
+
+    # 3. Monthly Trends (last 6 months)
+    import collections
+    monthly_trends = collections.defaultdict(lambda: {"count": 0, "avg_score": 0, "high_risk": 0})
+    for a in completed_assessments:
+        if a.completed_at:
+            month_key = a.completed_at.strftime("%Y-%m")
+            monthly_trends[month_key]["count"] += 1
+            monthly_trends[month_key]["avg_score"] += a.risk_percentage
+            if a.risk_level in ("high", "critical"):
+                monthly_trends[month_key]["high_risk"] += 1
+    
+    # Format monthly trends
+    trend_data = []
+    for month_key in sorted(monthly_trends.keys())[-6:]:  # Last 6 months
+        data = monthly_trends[month_key]
+        trend_data.append({
+            "month": month_key,
+            "count": data["count"],
+            "avg_risk": round(data["avg_score"] / data["count"], 1) if data["count"] > 0 else 0,
+            "high_risk_count": data["high_risk"]
+        })
+
+    # 4. Worst Categories (global)
+    category_stats = {}
+    from models import CategoryScore, QuestionCategory
+    all_cat_scores = db.query(CategoryScore).all()
+    for cs in all_cat_scores:
+        if cs.category_id not in category_stats:
+            cat = db.query(QuestionCategory).filter(QuestionCategory.id == cs.category_id).first()
+            category_stats[cs.category_id] = {
+                "name": cat.name if cat else f"Category {cs.category_id}",
+                "total_percentage": 0,
+                "count": 0
+            }
+        category_stats[cs.category_id]["total_percentage"] += cs.percentage
+        category_stats[cs.category_id]["count"] += 1
+    
+    worst_cats = []
+    for cat_id, stat in category_stats.items():
+        avg_pct = stat["total_percentage"] / stat["count"] if stat["count"] > 0 else 0
+        worst_cats.append({
+            "name": stat["name"],
+            "avg_score": round(avg_pct, 1)
+        })
+    worst_cats.sort(key=lambda x: x["avg_score"])
+
+    # 5. Recent Assessments
+    recent = []
+    for a in sorted(completed_assessments, key=lambda x: x.completed_at if x.completed_at else datetime.min, reverse=True)[:5]:
+        recent.append({
+            "id": a.id,
+            "facility_name": a.facility_name,
+            "risk_level": a.risk_level,
+            "risk_percentage": a.risk_percentage,
+            "date": a.completed_at.strftime("%Y-%m-%d") if a.completed_at else None
+        })
+
+    return {
+        "kpis": {
+            "total_assessments": total_assessments,
+            "unique_facilities": unique_facilities,
+            "coverage_rate": round(coverage_rate, 1)
+        },
+        "risk_distribution": risk_counts,
+        "trend_data": trend_data,
+        "worst_categories": worst_cats[:5],
+        "recent_assessments": recent
+    }

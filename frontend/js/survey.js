@@ -34,7 +34,10 @@ async function initSurvey() {
     renderStep();
 }
 
-function detectUserLocation() {
+function detectUserLocationUI() {
+    const statusEl = document.getElementById('gps-status');
+    if (statusEl) statusEl.textContent = 'Đang định vị...';
+
     if ('geolocation' in navigator) {
         navigator.geolocation.getCurrentPosition(
             (pos) => {
@@ -43,13 +46,25 @@ function detectUserLocation() {
                     longitude: pos.coords.longitude,
                 };
                 console.log('📍 Location detected:', surveyState.userLocation);
+                if (statusEl) {
+                    statusEl.innerHTML = `<span style="color:#22c55e">✓ Đã lấy tọa độ: ${pos.coords.latitude.toFixed(4)}, ${pos.coords.longitude.toFixed(4)}</span>`;
+                }
             },
             (err) => {
                 console.log('📍 Location not available:', err.message);
+                if (statusEl) {
+                    statusEl.innerHTML = `<span style="color:#ef4444">❌ Không lấy được vị trí: ${err.message}</span>`;
+                }
             },
-            { timeout: 10000, enableHighAccuracy: false }
+            { timeout: 10000, enableHighAccuracy: true }
         );
+    } else if (statusEl) {
+        statusEl.innerHTML = `<span style="color:#ef4444">❌ Trình duyệt không hỗ trợ định vị</span>`;
     }
+}
+
+function detectUserLocation() {
+    detectUserLocationUI();
 }
 
 async function loadCategoriesForFacilityType(facilityType) {
@@ -135,7 +150,21 @@ function renderFacilityForm(container) {
                 
                 <div class="form-group">
                     <label>Địa chỉ</label>
-                    <input type="text" class="form-control" id="f_address" placeholder="Địa chỉ cơ sở" value="${info.facility_address || ''}">
+                    <div style="display: flex; gap: 8px;">
+                        <input type="text" class="form-control" id="f_address" placeholder="Địa chỉ cơ sở" value="${info.facility_address || ''}">
+                        <button type="button" class="btn btn-outline" onclick="detectUserLocationUI()" title="Lấy vị trí hiện tại" style="padding: 10px; width: 44px; flex-shrink: 0;">📍</button>
+                    </div>
+                    <small id="gps-status" style="color:var(--text-muted); display:inline-block; margin-top:6px; font-size:0.8rem;">
+                        ${surveyState.userLocation ?
+            `<span style="color:#22c55e">✓ Đã lấy tọa độ: ${surveyState.userLocation.latitude.toFixed(4)}, ${surveyState.userLocation.longitude.toFixed(4)}</span>`
+            : 'Đang lấy tọa độ GPS...'}
+                    </small>
+                </div>
+                
+                <div class="form-group">
+                    <label>Ảnh mặt tiền / Cơ sở (Tùy chọn)</label>
+                    <input type="file" accept="image/*" capture="environment" id="f_photo" class="form-control" style="background: var(--glass-bg); padding: 8px;">
+                    <small style="color:var(--text-muted); display:inline-block; margin-top:4px;">Chụp ảnh thực tế cơ sở (tích hợp PWA)</small>
                 </div>
                 
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
