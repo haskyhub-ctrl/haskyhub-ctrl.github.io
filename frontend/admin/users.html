@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Người dùng - FRAS Admin</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/admin.css">
+    <style>
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 9999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: var(--bg-card, #1e293b);
+            border: 1px solid var(--border-color, #334155);
+            border-radius: 6px;
+            width: 90%;
+            max-width: 520px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--border-color, #334155);
+        }
+
+        .modal-header h3 {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            color: var(--text-secondary, #94a3b8);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .modal-body {
+            padding: 20px;
+        }
+
+        .modal-footer {
+            display: flex;
+            justify-content: flex-end;
+            gap: 8px;
+            padding: 16px 20px;
+            border-top: 1px solid var(--border-color, #334155);
+        }
+
+        .dropzone {
+            border: 2px dashed var(--border-color, #334155);
+            border-radius: 6px;
+            padding: 32px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .dropzone-active {
+            border-color: var(--accent-orange, #f97316);
+        }
+
+        .dropzone-icon {
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+
+        .file-preview {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 12px;
+            padding: 8px 12px;
+            background: var(--bg-secondary, #0f172a);
+            border-radius: 4px;
+        }
+
+        .import-summary {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 12px;
+        }
+
+        .import-stat {
+            flex: 1;
+            text-align: center;
+            padding: 12px;
+            border-radius: 4px;
+            background: var(--bg-secondary, #0f172a);
+        }
+
+        .import-stat-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            display: block;
+        }
+
+        .import-stat-success .import-stat-value {
+            color: #22c55e;
+        }
+
+        .import-stat-warning .import-stat-value {
+            color: #eab308;
+        }
+
+        .import-stat-error .import-stat-value {
+            color: #ef4444;
+        }
+
+        .import-errors {
+            margin-top: 12px;
+            padding: 10px;
+            background: rgba(239, 68, 68, 0.1);
+            border-radius: 4px;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="nav-brand"><span class="logo-icon">🔥</span>
+                <div><span>FRAS Admin</span><small>Quản trị Hệ thống</small></div>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="/">Trang chủ</a></li>
+            </ul>
+            <div class="nav-user" id="nav-user"></div>
+        </div>
+    </nav>
+
+    <div class="admin-layout">
+        <aside class="admin-sidebar">
+            <div class="sidebar-header">
+                <h3>⚙️ Quản trị</h3>
+                <p>Bảng điều khiển admin</p>
+            </div>
+            <ul class="sidebar-nav">
+                <li><a href="/admin/"><span class="nav-icon">📊</span> Tổng quan</a></li>
+                <li><a href="/admin/users.html" class="active"><span class="nav-icon">👥</span> Người dùng</a></li>
+                <li><a href="/admin/questions.html"><span class="nav-icon">❓</span> Câu hỏi</a></li>
+                <li><a href="/admin/assessments.html"><span class="nav-icon">📋</span> Đánh giá</a></li>
+                <li><a href="/admin/reports.html"><span class="nav-icon">📈</span> Báo cáo</a></li>
+                <li><a href="/admin/aggregate.html"><span class="nav-icon">🗺️</span> Phân tích tổng hợp</a></li>
+                <li><a href="/map.html"><span class="nav-icon">📍</span> Bản đồ</a></li>
+            </ul>
+        </aside>
+        <main class="admin-content">
+            <div class="page-header">
+                <h2>👥 Quản lý Người dùng</h2>
+                <div class="page-actions">
+                    <button class="btn btn-success btn-sm" id="btn-add-user" onclick="showAddUserModal()">
+                        ➕ Thêm người dùng
+                    </button>
+                    <button class="btn btn-secondary btn-sm" id="btn-download-template"
+                        onclick="downloadImportTemplate()">
+                        📄 Tải mẫu Excel
+                    </button>
+                    <button class="btn btn-primary btn-sm" id="btn-import-excel" onclick="showImportModal()">
+                        📥 Import Excel
+                    </button>
+                </div>
+            </div>
+            <div class="data-table-header">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" class="form-control" placeholder="Tìm kiếm..."
+                        oninput="loadAdminUsers(this.value)">
+                </div>
+            </div>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Họ tên</th>
+                            <th>Email</th>
+                            <th>Tổ chức</th>
+                            <th>Vai trò</th>
+                            <th>Trạng thái</th>
+                            <th>Ngày tạo</th>
+                            <th>Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody id="users-tbody">
+                        <tr>
+                            <td colspan="7" style="text-align:center;padding:40px;">
+                                <div class="loading-spinner"></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <!-- Import Excel Modal -->
+    <div class="modal-overlay" id="import-modal" style="display:none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>📥 Import Người dùng từ Excel</h3>
+                <button class="modal-close" onclick="hideImportModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="import-instructions">
+                    <p>Tải file mẫu Excel, điền thông tin người dùng và upload lại.</p>
+                    <p><strong>Định dạng:</strong> Email, Họ tên, Tổ chức, SĐT, Mật khẩu</p>
+                </div>
+                <div class="dropzone" id="dropzone" ondrop="handleDrop(event)" ondragover="handleDragOver(event)"
+                    ondragleave="handleDragLeave(event)">
+                    <div class="dropzone-icon">📁</div>
+                    <p class="dropzone-text">Kéo thả file Excel vào đây</p>
+                    <p class="dropzone-subtext">hoặc</p>
+                    <label class="btn btn-secondary btn-sm">
+                        Chọn file
+                        <input type="file" id="excel-file-input" accept=".xlsx,.xls" style="display:none;"
+                            onchange="handleFileSelect(event)">
+                    </label>
+                    <div class="file-preview" id="file-preview" style="display:none;">
+                        <span class="file-icon">📊</span>
+                        <span class="file-name" id="file-name"></span>
+                        <button class="btn-icon" onclick="clearFileSelection()" title="Xóa">❌</button>
+                    </div>
+                </div>
+                <div class="import-result" id="import-result" style="display:none;"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="hideImportModal()">Đóng</button>
+                <button class="btn btn-primary" onclick="importExcelUsers()" id="btn-do-import" disabled>
+                    📥 Import
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add User Modal -->
+    <div class="modal-overlay" id="add-user-modal" style="display:none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>➕ Thêm Người dùng mới</h3>
+                <button class="modal-close" onclick="hideAddUserModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div style="display:grid;gap:12px;">
+                    <div class="form-group"><label>Email *</label><input type="email" id="add-email"
+                            class="form-control" placeholder="user@example.com" required></div>
+                    <div class="form-group"><label>Họ tên *</label><input type="text" id="add-fullname"
+                            class="form-control" placeholder="Nguyễn Văn A" required></div>
+                    <div class="form-group"><label>Tổ chức</label><input type="text" id="add-org" class="form-control"
+                            placeholder="Tên đơn vị"></div>
+                    <div class="form-group"><label>Số điện thoại</label><input type="text" id="add-phone"
+                            class="form-control" placeholder="0912345678"></div>
+                    <div class="form-group"><label>Mật khẩu *</label><input type="password" id="add-password"
+                            class="form-control" placeholder="Tối thiểu 6 ký tự" required></div>
+                    <div class="form-group"><label>Vai trò</label>
+                        <select id="add-role" class="form-control">
+                            <option value="user">Người dùng</option>
+                            <option value="admin">Quản trị viên</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="add-user-error" style="color:#ef4444;margin-top:8px;display:none;"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="hideAddUserModal()">Hủy</button>
+                <button class="btn btn-primary" onclick="addSingleUser()">➕ Thêm</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/api.js"></script>
+    <script src="/js/admin.js"></script>
+    <script>
+        function showAddUserModal() {
+            console.log("Opening Add User Modal");
+            var m = document.getElementById('add-user-modal');
+            if (m) {
+                m.style.display = 'flex';
+                setTimeout(() => m.classList.add('active'), 10);
+            }
+            var e = document.getElementById('add-user-error');
+            if (e) { e.style.display = 'none'; }
+        }
+        function hideAddUserModal() {
+            var m = document.getElementById('add-user-modal');
+            if (m) {
+                m.classList.remove('active');
+                setTimeout(() => m.style.display = 'none', 300);
+            }
+        }
+        function showImportModal() {
+            console.log("Opening Import Modal");
+            var m = document.getElementById('import-modal');
+            if (m) {
+                m.style.display = 'flex';
+                setTimeout(() => m.classList.add('active'), 10);
+            }
+            clearFileSelection();
+            var res = document.getElementById('import-result');
+            if (res) res.style.display = 'none';
+        }
+        function hideImportModal() {
+            var m = document.getElementById('import-modal');
+            if (m) {
+                m.classList.remove('active');
+                setTimeout(() => m.style.display = 'none', 300);
+            }
+            clearFileSelection();
+        }
+        function downloadImportTemplate() {
+            console.log("Downloading Template");
+            const token = localStorage.getItem('fras_token');
+            const apiBase = window.location.origin + '/api';
+            fetch(apiBase + '/admin/users/import-template', {
+                headers: { 'Authorization': `Bearer ${token}` }
+            })
+                .then(response => {
+                    if (!response.ok) throw new Error('Không thể tải mẫu');
+                    return response.blob();
+                })
+                .then(blob => {
+                    const url = URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = 'fras_import_users_template.xlsx';
+                    a.click();
+                    URL.revokeObjectURL(url);
+                    showToast('Đã tải file mẫu Excel');
+                })
+                .catch(err => showToast(err.message, 'error'));
+        }
+        async function addSingleUser() {
+            const email = document.getElementById('add-email').value.trim();
+            const full_name = document.getElementById('add-fullname').value.trim();
+            const password = document.getElementById('add-password').value;
+            const organization = document.getElementById('add-org').value.trim();
+            const phone = document.getElementById('add-phone').value.trim();
+            const role = document.getElementById('add-role').value;
+            const errEl = document.getElementById('add-user-error');
+
+            if (!email || !full_name || !password) {
+                errEl.textContent = 'Vui lòng điền đầy đủ Email, Họ tên và Mật khẩu';
+                errEl.style.display = 'block';
+                return;
+            }
+            if (password.length < 6) {
+                errEl.textContent = 'Mật khẩu phải có ít nhất 6 ký tự';
+                errEl.style.display = 'block';
+                return;
+            }
+            try {
+                await api.post('/admin/users/add', { email, password, full_name, organization, phone, role });
+                showToast('Đã thêm người dùng thành công!');
+                hideAddUserModal();
+                ['add-email', 'add-fullname', 'add-password', 'add-org', 'add-phone'].forEach(id => document.getElementById(id).value = '');
+                loadAdminUsers();
+            } catch (e) {
+                errEl.textContent = e.message || 'Lỗi thêm người dùng';
+                errEl.style.display = 'block';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Init
+            try {
+                setupNavbar();
+                if (requireAuth()) loadAdminUsers();
+            } catch (err) {
+                console.error('Init error:', err);
+            }
+        });
+    </script>
+</body>
+
+</html>

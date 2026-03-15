@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Test Modal</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+            background: #0f172a;
+            color: white;
+        }
+
+        .modal-bg {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-bg.active {
+            display: flex;
+        }
+
+        .modal-box {
+            background: #1e293b;
+            padding: 24px;
+            border-radius: 8px;
+            min-width: 300px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+            color: white;
+            font-size: 14px;
+        }
+
+        .btn-green {
+            background: #22c55e;
+        }
+
+        .btn-red {
+            background: #ef4444;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Test Modal</h1>
+    <button class="btn btn-green" id="btn-open">Open Modal</button>
+    <button class="btn btn-red" id="btn-open2">Open Modal 2</button>
+
+    <div class="modal-bg" id="my-modal">
+        <div class="modal-box">
+            <h2>It works!</h2>
+            <p>This is the modal content.</p>
+            <button class="btn btn-red" id="btn-close">Close</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('btn-open').addEventListener('click', function () {
+            document.getElementById('my-modal').classList.add('active');
+        });
+        document.getElementById('btn-open2').addEventListener('click', function () {
+            document.getElementById('my-modal').style.display = 'flex';
+        });
+        document.getElementById('btn-close').addEventListener('click', function () {
+            document.getElementById('my-modal').classList.remove('active');
+            document.getElementById('my-modal').style.display = 'none';
+        });
+    </script>
+</body>
+
+</html>

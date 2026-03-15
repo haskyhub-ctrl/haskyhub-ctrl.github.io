@@ -1,0 +1,331 @@
+/* =====================================================
+   Survey Page Styles
+   ===================================================== */
+
+/* Survey Progress */
+.survey-progress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 24px 0;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+}
+
+.progress-step {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.step-indicator {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    border: 2px solid var(--border-color);
+    background: var(--bg-secondary);
+    color: var(--text-muted);
+    transition: all var(--transition-normal);
+    flex-shrink: 0;
+}
+
+.step-indicator.active {
+    border-color: var(--accent-orange);
+    background: rgba(249, 115, 22, 0.15);
+    color: var(--accent-orange);
+}
+
+.step-indicator.completed {
+    border-color: var(--accent-green);
+    background: var(--accent-green);
+    color: white;
+}
+
+.step-line {
+    width: 32px;
+    height: 2px;
+    background: var(--border-color);
+    transition: background var(--transition-normal);
+}
+
+.step-line.completed {
+    background: var(--accent-green);
+}
+
+.step-label {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    text-align: center;
+    max-width: 80px;
+    margin-top: 4px;
+    display: none;
+}
+
+/* Survey Container */
+.survey-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.survey-category-header {
+    text-align: center;
+    margin-bottom: 32px;
+    padding: 24px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+}
+
+.survey-category-header .cat-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.survey-category-header h2 {
+    font-size: 1.5rem;
+    margin-bottom: 4px;
+}
+
+.survey-category-header .cat-desc {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.survey-category-header .cat-progress {
+    margin-top: 16px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* Question Card */
+.question-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    margin-bottom: 20px;
+    animation: fadeIn 0.4s ease;
+}
+
+.question-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: white;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.question-text {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.question-help {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+    padding-left: 38px;
+    font-style: italic;
+}
+
+.question-ref {
+    font-size: 0.78rem;
+    color: var(--accent-blue);
+    margin-bottom: 12px;
+    padding-left: 38px;
+}
+
+/* Options */
+.options-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 38px;
+}
+
+.option-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px 16px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.option-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--border-hover);
+}
+
+.option-item.selected {
+    background: rgba(249, 115, 22, 0.08);
+    border-color: var(--accent-orange);
+}
+
+.option-item.selected .option-radio {
+    border-color: var(--accent-orange);
+    background: var(--accent-orange);
+}
+
+.option-item.selected .option-radio::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+}
+
+.option-radio {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+    transition: all var(--transition-fast);
+}
+
+.option-key {
+    font-weight: 700;
+    color: var(--text-accent);
+    font-size: 0.85rem;
+    min-width: 20px;
+    flex-shrink: 0;
+}
+
+.option-text {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.option-item.selected .option-text {
+    color: var(--text-primary);
+}
+
+/* Survey Navigation */
+.survey-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-color);
+}
+
+.survey-nav .step-info {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+/* Facility Info Form */
+.facility-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.facility-form .card {
+    padding: 32px;
+}
+
+.facility-type-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.facility-type-option {
+    padding: 14px 12px;
+    text-align: center;
+    background: var(--bg-input);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    font-size: 0.85rem;
+}
+
+.facility-type-option:hover {
+    border-color: var(--border-hover);
+}
+
+.facility-type-option.selected {
+    border-color: var(--accent-orange);
+    background: rgba(249, 115, 22, 0.1);
+}
+
+.facility-type-option .type-icon {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 6px;
+}
+
+/* Review Section */
+.review-section {
+    margin-bottom: 24px;
+}
+
+.review-section h4 {
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.review-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    font-size: 0.9rem;
+}
+
+.review-item .label {
+    color: var(--text-secondary);
+}
+
+.review-item .value {
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .facility-type-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .options-list {
+        padding-left: 0;
+    }
+
+    .question-help,
+    .question-ref {
+        padding-left: 0;
+    }
+
+    .step-line {
+        width: 16px;
+    }
+}

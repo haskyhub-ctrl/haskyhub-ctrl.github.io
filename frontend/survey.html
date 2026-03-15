@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khảo sát Đánh giá - FRAS</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/survey.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="nav-brand">
+                <span class="logo-icon">🔥</span>
+                <div><span>FRAS</span><small>Đánh giá Nguy cơ Cháy Nổ</small></div>
+            </a>
+            <ul class="nav-links" id="nav-links"></ul>
+            <div class="nav-user" id="nav-user"></div>
+            <button class="nav-mobile-toggle">☰</button>
+        </div>
+    </nav>
+
+    <div class="page-content">
+        <div class="container">
+            <div id="survey-progress" class="survey-progress"></div>
+            <div id="survey-body"></div>
+        </div>
+    </div>
+
+    <script src="/js/api.js"></script>
+    <script src="/js/survey.js"></script>
+    <script>onReady(() => { setupNavbar(); initSurvey(); });</script>
+</body>
+
+</html>

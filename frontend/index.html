@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRAS - Hệ thống Đánh giá Nguy cơ Cháy Nổ</title>
+    <meta name="description"
+        content="Hệ thống đánh giá toàn diện nguy cơ cháy nổ cho cơ sở, nhà xưởng, kho bãi. Xác định mối nguy, nhận khuyến cáo và theo dõi cải thiện an toàn.">
+    <meta name="theme-color" content="#F97316">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="/css/main.css">
+    <style>
+        .hero {
+            position: relative;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: calc(var(--nav-height) + 40px) 20px 60px;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(2, 6, 23, 0.3) 0%, rgba(2, 6, 23, 0.85) 60%, var(--bg-primary) 100%),
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23111827" width="1200" height="600"/><circle cx="200" cy="300" r="100" fill="%23ea580c" opacity="0.08"/><circle cx="900" cy="200" r="150" fill="%23dc2626" opacity="0.06"/><rect x="400" y="100" width="400" height="400" fill="%231e293b" opacity="0.3" rx="20"/></svg>');
+            background-size: cover;
+            background-position: center;
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 8px 20px;
+            background: rgba(220, 38, 38, 0.15);
+            border: 1px solid rgba(220, 38, 38, 0.3);
+            border-radius: var(--radius-full);
+            color: #fca5a5;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .hero .subtitle {
+            font-size: 1.15rem;
+            margin: 0 auto 36px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .categories-section {
+            background: var(--bg-secondary);
+            padding: 80px 0;
+        }
+
+        .cat-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .cat-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 24px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            transition: all var(--transition-normal);
+        }
+
+        .cat-card:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-2px);
+        }
+
+        .cat-card .ci {
+            width: 48px;
+            height: 48px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            flex-shrink: 0;
+        }
+
+        .cat-card h4 {
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+
+        .cat-card p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .features-section {
+            padding: 80px 0;
+        }
+
+        .feature-list {
+            list-style: none;
+            max-width: 700px;
+        }
+
+        .feature-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 0;
+            font-size: 1.05rem;
+            font-weight: 500;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .feature-list li .check {
+            color: var(--accent-green);
+            font-size: 1.2rem;
+        }
+
+        .risk-section {
+            background: rgba(127, 29, 29, 0.15);
+            border: 1px solid rgba(127, 29, 29, 0.2);
+            border-radius: var(--radius-xl);
+            padding: 48px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .risk-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .risk-bar {
+            width: 100px;
+            height: 10px;
+            border-radius: var(--radius-full);
+            flex-shrink: 0;
+        }
+
+        .risk-item h4 {
+            font-size: 0.95rem;
+            margin-bottom: 2px;
+        }
+
+        .risk-item p {
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .cat-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .risk-section {
+                padding: 28px;
+            }
+
+            .cta-section h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="nav-brand">
+                <span class="logo-icon">🔥</span>
+                <div>
+                    <span>Hệ thống Đánh giá Nguy cơ Cháy Nổ</span>
+                    <small>Quản lý An toàn Chuyên nghiệp</small>
+                </div>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="/" class="active">Trang chủ</a></li>
+            </ul>
+            <div class="nav-user" id="nav-user"></div>
+            <button class="nav-mobile-toggle" aria-label="Menu">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content slide-up">
+            <span class="hero-badge">🔥 Công cụ Đánh giá An toàn Chuyên nghiệp</span>
+            <h1>Đánh giá Toàn diện Nguy cơ<br><span class="text-gradient">Cháy & Nổ</span></h1>
+            <p class="subtitle">Đánh giá cơ sở của bạn qua 6 lĩnh vực an toàn quan trọng với hệ thống được thiết kế bởi
+                chuyên gia. Xác định mối nguy, nhận khuyến cáo ưu tiên và theo dõi sự cải thiện an toàn theo thời gian.
+            </p>
+            <div class="hero-actions">
+                <a href="/survey.html" class="btn btn-primary btn-lg">Bắt đầu Đánh giá →</a>
+                <a href="/dashboard.html" class="btn btn-secondary btn-lg">Xem Bảng điều khiển</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>6 Lĩnh vực Đánh giá Quan trọng</h2>
+                <p class="subtitle">Hệ thống đánh giá toàn diện của chúng tôi xem xét 30 yếu tố an toàn then chốt trong
+                    các lĩnh vực thiết yếu này</p>
+            </div>
+            <div class="cat-grid">
+                <div class="cat-card">
+                    <div class="ci">🔥</div>
+                    <div>
+                        <h4>Vật liệu Dễ cháy/Nổ</h4>
+                        <p>Đánh giá việc lưu trữ, xử lý và kiểm soát các vật liệu nguy hiểm</p>
+                    </div>
+                </div>
+                <div class="cat-card">
+                    <div class="ci">🌡️</div>
+                    <div>
+                        <h4>Điều kiện Môi trường</h4>
+                        <p>Đánh giá nhiệt độ, độ ẩm, thông gió và chất lượng không khí</p>
+                    </div>
+                </div>
+                <div class="cat-card">
+                    <div class="ci">⚡</div>
+                    <div>
+                        <h4>Thiết bị Điện & Nguồn gây cháy</h4>
+                        <p>Phân tích hệ thống điện, nối đất và phòng ngừa đánh lửa</p>
+                    </div>
+                </div>
+                <div class="cat-card">
+                    <div class="ci">⚠️</div>
+                    <div>
+                        <h4>Quy trình & Hoạt động</h4>
+                        <p>Xem xét SOP, phân tích mối nguy và hệ thống khẩn cấp</p>
+                    </div>
+                </div>
+                <div class="cat-card">
+                    <div class="ci">🛡️</div>
+                    <div>
+                        <h4>Biện pháp An toàn & Phòng ngừa</h4>
+                        <p>Kiểm tra thiết bị phát hiện, chữa cháy và bảo hộ</p>
+                    </div>
+                </div>
+                <div class="cat-card">
+                    <div class="ci">👥</div>
+                    <div>
+                        <h4>Quản lý & Đào tạo</h4>
+                        <p>Đánh giá chương trình đào tạo, diễn tập và văn hóa an toàn</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <h2 style="font-size: 2.2rem; margin-bottom: 12px;">Tại sao nên sử dụng Hệ thống của chúng tôi?</h2>
+            <p class="subtitle" style="margin-bottom: 40px;">Công cụ đánh giá được thiết kế khoa học giúp bạn xác định
+                và giảm thiểu rủi ro cháy nổ trước khi chúng trở thành sự cố.</p>
+            <ul class="feature-list">
+                <li><span class="check">✅</span> Xác định các mối nguy cháy nổ nghiêm trọng</li>
+                <li><span class="check">✅</span> Nhận các khuyến cáo an toàn theo mức độ ưu tiên</li>
+                <li><span class="check">✅</span> Theo dõi tiến độ giảm thiểu rủi ro theo thời gian</li>
+                <li><span class="check">✅</span> Đảm bảo tuân thủ các quy định pháp luật</li>
+                <li><span class="check">✅</span> Bảo vệ nhân sự và tài sản</li>
+                <li><span class="check">✅</span> Tạo báo cáo an toàn toàn diện</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Risk Classification -->
+    <section class="section">
+        <div class="container">
+            <div class="risk-section fade-in">
+                <h3 style="font-size: 1.5rem; margin-bottom: 28px;">Phân loại Mức độ Nguy cơ</h3>
+                <div class="risk-item">
+                    <div class="risk-bar" style="background: var(--accent-green);"></div>
+                    <div>
+                        <h4>Nguy cơ Thấp (76-100)</h4>
+                        <p>Các biện pháp an toàn tuyệt vời đã được áp dụng</p>
+                    </div>
+                </div>
+                <div class="risk-item">
+                    <div class="risk-bar" style="background: var(--accent-yellow);"></div>
+                    <div>
+                        <h4>Nguy cơ Trung bình (51-75)</h4>
+                        <p>Tốt, nhưng cần cải thiện thêm</p>
+                    </div>
+                </div>
+                <div class="risk-item">
+                    <div class="risk-bar" style="background: var(--accent-orange);"></div>
+                    <div>
+                        <h4>Nguy cơ Cao (26-50)</h4>
+                        <p>Đã xác định các mối nguy đáng kể</p>
+                    </div>
+                </div>
+                <div class="risk-item" style="margin-bottom:0;">
+                    <div class="risk-bar" style="background: var(--accent-red);"></div>
+                    <div>
+                        <h4>Nguy cơ Rất cao (0-25)</h4>
+                        <p>Yêu cầu hành động khắc phục ngay lập tức</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" style="background: var(--bg-secondary);">
+        <div class="container">
+            <h2>Bạn đã sẵn sàng đánh giá cơ sở của mình?</h2>
+            <p class="subtitle" style="margin: 0 auto 32px;">Bắt đầu đánh giá miễn phí ngay hôm nay và nhận báo cáo chi
+                tiết</p>
+            <a href="/survey.html" class="btn btn-primary btn-lg">🔥 Bắt đầu Đánh giá ngay →</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 FRAS - Hệ thống Đánh giá Nguy cơ Cháy Nổ. Phiên bản 1.0</p>
+        </div>
+    </footer>
+
+    <script src="/js/api.js"></script>
+    <script>
+        onReady(() => { setupNavbar(); });
+        // Register Service Worker for PWA
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js').catch(() => { });
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  fras:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=sqlite:///./fras.db
+      - SECRET_KEY=${SECRET_KEY:-fras-production-secret-key-change-me}
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      - GEMINI_API_KEY=${GEMINI_API_KEY:-}
+    volumes:
+      - fras_data:/app/data
+    restart: unless-stopped
+
+volumes:
+  fras_data:

@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phân tích Tổng hợp - FRAS Admin</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/admin.css">
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <style>
+        .aggregate-filters {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+            align-items: flex-end;
+        }
+
+        .aggregate-filters .form-group {
+            flex: 1;
+            min-width: 180px;
+            margin: 0;
+        }
+
+        .aggregate-filters .form-group label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 4px;
+            display: block;
+        }
+
+        .aggregate-filters select,
+        .aggregate-filters input {
+            background: var(--glass-bg);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 10px 14px;
+            width: 100%;
+            font-size: 0.95rem;
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .stat-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .stat-card .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-gradient-from);
+        }
+
+        .stat-card .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            margin-top: 4px;
+        }
+
+        .analysis-section {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+
+        .analysis-section h3 {
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+
+        .rec-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 16px;
+            margin-bottom: 12px;
+        }
+
+        .rec-card.critical {
+            border-left: 4px solid #ef4444;
+        }
+
+        .rec-card.high {
+            border-left: 4px solid #f97316;
+        }
+
+        .rec-card.medium {
+            border-left: 4px solid #eab308;
+        }
+
+        .rec-card.low {
+            border-left: 4px solid #22c55e;
+        }
+
+        .rec-card.urgent {
+            border-left: 4px solid #dc2626;
+        }
+
+        .rec-card h4 {
+            margin: 0 0 8px;
+            font-size: 1rem;
+        }
+
+        .rec-card p {
+            color: var(--text-secondary);
+            margin: 0 0 8px;
+            font-size: 0.9rem;
+        }
+
+        .rec-card ul {
+            margin: 0;
+            padding-left: 20px;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+
+        .rec-card ul li {
+            margin-bottom: 4px;
+        }
+
+        .facility-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .facility-table th,
+        .facility-table td {
+            padding: 10px 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        .facility-table th {
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
+
+        .risk-badge {
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .risk-badge.critical {
+            background: rgba(239, 68, 68, 0.2);
+            color: #ef4444;
+        }
+
+        .risk-badge.high {
+            background: rgba(249, 115, 22, 0.2);
+            color: #f97316;
+        }
+
+        .risk-badge.medium {
+            background: rgba(234, 179, 8, 0.2);
+            color: #eab308;
+        }
+
+        .risk-badge.low {
+            background: rgba(34, 197, 94, 0.2);
+            color: #22c55e;
+        }
+
+        .risk-badge.safe {
+            background: rgba(34, 197, 94, 0.2);
+            color: #22c55e;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-secondary);
+        }
+
+        .empty-state .icon {
+            font-size: 3rem;
+            margin-bottom: 16px;
+        }
+
+        .chart-container {
+            position: relative;
+            height: 250px;
+        }
+
+        .category-bar {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            gap: 12px;
+        }
+
+        .category-bar .name {
+            width: 200px;
+            font-size: 0.85rem;
+            text-align: right;
+            color: var(--text-secondary);
+        }
+
+        .category-bar .bar-wrap {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.05);
+            height: 24px;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .category-bar .bar-fill {
+            height: 100%;
+            border-radius: 12px;
+            transition: width 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 8px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="nav-brand"><span class="logo-icon">🔥</span>
+                <div><span>FRAS Admin</span><small>Quản trị Hệ thống</small></div>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="/">Trang chủ</a></li>
+            </ul>
+            <div class="nav-user" id="nav-user"></div>
+            <button class="nav-mobile-toggle">☰</button>
+        </div>
+    </nav>
+
+    <div class="admin-layout">
+        <aside class="admin-sidebar">
+            <div class="sidebar-header">
+                <h3>⚙️ Quản trị</h3>
+                <p>Bảng điều khiển admin</p>
+            </div>
+            <ul class="sidebar-nav">
+                <li><a href="/admin/"><span class="nav-icon">📊</span> Tổng quan</a></li>
+                <li><a href="/admin/users.html"><span class="nav-icon">👥</span> Người dùng</a></li>
+                <li><a href="/admin/questions.html"><span class="nav-icon">❓</span> Câu hỏi</a></li>
+                <li><a href="/admin/assessments.html"><span class="nav-icon">📋</span> Đánh giá</a></li>
+                <li><a href="/admin/reports.html"><span class="nav-icon">📈</span> Báo cáo</a></li>
+                <li><a href="/admin/aggregate.html" class="active"><span class="nav-icon">🗺️</span> Phân tích tổng
+                        hợp</a></li>
+            </ul>
+        </aside>
+
+        <main class="admin-content">
+            <div class="page-header">
+                <h2>🗺️ Phân tích Tổng hợp Nguy cơ Cháy nổ Địa phương</h2>
+                <p style="color: var(--text-secondary); margin-top: 4px;">Đánh giá tình hình PCCC trên toàn bộ cơ sở đã
+                    khảo sát, đề xuất giải pháp cho cơ quan quản lý nhà nước</p>
+            </div>
+
+            <!-- Filters -->
+            <div class="aggregate-filters">
+                <div class="form-group">
+                    <label>Loại hình cơ sở</label>
+                    <select id="filter-facility-type">
+                        <option value="">-- Tất cả --</option>
+                        <option value="industrial">Sản xuất công nghiệp</option>
+                        <option value="warehouse">Kho hàng</option>
+                        <option value="mixed_residence">Nhà ở hỗn hợp</option>
+                        <option value="hospitality">Nhà hàng, khách sạn</option>
+                        <option value="medical_education">Bệnh viện, trường học</option>
+                        <option value="fuel_gas">Xăng dầu, khí gas</option>
+                        <option value="transport">Giao thông</option>
+                        <option value="residential">Khu dân cư</option>
+                        <option value="construction">Xây dựng</option>
+                        <option value="office">Văn phòng</option>
+                        <option value="laboratory">Phòng thí nghiệm</option>
+                        <option value="agriculture">Nông nghiệp</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Mức nguy cơ</label>
+                    <select id="filter-risk-level">
+                        <option value="">-- Tất cả --</option>
+                        <option value="critical">Rất cao</option>
+                        <option value="high">Cao</option>
+                        <option value="medium">Trung bình</option>
+                        <option value="low">Thấp</option>
+                        <option value="safe">An toàn</option>
+                    </select>
+                </div>
+                <div class="form-group" style="flex: 0;">
+                    <label>&nbsp;</label>
+                    <button class="btn btn-primary" onclick="runAggregateAnalysis()">🔍 Phân tích</button>
+                </div>
+            </div>
+
+            <!-- Results -->
+            <div id="aggregate-results">
+                <div class="empty-state">
+                    <div class="icon">🗺️</div>
+                    <h3>Chọn bộ lọc và nhấn "Phân tích"</h3>
+                    <p>Hệ thống sẽ tổng hợp dữ liệu từ tất cả các đánh giá đã hoàn thành</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="/js/api.js"></script>
+    <script src="/js/admin.js"></script>
+    <script>
+        const riskLabels = { safe: 'An toàn', low: 'Thấp', medium: 'Trung bình', high: 'Cao', critical: 'Rất cao' };
+        const riskColors = { safe: '#22c55e', low: '#84cc16', medium: '#eab308', high: '#f97316', critical: '#ef4444' };
+
+        async function runAggregateAnalysis() {
+            const facilityType = document.getElementById('filter-facility-type').value;
+            const riskLevel = document.getElementById('filter-risk-level').value;
+
+            const params = {};
+            if (facilityType) params.facility_type = facilityType;
+            if (riskLevel) params.risk_level = riskLevel;
+
+            showLoading('Đang phân tích dữ liệu...');
+            try {
+                const data = await api.post('/admin/aggregate/analyze', params);
+                hideLoading();
+                renderAggregateResults(data);
+            } catch (error) {
+                hideLoading();
+                showToast(error.message, 'error');
+            }
+        }
+
+        function renderAggregateResults(data) {
+            const container = document.getElementById('aggregate-results');
+            const s = data.summary;
+
+            // Stats grid
+            let html = `
+                <div class="stat-grid fade-in">
+                    <div class="stat-card"><div class="stat-value">${s.total_assessments}</div><div class="stat-label">Cơ sở đã khảo sát</div></div>
+                    <div class="stat-card"><div class="stat-value">${s.avg_risk_percentage}%</div><div class="stat-label">Nguy cơ trung bình</div></div>
+                    <div class="stat-card"><div class="stat-value">${data.high_risk_facilities.length}</div><div class="stat-label">Cơ sở nguy cơ cao</div></div>
+                    <div class="stat-card"><div class="stat-value">${Object.keys(data.facility_distribution).length}</div><div class="stat-label">Loại hình cơ sở</div></div>
+                </div>
+            `;
+
+            // Risk Distribution Chart
+            html += `<div class="analysis-section fade-in">
+                <h3>📊 Phân bố mức nguy cơ</h3>
+                <div class="chart-container"><canvas id="agg-risk-chart"></canvas></div>
+            </div>`;
+
+            // Category Analysis
+            html += `<div class="analysis-section fade-in">
+                <h3>📋 Phân tích theo nhóm đánh giá</h3>
+                <div id="category-bars"></div>
+            </div>`;
+
+            // Recommendations
+            html += `<div class="analysis-section fade-in">
+                <h3>💡 Đề xuất & Kiến nghị cho cơ quan quản lý</h3>
+                <div id="recommendations-list"></div>
+            </div>`;
+
+            // High Risk Facilities
+            if (data.high_risk_facilities.length > 0) {
+                html += `<div class="analysis-section fade-in">
+                    <h3>🔴 Danh sách cơ sở nguy cơ cao — Ưu tiên kiểm tra</h3>
+                    <table class="facility-table">
+                        <thead><tr>
+                            <th>Cơ sở</th><th>Loại hình</th><th>Nguy cơ</th><th>Điểm</th><th>Thời gian</th>
+                        </tr></thead>
+                        <tbody>${data.high_risk_facilities.map(f => `
+                            <tr>
+                                <td><strong>${f.facility_name}</strong><br><small style="color:var(--text-muted)">${f.organization || ''}</small></td>
+                                <td>${f.facility_type || 'N/A'}</td>
+                                <td><span class="risk-badge ${f.risk_level}">${riskLabels[f.risk_level] || f.risk_level}</span></td>
+                                <td>${f.total_score}/${f.max_possible_score} (${f.risk_percentage}%)</td>
+                                <td>${f.completed_at ? new Date(f.completed_at).toLocaleDateString('vi-VN') : 'N/A'}</td>
+                            </tr>
+                        `).join('')}</tbody>
+                    </table>
+                </div>`;
+            }
+
+            // AI Analysis Section
+            if (data.ai_analysis) {
+                html += `<div class="analysis-section fade-in">
+                    <h3>🤖 Phân tích AI — Góc nhìn Quản lý Nhà nước PCCC</h3>
+                    <div id="ai-analysis-content"></div>
+                </div>`;
+            }
+
+            container.innerHTML = html;
+
+            // Render charts after DOM update
+            setTimeout(() => {
+                renderRiskDistChart(data.risk_distribution);
+                renderCategoryBars(data.category_analysis);
+                renderRecommendations(data.recommendations);
+                if (data.ai_analysis) renderAIAnalysis(data.ai_analysis);
+            }, 100);
+        }
+
+        function renderRiskDistChart(dist) {
+            const canvas = document.getElementById('agg-risk-chart');
+            if (!canvas) return;
+            const labels = Object.keys(dist).map(k => riskLabels[k] || k);
+            const values = Object.values(dist);
+            const colors = Object.keys(dist).map(k => riskColors[k] || '#888');
+
+            new Chart(canvas, {
+                type: 'doughnut',
+                data: { labels, datasets: [{ data: values, backgroundColor: colors, borderWidth: 0 }] },
+                options: {
+                    responsive: true, maintainAspectRatio: false,
+                    plugins: { legend: { position: 'right', labels: { color: '#94a3b8', font: { size: 13 } } } }
+                }
+            });
+        }
+
+        function renderCategoryBars(categories) {
+            const container = document.getElementById('category-bars');
+            if (!container) return;
+            container.innerHTML = categories.map(c => {
+                const pct = c.avg_percentage;
+                const color = pct >= 70 ? '#22c55e' : pct >= 50 ? '#eab308' : pct >= 30 ? '#f97316' : '#ef4444';
+                return `<div class="category-bar">
+                    <div class="name">${c.icon} ${c.name}</div>
+                    <div class="bar-wrap"><div class="bar-fill" style="width:${Math.max(pct, 5)}%; background:${color};">${pct}%</div></div>
+                </div>`;
+            }).join('');
+        }
+
+        function renderRecommendations(recs) {
+            const container = document.getElementById('recommendations-list');
+            if (!container) return;
+            container.innerHTML = recs.map(r => `
+                <div class="rec-card ${r.priority}">
+                    <h4>${r.title}</h4>
+                    <p>${r.detail}</p>
+                    <ul>${(r.actions || []).map(a => `<li>${a}</li>`).join('')}</ul>
+                </div>
+            `).join('');
+        }
+
+        function renderAIAnalysis(ai) {
+            const container = document.getElementById('ai-analysis-content');
+            if (!container || !ai) return;
+
+            let html = '';
+
+            // Nhận định chung
+            if (ai.nhan_dinh_chung) {
+                html += `<div class="rec-card medium" style="border-left:4px solid #8b5cf6;">
+                    <h4>📝 Nhận định chung</h4>
+                    <p>${ai.nhan_dinh_chung}</p>
+                </div>`;
+            }
+
+            // Điểm nổi bật
+            if (ai.diem_noi_bat && ai.diem_noi_bat.length) {
+                html += `<div class="rec-card low">
+                    <h4>⭐ Điểm nổi bật</h4>
+                    <ul>${ai.diem_noi_bat.map(d => `<li>${d}</li>`).join('')}</ul>
+                </div>`;
+            }
+
+            // Nguyên nhân chủ yếu
+            if (ai.nguyen_nhan_chu_yeu && ai.nguyen_nhan_chu_yeu.length) {
+                html += `<div class="rec-card high">
+                    <h4>🔍 Nguyên nhân chủ yếu</h4>
+                    <ul>${ai.nguyen_nhan_chu_yeu.map(n => `<li>${n}</li>`).join('')}</ul>
+                </div>`;
+            }
+
+            // Phương hướng
+            if (ai.phuong_huong && ai.phuong_huong.length) {
+                html += `<h4 style="margin:16px 0 8px;color:var(--text-primary)">🎯 Phương hướng</h4>`;
+                ai.phuong_huong.forEach(p => {
+                    html += `<div class="rec-card medium">
+                        <h4>${p.tieu_de}</h4>
+                        <p>${p.noi_dung}</p>
+                        <p style="font-size:0.82rem"><strong>⏱ Thời gian:</strong> ${p.thoi_gian || 'N/A'} &nbsp;|&nbsp; <strong>👤 Đơn vị:</strong> ${p.don_vi_thuc_hien || 'N/A'}</p>
+                    </div>`;
+                });
+            }
+
+            // Giải pháp cụ thể
+            if (ai.giai_phap_cu_the && ai.giai_phap_cu_the.length) {
+                html += `<h4 style="margin:16px 0 8px;color:var(--text-primary)">🛠️ Giải pháp cụ thể</h4>`;
+                ai.giai_phap_cu_the.forEach(g => {
+                    const prioClass = g.muc_do_uu_tien === 'khẩn cấp' ? 'critical' : g.muc_do_uu_tien === 'cao' ? 'high' : 'medium';
+                    html += `<div class="rec-card ${prioClass}">
+                        <h4>${g.tieu_de} <span class="risk-badge ${prioClass}" style="font-size:0.75rem">${g.muc_do_uu_tien || ''}</span></h4>
+                        <p>${g.noi_dung}</p>
+                        ${g.co_so_phap_ly ? `<p style="font-size:0.82rem;color:var(--text-muted)">📜 ${g.co_so_phap_ly}</p>` : ''}
+                    </div>`;
+                });
+            }
+
+            // Kiến nghị
+            if (ai.kien_nghi && ai.kien_nghi.length) {
+                html += `<div class="rec-card urgent" style="border-left:4px solid #dc2626;">
+                    <h4>📋 Kiến nghị</h4>
+                    <ul>${ai.kien_nghi.map(k => `<li>${k}</li>`).join('')}</ul>
+                </div>`;
+            }
+
+            // Fallback: raw text
+            if (!html && typeof ai === 'string') {
+                html = `<div class="rec-card medium"><p>${ai}</p></div>`;
+            }
+
+            container.innerHTML = html || '<p style="color:var(--text-muted)">Không có dữ liệu phân tích AI</p>';
+        }
+
+        onReady(() => { setupNavbar(); });
+    </script>
+</body>
+
+</html>
