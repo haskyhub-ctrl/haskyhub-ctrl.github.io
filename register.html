@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký - FRAS</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <style>
+        .auth-page {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .auth-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-xl);
+            padding: 40px;
+            width: 100%;
+            max-width: 480px;
+        }
+
+        .auth-card .logo {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .auth-card .logo .icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .auth-card .logo h2 {
+            font-size: 1.4rem;
+        }
+
+        .auth-card .logo p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .auth-footer {
+            text-align: center;
+            margin-top: 24px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="auth-page">
+        <div class="auth-card fade-in">
+            <div class="logo">
+                <span class="icon">🔥</span>
+                <h2>Đăng ký tài khoản</h2>
+                <p>Tạo tài khoản để bắt đầu đánh giá</p>
+            </div>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="full_name">Họ và tên *</label>
+                    <input type="text" class="form-control" id="full_name" placeholder="Nguyễn Văn A" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" class="form-control" id="email" placeholder="email@example.com" required>
+                </div>
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+                    <div class="form-group">
+                        <label for="password">Mật khẩu *</label>
+                        <input type="password" class="form-control" id="password" placeholder="Tối thiểu 6 ký tự"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm_password">Xác nhận *</label>
+                        <input type="password" class="form-control" id="confirm_password"
+                            placeholder="Nhập lại mật khẩu" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="organization">Tổ chức / Công ty</label>
+                    <input type="text" class="form-control" id="organization" placeholder="Tên cơ sở/tổ chức">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Số điện thoại</label>
+                    <input type="tel" class="form-control" id="phone" placeholder="0xxx xxx xxx">
+                </div>
+                <button type="submit" class="btn btn-primary" style="width:100%; margin-top: 8px;">Đăng ký</button>
+            </form>
+            <div class="auth-footer">
+                Đã có tài khoản? <a href="/login.html">Đăng nhập</a>
+            </div>
+        </div>
+    </div>
+    <script src="/js/api.js"></script>
+    <script src="/js/auth.js"></script>
+    <script>onReady(() => { if (api.isLoggedIn()) window.location.href = '/dashboard.html'; setupRegisterForm(); });</script>
+</body>
+
+</html>

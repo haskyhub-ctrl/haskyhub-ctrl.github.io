@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kế hoạch Cải thiện - FRAS</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <style>
+        .plans-page {
+            padding-top: calc(var(--nav-height) + 24px);
+            min-height: 100vh;
+        }
+
+        .plan-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            margin-bottom: 16px;
+            cursor: pointer;
+            transition: all var(--transition-normal);
+        }
+
+        .plan-card:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-2px);
+        }
+
+        .plan-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .plan-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--text-primary);
+        }
+
+        .progress-bar {
+            background: var(--bg-surface);
+            border-radius: 10px;
+            height: 10px;
+            overflow: hidden;
+            margin: 8px 0;
+        }
+
+        .progress-fill {
+            height: 100%;
+            border-radius: 10px;
+            transition: width 0.5s ease;
+        }
+
+        .progress-fill.low {
+            background: linear-gradient(90deg, #ef4444, #f97316);
+        }
+
+        .progress-fill.medium {
+            background: linear-gradient(90deg, #f97316, #eab308);
+        }
+
+        .progress-fill.high {
+            background: linear-gradient(90deg, #eab308, #22c55e);
+        }
+
+        .progress-fill.complete {
+            background: linear-gradient(90deg, #22c55e, #10b981);
+        }
+
+        .plan-stats {
+            display: flex;
+            gap: 24px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .task-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .task-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .task-check {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            border: 2px solid var(--border-color);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            flex-shrink: 0;
+            transition: all 0.2s;
+        }
+
+        .task-check:hover {
+            border-color: var(--accent-green);
+        }
+
+        .task-check.completed {
+            background: var(--accent-green);
+            border-color: var(--accent-green);
+            color: #fff;
+        }
+
+        .task-check.in_progress {
+            background: var(--accent-orange);
+            border-color: var(--accent-orange);
+            color: #fff;
+        }
+
+        .task-content {
+            flex: 1;
+        }
+
+        .task-title {
+            font-size: 0.95rem;
+            text-overflow: ellipsis;
+        }
+
+        .task-title.completed {
+            text-decoration: line-through;
+            opacity: 0.6;
+        }
+
+        .task-meta {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        .task-priority {
+            padding: 2px 8px;
+            border-radius: var(--radius-full);
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .task-priority.urgent {
+            background: rgba(239, 68, 68, 0.15);
+            color: #ef4444;
+        }
+
+        .task-priority.high {
+            background: rgba(249, 115, 22, 0.15);
+            color: #f97316;
+        }
+
+        .task-priority.medium {
+            background: rgba(234, 179, 8, 0.15);
+            color: #eab308;
+        }
+
+        .task-priority.low {
+            background: rgba(34, 197, 94, 0.15);
+            color: #22c55e;
+        }
+
+        .empty-plans {
+            text-align: center;
+            padding: 60px 20px;
+            background: var(--bg-card);
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--border-color);
+        }
+
+        .empty-plans .icon {
+            font-size: 3rem;
+            margin-bottom: 16px;
+        }
+
+        .detail-view {
+            display: none;
+        }
+
+        .detail-view.active {
+            display: block;
+        }
+
+        .list-view.hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="nav-brand"><span class="logo-icon">🔥</span>
+                <div><span>FRAS</span><small>Đánh giá Nguy cơ Cháy Nổ</small></div>
+            </a>
+            <ul class="nav-links" id="nav-links"></ul>
+            <div class="nav-user" id="nav-user"></div>
+            <button class="nav-mobile-toggle">☰</button>
+        </div>
+    </nav>
+
+    <div class="plans-page">
+        <div class="container">
+            <!-- List View -->
+            <div class="list-view" id="list-view">
+                <div class="page-header">
+                    <h1 class="fade-in">📋 Kế hoạch Cải thiện</h1>
+                    <p style="color:var(--text-secondary);">Theo dõi tiến độ khắc phục các nguy cơ cháy nổ</p>
+                </div>
+                <div id="plans-container">
+                    <div class="empty-plans">
+                        <div class="icon">📋</div>
+                        <h3>Chưa có kế hoạch nào</h3>
+                        <p style="color:var(--text-muted);">Kế hoạch cải thiện sẽ tự động sinh ra từ kết quả đánh giá
+                        </p>
+                        <a href="/survey.html" class="btn btn-primary" style="margin-top:16px;">Bắt đầu Đánh giá</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detail View -->
+            <div class="detail-view" id="detail-view">
+                <button class="btn btn-secondary btn-sm" onclick="showListView()" style="margin-bottom:16px;">← Quay
+                    lại</button>
+                <div id="detail-content"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/api.js"></script>
+    <script>
+        onReady(async () => {
+            setupNavbar();
+            if (!requireAuth()) return;
+            loadPlans();
+        });
+
+        async function loadPlans() {
+            try {
+                const plans = await api.get('/improvement/');
+                const container = document.getElementById('plans-container');
+                if (!plans.length) return;
+
+                container.innerHTML = plans.map(p => {
+                    const cls = p.progress >= 100 ? 'complete' : p.progress >= 60 ? 'high' : p.progress >= 30 ? 'medium' : 'low';
+                    return `
+                    <div class="plan-card" onclick="showPlanDetail('${p.id}')">
+                        <div class="plan-header">
+                            <span class="plan-title">${p.title}</span>
+                            <span class="badge badge-${p.status === 'completed' ? 'low' : 'medium'}">${p.status === 'completed' ? 'Hoàn thành' : 'Đang thực hiện'}</span>
+                        </div>
+                        <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:8px;">${p.facility_name}</p>
+                        <div class="progress-bar"><div class="progress-fill ${cls}" style="width:${p.progress}%"></div></div>
+                        <div class="plan-stats">
+                            <span>📊 ${Math.round(p.progress)}% hoàn thành</span>
+                            <span>✅ ${p.completed_tasks}/${p.total_tasks} nhiệm vụ</span>
+                            <span>📅 ${formatDate(p.created_at)}</span>
+                        </div>
+                    </div>`;
+                }).join('');
+            } catch (e) { showToast(e.message, 'error'); }
+        }
+
+        async function showPlanDetail(planId) {
+            try {
+                showLoading();
+                const plan = await api.get(`/improvement/${planId}`);
+                document.getElementById('list-view').classList.add('hidden');
+                document.getElementById('detail-view').classList.add('active');
+
+                const priorityLabels = { urgent: 'Khẩn cấp', high: 'Cao', medium: 'Trung bình', low: 'Thấp' };
+                const statusIcons = { pending: '⬜', in_progress: '🔶', completed: '✅' };
+                const cls = plan.progress >= 100 ? 'complete' : plan.progress >= 60 ? 'high' : plan.progress >= 30 ? 'medium' : 'low';
+
+                document.getElementById('detail-content').innerHTML = `
+                    <h2>${plan.title}</h2>
+                    <p style="color:var(--text-secondary); margin-bottom:16px;">${plan.facility_name} • Tạo ngày ${formatDate(plan.created_at)}</p>
+                    <div class="progress-bar" style="height:14px;"><div class="progress-fill ${cls}" style="width:${plan.progress}%"></div></div>
+                    <p style="text-align:center; margin:8px 0 24px; font-weight:600;">${Math.round(plan.progress)}% hoàn thành (${plan.completed_tasks}/${plan.total_tasks})</p>
+                    <div class="task-list">
+                        ${plan.tasks.map(t => `
+                            <div class="task-item">
+                                <div class="task-check ${t.status}" onclick="toggleTask(${t.id}, '${t.status}', '${planId}')">
+                                    ${t.status === 'completed' ? '✓' : t.status === 'in_progress' ? '◉' : ''}
+                                </div>
+                                <div class="task-content">
+                                    <div class="task-title ${t.status}">${t.title}</div>
+                                    <div class="task-meta">
+                                        <span class="task-priority ${t.priority}">${priorityLabels[t.priority]}</span>
+                                        ⏰ ${t.deadline_days} ngày
+                                        ${t.completed_at ? ' • ✅ ' + formatDate(t.completed_at) : ''}
+                                    </div>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>`;
+            } catch (e) { showToast(e.message, 'error'); }
+            finally { hideLoading(); }
+        }
+
+        async function toggleTask(taskId, currentStatus, planId) {
+            const nextStatus = currentStatus === 'pending' ? 'in_progress' : currentStatus === 'in_progress' ? 'completed' : 'pending';
+            try {
+                await api.put(`/improvement/task/${taskId}`, { status: nextStatus });
+                showPlanDetail(planId);
+            } catch (e) { showToast(e.message, 'error'); }
+        }
+
+        function showListView() {
+            document.getElementById('list-view').classList.remove('hidden');
+            document.getElementById('detail-view').classList.remove('active');
+            loadPlans();
+        }
+    </script>
+</body>
+
+</html>

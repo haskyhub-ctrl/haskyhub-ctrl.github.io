@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Đánh giá - FRAS Admin</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/admin.css">
+    <style>
+        .filter-bar {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .filter-bar select {
+            background: var(--glass-bg);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 8px 14px;
+            font-size: 0.9rem;
+            min-width: 180px;
+        }
+
+        .view-toggle {
+            display: flex;
+            gap: 4px;
+            margin-left: auto;
+        }
+
+        .view-toggle button {
+            padding: 8px 14px;
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+        }
+
+        .view-toggle button.active {
+            background: var(--accent-orange);
+            border-color: var(--accent-orange);
+            color: #fff;
+        }
+
+        .facility-group {
+            margin-bottom: 24px;
+        }
+
+        .facility-group-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 16px;
+            background: var(--glass-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 10px 10px 0 0;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .facility-group-header .count {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .facility-group table {
+            border-radius: 0 0 10px 10px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="nav-brand"><span class="logo-icon">🔥</span>
+                <div><span>FRAS Admin</span><small>Quản trị Hệ thống</small></div>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="/">Trang chủ</a></li>
+            </ul>
+            <div class="nav-user" id="nav-user"></div>
+        </div>
+    </nav>
+
+    <div class="admin-layout">
+        <aside class="admin-sidebar">
+            <div class="sidebar-header">
+                <h3>⚙️ Quản trị</h3>
+                <p>Bảng điều khiển admin</p>
+            </div>
+            <ul class="sidebar-nav">
+                <li><a href="/admin/"><span class="nav-icon">📊</span> Tổng quan</a></li>
+                <li><a href="/admin/users.html"><span class="nav-icon">👥</span> Người dùng</a></li>
+                <li><a href="/admin/questions.html"><span class="nav-icon">❓</span> Câu hỏi</a></li>
+                <li><a href="/admin/assessments.html" class="active"><span class="nav-icon">📋</span> Đánh giá</a></li>
+                <li><a href="/admin/reports.html"><span class="nav-icon">📈</span> Báo cáo</a></li>
+                <li><a href="/admin/aggregate.html"><span class="nav-icon">🗺️</span> Phân tích tổng hợp</a></li>
+                <li><a href="/map.html"><span class="nav-icon">📍</span> Bản đồ</a></li>
+            </ul>
+        </aside>
+        <main class="admin-content">
+            <div class="page-header">
+                <h2>📋 Quản lý Đánh giá</h2>
+            </div>
+
+            <div class="filter-bar">
+                <select id="filter-risk" onchange="applyFilters()">
+                    <option value="">Tất cả mức nguy cơ</option>
+                    <option value="low">🟢 Nguy cơ Thấp</option>
+                    <option value="medium">🟡 Nguy cơ Trung bình</option>
+                    <option value="high">🟠 Nguy cơ Cao</option>
+                    <option value="critical">🔴 Nguy cơ Rất cao</option>
+                </select>
+                <select id="filter-facility" onchange="applyFilters()">
+                    <option value="">Tất cả loại hình</option>
+                    <option value="industrial">🏭 Sản xuất công nghiệp</option>
+                    <option value="warehouse">🏪 Kho hàng</option>
+                    <option value="mixed_residence">🏠 Nhà ở hỗn hợp</option>
+                    <option value="hospitality">🍽️ Nhà hàng, khách sạn</option>
+                    <option value="medical_education">🏥 Bệnh viện, trường học</option>
+                    <option value="fuel_gas">⛽ Xăng dầu, khí gas</option>
+                    <option value="transport">🚌 Giao thông</option>
+                    <option value="residential">🏘️ Khu dân cư</option>
+                    <option value="construction">🏗️ Xây dựng</option>
+                    <option value="office">🏛️ Văn phòng</option>
+                    <option value="laboratory">🔬 Phòng thí nghiệm</option>
+                    <option value="agriculture">🌾 Nông nghiệp</option>
+                </select>
+                <div class="view-toggle">
+                    <button class="active" id="view-list" onclick="setView('list')">📋 Danh sách</button>
+                    <button id="view-group" onclick="setView('group')">📁 Nhóm theo loại hình</button>
+                </div>
+            </div>
+
+            <div id="assessments-container">
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Cơ sở</th>
+                                <th>Loại hình</th>
+                                <th>Người đánh giá</th>
+                                <th>Tổ chức</th>
+                                <th>Điểm</th>
+                                <th>Mức nguy cơ</th>
+                                <th>Ngày</th>
+                            </tr>
+                        </thead>
+                        <tbody id="assessments-tbody">
+                            <tr>
+                                <td colspan="7" style="text-align:center;padding:40px;">
+                                    <div class="loading-spinner"></div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="/js/api.js"></script>
+    <script src="/js/admin.js"></script>
+    <script>
+        let currentView = 'list';
+        let allAssessments = [];
+        const riskLabels = { safe: 'An toàn', low: 'Thấp', medium: 'Trung bình', high: 'Cao', critical: 'Rất cao' };
+        const facilityLabels = {
+            industrial: '🏭 Sản xuất công nghiệp', warehouse: '🏪 Kho hàng', mixed_residence: '🏠 Nhà ở hỗn hợp',
+            hospitality: '🍽️ Nhà hàng, khách sạn', medical_education: '🏥 Bệnh viện, trường học',
+            fuel_gas: '⛽ Xăng dầu, khí gas', transport: '🚌 Giao thông', residential: '🏘️ Khu dân cư',
+            construction: '🏗️ Xây dựng', office: '🏛️ Văn phòng', laboratory: '🔬 Phòng thí nghiệm',
+            agriculture: '🌾 Nông nghiệp',
+        };
+
+        function setView(view) {
+            currentView = view;
+            document.getElementById('view-list').classList.toggle('active', view === 'list');
+            document.getElementById('view-group').classList.toggle('active', view === 'group');
+            renderAssessments();
+        }
+
+        async function applyFilters() {
+            const risk = document.getElementById('filter-risk').value;
+            const facility = document.getElementById('filter-facility').value;
+            await loadAllAssessments(risk, facility);
+        }
+
+        async function loadAllAssessments(riskLevel, facilityType) {
+            try {
+                let url = '/admin/assessments?';
+                if (riskLevel) url += `risk_level=${riskLevel}&`;
+                if (facilityType) url += `facility_type=${facilityType}&`;
+                allAssessments = await api.get(url);
+                renderAssessments();
+            } catch (e) {
+                showToast(e.message, 'error');
+            }
+        }
+
+        function renderAssessments() {
+            if (currentView === 'group') {
+                renderGrouped();
+            } else {
+                renderList();
+            }
+        }
+
+        function renderList() {
+            const container = document.getElementById('assessments-container');
+            const rows = allAssessments.map(a => `
+                <tr>
+                    <td><strong>${a.facility_name}</strong><br><small style="color:var(--text-muted)">${a.facility_address || ''}</small></td>
+                    <td>${facilityLabels[a.facility_type] || a.facility_type || 'N/A'}</td>
+                    <td>${a.user_name || 'N/A'}</td>
+                    <td>${a.organization || 'N/A'}</td>
+                    <td>${a.total_score}/${a.max_possible_score} (${a.risk_percentage}%)</td>
+                    <td><span class="status-badge ${a.risk_level}">${riskLabels[a.risk_level] || a.risk_level}</span></td>
+                    <td>${a.completed_at ? new Date(a.completed_at).toLocaleDateString('vi-VN') : 'N/A'}</td>
+                </tr>
+            `).join('');
+            container.innerHTML = `<div class="table-wrapper"><table>
+                <thead><tr><th>Cơ sở</th><th>Loại hình</th><th>Người đánh giá</th><th>Tổ chức</th><th>Điểm</th><th>Mức nguy cơ</th><th>Ngày</th></tr></thead>
+                <tbody>${rows || '<tr><td colspan="7" style="text-align:center;padding:40px;color:var(--text-muted)">Chưa có đánh giá nào</td></tr>'}</tbody>
+            </table></div>`;
+        }
+
+        function renderGrouped() {
+            const container = document.getElementById('assessments-container');
+            // Group by facility_type
+            const groups = {};
+            allAssessments.forEach(a => {
+                const key = a.facility_type || 'unknown';
+                if (!groups[key]) groups[key] = [];
+                groups[key].push(a);
+            });
+
+            if (Object.keys(groups).length === 0) {
+                container.innerHTML = '<div style="text-align:center;padding:40px;color:var(--text-muted)">Chưa có đánh giá nào</div>';
+                return;
+            }
+
+            let html = '';
+            for (const [type, items] of Object.entries(groups)) {
+                const label = facilityLabels[type] || type;
+                const rows = items.map(a => `
+                    <tr>
+                        <td><strong>${a.facility_name}</strong></td>
+                        <td>${a.user_name || 'N/A'}</td>
+                        <td>${a.total_score}/${a.max_possible_score} (${a.risk_percentage}%)</td>
+                        <td><span class="status-badge ${a.risk_level}">${riskLabels[a.risk_level] || a.risk_level}</span></td>
+                        <td>${a.completed_at ? new Date(a.completed_at).toLocaleDateString('vi-VN') : 'N/A'}</td>
+                    </tr>
+                `).join('');
+                html += `<div class="facility-group">
+                    <div class="facility-group-header">${label} <span class="count">${items.length} cơ sở</span></div>
+                    <div class="table-wrapper"><table>
+                        <thead><tr><th>Cơ sở</th><th>Người đánh giá</th><th>Điểm</th><th>Mức nguy cơ</th><th>Ngày</th></tr></thead>
+                        <tbody>${rows}</tbody>
+                    </table></div>
+                </div>`;
+            }
+            container.innerHTML = html;
+        }
+
+        onReady(() => {
+            setupNavbar();
+            if (requireAuth()) loadAllAssessments();
+        });
+    </script>
+</body>
+
+</html>
