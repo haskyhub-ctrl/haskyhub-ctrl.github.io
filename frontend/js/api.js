@@ -3,7 +3,7 @@
  * Handles all API communication with JWT authentication
  */
 
-const API_BASE = 'https://pc07.fras-ai.com/api';
+const API_BASE = `${window.location.origin}/api`;
 
 class FrasAPI {
     constructor() {

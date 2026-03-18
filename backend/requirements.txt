@@ -13,3 +13,4 @@ bcrypt
 Pillow
 aiofiles
 qrcode[pil]
+psycopg2-binary
