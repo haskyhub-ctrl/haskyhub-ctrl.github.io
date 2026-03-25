@@ -16,13 +16,17 @@ router = APIRouter(prefix="/api/assessments", tags=["Assessments"])
 @router.get("/", response_model=List[AssessmentResponse])
 def list_assessments(
     status: Optional[str] = None,
+    limit: int = 0,
     current_user: User = Depends(get_current_user),
     db: Session = Depends(get_db)
 ):
     query = db.query(Assessment).filter(Assessment.user_id == current_user.id)
     if status:
         query = query.filter(Assessment.status == status)
-    assessments = query.order_by(Assessment.created_at.desc()).all()
+    query = query.order_by(Assessment.created_at.desc())
+    if limit > 0:
+        query = query.limit(limit)
+    assessments = query.all()
     return [AssessmentResponse.model_validate(a) for a in assessments]
 
 
@@ -32,10 +36,16 @@ def get_assessment_detail(
     current_user: User = Depends(get_current_user),
     db: Session = Depends(get_db)
 ):
-    assessment = db.query(Assessment).filter(
-        Assessment.id == assessment_id,
-        Assessment.user_id == current_user.id
-    ).first()
+    # Admin/superadmin can view any assessment
+    if current_user.role in ("admin", "superadmin"):
+        assessment = db.query(Assessment).filter(
+            Assessment.id == assessment_id
+        ).first()
+    else:
+        assessment = db.query(Assessment).filter(
+            Assessment.id == assessment_id,
+            Assessment.user_id == current_user.id
+        ).first()
     if not assessment:
         raise HTTPException(status_code=404, detail="Không tìm thấy đánh giá")
     
@@ -83,12 +93,16 @@ def compare_assessments(
     if len(id_list) < 2:
         raise HTTPException(status_code=400, detail="Cần ít nhất 2 đánh giá để so sánh")
     
+    is_admin = current_user.role in ("admin", "superadmin")
     results = []
     for aid in id_list:
-        assessment = db.query(Assessment).filter(
-            Assessment.id == aid,
-            Assessment.user_id == current_user.id
-        ).first()
+        if is_admin:
+            assessment = db.query(Assessment).filter(Assessment.id == aid).first()
+        else:
+            assessment = db.query(Assessment).filter(
+                Assessment.id == aid,
+                Assessment.user_id == current_user.id
+            ).first()
         if not assessment:
             continue
         

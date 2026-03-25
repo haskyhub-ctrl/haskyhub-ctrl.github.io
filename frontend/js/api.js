@@ -305,17 +305,16 @@ function setupNavbar() {
         dashLink.innerHTML = `<a href="/dashboard.html">${t('dashboard')}</a>`;
         const histLink = document.createElement('li');
         histLink.innerHTML = `<a href="/history.html">${t('history')}</a>`;
-        const imgLink = document.createElement('li');
-        imgLink.innerHTML = `<a href="/image_assessment.html">📸 Hình ảnh AI</a>`;
-        const impLink = document.createElement('li');
-        impLink.innerHTML = `<a href="/improvement.html">📋 Cải thiện</a>`;
 
         // Check if links already present
         if (!navLinks.querySelector('a[href="/dashboard.html"]')) {
             navLinks.insertBefore(dashLink, navLinks.firstChild);
             navLinks.insertBefore(histLink, dashLink.nextSibling);
-            navLinks.insertBefore(imgLink, histLink.nextSibling);
-            navLinks.insertBefore(impLink, imgLink.nextSibling);
+
+            // Add map link
+            const mapLink = document.createElement('li');
+            mapLink.innerHTML = `<a href="/map.html">Bản đồ</a>`;
+            navLinks.insertBefore(mapLink, histLink.nextSibling);
         }
 
         if (user.role === 'admin' || user.role === 'superadmin') {
@@ -469,3 +468,11 @@ document.addEventListener('click', function (e) {
         panel.style.display = 'none';
     }
 });
+
+// ========== Auto-load Global AI Chatbot ==========
+(function() {
+    const s = document.createElement('script');
+    s.src = '/js/chatbot.js';
+    s.defer = true;
+    document.body ? document.body.appendChild(s) : document.addEventListener('DOMContentLoaded', () => document.body.appendChild(s));
+})();

@@ -1,6 +1,7 @@
 """
 Excel Import Router
 Handles bulk facility/user creation from Excel files and template download.
+Optimized for large imports (up to 50,000+ accounts).
 """
 import io
 from fastapi import APIRouter, Depends, HTTPException, UploadFile, File
@@ -16,6 +17,7 @@ from openpyxl.styles import Font, Alignment, PatternFill
 router = APIRouter(prefix="/api/admin/users", tags=["User Import"])
 
 DEFAULT_PASSWORD = "Pc07@123"
+BATCH_SIZE = 500  # Commit every 500 rows for performance
 
 
 @router.get("/import-template")
@@ -101,7 +103,7 @@ async def import_users_from_excel(
     current_user: User = Depends(get_current_user),
     db: Session = Depends(get_db),
 ):
-    """Import facilities/users from Excel file."""
+    """Import facilities/users from Excel file. Optimized for large files (50K+)."""
     require_role("admin", "superadmin")(current_user)
 
     if not file.filename.endswith((".xlsx", ".xls")):
@@ -112,7 +114,7 @@ async def import_users_from_excel(
 
     try:
         contents = await file.read()
-        wb = load_workbook(io.BytesIO(contents))
+        wb = load_workbook(io.BytesIO(contents), read_only=True)
         ws = wb.active
     except Exception:
         raise HTTPException(
@@ -120,16 +122,35 @@ async def import_users_from_excel(
             detail="Không thể đọc file Excel. Vui lòng kiểm tra định dạng file.",
         )
 
+    # Pre-load existing facility codes and emails to avoid N+1 queries
+    existing_codes = set(
+        row[0] for row in db.query(User.facility_code).filter(
+            User.facility_code.isnot(None)
+        ).all()
+    )
+    existing_emails = set(
+        row[0] for row in db.query(User.email).all()
+    )
+
     created = 0
     skipped = 0
     errors = []
     rows_processed = 0
+    batch_users = []
+
+    # Hash the default password once for reuse
+    default_hash = hash_password(DEFAULT_PASSWORD)
 
     for row_idx, row in enumerate(ws.iter_rows(min_row=2, values_only=True), start=2):
         if not row or not any(row):
             continue
 
-        facility_code = str(row[0]).strip() if row[0] else ""
+        # Skip description/example rows (check if first cell looks like a description)
+        first_cell = str(row[0]).strip() if row[0] else ""
+        if first_cell.startswith("Mã đăng nhập") or first_cell == "":
+            continue
+
+        facility_code = first_cell
         full_name = str(row[1]).strip() if len(row) > 1 and row[1] else ""
         email = str(row[2]).strip() if len(row) > 2 and row[2] else ""
         phone = str(row[3]).strip() if len(row) > 3 and row[3] else ""
@@ -146,40 +167,45 @@ async def import_users_from_excel(
         except (ValueError, TypeError):
             pass
         facility_types = str(row[8]).strip() if len(row) > 8 and row[8] else ""
-        password = str(row[9]).strip() if len(row) > 9 and row[9] else DEFAULT_PASSWORD
+        password = str(row[9]).strip() if len(row) > 9 and row[9] else ""
 
         rows_processed += 1
 
         # Validation
         if not facility_code or len(facility_code) < 3:
-            errors.append(f"Dòng {row_idx}: Mã cơ sở không hợp lệ ({facility_code})")
+            if len(errors) < 100:  # Cap error messages to avoid huge responses
+                errors.append(f"Dòng {row_idx}: Mã cơ sở không hợp lệ ({facility_code})")
             continue
 
         if not full_name or len(full_name) < 2:
-            errors.append(f"Dòng {row_idx}: Tên cơ sở quá ngắn ({full_name})")
+            if len(errors) < 100:
+                errors.append(f"Dòng {row_idx}: Tên cơ sở quá ngắn ({full_name})")
             continue
 
-        if not password or len(password) < 6:
-            password = DEFAULT_PASSWORD
-
-        # Check duplicate by facility_code
-        existing = db.query(User).filter(
-            (User.facility_code == facility_code) | 
-            (User.email == email if email and "@" in email else False)
-        ).first()
-        if existing:
+        # Check duplicate using in-memory sets (fast!)
+        if facility_code in existing_codes:
             skipped += 1
             continue
-
+        
         # Generate email if not provided
         if not email or "@" not in email:
             email = f"{facility_code}@fras.local"
+        
+        if email in existing_emails:
+            skipped += 1
+            continue
+
+        # Use pre-hashed default password or hash custom password
+        if not password or len(password) < 6 or password == DEFAULT_PASSWORD:
+            pw_hash = default_hash
+        else:
+            pw_hash = hash_password(password)
 
         try:
             user = User(
                 email=email,
                 facility_code=facility_code,
-                password_hash=hash_password(password),
+                password_hash=pw_hash,
                 full_name=full_name,
                 organization=full_name,
                 phone=phone if phone else None,
@@ -190,19 +216,34 @@ async def import_users_from_excel(
                 facility_types=facility_types if facility_types else None,
                 role="user",
             )
-            db.add(user)
-            db.flush()
+            batch_users.append(user)
+            existing_codes.add(facility_code)
+            existing_emails.add(email)
             created += 1
-        except Exception as e:
-            errors.append(f"Dòng {row_idx}: Lỗi tạo tài khoản - {str(e)}")
 
-    db.commit()
+            # Batch commit every BATCH_SIZE rows
+            if len(batch_users) >= BATCH_SIZE:
+                db.bulk_save_objects(batch_users)
+                db.commit()
+                batch_users = []
+
+        except Exception as e:
+            if len(errors) < 100:
+                errors.append(f"Dòng {row_idx}: Lỗi tạo tài khoản - {str(e)}")
+
+    # Final batch commit
+    if batch_users:
+        db.bulk_save_objects(batch_users)
+        db.commit()
+
+    wb.close()
 
     return {
         "status": "ok",
         "created": created,
         "skipped": skipped,
-        "errors": errors,
+        "errors": errors[:100],  # Cap at 100 error messages
+        "total_errors": len(errors),
         "total_processed": rows_processed,
         "message": f"Đã tạo {created} tài khoản cơ sở mới"
         + (f", bỏ qua {skipped} (trùng mã)" if skipped else "")

@@ -117,6 +117,8 @@
         #map {
             flex: 1;
             z-index: 1;
+            contain: strict;
+            will-change: transform;
         }
 
         /* Override Leaflet popup styles for dark theme */
@@ -214,9 +216,25 @@
             font-size: 0.88rem;
         }
 
-        /* Custom Leaflet tile styling for dark mode */
+        /* Leaflet performance: use hardware acceleration, remove expensive filters */
         .leaflet-tile-pane {
-            filter: brightness(0.7) contrast(1.2) saturate(0.8);
+            /* Removed: filter: brightness(0.7) contrast(1.2) saturate(0.8); — this caused severe lag */
+            will-change: transform;
+            transform: translateZ(0);
+        }
+
+        .leaflet-tile {
+            will-change: transform;
+        }
+
+        /* FIX MAP LAG: Prevent global img max-width: 100% from breaking Leaflet tiles */
+        .leaflet-container img {
+            max-width: none !important;
+        }
+
+        .leaflet-container {
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
         }
     </style>
 </head>
@@ -284,12 +302,20 @@
 
         function initMap() {
             // Center on Vietnam
-            map = L.map('map').setView([16.0, 106.5], 6);
+            map = L.map('map', {
+                preferCanvas: true,
+                zoomAnimation: true,
+                markerZoomAnimation: true,
+                fadeAnimation: false
+            }).setView([16.0, 106.5], 6);
 
-            // Use OpenStreetMap tiles
+            // Use OpenStreetMap tiles with optimized loading
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
                 maxZoom: 19,
+                updateWhenIdle: true,
+                updateWhenZooming: false,
+                keepBuffer: 4
             }).addTo(map);
 
             markerClusterGroup = L.markerClusterGroup({
@@ -354,6 +380,8 @@
             }
 
             data.forEach(item => {
+                if (!item.latitude || !item.longitude) return; // Bỏ qua nếu không có tọa độ
+
                 const marker = L.marker([item.latitude, item.longitude], {
                     icon: createMarkerIcon(item.risk_level)
                 });
@@ -371,11 +399,11 @@
                     </div>
                     <div class="popup-row">
                         <span class="popup-label">Tỷ lệ nguy cơ:</span>
-                        <span class="popup-value" style="color:${riskColors[item.risk_level]}">${item.risk_percentage}%</span>
+                        <span class="popup-value" style="color:${riskColors[item.risk_level] || '#000'}">${item.risk_percentage}%</span>
                     </div>
                     <div class="popup-row">
                         <span class="popup-label">Mức nguy cơ:</span>
-                        <span class="popup-risk ${riskClass}">${riskLabels[item.risk_level]}</span>
+                        <span class="popup-risk ${riskClass}">${riskLabels[item.risk_level] || 'N/A'}</span>
                     </div>
                     <div class="popup-row">
                         <span class="popup-label">Điểm:</span>

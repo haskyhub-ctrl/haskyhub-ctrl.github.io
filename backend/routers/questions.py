@@ -136,7 +136,7 @@ def update_question(
     db: Session = Depends(get_db)
 ):
     require_role("admin", "superadmin")(current_user)
-    q = db.query(Question).filter(Question.id == question_id).first()
+    q = db.query(Question).options(joinedload(Question.options)).filter(Question.id == question_id).first()
     if not q:
         raise HTTPException(status_code=404, detail="Không tìm thấy câu hỏi")
     
@@ -144,12 +144,38 @@ def update_question(
     for key, value in update_data.items():
         setattr(q, key, value)
     
-    # Update options if provided
+    # Update options in-place to avoid FK constraint violations
     if data.options is not None:
-        db.query(QuestionOption).filter(QuestionOption.question_id == question_id).delete()
-        for opt_data in data.options:
-            opt = QuestionOption(question_id=question_id, **opt_data.model_dump())
-            db.add(opt)
+        existing_opts = {opt.option_key: opt for opt in q.options}
+        incoming_keys = set()
+        
+        for i, opt_data in enumerate(data.options):
+            od = opt_data.model_dump()
+            key = od.get("option_key", "")
+            incoming_keys.add(key)
+            
+            if key in existing_opts:
+                # Update existing option in-place
+                existing = existing_opts[key]
+                existing.option_text = od.get("option_text", existing.option_text)
+                existing.score = od.get("score", existing.score)
+                existing.risk_level = od.get("risk_level", existing.risk_level)
+                existing.order_index = od.get("order_index", i)
+            else:
+                # Add new option
+                new_opt = QuestionOption(question_id=question_id, **od)
+                db.add(new_opt)
+        
+        # Remove options no longer in the list (only if not referenced by answers)
+        from models import AssessmentAnswer
+        for key, opt in existing_opts.items():
+            if key not in incoming_keys:
+                has_refs = db.query(AssessmentAnswer).filter(
+                    AssessmentAnswer.selected_option_id == opt.id
+                ).first()
+                if not has_refs:
+                    db.delete(opt)
+                # If referenced, keep it but it won't appear in new response
     
     db.commit()
     db.refresh(q)

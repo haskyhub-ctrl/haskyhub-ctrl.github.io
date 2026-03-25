@@ -325,11 +325,21 @@
                         <option value="safe">An toàn</option>
                     </select>
                 </div>
+                <div class="form-group">
+                    <label>Tỉnh/TP (tùy chọn)</label>
+                    <input type="text" id="filter-province" placeholder="VD: Hà Nội, TP.HCM..." style="background:var(--glass-bg);color:var(--text-primary);border:1px solid var(--border-color); border-radius:8px; padding:10px 14px; width:100%; font-size:0.95rem;">
+                </div>
                 <div class="form-group" style="flex: 0;">
                     <label>&nbsp;</label>
-                    <button class="btn btn-primary" onclick="runAggregateAnalysis()">🔍 Phân tích</button>
+                    <div style="display:flex; gap:8px;">
+                        <button class="btn btn-primary" onclick="runAggregateAnalysis()">🔍 Phân tích</button>
+                        <button class="btn btn-outline" onclick="runAIRegionalSummary()" style="border-color:#8b5cf6; color:#8b5cf6;">🤖 AI Tổng hợp</button>
+                    </div>
                 </div>
             </div>
+
+            <!-- AI Regional Summary Result -->
+            <div id="ai-regional-result"></div>
 
             <!-- Results -->
             <div id="aggregate-results">
@@ -550,6 +560,68 @@
             }
 
             container.innerHTML = html || '<p style="color:var(--text-muted)">Không có dữ liệu phân tích AI</p>';
+        }
+
+        async function runAIRegionalSummary() {
+            const container = document.getElementById('ai-regional-result');
+            const province = document.getElementById('filter-province')?.value?.trim() || '';
+            const facilityType = document.getElementById('filter-facility-type').value;
+
+            container.innerHTML = '<div style="text-align:center; padding:30px;"><div class="loading-spinner"></div><p style="color:var(--text-secondary); margin-top:8px;">🤖 Gemini đang phân tích tổng hợp khu vực...</p></div>';
+
+            try {
+                const result = await api.post('/ai/regional-summary', {
+                    province: province || null,
+                    facility_type: facilityType || null,
+                    limit: 50,
+                });
+
+                container.innerHTML = `
+                    <div class="analysis-section fade-in" style="border-left:4px solid #8b5cf6;">
+                        <h3 style="color:#8b5cf6; margin-bottom:16px;">🤖 AI Phân tích Tổng hợp Khu vực</h3>
+                        <p style="color:var(--text-secondary); font-size:0.9rem; line-height:1.6; margin-bottom:16px;">${result.overview || ''}</p>
+
+                        ${result.risk_distribution ? `
+                            <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin-bottom:16px;">
+                                <div style="background:rgba(34,197,94,0.1); padding:10px; border-radius:8px; text-align:center;">
+                                    <div style="font-weight:700; color:#22c55e; font-size:1.2rem;">${result.risk_distribution.low || 0}</div>
+                                    <div style="color:var(--text-muted); font-size:0.75rem;">Thấp</div>
+                                </div>
+                                <div style="background:rgba(234,179,8,0.1); padding:10px; border-radius:8px; text-align:center;">
+                                    <div style="font-weight:700; color:#eab308; font-size:1.2rem;">${result.risk_distribution.medium || 0}</div>
+                                    <div style="color:var(--text-muted); font-size:0.75rem;">TB</div>
+                                </div>
+                                <div style="background:rgba(249,115,22,0.1); padding:10px; border-radius:8px; text-align:center;">
+                                    <div style="font-weight:700; color:#f97316; font-size:1.2rem;">${result.risk_distribution.high || 0}</div>
+                                    <div style="color:var(--text-muted); font-size:0.75rem;">Cao</div>
+                                </div>
+                                <div style="background:rgba(239,68,68,0.1); padding:10px; border-radius:8px; text-align:center;">
+                                    <div style="font-weight:700; color:#ef4444; font-size:1.2rem;">${result.risk_distribution.critical || 0}</div>
+                                    <div style="color:var(--text-muted); font-size:0.75rem;">Rất cao</div>
+                                </div>
+                            </div>
+                        ` : ''}
+
+                        ${result.common_issues?.length ? `
+                            <h5 style="color:#f97316; margin:12px 0 8px;">⚠️ Vấn đề phổ biến</h5>
+                            <ul style="padding-left:20px; color:var(--text-secondary); font-size:0.85rem;">
+                                ${result.common_issues.map(i => `<li style="margin-bottom:4px;">${i}</li>`).join('')}
+                            </ul>
+                        ` : ''}
+
+                        ${result.recommendations_for_authority?.length ? `
+                            <h5 style="color:#3b82f6; margin:12px 0 8px;">📋 Khuyến nghị cho cơ quan quản lý</h5>
+                            <ol style="padding-left:20px; color:var(--text-secondary); font-size:0.85rem;">
+                                ${result.recommendations_for_authority.map(r => `<li style="margin-bottom:4px;">${r}</li>`).join('')}
+                            </ol>
+                        ` : ''}
+
+                        ${result.trend_observation ? `<p style="color:var(--text-muted); font-size:0.82rem; margin-top:8px; font-style:italic;">📈 ${result.trend_observation}</p>` : ''}
+                    </div>
+                `;
+            } catch (err) {
+                container.innerHTML = `<div class="alert alert-danger" style="margin:12px 0;">Lỗi AI: ${err.message}</div>`;
+            }
         }
 
         async function loadDashboard() {

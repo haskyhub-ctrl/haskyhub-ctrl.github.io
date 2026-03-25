@@ -14,3 +14,5 @@ Pillow
 aiofiles
 qrcode[pil]
 psycopg2-binary
+PyPDF2
+python-docx

@@ -210,6 +210,10 @@ if os.path.exists(frontend_dir):
     app.mount("/css", StaticFiles(directory=os.path.join(frontend_dir, "css")), name="css")
     app.mount("/js", StaticFiles(directory=os.path.join(frontend_dir, "js")), name="js")
     
+    img_dir = os.path.join(frontend_dir, "img")
+    if os.path.exists(img_dir):
+        app.mount("/img", StaticFiles(directory=img_dir), name="img")
+    
     admin_dir = os.path.join(frontend_dir, "admin")
     if os.path.exists(admin_dir):
         app.mount("/admin", StaticFiles(directory=admin_dir, html=True), name="admin")

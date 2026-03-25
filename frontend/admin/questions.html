@@ -30,8 +30,8 @@
             border: 1px solid var(--border-color);
             border-radius: 16px;
             width: 90%;
-            max-width: 700px;
-            max-height: 85vh;
+            max-width: 750px;
+            max-height: 90vh;
             overflow-y: auto;
             padding: 28px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
@@ -88,6 +88,19 @@
             width: 100px;
         }
 
+        .option-edit-row .btn-remove-opt {
+            width: 32px;
+            height: 32px;
+            padding: 0;
+            border: none;
+            background: rgba(239, 68, 68, 0.15);
+            color: #ef4444;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
         .modal-actions {
             display: flex;
             gap: 12px;
@@ -119,12 +132,26 @@
             color: #818cf8;
         }
 
-        .q-active {
-            color: #22c55e;
+        .q-active { color: #22c55e; }
+        .q-inactive { color: #ef4444; }
+
+        .header-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
         }
 
-        .q-inactive {
-            color: #ef4444;
+        .ai-gen-preview {
+            background: rgba(139, 92, 246, 0.08);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 12px;
+            padding: 16px;
+            margin-top: 12px;
+        }
+
+        .ai-gen-preview h5 {
+            color: #8b5cf6;
+            margin: 0 0 12px;
         }
     </style>
 </head>
@@ -158,10 +185,15 @@
             </ul>
         </aside>
         <main class="admin-content">
-            <div class="page-header">
-                <h2>❓ Quản lý Câu hỏi & Điểm số</h2>
-                <p style="color:var(--text-secondary);margin-top:4px;">Chỉnh sửa nội dung câu hỏi, đáp án, và điểm số
-                    cho từng phương án</p>
+            <div class="page-header" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+                <div>
+                    <h2>❓ Quản lý Câu hỏi & Điểm số</h2>
+                    <p style="color:var(--text-secondary);margin-top:4px;">Tạo, chỉnh sửa, xóa câu hỏi và đáp án</p>
+                </div>
+                <div class="header-actions">
+                    <button class="btn btn-primary" onclick="openCreateModal()">➕ Thêm câu hỏi</button>
+                    <button class="btn btn-outline" onclick="openAIGenerateModal()" style="border-color: #8b5cf6; color: #8b5cf6;">🤖 AI Tạo câu hỏi</button>
+                </div>
             </div>
             <div class="data-table-header">
                 <div class="filter-group">
@@ -170,6 +202,7 @@
                         <option value="">Tất cả nhóm</option>
                     </select>
                 </div>
+                <div style="color:var(--text-muted); font-size:0.85rem;" id="question-count"></div>
             </div>
             <div class="table-wrapper">
                 <table>
@@ -177,15 +210,16 @@
                         <tr>
                             <th style="width:50px">ID</th>
                             <th>Câu hỏi</th>
+                            <th>Nhóm</th>
                             <th>Loại cơ sở</th>
                             <th style="width:80px">Đáp án</th>
                             <th style="width:80px">Trạng thái</th>
-                            <th style="width:100px">Thao tác</th>
+                            <th style="width:140px">Thao tác</th>
                         </tr>
                     </thead>
                     <tbody id="questions-tbody">
                         <tr>
-                            <td colspan="6" style="text-align:center;padding:40px;">
+                            <td colspan="7" style="text-align:center;padding:40px;">
                                 <div class="loading-spinner"></div>
                             </td>
                         </tr>
@@ -195,23 +229,27 @@
         </main>
     </div>
 
-    <!-- Edit Modal -->
+    <!-- Create/Edit Modal -->
     <div class="edit-modal-overlay" id="edit-modal-overlay" onclick="if(event.target===this) closeEditModal()">
         <div class="edit-modal">
-            <h3 id="edit-modal-title">✏️ Chỉnh sửa Câu hỏi</h3>
+            <h3 id="edit-modal-title">➕ Thêm Câu hỏi Mới</h3>
             <form id="edit-question-form" onsubmit="saveQuestion(event)">
                 <input type="hidden" id="eq-id">
                 <div class="form-group">
-                    <label>Nội dung câu hỏi</label>
-                    <textarea class="form-control" id="eq-text" rows="3" required></textarea>
+                    <label>Nhóm câu hỏi *</label>
+                    <select class="form-control" id="eq-category" required></select>
+                </div>
+                <div class="form-group">
+                    <label>Nội dung câu hỏi *</label>
+                    <textarea class="form-control" id="eq-text" rows="3" required placeholder="Nhập nội dung câu hỏi..."></textarea>
                 </div>
                 <div class="form-group">
                     <label>Gợi ý / Hướng dẫn</label>
-                    <input type="text" class="form-control" id="eq-help">
+                    <input type="text" class="form-control" id="eq-help" placeholder="Gợi ý cho người trả lời">
                 </div>
                 <div class="form-group">
                     <label>Tham chiếu pháp lý</label>
-                    <input type="text" class="form-control" id="eq-ref">
+                    <input type="text" class="form-control" id="eq-ref" placeholder="VD: Điều 15, Luật PCCC 55/2024">
                 </div>
                 <div class="form-group">
                     <label>Loại cơ sở áp dụng</label>
@@ -234,12 +272,46 @@
                 <div class="form-group">
                     <label>Đáp án & Điểm số</label>
                     <div id="eq-options"></div>
+                    <button type="button" class="btn btn-sm btn-outline" onclick="addOptionRow()" style="margin-top:8px;">
+                        ➕ Thêm đáp án
+                    </button>
                 </div>
                 <div class="modal-actions">
                     <button type="button" class="btn btn-secondary" onclick="closeEditModal()">Hủy</button>
-                    <button type="submit" class="btn btn-primary" id="save-btn">💾 Lưu thay đổi</button>
+                    <button type="submit" class="btn btn-primary" id="save-btn">💾 Lưu</button>
                 </div>
             </form>
+        </div>
+    </div>
+
+    <!-- AI Generate Modal -->
+    <div class="edit-modal-overlay" id="ai-gen-modal-overlay" onclick="if(event.target===this) closeAIGenModal()">
+        <div class="edit-modal">
+            <h3>🤖 AI Tạo Câu hỏi Tự Động</h3>
+            <div class="form-group">
+                <label>Nhóm câu hỏi</label>
+                <select class="form-control" id="ai-gen-category"></select>
+            </div>
+            <div class="form-group">
+                <label>Chủ đề / Mô tả câu hỏi cần tạo</label>
+                <textarea class="form-control" id="ai-gen-topic" rows="3"
+                    placeholder="VD: Kiểm tra hệ thống báo cháy tự động, đánh giá thiết bị chữa cháy vách tường..."></textarea>
+            </div>
+            <div class="form-group">
+                <label>Số câu hỏi cần tạo</label>
+                <select class="form-control" id="ai-gen-count">
+                    <option value="1">1 câu</option>
+                    <option value="3" selected>3 câu</option>
+                    <option value="5">5 câu</option>
+                </select>
+            </div>
+            <div style="display:flex; gap:12px;">
+                <button class="btn btn-primary" onclick="generateAIQuestions()" id="ai-gen-btn" style="background: linear-gradient(135deg, #8b5cf6, #6366f1);">
+                    🤖 Tạo câu hỏi bằng AI
+                </button>
+                <button class="btn btn-secondary" onclick="closeAIGenModal()">Đóng</button>
+            </div>
+            <div id="ai-gen-result"></div>
         </div>
     </div>
 
@@ -247,18 +319,23 @@
     <script src="/js/admin.js"></script>
     <script>
         let allQuestions = [];
+        let allCategories = [];
+        let isCreateMode = false;
+        let optionCounter = 0;
 
         onReady(async () => {
             setupNavbar();
             if (!requireAuth()) return;
             try {
-                const cats = await api.get('/questions/categories');
+                allCategories = await api.get('/questions/categories');
                 const select = document.getElementById('cat-filter');
-                cats.forEach(c => {
-                    const opt = document.createElement('option');
-                    opt.value = c.id;
-                    opt.textContent = `${c.icon || ''} ${c.name}`;
-                    select.appendChild(opt);
+                const eqCat = document.getElementById('eq-category');
+                const aiCat = document.getElementById('ai-gen-category');
+                allCategories.forEach(c => {
+                    const label = `${c.icon || ''} ${c.name}`;
+                    select.innerHTML += `<option value="${c.id}">${label}</option>`;
+                    eqCat.innerHTML += `<option value="${c.id}">${label}</option>`;
+                    aiCat.innerHTML += `<option value="${c.id}">${label}</option>`;
                 });
             } catch (e) { }
             loadAdminQuestions();
@@ -266,62 +343,117 @@
 
         async function loadAdminQuestions(catId) {
             const tbody = document.getElementById('questions-tbody');
-            tbody.innerHTML = '<tr><td colspan="6" style="text-align:center;padding:40px;"><div class="loading-spinner"></div></td></tr>';
+            tbody.innerHTML = '<tr><td colspan="7" style="text-align:center;padding:40px;"><div class="loading-spinner"></div></td></tr>';
             try {
                 const url = catId ? `/questions/?category_id=${catId}` : '/questions/';
                 allQuestions = await api.get(url);
                 renderQuestionsTable(allQuestions);
+                document.getElementById('question-count').textContent = `${allQuestions.length} câu hỏi`;
             } catch (e) {
-                tbody.innerHTML = `<tr><td colspan="6" style="text-align:center;padding:40px;color:var(--text-secondary);">Lỗi: ${e.message}</td></tr>`;
+                tbody.innerHTML = `<tr><td colspan="7" style="text-align:center;padding:40px;color:var(--text-secondary);">Lỗi: ${e.message}</td></tr>`;
             }
+        }
+
+        function getCatName(catId) {
+            const c = allCategories.find(x => x.id === catId);
+            return c ? `${c.icon || ''} ${c.name}` : catId;
         }
 
         function renderQuestionsTable(questions) {
             const tbody = document.getElementById('questions-tbody');
             if (!questions.length) {
-                tbody.innerHTML = '<tr><td colspan="6" style="text-align:center;padding:40px;color:var(--text-secondary);">Không có câu hỏi nào</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="7" style="text-align:center;padding:40px;color:var(--text-secondary);">Không có câu hỏi nào</td></tr>';
                 return;
             }
             tbody.innerHTML = questions.map(q => `
-                <tr>
+                <tr style="opacity:${q.is_active ? '1' : '0.5'}">
                     <td>${q.id}</td>
                     <td class="q-text-cell" title="${q.question_text}">${q.question_text.substring(0, 80)}${q.question_text.length > 80 ? '...' : ''}</td>
+                    <td style="font-size:0.8rem; max-width:120px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${getCatName(q.category_id)}</td>
                     <td><span class="q-type-badge ${q.facility_type === 'all' ? 'all' : 'specific'}">${q.facility_type === 'all' ? 'Chung' : q.facility_type}</span></td>
                     <td>${(q.options || []).length} đáp án</td>
-                    <td><span class="${q.is_active ? 'q-active' : 'q-inactive'}">${q.is_active ? '✅ Hoạt động' : '❌ Tắt'}</span></td>
-                    <td><button class="btn btn-sm" onclick="openEditModal(${q.id})">✏️ Sửa</button></td>
+                    <td><span class="${q.is_active ? 'q-active' : 'q-inactive'}">${q.is_active ? '✅' : '❌'}</span></td>
+                    <td>
+                        <button class="btn btn-sm" onclick="openEditModal(${q.id})" title="Sửa">✏️</button>
+                        <button class="btn btn-sm" onclick="toggleQuestion(${q.id}, ${q.is_active})" title="${q.is_active ? 'Tắt' : 'Bật'}">${q.is_active ? '🔒' : '🔓'}</button>
+                        <button class="btn btn-sm" onclick="deleteQuestion(${q.id})" title="Xóa" style="color:#ef4444;">🗑️</button>
+                    </td>
                 </tr>
             `).join('');
         }
 
+        // ========== CREATE / EDIT MODAL ==========
+
+        function openCreateModal() {
+            isCreateMode = true;
+            document.getElementById('edit-modal-title').textContent = '➕ Thêm Câu hỏi Mới';
+            document.getElementById('eq-id').value = '';
+            document.getElementById('eq-text').value = '';
+            document.getElementById('eq-help').value = '';
+            document.getElementById('eq-ref').value = '';
+            document.getElementById('eq-facility-type').value = 'all';
+            document.getElementById('eq-category').value = allCategories[0]?.id || '';
+            document.getElementById('eq-category').disabled = false;
+            document.getElementById('save-btn').textContent = '💾 Tạo câu hỏi';
+
+            // Default 4 options A-D
+            const optContainer = document.getElementById('eq-options');
+            optionCounter = 0;
+            optContainer.innerHTML = '';
+            ['A', 'B', 'C', 'D'].forEach(key => addOptionRow(key, '', 0, key === 'A' ? 'safe' : key === 'B' ? 'low' : key === 'C' ? 'high' : 'critical'));
+
+            document.getElementById('edit-modal-overlay').classList.add('active');
+        }
+
         function openEditModal(questionId) {
+            isCreateMode = false;
             const q = allQuestions.find(x => x.id === questionId);
             if (!q) return;
+            document.getElementById('edit-modal-title').textContent = '✏️ Chỉnh sửa Câu hỏi #' + q.id;
             document.getElementById('eq-id').value = q.id;
             document.getElementById('eq-text').value = q.question_text;
             document.getElementById('eq-help').value = q.help_text || '';
             document.getElementById('eq-ref').value = q.reference || '';
             document.getElementById('eq-facility-type').value = q.facility_type || 'all';
+            document.getElementById('eq-category').value = q.category_id;
+            document.getElementById('eq-category').disabled = true;
+            document.getElementById('save-btn').textContent = '💾 Lưu thay đổi';
 
             const optContainer = document.getElementById('eq-options');
-            optContainer.innerHTML = (q.options || []).map((opt, i) => `
-                <div class="option-edit-row">
-                    <span style="font-weight:600;width:30px;">${opt.option_key}.</span>
-                    <input type="text" class="form-control" name="opt_text_${i}" value="${opt.option_text}" placeholder="Nội dung đáp án">
-                    <input type="number" class="form-control score-input" name="opt_score_${i}" value="${opt.score}" placeholder="Điểm" title="Điểm số">
-                    <select class="form-control risk-select" name="opt_risk_${i}" title="Mức nguy cơ">
-                        <option value="safe" ${opt.risk_level === 'safe' ? 'selected' : ''}>An toàn</option>
-                        <option value="low" ${opt.risk_level === 'low' ? 'selected' : ''}>Thấp</option>
-                        <option value="medium" ${opt.risk_level === 'medium' ? 'selected' : ''}>TB</option>
-                        <option value="high" ${opt.risk_level === 'high' ? 'selected' : ''}>Cao</option>
-                        <option value="critical" ${opt.risk_level === 'critical' ? 'selected' : ''}>Rất cao</option>
-                    </select>
-                    <input type="hidden" name="opt_key_${i}" value="${opt.option_key}">
-                    <input type="hidden" name="opt_order_${i}" value="${opt.order_index}">
-                </div>
-            `).join('');
+            optionCounter = 0;
+            optContainer.innerHTML = '';
+            (q.options || []).forEach(opt => addOptionRow(opt.option_key, opt.option_text, opt.score, opt.risk_level));
 
             document.getElementById('edit-modal-overlay').classList.add('active');
+        }
+
+        function addOptionRow(key = '', text = '', score = 0, risk = 'safe') {
+            const idx = optionCounter++;
+            if (!key) key = String.fromCharCode(65 + idx); // A, B, C, D...
+            const container = document.getElementById('eq-options');
+            const row = document.createElement('div');
+            row.className = 'option-edit-row';
+            row.id = `opt-row-${idx}`;
+            row.innerHTML = `
+                <span style="font-weight:600;width:30px;">${key}.</span>
+                <input type="text" class="form-control" name="opt_text_${idx}" value="${text}" placeholder="Nội dung đáp án" required>
+                <input type="number" class="form-control score-input" name="opt_score_${idx}" value="${score}" placeholder="Điểm" title="Điểm số" min="0">
+                <select class="form-control risk-select" name="opt_risk_${idx}" title="Mức nguy cơ">
+                    <option value="safe" ${risk === 'safe' ? 'selected' : ''}>An toàn</option>
+                    <option value="low" ${risk === 'low' ? 'selected' : ''}>Thấp</option>
+                    <option value="medium" ${risk === 'medium' ? 'selected' : ''}>TB</option>
+                    <option value="high" ${risk === 'high' ? 'selected' : ''}>Cao</option>
+                    <option value="critical" ${risk === 'critical' ? 'selected' : ''}>Rất cao</option>
+                </select>
+                <input type="hidden" name="opt_key_${idx}" value="${key}">
+                <button type="button" class="btn-remove-opt" onclick="removeOptionRow(${idx})" title="Xóa đáp án">✕</button>
+            `;
+            container.appendChild(row);
+        }
+
+        function removeOptionRow(idx) {
+            const row = document.getElementById(`opt-row-${idx}`);
+            if (row) row.remove();
         }
 
         function closeEditModal() {
@@ -330,18 +462,30 @@
 
         async function saveQuestion(e) {
             e.preventDefault();
-            const qId = document.getElementById('eq-id').value;
-            const q = allQuestions.find(x => x.id == qId);
-            if (!q) return;
+            const btn = document.getElementById('save-btn');
+            btn.disabled = true;
+            btn.textContent = 'Đang lưu...';
 
-            // Collect options
-            const options = (q.options || []).map((opt, i) => ({
-                option_key: document.querySelector(`[name="opt_key_${i}"]`).value,
-                option_text: document.querySelector(`[name="opt_text_${i}"]`).value,
-                score: parseInt(document.querySelector(`[name="opt_score_${i}"]`).value) || 0,
-                risk_level: document.querySelector(`[name="opt_risk_${i}"]`).value,
-                order_index: parseInt(document.querySelector(`[name="opt_order_${i}"]`).value) || i,
-            }));
+            // Collect options from all visible rows
+            const optRows = document.querySelectorAll('#eq-options .option-edit-row');
+            const options = [];
+            optRows.forEach((row, i) => {
+                const idx = row.id.replace('opt-row-', '');
+                options.push({
+                    option_key: row.querySelector(`[name="opt_key_${idx}"]`)?.value || String.fromCharCode(65 + i),
+                    option_text: row.querySelector(`[name="opt_text_${idx}"]`)?.value || '',
+                    score: parseInt(row.querySelector(`[name="opt_score_${idx}"]`)?.value) || 0,
+                    risk_level: row.querySelector(`[name="opt_risk_${idx}"]`)?.value || 'safe',
+                    order_index: i,
+                });
+            });
+
+            if (options.length < 2) {
+                showToast('Cần ít nhất 2 đáp án', 'error');
+                btn.disabled = false;
+                btn.textContent = isCreateMode ? '💾 Tạo câu hỏi' : '💾 Lưu thay đổi';
+                return;
+            }
 
             const payload = {
                 question_text: document.getElementById('eq-text').value,
@@ -351,21 +495,150 @@
                 options: options,
             };
 
-            const btn = document.getElementById('save-btn');
-            btn.disabled = true;
-            btn.textContent = 'Đang lưu...';
-
             try {
-                await api.put(`/questions/${qId}`, payload);
-                showToast('Cập nhật câu hỏi thành công!');
+                if (isCreateMode) {
+                    payload.category_id = parseInt(document.getElementById('eq-category').value);
+                    payload.question_type = 'single';
+                    payload.order_index = allQuestions.length;
+                    payload.is_active = true;
+                    await api.post('/questions/', payload);
+                    showToast('✅ Tạo câu hỏi thành công!');
+                } else {
+                    const qId = document.getElementById('eq-id').value;
+                    await api.put(`/questions/${qId}`, payload);
+                    showToast('✅ Cập nhật câu hỏi thành công!');
+                }
                 closeEditModal();
                 loadAdminQuestions(document.getElementById('cat-filter').value);
             } catch (err) {
                 showToast(err.message, 'error');
             } finally {
                 btn.disabled = false;
-                btn.textContent = '💾 Lưu thay đổi';
+                btn.textContent = isCreateMode ? '💾 Tạo câu hỏi' : '💾 Lưu thay đổi';
             }
+        }
+
+        async function toggleQuestion(qId, currentState) {
+            if (!confirm(currentState ? 'Tắt câu hỏi này?' : 'Bật lại câu hỏi này?')) return;
+            try {
+                await api.put(`/questions/${qId}`, { is_active: !currentState });
+                showToast(currentState ? '🔒 Đã tắt câu hỏi' : '🔓 Đã bật câu hỏi');
+                loadAdminQuestions(document.getElementById('cat-filter').value);
+            } catch (err) {
+                showToast(err.message, 'error');
+            }
+        }
+
+        async function deleteQuestion(qId) {
+            if (!confirm('Xóa câu hỏi này? (Câu hỏi sẽ bị ẩn, không xóa vĩnh viễn)')) return;
+            try {
+                await api.delete(`/questions/${qId}`);
+                showToast('🗑️ Đã xóa câu hỏi');
+                loadAdminQuestions(document.getElementById('cat-filter').value);
+            } catch (err) {
+                showToast(err.message, 'error');
+            }
+        }
+
+        // ========== AI GENERATE ==========
+
+        function openAIGenerateModal() {
+            document.getElementById('ai-gen-result').innerHTML = '';
+            document.getElementById('ai-gen-topic').value = '';
+            document.getElementById('ai-gen-modal-overlay').classList.add('active');
+        }
+
+        function closeAIGenModal() {
+            document.getElementById('ai-gen-modal-overlay').classList.remove('active');
+        }
+
+        async function generateAIQuestions() {
+            const btn = document.getElementById('ai-gen-btn');
+            const resultDiv = document.getElementById('ai-gen-result');
+            const categoryId = document.getElementById('ai-gen-category').value;
+            const topic = document.getElementById('ai-gen-topic').value.trim();
+            const count = parseInt(document.getElementById('ai-gen-count').value);
+
+            if (!topic) { showToast('Vui lòng nhập chủ đề', 'error'); return; }
+
+            btn.disabled = true;
+            btn.innerHTML = '⏳ AI đang tạo...';
+            resultDiv.innerHTML = '<div style="text-align:center; padding:20px;"><div class="loading-spinner"></div><p style="color:var(--text-secondary); margin-top:8px;">🤖 Gemini đang tạo câu hỏi...</p></div>';
+
+            try {
+                const result = await api.post('/ai/generate-questions', {
+                    category_id: parseInt(categoryId),
+                    topic: topic,
+                    count: count,
+                });
+
+                const questions = result.questions || [];
+                if (!questions.length) {
+                    resultDiv.innerHTML = '<p style="color:var(--text-muted); padding:12px;">AI không tạo được câu hỏi. Thử lại với chủ đề khác.</p>';
+                    return;
+                }
+
+                resultDiv.innerHTML = `
+                    <div class="ai-gen-preview">
+                        <h5>🤖 AI đã tạo ${questions.length} câu hỏi — Xem preview và lưu</h5>
+                        ${questions.map((q, i) => `
+                            <div style="background:rgba(255,255,255,0.03); border-radius:10px; padding:12px; margin-bottom:10px; border:1px solid var(--border-color);">
+                                <div style="display:flex; justify-content:space-between; align-items:start; gap:8px;">
+                                    <div style="flex:1;">
+                                        <strong style="color:var(--text-primary); font-size:0.9rem;">${i + 1}. ${q.question_text}</strong>
+                                        ${q.help_text ? `<div style="color:var(--text-muted); font-size:0.8rem; margin-top:4px;">💡 ${q.help_text}</div>` : ''}
+                                        <div style="margin-top:8px;">
+                                            ${(q.options || []).map(o => `
+                                                <div style="font-size:0.82rem; color:var(--text-secondary); padding:2px 0;">
+                                                    <strong>${o.option_key}.</strong> ${o.option_text} 
+                                                    <span style="color:${{'safe':'#22c55e','low':'#eab308','medium':'#f97316','high':'#ef4444','critical':'#dc2626'}[o.risk_level] || '#94a3b8'}; font-size:0.75rem;">(${o.score}đ - ${o.risk_level})</span>
+                                                </div>
+                                            `).join('')}
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-sm btn-primary" onclick="saveAIQuestion(${i})" style="flex-shrink:0;">💾 Lưu</button>
+                                </div>
+                            </div>
+                        `).join('')}
+                        <button class="btn btn-primary" onclick="saveAllAIQuestions()" style="margin-top:8px;">💾 Lưu tất cả ${questions.length} câu</button>
+                    </div>
+                `;
+                // Store questions for saving
+                window._aiGeneratedQuestions = questions;
+            } catch (err) {
+                resultDiv.innerHTML = `<p style="color:#ef4444; padding:12px;">Lỗi: ${err.message}</p>`;
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = '🤖 Tạo câu hỏi bằng AI';
+            }
+        }
+
+        async function saveAIQuestion(index) {
+            const q = window._aiGeneratedQuestions?.[index];
+            if (!q) return;
+            try {
+                await api.post('/questions/', q);
+                showToast(`✅ Đã lưu câu ${index + 1}`);
+                // Disable button
+                event.target.disabled = true;
+                event.target.textContent = '✅ Đã lưu';
+            } catch (err) {
+                showToast(err.message, 'error');
+            }
+        }
+
+        async function saveAllAIQuestions() {
+            const questions = window._aiGeneratedQuestions || [];
+            let saved = 0;
+            for (const q of questions) {
+                try {
+                    await api.post('/questions/', q);
+                    saved++;
+                } catch (err) { }
+            }
+            showToast(`✅ Đã lưu ${saved}/${questions.length} câu hỏi`);
+            closeAIGenModal();
+            loadAdminQuestions(document.getElementById('cat-filter').value);
         }
     </script>
 </body>

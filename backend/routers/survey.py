@@ -1,6 +1,6 @@
 from datetime import datetime
 from fastapi import APIRouter, Depends, HTTPException
-from sqlalchemy.orm import Session, joinedload
+from sqlalchemy.orm import Session, joinedload, subqueryload
 from typing import List
 from database import get_db
 from models import (
@@ -17,50 +17,107 @@ from utils.scoring import calculate_category_scores, calculate_total_score, calc
 router = APIRouter(prefix="/api/survey", tags=["Survey"])
 
 
-@router.get("/categories", response_model=List[CategoryWithQuestions])
+@router.get("/categories")
 def get_survey_categories(facility_type: str = None, db: Session = Depends(get_db)):
     """Get all active categories with their questions and options.
     If facility_type is provided (comma-separated), only return common questions
     and questions matching ANY of the specified facility types.
     """
-    categories = (
-        db.query(QuestionCategory)
-        .filter(QuestionCategory.is_active == True)
-        .options(
-            joinedload(QuestionCategory.questions)
-            .joinedload(Question.options)
-        )
-        .order_by(QuestionCategory.order_index)
-        .all()
-    )
-    
     # Parse comma-separated facility types
     selected_types = []
     if facility_type:
         selected_types = [t.strip() for t in facility_type.split(",") if t.strip()]
     
+    # Query categories
+    categories = (
+        db.query(QuestionCategory)
+        .filter(QuestionCategory.is_active == True)
+        .order_by(QuestionCategory.order_index)
+        .all()
+    )
+    
+    # Query ALL active questions at once
+    all_questions = (
+        db.query(Question)
+        .filter(Question.is_active == True)
+        .order_by(Question.order_index)
+        .all()
+    )
+    
+    # Query ALL options at once
+    all_options = (
+        db.query(QuestionOption)
+        .order_by(QuestionOption.order_index)
+        .all()
+    )
+    
+    # Build lookup maps
+    options_by_question = {}
+    for opt in all_options:
+        options_by_question.setdefault(opt.question_id, []).append(opt)
+    
+    questions_by_category = {}
+    for q in all_questions:
+        questions_by_category.setdefault(q.category_id, []).append(q)
+    
+    total_q = sum(len(qs) for qs in questions_by_category.values())
+    print(f"[DEBUG] categories={len(categories)}, questions={len(all_questions)}, options={len(all_options)}, grouped_q={total_q}")
+    
     result = []
     for cat in categories:
-        cat_data = CategoryWithQuestions.model_validate(cat)
-        # Filter to active questions only
-        active_questions = [q for q in cat_data.questions if q.is_active]
+        questions_list = []
+        cat_questions = questions_by_category.get(cat.id, [])
         
-        # If facility_type specified, filter questions
-        if selected_types:
-            active_questions = [
-                q for q in active_questions
-                if not q.facility_type or q.facility_type == "all" or q.facility_type in selected_types
-            ]
+        for q in cat_questions:
+            # If facility_type specified, filter questions
+            if selected_types:
+                if q.facility_type and q.facility_type != "all" and q.facility_type not in selected_types:
+                    continue
+            
+            q_options = options_by_question.get(q.id, [])
+            options_list = [{
+                "id": opt.id,
+                "option_key": opt.option_key,
+                "option_text": opt.option_text,
+                "score": opt.score,
+                "risk_level": opt.risk_level,
+                "order_index": opt.order_index,
+            } for opt in q_options]
+            
+            questions_list.append({
+                "id": q.id,
+                "category_id": q.category_id,
+                "question_text": q.question_text,
+                "question_type": q.question_type,
+                "facility_type": q.facility_type,
+                "is_conditional": q.is_conditional,
+                "condition_question_id": q.condition_question_id,
+                "condition_answer": q.condition_answer,
+                "help_text": q.help_text,
+                "reference": q.reference,
+                "order_index": q.order_index,
+                "is_active": q.is_active,
+                "created_at": q.created_at.isoformat() if q.created_at else None,
+                "options": options_list,
+            })
         
         # Skip empty categories
-        if not active_questions:
+        if not questions_list:
             continue
         
-        cat_data.questions = sorted(active_questions, key=lambda x: x.order_index)
-        # Sort options within each question
-        for q in cat_data.questions:
-            q.options = sorted(q.options, key=lambda x: x.order_index)
-        result.append(cat_data)
+        result.append({
+            "id": cat.id,
+            "name": cat.name,
+            "description": cat.description,
+            "max_score": cat.max_score,
+            "weight": cat.weight,
+            "order_index": cat.order_index,
+            "icon": cat.icon,
+            "color": cat.color,
+            "is_active": cat.is_active,
+            "created_at": cat.created_at.isoformat() if cat.created_at else None,
+            "questions": questions_list,
+        })
     
     return result
 

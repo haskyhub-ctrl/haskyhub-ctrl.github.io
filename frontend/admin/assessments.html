@@ -228,11 +228,12 @@
                     <td>${a.total_score}/${a.max_possible_score} (${a.risk_percentage}%)</td>
                     <td><span class="status-badge ${a.risk_level}">${riskLabels[a.risk_level] || a.risk_level}</span></td>
                     <td>${a.completed_at ? new Date(a.completed_at).toLocaleDateString('vi-VN') : 'N/A'}</td>
+                    <td><a href="/result.html?id=${a.id}" class="btn btn-sm btn-secondary">👁️ Xem</a></td>
                 </tr>
             `).join('');
             container.innerHTML = `<div class="table-wrapper"><table>
-                <thead><tr><th>Cơ sở</th><th>Loại hình</th><th>Người đánh giá</th><th>Tổ chức</th><th>Điểm</th><th>Mức nguy cơ</th><th>Ngày</th></tr></thead>
-                <tbody>${rows || '<tr><td colspan="7" style="text-align:center;padding:40px;color:var(--text-muted)">Chưa có đánh giá nào</td></tr>'}</tbody>
+                <thead><tr><th>Cơ sở</th><th>Loại hình</th><th>Người đánh giá</th><th>Tổ chức</th><th>Điểm</th><th>Mức nguy cơ</th><th>Ngày</th><th>Thao tác</th></tr></thead>
+                <tbody>${rows || '<tr><td colspan="8" style="text-align:center;padding:40px;color:var(--text-muted)">Chưa có đánh giá nào</td></tr>'}</tbody>
             </table></div>`;
         }
 
@@ -261,12 +262,13 @@
                         <td>${a.total_score}/${a.max_possible_score} (${a.risk_percentage}%)</td>
                         <td><span class="status-badge ${a.risk_level}">${riskLabels[a.risk_level] || a.risk_level}</span></td>
                         <td>${a.completed_at ? new Date(a.completed_at).toLocaleDateString('vi-VN') : 'N/A'}</td>
+                        <td><a href="/result.html?id=${a.id}" class="btn btn-sm btn-secondary">👁️ Xem</a></td>
                     </tr>
                 `).join('');
                 html += `<div class="facility-group">
                     <div class="facility-group-header">${label} <span class="count">${items.length} cơ sở</span></div>
                     <div class="table-wrapper"><table>
-                        <thead><tr><th>Cơ sở</th><th>Người đánh giá</th><th>Điểm</th><th>Mức nguy cơ</th><th>Ngày</th></tr></thead>
+                        <thead><tr><th>Cơ sở</th><th>Người đánh giá</th><th>Điểm</th><th>Mức nguy cơ</th><th>Ngày</th><th>Thao tác</th></tr></thead>
                         <tbody>${rows}</tbody>
                     </table></div>
                 </div>`;

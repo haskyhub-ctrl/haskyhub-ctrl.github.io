@@ -29,8 +29,24 @@ const facilityTypes = [
 
 async function initSurvey() {
     if (!requireAuth()) return;
-    // Auto-detect location
-    detectUserLocation();
+
+    // Check if user has pre-assigned location (imported accounts)
+    const user = api.getUser();
+    const isImportedUser = !!(user && user.facility_code);
+
+    if (isImportedUser && user.latitude && user.longitude) {
+        // Pre-fill location from user profile (imported account)
+        surveyState.userLocation = {
+            latitude: user.latitude,
+            longitude: user.longitude,
+        };
+        surveyState.isImportedUser = true;
+        console.log('📍 Location pre-set from profile:', surveyState.userLocation);
+    } else {
+        // Self-registered user: detect GPS
+        surveyState.isImportedUser = false;
+        detectUserLocation();
+    }
     renderStep();
 }
 
@@ -152,10 +168,12 @@ function renderFacilityForm(container) {
                     <label>Địa chỉ</label>
                     <div style="display: flex; gap: 8px;">
                         <input type="text" class="form-control" id="f_address" placeholder="Địa chỉ cơ sở" value="${info.facility_address || ''}">
-                        <button type="button" class="btn btn-outline" onclick="detectUserLocationUI()" title="Lấy vị trí hiện tại" style="padding: 10px; width: 44px; flex-shrink: 0;">📍</button>
+                        ${!surveyState.isImportedUser ? `<button type="button" class="btn btn-outline" onclick="detectUserLocationUI()" title="Lấy vị trí hiện tại" style="padding: 10px; width: 44px; flex-shrink: 0;">📍</button>` : ''}
                     </div>
                     <small id="gps-status" style="color:var(--text-muted); display:inline-block; margin-top:6px; font-size:0.8rem;">
-                        ${surveyState.userLocation ?
+                        ${surveyState.isImportedUser && surveyState.userLocation ?
+            `<span style="color:#22c55e">✓ Tọa độ đã được thiết lập sẵn: ${surveyState.userLocation.latitude.toFixed(4)}, ${surveyState.userLocation.longitude.toFixed(4)}</span>`
+            : surveyState.userLocation ?
             `<span style="color:#22c55e">✓ Đã lấy tọa độ: ${surveyState.userLocation.latitude.toFixed(4)}, ${surveyState.userLocation.longitude.toFixed(4)}</span>`
             : 'Đang lấy tọa độ GPS...'}
                     </small>

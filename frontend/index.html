@@ -4,373 +4,493 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FRAS - Hệ thống Đánh giá Nguy cơ Cháy Nổ</title>
+    <title>Hệ thống Khảo sát Đánh giá Nguy cơ Cháy Nổ Thông minh - PCCC Bắc Ninh</title>
     <meta name="description"
-        content="Hệ thống đánh giá toàn diện nguy cơ cháy nổ cho cơ sở, nhà xưởng, kho bãi. Xác định mối nguy, nhận khuyến cáo và theo dõi cải thiện an toàn.">
-    <meta name="theme-color" content="#F97316">
+        content="Hệ thống đánh giá nguy cơ cháy nổ thông minh được hỗ trợ bởi trí tuệ nhân tạo. Phát triển bởi Phòng Cảnh sát PCCC và CNCH, Công an tỉnh Bắc Ninh. Miễn phí 100%.">
+    <meta name="theme-color" content="#C41E3A">
     <link rel="manifest" href="/manifest.json">
     <link rel="stylesheet" href="/css/main.css">
-    <style>
-        .hero {
-            position: relative;
-            min-height: 85vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: calc(var(--nav-height) + 40px) 20px 60px;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(180deg, rgba(2, 6, 23, 0.3) 0%, rgba(2, 6, 23, 0.85) 60%, var(--bg-primary) 100%),
-                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23111827" width="1200" height="600"/><circle cx="200" cy="300" r="100" fill="%23ea580c" opacity="0.08"/><circle cx="900" cy="200" r="150" fill="%23dc2626" opacity="0.06"/><rect x="400" y="100" width="400" height="400" fill="%231e293b" opacity="0.3" rx="20"/></svg>');
-            background-size: cover;
-            background-position: center;
-            z-index: 0;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            max-width: 800px;
-        }
-
-        .hero-badge {
-            display: inline-block;
-            padding: 8px 20px;
-            background: rgba(220, 38, 38, 0.15);
-            border: 1px solid rgba(220, 38, 38, 0.3);
-            border-radius: var(--radius-full);
-            color: #fca5a5;
-            font-size: 0.85rem;
-            font-weight: 500;
-            margin-bottom: 24px;
-        }
-
-        .hero h1 {
-            font-size: 3.2rem;
-            font-weight: 800;
-            line-height: 1.15;
-            margin-bottom: 20px;
-        }
-
-        .hero .subtitle {
-            font-size: 1.15rem;
-            margin: 0 auto 36px;
-        }
-
-        .hero-actions {
-            display: flex;
-            gap: 16px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .categories-section {
-            background: var(--bg-secondary);
-            padding: 80px 0;
-        }
-
-        .cat-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 16px;
-        }
-
-        .cat-card {
-            display: flex;
-            align-items: flex-start;
-            gap: 16px;
-            padding: 24px;
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-lg);
-            transition: all var(--transition-normal);
-        }
-
-        .cat-card:hover {
-            border-color: var(--border-hover);
-            transform: translateY(-2px);
-        }
-
-        .cat-card .ci {
-            width: 48px;
-            height: 48px;
-            border-radius: var(--radius-md);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            background: rgba(255, 255, 255, 0.05);
-            flex-shrink: 0;
-        }
-
-        .cat-card h4 {
-            font-size: 1rem;
-            margin-bottom: 4px;
-        }
-
-        .cat-card p {
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-            line-height: 1.5;
-        }
-
-        .features-section {
-            padding: 80px 0;
-        }
-
-        .feature-list {
-            list-style: none;
-            max-width: 700px;
-        }
-
-        .feature-list li {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 14px 0;
-            font-size: 1.05rem;
-            font-weight: 500;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .feature-list li .check {
-            color: var(--accent-green);
-            font-size: 1.2rem;
-        }
-
-        .risk-section {
-            background: rgba(127, 29, 29, 0.15);
-            border: 1px solid rgba(127, 29, 29, 0.2);
-            border-radius: var(--radius-xl);
-            padding: 48px;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .risk-item {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            margin-bottom: 24px;
-        }
-
-        .risk-bar {
-            width: 100px;
-            height: 10px;
-            border-radius: var(--radius-full);
-            flex-shrink: 0;
-        }
-
-        .risk-item h4 {
-            font-size: 0.95rem;
-            margin-bottom: 2px;
-        }
-
-        .risk-item p {
-            font-size: 0.82rem;
-            color: var(--text-secondary);
-        }
-
-        .cta-section {
-            text-align: center;
-            padding: 100px 0;
-        }
-
-        .cta-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 16px;
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .cat-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .risk-section {
-                padding: 28px;
-            }
-
-            .cta-section h2 {
-                font-size: 1.8rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="/css/homepage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Roboto+Condensed:wght@700;800;900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
+    <!-- ==================== HEADER ==================== -->
+    <nav class="navbar hp-navbar">
         <div class="container">
             <a href="/" class="nav-brand">
                 <span class="logo-icon">🔥</span>
                 <div>
-                    <span>Hệ thống Đánh giá Nguy cơ Cháy Nổ</span>
-                    <small>Quản lý An toàn Chuyên nghiệp</small>
+                    <span>HỆ THỐNG KHẢO SÁT AN TOÀN PCCC</span>
+                    <small>Phòng Cảnh sát PCCC & CNCH - Công an tỉnh Bắc Ninh</small>
                 </div>
             </a>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="/" class="active">Trang chủ</a></li>
-            </ul>
-            <div class="nav-user" id="nav-user"></div>
+            <div class="nav-right">
+                <a href="tel:114" class="hotline-btn" aria-label="Gọi đường dây nóng 114">
+                    <span class="hotline-icon">📞</span>
+                    <span>Hotline <strong>114</strong></span>
+                </a>
+                <div class="nav-user" id="nav-user"></div>
+            </div>
             <button class="nav-mobile-toggle" aria-label="Menu">☰</button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content slide-up">
-            <span class="hero-badge">🔥 Công cụ Đánh giá An toàn Chuyên nghiệp</span>
-            <h1>Đánh giá Toàn diện Nguy cơ<br><span class="text-gradient">Cháy & Nổ</span></h1>
-            <p class="subtitle">Đánh giá cơ sở của bạn qua 6 lĩnh vực an toàn quan trọng với hệ thống được thiết kế bởi
-                chuyên gia. Xác định mối nguy, nhận khuyến cáo ưu tiên và theo dõi sự cải thiện an toàn theo thời gian.
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hp-hero" id="hero">
+        <div class="hp-hero-overlay"></div>
+        <div class="hp-hero-content slide-up">
+            <h1 class="hp-hero-title">
+                🔥 BẢO VỆ NGÔI NHÀ<br>
+                <span class="hp-hero-highlight">BẢO VỆ TƯƠNG LAI</span>
+            </h1>
+            <p class="hp-hero-subtitle">
+                Hệ thống đánh giá nguy cơ cháy nổ thông minh<br>
+                được hỗ trợ bởi <strong>trí tuệ nhân tạo</strong>
             </p>
-            <div class="hero-actions">
-                <a href="/survey.html" class="btn btn-primary btn-lg">Bắt đầu Đánh giá →</a>
-                <a href="/dashboard.html" class="btn btn-secondary btn-lg">Xem Bảng điều khiển</a>
+            <p class="hp-hero-slogan">
+                "5 phút khảo sát hôm nay — An tâm suốt cả năm"
+            </p>
+            <a href="/survey.html" class="hp-cta-btn hp-cta-primary" id="hero-cta">
+                BẮT ĐẦU KHẢO SÁT NGAY
+            </a>
+            <p class="hp-hero-social-proof">
+                ⏱️ Hơn <strong class="count-up" data-target="2847">0</strong> hộ gia đình và cơ sở đã kiểm tra an toàn trong tuần này
+            </p>
+        </div>
+    </section>
+
+    <!-- ==================== STATS STRIP ==================== -->
+    <section class="hp-stats" id="stats">
+        <div class="container">
+            <div class="hp-stats-grid">
+                <div class="hp-stat-item fade-in-up">
+                    <div class="hp-stat-number count-up" data-target="14689">0</div>
+                    <div class="hp-stat-label">Vụ cháy toàn quốc</div>
+                    <div class="hp-stat-sub">(2021-2025)</div>
+                </div>
+                <div class="hp-stat-item fade-in-up" data-delay="200">
+                    <div class="hp-stat-number count-up" data-target="531">0</div>
+                    <div class="hp-stat-label">Người tử vong</div>
+                    <div class="hp-stat-sub">(Cùng 512 người bị thương)</div>
+                </div>
+                <div class="hp-stat-item fade-in-up" data-delay="400">
+                    <div class="hp-stat-number"><span class="count-up" data-target="3330">0</span> tỷ</div>
+                    <div class="hp-stat-label">Thiệt hại tài sản</div>
+                    <div class="hp-stat-sub">(Ước tính tổng)</div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Categories Section -->
-    <section class="categories-section">
+    <!-- ==================== WHY SECTION - 5 LÝ DO ==================== -->
+    <section class="hp-why" id="why">
         <div class="container">
             <div class="section-header">
-                <h2>6 Lĩnh vực Đánh giá Quan trọng</h2>
-                <p class="subtitle">Hệ thống đánh giá toàn diện của chúng tôi xem xét 30 yếu tố an toàn then chốt trong
-                    các lĩnh vực thiết yếu này</p>
+                <h2 class="hp-section-title">TẠI SAO BẠN NÊN KIỂM TRA <span class="text-red">NGAY HÔM NAY?</span></h2>
+                <p class="hp-section-subtitle">Nguy hiểm nhất không phải cái bạn không biết — mà là cái bạn đã quen thấy đến mức không thấy nữa</p>
             </div>
-            <div class="cat-grid">
-                <div class="cat-card">
-                    <div class="ci">🔥</div>
-                    <div>
-                        <h4>Vật liệu Dễ cháy/Nổ</h4>
-                        <p>Đánh giá việc lưu trữ, xử lý và kiểm soát các vật liệu nguy hiểm</p>
-                    </div>
-                </div>
-                <div class="cat-card">
-                    <div class="ci">🌡️</div>
-                    <div>
-                        <h4>Điều kiện Môi trường</h4>
-                        <p>Đánh giá nhiệt độ, độ ẩm, thông gió và chất lượng không khí</p>
-                    </div>
-                </div>
-                <div class="cat-card">
-                    <div class="ci">⚡</div>
-                    <div>
-                        <h4>Thiết bị Điện & Nguồn gây cháy</h4>
-                        <p>Phân tích hệ thống điện, nối đất và phòng ngừa đánh lửa</p>
-                    </div>
-                </div>
-                <div class="cat-card">
-                    <div class="ci">⚠️</div>
-                    <div>
-                        <h4>Quy trình & Hoạt động</h4>
-                        <p>Xem xét SOP, phân tích mối nguy và hệ thống khẩn cấp</p>
-                    </div>
-                </div>
-                <div class="cat-card">
-                    <div class="ci">🛡️</div>
-                    <div>
-                        <h4>Biện pháp An toàn & Phòng ngừa</h4>
-                        <p>Kiểm tra thiết bị phát hiện, chữa cháy và bảo hộ</p>
-                    </div>
-                </div>
-                <div class="cat-card">
-                    <div class="ci">👥</div>
-                    <div>
-                        <h4>Quản lý & Đào tạo</h4>
-                        <p>Đánh giá chương trình đào tạo, diễn tập và văn hóa an toàn</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Features Section -->
-    <section class="features-section">
-        <div class="container">
-            <h2 style="font-size: 2.2rem; margin-bottom: 12px;">Tại sao nên sử dụng Hệ thống của chúng tôi?</h2>
-            <p class="subtitle" style="margin-bottom: 40px;">Công cụ đánh giá được thiết kế khoa học giúp bạn xác định
-                và giảm thiểu rủi ro cháy nổ trước khi chúng trở thành sự cố.</p>
-            <ul class="feature-list">
-                <li><span class="check">✅</span> Xác định các mối nguy cháy nổ nghiêm trọng</li>
-                <li><span class="check">✅</span> Nhận các khuyến cáo an toàn theo mức độ ưu tiên</li>
-                <li><span class="check">✅</span> Theo dõi tiến độ giảm thiểu rủi ro theo thời gian</li>
-                <li><span class="check">✅</span> Đảm bảo tuân thủ các quy định pháp luật</li>
-                <li><span class="check">✅</span> Bảo vệ nhân sự và tài sản</li>
-                <li><span class="check">✅</span> Tạo báo cáo an toàn toàn diện</li>
-            </ul>
-        </div>
-    </section>
+            <div class="hp-why-grid">
+                <!-- Lý do 1 -->
+                <div class="hp-why-card fade-in-up" id="reason-1">
+                    <div class="hp-why-icon">🔥</div>
+                    <h3 class="hp-why-title">HƠN 14.600 VỤ CHÁY VÀ HÀNG TRĂM SINH MẠNG BỊ ĐE DỌA</h3>
+                    <div class="hp-why-stats">
+                        <div class="hp-mini-stat">
+                            <strong>14.689</strong> vụ cháy trên toàn quốc (2021-2025)
+                        </div>
+                        <div class="hp-mini-stat">
+                            <strong>531 người chết</strong> và 512 người bị thương
+                        </div>
+                        <div class="hp-mini-stat">
+                            Hơn <strong>3.330,7 tỉ</strong> đồng thiệt hại vật chất
+                        </div>
+                    </div>
+                    <div class="hp-why-story">
+                        <p>💔 <em>"Gia đình anh Minh (Từ Sơn) đã mất trắng căn nhà 3 tầng chỉ vì một ổ cắm quá tải không được phát hiện kịp thời. Anh nói: 'Tôi chưa bao giờ nghĩ mình lại gặp họa. Giá như có ai đó nhắc nhở tôi sớm hơn…'"</em></p>
+                    </div>
+                    <p class="hp-why-cta-text">✅ Bạn không muốn trở thành câu chuyện tiếp theo.</p>
+                </div>
 
-    <!-- Risk Classification -->
-    <section class="section">
-        <div class="container">
-            <div class="risk-section fade-in">
-                <h3 style="font-size: 1.5rem; margin-bottom: 28px;">Phân loại Mức độ Nguy cơ</h3>
-                <div class="risk-item">
-                    <div class="risk-bar" style="background: var(--accent-green);"></div>
-                    <div>
-                        <h4>Nguy cơ Thấp (76-100)</h4>
-                        <p>Các biện pháp an toàn tuyệt vời đã được áp dụng</p>
+                <!-- Lý do 2 -->
+                <div class="hp-why-card fade-in-up" id="reason-2">
+                    <div class="hp-why-icon">🔍</div>
+                    <h3 class="hp-why-title">NGUY CƠ Ở NGAY TRƯỚC MẮT — NHƯNG BẠN KHÔNG NHÌN THẤY</h3>
+                    <p class="hp-why-intro"><strong>95% gia đình</strong> nghĩ nhà mình an toàn… cho đến khi kiểm tra mới phát hiện:</p>
+                    <ul class="hp-why-list">
+                        <li>Dây điện cũ, lão hóa bị chuột gặm</li>
+                        <li>Aptomat không phù hợp công suất</li>
+                        <li>Ổ cắm quá tải dùng liên tục nhiều năm</li>
+                        <li>Không có bình chữa cháy hoặc đã quá hạn</li>
+                        <li>Lối thoát hiểm bị chặn đứng bởi đồ đạc</li>
+                    </ul>
+                    <div class="hp-why-warning">
+                        ⚠️ Hầu hết các vụ cháy đều có dấu hiệu cảnh báo trước từ <strong>3-6 tháng</strong>, nhưng không ai chú ý.
                     </div>
+                    <p class="hp-why-cta-text">✅ Hệ thống của chúng tôi sẽ phát hiện những "bom hẹn giờ" này cho bạn.</p>
                 </div>
-                <div class="risk-item">
-                    <div class="risk-bar" style="background: var(--accent-yellow);"></div>
-                    <div>
-                        <h4>Nguy cơ Trung bình (51-75)</h4>
-                        <p>Tốt, nhưng cần cải thiện thêm</p>
-                    </div>
+
+                <!-- Lý do 3 -->
+                <div class="hp-why-card fade-in-up" id="reason-3">
+                    <div class="hp-why-icon">🤖</div>
+                    <h3 class="hp-why-title">MIỄN PHÍ — NHANH — CHÍNH XÁC NHƯ CHUYÊN GIA</h3>
+                    <p class="hp-why-intro">Công nghệ AI học từ hơn <strong>14.000 vụ cháy thực tế</strong></p>
+                    <ul class="hp-why-list hp-why-list-check">
+                        <li>Phân tích hơn 60 yếu tố nguy cơ (mà mắt thường không thể thấy)</li>
+                        <li>Đưa ra đánh giá chỉ sau 5 phút trả lời</li>
+                        <li>Cảnh báo mức độ nguy hiểm bằng màu sắc trực quan</li>
+                        <li>Đề xuất giải pháp khắc phục cụ thể, dễ thực hiện ngay</li>
+                    </ul>
+                    <div class="hp-free-badge">HOÀN TOÀN MIỄN PHÍ</div>
+                    <p class="hp-why-cta-text">✅ Bạn được "tư vấn miễn phí bởi chuyên gia AI 24/7"</p>
                 </div>
-                <div class="risk-item">
-                    <div class="risk-bar" style="background: var(--accent-orange);"></div>
-                    <div>
-                        <h4>Nguy cơ Cao (26-50)</h4>
-                        <p>Đã xác định các mối nguy đáng kể</p>
-                    </div>
+
+                <!-- Lý do 4 - So sánh -->
+                <div class="hp-why-card fade-in-up" id="reason-4">
+                    <div class="hp-why-icon">📊</div>
+                    <h3 class="hp-why-title">SO SÁNH ĐỂ THẤY SỰ THAY ĐỔI</h3>
+                    <p class="hp-why-intro">Làm khảo sát <strong>nhiều lần</strong> để theo dõi tình trạng an toàn PCCC tại cơ sở của bạn theo thời gian:</p>
+                    <ul class="hp-why-list hp-why-list-check">
+                        <li>So sánh kết quả giữa các lần đánh giá để biết nguy cơ cháy nổ <strong>tăng lên hay giảm đi</strong></li>
+                        <li>Xác định những hạng mục đã khắc phục thành công và những điểm còn tồn tại</li>
+                        <li>Tạo lịch sử đánh giá an toàn — bằng chứng cho thấy bạn luôn chủ động phòng ngừa</li>
+                        <li>Nhận cảnh báo nếu có yếu tố nguy cơ mới phát sinh</li>
+                    </ul>
+                    <p class="hp-why-cta-text">✅ Đánh giá định kỳ = An toàn bền vững, không để nguy cơ "tích tụ" âm thầm.</p>
                 </div>
-                <div class="risk-item" style="margin-bottom:0;">
-                    <div class="risk-bar" style="background: var(--accent-red);"></div>
-                    <div>
-                        <h4>Nguy cơ Rất cao (0-25)</h4>
-                        <p>Yêu cầu hành động khắc phục ngay lập tức</p>
+
+                <!-- Lý do 5 -->
+                <div class="hp-why-card fade-in-up" id="reason-5">
+                    <div class="hp-why-icon">👨‍👩‍👧‍👦</div>
+                    <h3 class="hp-why-title">BẢO VỆ NGƯỜI THÂN LÀ TRÁCH NHIỆM THIÊNG LIÊNG</h3>
+                    <p class="hp-why-intro">Câu hỏi dành cho bạn:</p>
+                    <ul class="hp-why-list hp-why-list-question">
+                        <li>Nếu đêm nay có cháy, bạn có chắc gia đình biết lối thoát hiểm?</li>
+                        <li>Con bạn có biết cách gọi 114 và thoát ra ngoài an toàn không?</li>
+                        <li>Ông bà, người già ở nhà có thể tự cứu mình khi có sự cố không?</li>
+                    </ul>
+                    <div class="hp-why-warning">
+                        💔 Trong 14.689 vụ cháy toàn quốc, có nhiều nạn nhân là <strong>trẻ em và người già</strong> không kịp thoát thân vì: không biết lối thoát hiểm, cửa sắt bị khóa chặt, không có kỹ năng xử lý ban đầu.
                     </div>
+                    <p class="hp-why-cta-text">✅ Khảo sát này không chỉ bảo vệ tài sản — mà còn bảo vệ sinh mạng những người bạn yêu thương.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section" style="background: var(--bg-secondary);">
+    <!-- ==================== MID CTA ==================== -->
+    <section class="hp-mid-cta">
         <div class="container">
-            <h2>Bạn đã sẵn sàng đánh giá cơ sở của mình?</h2>
-            <p class="subtitle" style="margin: 0 auto 32px;">Bắt đầu đánh giá miễn phí ngay hôm nay và nhận báo cáo chi
-                tiết</p>
-            <a href="/survey.html" class="btn btn-primary btn-lg">🔥 Bắt đầu Đánh giá ngay →</a>
+            <p class="hp-mid-quote">"Khoảng cách giữa <strong>nguy cơ</strong> và <strong>thảm họa</strong> thường chỉ là một hành động nhỏ mà bạn chưa làm"</p>
+            <a href="/survey.html" class="hp-cta-btn hp-cta-primary">BẮT ĐẦU KHẢO SÁT NGAY — MIỄN PHÍ</a>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <!-- ==================== TRUST SECTION ==================== -->
+    <section class="hp-trust" id="trust">
         <div class="container">
-            <p>© 2024 FRAS - Hệ thống Đánh giá Nguy cơ Cháy Nổ. Phiên bản 1.0</p>
+            <div class="section-header">
+                <h2 class="hp-section-title">🛡️ CAM KẾT CỦA <span class="text-red">CHÚNG TÔI</span></h2>
+            </div>
+
+            <div class="hp-trust-grid">
+                <div class="hp-trust-commitments fade-in-up">
+                    <h3>🛡️ 5 CAM KẾT VÀNG</h3>
+                    <div class="hp-commit-list">
+                        <div class="hp-commit-item">
+                            <div class="hp-commit-icon">✅</div>
+                            <div>
+                                <strong>100% Miễn phí</strong>
+                                <p>Không thu bất kỳ khoản phí nào, không quảng cáo sản phẩm</p>
+                            </div>
+                        </div>
+                        <div class="hp-commit-item">
+                            <div class="hp-commit-icon">✅</div>
+                            <div>
+                                <strong>Bảo mật tuyệt đối</strong>
+                                <p>Dữ liệu được xử lý nội bộ (Local AI), không gửi ra bên ngoài</p>
+                            </div>
+                        </div>
+                        <div class="hp-commit-item">
+                            <div class="hp-commit-icon">✅</div>
+                            <div>
+                                <strong>Chính xác khoa học</strong>
+                                <p>Dựa trên hơn 14.000 vụ cháy thực tế và kết quả điều tra, xác minh nguyên nhân vụ cháy</p>
+                            </div>
+                        </div>
+                        <div class="hp-commit-item">
+                            <div class="hp-commit-icon">✅</div>
+                            <div>
+                                <strong>Đơn giản, dễ hiểu</strong>
+                                <p>Không cần kiến thức chuyên môn, mọi người đều làm được</p>
+                            </div>
+                        </div>
+                        <div class="hp-commit-item">
+                            <div class="hp-commit-icon">✅</div>
+                            <div>
+                                <strong>Kết quả ngay lập tức</strong>
+                                <p>Chỉ 5 phút trả lời, nhận ngay báo cáo chi tiết</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hp-trust-recognition fade-in-up" data-delay="200">
+                    <h3>🏆 CÔNG NHẬN</h3>
+                    <div class="hp-recognition-box">
+                        <p>Hệ thống này là <strong>sáng kiến cấp tỉnh năm 2026</strong> của Phòng Cảnh sát PCCC và CNCH, Công an tỉnh Bắc Ninh, được xây dựng nhằm mục tiêu:</p>
+                        <blockquote>
+                            "Ứng dụng AI vào đánh giá nguy cơ cháy, nổ tại cơ sở, phòng ngừa chủ động, phát hiện sớm nguy cơ cháy nổ, bảo vệ tính mạng và tài sản của người dân."
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== QUY TRÌNH 3 BƯỚC ==================== -->
+    <section class="hp-process" id="process">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="hp-section-title">CÁCH THỨC HOẠT ĐỘNG</h2>
+                <p class="hp-section-subtitle">Bạn không cần học thuộc lòng Luật, Nghị định, thông tư để biết mình đang đứng trước một nguy cơ cháy hay không</p>
+            </div>
+
+            <div class="hp-process-timeline">
+                <div class="hp-process-step fade-in-up" id="step-1">
+                    <div class="hp-step-number">1</div>
+                    <div class="hp-step-icon">📝</div>
+                    <h4>KHAI BÁO</h4>
+                    <p>Trả lời 20-25 câu hỏi trắc nghiệm đơn giản về tình trạng an toàn PCCC hiện tại</p>
+                    <div class="hp-step-time">⏱️ 2 phút</div>
+                </div>
+
+                <div class="hp-process-arrow">→</div>
+
+                <div class="hp-process-step fade-in-up" data-delay="200" id="step-2">
+                    <div class="hp-step-number">2</div>
+                    <div class="hp-step-icon">🤖</div>
+                    <h4>AI PHÂN TÍCH</h4>
+                    <p>Hệ thống xử lý tự động bằng AI, đối chiếu với dữ liệu hơn 14.000 vụ cháy thực tế</p>
+                    <div class="hp-step-time">⏱️ 10 giây</div>
+                </div>
+
+                <div class="hp-process-arrow">→</div>
+
+                <div class="hp-process-step fade-in-up" data-delay="400" id="step-3">
+                    <div class="hp-step-number">3</div>
+                    <div class="hp-step-icon">📊</div>
+                    <h4>NHẬN BÁO CÁO</h4>
+                    <p>Xem kết quả mức độ nguy cơ, giải pháp khắc phục cụ thể cho cơ sở của bạn</p>
+                    <div class="hp-step-time">⏱️ 1 phút đọc</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 5 NGUYÊN TẮC VÀNG TRONG PCCC ==================== -->
+    <section class="hp-principles" id="principles">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="hp-section-title">5 NGUYÊN TẮC VÀNG <span class="text-red">TRONG PHÒNG CHÁY CHỮA CHÁY</span></h2>
+                <p class="hp-section-subtitle">Chủ động phòng ngừa, lấy phòng là chính, chuẩn bị sẵn sàng lực lượng và phương tiện tại chỗ để xử lý ngay khi có sự cố</p>
+            </div>
+
+            <div class="hp-principles-grid hp-principles-grid-5">
+                <div class="hp-principle-card fade-in-up" id="principle-1">
+                    <div class="hp-principle-number">1️⃣</div>
+                    <h4>CHỦ ĐỘNG PHÒNG NGỪA LÀ CHÍNH</h4>
+                    <ul class="hp-principle-list">
+                        <li>Loại bỏ nguy cơ cháy: Không để vật liệu dễ cháy gần nguồn nhiệt</li>
+                        <li>An toàn điện: Rút phích cắm khi không sử dụng, không cắm nhiều thiết bị công suất lớn vào một ổ cắm</li>
+                        <li>An toàn khí gas: Khóa gas khi nấu xong, kiểm tra định kỳ dây dẫn và bình gas</li>
+                        <li>Phân loại và cảnh báo khu vực có nguy cơ cháy cao</li>
+                    </ul>
+                </div>
+                <div class="hp-principle-card fade-in-up" data-delay="150" id="principle-2">
+                    <div class="hp-principle-number">2️⃣</div>
+                    <h4>CHUẨN BỊ SẴN SÀNG LỰC LƯỢNG VÀ PHƯƠNG TIỆN TẠI CHỖ</h4>
+                    <ul class="hp-principle-list">
+                        <li>Trang bị thiết bị báo cháy, báo khói và bình chữa cháy tại gia đình/nơi làm việc</li>
+                        <li>Xây dựng phương án thoát hiểm: Nắm rõ lối thoát hiểm, sơ đồ thoát nạn</li>
+                        <li>Thường xuyên tham gia các buổi diễn tập PCCC</li>
+                    </ul>
+                </div>
+                <div class="hp-principle-card fade-in-up" data-delay="300" id="principle-3">
+                    <div class="hp-principle-number">3️⃣</div>
+                    <h4>PHÁT HIỆN VÀ CHỮA CHÁY KỊP THỜI</h4>
+                    <ul class="hp-principle-list">
+                        <li>Bình tĩnh: Không hoảng loạn, hô to báo động</li>
+                        <li>Ngắt điện/gas ngay lập tức khi có cháy (nếu an toàn)</li>
+                        <li>Sử dụng phương tiện tại chỗ để dập tắt đám cháy mới phát sinh</li>
+                        <li>Gọi <strong>114</strong> ngay cho lực lượng chữa cháy chuyên nghiệp</li>
+                    </ul>
+                </div>
+                <div class="hp-principle-card fade-in-up" data-delay="450" id="principle-4">
+                    <div class="hp-principle-number">4️⃣</div>
+                    <h4>ƯU TIÊN AN TOÀN CON NGƯỜI VÀ THOÁT HIỂM</h4>
+                    <ul class="hp-principle-list">
+                        <li><strong>Cứu người trước — Tài sản sau:</strong> Nguyên tắc cốt lõi</li>
+                        <li>Không quay lại: Khi đã thoát ra ngoài, tuyệt đối không quay lại lấy tài sản</li>
+                        <li>Bảo vệ hệ hô hấp: Dùng khăn ướt che mũi, miệng; cúi thấp người khi di chuyển</li>
+                    </ul>
+                </div>
+                <div class="hp-principle-card fade-in-up" data-delay="600" id="principle-5">
+                    <div class="hp-principle-number">5️⃣</div>
+                    <h4>HUY ĐỘNG SỨC MẠNH TỔNG HỢP CỦA TOÀN DÂN</h4>
+                    <ul class="hp-principle-list">
+                        <li>Mọi cá nhân, hộ gia đình và cơ quan đều có trách nhiệm PCCC</li>
+                        <li>Xây dựng văn hóa an toàn, nâng cao nhận thức cá nhân</li>
+                        <li>Tuân thủ nghiêm ngặt các quy định để hạn chế tối đa nguy cơ và thiệt hại do cháy nổ</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TESTIMONIALS ==================== -->
+    <section class="hp-testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="hp-section-title">💬 NGƯỜI DÂN NÓI GÌ VỀ HỆ THỐNG?</h2>
+                <p class="hp-section-subtitle">Thống kê từ phản hồi của người tham gia khảo sát cho thấy, rất nhiều nguy cơ tiềm ẩn đã được loại bỏ, khắc phục sau khi làm bài khảo sát</p>
+            </div>
+
+            <div class="hp-testimonials-grid">
+                <div class="hp-testimonial-card fade-in-up" id="testimonial-1">
+                    <div class="hp-testimonial-avatar">
+                        <div class="hp-avatar-placeholder">L</div>
+                    </div>
+                    <div class="hp-testimonial-content">
+                        <div class="hp-testimonial-stars">⭐⭐⭐⭐⭐</div>
+                        <p class="hp-testimonial-text">"Làm xong mới biết cái ổ cắm ở bếp nhà mình dùng 12 năm rồi chưa thay. Cắm bếp từ, nồi cơm, bình nóng lạnh chung 1 ổ. Hệ thống cảnh báo đỏ lòm, sợ quá gọi thợ thay ngay hôm đó."</p>
+                        <div class="hp-testimonial-author">
+                            <strong>Chị Lan</strong>
+                            <span>Chủ nhà trọ 5 tầng, Từ Sơn</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hp-testimonial-card fade-in-up" data-delay="100" id="testimonial-2">
+                    <div class="hp-testimonial-avatar">
+                        <div class="hp-avatar-placeholder">T</div>
+                    </div>
+                    <div class="hp-testimonial-content">
+                        <div class="hp-testimonial-stars">⭐⭐⭐⭐⭐</div>
+                        <p class="hp-testimonial-text">"Trước giờ cứ nghĩ nhà mình an toàn vì có bình cứu hỏa rồi. Ai ngờ làm khảo sát xong mới biết bình hết hạn 2 năm rồi, lối cầu thang thì chất đầy thùng xốp. Giờ dọn hết rồi, nhẹ cả người."</p>
+                        <div class="hp-testimonial-author">
+                            <strong>Anh Tuấn</strong>
+                            <span>Hộ gia đình, Đình Bảng, Từ Sơn</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hp-testimonial-card fade-in-up" data-delay="200" id="testimonial-3">
+                    <div class="hp-testimonial-avatar">
+                        <div class="hp-avatar-placeholder">H</div>
+                    </div>
+                    <div class="hp-testimonial-content">
+                        <div class="hp-testimonial-stars">⭐⭐⭐⭐⭐</div>
+                        <p class="hp-testimonial-text">"Xưởng mình 200m² mà chỉ có 2 bình chữa cháy, lại để ở góc khuất. Hệ thống chỉ ra luôn, mình bổ sung thêm 4 bình và gắn biển chỉ dẫn. Giờ công nhân ai cũng biết bình cứu hỏa ở đâu."</p>
+                        <div class="hp-testimonial-author">
+                            <strong>Anh Hùng</strong>
+                            <span>Chủ xưởng gỗ, Quế Võ</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hp-testimonial-card fade-in-up" data-delay="300" id="testimonial-4">
+                    <div class="hp-testimonial-avatar">
+                        <div class="hp-avatar-placeholder">M</div>
+                    </div>
+                    <div class="hp-testimonial-content">
+                        <div class="hp-testimonial-stars">⭐⭐⭐⭐</div>
+                        <p class="hp-testimonial-text">"Ban đầu cũng ngại, nghĩ chắc phải trả lời phức tạp lắm. Nhưng toàn câu hỏi dễ hiểu, chọn có/không thôi. 5 phút là xong, ra kết quả luôn. Vợ chồng mình ngồi đọc cùng nhau, bàn được nhiều thứ hay."</p>
+                        <div class="hp-testimonial-author">
+                            <strong>Chị Mai</strong>
+                            <span>Kinh doanh tạp hóa, Yên Phong</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hp-testimonial-card fade-in-up" data-delay="400" id="testimonial-5">
+                    <div class="hp-testimonial-avatar">
+                        <div class="hp-avatar-placeholder">Đ</div>
+                    </div>
+                    <div class="hp-testimonial-content">
+                        <div class="hp-testimonial-stars">⭐⭐⭐⭐⭐</div>
+                        <p class="hp-testimonial-text">"Mình quản lý 3 phòng trọ cho thuê. Làm khảo sát cho từng phòng, phòng nào cũng ra vấn đề khác nhau. Phòng thì thiếu cửa thoát hiểm, phòng thì dây điện đi nổi không có ống gen. Sửa hết rồi, yên tâm hơn nhiều."</p>
+                        <div class="hp-testimonial-author">
+                            <strong>Anh Đức</strong>
+                            <span>Chủ nhà trọ, Tiên Du</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hp-testimonial-card fade-in-up" data-delay="500" id="testimonial-6">
+                    <div class="hp-testimonial-avatar">
+                        <div class="hp-avatar-placeholder">N</div>
+                    </div>
+                    <div class="hp-testimonial-content">
+                        <div class="hp-testimonial-stars">⭐⭐⭐⭐⭐</div>
+                        <p class="hp-testimonial-text">"Ông bà ở nhà cả ngày, mình đi làm xa nên lo lắm. Làm bài khảo sát xong, hệ thống nhắc là phải có đầu báo khói và đèn thoát hiểm. Mình lắp ngay, giờ đi làm đỡ lo hơn hẳn."</p>
+                        <div class="hp-testimonial-author">
+                            <strong>Chị Ngọc</strong>
+                            <span>Nhân viên văn phòng, TP. Bắc Ninh</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FINAL CTA ==================== -->
+    <section class="hp-final-cta" id="final-cta">
+        <div class="container">
+            <div class="hp-final-cta-content">
+                <h2>🔥 CHÁY NỔ KHÔNG BÁO TRƯỚC 🔥</h2>
+                <p class="hp-final-subtitle">Nhưng nguy cơ thì luôn có dấu hiệu cảnh báo.<br>Hãy để AI giúp bạn nhìn thấy chúng.</p>
+                <p class="hp-final-slogan">"Bộ khảo sát này không phán xét bạn. Nó đứng về phía bạn — để giúp bạn nhìn thấy những gì cần thấy trước khi người khác phải thay bạn xử lý hậu quả."</p>
+                <a href="/survey.html" class="hp-cta-btn hp-cta-white" id="final-cta-btn">
+                    BẮT ĐẦU ĐÁNH GIÁ AN TOÀN NGAY — 100% MIỄN PHÍ
+                </a>
+                <p class="hp-final-tagline">🛡️ Hành động hôm nay — An tâm mãi mãi 🛡️</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="hp-footer">
+        <div class="container">
+            <div class="hp-footer-content">
+                <div class="hp-footer-brand">
+                    <div class="hp-footer-logo">🔥 HỆ THỐNG KHẢO SÁT AN TOÀN PCCC BẮC NINH</div>
+                </div>
+                <div class="hp-footer-info">
+                    <p>📍 Phòng Cảnh sát PCCC và CNCH — Công an tỉnh Bắc Ninh</p>
+                    <p>☎️ Hotline: <strong>114</strong> (24/7)</p>
+                    <p>✉️ Email: pccc@bacninh.gov.vn</p>
+                </div>
+                <div class="hp-footer-copy">
+                    <p>© 2026 Công an tỉnh Bắc Ninh. Bảo lưu mọi quyền.</p>
+                    <p class="hp-footer-dev">Phát triển bởi Đại úy Đỗ Thành Long — Cán bộ Phòng Cảnh sát PCCC và CNCH, Công an tỉnh Bắc Ninh</p>
+                </div>
+            </div>
         </div>
     </footer>
 
+    <!-- ==================== STICKY BOTTOM CTA (Mobile) ==================== -->
+    <div class="hp-sticky-cta" id="sticky-cta">
+        <a href="/survey.html" class="hp-cta-btn hp-cta-primary hp-cta-sticky">
+            🔥 BẮT ĐẦU KHẢO SÁT NGAY
+        </a>
+    </div>
+
     <script src="/js/api.js"></script>
+    <script src="/js/homepage.js"></script>
     <script>
         onReady(() => { setupNavbar(); });
-        // Register Service Worker for PWA
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('/sw.js').catch(() => { });
         }

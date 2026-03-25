@@ -53,7 +53,7 @@ MỨC NGUY CƠ TỔNG: {assessment_data.get('risk_level', 'N/A')}
     legal_refs = "\n".join(f"  - {r}" for r in CURRENT_LEGAL_REFERENCES)
     
     prompt = f"""Bạn là chuyên gia Phòng cháy chữa cháy và Cứu nạn cứu hộ (PCCC&CNCH) tại Việt Nam với 20 năm kinh nghiệm.
-Hãy phân tích kết quả đánh giá nguy cơ cháy nổ sau đây và đưa ra báo cáo chuyên sâu bằng tiếng Việt.
+Hãy phân tích kết quả đánh giá nguy cơ cháy nổ sau đây và đưa ra báo cáo chuyên sâu, CHI TIẾT, CỤ THỂ bằng tiếng Việt.
 
 {facility_info}
 
@@ -66,9 +66,9 @@ Hãy phân tích kết quả đánh giá nguy cơ cháy nổ sau đây và đưa
 CĂN CỨ PHÁP LÝ HIỆN HÀNH (2024-2025):
 {legal_refs}
 
-YÊU CẦU PHÂN TÍCH:
+YÊU CẦU PHÂN TÍCH (viết CHI TIẾT, không viết chung chung):
 
-1. ĐÁNH GIÁ TỔNG QUAN: Nhận xét tổng thể về tình trạng an toàn cháy nổ của cơ sở (2-3 câu).
+1. ĐÁNH GIÁ TỔNG QUAN: Nhận xét tổng thể về tình trạng an toàn cháy nổ (3-5 câu), bao gồm đánh giá mức độ tuân thủ pháp luật hiện hành.
 
 2. ĐIỂM MẠNH (Phân tích chi tiết): 
    - Dựa vào các nhóm có tỷ lệ nguy cơ THẤP (dưới 25%), giải thích CỤ THỂ tại sao cơ sở làm tốt ở lĩnh vực đó.
@@ -82,38 +82,63 @@ YÊU CẦU PHÂN TÍCH:
    - Đối với nhóm "Sự cố hệ thống, thiết bị điện": viện dẫn QCVN 25:2025/BCT và QCVN 25:2025/BKHCN.
    - Liệt kê 3-5 điểm yếu nghiêm trọng.
 
-4. KHUYẾN CÁO CHI TIẾT: Đây là phần QUAN TRỌNG NHẤT. Đưa ra 5-8 khuyến cáo CỤ THỂ, CHI TIẾT, bao gồm:
-   - Hành động cụ thể (ví dụ: "Thay dây dẫn điện cũ đoạn từ tủ điện đến khu vực bếp")
-   - Kiểm tra cụ thể (ví dụ: "Kiểm tra công tắc điện có tiếng kêu tạch tạch không", "Sờ cục sạc xem có nóng bất thường không")
-   - Biện pháp khắc phục rõ ràng
-   - Thời hạn thực hiện (Ngay lập tức / 7 ngày / 30 ngày / 90 ngày)
+4. KHUYẾN CÁO CHI TIẾT: Đây là phần QUAN TRỌNG NHẤT. Đưa ra 10-15 khuyến cáo CỤ THỂ, CHI TIẾT, bao gồm:
+   - Hành động cụ thể đến từng bước (ví dụ: "Bước 1: Ngắt nguồn điện tổng. Bước 2: Kiểm tra từng đoạn dây...")
+   - Kiểm tra cụ thể (ví dụ: "Sờ ổ cắm khi đang sử dụng — nếu nóng thì cần thay", "Ngửi xem có mùi khét ở tủ điện không")
+   - Biện pháp khắc phục chi tiết — liệt kê vật tư, thiết bị cần mua
+   - Ước tính chi phí (VD: "~500.000-2.000.000 VNĐ cho bình chữa cháy ABC 4kg")
+   - Người chịu trách nhiệm (VD: "Chủ cơ sở", "Đơn vị thi công điện có chứng chỉ", "Cơ quan PCCC địa phương")
+   - Thời hạn thực hiện (Ngay lập tức / 7 ngày / 30 ngày / 60 ngày / 90 ngày)
    - Mức ưu tiên (urgent/high/medium/low)
-   - Căn cứ pháp lý (viện dẫn cụ thể điều khoản liên quan từ danh sách pháp lý ở trên)
-   - Đối với lĩnh vực điện: áp dụng QCVN 25:2025/BCT về kiểm tra an toàn điện, tiếp đất, chống sét, cách điện; và QCVN 25:2025/BKHCN về thiết bị điện gia đình đúng tiêu chuẩn.
+   - Căn cứ pháp lý CỤ THỂ đến từng điều khoản (VD: "Điều 15, Luật PCCC 55/2024")
+   - Đối với lĩnh vực điện: áp dụng QCVN 25:2025/BCT và QCVN 25:2025/BKHCN cụ thể
 
-5. KẾ HOẠCH CẢI THIỆN: Lộ trình cải thiện 30-60-90 ngày
+5. DANH MỤC KIỂM TRA HÀNG NGÀY: Liệt kê 5-8 mục kiểm tra an toàn mà cơ sở cần thực hiện hàng ngày/hàng tuần.
 
-6. THAM CHIẾU PHÁP LÝ: Sử dụng ĐÚNG các quy định pháp luật hiện hành đã liệt kê ở trên. KHÔNG sử dụng các văn bản đã hết hiệu lực (Luật PCCC 2001, TCVN 3890:2009).
+6. KẾ HOẠCH CẢI THIỆN CHI TIẾT: Đây là phần RẤT QUAN TRỌNG. Lập lộ trình 30-60-90 ngày. Mỗi giai đoạn gồm 7-10 hành động CỤ THỂ. Mỗi hành động phải có:
+   - Tên công việc ngắn gọn (task)
+   - Mô tả chi tiết các bước thực hiện (detail) — viết DÀI, 2-4 câu cho mỗi hành động
+   - Người/đơn vị chịu trách nhiệm (responsible)
+   - Chi phí ước tính bằng VNĐ (cost)
+   - Tiêu chí đo lường hoàn thành (criteria)
+   - Căn cứ pháp lý nếu có (legal_basis)
+   30 ngày đầu: tập trung khắc phục khẩn cấp — ngắt nguồn nguy hiểm, kiểm tra hệ thống điện, mua bình chữa cháy, dọn lối thoát
+   30-60 ngày: nâng cấp — thay thế thiết bị, huấn luyện PCCC, lắp đặt hệ thống cảnh báo, hoàn thiện hồ sơ
+   60-90 ngày: hoàn thiện — đánh giá lại, xây dựng quy trình dài hạn, đào tạo chuyên sâu, kiểm định bên thứ ba
+
+7. THAM CHIẾU PHÁP LÝ: Sử dụng ĐÚNG các quy định pháp luật hiện hành đã liệt kê ở trên. KHÔNG sử dụng các văn bản đã hết hiệu lực.
 
 Hãy trả về kết quả dưới dạng JSON với cấu trúc:
 {{
-    "overall_assessment": "string - đánh giá tổng quan 2-3 câu",
+    "overall_assessment": "string - đánh giá tổng quan 3-5 câu, có viện dẫn pháp luật",
     "strengths": ["string - điểm mạnh chi tiết, có so sánh với quy chuẩn"],
     "critical_weaknesses": ["string - điểm yếu nghiêm trọng với hậu quả và viện dẫn pháp lý"],
     "detailed_recommendations": [
         {{
             "title": "string - tiêu đề ngắn gọn",
-            "description": "string - mô tả chi tiết hành động, bước kiểm tra cụ thể",
+            "description": "string - mô tả chi tiết từng bước hành động, bước kiểm tra cụ thể, vật tư cần thiết",
             "priority": "urgent|high|medium|low",
             "deadline": "string - thời hạn (VD: Ngay lập tức, 7 ngày, 30 ngày)",
             "category": "string - nhóm liên quan",
-            "legal_basis": "string - căn cứ pháp lý cụ thể"
+            "legal_basis": "string - căn cứ pháp lý cụ thể đến điều khoản",
+            "estimated_cost": "string - ước tính chi phí (VD: 500.000-1.000.000 VNĐ)",
+            "responsible_party": "string - người/đơn vị chịu trách nhiệm"
         }}
     ],
+    "daily_checklist": ["string - mục kiểm tra hàng ngày/hàng tuần"],
     "improvement_plan": {{
-        "30_days": ["string"],
-        "60_days": ["string"],
-        "90_days": ["string"]
+        "30_days": [
+            {{
+                "task": "string - tên công việc",
+                "detail": "string - mô tả chi tiết 2-4 câu, các bước cụ thể cần làm",
+                "responsible": "string - người/đơn vị chịu trách nhiệm",
+                "cost": "string - chi phí ước tính VNĐ",
+                "criteria": "string - tiêu chí hoàn thành",
+                "legal_basis": "string - căn cứ pháp lý"
+            }}
+        ],
+        "60_days": ["cùng cấu trúc object như 30_days"],
+        "90_days": ["cùng cấu trúc object như 30_days"]
     }},
     "legal_references": ["string - chỉ pháp luật hiện hành 2024-2025"],
     "risk_summary": "string - tóm tắt ngắn 1 câu"
@@ -192,22 +217,23 @@ def build_fallback_analysis(assessment_data: dict) -> dict:
         "priority_actions": priority_actions,
         "improvement_plan": {
             "30_days": [
-                "Khắc phục ngay các nguy cơ cháy nổ nghiêm trọng nhất",
-                "Kiểm tra và bảo trì hệ thống phòng cháy hiện có theo Nghị định 105/2025/NĐ-CP",
-                "Kiểm tra hệ thống điện theo QCVN 25:2025/BCT",
-                "Tập huấn cơ bản về PCCC cho toàn bộ nhân viên"
+                {"task": "Khắc phục ngay các nguy cơ cháy nổ nghiêm trọng nhất", "detail": "Rà soát toàn bộ cơ sở, xác định các điểm nguy cơ cao nhất (dây điện cũ, ổ cắm nóng, tủ điện bị che khuất, lối thoát bị chặn). Ngắt nguồn điện các mạch có dấu hiệu bất thường. Dọn dẹp vật liệu dễ cháy quanh tủ điện.", "responsible": "Chủ cơ sở + Quản lý an toàn", "cost": "0 - 500.000 VNĐ", "criteria": "100% điểm nguy cơ cao được xử lý hoặc cách ly", "legal_basis": "Luật PCCC 55/2024"},
+                {"task": "Kiểm tra hệ thống điện toàn bộ", "detail": "Mời đơn vị có chứng chỉ kiểm tra toàn bộ hệ thống dây dẫn, aptomat, RCCB, nối đất. Đo điện trở cách điện, kiểm tra tải từng mạch. Lập biên bản kiểm tra chi tiết.", "responsible": "Đơn vị thi công điện có chứng chỉ", "cost": "2.000.000 - 5.000.000 VNĐ", "criteria": "Có biên bản kiểm tra đạt chuẩn QCVN 25:2025/BCT", "legal_basis": "QCVN 25:2025/BCT"},
+                {"task": "Bổ sung bình chữa cháy đúng quy chuẩn", "detail": "Trang bị bình chữa cháy ABC 4kg: tối thiểu 1 bình/50m² sàn. Treo ở độ cao 0,8-1,5m, nơi dễ tiếp cận, có biển chỉ dẫn. Kiểm tra các bình hiện có còn hạn sử dụng.", "responsible": "Chủ cơ sở", "cost": "500.000 - 2.000.000 VNĐ/bình", "criteria": "Đủ số lượng bình theo quy định, 100% còn hạn", "legal_basis": "QCVN 10:2025/BCA"},
+                {"task": "Thông thoáng lối thoát nạn", "detail": "Dọn sạch toàn bộ hàng hóa, vật cản trên lối thoát. Mở khóa cửa thoát nạn trong giờ làm việc. Kiểm tra đèn EXIT và đèn chiếu sáng sự cố hoạt động tốt.", "responsible": "Quản lý cơ sở", "cost": "0 - 1.000.000 VNĐ", "criteria": "Lối thoát rộng ≥ 1,2m, không bị cản trở", "legal_basis": "QCVN 06:2022/BXD (Sửa đổi 1:2023)"},
+                {"task": "Tổ chức tập huấn PCCC cơ bản cho nhân viên", "detail": "Hướng dẫn 100% nhân viên cách sử dụng bình chữa cháy, quy trình báo cháy (gọi 114), phương án thoát nạn. Thực hành sử dụng bình chữa cháy thực tế.", "responsible": "Chủ cơ sở + Cơ quan PCCC địa phương", "cost": "1.000.000 - 3.000.000 VNĐ", "criteria": "100% nhân viên được huấn luyện, có biên bản", "legal_basis": "Luật PCCC 55/2024"}
             ],
             "60_days": [
-                "Nâng cấp trang thiết bị PCCC theo Nghị định 105/2025/NĐ-CP",
-                "Thiết lập quy trình ứng phó khẩn cấp theo Luật PCCC 55/2024",
-                "Diễn tập phương án chữa cháy và thoát nạn",
-                "Thay thế thiết bị điện không đạt chuẩn QCVN 25:2025/BKHCN"
+                {"task": "Nâng cấp trang thiết bị PCCC", "detail": "Lắp đặt hệ thống báo cháy tự động (đầu dò khói, đầu dò nhiệt) tại các khu vực nguy cơ cao. Bổ sung hệ thống chữa cháy vách tường nếu cơ sở trên 300m². Kiểm tra nguồn nước chữa cháy.", "responsible": "Đơn vị PCCC chuyên nghiệp", "cost": "10.000.000 - 50.000.000 VNĐ", "criteria": "Hệ thống báo cháy hoạt động, có biên bản nghiệm thu", "legal_basis": "Nghị định 105/2025/NĐ-CP"},
+                {"task": "Thiết lập quy trình ứng phó khẩn cấp", "detail": "Xây dựng phương án chữa cháy và cứu nạn cứu hộ bằng văn bản. Phân công nhiệm vụ cụ thể cho từng người khi có cháy. Niêm yết sơ đồ thoát nạn tại các tầng.", "responsible": "Chủ cơ sở + Tư vấn PCCC", "cost": "2.000.000 - 5.000.000 VNĐ", "criteria": "Phương án được PCCC địa phương phê duyệt", "legal_basis": "Luật PCCC 55/2024"},
+                {"task": "Thay thế thiết bị điện không đạt chuẩn", "detail": "Thay toàn bộ dây điện cũ trên 15 năm. Lắp aptomat đúng dòng định mức cho từng mạch. Lắp RCCB 30mA cho khu vực ẩm ướt. Sử dụng thiết bị điện có chứng nhận hợp quy (CR).", "responsible": "Đơn vị thi công điện có chứng chỉ", "cost": "5.000.000 - 30.000.000 VNĐ", "criteria": "100% thiết bị đạt chuẩn QCVN, có biên bản", "legal_basis": "QCVN 25:2025/BKHCN"},
+                {"task": "Diễn tập phương án chữa cháy", "detail": "Tổ chức diễn tập chữa cháy và thoát nạn thực tế với sự tham gia của toàn bộ nhân viên. Mời lực lượng PCCC địa phương hướng dẫn. Ghi hình và đánh giá hiệu quả diễn tập.", "responsible": "Đội PCCC cơ sở + PCCC địa phương", "cost": "3.000.000 - 8.000.000 VNĐ", "criteria": "Diễn tập thành công, thời gian thoát nạn < 3 phút", "legal_basis": "Nghị định 105/2025/NĐ-CP"}
             ],
             "90_days": [
-                "Đánh giá lại toàn diện sau khi khắc phục",
-                "Xây dựng kế hoạch duy trì an toàn dài hạn",
-                "Đào tạo chuyên sâu cho đội PCCC cơ sở",
-                "Hoàn thiện hồ sơ PCCC theo quy định mới"
+                {"task": "Đánh giá lại toàn diện sau khắc phục", "detail": "Thực hiện khảo sát đánh giá nguy cơ cháy nổ lần 2 bằng hệ thống FRAS. So sánh kết quả trước và sau khắc phục. Xác định các vấn đề còn tồn đọng.", "responsible": "Chủ cơ sở + Quản lý an toàn", "cost": "0 VNĐ (sử dụng FRAS)", "criteria": "Tỷ lệ nguy cơ giảm ít nhất 30% so với lần đầu"},
+                {"task": "Xây dựng kế hoạch duy trì an toàn dài hạn", "detail": "Lập lịch kiểm tra định kỳ hàng tháng/quý cho hệ thống điện, thiết bị PCCC. Phân công người chịu trách nhiệm. Xây dựng danh mục kiểm tra (checklist) hàng ngày.", "responsible": "Quản lý an toàn cơ sở", "cost": "0 - 1.000.000 VNĐ", "criteria": "Có kế hoạch văn bản, lịch kiểm tra 12 tháng"},
+                {"task": "Đào tạo chuyên sâu cho đội PCCC cơ sở", "detail": "Cử đội PCCC cơ sở tham gia khóa huấn luyện nghiệp vụ PCCC nâng cao. Nội dung: kỹ thuật chữa cháy nâng cao, sơ cấp cứu, sử dụng thiết bị chữa cháy chuyên dụng.", "responsible": "Trường PCCC / Trung tâm huấn luyện", "cost": "5.000.000 - 15.000.000 VNĐ", "criteria": "Đội PCCC có chứng chỉ huấn luyện", "legal_basis": "Luật PCCC 55/2024"},
+                {"task": "Hoàn thiện hồ sơ PCCC theo quy định mới", "detail": "Lập hồ sơ quản lý PCCC đầy đủ: phương án chữa cháy, biên bản kiểm tra, sổ theo dõi thiết bị, danh sách đội PCCC. Nộp hồ sơ cho cơ quan PCCC địa phương nếu thuộc diện quản lý.", "responsible": "Chủ cơ sở + Tư vấn pháp lý", "cost": "1.000.000 - 3.000.000 VNĐ", "criteria": "Hồ sơ đầy đủ, được PCCC nghiệm thu", "legal_basis": "Nghị định 105/2025/NĐ-CP"}
             ]
         },
         "legal_references": CURRENT_LEGAL_REFERENCES,
