@@ -472,7 +472,7 @@ document.addEventListener('click', function (e) {
 // ========== Auto-load Global AI Chatbot ==========
 (function() {
     const s = document.createElement('script');
-    s.src = '/js/chatbot.js';
+    s.src = '/js/chatbot.js?v=' + Date.now();
     s.defer = true;
     document.body ? document.body.appendChild(s) : document.addEventListener('DOMContentLoaded', () => document.body.appendChild(s));
 })();

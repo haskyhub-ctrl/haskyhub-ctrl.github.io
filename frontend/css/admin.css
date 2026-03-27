@@ -64,9 +64,27 @@
 }
 
 .sidebar-nav li a .nav-icon {
-    font-size: 1.1rem;
-    width: 24px;
-    text-align: center;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--text-secondary);
+}
+.sidebar-nav li a .nav-icon svg {
+    width: 18px;
+    height: 18px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: stroke var(--transition-fast);
+}
+.sidebar-nav li a:hover .nav-icon,
+.sidebar-nav li a.active .nav-icon {
+    color: var(--accent-orange);
 }
 
 /* Admin Content */
@@ -285,7 +303,7 @@
 .modal-content {
     background: var(--bg-secondary);
     border: 1px solid var(--border-color);
-    border-radius: var(--radius-lg, 12px);
+    border-radius: 0;
     width: 90%;
     max-width: 560px;
     max-height: 85vh;
@@ -319,7 +337,7 @@
     font-size: 1.5rem;
     cursor: pointer;
     padding: 4px 8px;
-    border-radius: var(--radius-sm, 6px);
+    border-radius: 0;
     transition: all 0.2s;
 }
 
@@ -343,7 +361,7 @@
 /* ======================== DROPZONE ======================== */
 .dropzone {
     border: 2px dashed var(--border-color);
-    border-radius: var(--radius-md, 8px);
+    border-radius: 0;
     padding: 40px 20px;
     text-align: center;
     cursor: pointer;
@@ -382,7 +400,7 @@
     margin-top: 16px;
     padding: 10px 16px;
     background: rgba(249, 115, 22, 0.1);
-    border-radius: var(--radius-sm, 6px);
+    border-radius: 0;
     border: 1px solid rgba(249, 115, 22, 0.3);
 }
 
@@ -420,7 +438,7 @@
 .import-stat {
     text-align: center;
     padding: 16px 12px;
-    border-radius: var(--radius-sm, 6px);
+    border-radius: 0;
     border: 1px solid var(--border-color);
 }
 
@@ -456,7 +474,7 @@
 .import-errors {
     background: rgba(239, 68, 68, 0.08);
     border: 1px solid rgba(239, 68, 68, 0.2);
-    border-radius: var(--radius-sm, 6px);
+    border-radius: 0;
     padding: 14px;
     margin-top: 10px;
     font-size: 0.82rem;

@@ -155,8 +155,8 @@ FIRE_SAFETY_TIPS = {
 import os
 
 # Maximum chars per individual document and total additional docs
-MAX_CHARS_PER_DOC = 15000
-MAX_TOTAL_ADDITIONAL = 80000
+MAX_CHARS_PER_DOC = 60000
+MAX_TOTAL_ADDITIONAL = 400000
 
 
 def _truncate(text: str, max_chars: int) -> str:
@@ -191,13 +191,36 @@ def _read_docx(filepath: str) -> str:
 
 # Cache so we don't re-read files on every chat request
 _legal_context_cache: str | None = None
+_docs_mtime_cache: float = 0.0
+
+
+def _get_docs_mtime() -> float:
+    """Return the most recent mtime across all files in docs/ folder."""
+    docs_dir = os.path.join(os.path.dirname(__file__), 'docs')
+    if not os.path.isdir(docs_dir):
+        return 0.0
+    try:
+        mtimes = [
+            os.path.getmtime(os.path.join(docs_dir, f))
+            for f in os.listdir(docs_dir)
+        ]
+        return max(mtimes) if mtimes else 0.0
+    except Exception:
+        return 0.0
 
 
 def get_legal_context_for_chat() -> str:
-    """Return the full legal knowledge context for injection into AI prompts."""
-    global _legal_context_cache
-    if _legal_context_cache is not None:
+    """Return the full legal knowledge context for injection into AI prompts.
+    Auto-reloads when docs/ folder content changes (file added/modified)."""
+    global _legal_context_cache, _docs_mtime_cache
+
+    current_mtime = _get_docs_mtime()
+    if _legal_context_cache is not None and current_mtime == _docs_mtime_cache:
         return _legal_context_cache
+
+    if _legal_context_cache is not None and current_mtime != _docs_mtime_cache:
+        print(f"🔄 [Legal KB] Phát hiện thay đổi trong docs/, nạp lại...")
+        _legal_context_cache = None
 
     context = LEGAL_DOCUMENTS
 
@@ -256,4 +279,5 @@ def get_legal_context_for_chat() -> str:
     print(f"📚 [Legal KB] Tổng kết: {loaded_count} tài liệu nạp thành công, tổng {total_len:,} ký tự")
 
     _legal_context_cache = context
+    _docs_mtime_cache = current_mtime
     return context

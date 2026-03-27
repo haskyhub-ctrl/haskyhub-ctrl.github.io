@@ -28,7 +28,7 @@
         .edit-modal {
             background: var(--card-bg, #1e293b);
             border: 1px solid var(--border-color);
-            border-radius: 16px;
+            border-radius: 0;
             width: 90%;
             max-width: 750px;
             max-height: 90vh;
@@ -59,7 +59,7 @@
             background: var(--glass-bg);
             color: var(--text-primary);
             border: 1px solid var(--border-color);
-            border-radius: 8px;
+            border-radius: 0;
             font-size: 0.95rem;
         }
 
@@ -95,7 +95,7 @@
             border: none;
             background: rgba(239, 68, 68, 0.15);
             color: #ef4444;
-            border-radius: 6px;
+            border-radius: 0;
             cursor: pointer;
             font-size: 0.9rem;
             flex-shrink: 0;
@@ -117,7 +117,7 @@
 
         .q-type-badge {
             padding: 3px 8px;
-            border-radius: 12px;
+            border-radius: 0;
             font-size: 0.75rem;
             font-weight: 600;
         }
@@ -144,7 +144,7 @@
         .ai-gen-preview {
             background: rgba(139, 92, 246, 0.08);
             border: 1px solid rgba(139, 92, 246, 0.3);
-            border-radius: 12px;
+            border-radius: 0;
             padding: 16px;
             margin-top: 12px;
         }
@@ -159,7 +159,7 @@
 <body>
     <nav class="navbar">
         <div class="container">
-            <a href="/" class="nav-brand"><span class="logo-icon">🔥</span>
+            <a href="/" class="nav-brand"><span class="logo-icon"><img src="/img/logo-cand.png" alt="CAND" width="36" height="36" style="object-fit:contain;filter:brightness(0) invert(1);"></span>
                 <div><span>FRAS Admin</span><small>Quản trị Hệ thống</small></div>
             </a>
             <ul class="nav-links" id="nav-links">
@@ -172,16 +172,16 @@
     <div class="admin-layout">
         <aside class="admin-sidebar">
             <div class="sidebar-header">
-                <h3>⚙️ Quản trị</h3>
+                <h3>Quản trị</h3>
                 <p>Bảng điều khiển admin</p>
             </div>
             <ul class="sidebar-nav">
-                <li><a href="/admin/"><span class="nav-icon">📊</span> Tổng quan</a></li>
-                <li><a href="/admin/users.html"><span class="nav-icon">👥</span> Người dùng</a></li>
-                <li><a href="/admin/questions.html" class="active"><span class="nav-icon">❓</span> Câu hỏi</a></li>
-                <li><a href="/admin/assessments.html"><span class="nav-icon">📋</span> Đánh giá</a></li>
-                <li><a href="/admin/reports.html"><span class="nav-icon">📈</span> Báo cáo</a></li>
-                <li><a href="/admin/aggregate.html"><span class="nav-icon">🗺️</span> Phân tích tổng hợp</a></li>
+                <li><a href="/admin/"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span> Tổng quan</a></li>
+                <li><a href="/admin/users.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span> Người dùng</a></li>
+                <li><a href="/admin/questions.html" class="active"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span> Câu hỏi</a></li>
+                <li><a href="/admin/assessments.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span> Đánh giá</a></li>
+                <li><a href="/admin/reports.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span> Báo cáo</a></li>
+                <li><a href="/admin/aggregate.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg></span> Phân tích tổng hợp</a></li>
             </ul>
         </aside>
         <main class="admin-content">
@@ -582,7 +582,7 @@
                     <div class="ai-gen-preview">
                         <h5>🤖 AI đã tạo ${questions.length} câu hỏi — Xem preview và lưu</h5>
                         ${questions.map((q, i) => `
-                            <div style="background:rgba(255,255,255,0.03); border-radius:10px; padding:12px; margin-bottom:10px; border:1px solid var(--border-color);">
+                            <div style="background:rgba(255,255,255,0.03); border-radius: 0; padding:12px; margin-bottom:10px; border:1px solid var(--border-color);">
                                 <div style="display:flex; justify-content:space-between; align-items:start; gap:8px;">
                                     <div style="flex:1;">
                                         <strong style="color:var(--text-primary); font-size:0.9rem;">${i + 1}. ${q.question_text}</strong>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 260" width="240" height="260">
+  <defs>
+    <!-- Gold gradient for emblem elements -->
+    <radialGradient id="goldGrad" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#FFE066"/>
+      <stop offset="60%" stop-color="#F5C518"/>
+      <stop offset="100%" stop-color="#C9962C"/>
+    </radialGradient>
+    <radialGradient id="redGrad" cx="50%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#E83030"/>
+      <stop offset="100%" stop-color="#9B1515"/>
+    </radialGradient>
+  </defs>
+
+  <!-- ===== OUTER LAUREL WREATH — LEFT BRANCH ===== -->
+  <g fill="#F5C518" stroke="#C41E1E" stroke-width="1.2">
+    <!-- Left branch stem -->
+    <ellipse cx="58" cy="130" rx="6" ry="16" transform="rotate(-30 58 130)"/>
+    <!-- Left leaves — bottom to top -->
+    <ellipse cx="28" cy="185" rx="9" ry="18" transform="rotate(55 28 185)"/>
+    <ellipse cx="22" cy="165" rx="9" ry="18" transform="rotate(45 22 165)"/>
+    <ellipse cx="18" cy="143" rx="9" ry="17" transform="rotate(35 18 143)"/>
+    <ellipse cx="18" cy="121" rx="9" ry="17" transform="rotate(20 18 121)"/>
+    <ellipse cx="22" cy="100" rx="9" ry="17" transform="rotate(10 22 100)"/>
+    <ellipse cx="30" cy="80"  rx="9" ry="17" transform="rotate(-5 30 80)"/>
+    <ellipse cx="42" cy="63"  rx="9" ry="16" transform="rotate(-20 42 63)"/>
+    <ellipse cx="57" cy="50"  rx="9" ry="15" transform="rotate(-35 57 50)"/>
+    <ellipse cx="74" cy="40"  rx="8" ry="15" transform="rotate(-50 74 40)"/>
+    <ellipse cx="92" cy="33"  rx="8" ry="14" transform="rotate(-65 92 33)"/>
+    <!-- Left berries (circles at leaf tips) -->
+    <circle cx="16" cy="192" r="5"/><circle cx="10" cy="172" r="5"/>
+    <circle cx="8"  cy="150" r="5"/><circle cx="8"  cy="128" r="5"/>
+    <circle cx="11" cy="106" r="5"/><circle cx="19" cy="84"  r="5"/>
+    <circle cx="31" cy="64"  r="5"/><circle cx="45" cy="48"  r="5"/>
+    <circle cx="62" cy="36"  r="5"/><circle cx="80" cy="27"  r="5"/>
+    <circle cx="100" cy="22" r="5"/>
+  </g>
+
+  <!-- ===== OUTER LAUREL WREATH — RIGHT BRANCH ===== -->
+  <g fill="#F5C518" stroke="#C41E1E" stroke-width="1.2">
+    <!-- Right branch stem -->
+    <ellipse cx="182" cy="130" rx="6" ry="16" transform="rotate(30 182 130)"/>
+    <!-- Right leaves — bottom to top (mirror of left) -->
+    <ellipse cx="212" cy="185" rx="9" ry="18" transform="rotate(-55 212 185)"/>
+    <ellipse cx="218" cy="165" rx="9" ry="18" transform="rotate(-45 218 165)"/>
+    <ellipse cx="222" cy="143" rx="9" ry="17" transform="rotate(-35 222 143)"/>
+    <ellipse cx="222" cy="121" rx="9" ry="17" transform="rotate(-20 222 121)"/>
+    <ellipse cx="218" cy="100" rx="9" ry="17" transform="rotate(-10 218 100)"/>
+    <ellipse cx="210" cy="80"  rx="9" ry="17" transform="rotate(5 210 80)"/>
+    <ellipse cx="198" cy="63"  rx="9" ry="16" transform="rotate(20 198 63)"/>
+    <ellipse cx="183" cy="50"  rx="9" ry="15" transform="rotate(35 183 50)"/>
+    <ellipse cx="166" cy="40"  rx="8" ry="15" transform="rotate(50 166 40)"/>
+    <ellipse cx="148" cy="33"  rx="8" ry="14" transform="rotate(65 148 33)"/>
+    <!-- Right berries -->
+    <circle cx="224" cy="192" r="5"/><circle cx="230" cy="172" r="5"/>
+    <circle cx="232" cy="150" r="5"/><circle cx="232" cy="128" r="5"/>
+    <circle cx="229" cy="106" r="5"/><circle cx="221" cy="84"  r="5"/>
+    <circle cx="209" cy="64"  r="5"/><circle cx="195" cy="48"  r="5"/>
+    <circle cx="178" cy="36"  r="5"/><circle cx="160" cy="27"  r="5"/>
+    <circle cx="140" cy="22"  r="5"/>
+  </g>
+
+  <!-- ===== BOTTOM BINDING — connecting the two branches ===== -->
+  <g fill="#F5C518" stroke="#C41E1E" stroke-width="1.2">
+    <!-- Central ribbon/band -->
+    <rect x="80" y="225" width="80" height="18" rx="3"/>
+    <!-- Oval connectors -->
+    <ellipse cx="60"  cy="228" rx="22" ry="10"/>
+    <ellipse cx="180" cy="228" rx="22" ry="10"/>
+    <!-- Horizontal bar above ribbon -->
+    <rect x="68" y="218" width="104" height="8" rx="2"/>
+  </g>
+
+  <!-- ===== OUTER GOLD RING ===== -->
+  <circle cx="120" cy="120" r="88" fill="none" stroke="#F5C518" stroke-width="5"/>
+
+  <!-- ===== GREEN RING ===== -->
+  <circle cx="120" cy="120" r="82" fill="#2D7A2D" stroke="#C41E1E" stroke-width="1.5"/>
+
+  <!-- Small inner wreath on green ring -->
+  <g fill="#F5C518" stroke="#C41E1E" stroke-width="0.8" opacity="0.9">
+    <!-- Small leaf pairs around the green ring -->
+    <ellipse cx="55"  cy="90"  rx="5" ry="9" transform="rotate(40 55 90)"/>
+    <ellipse cx="48"  cy="110" rx="5" ry="9" transform="rotate(20 48 110)"/>
+    <ellipse cx="47"  cy="130" rx="5" ry="9" transform="rotate(0 47 130)"/>
+    <ellipse cx="52"  cy="150" rx="5" ry="9" transform="rotate(-20 52 150)"/>
+    <ellipse cx="62"  cy="167" rx="5" ry="9" transform="rotate(-40 62 167)"/>
+    <ellipse cx="185" cy="90"  rx="5" ry="9" transform="rotate(-40 185 90)"/>
+    <ellipse cx="192" cy="110" rx="5" ry="9" transform="rotate(-20 192 110)"/>
+    <ellipse cx="193" cy="130" rx="5" ry="9" transform="rotate(0 193 130)"/>
+    <ellipse cx="188" cy="150" rx="5" ry="9" transform="rotate(20 188 150)"/>
+    <ellipse cx="178" cy="167" rx="5" ry="9" transform="rotate(40 178 167)"/>
+  </g>
+
+  <!-- ===== GOLD MIDDLE RING ===== -->
+  <circle cx="120" cy="120" r="70" fill="#F5C518" stroke="#C41E1E" stroke-width="1.5"/>
+
+  <!-- ===== RED CENTER WITH SUNBURST ===== -->
+  <circle cx="120" cy="120" r="65" fill="url(#redGrad)" stroke="#C41E1E" stroke-width="1.2"/>
+
+  <!-- Sunburst rays -->
+  <g stroke="#F5C518" stroke-width="1.8" opacity="0.7">
+    <line x1="120" y1="60"  x2="120" y2="56"/>
+    <line x1="120" y1="120" x2="120" y2="57" opacity="0.4"/>
+    <!-- Radiating lines from center -->
+    <line x1="120" y1="120" x2="120" y2="57"/>
+    <line x1="120" y1="120" x2="152" y2="61"/>
+    <line x1="120" y1="120" x2="179" y2="79"/>
+    <line x1="120" y1="120" x2="183" y2="110"/>
+    <line x1="120" y1="120" x2="183" y2="130"/>
+    <line x1="120" y1="120" x2="179" y2="161"/>
+    <line x1="120" y1="120" x2="152" y2="179"/>
+    <line x1="120" y1="120" x2="120" y2="183"/>
+    <line x1="120" y1="120" x2="88"  y2="179"/>
+    <line x1="120" y1="120" x2="61"  y2="161"/>
+    <line x1="120" y1="120" x2="57"  y2="130"/>
+    <line x1="120" y1="120" x2="57"  y2="110"/>
+    <line x1="120" y1="120" x2="61"  y2="79"/>
+    <line x1="120" y1="120" x2="88"  y2="61"/>
+    <!-- Halfway rays -->
+    <line x1="120" y1="120" x2="139" y2="58" stroke-width="1.2" opacity="0.5"/>
+    <line x1="120" y1="120" x2="164" y2="69" stroke-width="1.2" opacity="0.5"/>
+    <line x1="120" y1="120" x2="181" y2="94" stroke-width="1.2" opacity="0.5"/>
+    <line x1="120" y1="120" x2="183" y2="120" stroke-width="1.2" opacity="0.5"/>
+    <line x1="120" y1="120" x2="181" y2="146" stroke-width="1.2" opacity="0.5"/>
+    <line x1="120" y1="120" x2="164" y2="171" stroke-width="1.2" opacity="0.5"/>
+    <line x1="120" y1="120" x2="139" y2="182" stroke-width="1.2" opacity="0.5"/>
+    <line x1="120" y1="120" x2="101" y2="182" stroke-width="1.2" opacity="0.5"/>
+    <line x1="120" y1="120" x2="76"  y2="171" stroke-width="1.2" opacity="0.5"/>
+    <line x1="120" y1="120" x2="59"  y2="146" stroke-width="1.2" opacity="0.5"/>
+    <line x1="120" y1="120" x2="57"  y2="120" stroke-width="1.2" opacity="0.5"/>
+    <line x1="120" y1="120" x2="59"  y2="94"  stroke-width="1.2" opacity="0.5"/>
+    <line x1="120" y1="120" x2="76"  y2="69"  stroke-width="1.2" opacity="0.5"/>
+    <line x1="120" y1="120" x2="101" y2="58"  stroke-width="1.2" opacity="0.5"/>
+  </g>
+
+  <!-- Thin inner gold ring over sunburst -->
+  <circle cx="120" cy="120" r="55" fill="none" stroke="#F5C518" stroke-width="2" opacity="0.6"/>
+
+  <!-- ===== GOLD 5-POINTED STAR ===== -->
+  <polygon
+    points="120,68 129,96 158,96 135,113 143,141 120,124 97,141 105,113 82,96 111,96"
+    fill="url(#goldGrad)"
+    stroke="#C9962C"
+    stroke-width="1.2"
+  />
+  <!-- Star inner lines for texture -->
+  <polygon
+    points="120,75 127,94 120,89 113,94"
+    fill="#F5C518" opacity="0.5"
+  />
+
+  <!-- ===== "CA" MONOGRAM ===== -->
+  <g transform="translate(120, 153)" fill="#F5C518" stroke="#C9962C" stroke-width="0.5">
+    <!-- C letter -->
+    <path d="M-18,-12 C-28,-12 -34,-6 -34,2 C-34,10 -28,16 -18,16
+             C-12,16 -7,13 -4,9 L-9,6 C-11,9 -14,11 -18,11
+             C-24,11 -28,7 -28,2 C-28,-3 -24,-7 -18,-7
+             C-14,-7 -11,-5 -9,-2 L-4,-5 C-7,-9 -12,-12 -18,-12 Z"
+          stroke-width="0.8"/>
+    <!-- A letter -->
+    <path d="M4,-12 L16,16 L10,16 L7,9 L-2,9 L-5,16 L-11,16 L1,-12 Z
+             M5,4 L2,-4 L-1,4 Z"
+          stroke-width="0.8"/>
+    <!-- Gear / cogwheel under CA -->
+    <g transform="translate(0, 24)">
+      <circle cx="0" cy="0" r="8" fill="none" stroke="#F5C518" stroke-width="2.5"/>
+      <circle cx="0" cy="0" r="4" fill="#F5C518" stroke="none"/>
+      <!-- Gear teeth -->
+      <rect x="-2" y="-12" width="4" height="5" fill="#F5C518"/>
+      <rect x="-2" y="7"  width="4" height="5" fill="#F5C518"/>
+      <rect x="-12" y="-2" width="5" height="4" fill="#F5C518"/>
+      <rect x="7"  y="-2" width="5" height="4" fill="#F5C518"/>
+      <rect x="-9.5" y="-9.5" width="4" height="4" fill="#F5C518" transform="rotate(45 -9.5 -9.5)"/>
+      <rect x="5.5"  y="-9.5" width="4" height="4" fill="#F5C518" transform="rotate(45 5.5 -9.5)"/>
+      <rect x="-9.5" y="5.5"  width="4" height="4" fill="#F5C518" transform="rotate(45 -9.5 5.5)"/>
+      <rect x="5.5"  y="5.5"  width="4" height="4" fill="#F5C518" transform="rotate(45 5.5 5.5)"/>
+    </g>
+  </g>
+
+  <!-- ===== OUTER DECORATIVE BORDER RING ===== -->
+  <circle cx="120" cy="120" r="90" fill="none" stroke="#C41E1E" stroke-width="2.5"/>
+  <circle cx="120" cy="120" r="87" fill="none" stroke="#F5C518" stroke-width="1"/>
+</svg>

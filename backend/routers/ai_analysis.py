@@ -33,22 +33,22 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
 async def call_gemini(prompt: str, temperature: float = 0.3) -> dict:
     """Call Gemini API and return parsed JSON response."""
     if not GEMINI_API_KEY:
-        raise HTTPException(status_code=500, detail="GEMINI_API_KEY chưa được cấu hình")
+        raise ValueError("GEMINI_API_KEY chưa được cấu hình")
 
     import httpx
-    async with httpx.AsyncClient() as client:
+    # Timeout 25s — giữ dưới ngưỡng nginx proxy_read_timeout (thường 30-60s)
+    async with httpx.AsyncClient(timeout=25.0) as client:
         resp = await client.post(
             f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={GEMINI_API_KEY}",
             json={
                 "contents": [{"parts": [{"text": prompt}]}],
                 "generationConfig": {"temperature": temperature}
             },
-            timeout=90.0
         )
         if resp.status_code != 200:
-            error_detail = resp.text[:500] if resp.text else "No response body"
+            error_detail = resp.text[:200] if resp.text else "No response body"
             print(f"[Gemini API Error] Status: {resp.status_code}, Response: {error_detail}")
-            raise HTTPException(status_code=502, detail=f"Gemini API lỗi: {resp.status_code}")
+            raise ValueError(f"Gemini API lỗi: {resp.status_code}")
 
         data = resp.json()
         content = data["candidates"][0]["content"]["parts"][0]["text"]
@@ -389,11 +389,11 @@ NGỮ CẢNH: Người dùng đang hỏi về đánh giá cháy nổ của cơ s
             role = "Người dùng" if msg.get("role") == "user" else "AI"
             history_text += f"{role}: {msg.get('content', '')}\n"
 
-    prompt = f"""Bạn là chuyên gia tư vấn Phòng cháy chữa cháy (PCCC) tại Việt Nam. Bạn CHỈ trả lời dựa trên các văn bản pháp lý và quy chuẩn đã được cung cấp bên dưới. Không bịa đặt thông tin.
+    prompt = f"""Bạn là Trợ lý ảo Nguyễn Thị Duyên — chuyên gia tư vấn Phòng cháy chữa cháy (PCCC) và an toàn cháy nổ tại Việt Nam, thuộc hệ thống FRAS của Công an tỉnh Bắc Ninh. Mọi câu trả lời của bạn phải thể hiện sự lịch sự, chuyên nghiệp, xưng "Duyên" hoặc "tôi" và gọi người dùng là "bạn" hoặc "anh/chị".
 
-=== VĂN BẢN PHÁP LÝ VÀ QUY CHUẨN ===
+=== CƠ SỞ DỮ LIỆU PHÁP LÝ (ưu tiên sử dụng) ===
 {legal_context}
-=== HẾT VĂN BẢN PHÁP LÝ ===
+=== HẾT CƠ SỞ DỮ LIỆU PHÁP LÝ ===
 
 {context}
 
@@ -401,18 +401,28 @@ NGỮ CẢNH: Người dùng đang hỏi về đánh giá cháy nổ của cơ s
 
 CÂU HỎI CỦA NGƯỜI DÙNG: {data.message}
 
-YÊU CẦU:
-- Trả lời bằng tiếng Việt, chi tiết, dễ hiểu, thực tế
-- PHẢI viện dẫn cụ thể điều khoản pháp luật từ văn bản đã cung cấp
-- Nếu câu hỏi liên quan đến ngữ cảnh đánh giá, đưa ra tư vấn cụ thể cho cơ sở đó
-- Nếu không tìm thấy thông tin trong văn bản, nói rõ "Thông tin này chưa có trong cơ sở dữ liệu pháp lý hiện tại" và gợi ý nguồn tra cứu
-- Nếu không liên quan đến PCCC, nhẹ nhàng hướng người dùng quay lại chủ đề
+NGUYÊN TẮC TRẢ LỜI (theo thứ tự ưu tiên):
+
+1. ƯU TIÊN 1 — DÙNG CƠ SỞ DỮ LIỆU:
+   Nếu câu hỏi liên quan đến pháp luật, quy chuẩn, quy trình PCCC Việt Nam → tìm trong tài liệu pháp lý trên và trả lời với trích dẫn cụ thể (tên văn bản, số điều, khoản).
+
+2. ƯU TIÊN 2 — DÙNG KIẾN THỨC TỔNG HỢP:
+   Nếu câu hỏi không có trong cơ sở dữ liệu hoặc là câu hỏi chung về an toàn cháy nổ, kỹ thuật, khoa học → trả lời dựa trên kiến thức chuyên môn, ghi chú rõ "(Thông tin chung, chưa có trong văn bản pháp lý được cung cấp)".
+
+3. ƯU TIÊN 3 — CÂU HỎI NGOÀI PCCC:
+   Nếu câu hỏi hoàn toàn không liên quan đến PCCC, an toàn cháy nổ hoặc ngữ cảnh đánh giá → vẫn trả lời ngắn gọn và hướng người dùng về chủ đề PCCC nếu phù hợp.
+
+YÊU CẦU THÊM:
+- Trả lời bằng tiếng Việt, rõ ràng, thực tế, dễ áp dụng
+- Nếu câu hỏi liên quan đến ngữ cảnh đánh giá cơ sở cụ thể, đưa ra khuyến nghị riêng cho cơ sở đó
+- Luôn đưa ra gợi ý hành động cụ thể mà người dùng có thể thực hiện ngay
 
 Trả về JSON:
 {{
-    "reply": "string - câu trả lời chi tiết, có viện dẫn pháp lý cụ thể",
-    "suggestions": ["string - 2-3 câu hỏi gợi ý liên quan"],
-    "references": ["string - danh sách văn bản pháp lý đã viện dẫn trong câu trả lời"]
+    "reply": "string - câu trả lời đầy đủ, thực tế, có viện dẫn nếu có",
+    "source_type": "docs | general | mixed",
+    "suggestions": ["string - 2-3 câu hỏi gợi ý tiếp theo liên quan"],
+    "references": ["string - danh sách văn bản pháp lý đã viện dẫn, để trống nếu dùng kiến thức chung"]
 }}
 """
 
@@ -431,42 +441,191 @@ def _chat_fallback(message: str) -> dict:
     """Built-in fallback responses when AI API is unavailable."""
     msg = message.lower()
 
-    # Keyword-based responses
+    # Keyword-based responses — thứ tự quan trọng: cụ thể trước, tổng quát sau
     responses = [
+        # --- Xử lý tình huống khẩn cấp (ưu tiên cao nhất) ---
         {
-            "keywords": ["bình chữa cháy", "bình cứu hỏa", "bcc"],
-            "reply": "📋 Quy định về bình chữa cháy:\n\n• Trang bị tối thiểu 1 bình ABC 4kg cho mỗi 50m² sàn\n• Treo ở độ cao 0,8 - 1,5 mét, nơi dễ tiếp cận\n• Kiểm tra áp suất bằng đồng hồ hàng tháng\n• Thay mới khi hết hạn (thường 5-10 năm)\n• Nhấn nút TEST định kỳ\n\n📜 Căn cứ: QCVN 10:2025/BCA, Nghị định 105/2025/NĐ-CP",
-            "suggestions": ["Cách sử dụng bình chữa cháy?", "Có mấy loại bình chữa cháy?", "Chi phí mua bình chữa cháy?"]
+            "keywords": ["khi cháy", "phải làm gì khi", "xử lý khi cháy", "khi xảy ra cháy",
+                         "khi phát hiện cháy", "bị cháy", "đang cháy", "thoát ra", "kẹt trong"],
+            "reply": "🚨 XỬ LÝ KHẨN CẤP KHI XẢY RA CHÁY\n\n"
+                     "BƯỚC 1 — BÁO ĐỘNG NGAY:\n"
+                     "• Hô to \"CÓ CHÁY! CÓ CHÁY!\" để cảnh báo mọi người\n"
+                     "• Bấm chuông/còi báo cháy gần nhất\n"
+                     "• Gọi ngay 114 (Cảnh sát PCCC) — nói rõ địa chỉ, tầng\n\n"
+                     "BƯỚC 2 — SƠ TÁN AN TOÀN:\n"
+                     "• Di chuyển theo lối thoát nạn đã chỉ định\n"
+                     "• Dùng cầu thang bộ — KHÔNG dùng thang máy\n"
+                     "• Che mũi miệng bằng vải ướt, cúi thấp nếu có khói\n"
+                     "• Sờ cửa trước khi mở: nếu NÓNG → không mở, tìm lối khác\n\n"
+                     "BƯỚC 3 — CHỮA CHÁY (chỉ khi đám cháy nhỏ):\n"
+                     "• Dùng bình chữa cháy: Rút chốt → Hướng vòi → Bóp cò → Quét đáy lửa\n"
+                     "• Nếu cháy lan rộng: THOÁT NGAY, không cố chữa\n\n"
+                     "BƯỚC 4 — KHI MẮC KẸT:\n"
+                     "• Đóng cửa ngăn khói, dùng quần áo nhét khe cửa\n"
+                     "• Ra ban công/cửa sổ ra hiệu cho lực lượng cứu nạn\n"
+                     "• Gọi 114 báo vị trí cụ thể\n\n"
+                     "📜 Căn cứ: Luật PCCC 55/2024/QH15, Điều 24 — Phương án chữa cháy và thoát nạn",
+            "suggestions": ["Cách sử dụng bình chữa cháy đúng cách?", "Số 114 gọi như thế nào?", "Cách thoát qua khói?"]
         },
         {
-            "keywords": ["lối thoát", "thoát nạn", "thoát hiểm", "exit"],
-            "reply": "🚪 Quy định lối thoát nạn:\n\n• Chiều rộng tối thiểu 1,2 mét\n• KHÔNG được khóa cửa thoát nạn trong giờ hoạt động\n• Lắp đèn EXIT và đèn chiếu sáng sự cố tại mỗi lối ra\n• Niêm yết sơ đồ thoát nạn ở mỗi tầng\n• Không để hàng hóa cản trở lối thoát\n\n📜 Căn cứ: QCVN 06:2022/BXD (Sửa đổi 1:2023)",
-            "suggestions": ["Quy định đèn EXIT?", "Sơ đồ thoát nạn cần gì?", "Diễn tập thoát nạn như thế nào?"]
+            "keywords": ["sử dụng bình", "dùng bình", "cách chữa cháy", "dập lửa", "phun bình"],
+            "reply": "🧯 CÁCH SỬ DỤNG BÌNH CHỮA CHÁY\n\n"
+                     "Nhớ theo quy tắc PASS:\n"
+                     "• P — Pull (Rút): Rút chốt an toàn\n"
+                     "• A — Aim (Nhắm): Hướng vòi về phía GỐC LỬA, cách 1-2m\n"
+                     "• S — Squeeze (Bóp): Bóp cò để phun\n"
+                     "• S — Sweep (Quét): Quét ngang từ bên này sang bên kia\n\n"
+                     "LƯU Ý QUAN TRỌNG:\n"
+                     "• Đứng xuôi chiều gió\n"
+                     "• Bình ABC: dùng cho cháy thông thường, điện, xăng dầu\n"
+                     "• Bình CO2: dùng cho thiết bị điện tử, đám cháy kín\n"
+                     "• Bình thường chỉ dùng được 10-30 giây\n\n"
+                     "📜 Căn cứ: QCVN 10:2025/BCA",
+            "suggestions": ["Có mấy loại bình chữa cháy?", "Bình nào dùng cho cháy điện?", "Cách bảo quản bình chữa cháy?"]
+        },
+        # --- Trang bị và thiết bị ---
+        {
+            "keywords": ["bình chữa cháy", "bình cứu hỏa", "bcc", "bình abc", "bình co2"],
+            "reply": "📋 QUY ĐỊNH VỀ BÌNH CHỮA CHÁY\n\n"
+                     "ĐỊNH MỨC TRANG BỊ:\n"
+                     "• Văn phòng: 1 bình ABC 4kg / 50m² sàn\n"
+                     "• Nhà xưởng: 1 bình ABC 6kg / 50m² + 1 bình CO2 5kg / 100m²\n"
+                     "• Kho hàng: 1 bình ABC 6kg / 30m²\n"
+                     "• Nhà ở: tối thiểu 1 bình ABC 2kg/căn hộ\n\n"
+                     "VỊ TRÍ LẮP ĐẶT:\n"
+                     "• Treo cao 0,8 - 1,5m so với sàn\n"
+                     "• Khoảng cách tối đa giữa 2 bình: 20m\n"
+                     "• Không đặt sau cửa hoặc góc khuất\n\n"
+                     "KIỂM TRA ĐỊNH KỲ:\n"
+                     "• Hàng tháng: kiểm tra áp suất đồng hồ (kim phải ở vùng xanh)\n"
+                     "• Hàng năm: kiểm định lại hoặc thay bột/khí\n"
+                     "• Hết hạn sử dụng (5-10 năm): thay mới\n\n"
+                     "📜 Căn cứ: QCVN 10:2025/BCA, Nghị định 105/2025/NĐ-CP",
+            "suggestions": ["Cách sử dụng bình chữa cháy?", "Mua bình chữa cháy ở đâu?", "Kiểm tra bình hàng tháng thế nào?"]
         },
         {
-            "keywords": ["điện", "dây điện", "aptomat", "ổ cắm", "rccb", "chập"],
-            "reply": "⚡ An toàn điện - phòng cháy:\n\n• Kiểm tra dây điện: nếu vỏ bọc nứt, bong tróc → thay ngay\n• Sờ ổ cắm khi đang dùng: nếu NÓNG → ngắt ngay, gọi thợ điện\n• Ngửi xem có MÙI KHÉT ở tủ điện/ổ cắm → dấu hiệu chập mạch\n• Lắp RCCB 30mA cho khu vực ẩm ướt\n• Lắp aptomat đúng dòng định mức cho từng mạch\n• KHÔNG cắm chồng ổ nối dài\n\n📜 Căn cứ: QCVN 25:2025/BCT, QCVN 25:2025/BKHCN",
-            "suggestions": ["Dấu hiệu quá tải điện?", "Chi phí kiểm tra hệ thống điện?", "Cách chọn aptomat phù hợp?"]
+            "keywords": ["lối thoát", "thoát nạn", "thoát hiểm", "exit", "cửa thoát"],
+            "reply": "🚪 QUY ĐỊNH LỐI THOÁT NẠN\n\n"
+                     "YÊU CẦU KỸ THUẬT:\n"
+                     "• Chiều rộng tối thiểu: 1,2m (nhà dân dụng), 1,5m (nhà công cộng)\n"
+                     "• Khoảng cách xa nhất từ bất kỳ vị trí đến lối thoát: 25-40m\n"
+                     "• Cửa thoát nạn phải mở ra phía lối thoát\n\n"
+                     "THIẾT BỊ BẮT BUỘC:\n"
+                     "• Đèn EXIT tại mỗi lối ra (sáng 24/7)\n"
+                     "• Đèn chiếu sáng sự cố (tự bật khi mất điện)\n"
+                     "• Bảng chỉ dẫn thoát nạn ở mỗi tầng\n\n"
+                     "NGHIÊM CẤM:\n"
+                     "• Khóa cửa thoát nạn trong giờ hoạt động\n"
+                     "• Để hàng hóa, xe máy cản trở lối thoát\n"
+                     "• Che khuất biển chỉ dẫn EXIT\n\n"
+                     "📜 Căn cứ: QCVN 06:2022/BXD (Sửa đổi 1:2023)",
+            "suggestions": ["Quy định đèn EXIT?", "Sơ đồ thoát nạn cần gì?", "Xử phạt vi phạm lối thoát nạn?"]
         },
         {
-            "keywords": ["gas", "bếp", "nấu ăn", "bình gas"],
-            "reply": "🔥 An toàn bếp gas:\n\n• Lắp van ngắt gas tự động và đầu dò rò rỉ gas\n• Đặt bình gas xa nguồn nhiệt tối thiểu 1,5 mét\n• Kiểm tra ống dẫn gas: nếu giòn, nứt → thay ngay\n• KHÔNG bao giờ để bếp gas trong phòng ngủ hoặc kho hàng\n• Tắt van bình gas khi không sử dụng\n\n📜 Căn cứ: Nghị định 105/2025/NĐ-CP",
-            "suggestions": ["Cách kiểm tra rò rỉ gas?", "Bếp điện an toàn hơn bếp gas?", "Van ngắt gas tự động giá bao nhiêu?"]
+            "keywords": ["điện", "dây điện", "aptomat", "ổ cắm", "rccb", "chập điện", "quá tải điện"],
+            "reply": "⚡ AN TOÀN ĐIỆN — PHÒNG NGỪA CHÁY NỔ\n\n"
+                     "DẤU HIỆU NGUY HIỂM CẦN XỬ LÝ NGAY:\n"
+                     "• Ổ cắm NÓNG khi sử dụng → ngắt ngay, gọi thợ điện\n"
+                     "• Mùi KHÉT từ tủ điện, ổ cắm → dấu hiệu chập mạch\n"
+                     "• Aptomat tự ngắt thường xuyên → đang quá tải\n"
+                     "• Dây điện vỏ bọc nứt, bong tróc → thay ngay\n\n"
+                     "QUY ĐỊNH BẮT BUỘC:\n"
+                     "• Lắp RCCB 30mA cho khu vực ẩm ướt (bếp, nhà tắm)\n"
+                     "• Lắp aptomat (CB) đúng dòng định mức từng mạch\n"
+                     "• Nối đất toàn bộ hệ thống\n\n"
+                     "NGHIÊM CẤM:\n"
+                     "• Cắm chồng ổ nối dài (ổ nối → ổ nối)\n"
+                     "• Dùng dây điện không đạt tiêu chuẩn\n"
+                     "• Để dây điện tiếp xúc vật liệu dễ cháy\n\n"
+                     "📜 Căn cứ: QCVN 25:2025/BCT",
+            "suggestions": ["Dấu hiệu quá tải điện?", "Cách chọn aptomat phù hợp?", "Kiểm tra hệ thống điện định kỳ?"]
         },
         {
-            "keywords": ["luật", "pháp luật", "quy định", "nghị định", "thông tư", "55/2024"],
-            "reply": "📜 Pháp luật PCCC hiện hành (2024-2025):\n\n1. Luật PCCC và CNCH số 55/2024/QH15 — luật mới nhất\n2. QCVN 06:2022/BXD (Sửa đổi 1:2023) — an toàn cháy cho nhà và công trình\n3. Nghị định 105/2025/NĐ-CP — hướng dẫn chi tiết Luật PCCC\n4. QCVN 10:2025/BCA — trang bị phương tiện PCCC\n5. QCVN 25:2025/BCT — an toàn điện\n6. QCVN 25:2025/BKHCN — thiết bị điện gia đình\n\n⚠️ Các văn bản cũ (Luật PCCC 2001, NĐ 136/2020) đã hết hiệu lực.",
+            "keywords": ["gas", "bếp gas", "bình gas", "rò gas", "mùi gas"],
+            "reply": "🔥 AN TOÀN BẾP GAS\n\n"
+                     "PHÒNG NGỪA:\n"
+                     "• Lắp đầu dò rò rỉ gas và van ngắt tự động\n"
+                     "• Đặt bình gas cách nguồn nhiệt tối thiểu 1,5m\n"
+                     "• Kiểm tra ống dẫn gas: nếu giòn, nứt → thay ngay\n"
+                     "• Tắt van bình gas sau mỗi lần dùng xong\n\n"
+                     "KHI PHÁT HIỆN MÙI GAS:\n"
+                     "• KHÔNG bật/tắt điện, không dùng lửa\n"
+                     "• Tắt van bình gas ngay\n"
+                     "• Mở toàn bộ cửa thông gió\n"
+                     "• Thoát ra ngoài, gọi 114 nếu cần\n\n"
+                     "NGHIÊM CẤM:\n"
+                     "• Để bình gas trong phòng ngủ hoặc kho kín\n"
+                     "• Dùng bếp gas trong không gian thiếu thông gió\n\n"
+                     "📜 Căn cứ: Nghị định 105/2025/NĐ-CP",
+            "suggestions": ["Cách kiểm tra rò rỉ gas?", "Bếp điện an toàn hơn bếp gas?", "Van ngắt gas tự động loại nào tốt?"]
+        },
+        {
+            "keywords": ["luật", "pháp luật", "nghị định", "thông tư", "55/2024", "văn bản pháp lý"],
+            "reply": "📜 PHÁP LUẬT PCCC HIỆN HÀNH (2024-2025)\n\n"
+                     "VĂN BẢN ĐANG CÓ HIỆU LỰC:\n"
+                     "1. Luật PCCC và CNCH số 55/2024/QH15 (hiệu lực 01/07/2025)\n"
+                     "2. Nghị định 105/2025/NĐ-CP — hướng dẫn chi tiết Luật PCCC\n"
+                     "3. Nghị định 68/2025/NĐ-CP — xử phạt vi phạm PCCC\n"
+                     "4. QCVN 06:2022/BXD (Sửa đổi 1:2023) — an toàn cháy nhà và công trình\n"
+                     "5. QCVN 10:2025/BCA — trang bị phương tiện PCCC\n"
+                     "6. QCVN 25:2025/BCT — an toàn điện\n\n"
+                     "VĂN BẢN ĐÃ HẾT HIỆU LỰC:\n"
+                     "• Luật PCCC 2001 (thay bởi Luật 55/2024)\n"
+                     "• Nghị định 136/2020/NĐ-CP (thay bởi NĐ 105/2025)\n\n"
+                     "📜 Tra cứu đầy đủ tại: vbpl.vn hoặc thuvienphapluat.vn",
             "suggestions": ["Luật 55/2024 có gì mới?", "Mức phạt vi phạm PCCC?", "Cơ sở nào phải có giấy phép PCCC?"]
         },
         {
-            "keywords": ["huấn luyện", "tập huấn", "đào tạo", "diễn tập"],
-            "reply": "🎓 Huấn luyện PCCC:\n\n• Tổ chức huấn luyện PCCC cho 100% nhân viên ít nhất 1 lần/năm\n• Nội dung: sử dụng bình chữa cháy, quy trình báo cháy (gọi 114), thoát nạn\n• Diễn tập phương án chữa cháy ít nhất 1 lần/năm\n• Lưu biên bản huấn luyện và diễn tập\n• Liên hệ cơ quan PCCC địa phương để được hỗ trợ\n\n📜 Căn cứ: Luật PCCC 55/2024, Nghị định 105/2025/NĐ-CP",
-            "suggestions": ["Chi phí huấn luyện PCCC?", "Liên hệ PCCC địa phương ở đâu?", "Thời gian diễn tập bao lâu?"]
+            "keywords": ["huấn luyện", "tập huấn", "đào tạo pccc", "diễn tập"],
+            "reply": "🎓 HUẤN LUYỆN VÀ DIỄN TẬP PCCC\n\n"
+                     "QUY ĐỊNH BẮT BUỘC:\n"
+                     "• Huấn luyện PCCC cho 100% nhân viên: ít nhất 1 lần/năm\n"
+                     "• Diễn tập phương án chữa cháy: ít nhất 1 lần/năm\n"
+                     "• Lưu biên bản huấn luyện và diễn tập\n\n"
+                     "NỘI DUNG HUẤN LUYỆN:\n"
+                     "• Nhận biết nguy cơ cháy nổ\n"
+                     "• Quy trình báo cháy (gọi 114, bấm còi)\n"
+                     "• Sử dụng bình chữa cháy, vòi chữa cháy\n"
+                     "• Hướng dẫn thoát nạn, cứu người bị nạn\n\n"
+                     "LIÊN HỆ PCCC BẮC NINH:\n"
+                     "• Phòng Cảnh sát PCCC & CNCH tỉnh Bắc Ninh\n"
+                     "• Đường dây nóng: 114\n\n"
+                     "📜 Căn cứ: Luật PCCC 55/2024, Điều 24",
+            "suggestions": ["Chi phí huấn luyện PCCC?", "Ai phải tham gia huấn luyện?", "Diễn tập cần chuẩn bị gì?"]
         },
         {
-            "keywords": ["cháy", "nguyên nhân", "nguy cơ", "dấu hiệu"],
-            "reply": "🔍 Các dấu hiệu nhận biết sớm nguy cơ cháy:\n\n⚡ HỆ THỐNG ĐIỆN:\n• Ổ cắm nóng bất thường khi sử dụng\n• Mùi khét từ tủ điện, công tắc\n• Đèn nhấp nháy, tối sáng không đều\n• Aptomat tự ngắt thường xuyên → quá tải\n\n🔥 NGUỒN NHIỆT:\n• Mùi gas bất thường\n• Tàn thuốc chưa tắt hẳn\n• Thiết bị đun nấu bị hở\n\n⚠️ MÔI TRƯỜNG:\n• Vật liệu dễ cháy chất đống\n• Lối thoát bị cản trở\n• Bình chữa cháy hết hạn/thiếu",
-            "suggestions": ["Cách xử lý khi phát hiện cháy?", "Số điện thoại báo cháy?", "Bảo hiểm cháy nổ như thế nào?"]
+            "keywords": ["dấu hiệu cháy", "nhận biết cháy", "nguy cơ cháy", "nguyên nhân cháy"],
+            "reply": "🔍 DẤU HIỆU NHẬN BIẾT SỚM NGUY CƠ CHÁY\n\n"
+                     "HỆ THỐNG ĐIỆN:\n"
+                     "• Ổ cắm nóng bất thường khi sử dụng\n"
+                     "• Mùi khét từ tủ điện, công tắc\n"
+                     "• Đèn nhấp nháy, tối sáng không đều\n"
+                     "• Aptomat tự ngắt thường xuyên\n\n"
+                     "NGUỒN NHIỆT:\n"
+                     "• Mùi gas bất thường\n"
+                     "• Tàn thuốc chưa tắt hẳn\n"
+                     "• Thiết bị đun nấu để trên vật dễ cháy\n\n"
+                     "MÔI TRƯỜNG:\n"
+                     "• Vật liệu dễ cháy chất đống gần nguồn lửa/nhiệt\n"
+                     "• Lối thoát bị cản trở\n"
+                     "• Bình chữa cháy hết hạn hoặc thiếu\n\n"
+                     "📜 Căn cứ: Nghị định 105/2025/NĐ-CP",
+            "suggestions": ["Khi cháy phải làm gì?", "Cách phòng ngừa cháy điện?", "Kiểm tra định kỳ những gì?"]
+        },
+        {
+            "keywords": ["phạt", "xử phạt", "vi phạm", "mức phạt", "tiền phạt"],
+            "reply": "⚖️ MỨC PHẠT VI PHẠM QUY ĐỊNH PCCC\n\n"
+                     "PHẠT HÀNH CHÍNH (Nghị định 68/2025/NĐ-CP):\n"
+                     "• Không có nội quy PCCC: 2 - 5 triệu đồng\n"
+                     "• Không trang bị phương tiện PCCC: 15 - 25 triệu đồng\n"
+                     "• Không bố trí lực lượng PCCC cơ sở: 20 - 30 triệu đồng\n"
+                     "• Hoạt động không có giấy phép PCCC: 30 - 50 triệu đồng\n"
+                     "• Vi phạm gây cháy, nổ: 50 - 100 triệu đồng\n\n"
+                     "ĐÌNH CHỈ HOẠT ĐỘNG:\n"
+                     "• Cơ sở vi phạm nghiêm trọng có thể bị đình chỉ\n"
+                     "• Tái phạm: xem xét truy cứu trách nhiệm hình sự\n\n"
+                     "📜 Căn cứ: Nghị định 68/2025/NĐ-CP",
+            "suggestions": ["Cơ sở nào phải có giấy phép PCCC?", "Thủ tục xin giấy phép PCCC?", "Cách khắc phục vi phạm PCCC?"]
         },
     ]
 
@@ -476,7 +635,7 @@ def _chat_fallback(message: str) -> dict:
 
     # Default response
     return {
-        "reply": "Cảm ơn câu hỏi của bạn! Tôi là trợ lý PCCC.\n\nHiện tại tôi có thể tư vấn về:\n• ⚡ An toàn hệ thống điện\n• 🔥 Phòng cháy bếp gas, nguồn nhiệt\n• 🧯 Bình chữa cháy và thiết bị PCCC\n• 🚪 Lối thoát nạn\n• 📜 Pháp luật PCCC 2024-2025\n• 🎓 Huấn luyện và diễn tập PCCC\n• 🔍 Dấu hiệu nhận biết nguy cơ cháy\n\nHãy đặt câu hỏi cụ thể hơn để tôi tư vấn chi tiết!",
+        "reply": "Cảm ơn câu hỏi của bạn! Tôi là Trợ lý ảo Nguyễn Thị Duyên.\n\nHiện tại tôi có thể tư vấn các vấn đề về PCCC như:\n• ⚡ An toàn hệ thống điện\n• 🔥 Phòng cháy bếp gas, nguồn nhiệt\n• 🧯 Bình chữa cháy và thiết bị PCCC\n• 🚪 Lối thoát nạn\n• 📜 Pháp luật PCCC 2024-2025\n• 🎓 Huấn luyện và diễn tập PCCC\n• 🔍 Dấu hiệu nhận biết nguy cơ cháy\n\nHãy đặt câu hỏi cụ thể hơn để Duyên tư vấn chi tiết cho bạn nhé!",
         "suggestions": ["Dấu hiệu nào cho thấy hệ thống điện sắp gây cháy?", "Quy định bình chữa cháy?", "Luật PCCC 55/2024 có gì mới?"],
         "references": []
     }
@@ -694,3 +853,19 @@ Trả về JSON:
         "prediction_confidence": "medium",
         "prediction_note": "Dự đoán dựa trên phân tích thống kê từ dữ liệu đánh giá. Kết quả chính xác hơn khi có nhiều đánh giá định kỳ."
     }
+
+
+# ======================== ADMIN: RELOAD DOCS ========================
+
+@router.post("/reload-docs")
+async def reload_legal_docs(
+    current_user: User = Depends(get_current_user)
+):
+    """Admin endpoint: xóa cache tài liệu pháp lý để nạp lại từ docs/ folder.
+    Gọi sau khi thêm/sửa tài liệu mà không muốn restart server."""
+    require_role("admin", "superadmin")(current_user)
+    import legal_knowledge
+    legal_knowledge._legal_context_cache = None
+    context = legal_knowledge.get_legal_context_for_chat()
+    char_count = len(context)
+    return {"status": "ok", "message": f"Đã nạp lại tài liệu pháp lý ({char_count:,} ký tự)"}

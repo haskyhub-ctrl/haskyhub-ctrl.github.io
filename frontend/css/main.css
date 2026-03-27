@@ -217,8 +217,16 @@ h5 { font-size: 1.1rem; }
 }
 
 .nav-brand .logo-icon {
-    font-size: 1.6rem;
-    filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.3));
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.nav-brand .logo-icon svg {
+    width: 36px;
+    height: 36px;
 }
 
 .nav-brand small {

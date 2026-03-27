@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(for f:*)",
+      "Bash(do)",
+      "Bash(sed -i 's|>☰<|>&#9776;<|g' \"$f\")",
+      "Bash(done)"
+    ]
+  }
+}

@@ -15,12 +15,12 @@
 <body>
     <nav class="navbar">
         <div class="container">
-            <a href="/" class="nav-brand"><span class="logo-icon">🔥</span>
+            <a href="/" class="nav-brand"><span class="logo-icon"><img src="/img/logo-cand.png" alt="CAND" width="36" height="36" style="object-fit:contain;filter:brightness(0) invert(1);"></span>
                 <div><span>FRAS</span><small>Đánh giá Nguy cơ Cháy Nổ</small></div>
             </a>
             <ul class="nav-links" id="nav-links"></ul>
             <div class="nav-user" id="nav-user"></div>
-            <button class="nav-mobile-toggle">☰</button>
+            <button class="nav-mobile-toggle">>☰<#9776;</button>
         </div>
     </nav>
 
@@ -68,7 +68,7 @@
         <div class="page-header" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
             <div style="display:flex; align-items:center; gap:20px;">
                 <div id="qr-code-container" style="display:flex; align-items:center;">
-                    <div style="width:80px; height:80px; border-radius:8px; background:rgba(255,255,255,0.1); border:1px solid var(--border-color); display:flex; align-items:center; justify-content:center; font-size:0.8rem; color:var(--text-muted)">QR</div>
+                    <div style="width:80px; height:80px; border-radius:0; background:rgba(255,255,255,0.1); border:1px solid var(--border-color); display:flex; align-items:center; justify-content:center; font-size:0.8rem; color:var(--text-muted)">QR</div>
                 </div>
                 <div>
                     <h1 class="fade-in">📊 Kết quả Đánh giá</h1>
@@ -77,7 +77,7 @@
             </div>
             <div style="display:flex; gap:8px; flex-wrap:wrap;">
                 <button class="btn btn-outline" onclick="exportPDF('${data.id}')">📄 Xuất PDF</button>
-                <button class="btn btn-primary" onclick="requestAI('${data.id}')" id="btn-ai">🤖 Phân tích AI</button>
+                <button class="btn btn-primary" onclick="requestAI('${data.id}')" id="btn-ai">🤖 Trợ lý Duyên phân tích</button>
             </div>
         </div>
 
@@ -164,7 +164,7 @@
                     const url = URL.createObjectURL(blob);
                     const container = document.getElementById('qr-code-container');
                     if(container) {
-                        container.innerHTML = `<img src="${url}" alt="QR" style="width:80px; height:80px; border-radius:8px; border:4px solid white; background:white; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">`;
+                        container.innerHTML = `<img src="${url}" alt="QR" style="width:80px; height:80px; border-radius:0; border:4px solid white; background:white;">`;
                     }
                 }
             } catch (err) {
@@ -176,18 +176,18 @@
 
         function buildAiSection(ai) {
             const pc = { urgent: '#ef4444', high: '#f97316', medium: '#eab308', low: '#22c55e' };
-            let h = '<div class="dashboard-section mt-3"><div class="section-title"><h3>🤖 Phân tích & Khuyến cáo từ AI</h3></div>';
+            let h = '<div class="dashboard-section mt-3"><div class="section-title"><h3>👩‍💼 Khuyến cáo từ Trợ lý Nguyễn Thị Duyên</h3></div>';
             if (ai.overall_assessment) h += `<div class="alert alert-info" style="margin-bottom:16px; font-size:0.95rem;">${ai.overall_assessment}</div>`;
             if (ai.strengths?.length) h += `<h5 style="margin:12px 0 8px; color:#22c55e;">✅ Ưu điểm</h5><ul style="padding-left:20px;color:var(--text-secondary);font-size:0.9rem;">${ai.strengths.map(s => `<li style="margin-bottom:4px;">${s}</li>`).join('')}</ul>`;
             if (ai.critical_weaknesses?.length) h += `<h5 style="margin:12px 0 8px; color:#ef4444;">⚠️ Tồn tại, nguy cơ cháy, nổ</h5><ul style="padding-left:20px;color:var(--text-secondary);font-size:0.9rem;">${ai.critical_weaknesses.map(s => `<li style="margin-bottom:4px;">${s}</li>`).join('')}</ul>`;
             if (ai.detailed_recommendations?.length) {
-                h += `<h5 style="margin:16px 0 8px; color:#f97316;">🔧 Khuyến cáo chi tiết từ AI (${ai.detailed_recommendations.length} khuyến cáo)</h5>`;
+                h += `<h5 style="margin:16px 0 8px; color:#f97316;">🔧 Khuyến cáo chi tiết từ Duyên (${ai.detailed_recommendations.length} khuyến cáo)</h5>`;
                 ai.detailed_recommendations.forEach((r, i) => {
                     const c = pc[r.priority] || '#94a3b8';
-                    h += `<div style="background:rgba(255,255,255,0.03); border-radius:10px; padding:14px; margin-bottom:10px; border-left:3px solid ${c};">
+                    h += `<div style="background:rgba(255,255,255,0.03); border-radius:0; padding:14px; margin-bottom:10px; border-left:3px solid ${c};">
                         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
                             <strong style="color:var(--text-primary); font-size:0.92rem;">${i + 1}. ${r.title || ''}</strong>
-                            <span style="background:${c}20; color:${c}; padding:2px 8px; border-radius:4px; font-size:0.75rem; font-weight:600;">${(r.priority || '').toUpperCase()}</span>
+                            <span style="background:${c}20; color:${c}; padding:2px 8px; border-radius:0; font-size:0.75rem; font-weight:600;">${(r.priority || '').toUpperCase()}</span>
                         </div>
                         <p style="color:var(--text-secondary); font-size:0.85rem; margin:0 0 6px; line-height:1.5;">${r.description || ''}</p>
                         <div style="color:var(--text-muted); font-size:0.78rem; display:flex; flex-wrap:wrap; gap:8px;">
@@ -205,7 +205,7 @@
             // Daily checklist section
             if (ai.daily_checklist?.length) {
                 h += `<h5 style="margin:16px 0 8px; color:#06b6d4;">📋 Danh mục kiểm tra hàng ngày</h5>`;
-                h += `<div style="background:rgba(6,182,212,0.08); border-radius:10px; padding:14px; border-left:3px solid #06b6d4;">`;
+                h += `<div style="background:rgba(6,182,212,0.08); border-radius:0; padding:14px; border-left:3px solid #06b6d4;">`;
                 h += `<ul style="padding-left:20px; margin:0; color:var(--text-secondary); font-size:0.85rem;">`;
                 ai.daily_checklist.forEach(item => {
                     h += `<li style="margin-bottom:6px;">☑️ ${item}</li>`;
@@ -223,17 +223,17 @@
                 phases.forEach(phase => {
                     const items = p[phase.key];
                     if (!items?.length) return;
-                    h += `<div style="background:${phase.bg}; border-radius:12px; padding:16px; margin-bottom:14px; border-left:4px solid ${phase.color};">`;
+                    h += `<div style="background:${phase.bg}; border-radius: 0; padding:16px; margin-bottom:14px; border-left:4px solid ${phase.color};">`;
                     h += `<div style="margin-bottom:10px;"><strong style="color:${phase.color}; font-size:0.92rem;">${phase.label}</strong>`;
                     h += `<p style="color:var(--text-muted); font-size:0.78rem; margin:4px 0 0;">${phase.desc}</p></div>`;
                     items.forEach((item, idx) => {
                         if (typeof item === 'string') {
-                            h += `<div style="display:flex; gap:8px; margin-bottom:8px; padding:8px 10px; background:rgba(255,255,255,0.03); border-radius:8px;">
+                            h += `<div style="display:flex; gap:8px; margin-bottom:8px; padding:8px 10px; background:rgba(255,255,255,0.03); border-radius: 0;">
                                 <span style="color:${phase.color}; font-weight:700; min-width:20px;">${idx+1}.</span>
                                 <span style="color:var(--text-secondary); font-size:0.84rem; line-height:1.5;">${item}</span>
                             </div>`;
                         } else {
-                            h += `<div style="margin-bottom:10px; padding:10px 12px; background:rgba(255,255,255,0.03); border-radius:8px;">
+                            h += `<div style="margin-bottom:10px; padding:10px 12px; background:rgba(255,255,255,0.03); border-radius: 0;">
                                 <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:4px;">
                                     <strong style="color:var(--text-primary); font-size:0.86rem;">${idx+1}. ${item.task || item.title || ''}</strong>
                                 </div>

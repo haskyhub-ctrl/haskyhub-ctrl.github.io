@@ -4,244 +4,357 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hệ thống Khảo sát Đánh giá Nguy cơ Cháy Nổ Thông minh - PCCC Bắc Ninh</title>
-    <meta name="description"
-        content="Hệ thống đánh giá nguy cơ cháy nổ thông minh được hỗ trợ bởi trí tuệ nhân tạo. Phát triển bởi Phòng Cảnh sát PCCC và CNCH, Công an tỉnh Bắc Ninh. Miễn phí 100%.">
-    <meta name="theme-color" content="#C41E3A">
+    <title>Hệ thống Đánh giá Nguy cơ Cháy Nổ Thông minh - PCCC Bắc Ninh</title>
+    <meta name="description" content="Hệ thống đánh giá nguy cơ cháy nổ thông minh được hỗ trợ bởi trí tuệ nhân tạo. Phát triển bởi Phòng Cảnh sát PCCC và CNCH, Công an tỉnh Bắc Ninh.">
+    <meta name="theme-color" content="#C0202A">
     <link rel="manifest" href="/manifest.json">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/homepage.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Roboto+Condensed:wght@700;800;900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700;800;900&family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
-    <!-- ==================== HEADER ==================== -->
-    <nav class="navbar hp-navbar">
+<body class="has-gov-header">
+
+    <!-- ============================================================
+         TOP AUTHORITY BAR — Quốc hiệu / Tiêu ngữ
+         ============================================================ -->
+    <div class="gov-top-bar">
         <div class="container">
-            <a href="/" class="nav-brand">
-                <span class="logo-icon">🔥</span>
-                <div>
-                    <span>HỆ THỐNG KHẢO SÁT AN TOÀN PCCC</span>
-                    <small>Phòng Cảnh sát PCCC & CNCH - Công an tỉnh Bắc Ninh</small>
+            <span class="gov-top-motto">
+                CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
+                <span class="separator">•</span>
+                <span class="motto-sub">Độc lập – Tự do – Hạnh phúc</span>
+            </span>
+            <div class="gov-top-right">
+                <span class="gov-top-clock" id="gov-clock">--:-- --/--/----</span>
+                <div class="gov-font-size-btns">
+                    <button class="gov-font-btn" onclick="document.documentElement.style.fontSize='14px'">A-</button>
+                    <button class="gov-font-btn" onclick="document.documentElement.style.fontSize='16px'">A</button>
+                    <button class="gov-font-btn" onclick="document.documentElement.style.fontSize='18px'">A+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+         OFFICIAL HEADER BAND — Logo cơ quan + Tên + Hotline
+         ============================================================ -->
+    <header class="gov-header-band">
+        <div class="container">
+            <a href="/" class="gov-agency-brand">
+                <div class="gov-emblem">
+                    <img src="/img/logo-cand.png" alt="Biểu tượng Công an nhân dân Việt Nam" width="64" height="64" style="object-fit:contain;">
+                </div>
+                <div class="gov-agency-name">
+                    <span class="gov-agency-parent">CÔNG AN TỈNH BẮC NINH</span>
+                    <span class="gov-agency-unit">Phòng Cảnh sát PCCC và CNCH</span>
+                    <span class="gov-agency-system">Hệ thống ứng dụng trí tuệ nhân tạo trong khảo sát, đánh giá, cảnh báo nguy cơ cháy, nổ</span>
                 </div>
             </a>
-            <div class="nav-right">
-                <a href="tel:114" class="hotline-btn" aria-label="Gọi đường dây nóng 114">
-                    <span class="hotline-icon">📞</span>
-                    <span>Hotline <strong>114</strong></span>
+            <div class="gov-header-actions">
+                <a href="tel:114" class="gov-hotline-btn" aria-label="Đường dây khẩn cấp 114">
+                    <span class="gov-hotline-label">Báo cháy</span>
+                    <span class="gov-hotline-number">114</span>
                 </a>
-                <div class="nav-user" id="nav-user"></div>
+                <div class="gov-nav-user" id="nav-user"></div>
+                <a href="/login.html" class="gov-login-btn" id="gov-login-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                        <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                    <span>Đăng nhập</span>
+                </a>
             </div>
-            <button class="nav-mobile-toggle" aria-label="Menu">☰</button>
+            <button class="gov-mobile-toggle" id="gov-mobile-toggle" aria-label="Menu">&#9776;</button>
+        </div>
+    </header>
+
+    <!-- ============================================================
+         NAVIGATION BAR — Menu chính
+         ============================================================ -->
+    <nav class="gov-navbar" id="gov-navbar">
+        <div class="container">
+            <ul class="gov-nav-menu" id="gov-nav-menu">
+                <li class="active"><a href="/">Trang chủ</a></li>
+                <li><a href="#services">Dịch vụ</a></li>
+                <li><a href="/survey.html">Bắt đầu khảo sát</a></li>
+                <li><a href="#process">Hướng dẫn</a></li>
+                <li><a href="/dashboard.html">Tra cứu kết quả</a></li>
+                <li><a href="#trust">Về chúng tôi</a></li>
+            </ul>
+            <div class="gov-nav-search">
+                <input type="text" placeholder="Tìm kiếm..." aria-label="Tìm kiếm">
+                <button aria-label="Tìm kiếm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+                    </svg>
+                </button>
+            </div>
         </div>
     </nav>
 
-    <!-- ==================== HERO SECTION ==================== -->
+    <!-- ============================================================
+         HERO BANNER
+         ============================================================ -->
     <section class="hp-hero" id="hero">
         <div class="hp-hero-overlay"></div>
         <div class="hp-hero-content slide-up">
+            <span class="gov-hero-badge">Sáng kiến cấp tỉnh 2026</span>
             <h1 class="hp-hero-title">
-                🔥 BẢO VỆ NGÔI NHÀ<br>
-                <span class="hp-hero-highlight">BẢO VỆ TƯƠNG LAI</span>
+                HỆ THỐNG ỨNG DỤNG TRÍ TUỆ NHÂN TẠO<br>
+                <span class="hp-hero-highlight">TRONG KHẢO SÁT, ĐÁNH GIÁ, CẢNH BÁO NGUY CƠ CHÁY, NỔ</span>
             </h1>
             <p class="hp-hero-subtitle">
-                Hệ thống đánh giá nguy cơ cháy nổ thông minh<br>
-                được hỗ trợ bởi <strong>trí tuệ nhân tạo</strong>
+                Khuyến cáo, đề xuất giải pháp và khắc phục nguy cơ cháy, nổ tại cơ sở<br>
+                Phát triển bởi Công an tỉnh Bắc Ninh
             </p>
             <p class="hp-hero-slogan">
-                "5 phút khảo sát hôm nay — An tâm suốt cả năm"
+                "Phòng ngừa chủ động — Phát hiện sớm — Bảo vệ tính mạng và tài sản"
             </p>
-            <a href="/survey.html" class="hp-cta-btn hp-cta-primary" id="hero-cta">
-                BẮT ĐẦU KHẢO SÁT NGAY
-            </a>
+            <div class="gov-hero-actions">
+                <a href="/survey.html" class="hp-cta-btn hp-cta-primary" id="hero-cta">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+                    </svg>
+                    Bắt đầu khảo sát ngay
+                </a>
+                <a href="#services" class="hp-cta-btn hp-cta-white">
+                    Tìm hiểu thêm
+                </a>
+            </div>
             <p class="hp-hero-social-proof">
-                ⏱️ Hơn <strong class="count-up" data-target="2847">0</strong> hộ gia đình và cơ sở đã kiểm tra an toàn trong tuần này
+                Hơn <strong class="count-up" data-target="2847">0</strong> hộ gia đình và cơ sở đã khảo sát an toàn trong tuần này
             </p>
         </div>
     </section>
 
-    <!-- ==================== STATS STRIP ==================== -->
+    <!-- ============================================================
+         SERVICES SECTION — Dịch vụ trực tuyến
+         ============================================================ -->
+    <section class="gov-services" id="services">
+        <div class="container">
+            <div class="gov-section-header">
+                <span class="gov-section-eyebrow">Tính năng hệ thống</span>
+                <h2 class="gov-section-title">Dịch vụ của chúng tôi</h2>
+                <p class="gov-section-subtitle">Tra cứu, đánh giá và theo dõi tình trạng an toàn PCCC hoàn toàn trực tuyến, không cần đến trực tiếp cơ quan</p>
+            </div>
+            <div class="gov-services-grid">
+                <!-- Dịch vụ 1 -->
+                <a href="/survey.html" class="gov-service-card">
+                    <div class="gov-service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+                        </svg>
+                    </div>
+                    <div class="gov-service-name">Khảo sát an toàn PCCC</div>
+                    <div class="gov-service-desc">Đánh giá nguy cơ cháy nổ cho nhà ở, cơ sở kinh doanh, xưởng sản xuất với AI hỗ trợ phân tích</div>
+                    <span class="gov-service-arrow">&#8594;</span>
+                </a>
+                <!-- Dịch vụ 2 -->
+                <a href="/dashboard.html" class="gov-service-card">
+                    <div class="gov-service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+                            <rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
+                        </svg>
+                    </div>
+                    <div class="gov-service-name">Tra cứu kết quả đánh giá</div>
+                    <div class="gov-service-desc">Xem lịch sử các lần đánh giá, theo dõi tiến độ cải thiện và so sánh giữa các kỳ</div>
+                    <span class="gov-service-arrow">&#8594;</span>
+                </a>
+                <!-- Dịch vụ 3 -->
+                <a href="/map.html" class="gov-service-card">
+                    <div class="gov-service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                    </div>
+                    <div class="gov-service-name">Bản đồ nguy cơ cháy nổ</div>
+                    <div class="gov-service-desc">Xem phân bố nguy cơ cháy nổ theo địa bàn tỉnh Bắc Ninh, tra cứu khu vực trọng điểm</div>
+                    <span class="gov-service-arrow">&#8594;</span>
+                </a>
+                <!-- Dịch vụ 4 -->
+                <a href="/improvement.html" class="gov-service-card">
+                    <div class="gov-service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                        </svg>
+                    </div>
+                    <div class="gov-service-name">Kế hoạch cải thiện</div>
+                    <div class="gov-service-desc">Nhận hướng dẫn chi tiết khắc phục từng điểm nguy cơ, theo thứ tự ưu tiên và chi phí thực hiện</div>
+                    <span class="gov-service-arrow">&#8594;</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         STATS SECTION — Số liệu thực tế
+         ============================================================ -->
     <section class="hp-stats" id="stats">
         <div class="container">
             <div class="hp-stats-grid">
                 <div class="hp-stat-item fade-in-up">
                     <div class="hp-stat-number count-up" data-target="14689">0</div>
                     <div class="hp-stat-label">Vụ cháy toàn quốc</div>
-                    <div class="hp-stat-sub">(2021-2025)</div>
+                    <div class="hp-stat-sub">Giai đoạn 2021–2025</div>
                 </div>
                 <div class="hp-stat-item fade-in-up" data-delay="200">
                     <div class="hp-stat-number count-up" data-target="531">0</div>
                     <div class="hp-stat-label">Người tử vong</div>
-                    <div class="hp-stat-sub">(Cùng 512 người bị thương)</div>
+                    <div class="hp-stat-sub">Và 512 người bị thương</div>
                 </div>
                 <div class="hp-stat-item fade-in-up" data-delay="400">
                     <div class="hp-stat-number"><span class="count-up" data-target="3330">0</span> tỷ</div>
                     <div class="hp-stat-label">Thiệt hại tài sản</div>
-                    <div class="hp-stat-sub">(Ước tính tổng)</div>
+                    <div class="hp-stat-sub">Ước tính tổng cộng (đồng)</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== WHY SECTION - 5 LÝ DO ==================== -->
+    <!-- ============================================================
+         WHY SECTION — Tại sao cần khảo sát
+         ============================================================ -->
     <section class="hp-why" id="why">
         <div class="container">
-            <div class="section-header">
-                <h2 class="hp-section-title">TẠI SAO BẠN NÊN KIỂM TRA <span class="text-red">NGAY HÔM NAY?</span></h2>
-                <p class="hp-section-subtitle">Nguy hiểm nhất không phải cái bạn không biết — mà là cái bạn đã quen thấy đến mức không thấy nữa</p>
+            <div class="gov-section-header">
+                <span class="gov-section-eyebrow">Tại sao cần thực hiện</span>
+                <h2 class="gov-section-title">Những nguy cơ tiềm ẩn tại cơ sở của bạn</h2>
+                <p class="gov-section-subtitle">Nguy hiểm nhất không phải điều bạn không biết — mà là điều bạn đã quen thấy đến mức bỏ qua</p>
             </div>
 
             <div class="hp-why-grid">
-                <!-- Lý do 1 -->
                 <div class="hp-why-card fade-in-up" id="reason-1">
-                    <div class="hp-why-icon">🔥</div>
+                    <div class="hp-why-icon">01</div>
                     <h3 class="hp-why-title">HƠN 14.600 VỤ CHÁY VÀ HÀNG TRĂM SINH MẠNG BỊ ĐE DỌA</h3>
                     <div class="hp-why-stats">
-                        <div class="hp-mini-stat">
-                            <strong>14.689</strong> vụ cháy trên toàn quốc (2021-2025)
-                        </div>
-                        <div class="hp-mini-stat">
-                            <strong>531 người chết</strong> và 512 người bị thương
-                        </div>
-                        <div class="hp-mini-stat">
-                            Hơn <strong>3.330,7 tỉ</strong> đồng thiệt hại vật chất
-                        </div>
+                        <div class="hp-mini-stat"><strong>14.689</strong> vụ cháy trên toàn quốc (2021–2025)</div>
+                        <div class="hp-mini-stat"><strong>531 người tử vong</strong> và 512 người bị thương</div>
+                        <div class="hp-mini-stat">Hơn <strong>3.330,7 tỉ</strong> đồng thiệt hại vật chất</div>
                     </div>
                     <div class="hp-why-story">
-                        <p>💔 <em>"Gia đình anh Minh (Từ Sơn) đã mất trắng căn nhà 3 tầng chỉ vì một ổ cắm quá tải không được phát hiện kịp thời. Anh nói: 'Tôi chưa bao giờ nghĩ mình lại gặp họa. Giá như có ai đó nhắc nhở tôi sớm hơn…'"</em></p>
+                        <p><em>"Gia đình anh Minh (Từ Sơn) mất trắng căn nhà 3 tầng vì một ổ cắm quá tải không được phát hiện kịp thời. Giá như có ai đó nhắc nhở sớm hơn…"</em></p>
                     </div>
-                    <p class="hp-why-cta-text">✅ Bạn không muốn trở thành câu chuyện tiếp theo.</p>
+                    <p class="hp-why-cta-text">Đừng để trở thành câu chuyện tiếp theo.</p>
                 </div>
 
-                <!-- Lý do 2 -->
                 <div class="hp-why-card fade-in-up" id="reason-2">
-                    <div class="hp-why-icon">🔍</div>
+                    <div class="hp-why-icon">02</div>
                     <h3 class="hp-why-title">NGUY CƠ Ở NGAY TRƯỚC MẮT — NHƯNG BẠN KHÔNG NHÌN THẤY</h3>
-                    <p class="hp-why-intro"><strong>95% gia đình</strong> nghĩ nhà mình an toàn… cho đến khi kiểm tra mới phát hiện:</p>
+                    <p class="hp-why-intro"><strong>95% cơ sở</strong> cho rằng mình đang an toàn… cho đến khi kiểm tra mới phát hiện:</p>
                     <ul class="hp-why-list">
                         <li>Dây điện cũ, lão hóa bị chuột gặm</li>
                         <li>Aptomat không phù hợp công suất</li>
                         <li>Ổ cắm quá tải dùng liên tục nhiều năm</li>
                         <li>Không có bình chữa cháy hoặc đã quá hạn</li>
-                        <li>Lối thoát hiểm bị chặn đứng bởi đồ đạc</li>
+                        <li>Lối thoát hiểm bị chặn bởi đồ đạc</li>
                     </ul>
                     <div class="hp-why-warning">
-                        ⚠️ Hầu hết các vụ cháy đều có dấu hiệu cảnh báo trước từ <strong>3-6 tháng</strong>, nhưng không ai chú ý.
+                        Phần lớn vụ cháy có dấu hiệu cảnh báo trước <strong>3–6 tháng</strong>, nhưng không được chú ý.
                     </div>
-                    <p class="hp-why-cta-text">✅ Hệ thống của chúng tôi sẽ phát hiện những "bom hẹn giờ" này cho bạn.</p>
+                    <p class="hp-why-cta-text">Hệ thống sẽ phát hiện những "nguy cơ tiềm ẩn" này cho bạn.</p>
                 </div>
 
-                <!-- Lý do 3 -->
                 <div class="hp-why-card fade-in-up" id="reason-3">
-                    <div class="hp-why-icon">🤖</div>
+                    <div class="hp-why-icon">03</div>
                     <h3 class="hp-why-title">MIỄN PHÍ — NHANH — CHÍNH XÁC NHƯ CHUYÊN GIA</h3>
                     <p class="hp-why-intro">Công nghệ AI học từ hơn <strong>14.000 vụ cháy thực tế</strong></p>
                     <ul class="hp-why-list hp-why-list-check">
-                        <li>Phân tích hơn 60 yếu tố nguy cơ (mà mắt thường không thể thấy)</li>
-                        <li>Đưa ra đánh giá chỉ sau 5 phút trả lời</li>
+                        <li>Phân tích hơn 60 yếu tố nguy cơ</li>
+                        <li>Đưa ra kết quả chỉ sau 5 phút trả lời</li>
                         <li>Cảnh báo mức độ nguy hiểm bằng màu sắc trực quan</li>
                         <li>Đề xuất giải pháp khắc phục cụ thể, dễ thực hiện ngay</li>
                     </ul>
                     <div class="hp-free-badge">HOÀN TOÀN MIỄN PHÍ</div>
-                    <p class="hp-why-cta-text">✅ Bạn được "tư vấn miễn phí bởi chuyên gia AI 24/7"</p>
+                    <p class="hp-why-cta-text">Tư vấn miễn phí bởi chuyên gia AI — hoạt động 24/7</p>
                 </div>
 
-                <!-- Lý do 4 - So sánh -->
                 <div class="hp-why-card fade-in-up" id="reason-4">
-                    <div class="hp-why-icon">📊</div>
-                    <h3 class="hp-why-title">SO SÁNH ĐỂ THẤY SỰ THAY ĐỔI</h3>
-                    <p class="hp-why-intro">Làm khảo sát <strong>nhiều lần</strong> để theo dõi tình trạng an toàn PCCC tại cơ sở của bạn theo thời gian:</p>
+                    <div class="hp-why-icon">04</div>
+                    <h3 class="hp-why-title">THEO DÕI VÀ SO SÁNH THEO THỜI GIAN</h3>
+                    <p class="hp-why-intro">Thực hiện khảo sát <strong>định kỳ</strong> để theo dõi mức độ an toàn PCCC:</p>
                     <ul class="hp-why-list hp-why-list-check">
-                        <li>So sánh kết quả giữa các lần đánh giá để biết nguy cơ cháy nổ <strong>tăng lên hay giảm đi</strong></li>
-                        <li>Xác định những hạng mục đã khắc phục thành công và những điểm còn tồn tại</li>
-                        <li>Tạo lịch sử đánh giá an toàn — bằng chứng cho thấy bạn luôn chủ động phòng ngừa</li>
-                        <li>Nhận cảnh báo nếu có yếu tố nguy cơ mới phát sinh</li>
+                        <li>So sánh kết quả giữa các lần để biết nguy cơ tăng hay giảm</li>
+                        <li>Xác định hạng mục đã khắc phục và điểm còn tồn tại</li>
+                        <li>Tạo hồ sơ an toàn PCCC — bằng chứng chủ động phòng ngừa</li>
+                        <li>Cảnh báo khi có yếu tố nguy cơ mới phát sinh</li>
                     </ul>
-                    <p class="hp-why-cta-text">✅ Đánh giá định kỳ = An toàn bền vững, không để nguy cơ "tích tụ" âm thầm.</p>
-                </div>
-
-                <!-- Lý do 5 -->
-                <div class="hp-why-card fade-in-up" id="reason-5">
-                    <div class="hp-why-icon">👨‍👩‍👧‍👦</div>
-                    <h3 class="hp-why-title">BẢO VỆ NGƯỜI THÂN LÀ TRÁCH NHIỆM THIÊNG LIÊNG</h3>
-                    <p class="hp-why-intro">Câu hỏi dành cho bạn:</p>
-                    <ul class="hp-why-list hp-why-list-question">
-                        <li>Nếu đêm nay có cháy, bạn có chắc gia đình biết lối thoát hiểm?</li>
-                        <li>Con bạn có biết cách gọi 114 và thoát ra ngoài an toàn không?</li>
-                        <li>Ông bà, người già ở nhà có thể tự cứu mình khi có sự cố không?</li>
-                    </ul>
-                    <div class="hp-why-warning">
-                        💔 Trong 14.689 vụ cháy toàn quốc, có nhiều nạn nhân là <strong>trẻ em và người già</strong> không kịp thoát thân vì: không biết lối thoát hiểm, cửa sắt bị khóa chặt, không có kỹ năng xử lý ban đầu.
-                    </div>
-                    <p class="hp-why-cta-text">✅ Khảo sát này không chỉ bảo vệ tài sản — mà còn bảo vệ sinh mạng những người bạn yêu thương.</p>
+                    <p class="hp-why-cta-text">Đánh giá định kỳ = An toàn bền vững.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== MID CTA ==================== -->
+    <!-- ============================================================
+         MID CTA
+         ============================================================ -->
     <section class="hp-mid-cta">
         <div class="container">
-            <p class="hp-mid-quote">"Khoảng cách giữa <strong>nguy cơ</strong> và <strong>thảm họa</strong> thường chỉ là một hành động nhỏ mà bạn chưa làm"</p>
-            <a href="/survey.html" class="hp-cta-btn hp-cta-primary">BẮT ĐẦU KHẢO SÁT NGAY — MIỄN PHÍ</a>
+            <p class="hp-mid-quote">"Khoảng cách giữa <strong>nguy cơ</strong> và <strong>thảm họa</strong> thường chỉ là một hành động nhỏ chưa được thực hiện"</p>
+            <a href="/survey.html" class="hp-cta-btn hp-cta-primary">Thực hiện khảo sát ngay — Miễn phí</a>
         </div>
     </section>
 
-    <!-- ==================== TRUST SECTION ==================== -->
+    <!-- ============================================================
+         TRUST SECTION
+         ============================================================ -->
     <section class="hp-trust" id="trust">
         <div class="container">
-            <div class="section-header">
-                <h2 class="hp-section-title">🛡️ CAM KẾT CỦA <span class="text-red">CHÚNG TÔI</span></h2>
+            <div class="gov-section-header">
+                <span class="gov-section-eyebrow">Cam kết của cơ quan</span>
+                <h2 class="gov-section-title">Cam kết từ Công an tỉnh Bắc Ninh</h2>
             </div>
 
             <div class="hp-trust-grid">
                 <div class="hp-trust-commitments fade-in-up">
-                    <h3>🛡️ 5 CAM KẾT VÀNG</h3>
+                    <h3>5 CAM KẾT CỦA HỆ THỐNG</h3>
                     <div class="hp-commit-list">
                         <div class="hp-commit-item">
-                            <div class="hp-commit-icon">✅</div>
+                            <div class="hp-commit-icon" style="color:var(--gov-red); font-weight:bold; font-size:16px;">&#10003;</div>
                             <div>
                                 <strong>100% Miễn phí</strong>
                                 <p>Không thu bất kỳ khoản phí nào, không quảng cáo sản phẩm</p>
                             </div>
                         </div>
                         <div class="hp-commit-item">
-                            <div class="hp-commit-icon">✅</div>
+                            <div class="hp-commit-icon" style="color:var(--gov-red); font-weight:bold; font-size:16px;">&#10003;</div>
                             <div>
                                 <strong>Bảo mật tuyệt đối</strong>
-                                <p>Dữ liệu được xử lý nội bộ (Local AI), không gửi ra bên ngoài</p>
+                                <p>Dữ liệu được xử lý nội bộ (Local AI), không chia sẻ ra bên ngoài</p>
                             </div>
                         </div>
                         <div class="hp-commit-item">
-                            <div class="hp-commit-icon">✅</div>
+                            <div class="hp-commit-icon" style="color:var(--gov-red); font-weight:bold; font-size:16px;">&#10003;</div>
                             <div>
                                 <strong>Chính xác khoa học</strong>
-                                <p>Dựa trên hơn 14.000 vụ cháy thực tế và kết quả điều tra, xác minh nguyên nhân vụ cháy</p>
+                                <p>Dựa trên hơn 14.000 vụ cháy thực tế và kết quả điều tra, xác minh nguyên nhân</p>
                             </div>
                         </div>
                         <div class="hp-commit-item">
-                            <div class="hp-commit-icon">✅</div>
+                            <div class="hp-commit-icon" style="color:var(--gov-red); font-weight:bold; font-size:16px;">&#10003;</div>
                             <div>
                                 <strong>Đơn giản, dễ hiểu</strong>
-                                <p>Không cần kiến thức chuyên môn, mọi người đều làm được</p>
+                                <p>Không cần kiến thức chuyên môn, mọi người đều thực hiện được</p>
                             </div>
                         </div>
                         <div class="hp-commit-item">
-                            <div class="hp-commit-icon">✅</div>
+                            <div class="hp-commit-icon" style="color:var(--gov-red); font-weight:bold; font-size:16px;">&#10003;</div>
                             <div>
                                 <strong>Kết quả ngay lập tức</strong>
-                                <p>Chỉ 5 phút trả lời, nhận ngay báo cáo chi tiết</p>
+                                <p>Chỉ 5 phút trả lời, nhận ngay báo cáo chi tiết kèm giải pháp</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="hp-trust-recognition fade-in-up" data-delay="200">
-                    <h3>🏆 CÔNG NHẬN</h3>
+                    <h3>CÔNG NHẬN CỦA CƠ QUAN CHỨC NĂNG</h3>
                     <div class="hp-recognition-box">
                         <p>Hệ thống này là <strong>sáng kiến cấp tỉnh năm 2026</strong> của Phòng Cảnh sát PCCC và CNCH, Công an tỉnh Bắc Ninh, được xây dựng nhằm mục tiêu:</p>
                         <blockquote>
-                            "Ứng dụng AI vào đánh giá nguy cơ cháy, nổ tại cơ sở, phòng ngừa chủ động, phát hiện sớm nguy cơ cháy nổ, bảo vệ tính mạng và tài sản của người dân."
+                            "Ứng dụng AI vào đánh giá nguy cơ cháy, nổ tại cơ sở — phòng ngừa chủ động, phát hiện sớm nguy cơ, bảo vệ tính mạng và tài sản của người dân."
                         </blockquote>
                     </div>
                 </div>
@@ -249,247 +362,297 @@
         </div>
     </section>
 
-    <!-- ==================== QUY TRÌNH 3 BƯỚC ==================== -->
+    <!-- ============================================================
+         QUY TRÌNH 3 BƯỚC
+         ============================================================ -->
     <section class="hp-process" id="process">
         <div class="container">
-            <div class="section-header">
-                <h2 class="hp-section-title">CÁCH THỨC HOẠT ĐỘNG</h2>
-                <p class="hp-section-subtitle">Bạn không cần học thuộc lòng Luật, Nghị định, thông tư để biết mình đang đứng trước một nguy cơ cháy hay không</p>
+            <div class="gov-section-header">
+                <span class="gov-section-eyebrow">Hướng dẫn sử dụng</span>
+                <h2 class="gov-section-title">Cách thức hoạt động</h2>
+                <p class="gov-section-subtitle">Không cần kiến thức chuyên môn về PCCC. Chỉ cần trả lời trung thực các câu hỏi trắc nghiệm đơn giản</p>
             </div>
 
             <div class="hp-process-timeline">
                 <div class="hp-process-step fade-in-up" id="step-1">
                     <div class="hp-step-number">1</div>
-                    <div class="hp-step-icon">📝</div>
                     <h4>KHAI BÁO</h4>
-                    <p>Trả lời 20-25 câu hỏi trắc nghiệm đơn giản về tình trạng an toàn PCCC hiện tại</p>
-                    <div class="hp-step-time">⏱️ 2 phút</div>
+                    <p>Trả lời 20–25 câu hỏi trắc nghiệm đơn giản về tình trạng an toàn PCCC hiện tại của cơ sở</p>
+                    <div class="hp-step-time">Khoảng 2–5 phút</div>
                 </div>
 
-                <div class="hp-process-arrow">→</div>
+                <div class="hp-process-arrow">&#8594;</div>
 
                 <div class="hp-process-step fade-in-up" data-delay="200" id="step-2">
                     <div class="hp-step-number">2</div>
-                    <div class="hp-step-icon">🤖</div>
                     <h4>AI PHÂN TÍCH</h4>
-                    <p>Hệ thống xử lý tự động bằng AI, đối chiếu với dữ liệu hơn 14.000 vụ cháy thực tế</p>
-                    <div class="hp-step-time">⏱️ 10 giây</div>
+                    <p>Hệ thống xử lý tự động bằng AI, đối chiếu với cơ sở dữ liệu hơn 14.000 vụ cháy thực tế</p>
+                    <div class="hp-step-time">Xử lý trong vòng 10 giây</div>
                 </div>
 
-                <div class="hp-process-arrow">→</div>
+                <div class="hp-process-arrow">&#8594;</div>
 
                 <div class="hp-process-step fade-in-up" data-delay="400" id="step-3">
                     <div class="hp-step-number">3</div>
-                    <div class="hp-step-icon">📊</div>
                     <h4>NHẬN BÁO CÁO</h4>
-                    <p>Xem kết quả mức độ nguy cơ, giải pháp khắc phục cụ thể cho cơ sở của bạn</p>
-                    <div class="hp-step-time">⏱️ 1 phút đọc</div>
+                    <p>Xem kết quả mức độ nguy cơ, danh sách điểm cần khắc phục và giải pháp cụ thể</p>
+                    <div class="hp-step-time">Báo cáo chi tiết ngay lập tức</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== 5 NGUYÊN TẮC VÀNG TRONG PCCC ==================== -->
+    <!-- ============================================================
+         5 NGUYÊN TẮC VÀNG PCCC
+         ============================================================ -->
     <section class="hp-principles" id="principles">
         <div class="container">
-            <div class="section-header">
-                <h2 class="hp-section-title">5 NGUYÊN TẮC VÀNG <span class="text-red">TRONG PHÒNG CHÁY CHỮA CHÁY</span></h2>
-                <p class="hp-section-subtitle">Chủ động phòng ngừa, lấy phòng là chính, chuẩn bị sẵn sàng lực lượng và phương tiện tại chỗ để xử lý ngay khi có sự cố</p>
+            <div class="gov-section-header">
+                <span class="gov-section-eyebrow">Kiến thức PCCC</span>
+                <h2 class="gov-section-title">5 Nguyên tắc vàng trong Phòng cháy Chữa cháy</h2>
+                <p class="gov-section-subtitle">Chủ động phòng ngừa, lấy phòng là chính — chuẩn bị sẵn sàng lực lượng và phương tiện tại chỗ</p>
             </div>
 
             <div class="hp-principles-grid hp-principles-grid-5">
                 <div class="hp-principle-card fade-in-up" id="principle-1">
-                    <div class="hp-principle-number">1️⃣</div>
+                    <div class="hp-principle-number">01</div>
                     <h4>CHỦ ĐỘNG PHÒNG NGỪA LÀ CHÍNH</h4>
                     <ul class="hp-principle-list">
                         <li>Loại bỏ nguy cơ cháy: Không để vật liệu dễ cháy gần nguồn nhiệt</li>
-                        <li>An toàn điện: Rút phích cắm khi không sử dụng, không cắm nhiều thiết bị công suất lớn vào một ổ cắm</li>
-                        <li>An toàn khí gas: Khóa gas khi nấu xong, kiểm tra định kỳ dây dẫn và bình gas</li>
+                        <li>An toàn điện: Rút phích cắm khi không sử dụng, không cắm quá tải</li>
+                        <li>An toàn khí gas: Khóa gas khi nấu xong, kiểm tra định kỳ</li>
                         <li>Phân loại và cảnh báo khu vực có nguy cơ cháy cao</li>
                     </ul>
                 </div>
                 <div class="hp-principle-card fade-in-up" data-delay="150" id="principle-2">
-                    <div class="hp-principle-number">2️⃣</div>
+                    <div class="hp-principle-number">02</div>
                     <h4>CHUẨN BỊ SẴN SÀNG LỰC LƯỢNG VÀ PHƯƠNG TIỆN TẠI CHỖ</h4>
                     <ul class="hp-principle-list">
-                        <li>Trang bị thiết bị báo cháy, báo khói và bình chữa cháy tại gia đình/nơi làm việc</li>
-                        <li>Xây dựng phương án thoát hiểm: Nắm rõ lối thoát hiểm, sơ đồ thoát nạn</li>
-                        <li>Thường xuyên tham gia các buổi diễn tập PCCC</li>
+                        <li>Trang bị thiết bị báo cháy, báo khói và bình chữa cháy</li>
+                        <li>Nắm rõ lối thoát hiểm và sơ đồ thoát nạn</li>
+                        <li>Thường xuyên tham gia diễn tập PCCC</li>
                     </ul>
                 </div>
                 <div class="hp-principle-card fade-in-up" data-delay="300" id="principle-3">
-                    <div class="hp-principle-number">3️⃣</div>
+                    <div class="hp-principle-number">03</div>
                     <h4>PHÁT HIỆN VÀ CHỮA CHÁY KỊP THỜI</h4>
                     <ul class="hp-principle-list">
                         <li>Bình tĩnh: Không hoảng loạn, hô to báo động</li>
-                        <li>Ngắt điện/gas ngay lập tức khi có cháy (nếu an toàn)</li>
-                        <li>Sử dụng phương tiện tại chỗ để dập tắt đám cháy mới phát sinh</li>
+                        <li>Ngắt điện, gas ngay lập tức khi có cháy (nếu an toàn)</li>
+                        <li>Sử dụng phương tiện tại chỗ để dập tắt đám cháy mới</li>
                         <li>Gọi <strong>114</strong> ngay cho lực lượng chữa cháy chuyên nghiệp</li>
                     </ul>
                 </div>
                 <div class="hp-principle-card fade-in-up" data-delay="450" id="principle-4">
-                    <div class="hp-principle-number">4️⃣</div>
+                    <div class="hp-principle-number">04</div>
                     <h4>ƯU TIÊN AN TOÀN CON NGƯỜI VÀ THOÁT HIỂM</h4>
                     <ul class="hp-principle-list">
                         <li><strong>Cứu người trước — Tài sản sau:</strong> Nguyên tắc cốt lõi</li>
-                        <li>Không quay lại: Khi đã thoát ra ngoài, tuyệt đối không quay lại lấy tài sản</li>
-                        <li>Bảo vệ hệ hô hấp: Dùng khăn ướt che mũi, miệng; cúi thấp người khi di chuyển</li>
+                        <li>Khi đã thoát ra ngoài, tuyệt đối không quay lại lấy tài sản</li>
+                        <li>Dùng khăn ướt che mũi, miệng; cúi thấp người khi di chuyển</li>
                     </ul>
                 </div>
                 <div class="hp-principle-card fade-in-up" data-delay="600" id="principle-5">
-                    <div class="hp-principle-number">5️⃣</div>
+                    <div class="hp-principle-number">05</div>
                     <h4>HUY ĐỘNG SỨC MẠNH TỔNG HỢP CỦA TOÀN DÂN</h4>
                     <ul class="hp-principle-list">
                         <li>Mọi cá nhân, hộ gia đình và cơ quan đều có trách nhiệm PCCC</li>
-                        <li>Xây dựng văn hóa an toàn, nâng cao nhận thức cá nhân</li>
-                        <li>Tuân thủ nghiêm ngặt các quy định để hạn chế tối đa nguy cơ và thiệt hại do cháy nổ</li>
+                        <li>Xây dựng văn hóa an toàn, nâng cao nhận thức cộng đồng</li>
+                        <li>Tuân thủ nghiêm ngặt các quy định để hạn chế thiệt hại do cháy nổ</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== TESTIMONIALS ==================== -->
+    <!-- ============================================================
+         TESTIMONIALS
+         ============================================================ -->
     <section class="hp-testimonials" id="testimonials">
         <div class="container">
-            <div class="section-header">
-                <h2 class="hp-section-title">💬 NGƯỜI DÂN NÓI GÌ VỀ HỆ THỐNG?</h2>
-                <p class="hp-section-subtitle">Thống kê từ phản hồi của người tham gia khảo sát cho thấy, rất nhiều nguy cơ tiềm ẩn đã được loại bỏ, khắc phục sau khi làm bài khảo sát</p>
+            <div class="gov-section-header">
+                <span class="gov-section-eyebrow">Phản hồi từ người dân</span>
+                <h2 class="gov-section-title">Người dân nói gì về hệ thống?</h2>
+                <p class="gov-section-subtitle">Rất nhiều nguy cơ tiềm ẩn đã được phát hiện và khắc phục sau khi thực hiện khảo sát</p>
             </div>
 
             <div class="hp-testimonials-grid">
                 <div class="hp-testimonial-card fade-in-up" id="testimonial-1">
-                    <div class="hp-testimonial-avatar">
-                        <div class="hp-avatar-placeholder">L</div>
-                    </div>
-                    <div class="hp-testimonial-content">
-                        <div class="hp-testimonial-stars">⭐⭐⭐⭐⭐</div>
-                        <p class="hp-testimonial-text">"Làm xong mới biết cái ổ cắm ở bếp nhà mình dùng 12 năm rồi chưa thay. Cắm bếp từ, nồi cơm, bình nóng lạnh chung 1 ổ. Hệ thống cảnh báo đỏ lòm, sợ quá gọi thợ thay ngay hôm đó."</p>
-                        <div class="hp-testimonial-author">
-                            <strong>Chị Lan</strong>
-                            <span>Chủ nhà trọ 5 tầng, Từ Sơn</span>
-                        </div>
+                    <div class="hp-testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="hp-testimonial-text">"Làm xong mới biết cái ổ cắm ở bếp nhà mình dùng 12 năm rồi chưa thay. Hệ thống cảnh báo đỏ, sợ quá gọi thợ thay ngay hôm đó."</p>
+                    <div class="hp-testimonial-author">
+                        <strong>Chị Lan</strong>
+                        <span>Chủ nhà trọ 5 tầng, Từ Sơn</span>
                     </div>
                 </div>
 
                 <div class="hp-testimonial-card fade-in-up" data-delay="100" id="testimonial-2">
-                    <div class="hp-testimonial-avatar">
-                        <div class="hp-avatar-placeholder">T</div>
-                    </div>
-                    <div class="hp-testimonial-content">
-                        <div class="hp-testimonial-stars">⭐⭐⭐⭐⭐</div>
-                        <p class="hp-testimonial-text">"Trước giờ cứ nghĩ nhà mình an toàn vì có bình cứu hỏa rồi. Ai ngờ làm khảo sát xong mới biết bình hết hạn 2 năm rồi, lối cầu thang thì chất đầy thùng xốp. Giờ dọn hết rồi, nhẹ cả người."</p>
-                        <div class="hp-testimonial-author">
-                            <strong>Anh Tuấn</strong>
-                            <span>Hộ gia đình, Đình Bảng, Từ Sơn</span>
-                        </div>
+                    <div class="hp-testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="hp-testimonial-text">"Cứ nghĩ nhà mình an toàn vì có bình cứu hỏa. Ai ngờ bình hết hạn 2 năm rồi, lối cầu thang chất đầy thùng xốp. Giờ dọn hết, nhẹ cả người."</p>
+                    <div class="hp-testimonial-author">
+                        <strong>Anh Tuấn</strong>
+                        <span>Hộ gia đình, Đình Bảng, Từ Sơn</span>
                     </div>
                 </div>
 
                 <div class="hp-testimonial-card fade-in-up" data-delay="200" id="testimonial-3">
-                    <div class="hp-testimonial-avatar">
-                        <div class="hp-avatar-placeholder">H</div>
-                    </div>
-                    <div class="hp-testimonial-content">
-                        <div class="hp-testimonial-stars">⭐⭐⭐⭐⭐</div>
-                        <p class="hp-testimonial-text">"Xưởng mình 200m² mà chỉ có 2 bình chữa cháy, lại để ở góc khuất. Hệ thống chỉ ra luôn, mình bổ sung thêm 4 bình và gắn biển chỉ dẫn. Giờ công nhân ai cũng biết bình cứu hỏa ở đâu."</p>
-                        <div class="hp-testimonial-author">
-                            <strong>Anh Hùng</strong>
-                            <span>Chủ xưởng gỗ, Quế Võ</span>
-                        </div>
+                    <div class="hp-testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="hp-testimonial-text">"Xưởng 200m² mà chỉ có 2 bình chữa cháy, lại để ở góc khuất. Hệ thống chỉ ra luôn, mình bổ sung thêm 4 bình và gắn biển chỉ dẫn. Công nhân ai cũng biết bình ở đâu."</p>
+                    <div class="hp-testimonial-author">
+                        <strong>Anh Hùng</strong>
+                        <span>Chủ xưởng gỗ, Quế Võ</span>
                     </div>
                 </div>
 
                 <div class="hp-testimonial-card fade-in-up" data-delay="300" id="testimonial-4">
-                    <div class="hp-testimonial-avatar">
-                        <div class="hp-avatar-placeholder">M</div>
-                    </div>
-                    <div class="hp-testimonial-content">
-                        <div class="hp-testimonial-stars">⭐⭐⭐⭐</div>
-                        <p class="hp-testimonial-text">"Ban đầu cũng ngại, nghĩ chắc phải trả lời phức tạp lắm. Nhưng toàn câu hỏi dễ hiểu, chọn có/không thôi. 5 phút là xong, ra kết quả luôn. Vợ chồng mình ngồi đọc cùng nhau, bàn được nhiều thứ hay."</p>
-                        <div class="hp-testimonial-author">
-                            <strong>Chị Mai</strong>
-                            <span>Kinh doanh tạp hóa, Yên Phong</span>
-                        </div>
+                    <div class="hp-testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+                    <p class="hp-testimonial-text">"Câu hỏi dễ hiểu, chọn có/không thôi. 5 phút là xong, ra kết quả luôn. Vợ chồng ngồi đọc cùng nhau, bàn được nhiều thứ hay."</p>
+                    <div class="hp-testimonial-author">
+                        <strong>Chị Mai</strong>
+                        <span>Kinh doanh tạp hóa, Yên Phong</span>
                     </div>
                 </div>
 
                 <div class="hp-testimonial-card fade-in-up" data-delay="400" id="testimonial-5">
-                    <div class="hp-testimonial-avatar">
-                        <div class="hp-avatar-placeholder">Đ</div>
-                    </div>
-                    <div class="hp-testimonial-content">
-                        <div class="hp-testimonial-stars">⭐⭐⭐⭐⭐</div>
-                        <p class="hp-testimonial-text">"Mình quản lý 3 phòng trọ cho thuê. Làm khảo sát cho từng phòng, phòng nào cũng ra vấn đề khác nhau. Phòng thì thiếu cửa thoát hiểm, phòng thì dây điện đi nổi không có ống gen. Sửa hết rồi, yên tâm hơn nhiều."</p>
-                        <div class="hp-testimonial-author">
-                            <strong>Anh Đức</strong>
-                            <span>Chủ nhà trọ, Tiên Du</span>
-                        </div>
+                    <div class="hp-testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="hp-testimonial-text">"Quản lý 3 phòng trọ cho thuê. Làm khảo sát cho từng phòng, phòng nào cũng ra vấn đề khác nhau. Sửa hết rồi, yên tâm hơn nhiều."</p>
+                    <div class="hp-testimonial-author">
+                        <strong>Anh Đức</strong>
+                        <span>Chủ nhà trọ, Tiên Du</span>
                     </div>
                 </div>
 
                 <div class="hp-testimonial-card fade-in-up" data-delay="500" id="testimonial-6">
-                    <div class="hp-testimonial-avatar">
-                        <div class="hp-avatar-placeholder">N</div>
-                    </div>
-                    <div class="hp-testimonial-content">
-                        <div class="hp-testimonial-stars">⭐⭐⭐⭐⭐</div>
-                        <p class="hp-testimonial-text">"Ông bà ở nhà cả ngày, mình đi làm xa nên lo lắm. Làm bài khảo sát xong, hệ thống nhắc là phải có đầu báo khói và đèn thoát hiểm. Mình lắp ngay, giờ đi làm đỡ lo hơn hẳn."</p>
-                        <div class="hp-testimonial-author">
-                            <strong>Chị Ngọc</strong>
-                            <span>Nhân viên văn phòng, TP. Bắc Ninh</span>
-                        </div>
+                    <div class="hp-testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="hp-testimonial-text">"Ông bà ở nhà cả ngày, mình đi làm xa nên lo. Hệ thống nhắc lắp đầu báo khói và đèn thoát hiểm. Lắp ngay, đi làm đỡ lo hơn hẳn."</p>
+                    <div class="hp-testimonial-author">
+                        <strong>Chị Ngọc</strong>
+                        <span>Nhân viên văn phòng, TP. Bắc Ninh</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== FINAL CTA ==================== -->
+    <!-- ============================================================
+         FINAL CTA
+         ============================================================ -->
     <section class="hp-final-cta" id="final-cta">
         <div class="container">
             <div class="hp-final-cta-content">
-                <h2>🔥 CHÁY NỔ KHÔNG BÁO TRƯỚC 🔥</h2>
-                <p class="hp-final-subtitle">Nhưng nguy cơ thì luôn có dấu hiệu cảnh báo.<br>Hãy để AI giúp bạn nhìn thấy chúng.</p>
-                <p class="hp-final-slogan">"Bộ khảo sát này không phán xét bạn. Nó đứng về phía bạn — để giúp bạn nhìn thấy những gì cần thấy trước khi người khác phải thay bạn xử lý hậu quả."</p>
-                <a href="/survey.html" class="hp-cta-btn hp-cta-white" id="final-cta-btn">
-                    BẮT ĐẦU ĐÁNH GIÁ AN TOÀN NGAY — 100% MIỄN PHÍ
+                <h2>THỰC HIỆN KHẢO SÁT AN TOÀN NGAY HÔM NAY</h2>
+                <p class="hp-final-subtitle">Cháy nổ không báo trước. Nhưng nguy cơ luôn có dấu hiệu.<br>Hãy để AI giúp bạn phát hiện trước khi quá muộn.</p>
+                <p class="hp-final-slogan">"Phòng cháy — Chữa cháy — Cứu nạn, cứu hộ là trách nhiệm của toàn dân"</p>
+                <a href="/survey.html" class="hp-cta-btn hp-cta-primary" id="final-cta-btn">
+                    Bắt đầu đánh giá an toàn — 100% Miễn phí
                 </a>
-                <p class="hp-final-tagline">🛡️ Hành động hôm nay — An tâm mãi mãi 🛡️</p>
+                <p class="hp-final-tagline">Hành động hôm nay — An tâm mãi mãi</p>
             </div>
         </div>
     </section>
 
-    <!-- ==================== FOOTER ==================== -->
+    <!-- ============================================================
+         FOOTER — 4 cột Government style
+         ============================================================ -->
     <footer class="hp-footer">
         <div class="container">
-            <div class="hp-footer-content">
-                <div class="hp-footer-brand">
-                    <div class="hp-footer-logo">🔥 HỆ THỐNG KHẢO SÁT AN TOÀN PCCC BẮC NINH</div>
+            <div class="hp-footer-grid">
+                <!-- Cột 1: Thông tin cơ quan -->
+                <div>
+                    <div class="hp-footer-agency-name">Phòng Cảnh sát PCCC và CNCH</div>
+                    <div class="hp-footer-agency-sub">Công an tỉnh Bắc Ninh</div>
+                    <address class="hp-footer-address">
+                        <strong>Địa chỉ:</strong> Đường Võ Nguyên Giáp, phường Tân Tiến, tỉnh Bắc Ninh<br>
+                        <strong>Email:</strong> tonghoppc07@gmail.com<br>
+                        <strong>Website:</strong> bacninh.gov.vn
+                    </address>
                 </div>
-                <div class="hp-footer-info">
-                    <p>📍 Phòng Cảnh sát PCCC và CNCH — Công an tỉnh Bắc Ninh</p>
-                    <p>☎️ Hotline: <strong>114</strong> (24/7)</p>
-                    <p>✉️ Email: pccc@bacninh.gov.vn</p>
+
+                <!-- Cột 2: Liên kết nhanh -->
+                <div>
+                    <span class="hp-footer-col-title">Liên kết nhanh</span>
+                    <ul class="hp-footer-links">
+                        <li><a href="/">Trang chủ</a></li>
+                        <li><a href="/survey.html">Khảo sát PCCC</a></li>
+                        <li><a href="/dashboard.html">Tra cứu kết quả</a></li>
+                        <li><a href="/map.html">Bản đồ nguy cơ</a></li>
+                        <li><a href="/improvement.html">Kế hoạch cải thiện</a></li>
+                    </ul>
                 </div>
-                <div class="hp-footer-copy">
-                    <p>© 2026 Công an tỉnh Bắc Ninh. Bảo lưu mọi quyền.</p>
-                    <p class="hp-footer-dev">Phát triển bởi Đại úy Đỗ Thành Long — Cán bộ Phòng Cảnh sát PCCC và CNCH, Công an tỉnh Bắc Ninh</p>
+
+                <!-- Cột 3: Hỗ trợ -->
+                <div>
+                    <span class="hp-footer-col-title">Hỗ trợ</span>
+                    <ul class="hp-footer-links">
+                        <li><a href="#process">Hướng dẫn sử dụng</a></li>
+                        <li><a href="#trust">Về hệ thống</a></li>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                        <li><a href="#">Điều khoản sử dụng</a></li>
+                        <li><a href="#">Liên hệ cơ quan</a></li>
+                    </ul>
                 </div>
+
+                <!-- Cột 4: Hotline -->
+                <div>
+                    <span class="hp-footer-col-title">Đường dây khẩn cấp</span>
+                    <div class="hp-footer-hotline-box">
+                        <div class="hp-footer-hotline-label">Báo cháy khẩn cấp</div>
+                        <div class="hp-footer-hotline-number">114</div>
+                        <div class="hp-footer-hotline-sub">Hoạt động 24/7</div>
+                    </div>
+                    <ul class="hp-footer-links">
+                        <li><a href="tel:02223822114">PCCC Bắc Ninh: 0222 382 2114</a></li>
+                        <li><a href="mailto:tonghoppc07@gmail.com">tonghoppc07@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="hp-footer-copy">
+                &copy; 2026 Công an tỉnh Bắc Ninh. Bảo lưu mọi quyền.
+            </div>
+            <div class="hp-footer-dev">
+                Phát triển bởi Đại úy Đỗ Thành Long — Phòng Cảnh sát PCCC và CNCH, Công an tỉnh Bắc Ninh
             </div>
         </div>
     </footer>
 
-    <!-- ==================== STICKY BOTTOM CTA (Mobile) ==================== -->
+    <!-- Sticky CTA Mobile -->
     <div class="hp-sticky-cta" id="sticky-cta">
         <a href="/survey.html" class="hp-cta-btn hp-cta-primary hp-cta-sticky">
-            🔥 BẮT ĐẦU KHẢO SÁT NGAY
+            Bắt đầu khảo sát ngay
         </a>
     </div>
 
     <script src="/js/api.js"></script>
     <script src="/js/homepage.js"></script>
     <script>
+        // Clock
+        function updateClock() {
+            const now = new Date();
+            const time = now.toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' });
+            const date = now.toLocaleDateString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric' });
+            const el = document.getElementById('gov-clock');
+            if (el) el.textContent = time + ' · ' + date;
+        }
+        updateClock();
+        setInterval(updateClock, 30000);
+
+        // Mobile menu toggle
+        document.getElementById('gov-mobile-toggle')?.addEventListener('click', function() {
+            const menu = document.getElementById('gov-nav-menu');
+            if (menu) {
+                menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+                menu.style.flexDirection = 'column';
+                menu.style.position = 'absolute';
+                menu.style.top = '48px';
+                menu.style.left = '0';
+                menu.style.right = '0';
+                menu.style.background = 'var(--gov-red)';
+                menu.style.padding = '8px 0';
+                menu.style.zIndex = '999';
+            }
+        });
+
         onReady(() => { setupNavbar(); });
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('/sw.js').catch(() => { });

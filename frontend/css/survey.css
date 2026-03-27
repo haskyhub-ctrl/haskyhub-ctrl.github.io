@@ -22,7 +22,7 @@
 .step-indicator {
     width: 36px;
     height: 36px;
-    border-radius: 50%;
+    border-radius: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -121,7 +121,7 @@
     width: 28px;
     height: 28px;
     background: var(--gradient-primary);
-    border-radius: 50%;
+    border-radius: 0;
     font-size: 0.8rem;
     font-weight: 700;
     color: white;

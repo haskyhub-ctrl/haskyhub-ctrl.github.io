@@ -1,0 +1,10 @@
+411ae15 HEAD@{0}: commit: Lưu lại tiến độ công việc
+15cc795 HEAD@{1}: commit: Update API URL to pc07.fras-ai.com
+a62fe0f HEAD@{2}: commit: Update API URL to fras-ai.com
+ae5e732 HEAD@{3}: checkout: moving from gh-pages to main
+939c5d6 HEAD@{4}: checkout: moving from main to gh-pages
+ae5e732 HEAD@{5}: checkout: moving from gh-pages to main
+939c5d6 HEAD@{6}: commit (initial): Deploy frontend to GitHub Pages
+ae5e732 HEAD@{7}: pull origin main --allow-unrelated-histories --no-edit: Merge made by the 'ort' strategy.
+acdb9f5 HEAD@{8}: Branch: renamed refs/heads/master to refs/heads/main
+acdb9f5 HEAD@{10}: commit (initial): Initial commit - FRAS Fire Risk Assessment System

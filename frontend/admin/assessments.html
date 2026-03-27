@@ -20,7 +20,7 @@
             background: var(--glass-bg);
             color: var(--text-primary);
             border: 1px solid var(--border-color);
-            border-radius: 8px;
+            border-radius: 0;
             padding: 8px 14px;
             font-size: 0.9rem;
             min-width: 180px;
@@ -37,7 +37,7 @@
             background: transparent;
             border: 1px solid var(--border-color);
             color: var(--text-secondary);
-            border-radius: 8px;
+            border-radius: 0;
             cursor: pointer;
             font-size: 0.85rem;
             transition: all 0.2s;
@@ -60,7 +60,7 @@
             padding: 10px 16px;
             background: var(--glass-bg);
             border: 1px solid var(--border-color);
-            border-radius: 10px 10px 0 0;
+            border-radius: 0 0 0;
             font-weight: 600;
             font-size: 0.95rem;
         }
@@ -68,7 +68,7 @@
         .facility-group-header .count {
             background: rgba(255, 255, 255, 0.1);
             padding: 2px 10px;
-            border-radius: 12px;
+            border-radius: 0;
             font-size: 0.8rem;
             color: var(--text-muted);
         }
@@ -83,7 +83,7 @@
 <body>
     <nav class="navbar">
         <div class="container">
-            <a href="/" class="nav-brand"><span class="logo-icon">🔥</span>
+            <a href="/" class="nav-brand"><span class="logo-icon"><img src="/img/logo-cand.png" alt="CAND" width="36" height="36" style="object-fit:contain;filter:brightness(0) invert(1);"></span>
                 <div><span>FRAS Admin</span><small>Quản trị Hệ thống</small></div>
             </a>
             <ul class="nav-links" id="nav-links">
@@ -96,16 +96,16 @@
     <div class="admin-layout">
         <aside class="admin-sidebar">
             <div class="sidebar-header">
-                <h3>⚙️ Quản trị</h3>
+                <h3>Quản trị</h3>
                 <p>Bảng điều khiển admin</p>
             </div>
             <ul class="sidebar-nav">
-                <li><a href="/admin/"><span class="nav-icon">📊</span> Tổng quan</a></li>
-                <li><a href="/admin/users.html"><span class="nav-icon">👥</span> Người dùng</a></li>
-                <li><a href="/admin/questions.html"><span class="nav-icon">❓</span> Câu hỏi</a></li>
-                <li><a href="/admin/assessments.html" class="active"><span class="nav-icon">📋</span> Đánh giá</a></li>
-                <li><a href="/admin/reports.html"><span class="nav-icon">📈</span> Báo cáo</a></li>
-                <li><a href="/admin/aggregate.html"><span class="nav-icon">🗺️</span> Phân tích tổng hợp</a></li>
+                <li><a href="/admin/"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span> Tổng quan</a></li>
+                <li><a href="/admin/users.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span> Người dùng</a></li>
+                <li><a href="/admin/questions.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span> Câu hỏi</a></li>
+                <li><a href="/admin/assessments.html" class="active"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span> Đánh giá</a></li>
+                <li><a href="/admin/reports.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span> Báo cáo</a></li>
+                <li><a href="/admin/aggregate.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg></span> Phân tích tổng hợp</a></li>
                 <li><a href="/map.html"><span class="nav-icon">📍</span> Bản đồ</a></li>
             </ul>
         </aside>
