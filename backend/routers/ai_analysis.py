@@ -389,7 +389,7 @@ NGỮ CẢNH: Người dùng đang hỏi về đánh giá cháy nổ của cơ s
             role = "Người dùng" if msg.get("role") == "user" else "AI"
             history_text += f"{role}: {msg.get('content', '')}\n"
 
-    prompt = f"""Bạn là Trợ lý ảo Nguyễn Thị Duyên — chuyên gia tư vấn Phòng cháy chữa cháy (PCCC) và an toàn cháy nổ tại Việt Nam, thuộc hệ thống FRAS của Công an tỉnh Bắc Ninh. Mọi câu trả lời của bạn phải thể hiện sự lịch sự, chuyên nghiệp, xưng "Duyên" hoặc "tôi" và gọi người dùng là "bạn" hoặc "anh/chị".
+    prompt = f"""Bạn là Trợ lý ảo Chi — chuyên gia tư vấn Phòng cháy chữa cháy (PCCC) và an toàn cháy nổ tại Việt Nam, thuộc hệ thống FRAS của Công an tỉnh Bắc Ninh. Mọi câu trả lời của bạn phải thể hiện sự lịch sự, chuyên nghiệp, xưng "Chi" hoặc "tôi" và gọi người dùng là "bạn" hoặc "anh/chị".
 
 === CƠ SỞ DỮ LIỆU PHÁP LÝ (ưu tiên sử dụng) ===
 {legal_context}
@@ -635,7 +635,7 @@ def _chat_fallback(message: str) -> dict:
 
     # Default response
     return {
-        "reply": "Cảm ơn câu hỏi của bạn! Tôi là Trợ lý ảo Nguyễn Thị Duyên.\n\nHiện tại tôi có thể tư vấn các vấn đề về PCCC như:\n• ⚡ An toàn hệ thống điện\n• 🔥 Phòng cháy bếp gas, nguồn nhiệt\n• 🧯 Bình chữa cháy và thiết bị PCCC\n• 🚪 Lối thoát nạn\n• 📜 Pháp luật PCCC 2024-2025\n• 🎓 Huấn luyện và diễn tập PCCC\n• 🔍 Dấu hiệu nhận biết nguy cơ cháy\n\nHãy đặt câu hỏi cụ thể hơn để Duyên tư vấn chi tiết cho bạn nhé!",
+        "reply": "Cảm ơn câu hỏi của bạn! Tôi là Trợ lý ảo Chi.\n\nHiện tại tôi có thể tư vấn các vấn đề về PCCC như:\n• ⚡ An toàn hệ thống điện\n• 🔥 Phòng cháy bếp gas, nguồn nhiệt\n• 🧯 Bình chữa cháy và thiết bị PCCC\n• 🚪 Lối thoát nạn\n• 📜 Pháp luật PCCC 2024-2025\n• 🎓 Huấn luyện và diễn tập PCCC\n• 🔍 Dấu hiệu nhận biết nguy cơ cháy\n\nHãy đặt câu hỏi cụ thể hơn để Chi tư vấn chi tiết cho bạn nhé!",
         "suggestions": ["Dấu hiệu nào cho thấy hệ thống điện sắp gây cháy?", "Quy định bình chữa cháy?", "Luật PCCC 55/2024 có gì mới?"],
         "references": []
     }

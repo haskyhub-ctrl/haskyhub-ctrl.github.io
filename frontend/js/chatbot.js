@@ -204,7 +204,7 @@
                         </svg>
                     </div>
                     <div>
-                        <div class="fras-header-title">Trợ lý ảo Nguyễn Thị Duyên</div>
+                        <div class="fras-header-title">Trợ lý ảo Chi</div>
                         <div class="fras-header-sub">Phòng Cảnh sát PCCC & CNCH Bắc Ninh</div>
                     </div>
                 </div>
@@ -270,14 +270,14 @@
         _appendWelcome() {
             const msgs = document.getElementById('fras-messages');
             this._addBubble('ai',
-                'Xin chào! Tôi là trợ lý ảo Nguyễn Thị Duyên, chuyên gia tư vấn về Phòng cháy chữa cháy.\n\n' +
+                'Xin chào! Tôi là trợ lý ảo Chi, chuyên gia tư vấn về Phòng cháy chữa cháy.\n\n' +
                 'Tôi có thể tư vấn về:\n' +
                 '• Xử lý tình huống khẩn cấp khi có cháy\n' +
                 '• Pháp luật PCCC 2024-2025 (Luật 55/2024, NĐ 105...)\n' +
                 '• Quy định trang bị thiết bị PCCC\n' +
                 '• An toàn điện, gas, lối thoát nạn\n' +
                 '• Huấn luyện và diễn tập PCCC\n\n' +
-                'Hãy đặt câu hỏi cho Duyên nhé!',
+                'Hãy đặt câu hỏi cho Chi nhé!',
                 null, null
             );
         },
@@ -305,7 +305,7 @@
             const typingId = 'fras-typing-' + Date.now();
             msgs.innerHTML += `
                 <div class="fras-msg ai fras-typing" id="${typingId}">
-                    <div class="fras-avatar">Duyên</div>
+                    <div class="fras-avatar">Chi</div>
                     <div class="fras-bubble">
                         <div class="fras-typing-dot"></div>
                         <div class="fras-typing-dot"></div>
@@ -385,7 +385,7 @@
                             <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
                         </svg>
                    </div>`
-                : `<div class="fras-avatar">Duyên</div>`;
+                : `<div class="fras-avatar">Chi</div>`;
 
             const div = document.createElement('div');
             div.className = `fras-msg ${isUser ? 'user' : 'ai'}`;
