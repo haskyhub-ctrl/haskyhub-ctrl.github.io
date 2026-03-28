@@ -382,16 +382,27 @@
 
         async function loadMapData() {
             try {
-                const url = '/admin/map-data' + (activeFilter ? `?risk_level=${activeFilter}` : '');
+                const user = api.getUser();
+                const isAdmin = user && (user.role === 'admin' || user.role === 'superadmin');
+                let url;
+                if (isAdmin) {
+                    url = '/admin/map-data' + (activeFilter ? `?risk_level=${activeFilter}` : '');
+                } else {
+                    url = '/assessments/map-data';
+                }
                 allData = await api.get(url);
+
+                // Hide "unassessed" filter for non-admin (no imported facilities)
+                if (!isAdmin) {
+                    const btn = document.getElementById('filter-unassessed');
+                    if (btn) btn.style.display = 'none';
+                }
+
                 renderMarkers(allData);
                 updateStats(allData);
             } catch (err) {
                 console.error('Error loading map data:', err);
-                // Show message if no auth or error
-                if (err.message.includes('hết hạn') || err.message.includes('401')) {
-                    showToast('Vui lòng đăng nhập với tài khoản admin để xem bản đồ', 'error');
-                }
+                showToast('Không thể tải dữ liệu bản đồ: ' + err.message, 'error');
             }
         }
 

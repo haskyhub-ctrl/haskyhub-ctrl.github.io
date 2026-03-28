@@ -11,17 +11,29 @@ async function initAdminDashboard() {
         return;
     }
 
-    try {
-        const stats = await api.get('/admin/stats');
-        renderAdminStats(stats);
+    // Run all 3 independently — one failure won't block the others
+    const [statsResult, logsResult, distResult] = await Promise.allSettled([
+        api.get('/admin/stats'),
+        api.get('/admin/audit-logs?limit=10'),
+        api.get('/admin/reports/risk-distribution'),
+    ]);
 
-        const logs = await api.get('/admin/audit-logs?limit=10');
-        renderAuditLogs(logs);
+    if (statsResult.status === 'fulfilled') {
+        renderAdminStats(statsResult.value);
+    } else {
+        const c = document.getElementById('admin-stats');
+        if (c) c.innerHTML = `<div class="admin-stat-card" style="color:var(--accent-red);grid-column:1/-1;">Không thể tải thống kê: ${statsResult.reason?.message || 'Lỗi server'}</div>`;
+    }
 
-        const dist = await api.get('/admin/reports/risk-distribution');
-        renderRiskDistribution(dist);
-    } catch (error) {
-        showToast(error.message, 'error');
+    if (logsResult.status === 'fulfilled') {
+        renderAuditLogs(logsResult.value);
+    } else {
+        const c = document.getElementById('audit-log-list');
+        if (c) c.innerHTML = `<p style="color:var(--text-muted);text-align:center;padding:20px;">Không thể tải hoạt động: ${logsResult.reason?.message || 'Lỗi server'}</p>`;
+    }
+
+    if (distResult.status === 'fulfilled') {
+        renderRiskDistribution(distResult.value);
     }
 }
 

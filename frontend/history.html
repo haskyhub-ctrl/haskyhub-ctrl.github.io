@@ -45,17 +45,33 @@
 
     <script src="/js/api.js"></script>
     <script>
+        let _isAdmin = false;
+
         onReady(async () => {
             setupNavbar();
             if (!requireAuth()) return;
 
+            const user = api.getUser();
+            _isAdmin = user && (user.role === 'admin' || user.role === 'superadmin');
+
+            // Update page title for admin
+            if (_isAdmin) {
+                const h2 = document.querySelector('h2');
+                if (h2) h2.textContent = 'Lịch sử Đánh giá Toàn Hệ thống';
+            }
+
+            await loadHistory();
+        });
+
+        async function loadHistory() {
             try {
-                const assessments = await api.get('/assessments');
+                const endpoint = _isAdmin ? '/admin/assessments' : '/assessments';
+                const assessments = await api.get(endpoint);
                 renderHistory(assessments);
             } catch (error) {
                 showToast(error.message, 'error');
             }
-        });
+        }
 
         function renderHistory(assessments) {
             const container = document.getElementById('history-table');
@@ -64,12 +80,22 @@
                 return;
             }
 
+            const adminCols = _isAdmin
+                ? `<th>Người đánh giá</th><th>Tổ chức</th>`
+                : '';
+            const adminCells = (a) => _isAdmin
+                ? `<td>${a.user_name || '—'}</td><td>${a.organization || '—'}</td>`
+                : '';
+            const deleteBtn = (a) => _isAdmin ? '' :
+                `<button class="btn-icon" onclick="deleteAssessment('${a.id}')" title="Xóa">🗑️</button>`;
+
             container.innerHTML = `
         <table>
             <thead>
                 <tr>
                     <th>Cơ sở</th>
                     <th>Loại hình</th>
+                    ${adminCols}
                     <th>Điểm</th>
                     <th>Mức nguy cơ</th>
                     <th>Trạng thái</th>
@@ -82,13 +108,14 @@
                 <tr>
                     <td><strong>${a.facility_name}</strong></td>
                     <td>${a.facility_type || '—'}</td>
+                    ${adminCells(a)}
                     <td><strong>${a.risk_percentage}%</strong> <span style="color:var(--text-muted); font-size:0.8rem;">(${a.total_score}/${a.max_possible_score})</span></td>
                     <td>${getRiskBadge(a.risk_level)}</td>
                     <td><span class="badge ${a.status === 'completed' ? 'badge-safe' : 'badge-info'}">${a.status === 'completed' ? 'Hoàn thành' : a.status === 'in_progress' ? 'Đang làm' : 'Lưu trữ'}</span></td>
                     <td>${formatDate(a.completed_at || a.created_at)}</td>
                     <td>
                         ${a.status === 'completed' ? `<a href="/result.html?id=${a.id}" class="btn btn-sm btn-secondary">Xem</a>` : ''}
-                        <button class="btn-icon" onclick="deleteAssessment('${a.id}')" title="Xóa">🗑️</button>
+                        ${deleteBtn(a)}
                     </td>
                 </tr>
                 `).join('')}
@@ -101,8 +128,7 @@
             try {
                 await api.delete(`/assessments/${id}`);
                 showToast('Đã xóa đánh giá');
-                const assessments = await api.get('/assessments');
-                renderHistory(assessments);
+                await loadHistory();
             } catch (error) {
                 showToast(error.message, 'error');
             }

@@ -345,7 +345,7 @@
             const tbody = document.getElementById('questions-tbody');
             tbody.innerHTML = '<tr><td colspan="7" style="text-align:center;padding:40px;"><div class="loading-spinner"></div></td></tr>';
             try {
-                const url = catId ? `/questions/?category_id=${catId}` : '/questions/';
+                const url = catId ? `/questions?category_id=${catId}` : '/questions';
                 allQuestions = await api.get(url);
                 renderQuestionsTable(allQuestions);
                 document.getElementById('question-count').textContent = `${allQuestions.length} câu hỏi`;

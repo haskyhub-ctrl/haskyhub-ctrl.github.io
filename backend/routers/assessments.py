@@ -130,6 +130,40 @@ def compare_assessments(
     return results
 
 
+@router.get("/map-data")
+def get_user_map_data(
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db),
+):
+    """Return current user's completed assessments with coordinates for map display."""
+    assessments = db.query(Assessment).filter(
+        Assessment.user_id == current_user.id,
+        Assessment.status == "completed",
+        Assessment.latitude.isnot(None),
+        Assessment.longitude.isnot(None),
+    ).order_by(Assessment.created_at.desc()).all()
+
+    return [
+        {
+            "id": a.id,
+            "facility_name": a.facility_name,
+            "facility_type": a.facility_type,
+            "facility_address": a.facility_address,
+            "latitude": a.latitude,
+            "longitude": a.longitude,
+            "risk_level": a.risk_level,
+            "risk_percentage": a.risk_percentage,
+            "total_score": a.total_score,
+            "max_possible_score": a.max_possible_score,
+            "completed_at": a.completed_at.isoformat() if a.completed_at else None,
+            "user_name": current_user.full_name,
+            "organization": current_user.organization,
+            "source": "assessment",
+        }
+        for a in assessments
+    ]
+
+
 @router.delete("/{assessment_id}")
 def delete_assessment(
     assessment_id: str,
