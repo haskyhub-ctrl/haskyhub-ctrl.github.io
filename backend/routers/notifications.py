@@ -11,7 +11,7 @@ from middleware.auth_middleware import get_current_user
 router = APIRouter(prefix="/api/notifications", tags=["Notifications"])
 
 
-@router.get("/")
+@router.get("")
 def list_notifications(
     current_user: User = Depends(get_current_user),
     db: Session = Depends(get_db),

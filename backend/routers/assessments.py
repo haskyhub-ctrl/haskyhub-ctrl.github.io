@@ -13,7 +13,7 @@ from utils.recommendations import get_recommendations_for_assessment
 router = APIRouter(prefix="/api/assessments", tags=["Assessments"])
 
 
-@router.get("/", response_model=List[AssessmentResponse])
+@router.get("", response_model=List[AssessmentResponse])
 def list_assessments(
     status: Optional[str] = None,
     limit: int = 0,

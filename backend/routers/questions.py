@@ -71,7 +71,7 @@ def delete_category(
 
 # ======================== QUESTIONS ========================
 
-@router.get("/", response_model=List[QuestionResponse])
+@router.get("", response_model=List[QuestionResponse])
 def list_questions(
     category_id: int = None,
     db: Session = Depends(get_db)
@@ -91,7 +91,7 @@ def get_question(question_id: int, db: Session = Depends(get_db)):
     return QuestionResponse.model_validate(q)
 
 
-@router.post("/", response_model=QuestionResponse)
+@router.post("", response_model=QuestionResponse)
 def create_question(
     data: QuestionCreate,
     current_user: User = Depends(get_current_user),

@@ -105,7 +105,7 @@ def generate_improvement_plan(
     return _plan_to_dict(plan, db)
 
 
-@router.get("/")
+@router.get("")
 def list_improvement_plans(
     current_user: User = Depends(get_current_user),
     db: Session = Depends(get_db),
