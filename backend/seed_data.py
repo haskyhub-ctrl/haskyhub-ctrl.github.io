@@ -2,6 +2,11 @@
 FRAS Question Database - Common Questions
 AUTO-GENERATED from danh_sach_cau_hoi_duyet.txt
 DO NOT EDIT MANUALLY - Edit the txt file and re-run sync_questions_from_txt.py
+
+Scoring logic v2:
+  - "high" (default): A=0, B=1, C=2, D=3 (nguy co truc tiep)
+  - "medium":         A=0, B=1, C=2, D=2 (anh huong gian tiep)
+  - "low":            A=0, B=0, C=1, D=2 (phong ngua, hieu biet)
 """
 
 FACILITY_TYPES = [
@@ -62,7 +67,7 @@ COMMON_CATEGORIES = [
         "icon": "⚡",
         "color": "#e74c3c",
         "order_index": 1,
-        "max_score": 39
+        "max_score": 37
     },
     {
         "name": "Nguy cơ từ nguồn lửa/nhiệt",
@@ -70,7 +75,7 @@ COMMON_CATEGORIES = [
         "icon": "🔥",
         "color": "#e67e22",
         "order_index": 2,
-        "max_score": 21
+        "max_score": 20
     },
     {
         "name": "Lối thoát nạn và trang bị PCCC",
@@ -78,7 +83,7 @@ COMMON_CATEGORIES = [
         "icon": "🚪",
         "color": "#2ecc71",
         "order_index": 3,
-        "max_score": 18
+        "max_score": 17
     },
     {
         "name": "Dấu hiệu bất thường từ máy móc",
@@ -94,7 +99,7 @@ COMMON_CATEGORIES = [
         "icon": "🌿",
         "color": "#27ae60",
         "order_index": 5,
-        "max_score": 15
+        "max_score": 13
     },
     {
         "name": "Nguy cơ tự cháy",
@@ -102,7 +107,7 @@ COMMON_CATEGORIES = [
         "icon": "💥",
         "color": "#9b59b6",
         "order_index": 6,
-        "max_score": 21
+        "max_score": 20
     },
     {
         "name": "Phương tiện giao thông",
@@ -118,7 +123,7 @@ COMMON_CATEGORIES = [
         "icon": "⚠️",
         "color": "#f39c12",
         "order_index": 8,
-        "max_score": 15
+        "max_score": 12
     }
 ]
 
@@ -379,8 +384,8 @@ GROUP1_QUESTIONS = [
             {
                 "key": "D",
                 "text": "Tăng đột biến >50% kèm theo dây điện nóng hoặc CB nhảy",
-                "score": 3,
-                "risk": "critical"
+                "score": 2,
+                "risk": "high"
             }
         ]
     },
@@ -408,8 +413,8 @@ GROUP1_QUESTIONS = [
             {
                 "key": "D",
                 "text": "Chuột gặm nhiều dây, đã từng chập điện do chuột",
-                "score": 3,
-                "risk": "critical"
+                "score": 2,
+                "risk": "high"
             }
         ]
     },
@@ -701,8 +706,8 @@ GROUP2_QUESTIONS = [
             {
                 "key": "D",
                 "text": "Đốt lửa gần kho hàng, bãi xe, cỏ khô",
-                "score": 3,
-                "risk": "critical"
+                "score": 2,
+                "risk": "high"
             }
         ]
     }
@@ -837,20 +842,20 @@ GROUP3_QUESTIONS = [
             {
                 "key": "B",
                 "text": "Biết đường đi nhưng sơ đồ cũ/mờ chữ",
-                "score": 1,
-                "risk": "low"
+                "score": 0,
+                "risk": "safe"
             },
             {
                 "key": "C",
                 "text": "Không chắc đường nào, không thấy sơ đồ",
-                "score": 2,
-                "risk": "high"
+                "score": 1,
+                "risk": "low"
             },
             {
                 "key": "D",
                 "text": "Không biết, Không để ý",
-                "score": 3,
-                "risk": "critical"
+                "score": 2,
+                "risk": "high"
             }
         ]
     },
@@ -1104,20 +1109,20 @@ GROUP5_QUESTIONS = [
             {
                 "key": "B",
                 "text": "Gần đồi núi nhưng có khoảng cách an toàn và đường ngăn lửa",
-                "score": 1,
-                "risk": "low"
+                "score": 0,
+                "risk": "safe"
             },
             {
                 "key": "C",
                 "text": "Gần bìa rừng/đồng cỏ, mùa khô có nguy cơ cháy lan",
-                "score": 2,
-                "risk": "high"
+                "score": 1,
+                "risk": "low"
             },
             {
                 "key": "D",
                 "text": "Giáp rừng, vùng cháy rừng thường xuyên, không có biện pháp ngăn",
-                "score": 3,
-                "risk": "critical"
+                "score": 2,
+                "risk": "high"
             }
         ]
     },
@@ -1145,8 +1150,8 @@ GROUP5_QUESTIONS = [
             {
                 "key": "D",
                 "text": "Toàn bộ bằng gỗ/lá/bạt, nằm vùng nắng nóng kéo dài",
-                "score": 3,
-                "risk": "critical"
+                "score": 2,
+                "risk": "high"
             }
         ]
     },
@@ -1409,8 +1414,8 @@ GROUP6_QUESTIONS = [
             {
                 "key": "D",
                 "text": "Đống ủ tự phát nhiệt, bốc khói hoặc âm ỉ cháy",
-                "score": 3,
-                "risk": "critical"
+                "score": 2,
+                "risk": "high"
             }
         ]
     },
@@ -1635,20 +1640,20 @@ GROUP8_QUESTIONS = [
             {
                 "key": "B",
                 "text": "Có camera và khóa cổng nhưng không bảo vệ ngoài giờ",
-                "score": 1,
-                "risk": "low"
+                "score": 0,
+                "risk": "safe"
             },
             {
                 "key": "C",
                 "text": "Không camera, cổng lỏng, người lạ dễ vào",
-                "score": 2,
-                "risk": "high"
+                "score": 1,
+                "risk": "low"
             },
             {
                 "key": "D",
                 "text": "Khuôn viên mở, đã có dấu hiệu bị phá hoại",
-                "score": 3,
-                "risk": "critical"
+                "score": 2,
+                "risk": "high"
             }
         ]
     },
@@ -1676,8 +1681,8 @@ GROUP8_QUESTIONS = [
             {
                 "key": "D",
                 "text": "Đèn khắp nơi gần rèm/vải, nối chéo, CB nhảy phải nối tắt",
-                "score": 3,
-                "risk": "critical"
+                "score": 2,
+                "risk": "high"
             }
         ]
     },
@@ -1693,20 +1698,20 @@ GROUP8_QUESTIONS = [
             {
                 "key": "B",
                 "text": "Biết số 114 nhưng chưa thực hành dùng bình chữa cháy, chưa được tập huấn.",
-                "score": 1,
-                "risk": "low"
+                "score": 0,
+                "risk": "safe"
             },
             {
                 "key": "C",
                 "text": "Không biết số 114, không biết bình chữa cháy ở đâu.",
-                "score": 2,
-                "risk": "high"
+                "score": 1,
+                "risk": "low"
             },
             {
                 "key": "D",
                 "text": "Không ai biết gì về PCCC, chưa từng được hướng dẫn, tập huấn, nhà không có bình chữa cháy",
-                "score": 3,
-                "risk": "critical"
+                "score": 2,
+                "risk": "high"
             }
         ]
     }

@@ -3,12 +3,103 @@ Parse danh_sach_cau_hoi_duyet.txt (user-approved) and generate
 seed_data.py + seed_data_specific.py for the backend.
 
 This is the SINGLE SOURCE OF TRUTH for all FRAS questions.
+
+Scoring logic v2 — Variable scoring per question:
+ - Câu ảnh hưởng TRỰC TIẾP đến nguy cơ cháy nổ: A=0, B=1, C=2, D=3
+ - Câu ảnh hưởng GIÁN TIẾP / chỉ số phát hiện: A=0, B=1, C=2, D=2
+ - Câu mang tính phòng ngừa / chuẩn bị / hiểu biết: A=0, B=0, C=1, D=2
 """
 import re, os, json, pprint
 
 TXT_FILE = "danh_sach_cau_hoi_duyet.txt"
 SEED_COMMON = os.path.join("backend", "seed_data.py")
 SEED_SPECIFIC = os.path.join("backend", "seed_data_specific.py")
+
+# ========== BẢNG ĐIỂM TÙY BIẾN THEO ID CÂU HỎI ==========
+# Mặc định: A=0, B=1, C=2, D=3 (nguy cơ trực tiếp cao)
+# "medium": A=0, B=1, C=2, D=2 (ảnh hưởng gián tiếp, chỉ báo gián tiếp)
+# "low":    A=0, B=0, C=1, D=2 (mang tính hiểu biết, phòng ngừa, khó thay đổi)
+
+SCORE_PROFILES = {
+    # === NHÓM 1: HỆ THỐNG ĐIỆN ===
+    # ID1-ID8: Nguy cơ trực tiếp → mặc định (A0 B1 C2 D3)
+    # ID9: Hóa đơn tiền điện tăng = chỉ báo gián tiếp, không trực tiếp gây cháy
+    9: "medium",
+    # ID10: Chuột gặm dây = nguy cơ trung bình, phụ thuộc nhiều yếu tố
+    10: "medium",
+    # ID11-ID12: Vật dễ cháy gần điện, thiết bị nung nóng → mặc định
+    # ID20: Điều hòa, tủ lạnh bất thường → mặc định
+
+    # === NHÓM 2: NGUỒN LỬA/NHIỆT ===
+    # ID13-ID19: phần lớn nguy cơ trực tiếp → mặc định
+    # ID19: Lửa trại, nướng ngoài trời = nguy cơ tùy tình huống
+    19: "medium",
+
+    # === NHÓM 3: LỐI THOÁT NẠN & PCCC ===
+    # ID21-ID22: Trực tiếp ảnh hưởng an toàn → mặc định
+    # ID25: Biết đường thoát nạn/sơ đồ = phòng ngừa, hiểu biết
+    25: "low",
+    # ID26: Hàng hóa chật → mặc định
+
+    # === NHÓM 4: MÁY MÓC ===
+    # ID27-ID33: Máy móc bất thường → mặc định
+
+    # === NHÓM 5: THIÊN NHIÊN ===
+    # ID34: Gần rừng = yếu tố môi trường, không thể thay đổi
+    34: "low",
+    # ID35: Vật liệu nhà = yếu tố cấu trúc, khó thay đổi
+    35: "medium",
+    # ID36-ID38: Ảnh hưởng thời tiết → mặc định
+
+    # === NHÓM 6: NGUY CƠ TỰ CHÁY ===
+    # ID39-ID45: Phần lớn trực tiếp → mặc định
+    # ID44: Phân bón, phế phẩm hữu cơ = khá chuyên biệt
+    44: "medium",
+
+    # === NHÓM 7: PHƯƠNG TIỆN GIAO THÔNG ===
+    # ID46-ID50: mặc định
+    # ID47: Xe chắn lối thoát = liên quan lối thoát → mặc định
+
+    # === NHÓM 8: NGUY CƠ BỔ SUNG ===
+    # ID53: Camera, hàng rào = phòng chống phá hoại, gián tiếp
+    53: "low",
+    # ID54: Đèn lễ hội = tình huống thỉnh thoảng
+    54: "medium",
+    # ID55: Biết gọi 114 = kiến thức, phòng ngừa
+    55: "low",
+
+    # === CÂU HỎI ĐẶC THÙ ===
+    # Phần lớn trực tiếp → mặc định
+    # Một số câu hiểu biết/quy trình
+    65: "low",    # Công nhân nhận biết dấu hiệu = kiến thức
+    72: "medium", # Bảo vệ kiểm tra cuối ngày = quy trình
+    80: "low",    # Trẻ em biết đường thoát = phòng ngừa
+    82: "low",    # Diễn tập thoát nạn ban đêm = phòng ngừa
+    92: "low",    # Trường diễn tập sơ tán = phòng ngừa
+    97: "low",    # Nhân viên ca đêm biết quy trình = kiến thức
+    110: "low",   # Chủ nhà dán sơ đồ, phổ biến = phòng ngừa
+}
+
+def get_score_map(qid):
+    """Trả về bảng điểm A/B/C/D tùy theo ID câu hỏi."""
+    profile = SCORE_PROFILES.get(qid, "high")
+    if profile == "high":
+        return {"A": 0, "B": 1, "C": 2, "D": 3}
+    elif profile == "medium":
+        return {"A": 0, "B": 1, "C": 2, "D": 2}
+    elif profile == "low":
+        return {"A": 0, "B": 0, "C": 1, "D": 2}
+    return {"A": 0, "B": 1, "C": 2, "D": 3}
+
+def get_risk_map(qid):
+    """Trả về mức nguy cơ A/B/C/D tùy theo profile."""
+    profile = SCORE_PROFILES.get(qid, "high")
+    if profile == "low":
+        return {"A": "safe", "B": "safe", "C": "low", "D": "high"}
+    elif profile == "medium":
+        return {"A": "safe", "B": "low", "C": "high", "D": "high"}
+    else:
+        return {"A": "safe", "B": "low", "C": "high", "D": "critical"}
 
 # ========== 1. PARSE TXT FILE ==========
 with open(TXT_FILE, encoding="utf-8") as f:
@@ -46,6 +137,8 @@ def parse_questions(text):
             qid = int(m.group(1))
             qtext = m.group(2).strip()
             options = []
+            score_map = get_score_map(qid)
+            risk_map = get_risk_map(qid)
             i += 1
             # Read options A, B, C, D
             while i < len(lines):
@@ -54,9 +147,6 @@ def parse_questions(text):
                 if om:
                     okey = om.group(1)
                     otext = om.group(2).strip()
-                    # Score: A=0, B=1, C=2, D=3
-                    score_map = {"A": 0, "B": 1, "C": 2, "D": 3}
-                    risk_map = {"A": "safe", "B": "low", "C": "high", "D": "critical"}
                     options.append({
                         "key": okey,
                         "text": otext,
@@ -84,13 +174,21 @@ specific_groups = parse_questions(phan2_text)
 print(f"=== Parsed from {TXT_FILE} ===")
 total_common = 0
 for gname, qs in common_groups:
-    print(f"  Common: {gname} -> {len(qs)} questions")
+    max_pts = sum(max(o["score"] for o in q["options"]) for q in qs)
+    print(f"  Common: {gname} -> {len(qs)} questions (max={max_pts})")
     total_common += len(qs)
 total_specific = 0
 for gname, qs in specific_groups:
-    print(f"  Specific: {gname} -> {len(qs)} questions")
+    max_pts = sum(max(o["score"] for o in q["options"]) for q in qs)
+    print(f"  Specific: {gname} -> {len(qs)} questions (max={max_pts})")
     total_specific += len(qs)
 print(f"  TOTAL: {total_common} common + {total_specific} specific = {total_common + total_specific}")
+
+# Print scoring summary
+print(f"\n=== Scoring Profile Summary ===")
+for qid, profile in sorted(SCORE_PROFILES.items()):
+    print(f"  ID{qid}: {profile}")
+print(f"  Others: high (default A=0 B=1 C=2 D=3)")
 
 # ========== 2. CATEGORY METADATA ==========
 # Icons and colors for common categories
@@ -103,6 +201,17 @@ COMMON_CAT_META = {
     "NGUY CƠ TỰ CHÁY": {"icon": "💥", "color": "#9b59b6"},
     "PHƯƠNG TIỆN GIAO THÔNG": {"icon": "🚗", "color": "#1abc9c"},
     "NGUY CƠ BỔ SUNG": {"icon": "⚠️", "color": "#f39c12"},
+}
+
+COMMON_CAT_NAMES_VI = {
+    "DẤU HIỆU NGUY CƠ TỪ HỆ THỐNG ĐIỆN": "Dấu hiệu nguy cơ từ hệ thống điện",
+    "NGUY CƠ TỪ NGUỒN LỬA/NHIỆT": "Nguy cơ từ nguồn lửa/nhiệt",
+    "LỐI THOÁT NẠN VÀ TRANG BỊ PCCC": "Lối thoát nạn và trang bị PCCC",
+    "DẤU HIỆU BẤT THƯỜNG TỪ MÁY MÓC": "Dấu hiệu bất thường từ máy móc",
+    "TÁC ĐỘNG TỪ THIÊN NHIÊN": "Tác động từ thiên nhiên",
+    "NGUY CƠ TỰ CHÁY": "Nguy cơ tự cháy",
+    "PHƯƠNG TIỆN GIAO THÔNG": "Phương tiện giao thông",
+    "NGUY CƠ BỔ SUNG": "Nguy cơ bổ sung",
 }
 
 # Map specific group name to facility type code
@@ -151,7 +260,12 @@ FACILITY_TYPES = [
 with open(SEED_COMMON, "w", encoding="utf-8") as f:
     f.write('"""\nFRAS Question Database - Common Questions\n')
     f.write('AUTO-GENERATED from danh_sach_cau_hoi_duyet.txt\n')
-    f.write('DO NOT EDIT MANUALLY - Edit the txt file and re-run sync_questions_from_txt.py\n"""\n\n')
+    f.write('DO NOT EDIT MANUALLY - Edit the txt file and re-run sync_questions_from_txt.py\n')
+    f.write('\nScoring logic v2:\n')
+    f.write('  - "high" (default): A=0, B=1, C=2, D=3 (nguy co truc tiep)\n')
+    f.write('  - "medium":         A=0, B=1, C=2, D=2 (anh huong gian tiep)\n')
+    f.write('  - "low":            A=0, B=0, C=1, D=2 (phong ngua, hieu biet)\n')
+    f.write('"""\n\n')
     
     # FACILITY_TYPES
     f.write(f"FACILITY_TYPES = {json.dumps(FACILITY_TYPES, ensure_ascii=False, indent=4)}\n\n")
@@ -162,16 +276,7 @@ with open(SEED_COMMON, "w", encoding="utf-8") as f:
         meta = COMMON_CAT_META.get(gname, {"icon": "❓", "color": "#95a5a6"})
         max_score = sum(max(o["score"] for o in q["options"]) for q in qs)
         cat = {
-            "name": gname.replace(gname, {
-                "DẤU HIỆU NGUY CƠ TỪ HỆ THỐNG ĐIỆN": "Dấu hiệu nguy cơ từ hệ thống điện",
-                "NGUY CƠ TỪ NGUỒN LỬA/NHIỆT": "Nguy cơ từ nguồn lửa/nhiệt",
-                "LỐI THOÁT NẠN VÀ TRANG BỊ PCCC": "Lối thoát nạn và trang bị PCCC",
-                "DẤU HIỆU BẤT THƯỜNG TỪ MÁY MÓC": "Dấu hiệu bất thường từ máy móc",
-                "TÁC ĐỘNG TỪ THIÊN NHIÊN": "Tác động từ thiên nhiên",
-                "NGUY CƠ TỰ CHÁY": "Nguy cơ tự cháy",
-                "PHƯƠNG TIỆN GIAO THÔNG": "Phương tiện giao thông",
-                "NGUY CƠ BỔ SUNG": "Nguy cơ bổ sung",
-            }.get(gname, gname)),
+            "name": COMMON_CAT_NAMES_VI.get(gname, gname),
             "description": f"Các dấu hiệu nhận biết sớm nguy cơ cháy nổ - {gname.lower()}",
             "icon": meta["icon"],
             "color": meta["color"],
@@ -211,11 +316,6 @@ with open(SEED_SPECIFIC, "w", encoding="utf-8") as f:
         
         # Clean name: "ĐẶC THÙ: SẢN XUẤT CÔNG NGHIỆP" -> "Đặc thù: Sản xuất công nghiệp"
         clean_name = gname.replace("ĐẶC THÙ: ", "Đặc thù: ")
-        # Title case the rest
-        parts_name = clean_name.split(": ", 1)
-        if len(parts_name) == 2:
-            # Keep the second part as-is from specific groups  
-            pass
         
         max_score = sum(max(o["score"] for o in q["options"]) for q in qs)
         

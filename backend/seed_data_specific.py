@@ -284,20 +284,20 @@ SPECIFIC_CATEGORY_A = {
                 {
                     "key": "B",
                     "text": "Được đào tạo PCCC chung, chưa đi sâu dấu hiệu đặc thù",
-                    "score": 1,
-                    "risk": "low"
+                    "score": 0,
+                    "risk": "safe"
                 },
                 {
                     "key": "C",
                     "text": "Chỉ quản lý biết, công nhân chưa nhận ra dấu hiệu",
-                    "score": 2,
-                    "risk": "high"
+                    "score": 1,
+                    "risk": "low"
                 },
                 {
                     "key": "D",
                     "text": "Không ai biết dấu hiệu nguy hiểm của quy trình mình làm",
-                    "score": 3,
-                    "risk": "critical"
+                    "score": 2,
+                    "risk": "high"
                 }
             ]
         }
@@ -509,8 +509,8 @@ SPECIFIC_CATEGORY_B = {
                 {
                     "key": "D",
                     "text": "Không kiểm tra gì, đôi khi quên tắt điện",
-                    "score": 3,
-                    "risk": "critical"
+                    "score": 2,
+                    "risk": "high"
                 }
             ]
         }
@@ -739,20 +739,20 @@ SPECIFIC_CATEGORY_C = {
                 {
                     "key": "B",
                     "text": "Đã nói cho trẻ biết lối thoát nhưng chưa diễn tập",
-                    "score": 1,
-                    "risk": "low"
+                    "score": 0,
+                    "risk": "safe"
                 },
                 {
                     "key": "C",
                     "text": "Trẻ chưa được hướng dẫn về thoát nạn",
-                    "score": 2,
-                    "risk": "high"
+                    "score": 1,
+                    "risk": "low"
                 },
                 {
                     "key": "D",
                     "text": "Trẻ nhỏ ngủ phòng kín tầng cao, không lối thoát thứ hai",
-                    "score": 3,
-                    "risk": "critical"
+                    "score": 2,
+                    "risk": "high"
                 }
             ]
         },
@@ -797,20 +797,20 @@ SPECIFIC_CATEGORY_C = {
                 {
                     "key": "B",
                     "text": "Đã bàn kế hoạch nhưng chưa thực hành, có đèn pin",
-                    "score": 1,
-                    "risk": "low"
+                    "score": 0,
+                    "risk": "safe"
                 },
                 {
                     "key": "C",
                     "text": "Chưa nghĩ đến, không có kế hoạch",
-                    "score": 2,
-                    "risk": "high"
+                    "score": 1,
+                    "risk": "low"
                 },
                 {
                     "key": "D",
                     "text": "Nhà nhiều tầng, khóa kín ban đêm, không ai biết phải làm gì",
-                    "score": 3,
-                    "risk": "critical"
+                    "score": 2,
+                    "risk": "high"
                 }
             ]
         }
@@ -1107,20 +1107,20 @@ SPECIFIC_CATEGORY_E = {
                 {
                     "key": "B",
                     "text": "1 lần/năm có báo trước, học sinh biết lối thoát",
-                    "score": 1,
-                    "risk": "low"
+                    "score": 0,
+                    "risk": "safe"
                 },
                 {
                     "key": "C",
                     "text": "Chỉ phổ biến lý thuyết, chưa diễn tập thực tế",
-                    "score": 2,
-                    "risk": "high"
+                    "score": 1,
+                    "risk": "low"
                 },
                 {
                     "key": "D",
                     "text": "Chưa bao giờ diễn tập, học sinh không biết lối thoát",
-                    "score": 3,
-                    "risk": "critical"
+                    "score": 2,
+                    "risk": "high"
                 }
             ]
         }
@@ -1262,20 +1262,20 @@ SPECIFIC_CATEGORY_F = {
                 {
                     "key": "B",
                     "text": "Biết nút ngắt nhưng chưa thực hành bao giờ",
-                    "score": 1,
-                    "risk": "low"
+                    "score": 0,
+                    "risk": "safe"
                 },
                 {
                     "key": "C",
                     "text": "Nhân viên mới, chưa biết quy trình khẩn cấp",
-                    "score": 2,
-                    "risk": "high"
+                    "score": 1,
+                    "risk": "low"
                 },
                 {
                     "key": "D",
                     "text": "Ca đêm 1 người, không biết quy trình, ngủ gật",
-                    "score": 3,
-                    "risk": "critical"
+                    "score": 2,
+                    "risk": "high"
                 }
             ]
         }
@@ -1659,20 +1659,20 @@ SPECIFIC_CATEGORY_H = {
                 {
                     "key": "B",
                     "text": "Phổ biến miệng nhưng chưa dán sơ đồ",
-                    "score": 1,
-                    "risk": "low"
+                    "score": 0,
+                    "risk": "safe"
                 },
                 {
                     "key": "C",
                     "text": "Chưa phổ biến, nội quy cũ mờ chữ",
-                    "score": 2,
-                    "risk": "high"
+                    "score": 1,
+                    "risk": "low"
                 },
                 {
                     "key": "D",
                     "text": "Không nội quy, sơ đồ, người thuê không biết lối thoát",
-                    "score": 3,
-                    "risk": "critical"
+                    "score": 2,
+                    "risk": "high"
                 }
             ]
         },

@@ -2,15 +2,23 @@
 
 Quy tắc tính điểm — Weighted Scoring + Max-Domination Rule:
 
-Trọng số theo 8 nhóm nguyên nhân cháy:
-  1. Sự cố hệ thống, thiết bị điện:        55 điểm (55%)
-  2. Sơ suất, bất cẩn dùng lửa/nhiệt:      15 điểm (15%)
-  3. Vi phạm quy định PCCC:                 10 điểm (10%)
-  4. Sự cố kỹ thuật (thiết bị, máy móc):    7 điểm (7%)
-  5. Tác động thiên nhiên:                   4 điểm (4%)
-  6. Tự cháy:                                4 điểm (4%)
-  7. Tai nạn giao thông:                     3 điểm (3%)  (max_score=3 in seed)
-  8. Nguyên nhân khác / Rủi ro bổ sung:      2 điểm (2%)
+Trọng số theo 8 nhóm nguyên nhân cháy (dựa trên thống kê thực tế Việt Nam):
+  1. Dấu hiệu nguy cơ từ hệ thống điện:     50 điểm (50%)
+     → Chiếm >50% nguyên nhân vụ cháy tại VN (Cục CS PCCC)
+  2. Nguy cơ từ nguồn lửa/nhiệt:              15 điểm (15%)
+     → Bất cẩn dùng lửa, bếp gas, hàn cắt — nguyên nhân phổ biến thứ 2
+  3. Lối thoát nạn và trang bị PCCC:           12 điểm (12%)
+     → Quyết định hậu quả khi xảy ra cháy (người chết/sống)
+  4. Dấu hiệu bất thường từ máy móc:           7 điểm (7%)
+     → Quan trọng với nhà xưởng, ít ảnh hưởng nhà ở
+  5. Tác động từ thiên nhiên:                   4 điểm (4%)
+     → Yếu tố môi trường, ít kiểm soát được
+  6. Nguy cơ tự cháy:                           5 điểm (5%)
+     → Pin lithium, hóa chất — xu hướng tăng
+  7. Phương tiện giao thông:                    4 điểm (4%)
+     → Xe máy, xe điện đỗ trong nhà — rất phổ biến tại VN
+  8. Nguy cơ bổ sung:                           3 điểm (3%)
+     → Rác thải, phá hoại, sự kiện — yếu tố phụ
 
 Max-Domination Rule:
   - Nếu BẤT KỲ nhóm nào = CRITICAL -> tổng thể tối thiểu = HIGH
@@ -25,27 +33,27 @@ Risk Level (từ % nguy cơ):
 """
 
 # Trọng số mặc định theo tên nhóm (khớp với seed_data.py)
-# Key = tên category hoặc order_index, giá trị = weight (tổng = 100)
+# Key = order_index, giá trị = weight (tổng = 100)
 CATEGORY_WEIGHTS_BY_ORDER = {
-    1: 55,   # Sự cố hệ thống, thiết bị điện
-    2: 15,   # Sơ suất, bất cẩn dùng lửa/nhiệt
-    3: 10,   # Vi phạm quy định PCCC
-    4: 7,    # Sự cố kỹ thuật
-    5: 4,    # Tác động thiên nhiên
-    6: 4,    # Tự cháy
-    7: 3,    # Tai nạn giao thông
-    8: 2,    # Nguyên nhân khác
+    1: 50,   # Dấu hiệu nguy cơ từ hệ thống điện
+    2: 15,   # Nguy cơ từ nguồn lửa/nhiệt
+    3: 12,   # Lối thoát nạn và trang bị PCCC
+    4: 7,    # Dấu hiệu bất thường từ máy móc
+    5: 4,    # Tác động từ thiên nhiên
+    6: 5,    # Nguy cơ tự cháy
+    7: 4,    # Phương tiện giao thông
+    8: 3,    # Nguy cơ bổ sung
 }
 
 # Fallback: map bằng tên chứa keyword
 CATEGORY_WEIGHT_KEYWORDS = {
-    "điện": 55,
+    "điện": 50,
     "lửa": 15, "nhiệt": 15, "bất cẩn": 15,
-    "pccc": 10, "quy định": 10,
-    "kỹ thuật": 7,
+    "pccc": 12, "thoát nạn": 12,
+    "máy móc": 7, "kỹ thuật": 7,
     "thiên nhiên": 4,
-    "tự cháy": 4,
-    "giao thông": 3,
+    "tự cháy": 5,
+    "giao thông": 4,
 }
 
 DEFAULT_WEIGHT = 5  # For specific categories (A-L) not in common groups
