@@ -1,0 +1,1052 @@
+[
+  {
+    "id": 1,
+    "category": "Sự cố hệ thống, thiết bị điện",
+    "text": "Hệ thống điện tại cơ sở có được kiểm tra, bảo trì định kỳ bởi đơn vị có chuyên môn không?"
+  },
+  {
+    "id": 2,
+    "category": "Sự cố hệ thống, thiết bị điện",
+    "text": "Hệ thống dây dẫn điện tại cơ sở có dấu hiệu hư hỏng (bong tróc vỏ cách điện, rỉ sét, nối dây bằng băng keo không đúng quy cách) không?"
+  },
+  {
+    "id": 3,
+    "category": "Sự cố hệ thống, thiết bị điện",
+    "text": "Các thiết bị bảo vệ điện (Cầu chì, Aptomat, CB) có dung lượng và tình trạng hoạt động như thế nào?"
+  },
+  {
+    "id": 4,
+    "category": "Sự cố hệ thống, thiết bị điện",
+    "text": "Việc sử dụng ổ cắm di động (dây kéo dài) tại cơ sở được thực hiện như thế nào?"
+  },
+  {
+    "id": 5,
+    "category": "Sự cố hệ thống, thiết bị điện",
+    "text": "Hệ thống tiếp địa bảo vệ (nối đất) và chống sét của cơ sở được lắp đặt và kiểm tra như thế nào?"
+  },
+  {
+    "id": 6,
+    "category": "Sự cố hệ thống, thiết bị điện",
+    "text": "Cơ sở có lắp đặt thiết bị chống giật/chống rò điện (ELCB, RCD) tại các mạch điện quan trọng không?"
+  },
+  {
+    "id": 7,
+    "category": "Sự cố hệ thống, thiết bị điện",
+    "text": "Tình trạng tủ điện chính/phân phối tại cơ sở như thế nào?"
+  },
+  {
+    "id": 8,
+    "category": "Sự cố hệ thống, thiết bị điện",
+    "text": "Hệ thống chiếu sáng tại cơ sở được lắp đặt và vận hành như thế nào liên quan đến an toàn cháy nổ?"
+  },
+  {
+    "id": 9,
+    "category": "Sự cố hệ thống, thiết bị điện",
+    "text": "Các thiết bị điện nung nóng (bếp điện, bếp từ, lò sưởi điện, bàn ủi) được sử dụng và quản lý như thế nào tại cơ sở?"
+  },
+  {
+    "id": 10,
+    "category": "Sự cố hệ thống, thiết bị điện",
+    "text": "Hệ thống máy điều hòa không khí (ĐHKK) tại cơ sở được bảo trì và kiểm tra an toàn như thế nào?"
+  },
+  {
+    "id": 11,
+    "category": "Sự cố hệ thống, thiết bị điện",
+    "text": "Cơ sở có sử dụng máy phát điện dự phòng không? Nếu có, việc vận hành và bảo quản như thế nào?"
+  },
+  {
+    "id": 12,
+    "category": "Sự cố hệ thống, thiết bị điện",
+    "text": "Tải điện thực tế tại cơ sở có vượt quá công suất thiết kế ban đầu của hệ thống điện không?"
+  },
+  {
+    "id": 13,
+    "category": "Sự cố hệ thống, thiết bị điện",
+    "text": "Tại cơ sở, vật liệu dễ cháy (giấy, vải, xăng, hóa chất) có được bảo quản cách xa các thiết bị và nguồn điện không?"
+  },
+  {
+    "id": 14,
+    "category": "Sự cố hệ thống, thiết bị điện",
+    "text": "Tại cơ sở có sử dụng hệ thống UPS (lưu điện) hoặc trạm sạc pin, bình ắc-quy không? Nếu có, tình trạng như thế nào?"
+  },
+  {
+    "id": 15,
+    "category": "Sự cố hệ thống, thiết bị điện",
+    "text": "Tại các khu vực có hơi khí dễ cháy nổ (kho xăng dầu, phòng sơn, kho gas), thiết bị điện được lựa chọn như thế nào?"
+  },
+  {
+    "id": 16,
+    "category": "Sự cố hệ thống, thiết bị điện",
+    "text": "Nhân viên tại cơ sở có được đào tạo quy trình xử lý sự cố điện (chập cháy, điện giật, mất điện đột ngột) không?"
+  },
+  {
+    "id": 17,
+    "category": "Sự cố hệ thống, thiết bị điện",
+    "text": "Tại các khu vực tập trung thiết bị điện (phòng server, tủ điện, UPS), loại bình chữa cháy nào được trang bị?"
+  },
+  {
+    "id": 18,
+    "category": "Sự cố hệ thống, thiết bị điện",
+    "text": "Quy trình tắt thiết bị điện và kiểm tra an toàn trước khi rời cơ sở (cuối ngày, cuối tuần) được thực hiện như thế nào?"
+  },
+  {
+    "id": 19,
+    "category": "Sự cố hệ thống, thiết bị điện",
+    "text": "Hồ sơ pháp lý về an toàn điện của cơ sở (thiết kế điện được thẩm duyệt, nghiệm thu điện, biên bản kiểm tra định kỳ) có đầy đủ không?"
+  },
+  {
+    "id": 20,
+    "category": "Sự cố hệ thống, thiết bị điện",
+    "text": "Cơ sở có trang bị hệ thống phát hiện và cảnh báo sớm các nguy cơ từ điện (cảm biến nhiệt, cảm biến khói, camera nhiệt hồng ngoại) không?"
+  },
+  {
+    "id": 21,
+    "category": "Sơ suất, bất cẩn dùng lửa/nhiệt",
+    "text": "Cơ sở/hộ gia đình có thực hiện đốt rác, phế thải, lá khô tại khuôn viên không? Nếu có, việc này được thực hiện như thế nào?"
+  },
+  {
+    "id": 22,
+    "category": "Sơ suất, bất cẩn dùng lửa/nhiệt",
+    "text": "Tại cơ sở hoặc hộ gia đình, việc đốt vàng mã, hóa vàng, thắp hương cúng lễ được thực hiện như thế nào?"
+  },
+  {
+    "id": 23,
+    "category": "Sơ suất, bất cẩn dùng lửa/nhiệt",
+    "text": "Tại cơ sở có sử dụng nến, đèn dầu, đèn cầy không? Nếu có, cách sử dụng và bảo quản như thế nào?"
+  },
+  {
+    "id": 24,
+    "category": "Sơ suất, bất cẩn dùng lửa/nhiệt",
+    "text": "Việc thắp hương (hương thẳng, hương vòng, nhang trầm) tại cơ sở/gia đình được thực hiện như thế nào?"
+  },
+  {
+    "id": 25,
+    "category": "Sơ suất, bất cẩn dùng lửa/nhiệt",
+    "text": "Việc hút thuốc lá tại cơ sở/gia đình được quản lý như thế nào?"
+  },
+  {
+    "id": 26,
+    "category": "Sơ suất, bất cẩn dùng lửa/nhiệt",
+    "text": "Việc sử dụng và bảo quản bếp gas, bình gas (LPG) tại cơ sở/gia đình được thực hiện như thế nào?"
+  },
+  {
+    "id": 27,
+    "category": "Sơ suất, bất cẩn dùng lửa/nhiệt",
+    "text": "Cơ sở/gia đình có tổ chức nướng than hoa ngoài trời, lửa trại hoặc các hoạt động có dùng lửa ngoài trời không?"
+  },
+  {
+    "id": 28,
+    "category": "Sơ suất, bất cẩn dùng lửa/nhiệt",
+    "text": "Tại cơ sở có sử dụng máy hàn hơi, máy cắt kim loại, máy khò gas hoặc đèn khò không? Quy trình an toàn khi thực hiện các công việc phát sinh tia lửa được thực hiện như thế nào?"
+  },
+  {
+    "id": 29,
+    "category": "Sơ suất, bất cẩn dùng lửa/nhiệt",
+    "text": "Tại cơ sở/gia đình có tự bảo quản xăng dầu, cồn, dung môi dễ cháy không? Cách bảo quản như thế nào?"
+  },
+  {
+    "id": 30,
+    "category": "Sơ suất, bất cẩn dùng lửa/nhiệt",
+    "text": "Tại cơ sở/gia đình có sử dụng pháo hoa, pháo nổ, pháo sáng hoặc các vật liệu gây cháy nổ tương tự trong các dịp lễ, tết không?"
+  },
+  {
+    "id": 31,
+    "category": "Vi phạm quy định PCCC",
+    "text": "Cơ sở có đầy đủ hồ sơ pháp lý PCCC bắt buộc (thẩm duyệt thiết kế PCCC, nghiệm thu PCCC, giấy chứng nhận PCCC) không?"
+  },
+  {
+    "id": 32,
+    "category": "Vi phạm quy định PCCC",
+    "text": "Lối thoát hiểm và đường thoát nạn tại cơ sở có đáp ứng yêu cầu không?"
+  },
+  {
+    "id": 33,
+    "category": "Vi phạm quy định PCCC",
+    "text": "Hệ thống báo cháy tự động tại cơ sở có được lắp đặt, duy trì và kiểm tra theo quy định không?"
+  },
+  {
+    "id": 34,
+    "category": "Vi phạm quy định PCCC",
+    "text": "Hệ thống chữa cháy tự động (Sprinkler, chữa cháy khí) tại cơ sở có hoạt động đúng không?"
+  },
+  {
+    "id": 35,
+    "category": "Vi phạm quy định PCCC",
+    "text": "Phương tiện chữa cháy ban đầu (bình chữa cháy, hộp cứu hỏa, vòi chữa cháy vách tường) tại cơ sở có đầy đủ và sẵn sàng sử dụng không?"
+  },
+  {
+    "id": 36,
+    "category": "Vi phạm quy định PCCC",
+    "text": "Cơ sở có thành lập Đội PCCC cơ sở và xây dựng Phương án chữa cháy, thoát nạn không?"
+  },
+  {
+    "id": 37,
+    "category": "Vi phạm quy định PCCC",
+    "text": "Việc quản lý và sắp xếp hàng hóa, vật tư trong kho có tuân thủ quy định về an toàn PCCC không?"
+  },
+  {
+    "id": 38,
+    "category": "Vi phạm quy định PCCC",
+    "text": "Các thiết bị điện, tủ điện, đầu phun sprinkler có đang bị che khuất hoặc bị hàng hóa, vật dụng chất gần ép sát không?"
+  },
+  {
+    "id": 39,
+    "category": "Vi phạm quy định PCCC",
+    "text": "Nguồn nước chữa cháy (bể nước, máy bơm, họng tiếp nước) có đủ áp lực và lưu lượng sẵn sàng không?"
+  },
+  {
+    "id": 40,
+    "category": "Vi phạm quy định PCCC",
+    "text": "Sơ đồ thoát nạn, biển chỉ dẫn PCCC và nội quy an toàn có được dán đúng vị trí và còn đọc được không?"
+  },
+  {
+    "id": 41,
+    "category": "Sự cố kỹ thuật (thiết bị, máy móc)",
+    "text": "Máy móc, thiết bị sản xuất tại cơ sở có được bảo trì định kỳ và kiểm tra an toàn vận hành không?"
+  },
+  {
+    "id": 42,
+    "category": "Sự cố kỹ thuật (thiết bị, máy móc)",
+    "text": "Cơ sở có sử dụng nồi hơi, bình chịu áp lực, hệ thống khí nén không? Nếu có, tình trạng kiểm định và vận hành như thế nào?"
+  },
+  {
+    "id": 43,
+    "category": "Sự cố kỹ thuật (thiết bị, máy móc)",
+    "text": "Hệ thống băng chuyền, dây đai truyền động và các bộ phận ma sát cao có được kiểm soát nguy cơ cháy không?"
+  },
+  {
+    "id": 44,
+    "category": "Sự cố kỹ thuật (thiết bị, máy móc)",
+    "text": "Cơ sở có sử dụng lò nung, lò sấy, lò nấu công nghiệp không? Hệ thống bảo vệ và kiểm soát nhiệt độ như thế nào?"
+  },
+  {
+    "id": 45,
+    "category": "Sự cố kỹ thuật (thiết bị, máy móc)",
+    "text": "Xe nâng hàng và phương tiện vận chuyển nội bộ có gây nguy cơ cháy nổ không?"
+  },
+  {
+    "id": 46,
+    "category": "Sự cố kỹ thuật (thiết bị, máy móc)",
+    "text": "Hệ thống làm lạnh công nghiệp (kho lạnh, máy lạnh công suất lớn dùng môi chất NH₃ hoặc Freon) có tiềm ẩn nguy cơ cháy nổ không?"
+  },
+  {
+    "id": 47,
+    "category": "Sự cố kỹ thuật (thiết bị, máy móc)",
+    "text": "Bề mặt vỏ máy, ổ bi, hộp số hoặc các bộ phận chuyển động có nóng hơn bình thường khi chạm tay vào không?"
+  },
+  {
+    "id": 48,
+    "category": "Sự cố kỹ thuật (thiết bị, máy móc)",
+    "text": "Máy móc có phát ra tiếng kêu lạ (rít, gõ, lục cục) hoặc rung động mạnh hơn bình thường gần đây không?"
+  },
+  {
+    "id": 49,
+    "category": "Sự cố kỹ thuật (thiết bị, máy móc)",
+    "text": "Có vết dầu mỡ nhỏ giọt xuống sàn hoặc bám trên vỏ máy, ống dẫn dầu không?"
+  },
+  {
+    "id": 50,
+    "category": "Sự cố kỹ thuật (thiết bị, máy móc)",
+    "text": "Hệ thống thủy lực và khí nén có dấu hiệu rò rỉ áp lực, ống dẫn mòn hoặc khớp nối lỏng không?"
+  },
+  {
+    "id": 51,
+    "category": "Tác động thiên nhiên",
+    "text": "Cơ sở có hệ thống chống sét trực tiếp và chống sét lan truyền (surge protection) không?"
+  },
+  {
+    "id": 52,
+    "category": "Tác động thiên nhiên",
+    "text": "Cơ sở có các yếu tố làm tăng nguy cơ cháy trong điều kiện nắng nóng, khô hanh không?"
+  },
+  {
+    "id": 53,
+    "category": "Tác động thiên nhiên",
+    "text": "Cơ sở có biện pháp PCCC ứng phó với gió lớn, bão và điều kiện thời tiết cực đoan không?"
+  },
+  {
+    "id": 54,
+    "category": "Tác động thiên nhiên",
+    "text": "Cơ sở có nguy cơ bị ảnh hưởng bởi cháy rừng, cháy đồng cỏ hoặc hỏa hoạn lan từ khu vực lân cận không?"
+  },
+  {
+    "id": 55,
+    "category": "Tác động thiên nhiên",
+    "text": "Trong mùa khô hanh, cơ sở có biện pháp kiểm soát tĩnh điện tích tụ trên thiết bị và vật liệu không?"
+  },
+  {
+    "id": 56,
+    "category": "Tác động thiên nhiên",
+    "text": "Cơ sở có nằm trong vùng thấp, hầm ngầm hoặc tầng 1 có nguy cơ ngập nước không? Hệ thống điện có được bảo vệ khỏi ngập nước không?"
+  },
+  {
+    "id": 57,
+    "category": "Tác động thiên nhiên",
+    "text": "Trong những ngày nắng nóng cực đoan (trên 38°C), cơ sở có tăng cường biện pháp PCCC không?"
+  },
+  {
+    "id": 58,
+    "category": "Tác động thiên nhiên",
+    "text": "Cơ sở có dấu hiệu chuột, kiến hoặc côn trùng xâm nhập vào tủ điện, hộp nối dây không?"
+  },
+  {
+    "id": 59,
+    "category": "Tác động thiên nhiên",
+    "text": "Các thiết bị điện ngoài trời (tủ điện ngoài trời, cáp điện, đèn chiếu sáng) có dấu hiệu gỉ sét, ăn mòn hoặc vỡ vỏ bảo vệ không?"
+  },
+  {
+    "id": 60,
+    "category": "Tác động thiên nhiên",
+    "text": "Bụi mịn từ môi trường (bụi xi măng, bụi kim loại, bụi than) có tích tụ trên thiết bị điện và hệ thống PCCC không?"
+  },
+  {
+    "id": 61,
+    "category": "Tự cháy",
+    "text": "Cơ sở có bảo quản các vật liệu có khả năng tự cháy (dầu lanh, than non, vải dính dầu, phân bón có nitrat) không?"
+  },
+  {
+    "id": 62,
+    "category": "Tự cháy",
+    "text": "Tại cơ sở có phát sinh bụi hữu cơ (bụi gỗ, bụi ngũ cốc, bụi đường, bụi nhôm) trong quá trình sản xuất không?"
+  },
+  {
+    "id": 63,
+    "category": "Tự cháy",
+    "text": "Cơ sở có bảo quản phân bón Amoni Nitrat (AN), oxy già (H₂O₂), hoặc các hóa chất tự phản ứng/tự oxy hóa không?"
+  },
+  {
+    "id": 64,
+    "category": "Tự cháy",
+    "text": "Bột màu, pigment hoặc sơn bột công nghiệp được bảo quản và xử lý như thế nào tại cơ sở?"
+  },
+  {
+    "id": 65,
+    "category": "Tự cháy",
+    "text": "Cơ sở có bảo quản than củi, than đá, pellet gỗ hoặc biomass không? Đống than có được kiểm soát nhiệt độ không?"
+  },
+  {
+    "id": 66,
+    "category": "Tự cháy",
+    "text": "Cơ sở có bảo quản phân hữu cơ, xác bã nông sản, hoặc chất thải hữu cơ ủ đống lớn không?"
+  },
+  {
+    "id": 67,
+    "category": "Tự cháy",
+    "text": "Cơ sở có sử dụng hoặc lưu trữ dầu thực vật, mỡ động vật, dầu cá số lượng lớn không?"
+  },
+  {
+    "id": 68,
+    "category": "Tự cháy",
+    "text": "Các thiết bị dùng pin lithium (laptop, điện thoại, xe điện, máy bay không người lái) được sạc và bảo quản như thế nào?"
+  },
+  {
+    "id": 69,
+    "category": "Tự cháy",
+    "text": "Cơ sở có bảo quản hóa chất phản ứng mạnh với nước (natri kim loại, canxi cacbua, thuốc tím) không?"
+  },
+  {
+    "id": 70,
+    "category": "Tự cháy",
+    "text": "Rơm rạ, trấu, vỏ cà phê hoặc bã mía tại cơ sở được bảo quản và xử lý như thế nào sau mùa thu hoạch?"
+  },
+  {
+    "id": 71,
+    "category": "Tai nạn giao thông (phương tiện cơ giới)",
+    "text": "Khu vực đỗ xe (ô tô, xe máy) trong cơ sở có tiềm ẩn nguy cơ cháy nổ không?"
+  },
+  {
+    "id": 72,
+    "category": "Tai nạn giao thông (phương tiện cơ giới)",
+    "text": "Cơ sở có nằm gần đường vận chuyển hàng hóa nguy hiểm (xe bồn xăng dầu, xe chở gas, xe hóa chất) không? Có biện pháp phòng ngừa gì?"
+  },
+  {
+    "id": 73,
+    "category": "Tai nạn giao thông (phương tiện cơ giới)",
+    "text": "Xe cứu hỏa có thể tiếp cận nhanh và thuận tiện vào cơ sở khi xảy ra sự cố không?"
+  },
+  {
+    "id": 74,
+    "category": "Tai nạn giao thông (phương tiện cơ giới)",
+    "text": "Xe cơ giới (ô tô, xe tải, xe nâng) đậu trong nhà xưởng hoặc kho có dấu hiệu rò rỉ nhiên liệu không?"
+  },
+  {
+    "id": 75,
+    "category": "Tai nạn giao thông (phương tiện cơ giới)",
+    "text": "Xe nâng, xe đẩy hoặc phương tiện nội bộ có thường xuyên va chạm vào kệ hàng, tường, hoặc thiết bị không?"
+  },
+  {
+    "id": 76,
+    "category": "Tai nạn giao thông (phương tiện cơ giới)",
+    "text": "Nhiên liệu và dầu nhớt dự trữ cho đội xe của cơ sở được bảo quản như thế nào?"
+  },
+  {
+    "id": 77,
+    "category": "Tai nạn giao thông (phương tiện cơ giới)",
+    "text": "Hệ thống điện và cầu chì của phương tiện cơ giới trong đội xe có được kiểm tra bảo dưỡng định kỳ không?"
+  },
+  {
+    "id": 78,
+    "category": "Tai nạn giao thông (phương tiện cơ giới)",
+    "text": "Khu vực rửa xe và bảo dưỡng xe có tuân thủ quy định phòng cháy không?"
+  },
+  {
+    "id": 79,
+    "category": "Tai nạn giao thông (phương tiện cơ giới)",
+    "text": "Xe bồn chở xăng dầu hoặc xe chở khí gas của cơ sở có được kiểm tra bình áp lực và van an toàn định kỳ không?"
+  },
+  {
+    "id": 80,
+    "category": "Tai nạn giao thông (phương tiện cơ giới)",
+    "text": "Khu vực đỗ xe ban đêm có được kiểm tra trước khi nhân viên rời cơ sở không?"
+  },
+  {
+    "id": 81,
+    "category": "Nguyên nhân khác / Rủi ro bổ sung",
+    "text": "Cơ sở có các biện pháp bảo mật vật lý để ngăn ngừa hành vi phóng hỏa cố ý không?"
+  },
+  {
+    "id": 82,
+    "category": "Nguyên nhân khác / Rủi ro bổ sung",
+    "text": "Cơ sở lân cận (hàng xóm, cơ sở cùng khu công nghiệp) có mang lại rủi ro cháy lan sang cơ sở của bạn không?"
+  },
+  {
+    "id": 83,
+    "category": "Nguyên nhân khác / Rủi ro bổ sung",
+    "text": "Mức độ nhận thức và ý thức về an toàn PCCC của toàn thể nhân viên tại cơ sở như thế nào?"
+  },
+  {
+    "id": 84,
+    "category": "Nguyên nhân khác / Rủi ro bổ sung",
+    "text": "Cơ sở có đang hoặc vừa trải qua quá trình xây dựng, sửa chữa, cải tạo không? Công tác PCCC trong thời gian thi công được quản lý như thế nào?"
+  },
+  {
+    "id": 85,
+    "category": "Nguyên nhân khác / Rủi ro bổ sung",
+    "text": "Rác thải, vật liệu phế phẩm và phế liệu có tích tụ tại cơ sở mà không được thu gom kịp thời không?"
+  },
+  {
+    "id": 86,
+    "category": "Nguyên nhân khác / Rủi ro bổ sung",
+    "text": "Nhà thầu phụ, kỹ thuật viên bên ngoài hoặc nhân viên giao hàng vào cơ sở có được phổ biến quy tắc PCCC không?"
+  },
+  {
+    "id": 87,
+    "category": "Nguyên nhân khác / Rủi ro bổ sung",
+    "text": "Trong các dịp lễ hội, sự kiện hoặc mùa tăng ca cao điểm, cơ sở có điều chỉnh biện pháp PCCC không?"
+  },
+  {
+    "id": 88,
+    "category": "Nguyên nhân khác / Rủi ro bổ sung",
+    "text": "Nhân viên có sử dụng điện thoại hoặc sạc pin cá nhân trong khu vực nguy hiểm hoặc kho hàng không?"
+  },
+  {
+    "id": 89,
+    "category": "Nguyên nhân khác / Rủi ro bổ sung",
+    "text": "Phòng máy chủ (server room) hoặc phòng điều khiển của cơ sở có được bảo vệ PCCC chuyên dụng không?"
+  },
+  {
+    "id": 90,
+    "category": "Nguyên nhân khác / Rủi ro bổ sung",
+    "text": "Cơ sở có bảo hiểm cháy nổ hợp lệ và kế hoạch khôi phục hoạt động sau sự cố cháy (Business Continuity Plan) không?"
+  },
+  {
+    "id": 91,
+    "category": "Đặc thù: Sản xuất công nghiệp",
+    "text": "Quy trình sản xuất có sử dụng nhiệt độ cao (lò nung, lò sấy, nhiệt đóng gói) có được kiểm soát tự động không?"
+  },
+  {
+    "id": 92,
+    "category": "Đặc thù: Sản xuất công nghiệp",
+    "text": "Khu vực sơn, phun sơn hoặc sử dụng dung môi hữu cơ có được thông gió và kiểm soát nồng độ hơi không?"
+  },
+  {
+    "id": 93,
+    "category": "Đặc thù: Sản xuất công nghiệp",
+    "text": "Hệ thống truyền tải bụi (ống hút bụi, silo, cyclone) có được vệ sinh và kiểm tra nguy cơ nổ bụi định kỳ không?"
+  },
+  {
+    "id": 94,
+    "category": "Đặc thù: Sản xuất công nghiệp",
+    "text": "Chất làm mát (coolant), dầu cắt gọt kim loại có tích tụ trên phoi kim loại và mùn cưa không?"
+  },
+  {
+    "id": 95,
+    "category": "Đặc thù: Sản xuất công nghiệp",
+    "text": "Hệ thống điện trong nhà xưởng có được thiết kế và bảo trì phù hợp với tải sản xuất thực tế hiện tại không?"
+  },
+  {
+    "id": 96,
+    "category": "Đặc thù: Sản xuất công nghiệp",
+    "text": "Khu vực nạp axit, pha hóa chất hoặc xử lý bề mặt kim loại có hệ thống thông gió và kiểm soát hơi axit không?"
+  },
+  {
+    "id": 97,
+    "category": "Đặc thù: Sản xuất công nghiệp",
+    "text": "Hệ thống làm mát tháp nước hoặc chiller công nghiệp có được kiểm tra nguy cơ cháy nổ từ hóa chất xử lý nước không?"
+  },
+  {
+    "id": 98,
+    "category": "Đặc thù: Sản xuất công nghiệp",
+    "text": "Hệ thống điện trở và cuộn sấy trong dây chuyền đóng gói có được kiểm tra ngăn vật liệu đóng gói tiếp xúc trực tiếp không?"
+  },
+  {
+    "id": 99,
+    "category": "Đặc thù: Sản xuất công nghiệp",
+    "text": "Khu vực nạp điện cho xe nâng và thiết bị điện công nghiệp có được bố trí đúng không?"
+  },
+  {
+    "id": 100,
+    "category": "Đặc thù: Sản xuất công nghiệp",
+    "text": "Nhân viên sản xuất có được đào tạo nhận biết dấu hiệu cảnh báo sớm nguy cơ cháy nổ liên quan đến quy trình của mình không?"
+  },
+  {
+    "id": 101,
+    "category": "Đặc thù: Kho hàng, kho vật liệu",
+    "text": "Phân loại hàng hóa theo mức độ dễ cháy trong kho có được duy trì nhất quán không?"
+  },
+  {
+    "id": 102,
+    "category": "Đặc thù: Kho hàng, kho vật liệu",
+    "text": "Lối đi chính trong kho và lối tiếp cận chữa cháy có luôn thông thoáng không?"
+  },
+  {
+    "id": 103,
+    "category": "Đặc thù: Kho hàng, kho vật liệu",
+    "text": "Hàng hóa dễ cháy tồn kho ngoài giờ làm việc có được giám sát bởi hệ thống tự động không?"
+  },
+  {
+    "id": 104,
+    "category": "Đặc thù: Kho hàng, kho vật liệu",
+    "text": "Kệ hàng kim loại trong kho có được kiểm tra tải trọng và neo giữ chống đổ không?"
+  },
+  {
+    "id": 105,
+    "category": "Đặc thù: Kho hàng, kho vật liệu",
+    "text": "Hàng hóa nguy hiểm (pin lithium, aerosol, hàng dễ cháy đặc biệt) có được xác định và bảo quản riêng không?"
+  },
+  {
+    "id": 106,
+    "category": "Đặc thù: Kho hàng, kho vật liệu",
+    "text": "Kho lạnh hoặc kho đông có hệ thống phát hiện và ngắt an toàn khi xảy ra sự cố môi chất lạnh không?"
+  },
+  {
+    "id": 107,
+    "category": "Đặc thù: Kho hàng, kho vật liệu",
+    "text": "Ánh sáng chiếu sáng trong kho có được lắp đặt an toàn và không tiếp xúc với hàng hóa dễ cháy không?"
+  },
+  {
+    "id": 108,
+    "category": "Đặc thù: Kho hàng, kho vật liệu",
+    "text": "Hàng hóa trả lại, hàng hỏng và phế phẩm có được quản lý riêng trong kho không?"
+  },
+  {
+    "id": 109,
+    "category": "Đặc thù: Kho hàng, kho vật liệu",
+    "text": "Việc sạc pin xe nâng và thiết bị điện trong kho được thực hiện ở khu vực được chỉ định an toàn không?"
+  },
+  {
+    "id": 110,
+    "category": "Đặc thù: Kho hàng, kho vật liệu",
+    "text": "Kho có quy trình thực hành tốt để duy trì an toàn PCCC hàng ngày không?"
+  },
+  {
+    "id": 111,
+    "category": "Đặc thù: Nhà ở hỗn hợp (ở + kinh doanh)",
+    "text": "Khu vực kinh doanh và khu vực sinh hoạt gia đình có được ngăn cách bằng tường và cửa chống cháy không, hay chỉ phân biệt bằng nội thất?"
+  },
+  {
+    "id": 112,
+    "category": "Đặc thù: Nhà ở hỗn hợp (ở + kinh doanh)",
+    "text": "Lối thoát nạn từ tầng ở phía trên có hoàn toàn độc lập với lối ra vào của khu kinh doanh tầng dưới không?"
+  },
+  {
+    "id": 113,
+    "category": "Đặc thù: Nhà ở hỗn hợp (ở + kinh doanh)",
+    "text": "Hệ thống điện phục vụ kinh doanh và điện sinh hoạt gia đình có được tách riêng mạch, riêng CB, có thể ngắt độc lập không?"
+  },
+  {
+    "id": 114,
+    "category": "Đặc thù: Nhà ở hỗn hợp (ở + kinh doanh)",
+    "text": "Hàng hóa kinh doanh được để qua đêm trong cửa hàng có được sắp xếp cách xa nguồn điện, nguồn nhiệt và không chất vào khu sinh hoạt không?"
+  },
+  {
+    "id": 115,
+    "category": "Đặc thù: Nhà ở hỗn hợp (ở + kinh doanh)",
+    "text": "Có cảm biến khói được lắp đặt trong từng phòng ngủ của khu ở không?"
+  },
+  {
+    "id": 116,
+    "category": "Đặc thù: Nhà ở hỗn hợp (ở + kinh doanh)",
+    "text": "Các thiết bị điện kinh doanh hoạt động 24/7 như tủ đông, tủ mát, biển hiệu LED có được bảo dưỡng định kỳ không?"
+  },
+  {
+    "id": 117,
+    "category": "Đặc thù: Nhà ở hỗn hợp (ở + kinh doanh)",
+    "text": "Bếp nấu ăn của gia đình và bếp chế biến phục vụ kinh doanh có được tách biệt về không gian và nguồn nhiệt không?"
+  },
+  {
+    "id": 118,
+    "category": "Đặc thù: Nhà ở hỗn hợp (ở + kinh doanh)",
+    "text": "Trẻ em trong gia đình có biết đường thoát nạn, biết điểm tập kết ngoài nhà và biết phải làm gì khi nghe chuông cảm biến khói kêu không?"
+  },
+  {
+    "id": 119,
+    "category": "Đặc thù: Nhà ở hỗn hợp (ở + kinh doanh)",
+    "text": "Cầu thang bộ trong nhà nhiều tầng có cửa ngăn khói tại mỗi tầng với cơ chế tự đóng, và không bị xe máy hay đồ đạc chiếm chỗ không?"
+  },
+  {
+    "id": 120,
+    "category": "Đặc thù: Nhà ở hỗn hợp (ở + kinh doanh)",
+    "text": "Gia đình đã từng thực hành diễn tập thoát nạn, kể cả tình huống giả định cháy xảy ra vào ban đêm khi mọi người đang ngủ chưa?"
+  },
+  {
+    "id": 121,
+    "category": "Đặc thù: Nhà hàng, khách sạn, chợ, TTTM",
+    "text": "Hệ thống ống hút khói và bộ lọc mỡ của bếp công nghiệp có được vệ sinh định kỳ không, hay đã có mùi khét và quạt chạy chậm hơn bình thường?"
+  },
+  {
+    "id": 122,
+    "category": "Đặc thù: Nhà hàng, khách sạn, chợ, TTTM",
+    "text": "Toàn bộ nhân viên có được đào tạo quy trình dẫn khách thoát nạn, và cơ sở đã tổ chức diễn tập sơ tán có sự tham gia của khách hàng thực tế chưa?"
+  },
+  {
+    "id": 123,
+    "category": "Đặc thù: Nhà hàng, khách sạn, chợ, TTTM",
+    "text": "Ban quản lý chợ/TTTM có thực sự kiểm tra và xử lý khi tiểu thương sử dụng bếp lửa, bếp gas hoặc bếp cồn ngay tại gian hàng không?"
+  },
+  {
+    "id": 124,
+    "category": "Đặc thù: Nhà hàng, khách sạn, chợ, TTTM",
+    "text": "Cửa phòng khách sạn có phải cửa chống cháy với cơ chế tự đóng không, và nhân viên có nhắc khách không được chèn cửa mở không?"
+  },
+  {
+    "id": 125,
+    "category": "Đặc thù: Nhà hàng, khách sạn, chợ, TTTM",
+    "text": "Trong các dịp lễ tết khi bổ sung đèn trang trí, tải điện thực tế có được tính toán lại và kiểm tra không vượt quá công suất thiết kế không?"
+  },
+  {
+    "id": 126,
+    "category": "Đặc thù: Nhà hàng, khách sạn, chợ, TTTM",
+    "text": "Cửa kho hàng trong TTTM/siêu thị có luôn được đóng kín và có cơ chế tự đóng, hay thường xuyên bị chèn mở suốt ngày vì nhân viên đi lại?"
+  },
+  {
+    "id": 127,
+    "category": "Đặc thù: Nhà hàng, khách sạn, chợ, TTTM",
+    "text": "Khách sạn có danh sách phòng đang có khách được cập nhật real-time và quy trình kiểm tra từng phòng khi có báo động cháy không?"
+  },
+  {
+    "id": 128,
+    "category": "Đặc thù: Nhà hàng, khách sạn, chợ, TTTM",
+    "text": "Bếp nhà hàng có hệ thống chữa cháy tự động chuyên dụng cho cháy dầu mỡ (wet chemical system), hay chỉ trang bị bình CO₂ thông thường?"
+  },
+  {
+    "id": 129,
+    "category": "Đặc thù: Nhà hàng, khách sạn, chợ, TTTM",
+    "text": "Bảo vệ cuối ngày có thực hiện kiểm tra từng gian hàng theo checklist cụ thể trước khi đóng cửa chợ/TTTM không, hay chỉ tắt đèn và khóa cổng?"
+  },
+  {
+    "id": 130,
+    "category": "Đặc thù: Nhà hàng, khách sạn, chợ, TTTM",
+    "text": "Cơ sở có tính toán và kiểm soát số người tối đa được phép có mặt theo thiết kế thoát nạn, đặc biệt trong các sự kiện đông người không?"
+  },
+  {
+    "id": 131,
+    "category": "Đặc thù: Bệnh viện, trường học, cơ sở y tế",
+    "text": "Cơ sở y tế có phương án và thiết bị sơ tán chuyên dụng cho bệnh nhân không thể tự di chuyển hoặc đang phụ thuộc vào thiết bị hỗ trợ sự sống không?"
+  },
+  {
+    "id": 132,
+    "category": "Đặc thù: Bệnh viện, trường học, cơ sở y tế",
+    "text": "Trường học có tổ chức diễn tập sơ tán phù hợp với từng độ tuổi học sinh, kể cả tình huống không báo trước không?"
+  },
+  {
+    "id": 133,
+    "category": "Đặc thù: Bệnh viện, trường học, cơ sở y tế",
+    "text": "Kho lưu trữ hồ sơ bệnh án giấy có được bảo vệ bằng hệ thống phát hiện và chữa cháy chuyên dụng không?"
+  },
+  {
+    "id": 134,
+    "category": "Đặc thù: Bệnh viện, trường học, cơ sở y tế",
+    "text": "Cồn y tế, formalin và các hóa chất dễ cháy trong phòng xét nghiệm có được bảo quản trong tủ chuyên dụng chống cháy không?"
+  },
+  {
+    "id": 135,
+    "category": "Đặc thù: Bệnh viện, trường học, cơ sở y tế",
+    "text": "Thiết bị điện y tế (máy X-quang, máy MRI, máy thở) có được kiểm tra và bảo dưỡng theo lịch riêng không?"
+  },
+  {
+    "id": 136,
+    "category": "Đặc thù: Bệnh viện, trường học, cơ sở y tế",
+    "text": "Khu vực phòng mổ và phòng hồi sức sử dụng khí oxy, khí gây mê có hệ thống phát hiện rò rỉ khí không?"
+  },
+  {
+    "id": 137,
+    "category": "Đặc thù: Bệnh viện, trường học, cơ sở y tế",
+    "text": "Phòng học có đủ ít nhất hai lối thoát nạn, cửa mở ra phía ngoài và không bị khóa hoặc chất đồ trong giờ học không?"
+  },
+  {
+    "id": 138,
+    "category": "Đặc thù: Bệnh viện, trường học, cơ sở y tế",
+    "text": "Nhân viên y tế trực ca đêm có nắm rõ quy trình báo động, ngắt điện cục bộ và dẫn bệnh nhân sơ tán không?"
+  },
+  {
+    "id": 139,
+    "category": "Đặc thù: Bệnh viện, trường học, cơ sở y tế",
+    "text": "Hệ thống oxy trung tâm và bình oxy lưu động trong bệnh viện có được kiểm tra áp suất, van an toàn định kỳ không?"
+  },
+  {
+    "id": 140,
+    "category": "Đặc thù: Bệnh viện, trường học, cơ sở y tế",
+    "text": "Nhà trẻ, mầm non có tường ngăn cháy giữa các phòng học, cửa mở ra ngoài dễ dàng và đủ nhân viên để bế/dẫn trẻ thoát nạn không?"
+  },
+  {
+    "id": 141,
+    "category": "Đặc thù: Xăng dầu, khí gas, vật liệu nổ",
+    "text": "Cửa hàng xăng dầu có kiểm tra rò rỉ đường ống ngầm và bể ngầm định kỳ không?"
+  },
+  {
+    "id": 142,
+    "category": "Đặc thù: Xăng dầu, khí gas, vật liệu nổ",
+    "text": "Nhân viên cây xăng có thực sự yêu cầu khách tắt máy xe, không sử dụng điện thoại và không hút thuốc trong khu vực bơm xăng không?"
+  },
+  {
+    "id": 143,
+    "category": "Đặc thù: Xăng dầu, khí gas, vật liệu nổ",
+    "text": "Hệ thống nối đất chống tĩnh điện cho bồn chứa xăng dầu và vòi bơm có được đo kiểm định kỳ không?"
+  },
+  {
+    "id": 144,
+    "category": "Đặc thù: Xăng dầu, khí gas, vật liệu nổ",
+    "text": "Kho LPG và trạm nạp bình gas có cảm biến phát hiện rò rỉ khí, van ngắt khẩn cấp và hệ thống thông gió cơ học hoạt động 24/7 không?"
+  },
+  {
+    "id": 145,
+    "category": "Đặc thù: Xăng dầu, khí gas, vật liệu nổ",
+    "text": "Nhân viên giao nhận bình gas có được đào tạo phát hiện bình méo, van hỏng và quy trình xử lý khi phát hiện rò rỉ không?"
+  },
+  {
+    "id": 146,
+    "category": "Đặc thù: Xăng dầu, khí gas, vật liệu nổ",
+    "text": "Khu vực bơm xăng và bể ngầm có được phân vùng nguy hiểm và toàn bộ thiết bị điện trong vùng đó có đạt cấp Ex không?"
+  },
+  {
+    "id": 147,
+    "category": "Đặc thù: Xăng dầu, khí gas, vật liệu nổ",
+    "text": "Xe bồn chở xăng dầu khi vào cơ sở có thực hiện nối đất chống tĩnh điện trước khi bơm không?"
+  },
+  {
+    "id": 148,
+    "category": "Đặc thù: Xăng dầu, khí gas, vật liệu nổ",
+    "text": "Vật liệu nổ (nếu có) được bảo quản trong kho đúng tiêu chuẩn với đầy đủ giấy phép không?"
+  },
+  {
+    "id": 149,
+    "category": "Đặc thù: Xăng dầu, khí gas, vật liệu nổ",
+    "text": "Cơ sở có phương án ứng phó sự cố tràn đổ xăng dầu quy mô lớn không?"
+  },
+  {
+    "id": 150,
+    "category": "Đặc thù: Xăng dầu, khí gas, vật liệu nổ",
+    "text": "Nhân viên trực ca đêm tại cây xăng có biết quy trình ngắt điện toàn bộ, đóng van bể khẩn cấp khi phát hiện rò rỉ ban đêm không?"
+  },
+  {
+    "id": 151,
+    "category": "Đặc thù: Phương tiện giao thông",
+    "text": "Xe khách, xe buýt có được kiểm tra hệ thống nhiên liệu, ống dẫn gas (nếu chạy CNG/LPG) định kỳ không?"
+  },
+  {
+    "id": 152,
+    "category": "Đặc thù: Phương tiện giao thông",
+    "text": "Búa thoát hiểm, cửa thoát hiểm trên xe khách có đủ số lượng, ở đúng vị trí và hành khách biết cách sử dụng không?"
+  },
+  {
+    "id": 153,
+    "category": "Đặc thù: Phương tiện giao thông",
+    "text": "Hệ thống điện trên phương tiện (dây điện, cầu chì, ắc quy) có được bảo dưỡng và kiểm tra chuyên sâu không?"
+  },
+  {
+    "id": 154,
+    "category": "Đặc thù: Phương tiện giao thông",
+    "text": "Tàu thuyền có đầy đủ phao cứu sinh, áo phao và đã diễn tập sơ tán cho thuyền viên và hành khách không?"
+  },
+  {
+    "id": 155,
+    "category": "Đặc thù: Phương tiện giao thông",
+    "text": "Xe ô tô/xe tải của cơ sở có được trang bị bình chữa cháy đúng loại, còn hạn và tài xế biết sử dụng không?"
+  },
+  {
+    "id": 156,
+    "category": "Đặc thù: Phương tiện giao thông",
+    "text": "Xe chở hàng nguy hiểm (xăng dầu, hóa chất, khí gas) có đầy đủ biển báo, trang thiết bị PCCC và giấy phép vận chuyển không?"
+  },
+  {
+    "id": 157,
+    "category": "Đặc thù: Phương tiện giao thông",
+    "text": "Khu vực sạc pin xe điện (ô tô điện, xe máy điện) tại bãi đỗ có được bố trí an toàn với hệ thống PCCC phù hợp không?"
+  },
+  {
+    "id": 158,
+    "category": "Đặc thù: Phương tiện giao thông",
+    "text": "Tài xế xe tải/xe khách có được huấn luyện quy trình xử lý khi phát hiện cháy xe trên đường không?"
+  },
+  {
+    "id": 159,
+    "category": "Đặc thù: Phương tiện giao thông",
+    "text": "Thùng hàng xe tải có lắp cảm biến nhiệt hoặc báo cháy cho các chuyến hàng có nguy cơ cháy cao không?"
+  },
+  {
+    "id": 160,
+    "category": "Đặc thù: Phương tiện giao thông",
+    "text": "Phương tiện giao thông có khu vực riêng cho hành lý và hàng hóa tách biệt với khoang hành khách, với vách ngăn chống cháy không?"
+  },
+  {
+    "id": 161,
+    "category": "Đặc thù: Khu dân cư, nhà ở, nhà trọ",
+    "text": "Nhà trọ, chung cư mini có mấy lối thoát nạn độc lập, và các lối thoát có thông thoáng 24/7 không?"
+  },
+  {
+    "id": 162,
+    "category": "Đặc thù: Khu dân cư, nhà ở, nhà trọ",
+    "text": "Khu nhà trọ có hệ thống báo cháy (ít nhất cảm biến khói độc lập) lắp tại hành lang và từng phòng không?"
+  },
+  {
+    "id": 163,
+    "category": "Đặc thù: Khu dân cư, nhà ở, nhà trọ",
+    "text": "Cổng sắt, chuồng cọp, lưới chống trộm có được thiết kế lối mở khẩn cấp khi xảy ra sự cố cháy không?"
+  },
+  {
+    "id": 164,
+    "category": "Đặc thù: Khu dân cư, nhà ở, nhà trọ",
+    "text": "Mỗi phòng trọ có mạch điện riêng với CB riêng, để khi 1 phòng có sự cố thì ngắt được mà không ảnh hưởng phòng khác không?"
+  },
+  {
+    "id": 165,
+    "category": "Đặc thù: Khu dân cư, nhà ở, nhà trọ",
+    "text": "Bình nước nóng điện (máy nóng lạnh) trong các phòng trọ/phòng tắm được lắp đặt và sử dụng an toàn không?"
+  },
+  {
+    "id": 166,
+    "category": "Đặc thù: Khu dân cư, nhà ở, nhà trọ",
+    "text": "Xe máy, xe đạp điện có được sạc tại khu vực riêng an toàn hay sạc ngay trong phòng trọ/phòng ngủ?"
+  },
+  {
+    "id": 167,
+    "category": "Đặc thù: Khu dân cư, nhà ở, nhà trọ",
+    "text": "Chủ nhà trọ có phổ biến quy tắc PCCC cho người thuê, niêm yết nội quy và sơ đồ thoát nạn mỗi tầng không?"
+  },
+  {
+    "id": 168,
+    "category": "Đặc thù: Khu dân cư, nhà ở, nhà trọ",
+    "text": "Người thuê trọ có được phép nấu ăn bằng bếp gas trong phòng không? Nếu có, quản lý bình gas như thế nào?"
+  },
+  {
+    "id": 169,
+    "category": "Đặc thù: Khu dân cư, nhà ở, nhà trọ",
+    "text": "Có ai giữ chìa khóa tổng (master key) của toàn bộ phòng trọ và chìa khóa cổng khẩn cấp không?"
+  },
+  {
+    "id": 170,
+    "category": "Đặc thù: Khu dân cư, nhà ở, nhà trọ",
+    "text": "Khu dân cư, hẻm nhỏ có trụ nước cứu hỏa gần nhất trong phạm vi bao nhiêu mét, và xe cứu hỏa có vào được không?"
+  },
+  {
+    "id": 171,
+    "category": "Đặc thù: Công trình xây dựng đang thi công",
+    "text": "Công trình có quy trình cấp giấy phép hàn cắt (Hot Work Permit) cho mọi hoạt động phát sinh tia lửa không?"
+  },
+  {
+    "id": 172,
+    "category": "Đặc thù: Công trình xây dựng đang thi công",
+    "text": "Vật liệu xây dựng dễ cháy (gỗ ván khuôn, xốp cách nhiệt, bạt che, sơn) được bảo quản tại công trình như thế nào?"
+  },
+  {
+    "id": 173,
+    "category": "Đặc thù: Công trình xây dựng đang thi công",
+    "text": "Hệ thống điện tạm thi công có được thiết kế và lắp đặt bởi thợ điện có chứng chỉ không?"
+  },
+  {
+    "id": 174,
+    "category": "Đặc thù: Công trình xây dựng đang thi công",
+    "text": "Tầng hầm và khu vực kín của công trình có hệ thống thông gió đủ khi sử dụng sơn, keo, dung môi không?"
+  },
+  {
+    "id": 175,
+    "category": "Đặc thù: Công trình xây dựng đang thi công",
+    "text": "Bình gas phục vụ thi công (hàn hơi, cắt gas) được bảo quản và sử dụng tại công trình như thế nào?"
+  },
+  {
+    "id": 176,
+    "category": "Đặc thù: Công trình xây dựng đang thi công",
+    "text": "Công nhân trên công trình có được đào tạo PCCC, biết vị trí bình chữa cháy và lối thoát nạn tại công trình không?"
+  },
+  {
+    "id": 177,
+    "category": "Đặc thù: Công trình xây dựng đang thi công",
+    "text": "Rác thải xây dựng dễ cháy (gỗ vụn, xốp thừa, bao bì, vải bạt cũ) có được thu gom và xử lý kịp thời không?"
+  },
+  {
+    "id": 178,
+    "category": "Đặc thù: Công trình xây dựng đang thi công",
+    "text": "Nhà tạm của công nhân (lán trại) tại công trình có đáp ứng yêu cầu PCCC không?"
+  },
+  {
+    "id": 179,
+    "category": "Đặc thù: Công trình xây dựng đang thi công",
+    "text": "Giàn giáo có che bạt chống bụi/nắng bằng vật liệu dễ cháy không? Bạt có tiếp xúc với nguồn nhiệt không?"
+  },
+  {
+    "id": 180,
+    "category": "Đặc thù: Công trình xây dựng đang thi công",
+    "text": "Cần trục, thang máy xây dựng (vận thăng) có nguy cơ chập cháy hệ thống điện điều khiển không?"
+  },
+  {
+    "id": 181,
+    "category": "Đặc thù: Cơ quan, văn phòng, trụ sở",
+    "text": "Kho lưu trữ hồ sơ, giấy tờ, tài liệu tại cơ quan có được bảo vệ bằng hệ thống PCCC chuyên dụng không?"
+  },
+  {
+    "id": 182,
+    "category": "Đặc thù: Cơ quan, văn phòng, trụ sở",
+    "text": "Nhân viên có thói quen rút phích cắm các thiết bị điện (ấm nước, máy pha cà phê, quạt sưởi) trước khi ra về không?"
+  },
+  {
+    "id": 183,
+    "category": "Đặc thù: Cơ quan, văn phòng, trụ sở",
+    "text": "Phòng máy photocopy, máy in chuyên dụng có thông gió tốt và được kiểm soát nhiệt độ không?"
+  },
+  {
+    "id": 184,
+    "category": "Đặc thù: Cơ quan, văn phòng, trụ sở",
+    "text": "Hành lang và cầu thang thoát nạn trong tòa nhà văn phòng có được duy trì thông thoáng và đèn chiếu sáng sự cố hoạt động không?"
+  },
+  {
+    "id": 185,
+    "category": "Đặc thù: Cơ quan, văn phòng, trụ sở",
+    "text": "Tòa nhà văn phòng có hệ thống quản lý ra vào (access control) kết hợp với hệ thống PCCC (tự mở cửa khi báo cháy) không?"
+  },
+  {
+    "id": 186,
+    "category": "Đặc thù: Cơ quan, văn phòng, trụ sở",
+    "text": "Bếp ăn tập thể, phòng ăn nhân viên trong cơ quan có hệ thống hút khói bếp và bình chữa cháy phù hợp không?"
+  },
+  {
+    "id": 187,
+    "category": "Đặc thù: Cơ quan, văn phòng, trụ sở",
+    "text": "Phòng hội nghị, hội trường có lắp đặt đèn EXIT, đèn chiếu sáng sự cố và kiểm soát số người tối đa không?"
+  },
+  {
+    "id": 188,
+    "category": "Đặc thù: Cơ quan, văn phòng, trụ sở",
+    "text": "Cơ quan có quy trình ứng phó khi có tin nhắn đe dọa cháy nổ hoặc phát hiện vật thể lạ nghi ngờ không?"
+  },
+  {
+    "id": 189,
+    "category": "Đặc thù: Cơ quan, văn phòng, trụ sở",
+    "text": "Thang máy trong tòa nhà văn phòng có chế độ vận hành đặc biệt khi có cháy (Firefighter Mode) không?"
+  },
+  {
+    "id": 190,
+    "category": "Đặc thù: Cơ quan, văn phòng, trụ sở",
+    "text": "Cơ quan có bảo dưỡng hệ thống ĐHKK trung tâm và kiểm tra nguy cơ cháy từ dàn nóng/dàn lạnh định kỳ không?"
+  },
+  {
+    "id": 191,
+    "category": "Đặc thù: Nghiên cứu, phòng thí nghiệm",
+    "text": "Hóa chất trong phòng thí nghiệm có được bảo quản theo bảng tương thích hóa chất (Chemical Compatibility Chart) không?"
+  },
+  {
+    "id": 192,
+    "category": "Đặc thù: Nghiên cứu, phòng thí nghiệm",
+    "text": "Tủ hút khí độc (fume hood) trong phòng thí nghiệm có hoạt động đúng và được kiểm tra định kỳ không?"
+  },
+  {
+    "id": 193,
+    "category": "Đặc thù: Nghiên cứu, phòng thí nghiệm",
+    "text": "Phòng thí nghiệm có hệ thống rửa mắt khẩn cấp (eyewash) và vòi sen khẩn cấp (safety shower) hoạt động không?"
+  },
+  {
+    "id": 194,
+    "category": "Đặc thù: Nghiên cứu, phòng thí nghiệm",
+    "text": "Nhân viên phòng thí nghiệm có được đào tạo về xử lý sự cố đổ tràn hóa chất (spill response) không?"
+  },
+  {
+    "id": 195,
+    "category": "Đặc thù: Nghiên cứu, phòng thí nghiệm",
+    "text": "Khí nén, gas thí nghiệm (H₂, O₂, N₂, Ar, He) có được buộc cố định vào tường và có van ngắt khẩn cấp ngoài phòng không?"
+  },
+  {
+    "id": 196,
+    "category": "Đặc thù: Nghiên cứu, phòng thí nghiệm",
+    "text": "Tủ bảo quản hóa chất dễ cháy trong phòng thí nghiệm có phải tủ chống cháy chuyên dụng (flammable storage cabinet) không?"
+  },
+  {
+    "id": 197,
+    "category": "Đặc thù: Nghiên cứu, phòng thí nghiệm",
+    "text": "Phòng thí nghiệm có bình chữa cháy phù hợp (CO₂ cho thiết bị, bột cho hóa chất, cát cho kim loại hoạt tính) không?"
+  },
+  {
+    "id": 198,
+    "category": "Đặc thù: Nghiên cứu, phòng thí nghiệm",
+    "text": "Chất thải hóa chất nguy hại có được thu gom, phân loại và xử lý đúng quy định không?"
+  },
+  {
+    "id": 199,
+    "category": "Đặc thù: Nghiên cứu, phòng thí nghiệm",
+    "text": "Phòng thí nghiệm có nguy cơ cháy nổ do sử dụng laser, lò nung mẫu, bếp cách thủy hoặc thiết bị gia nhiệt không?"
+  },
+  {
+    "id": 200,
+    "category": "Đặc thù: Nghiên cứu, phòng thí nghiệm",
+    "text": "Phòng thí nghiệm có quy trình khóa/mở (Lock-Out/Tag-Out) cho thiết bị đang bảo dưỡng để ngăn vận hành ngoài ý muốn không?"
+  },
+  {
+    "id": 201,
+    "category": "Đặc thù: Nông nghiệp, chế biến nông lâm sản",
+    "text": "Xưởng xay xát, xưởng chế biến lúa gạo có hệ thống hút bụi và kiểm soát nguy cơ nổ bụi ngũ cốc không?"
+  },
+  {
+    "id": 202,
+    "category": "Đặc thù: Nông nghiệp, chế biến nông lâm sản",
+    "text": "Kho thóc, kho gạo, kho nông sản có kiểm tra nhiệt độ bên trong đống hàng để phát hiện tự phát nhiệt không?"
+  },
+  {
+    "id": 203,
+    "category": "Đặc thù: Nông nghiệp, chế biến nông lâm sản",
+    "text": "Xưởng chế biến gỗ (cưa, bào, chà nhám) có hệ thống hút mùn cưa và kiểm soát nguy cơ cháy nổ bụi gỗ không?"
+  },
+  {
+    "id": 204,
+    "category": "Đặc thù: Nông nghiệp, chế biến nông lâm sản",
+    "text": "Lò sấy nông sản (sấy cà phê, tiêu, lúa, gỗ) có thermostat tự động và ngắt quá nhiệt dự phòng không?"
+  },
+  {
+    "id": 205,
+    "category": "Đặc thù: Nông nghiệp, chế biến nông lâm sản",
+    "text": "Hệ thống biogas (nếu có) tại trại chăn nuôi có cảm biến rò rỉ khí methane và van an toàn không?"
+  },
+  {
+    "id": 206,
+    "category": "Đặc thù: Nông nghiệp, chế biến nông lâm sản",
+    "text": "Máy xay, máy nghiền, máy ép có lắp thiết bị phát hiện kim loại hoặc dị vật để ngăn tia lửa va chạm không?"
+  },
+  {
+    "id": 207,
+    "category": "Đặc thù: Nông nghiệp, chế biến nông lâm sản",
+    "text": "Khu vực phun thuốc trừ sâu, phân bón hóa học có được cách ly khỏi kho nông sản và khu sinh hoạt không?"
+  },
+  {
+    "id": 208,
+    "category": "Đặc thù: Nông nghiệp, chế biến nông lâm sản",
+    "text": "Trại chăn nuôi có biện pháp phòng cháy cho khu chuồng trại (quạt thông gió, đèn sưởi gia súc, hệ thống điện) không?"
+  },
+  {
+    "id": 209,
+    "category": "Đặc thù: Nông nghiệp, chế biến nông lâm sản",
+    "text": "Khu vực phơi sấy nông sản ngoài trời (sân phơi, giàn phơi) gần đường dây điện cao thế hoặc nguồn phát tia lửa không?"
+  },
+  {
+    "id": 210,
+    "category": "Đặc thù: Nông nghiệp, chế biến nông lâm sản",
+    "text": "Cơ sở nông nghiệp có phương án PCCC phù hợp mùa khô hanh khi nguy cơ cháy đồng, cháy rừng cao không?"
+  }
+]

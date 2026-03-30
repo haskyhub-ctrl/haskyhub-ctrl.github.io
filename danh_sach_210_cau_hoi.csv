@@ -1,0 +1,1051 @@
+﻿TT,Lĩnh vực,Câu hỏi,Loại,Các đáp án lựa chọn (Điểm - Rủi ro),Các khuyến nghị xử lý
+1,"Sự cố hệ thống, thiết bị điện","Hệ thống điện tại cơ sở có được kiểm tra, bảo trì định kỳ bởi đơn vị có chuyên môn không?",single,"A) Có kiểm tra định kỳ hàng năm bởi đơn vị có giấy phép, có biên bản lưu hồ sơ đầy đủ [Điểm: 0, Rủi ro: safe]
+B) Tự kiểm tra nội bộ theo kinh nghiệm, chưa mời đơn vị chuyên nghiệp bên ngoài [Điểm: 1, Rủi ro: low]
+C) Chỉ kiểm tra khi có sự cố xảy ra hoặc khi cơ quan chức năng yêu cầu [Điểm: 2, Rủi ro: high]
+D) Chưa từng kiểm tra hệ thống điện kể từ khi lắp đặt ban đầu [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Điều tra nguyên nhân sự cố trước đây, lập biện pháp phòng ngừa tái phát. Tăng cường tuần tra PCCC.
+- Nếu chọn (D): Khắc phục: Chưa từng kiểm tra hệ thống điện kể từ khi lắp đặt ban đầu. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+2,"Sự cố hệ thống, thiết bị điện","Hệ thống dây dẫn điện tại cơ sở có dấu hiệu hư hỏng (bong tróc vỏ cách điện, rỉ sét, nối dây bằng băng keo không đúng quy cách) không?",single,"A) Dây điện còn mới, vỏ cách điện nguyên vẹn, luồn trong ống bảo vệ hoặc máng cáp đúng quy cách [Điểm: 0, Rủi ro: safe]
+B) Phần lớn dây tốt, có 1-2 đoạn nhỏ vỏ hơi cũ nhưng chưa bong tróc [Điểm: 1, Rủi ro: low]
+C) Nhiều đoạn dây bong tróc vỏ cách điện, có mối nối bằng băng keo không đúng kỹ thuật [Điểm: 2, Rủi ro: high]
+D) Dây điện cũ nát, vỏ bọc nứt rạn nhiều chỗ, rỉ sét tại các mối nối, có dấu hiệu chạm chập [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Nhiều đoạn dây bong tróc vỏ cách điện, có mối nối bằng băng keo không đúng kỹ thuật. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Thay thế toàn bộ dây điện cũ/hỏng bằng dây đạt chuẩn TCVN, luồn trong ống bảo vệ PVC. Kiểm tra từng đoạn dây, đánh dấu vị trí cần thay."
+3,"Sự cố hệ thống, thiết bị điện","Các thiết bị bảo vệ điện (Cầu chì, Aptomat, CB) có dung lượng và tình trạng hoạt động như thế nào?",single,"A) Có aptomat/CB đúng dòng định mức cho từng mạch, kiểm tra hoạt động định kỳ ít nhất 1 lần/năm [Điểm: 0, Rủi ro: safe]
+B) Có aptomat nhưng không rõ dòng định mức có phù hợp tải thực tế không, chưa từng test [Điểm: 1, Rủi ro: low]
+C) Dùng cầu chì dây thay aptomat, hoặc aptomat đã cũ bị kẹt chưa thay thế [Điểm: 2, Rủi ro: high]
+D) Không có thiết bị bảo vệ ngắt điện tự động nào, hoặc đã bị bypass (nối tắt) [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Kiểm tra và thay thế aptomat không đúng dòng định mức. Thử test aptomat bằng cách nhấn nút TEST hàng tháng.
+- Nếu chọn (D): Khắc phục: Không có thiết bị bảo vệ ngắt điện tự động nào, hoặc đã bị bypass (nối tắt). Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+4,"Sự cố hệ thống, thiết bị điện",Việc sử dụng ổ cắm di động (dây kéo dài) tại cơ sở được thực hiện như thế nào?,single,"A) Không sử dụng ổ cắm kéo dài, hoặc chỉ dùng loại có CB bảo vệ tích hợp, đúng công suất [Điểm: 0, Rủi ro: safe]
+B) Có dùng ổ cắm kéo dài nhưng kiểm soát tổng công suất thiết bị cắm vào không vượt tải [Điểm: 1, Rủi ro: low]
+C) Thường xuyên dùng nhiều ổ cắm kéo dài nối chồng nhau, cắm nhiều thiết bị công suất lớn [Điểm: 2, Rủi ro: high]
+D) Ổ cắm kéo dài cũ hỏng, dây bị nóng khi dùng, chân cắm lỏng lẻo, vẫn sử dụng hàng ngày [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Thay thế ổ cắm hỏng/méo. Không cắm chồng nhiều ổ nối dài. Dùng ổ cắm có nắp bảo vệ tại nơi ẩm ướt.
+- Nếu chọn (D): NGUY HIỂM: Ngắt ngay mạch điện có hiện tượng nóng/khét. Gọi thợ điện kiểm tra nguyên nhân (quá tải, chập mạch, tiếp xúc kém)."
+5,"Sự cố hệ thống, thiết bị điện",Hệ thống tiếp địa bảo vệ (nối đất) và chống sét của cơ sở được lắp đặt và kiểm tra như thế nào?,single,"A) Có hệ thống tiếp địa và chống sét đầy đủ, đo điện trở nối đất đạt ≤ 4Ω, có biên bản kiểm tra định kỳ [Điểm: 0, Rủi ro: safe]
+B) Có hệ thống tiếp địa nhưng chưa đo điện trở nối đất gần đây, không rõ có đạt tiêu chuẩn không [Điểm: 1, Rủi ro: low]
+C) Chỉ một số thiết bị lớn có nối đất, hệ thống không đồng bộ, chưa có chống sét lan truyền [Điểm: 2, Rủi ro: high]
+D) Không có hệ thống nối đất bảo vệ và không có chống sét, hoặc không biết cơ sở có hay không [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Thuê đơn vị có chức năng đo điện trở nối đất. Yêu cầu đạt ≤ 4Ω theo TCVN. Bổ sung dây nối đất cho thiết bị chưa có.
+- Nếu chọn (D): Thuê đơn vị có chức năng đo điện trở nối đất. Yêu cầu đạt ≤ 4Ω theo TCVN. Bổ sung dây nối đất cho thiết bị chưa có."
+6,"Sự cố hệ thống, thiết bị điện","Cơ sở có lắp đặt thiết bị chống giật/chống rò điện (ELCB, RCD) tại các mạch điện quan trọng không?",single,"A) Có lắp ELCB/RCD 30mA cho toàn bộ các mạch điện, kiểm tra bằng nút TEST định kỳ hàng tháng [Điểm: 0, Rủi ro: safe]
+B) Chỉ lắp ở một số mạch quan trọng (khu vực ẩm ướt, bếp, nhà tắm) [Điểm: 1, Rủi ro: low]
+C) Có lắp nhưng chưa bao giờ test, không biết còn hoạt động tốt không [Điểm: 2, Rủi ro: high]
+D) Không lắp thiết bị chống rò điện nào, hoặc không biết thiết bị này là gì [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Có lắp nhưng chưa bao giờ test, không biết còn hoạt động tốt không. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Lắp RCCB/ELCB 30mA cho toàn bộ mạch điện, ưu tiên khu vực ẩm ướt (nhà tắm, bếp). Test nút TEST mỗi tháng."
+7,"Sự cố hệ thống, thiết bị điện",Tình trạng tủ điện chính/phân phối tại cơ sở như thế nào?,single,"A) Tủ điện đặt nơi khô ráo thông thoáng, có khóa, biển cảnh báo, không có vật liệu dễ cháy trong vòng 1m [Điểm: 0, Rủi ro: safe]
+B) Tủ điện đặt đúng vị trí nhưng xung quanh có để một số vật dụng, chưa có biển cảnh báo [Điểm: 1, Rủi ro: low]
+C) Tủ điện đặt gần vật liệu dễ cháy hoặc ở nơi ẩm ướt, cửa tủ không đóng kín [Điểm: 2, Rủi ro: high]
+D) Tủ điện bị hàng hóa che khuất hoàn toàn, khó tiếp cận khi xảy ra sự cố khẩn cấp [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Di chuyển vật liệu dễ cháy ra xa tủ điện ít nhất 1m. Lắp khóa và biển cảnh báo 'NGUY HIỂM - ĐIỆN CAO ÁP'.
+- Nếu chọn (D): Di chuyển vật liệu dễ cháy ra xa tủ điện ít nhất 1m. Lắp khóa và biển cảnh báo 'NGUY HIỂM - ĐIỆN CAO ÁP'."
+8,"Sự cố hệ thống, thiết bị điện",Hệ thống chiếu sáng tại cơ sở được lắp đặt và vận hành như thế nào liên quan đến an toàn cháy nổ?,single,"A) Dùng đèn LED tiết kiệm điện, lắp đặt cách vật liệu dễ cháy ≥ 0.5m, có chao đèn bảo vệ [Điểm: 0, Rủi ro: safe]
+B) Phần lớn đèn LED, còn một số đèn huỳnh quang cũ nhưng hoạt động bình thường [Điểm: 1, Rủi ro: low]
+C) Còn dùng đèn sợi đốt/halogen tỏa nhiệt cao gần vật liệu dễ cháy như vải, giấy, gỗ [Điểm: 2, Rủi ro: high]
+D) Đèn lắp áp sát trần bằng vật liệu dễ cháy, ballast đèn cũ nóng bất thường, có mùi khét [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Đốt vàng mã trong lư/thùng kim loại có nắp, đặt trên nền bê tông, xa vật liệu dễ cháy 3m. Luôn có người trông coi.
+- Nếu chọn (D): NGUY HIỂM: Ngắt ngay mạch điện có hiện tượng nóng/khét. Gọi thợ điện kiểm tra nguyên nhân (quá tải, chập mạch, tiếp xúc kém)."
+9,"Sự cố hệ thống, thiết bị điện","Các thiết bị điện nung nóng (bếp điện, bếp từ, lò sưởi điện, bàn ủi) được sử dụng và quản lý như thế nào tại cơ sở?",single,"A) Dùng thiết bị có CE/CR, có mạch riêng, luôn rút phích cắm khi không dùng, cách xa vật dễ cháy [Điểm: 0, Rủi ro: safe]
+B) Có thiết bị nung nóng, sử dụng cẩn thận nhưng đôi khi quên rút phích cắm khi rời đi [Điểm: 1, Rủi ro: low]
+C) Thiết bị nung nóng đặt gần vật dễ cháy, dùng chung ổ cắm với thiết bị khác [Điểm: 2, Rủi ro: high]
+D) Thiết bị nung nóng cũ không có thermostat tự ngắt, để chạy liên tục không giám sát [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): NGUY HIỂM: Ngắt ngay mạch điện có hiện tượng nóng/khét. Gọi thợ điện kiểm tra nguyên nhân (quá tải, chập mạch, tiếp xúc kém).
+- Nếu chọn (D): NGUY HIỂM: Ngắt ngay mạch điện có hiện tượng nóng/khét. Gọi thợ điện kiểm tra nguyên nhân (quá tải, chập mạch, tiếp xúc kém)."
+10,"Sự cố hệ thống, thiết bị điện",Hệ thống máy điều hòa không khí (ĐHKK) tại cơ sở được bảo trì và kiểm tra an toàn như thế nào?,single,"A) Vệ sinh và kiểm tra ĐHKK định kỳ 6 tháng/lần bởi thợ chuyên nghiệp, mạch điện riêng có CB [Điểm: 0, Rủi ro: safe]
+B) Vệ sinh filter tự làm 1 lần/năm, chưa kiểm tra hệ thống điện và gas lạnh [Điểm: 1, Rủi ro: low]
+C) ĐHKK chạy liên tục nhiều năm không bảo trì, có tiếng kêu lạ hoặc rung lắc bất thường [Điểm: 2, Rủi ro: high]
+D) ĐHKK cũ bị rò gas lạnh, dây điện nóng khi chạy, có mùi khét nhưng vẫn sử dụng [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Lập lịch bảo dưỡng theo khuyến cáo nhà sản xuất. Ghi sổ theo dõi: ngày bảo dưỡng, người thực hiện, hạng mục.
+- Nếu chọn (D): Thay thế toàn bộ dây điện cũ/hỏng bằng dây đạt chuẩn TCVN, luồn trong ống bảo vệ PVC. Kiểm tra từng đoạn dây, đánh dấu vị trí cần thay."
+11,"Sự cố hệ thống, thiết bị điện","Cơ sở có sử dụng máy phát điện dự phòng không? Nếu có, việc vận hành và bảo quản như thế nào?",single,"A) Không có máy phát điện; hoặc có, đặt ngoài trời/phòng riêng thông gió, bảo dưỡng định kỳ, có ATS [Điểm: 0, Rủi ro: safe]
+B) Có máy phát, đặt đúng nơi nhưng chưa bảo dưỡng định kỳ, chỉ chạy thử khi mất điện [Điểm: 1, Rủi ro: low]
+C) Máy phát đặt trong nhà kho chung, gần vật liệu dễ cháy, ống xả không dẫn ra ngoài [Điểm: 2, Rủi ro: high]
+D) Máy phát cũ rò rỉ nhiên liệu, đặt trong tầng hầm kín, không có hệ thống thông gió [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Máy phát đặt trong nhà kho chung, gần vật liệu dễ cháy, ống xả không dẫn ra ngoài. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Bảo quản xăng dầu trong kho riêng, xa nguồn nhiệt/điện. Dùng can chuyên dụng có nắp kín, gắn nhãn cảnh báo."
+12,"Sự cố hệ thống, thiết bị điện",Tải điện thực tế tại cơ sở có vượt quá công suất thiết kế ban đầu của hệ thống điện không?,single,"A) Tải thực tế nằm trong phạm vi thiết kế, có đo đạc xác nhận, dự phòng ≥ 20% công suất [Điểm: 0, Rủi ro: safe]
+B) Không rõ công suất thiết kế ban đầu, nhưng chưa có dấu hiệu quá tải (dây không nóng) [Điểm: 1, Rủi ro: low]
+C) Đã bổ sung nhiều thiết bị mới mà không nâng cấp hệ thống điện, aptomat thỉnh thoảng nhảy [Điểm: 2, Rủi ro: high]
+D) Hệ thống điện quá tải nghiêm trọng, dây nóng khi vận hành, CB nhảy thường xuyên phải nối tắt [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Kiểm tra và thay thế aptomat không đúng dòng định mức. Thử test aptomat bằng cách nhấn nút TEST hàng tháng.
+- Nếu chọn (D): Kiểm tra và thay thế aptomat không đúng dòng định mức. Thử test aptomat bằng cách nhấn nút TEST hàng tháng."
+13,"Sự cố hệ thống, thiết bị điện","Tại cơ sở, vật liệu dễ cháy (giấy, vải, xăng, hóa chất) có được bảo quản cách xa các thiết bị và nguồn điện không?",single,"A) Vật liệu dễ cháy bảo quản trong kho riêng, cách xa tủ điện, ổ cắm và thiết bị điện ≥ 1m [Điểm: 0, Rủi ro: safe]
+B) Phần lớn cách xa, nhưng một vài vị trí vật liệu dễ cháy còn gần ổ cắm hoặc dây điện [Điểm: 1, Rủi ro: low]
+C) Vật liệu dễ cháy xếp gần tủ điện, ổ cắm, hoặc dưới đường đi dây điện chính [Điểm: 2, Rủi ro: high]
+D) Vật liệu dễ cháy chất đống sát tủ điện, che khuất thiết bị điện, dây điện đi xuyên qua [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Di chuyển vật liệu dễ cháy ra xa tủ điện ít nhất 1m. Lắp khóa và biển cảnh báo 'NGUY HIỂM - ĐIỆN CAO ÁP'.
+- Nếu chọn (D): Di chuyển vật liệu dễ cháy ra xa tủ điện ít nhất 1m. Lắp khóa và biển cảnh báo 'NGUY HIỂM - ĐIỆN CAO ÁP'."
+14,"Sự cố hệ thống, thiết bị điện","Tại cơ sở có sử dụng hệ thống UPS (lưu điện) hoặc trạm sạc pin, bình ắc-quy không? Nếu có, tình trạng như thế nào?",single,"A) Không có UPS/ắc-quy; hoặc có, đặt phòng riêng thông gió, bảo trì theo nhà sản xuất [Điểm: 0, Rủi ro: safe]
+B) Có UPS đặt trong phòng làm việc, hoạt động bình thường nhưng chưa kiểm tra pin gần đây [Điểm: 1, Rủi ro: low]
+C) UPS/ắc-quy cũ, pin phồng hoặc rò rỉ axit, đặt trong phòng kín không thông gió [Điểm: 2, Rủi ro: high]
+D) Nhiều bình ắc-quy cũ bảo quản cùng vật liệu dễ cháy, không có hệ thống xử lý khí hydro [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: UPS/ắc-quy cũ, pin phồng hoặc rò rỉ axit, đặt trong phòng kín không thông gió. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Nhiều bình ắc-quy cũ bảo quản cùng vật liệu dễ cháy, không có hệ thống xử lý khí hydro. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+15,"Sự cố hệ thống, thiết bị điện","Tại các khu vực có hơi khí dễ cháy nổ (kho xăng dầu, phòng sơn, kho gas), thiết bị điện được lựa chọn như thế nào?",single,"A) Không có khu vực chứa hơi khí dễ cháy; hoặc có nhưng toàn bộ thiết bị điện đạt cấp Ex phòng nổ [Điểm: 0, Rủi ro: safe]
+B) Thiết bị điện chính đạt cấp Ex, nhưng đèn chiếu sáng và ổ cắm vẫn dùng loại thường [Điểm: 1, Rủi ro: low]
+C) Có khu vực hơi khí dễ cháy nhưng dùng thiết bị điện thông thường, không phòng nổ [Điểm: 2, Rủi ro: high]
+D) Dùng công tắc, ổ cắm thường trong khu vực có hơi xăng dầu/gas, có nguy cơ phát tia lửa [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Có khu vực hơi khí dễ cháy nhưng dùng thiết bị điện thông thường, không phòng nổ. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Lắp van ngắt gas tự động và đầu dò khí gas LPG. Đặt bình gas nơi thoáng, xa nguồn nhiệt tối thiểu 1.5m."
+16,"Sự cố hệ thống, thiết bị điện","Nhân viên tại cơ sở có được đào tạo quy trình xử lý sự cố điện (chập cháy, điện giật, mất điện đột ngột) không?",single,"A) 100% nhân viên được đào tạo, biết vị trí cầu dao tổng, biết sơ cứu điện giật, có diễn tập [Điểm: 0, Rủi ro: safe]
+B) Một số nhân viên phụ trách biết cách xử lý, còn lại chưa được đào tạo chính thức [Điểm: 1, Rủi ro: low]
+C) Chỉ phổ biến miệng, nhân viên không rõ vị trí cầu dao tổng và quy trình ngắt điện [Điểm: 2, Rủi ro: high]
+D) Không ai được đào tạo về xử lý sự cố điện, không biết cầu dao tổng ở đâu [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Kiểm tra và thay thế aptomat không đúng dòng định mức. Thử test aptomat bằng cách nhấn nút TEST hàng tháng.
+- Nếu chọn (D): Kiểm tra và thay thế aptomat không đúng dòng định mức. Thử test aptomat bằng cách nhấn nút TEST hàng tháng."
+17,"Sự cố hệ thống, thiết bị điện","Tại các khu vực tập trung thiết bị điện (phòng server, tủ điện, UPS), loại bình chữa cháy nào được trang bị?",single,"A) Trang bị bình CO₂ hoặc hệ thống chữa cháy khí sạch (FM200), phù hợp cháy thiết bị điện [Điểm: 0, Rủi ro: safe]
+B) Có bình chữa cháy bột ABC gần đó, chưa có bình CO₂ chuyên dụng cho thiết bị điện [Điểm: 1, Rủi ro: low]
+C) Chỉ có bình chữa cháy bột để ở hành lang xa, không có bình riêng tại khu vực điện [Điểm: 2, Rủi ro: high]
+D) Không có bình chữa cháy nào gần khu vực tập trung thiết bị điện [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Mua bổ sung bình chữa cháy ABC 4kg: 1 bình/50m². Đặt nơi dễ lấy, cao 0.8-1.5m. Kiểm tra hạn sử dụng hàng quý.
+- Nếu chọn (D): Mua bổ sung bình chữa cháy ABC 4kg: 1 bình/50m². Đặt nơi dễ lấy, cao 0.8-1.5m. Kiểm tra hạn sử dụng hàng quý."
+18,"Sự cố hệ thống, thiết bị điện","Quy trình tắt thiết bị điện và kiểm tra an toàn trước khi rời cơ sở (cuối ngày, cuối tuần) được thực hiện như thế nào?",single,"A) Có checklist kiểm tra cuối ngày bắt buộc, người cuối cùng ký xác nhận đã ngắt thiết bị không cần thiết [Điểm: 0, Rủi ro: safe]
+B) Có nhắc nhở tắt thiết bị nhưng không có checklist chính thức, phụ thuộc ý thức cá nhân [Điểm: 1, Rủi ro: low]
+C) Không có quy trình, nhiều thiết bị để chế độ chờ hoặc chạy liên tục qua đêm và cuối tuần [Điểm: 2, Rủi ro: high]
+D) Toàn bộ thiết bị chạy 24/7 không ai kiểm tra, không có người trực ngoài giờ làm việc [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Không có quy trình, nhiều thiết bị để chế độ chờ hoặc chạy liên tục qua đêm và cuối tuần. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Toàn bộ thiết bị chạy 24/7 không ai kiểm tra, không có người trực ngoài giờ làm việc. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+19,"Sự cố hệ thống, thiết bị điện","Hồ sơ pháp lý về an toàn điện của cơ sở (thiết kế điện được thẩm duyệt, nghiệm thu điện, biên bản kiểm tra định kỳ) có đầy đủ không?",single,"A) Có đầy đủ: bản vẽ thiết kế điện, biên bản nghiệm thu, biên bản kiểm tra định kỳ còn hiệu lực [Điểm: 0, Rủi ro: safe]
+B) Có bản vẽ thiết kế nhưng thiếu biên bản kiểm tra định kỳ gần nhất [Điểm: 1, Rủi ro: low]
+C) Chỉ có hồ sơ ban đầu, không cập nhật theo thực tế sửa chữa và mở rộng [Điểm: 2, Rủi ro: high]
+D) Không có bất kỳ hồ sơ pháp lý nào về hệ thống điện, điện lắp đặt tự phát [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Chỉ có hồ sơ ban đầu, không cập nhật theo thực tế sửa chữa và mở rộng. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Bảo quản vật liệu dễ tự cháy nơi thông thoáng, không chất đống. Kiểm tra nhiệt độ kho định kỳ hàng ngày."
+20,"Sự cố hệ thống, thiết bị điện","Cơ sở có trang bị hệ thống phát hiện và cảnh báo sớm các nguy cơ từ điện (cảm biến nhiệt, cảm biến khói, camera nhiệt hồng ngoại) không?",single,"A) Có hệ thống giám sát nhiệt tủ điện, cảm biến khói tại phòng điện, cảnh báo qua app/SMS [Điểm: 0, Rủi ro: safe]
+B) Có cảm biến khói chung trong tòa nhà nhưng không có giám sát nhiệt riêng cho tủ điện [Điểm: 1, Rủi ro: low]
+C) Không có cảm biến tự động, chỉ dựa vào quan sát bằng mắt thường khi tuần tra [Điểm: 2, Rủi ro: high]
+D) Không có bất kỳ hệ thống phát hiện sớm nào, cũng không có tuần tra kiểm tra [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Không có cảm biến tự động, chỉ dựa vào quan sát bằng mắt thường khi tuần tra. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Không có bất kỳ hệ thống phát hiện sớm nào, cũng không có tuần tra kiểm tra. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+21,"Sơ suất, bất cẩn dùng lửa/nhiệt","Cơ sở/hộ gia đình có thực hiện đốt rác, phế thải, lá khô tại khuôn viên không? Nếu có, việc này được thực hiện như thế nào?",single,"A) Không đốt rác tại khuôn viên, thu gom và xử lý qua dịch vụ vệ sinh môi trường [Điểm: 0, Rủi ro: safe]
+B) Có đốt nhưng trong lò đốt chuyên dụng hoặc thùng kim loại có nắp, có người giám sát [Điểm: 1, Rủi ro: low]
+C) Đốt rác lộ thiên trong sân, gần hàng rào hoặc cây cối khô, không có người trông coi liên tục [Điểm: 2, Rủi ro: high]
+D) Đốt rác lộ thiên gần kho hàng, nhà xưởng hoặc khu dân cư đông đúc, khi gió lớn vẫn đốt [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Đốt vàng mã trong lư/thùng kim loại có nắp, đặt trên nền bê tông, xa vật liệu dễ cháy 3m. Luôn có người trông coi.
+- Nếu chọn (D): Đốt vàng mã trong lư/thùng kim loại có nắp, đặt trên nền bê tông, xa vật liệu dễ cháy 3m. Luôn có người trông coi."
+22,"Sơ suất, bất cẩn dùng lửa/nhiệt","Tại cơ sở hoặc hộ gia đình, việc đốt vàng mã, hóa vàng, thắp hương cúng lễ được thực hiện như thế nào?",single,"A) Không có hoạt động đốt vàng mã tại cơ sở [Điểm: 0, Rủi ro: safe]
+B) Đốt trong lư/thùng kim loại trên nền bê tông, cách vật dễ cháy ≥ 3m, có người trông [Điểm: 1, Rủi ro: low]
+C) Đốt vàng mã trong thùng nhưng đặt gần tường gỗ, mái tôn nhựa hoặc hàng hóa [Điểm: 2, Rủi ro: high]
+D) Đốt vàng mã lộ thiên không kiểm soát, tàn bay khắp nơi, không có người trông coi [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Đốt vàng mã trong lư/thùng kim loại có nắp, đặt trên nền bê tông, xa vật liệu dễ cháy 3m. Luôn có người trông coi.
+- Nếu chọn (D): Đốt vàng mã trong lư/thùng kim loại có nắp, đặt trên nền bê tông, xa vật liệu dễ cháy 3m. Luôn có người trông coi."
+23,"Sơ suất, bất cẩn dùng lửa/nhiệt","Tại cơ sở có sử dụng nến, đèn dầu, đèn cầy không? Nếu có, cách sử dụng và bảo quản như thế nào?",single,"A) Không sử dụng nến/đèn dầu; hoặc chỉ dùng nến LED (điện tử) thay thế [Điểm: 0, Rủi ro: safe]
+B) Có dùng nến/đèn dầu nhưng đặt trong chụp thủy tinh, trên bề mặt không cháy, có người giám sát [Điểm: 1, Rủi ro: low]
+C) Dùng nến đặt gần rèm cửa, khăn trải bàn hoặc giấy tờ, đôi khi không có người trông [Điểm: 2, Rủi ro: high]
+D) Dùng nến/đèn dầu trong phòng ngủ hoặc kho hàng, để cháy qua đêm không ai giám sát [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Dùng nến đặt gần rèm cửa, khăn trải bàn hoặc giấy tờ, đôi khi không có người trông. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Bảo quản xăng dầu trong kho riêng, xa nguồn nhiệt/điện. Dùng can chuyên dụng có nắp kín, gắn nhãn cảnh báo."
+24,"Sơ suất, bất cẩn dùng lửa/nhiệt","Việc thắp hương (hương thẳng, hương vòng, nhang trầm) tại cơ sở/gia đình được thực hiện như thế nào?",single,"A) Không thắp hương; hoặc thắp trên bàn thờ có bát hương chắc chắn, cách trần và vật dễ cháy ≥ 0.5m [Điểm: 0, Rủi ro: safe]
+B) Thắp hương trên bàn thờ cố định, bát hương đầy tro nhưng vẫn ổn định, có vách sau bàn thờ [Điểm: 1, Rủi ro: low]
+C) Bàn thờ bằng gỗ sát trần nhà, tàn hương rơi xuống đồ thờ bằng giấy/vải [Điểm: 2, Rủi ro: high]
+D) Thắp nhiều hương cùng lúc, bàn thờ đầy đồ giấy, tàn hương rơi ra sàn gỗ, không dọn [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Đốt vàng mã trong lư/thùng kim loại có nắp, đặt trên nền bê tông, xa vật liệu dễ cháy 3m. Luôn có người trông coi.
+- Nếu chọn (D): Đốt vàng mã trong lư/thùng kim loại có nắp, đặt trên nền bê tông, xa vật liệu dễ cháy 3m. Luôn có người trông coi."
+25,"Sơ suất, bất cẩn dùng lửa/nhiệt",Việc hút thuốc lá tại cơ sở/gia đình được quản lý như thế nào?,single,"A) Cấm hút thuốc hoàn toàn trong toàn bộ cơ sở, có biển cấm và chế tài xử lý vi phạm [Điểm: 0, Rủi ro: safe]
+B) Cho phép hút thuốc ở khu vực riêng ngoài trời, xa vật liệu dễ cháy, có gạt tàn [Điểm: 1, Rủi ro: low]
+C) Hút thuốc trong nhà xưởng, văn phòng, vứt tàn thuốc vào thùng rác thường [Điểm: 2, Rủi ro: high]
+D) Hút thuốc trong kho hàng, gần khu vực chứa nhiên liệu hoặc hóa chất dễ cháy [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Quy định khu vực hút thuốc riêng ngoài trời, đặt thùng gạt tàn kim loại có nắp. Treo biển CẤM HÚT THUỐC trong nhà.
+- Nếu chọn (D): Quy định khu vực hút thuốc riêng ngoài trời, đặt thùng gạt tàn kim loại có nắp. Treo biển CẤM HÚT THUỐC trong nhà."
+26,"Sơ suất, bất cẩn dùng lửa/nhiệt","Việc sử dụng và bảo quản bếp gas, bình gas (LPG) tại cơ sở/gia đình được thực hiện như thế nào?",single,"A) Bếp gas đặt phòng riêng thông thoáng, dây dẫn gas mới, có van ngắt tự động và đầu dò gas [Điểm: 0, Rủi ro: safe]
+B) Bếp gas đặt đúng nơi, dây dẫn chưa quá 2 năm, luôn khóa van bình sau khi nấu xong [Điểm: 1, Rủi ro: low]
+C) Bình gas đặt gần nguồn nhiệt, dây dẫn cũ trên 3 năm, đôi khi quên khóa van bình [Điểm: 2, Rủi ro: high]
+D) Dùng bếp gas trong phòng ngủ hoặc kho hàng, dây gas nứt vá bằng băng keo, bình gas kẹt tủ kín [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Lắp van ngắt gas tự động và đầu dò khí gas LPG. Đặt bình gas nơi thoáng, xa nguồn nhiệt tối thiểu 1.5m.
+- Nếu chọn (D): Lắp van ngắt gas tự động và đầu dò khí gas LPG. Đặt bình gas nơi thoáng, xa nguồn nhiệt tối thiểu 1.5m."
+27,"Sơ suất, bất cẩn dùng lửa/nhiệt","Cơ sở/gia đình có tổ chức nướng than hoa ngoài trời, lửa trại hoặc các hoạt động có dùng lửa ngoài trời không?",single,"A) Không có hoạt động dùng lửa ngoài trời tại khuôn viên cơ sở [Điểm: 0, Rủi ro: safe]
+B) Có nướng/lửa trại nhưng tại khu vực được chỉ định, nền bê tông, cách xa cây cối, có nước dập [Điểm: 1, Rủi ro: low]
+C) Nướng than hoa trên ban công, sân thượng hoặc gần hàng rào, mái hiên dễ cháy [Điểm: 2, Rủi ro: high]
+D) Đốt lửa ngoài trời gần kho hàng, bãi xe hoặc khu vực có cỏ khô, không kiểm soát tàn lửa [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Nướng than hoa trên ban công, sân thượng hoặc gần hàng rào, mái hiên dễ cháy. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Đốt vàng mã trong lư/thùng kim loại có nắp, đặt trên nền bê tông, xa vật liệu dễ cháy 3m. Luôn có người trông coi."
+28,"Sơ suất, bất cẩn dùng lửa/nhiệt","Tại cơ sở có sử dụng máy hàn hơi, máy cắt kim loại, máy khò gas hoặc đèn khò không? Quy trình an toàn khi thực hiện các công việc phát sinh tia lửa được thực hiện như thế nào?",single,"A) Không có hoạt động hàn cắt; hoặc có giấy phép hàn cắt, dọn sạch 10m, bạt chắn tia lửa, bình chữa cháy [Điểm: 0, Rủi ro: safe]
+B) Có hàn cắt tại khu vực riêng, có bình chữa cháy nhưng chưa có giấy phép chính thức [Điểm: 1, Rủi ro: low]
+C) Hàn cắt ngay trong khu vực sản xuất, chưa dọn vật liệu dễ cháy, không có bạt chắn [Điểm: 2, Rủi ro: high]
+D) Hàn cắt cạnh vật liệu dễ cháy, không bình chữa cháy, không giám sát, tia lửa bắn tự do [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Lập phiếu xin phép hàn cắt. Dọn sạch vật liệu dễ cháy 10m xung quanh. Bố trí 1 bình chữa cháy + 1 người giám sát.
+- Nếu chọn (D): Lập phiếu xin phép hàn cắt. Dọn sạch vật liệu dễ cháy 10m xung quanh. Bố trí 1 bình chữa cháy + 1 người giám sát."
+29,"Sơ suất, bất cẩn dùng lửa/nhiệt","Tại cơ sở/gia đình có tự bảo quản xăng dầu, cồn, dung môi dễ cháy không? Cách bảo quản như thế nào?",single,"A) Không lưu trữ xăng dầu/dung môi dễ cháy; hoặc bảo quản trong tủ chuyên dụng chống cháy [Điểm: 0, Rủi ro: safe]
+B) Có lưu trữ lượng nhỏ trong can kim loại có nắp kín, để nơi thông thoáng xa nguồn nhiệt [Điểm: 1, Rủi ro: low]
+C) Để can xăng/dung môi trong nhà kho chung, gần thiết bị điện hoặc ổ cắm [Điểm: 2, Rủi ro: high]
+D) Để xăng dầu trong chai nhựa hở miệng, trong phòng ngủ hoặc gần bếp nấu ăn [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Bảo quản xăng dầu trong kho riêng, xa nguồn nhiệt/điện. Dùng can chuyên dụng có nắp kín, gắn nhãn cảnh báo.
+- Nếu chọn (D): Bảo quản xăng dầu trong kho riêng, xa nguồn nhiệt/điện. Dùng can chuyên dụng có nắp kín, gắn nhãn cảnh báo."
+30,"Sơ suất, bất cẩn dùng lửa/nhiệt","Tại cơ sở/gia đình có sử dụng pháo hoa, pháo nổ, pháo sáng hoặc các vật liệu gây cháy nổ tương tự trong các dịp lễ, tết không?",single,"A) Không sử dụng pháo hoa/pháo nổ; hoặc chỉ xem pháo hoa do đơn vị có giấy phép tổ chức tại nơi công cộng [Điểm: 0, Rủi ro: safe]
+B) Có sử dụng pháo hoa loại nhỏ cho phép, đốt ngoài trời sân rộng, xa nhà cửa và cây cối [Điểm: 1, Rủi ro: low]
+C) Đốt pháo hoa gần nhà, gần mái hiên hoặc ban công, tàn pháo rơi lên mái tôn nhựa/bạt [Điểm: 2, Rủi ro: high]
+D) Tự chế hoặc tích trữ pháo nổ trái phép trong nhà, bảo quản không đúng quy định [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Đốt vàng mã trong lư/thùng kim loại có nắp, đặt trên nền bê tông, xa vật liệu dễ cháy 3m. Luôn có người trông coi.
+- Nếu chọn (D): Khắc phục: Tự chế hoặc tích trữ pháo nổ trái phép trong nhà, bảo quản không đúng quy định. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+31,Vi phạm quy định PCCC,"Cơ sở có đầy đủ hồ sơ pháp lý PCCC bắt buộc (thẩm duyệt thiết kế PCCC, nghiệm thu PCCC, giấy chứng nhận PCCC) không?",single,"A) Có đầy đủ: thẩm duyệt thiết kế, biên bản nghiệm thu, giấy chứng nhận PCCC còn hiệu lực [Điểm: 0, Rủi ro: safe]
+B) Có thẩm duyệt và nghiệm thu nhưng chưa cập nhật sau lần cải tạo/mở rộng gần nhất [Điểm: 1, Rủi ro: low]
+C) Chỉ có giấy phép kinh doanh, chưa hoàn thành thủ tục thẩm duyệt và nghiệm thu PCCC [Điểm: 2, Rủi ro: high]
+D) Không có bất kỳ hồ sơ pháp lý PCCC nào, cơ sở hoạt động không phép về PCCC [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Chỉ có giấy phép kinh doanh, chưa hoàn thành thủ tục thẩm duyệt và nghiệm thu PCCC. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Không có bất kỳ hồ sơ pháp lý PCCC nào, cơ sở hoạt động không phép về PCCC. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+32,Vi phạm quy định PCCC,Lối thoát hiểm và đường thoát nạn tại cơ sở có đáp ứng yêu cầu không?,single,"A) Có ≥ 2 lối thoát nạn độc lập, thông thoáng, đúng chiều rộng quy định, đèn chỉ dẫn EXIT hoạt động [Điểm: 0, Rủi ro: safe]
+B) Có lối thoát nạn đủ nhưng một số đèn chỉ dẫn đã hỏng, chưa thay thế [Điểm: 1, Rủi ro: low]
+C) Lối thoát nạn bị thu hẹp do hàng hóa, đồ đạc, xe máy chiếm chỗ, vẫn đi qua được [Điểm: 2, Rủi ro: high]
+D) Lối thoát nạn bị chặn hoàn toàn hoặc cửa thoát nạn bị khóa cứng từ bên ngoài [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Dọn sạch lối thoát hiểm ngay. Lắp đèn EXIT phát quang và đèn chiếu sáng sự cố. Không khóa cửa thoát nạn.
+- Nếu chọn (D): Dọn sạch lối thoát hiểm ngay. Lắp đèn EXIT phát quang và đèn chiếu sáng sự cố. Không khóa cửa thoát nạn."
+33,Vi phạm quy định PCCC,"Hệ thống báo cháy tự động tại cơ sở có được lắp đặt, duy trì và kiểm tra theo quy định không?",single,"A) Có hệ thống báo cháy tự động đầy đủ (đầu báo khói/nhiệt, trung tâm, chuông), kiểm tra định kỳ 6 tháng [Điểm: 0, Rủi ro: safe]
+B) Có hệ thống báo cháy nhưng một số đầu báo đã lâu không kiểm tra, không rõ hoạt động [Điểm: 1, Rủi ro: low]
+C) Hệ thống báo cháy đã lắp nhưng bị tắt do báo giả thường xuyên, chưa sửa chữa [Điểm: 2, Rủi ro: high]
+D) Không có hệ thống báo cháy tự động nào, chỉ dựa vào quan sát con người [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Hệ thống báo cháy đã lắp nhưng bị tắt do báo giả thường xuyên, chưa sửa chữa. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Không có hệ thống báo cháy tự động nào, chỉ dựa vào quan sát con người. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+34,Vi phạm quy định PCCC,"Hệ thống chữa cháy tự động (Sprinkler, chữa cháy khí) tại cơ sở có hoạt động đúng không?",single,"A) Có sprinkler/chữa cháy khí đúng thiết kế, kiểm tra áp lực và thử nghiệm định kỳ, có biên bản [Điểm: 0, Rủi ro: safe]
+B) Có hệ thống sprinkler nhưng chưa thử nghiệm phun thực tế, chỉ kiểm tra áp lực đồng hồ [Điểm: 1, Rủi ro: low]
+C) Hệ thống sprinkler lắp đặt lâu, nhiều đầu phun bị che khuất bởi hàng hóa xếp cao [Điểm: 2, Rủi ro: high]
+D) Không có hệ thống chữa cháy tự động, hoặc hệ thống đã hỏng không sửa chữa [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Hệ thống sprinkler lắp đặt lâu, nhiều đầu phun bị che khuất bởi hàng hóa xếp cao. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Không có hệ thống chữa cháy tự động, hoặc hệ thống đã hỏng không sửa chữa. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+35,Vi phạm quy định PCCC,"Phương tiện chữa cháy ban đầu (bình chữa cháy, hộp cứu hỏa, vòi chữa cháy vách tường) tại cơ sở có đầy đủ và sẵn sàng sử dụng không?",single,"A) Đủ số lượng theo quy định (1 bình/50m²), còn hạn, đặt đúng vị trí, dễ lấy, có bảng hướng dẫn [Điểm: 0, Rủi ro: safe]
+B) Có bình chữa cháy nhưng số lượng chưa đủ hoặc một số bình gần hết hạn [Điểm: 1, Rủi ro: low]
+C) Bình chữa cháy để trong kho, bị hàng hóa che khuất, khó lấy khi cần [Điểm: 2, Rủi ro: high]
+D) Không có bình chữa cháy hoặc toàn bộ bình đã hết hạn, hỏng van, không sử dụng được [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Mua bổ sung bình chữa cháy ABC 4kg: 1 bình/50m². Đặt nơi dễ lấy, cao 0.8-1.5m. Kiểm tra hạn sử dụng hàng quý.
+- Nếu chọn (D): Mua bổ sung bình chữa cháy ABC 4kg: 1 bình/50m². Đặt nơi dễ lấy, cao 0.8-1.5m. Kiểm tra hạn sử dụng hàng quý."
+36,Vi phạm quy định PCCC,"Cơ sở có thành lập Đội PCCC cơ sở và xây dựng Phương án chữa cháy, thoát nạn không?",single,"A) Có đội PCCC cơ sở được huấn luyện, có phương án chữa cháy được phê duyệt, diễn tập định kỳ [Điểm: 0, Rủi ro: safe]
+B) Có đội PCCC trên giấy tờ, có phương án nhưng chưa tổ chức diễn tập thực tế [Điểm: 1, Rủi ro: low]
+C) Chưa thành lập đội PCCC, chỉ có phương án chữa cháy sơ sài để đối phó kiểm tra [Điểm: 2, Rủi ro: high]
+D) Không có đội PCCC, không có phương án chữa cháy, chưa từng diễn tập [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Đốt vàng mã trong lư/thùng kim loại có nắp, đặt trên nền bê tông, xa vật liệu dễ cháy 3m. Luôn có người trông coi.
+- Nếu chọn (D): Đốt vàng mã trong lư/thùng kim loại có nắp, đặt trên nền bê tông, xa vật liệu dễ cháy 3m. Luôn có người trông coi."
+37,Vi phạm quy định PCCC,"Việc quản lý và sắp xếp hàng hóa, vật tư trong kho có tuân thủ quy định về an toàn PCCC không?",single,"A) Hàng hóa phân loại theo mức độ cháy, cách tường ≥ 0.5m, cách sprinkler ≥ 0.45m, lối đi thông thoáng [Điểm: 0, Rủi ro: safe]
+B) Hàng xếp gọn gàng, có lối đi nhưng chưa phân loại theo mức độ nguy hiểm cháy [Điểm: 1, Rủi ro: low]
+C) Hàng hóa xếp chật, lối đi thu hẹp, hàng dễ cháy để lẫn với hàng thông thường [Điểm: 2, Rủi ro: high]
+D) Hàng hóa chất đống tràn lan, không lối đi, che khuất tủ điện và đầu phun sprinkler [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Hàng hóa xếp chật, lối đi thu hẹp, hàng dễ cháy để lẫn với hàng thông thường. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Di chuyển vật liệu dễ cháy ra xa tủ điện ít nhất 1m. Lắp khóa và biển cảnh báo 'NGUY HIỂM - ĐIỆN CAO ÁP'."
+38,Vi phạm quy định PCCC,"Các thiết bị điện, tủ điện, đầu phun sprinkler có đang bị che khuất hoặc bị hàng hóa, vật dụng chất gần ép sát không?",single,"A) Toàn bộ tủ điện, thiết bị điện và đầu phun sprinkler đều tiếp cận dễ dàng, không bị che khuất [Điểm: 0, Rủi ro: safe]
+B) Phần lớn thông thoáng, nhưng 1-2 vị trí tủ điện có đồ đạc gần sát [Điểm: 1, Rủi ro: low]
+C) Nhiều tủ điện bị hàng hóa che trước, đầu phun sprinkler bị kệ hàng che mất [Điểm: 2, Rủi ro: high]
+D) Tủ điện và đầu phun sprinkler bị chôn vùi trong hàng hóa, không thể tiếp cận được [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Di chuyển vật liệu dễ cháy ra xa tủ điện ít nhất 1m. Lắp khóa và biển cảnh báo 'NGUY HIỂM - ĐIỆN CAO ÁP'.
+- Nếu chọn (D): Di chuyển vật liệu dễ cháy ra xa tủ điện ít nhất 1m. Lắp khóa và biển cảnh báo 'NGUY HIỂM - ĐIỆN CAO ÁP'."
+39,Vi phạm quy định PCCC,"Nguồn nước chữa cháy (bể nước, máy bơm, họng tiếp nước) có đủ áp lực và lưu lượng sẵn sàng không?",single,"A) Có bể nước PCCC riêng đúng dung tích, máy bơm chữa cháy hoạt động, kiểm tra áp lực định kỳ [Điểm: 0, Rủi ro: safe]
+B) Có bể nước chung (sinh hoạt + PCCC), máy bơm có nhưng chưa thử áp lực vòi gần đây [Điểm: 1, Rủi ro: low]
+C) Bể nước nhỏ không đủ dung tích theo quy định, máy bơm cũ lâu không kiểm tra [Điểm: 2, Rủi ro: high]
+D) Không có nguồn nước chữa cháy riêng, không có máy bơm, trụ nước cứu hỏa xa cơ sở [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Bể nước nhỏ không đủ dung tích theo quy định, máy bơm cũ lâu không kiểm tra. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Không có nguồn nước chữa cháy riêng, không có máy bơm, trụ nước cứu hỏa xa cơ sở. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+40,Vi phạm quy định PCCC,"Sơ đồ thoát nạn, biển chỉ dẫn PCCC và nội quy an toàn có được dán đúng vị trí và còn đọc được không?",single,"A) Sơ đồ thoát nạn dán mỗi tầng, biển PCCC đầy đủ, nội quy cập nhật, chữ rõ ràng, đúng vị trí [Điểm: 0, Rủi ro: safe]
+B) Có sơ đồ và biển chỉ dẫn nhưng một số đã cũ, chữ mờ, chưa cập nhật thay đổi mặt bằng [Điểm: 1, Rủi ro: low]
+C) Chỉ có nội quy PCCC ở sảnh, không có sơ đồ thoát nạn tại các tầng/khu vực [Điểm: 2, Rủi ro: high]
+D) Không có sơ đồ, không có biển chỉ dẫn, không có nội quy PCCC niêm yết [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Ban hành nội quy PCCC bằng văn bản. Niêm yết tại: cửa ra vào, khu vực nguy hiểm, bảng tin. Cập nhật hàng năm.
+- Nếu chọn (D): Ban hành nội quy PCCC bằng văn bản. Niêm yết tại: cửa ra vào, khu vực nguy hiểm, bảng tin. Cập nhật hàng năm."
+41,"Sự cố kỹ thuật (thiết bị, máy móc)","Máy móc, thiết bị sản xuất tại cơ sở có được bảo trì định kỳ và kiểm tra an toàn vận hành không?",single,"A) Có lịch bảo dưỡng định kỳ theo hướng dẫn nhà sản xuất, có sổ theo dõi và biên bản [Điểm: 0, Rủi ro: safe]
+B) Bảo dưỡng theo kinh nghiệm, không có lịch cố định, chỉ sửa chữa khi hỏng [Điểm: 1, Rủi ro: low]
+C) Thiết bị hoạt động liên tục, ít khi tắt để bảo dưỡng, có rung lắc hoặc tiếng kêu bất thường [Điểm: 2, Rủi ro: high]
+D) Thiết bị cũ xuống cấp nghiêm trọng, chưa bảo dưỡng trong hơn 2 năm, vẫn vận hành [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Lập lịch bảo dưỡng theo khuyến cáo nhà sản xuất. Ghi sổ theo dõi: ngày bảo dưỡng, người thực hiện, hạng mục.
+- Nếu chọn (D): Thay thế thiết bị điện không rõ xuất xứ bằng sản phẩm có nhãn CR (hợp quy). Mua từ đại lý chính hãng, giữ hóa đơn."
+42,"Sự cố kỹ thuật (thiết bị, máy móc)","Cơ sở có sử dụng nồi hơi, bình chịu áp lực, hệ thống khí nén không? Nếu có, tình trạng kiểm định và vận hành như thế nào?",single,"A) Không có thiết bị áp lực; hoặc có, đã đăng ký kiểm định đúng hạn, van an toàn hoạt động tốt [Điểm: 0, Rủi ro: safe]
+B) Có thiết bị áp lực, kiểm định còn hạn nhưng van an toàn lâu chưa thử nghiệm [Điểm: 1, Rủi ro: low]
+C) Thiết bị áp lực đã quá hạn kiểm định nhưng vẫn đang sử dụng, chưa gia hạn [Điểm: 2, Rủi ro: high]
+D) Thiết bị áp lực chưa từng kiểm định, van an toàn hỏng hoặc bị nối tắt [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Đăng ký kiểm định thiết bị áp lực theo NĐ 44/2016/NĐ-CP. Van an toàn phải hoạt động tốt, có tem kiểm định.
+- Nếu chọn (D): Đăng ký kiểm định thiết bị áp lực theo NĐ 44/2016/NĐ-CP. Van an toàn phải hoạt động tốt, có tem kiểm định."
+43,"Sự cố kỹ thuật (thiết bị, máy móc)","Hệ thống băng chuyền, dây đai truyền động và các bộ phận ma sát cao có được kiểm soát nguy cơ cháy không?",single,"A) Không có băng chuyền/truyền động; hoặc có, bôi trơn đúng lịch, kiểm tra độ căng dây đai định kỳ [Điểm: 0, Rủi ro: safe]
+B) Có kiểm tra nhưng không thường xuyên, thỉnh thoảng dây đai bị trượt phát sinh nhiệt [Điểm: 1, Rủi ro: low]
+C) Dây đai cũ, hay bị kẹt gây nóng cục bộ, bụi và sợi vải tích tụ quanh bộ phận ma sát [Điểm: 2, Rủi ro: high]
+D) Bộ phận truyền động nóng bất thường, có mùi khét từ dây đai, bụi dễ cháy tích dày [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): NGUY HIỂM: Ngắt ngay mạch điện có hiện tượng nóng/khét. Gọi thợ điện kiểm tra nguyên nhân (quá tải, chập mạch, tiếp xúc kém).
+- Nếu chọn (D): NGUY HIỂM: Ngắt ngay mạch điện có hiện tượng nóng/khét. Gọi thợ điện kiểm tra nguyên nhân (quá tải, chập mạch, tiếp xúc kém)."
+44,"Sự cố kỹ thuật (thiết bị, máy móc)","Cơ sở có sử dụng lò nung, lò sấy, lò nấu công nghiệp không? Hệ thống bảo vệ và kiểm soát nhiệt độ như thế nào?",single,"A) Không có lò nung/sấy; hoặc có, thermostat tự động, ngắt quá nhiệt, cách nhiệt đúng kỹ thuật [Điểm: 0, Rủi ro: safe]
+B) Có lò nung/sấy với thermostat nhưng chưa hiệu chuẩn lại gần đây [Điểm: 1, Rủi ro: low]
+C) Lò nung/sấy điều chỉnh nhiệt thủ công, không có ngắt quá nhiệt tự động dự phòng [Điểm: 2, Rủi ro: high]
+D) Lò nung/sấy tự chế, lớp cách nhiệt hư hỏng, vỏ ngoài nóng rát, gần vật liệu dễ cháy [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Lò nung/sấy điều chỉnh nhiệt thủ công, không có ngắt quá nhiệt tự động dự phòng. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): NGUY HIỂM: Ngắt ngay mạch điện có hiện tượng nóng/khét. Gọi thợ điện kiểm tra nguyên nhân (quá tải, chập mạch, tiếp xúc kém)."
+45,"Sự cố kỹ thuật (thiết bị, máy móc)",Xe nâng hàng và phương tiện vận chuyển nội bộ có gây nguy cơ cháy nổ không?,single,"A) Không có xe nâng; hoặc dùng xe nâng điện, sạc tại khu riêng thông thoáng, bảo trì đúng lịch [Điểm: 0, Rủi ro: safe]
+B) Xe nâng diesel/gas bảo dưỡng định kỳ, ống xả có lưới chặn tia lửa [Điểm: 1, Rủi ro: low]
+C) Xe nâng cũ, ống xả không có lưới chặn, thỉnh thoảng rò rỉ dầu nhớt trên sàn [Điểm: 2, Rủi ro: high]
+D) Xe nâng rò rỉ nhiên liệu, hoạt động trong khu vực có hơi khí dễ cháy hoặc bụi nổ [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Bố trí bãi đỗ xe riêng biệt, xa khu sản xuất/kho hàng. Không để xe trong lối thoát hiểm.
+- Nếu chọn (D): Bố trí bãi đỗ xe riêng biệt, xa khu sản xuất/kho hàng. Không để xe trong lối thoát hiểm."
+46,"Sự cố kỹ thuật (thiết bị, máy móc)","Hệ thống làm lạnh công nghiệp (kho lạnh, máy lạnh công suất lớn dùng môi chất NH₃ hoặc Freon) có tiềm ẩn nguy cơ cháy nổ không?",single,"A) Không có hệ thống làm lạnh công nghiệp; hoặc có, dùng môi chất an toàn, bảo trì đúng lịch [Điểm: 0, Rủi ro: safe]
+B) Có hệ thống lạnh NH₃, vận hành tốt, có cảm biến rò khí và quạt thông gió dự phòng [Điểm: 1, Rủi ro: low]
+C) Hệ thống lạnh cũ, đường ống có dấu hiệu ăn mòn, chưa kiểm tra rò rỉ môi chất gần đây [Điểm: 2, Rủi ro: high]
+D) Hệ thống lạnh NH₃ rò rỉ, không có cảm biến khí, phòng máy lạnh kín không thông gió [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Hệ thống lạnh cũ, đường ống có dấu hiệu ăn mòn, chưa kiểm tra rò rỉ môi chất gần đây. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Hệ thống lạnh NH₃ rò rỉ, không có cảm biến khí, phòng máy lạnh kín không thông gió. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+47,"Sự cố kỹ thuật (thiết bị, máy móc)","Bề mặt vỏ máy, ổ bi, hộp số hoặc các bộ phận chuyển động có nóng hơn bình thường khi chạm tay vào không?",single,"A) Không có hiện tượng nóng bất thường, nhiệt độ vỏ máy trong phạm vi cho phép [Điểm: 0, Rủi ro: safe]
+B) Một số vị trí ấm hơn bình thường nhưng chưa đến mức bỏng tay, đã lưu ý theo dõi [Điểm: 1, Rủi ro: low]
+C) Ổ bi, hộp số nóng rõ rệt khi chạm, có mùi dầu cháy nhẹ nhưng vẫn vận hành [Điểm: 2, Rủi ro: high]
+D) Vỏ máy nóng bỏng tay, có khói hoặc mùi khét rõ rệt từ ổ bi/hộp số, vẫn chưa dừng máy [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): NGUY HIỂM: Ngắt ngay mạch điện có hiện tượng nóng/khét. Gọi thợ điện kiểm tra nguyên nhân (quá tải, chập mạch, tiếp xúc kém).
+- Nếu chọn (D): NGUY HIỂM: Ngắt ngay mạch điện có hiện tượng nóng/khét. Gọi thợ điện kiểm tra nguyên nhân (quá tải, chập mạch, tiếp xúc kém)."
+48,"Sự cố kỹ thuật (thiết bị, máy móc)","Máy móc có phát ra tiếng kêu lạ (rít, gõ, lục cục) hoặc rung động mạnh hơn bình thường gần đây không?",single,"A) Máy hoạt động êm ái, không có tiếng kêu lạ hay rung động bất thường [Điểm: 0, Rủi ro: safe]
+B) Thỉnh thoảng có tiếng kêu nhẹ khi khởi động, hết khi chạy ổn định [Điểm: 1, Rủi ro: low]
+C) Máy phát tiếng rít hoặc gõ liên tục khi vận hành, rung lắc mạnh hơn trước [Điểm: 2, Rủi ro: high]
+D) Tiếng kêu va đập mạnh, rung động dữ dội làm lỏng bu lông, đã lâu nhưng chưa sửa chữa [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Máy phát tiếng rít hoặc gõ liên tục khi vận hành, rung lắc mạnh hơn trước. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Tiếng kêu va đập mạnh, rung động dữ dội làm lỏng bu lông, đã lâu nhưng chưa sửa chữa. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+49,"Sự cố kỹ thuật (thiết bị, máy móc)","Có vết dầu mỡ nhỏ giọt xuống sàn hoặc bám trên vỏ máy, ống dẫn dầu không?",single,"A) Không có vết dầu rò rỉ, sàn nhà xưởng sạch, máy móc khô ráo [Điểm: 0, Rủi ro: safe]
+B) Có vết dầu nhỏ tại khớp nối nhưng đã dùng khay hứng và lau dọn thường xuyên [Điểm: 1, Rủi ro: low]
+C) Dầu mỡ nhỏ giọt xuống sàn tạo vũng nhỏ, chưa xử lý, sàn trơn trượt [Điểm: 2, Rủi ro: high]
+D) Dầu rò rỉ nhiều, bám trên vỏ máy và ống dẫn, sàn dính dầu loang rộng gần nguồn nhiệt [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Bảo quản xăng dầu trong kho riêng, xa nguồn nhiệt/điện. Dùng can chuyên dụng có nắp kín, gắn nhãn cảnh báo.
+- Nếu chọn (D): Bảo quản xăng dầu trong kho riêng, xa nguồn nhiệt/điện. Dùng can chuyên dụng có nắp kín, gắn nhãn cảnh báo."
+50,"Sự cố kỹ thuật (thiết bị, máy móc)","Hệ thống thủy lực và khí nén có dấu hiệu rò rỉ áp lực, ống dẫn mòn hoặc khớp nối lỏng không?",single,"A) Không có hệ thống thủy lực/khí nén; hoặc có, ống dẫn tốt, khớp nối chắc, không rò rỉ [Điểm: 0, Rủi ro: safe]
+B) Hệ thống hoạt động ổn, có 1-2 khớp nối rỉ nhẹ đã được siết lại [Điểm: 1, Rủi ro: low]
+C) Ống dẫn thủy lực cũ, một số đoạn mòn mỏng, khớp nối lỏng gây rò rỉ dầu áp lực [Điểm: 2, Rủi ro: high]
+D) Ống thủy lực phồng rộp có nguy cơ vỡ, dầu áp lực phun ra khi vận hành, rất nguy hiểm [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Đăng ký kiểm định thiết bị áp lực theo NĐ 44/2016/NĐ-CP. Van an toàn phải hoạt động tốt, có tem kiểm định.
+- Nếu chọn (D): Đăng ký kiểm định thiết bị áp lực theo NĐ 44/2016/NĐ-CP. Van an toàn phải hoạt động tốt, có tem kiểm định."
+51,Tác động thiên nhiên,Cơ sở có hệ thống chống sét trực tiếp và chống sét lan truyền (surge protection) không?,single,"A) Có chống sét trực tiếp (kim thu lôi) và chống sét lan truyền đầy đủ, kiểm tra định kỳ hàng năm [Điểm: 0, Rủi ro: safe]
+B) Có chống sét trực tiếp nhưng chưa lắp chống sét lan truyền cho hệ thống điện/mạng [Điểm: 1, Rủi ro: low]
+C) Có hệ thống chống sét nhưng lâu chưa kiểm tra, điện trở tiếp địa không rõ có đạt không [Điểm: 2, Rủi ro: high]
+D) Không có bất kỳ hệ thống chống sét nào, cơ sở ở vùng hay bị sét đánh [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Thuê đơn vị có chức năng đo điện trở nối đất. Yêu cầu đạt ≤ 4Ω theo TCVN. Bổ sung dây nối đất cho thiết bị chưa có.
+- Nếu chọn (D): Lắp hệ thống chống sét theo TCVN 9385. Đo điện trở tiếp địa hàng năm, yêu cầu ≤ 10Ω."
+52,Tác động thiên nhiên,"Cơ sở có các yếu tố làm tăng nguy cơ cháy trong điều kiện nắng nóng, khô hanh không?",single,"A) Cơ sở xây dựng bằng vật liệu không cháy, nằm trong khu đô thị, không gần cây cối khô [Điểm: 0, Rủi ro: safe]
+B) Có một số vật liệu dễ cháy ngoài trời nhưng được che chắn và quản lý [Điểm: 1, Rủi ro: low]
+C) Mái nhà bằng lá, gỗ hoặc tôn nhựa, xung quanh có cỏ khô và cây dễ cháy [Điểm: 2, Rủi ro: high]
+D) Cơ sở xây bằng vật liệu dễ cháy, nằm gần rừng/đồng cỏ khô, vùng nắng nóng kéo dài [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Mái nhà bằng lá, gỗ hoặc tôn nhựa, xung quanh có cỏ khô và cây dễ cháy. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): NGUY HIỂM: Ngắt ngay mạch điện có hiện tượng nóng/khét. Gọi thợ điện kiểm tra nguyên nhân (quá tải, chập mạch, tiếp xúc kém)."
+53,Tác động thiên nhiên,"Cơ sở có biện pháp PCCC ứng phó với gió lớn, bão và điều kiện thời tiết cực đoan không?",single,"A) Có kế hoạch ứng phó bão, chằng chống mái, ngắt điện khi bão, cố định trang thiết bị ngoài trời [Điểm: 0, Rủi ro: safe]
+B) Có nhắc nhở chung nhưng chưa có kế hoạch văn bản chi tiết cho từng kịch bản [Điểm: 1, Rủi ro: low]
+C) Không có kế hoạch ứng phó, mái tôn lỏng lẻo, biển quảng cáo chưa chằng chống [Điểm: 2, Rủi ro: high]
+D) Cơ sở ở vùng bão thường xuyên, mái yếu có nguy cơ bay tốc làm đứt dây điện, chưa có biện pháp [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Không có kế hoạch ứng phó, mái tôn lỏng lẻo, biển quảng cáo chưa chằng chống. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Cơ sở ở vùng bão thường xuyên, mái yếu có nguy cơ bay tốc làm đứt dây điện, chưa có biện pháp. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+54,Tác động thiên nhiên,"Cơ sở có nguy cơ bị ảnh hưởng bởi cháy rừng, cháy đồng cỏ hoặc hỏa hoạn lan từ khu vực lân cận không?",single,"A) Cơ sở nằm trong khu đô thị, không gần rừng, có tường rào ngăn cách với bên ngoài [Điểm: 0, Rủi ro: safe]
+B) Gần khu vực đồi núi nhưng có đường ngăn lửa và khoảng cách an toàn với cây rừng [Điểm: 1, Rủi ro: low]
+C) Gần bìa rừng hoặc đồng cỏ, không có đường ngăn lửa, mùa khô có nguy cơ cháy lan [Điểm: 2, Rủi ro: high]
+D) Nằm trong/giáp rừng, vùng thường xuyên cháy rừng mùa khô, không có biện pháp phòng ngừa [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Tạo băng cản lửa 10m quanh cơ sở. Cắt cỏ khô, dọn lá rụng mùa khô. Bố trí bể chứa nước chữa cháy.
+- Nếu chọn (D): Tạo băng cản lửa 10m quanh cơ sở. Cắt cỏ khô, dọn lá rụng mùa khô. Bố trí bể chứa nước chữa cháy."
+55,Tác động thiên nhiên,"Trong mùa khô hanh, cơ sở có biện pháp kiểm soát tĩnh điện tích tụ trên thiết bị và vật liệu không?",single,"A) Có biện pháp kiểm soát tĩnh điện: nối đất thiết bị, dùng sơn/tấm chống tĩnh điện, kiểm soát độ ẩm [Điểm: 0, Rủi ro: safe]
+B) Thiết bị chính có nối đất, nhưng chưa kiểm soát tĩnh điện trên vật liệu di chuyển [Điểm: 1, Rủi ro: low]
+C) Không có biện pháp chống tĩnh điện, thường xuyên bị giật tĩnh điện khi chạm thiết bị [Điểm: 2, Rủi ro: high]
+D) Có hơi khí/bụi dễ cháy mà không kiểm soát tĩnh điện, đã từng phát tia lửa tĩnh điện [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Không có biện pháp chống tĩnh điện, thường xuyên bị giật tĩnh điện khi chạm thiết bị. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Có hơi khí/bụi dễ cháy mà không kiểm soát tĩnh điện, đã từng phát tia lửa tĩnh điện. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+56,Tác động thiên nhiên,"Cơ sở có nằm trong vùng thấp, hầm ngầm hoặc tầng 1 có nguy cơ ngập nước không? Hệ thống điện có được bảo vệ khỏi ngập nước không?",single,"A) Cơ sở ở vùng cao, không ngập; hoặc tủ điện đặt trên cao, hệ thống điện chống ngập đúng chuẩn [Điểm: 0, Rủi ro: safe]
+B) Vùng thỉnh thoảng ngập nhẹ, tủ điện đặt trên cao nhưng ổ cắm tầng trệt chưa có nắp chống nước [Điểm: 1, Rủi ro: low]
+C) Vùng hay ngập, tủ điện đặt thấp dưới 1m, dây điện đi sát sàn có nguy cơ chập khi ngập [Điểm: 2, Rủi ro: high]
+D) Tầng hầm có thiết bị điện, không có bơm thoát nước, đã từng bị ngập gây chập điện [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Di chuyển vật liệu dễ cháy ra xa tủ điện ít nhất 1m. Lắp khóa và biển cảnh báo 'NGUY HIỂM - ĐIỆN CAO ÁP'.
+- Nếu chọn (D): Dọn sạch lối thoát hiểm ngay. Lắp đèn EXIT phát quang và đèn chiếu sáng sự cố. Không khóa cửa thoát nạn."
+57,Tác động thiên nhiên,"Trong những ngày nắng nóng cực đoan (trên 38°C), cơ sở có tăng cường biện pháp PCCC không?",single,"A) Có kế hoạch mùa nóng: tăng tần suất kiểm tra điện, hạn chế nguồn lửa, bố trí trực PCCC 24/7 [Điểm: 0, Rủi ro: safe]
+B) Có nhắc nhở chung về PCCC trong mùa nóng nhưng không có văn bản kế hoạch cụ thể [Điểm: 1, Rủi ro: low]
+C) Không tăng cường biện pháp gì, mùa nóng vẫn vận hành như bình thường [Điểm: 2, Rủi ro: high]
+D) Mùa nóng thiết bị chạy quá tải do ĐHKK, không tăng cường PCCC, không kiểm tra điện [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): NGUY HIỂM: Ngắt ngay mạch điện có hiện tượng nóng/khét. Gọi thợ điện kiểm tra nguyên nhân (quá tải, chập mạch, tiếp xúc kém).
+- Nếu chọn (D): NGUY HIỂM: Ngắt ngay mạch điện có hiện tượng nóng/khét. Gọi thợ điện kiểm tra nguyên nhân (quá tải, chập mạch, tiếp xúc kém)."
+58,Tác động thiên nhiên,"Cơ sở có dấu hiệu chuột, kiến hoặc côn trùng xâm nhập vào tủ điện, hộp nối dây không?",single,"A) Tủ điện kín, không có dấu hiệu côn trùng xâm nhập, có biện pháp chống chuột định kỳ [Điểm: 0, Rủi ro: safe]
+B) Thỉnh thoảng thấy côn trùng nhỏ gần tủ điện nhưng chưa phát hiện xâm nhập bên trong [Điểm: 1, Rủi ro: low]
+C) Đã phát hiện chuột gặm dây điện hoặc kiến lửa làm tổ trong hộp nối, chưa xử lý triệt để [Điểm: 2, Rủi ro: high]
+D) Chuột thường xuyên gặm nát vỏ dây điện, đã xảy ra chập do chuột, chưa khắc phục [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Loại bỏ các mối nối tạm bằng băng keo. Sử dụng hộp nối chuyên dụng hoặc đầu nối bấm chuẩn cho tất cả các điểm nối dây.
+- Nếu chọn (D): Khắc phục: Chuột thường xuyên gặm nát vỏ dây điện, đã xảy ra chập do chuột, chưa khắc phục. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+59,Tác động thiên nhiên,"Các thiết bị điện ngoài trời (tủ điện ngoài trời, cáp điện, đèn chiếu sáng) có dấu hiệu gỉ sét, ăn mòn hoặc vỡ vỏ bảo vệ không?",single,"A) Thiết bị ngoài trời đạt cấp IP65, vỏ inox/composite, không gỉ sét, kiểm tra định kỳ [Điểm: 0, Rủi ro: safe]
+B) Một số thiết bị bắt đầu gỉ sét nhẹ bên ngoài nhưng vỏ bảo vệ còn nguyên vẹn [Điểm: 1, Rủi ro: low]
+C) Vỏ tủ điện ngoài trời bị thủng, nắp hộp nối dây bị vỡ, dây cáp lộ lõi do gỉ mòn [Điểm: 2, Rủi ro: high]
+D) Thiết bị điện ngoài trời hư hỏng nghiêm trọng, nước mưa xâm nhập vào tủ điện gây chập [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Di chuyển vật liệu dễ cháy ra xa tủ điện ít nhất 1m. Lắp khóa và biển cảnh báo 'NGUY HIỂM - ĐIỆN CAO ÁP'.
+- Nếu chọn (D): Di chuyển vật liệu dễ cháy ra xa tủ điện ít nhất 1m. Lắp khóa và biển cảnh báo 'NGUY HIỂM - ĐIỆN CAO ÁP'."
+60,Tác động thiên nhiên,"Bụi mịn từ môi trường (bụi xi măng, bụi kim loại, bụi than) có tích tụ trên thiết bị điện và hệ thống PCCC không?",single,"A) Thiết bị điện và hệ thống PCCC được vệ sinh định kỳ, không tích tụ bụi đáng kể [Điểm: 0, Rủi ro: safe]
+B) Có lớp bụi mỏng trên một số thiết bị nhưng vệ sinh hàng tháng [Điểm: 1, Rủi ro: low]
+C) Bụi tích dày trên tủ điện, ổ cắm, đầu báo khói, ảnh hưởng tản nhiệt và phát hiện cháy [Điểm: 2, Rủi ro: high]
+D) Bụi dẫn điện (bụi kim loại, than) phủ dày trên thanh dẫn điện, có nguy cơ chập và nổ bụi [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Di chuyển vật liệu dễ cháy ra xa tủ điện ít nhất 1m. Lắp khóa và biển cảnh báo 'NGUY HIỂM - ĐIỆN CAO ÁP'.
+- Nếu chọn (D): Khắc phục: Bụi dẫn điện (bụi kim loại, than) phủ dày trên thanh dẫn điện, có nguy cơ chập và nổ bụi. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+61,Tự cháy,"Cơ sở có bảo quản các vật liệu có khả năng tự cháy (dầu lanh, than non, vải dính dầu, phân bón có nitrat) không?",single,"A) Không có vật liệu tự cháy; hoặc bảo quản đúng cách: thông thoáng, kiểm tra nhiệt độ định kỳ [Điểm: 0, Rủi ro: safe]
+B) Có một lượng nhỏ, bảo quản trong kho riêng thông gió nhưng chưa kiểm tra nhiệt độ [Điểm: 1, Rủi ro: low]
+C) Có lưu trữ vật liệu tự cháy chất đống lớn, kho thông gió kém, chưa theo dõi nhiệt [Điểm: 2, Rủi ro: high]
+D) Vật liệu tự cháy số lượng lớn chất đống trong kho kín, không thông gió, không giám sát [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Bảo quản vật liệu dễ tự cháy nơi thông thoáng, không chất đống. Kiểm tra nhiệt độ kho định kỳ hàng ngày.
+- Nếu chọn (D): Bảo quản vật liệu dễ tự cháy nơi thông thoáng, không chất đống. Kiểm tra nhiệt độ kho định kỳ hàng ngày."
+62,Tự cháy,"Tại cơ sở có phát sinh bụi hữu cơ (bụi gỗ, bụi ngũ cốc, bụi đường, bụi nhôm) trong quá trình sản xuất không?",single,"A) Không phát sinh bụi hữu cơ; hoặc có hệ thống hút bụi công nghiệp, vệ sinh định kỳ [Điểm: 0, Rủi ro: safe]
+B) Có bụi nhưng vệ sinh hàng ngày, không tích tụ dày trên máy móc và sàn [Điểm: 1, Rủi ro: low]
+C) Bụi tích tụ dày trên máy, tường, trần, không có hệ thống hút bụi [Điểm: 2, Rủi ro: high]
+D) Bụi lơ lửng dày đặc tạo mây bụi khi sản xuất, có nguy cơ nổ bụi, không thông gió [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Bụi tích tụ dày trên máy, tường, trần, không có hệ thống hút bụi. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Bụi lơ lửng dày đặc tạo mây bụi khi sản xuất, có nguy cơ nổ bụi, không thông gió. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+63,Tự cháy,"Cơ sở có bảo quản phân bón Amoni Nitrat (AN), oxy già (H₂O₂), hoặc các hóa chất tự phản ứng/tự oxy hóa không?",single,"A) Không có hóa chất tự phản ứng; hoặc bảo quản đúng SDS, kho riêng, tách biệt chất không tương thích [Điểm: 0, Rủi ro: safe]
+B) Có lượng nhỏ, bảo quản trong tủ chuyên dụng nhưng chưa tách riêng theo tính tương thích [Điểm: 1, Rủi ro: low]
+C) Hóa chất oxy hóa để chung với vật liệu dễ cháy, không có kho riêng biệt [Điểm: 2, Rủi ro: high]
+D) Khối lượng lớn AN hoặc chất oxy hóa mạnh bảo quản không đúng, gần nguồn nhiệt, không giám sát [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Hóa chất oxy hóa để chung với vật liệu dễ cháy, không có kho riêng biệt. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Khối lượng lớn AN hoặc chất oxy hóa mạnh bảo quản không đúng, gần nguồn nhiệt, không giám sát. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+64,Tự cháy,"Bột màu, pigment hoặc sơn bột công nghiệp được bảo quản và xử lý như thế nào tại cơ sở?",single,"A) Không có sơn bột/pigment; hoặc bảo quản trong khu vực chuyên dụng, hút bụi tốt, thiết bị Ex [Điểm: 0, Rủi ro: safe]
+B) Có sơn bột, bảo quản trong thùng kín, khu vực thông gió nhưng chưa có thiết bị phòng nổ [Điểm: 1, Rủi ro: low]
+C) Sơn bột rơi vãi trên sàn, tích tụ trên máy, không vệ sinh thường xuyên [Điểm: 2, Rủi ro: high]
+D) Bụi sơn bột phát tán dày đặc, không hút bụi, thiết bị điện thường phát tia lửa [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Sơn bột rơi vãi trên sàn, tích tụ trên máy, không vệ sinh thường xuyên. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Bụi sơn bột phát tán dày đặc, không hút bụi, thiết bị điện thường phát tia lửa. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+65,Tự cháy,"Cơ sở có bảo quản than củi, than đá, pellet gỗ hoặc biomass không? Đống than có được kiểm soát nhiệt độ không?",single,"A) Không có than/biomass; hoặc bảo quản đống nhỏ nơi thoáng, có đo nhiệt độ bên trong đống [Điểm: 0, Rủi ro: safe]
+B) Có bảo quản, đống vừa phải, kho thông thoáng nhưng chưa đo nhiệt bên trong đống [Điểm: 1, Rủi ro: low]
+C) Chất đống lớn trong kho kín, không kiểm tra nhiệt, chưa phát hiện nóng bất thường [Điểm: 2, Rủi ro: high]
+D) Đống than/biomass lớn đã tự nóng, bốc khói hoặc có mùi cháy nhưng chưa xử lý [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): NGUY HIỂM: Ngắt ngay mạch điện có hiện tượng nóng/khét. Gọi thợ điện kiểm tra nguyên nhân (quá tải, chập mạch, tiếp xúc kém).
+- Nếu chọn (D): NGUY HIỂM: Ngắt ngay mạch điện có hiện tượng nóng/khét. Gọi thợ điện kiểm tra nguyên nhân (quá tải, chập mạch, tiếp xúc kém)."
+66,Tự cháy,"Cơ sở có bảo quản phân hữu cơ, xác bã nông sản, hoặc chất thải hữu cơ ủ đống lớn không?",single,"A) Không có chất thải hữu cơ ủ đống; hoặc ủ đúng kỹ thuật, có đảo trộn, kiểm soát nhiệt độ [Điểm: 0, Rủi ro: safe]
+B) Có ủ phân hữu cơ quy mô nhỏ, ngoài trời, đảo trộn không thường xuyên [Điểm: 1, Rủi ro: low]
+C) Chất thải hữu cơ chất đống lớn không xử lý, trong khu vực kín, bốc mùi nóng [Điểm: 2, Rủi ro: high]
+D) Đống ủ lớn tự phát nhiệt, đã bốc khói hoặc âm ỉ cháy nhưng chưa dập tắt [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): NGUY HIỂM: Ngắt ngay mạch điện có hiện tượng nóng/khét. Gọi thợ điện kiểm tra nguyên nhân (quá tải, chập mạch, tiếp xúc kém).
+- Nếu chọn (D): Bảo quản vật liệu dễ tự cháy nơi thông thoáng, không chất đống. Kiểm tra nhiệt độ kho định kỳ hàng ngày."
+67,Tự cháy,"Cơ sở có sử dụng hoặc lưu trữ dầu thực vật, mỡ động vật, dầu cá số lượng lớn không?",single,"A) Không lưu trữ dầu mỡ số lượng lớn; hoặc bảo quản trong thùng kín, kho mát thông gió [Điểm: 0, Rủi ro: safe]
+B) Có lưu trữ, thùng kín nơi mát nhưng giẻ lau dính dầu chưa xử lý đúng cách [Điểm: 1, Rủi ro: low]
+C) Giẻ lau dính dầu thực vật chất đống, thùng dầu hở nắp trong kho nóng [Điểm: 2, Rủi ro: high]
+D) Giẻ lau dính dầu ăn vứt bừa bãi gần nguồn nhiệt, đã có hiện tượng nóng hoặc bốc khói [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): NGUY HIỂM: Ngắt ngay mạch điện có hiện tượng nóng/khét. Gọi thợ điện kiểm tra nguyên nhân (quá tải, chập mạch, tiếp xúc kém).
+- Nếu chọn (D): NGUY HIỂM: Ngắt ngay mạch điện có hiện tượng nóng/khét. Gọi thợ điện kiểm tra nguyên nhân (quá tải, chập mạch, tiếp xúc kém)."
+68,Tự cháy,"Các thiết bị dùng pin lithium (laptop, điện thoại, xe điện, máy bay không người lái) được sạc và bảo quản như thế nào?",single,"A) Sạc tại nơi thông thoáng, dùng sạc chính hãng, không sạc qua đêm không giám sát, pin không phồng [Điểm: 0, Rủi ro: safe]
+B) Sạc trong nhà, dùng sạc chính hãng, thỉnh thoảng sạc qua đêm nhưng nơi thoáng [Điểm: 1, Rủi ro: low]
+C) Sạc nhiều thiết bị cùng lúc trong phòng kín, dùng sạc không chính hãng, pin một số cái phồng [Điểm: 2, Rủi ro: high]
+D) Pin lithium phồng vẫn sử dụng, sạc qua đêm trong phòng ngủ kín, dùng sạc kém chất lượng [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Sạc nhiều thiết bị cùng lúc trong phòng kín, dùng sạc không chính hãng, pin một số cái phồng. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Pin lithium phồng vẫn sử dụng, sạc qua đêm trong phòng ngủ kín, dùng sạc kém chất lượng. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+69,Tự cháy,"Cơ sở có bảo quản hóa chất phản ứng mạnh với nước (natri kim loại, canxi cacbua, thuốc tím) không?",single,"A) Không có hóa chất phản ứng với nước; hoặc bảo quản trong tủ chống ẩm, cách xa nguồn nước [Điểm: 0, Rủi ro: safe]
+B) Có lượng nhỏ, bảo quản trong tủ kín nhưng chưa có biện pháp chống ẩm chuyên dụng [Điểm: 1, Rủi ro: low]
+C) Hóa chất phản ứng với nước để gần khu vực ẩm ướt, gần ống nước hoặc bồn rửa [Điểm: 2, Rủi ro: high]
+D) Hóa chất phản ứng mạnh với nước bảo quản trong kho bị dột, gần họng nước chữa cháy [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Hóa chất phản ứng với nước để gần khu vực ẩm ướt, gần ống nước hoặc bồn rửa. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Hóa chất phản ứng mạnh với nước bảo quản trong kho bị dột, gần họng nước chữa cháy. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+70,Tự cháy,"Rơm rạ, trấu, vỏ cà phê hoặc bã mía tại cơ sở được bảo quản và xử lý như thế nào sau mùa thu hoạch?",single,"A) Không có rơm rạ/trấu; hoặc bảo quản khô, đống nhỏ, nơi thoáng, có kiểm tra nhiệt định kỳ [Điểm: 0, Rủi ro: safe]
+B) Bảo quản trong kho thoáng, đống vừa phải nhưng chưa kiểm tra nhiệt bên trong [Điểm: 1, Rủi ro: low]
+C) Chất đống lớn ngoài trời không che chắn, ẩm ướt sau mưa, không kiểm soát [Điểm: 2, Rủi ro: high]
+D) Đống rơm/trấu lớn đã ẩm mục tự phát nhiệt, bốc hơi nóng, gần nhà dân hoặc kho hàng [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Bảo quản vật liệu dễ tự cháy nơi thông thoáng, không chất đống. Kiểm tra nhiệt độ kho định kỳ hàng ngày.
+- Nếu chọn (D): NGUY HIỂM: Ngắt ngay mạch điện có hiện tượng nóng/khét. Gọi thợ điện kiểm tra nguyên nhân (quá tải, chập mạch, tiếp xúc kém)."
+71,Tai nạn giao thông (phương tiện cơ giới),"Khu vực đỗ xe (ô tô, xe máy) trong cơ sở có tiềm ẩn nguy cơ cháy nổ không?",single,"A) Bãi đỗ xe riêng biệt, có hệ thống báo cháy, sprinkler (nếu trong nhà), cách xa khu sản xuất/kho [Điểm: 0, Rủi ro: safe]
+B) Đỗ xe trong sân chung nhưng xa kho hàng, có bình chữa cháy gần bãi xe [Điểm: 1, Rủi ro: low]
+C) Xe đỗ trong tầng 1 nhà ở, gần cầu thang, gần hàng hóa dễ cháy, không có PCCC [Điểm: 2, Rủi ro: high]
+D) Nhiều xe máy/ô tô đỗ trong nhà kho, tầng hầm chật, chắn lối thoát nạn, không có PCCC [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Bố trí bãi đỗ xe riêng biệt, xa khu sản xuất/kho hàng. Không để xe trong lối thoát hiểm.
+- Nếu chọn (D): Dọn sạch lối thoát hiểm ngay. Lắp đèn EXIT phát quang và đèn chiếu sáng sự cố. Không khóa cửa thoát nạn."
+72,Tai nạn giao thông (phương tiện cơ giới),"Cơ sở có nằm gần đường vận chuyển hàng hóa nguy hiểm (xe bồn xăng dầu, xe chở gas, xe hóa chất) không? Có biện pháp phòng ngừa gì?",single,"A) Không gần đường vận chuyển hàng nguy hiểm; hoặc có tường rào, dải cách ly an toàn [Điểm: 0, Rủi ro: safe]
+B) Gần đường có xe bồn đi qua nhưng có hàng rào và khoảng cách ≥ 10m [Điểm: 1, Rủi ro: low]
+C) Sát đường xe bồn xăng dầu thường đi, không có rào chắn hay dải cách ly [Điểm: 2, Rủi ro: high]
+D) Cơ sở nằm sát ngã tư/cua gấp trên đường xe bồn, đã có tai nạn xe bồn gần đó [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Bố trí bãi đỗ xe riêng biệt, xa khu sản xuất/kho hàng. Không để xe trong lối thoát hiểm.
+- Nếu chọn (D): Bố trí bãi đỗ xe riêng biệt, xa khu sản xuất/kho hàng. Không để xe trong lối thoát hiểm."
+73,Tai nạn giao thông (phương tiện cơ giới),Xe cứu hỏa có thể tiếp cận nhanh và thuận tiện vào cơ sở khi xảy ra sự cố không?,single,"A) Đường vào rộng ≥ 3,5m, xe cứu hỏa vào tận nơi, có bãi quay xe, họng tiếp nước sẵn [Điểm: 0, Rủi ro: safe]
+B) Đường vào đủ rộng cho xe cứu hỏa nhưng đôi khi bị xe đậu hai bên thu hẹp [Điểm: 1, Rủi ro: low]
+C) Đường vào hẹp (< 3,5m), xe cứu hỏa phải đỗ ngoài đường chính, kéo vòi vào xa [Điểm: 2, Rủi ro: high]
+D) Cơ sở trong ngõ hẻm sâu, xe cứu hỏa không thể tiếp cận, không có nguồn nước gần [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Bố trí bãi đỗ xe riêng biệt, xa khu sản xuất/kho hàng. Không để xe trong lối thoát hiểm.
+- Nếu chọn (D): Bố trí bãi đỗ xe riêng biệt, xa khu sản xuất/kho hàng. Không để xe trong lối thoát hiểm."
+74,Tai nạn giao thông (phương tiện cơ giới),"Xe cơ giới (ô tô, xe tải, xe nâng) đậu trong nhà xưởng hoặc kho có dấu hiệu rò rỉ nhiên liệu không?",single,"A) Xe không đậu trong kho/xưởng; hoặc kiểm tra rò rỉ trước khi vào, sàn sạch không vết dầu [Điểm: 0, Rủi ro: safe]
+B) Xe đậu trong nhà xưởng, kiểm tra định kỳ, chưa phát hiện rò rỉ nhiên liệu [Điểm: 1, Rủi ro: low]
+C) Phát hiện vết dầu loang dưới xe trong kho nhưng chưa xác định nguồn rò rỉ [Điểm: 2, Rủi ro: high]
+D) Xe rò rỉ nhiên liệu rõ ràng, vẫn đậu trong kho hàng dễ cháy, mùi xăng trong nhà kho [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Bố trí bãi đỗ xe riêng biệt, xa khu sản xuất/kho hàng. Không để xe trong lối thoát hiểm.
+- Nếu chọn (D): Bố trí bãi đỗ xe riêng biệt, xa khu sản xuất/kho hàng. Không để xe trong lối thoát hiểm."
+75,Tai nạn giao thông (phương tiện cơ giới),"Xe nâng, xe đẩy hoặc phương tiện nội bộ có thường xuyên va chạm vào kệ hàng, tường, hoặc thiết bị không?",single,"A) Có lối đi riêng cho xe nâng, bollard bảo vệ kệ hàng và thiết bị, tài xế có chứng chỉ [Điểm: 0, Rủi ro: safe]
+B) Lối đi đủ rộng, thỉnh thoảng va quẹt nhẹ kệ hàng nhưng không gây hư hại [Điểm: 1, Rủi ro: low]
+C) Xe nâng hay va chạm kệ hàng làm nghiêng, đã từng đổ hàng hóa lên thiết bị điện [Điểm: 2, Rủi ro: high]
+D) Xe nâng va chạm mạnh vào ống gas, đường ống dẫn hoặc tủ điện, gây hư hại nghiêm trọng [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Bố trí bãi đỗ xe riêng biệt, xa khu sản xuất/kho hàng. Không để xe trong lối thoát hiểm.
+- Nếu chọn (D): Di chuyển vật liệu dễ cháy ra xa tủ điện ít nhất 1m. Lắp khóa và biển cảnh báo 'NGUY HIỂM - ĐIỆN CAO ÁP'."
+76,Tai nạn giao thông (phương tiện cơ giới),Nhiên liệu và dầu nhớt dự trữ cho đội xe của cơ sở được bảo quản như thế nào?,single,"A) Kho nhiên liệu riêng biệt, tường chống cháy, biển cấm lửa, hệ thống chống tràn, bình chữa cháy [Điểm: 0, Rủi ro: safe]
+B) Để trong khu vực riêng ngoài trời, thùng có nắp kín, xa nguồn nhiệt [Điểm: 1, Rủi ro: low]
+C) Thùng dầu nhớt để trong nhà xưởng chung, gần thiết bị điện và máy móc [Điểm: 2, Rủi ro: high]
+D) Xăng dầu để trong can nhựa hở, trong garage chung với nhiều xe, gần ổ cắm điện [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Bảo quản xăng dầu trong kho riêng, xa nguồn nhiệt/điện. Dùng can chuyên dụng có nắp kín, gắn nhãn cảnh báo.
+- Nếu chọn (D): Thay thế ổ cắm hỏng/méo. Không cắm chồng nhiều ổ nối dài. Dùng ổ cắm có nắp bảo vệ tại nơi ẩm ướt."
+77,Tai nạn giao thông (phương tiện cơ giới),Hệ thống điện và cầu chì của phương tiện cơ giới trong đội xe có được kiểm tra bảo dưỡng định kỳ không?,single,"A) Kiểm tra hệ thống điện xe theo lịch bảo dưỡng, cầu chì đúng ampe, dây điện không hở [Điểm: 0, Rủi ro: safe]
+B) Bảo dưỡng định kỳ theo km nhưng chưa kiểm tra chuyên sâu hệ thống điện [Điểm: 1, Rủi ro: low]
+C) Xe cũ, hệ thống điện chưa kiểm tra lâu, cầu chì thay bằng dây đồng nghiệp dư [Điểm: 2, Rủi ro: high]
+D) Hệ thống điện xe hỏng nặng, dây điện chạm chập, đã có hiện tượng khói/tia lửa từ khoang điện [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Bố trí bãi đỗ xe riêng biệt, xa khu sản xuất/kho hàng. Không để xe trong lối thoát hiểm.
+- Nếu chọn (D): Bố trí bãi đỗ xe riêng biệt, xa khu sản xuất/kho hàng. Không để xe trong lối thoát hiểm."
+78,Tai nạn giao thông (phương tiện cơ giới),Khu vực rửa xe và bảo dưỡng xe có tuân thủ quy định phòng cháy không?,single,"A) Không có khu rửa xe/bảo dưỡng; hoặc có, sàn chống trơn, thoát nước tốt, bình chữa cháy [Điểm: 0, Rủi ro: safe]
+B) Có khu bảo dưỡng riêng, có bình chữa cháy nhưng sàn đôi khi dính dầu nhớt [Điểm: 1, Rủi ro: low]
+C) Bảo dưỡng xe ngay trong kho/xưởng, sàn dính dầu, giẻ lau dầu vứt bừa bãi [Điểm: 2, Rủi ro: high]
+D) Rửa xe bằng xăng/dung môi trong nhà kín, không thông gió, không bình chữa cháy [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Lập lịch bảo dưỡng theo khuyến cáo nhà sản xuất. Ghi sổ theo dõi: ngày bảo dưỡng, người thực hiện, hạng mục.
+- Nếu chọn (D): Mua bổ sung bình chữa cháy ABC 4kg: 1 bình/50m². Đặt nơi dễ lấy, cao 0.8-1.5m. Kiểm tra hạn sử dụng hàng quý."
+79,Tai nạn giao thông (phương tiện cơ giới),Xe bồn chở xăng dầu hoặc xe chở khí gas của cơ sở có được kiểm tra bình áp lực và van an toàn định kỳ không?,single,"A) Không có xe bồn/xe gas; hoặc có, kiểm định đúng hạn, van an toàn hoạt động, dây tiếp địa đủ [Điểm: 0, Rủi ro: safe]
+B) Xe kiểm định còn hạn nhưng dây tiếp địa chống tĩnh điện chưa kiểm tra gần đây [Điểm: 1, Rủi ro: low]
+C) Xe bồn quá hạn kiểm định nhưng vẫn hoạt động, van an toàn lâu chưa thử [Điểm: 2, Rủi ro: high]
+D) Xe bồn cũ nát, rò rỉ xăng dầu, van an toàn hỏng, không kiểm định, vẫn vận hành [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Bố trí bãi đỗ xe riêng biệt, xa khu sản xuất/kho hàng. Không để xe trong lối thoát hiểm.
+- Nếu chọn (D): Bố trí bãi đỗ xe riêng biệt, xa khu sản xuất/kho hàng. Không để xe trong lối thoát hiểm."
+80,Tai nạn giao thông (phương tiện cơ giới),Khu vực đỗ xe ban đêm có được kiểm tra trước khi nhân viên rời cơ sở không?,single,"A) Có kiểm tra bãi xe cuối ngày: rò rỉ nhiên liệu, ngắt điện sạc, khóa cổng, camera giám sát [Điểm: 0, Rủi ro: safe]
+B) Bảo vệ tuần tra bãi xe nhưng không có checklist kiểm tra cụ thể về PCCC [Điểm: 1, Rủi ro: low]
+C) Không kiểm tra bãi xe ban đêm, xe đỗ qua đêm không ai giám sát [Điểm: 2, Rủi ro: high]
+D) Bãi xe trong tầng hầm/kho, không camera, không tuần tra, không PCCC, khóa cửa kín [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Bố trí bãi đỗ xe riêng biệt, xa khu sản xuất/kho hàng. Không để xe trong lối thoát hiểm.
+- Nếu chọn (D): Bố trí bãi đỗ xe riêng biệt, xa khu sản xuất/kho hàng. Không để xe trong lối thoát hiểm."
+81,Nguyên nhân khác / Rủi ro bổ sung,Cơ sở có các biện pháp bảo mật vật lý để ngăn ngừa hành vi phóng hỏa cố ý không?,single,"A) Có camera giám sát 24/7, bảo vệ trực, hàng rào/cổng kín, chiếu sáng an ninh ngoài trời [Điểm: 0, Rủi ro: safe]
+B) Có camera và khóa cổng nhưng không có bảo vệ trực ngoài giờ làm việc [Điểm: 1, Rủi ro: low]
+C) Không có camera, cổng lỏng lẻo, người lạ có thể xâm nhập khuôn viên dễ dàng [Điểm: 2, Rủi ro: high]
+D) Khuôn viên mở, không bảo mật, đã có dấu hiệu bị đe dọa hoặc phá hoại [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Không có camera, cổng lỏng lẻo, người lạ có thể xâm nhập khuôn viên dễ dàng. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Tăng cường an ninh: camera giám sát, bảo vệ 24/7. Phối hợp công an địa phương trong phòng ngừa."
+82,Nguyên nhân khác / Rủi ro bổ sung,"Cơ sở lân cận (hàng xóm, cơ sở cùng khu công nghiệp) có mang lại rủi ro cháy lan sang cơ sở của bạn không?",single,"A) Có tường ngăn cháy với cơ sở bên cạnh, khoảng cách an toàn đủ theo quy định [Điểm: 0, Rủi ro: safe]
+B) Liền kề nhưng cơ sở bên cạnh có hoạt động ít nguy cơ cháy (văn phòng, trường học) [Điểm: 1, Rủi ro: low]
+C) Liền kề cơ sở có nguy cơ cháy cao (kho hàng, xưởng gỗ) mà không có tường ngăn cháy [Điểm: 2, Rủi ro: high]
+D) Sát nhà hàng xóm kinh doanh xăng dầu, gas hoặc hóa chất, mái nhà thông nhau [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Liền kề cơ sở có nguy cơ cháy cao (kho hàng, xưởng gỗ) mà không có tường ngăn cháy. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Lắp van ngắt gas tự động và đầu dò khí gas LPG. Đặt bình gas nơi thoáng, xa nguồn nhiệt tối thiểu 1.5m."
+83,Nguyên nhân khác / Rủi ro bổ sung,Mức độ nhận thức và ý thức về an toàn PCCC của toàn thể nhân viên tại cơ sở như thế nào?,single,"A) 100% nhân viên được đào tạo PCCC, biết dùng bình chữa cháy, biết lối thoát, số 114 [Điểm: 0, Rủi ro: safe]
+B) Phần lớn nhân viên biết cơ bản, một số nhân viên mới chưa được đào tạo [Điểm: 1, Rủi ro: low]
+C) Nhân viên ít quan tâm PCCC, không biết vị trí bình chữa cháy và lối thoát nạn [Điểm: 2, Rủi ro: high]
+D) Nhân viên hoàn toàn không có kiến thức PCCC, chưa từng được phổ biến hay đào tạo [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Mua bổ sung bình chữa cháy ABC 4kg: 1 bình/50m². Đặt nơi dễ lấy, cao 0.8-1.5m. Kiểm tra hạn sử dụng hàng quý.
+- Nếu chọn (D): Khắc phục: Nhân viên hoàn toàn không có kiến thức PCCC, chưa từng được phổ biến hay đào tạo. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+84,Nguyên nhân khác / Rủi ro bổ sung,"Cơ sở có đang hoặc vừa trải qua quá trình xây dựng, sửa chữa, cải tạo không? Công tác PCCC trong thời gian thi công được quản lý như thế nào?",single,"A) Không có thi công; hoặc có, đã thông báo Cảnh sát PCCC, có phương án PCCC tạm thời [Điểm: 0, Rủi ro: safe]
+B) Đang sửa chữa nhỏ, có bình chữa cháy tại khu vực thi công nhưng chưa thông báo PCCC [Điểm: 1, Rủi ro: low]
+C) Đang cải tạo lớn, hệ thống PCCC bị ngắt tạm thời, chưa có biện pháp bù đắp [Điểm: 2, Rủi ro: high]
+D) Thi công trong khi vẫn hoạt động, PCCC bị vô hiệu hóa, hàn cắt không kiểm soát [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Đang cải tạo lớn, hệ thống PCCC bị ngắt tạm thời, chưa có biện pháp bù đắp. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Lập phiếu xin phép hàn cắt. Dọn sạch vật liệu dễ cháy 10m xung quanh. Bố trí 1 bình chữa cháy + 1 người giám sát."
+85,Nguyên nhân khác / Rủi ro bổ sung,"Rác thải, vật liệu phế phẩm và phế liệu có tích tụ tại cơ sở mà không được thu gom kịp thời không?",single,"A) Thu gom rác hàng ngày, phế liệu xử lý kịp thời, khu vực rác sạch sẽ, thùng có nắp [Điểm: 0, Rủi ro: safe]
+B) Thu gom 2-3 ngày/lần, có thùng chứa nhưng đôi khi đầy tràn [Điểm: 1, Rủi ro: low]
+C) Rác phế liệu tích tụ thành đống trong góc xưởng, chưa xử lý nhiều ngày [Điểm: 2, Rủi ro: high]
+D) Phế liệu dễ cháy chất đống lớn, gần nguồn nhiệt/điện, lâu ngày không thu gom [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Thu gom rác thải hữu cơ hàng ngày vào thùng kim loại có nắp. Không để tích tụ quá 24 giờ.
+- Nếu chọn (D): Bảo quản vật liệu dễ tự cháy nơi thông thoáng, không chất đống. Kiểm tra nhiệt độ kho định kỳ hàng ngày."
+86,Nguyên nhân khác / Rủi ro bổ sung,"Nhà thầu phụ, kỹ thuật viên bên ngoài hoặc nhân viên giao hàng vào cơ sở có được phổ biến quy tắc PCCC không?",single,"A) Có quy trình phổ biến PCCC bắt buộc cho người ngoài, đăng ký ra vào, có nhân viên đi kèm [Điểm: 0, Rủi ro: safe]
+B) Có nhắc nhở cơ bản nhưng không có quy trình chính thức, không đăng ký [Điểm: 1, Rủi ro: low]
+C) Nhà thầu ra vào tự do, không phổ biến PCCC, tự ý hàn cắt khi cần [Điểm: 2, Rủi ro: high]
+D) Nhà thầu mang thiết bị phát lửa vào khu vực nguy hiểm, không ai kiểm soát [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Lập phiếu xin phép hàn cắt. Dọn sạch vật liệu dễ cháy 10m xung quanh. Bố trí 1 bình chữa cháy + 1 người giám sát.
+- Nếu chọn (D): Khắc phục: Nhà thầu mang thiết bị phát lửa vào khu vực nguy hiểm, không ai kiểm soát. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+87,Nguyên nhân khác / Rủi ro bổ sung,"Trong các dịp lễ hội, sự kiện hoặc mùa tăng ca cao điểm, cơ sở có điều chỉnh biện pháp PCCC không?",single,"A) Tăng cường trực PCCC, kiểm tra điện trước sự kiện, bổ sung bình chữa cháy, giới hạn người [Điểm: 0, Rủi ro: safe]
+B) Có nhắc nhở chung nhưng không tăng cường trực hay kiểm tra thêm [Điểm: 1, Rủi ro: low]
+C) Không điều chỉnh, thêm đèn trang trí gây quá tải điện, lối thoát bị thu hẹp do đông người [Điểm: 2, Rủi ro: high]
+D) Sự kiện đông nghịt vượt sức chứa, đèn trang trí bịt kín lối thoát, không ai phụ trách PCCC [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Dọn sạch lối thoát hiểm ngay. Lắp đèn EXIT phát quang và đèn chiếu sáng sự cố. Không khóa cửa thoát nạn.
+- Nếu chọn (D): Dọn sạch lối thoát hiểm ngay. Lắp đèn EXIT phát quang và đèn chiếu sáng sự cố. Không khóa cửa thoát nạn."
+88,Nguyên nhân khác / Rủi ro bổ sung,Nhân viên có sử dụng điện thoại hoặc sạc pin cá nhân trong khu vực nguy hiểm hoặc kho hàng không?,single,"A) Cấm sử dụng và sạc thiết bị cá nhân trong khu nguy hiểm/kho, có biển cấm, có chế tài [Điểm: 0, Rủi ro: safe]
+B) Cho phép sử dụng điện thoại nhưng cấm sạc pin trong kho hàng và khu nguy hiểm [Điểm: 1, Rủi ro: low]
+C) Nhân viên tự ý sạc pin trong kho hàng, cắm vào ổ cắm không được phép [Điểm: 2, Rủi ro: high]
+D) Sạc nhiều điện thoại cùng lúc bằng ổ cắm tạm trong kho hàng dễ cháy, sạc qua đêm [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Nhân viên tự ý sạc pin trong kho hàng, cắm vào ổ cắm không được phép. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Sạc nhiều điện thoại cùng lúc bằng ổ cắm tạm trong kho hàng dễ cháy, sạc qua đêm. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+89,Nguyên nhân khác / Rủi ro bổ sung,Phòng máy chủ (server room) hoặc phòng điều khiển của cơ sở có được bảo vệ PCCC chuyên dụng không?,single,"A) Có hệ thống chữa cháy khí sạch, báo cháy sớm, kiểm soát ra vào, ĐHKK dự phòng [Điểm: 0, Rủi ro: safe]
+B) Có báo cháy và bình CO₂ riêng, ĐHKK hoạt động nhưng chưa có chữa cháy tự động [Điểm: 1, Rủi ro: low]
+C) Phòng server không có PCCC riêng, chung hệ thống với tòa nhà, nhiều giấy tờ trong phòng [Điểm: 2, Rủi ro: high]
+D) Phòng server không có PCCC, ĐHKK hỏng, nhiệt độ cao, máy chạy quá tải liên tục [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Phòng server không có PCCC riêng, chung hệ thống với tòa nhà, nhiều giấy tờ trong phòng. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Phòng server không có PCCC, ĐHKK hỏng, nhiệt độ cao, máy chạy quá tải liên tục. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+90,Nguyên nhân khác / Rủi ro bổ sung,Cơ sở có bảo hiểm cháy nổ hợp lệ và kế hoạch khôi phục hoạt động sau sự cố cháy (Business Continuity Plan) không?,single,"A) Có bảo hiểm cháy nổ bắt buộc còn hiệu lực và BCP được lập, cập nhật hàng năm [Điểm: 0, Rủi ro: safe]
+B) Có bảo hiểm cháy nổ nhưng chưa có kế hoạch khôi phục hoạt động sau cháy [Điểm: 1, Rủi ro: low]
+C) Bảo hiểm cháy nổ đã hết hạn hoặc mức bảo hiểm quá thấp so với giá trị tài sản [Điểm: 2, Rủi ro: high]
+D) Không có bảo hiểm cháy nổ, không có BCP, chưa từng nghĩ đến kịch bản sau cháy [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Bảo hiểm cháy nổ đã hết hạn hoặc mức bảo hiểm quá thấp so với giá trị tài sản. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Không có bảo hiểm cháy nổ, không có BCP, chưa từng nghĩ đến kịch bản sau cháy. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+91,Đặc thù: Sản xuất công nghiệp,"Quy trình sản xuất có sử dụng nhiệt độ cao (lò nung, lò sấy, nhiệt đóng gói) có được kiểm soát tự động không?",single,"A) Có thermostat tự động, ngắt quá nhiệt dự phòng độc lập, kiểm tra hiệu chuẩn định kỳ [Điểm: 0, Rủi ro: safe]
+B) Có thermostat nhưng chưa hiệu chuẩn lại gần đây, không có ngắt quá nhiệt dự phòng [Điểm: 1, Rủi ro: low]
+C) Điều chỉnh nhiệt thủ công, không có ngắt tự động, công nhân tự theo dõi bằng mắt [Điểm: 2, Rủi ro: high]
+D) Thiết bị gia nhiệt tự chế, không kiểm soát nhiệt, đã xảy ra quá nhiệt gây hỏng sản phẩm [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Điều chỉnh nhiệt thủ công, không có ngắt tự động, công nhân tự theo dõi bằng mắt. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Thiết bị gia nhiệt tự chế, không kiểm soát nhiệt, đã xảy ra quá nhiệt gây hỏng sản phẩm. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+92,Đặc thù: Sản xuất công nghiệp,"Khu vực sơn, phun sơn hoặc sử dụng dung môi hữu cơ có được thông gió và kiểm soát nồng độ hơi không?",single,"A) Có buồng sơn kín với quạt hút, bộ lọc, cảm biến VOC, thiết bị điện đạt cấp Ex phòng nổ [Điểm: 0, Rủi ro: safe]
+B) Có quạt hút nhưng không có cảm biến VOC, thiết bị điện chưa đạt cấp Ex [Điểm: 1, Rủi ro: low]
+C) Sơn phun trong xưởng mở, chỉ dùng quạt thông gió thường, hơi dung môi lan tỏa [Điểm: 2, Rủi ro: high]
+D) Phun sơn/dung môi trong phòng kín, không thông gió, nồng độ hơi cao, có ổ cắm thường [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Sơn phun trong xưởng mở, chỉ dùng quạt thông gió thường, hơi dung môi lan tỏa. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Phun sơn/dung môi trong phòng kín, không thông gió, nồng độ hơi cao, có ổ cắm thường. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+93,Đặc thù: Sản xuất công nghiệp,"Hệ thống truyền tải bụi (ống hút bụi, silo, cyclone) có được vệ sinh và kiểm tra nguy cơ nổ bụi định kỳ không?",single,"A) Có lịch vệ sinh định kỳ, kiểm tra nguy cơ nổ bụi, van xả áp trên silo/cyclone [Điểm: 0, Rủi ro: safe]
+B) Vệ sinh hàng tháng nhưng chưa đánh giá nguy cơ nổ bụi chuyên sâu [Điểm: 1, Rủi ro: low]
+C) Lâu chưa vệ sinh, bụi tích tụ dày trong ống dẫn, silo chưa có van xả áp [Điểm: 2, Rủi ro: high]
+D) Bụi tích cực dày trong toàn hệ thống, đã xảy ra phồng ống hoặc cháy nhỏ trong hệ thống hút [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Lâu chưa vệ sinh, bụi tích tụ dày trong ống dẫn, silo chưa có van xả áp. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Bụi tích cực dày trong toàn hệ thống, đã xảy ra phồng ống hoặc cháy nhỏ trong hệ thống hút. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+94,Đặc thù: Sản xuất công nghiệp,"Chất làm mát (coolant), dầu cắt gọt kim loại có tích tụ trên phoi kim loại và mùn cưa không?",single,"A) Phoi kim loại thu gom ngay, dầu coolant hứng trong khay, xử lý hàng ngày [Điểm: 0, Rủi ro: safe]
+B) Thu gom cuối ca, phoi có dính dầu nhưng lượng nhỏ, cách xa nguồn nhiệt [Điểm: 1, Rủi ro: low]
+C) Phoi kim loại dính dầu tích đống nhiều ngày gần máy tiện, máy phay đang chạy [Điểm: 2, Rủi ro: high]
+D) Phoi dính dầu chất đống lớn gần nguồn nhiệt/hàn cắt, đã có hiện tượng bốc khói [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Bảo quản xăng dầu trong kho riêng, xa nguồn nhiệt/điện. Dùng can chuyên dụng có nắp kín, gắn nhãn cảnh báo.
+- Nếu chọn (D): Lập phiếu xin phép hàn cắt. Dọn sạch vật liệu dễ cháy 10m xung quanh. Bố trí 1 bình chữa cháy + 1 người giám sát."
+95,Đặc thù: Sản xuất công nghiệp,Hệ thống điện trong nhà xưởng có được thiết kế và bảo trì phù hợp với tải sản xuất thực tế hiện tại không?,single,"A) Hệ thống điện thiết kế theo tải sản xuất, có dự phòng 20%, kiểm tra định kỳ bởi kỹ sư điện [Điểm: 0, Rủi ro: safe]
+B) Hệ thống đáp ứng tải hiện tại nhưng không còn dư phòng cho thiết bị mới [Điểm: 1, Rủi ro: low]
+C) Đã bổ sung nhiều máy mới mà không nâng cấp hệ thống điện, CB thỉnh thoảng nhảy [Điểm: 2, Rủi ro: high]
+D) Hệ thống điện quá tải nghiêm trọng, dây nóng khi chạy, đã phải nối tắt CB vì nhảy liên tục [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Kiểm tra và thay thế aptomat không đúng dòng định mức. Thử test aptomat bằng cách nhấn nút TEST hàng tháng.
+- Nếu chọn (D): Kiểm tra và thay thế aptomat không đúng dòng định mức. Thử test aptomat bằng cách nhấn nút TEST hàng tháng."
+96,Đặc thù: Sản xuất công nghiệp,"Khu vực nạp axit, pha hóa chất hoặc xử lý bề mặt kim loại có hệ thống thông gió và kiểm soát hơi axit không?",single,"A) Không có khu vực hóa chất; hoặc có quạt hút cục bộ, trung hòa axit, PPE đầy đủ [Điểm: 0, Rủi ro: safe]
+B) Có quạt hút nhưng công suất nhỏ, nhân viên có PPE nhưng không đầy đủ [Điểm: 1, Rủi ro: low]
+C) Không có hệ thống hút hơi, axit bay hơi tự do, ăn mòn thiết bị điện xung quanh [Điểm: 2, Rủi ro: high]
+D) Hơi axit mạnh ăn mòn dây điện và tủ điện gần đó, đã gây chập cháy thiết bị [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Không có hệ thống hút hơi, axit bay hơi tự do, ăn mòn thiết bị điện xung quanh. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Di chuyển vật liệu dễ cháy ra xa tủ điện ít nhất 1m. Lắp khóa và biển cảnh báo 'NGUY HIỂM - ĐIỆN CAO ÁP'."
+97,Đặc thù: Sản xuất công nghiệp,Hệ thống làm mát tháp nước hoặc chiller công nghiệp có được kiểm tra nguy cơ cháy nổ từ hóa chất xử lý nước không?,single,"A) Không có tháp giải nhiệt; hoặc có, dùng hóa chất xử lý nước an toàn, bảo trì đúng lịch [Điểm: 0, Rủi ro: safe]
+B) Có hệ thống chiller, bảo trì định kỳ nhưng chưa đánh giá nguy cơ cháy từ hóa chất [Điểm: 1, Rủi ro: low]
+C) Hệ thống cũ, motor quạt tháp giải nhiệt nóng bất thường, rung lắc mạnh [Điểm: 2, Rủi ro: high]
+D) Hệ thống cũ nát, dùng tấm tản nhiệt bằng nhựa PVC dễ cháy, motor quá tải thường xuyên [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): NGUY HIỂM: Ngắt ngay mạch điện có hiện tượng nóng/khét. Gọi thợ điện kiểm tra nguyên nhân (quá tải, chập mạch, tiếp xúc kém).
+- Nếu chọn (D): Khắc phục: Hệ thống cũ nát, dùng tấm tản nhiệt bằng nhựa PVC dễ cháy, motor quá tải thường xuyên. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+98,Đặc thù: Sản xuất công nghiệp,Hệ thống điện trở và cuộn sấy trong dây chuyền đóng gói có được kiểm tra ngăn vật liệu đóng gói tiếp xúc trực tiếp không?,single,"A) Không có máy sấy/hàn nhiệt đóng gói; hoặc có, thanh nhiệt có bảo vệ, cảm biến ngắt kẹt [Điểm: 0, Rủi ro: safe]
+B) Có thanh nhiệt, hoạt động tốt nhưng chưa có cảm biến ngắt khi vật liệu kẹt [Điểm: 1, Rủi ro: low]
+C) Vật liệu đóng gói (nilon, giấy) đôi khi kẹt vào thanh nhiệt gây chảy/cháy nhỏ [Điểm: 2, Rủi ro: high]
+D) Thanh nhiệt hỏng thermostat, quá nhiệt liên tục, vật liệu đóng gói đã bị cháy nhiều lần [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Vật liệu đóng gói (nilon, giấy) đôi khi kẹt vào thanh nhiệt gây chảy/cháy nhỏ. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Thanh nhiệt hỏng thermostat, quá nhiệt liên tục, vật liệu đóng gói đã bị cháy nhiều lần. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+99,Đặc thù: Sản xuất công nghiệp,Khu vực nạp điện cho xe nâng và thiết bị điện công nghiệp có được bố trí đúng không?,single,"A) Khu sạc riêng biệt, thông gió (khí hydro), sàn chống axit, bình chữa cháy, biển cấm lửa [Điểm: 0, Rủi ro: safe]
+B) Khu sạc riêng nhưng thông gió chưa đủ, chưa có biển cấm lửa [Điểm: 1, Rủi ro: low]
+C) Sạc xe nâng ngay trong kho hàng, gần hàng hóa dễ cháy, không thông gió [Điểm: 2, Rủi ro: high]
+D) Sạc ắc-quy xe nâng trong phòng kín, bộ sạc cũ hỏng, tia lửa khi sạc, khí hydro tích tụ [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Bố trí bãi đỗ xe riêng biệt, xa khu sản xuất/kho hàng. Không để xe trong lối thoát hiểm.
+- Nếu chọn (D): Bố trí bãi đỗ xe riêng biệt, xa khu sản xuất/kho hàng. Không để xe trong lối thoát hiểm."
+100,Đặc thù: Sản xuất công nghiệp,Nhân viên sản xuất có được đào tạo nhận biết dấu hiệu cảnh báo sớm nguy cơ cháy nổ liên quan đến quy trình của mình không?,single,"A) Đào tạo chuyên sâu cho từng vị trí, nhận biết dấu hiệu cháy nổ riêng, thực tập định kỳ [Điểm: 0, Rủi ro: safe]
+B) Đào tạo PCCC chung, chưa đi sâu vào nguy cơ đặc thù từng quy trình sản xuất [Điểm: 1, Rủi ro: low]
+C) Chỉ đào tạo cho quản lý, công nhân trực tiếp sản xuất chưa biết dấu hiệu cảnh báo [Điểm: 2, Rủi ro: high]
+D) Chưa ai được đào tạo, công nhân không biết dấu hiệu nguy hiểm của quy trình mình làm [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Chỉ đào tạo cho quản lý, công nhân trực tiếp sản xuất chưa biết dấu hiệu cảnh báo. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Chưa ai được đào tạo, công nhân không biết dấu hiệu nguy hiểm của quy trình mình làm. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+101,"Đặc thù: Kho hàng, kho vật liệu",Phân loại hàng hóa theo mức độ dễ cháy trong kho có được duy trì nhất quán không?,single,"A) Có bảng phân loại nguy hiểm cháy, hàng dễ cháy để kho riêng, nhãn cảnh báo rõ ràng [Điểm: 0, Rủi ro: safe]
+B) Có phân loại sơ bộ nhưng chưa dán nhãn đầy đủ, đôi khi xếp lẫn lộn [Điểm: 1, Rủi ro: low]
+C) Không phân loại, hàng dễ cháy và hàng thường để chung trong cùng kho [Điểm: 2, Rủi ro: high]
+D) Hàng nguy hiểm cháy nổ (aerosol, pin lithium, dung môi) để lẫn hàng thường, không nhãn [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Không phân loại, hàng dễ cháy và hàng thường để chung trong cùng kho. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Hàng nguy hiểm cháy nổ (aerosol, pin lithium, dung môi) để lẫn hàng thường, không nhãn. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+102,"Đặc thù: Kho hàng, kho vật liệu",Lối đi chính trong kho và lối tiếp cận chữa cháy có luôn thông thoáng không?,single,"A) Lối đi chính ≥ 2m thông suốt, lối tiếp cận xe cứu hỏa ≥ 3.5m, kiểm tra hàng ngày [Điểm: 0, Rủi ro: safe]
+B) Lối đi chính thông thoáng nhưng đôi khi có pallet tạm chiếm chỗ rồi dọn đi [Điểm: 1, Rủi ro: low]
+C) Lối đi chính bị hàng hóa thu hẹp, xe nâng phải đi khó khăn, lối thoát nạn hẹp [Điểm: 2, Rủi ro: high]
+D) Lối đi chính bị chặn hoàn toàn bởi hàng hóa, không thể đi qua khi khẩn cấp [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Dọn sạch lối thoát hiểm ngay. Lắp đèn EXIT phát quang và đèn chiếu sáng sự cố. Không khóa cửa thoát nạn.
+- Nếu chọn (D): Khắc phục: Lối đi chính bị chặn hoàn toàn bởi hàng hóa, không thể đi qua khi khẩn cấp. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+103,"Đặc thù: Kho hàng, kho vật liệu",Hàng hóa dễ cháy tồn kho ngoài giờ làm việc có được giám sát bởi hệ thống tự động không?,single,"A) Có hệ thống báo cháy tự động, camera nhiệt, kết nối trung tâm điều khiển 24/7 [Điểm: 0, Rủi ro: safe]
+B) Có báo cháy tự động nhưng không có camera nhiệt, bảo vệ tuần tra ban đêm [Điểm: 1, Rủi ro: low]
+C) Chỉ có bảo vệ tuần tra, không có hệ thống tự động phát hiện cháy [Điểm: 2, Rủi ro: high]
+D) Kho không có người trực ban đêm, không có bất kỳ hệ thống giám sát nào [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Chỉ có bảo vệ tuần tra, không có hệ thống tự động phát hiện cháy. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Kho không có người trực ban đêm, không có bất kỳ hệ thống giám sát nào. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+104,"Đặc thù: Kho hàng, kho vật liệu",Kệ hàng kim loại trong kho có được kiểm tra tải trọng và neo giữ chống đổ không?,single,"A) Kệ neo vào tường/sàn, tải trọng ghi rõ, không chất vượt tải, kiểm tra định kỳ [Điểm: 0, Rủi ro: safe]
+B) Kệ có neo giữ nhưng tải trọng không ghi rõ, chất hàng theo kinh nghiệm [Điểm: 1, Rủi ro: low]
+C) Kệ không neo giữ, đã bị nghiêng do chất quá tải, xe nâng va chạm làm cong [Điểm: 2, Rủi ro: high]
+D) Kệ hỏng cong vênh vẫn dùng, chất quá tải, đã từng đổ kệ gây hư hại [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Bố trí bãi đỗ xe riêng biệt, xa khu sản xuất/kho hàng. Không để xe trong lối thoát hiểm.
+- Nếu chọn (D): Khắc phục: Kệ hỏng cong vênh vẫn dùng, chất quá tải, đã từng đổ kệ gây hư hại. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+105,"Đặc thù: Kho hàng, kho vật liệu","Hàng hóa nguy hiểm (pin lithium, aerosol, hàng dễ cháy đặc biệt) có được xác định và bảo quản riêng không?",single,"A) Khu vực riêng cho hàng nguy hiểm, tường ngăn cháy, sprinkler, biển cảnh báo đầy đủ [Điểm: 0, Rủi ro: safe]
+B) Để khu riêng nhưng không có tường ngăn cháy, có biển cảnh báo [Điểm: 1, Rủi ro: low]
+C) Hàng nguy hiểm để chung với hàng thường, không nhãn cảnh báo đặc biệt [Điểm: 2, Rủi ro: high]
+D) Pin lithium, aerosol để chung đống lớn sát tủ điện, không biện pháp bảo vệ [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Hàng nguy hiểm để chung với hàng thường, không nhãn cảnh báo đặc biệt. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Di chuyển vật liệu dễ cháy ra xa tủ điện ít nhất 1m. Lắp khóa và biển cảnh báo 'NGUY HIỂM - ĐIỆN CAO ÁP'."
+106,"Đặc thù: Kho hàng, kho vật liệu",Kho lạnh hoặc kho đông có hệ thống phát hiện và ngắt an toàn khi xảy ra sự cố môi chất lạnh không?,single,"A) Không có kho lạnh; hoặc có, cảm biến rò môi chất, quạt sự cố, van ngắt khẩn cấp [Điểm: 0, Rủi ro: safe]
+B) Có kho lạnh, van ngắt tay nhưng chưa có cảm biến tự động phát hiện rò rỉ [Điểm: 1, Rủi ro: low]
+C) Kho lạnh cũ dùng NH₃, đường ống ăn mòn, không có cảm biến rò khí [Điểm: 2, Rủi ro: high]
+D) Kho lạnh NH₃ rò rỉ thường xuyên, không cảm biến, phòng máy kín, rất nguy hiểm [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Kho lạnh cũ dùng NH₃, đường ống ăn mòn, không có cảm biến rò khí. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Kho lạnh NH₃ rò rỉ thường xuyên, không cảm biến, phòng máy kín, rất nguy hiểm. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+107,"Đặc thù: Kho hàng, kho vật liệu",Ánh sáng chiếu sáng trong kho có được lắp đặt an toàn và không tiếp xúc với hàng hóa dễ cháy không?,single,"A) Đèn LED, cách hàng ≥ 0.5m, chao đèn bảo vệ, dây điện luồn ống đúng kỹ thuật [Điểm: 0, Rủi ro: safe]
+B) Đèn LED nhưng một số vị trí hàng xếp cao gần sát đèn [Điểm: 1, Rủi ro: low]
+C) Dùng đèn huỳnh quang/sợi đốt, hàng dễ cháy xếp sát đèn, ballast cũ nóng [Điểm: 2, Rủi ro: high]
+D) Đèn sợi đốt tỏa nhiệt chạm trực tiếp vào hàng vải/giấy/nhựa, đã có hiện tượng ố cháy [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): NGUY HIỂM: Ngắt ngay mạch điện có hiện tượng nóng/khét. Gọi thợ điện kiểm tra nguyên nhân (quá tải, chập mạch, tiếp xúc kém).
+- Nếu chọn (D): Đốt vàng mã trong lư/thùng kim loại có nắp, đặt trên nền bê tông, xa vật liệu dễ cháy 3m. Luôn có người trông coi."
+108,"Đặc thù: Kho hàng, kho vật liệu","Hàng hóa trả lại, hàng hỏng và phế phẩm có được quản lý riêng trong kho không?",single,"A) Có khu riêng cho hàng trả lại/hỏng, kiểm tra và xử lý trong ngày, không tích tụ [Điểm: 0, Rủi ro: safe]
+B) Có khu riêng nhưng xử lý hàng tuần, đôi khi tích tụ nhiều [Điểm: 1, Rủi ro: low]
+C) Hàng hỏng để lẫn trong kho chính, tích tụ lâu ngày không xử lý [Điểm: 2, Rủi ro: high]
+D) Hàng hỏng (pin rò, aerosol méo, hóa chất đổ) chất đống trong kho không ai quản lý [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Hàng hỏng để lẫn trong kho chính, tích tụ lâu ngày không xử lý. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Bảo quản vật liệu dễ tự cháy nơi thông thoáng, không chất đống. Kiểm tra nhiệt độ kho định kỳ hàng ngày."
+109,"Đặc thù: Kho hàng, kho vật liệu",Việc sạc pin xe nâng và thiết bị điện trong kho được thực hiện ở khu vực được chỉ định an toàn không?,single,"A) Không sạc trong kho; hoặc sạc tại khu riêng thông gió, sàn chống axit, biển cấm lửa [Điểm: 0, Rủi ro: safe]
+B) Sạc tại góc kho có thông gió nhưng cách hàng hóa chỉ vài mét [Điểm: 1, Rủi ro: low]
+C) Sạc xe nâng giữa kho, gần hàng dễ cháy, không thông gió riêng [Điểm: 2, Rủi ro: high]
+D) Sạc ắc-quy cũ rò axit giữa kho hàng dễ cháy, bộ sạc tóe tia lửa khi cắm [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Bố trí bãi đỗ xe riêng biệt, xa khu sản xuất/kho hàng. Không để xe trong lối thoát hiểm.
+- Nếu chọn (D): Khắc phục: Sạc ắc-quy cũ rò axit giữa kho hàng dễ cháy, bộ sạc tóe tia lửa khi cắm. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+110,"Đặc thù: Kho hàng, kho vật liệu",Kho có quy trình thực hành tốt để duy trì an toàn PCCC hàng ngày không?,single,"A) Có checklist PCCC hàng ngày: kiểm tra thoát hiểm, bình chữa cháy, tủ điện, cuối ngày ký xác nhận [Điểm: 0, Rủi ro: safe]
+B) Có nhắc nhở chung về PCCC nhưng không có checklist cụ thể hàng ngày [Điểm: 1, Rủi ro: low]
+C) Không có quy trình PCCC hàng ngày, chỉ kiểm tra khi có đoàn thanh tra [Điểm: 2, Rủi ro: high]
+D) Không có bất kỳ quy trình PCCC nào, nhân viên kho không biết trách nhiệm PCCC [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Không có quy trình PCCC hàng ngày, chỉ kiểm tra khi có đoàn thanh tra. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Thu gom rác thải hữu cơ hàng ngày vào thùng kim loại có nắp. Không để tích tụ quá 24 giờ."
+111,Đặc thù: Nhà ở hỗn hợp (ở + kinh doanh),"Khu vực kinh doanh và khu vực sinh hoạt gia đình có được ngăn cách bằng tường và cửa chống cháy không, hay chỉ phân biệt bằng nội thất?",single,"A) Ngăn cách bằng tường chịu lửa và cửa chống cháy tự đóng, lối đi riêng biệt [Điểm: 0, Rủi ro: safe]
+B) Có tường ngăn thường (gạch), cửa thường, nhưng lối đi chung qua khu kinh doanh [Điểm: 1, Rủi ro: low]
+C) Chỉ phân biệt bằng nội thất, không có tường ngăn, hàng hóa tràn vào khu sinh hoạt [Điểm: 2, Rủi ro: high]
+D) Toàn bộ nhà (kể cả phòng ngủ, cầu thang) đều chứa hàng hóa kinh doanh [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Chỉ phân biệt bằng nội thất, không có tường ngăn, hàng hóa tràn vào khu sinh hoạt. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Toàn bộ nhà (kể cả phòng ngủ, cầu thang) đều chứa hàng hóa kinh doanh. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+112,Đặc thù: Nhà ở hỗn hợp (ở + kinh doanh),Lối thoát nạn từ tầng ở phía trên có hoàn toàn độc lập với lối ra vào của khu kinh doanh tầng dưới không?,single,"A) Có cầu thang thoát hiểm riêng hoặc ban công kết nối nhà bên, không qua khu kinh doanh [Điểm: 0, Rủi ro: safe]
+B) Cầu thang đi qua tầng kinh doanh nhưng bằng bê tông, có cửa ngăn tại mỗi tầng [Điểm: 1, Rủi ro: low]
+C) Cầu thang duy nhất đi qua khu kinh doanh đầy hàng hóa, không có cửa ngăn [Điểm: 2, Rủi ro: high]
+D) Tầng trên hoàn toàn bị giam kín (chuồng cọp), chỉ có 1 lối duy nhất qua tầng dưới [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Cầu thang duy nhất đi qua khu kinh doanh đầy hàng hóa, không có cửa ngăn. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Tầng trên hoàn toàn bị giam kín (chuồng cọp), chỉ có 1 lối duy nhất qua tầng dưới. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+113,Đặc thù: Nhà ở hỗn hợp (ở + kinh doanh),"Hệ thống điện phục vụ kinh doanh và điện sinh hoạt gia đình có được tách riêng mạch, riêng CB, có thể ngắt độc lập không?",single,"A) Mạch điện kinh doanh và sinh hoạt tách riêng hoàn toàn, CB riêng, ngắt độc lập [Điểm: 0, Rủi ro: safe]
+B) Có CB riêng cho khu kinh doanh nhưng chung công tơ, chung dây tổng [Điểm: 1, Rủi ro: low]
+C) Dùng chung mạch điện, thiết bị kinh doanh và gia đình cắm cùng ổ cắm [Điểm: 2, Rủi ro: high]
+D) Chung mạch điện, thường xuyên quá tải do thiết bị kinh doanh, CB nhảy liên tục [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Dùng chung mạch điện, thiết bị kinh doanh và gia đình cắm cùng ổ cắm. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Kiểm tra và thay thế aptomat không đúng dòng định mức. Thử test aptomat bằng cách nhấn nút TEST hàng tháng."
+114,Đặc thù: Nhà ở hỗn hợp (ở + kinh doanh),"Hàng hóa kinh doanh được để qua đêm trong cửa hàng có được sắp xếp cách xa nguồn điện, nguồn nhiệt và không chất vào khu sinh hoạt không?",single,"A) Hàng hóa xếp gọn tầng dưới, cách xa ổ cắm/tủ điện ≥ 1m, không chất lên tầng sinh hoạt [Điểm: 0, Rủi ro: safe]
+B) Hàng hóa xếp gọn nhưng một số gần ổ cắm, không tràn lên tầng sinh hoạt [Điểm: 1, Rủi ro: low]
+C) Hàng hóa dễ cháy xếp sát tủ điện, ổ cắm, một phần tràn vào khu sinh hoạt [Điểm: 2, Rủi ro: high]
+D) Hàng hóa dễ cháy chất khắp nhà kể cả cầu thang, phòng ngủ, sát thiết bị điện [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Di chuyển vật liệu dễ cháy ra xa tủ điện ít nhất 1m. Lắp khóa và biển cảnh báo 'NGUY HIỂM - ĐIỆN CAO ÁP'.
+- Nếu chọn (D): Khắc phục: Hàng hóa dễ cháy chất khắp nhà kể cả cầu thang, phòng ngủ, sát thiết bị điện. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+115,Đặc thù: Nhà ở hỗn hợp (ở + kinh doanh),Có cảm biến khói được lắp đặt trong từng phòng ngủ của khu ở không?,single,"A) Có cảm biến khói trong mỗi phòng ngủ, kiểm tra pin hàng tháng, hoạt động tốt [Điểm: 0, Rủi ro: safe]
+B) Có cảm biến khói ở hành lang các tầng ngủ nhưng chưa lắp trong từng phòng [Điểm: 1, Rủi ro: low]
+C) Chỉ có 1 cảm biến ở tầng kinh doanh, tầng ngủ không có cảm biến [Điểm: 2, Rủi ro: high]
+D) Không có bất kỳ cảm biến khói nào trong nhà [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Chỉ có 1 cảm biến ở tầng kinh doanh, tầng ngủ không có cảm biến. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Không có bất kỳ cảm biến khói nào trong nhà. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+116,Đặc thù: Nhà ở hỗn hợp (ở + kinh doanh),"Các thiết bị điện kinh doanh hoạt động 24/7 như tủ đông, tủ mát, biển hiệu LED có được bảo dưỡng định kỳ không?",single,"A) Bảo dưỡng 6 tháng/lần, mạch điện riêng có CB, kiểm tra dây điện và motor định kỳ [Điểm: 0, Rủi ro: safe]
+B) Hoạt động bình thường, chỉ sửa khi hỏng, chưa bảo dưỡng chủ động [Điểm: 1, Rủi ro: low]
+C) Chạy liên tục nhiều năm không bảo dưỡng, motor kêu lạ, dây điện nóng [Điểm: 2, Rủi ro: high]
+D) Tủ đông/tủ mát motor cháy khét vẫn chạy, biển hiệu LED cũ chập chờn, chưa sửa [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): NGUY HIỂM: Ngắt ngay mạch điện có hiện tượng nóng/khét. Gọi thợ điện kiểm tra nguyên nhân (quá tải, chập mạch, tiếp xúc kém).
+- Nếu chọn (D): NGUY HIỂM: Ngắt ngay mạch điện có hiện tượng nóng/khét. Gọi thợ điện kiểm tra nguyên nhân (quá tải, chập mạch, tiếp xúc kém)."
+117,Đặc thù: Nhà ở hỗn hợp (ở + kinh doanh),Bếp nấu ăn của gia đình và bếp chế biến phục vụ kinh doanh có được tách biệt về không gian và nguồn nhiệt không?,single,"A) Bếp gia đình và bếp kinh doanh ở phòng riêng, quạt hút riêng, bình gas riêng [Điểm: 0, Rủi ro: safe]
+B) Cùng phòng bếp nhưng bếp kinh doanh có quạt hút mùi, bình gas đặt nơi thoáng [Điểm: 1, Rủi ro: low]
+C) Dùng chung bếp quá tải, nhiều bình gas cùng phòng nhỏ, thông gió kém [Điểm: 2, Rủi ro: high]
+D) Bếp kinh doanh đặt ngay trong khu bán hàng hoặc gần kho hàng dễ cháy [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Lắp van ngắt gas tự động và đầu dò khí gas LPG. Đặt bình gas nơi thoáng, xa nguồn nhiệt tối thiểu 1.5m.
+- Nếu chọn (D): Khắc phục: Bếp kinh doanh đặt ngay trong khu bán hàng hoặc gần kho hàng dễ cháy. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+118,Đặc thù: Nhà ở hỗn hợp (ở + kinh doanh),"Trẻ em trong gia đình có biết đường thoát nạn, biết điểm tập kết ngoài nhà và biết phải làm gì khi nghe chuông cảm biến khói kêu không?",single,"A) Trẻ em đã được dạy, biết đường thoát, biết điểm tập kết, đã diễn tập gia đình [Điểm: 0, Rủi ro: safe]
+B) Đã nói cho trẻ biết lối thoát nhưng chưa diễn tập thực tế [Điểm: 1, Rủi ro: low]
+C) Trẻ chưa được hướng dẫn về thoát nạn, gia đình chưa nghĩ đến việc này [Điểm: 2, Rủi ro: high]
+D) Trẻ nhỏ ngủ phòng kín trên tầng cao, không có lối thoát thứ hai, không ai hướng dẫn [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Dọn sạch lối thoát hiểm ngay. Lắp đèn EXIT phát quang và đèn chiếu sáng sự cố. Không khóa cửa thoát nạn.
+- Nếu chọn (D): Dọn sạch lối thoát hiểm ngay. Lắp đèn EXIT phát quang và đèn chiếu sáng sự cố. Không khóa cửa thoát nạn."
+119,Đặc thù: Nhà ở hỗn hợp (ở + kinh doanh),"Cầu thang bộ trong nhà nhiều tầng có cửa ngăn khói tại mỗi tầng với cơ chế tự đóng, và không bị xe máy hay đồ đạc chiếm chỗ không?",single,"A) Cầu thang bê tông, cửa ngăn khói tự đóng mỗi tầng, không để đồ đạc, xe máy trên cầu thang [Điểm: 0, Rủi ro: safe]
+B) Cầu thang bê tông, không có cửa ngăn khói nhưng thông thoáng, không để đồ đạc [Điểm: 1, Rủi ro: low]
+C) Cầu thang bị xe máy, đồ đạc chiếm chỗ, phải len qua khi đi, không có cửa ngăn khói [Điểm: 2, Rủi ro: high]
+D) Cầu thang gỗ duy nhất, chất đầy đồ đạc và xe máy, khi cháy tầng 1 không thể thoát [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Bố trí bãi đỗ xe riêng biệt, xa khu sản xuất/kho hàng. Không để xe trong lối thoát hiểm.
+- Nếu chọn (D): Dọn sạch lối thoát hiểm ngay. Lắp đèn EXIT phát quang và đèn chiếu sáng sự cố. Không khóa cửa thoát nạn."
+120,Đặc thù: Nhà ở hỗn hợp (ở + kinh doanh),"Gia đình đã từng thực hành diễn tập thoát nạn, kể cả tình huống giả định cháy xảy ra vào ban đêm khi mọi người đang ngủ chưa?",single,"A) Đã diễn tập thoát nạn ban đêm, mọi người biết cách, có thang dây hoặc lối thoát phụ [Điểm: 0, Rủi ro: safe]
+B) Đã bàn về kế hoạch thoát nạn nhưng chưa thực hành, có đèn pin sẵn [Điểm: 1, Rủi ro: low]
+C) Chưa bao giờ nghĩ đến việc diễn tập, không có kế hoạch thoát nạn gia đình [Điểm: 2, Rủi ro: high]
+D) Nhà nhiều tầng, cửa khóa kín ban đêm, không ai biết phải làm gì nếu cháy lúc ngủ [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Dọn sạch lối thoát hiểm ngay. Lắp đèn EXIT phát quang và đèn chiếu sáng sự cố. Không khóa cửa thoát nạn.
+- Nếu chọn (D): Khắc phục: Nhà nhiều tầng, cửa khóa kín ban đêm, không ai biết phải làm gì nếu cháy lúc ngủ. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+121,"Đặc thù: Nhà hàng, khách sạn, chợ, TTTM","Hệ thống ống hút khói và bộ lọc mỡ của bếp công nghiệp có được vệ sinh định kỳ không, hay đã có mùi khét và quạt chạy chậm hơn bình thường?",single,"A) Vệ sinh ống hút và bộ lọc mỡ mỗi 3 tháng bởi đơn vị chuyên nghiệp, có biên bản [Điểm: 0, Rủi ro: safe]
+B) Tự vệ sinh 6 tháng/lần, quạt hoạt động bình thường, chưa mời đơn vị chuyên nghiệp [Điểm: 1, Rủi ro: low]
+C) Lâu chưa vệ sinh, bộ lọc mỡ bám dày, quạt chạy chậm, có mùi khét khi nấu [Điểm: 2, Rủi ro: high]
+D) Chưa bao giờ vệ sinh ống hút, mỡ nhỏ giọt ngược, quạt gần kẹt, đã có cháy mỡ nhỏ [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): NGUY HIỂM: Ngắt ngay mạch điện có hiện tượng nóng/khét. Gọi thợ điện kiểm tra nguyên nhân (quá tải, chập mạch, tiếp xúc kém).
+- Nếu chọn (D): Khắc phục: Chưa bao giờ vệ sinh ống hút, mỡ nhỏ giọt ngược, quạt gần kẹt, đã có cháy mỡ nhỏ. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+122,"Đặc thù: Nhà hàng, khách sạn, chợ, TTTM","Toàn bộ nhân viên có được đào tạo quy trình dẫn khách thoát nạn, và cơ sở đã tổ chức diễn tập sơ tán có sự tham gia của khách hàng thực tế chưa?",single,"A) 100% nhân viên được đào tạo, có diễn tập sơ tán thực tế bao gồm khách, định kỳ 6 tháng [Điểm: 0, Rủi ro: safe]
+B) Nhân viên được đào tạo lý thuyết, chưa tổ chức diễn tập có khách tham gia [Điểm: 1, Rủi ro: low]
+C) Chỉ quản lý biết quy trình, nhân viên phục vụ không biết dẫn khách thoát nạn [Điểm: 2, Rủi ro: high]
+D) Không ai được đào tạo, cơ sở đông khách nhưng chưa từng diễn tập sơ tán [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Dọn sạch lối thoát hiểm ngay. Lắp đèn EXIT phát quang và đèn chiếu sáng sự cố. Không khóa cửa thoát nạn.
+- Nếu chọn (D): Khắc phục: Không ai được đào tạo, cơ sở đông khách nhưng chưa từng diễn tập sơ tán. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+123,"Đặc thù: Nhà hàng, khách sạn, chợ, TTTM","Ban quản lý chợ/TTTM có thực sự kiểm tra và xử lý khi tiểu thương sử dụng bếp lửa, bếp gas hoặc bếp cồn ngay tại gian hàng không?",single,"A) Cấm tuyệt đối bếp lửa/gas tại gian hàng, kiểm tra hàng ngày, xử phạt vi phạm [Điểm: 0, Rủi ro: safe]
+B) Có quy định cấm nhưng kiểm tra không thường xuyên, đôi khi bỏ qua vi phạm nhỏ [Điểm: 1, Rủi ro: low]
+C) Biết tiểu thương dùng bếp gas nhưng không xử lý vì sợ mất mối quan hệ [Điểm: 2, Rủi ro: high]
+D) Nhiều gian hàng dùng bếp gas/cồn thoải mái, bình gas để trong gian hàng kín [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Lắp van ngắt gas tự động và đầu dò khí gas LPG. Đặt bình gas nơi thoáng, xa nguồn nhiệt tối thiểu 1.5m.
+- Nếu chọn (D): Lắp van ngắt gas tự động và đầu dò khí gas LPG. Đặt bình gas nơi thoáng, xa nguồn nhiệt tối thiểu 1.5m."
+124,"Đặc thù: Nhà hàng, khách sạn, chợ, TTTM","Cửa phòng khách sạn có phải cửa chống cháy với cơ chế tự đóng không, và nhân viên có nhắc khách không được chèn cửa mở không?",single,"A) Cửa phòng chống cháy với tay gạt tự đóng, nhân viên nhắc khách không chèn cửa [Điểm: 0, Rủi ro: safe]
+B) Cửa phòng có tự đóng nhưng nhân viên không nhắc khách về quy định [Điểm: 1, Rủi ro: low]
+C) Cửa phòng thường, không tự đóng, khách thường chèn cửa mở cho thoáng [Điểm: 2, Rủi ro: high]
+D) Cửa gỗ mỏng không chống cháy, tay gạt hỏng, hành lang không có cửa ngăn khói [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Cửa phòng thường, không tự đóng, khách thường chèn cửa mở cho thoáng. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Cửa gỗ mỏng không chống cháy, tay gạt hỏng, hành lang không có cửa ngăn khói. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+125,"Đặc thù: Nhà hàng, khách sạn, chợ, TTTM","Trong các dịp lễ tết khi bổ sung đèn trang trí, tải điện thực tế có được tính toán lại và kiểm tra không vượt quá công suất thiết kế không?",single,"A) Có tính toán tải trước khi lắp đèn trang trí, dùng đèn LED tiết kiệm, CB riêng cho đèn [Điểm: 0, Rủi ro: safe]
+B) Dùng đèn LED nhưng chưa tính toán tải cụ thể, cắm vào ổ cắm hiện có [Điểm: 1, Rủi ro: low]
+C) Lắp nhiều đèn sợi đốt/dây đèn nhấp nháy, dùng ổ cắm kéo dài nối chồng [Điểm: 2, Rủi ro: high]
+D) Đèn trang trí khắp nơi kể cả gần rèm/vải, nối điện chồng chéo, CB nhảy phải nối tắt [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Thay thế ổ cắm hỏng/méo. Không cắm chồng nhiều ổ nối dài. Dùng ổ cắm có nắp bảo vệ tại nơi ẩm ướt.
+- Nếu chọn (D): Kiểm tra và thay thế aptomat không đúng dòng định mức. Thử test aptomat bằng cách nhấn nút TEST hàng tháng."
+126,"Đặc thù: Nhà hàng, khách sạn, chợ, TTTM","Cửa kho hàng trong TTTM/siêu thị có luôn được đóng kín và có cơ chế tự đóng, hay thường xuyên bị chèn mở suốt ngày vì nhân viên đi lại?",single,"A) Cửa kho chống cháy tự đóng, có gắn nam châm giữ mở kết nối hệ thống báo cháy [Điểm: 0, Rủi ro: safe]
+B) Cửa kho tự đóng nhưng nhân viên thỉnh thoảng chèn mở rồi đóng lại [Điểm: 1, Rủi ro: low]
+C) Cửa kho luôn bị chèn mở bằng gạch/nêm suốt ngày vì nhân viên đi lại thường xuyên [Điểm: 2, Rủi ro: high]
+D) Cửa kho hỏng không đóng được, kho thông với sàn bán hàng, hàng hóa tràn ra ngoài [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Cửa kho luôn bị chèn mở bằng gạch/nêm suốt ngày vì nhân viên đi lại thường xuyên. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Cửa kho hỏng không đóng được, kho thông với sàn bán hàng, hàng hóa tràn ra ngoài. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+127,"Đặc thù: Nhà hàng, khách sạn, chợ, TTTM",Khách sạn có danh sách phòng đang có khách được cập nhật real-time và quy trình kiểm tra từng phòng khi có báo động cháy không?,single,"A) Hệ thống quản lý phòng real-time, quy trình rõ ai kiểm tra phòng nào, master key sẵn sàng [Điểm: 0, Rủi ro: safe]
+B) Biết phòng nào có khách nhưng chưa có quy trình phân công kiểm tra cụ thể [Điểm: 1, Rủi ro: low]
+C) Danh sách phòng cập nhật thủ công, có thể sai lệch, chưa có quy trình kiểm tra [Điểm: 2, Rủi ro: high]
+D) Không quản lý danh sách phòng có khách, khi cháy không biết phòng nào cần kiểm tra [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Danh sách phòng cập nhật thủ công, có thể sai lệch, chưa có quy trình kiểm tra. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Không quản lý danh sách phòng có khách, khi cháy không biết phòng nào cần kiểm tra. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+128,"Đặc thù: Nhà hàng, khách sạn, chợ, TTTM","Bếp nhà hàng có hệ thống chữa cháy tự động chuyên dụng cho cháy dầu mỡ (wet chemical system), hay chỉ trang bị bình CO₂ thông thường?",single,"A) Có hệ thống dập cháy bếp tự động (wet chemical/ANSUL), kiểm tra 6 tháng/lần [Điểm: 0, Rủi ro: safe]
+B) Có bình chữa cháy bếp chuyên dụng (loại K/F) nhưng chưa có hệ thống tự động [Điểm: 1, Rủi ro: low]
+C) Chỉ có bình CO₂ hoặc bột ABC cho bếp, không phù hợp cho cháy dầu mỡ [Điểm: 2, Rủi ro: high]
+D) Không có bình chữa cháy nào trong bếp, dập cháy dầu bằng nước (rất nguy hiểm) [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Bảo quản xăng dầu trong kho riêng, xa nguồn nhiệt/điện. Dùng can chuyên dụng có nắp kín, gắn nhãn cảnh báo.
+- Nếu chọn (D): Mua bổ sung bình chữa cháy ABC 4kg: 1 bình/50m². Đặt nơi dễ lấy, cao 0.8-1.5m. Kiểm tra hạn sử dụng hàng quý."
+129,"Đặc thù: Nhà hàng, khách sạn, chợ, TTTM","Bảo vệ cuối ngày có thực hiện kiểm tra từng gian hàng theo checklist cụ thể trước khi đóng cửa chợ/TTTM không, hay chỉ tắt đèn và khóa cổng?",single,"A) Có checklist kiểm tra: điện từng gian hàng, bình gas, lối thoát, ký xác nhận mỗi tối [Điểm: 0, Rủi ro: safe]
+B) Bảo vệ đi qua từng khu nhưng không có checklist, kiểm tra bằng mắt [Điểm: 1, Rủi ro: low]
+C) Bảo vệ chỉ tắt đèn chung và khóa cổng, không kiểm tra từng gian hàng [Điểm: 2, Rủi ro: high]
+D) Không kiểm tra gì, tiểu thương tự khóa gian hàng, đôi khi quên tắt điện/bếp [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Bảo vệ chỉ tắt đèn chung và khóa cổng, không kiểm tra từng gian hàng. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Đốt vàng mã trong lư/thùng kim loại có nắp, đặt trên nền bê tông, xa vật liệu dễ cháy 3m. Luôn có người trông coi."
+130,"Đặc thù: Nhà hàng, khách sạn, chợ, TTTM","Cơ sở có tính toán và kiểm soát số người tối đa được phép có mặt theo thiết kế thoát nạn, đặc biệt trong các sự kiện đông người không?",single,"A) Có biển ghi sức chứa tối đa, kiểm soát số người vào, đóng cửa khi đạt giới hạn [Điểm: 0, Rủi ro: safe]
+B) Biết sức chứa thiết kế nhưng chưa kiểm soát đếm người ra vào [Điểm: 1, Rủi ro: low]
+C) Không biết sức chứa tối đa, sự kiện đông nghịt nhưng không giới hạn [Điểm: 2, Rủi ro: high]
+D) Đông vượt xa sức chứa, lối thoát kẹt cứng người, đã xảy ra chen lấn nguy hiểm [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Không biết sức chứa tối đa, sự kiện đông nghịt nhưng không giới hạn. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Dọn sạch lối thoát hiểm ngay. Lắp đèn EXIT phát quang và đèn chiếu sáng sự cố. Không khóa cửa thoát nạn."
+131,"Đặc thù: Bệnh viện, trường học, cơ sở y tế",Cơ sở y tế có phương án và thiết bị sơ tán chuyên dụng cho bệnh nhân không thể tự di chuyển hoặc đang phụ thuộc vào thiết bị hỗ trợ sự sống không?,single,"A) Có phương án chi tiết, xe lăn sơ tán, tấm trượt, phân công cụ thể, đã diễn tập [Điểm: 0, Rủi ro: safe]
+B) Có phương án chung nhưng chưa có thiết bị sơ tán chuyên dụng, chưa diễn tập [Điểm: 1, Rủi ro: low]
+C) Chỉ có phương án cho người tự đi, bệnh nhân nặng chưa có kế hoạch sơ tán cụ thể [Điểm: 2, Rủi ro: high]
+D) Không có phương án sơ tán nào, bệnh nhân nằm liệt tầng cao không có thang máy cứu hỏa [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Đốt vàng mã trong lư/thùng kim loại có nắp, đặt trên nền bê tông, xa vật liệu dễ cháy 3m. Luôn có người trông coi.
+- Nếu chọn (D): Đốt vàng mã trong lư/thùng kim loại có nắp, đặt trên nền bê tông, xa vật liệu dễ cháy 3m. Luôn có người trông coi."
+132,"Đặc thù: Bệnh viện, trường học, cơ sở y tế","Trường học có tổ chức diễn tập sơ tán phù hợp với từng độ tuổi học sinh, kể cả tình huống không báo trước không?",single,"A) Diễn tập sơ tán 2 lần/năm, phù hợp từng lứa tuổi, bao gồm tình huống không báo trước [Điểm: 0, Rủi ro: safe]
+B) Diễn tập 1 lần/năm có báo trước, tất cả học sinh biết lối thoát [Điểm: 1, Rủi ro: low]
+C) Chỉ phổ biến lý thuyết, chưa tổ chức diễn tập thực tế cho học sinh [Điểm: 2, Rủi ro: high]
+D) Chưa bao giờ tổ chức diễn tập, học sinh không biết lối thoát nạn [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Chỉ phổ biến lý thuyết, chưa tổ chức diễn tập thực tế cho học sinh. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Dọn sạch lối thoát hiểm ngay. Lắp đèn EXIT phát quang và đèn chiếu sáng sự cố. Không khóa cửa thoát nạn."
+133,"Đặc thù: Bệnh viện, trường học, cơ sở y tế",Kho lưu trữ hồ sơ bệnh án giấy có được bảo vệ bằng hệ thống phát hiện và chữa cháy chuyên dụng không?,single,"A) Kho riêng có báo cháy sớm, bình CO₂, tường chống cháy, có bản sao lưu số [Điểm: 0, Rủi ro: safe]
+B) Kho riêng có bình chữa cháy, chưa có báo cháy riêng, đang số hóa dần [Điểm: 1, Rủi ro: low]
+C) Hồ sơ giấy để trong phòng làm việc chung, không có PCCC riêng, chưa sao lưu số [Điểm: 2, Rủi ro: high]
+D) Hồ sơ giấy chất đống trong kho kín không PCCC, là bản gốc duy nhất [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Hồ sơ giấy để trong phòng làm việc chung, không có PCCC riêng, chưa sao lưu số. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Bảo quản vật liệu dễ tự cháy nơi thông thoáng, không chất đống. Kiểm tra nhiệt độ kho định kỳ hàng ngày."
+134,"Đặc thù: Bệnh viện, trường học, cơ sở y tế","Cồn y tế, formalin và các hóa chất dễ cháy trong phòng xét nghiệm có được bảo quản trong tủ chuyên dụng chống cháy không?",single,"A) Bảo quản trong tủ chống cháy chuyên dụng, phân loại tương thích, SDS đầy đủ [Điểm: 0, Rủi ro: safe]
+B) Để trong tủ riêng có khóa nhưng không phải tủ chống cháy chuyên dụng [Điểm: 1, Rủi ro: low]
+C) Cồn, formalin để lẫn lộn trên kệ chung, gần bồn rửa và ổ cắm điện [Điểm: 2, Rủi ro: high]
+D) Hóa chất dễ cháy để tràn lan trên bàn, gần nguồn nhiệt, chai hở nắp [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Cồn, formalin để lẫn lộn trên kệ chung, gần bồn rửa và ổ cắm điện. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Hóa chất dễ cháy để tràn lan trên bàn, gần nguồn nhiệt, chai hở nắp. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+135,"Đặc thù: Bệnh viện, trường học, cơ sở y tế","Thiết bị điện y tế (máy X-quang, máy MRI, máy thở) có được kiểm tra và bảo dưỡng theo lịch riêng không?",single,"A) Bảo dưỡng theo lịch nhà sản xuất, mạch điện riêng, phòng đặt có thông gió tản nhiệt tốt [Điểm: 0, Rủi ro: safe]
+B) Bảo dưỡng khi có lỗi, mạch điện riêng, phòng có ĐHKK nhưng chưa kiểm tra tản nhiệt [Điểm: 1, Rủi ro: low]
+C) Thiết bị y tế dùng chung mạch điện, phòng đặt chật, thông gió kém, nóng [Điểm: 2, Rủi ro: high]
+D) Thiết bị y tế cũ chạy quá tải, phòng kín nóng, dây điện nóng bất thường [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): NGUY HIỂM: Ngắt ngay mạch điện có hiện tượng nóng/khét. Gọi thợ điện kiểm tra nguyên nhân (quá tải, chập mạch, tiếp xúc kém).
+- Nếu chọn (D): Thay thế toàn bộ dây điện cũ/hỏng bằng dây đạt chuẩn TCVN, luồn trong ống bảo vệ PVC. Kiểm tra từng đoạn dây, đánh dấu vị trí cần thay."
+136,"Đặc thù: Bệnh viện, trường học, cơ sở y tế","Khu vực phòng mổ và phòng hồi sức sử dụng khí oxy, khí gây mê có hệ thống phát hiện rò rỉ khí không?",single,"A) Có cảm biến rò rỉ khí oxy/gây mê, van ngắt khẩn cấp, kiểm tra đường ống định kỳ [Điểm: 0, Rủi ro: safe]
+B) Kiểm tra đường ống định kỳ nhưng chưa lắp cảm biến rò rỉ tự động [Điểm: 1, Rủi ro: low]
+C) Đường ống khí cũ, chưa kiểm tra gần đây, không có cảm biến rò rỉ [Điểm: 2, Rủi ro: high]
+D) Đường ống oxy bị rò rỉ, nồng độ oxy cao trong phòng kín, nguy cơ cháy bùng rất lớn [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Đường ống khí cũ, chưa kiểm tra gần đây, không có cảm biến rò rỉ. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Đường ống oxy bị rò rỉ, nồng độ oxy cao trong phòng kín, nguy cơ cháy bùng rất lớn. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+137,"Đặc thù: Bệnh viện, trường học, cơ sở y tế","Phòng học có đủ ít nhất hai lối thoát nạn, cửa mở ra phía ngoài và không bị khóa hoặc chất đồ trong giờ học không?",single,"A) Có ≥ 2 cửa mở ra ngoài, thanh đẩy khẩn cấp, không bị chất đồ, đèn EXIT hoạt động [Điểm: 0, Rủi ro: safe]
+B) Có 2 cửa nhưng 1 cửa mở vào trong, không bị khóa [Điểm: 1, Rủi ro: low]
+C) Chỉ có 1 cửa ra vào, cửa mở vào trong, bàn ghế xếp chật [Điểm: 2, Rủi ro: high]
+D) Cửa lớp khóa từ bên ngoài trong giờ học, cửa sổ có song sắt, không thoát được [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Chỉ có 1 cửa ra vào, cửa mở vào trong, bàn ghế xếp chật. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Dọn sạch lối thoát hiểm ngay. Lắp đèn EXIT phát quang và đèn chiếu sáng sự cố. Không khóa cửa thoát nạn."
+138,"Đặc thù: Bệnh viện, trường học, cơ sở y tế","Nhân viên y tế trực ca đêm có nắm rõ quy trình báo động, ngắt điện cục bộ và dẫn bệnh nhân sơ tán không?",single,"A) 100% nhân viên trực đêm biết quy trình, đã diễn tập, biết rõ vị trí CB và lối thoát [Điểm: 0, Rủi ro: safe]
+B) Nhân viên biết quy trình chung nhưng chưa diễn tập ca đêm cụ thể [Điểm: 1, Rủi ro: low]
+C) Chỉ bác sĩ trực biết, điều dưỡng và hộ lý chưa nắm quy trình sơ tán [Điểm: 2, Rủi ro: high]
+D) Ca đêm ít người, không ai biết quy trình sơ tán, không biết cầu dao ở đâu [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Chỉ bác sĩ trực biết, điều dưỡng và hộ lý chưa nắm quy trình sơ tán. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Kiểm tra và thay thế aptomat không đúng dòng định mức. Thử test aptomat bằng cách nhấn nút TEST hàng tháng."
+139,"Đặc thù: Bệnh viện, trường học, cơ sở y tế","Hệ thống oxy trung tâm và bình oxy lưu động trong bệnh viện có được kiểm tra áp suất, van an toàn định kỳ không?",single,"A) Kiểm tra áp suất và van an toàn hàng tháng, bình oxy cách nguồn nhiệt ≥ 3m, buộc cố định [Điểm: 0, Rủi ro: safe]
+B) Kiểm tra khi nạp bình, bình oxy buộc cố định nhưng chưa kiểm tra van định kỳ [Điểm: 1, Rủi ro: low]
+C) Bình oxy để lung tung, không buộc cố định, van an toàn lâu chưa kiểm tra [Điểm: 2, Rủi ro: high]
+D) Bình oxy không buộc, gần nguồn nhiệt/điện, van hỏng, đã từng rò rỉ oxy [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Bình oxy để lung tung, không buộc cố định, van an toàn lâu chưa kiểm tra. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Bình oxy không buộc, gần nguồn nhiệt/điện, van hỏng, đã từng rò rỉ oxy. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+140,"Đặc thù: Bệnh viện, trường học, cơ sở y tế","Nhà trẻ, mầm non có tường ngăn cháy giữa các phòng học, cửa mở ra ngoài dễ dàng và đủ nhân viên để bế/dẫn trẻ thoát nạn không?",single,"A) Tường chống cháy, cửa mở ra ngoài, tỷ lệ cô/trẻ đủ, đã diễn tập sơ tán với trẻ [Điểm: 0, Rủi ro: safe]
+B) Cửa mở ra ngoài, tỷ lệ cô/trẻ đủ nhưng chưa tổ chức diễn tập cháy với trẻ [Điểm: 1, Rủi ro: low]
+C) Cửa mở vào trong, ít nhân viên so với số trẻ, chưa diễn tập thoát nạn [Điểm: 2, Rủi ro: high]
+D) Phòng trẻ tầng cao, cửa khóa, song sắt kín, ít cô giáo, không thể sơ tán nhanh [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Dọn sạch lối thoát hiểm ngay. Lắp đèn EXIT phát quang và đèn chiếu sáng sự cố. Không khóa cửa thoát nạn.
+- Nếu chọn (D): Khắc phục: Phòng trẻ tầng cao, cửa khóa, song sắt kín, ít cô giáo, không thể sơ tán nhanh. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+141,"Đặc thù: Xăng dầu, khí gas, vật liệu nổ",Cửa hàng xăng dầu có kiểm tra rò rỉ đường ống ngầm và bể ngầm định kỳ không?,single,"A) Kiểm tra rò rỉ bể ngầm và đường ống hàng năm bằng thiết bị chuyên dụng, có biên bản [Điểm: 0, Rủi ro: safe]
+B) Kiểm tra bằng quan sát mắt thường hàng tháng, chưa dùng thiết bị đo chuyên dụng [Điểm: 1, Rủi ro: low]
+C) Lâu chưa kiểm tra, đôi khi thấy vết dầu loang trên mặt sân nhưng chưa điều tra [Điểm: 2, Rủi ro: high]
+D) Đã phát hiện rò rỉ dầu từ bể ngầm, dầu ngấm ra xung quanh nhưng chưa sửa chữa [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Bảo quản xăng dầu trong kho riêng, xa nguồn nhiệt/điện. Dùng can chuyên dụng có nắp kín, gắn nhãn cảnh báo.
+- Nếu chọn (D): Bảo quản xăng dầu trong kho riêng, xa nguồn nhiệt/điện. Dùng can chuyên dụng có nắp kín, gắn nhãn cảnh báo."
+142,"Đặc thù: Xăng dầu, khí gas, vật liệu nổ","Nhân viên cây xăng có thực sự yêu cầu khách tắt máy xe, không sử dụng điện thoại và không hút thuốc trong khu vực bơm xăng không?",single,"A) Thực thi nghiêm: yêu cầu tắt máy, cấm điện thoại và hút thuốc, có biển cấm đầy đủ [Điểm: 0, Rủi ro: safe]
+B) Có biển cấm và nhắc nhở nhưng không phải lúc nào cũng kiểm soát được 100% [Điểm: 1, Rủi ro: low]
+C) Có biển cấm nhưng nhân viên ngại nhắc khách, nhiều khách vẫn dùng điện thoại [Điểm: 2, Rủi ro: high]
+D) Không kiểm soát, khách thoải mái dùng điện thoại, hút thuốc, nổ máy khi bơm [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Có biển cấm nhưng nhân viên ngại nhắc khách, nhiều khách vẫn dùng điện thoại. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Quy định khu vực hút thuốc riêng ngoài trời, đặt thùng gạt tàn kim loại có nắp. Treo biển CẤM HÚT THUỐC trong nhà."
+143,"Đặc thù: Xăng dầu, khí gas, vật liệu nổ",Hệ thống nối đất chống tĩnh điện cho bồn chứa xăng dầu và vòi bơm có được đo kiểm định kỳ không?,single,"A) Đo kiểm điện trở nối đất hàng năm, đạt tiêu chuẩn ≤ 10Ω, có biên bản kiểm định [Điểm: 0, Rủi ro: safe]
+B) Có hệ thống nối đất nhưng lâu chưa đo kiểm, giả định vẫn đạt [Điểm: 1, Rủi ro: low]
+C) Hệ thống nối đất đã lắp nhưng dây nối bị đứt/gỉ ở một số vị trí [Điểm: 2, Rủi ro: high]
+D) Không có hệ thống nối đất chống tĩnh điện cho bồn chứa và vòi bơm [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Thuê đơn vị có chức năng đo điện trở nối đất. Yêu cầu đạt ≤ 4Ω theo TCVN. Bổ sung dây nối đất cho thiết bị chưa có.
+- Nếu chọn (D): Thuê đơn vị có chức năng đo điện trở nối đất. Yêu cầu đạt ≤ 4Ω theo TCVN. Bổ sung dây nối đất cho thiết bị chưa có."
+144,"Đặc thù: Xăng dầu, khí gas, vật liệu nổ","Kho LPG và trạm nạp bình gas có cảm biến phát hiện rò rỉ khí, van ngắt khẩn cấp và hệ thống thông gió cơ học hoạt động 24/7 không?",single,"A) Có cảm biến gas LPG, van ngắt khẩn cấp tự động, quạt thông gió cơ học 24/7 [Điểm: 0, Rủi ro: safe]
+B) Có van ngắt tay và quạt thông gió nhưng chưa có cảm biến phát hiện gas tự động [Điểm: 1, Rủi ro: low]
+C) Không có cảm biến, thông gió tự nhiên, phát hiện rò rỉ bằng mũi [Điểm: 2, Rủi ro: high]
+D) Kho gas kín, không thông gió, có mùi gas nhưng chưa xử lý, không van ngắt khẩn [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Không có cảm biến, thông gió tự nhiên, phát hiện rò rỉ bằng mũi. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Lắp van ngắt gas tự động và đầu dò khí gas LPG. Đặt bình gas nơi thoáng, xa nguồn nhiệt tối thiểu 1.5m."
+145,"Đặc thù: Xăng dầu, khí gas, vật liệu nổ","Nhân viên giao nhận bình gas có được đào tạo phát hiện bình méo, van hỏng và quy trình xử lý khi phát hiện rò rỉ không?",single,"A) 100% nhân viên được đào tạo kiểm tra bình, loại bỏ bình lỗi, biết quy trình rò rỉ [Điểm: 0, Rủi ro: safe]
+B) Nhân viên kiểm tra bằng kinh nghiệm, chưa qua đào tạo chính thức bài bản [Điểm: 1, Rủi ro: low]
+C) Chỉ kiểm tra sơ qua, đôi khi giao bình van lỏng hoặc dây dẫn nứt cho khách [Điểm: 2, Rủi ro: high]
+D) Không kiểm tra, giao bình cũ méo van hỏng, chưa ai biết xử lý rò rỉ gas [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Chỉ kiểm tra sơ qua, đôi khi giao bình van lỏng hoặc dây dẫn nứt cho khách. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Lắp van ngắt gas tự động và đầu dò khí gas LPG. Đặt bình gas nơi thoáng, xa nguồn nhiệt tối thiểu 1.5m."
+146,"Đặc thù: Xăng dầu, khí gas, vật liệu nổ",Khu vực bơm xăng và bể ngầm có được phân vùng nguy hiểm và toàn bộ thiết bị điện trong vùng đó có đạt cấp Ex không?,single,"A) Phân vùng theo TCVN/IEC, toàn bộ thiết bị điện trong vùng nguy hiểm đạt cấp Ex [Điểm: 0, Rủi ro: safe]
+B) Thiết bị chính (trụ bơm, đèn) đạt Ex, nhưng ổ cắm phụ dùng loại thường [Điểm: 1, Rủi ro: low]
+C) Dùng thiết bị điện thông thường trong khu vực bơm, chưa phân vùng chính thức [Điểm: 2, Rủi ro: high]
+D) Có ổ cắm, công tắc thường trong vùng hơi xăng, đã xảy ra tia lửa điện gần trụ bơm [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Dùng thiết bị điện thông thường trong khu vực bơm, chưa phân vùng chính thức. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Bảo quản xăng dầu trong kho riêng, xa nguồn nhiệt/điện. Dùng can chuyên dụng có nắp kín, gắn nhãn cảnh báo."
+147,"Đặc thù: Xăng dầu, khí gas, vật liệu nổ",Xe bồn chở xăng dầu khi vào cơ sở có thực hiện nối đất chống tĩnh điện trước khi bơm không?,single,"A) Có quy trình bắt buộc: nối đất xe bồn, kiểm tra dây nối, có nút dừng khẩn cấp [Điểm: 0, Rủi ro: safe]
+B) Có dây nối đất nhưng đôi khi tài xế quên nối, nhân viên nhắc không thường xuyên [Điểm: 1, Rủi ro: low]
+C) Dây nối đất cũ hỏng, không thay mới, bơm xăng mà không nối đất [Điểm: 2, Rủi ro: high]
+D) Không có dây nối đất, không có nút dừng khẩn cấp, bơm xăng ban đêm không giám sát [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Thuê đơn vị có chức năng đo điện trở nối đất. Yêu cầu đạt ≤ 4Ω theo TCVN. Bổ sung dây nối đất cho thiết bị chưa có.
+- Nếu chọn (D): Thuê đơn vị có chức năng đo điện trở nối đất. Yêu cầu đạt ≤ 4Ω theo TCVN. Bổ sung dây nối đất cho thiết bị chưa có."
+148,"Đặc thù: Xăng dầu, khí gas, vật liệu nổ",Vật liệu nổ (nếu có) được bảo quản trong kho đúng tiêu chuẩn với đầy đủ giấy phép không?,single,"A) Không có vật liệu nổ; hoặc kho đúng tiêu chuẩn, xa khu dân cư, giấy phép còn hiệu lực [Điểm: 0, Rủi ro: safe]
+B) Có kho đúng tiêu chuẩn, giấy phép sắp hết hạn đang gia hạn [Điểm: 1, Rủi ro: low]
+C) Kho chưa đạt chuẩn khoảng cách an toàn, giấy phép đã hết hạn [Điểm: 2, Rủi ro: high]
+D) Bảo quản vật liệu nổ trái phép, không kho chuyên dụng, gần khu dân cư [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Kho chưa đạt chuẩn khoảng cách an toàn, giấy phép đã hết hạn. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Bảo quản vật liệu nổ trái phép, không kho chuyên dụng, gần khu dân cư. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+149,"Đặc thù: Xăng dầu, khí gas, vật liệu nổ",Cơ sở có phương án ứng phó sự cố tràn đổ xăng dầu quy mô lớn không?,single,"A) Có phương án ứng phó tràn đổ, vật liệu thấm dầu sẵn sàng, van ngăn tràn vào cống [Điểm: 0, Rủi ro: safe]
+B) Có vật liệu thấm dầu nhưng chưa có phương án chi tiết và diễn tập [Điểm: 1, Rủi ro: low]
+C) Không có vật liệu thấm dầu, xăng tràn chảy tự do vào cống thoát nước [Điểm: 2, Rủi ro: high]
+D) Không có bất kỳ biện pháp nào, xăng dầu tràn đã chảy vào khu dân cư gần đó [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Dọn sạch lối thoát hiểm ngay. Lắp đèn EXIT phát quang và đèn chiếu sáng sự cố. Không khóa cửa thoát nạn.
+- Nếu chọn (D): Bảo quản xăng dầu trong kho riêng, xa nguồn nhiệt/điện. Dùng can chuyên dụng có nắp kín, gắn nhãn cảnh báo."
+150,"Đặc thù: Xăng dầu, khí gas, vật liệu nổ","Nhân viên trực ca đêm tại cây xăng có biết quy trình ngắt điện toàn bộ, đóng van bể khẩn cấp khi phát hiện rò rỉ ban đêm không?",single,"A) Biết rõ: vị trí nút ngắt khẩn, van bể, quy trình sơ tán, số điện thoại khẩn cấp [Điểm: 0, Rủi ro: safe]
+B) Biết vị trí nút ngắt nhưng chưa thực hành quy trình khẩn cấp bao giờ [Điểm: 1, Rủi ro: low]
+C) Nhân viên trực đêm là lao động mới, chưa biết quy trình khẩn cấp [Điểm: 2, Rủi ro: high]
+D) Ca đêm chỉ 1 người, không biết quy trình, ngủ gật, có nguy cơ không phát hiện rò rỉ [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Nhân viên trực đêm là lao động mới, chưa biết quy trình khẩn cấp. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Ca đêm chỉ 1 người, không biết quy trình, ngủ gật, có nguy cơ không phát hiện rò rỉ. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+151,Đặc thù: Phương tiện giao thông,"Xe khách, xe buýt có được kiểm tra hệ thống nhiên liệu, ống dẫn gas (nếu chạy CNG/LPG) định kỳ không?",single,"A) Kiểm tra hệ thống nhiên liệu theo lịch nhà sản xuất, có biên bản, bình PCCC trên xe [Điểm: 0, Rủi ro: safe]
+B) Kiểm tra trước mỗi chuyến nhưng không có biên bản chi tiết [Điểm: 1, Rủi ro: low]
+C) Kiểm tra khi bảo dưỡng lớn, giữa các lần không kiểm tra hệ thống nhiên liệu [Điểm: 2, Rủi ro: high]
+D) Xe cũ, hệ thống nhiên liệu rò rỉ, bình PCCC hết hạn hoặc không có [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Lập lịch bảo dưỡng theo khuyến cáo nhà sản xuất. Ghi sổ theo dõi: ngày bảo dưỡng, người thực hiện, hạng mục.
+- Nếu chọn (D): Bố trí bãi đỗ xe riêng biệt, xa khu sản xuất/kho hàng. Không để xe trong lối thoát hiểm."
+152,Đặc thù: Phương tiện giao thông,"Búa thoát hiểm, cửa thoát hiểm trên xe khách có đủ số lượng, ở đúng vị trí và hành khách biết cách sử dụng không?",single,"A) Đủ búa, cửa thoát hiểm hoạt động, có hướng dẫn sử dụng, tài xế thông báo trước chuyến [Điểm: 0, Rủi ro: safe]
+B) Có búa và cửa thoát hiểm nhưng tài xế không thông báo cho hành khách [Điểm: 1, Rủi ro: low]
+C) Búa thoát hiểm thiếu hoặc bị giấu đi, cửa thoát hiểm bị kẹt [Điểm: 2, Rủi ro: high]
+D) Không có búa, cửa thoát hiểm bị hàn kín hoặc chất hàng che khuất [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Dọn sạch lối thoát hiểm ngay. Lắp đèn EXIT phát quang và đèn chiếu sáng sự cố. Không khóa cửa thoát nạn.
+- Nếu chọn (D): Dọn sạch lối thoát hiểm ngay. Lắp đèn EXIT phát quang và đèn chiếu sáng sự cố. Không khóa cửa thoát nạn."
+153,Đặc thù: Phương tiện giao thông,"Hệ thống điện trên phương tiện (dây điện, cầu chì, ắc quy) có được bảo dưỡng và kiểm tra chuyên sâu không?",single,"A) Kiểm tra hệ thống điện mỗi 6 tháng, cầu chì đúng ampe, dây không hở, ắc quy tốt [Điểm: 0, Rủi ro: safe]
+B) Kiểm tra khi bảo dưỡng định kỳ, chưa kiểm tra riêng hệ thống điện chuyên sâu [Điểm: 1, Rủi ro: low]
+C) Dây điện xe cũ, một số đoạn nối tạm bằng băng keo, cầu chì thay bằng dây đồng [Điểm: 2, Rủi ro: high]
+D) Hệ thống điện hỏng nặng, đã có hiện tượng chập cháy, vẫn chạy [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Thay thế toàn bộ dây điện cũ/hỏng bằng dây đạt chuẩn TCVN, luồn trong ống bảo vệ PVC. Kiểm tra từng đoạn dây, đánh dấu vị trí cần thay.
+- Nếu chọn (D): Khắc phục: Hệ thống điện hỏng nặng, đã có hiện tượng chập cháy, vẫn chạy. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+154,Đặc thù: Phương tiện giao thông,"Tàu thuyền có đầy đủ phao cứu sinh, áo phao và đã diễn tập sơ tán cho thuyền viên và hành khách không?",single,"A) Không có tàu thuyền; hoặc có đủ phao/áo phao, diễn tập cứu nạn định kỳ, hành khách được hướng dẫn [Điểm: 0, Rủi ro: safe]
+B) Đủ phao và áo phao nhưng chưa tổ chức diễn tập cho hành khách [Điểm: 1, Rủi ro: low]
+C) Thiếu phao/áo phao so với số hành khách, chưa diễn tập bao giờ [Điểm: 2, Rủi ro: high]
+D) Không đủ phao, áo phao hỏng, thuyền viên không biết quy trình cứu nạn [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Thiếu phao/áo phao so với số hành khách, chưa diễn tập bao giờ. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Không đủ phao, áo phao hỏng, thuyền viên không biết quy trình cứu nạn. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+155,Đặc thù: Phương tiện giao thông,"Xe ô tô/xe tải của cơ sở có được trang bị bình chữa cháy đúng loại, còn hạn và tài xế biết sử dụng không?",single,"A) Mỗi xe có bình chữa cháy còn hạn, đúng loại, tài xế biết sử dụng, kiểm tra hàng tháng [Điểm: 0, Rủi ro: safe]
+B) Có bình chữa cháy trên xe nhưng tài xế chưa thực hành sử dụng bao giờ [Điểm: 1, Rủi ro: low]
+C) Bình chữa cháy hết hạn hoặc để trong cốp xe khó lấy khi khẩn cấp [Điểm: 2, Rủi ro: high]
+D) Không có bình chữa cháy trên xe, hoặc bình đã hỏng van không sử dụng được [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Mua bổ sung bình chữa cháy ABC 4kg: 1 bình/50m². Đặt nơi dễ lấy, cao 0.8-1.5m. Kiểm tra hạn sử dụng hàng quý.
+- Nếu chọn (D): Mua bổ sung bình chữa cháy ABC 4kg: 1 bình/50m². Đặt nơi dễ lấy, cao 0.8-1.5m. Kiểm tra hạn sử dụng hàng quý."
+156,Đặc thù: Phương tiện giao thông,"Xe chở hàng nguy hiểm (xăng dầu, hóa chất, khí gas) có đầy đủ biển báo, trang thiết bị PCCC và giấy phép vận chuyển không?",single,"A) Không chở hàng nguy hiểm; hoặc có đủ biển báo, giấy phép, bộ ứng phó sự cố trên xe [Điểm: 0, Rủi ro: safe]
+B) Có biển báo và giấy phép nhưng bộ ứng phó sự cố chưa đầy đủ [Điểm: 1, Rủi ro: low]
+C) Biển báo mờ, giấy phép sắp hết hạn, thiếu dụng cụ ứng phó sự cố [Điểm: 2, Rủi ro: high]
+D) Chở hàng nguy hiểm không phép, không biển báo, không có PCCC trên xe [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Điều tra nguyên nhân sự cố trước đây, lập biện pháp phòng ngừa tái phát. Tăng cường tuần tra PCCC.
+- Nếu chọn (D): Bố trí bãi đỗ xe riêng biệt, xa khu sản xuất/kho hàng. Không để xe trong lối thoát hiểm."
+157,Đặc thù: Phương tiện giao thông,"Khu vực sạc pin xe điện (ô tô điện, xe máy điện) tại bãi đỗ có được bố trí an toàn với hệ thống PCCC phù hợp không?",single,"A) Không có sạc xe điện; hoặc khu sạc riêng biệt, sprinkler, bình chữa cháy, nền chống cháy [Điểm: 0, Rủi ro: safe]
+B) Có khu sạc riêng, bình chữa cháy nhưng chưa có sprinkler riêng cho khu sạc [Điểm: 1, Rủi ro: low]
+C) Sạc xe điện trong bãi đỗ xe chung, gần xe xăng dầu, không có PCCC riêng [Điểm: 2, Rủi ro: high]
+D) Sạc xe điện trong tầng hầm kín, không thông gió, không PCCC, sạc qua đêm [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Bố trí bãi đỗ xe riêng biệt, xa khu sản xuất/kho hàng. Không để xe trong lối thoát hiểm.
+- Nếu chọn (D): Bố trí bãi đỗ xe riêng biệt, xa khu sản xuất/kho hàng. Không để xe trong lối thoát hiểm."
+158,Đặc thù: Phương tiện giao thông,Tài xế xe tải/xe khách có được huấn luyện quy trình xử lý khi phát hiện cháy xe trên đường không?,single,"A) Đào tạo bài bản: dừng xe an toàn, sơ tán hành khách, dùng bình chữa cháy, gọi 114 [Điểm: 0, Rủi ro: safe]
+B) Biết cơ bản nhưng chưa thực hành diễn tập tình huống cháy xe thực tế [Điểm: 1, Rủi ro: low]
+C) Chỉ biết gọi cứu hỏa, không biết sử dụng bình chữa cháy trên xe [Điểm: 2, Rủi ro: high]
+D) Tài xế không được đào tạo PCCC, không biết bình chữa cháy ở đâu trên xe [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Mua bổ sung bình chữa cháy ABC 4kg: 1 bình/50m². Đặt nơi dễ lấy, cao 0.8-1.5m. Kiểm tra hạn sử dụng hàng quý.
+- Nếu chọn (D): Mua bổ sung bình chữa cháy ABC 4kg: 1 bình/50m². Đặt nơi dễ lấy, cao 0.8-1.5m. Kiểm tra hạn sử dụng hàng quý."
+159,Đặc thù: Phương tiện giao thông,Thùng hàng xe tải có lắp cảm biến nhiệt hoặc báo cháy cho các chuyến hàng có nguy cơ cháy cao không?,single,"A) Không chở hàng nguy hiểm; hoặc có cảm biến nhiệt/khói trong thùng, cảnh báo cab tài xế [Điểm: 0, Rủi ro: safe]
+B) Không có cảm biến nhưng tài xế kiểm tra hàng mỗi trạm dừng [Điểm: 1, Rủi ro: low]
+C) Chở hàng dễ cháy nhưng không có giám sát thùng hàng, chỉ phát hiện khi cháy ra ngoài [Điểm: 2, Rủi ro: high]
+D) Chở hóa chất/hàng nguy hiểm trong thùng kín, không giám sát, đường dài không kiểm tra [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Chở hàng dễ cháy nhưng không có giám sát thùng hàng, chỉ phát hiện khi cháy ra ngoài. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Chở hóa chất/hàng nguy hiểm trong thùng kín, không giám sát, đường dài không kiểm tra. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+160,Đặc thù: Phương tiện giao thông,"Phương tiện giao thông có khu vực riêng cho hành lý và hàng hóa tách biệt với khoang hành khách, với vách ngăn chống cháy không?",single,"A) Khoang hành lý tách biệt hoàn toàn, có vách ngăn, không thông với khoang hành khách [Điểm: 0, Rủi ro: safe]
+B) Khoang hành lý riêng nhưng vách ngăn bằng vật liệu thường, không chống cháy [Điểm: 1, Rủi ro: low]
+C) Hành lý để lẫn trong khoang khách, hàng hóa chất trên lối đi [Điểm: 2, Rủi ro: high]
+D) Hàng hóa dễ cháy, bình gas, xăng để lẫn trong khoang hành khách [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Hành lý để lẫn trong khoang khách, hàng hóa chất trên lối đi. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Lắp van ngắt gas tự động và đầu dò khí gas LPG. Đặt bình gas nơi thoáng, xa nguồn nhiệt tối thiểu 1.5m."
+161,"Đặc thù: Khu dân cư, nhà ở, nhà trọ","Nhà trọ, chung cư mini có mấy lối thoát nạn độc lập, và các lối thoát có thông thoáng 24/7 không?",single,"A) Có ≥ 2 lối thoát nạn độc lập, luôn thông thoáng, đèn EXIT hoạt động, có thang thoát hiểm phụ [Điểm: 0, Rủi ro: safe]
+B) Có 2 lối nhưng 1 lối phụ (ban công, cửa sổ), lối chính thông thoáng [Điểm: 1, Rủi ro: low]
+C) Chỉ có 1 cầu thang duy nhất, cửa thoát hiểm phụ bị khóa hoặc chặn đồ [Điểm: 2, Rủi ro: high]
+D) 1 lối duy nhất, bị khóa cổng sắt ban đêm, không ai có chìa khóa dự phòng [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Dọn sạch lối thoát hiểm ngay. Lắp đèn EXIT phát quang và đèn chiếu sáng sự cố. Không khóa cửa thoát nạn.
+- Nếu chọn (D): Khắc phục: 1 lối duy nhất, bị khóa cổng sắt ban đêm, không ai có chìa khóa dự phòng. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+162,"Đặc thù: Khu dân cư, nhà ở, nhà trọ",Khu nhà trọ có hệ thống báo cháy (ít nhất cảm biến khói độc lập) lắp tại hành lang và từng phòng không?,single,"A) Cảm biến khói trong mỗi phòng trọ và hành lang, kiểm tra pin hàng tháng, có chuông báo chung [Điểm: 0, Rủi ro: safe]
+B) Cảm biến khói ở hành lang mỗi tầng nhưng chưa lắp trong từng phòng [Điểm: 1, Rủi ro: low]
+C) Chỉ lắp ở cầu thang tầng 1, các tầng trên không có cảm biến [Điểm: 2, Rủi ro: high]
+D) Không có bất kỳ cảm biến khói hay chuông báo cháy nào trong toàn bộ nhà trọ [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Chỉ lắp ở cầu thang tầng 1, các tầng trên không có cảm biến. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Không có bất kỳ cảm biến khói hay chuông báo cháy nào trong toàn bộ nhà trọ. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+163,"Đặc thù: Khu dân cư, nhà ở, nhà trọ","Cổng sắt, chuồng cọp, lưới chống trộm có được thiết kế lối mở khẩn cấp khi xảy ra sự cố cháy không?",single,"A) Không có chuồng cọp; hoặc có lối mở khẩn cấp bản lề, chìa khóa để cạnh, mọi người biết [Điểm: 0, Rủi ro: safe]
+B) Có cửa mở khẩn cấp trên chuồng cọp nhưng chìa khóa cất trong phòng, phải tìm [Điểm: 1, Rủi ro: low]
+C) Chuồng cọp hàn kín, chỉ có 1 cửa ra vào chính, chưa có lối mở khẩn cấp [Điểm: 2, Rủi ro: high]
+D) Chuồng cọp hàn kín toàn bộ cửa sổ và ban công, không có bất kỳ lối mở nào [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Chuồng cọp hàn kín, chỉ có 1 cửa ra vào chính, chưa có lối mở khẩn cấp. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Chuồng cọp hàn kín toàn bộ cửa sổ và ban công, không có bất kỳ lối mở nào. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+164,"Đặc thù: Khu dân cư, nhà ở, nhà trọ","Mỗi phòng trọ có mạch điện riêng với CB riêng, để khi 1 phòng có sự cố thì ngắt được mà không ảnh hưởng phòng khác không?",single,"A) Mỗi phòng có CB riêng, tổng có CB chống rò, công tơ riêng, sơ đồ mạch rõ ràng [Điểm: 0, Rủi ro: safe]
+B) Có CB riêng mỗi phòng nhưng chưa có CB chống rò (ELCB) tổng [Điểm: 1, Rủi ro: low]
+C) 2-3 phòng dùng chung CB, quá tải CB nhảy thì mất điện cả mấy phòng [Điểm: 2, Rủi ro: high]
+D) Toàn bộ nhà trọ dùng chung 1 CB, dây điện nối tạm, nào CB nhảy nối tắt [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Kiểm tra và thay thế aptomat không đúng dòng định mức. Thử test aptomat bằng cách nhấn nút TEST hàng tháng.
+- Nếu chọn (D): Loại bỏ các mối nối tạm bằng băng keo. Sử dụng hộp nối chuyên dụng hoặc đầu nối bấm chuẩn cho tất cả các điểm nối dây."
+165,"Đặc thù: Khu dân cư, nhà ở, nhà trọ",Bình nước nóng điện (máy nóng lạnh) trong các phòng trọ/phòng tắm được lắp đặt và sử dụng an toàn không?,single,"A) Bình nước nóng có ELCB riêng 30mA, nối đất đúng, bảo dưỡng hàng năm, còn bảo hành [Điểm: 0, Rủi ro: safe]
+B) Bình nước nóng có ELCB nhưng lần lắp đặt đã lâu, chưa kiểm tra nối đất [Điểm: 1, Rủi ro: low]
+C) Bình nước nóng cũ không có ELCB riêng, dùng chung CB với ổ cắm phòng [Điểm: 2, Rủi ro: high]
+D) Bình nước nóng rỉ sét, dây điện hở trong môi trường ẩm ướt, không ELCB, rất nguy hiểm [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Lắp đặt ngay aptomat/CB đúng dòng định mức cho từng mạch điện. Mỗi thiết bị công suất lớn cần aptomat riêng.
+- Nếu chọn (D): Kiểm tra và thay thế aptomat không đúng dòng định mức. Thử test aptomat bằng cách nhấn nút TEST hàng tháng."
+166,"Đặc thù: Khu dân cư, nhà ở, nhà trọ","Xe máy, xe đạp điện có được sạc tại khu vực riêng an toàn hay sạc ngay trong phòng trọ/phòng ngủ?",single,"A) Khu sạc xe riêng tầng trệt, thông thoáng, ổ cắm chuyên dụng, bình chữa cháy gần đó [Điểm: 0, Rủi ro: safe]
+B) Sạc ở tầng trệt khu chung nhưng chưa có ổ cắm chuyên dụng hay bình chữa cháy [Điểm: 1, Rủi ro: low]
+C) Sạc xe máy/xe đạp điện trong phòng trọ, gần đồ dùng cá nhân [Điểm: 2, Rủi ro: high]
+D) Sạc xe điện qua đêm trong phòng ngủ kín, pin xe cũ phồng, dùng sạc kém chất lượng [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Bố trí bãi đỗ xe riêng biệt, xa khu sản xuất/kho hàng. Không để xe trong lối thoát hiểm.
+- Nếu chọn (D): Bố trí bãi đỗ xe riêng biệt, xa khu sản xuất/kho hàng. Không để xe trong lối thoát hiểm."
+167,"Đặc thù: Khu dân cư, nhà ở, nhà trọ","Chủ nhà trọ có phổ biến quy tắc PCCC cho người thuê, niêm yết nội quy và sơ đồ thoát nạn mỗi tầng không?",single,"A) Nội quy PCCC lồng khung kính mỗi tầng, sơ đồ thoát nạn dán mỗi tầng, phổ biến cho người thuê mới [Điểm: 0, Rủi ro: safe]
+B) Có phổ biến miệng cho người thuê nhưng chưa niêm yết sơ đồ và nội quy [Điểm: 1, Rủi ro: low]
+C) Chưa phổ biến PCCC cho người thuê, niêm yết nội quy nhưng chữ mờ cũ [Điểm: 2, Rủi ro: high]
+D) Không có nội quy, sơ đồ, phổ biến gì, người thuê không biết lối thoát nạn [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Ban hành nội quy PCCC bằng văn bản. Niêm yết tại: cửa ra vào, khu vực nguy hiểm, bảng tin. Cập nhật hàng năm.
+- Nếu chọn (D): Ban hành nội quy PCCC bằng văn bản. Niêm yết tại: cửa ra vào, khu vực nguy hiểm, bảng tin. Cập nhật hàng năm."
+168,"Đặc thù: Khu dân cư, nhà ở, nhà trọ","Người thuê trọ có được phép nấu ăn bằng bếp gas trong phòng không? Nếu có, quản lý bình gas như thế nào?",single,"A) Cấm nấu gas trong phòng, có bếp chung hoặc bếp điện từ thay thế [Điểm: 0, Rủi ro: safe]
+B) Cho phép dùng bếp gas mini nhỏ, dây dẫn mới, bình gas nhỏ, phòng thông thoáng [Điểm: 1, Rủi ro: low]
+C) Dùng bếp gas trong phòng trọ nhỏ kín, bình gas 12kg, thông gió kém [Điểm: 2, Rủi ro: high]
+D) Bếp gas trong phòng trọ kín, dây gas cũ nứt, bình gas để dưới gầm giường [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Lắp van ngắt gas tự động và đầu dò khí gas LPG. Đặt bình gas nơi thoáng, xa nguồn nhiệt tối thiểu 1.5m.
+- Nếu chọn (D): Lắp van ngắt gas tự động và đầu dò khí gas LPG. Đặt bình gas nơi thoáng, xa nguồn nhiệt tối thiểu 1.5m."
+169,"Đặc thù: Khu dân cư, nhà ở, nhà trọ",Có ai giữ chìa khóa tổng (master key) của toàn bộ phòng trọ và chìa khóa cổng khẩn cấp không?,single,"A) Chủ nhà/quản lý giữ master key 24/7, chìa khóa cổng khẩn cấp đặt trong hộp kính phá vỡ [Điểm: 0, Rủi ro: safe]
+B) Chủ nhà giữ master key nhưng không ở tại chỗ 24/7, ban đêm phải gọi điện [Điểm: 1, Rủi ro: low]
+C) Chìa khóa tổng chỉ chủ nhà có, chủ nhà ở xa, ban đêm không liên lạc được [Điểm: 2, Rủi ro: high]
+D) Không có master key, mỗi phòng khóa riêng, cổng khóa xích, khi cháy không mở được [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Chìa khóa tổng chỉ chủ nhà có, chủ nhà ở xa, ban đêm không liên lạc được. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Không có master key, mỗi phòng khóa riêng, cổng khóa xích, khi cháy không mở được. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+170,"Đặc thù: Khu dân cư, nhà ở, nhà trọ","Khu dân cư, hẻm nhỏ có trụ nước cứu hỏa gần nhất trong phạm vi bao nhiêu mét, và xe cứu hỏa có vào được không?",single,"A) Trụ nước cứu hỏa trong phạm vi 150m, đường rộng ≥ 3.5m xe cứu hỏa vào được [Điểm: 0, Rủi ro: safe]
+B) Trụ nước cứu hỏa gần nhưng đường hẻm hơi hẹp, xe cứu hỏa phải đỗ ngoài [Điểm: 1, Rủi ro: low]
+C) Không biết trụ nước gần nhất ở đâu, hẻm nhỏ xe cứu hỏa không vào được [Điểm: 2, Rủi ro: high]
+D) Không có trụ nước cứu hỏa gần đây, hẻm cụt xe cứu hỏa không thể tiếp cận [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Bố trí bãi đỗ xe riêng biệt, xa khu sản xuất/kho hàng. Không để xe trong lối thoát hiểm.
+- Nếu chọn (D): Bố trí bãi đỗ xe riêng biệt, xa khu sản xuất/kho hàng. Không để xe trong lối thoát hiểm."
+171,Đặc thù: Công trình xây dựng đang thi công,Công trình có quy trình cấp giấy phép hàn cắt (Hot Work Permit) cho mọi hoạt động phát sinh tia lửa không?,single,"A) Có giấy phép bắt buộc, kiểm tra hiện trường, dọn vật dễ cháy 10m, canh lửa sau 30 phút [Điểm: 0, Rủi ro: safe]
+B) Có giấy phép nhưng không phải lúc nào cũng kiểm tra hiện trường trước khi hàn [Điểm: 1, Rủi ro: low]
+C) Hàn cắt tự do không cần giấy phép, đôi khi dọn vật dễ cháy xung quanh [Điểm: 2, Rủi ro: high]
+D) Hàn cắt không kiểm soát, tia lửa bắn vào vật liệu dễ cháy, đã có cháy nhỏ nhiều lần [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Lập phiếu xin phép hàn cắt. Dọn sạch vật liệu dễ cháy 10m xung quanh. Bố trí 1 bình chữa cháy + 1 người giám sát.
+- Nếu chọn (D): Lập phiếu xin phép hàn cắt. Dọn sạch vật liệu dễ cháy 10m xung quanh. Bố trí 1 bình chữa cháy + 1 người giám sát."
+172,Đặc thù: Công trình xây dựng đang thi công,"Vật liệu xây dựng dễ cháy (gỗ ván khuôn, xốp cách nhiệt, bạt che, sơn) được bảo quản tại công trình như thế nào?",single,"A) Kho riêng, cách khu thi công ≥ 10m, biển cấm lửa, bình chữa cháy gần đó [Điểm: 0, Rủi ro: safe]
+B) Để khu riêng nhưng gần khu thi công, có bình chữa cháy [Điểm: 1, Rủi ro: low]
+C) Để rải rác khắp công trình, gần khu hàn cắt, không có biện pháp bảo vệ [Điểm: 2, Rủi ro: high]
+D) Gỗ, xốp, sơn chất đống lẫn lộn sát khu hàn cắt và thiết bị điện tạm [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Lập phiếu xin phép hàn cắt. Dọn sạch vật liệu dễ cháy 10m xung quanh. Bố trí 1 bình chữa cháy + 1 người giám sát.
+- Nếu chọn (D): Lập phiếu xin phép hàn cắt. Dọn sạch vật liệu dễ cháy 10m xung quanh. Bố trí 1 bình chữa cháy + 1 người giám sát."
+173,Đặc thù: Công trình xây dựng đang thi công,Hệ thống điện tạm thi công có được thiết kế và lắp đặt bởi thợ điện có chứng chỉ không?,single,"A) Hệ thống điện tạm do thợ điện có chứng chỉ lắp, tủ điện tạm có CB, ELCB, nối đất [Điểm: 0, Rủi ro: safe]
+B) Thợ điện lắp nhưng chưa có ELCB chống rò, chỉ có CB thông thường [Điểm: 1, Rủi ro: low]
+C) Công nhân tự kéo điện, nối tạm, dây vắt qua khung thép, không có CB riêng [Điểm: 2, Rủi ro: high]
+D) Điện kéo tạm bằng dây trần, nối bằng băng keo, ngâm nước khi mưa, rất nguy hiểm [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Lắp đặt ngay aptomat/CB đúng dòng định mức cho từng mạch điện. Mỗi thiết bị công suất lớn cần aptomat riêng.
+- Nếu chọn (D): Khắc phục: Điện kéo tạm bằng dây trần, nối bằng băng keo, ngâm nước khi mưa, rất nguy hiểm. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+174,Đặc thù: Công trình xây dựng đang thi công,"Tầng hầm và khu vực kín của công trình có hệ thống thông gió đủ khi sử dụng sơn, keo, dung môi không?",single,"A) Có quạt thông gió cưỡng bức, đo nồng độ VOC, thiết bị điện phòng nổ trong vùng kín [Điểm: 0, Rủi ro: safe]
+B) Có quạt thông gió nhưng không đo nồng độ hơi  dung môi [Điểm: 1, Rủi ro: low]
+C) Không có thông gió cơ học, chỉ mở cửa tự nhiên, hơi dung môi tích tụ [Điểm: 2, Rủi ro: high]
+D) Phun sơn/keo trong tầng hầm kín, không thông gió, dùng đèn sợi đốt chiếu sáng [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Không có thông gió cơ học, chỉ mở cửa tự nhiên, hơi dung môi tích tụ. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Đốt vàng mã trong lư/thùng kim loại có nắp, đặt trên nền bê tông, xa vật liệu dễ cháy 3m. Luôn có người trông coi."
+175,Đặc thù: Công trình xây dựng đang thi công,"Bình gas phục vụ thi công (hàn hơi, cắt gas) được bảo quản và sử dụng tại công trình như thế nào?",single,"A) Bình gas đứng, buộc cố định, nắp bảo vệ van, cách nguồn nhiệt ≥ 3m, kho riêng [Điểm: 0, Rủi ro: safe]
+B) Bình gas buộc cố định khi dùng, cất trong khu riêng khi không dùng [Điểm: 1, Rủi ro: low]
+C) Bình gas để nằm, không buộc, nắp bảo vệ van bị mất, gần khu hàn cắt [Điểm: 2, Rủi ro: high]
+D) Bình gas oxy và bình gas axetylen để sát nhau, nằm trên sàn, không buộc, rất dễ nổ [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Lắp van ngắt gas tự động và đầu dò khí gas LPG. Đặt bình gas nơi thoáng, xa nguồn nhiệt tối thiểu 1.5m.
+- Nếu chọn (D): Lắp van ngắt gas tự động và đầu dò khí gas LPG. Đặt bình gas nơi thoáng, xa nguồn nhiệt tối thiểu 1.5m."
+176,Đặc thù: Công trình xây dựng đang thi công,"Công nhân trên công trình có được đào tạo PCCC, biết vị trí bình chữa cháy và lối thoát nạn tại công trình không?",single,"A) 100% công nhân được đào tạo PCCC trước khi vào công trình, biết vị trí bình chữa cháy [Điểm: 0, Rủi ro: safe]
+B) Chỉ đội trưởng và kỹ sư được đào tạo, công nhân được phổ biến sơ qua [Điểm: 1, Rủi ro: low]
+C) Không có đào tạo PCCC, công nhân không biết bình chữa cháy ở đâu [Điểm: 2, Rủi ro: high]
+D) Công nhân thời vụ vào ra tự do, không đào tạo, không biết lối thoát nạn [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Mua bổ sung bình chữa cháy ABC 4kg: 1 bình/50m². Đặt nơi dễ lấy, cao 0.8-1.5m. Kiểm tra hạn sử dụng hàng quý.
+- Nếu chọn (D): Dọn sạch lối thoát hiểm ngay. Lắp đèn EXIT phát quang và đèn chiếu sáng sự cố. Không khóa cửa thoát nạn."
+177,Đặc thù: Công trình xây dựng đang thi công,"Rác thải xây dựng dễ cháy (gỗ vụn, xốp thừa, bao bì, vải bạt cũ) có được thu gom và xử lý kịp thời không?",single,"A) Thu gom cuối mỗi ngày, đổ tại bãi rác riêng xa công trình, không đốt tại chỗ [Điểm: 0, Rủi ro: safe]
+B) Thu gom 2-3 ngày/lần, chất tại góc công trình chờ xe đến lấy [Điểm: 1, Rủi ro: low]
+C) Rác xây dựng tích nhiều ngày, chất đống gần khu thi công, gần dây điện tạm [Điểm: 2, Rủi ro: high]
+D) Công nhân tự đốt rác xây dựng tại công trình, gần kho vật tư và bình gas [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Bảo quản vật liệu dễ tự cháy nơi thông thoáng, không chất đống. Kiểm tra nhiệt độ kho định kỳ hàng ngày.
+- Nếu chọn (D): Lắp van ngắt gas tự động và đầu dò khí gas LPG. Đặt bình gas nơi thoáng, xa nguồn nhiệt tối thiểu 1.5m."
+178,Đặc thù: Công trình xây dựng đang thi công,Nhà tạm của công nhân (lán trại) tại công trình có đáp ứng yêu cầu PCCC không?,single,"A) Lán trại bằng vật liệu khó cháy, cách công trình ≥ 10m, có cảm biến khói và bình chữa cháy [Điểm: 0, Rủi ro: safe]
+B) Lán trại tôn thiếc, cách công trình, có bình chữa cháy nhưng không có cảm biến khói [Điểm: 1, Rủi ro: low]
+C) Lán trại bằng gỗ/bạt dựng sát công trình, không bình chữa cháy [Điểm: 2, Rủi ro: high]
+D) Lán trại bạt/gỗ dễ cháy, nấu ăn bếp gas trong lán, sạc điện thoại tạm, rất nguy hiểm [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Mua bổ sung bình chữa cháy ABC 4kg: 1 bình/50m². Đặt nơi dễ lấy, cao 0.8-1.5m. Kiểm tra hạn sử dụng hàng quý.
+- Nếu chọn (D): Lắp van ngắt gas tự động và đầu dò khí gas LPG. Đặt bình gas nơi thoáng, xa nguồn nhiệt tối thiểu 1.5m."
+179,Đặc thù: Công trình xây dựng đang thi công,Giàn giáo có che bạt chống bụi/nắng bằng vật liệu dễ cháy không? Bạt có tiếp xúc với nguồn nhiệt không?,single,"A) Không dùng bạt; hoặc dùng bạt chống cháy, cách xa khu hàn cắt, có biện pháp chống tia lửa [Điểm: 0, Rủi ro: safe]
+B) Bạt PE thường nhưng cách xa khu hàn cắt, không tiếp xúc nguồn nhiệt [Điểm: 1, Rủi ro: low]
+C) Bạt PE phủ giàn giáo gần khu hàn cắt, tia lửa có thể bắn tới [Điểm: 2, Rủi ro: high]
+D) Bạt dễ cháy bao quanh toàn bộ công trình, hàn cắt bên trong, tia lửa bắn vào bạt [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Lập phiếu xin phép hàn cắt. Dọn sạch vật liệu dễ cháy 10m xung quanh. Bố trí 1 bình chữa cháy + 1 người giám sát.
+- Nếu chọn (D): Lập phiếu xin phép hàn cắt. Dọn sạch vật liệu dễ cháy 10m xung quanh. Bố trí 1 bình chữa cháy + 1 người giám sát."
+180,Đặc thù: Công trình xây dựng đang thi công,"Cần trục, thang máy xây dựng (vận thăng) có nguy cơ chập cháy hệ thống điện điều khiển không?",single,"A) Không có cần trục/vận thăng; hoặc kiểm tra hệ thống điện hàng tuần, bảo dưỡng đúng lịch [Điểm: 0, Rủi ro: safe]
+B) Kiểm tra khi bảo dưỡng định kỳ, hoạt động bình thường [Điểm: 1, Rủi ro: low]
+C) Hệ thống điện cần trục cũ, dây cáp điều khiển mòn, chưa thay thế [Điểm: 2, Rủi ro: high]
+D) Hệ thống điện cần trục hỏng, chập cháy, motor bốc khói vẫn vận hành [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Hệ thống điện cần trục cũ, dây cáp điều khiển mòn, chưa thay thế. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Hệ thống điện cần trục hỏng, chập cháy, motor bốc khói vẫn vận hành. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+181,"Đặc thù: Cơ quan, văn phòng, trụ sở","Kho lưu trữ hồ sơ, giấy tờ, tài liệu tại cơ quan có được bảo vệ bằng hệ thống PCCC chuyên dụng không?",single,"A) Kho riêng, tường chống cháy, cửa chống cháy, báo cháy sớm, bình CO₂, hồ sơ có sao lưu số [Điểm: 0, Rủi ro: safe]
+B) Kho riêng có bình chữa cháy nhưng chưa có hệ thống báo cháy riêng cho kho [Điểm: 1, Rủi ro: low]
+C) Hồ sơ giấy chất đống trong phòng làm việc, gần ổ cắm điện và máy photocopy [Điểm: 2, Rủi ro: high]
+D) Hồ sơ giấy chất đống trong kho kín không PCCC, là bản gốc duy nhất, mất là mất [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Bảo quản vật liệu dễ tự cháy nơi thông thoáng, không chất đống. Kiểm tra nhiệt độ kho định kỳ hàng ngày.
+- Nếu chọn (D): Bảo quản vật liệu dễ tự cháy nơi thông thoáng, không chất đống. Kiểm tra nhiệt độ kho định kỳ hàng ngày."
+182,"Đặc thù: Cơ quan, văn phòng, trụ sở","Nhân viên có thói quen rút phích cắm các thiết bị điện (ấm nước, máy pha cà phê, quạt sưởi) trước khi ra về không?",single,"A) Có quy định bắt buộc rút phích cắm, người cuối cùng kiểm tra và ký xác nhận [Điểm: 0, Rủi ro: safe]
+B) Có nhắc nhở nhưng phụ thuộc ý thức cá nhân, đôi khi quên rút ấm nước [Điểm: 1, Rủi ro: low]
+C) Nhiều thiết bị để chế độ chờ qua đêm, ấm nước điện cắm suốt [Điểm: 2, Rủi ro: high]
+D) Quạt sưởi, ấm đun nước chạy suốt đêm không ai tắt, đã có ấm cạn nước bốc khói [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Nhiều thiết bị để chế độ chờ qua đêm, ấm nước điện cắm suốt. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Quạt sưởi, ấm đun nước chạy suốt đêm không ai tắt, đã có ấm cạn nước bốc khói. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+183,"Đặc thù: Cơ quan, văn phòng, trụ sở","Phòng máy photocopy, máy in chuyên dụng có thông gió tốt và được kiểm soát nhiệt độ không?",single,"A) Phòng riêng có ĐHKK, thông gió tốt, bình chữa cháy CO₂, CB riêng cho máy in [Điểm: 0, Rủi ro: safe]
+B) Máy photocopy đặt trong phòng làm việc chung, ĐHKK hoạt động bình thường [Điểm: 1, Rủi ro: low]
+C) Máy in/photocopy cũ tỏa nhiệt nhiều, đặt trong phòng kín nhỏ, giấy chất xung quanh [Điểm: 2, Rủi ro: high]
+D) Máy cũ nóng bất thường, bốc mùi nhựa khét, giấy chất đống sát máy, chưa sửa [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Máy in/photocopy cũ tỏa nhiệt nhiều, đặt trong phòng kín nhỏ, giấy chất xung quanh. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): NGUY HIỂM: Ngắt ngay mạch điện có hiện tượng nóng/khét. Gọi thợ điện kiểm tra nguyên nhân (quá tải, chập mạch, tiếp xúc kém)."
+184,"Đặc thù: Cơ quan, văn phòng, trụ sở",Hành lang và cầu thang thoát nạn trong tòa nhà văn phòng có được duy trì thông thoáng và đèn chiếu sáng sự cố hoạt động không?,single,"A) Hành lang và cầu thang thông thoáng, cửa ngăn khói tự đóng, đèn sự cố hoạt động, test hàng tháng [Điểm: 0, Rủi ro: safe]
+B) Hành lang thông thoáng, đèn sự cố có nhưng lâu chưa test, không rõ hoạt động [Điểm: 1, Rủi ro: low]
+C) Hành lang để bàn ghế, tủ hồ sơ, đèn sự cố một số đã hỏng chưa thay [Điểm: 2, Rủi ro: high]
+D) Cầu thang thoát nạn bị khóa, hành lang chất đầy đồ, đèn sự cố không có [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Điều tra nguyên nhân sự cố trước đây, lập biện pháp phòng ngừa tái phát. Tăng cường tuần tra PCCC.
+- Nếu chọn (D): Dọn sạch lối thoát hiểm ngay. Lắp đèn EXIT phát quang và đèn chiếu sáng sự cố. Không khóa cửa thoát nạn."
+185,"Đặc thù: Cơ quan, văn phòng, trụ sở",Tòa nhà văn phòng có hệ thống quản lý ra vào (access control) kết hợp với hệ thống PCCC (tự mở cửa khi báo cháy) không?,single,"A) Có access control kết nối hệ thống báo cháy, tự mở khóa cửa thoát nạn khi báo cháy [Điểm: 0, Rủi ro: safe]
+B) Có access control nhưng chưa kết nối hệ thống báo cháy, cửa thoát nạn luôn mở từ trong [Điểm: 1, Rủi ro: low]
+C) Cửa thoát nạn bị khóa điện, khi mất điện hoặc cháy phải mở bằng tay từ phòng bảo vệ [Điểm: 2, Rủi ro: high]
+D) Cửa thoát nạn khóa cơ, chỉ bảo vệ có chìa, ban đêm không ai mở được [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Dọn sạch lối thoát hiểm ngay. Lắp đèn EXIT phát quang và đèn chiếu sáng sự cố. Không khóa cửa thoát nạn.
+- Nếu chọn (D): Dọn sạch lối thoát hiểm ngay. Lắp đèn EXIT phát quang và đèn chiếu sáng sự cố. Không khóa cửa thoát nạn."
+186,"Đặc thù: Cơ quan, văn phòng, trụ sở","Bếp ăn tập thể, phòng ăn nhân viên trong cơ quan có hệ thống hút khói bếp và bình chữa cháy phù hợp không?",single,"A) Có quạt hút khói, bình chữa cháy loại K/F cho bếp, bếp điện từ, không dùng gas [Điểm: 0, Rủi ro: safe]
+B) Dùng bếp gas có quạt hút, bình chữa cháy bột ABC gần bếp [Điểm: 1, Rủi ro: low]
+C) Bếp gas trong phòng nhỏ ít thông gió, bình chữa cháy ở hành lang, xa bếp [Điểm: 2, Rủi ro: high]
+D) Nhân viên tự nấu bằng bếp cồn/bếp gas mini tại bàn làm việc, không có PCCC [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Lắp van ngắt gas tự động và đầu dò khí gas LPG. Đặt bình gas nơi thoáng, xa nguồn nhiệt tối thiểu 1.5m.
+- Nếu chọn (D): Lắp van ngắt gas tự động và đầu dò khí gas LPG. Đặt bình gas nơi thoáng, xa nguồn nhiệt tối thiểu 1.5m."
+187,"Đặc thù: Cơ quan, văn phòng, trụ sở","Phòng hội nghị, hội trường có lắp đặt đèn EXIT, đèn chiếu sáng sự cố và kiểm soát số người tối đa không?",single,"A) Đèn EXIT hoạt động, đèn sự cố tại lối thoát, biển ghi sức chứa tối đa, kiểm tra định kỳ [Điểm: 0, Rủi ro: safe]
+B) Có đèn EXIT nhưng chưa có biển ghi sức chứa tối đa [Điểm: 1, Rủi ro: low]
+C) Đèn EXIT hỏng một số, đèn sự cố không có, không biết sức chứa tối đa [Điểm: 2, Rủi ro: high]
+D) Phòng hội nghị kín, không đèn EXIT, không đèn sự cố, chứa vượt sức chứa thiết kế [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Điều tra nguyên nhân sự cố trước đây, lập biện pháp phòng ngừa tái phát. Tăng cường tuần tra PCCC.
+- Nếu chọn (D): Điều tra nguyên nhân sự cố trước đây, lập biện pháp phòng ngừa tái phát. Tăng cường tuần tra PCCC."
+188,"Đặc thù: Cơ quan, văn phòng, trụ sở",Cơ quan có quy trình ứng phó khi có tin nhắn đe dọa cháy nổ hoặc phát hiện vật thể lạ nghi ngờ không?,single,"A) Có quy trình rõ ràng: báo bảo vệ, sơ tán, cách ly vật thể, gọi Cảnh sát, đã diễn tập [Điểm: 0, Rủi ro: safe]
+B) Có quy trình trên giấy nhưng chưa diễn tập và phổ biến cho toàn bộ nhân viên [Điểm: 1, Rủi ro: low]
+C) Không có quy trình cụ thể, phụ thuộc vào phán đoán cá nhân bảo vệ [Điểm: 2, Rủi ro: high]
+D) Không có quy trình, không ai biết phải làm gì, cơ quan là mục tiêu có nguy cơ [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Không có quy trình cụ thể, phụ thuộc vào phán đoán cá nhân bảo vệ. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Không có quy trình, không ai biết phải làm gì, cơ quan là mục tiêu có nguy cơ. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+189,"Đặc thù: Cơ quan, văn phòng, trụ sở",Thang máy trong tòa nhà văn phòng có chế độ vận hành đặc biệt khi có cháy (Firefighter Mode) không?,single,"A) Thang máy có Firefighter Mode, tự về tầng 1 khi báo cháy, chìa khóa cho lực lượng PCCC [Điểm: 0, Rủi ro: safe]
+B) Thang máy ngắt khi báo cháy nhưng không có chế độ Firefighter dành cho lực lượng PCCC [Điểm: 1, Rủi ro: low]
+C) Thang máy không kết nối hệ thống báo cháy, vẫn chạy bình thường khi có cháy [Điểm: 2, Rủi ro: high]
+D) Thang máy cũ, đôi khi kẹt giữa chừng, không có chế độ cháy, người dùng khi cháy có thể bị kẹt [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Thang máy không kết nối hệ thống báo cháy, vẫn chạy bình thường khi có cháy. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Thang máy cũ, đôi khi kẹt giữa chừng, không có chế độ cháy, người dùng khi cháy có thể bị kẹt. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+190,"Đặc thù: Cơ quan, văn phòng, trụ sở",Cơ quan có bảo dưỡng hệ thống ĐHKK trung tâm và kiểm tra nguy cơ cháy từ dàn nóng/dàn lạnh định kỳ không?,single,"A) Bảo dưỡng ĐHKK 6 tháng/lần bởi đơn vị chuyên nghiệp, kiểm tra hệ thống điện và gas lạnh [Điểm: 0, Rủi ro: safe]
+B) Vệ sinh filter hàng năm, chưa kiểm tra chuyên sâu hệ thống điện và gas lạnh [Điểm: 1, Rủi ro: low]
+C) ĐHKK chạy liên tục nhiều năm, chưa bảo dưỡng, dàn nóng rung lắc bất thường [Điểm: 2, Rủi ro: high]
+D) ĐHKK cũ rò gas lạnh, dàn nóng bốc mùi khét, dây điện nóng bất thường, vẫn chạy [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): NGUY HIỂM: Ngắt ngay mạch điện có hiện tượng nóng/khét. Gọi thợ điện kiểm tra nguyên nhân (quá tải, chập mạch, tiếp xúc kém).
+- Nếu chọn (D): Thay thế toàn bộ dây điện cũ/hỏng bằng dây đạt chuẩn TCVN, luồn trong ống bảo vệ PVC. Kiểm tra từng đoạn dây, đánh dấu vị trí cần thay."
+191,"Đặc thù: Nghiên cứu, phòng thí nghiệm",Hóa chất trong phòng thí nghiệm có được bảo quản theo bảng tương thích hóa chất (Chemical Compatibility Chart) không?,single,"A) Có bảng tương thích, hóa chất phân loại theo nhóm, tách riêng axit-bazơ-oxy hóa-dễ cháy [Điểm: 0, Rủi ro: safe]
+B) Phân loại sơ bộ nhưng chưa tách riêng hoàn toàn, bảng tương thích chưa niêm yết [Điểm: 1, Rủi ro: low]
+C) Hóa chất để lẫn lộn, axit gần bazơ, chất oxy hóa gần chất dễ cháy [Điểm: 2, Rủi ro: high]
+D) Hóa chất không phân loại, để tràn lan, đã xảy ra phản ứng ngoài ý muốn [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Hóa chất để lẫn lộn, axit gần bazơ, chất oxy hóa gần chất dễ cháy. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Hóa chất không phân loại, để tràn lan, đã xảy ra phản ứng ngoài ý muốn. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+192,"Đặc thù: Nghiên cứu, phòng thí nghiệm",Tủ hút khí độc (fume hood) trong phòng thí nghiệm có hoạt động đúng và được kiểm tra định kỳ không?,single,"A) Tủ hút kiểm tra lưu lượng gió hàng năm, đạt ≥ 0.5 m/s, có báo lỗi khi quạt hỏng [Điểm: 0, Rủi ro: safe]
+B) Tủ hút hoạt động nhưng lâu chưa đo lưu lượng gió, không rõ có đạt chuẩn không [Điểm: 1, Rủi ro: low]
+C) Tủ hút lực hút yếu, cửa kính lên xuống nặng, hơi hóa chất có thoát ra ngoài [Điểm: 2, Rủi ro: high]
+D) Tủ hút hỏng không sử dụng được, vẫn thao tác hóa chất dễ bay hơi ngoài tủ hút [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Dọn sạch lối thoát hiểm ngay. Lắp đèn EXIT phát quang và đèn chiếu sáng sự cố. Không khóa cửa thoát nạn.
+- Nếu chọn (D): Khắc phục: Tủ hút hỏng không sử dụng được, vẫn thao tác hóa chất dễ bay hơi ngoài tủ hút. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+193,"Đặc thù: Nghiên cứu, phòng thí nghiệm",Phòng thí nghiệm có hệ thống rửa mắt khẩn cấp (eyewash) và vòi sen khẩn cấp (safety shower) hoạt động không?,single,"A) Có eyewash và safety shower trong vòng 10 giây đi bộ, test hàng tuần, nước xả thông [Điểm: 0, Rủi ro: safe]
+B) Có nhưng lâu chưa test, không rõ nước có chảy thông hay không [Điểm: 1, Rủi ro: low]
+C) Có eyewash nhưng không có safety shower, hoặc vị trí quá xa [Điểm: 2, Rủi ro: high]
+D) Không có eyewash hay safety shower nào trong phòng thí nghiệm [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Có eyewash nhưng không có safety shower, hoặc vị trí quá xa. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Không có eyewash hay safety shower nào trong phòng thí nghiệm. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+194,"Đặc thù: Nghiên cứu, phòng thí nghiệm",Nhân viên phòng thí nghiệm có được đào tạo về xử lý sự cố đổ tràn hóa chất (spill response) không?,single,"A) 100% được đào tạo, có bộ kit xử lý tràn đổ (spill kit), biết khi nào phải sơ tán [Điểm: 0, Rủi ro: safe]
+B) Có spill kit nhưng chỉ quản phòng biết sử dụng, nhân viên mới chưa được đào tạo [Điểm: 1, Rủi ro: low]
+C) Không có spill kit, khi đổ hóa chất thì lau bằng giẻ thường [Điểm: 2, Rủi ro: high]
+D) Không ai biết xử lý khi đổ tràn, đã từng đổ axit mà không biết trung hòa [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Không có spill kit, khi đổ hóa chất thì lau bằng giẻ thường. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Không ai biết xử lý khi đổ tràn, đã từng đổ axit mà không biết trung hòa. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+195,"Đặc thù: Nghiên cứu, phòng thí nghiệm","Khí nén, gas thí nghiệm (H₂, O₂, N₂, Ar, He) có được buộc cố định vào tường và có van ngắt khẩn cấp ngoài phòng không?",single,"A) Bình gas buộc cố định, van ngắt ngoài phòng, kiểm tra rò rỉ hàng tháng, nhãn đầy đủ [Điểm: 0, Rủi ro: safe]
+B) Bình gas buộc cố định nhưng van ngắt chung ở trong phòng, chưa kiểm tra rò rỉ [Điểm: 1, Rủi ro: low]
+C) Bình gas không buộc, đứng tự do, van ngắt ở trên bình, phải vào phòng để ngắt [Điểm: 2, Rủi ro: high]
+D) Bình H₂ hoặc O₂ không buộc, nằm nghiêng, gần nguồn nhiệt, không van ngắt ngoài [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Lắp van ngắt gas tự động và đầu dò khí gas LPG. Đặt bình gas nơi thoáng, xa nguồn nhiệt tối thiểu 1.5m.
+- Nếu chọn (D): Khắc phục: Bình H₂ hoặc O₂ không buộc, nằm nghiêng, gần nguồn nhiệt, không van ngắt ngoài. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+196,"Đặc thù: Nghiên cứu, phòng thí nghiệm",Tủ bảo quản hóa chất dễ cháy trong phòng thí nghiệm có phải tủ chống cháy chuyên dụng (flammable storage cabinet) không?,single,"A) Tủ chống cháy đạt chuẩn FM/UL, tự đóng, thông gió, dung tích đúng quy định [Điểm: 0, Rủi ro: safe]
+B) Tủ kim loại có khóa nhưng không phải tủ chống cháy chuyên dụng [Điểm: 1, Rủi ro: low]
+C) Để hóa chất dễ cháy trong tủ gỗ hoặc ngăn kéo bàn làm việc [Điểm: 2, Rủi ro: high]
+D) Hóa chất dễ cháy để ngoài bàn, gần bếp đun/nguồn nhiệt, chai hở nắp [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Để hóa chất dễ cháy trong tủ gỗ hoặc ngăn kéo bàn làm việc. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Hóa chất dễ cháy để ngoài bàn, gần bếp đun/nguồn nhiệt, chai hở nắp. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+197,"Đặc thù: Nghiên cứu, phòng thí nghiệm","Phòng thí nghiệm có bình chữa cháy phù hợp (CO₂ cho thiết bị, bột cho hóa chất, cát cho kim loại hoạt tính) không?",single,"A) Có bình phù hợp từng loại nguy cơ, vị trí rõ ràng, kiểm tra hàng tháng, nhân viên biết dùng [Điểm: 0, Rủi ro: safe]
+B) Có bình chữa cháy bột ABC, chưa có bình riêng cho thiết bị điện và kim loại [Điểm: 1, Rủi ro: low]
+C) Chỉ có 1 bình chữa cháy ở hành lang, trong phòng thí nghiệm không có bình [Điểm: 2, Rủi ro: high]
+D) Không có bình chữa cháy, chỉ có nước vòi (không phù hợp cho nhiều loại cháy hóa chất) [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Mua bổ sung bình chữa cháy ABC 4kg: 1 bình/50m². Đặt nơi dễ lấy, cao 0.8-1.5m. Kiểm tra hạn sử dụng hàng quý.
+- Nếu chọn (D): Mua bổ sung bình chữa cháy ABC 4kg: 1 bình/50m². Đặt nơi dễ lấy, cao 0.8-1.5m. Kiểm tra hạn sử dụng hàng quý."
+198,"Đặc thù: Nghiên cứu, phòng thí nghiệm","Chất thải hóa chất nguy hại có được thu gom, phân loại và xử lý đúng quy định không?",single,"A) Thu gom trong thùng chuyên dụng có nhãn, phân loại theo nhóm, hợp đồng xử lý với đơn vị có phép [Điểm: 0, Rủi ro: safe]
+B) Thu gom riêng nhưng chưa phân loại chi tiết, đang tìm đơn vị xử lý [Điểm: 1, Rủi ro: low]
+C) Đổ chất thải hóa chất xuống bồn rửa hoặc thùng rác thường [Điểm: 2, Rủi ro: high]
+D) Chất thải nguy hại chất đống trong phòng, chai lọ hở nắp, nguy cơ phản ứng [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Thu gom rác thải hữu cơ hàng ngày vào thùng kim loại có nắp. Không để tích tụ quá 24 giờ.
+- Nếu chọn (D): Bảo quản vật liệu dễ tự cháy nơi thông thoáng, không chất đống. Kiểm tra nhiệt độ kho định kỳ hàng ngày."
+199,"Đặc thù: Nghiên cứu, phòng thí nghiệm","Phòng thí nghiệm có nguy cơ cháy nổ do sử dụng laser, lò nung mẫu, bếp cách thủy hoặc thiết bị gia nhiệt không?",single,"A) Thiết bị gia nhiệt có thermostat, ngắt quá nhiệt, cách xa hóa chất dễ cháy, có giám sát [Điểm: 0, Rủi ro: safe]
+B) Có thermostat nhưng đôi khi để chạy không giám sát khi ra ngoài nghỉ trưa [Điểm: 1, Rủi ro: low]
+C) Lò nung/bếp cách thủy chạy qua đêm không ai giám sát, gần hóa chất trên bàn [Điểm: 2, Rủi ro: high]
+D) Thiết bị gia nhiệt tự chế, không thermostat, chạy liên tục, gần dung môi dễ cháy [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Lò nung/bếp cách thủy chạy qua đêm không ai giám sát, gần hóa chất trên bàn. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Thiết bị gia nhiệt tự chế, không thermostat, chạy liên tục, gần dung môi dễ cháy. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+200,"Đặc thù: Nghiên cứu, phòng thí nghiệm",Phòng thí nghiệm có quy trình khóa/mở (Lock-Out/Tag-Out) cho thiết bị đang bảo dưỡng để ngăn vận hành ngoài ý muốn không?,single,"A) Có quy trình LOTO đầy đủ, khóa chuyên dụng, biển cảnh báo, nhân viên được đào tạo [Điểm: 0, Rủi ro: safe]
+B) Có ghi chú 'đang sửa chữa' nhưng không có khóa chuyên dụng ngăn vận hành [Điểm: 1, Rủi ro: low]
+C) Không có quy trình LOTO, đôi khi người khác bật thiết bị đang sửa ngoài ý muốn [Điểm: 2, Rủi ro: high]
+D) Đã xảy ra sự cố do bật thiết bị đang sửa, chưa có biện pháp khắc phục [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Không có quy trình LOTO, đôi khi người khác bật thiết bị đang sửa ngoài ý muốn. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Điều tra nguyên nhân sự cố trước đây, lập biện pháp phòng ngừa tái phát. Tăng cường tuần tra PCCC."
+201,"Đặc thù: Nông nghiệp, chế biến nông lâm sản","Xưởng xay xát, xưởng chế biến lúa gạo có hệ thống hút bụi và kiểm soát nguy cơ nổ bụi ngũ cốc không?",single,"A) Có hệ thống hút bụi cyclone, van xả áp nổ, vệ sinh bụi hàng ngày, thiết bị Ex [Điểm: 0, Rủi ro: safe]
+B) Có hút bụi nhưng chưa có van xả áp, vệ sinh bụi hàng tuần [Điểm: 1, Rủi ro: low]
+C) Bụi ngũ cốc tích dày trên máy, trần, tường, không có hệ thống hút bụi [Điểm: 2, Rủi ro: high]
+D) Bụi lơ lửng dày đặc khi máy chạy, đã xảy ra cháy nhỏ do bụi, chưa khắc phục [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Bụi ngũ cốc tích dày trên máy, trần, tường, không có hệ thống hút bụi. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Bụi lơ lửng dày đặc khi máy chạy, đã xảy ra cháy nhỏ do bụi, chưa khắc phục. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+202,"Đặc thù: Nông nghiệp, chế biến nông lâm sản","Kho thóc, kho gạo, kho nông sản có kiểm tra nhiệt độ bên trong đống hàng để phát hiện tự phát nhiệt không?",single,"A) Có que đo nhiệt hoặc cảm biến nhiệt cắm trong đống, kiểm tra hàng tuần, kho thông gió tốt [Điểm: 0, Rủi ro: safe]
+B) Kiểm tra định kỳ nhưng bằng sờ tay, kho thông gió tự nhiên [Điểm: 1, Rủi ro: low]
+C) Không kiểm tra nhiệt, kho kín thông gió kém, nông sản ẩm khi nhập kho [Điểm: 2, Rủi ro: high]
+D) Nông sản ẩm chất đống lớn trong kho kín, đã bốc nóng/mốc nhưng chưa xử lý [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Không kiểm tra nhiệt, kho kín thông gió kém, nông sản ẩm khi nhập kho. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): NGUY HIỂM: Ngắt ngay mạch điện có hiện tượng nóng/khét. Gọi thợ điện kiểm tra nguyên nhân (quá tải, chập mạch, tiếp xúc kém)."
+203,"Đặc thù: Nông nghiệp, chế biến nông lâm sản","Xưởng chế biến gỗ (cưa, bào, chà nhám) có hệ thống hút mùn cưa và kiểm soát nguy cơ cháy nổ bụi gỗ không?",single,"A) Có hệ thống hút mùn cưa tập trung, silo chứa có van xả áp, vệ sinh hàng ngày [Điểm: 0, Rủi ro: safe]
+B) Có hút bụi cục bộ tại máy, quét mùn cưa cuối ngày nhưng chưa có silo chứa [Điểm: 1, Rủi ro: low]
+C) Mùn cưa tích đống quanh máy, trên nóc máy, không hút bụi đúng cách [Điểm: 2, Rủi ro: high]
+D) Mùn cưa phủ dày khắp xưởng, máy móc nóng, đã cháy mùn cưa gần motor máy [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Mùn cưa tích đống quanh máy, trên nóc máy, không hút bụi đúng cách. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): NGUY HIỂM: Ngắt ngay mạch điện có hiện tượng nóng/khét. Gọi thợ điện kiểm tra nguyên nhân (quá tải, chập mạch, tiếp xúc kém)."
+204,"Đặc thù: Nông nghiệp, chế biến nông lâm sản","Lò sấy nông sản (sấy cà phê, tiêu, lúa, gỗ) có thermostat tự động và ngắt quá nhiệt dự phòng không?",single,"A) Lò sấy có thermostat tự động, ngắt quá nhiệt độc lập, bảo dưỡng định kỳ [Điểm: 0, Rủi ro: safe]
+B) Có thermostat nhưng ngắt quá nhiệt chưa được test, sấy theo kinh nghiệm [Điểm: 1, Rủi ro: low]
+C) Sấy thủ công, điều chỉnh nhiệt bằng tay, phải canh suốt quá trình sấy [Điểm: 2, Rủi ro: high]
+D) Lò sấy tự chế, không thermostat, sấy qua đêm không ai canh, đã cháy sản phẩm [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Sấy thủ công, điều chỉnh nhiệt bằng tay, phải canh suốt quá trình sấy. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Lò sấy tự chế, không thermostat, sấy qua đêm không ai canh, đã cháy sản phẩm. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+205,"Đặc thù: Nông nghiệp, chế biến nông lâm sản",Hệ thống biogas (nếu có) tại trại chăn nuôi có cảm biến rò rỉ khí methane và van an toàn không?,single,"A) Không có biogas; hoặc có, cảm biến CH₄, van an toàn, kiểm tra đường ống định kỳ [Điểm: 0, Rủi ro: safe]
+B) Có van an toàn nhưng không có cảm biến khí, kiểm tra đường ống bằng mắt [Điểm: 1, Rủi ro: low]
+C) Đường ống biogas cũ, mối nối lỏng, không van an toàn, phát hiện rò bằng mùi [Điểm: 2, Rủi ro: high]
+D) Hệ  thống biogas rò rỉ nghiêm trọng, mùi gas quanh trại, gần bếp nấu ăn công nhân [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Lắp van ngắt gas tự động và đầu dò khí gas LPG. Đặt bình gas nơi thoáng, xa nguồn nhiệt tối thiểu 1.5m.
+- Nếu chọn (D): Lắp van ngắt gas tự động và đầu dò khí gas LPG. Đặt bình gas nơi thoáng, xa nguồn nhiệt tối thiểu 1.5m."
+206,"Đặc thù: Nông nghiệp, chế biến nông lâm sản","Máy xay, máy nghiền, máy ép có lắp thiết bị phát hiện kim loại hoặc dị vật để ngăn tia lửa va chạm không?",single,"A) Có đầu dò kim loại tự động, ngắt máy khi phát hiện dị vật, nam châm bẫy sắt [Điểm: 0, Rủi ro: safe]
+B) Có nam châm bẫy sắt nhưng không có đầu dò tự động [Điểm: 1, Rủi ro: low]
+C) Không có thiết bị phát hiện, đôi khi đá, sắt vào máy gây tia lửa [Điểm: 2, Rủi ro: high]
+D) Thường xuyên có dị vật gây tia lửa trong máy xay, trong môi trường bụi ngũ cốc [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Không có thiết bị phát hiện, đôi khi đá, sắt vào máy gây tia lửa. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Thường xuyên có dị vật gây tia lửa trong máy xay, trong môi trường bụi ngũ cốc. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+207,"Đặc thù: Nông nghiệp, chế biến nông lâm sản","Khu vực phun thuốc trừ sâu, phân bón hóa học có được cách ly khỏi kho nông sản và khu sinh hoạt không?",single,"A) Kho thuốc riêng biệt, có khóa, tường chống cháy, cách kho nông sản và nhà ở ≥ 10m [Điểm: 0, Rủi ro: safe]
+B) Có khu riêng nhưng chưa có tường ngăn cháy, cách kho nông sản vài mét [Điểm: 1, Rủi ro: low]
+C) Thuốc trừ sâu để chung kho nông sản, không nhãn riêng, gần khu ở [Điểm: 2, Rủi ro: high]
+D) Thuốc trừ sâu dạng dung môi dễ cháy để lẫn kho gạo, gần bếp nấu, rất nguy hiểm [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Khắc phục: Thuốc trừ sâu để chung kho nông sản, không nhãn riêng, gần khu ở. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể.
+- Nếu chọn (D): Khắc phục: Thuốc trừ sâu dạng dung môi dễ cháy để lẫn kho gạo, gần bếp nấu, rất nguy hiểm. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+208,"Đặc thù: Nông nghiệp, chế biến nông lâm sản","Trại chăn nuôi có biện pháp phòng cháy cho khu chuồng trại (quạt thông gió, đèn sưởi gia súc, hệ thống điện) không?",single,"A) Điện chuồng trại có CB riêng, ELCB, đèn sưởi có bảo vệ, cách rơm ≥ 1m, bình chữa cháy [Điểm: 0, Rủi ro: safe]
+B) Có CB nhưng đèn sưởi để gần rơm hơn quy định, vẫn theo dõi [Điểm: 1, Rủi ro: low]
+C) Đèn sưởi treo sát rơm/cỏ khô, dây điện kéo qua chuồng, không ELCB [Điểm: 2, Rủi ro: high]
+D) Dây điện bị chuột gặm trong chuồng, đèn sưởi chạm rơm khô, đã cháy nhỏ 1 lần [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Kiểm tra và thay thế aptomat không đúng dòng định mức. Thử test aptomat bằng cách nhấn nút TEST hàng tháng.
+- Nếu chọn (D): Khắc phục: Dây điện bị chuột gặm trong chuồng, đèn sưởi chạm rơm khô, đã cháy nhỏ 1 lần. Liên hệ đơn vị chuyên môn để được tư vấn giải pháp cụ thể."
+209,"Đặc thù: Nông nghiệp, chế biến nông lâm sản","Khu vực phơi sấy nông sản ngoài trời (sân phơi, giàn phơi) gần đường dây điện cao thế hoặc nguồn phát tia lửa không?",single,"A) Sân phơi cách xa đường dây điện cao thế, không gần nguồn lửa, có rào chắn [Điểm: 0, Rủi ro: safe]
+B) Sân phơi gần dây điện hạ thế nhưng cách an toàn, không có nguồn lửa gần [Điểm: 1, Rủi ro: low]
+C) Phơi sấy nông sản ngay dưới đường dây điện, gần khu đốt rác thải [Điểm: 2, Rủi ro: high]
+D) Nông sản khô phơi sát đường dây điện rủ võng, gần lò đốt/bếp, mùa gió lốc [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Đốt vàng mã trong lư/thùng kim loại có nắp, đặt trên nền bê tông, xa vật liệu dễ cháy 3m. Luôn có người trông coi.
+- Nếu chọn (D): Đốt vàng mã trong lư/thùng kim loại có nắp, đặt trên nền bê tông, xa vật liệu dễ cháy 3m. Luôn có người trông coi."
+210,"Đặc thù: Nông nghiệp, chế biến nông lâm sản","Cơ sở nông nghiệp có phương án PCCC phù hợp mùa khô hanh khi nguy cơ cháy đồng, cháy rừng cao không?",single,"A) Có kế hoạch mùa khô: tăng cường tuần tra, đường ngăn lửa, liên lạc lực lượng C.sát PCCC [Điểm: 0, Rủi ro: safe]
+B) Có nhận thức về nguy cơ mùa khô nhưng chưa có kế hoạch cụ thể văn bản [Điểm: 1, Rủi ro: low]
+C) Không có kế hoạch, mùa khô vẫn đốt rơm rạ trên đồng gần kho nông sản [Điểm: 2, Rủi ro: high]
+D) Đốt rơm mùa khô gần kho, trại, đường dây điện, đã cháy lan 1 lần trước đây [Điểm: 3, Rủi ro: critical]","- Nếu chọn (C): Đốt vàng mã trong lư/thùng kim loại có nắp, đặt trên nền bê tông, xa vật liệu dễ cháy 3m. Luôn có người trông coi.
+- Nếu chọn (D): Đốt vàng mã trong lư/thùng kim loại có nắp, đặt trên nền bê tông, xa vật liệu dễ cháy 3m. Luôn có người trông coi."

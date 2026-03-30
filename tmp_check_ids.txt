@@ -1,0 +1,12 @@
+ID: 19 - Hồ sơ pháp lý về an toàn điện của cơ sở (thiết kế điện được thẩm duyệt, nghiệm thu điện, biên bản kiểm tra định kỳ) có đầy đủ không?
+ID: 31 - Cơ sở có đầy đủ hồ sơ pháp lý PCCC bắt buộc (thẩm duyệt thiết kế PCCC, nghiệm thu PCCC, giấy chứng nhận PCCC) không?
+ID: 36 - Cơ sở có thành lập Đội PCCC cơ sở và xây dựng Phương án chữa cháy, thoát nạn không?
+ID: 40 - Sơ đồ thoát nạn, biển chỉ dẫn PCCC và nội quy an toàn có được dán đúng vị trí và còn đọc được không?
+ID: 54 - Cơ sở có nguy cơ bị ảnh hưởng bởi cháy rừng, cháy đồng cỏ hoặc hỏa hoạn lan từ khu vực lân cận không?
+ID: 82 - Cơ sở lân cận (hàng xóm, cơ sở cùng khu công nghiệp) có mang lại rủi ro cháy lan sang cơ sở của bạn không?
+ID: 90 - Cơ sở có bảo hiểm cháy nổ hợp lệ và kế hoạch khôi phục hoạt động sau sự cố cháy (Business Continuity Plan) không?
+ID: 120 - Gia đình đã từng thực hành diễn tập thoát nạn, kể cả tình huống giả định cháy xảy ra vào ban đêm khi mọi người đang ngủ chưa?
+ID: 122 - Toàn bộ nhân viên có được đào tạo quy trình dẫn khách thoát nạn, và cơ sở đã tổ chức diễn tập sơ tán có sự tham gia của khách hàng thực tế chưa?
+ID: 132 - Trường học có tổ chức diễn tập sơ tán phù hợp với từng độ tuổi học sinh, kể cả tình huống không báo trước không?
+ID: 154 - Tàu thuyền có đầy đủ phao cứu sinh, áo phao và đã diễn tập sơ tán cho thuyền viên và hành khách không?
+ID: 167 - Chủ nhà trọ có phổ biến quy tắc PCCC cho người thuê, niêm yết nội quy và sơ đồ thoát nạn mỗi tầng không?
