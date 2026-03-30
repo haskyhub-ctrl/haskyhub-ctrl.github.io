@@ -1,0 +1,835 @@
+============================================================
+PHẦN 1: CÂU HỎI CHUNG (áp dụng cho mọi loại cơ sở)
+============================================================
+
+--- NHÓM: DẤU HIỆU NGUY CƠ TỪ HỆ THỐNG ĐIỆN ---
+
+ID1. Bạn có ngửi thấy mùi khét (nhựa cháy, cao su) phát ra từ ổ cắm, công tắc, tủ điện hoặc bảng điện không?
+A. Không có mùi khét bất thường
+B. Thỉnh thoảng thoáng có mùi khét nhẹ nhưng nhanh hết
+C. Có mùi khét rõ ràng từ ổ cắm hoặc tủ điện, xuất hiện thường xuyên
+D. Mùi khét nồng kèm khói mỏng từ thiết bị điện
+
+ID2. Ổ cắm, phích cắm hoặc công tắc điện có bị nóng bất thường khi chạm tay vào không?
+A. Không nóng, nhiệt độ bình thường
+B. Ấm nhẹ khi dùng thiết bị công suất lớn, hết ấm khi rút phích
+C. Nóng rõ rệt dù chỉ cắm thiết bị nhỏ, phích cắm bị biến dạng
+D. Nóng bỏng tay, nhựa ổ cắm bị chảy méo, có vết cháy đen
+
+ID3. Quanh ổ cắm, công tắc hoặc bảng điện có xuất hiện vết xém, ố vàng hoặc muội đen không?
+A. Không có vết ố hay cháy xém
+B. Có vết ố vàng nhẹ quanh 1-2 ổ cắm cũ
+C. Nhiều ổ cắm/công tắc có vết xém đen, nhựa sậm màu
+D. Vết cháy lan rộng trên tường quanh bảng điện, có dấu tia lửa
+
+ID4. Đèn chiếu sáng có bị chập chờn, nhấp nháy hoặc tối đi bất thường không?
+A. Đèn sáng ổn định, không nhấp nháy
+B. Thỉnh thoảng 1-2 bóng nhấp nháy khi bật nhiều thiết bị cùng lúc
+C. Nhiều đèn nhấp nháy thường xuyên, tối đi rõ rệt khi bật thêm thiết bị
+D. Đèn chập chờn liên tục kèm tiếng kêu từ bảng điện, đã từng tắt đột ngột
+
+ID5. Có tiếng kêu lạ (vo ve, lạch cạch, xì xì) phát ra từ ổ cắm, hộp điện hoặc tủ điện không?
+A. Không có tiếng kêu bất thường
+B. Có tiếng vo nhẹ từ ballast đèn huỳnh quang cũ
+C. Tiếng lạch cạch hoặc xì xì từ ổ cắm/hộp nối khi dùng thiết bị
+D. Tiếng nổ lách tách kèm tia lửa nhỏ nhìn thấy được
+
+ID6. Aptomat (CB) hoặc cầu chì có tự nhảy (ngắt) thường xuyên không?
+A. Chưa bao giờ tự nhảy, hoặc rất hiếm khi
+B. Nhảy 1-2 lần/tháng khi bật nhiều thiết bị cùng lúc
+C. Nhảy thường xuyên hàng tuần, phải đóng lại liên tục
+D. CB nhảy liên tục nên đã phải nối tắt (bypass) hoặc dùng dây đồng thay cầu chì
+
+ID7. Dây điện có bị bong tróc, nứt vỏ cách điện, lộ lõi đồng hoặc có mối nối quấn băng keo không?
+A. Dây điện vỏ nguyên vẹn, luồn ống hoặc máng cáp gọn gàng
+B. Có 1-2 chỗ vỏ hơi cũ nhưng chưa lộ lõi
+C. Nhiều chỗ bong tróc, lộ lõi đồng, mối nối quấn băng keo điện
+D. Dây cũ nát, lõi lộ nhiều chỗ, rỉ sét mối nối, đã có dấu hiệu chạm chập
+
+ID8. Ổ cắm kéo dài (dây nối dài) có bị nóng, chân cắm lỏng hoặc nối chồng nhiều cái không?
+A. Không dùng ổ kéo dài, hoặc dùng ít, không nóng
+B. Có dùng nhưng không nối chồng, dây không nóng
+C. Nối chồng 2-3 ổ, cắm nhiều thiết bị, dây ấm khi dùng
+D. Ổ cắm cũ hỏng, chân lỏng, dây nóng ran khi dùng, vẫn dùng hàng ngày
+
+ID9. Hóa đơn tiền điện có tăng đột biến (trên 20-30%) mà không sử dụng thêm thiết bị mới không?
+A. Tiền điện ổn định, tăng giảm theo mùa bình thường
+B. Có tăng nhẹ nhưng giải thích được (thêm ĐHKK, mùa nóng)
+C. Tăng bất thường >20% mà không rõ lý do
+D. Tăng đột biến >50% kèm theo dây điện nóng hoặc CB nhảy
+
+ID10. Dây điện có bị chuột, côn trùng gặm nhấm làm hở lớp vỏ bảo vệ không?
+A. Không có dấu hiệu chuột/côn trùng gặm dây điện
+B. Có thấy chuột trong nhà nhưng chưa phát hiện gặm dây
+C. Đã thấy dây điện bị gặm hở vỏ 1-2 chỗ
+D. Chuột gặm nhiều dây, đã từng chập điện do chuột
+
+ID11. Vật liệu dễ cháy (giấy, vải, hàng hóa) có đang chất gần hoặc sát ổ cắm, tủ điện không?
+A. Tủ điện và ổ cắm đều thông thoáng, cách vật dễ cháy >1m
+B. Đôi chỗ có đồ gần ổ cắm nhưng không che khuất tủ điện
+C. Hàng hóa xếp sát tủ điện và ổ cắm, che khuất một phần
+D. Tủ điện bị chôn vùi trong hàng hóa dễ cháy, không thể tiếp cận
+
+ID12. Thiết bị điện nung nóng (bếp, bàn ủi, lò sưởi, ấm nước) có đang đặt gần vật dễ cháy hoặc chạy không giám sát không?
+A. Luôn cách xa vật dễ cháy, rút phích khi không dùng
+B. Đôi khi quên rút phích nhưng thiết bị có tự ngắt
+C. Đặt gần rèm/vải, dùng chung ổ cắm với thiết bị khác
+D. Thiết bị cũ không tự ngắt, chạy liên tục không ai trông
+
+ID20. Điều hòa, tủ lạnh, tủ đông có tiếng kêu bất thường, rung mạnh hoặc mùi khét không?
+A. Hoạt động êm ái, không mùi, không rung lắc lạ
+B. Thỉnh thoảng kêu nhẹ khi khởi động, nhanh hết
+C. Rung lắc mạnh, kêu liên tục, dây điện nóng khi chạy
+D. Bốc mùi khét, motor cháy, vẫn cắm điện chạy
+
+--- NHÓM: NGUY CƠ TỪ NGUỒN LỬA/NHIỆT ---
+
+ID13. Có đốt rác, lá khô, phế thải lộ thiên trong khuôn viên không?
+A. Không đốt rác lộ thiên
+B. Có đốt trong thùng kim loại có nắp, có người trông
+C. Đốt lộ thiên gần hàng rào, cây khô, không trông liên tục
+D. Đốt gần kho hàng hoặc nhà xưởng, kể cả khi gió lớn
+
+ID14. Bàn thờ, nến, đèn dầu, vàng mã có đặt gần vật dễ cháy (rèm, gỗ, giấy) không?
+A. Không dùng lửa thờ cúng, hoặc dùng nến LED thay thế
+B. Bàn thờ cách trần và vật dễ cháy >0.5m, có người trông
+C. Bàn thờ gỗ sát trần, tàn hương/nến rơi xuống đồ giấy/vải
+D. Đốt vàng mã lộ thiên, nến cháy qua đêm không ai trông
+
+ID15. Có người hút thuốc trong nhà, trong kho hàng hoặc gần vật liệu dễ cháy không?
+A. Không ai hút thuốc trong khuôn viên
+B. Hút ngoài trời, xa vật dễ cháy, có gạt tàn
+C. Hút trong nhà, vứt tàn vào thùng rác thường
+D. Hút trong kho hàng hoặc gần nhiên liệu/hóa chất
+
+ID16. Bếp gas, bình gas có dấu hiệu bất thường (mùi gas, dây dẫn cũ nứt, van khó khóa) không?
+A. Bếp gas hoạt động tốt, dây mới, không mùi gas
+B. Dây dẫn hơi cũ nhưng chưa nứt, không mùi gas
+C. Thoáng có mùi gas khi mở bếp, dây cũ trên 3 năm, van hơi cứng
+D. Mùi gas rõ, dây nứt vá băng keo, bình gas đặt trong phòng kín
+
+ID17. Xăng dầu, cồn, dung môi dễ cháy có đang được để trong nhà/phòng ngủ/gần bếp không?
+A. Không lưu trữ chất dễ cháy, hoặc để tủ chuyên dụng
+B. Lượng nhỏ trong can kim loại có nắp, xa nguồn nhiệt
+C. Để trong kho chung gần thiết bị điện
+D. Để trong chai nhựa hở, trong phòng ngủ hoặc gần bếp
+
+ID18. Có hoạt động hàn cắt kim loại gần vật liệu dễ cháy không?
+A. Không có hàn cắt, hoặc hàn tại khu riêng cách xa vật dễ cháy
+B. Hàn tại khu riêng, có bình chữa cháy gần đó
+C. Hàn cắt ngay khu sản xuất, chưa dọn vật dễ cháy xung quanh
+D. Hàn cắt cạnh vật dễ cháy, tia lửa bắn tự do, không giám sát
+
+ID19. Có than hoa, lửa trại, nướng lộ thiên gần nhà hoặc kho hàng không?
+A. Không dùng lửa ngoài trời
+B. Nướng ngoài sân rộng, cách xa nhà, có nước dập sẵn
+C. Nướng trên ban công hoặc gần mái hiên dễ cháy
+D. Đốt lửa gần kho hàng, bãi xe, cỏ khô
+
+
+--- NHÓM: LỐI THOÁT NẠN VÀ TRANG BỊ PCCC ---
+
+ID21. Lối thoát nạn (cửa thoát hiểm, cầu thang bộ) có đang bị chặn bởi hàng hóa, xe máy hoặc khóa cứng không?
+A. Tất cả lối thoát thông thoáng, cửa mở dễ dàng
+B. Lối thoát chính thông, có đồ đạc nhẹ bên cạnh nhưng không cản trở
+C. Lối thoát bị thu hẹp bởi hàng hóa/xe máy, phải len qua
+D. Lối thoát duy nhất bị chặn hoàn toàn hoặc cửa bị khóa cứng
+
+ID22. Bạn có nhìn thấy bình chữa cháy gần nhất không? Nó có dễ lấy không?
+A. Nhìn thấy ngay, dễ lấy, kim đồng hồ ở vùng xanh
+B. Có bình nhưng hơi xa hoặc để dưới thấp khó thấy
+C. Bình bị hàng hóa che khuất, phải dọn mới lấy được
+D. Không thấy bình nào, hoặc bình hết hạn/hỏng van
+
+ID23. Đèn EXIT (chỉ lối thoát) và đèn chiếu sáng khẩn cấp có sáng không?
+A. Đèn EXIT sáng rõ, đèn khẩn cấp hoạt động khi test, không thuộc diện phải trang bị đèn exit
+B. Đèn EXIT sáng nhưng chưa test đèn khẩn cấp gần đây
+C. Một số đèn EXIT đã tắt/hỏng, chưa thay
+D. Không có đèn EXIT hoặc tất cả đã hỏng
+
+ID24. Đầu phun sprinkler (nếu có) có bị hàng hóa che khuất hoặc sơn phủ lên không?
+A. Không có sprinkler, hoặc có và đầu phun đều thông thoáng, không thuộc diện phải trang bị đầu phun sprinkler
+B. Hầu hết thông thoáng, 1-2 chỗ hàng xếp gần sát
+C. Nhiều đầu phun bị kệ hàng che khuất hoặc bị sơn phủ
+D. Đầu phun bị chôn vùi trong hàng hóa, không thể phun được
+
+ID25. Bạn có biết đường thoát nạn gần nhất từ vị trí hiện tại không? Có sơ đồ dán trên tường không?
+A. Biết rõ, có sơ đồ thoát nạn rõ ràng dán mỗi tầng
+B. Biết đường đi nhưng sơ đồ cũ/mờ chữ
+C. Không chắc đường nào, không thấy sơ đồ
+D. Không biết, Không để ý
+
+ID26. Hàng hóa, vật tư trong kho có đang xếp chật tràn lan, che khuất tủ điện không?
+A. Xếp gọn gàng, lối đi thông, tủ điện dễ tiếp cận
+B. Có lối đi nhưng hơi hẹp, tủ điện vẫn tiếp cận được
+C. Lối đi bị thu hẹp, hàng dễ cháy để lẫn lộn, tủ điện bị chắn
+D. Hàng chất tràn lan, không lối đi, tủ điện bị chôn vùi
+
+--- NHÓM: DẤU HIỆU BẤT THƯỜNG TỪ MÁY MÓC ---
+
+ID27. Vỏ máy, ổ bi, hộp số hoặc bộ phận chuyển động có nóng bất thường khi chạm vào không?
+A. Không nóng bất thường, nhiệt độ trong phạm vi bình thường
+B. Ấm hơn bình thường ở 1-2 vị trí, đã lưu ý theo dõi
+C. Nóng rõ rệt khi chạm, có mùi dầu cháy nhẹ
+D. Nóng bỏng tay, có khói hoặc mùi khét từ ổ bi/hộp số
+
+ID28. Máy móc có phát ra tiếng kêu lạ (rít, gõ, lục cục) hoặc rung mạnh hơn bình thường không?
+A. Hoạt động êm ái, không tiếng lạ hay rung bất thường
+B. Tiếng kêu nhẹ khi khởi động, hết khi chạy ổn định
+C. Tiếng rít hoặc gõ liên tục, rung lắc mạnh hơn trước
+D. Va đập mạnh, rung dữ dội làm lỏng bu lông, chưa sửa
+
+ID29. Có vết dầu mỡ rò rỉ, nhỏ giọt xuống sàn hoặc bám trên vỏ máy không?
+A. Không rò rỉ, sàn sạch, máy khô ráo
+B. Rỉ nhẹ tại khớp nối, đã dùng khay hứng và lau dọn
+C. Dầu nhỏ giọt xuống sàn tạo vũng, sàn trơn, chưa xử lý
+D. Dầu loang rộng trên sàn gần nguồn nhiệt/thiết bị điện
+
+ID30. Dây đai truyền động, băng chuyền có bốc mùi khét hoặc nóng bất thường không?
+A. Không có dây đai/băng chuyền, hoặc hoạt động bình thường
+B. Thỉnh thoảng dây đai trượt phát sinh nhiệt nhẹ
+C. Dây đai cũ, kẹt gây nóng, bụi vải tích quanh bộ phận ma sát
+D. Mùi khét từ dây đai, bụi dễ cháy tích dày, nóng bất thường
+
+ID31. Ống dẫn thủy lực, khí nén có bị phồng rộp, rỉ dầu tại khớp nối không?
+A. Không có hoặc ống tốt, khớp nối chắc, không rò rỉ
+B. 1-2 khớp rỉ nhẹ đã siết lại
+C. Ống cũ mòn mỏng, khớp lỏng gây rò dầu áp lực
+D. Ống phồng rộp có nguy cơ vỡ, dầu phun ra khi vận hành
+
+ID32. Xe nâng hoặc phương tiện nội bộ có rò rỉ nhiên liệu, dầu nhớt trên sàn không?
+A. Không có vết dầu dưới xe, sàn sạch
+B. Vết dầu nhỏ tại chỗ đỗ, lau dọn thường xuyên
+C. Vết dầu loang dưới xe trong kho, chưa xác định nguồn
+D. Xe rò rỉ rõ ràng, vẫn đỗ trong kho hàng dễ cháy, mùi xăng
+
+ID33. Lò nung, lò sấy (nếu có) có dấu hiệu quá nhiệt: vỏ ngoài nóng rát, lớp cách nhiệt bong tróc?
+A. Không có lò nung/sấy, hoặc vỏ ngoài mát, cách nhiệt tốt
+B. Vỏ ấm nhẹ, cách nhiệt nguyên vẹn
+C. Vỏ nóng, cách nhiệt bong 1-2 chỗ, đặt gần vật dễ cháy
+D. Vỏ nóng bỏng, cách nhiệt hư hỏng nặng, sát vật dễ cháy
+
+--- NHÓM: TÁC ĐỘNG TỪ THIÊN NHIÊN ---
+
+ID34. Cơ sở có nằm gần rừng, đồng cỏ khô hoặc khu vực hay xảy ra cháy rừng không?
+A. Nằm trong khu đô thị, không gần rừng/đồng cỏ
+B. Gần đồi núi nhưng có khoảng cách an toàn và đường ngăn lửa
+C. Gần bìa rừng/đồng cỏ, mùa khô có nguy cơ cháy lan
+D. Giáp rừng, vùng cháy rừng thường xuyên, không có biện pháp ngăn
+
+ID35. Mái nhà, tường có bằng vật liệu dễ cháy (gỗ, lá, tôn nhựa, xốp) không?
+A. Xây bằng bê tông, gạch, tôn thép - khó cháy
+B. Phần lớn bê tông, có một số vách ngăn bằng gỗ/nhựa
+C. Mái tôn nhựa, vách gỗ, xốp cách nhiệt dễ cháy
+D. Toàn bộ bằng gỗ/lá/bạt, nằm vùng nắng nóng kéo dài
+
+ID36. Thiết bị điện ngoài trời có bị gỉ sét, vỡ vỏ bảo vệ hoặc nước mưa xâm nhập không?
+A. Vỏ nguyên vẹn chống nước, không gỉ sét
+B. Gỉ sét nhẹ bên ngoài, vỏ bảo vệ còn nguyên
+C. Vỏ tủ điện ngoài trời bị thủng, nắp hộp vỡ, cáp lộ lõi
+D. Nước mưa đã xâm nhập vào tủ điện, gây chập
+
+ID37. Bụi (xi măng, kim loại, than) có tích tụ dày trên thiết bị điện, tủ điện không?
+A. Thiết bị được vệ sinh định kỳ, không tích bụi
+B. Lớp bụi mỏng, vệ sinh mỗi tháng
+C. Bụi tích dày trên tủ điện, ổ cắm, đầu báo khói
+D. Bụi dẫn điện (kim loại/than) phủ dày trên thanh dẫn điện
+
+ID38. Tủ điện, ổ cắm có đặt ở vùng thấp dễ bị ngập nước khi mưa lớn không?
+A. Vùng cao không ngập, tủ điện đặt trên cao
+B. Thỉnh thoảng ngập nhẹ, ổ cắm tầng trệt chưa có nắp chống nước
+C. Hay ngập, tủ điện đặt thấp dưới 1m, dây đi sát sàn
+D. Tầng hầm có thiết bị điện, đã từng ngập gây chập điện
+
+--- NHÓM: NGUY CƠ TỰ CHÁY ---
+
+ID39. Có đống rơm, trấu, than, gỗ vụn lớn nào đang bốc nóng, bốc hơi hoặc có mùi cháy không?
+A. Không có vật liệu tự cháy, hoặc đống nhỏ nơi thoáng mát
+B. Có bảo quản nhưng đống nhỏ, kho thông gió, chưa nóng
+C. Đống lớn trong kho kín, thông gió kém, chưa kiểm tra nhiệt
+D. Đống đã tự nóng, bốc khói hoặc có mùi cháy âm ỉ
+
+ID40. Giẻ lau dính dầu (dầu ăn, dầu máy) có đang chất đống hoặc vứt gần nguồn nhiệt không?
+A. Giẻ dính dầu được thu gom vào thùng kim loại có nắp
+B. Có thu gom nhưng thùng hở nắp, chưa xử lý hàng ngày
+C. Giẻ dính dầu chất đống, thùng dầu hở trong kho nóng
+D. Giẻ dính dầu vứt bừa gần nguồn nhiệt, đã nóng hoặc bốc khói
+
+ID41. Bụi gỗ, bụi ngũ cốc, bụi kim loại có tích tụ dày trong không gian kín không?
+A. Không phát sinh bụi, hoặc có hệ thống hút bụi tốt
+B. Có bụi nhưng vệ sinh hàng ngày, không tích dày
+C. Bụi tích dày trên máy, tường, trần, không hút bụi
+D. Bụi lơ lửng dày đặc tạo mây bụi, đã có cháy nhỏ do bụi
+
+ID42. Pin lithium (điện thoại, laptop, xe điện) có bị phồng, nóng hoặc sạc bằng sạc kém chất lượng không?
+A. Pin tốt, sạc chính hãng, không sạc qua đêm
+B. Sạc chính hãng, đôi khi sạc qua đêm nơi thoáng
+C. Pin một số thiết bị phồng, sạc không chính hãng, phòng kín
+D. Pin phồng vẫn dùng, sạc qua đêm trong phòng ngủ kín
+
+ID43. Hóa chất dễ cháy hoặc tự phản ứng có đang để lẫn với nhau hoặc gần nguồn nhiệt không?
+A. Không có hóa chất, hoặc tách riêng theo nhóm tương thích
+B. Có tách nhóm nhưng chưa hoàn toàn, kho thông gió
+C. Hóa chất oxy hóa để chung vật dễ cháy, không kho riêng
+D. Hóa chất lượng lớn bảo quản kém, gần nguồn nhiệt
+
+ID44. Phân bón, phế phẩm hữu cơ có ủ đống lớn trong không gian kín, bốc nóng không?
+A. Không có đống ủ, hoặc ủ nhỏ ngoài trời có đảo trộn
+B. Ủ quy mô nhỏ ngoài trời, đảo trộn không thường xuyên
+C. Đống lớn trong khu kín, bốc mùi nóng, chưa xử lý
+D. Đống ủ tự phát nhiệt, bốc khói hoặc âm ỉ cháy
+
+ID45. Xe máy, xe đạp điện có đang sạc trong phòng ngủ kín hoặc pin đã phồng không?
+A. Sạc ở khu riêng thông thoáng, pin còn tốt
+B. Sạc tầng trệt khu chung, pin bình thường
+C. Sạc trong phòng trọ/ngủ, gần đồ dùng cá nhân
+D. Sạc qua đêm phòng kín, pin cũ phồng, sạc kém chất lượng
+
+--- NHÓM: PHƯƠNG TIỆN GIAO THÔNG ---
+
+ID46. Xe ô tô, xe máy đỗ trong nhà có dấu hiệu rò rỉ xăng dầu (mùi xăng, vết dầu dưới xe) không?
+A. Xe không đỗ trong nhà, hoặc không rò rỉ, sàn sạch
+B. Đỗ trong nhà, kiểm tra thường, chưa phát hiện rò rỉ
+C. Có vết dầu loang dưới xe, chưa xác định nguồn
+D. Xe rò xăng rõ ràng, mùi xăng nồng, vẫn đỗ trong nhà
+
+ID47. Xe đỗ trong nhà có đang chắn lối thoát nạn duy nhất không?
+A. Xe đỗ không cản trở lối thoát, có ≥2 lối ra
+B. Xe đỗ gần cầu thang nhưng vẫn đi qua được
+C. Xe đỗ chật tầng 1, phải len qua mới lên lầu
+D. Nhiều xe chặn lối thoát duy nhất, khi cháy không ra được
+
+ID48. Can xăng, dầu nhớt dự trữ có đang để trong nhà gần ổ cắm điện không?
+A. Không dự trữ xăng dầu, hoặc để khu riêng xa nhà
+B. Để riêng ngoài trời, thùng có nắp kín, xa nguồn nhiệt
+C. Để trong nhà gần thiết bị điện
+D. Can nhựa hở, trong garage chung nhiều xe, gần ổ cắm
+
+ID50. Hệ thống điện xe (dây điện, ắc-quy) có dấu hiệu chạm chập: khói, mùi khét, tia lửa?
+A. Hệ thống điện xe hoạt động bình thường
+B. Xe cũ, chưa kiểm tra điện gần đây nhưng chưa có dấu hiệu lạ
+C. Dây điện xe một số chỗ nối tạm, cầu chì thay bằng dây đồng
+D. Đã có hiện tượng khói/tia lửa từ khoang động cơ, vẫn chạy
+
+--- NHÓM: NGUY CƠ BỔ SUNG ---
+
+ID51. Cơ sở lân cận (nhà hàng xóm, xưởng bên cạnh) có hoạt động dễ gây cháy lan không?
+A. Có tường ngăn, hàng xóm hoạt động ít nguy cơ
+B. Liền kề nhưng hàng xóm ít nguy cơ (văn phòng, trường)
+C. Liền kề xưởng gỗ/kho hàng, không tường ngăn cháy
+D. Sát cơ sở kinh doanh xăng dầu/gas, mái nhà thông nhau
+
+ID52. Rác thải, phế liệu dễ cháy có đang tích tụ thành đống lớn gần nguồn nhiệt/điện không?
+A. Thu gom rác hàng ngày, khu rác sạch, thùng có nắp
+B. Thu gom 2-3 ngày/lần, đôi khi đầy tràn
+C. Phế liệu tích đống trong góc xưởng, nhiều ngày chưa xử lý
+D. Phế liệu dễ cháy chất đống gần nguồn nhiệt/điện, lâu ngày
+
+ID53. Khuôn viên có camera, hàng rào, khóa cổng để ngăn người lạ xâm nhập không?
+A. Có camera 24/7, hàng rào kín, bảo vệ trực
+B. Có camera và khóa cổng nhưng không bảo vệ ngoài giờ
+C. Không camera, cổng lỏng, người lạ dễ vào
+D. Khuôn viên mở, đã có dấu hiệu bị phá hoại
+
+ID54. Trong dịp lễ, sự kiện, có lắp nhiều đèn trang trí gây nóng dây điện, quá tải không?
+A. Dùng đèn LED ít, CB riêng cho đèn trang trí
+B. Dùng đèn LED, cắm ổ cắm hiện có, chưa tính tải
+C. Nhiều đèn sợi đốt, nối chồng ổ cắm kéo dài
+D. Đèn khắp nơi gần rèm/vải, nối chéo, CB nhảy phải nối tắt
+
+ID55. Mọi người có biết gọi số 114 khi xảy ra cháy và biết dùng bình chữa cháy không?
+A. Biết số 114, biết dùng bình chữa cháy, đã thực hành, đã được tập huấn
+B. Biết số 114 nhưng chưa thực hành dùng bình chữa cháy, chưa được tập huấn.
+C. Không biết số 114, không biết bình chữa cháy ở đâu.
+D. Không ai biết gì về PCCC, chưa từng được hướng dẫn, tập huấn, nhà không có bình chữa cháy
+
+============================================================
+PHẦN 2: CÂU HỎI ĐẶC THÙ NGÀNH
+============================================================
+
+--- NHÓM: ĐẶC THÙ: SẢN XUẤT CÔNG NGHIỆP ---
+
+ID56. Khu vực sơn, phun sơn có mùi dung môi nồng, hơi dung môi nhìn thấy được trong không khí không?
+A. Buồng sơn kín có quạt hút, không mùi ngoài buồng
+B. Có quạt hút nhưng thoáng mùi dung môi lúc mở cửa
+C. Sơn trong xưởng mở, hơi dung môi lan tỏa, mùi nồng
+D. Phun sơn trong phòng kín, không thông gió, nồng độ hơi cao, có ổ cắm thường
+
+ID57. Hệ thống hút bụi, ống dẫn bụi, silo chứa bụi có tích bụi dày hoặc đã phồng ống không?
+A. Vệ sinh định kỳ, ống sạch, silo có van xả áp
+B. Vệ sinh hàng tháng nhưng chưa kiểm tra nguy cơ nổ bụi
+C. Bụi tích dày trong ống, silo chưa có van xả áp
+D. Đã phồng ống hoặc cháy nhỏ trong hệ thống hút bụi
+
+ID58. Phoi kim loại dính dầu cắt gọt có tích đống gần máy đang chạy hoặc nguồn nhiệt không?
+A. Phoi thu gom ngay, dầu hứng khay, xử lý hàng ngày
+B. Thu gom cuối ca, dính dầu nhưng lượng nhỏ, xa nguồn nhiệt
+C. Phoi dính dầu tích đống nhiều ngày gần máy đang chạy
+D. Phoi dính dầu chất đống gần khu hàn cắt, đã bốc khói
+
+ID59. Hệ thống điện nhà xưởng có dấu hiệu quá tải: dây nóng, CB nhảy thường xuyên?
+A. Hệ thống đủ tải, dây không nóng, CB không nhảy
+B. Đủ tải hiện tại nhưng không còn dự phòng cho máy mới
+C. Thêm nhiều máy mới, CB thỉnh thoảng nhảy
+D. Dây nóng ran khi chạy, CB nhảy phải nối tắt
+
+ID60. Khu nạp axit, pha hóa chất có hơi axit ăn mòn thiết bị điện xung quanh không?
+A. Không có hóa chất, hoặc có quạt hút cục bộ, thiết bị được bảo vệ
+B. Có quạt hút nhưng công suất nhỏ, thoáng mùi hóa chất
+C. Không hút hơi, axit bay hơi ăn mòn thiết bị điện gần đó
+D. Hơi axit ăn mòn dây điện và tủ điện, đã gây chập
+
+ID61. Thanh nhiệt trong dây chuyền đóng gói có bị kẹt vật liệu (nilon, giấy) gây cháy chảy không?
+A. Không có thanh nhiệt, hoặc có cảm biến ngắt khi kẹt
+B. Hoạt động tốt nhưng chưa có cảm biến ngắt khi kẹt
+C. Vật liệu đôi khi kẹt vào thanh nhiệt gây chảy/cháy nhỏ
+D. Thanh nhiệt hỏng tự ngắt, quá nhiệt, đã cháy nhiều lần
+
+ID62. Khu sạc xe nâng/ắc-quy có thông gió không? Có mùi axit hoặc khí gas không?
+A. Khu sạc riêng, thông gió tốt, biển cấm lửa
+B. Khu sạc riêng nhưng thông gió chưa đủ
+C. Sạc ngay trong kho hàng, gần hàng dễ cháy
+D. Sạc phòng kín, bộ sạc cũ tóe tia lửa, khí hydro tích tụ
+
+ID63. Thiết bị gia nhiệt (lò nung, sấy, nhiệt đóng gói) có dấu hiệu quá nhiệt không kiểm soát?
+A. Có tự ngắt quá nhiệt, nhiệt kế kiểm tra định kỳ
+B. Có nhiệt kế nhưng chưa hiệu chuẩn gần đây
+C. Điều chỉnh nhiệt bằng tay, không tự ngắt, công nhân canh bằng mắt
+D. Thiết bị tự chế, không kiểm soát nhiệt, đã quá nhiệt gây hỏng
+
+ID64. Motor quạt tháp giải nhiệt, chiller có rung lắc, nóng bất thường, mùi khét không?
+A. Không có tháp/chiller, hoặc hoạt động êm, bảo trì tốt
+B. Hoạt động bình thường, chưa kiểm tra gần đây
+C. Motor nóng, rung lắc mạnh hơn trước
+D. Motor quá tải thường xuyên, tấm tản nhiệt PVC dễ cháy
+
+ID65. Công nhân có nhận biết được dấu hiệu cảnh báo sớm (mùi khét, khói, tiếng lạ) từ quy trình mình làm không?
+A. Được đào tạo nhận biết dấu hiệu riêng cho từng vị trí
+B. Được đào tạo PCCC chung, chưa đi sâu dấu hiệu đặc thù
+C. Chỉ quản lý biết, công nhân chưa nhận ra dấu hiệu
+D. Không ai biết dấu hiệu nguy hiểm của quy trình mình làm
+
+--- NHÓM: ĐẶC THÙ: KHO HÀNG, KHO VẬT LIỆU ---
+
+ID66. Hàng dễ cháy (aerosol, pin lithium, dung môi) có đang để lẫn với hàng thường, không nhãn cảnh báo?
+A. Khu riêng cho hàng nguy hiểm, biển cảnh báo rõ
+B. Để khu riêng nhưng chưa có biển cảnh báo đầy đủ
+C. Hàng nguy hiểm để chung hàng thường, không nhãn
+D. Pin lithium, aerosol chất đống sát tủ điện, không bảo vệ
+
+ID67. Lối đi chính trong kho có đang bị hàng hóa chặn, xe nâng không qua được?
+A. Lối đi thông suốt ≥2m, kiểm tra hàng ngày
+B. Đôi khi có pallet tạm chiếm chỗ rồi dọn đi
+C. Lối đi bị thu hẹp, xe nâng đi khó, lối thoát hẹp
+D. Lối đi bị chặn hoàn toàn, không thể đi qua khi khẩn cấp
+
+ID68. Kho ban đêm có hệ thống báo cháy tự động hoặc camera giám sát không?
+A. Báo cháy tự động, camera nhiệt, kết nối trung tâm 24/7
+B. Báo cháy có nhưng không camera nhiệt, bảo vệ tuần tra
+C. Chỉ bảo vệ tuần tra, không hệ thống tự động
+D. Ban đêm không ai trực, không hệ thống giám sát nào
+
+ID69. Đèn chiếu sáng trong kho có loại nào tỏa nhiệt cao (sợi đốt) chạm vào hàng dễ cháy không?
+A. Đèn LED, cách hàng ≥0.5m, có chao bảo vệ
+B. Đèn LED nhưng hàng xếp cao gần sát đèn
+C. Đèn huỳnh quang/sợi đốt, hàng dễ cháy sát đèn, ballast nóng
+D. Đèn sợi đốt chạm trực tiếp vải/giấy/nhựa, đã ố cháy
+
+ID70. Kệ hàng có bị nghiêng, cong vênh do chất quá tải hoặc xe nâng va chạm không?
+A. Kệ neo chắc, tải trọng ghi rõ, không chất vượt
+B. Kệ neo nhưng tải không ghi rõ, chất theo kinh nghiệm
+C. Kệ không neo, nghiêng do quá tải, đã bị xe nâng va cong
+D. Kệ cong vênh vẫn dùng, đã từng đổ gây hư hại
+
+ID71. Hàng hỏng (pin rò, aerosol méo, hóa chất đổ) có đang tích đống trong kho không?
+A. Có khu riêng, kiểm tra xử lý trong ngày
+B. Có khu riêng nhưng xử lý hàng tuần, đôi khi tích nhiều
+C. Hàng hỏng để lẫn kho chính, tích lâu ngày
+D. Hàng hỏng (pin rò, hóa chất đổ) chất đống không ai quản lý
+
+ID72. Cuối ngày, bảo vệ có kiểm tra điện từng khu vực kho trước khi khóa cửa không?
+A. Có checklist kiểm tra: điện, lối thoát, bình chữa cháy
+B. Đi qua kiểm tra bằng mắt, không checklist
+C. Chỉ tắt đèn chung và khóa cổng
+D. Không kiểm tra gì, đôi khi quên tắt điện
+
+--- NHÓM: ĐẶC THÙ: NHÀ Ở KẾT HỢP KINH DOANH ---
+
+ID73. Khu bán hàng/sản xuất tầng dưới có ngăn cách với khu ngủ tầng trên bằng tường và cửa chắn không?
+A. Tường chịu lửa, cửa chắn tự đóng, lối đi riêng
+B. Có tường gạch, cửa thường, nhưng lối đi chung qua khu kinh doanh
+C. Chỉ phân biệt bằng nội thất, hàng hóa tràn vào khu ở
+D. Toàn bộ nhà kể cả phòng ngủ, cầu thang đều chứa hàng
+
+ID74. Từ phòng ngủ tầng trên có lối thoát nào KHÔNG đi qua khu hàng hóa tầng dưới không?
+A. Có cầu thang thoát riêng hoặc ban công nối nhà bên
+B. Cầu thang bê tông qua tầng kinh doanh, có cửa ngăn mỗi tầng
+C. Cầu thang duy nhất qua khu hàng hóa đầy ắp, không cửa ngăn
+D. Tầng trên bị giam kín (chuồng cọp), chỉ 1 lối qua tầng dưới
+
+ID75. Điện kinh doanh và điện sinh hoạt có riêng mạch, riêng aptomat (CB) không?
+A. Tách riêng hoàn toàn, CB riêng, ngắt độc lập được
+B. Có CB riêng cho kinh doanh nhưng chung dây tổng
+C. Dùng chung mạch, thiết bị kinh doanh và gia đình cắm cùng ổ
+D. Chung mạch, thường quá tải, CB nhảy liên tục
+
+ID76. Hàng hóa kinh doanh có đang xếp sát ổ cắm, tủ điện hoặc tràn vào khu ngủ không?
+A. Hàng gọn tầng dưới, cách xa ổ cắm/tủ điện >1m
+B. Hàng gọn nhưng gần ổ cắm, không tràn lên tầng ngủ
+C. Hàng dễ cháy sát tủ điện, tràn vào khu sinh hoạt
+D. Hàng chất khắp nhà kể cả cầu thang, phòng ngủ, sát thiết bị điện
+
+ID77. Phòng ngủ có cảm biến khói không?
+A. Có cảm biến khói trong mỗi phòng ngủ, hoạt động tốt
+B. Có ở hành lang tầng ngủ nhưng chưa lắp trong phòng
+C. Chỉ có ở tầng kinh doanh, tầng ngủ không có
+D. Không có cảm biến khói nào trong nhà
+
+ID78. Tủ đông, tủ mát, biển hiệu LED chạy 24/7 có tiếng kêu lạ, motor nóng, mùi khét không?
+A. Hoạt động bình thường, bảo dưỡng định kỳ
+B. Hoạt động bình thường nhưng chỉ sửa khi hỏng
+C. Chạy nhiều năm không bảo dưỡng, motor kêu, dây nóng
+D. Motor cháy khét vẫn chạy, biển hiệu chập chờn, chưa sửa
+
+ID79. Bếp kinh doanh và bếp gia đình có cùng phòng nhỏ, nhiều bình gas, ít thông gió không?
+A. Bếp riêng biệt, quạt hút riêng, thoáng
+B. Cùng phòng bếp nhưng thoáng, bình gas đặt nơi thông gió
+C. Chung bếp quá tải, nhiều bình gas phòng nhỏ, thông gió kém
+D. Bếp kinh doanh ngay khu bán hàng hoặc gần kho dễ cháy
+
+ID80. Trẻ em trong nhà có biết đường thoát khi cháy và biết làm gì khi nghe chuông báo cháy không?
+A. Trẻ đã được dạy, biết đường thoát, đã diễn tập
+B. Đã nói cho trẻ biết lối thoát nhưng chưa diễn tập
+C. Trẻ chưa được hướng dẫn về thoát nạn
+D. Trẻ nhỏ ngủ phòng kín tầng cao, không lối thoát thứ hai
+
+ID81. Cầu thang có bị xe máy, hàng hóa chiếm chỗ không? Có cửa ngăn khói mỗi tầng không?
+A. Cầu thang thông thoáng, có cửa ngăn khói tự đóng
+B. Không cửa ngăn khói nhưng thông thoáng, không để đồ
+C. Xe máy, đồ đạc chiếm chỗ, phải len qua
+D. Cầu thang gỗ duy nhất, chất đầy đồ, khi cháy tầng 1 kẹt
+
+ID82. Gia đình đã từng diễn tập thoát nạn ban đêm chưa? Nhà có thang dây hoặc lối phụ không?
+A. Đã diễn tập, có thang dây hoặc lối thoát phụ
+B. Đã bàn kế hoạch nhưng chưa thực hành, có đèn pin
+C. Chưa nghĩ đến, không có kế hoạch
+D. Nhà nhiều tầng, khóa kín ban đêm, không ai biết phải làm gì
+
+--- NHÓM: ĐẶC THÙ: NHÀ HÀNG, KHÁCH SẠN, CHỢ, TTTM ---
+
+ID83. Ống hút khói bếp có mùi khét, quạt chạy chậm, mỡ nhỏ giọt ngược không?
+A. Vệ sinh mỗi 3 tháng, hoạt động tốt
+B. Tự vệ sinh, quạt bình thường
+C. Bộ lọc mỡ bám dày, quạt chậm, mùi khét
+D. Chưa bao giờ vệ sinh, mỡ nhỏ ngược, đã cháy mỡ nhỏ
+
+ID84. Tiểu thương có dùng bếp gas/bếp cồn ngay tại gian hàng trong chợ/TTTM không?
+A. Cấm tuyệt đối, kiểm tra hàng ngày
+B. Có quy tắc cấm nhưng kiểm tra không thường xuyên
+C. Biết tiểu thương dùng nhưng không xử lý
+D. Nhiều gian hàng dùng bếp gas thoải mái, bình gas trong gian hàng kín
+
+ID85. Cửa kho hàng trong TTTM có luôn bị chèn mở suốt ngày không?
+A. Cửa chống cháy tự đóng, kết nối hệ thống báo cháy
+B. Tự đóng nhưng thỉnh thoảng chèn mở rồi đóng lại
+C. Luôn bị chèn mở bằng gạch/nêm suốt ngày
+D. Cửa kho hỏng, kho thông sàn bán hàng, hàng tràn ra
+
+ID86. Bếp nhà hàng có hệ thống dập cháy dầu mỡ chuyên dụng hay chỉ có bình bột thường?
+A. Có hệ thống dập cháy bếp tự động, kiểm tra 6 tháng
+B. Có bình chữa cháy bếp chuyên dụng, chưa có hệ thống tự động
+C. Chỉ có bình bột ABC, không phù hợp cho cháy dầu mỡ
+D. Không bình nào trong bếp, dập cháy dầu bằng nước
+
+ID87. Lối thoát có bị đông nghịt vượt sức chứa trong sự kiện/giờ cao điểm không?
+A. Có biển sức chứa, kiểm soát số người, đóng cửa khi đạt giới hạn
+B. Biết sức chứa nhưng chưa đếm người ra vào
+C. Không biết sức chứa, sự kiện đông không giới hạn
+D. Đông vượt sức chứa, lối thoát kẹt cứng, chen lấn nguy hiểm
+
+--- NHÓM: ĐẶC THÙ: BỆNH VIỆN, TRƯỜNG HỌC, CƠ SỞ Y TẾ ---
+
+ID88. Có phương án sơ tán cho bệnh nhân không tự đi (nằm liệt, máy trợ sự sống) không?
+A. Có phương án, thiết bị sơ tán, đã diễn tập
+B. Có phương án chung, chưa có thiết bị chuyên dụng
+C. Chỉ có kế hoạch cho người tự đi, bệnh nhân nặng chưa có
+D. Không có phương án, bệnh nhân liệt tầng cao không thang cứu hỏa
+
+ID89. Cồn y tế, formalin, hóa chất dễ cháy có đang để lẫn lộn gần ổ cắm, bồn rửa không?
+A. Để trong tủ chống cháy, phân loại tương thích
+B. Tủ riêng có khóa nhưng không phải tủ chống cháy
+C. Để lẫn trên kệ chung, gần bồn rửa và ổ cắm
+D. Để tràn lan trên bàn, gần nguồn nhiệt, chai hở nắp
+
+ID90. Đường ống oxy trong bệnh viện có dấu hiệu rò rỉ (mùi lạ, tiếng xì) không?
+A. Có cảm biến rò, van ngắt khẩn, kiểm tra ống định kỳ
+B. Kiểm tra ống định kỳ nhưng chưa lắp cảm biến tự động
+C. Ống cũ, chưa kiểm tra gần đây, không cảm biến
+D. Ống rò rỉ, nồng độ oxy cao phòng kín, nguy cơ cháy bùng lớn
+
+ID91. Phòng học có ≥2 cửa thoát? Cửa có bị khóa hoặc chất đồ trong giờ học không?
+A. ≥2 cửa mở ra ngoài, thanh đẩy khẩn cấp, đèn EXIT
+B. 2 cửa nhưng 1 mở vào trong, không khóa
+C. Chỉ 1 cửa, mở vào trong, bàn ghế chật
+D. Cửa khóa từ ngoài trong giờ, cửa sổ song sắt, không thoát được
+
+ID92. Trường có tổ chức diễn tập sơ tán cho học sinh, kể cả tình huống không báo trước không?
+A. Diễn tập 2 lần/năm, phù hợp lứa tuổi, kể cả không báo trước
+B. 1 lần/năm có báo trước, học sinh biết lối thoát
+C. Chỉ phổ biến lý thuyết, chưa diễn tập thực tế
+D. Chưa bao giờ diễn tập, học sinh không biết lối thoát
+
+--- NHÓM: ĐẶC THÙ: XĂNG DẦU, KHÍ GAS, VẬT LIỆU NỔ ---
+
+ID93. Có vết dầu loang trên mặt sân cây xăng gợi ý rò rỉ bể ngầm/đường ống không?
+A. Kiểm tra rò rỉ hàng năm bằng thiết bị, không vết dầu
+B. Kiểm tra bằng mắt hàng tháng, chưa thấy bất thường
+C. Đôi khi thấy vết dầu loang trên sân chưa điều tra
+D. Dầu rò rỉ từ bể ngầm, ngấm ra xung quanh, chưa sửa
+
+ID94. Kho gas/LPG có mùi gas, cảm biến khí hoạt động, hệ thống thông gió chạy tốt không?
+A. Cảm biến gas, van ngắt tự động, quạt thông gió 24/7
+B. Van ngắt tay, quạt thông gió, chưa có cảm biến tự động
+C. Không cảm biến, thông gió tự nhiên, phát hiện rò bằng mũi
+D. Kho kín, mùi gas rõ, chưa xử lý, không van ngắt khẩn cấp
+
+ID95. Khách có tắt máy xe và không dùng điện thoại khi bơm xăng không?
+A. Nhân viên yêu cầu nghiêm, biển cấm đầy đủ
+B. Có biển cấm, nhắc nhở nhưng chưa kiểm soát 100%
+C. Có biển nhưng nhân viên ngại nhắc, nhiều khách dùng điện thoại
+D. Không kiểm soát, khách vẫn nổ máy, hút thuốc khi bơm
+
+ID96. Dây nối đất chống tĩnh điện bồn chứa và vòi bơm có bị đứt, gỉ sét không?
+A. Kiểm tra hàng năm, dây tốt, điện trở đạt
+B. Có hệ thống nhưng lâu chưa kiểm tra
+C. Dây nối đứt/gỉ ở một số vị trí
+D. Không có hệ thống nối đất chống tĩnh điện
+
+ID97. Nhân viên ca đêm có biết cách ngắt điện khẩn cấp, đóng van bể khi rò rỉ không?
+A. Biết rõ: nút ngắt, van bể, quy trình sơ tán, số khẩn cấp
+B. Biết nút ngắt nhưng chưa thực hành bao giờ
+C. Nhân viên mới, chưa biết quy trình khẩn cấp
+D. Ca đêm 1 người, không biết quy trình, ngủ gật
+
+--- NHÓM: ĐẶC THÙ: PHƯƠNG TIỆN GIAO THÔNG ---
+
+ID98. Xe khách/xe buýt có bình chữa cháy, búa thoát hiểm đầy đủ, hành khách biết vị trí không?
+A. Đủ búa, cửa thoát hoạt động, tài xế thông báo trước chuyến
+B. Có búa và cửa thoát nhưng tài xế không thông báo
+C. Búa thiếu hoặc giấu đi, cửa thoát bị kẹt
+D. Không có búa, cửa thoát hàn kín hoặc chất hàng che
+
+ID99. Hệ thống điện xe (dây, cầu chì, ắc-quy) có dấu hiệu chạm chập: khói, mùi khét?
+A. Kiểm tra mỗi 6 tháng, dây tốt, cầu chì đúng
+B. Bảo dưỡng theo km, chưa kiểm tra điện riêng
+C. Xe cũ, dây nối tạm băng keo, cầu chì dùng dây đồng
+D. Đã có khói/tia lửa từ khoang điện, vẫn chạy
+
+ID100. Khu sạc xe điện tại bãi đỗ có thông gió, bình chữa cháy, cách xa xe xăng không?
+A. Khu sạc riêng, sprinkler, bình chữa cháy, sàn chống cháy
+B. Khu riêng, có bình chữa cháy nhưng chưa có sprinkler
+C. Sạc trong bãi chung, gần xe xăng, không PCCC riêng
+D. Sạc tầng hầm kín, không thông gió, không PCCC, qua đêm
+
+ID101. Hàng hóa dễ cháy (bình gas, xăng) có đang để lẫn trong khoang hành khách không?
+A. Khoang hành lý tách biệt, vách ngăn, không hàng nguy hiểm
+B. Khoang riêng nhưng vách ngăn bằng vật liệu thường
+C. Hành lý để lẫn khoang khách, hàng chất trên lối đi
+D. Bình gas, xăng để lẫn khoang hành khách
+
+ID102. Xe tải chở hàng nguy hiểm có biển báo, bộ ứng phó sự cố trên xe không?
+A. Không chở hàng nguy hiểm, hoặc đủ biển báo, bộ ứng phó
+B. Có biển báo nhưng bộ ứng phó chưa đầy đủ
+C. Biển mờ, thiếu dụng cụ ứng phó
+D. Chở hàng nguy hiểm không biển, không PCCC trên xe
+
+--- NHÓM: ĐẶC THÙ: KHU DÂN CƯ, NHÀ TRỌ, NHÀ Ở ---
+
+ID103. Nhà trọ/chung cư mini có bao nhiêu lối thoát nạn? Các lối thoát có thông thoáng 24/7 không?
+A. ≥2 lối thoát độc lập, luôn thông, có thang thoát phụ
+B. 2 lối nhưng 1 lối phụ (ban công, cửa sổ), lối chính thông
+C. Chỉ 1 cầu thang duy nhất, cửa phụ bị khóa hoặc chặn đồ
+D. 1 lối duy nhất, khóa cổng sắt ban đêm, không ai có chìa dự phòng
+
+ID104. Chuồng cọp, lưới chống trộm có lối mở khẩn cấp không? Mọi người có biết cách mở không?
+A. Không có chuồng cọp, hoặc có lối mở, chìa để cạnh, mọi người biết
+B. Có cửa mở nhưng chìa cất trong phòng, phải tìm
+C. Chuồng cọp hàn kín, chỉ 1 cửa ra vào chính
+D. Hàn kín toàn bộ cửa sổ và ban công, không lối mở nào
+
+ID105. Mỗi phòng trọ có aptomat (CB) riêng không? Hay nhiều phòng dùng chung?
+A. Mỗi phòng CB riêng, có CB chống rò tổng
+B. CB riêng mỗi phòng nhưng chưa có CB chống rò tổng
+C. 2-3 phòng chung CB, quá tải thì mất điện cả mấy phòng
+D. Toàn nhà chung 1 CB, dây nối tạm, CB nhảy thì nối tắt
+
+ID106. Bình nước nóng trong phòng tắm có bị rỉ sét, dây điện hở trong môi trường ẩm ướt không?
+A. Bình tốt, có thiết bị chống giật riêng, nối đất đúng
+B. Có thiết bị chống giật nhưng lắp đã lâu, chưa kiểm tra
+C. Bình cũ không có thiết bị chống giật, chung CB với ổ cắm phòng
+D. Bình rỉ sét, dây hở trong phòng tắm ẩm, rất nguy hiểm
+
+ID107. Người thuê có nấu gas trong phòng trọ kín không? Bình gas để ở đâu?
+A. Cấm gas trong phòng, có bếp chung hoặc bếp điện từ
+B. Dùng bếp gas mini nhỏ, phòng thông thoáng
+C. Bếp gas trong phòng nhỏ kín, bình gas 12kg, ít thông gió
+D. Bếp gas phòng kín, dây nứt, bình gas dưới gầm giường
+
+ID108. Có ai giữ chìa khóa tổng (master key) và chìa cổng khẩn cấp 24/7 không?
+A. Chủ nhà giữ master key 24/7, chìa cổng trong hộp kính phá vỡ
+B. Chủ nhà giữ nhưng không ở tại chỗ 24/7, phải gọi điện
+C. Chỉ chủ nhà có chìa, chủ ở xa, ban đêm không liên lạc được
+D. Không master key, mỗi phòng khóa riêng, cổng khóa xích
+
+ID109. Xe cứu hỏa có vào được hẻm/ngõ nơi nhà trọ tọa lạc không?
+A. Đường rộng ≥3.5m, xe cứu hỏa vào tận nơi
+B. Hẻm hơi hẹp, xe cứu hỏa phải đỗ ngoài kéo vòi
+C. Không biết, hẻm nhỏ xe cứu hỏa không vào được
+D. Hẻm cụt, xe cứu hỏa không thể tiếp cận
+
+ID110. Chủ nhà trọ có dán sơ đồ thoát nạn mỗi tầng và phổ biến cho người thuê không?
+A. Sơ đồ dán mỗi tầng, phổ biến cho người thuê mới
+B. Phổ biến miệng nhưng chưa dán sơ đồ
+C. Chưa phổ biến, nội quy cũ mờ chữ
+D. Không nội quy, sơ đồ, người thuê không biết lối thoát
+
+ID111. Nhà trọ có cảm biến khói ở hành lang và phòng trọ không?
+A. Cảm biến khói trong mỗi phòng và hành lang, có chuông
+B. Ở hành lang mỗi tầng nhưng chưa lắp trong phòng
+C. Chỉ ở tầng 1, các tầng trên không có
+D. Không có cảm biến hay chuông báo cháy nào
+
+ID112. Xe máy, xe đạp điện có sạc trong phòng trọ/phòng ngủ kín qua đêm không?
+A. Khu sạc riêng tầng trệt thông thoáng, có bình chữa cháy
+B. Sạc tầng trệt khu chung, chưa có bình chữa cháy
+C. Sạc trong phòng trọ gần đồ dùng cá nhân
+D. Sạc qua đêm phòng kín, pin cũ phồng, sạc kém chất lượng
+
+--- NHÓM: ĐẶC THÙ: CÔNG TRÌNH XÂY DỰNG ĐANG THI CÔNG ---
+
+ID113. Công trình có hàn cắt tự do không cần kiểm tra hiện trường, tia lửa bắn vào vật dễ cháy?
+A. Có kiểm tra hiện trường trước, dọn vật cháy 10m, canh lửa sau
+B. Có kiểm tra nhưng không phải lúc nào cũng thực hiện
+C. Hàn cắt tự do, đôi khi dọn vật dễ cháy
+D. Hàn cắt không kiểm soát, tia lửa bắn vào vật cháy, đã cháy nhỏ
+
+ID114. Gỗ ván khuôn, xốp cách nhiệt, sơn có đang chất đống sát khu hàn cắt và thiết bị điện tạm?
+A. Kho riêng cách khu thi công ≥10m, có bình chữa cháy
+B. Khu riêng nhưng gần khu thi công, có bình chữa cháy
+C. Rải rác khắp công trình, gần khu hàn cắt
+D. Gỗ, xốp, sơn chất lẫn lộn sát khu hàn cắt và điện tạm
+
+ID115. Điện tạm thi công có dây trần, nối băng keo, CB không có, ngâm nước khi mưa?
+A. Thợ điện chứng chỉ lắp, tủ tạm có CB, ELCB, nối đất
+B. Thợ điện lắp, có CB nhưng chưa ELCB
+C. Công nhân tự kéo, nối tạm, vắt qua khung thép, không CB
+D. Dây trần, nối băng keo, ngâm nước khi mưa
+
+ID116. Lán trại công nhân có bằng bạt/gỗ dễ cháy, nấu bếp gas trong lán, sạc điện tạm?
+A. Lán vật liệu khó cháy, cách công trình, có cảm biến khói
+B. Lán tôn thiếc, cách công trình, có bình chữa cháy
+C. Lán gỗ/bạt sát công trình, không bình chữa cháy
+D. Lán bạt dễ cháy, nấu gas trong lán, sạc điện tạm, rất nguy hiểm
+
+ID117. Rác xây dựng (gỗ vụn, xốp, bạt cũ) có đang tích đống gần dây điện tạm hoặc bình gas?
+A. Thu gom cuối ngày, đổ bãi rác xa công trình
+B. Thu gom 2-3 ngày, chất góc công trình chờ xe lấy
+C. Tích nhiều ngày, gần khu thi công, gần dây điện tạm
+D. Công nhân tự đốt rác tại công trình, gần kho vật tư, bình gas
+
+--- NHÓM: ĐẶC THÙ: CƠ QUAN, VĂN PHÒNG, TRỤ SỞ ---
+
+ID118. Ấm nước, quạt sưởi, máy pha cà phê có đang cắm suốt đêm không ai tắt không?
+A. Có nhắc rút phích cắm, người cuối kiểm tra
+B. Có nhắc nhưng phụ thuộc ý thức, đôi khi quên
+C. Nhiều thiết bị chế độ chờ qua đêm, ấm nước cắm suốt
+D. Quạt sưởi, ấm chạy suốt đêm, đã có ấm cạn bốc khói
+
+ID119. Hồ sơ giấy tờ có chất đống gần ổ cắm, máy photocopy, không có bản sao lưu số?
+A. Kho riêng, có PCCC, hồ sơ sao lưu số
+B. Kho riêng, bình chữa cháy, chưa sao lưu số
+C. Chất đống phòng làm việc, gần ổ cắm, chưa sao lưu
+D. Chất đống kho kín không PCCC, bản gốc duy nhất
+
+ID120. Hành lang, cầu thang thoát nạn có bị bàn ghế, tủ hồ sơ chiếm chỗ không?
+A. Hành lang thông, cửa ngăn khói tự đóng, đèn sự cố tốt
+B. Thông thoáng, đèn sự cố có nhưng lâu chưa test
+C. Để bàn ghế, tủ hồ sơ, đèn sự cố một số hỏng
+D. Cầu thang khóa, hành lang chất đầy đồ, không đèn sự cố
+
+ID121. Máy photocopy, máy in cũ có tỏa nhiệt, bốc mùi nhựa khét, giấy chất sát máy không?
+A. Phòng riêng thông gió, CB riêng, hoạt động bình thường
+B. Đặt phòng chung, ĐHKK bình thường
+C. Máy cũ tỏa nhiệt nhiều, phòng kín nhỏ, giấy chất xung quanh
+D. Máy nóng bất thường, mùi nhựa khét, giấy đống sát máy, chưa sửa
+
+ID122. Thang máy văn phòng có tự về tầng 1 khi báo cháy không?
+A. Có chế độ cháy, tự về tầng 1 khi báo cháy
+B. Ngắt khi báo cháy nhưng không có chế độ riêng cho PCCC
+C. Không kết nối báo cháy, chạy bình thường khi cháy
+D. Thang cũ, đôi khi kẹt, không chế độ cháy, nguy cơ kẹt người
+
+--- NHÓM: ĐẶC THÙ: NGHIÊN CỨU, PHÒNG THÍ NGHIỆM ---
+
+ID123. Hóa chất dễ cháy có đang để lẫn lộn không phân loại (axit gần bazơ, oxy hóa gần dễ cháy)?
+A. Phân loại theo nhóm tương thích, tách riêng rõ ràng
+B. Phân loại sơ bộ, chưa tách hoàn toàn
+C. Để lẫn lộn, axit gần bazơ, oxy hóa gần dễ cháy
+D. Không phân loại, tràn lan, đã xảy ra phản ứng ngoài ý muốn
+
+ID124. Tủ hút khí độc (fume hood) có lực hút yếu, hơi hóa chất thoát ra ngoài không?
+A. Kiểm tra lưu lượng gió hàng năm, đạt yêu cầu
+B. Hoạt động nhưng lâu chưa đo, không rõ còn đạt không
+C. Lực hút yếu, hơi hóa chất thoát ra ngoài
+D. Tủ hút hỏng, vẫn thao tác hóa chất bay hơi ngoài tủ
+
+ID125. Bình gas thí nghiệm (H₂, O₂) có buộc cố định không? Có van ngắt ngoài phòng không?
+A. Buộc cố định, van ngắt ngoài phòng, kiểm tra rò rỉ
+B. Buộc cố định, van ngắt trong phòng, chưa kiểm tra rò
+C. Không buộc, đứng tự do, phải vào phòng mới ngắt
+D. H₂/O₂ không buộc, nghiêng, gần nguồn nhiệt, không van ngoài
+
+ID126. Lò nung mẫu, bếp cách thủy có chạy qua đêm không ai giám sát, gần hóa chất?
+A. Có tự ngắt quá nhiệt, cách xa hóa chất, có giám sát
+B. Có nhiệt kế nhưng đôi khi chạy không giám sát
+C. Chạy qua đêm không giám sát, gần hóa chất trên bàn
+D. Thiết bị tự chế, không tự ngắt, chạy liên tục gần dung môi
+
+ID127. Chất thải hóa chất có đang đổ bồn rửa hoặc chất đống trong phòng, chai hở nắp?
+A. Thu gom thùng chuyên dụng có nhãn, xử lý đúng cách
+B. Thu gom riêng nhưng chưa phân loại chi tiết
+C. Đổ xuống bồn rửa hoặc thùng rác thường
+D. Chất thải nguy hại đống trong phòng, chai hở, nguy cơ phản ứng
+
+--- NHÓM: ĐẶC THÙ: NÔNG NGHIỆP, CHẾ BIẾN NÔNG LÂM SẢN ---
+
+ID128. Xưởng xay xát, chế biến gỗ có bụi ngũ cốc/mùn cưa tích dày, lơ lửng trong không khí?
+A. Có hệ thống hút bụi, vệ sinh hàng ngày
+B. Có hút bụi nhưng vệ sinh hàng tuần
+C. Bụi tích dày trên máy, trần, tường, không hút bụi
+D. Bụi dày đặc khi máy chạy, đã cháy nhỏ do bụi, chưa khắc phục
+
+ID129. Nông sản trong kho có bốc nóng, mốc ẩm nhưng chưa xử lý?
+A. Có kiểm tra nhiệt, kho thông gió tốt
+B. Kiểm tra bằng sờ tay, kho thông gió tự nhiên
+C. Không kiểm tra, kho kín, nông sản ẩm khi nhập
+D. Nông sản ẩm bốc nóng/mốc trong kho kín, chưa xử lý
+
+ID130. Lò sấy nông sản có chạy qua đêm không ai canh? Có dấu hiệu quá nhiệt?
+A. Có tự ngắt quá nhiệt, bảo dưỡng định kỳ
+B. Có nhiệt kế nhưng chưa test tự ngắt, sấy theo kinh nghiệm
+C. Sấy thủ công, canh suốt quá trình sấy
+D. Lò sấy tự chế, không tự ngắt, sấy qua đêm, đã cháy sản phẩm
+
+ID131. Đèn sưởi gia súc có treo sát rơm, cỏ khô? Dây điện chuồng trại có bị chuột gặm?
+A. Đèn sưởi có bảo vệ, cách rơm >1m, CB riêng, ELCB
+B. Có CB nhưng đèn sưởi gần rơm, vẫn theo dõi
+C. Đèn sưởi treo sát rơm/cỏ, dây kéo qua chuồng, không ELCB
+D. Dây bị chuột gặm, đèn sưởi chạm rơm, đã cháy nhỏ 1 lần
+
+ID132. Hệ thống biogas có mùi gas quanh trại, mối nối ống lỏng, van an toàn có hoạt động không?
+A. Không biogas, hoặc cảm biến CH₄, van an toàn, kiểm tra ống
+B. Van an toàn có, kiểm tra ống bằng mắt, không cảm biến
+C. Ống cũ, mối lỏng, không van an toàn, phát hiện rò bằng mùi
+D. Rò rỉ nghiêm trọng, mùi gas quanh trại, gần bếp nấu ăn
+

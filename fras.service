@@ -1,0 +1,17 @@
+[Unit]
+Description=FRAS Backend Server
+After=network.target postgresql.service
+
+[Service]
+Type=simple
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/home/ubuntu/fras/backend
+Environment="PATH=/home/ubuntu/fras/backend/venv/bin:/usr/bin"
+EnvironmentFile=/home/ubuntu/fras/backend/.env
+ExecStart=/home/ubuntu/fras/backend/venv/bin/gunicorn -w 2 -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:8000 --forwarded-allow-ips='*' main:app
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
