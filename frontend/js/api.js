@@ -62,7 +62,15 @@ class FrasAPI {
             const data = await response.json();
 
             if (!response.ok) {
-                throw new Error(data.detail || 'Lỗi không xác định');
+                let errMessage = 'Lỗi không xác định';
+                if (data.detail) {
+                    if (Array.isArray(data.detail)) {
+                        errMessage = data.detail.map(e => `${e.loc ? e.loc.join('.') : ''}: ${e.msg}`).join(' | ');
+                    } else {
+                        errMessage = data.detail;
+                    }
+                }
+                throw new Error(errMessage);
             }
 
             return data;
@@ -300,28 +308,33 @@ function setupNavbar() {
     const navLinks = document.querySelector('.nav-links');
 
     if (user && navLinks) {
-        // Add user links
-        const dashLink = document.createElement('li');
-        dashLink.innerHTML = `<a href="/dashboard.html">${t('dashboard')}</a>`;
-        const histLink = document.createElement('li');
-        histLink.innerHTML = `<a href="/history.html">${t('history')}</a>`;
+        const isAdmin = user.role === 'admin' || user.role === 'superadmin';
 
-        // Check if links already present
-        if (!navLinks.querySelector('a[href="/dashboard.html"]')) {
-            navLinks.insertBefore(dashLink, navLinks.firstChild);
-            navLinks.insertBefore(histLink, dashLink.nextSibling);
+        if (!isAdmin) {
+            // Normal User Links
+            const dashLink = document.createElement('li');
+            dashLink.innerHTML = `<a href="/dashboard.html">${t('dashboard')}</a>`;
+            const histLink = document.createElement('li');
+            histLink.innerHTML = `<a href="/history.html">${t('history')}</a>`;
 
-            // Add map link
-            const mapLink = document.createElement('li');
-            mapLink.innerHTML = `<a href="/map.html">Bản đồ</a>`;
-            navLinks.insertBefore(mapLink, histLink.nextSibling);
-        }
+            if (!navLinks.querySelector('a[href="/dashboard.html"]')) {
+                navLinks.insertBefore(dashLink, navLinks.firstChild);
+                navLinks.insertBefore(histLink, dashLink.nextSibling);
 
-        if (user.role === 'admin' || user.role === 'superadmin') {
+                const mapLink = document.createElement('li');
+                mapLink.innerHTML = `<a href="/map.html">Bản đồ</a>`;
+                navLinks.insertBefore(mapLink, histLink.nextSibling);
+            }
+        } else {
+            // Admin Links
             if (!navLinks.querySelector('a[href="/admin/"]')) {
                 const adminLink = document.createElement('li');
-                adminLink.innerHTML = `<a href="/admin/">${t('admin')}</a>`;
-                navLinks.appendChild(adminLink);
+                adminLink.innerHTML = `<a href="/admin/">Bảng điều khiển Admin</a>`;
+                navLinks.insertBefore(adminLink, navLinks.firstChild);
+                
+                const mapLink = document.createElement('li');
+                mapLink.innerHTML = `<a href="/map.html">Bản đồ Rủi ro</a>`;
+                navLinks.insertBefore(mapLink, adminLink.nextSibling);
             }
         }
     }

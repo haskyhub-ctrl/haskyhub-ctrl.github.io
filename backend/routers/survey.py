@@ -313,17 +313,14 @@ def complete_assessment(
     db.refresh(assessment)
     
     # Notify user of completion for all assessments
-    try:
-        from routers.notifications import create_notification
-        create_notification(
-            db, current_user.id,
-            notification_type="assessment_completed",
-            title=f"✅ Hoàn thành đánh giá: {assessment.facility_name}",
-            message=f"Đánh giá cơ sở '{assessment.facility_name}' đã hoàn thành. Mức nguy cơ: {assessment.risk_percentage}%.",
-            link=f"/result.html?id={assessment.id}",
-        )
-    except Exception:
-        pass
+    from routers.notifications import create_notification
+    create_notification(
+        db=db, user_id=current_user.id,
+        notification_type="assessment_completed",
+        title=f"✅ Hoàn thành đánh giá: {assessment.facility_name}",
+        message=f"Đánh giá cơ sở '{assessment.facility_name}' đã hoàn thành. Mức nguy cơ: {assessment.risk_percentage}%.",
+        link=f"/result.html?id={assessment.id}"
+    )
 
     # Trigger notifications for high/critical risk
     if assessment.risk_level in ("high", "critical"):
@@ -334,28 +331,31 @@ def complete_assessment(
 
 def _trigger_risk_notifications(db, assessment, current_user):
     """Create notifications when high/critical risk is detected."""
-    try:
-        from routers.notifications import create_notification
-        risk_label = "Nguy cơ Cao" if assessment.risk_level == "high" else "Nguy cơ Rất cao"
-        create_notification(
-            db, current_user.id,
-            notification_type="high_risk",
-            title=f"⚠️ {risk_label}: {assessment.facility_name}",
-            message=f"Đánh giá cơ sở '{assessment.facility_name}' cho thấy mức {risk_label} ({assessment.risk_percentage}%). Hãy xem khuyến cáo cải thiện ngay.",
-            link=f"/result.html?id={assessment.id}",
-        )
-        admins = db.query(User).filter(
-            User.role.in_(["admin", "superadmin"]),
-            User.is_active == True,
-        ).all()
-        for admin_user in admins:
-            if admin_user.id != current_user.id:
-                create_notification(
-                    db, admin_user.id,
-                    notification_type="high_risk",
-                    title=f"⚠️ {risk_label}: {assessment.facility_name}",
-                    message=f"{current_user.full_name} vừa đánh giá '{assessment.facility_name}' - {risk_label} ({assessment.risk_percentage}%).",
-                    link=f"/admin/assessments.html",
-                )
-    except Exception:
-        pass
+    from routers.notifications import create_notification
+    risk_label = "Nguy cơ Cao" if assessment.risk_level == "high" else "Nguy cơ Rất cao"
+    
+    # Notify user
+    create_notification(
+        db=db, user_id=current_user.id,
+        notification_type="high_risk",
+        title=f"⚠️ {risk_label}: {assessment.facility_name}",
+        message=f"Đánh giá cơ sở '{assessment.facility_name}' cho thấy mức {risk_label} ({assessment.risk_percentage}%).",
+        link=f"/result.html?id={assessment.id}"
+    )
+    
+    # Notify admins
+    from models import User
+    admins = db.query(User).filter(
+        User.role.in_(["admin", "superadmin"]),
+        User.is_active == True,
+    ).all()
+    
+    for admin_user in admins:
+        if admin_user.id != current_user.id:
+            create_notification(
+                db=db, user_id=admin_user.id,
+                notification_type="high_risk",
+                title=f"⚠️ {risk_label}: {assessment.facility_name}",
+                message=f"{current_user.full_name} vừa đánh giá '{assessment.facility_name}' - {risk_label} ({assessment.risk_percentage}%).",
+                link=f"/admin/assessments.html"
+            )

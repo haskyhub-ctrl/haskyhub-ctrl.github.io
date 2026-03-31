@@ -69,7 +69,7 @@ function detectUserLocationUI() {
             (err) => {
                 console.log('📍 Location not available:', err.message);
                 if (statusEl) {
-                    statusEl.innerHTML = `<span style="color:#ef4444">❌ Không lấy được vị trí: ${err.message}</span>`;
+                    statusEl.innerHTML = `<span style="color:#eab308">⚠️ Không có vị trí: Vui lòng bật vị trí để hiển thị trên bản đồ. Không bắt buộc.</span>`;
                 }
             },
             { timeout: 10000, enableHighAccuracy: true }
