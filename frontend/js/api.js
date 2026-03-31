@@ -433,7 +433,7 @@ function toggleNotifPanel(e) {
 
 async function loadNotifList() {
     try {
-        const data = await api.get('/notifications/');
+        const data = await api.get('/notifications');
         const body = document.getElementById('notif-panel-body');
         if (!data.length) {
             body.innerHTML = '<div style="padding:24px; text-align:center; color:var(--text-muted);">Không có thông báo</div>';

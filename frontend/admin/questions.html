@@ -501,7 +501,7 @@
                     payload.question_type = 'single';
                     payload.order_index = allQuestions.length;
                     payload.is_active = true;
-                    await api.post('/questions/', payload);
+                    await api.post('/questions', payload);
                     showToast('✅ Tạo câu hỏi thành công!');
                 } else {
                     const qId = document.getElementById('eq-id').value;
@@ -551,6 +551,10 @@
         function closeAIGenModal() {
             document.getElementById('ai-gen-modal-overlay').classList.remove('active');
         }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') { closeEditModal(); closeAIGenModal(); }
+        });
 
         async function generateAIQuestions() {
             const btn = document.getElementById('ai-gen-btn');
@@ -617,7 +621,7 @@
             const q = window._aiGeneratedQuestions?.[index];
             if (!q) return;
             try {
-                await api.post('/questions/', q);
+                await api.post('/questions', q);
                 showToast(`✅ Đã lưu câu ${index + 1}`);
                 // Disable button
                 event.target.disabled = true;
@@ -632,7 +636,7 @@
             let saved = 0;
             for (const q of questions) {
                 try {
-                    await api.post('/questions/', q);
+                    await api.post('/questions', q);
                     saved++;
                 } catch (err) { }
             }

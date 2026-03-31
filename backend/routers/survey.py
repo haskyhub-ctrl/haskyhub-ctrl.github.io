@@ -136,8 +136,8 @@ def start_assessment(
         facility_address=data.facility_address,
         facility_area=data.facility_area,
         worker_count=data.worker_count,
-        latitude=data.latitude,
-        longitude=data.longitude,
+        latitude=data.latitude if data.latitude is not None else current_user.latitude,
+        longitude=data.longitude if data.longitude is not None else current_user.longitude,
         status="in_progress",
     )
     db.add(assessment)
@@ -312,6 +312,19 @@ def complete_assessment(
     db.commit()
     db.refresh(assessment)
     
+    # Notify user of completion for all assessments
+    try:
+        from routers.notifications import create_notification
+        create_notification(
+            db, current_user.id,
+            notification_type="assessment_completed",
+            title=f"✅ Hoàn thành đánh giá: {assessment.facility_name}",
+            message=f"Đánh giá cơ sở '{assessment.facility_name}' đã hoàn thành. Mức nguy cơ: {assessment.risk_percentage}%.",
+            link=f"/result.html?id={assessment.id}",
+        )
+    except Exception:
+        pass
+
     # Trigger notifications for high/critical risk
     if assessment.risk_level in ("high", "critical"):
         _trigger_risk_notifications(db, assessment, current_user)

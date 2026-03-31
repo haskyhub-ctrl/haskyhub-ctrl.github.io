@@ -305,12 +305,8 @@ def get_map_data(
     results = []
     assessed_user_ids = set()
 
-    # 1. Completed assessments with coordinates
-    query = db.query(Assessment).filter(
-        Assessment.status == "completed",
-        Assessment.latitude.isnot(None),
-        Assessment.longitude.isnot(None),
-    )
+    # 1. Completed assessments — try assessment coords first, fallback to user coords
+    query = db.query(Assessment).filter(Assessment.status == "completed")
     if risk_level and risk_level != "unassessed":
         query = query.filter(Assessment.risk_level == risk_level)
 
@@ -318,14 +314,18 @@ def get_map_data(
         assessments = query.order_by(Assessment.created_at.desc()).all()
         for a in assessments:
             user = db.query(User).get(a.user_id)
+            lat = a.latitude if a.latitude is not None else (user.latitude if user else None)
+            lng = a.longitude if a.longitude is not None else (user.longitude if user else None)
+            if lat is None or lng is None:
+                continue
             assessed_user_ids.add(a.user_id)
             results.append({
                 "id": a.id,
                 "facility_name": a.facility_name,
                 "facility_type": a.facility_type,
                 "facility_address": a.facility_address,
-                "latitude": a.latitude,
-                "longitude": a.longitude,
+                "latitude": lat,
+                "longitude": lng,
                 "risk_level": a.risk_level,
                 "risk_percentage": a.risk_percentage,
                 "total_score": a.total_score,

@@ -182,7 +182,7 @@ function renderAssessmentTable(assessments) {
 // Questions Management
 async function loadAdminQuestions(categoryId = '') {
     try {
-        const url = '/questions/' + (categoryId ? `?category_id=${categoryId}` : '');
+        const url = '/questions' + (categoryId ? `?category_id=${categoryId}` : '');
         const questions = await api.get(url);
         renderQuestionTable(questions);
     } catch (error) {

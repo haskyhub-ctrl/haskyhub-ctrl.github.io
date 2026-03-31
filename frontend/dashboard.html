@@ -101,8 +101,15 @@
 
         async function loadDashboard() {
             try {
-                const assessments = await api.get(`/assessments?limit=${currentLimit}`);
-                renderDashboard(assessments);
+                const user = api.getUser();
+                const isAdmin = user && (user.role === 'admin' || user.role === 'superadmin');
+                let assessments;
+                if (isAdmin) {
+                    assessments = await api.get('/admin/assessments');
+                } else {
+                    assessments = await api.get(`/assessments?limit=${currentLimit}`);
+                }
+                renderDashboard(assessments, isAdmin);
             } catch (error) {
                 showToast(error.message, 'error');
             }
@@ -113,7 +120,7 @@
             loadDashboard();
         }
 
-        function renderDashboard(assessments) {
+        function renderDashboard(assessments, isAdminView = false) {
             const completed = assessments.filter(a => a.status === 'completed');
             const latest = completed[0];
             const avgScore = completed.length > 0 ? Math.round(completed.reduce((s, a) => s + a.risk_percentage, 0) / completed.length) : 0;
@@ -139,18 +146,18 @@
             if (completed.length > 0) {
                 list.innerHTML = `
                     <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; padding:0 4px;">
-                        <span style="color:var(--text-muted); font-size:0.85rem;">Hiển thị ${completed.length} đánh giá gần nhất</span>
-                        <select onchange="changeLimit(this.value)" style="background:var(--glass-bg); color:var(--text-primary); border:1px solid var(--border-color); border-radius:0; padding:6px 12px; font-size:0.85rem;">
+                        <span style="color:var(--text-muted); font-size:0.85rem;">Hiển thị ${completed.length} đánh giá${isAdminView ? ' (tất cả người dùng)' : ' gần nhất'}</span>
+                        ${!isAdminView ? `<select onchange="changeLimit(this.value)" style="background:var(--glass-bg); color:var(--text-primary); border:1px solid var(--border-color); border-radius:0; padding:6px 12px; font-size:0.85rem;">
                             <option value="20" ${currentLimit===20?'selected':''}>20 bài</option>
                             <option value="50" ${currentLimit===50?'selected':''}>50 bài</option>
                             <option value="100" ${currentLimit===100?'selected':''}>100 bài</option>
-                        </select>
+                        </select>` : ''}
                     </div>
                 ` + completed.map(a => `
                 <div class="assessment-item" onclick="window.location.href='/result.html?id=${a.id}'">
                     <div class="item-info">
                         <h4>${a.facility_name}</h4>
-                        <div class="item-meta">${a.facility_type || ''} • ${formatDate(a.completed_at)}</div>
+                        <div class="item-meta">${isAdminView ? `👤 ${a.user_name} • ` : ''}${a.facility_type || ''} • ${formatDate(a.completed_at)}</div>
                     </div>
                     <div class="item-score">
                         <div class="score-value" style="color:${{ 'low': '#22c55e', 'medium': '#eab308', 'high': '#f97316', 'critical': '#ef4444' }[a.risk_level]}">${a.risk_percentage}%</div>
@@ -161,8 +168,14 @@
             }
 
             // Action items: get recommendations from latest assessment
-            if (latest) {
+            if (latest && !isAdminView) {
                 loadActions(latest.id);
+            } else if (isAdminView) {
+                document.getElementById('action-items').innerHTML = `
+                    <div style="padding:20px; text-align:center; color:var(--text-muted); font-size:0.9rem;">
+                        <a href="/admin/" style="color:var(--accent-orange);">Vào trang Quản trị</a> để quản lý toàn hệ thống
+                    </div>
+                `;
             }
 
             // Show AI prediction section if there are assessments
