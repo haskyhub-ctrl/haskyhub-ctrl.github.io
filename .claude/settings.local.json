@@ -1,11 +1,8 @@
 {
-  "permissions": {
-    "allow": [
-      "Bash(for f:*)",
-      "Bash(do)",
-      "Bash(sed -i 's|>☰<|>&#9776;<|g' \"$f\")",
-      "Bash(done)",
-      "Bash(nslookup fras-ai.com)"
-    ]
+  "env": {
+    "ANTHROPIC_BASE_URL": "https://openrouter.ai/api",
+    "ANTHROPIC_AUTH_TOKEN": "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",
+    "ANTHROPIC_API_KEY": "",
+    "ANTHROPIC_MODEL": "nvidia/nemotron-3-super-120b-a12b:free"
   }
 }

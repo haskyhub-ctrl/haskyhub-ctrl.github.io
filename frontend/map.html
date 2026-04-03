@@ -236,6 +236,25 @@
             -webkit-transform: translateZ(0);
             transform: translateZ(0);
         }
+
+        /* Tooltip ranh giới sáp nhập */
+        .province-tooltip {
+            background: rgba(15, 23, 42, 0.85);
+            color: #f8fafc;
+            border: 1px solid #475569;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 0.9rem;
+            font-weight: 600;
+            padding: 5px 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+            text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+            pointer-events: none; /* Prevent tooltip from blocking clicks */
+        }
+        .leaflet-tooltip-left.province-tooltip::before { border-left-color: #475569; }
+        .leaflet-tooltip-right.province-tooltip::before { border-right-color: #475569; }
+        .leaflet-tooltip-top.province-tooltip::before { border-top-color: #475569; }
+        .leaflet-tooltip-bottom.province-tooltip::before { border-bottom-color: #475569; }
     </style>
 </head>
 
@@ -318,36 +337,78 @@
 
         function initMap() {
             try {
-            // Center on Vietnam
+            // Vietnam bounding box — prevents panning outside
+            const vietnamBounds = L.latLngBounds([7.5, 101.0], [23.5, 110.0]);
+
+            // Center on Vietnam with bounds lock
             map = L.map('map', {
                 preferCanvas: true,
                 zoomAnimation: true,
                 markerZoomAnimation: true,
-                fadeAnimation: false
-            }).setView([16.0, 106.5], 6);
+                fadeAnimation: false,
+                maxBounds: vietnamBounds.pad(0.15),
+                maxBoundsViscosity: 1.0,
+                minZoom: 5,
+                maxZoom: 18
+            }).setView([16.0, 106.0], 6);
 
-            // Use OpenStreetMap tiles with optimized loading
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-                maxZoom: 19,
+            // CartoDB Voyager — clean, modern base map that highlights data points
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+                attribution: '&copy; <a href="https://carto.com/">CARTO</a> &copy; <a href="https://www.openstreetmap.org/copyright">OSM</a>',
+                maxZoom: 18,
                 updateWhenIdle: true,
                 updateWhenZooming: false,
                 keepBuffer: 4
             }).addTo(map);
 
+            // Tải và hiển thị ranh giới Tỉnh thành sau sáp nhập
+            fetch('/data/vietnam_merged_optimized.geojson')
+                .then(response => {
+                    if (!response.ok) throw new Error("Network response was not ok");
+                    return response.json();
+                })
+                .then(geojsonData => {
+                    L.geoJSON(geojsonData, {
+                        style: function (feature) {
+                            return {
+                                color: '#475569', // Xanh dương slate đậm vừa
+                                weight: 1.5,
+                                opacity: 0.85,
+                                fillColor: '#94a3b8',
+                                fillOpacity: 0.05, // Tint rất nhẹ để bắt event chuốt nhưng không làm mờ nền
+                                dashArray: '5, 5' // Nét đứt phân tách rõ ràng
+                            };
+                        },
+                        onEachFeature: function (feature, layer) {
+                            if (feature.properties && feature.properties.ten_tinh) {
+                                layer.bindTooltip(feature.properties.ten_tinh, {
+                                    permanent: false,
+                                    direction: "center",
+                                    className: "province-tooltip",
+                                    sticky: true // Tooltip đi theo chuột
+                                });
+                            }
+                        }
+                    }).addTo(map);
+                }).catch(err => {
+                    console.warn('[Map] Không thể tải ranh giới sáp nhập:', err);
+                });
+
             markerClusterGroup = L.markerClusterGroup({
-                maxClusterRadius: 50,
+                maxClusterRadius: 20,
+                disableClusteringAtZoom: 12,
                 spiderfyOnMaxZoom: true,
                 showCoverageOnHover: false,
                 iconCreateFunction: function (cluster) {
                     const count = cluster.getChildCount();
                     let size = 'small';
-                    if (count > 10) size = 'medium';
-                    if (count > 30) size = 'large';
+                    let px = 32;
+                    if (count > 10) { size = 'medium'; px = 38; }
+                    if (count > 30) { size = 'large'; px = 46; }
                     return L.divIcon({
                         html: `<div class="cluster-marker cluster-${size}">${count}</div>`,
                         className: 'custom-cluster-icon',
-                        iconSize: L.point(40, 40)
+                        iconSize: L.point(px, px)
                     });
                 }
             });
@@ -363,21 +424,17 @@
             }
         }
 
-        function createMarkerIcon(riskLevel) {
+        // Returns circleMarker options instead of an icon — used with L.circleMarker
+        function getCircleMarkerStyle(riskLevel) {
             const color = riskColors[riskLevel] || '#94a3b8';
-            return L.divIcon({
-                className: 'custom-marker',
-                html: `<div style="
-                    width: 28px; height: 28px;
-                    background: ${color};
-                    border: 3px solid white;
-                    border-radius: 50%;
-                    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
-                "></div>`,
-                iconSize: [28, 28],
-                iconAnchor: [14, 14],
-                popupAnchor: [0, -16]
-            });
+            return {
+                radius: 5,
+                fillColor: color,
+                color: '#fff',
+                weight: 1.5,
+                opacity: 1,
+                fillOpacity: 0.85
+            };
         }
 
         async function loadMapData() {
@@ -417,9 +474,8 @@
             data.forEach(item => {
                 if (!item.latitude || !item.longitude) return; // Bỏ qua nếu không có tọa độ
 
-                const marker = L.marker([item.latitude, item.longitude], {
-                    icon: createMarkerIcon(item.risk_level)
-                });
+                // Use circleMarker for small, performant dots
+                const marker = L.circleMarker([item.latitude, item.longitude], getCircleMarkerStyle(item.risk_level));
 
                 const riskClass = `popup-risk-${item.risk_level}`;
                 const popup = `
