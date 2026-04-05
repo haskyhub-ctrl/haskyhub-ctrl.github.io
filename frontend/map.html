@@ -445,7 +445,7 @@
                 if (isAdmin) {
                     url = '/admin/map-data' + (activeFilter ? `?risk_level=${activeFilter}` : '');
                 } else {
-                    url = '/assessments/map-data';
+                    url = '/assessments/map-data' + (activeFilter ? `?risk_level=${activeFilter}` : '');
                 }
                 allData = await api.get(url);
 
@@ -455,7 +455,7 @@
                     if (btn) btn.style.display = 'none';
                 }
 
-                renderMarkers(allData);
+                renderMarkers(allData, isAdmin);
                 updateStats(allData);
             } catch (err) {
                 console.error('Error loading map data:', err);
@@ -463,7 +463,7 @@
             }
         }
 
-        function renderMarkers(data) {
+        function renderMarkers(data, isAdmin = false) {
             markerClusterGroup.clearLayers();
             allMarkers = [];
 
@@ -477,40 +477,107 @@
                 // Use circleMarker for small, performant dots
                 const marker = L.circleMarker([item.latitude, item.longitude], getCircleMarkerStyle(item.risk_level));
 
+                // Xác định xem item này có phải của user hiện tại không (backend đã ẩn dữ liệu cho item khác)
+                const isOwn = item.id !== 'hidden';
                 const riskClass = `popup-risk-${item.risk_level}`;
+
+                // Luôn hiển thị popup — backend đã xử lý ẩn tên/địa chỉ cho bài của người khác
+                let popupRows = '';
+
+                if (isAdmin) {
+                    // Admin: xem đầy đủ thông tin
+                    popupRows = `
+                        <div class="popup-row">
+                            <span class="popup-label">Địa chỉ:</span>
+                            <span class="popup-value">${item.facility_address || 'N/A'}</span>
+                        </div>
+                        <div class="popup-row">
+                            <span class="popup-label">Loại cơ sở:</span>
+                            <span class="popup-value">${item.facility_type || 'N/A'}</span>
+                        </div>
+                        <div class="popup-row">
+                            <span class="popup-label">Tỷ lệ nguy cơ:</span>
+                            <span class="popup-value" style="color:${riskColors[item.risk_level] || '#000'}">${item.risk_percentage}%</span>
+                        </div>
+                        <div class="popup-row">
+                            <span class="popup-label">Mức nguy cơ:</span>
+                            <span class="popup-risk ${riskClass}">${riskLabels[item.risk_level] || 'N/A'}</span>
+                        </div>
+                        <div class="popup-row">
+                            <span class="popup-label">Điểm:</span>
+                            <span class="popup-value">${item.total_score}/${item.max_possible_score}</span>
+                        </div>
+                        <div class="popup-row">
+                            <span class="popup-label">Tổ chức:</span>
+                            <span class="popup-value">${item.organization || 'N/A'}</span>
+                        </div>
+                        <div class="popup-row">
+                            <span class="popup-label">Ngày đánh giá:</span>
+                            <span class="popup-value">${item.completed_at ? new Date(item.completed_at).toLocaleDateString('vi-VN') : 'N/A'}</span>
+                        </div>
+                    `;
+                } else if (isOwn) {
+                    // User: xem đầy đủ bài của mình
+                    popupRows = `
+                        <div class="popup-row">
+                            <span class="popup-label">Địa chỉ:</span>
+                            <span class="popup-value">${item.facility_address || 'N/A'}</span>
+                        </div>
+                        <div class="popup-row">
+                            <span class="popup-label">Loại cơ sở:</span>
+                            <span class="popup-value">${item.facility_type || 'N/A'}</span>
+                        </div>
+                        <div class="popup-row">
+                            <span class="popup-label">Tỷ lệ nguy cơ:</span>
+                            <span class="popup-value" style="color:${riskColors[item.risk_level] || '#000'}">${item.risk_percentage}%</span>
+                        </div>
+                        <div class="popup-row">
+                            <span class="popup-label">Mức nguy cơ:</span>
+                            <span class="popup-risk ${riskClass}">${riskLabels[item.risk_level] || 'N/A'}</span>
+                        </div>
+                        <div class="popup-row">
+                            <span class="popup-label">Điểm:</span>
+                            <span class="popup-value">${item.total_score}/${item.max_possible_score}</span>
+                        </div>
+                        <div class="popup-row">
+                            <span class="popup-label">Tổ chức:</span>
+                            <span class="popup-value">${item.organization || 'N/A'}</span>
+                        </div>
+                        <div class="popup-row">
+                            <span class="popup-label">Ngày đánh giá:</span>
+                            <span class="popup-value">${item.completed_at ? new Date(item.completed_at).toLocaleDateString('vi-VN') : 'N/A'}</span>
+                        </div>
+                    `;
+                } else {
+                    // User: xem bài của người khác — chỉ hiện mức nguy cơ, ẩn tên
+                    popupRows = `
+                        <div class="popup-row">
+                            <span class="popup-label">Loại cơ sở:</span>
+                            <span class="popup-value">${item.facility_type || 'N/A'}</span>
+                        </div>
+                        <div class="popup-row">
+                            <span class="popup-label">Mức nguy cơ:</span>
+                            <span class="popup-risk ${riskClass}">${riskLabels[item.risk_level] || 'N/A'}</span>
+                        </div>
+                        <div class="popup-row">
+                            <span class="popup-label">Tỷ lệ nguy cơ:</span>
+                            <span class="popup-value" style="color:${riskColors[item.risk_level] || '#000'}">${item.risk_percentage}%</span>
+                        </div>
+                    `;
+                }
+
+                // Tiêu đề popup: ẩn tên cơ sở cho bài của người khác (khi là user thường)
+                const displayName = (!isAdmin && !isOwn)
+                    ? '<span style="color:var(--text-muted);font-style:italic;font-size:0.88rem;">🔒 Thông tin được bảo mật</span>'
+                    : item.facility_name;
+
                 const popup = `
-                    <div class="popup-title">${item.facility_name}</div>
-                    <div class="popup-row">
-                        <span class="popup-label">Địa chỉ:</span>
-                        <span class="popup-value">${item.facility_address || 'N/A'}</span>
-                    </div>
-                    <div class="popup-row">
-                        <span class="popup-label">Loại cơ sở:</span>
-                        <span class="popup-value">${item.facility_type || 'N/A'}</span>
-                    </div>
-                    <div class="popup-row">
-                        <span class="popup-label">Tỷ lệ nguy cơ:</span>
-                        <span class="popup-value" style="color:${riskColors[item.risk_level] || '#000'}">${item.risk_percentage}%</span>
-                    </div>
-                    <div class="popup-row">
-                        <span class="popup-label">Mức nguy cơ:</span>
-                        <span class="popup-risk ${riskClass}">${riskLabels[item.risk_level] || 'N/A'}</span>
-                    </div>
-                    <div class="popup-row">
-                        <span class="popup-label">Điểm:</span>
-                        <span class="popup-value">${item.total_score}/${item.max_possible_score}</span>
-                    </div>
-                    <div class="popup-row">
-                        <span class="popup-label">Tổ chức:</span>
-                        <span class="popup-value">${item.organization || 'N/A'}</span>
-                    </div>
-                    <div class="popup-row">
-                        <span class="popup-label">Ngày đánh giá:</span>
-                        <span class="popup-value">${item.completed_at ? new Date(item.completed_at).toLocaleDateString('vi-VN') : 'N/A'}</span>
-                    </div>
+                    <div class="popup-title">${displayName}</div>
+                    ${popupRows}
                 `;
 
                 marker.bindPopup(popup, { maxWidth: 320 });
+
                 allMarkers.push(marker);
                 markerClusterGroup.addLayer(marker);
             });

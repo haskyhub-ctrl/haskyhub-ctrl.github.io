@@ -51,9 +51,7 @@ async function initSurvey() {
 }
 
 function detectUserLocationUI() {
-    const statusEl = document.getElementById('gps-status');
-    if (statusEl) statusEl.textContent = 'Đang định vị...';
-
+    // Chạy ngầm lập tức để lấy vị trí, không hiển thị giao diện tải
     if ('geolocation' in navigator) {
         navigator.geolocation.getCurrentPosition(
             (pos) => {
@@ -61,21 +59,13 @@ function detectUserLocationUI() {
                     latitude: pos.coords.latitude,
                     longitude: pos.coords.longitude,
                 };
-                console.log('📍 Location detected:', surveyState.userLocation);
-                if (statusEl) {
-                    statusEl.innerHTML = `<span style="color:#22c55e">✓ Đã lấy tọa độ: ${pos.coords.latitude.toFixed(4)}, ${pos.coords.longitude.toFixed(4)}</span>`;
-                }
+                console.log('📍 Location detected silently:', surveyState.userLocation);
             },
             (err) => {
-                console.log('📍 Location not available:', err.message);
-                if (statusEl) {
-                    statusEl.innerHTML = `<span style="color:#eab308">⚠️ Không có vị trí: Vui lòng bật vị trí để hiển thị trên bản đồ. Không bắt buộc.</span>`;
-                }
+                console.log('📍 Location not available silently:', err.message);
             },
             { timeout: 10000, enableHighAccuracy: true }
         );
-    } else if (statusEl) {
-        statusEl.innerHTML = `<span style="color:#ef4444">❌ Trình duyệt không hỗ trợ định vị</span>`;
     }
 }
 
@@ -166,34 +156,12 @@ function renderFacilityForm(container) {
                 
                 <div class="form-group">
                     <label>Địa chỉ</label>
-                    <div style="display: flex; gap: 8px;">
-                        <input type="text" class="form-control" id="f_address" placeholder="Địa chỉ cơ sở" value="${info.facility_address || ''}">
-                        ${!surveyState.isImportedUser ? `<button type="button" class="btn btn-outline" onclick="detectUserLocationUI()" title="Lấy vị trí hiện tại" style="padding: 10px; width: 44px; flex-shrink: 0;">📍</button>` : ''}
-                    </div>
-                    <small id="gps-status" style="color:var(--text-muted); display:inline-block; margin-top:6px; font-size:0.8rem;">
-                        ${surveyState.isImportedUser && surveyState.userLocation ?
-            `<span style="color:#22c55e">✓ Tọa độ đã được thiết lập sẵn: ${surveyState.userLocation.latitude.toFixed(4)}, ${surveyState.userLocation.longitude.toFixed(4)}</span>`
-            : surveyState.userLocation ?
-            `<span style="color:#22c55e">✓ Đã lấy tọa độ: ${surveyState.userLocation.latitude.toFixed(4)}, ${surveyState.userLocation.longitude.toFixed(4)}</span>`
-            : 'Đang lấy tọa độ GPS...'}
-                    </small>
-                </div>
-                
-                <div class="form-group">
-                    <label>Ảnh mặt tiền / Cơ sở (Tùy chọn)</label>
-                    <input type="file" accept="image/*" capture="environment" id="f_photo" class="form-control" style="background: var(--glass-bg); padding: 8px;">
-                    <small style="color:var(--text-muted); display:inline-block; margin-top:4px;">Chụp ảnh thực tế cơ sở (tích hợp PWA)</small>
-                </div>
-                
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
-                    <div class="form-group">
-                        <label>Diện tích (m²)</label>
-                        <input type="number" class="form-control" id="f_area" placeholder="VD: 500" value="${info.facility_area || ''}">
-                    </div>
-                    <div class="form-group">
-                        <label>Số người làm việc</label>
-                        <input type="number" class="form-control" id="f_workers" placeholder="VD: 50" value="${info.worker_count || ''}">
-                    </div>
+                    <input type="text" class="form-control" id="f_address" placeholder="Địa chỉ cơ sở" value="${info.facility_address || ''}">
+                    ${!surveyState.isImportedUser ? `
+                    <button type="button" class="btn" style="margin-top: 12px; width: 100%; border: 1px dashed var(--border-color); background: transparent; color: var(--text-secondary); display: flex; align-items: center; justify-content: center; gap: 8px;" onclick="openMapPicker()">
+                        <span id="map-picker-text">📍 Ấn để chọn vị trí trên bản đồ (Tùy chọn)</span>
+                    </button>
+                    ` : ''}
                 </div>
             </div>
             
@@ -312,8 +280,6 @@ function renderReview(container) {
                     <div class="review-item"><span class="label">Tên cơ sở:</span><span class="value">${info.facility_name}</span></div>
                     <div class="review-item"><span class="label">Loại hình:</span><span class="value">${info.facility_type || 'N/A'}</span></div>
                     <div class="review-item"><span class="label">Địa chỉ:</span><span class="value">${info.facility_address || 'N/A'}</span></div>
-                    <div class="review-item"><span class="label">Diện tích:</span><span class="value">${info.facility_area || 'N/A'} m²</span></div>
-                    <div class="review-item"><span class="label">Số người:</span><span class="value">${info.worker_count || 'N/A'}</span></div>
                 </div>
                 
                 ${categoriesReview}
@@ -360,8 +326,6 @@ async function nextStep() {
             facility_name: name,
             facility_type: typesArray.join(','),
             facility_address: address,
-            facility_area: parseFloat(document.getElementById('f_area')?.value) || null,
-            worker_count: parseInt(document.getElementById('f_workers')?.value) || null,
             latitude: surveyState.userLocation?.latitude || null,
             longitude: surveyState.userLocation?.longitude || null,
         };
@@ -411,4 +375,70 @@ async function submitSurvey() {
         btn.disabled = false;
         btn.textContent = '🔥 Gửi Đánh giá';
     }
+}
+
+// Map Picker Logic
+let pickerMap = null;
+let pickerMarker = null;
+
+function openMapPicker() {
+    // Create modal dynamically
+    const modalHtml = `
+    <div id="mapPickerModal" style="position: fixed; inset: 0; z-index: 9999; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.7); padding: 20px;">
+        <div style="background: var(--bg-card); width: 100%; max-width: 600px; border-radius: 8px; overflow: hidden; display: flex; flex-direction: column;">
+            <div style="padding: 16px; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;">
+                <h3 style="margin: 0;">Chọn vị trí cơ sở</h3>
+                <button onclick="closeMapPicker()" style="background: transparent; border: none; font-size: 1.5rem; color: var(--text-muted); cursor: pointer;">&times;</button>
+            </div>
+            <div id="picker-map-container" style="height: 400px; width: 100%;"></div>
+            <div style="padding: 16px; text-align: right; background: var(--bg-secondary);">
+                <button onclick="closeMapPicker()" class="btn btn-outline" style="margin-right: 8px;">Hủy</button>
+                <button onclick="confirmMapPicker()" class="btn btn-primary">Xác nhận chọn</button>
+            </div>
+        </div>
+    </div>`;
+    
+    document.body.insertAdjacentHTML('beforeend', modalHtml);
+    
+    // Init map
+    setTimeout(() => {
+        const center = surveyState.userLocation ? 
+             [surveyState.userLocation.latitude, surveyState.userLocation.longitude] : 
+             [21.0285, 105.8542]; // Default to Hanoi
+             
+        pickerMap = L.map('picker-map-container').setView(center, 13);
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; CARTO'
+        }).addTo(pickerMap);
+        
+        pickerMarker = L.marker(center, {draggable: true}).addTo(pickerMap);
+        
+        pickerMap.on('click', function(e) {
+            pickerMarker.setLatLng(e.latlng);
+        });
+    }, 100);
+}
+
+function closeMapPicker() {
+    const modal = document.getElementById('mapPickerModal');
+    if(modal) {
+        modal.remove();
+        pickerMap = null;
+        pickerMarker = null;
+    }
+}
+
+function confirmMapPicker() {
+    if(pickerMarker) {
+        const pos = pickerMarker.getLatLng();
+        surveyState.userLocation = {
+            latitude: pos.lat,
+            longitude: pos.lng
+        };
+        const textBtn = document.getElementById('map-picker-text');
+        if(textBtn) {
+            textBtn.innerHTML = `<span style="color:#22c55e">✓ Đã chọn: ${pos.lat.toFixed(4)}, ${pos.lng.toFixed(4)}</span>`;
+        }
+    }
+    closeMapPicker();
 }

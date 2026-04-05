@@ -213,6 +213,10 @@ if os.path.exists(frontend_dir):
     img_dir = os.path.join(frontend_dir, "img")
     if os.path.exists(img_dir):
         app.mount("/img", StaticFiles(directory=img_dir), name="img")
+        
+    data_dir = os.path.join(frontend_dir, "data")
+    if os.path.exists(data_dir):
+        app.mount("/data", StaticFiles(directory=data_dir), name="data")
     
     admin_dir = os.path.join(frontend_dir, "admin")
     if os.path.exists(admin_dir):

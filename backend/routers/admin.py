@@ -198,7 +198,7 @@ def list_all_assessments(
     assessments = query.order_by(Assessment.created_at.desc()).all()
     results = []
     for a in assessments:
-        user = db.query(User).get(a.user_id)
+        user = db.get(User, a.user_id)
         data = {
             "id": a.id,
             "facility_name": a.facility_name,
@@ -233,7 +233,7 @@ def get_audit_logs(
     )
     results = []
     for log in logs:
-        admin = db.query(User).get(log.admin_id)
+        admin = db.get(User, log.admin_id)
         r = AuditLogResponse.model_validate(log)
         r.admin_name = admin.full_name if admin else "N/A"
         results.append(r)
@@ -313,7 +313,7 @@ def get_map_data(
     if risk_level != "unassessed":
         assessments = query.order_by(Assessment.created_at.desc()).all()
         for a in assessments:
-            user = db.query(User).get(a.user_id)
+            user = db.get(User, a.user_id)
             lat = a.latitude if a.latitude is not None else (user.latitude if user else None)
             lng = a.longitude if a.longitude is not None else (user.longitude if user else None)
             if lat is None or lng is None:
