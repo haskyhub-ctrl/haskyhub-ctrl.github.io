@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm nguy cơ cháy nổ - Trò chơi PCCC</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/games.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700;800;900&family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="has-gov-header game-page-wrapper">
+    <div class="gov-top-bar"><div class="container"><span class="gov-top-motto">CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM <span class="separator">•</span> <span class="motto-sub">Độc lập – Tự do – Hạnh phúc</span></span></div></div>
+    <header class="gov-header-band"><div class="container">
+        <a href="/" class="gov-agency-brand"><div class="gov-emblem"><img src="/img/logo-cand.png" alt="Logo" width="64" height="64" style="object-fit:contain;"></div>
+        <div class="gov-agency-name"><span class="gov-agency-parent">CÔNG AN TỈNH BẮC NINH</span><span class="gov-agency-unit">Phòng Cảnh sát PCCC và CNCH</span></div></a>
+        <div class="gov-header-actions"><a href="/games.html" style="color:#fff;text-decoration:none;font-size:14px;font-weight:600;padding:8px 16px;background:rgba(255,255,255,.1);border-radius:8px;">← Quay lại</a></div>
+    </div></header>
+
+    <div class="game-container">
+        <div class="game-header">
+            <div class="game-title-bar"><span class="game-title-icon">🔍</span><h2>Tìm nguy cơ cháy nổ</h2></div>
+            <div class="game-hud">
+                <div class="hud-item"><span class="hud-icon">🔍</span><span>Tìm thấy:</span><span class="hud-value" id="spot-found">0</span>/<span id="spot-total">0</span></div>
+                <div class="hud-item hud-timer"><span class="hud-icon">⏱️</span><span class="hud-value" id="spot-timer">60</span></div>
+                <div class="hud-item"><span class="hud-icon">⭐</span><span class="hud-value" id="spot-score">0</span></div>
+            </div>
+        </div>
+
+        <div class="spot-hint-bar" id="spot-hint">👆 Nhấn vào các vị trí có nguy cơ cháy nổ trong căn phòng!</div>
+
+        <div class="game-canvas-wrapper" style="position:relative;">
+            <canvas id="spot-canvas" width="840" height="560"></canvas>
+            <div id="spot-markers"></div>
+            <div class="game-message-overlay" id="spot-overlay">
+                <div class="game-message-box">
+                    <div class="game-message-icon" id="spot-msg-icon">🔍</div>
+                    <div class="game-message-title" id="spot-msg-title">Tìm nguy cơ cháy nổ</div>
+                    <div class="game-message-text" id="spot-msg-text">Quan sát căn phòng dưới đây và tìm ra TẤT CẢ các nguy cơ cháy nổ tiềm ẩn!</div>
+                    <div class="game-message-tip" id="spot-msg-tip">💡 Nhấn vào vị trí mà bạn cho là có nguy cơ cháy nổ.</div>
+                    <div id="spot-msg-buttons">
+                        <button class="game-btn game-btn-primary" onclick="startSpotGame()">BẮT ĐẦU</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="spot-found-list" style="margin-top:16px;"></div>
+    </div>
+
+    <script>
+    const canvas = document.getElementById('spot-canvas');
+    const ctx = canvas.getContext('2d');
+    const W = canvas.width, H = canvas.height;
+
+    const ROOMS = [
+        {
+            name: "Phòng khách",
+            hazards: [
+                { x: 120, y: 380, w: 80, h: 50, name: "Ổ cắm quá tải", desc: "Cắm quá nhiều thiết bị vào 1 ổ cắm → nguy cơ chập điện, cháy nổ!", icon: "⚡", color: "#ff6b35" },
+                { x: 680, y: 100, w: 60, h: 70, name: "Rèm cửa gần đèn", desc: "Rèm cửa tiếp xúc gần bóng đèn nóng → dễ bắt lửa!", icon: "💡", color: "#ffd93d" },
+                { x: 350, y: 420, w: 70, h: 50, name: "Nến không giám sát", desc: "Để nến cháy mà không có người trông → rủi ro cháy rất cao!", icon: "🕯️", color: "#ff4444" },
+                { x: 50, y: 150, w: 60, h: 80, name: "Lối thoát bị chặn", desc: "Đồ đạc chặn lối thoát nạn → không thể thoát khi có cháy!", icon: "🚪", color: "#c0202a" },
+                { x: 550, y: 350, w: 70, h: 60, name: "Dây điện cũ", desc: "Dây điện lộ lõi, cũ kỹ → chập điện gây cháy bất cứ lúc nào!", icon: "🔌", color: "#ff8800" },
+                { x: 250, y: 200, w: 60, h: 50, name: "Thuốc lá trên sofa", desc: "Hút thuốc trên sofa dễ gây cháy do tàn thuốc rơi vào vải dễ cháy!", icon: "🚬", color: "#888" },
+                { x: 730, y: 400, w: 70, h: 60, name: "Bình gas gần bếp điện", desc: "Bình gas để gần nguồn nhiệt → nguy cơ nổ cực kỳ cao!", icon: "⛽", color: "#ff0000" },
+            ]
+        }
+    ];
+
+    let currentRoom = 0, found = [], score = 0, timer = 60, timerInterval = null, gameActive = false;
+
+    function drawRoom() {
+        const room = ROOMS[currentRoom];
+        // Background - room
+        ctx.fillStyle = '#f5e6d3';
+        ctx.fillRect(0, 0, W, H);
+
+        // Floor
+        ctx.fillStyle = '#d4a574';
+        ctx.fillRect(0, H * 0.7, W, H * 0.3);
+        // Floor pattern
+        for (let i = 0; i < W; i += 60) {
+            ctx.strokeStyle = '#c49564';
+            ctx.beginPath(); ctx.moveTo(i, H*0.7); ctx.lineTo(i, H); ctx.stroke();
+        }
+
+        // Walls
+        ctx.fillStyle = '#e8dcc8';
+        ctx.fillRect(0, 0, W, H * 0.12);
+        ctx.strokeStyle = '#c4b5a0';
+        ctx.lineWidth = 3;
+        ctx.strokeRect(0, 0, W, H * 0.7);
+        ctx.lineWidth = 1;
+
+        // Baseboard
+        ctx.fillStyle = '#8b7355';
+        ctx.fillRect(0, H*0.7, W, 8);
+
+        // Window
+        ctx.fillStyle = '#87ceeb';
+        ctx.fillRect(300, 30, 200, 140);
+        ctx.strokeStyle = '#fff';
+        ctx.lineWidth = 4;
+        ctx.strokeRect(300, 30, 200, 140);
+        ctx.beginPath(); ctx.moveTo(400, 30); ctx.lineTo(400, 170); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(300, 100); ctx.lineTo(500, 100); ctx.stroke();
+        ctx.lineWidth = 1;
+
+        // Curtains (hazard: near lamp)
+        ctx.fillStyle = '#c0392b';
+        ctx.fillRect(660, 20, 40, 200);
+        ctx.fillRect(740, 20, 40, 200);
+
+        // Lamp near curtain
+        ctx.fillStyle = '#ffd93d';
+        ctx.beginPath();
+        ctx.arc(710, 100, 18, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.fillStyle = '#aaa';
+        ctx.fillRect(706, 118, 8, 80);
+
+        // Sofa
+        ctx.fillStyle = '#6c5ce7';
+        ctx.fillRect(180, 220, 200, 80);
+        ctx.fillRect(170, 220, 20, 100);
+        ctx.fillRect(370, 220, 20, 100);
+        ctx.fillStyle = '#5a4bd1';
+        ctx.fillRect(190, 230, 60, 60);
+        ctx.fillRect(260, 230, 60, 60);
+        ctx.fillRect(330, 230, 50, 60);
+
+        // Cigarette on sofa
+        ctx.fillStyle = '#ddd';
+        ctx.fillRect(260, 228, 24, 4);
+        ctx.fillStyle = '#ff4444';
+        ctx.beginPath(); ctx.arc(284, 230, 3, 0, Math.PI*2); ctx.fill();
+
+        // Coffee table with candle
+        ctx.fillStyle = '#8b6914';
+        ctx.fillRect(220, 380, 180, 30);
+        ctx.fillRect(230, 410, 20, 40);
+        ctx.fillRect(370, 410, 20, 40);
+        // Candle
+        ctx.fillStyle = '#fff';
+        ctx.fillRect(375, 355, 14, 28);
+        ctx.fillStyle = '#ff8800';
+        ctx.beginPath(); ctx.ellipse(382, 352, 6, 10, 0, 0, Math.PI*2); ctx.fill();
+        ctx.fillStyle = '#ffd93d';
+        ctx.beginPath(); ctx.ellipse(382, 348, 3, 5, 0, 0, Math.PI*2); ctx.fill();
+
+        // Door (blocked)
+        ctx.fillStyle = '#8b4513';
+        ctx.fillRect(30, 100, 60, 150);
+        ctx.fillStyle = '#a0522d';
+        ctx.fillRect(35, 105, 50, 140);
+        ctx.fillStyle = '#ffd93d';
+        ctx.beginPath(); ctx.arc(75, 175, 4, 0, Math.PI*2); ctx.fill();
+        // Boxes blocking door
+        ctx.fillStyle = '#a88b6e';
+        ctx.fillRect(35, 160, 50, 40);
+        ctx.fillRect(45, 130, 40, 35);
+        ctx.fillStyle = '#96785e';
+        ctx.strokeRect(35, 160, 50, 40);
+
+        // Power strip overloaded
+        ctx.fillStyle = '#eee';
+        ctx.fillRect(100, 390, 90, 20);
+        ctx.strokeStyle = '#aaa';
+        ctx.strokeRect(100, 390, 90, 20);
+        // Plugs
+        for (let i = 0; i < 5; i++) {
+            ctx.fillStyle = '#333';
+            ctx.fillRect(105+i*17, 385, 10, 8);
+        }
+        // Wires going everywhere
+        ctx.strokeStyle = '#333'; ctx.lineWidth = 2;
+        ctx.beginPath(); ctx.moveTo(110, 410); ctx.quadraticCurveTo(80, 450, 60, 440); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(145, 410); ctx.quadraticCurveTo(130, 460, 100, 480); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(175, 410); ctx.quadraticCurveTo(200, 450, 190, 490); ctx.stroke();
+        ctx.lineWidth = 1;
+
+        // Old wire (exposed)
+        ctx.strokeStyle = '#8B0000'; ctx.lineWidth = 3;
+        ctx.beginPath(); ctx.moveTo(540, 350); ctx.quadraticCurveTo(560, 380, 590, 370);
+        ctx.quadraticCurveTo(620, 360, 610, 400); ctx.stroke();
+        ctx.lineWidth = 1;
+        // Spark
+        ctx.fillStyle = '#ffd93d'; ctx.font = '14px serif';
+        ctx.fillText('⚡', 600, 365);
+
+        // Gas tank near stove
+        ctx.fillStyle = '#cc0000';
+        ctx.beginPath(); ctx.ellipse(760, 430, 25, 35, 0, 0, Math.PI*2); ctx.fill();
+        ctx.fillStyle = '#990000';
+        ctx.fillRect(748, 395, 24, 8);
+        ctx.fillStyle = '#fff'; ctx.font = 'bold 10px Roboto'; ctx.textAlign = 'center';
+        ctx.fillText('GAS', 760, 435);
+        // Small stove
+        ctx.fillStyle = '#555';
+        ctx.fillRect(700, 420, 40, 30);
+        ctx.fillStyle = '#ff6600';
+        ctx.beginPath(); ctx.ellipse(720, 418, 8, 5, 0, 0, Math.PI*2); ctx.fill();
+
+        // Draw hazard zones (debug only, hidden in gameplay)
+        if (!gameActive) {
+            room.hazards.forEach(h => {
+                ctx.strokeStyle = 'rgba(255,0,0,0.3)';
+                ctx.strokeRect(h.x, h.y, h.w, h.h);
+            });
+        }
+
+        // Room label
+        ctx.fillStyle = '#333';
+        ctx.font = 'bold 16px Roboto';
+        ctx.textAlign = 'left';
+        ctx.fillText('🏠 ' + room.name, 20, H - 10);
+    }
+
+    function startSpotGame() {
+        document.getElementById('spot-overlay').classList.remove('visible');
+        const room = ROOMS[currentRoom];
+        found = [];
+        score = 0;
+        timer = 60;
+        gameActive = true;
+        document.getElementById('spot-total').textContent = room.hazards.length;
+        document.getElementById('spot-found').textContent = '0';
+        document.getElementById('spot-score').textContent = '0';
+        document.getElementById('spot-timer').textContent = timer;
+        document.getElementById('spot-found-list').innerHTML = '';
+        document.getElementById('spot-markers').innerHTML = '';
+        drawRoom();
+
+        clearInterval(timerInterval);
+        timerInterval = setInterval(() => {
+            timer--;
+            document.getElementById('spot-timer').textContent = timer;
+            if (timer <= 10) document.getElementById('spot-timer').style.animation = 'pulse 1s infinite';
+            if (timer <= 0) endGame();
+        }, 1000);
+    }
+
+    canvas.addEventListener('click', (e) => {
+        if (!gameActive) return;
+        const rect = canvas.getBoundingClientRect();
+        const scaleX = W / rect.width, scaleY = H / rect.height;
+        const cx = (e.clientX - rect.left) * scaleX;
+        const cy = (e.clientY - rect.top) * scaleY;
+
+        const room = ROOMS[currentRoom];
+        let hit = false;
+        room.hazards.forEach((h, i) => {
+            if (found.includes(i)) return;
+            if (cx >= h.x && cx <= h.x + h.w && cy >= h.y && cy <= h.y + h.h) {
+                found.push(i);
+                hit = true;
+                score += 100 + timer;
+                document.getElementById('spot-found').textContent = found.length;
+                document.getElementById('spot-score').textContent = score;
+
+                // Show marker
+                const markerDiv = document.createElement('div');
+                markerDiv.style.cssText = `position:absolute;left:${h.x/W*100}%;top:${h.y/H*100}%;width:${h.w/W*100}%;height:${h.h/H*100}%;border:3px solid ${h.color};border-radius:8px;background:rgba(255,255,255,.1);animation:popIn .4s cubic-bezier(.68,-.55,.27,1.55);pointer-events:none;z-index:5;`;
+                document.getElementById('spot-markers').appendChild(markerDiv);
+
+                // Add to found list
+                const listItem = document.createElement('div');
+                listItem.style.cssText = 'padding:12px 16px;background:rgba(255,255,255,.04);border-radius:10px;border:1px solid rgba(255,255,255,.08);margin-bottom:8px;animation:fadeInUp .3s ease;';
+                listItem.innerHTML = `<div style="font-size:14px;color:#ffd93d;font-weight:600;margin-bottom:4px;">${h.icon} ${h.name}</div><div style="font-size:12px;color:#aaa;line-height:1.5;">${h.desc}</div>`;
+                document.getElementById('spot-found-list').appendChild(listItem);
+
+                document.getElementById('spot-hint').innerHTML = `✅ <strong>${h.name}</strong> — ${h.desc}`;
+                document.getElementById('spot-hint').style.borderColor = h.color;
+
+                if (found.length >= room.hazards.length) {
+                    setTimeout(endGame, 500);
+                }
+            }
+        });
+
+        if (!hit) {
+            score = Math.max(0, score - 10);
+            document.getElementById('spot-score').textContent = score;
+            document.getElementById('spot-hint').innerHTML = '❌ Không có nguy cơ ở đây! Thử vị trí khác. (-10 điểm)';
+        }
+    });
+
+    function endGame() {
+        gameActive = false;
+        clearInterval(timerInterval);
+        const room = ROOMS[currentRoom];
+        const allFound = found.length >= room.hazards.length;
+        const overlay = document.getElementById('spot-overlay');
+        document.getElementById('spot-msg-icon').textContent = allFound ? '🏆' : '⏰';
+        document.getElementById('spot-msg-title').textContent = allFound ? 'HOÀN THÀNH!' : 'Hết thời gian!';
+        document.getElementById('spot-msg-text').textContent = `Bạn tìm thấy ${found.length}/${room.hazards.length} nguy cơ. Điểm: ${score}`;
+        document.getElementById('spot-msg-tip').innerHTML = allFound
+            ? '🎓 <strong>Tuyệt vời!</strong> Bạn đã nhận biết tất cả nguy cơ cháy nổ. Hãy kiểm tra nhà mình xem có những nguy cơ tương tự không!'
+            : '💡 <strong>Các nguy cơ bạn chưa tìm thấy:</strong><br>' + room.hazards.filter((h,i) => !found.includes(i)).map(h => `${h.icon} ${h.name}`).join('<br>');
+        document.getElementById('spot-msg-buttons').innerHTML = '<button class="game-btn game-btn-primary" onclick="startSpotGame()">CHƠI LẠI</button> <a href="/games.html" class="game-btn game-btn-secondary">Trò chơi khác</a>';
+        overlay.classList.add('visible');
+
+        // Show all unfound hazards
+        room.hazards.forEach((h, i) => {
+            if (!found.includes(i)) {
+                const markerDiv = document.createElement('div');
+                markerDiv.style.cssText = `position:absolute;left:${h.x/W*100}%;top:${h.y/H*100}%;width:${h.w/W*100}%;height:${h.h/H*100}%;border:2px dashed rgba(255,100,100,.5);border-radius:8px;pointer-events:none;z-index:5;`;
+                document.getElementById('spot-markers').appendChild(markerDiv);
+            }
+        });
+    }
+
+    // Init
+    drawRoom();
+    document.getElementById('spot-overlay').classList.add('visible');
+    </script>
+</body>
+</html>

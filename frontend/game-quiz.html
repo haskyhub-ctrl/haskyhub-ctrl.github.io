@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đố vui kiến thức PCCC - Trò chơi PCCC</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/games.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700;800;900&family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="has-gov-header game-page-wrapper">
+    <div class="gov-top-bar"><div class="container"><span class="gov-top-motto">CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM <span class="separator">•</span> <span class="motto-sub">Độc lập – Tự do – Hạnh phúc</span></span></div></div>
+    <header class="gov-header-band"><div class="container">
+        <a href="/" class="gov-agency-brand"><div class="gov-emblem"><img src="/img/logo-cand.png" alt="Logo" width="64" height="64" style="object-fit:contain;"></div>
+        <div class="gov-agency-name"><span class="gov-agency-parent">CÔNG AN TỈNH BẮC NINH</span><span class="gov-agency-unit">Phòng Cảnh sát PCCC và CNCH</span></div></a>
+        <div class="gov-header-actions"><a href="/games.html" style="color:#fff;text-decoration:none;font-size:14px;font-weight:600;padding:8px 16px;background:rgba(255,255,255,.1);border-radius:8px;">← Quay lại</a></div>
+    </div></header>
+
+    <div class="quiz-container">
+        <div class="quiz-header" id="quiz-start-screen">
+            <div style="font-size:56px;margin-bottom:12px;">📝</div>
+            <h2 style="color:#ffd93d;font-family:'Roboto Condensed',sans-serif;font-size:28px;margin:0 0 8px;">Đố vui kiến thức PCCC</h2>
+            <p style="color:rgba(255,255,255,.7);font-size:14px;margin:0 0 20px;">15 câu hỏi — 15 giây mỗi câu — Bạn sẵn sàng chưa?</p>
+            <button class="game-btn game-btn-primary" onclick="startQuiz()">BẮT ĐẦU</button>
+        </div>
+
+        <div id="quiz-game" style="display:none;">
+            <div class="quiz-progress">
+                <div class="quiz-progress-bar"><div class="quiz-progress-fill" id="q-progress" style="width:0%"></div></div>
+                <span class="quiz-progress-text" id="q-count">0/15</span>
+                <span class="hud-item" style="margin-left:12px;"><span class="hud-icon">⭐</span><span class="hud-value" id="q-score">0</span></span>
+            </div>
+            <div class="quiz-timer-bar"><div class="quiz-timer-fill" id="q-timer-bar"></div></div>
+            <div class="quiz-card">
+                <div class="quiz-question-text" id="q-text"></div>
+                <div class="quiz-options" id="q-options"></div>
+                <div class="quiz-explanation" id="q-explanation"></div>
+            </div>
+        </div>
+
+        <div id="quiz-result" style="display:none;" class="quiz-header">
+            <div style="font-size:56px;margin-bottom:12px;" id="result-icon">🏆</div>
+            <h2 style="color:#ffd93d;font-family:'Roboto Condensed',sans-serif;font-size:28px;margin:0 0 8px;" id="result-title">Kết quả</h2>
+            <p style="color:rgba(255,255,255,.7);font-size:16px;margin:0 0 6px;" id="result-score"></p>
+            <p style="color:rgba(255,255,255,.5);font-size:14px;margin:0 0 20px;" id="result-msg"></p>
+            <button class="game-btn game-btn-primary" onclick="startQuiz()">CHƠI LẠI</button>
+            <a href="/games.html" class="game-btn game-btn-secondary">Trò chơi khác</a>
+        </div>
+    </div>
+
+    <script>
+    const QUESTIONS = [
+        { q: "Khi phát hiện đám cháy, bạn nên gọi số điện thoại nào?", opts: ["113","115","114","112"], ans: 2, exp: "Số 114 là số điện thoại báo cháy và cứu nạn cứu hộ toàn quốc." },
+        { q: "Khi thoát khỏi đám cháy có nhiều khói, bạn nên:", opts: ["Chạy thẳng đứng càng nhanh càng tốt","Cúi thấp người, bò sát mặt đất","Đứng yên chờ cứu hộ","Leo lên tầng cao nhất"], ans: 1, exp: "Khói nóng và khí độc bay lên cao. Cúi thấp người hoặc bò sát mặt đất giúp hít ít khói hơn." },
+        { q: "Bình chữa cháy CO2 KHÔNG nên dùng để chữa loại cháy nào?", opts: ["Cháy thiết bị điện","Cháy xăng dầu","Cháy kim loại kiềm","Cháy giấy, gỗ"], ans: 2, exp: "Bình CO2 không hiệu quả với cháy kim loại kiềm (Na, K, Mg) vì kim loại phản ứng với CO2." },
+        { q: "Khi quần áo bị bắt lửa, bạn nên:", opts: ["Chạy thật nhanh","Dừng - Nằm - Lăn","Dùng tay phủi lửa","Nhảy xuống nước"], ans: 1, exp: "Phương pháp Dừng - Nằm - Lăn (Stop - Drop - Roll) giúp dập tắt lửa trên quần áo hiệu quả nhất." },
+        { q: "Thời gian sử dụng của bình chữa cháy thông thường là bao lâu?", opts: ["1 năm","3 năm","5 năm","10 năm"], ans: 2, exp: "Bình chữa cháy thường có hạn sử dụng khoảng 5 năm, cần kiểm tra định kỳ và thay thế khi hết hạn." },
+        { q: "Khi phát hiện rò rỉ gas trong nhà, việc đầu tiên cần làm là:", opts: ["Bật đèn để tìm chỗ rò","Mở cửa sổ thông gió","Bật quạt hút khí","Gọi điện thoại ngay"], ans: 1, exp: "Mở cửa sổ thông gió ngay. KHÔNG bật/tắt điện, không dùng điện thoại gần khu vực rò gas vì có thể gây tia lửa." },
+        { q: "Lối thoát nạn trong tòa nhà phải đảm bảo chiều rộng tối thiểu:", opts: ["0.6m","0.8m","1.0m","1.2m"], ans: 2, exp: "Theo QCVN 06:2022/BXD, lối thoát nạn phải có chiều rộng tối thiểu 1.0m để đảm bảo di chuyển an toàn." },
+        { q: "Đám cháy chất lỏng (xăng, dầu) thuộc loại cháy nào?", opts: ["Loại A","Loại B","Loại C","Loại D"], ans: 1, exp: "Cháy loại B là cháy chất lỏng dễ cháy (xăng, dầu, sơn...). Dùng bình bọt hoặc bột để chữa." },
+        { q: "Khi bị mắc kẹt trong phòng có cháy, bạn nên:", opts: ["Mở cửa sổ nhảy xuống","Đóng kín cửa, nhét khăn ướt khe cửa, ra hiệu cầu cứu","Chạy xuyên qua đám lửa","Trốn trong tủ"], ans: 1, exp: "Đóng cửa ngăn khói, nhét khăn ướt khe cửa, ra cửa sổ kêu cứu hoặc dùng vải sáng màu vẫy." },
+        { q: "Nguồn nhiệt nào gây ra nhiều vụ cháy nhất ở Việt Nam?", opts: ["Bếp gas","Sự cố điện","Hàn cắt kim loại","Tàn thuốc lá"], ans: 1, exp: "Theo thống kê, sự cố chập điện, quá tải điện là nguyên nhân gây ra hơn 40% số vụ cháy tại Việt Nam." },
+        { q: "Thang máy có được sử dụng khi có cháy không?", opts: ["Được, để thoát nhanh hơn","Chỉ dùng khi ở tầng cao","Không, tuyệt đối không","Được nếu cháy ở tầng khác"], ans: 2, exp: "TUYỆT ĐỐI không dùng thang máy khi có cháy. Thang máy có thể dừng ở tầng đang cháy hoặc mất điện." },
+        { q: "Khoảng cách an toàn khi sử dụng bình chữa cháy bột là bao nhiêu?", opts: ["1m","2-3m","4-5m","7-8m"], ans: 1, exp: "Khoảng cách an toàn khi dùng bình chữa cháy bột ABC là 2-3m tính từ gốc đám cháy." },
+        { q: "Ký hiệu EXIT hoặc biển chỉ dẫn thoát nạn có màu gì?", opts: ["Đỏ","Xanh lá","Vàng","Trắng"], ans: 1, exp: "Biển EXIT / thoát nạn có nền xanh lá, chữ trắng theo tiêu chuẩn quốc tế ISO 7010." },
+        { q: "Khi hít phải khói, triệu chứng nguy hiểm nhất là:", opts: ["Ho","Chảy nước mắt","Mất ý thức","Ngứa da"], ans: 2, exp: "Khí CO trong khói cháy gây mất ý thức nhanh chóng và là nguyên nhân tử vong hàng đầu trong các vụ cháy." },
+        { q: "Mỗi gia đình nên diễn tập thoát nạn bao lâu một lần?", opts: ["1 tháng/lần","3 tháng/lần","6 tháng/lần","1 năm/lần"], ans: 2, exp: "Gia đình nên diễn tập thoát nạn ít nhất 6 tháng/lần. Tập luyện giúp mọi người phản xạ nhanh khi có sự cố." }
+    ];
+
+    let qIdx = 0, score = 0, timer = null, timeLeft = 15, answered = false;
+
+    function shuffle(arr) { for(let i=arr.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[arr[i],arr[j]]=[arr[j],arr[i]];} return arr; }
+
+    function startQuiz() {
+        shuffle(QUESTIONS);
+        qIdx = 0; score = 0; answered = false;
+        document.getElementById('quiz-start-screen').style.display = 'none';
+        document.getElementById('quiz-result').style.display = 'none';
+        document.getElementById('quiz-game').style.display = 'block';
+        showQuestion();
+    }
+
+    function showQuestion() {
+        if (qIdx >= QUESTIONS.length) { showResult(); return; }
+        answered = false;
+        const q = QUESTIONS[qIdx];
+        document.getElementById('q-text').textContent = `Câu ${qIdx+1}: ${q.q}`;
+        document.getElementById('q-count').textContent = `${qIdx+1}/${QUESTIONS.length}`;
+        document.getElementById('q-progress').style.width = `${(qIdx/QUESTIONS.length)*100}%`;
+        document.getElementById('q-score').textContent = score;
+        document.getElementById('q-explanation').classList.remove('visible');
+
+        const optsEl = document.getElementById('q-options');
+        optsEl.innerHTML = '';
+        const keys = ['A','B','C','D'];
+        q.opts.forEach((opt, i) => {
+            const div = document.createElement('div');
+            div.className = 'quiz-option';
+            div.innerHTML = `<span class="quiz-option-key">${keys[i]}</span><span>${opt}</span>`;
+            div.onclick = () => selectAnswer(i);
+            optsEl.appendChild(div);
+        });
+
+        timeLeft = 15;
+        document.getElementById('q-timer-bar').style.width = '100%';
+        clearInterval(timer);
+        timer = setInterval(() => {
+            timeLeft -= 0.1;
+            document.getElementById('q-timer-bar').style.width = `${(timeLeft/15)*100}%`;
+            if (timeLeft <= 0) { clearInterval(timer); if (!answered) selectAnswer(-1); }
+        }, 100);
+    }
+
+    function selectAnswer(idx) {
+        if (answered) return;
+        answered = true;
+        clearInterval(timer);
+        const q = QUESTIONS[qIdx];
+        const opts = document.querySelectorAll('.quiz-option');
+        opts.forEach((el, i) => {
+            el.onclick = null;
+            if (i === q.ans) el.classList.add('correct');
+            if (i === idx && idx !== q.ans) el.classList.add('wrong');
+        });
+        if (idx === q.ans) {
+            score += 10 + Math.round(timeLeft);
+            document.getElementById('q-score').textContent = score;
+        }
+        const expEl = document.getElementById('q-explanation');
+        expEl.innerHTML = (idx === q.ans ? '✅ Chính xác! ' : idx === -1 ? '⏰ Hết giờ! ' : '❌ Sai rồi! ') + q.exp;
+        expEl.classList.add('visible');
+        setTimeout(() => { qIdx++; showQuestion(); }, 3000);
+    }
+
+    function showResult() {
+        clearInterval(timer);
+        document.getElementById('quiz-game').style.display = 'none';
+        const res = document.getElementById('quiz-result');
+        res.style.display = 'block';
+        const pct = Math.round(score / (QUESTIONS.length * 25) * 100);
+        let icon = '😅', title = 'Cần cải thiện!', msg = 'Hãy đọc thêm kiến thức PCCC và thử lại!';
+        if (pct >= 80) { icon = '🏆'; title = 'Xuất sắc!'; msg = 'Bạn là chuyên gia PCCC!'; }
+        else if (pct >= 50) { icon = '😊'; title = 'Khá tốt!'; msg = 'Tiếp tục rèn luyện kiến thức PCCC nhé!'; }
+        document.getElementById('result-icon').textContent = icon;
+        document.getElementById('result-title').textContent = title;
+        document.getElementById('result-score').textContent = `Điểm: ${score}`;
+        document.getElementById('result-msg').textContent = msg;
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trò chơi An toàn PCCC - FRAS</title>
+    <meta name="description" content="Học kỹ năng phòng cháy chữa cháy qua các trò chơi tương tác thú vị. Miễn phí, phát triển bởi Công an tỉnh Bắc Ninh.">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/games.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700;800;900&family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="has-gov-header">
+    <!-- TOP BAR -->
+    <div class="gov-top-bar">
+        <div class="container">
+            <span class="gov-top-motto">
+                CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
+                <span class="separator">•</span>
+                <span class="motto-sub">Độc lập – Tự do – Hạnh phúc</span>
+            </span>
+            <div class="gov-top-right">
+                <span class="gov-top-clock" id="gov-clock">--:-- --/--/----</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="gov-header-band">
+        <div class="container">
+            <a href="/" class="gov-agency-brand">
+                <div class="gov-emblem">
+                    <img src="/img/logo-cand.png" alt="Biểu tượng Công an nhân dân Việt Nam" width="64" height="64" style="object-fit:contain;">
+                </div>
+                <div class="gov-agency-name">
+                    <span class="gov-agency-parent">CÔNG AN TỈNH BẮC NINH</span>
+                    <span class="gov-agency-unit">Phòng Cảnh sát PCCC và CNCH</span>
+                    <span class="gov-agency-system">Trò chơi học kỹ năng An toàn PCCC</span>
+                </div>
+            </a>
+            <div class="gov-header-actions">
+                <a href="tel:114" class="gov-hotline-btn" aria-label="Đường dây khẩn cấp 114">
+                    <span class="gov-hotline-label">Báo cháy</span>
+                    <span class="gov-hotline-number">114</span>
+                </a>
+            </div>
+            <button class="gov-mobile-toggle" id="gov-mobile-toggle" aria-label="Menu">&#9776;</button>
+        </div>
+    </header>
+
+    <!-- NAV -->
+    <nav class="gov-navbar" id="gov-navbar">
+        <div class="container">
+            <ul class="gov-nav-menu" id="gov-nav-menu">
+                <li><a href="/">Trang chủ</a></li>
+                <li><a href="/survey.html">Khảo sát PCCC</a></li>
+                <li class="active"><a href="/games.html">Trò chơi PCCC</a></li>
+                <li><a href="/map.html">Bản đồ nguy cơ</a></li>
+                <li><a href="/dashboard.html">Tra cứu kết quả</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="games-hero">
+        <div class="games-hero-overlay"></div>
+        <div class="games-hero-content">
+            <span class="games-hero-badge">🎮 Học mà chơi — Chơi mà học</span>
+            <h1 class="games-hero-title">
+                TRÒ CHƠI<br>
+                <span class="games-hero-highlight">AN TOÀN PCCC</span>
+            </h1>
+            <p class="games-hero-subtitle">
+                Rèn luyện kỹ năng phòng cháy, chữa cháy và thoát nạn qua các trò chơi tương tác hấp dẫn.<br>
+                Phù hợp mọi lứa tuổi — Hoàn toàn miễn phí
+            </p>
+        </div>
+    </section>
+
+    <!-- GAMES GRID -->
+    <section class="games-section" id="games">
+        <div class="container">
+            <div class="gov-section-header">
+                <span class="gov-section-eyebrow">Danh sách trò chơi</span>
+                <h2 class="gov-section-title">Chọn trò chơi để bắt đầu</h2>
+                <p class="gov-section-subtitle">Mỗi trò chơi dạy bạn một kỹ năng quan trọng trong phòng cháy chữa cháy và thoát nạn</p>
+            </div>
+
+            <div class="games-grid">
+                <!-- Game 1: Thoát khỏi đám cháy -->
+                <a href="/game-escape.html" class="game-card" id="game-escape">
+                    <div class="game-card-visual">
+                        <div class="game-card-icon">🔥</div>
+                        <div class="game-card-badge game-card-badge-hot">HOT</div>
+                    </div>
+                    <div class="game-card-info">
+                        <h3 class="game-card-title">Thoát khỏi đám cháy</h3>
+                        <p class="game-card-desc">Di chuyển qua ngôi nhà đang cháy, thu thập bình chữa cháy, khăn ướt và tìm lối thoát nạn an toàn. Học cách xử lý khi gặp lửa, khói và các tình huống khẩn cấp.</p>
+                        <div class="game-card-meta">
+                            <span class="game-card-difficulty game-card-difficulty-medium">⭐⭐ Trung bình</span>
+                            <span class="game-card-time">⏱️ 3-5 phút/màn</span>
+                        </div>
+                        <div class="game-card-skills">
+                            <span class="game-skill-tag">Thoát nạn</span>
+                            <span class="game-skill-tag">Dùng bình CC</span>
+                            <span class="game-skill-tag">Tránh khói</span>
+                        </div>
+                    </div>
+                    <div class="game-card-play">
+                        <span class="game-play-btn">Chơi ngay →</span>
+                    </div>
+                </a>
+
+                <!-- Game 2: Quiz kiến thức PCCC -->
+                <a href="/game-quiz.html" class="game-card" id="game-quiz">
+                    <div class="game-card-visual">
+                        <div class="game-card-icon">📝</div>
+                        <div class="game-card-badge game-card-badge-new">MỚI</div>
+                    </div>
+                    <div class="game-card-info">
+                        <h3 class="game-card-title">Đố vui kiến thức PCCC</h3>
+                        <p class="game-card-desc">Trả lời nhanh các câu hỏi về kiến thức phòng cháy chữa cháy. Thi đua với thời gian, kiểm tra khả năng phản xạ và kiến thức an toàn cháy nổ của bạn.</p>
+                        <div class="game-card-meta">
+                            <span class="game-card-difficulty game-card-difficulty-easy">⭐ Dễ</span>
+                            <span class="game-card-time">⏱️ 2-3 phút</span>
+                        </div>
+                        <div class="game-card-skills">
+                            <span class="game-skill-tag">Kiến thức</span>
+                            <span class="game-skill-tag">Phản xạ</span>
+                            <span class="game-skill-tag">Số 114</span>
+                        </div>
+                    </div>
+                    <div class="game-card-play">
+                        <span class="game-play-btn">Chơi ngay →</span>
+                    </div>
+                </a>
+
+                <!-- Game 3: Tìm nguy cơ cháy -->
+                <a href="/game-spot.html" class="game-card" id="game-spot">
+                    <div class="game-card-visual">
+                        <div class="game-card-icon">🔍</div>
+                        <div class="game-card-badge game-card-badge-new">MỚI</div>
+                    </div>
+                    <div class="game-card-info">
+                        <h3 class="game-card-title">Tìm nguy cơ cháy nổ</h3>
+                        <p class="game-card-desc">Quan sát căn phòng và tìm ra tất cả các nguy cơ cháy nổ tiềm ẩn. Rèn luyện khả năng nhận biết nguy hiểm trong sinh hoạt hàng ngày.</p>
+                        <div class="game-card-meta">
+                            <span class="game-card-difficulty game-card-difficulty-easy">⭐ Dễ</span>
+                            <span class="game-card-time">⏱️ 2-4 phút</span>
+                        </div>
+                        <div class="game-card-skills">
+                            <span class="game-skill-tag">Quan sát</span>
+                            <span class="game-skill-tag">Nhận biết</span>
+                            <span class="game-skill-tag">Phòng ngừa</span>
+                        </div>
+                    </div>
+                    <div class="game-card-play">
+                        <span class="game-play-btn">Chơi ngay →</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- KNOWLEDGE SECTION -->
+    <section class="games-knowledge">
+        <div class="container">
+            <div class="gov-section-header">
+                <span class="gov-section-eyebrow">Kiến thức thu được</span>
+                <h2 class="gov-section-title">Bạn sẽ học được gì?</h2>
+            </div>
+            <div class="games-knowledge-grid">
+                <div class="knowledge-item">
+                    <div class="knowledge-icon">🧯</div>
+                    <h4>Sử dụng bình chữa cháy</h4>
+                    <p>Kéo chốt → Hướng vòi vào gốc lửa → Bóp tay cầm → Quét từ trái sang phải</p>
+                </div>
+                <div class="knowledge-item">
+                    <div class="knowledge-icon">🚪</div>
+                    <h4>Thoát nạn đúng cách</h4>
+                    <p>Cúi thấp người, men theo tường, dùng khăn ướt bịt mũi miệng, di chuyển nhanh ra lối thoát</p>
+                </div>
+                <div class="knowledge-item">
+                    <div class="knowledge-icon">📞</div>
+                    <h4>Gọi 114 kịp thời</h4>
+                    <p>Báo cháy, nêu rõ địa chỉ, tình trạng đám cháy, số người bị kẹt (nếu có)</p>
+                </div>
+                <div class="knowledge-item">
+                    <div class="knowledge-icon">⚡</div>
+                    <h4>Nhận biết nguy cơ</h4>
+                    <p>Ổ cắm quá tải, dây điện cũ, bếp gas rò rỉ, lối thoát bị chặn, vật liệu dễ cháy</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="hp-footer">
+        <div class="container">
+            <div class="hp-footer-copy">
+                &copy; 2026 Công an tỉnh Bắc Ninh. Bảo lưu mọi quyền.
+            </div>
+            <div class="hp-footer-dev">
+                Phát triển bởi Đại úy Đỗ Thành Long — Phòng Cảnh sát PCCC và CNCH, Công an tỉnh Bắc Ninh
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/api.js"></script>
+    <script>
+        // Clock
+        function updateClock() {
+            const now = new Date();
+            const time = now.toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' });
+            const date = now.toLocaleDateString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric' });
+            const el = document.getElementById('gov-clock');
+            if (el) el.textContent = time + ' · ' + date;
+        }
+        updateClock();
+        setInterval(updateClock, 30000);
+    </script>
+</body>
+</html>
