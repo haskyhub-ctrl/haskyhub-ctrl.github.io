@@ -41,7 +41,6 @@ async function initSurvey() {
             longitude: user.longitude,
         };
         surveyState.isImportedUser = true;
-        console.log('📍 Location pre-set from profile:', surveyState.userLocation);
     } else {
         // Self-registered user: detect GPS
         surveyState.isImportedUser = false;
@@ -59,10 +58,8 @@ function detectUserLocationUI() {
                     latitude: pos.coords.latitude,
                     longitude: pos.coords.longitude,
                 };
-                console.log('📍 Location detected silently:', surveyState.userLocation);
             },
             (err) => {
-                console.log('📍 Location not available silently:', err.message);
             },
             { timeout: 10000, enableHighAccuracy: true }
         );
