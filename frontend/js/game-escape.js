@@ -5,8 +5,8 @@
    ============================================================ */
 (function(){
 'use strict';
-var T=40,C=21,R=15,cv=document.getElementById('game-canvas'),cx=cv.getContext('2d');
-cv.width=C*T;cv.height=R*T;
+var T=36,C=25,R=19,cv=document.getElementById('game-canvas'),cx=cv.getContext('2d');
+/* cv.width and height are fixed to camW, camH */
 
 // Tile IDs
 var F=0,W=1,FIRE=2,SMK=3,EXIT=4,BCC=5,TWL=6,MSK=7,KEY=8,DLCK=9,TOX=10,
@@ -16,11 +16,16 @@ NPC=20,BLCK=21,EXITL=22;
 // State
 var p={x:1,y:1},inv={bcc:false,twl:false,msk:false,key:false},
 lv=0,sc=0,hp=3,tm=90,run=false,tick=0,tInt=null,
+camX=0,camY=0,camW=900,camH=684,
 breakerOff=false,gasOff=false,called114=false,
 npcFollow=false,npcPos=null,npcSaved=false,
 fogActive=false,crouching=false,
 fireSpreadRate=0,fireSpreadTick=0,
 particles=[],fmsgs=[],map=null;
+
+// Item state tracking (persists between levels)
+var extinguisherCharges = 0; // Tracks charges used (0-5)
+var wetTowelTimer = 0; // Tracks seconds of towel use (0-600)
 
 // Levels defined in game-levels.js
 var LEVELS=window.GAME_LEVELS||[];
@@ -29,14 +34,29 @@ function loadLv(i){
   if(!window.GAME_LEVELS)LEVELS=window.GAME_LEVELS||[];
   if(i>=LEVELS.length){winAll();return;}
   var L=LEVELS[i];lv=i;tm=L.time;
+
+  // Preserve item states between levels (but reset consumables)
+  var prevBcc = inv.bcc;
+  var prevTwl = inv.twl;
+  var prevMsk = inv.msk;
+  var prevKey = inv.key;
+
   inv={bcc:false,twl:false,msk:false,key:false};
+
+  // Restore permanent items (key and mask persist between levels)
+  if(prevKey) inv.key = true;
+  if(prevMsk) inv.msk = true;
+
+  // Reset consumable item states but preserve their tracking variables
+  // extinguisherCharges and wetTowelTimer persist but items need to be re-collected
+
   breakerOff=false;gasOff=false;called114=false;
   npcFollow=false;npcPos=null;npcSaved=false;
   fogActive=false;crouching=false;
   // Difficulty scaling: increase fire spread rate with level progression
-  var baseFireSpread = L.fireSpread||0;
-  var levelBonus = Math.floor(lv * 0.5); // Increase by 0.5 per level
-  fireSpreadRate = Math.max(1, baseFireSpread + levelBonus);
+  // Base fire spread every 3 seconds (180 ticks at 60fps)
+  var baseFireSpread = L.fireSpread||180;
+  fireSpreadRate = 180; // Fixed 3 second interval
   fireSpreadTick=0;
   particles=[];fmsgs=[];
   map=[];
@@ -62,6 +82,11 @@ function startTm(){clearInterval(tInt);tInt=setInterval(function(){
   if(fireSpreadRate>0){fireSpreadTick++;if(fireSpreadTick>=fireSpreadRate){fireSpreadTick=0;spreadFire();}}
 },1000);}
 
+// Fire extinguisher charge tracking
+if(!window.extinguisherCharges) extinguisherCharges = 0;
+// Wet towel timer tracking
+if(!window.wetTowelTimer) wetTowelTimer = 0;
+
 function spreadFire(){
   var newFire=[];
   for(var r=0;r<R;r++)for(var c=0;c<C;c++){
@@ -69,7 +94,8 @@ function spreadFire(){
       var nb=[[c-1,r],[c+1,r],[c,r-1],[c,r+1]];
       for(var n=0;n<nb.length;n++){
         var nx=nb[n][0],ny=nb[n][1];
-        if(nx>=0&&nx<C&&ny>=0&&ny<R&&map[ny][nx]===F&&Math.random()<0.3)
+        // Reduced fire spread probability for more realistic spread
+        if(nx>=0&&nx<C&&ny>=0&&ny<R&&map[ny][nx]===F&&Math.random()<0.15)
           newFire.push([ny,nx]);
       }
     }
@@ -149,7 +175,9 @@ function showEduTip(tip){
   // Clear any existing educational tips
   fmsgs = fmsgs.filter(function(msg){return !msg.isEduTip;});
   // Add new educational tip with longer life
-  fmsgs.push({x:cv.width/2,y:cv.height-40,text:tip,life:120,isEduTip:true});
+  // Ensure tip is properly encoded and trimmed to prevent extra characters
+  var cleanTip = String(tip).trim();
+  fmsgs.push({x:cv.width/2,y:cv.height-40,text:cleanTip,life:120,isEduTip:true});
 }
 
 // ==================== INTERACTION (Space/Enter) ====================
@@ -166,7 +194,7 @@ function interact(){
       breakerOff=true;sc+=30;
       // Remove all ELEC tiles
       for(var r=0;r<R;r++)for(var c=0;c<C;c++)if(map[r][c]===ELEC)map[r][c]=F;
-      spark(nx,ny,'#ffff00',15);fmsg(nx,ny,'Ngat dien!');updHUD();
+      spark(nx,ny,'#ffff00',15);fmsg(nx,ny,'Ngắt điện!');updHUD();
       showEduTip('<strong>Bài học:</strong> Luôn ngắt điện trước khi tiếp近 dây điện!');
       return;
     }
@@ -175,7 +203,7 @@ function interact(){
       gasOff=true;sc+=30;
       // Remove all GAS_LEAK tiles
       for(var r=0;r<R;r++)for(var c=0;c<C;c++)if(map[r][c]===GASL)map[r][c]=F;
-      spark(nx,ny,'#00ffaa',12);fmsg(nx,ny,'Khoa gas!');updHUD();
+      spark(nx,ny,'#00ffaa',12);fmsg(nx,ny,'Khóa gas!');updHUD();
       showEduTip('<strong>Bài học:</strong> Khóa van gas TRƯỚC KHI dập lửa gần nguồn gas!');
       return;
     }
@@ -184,24 +212,24 @@ function interact(){
       called114=true;sc+=50;
       // Unlock EXITL tiles
       for(var r=0;r<R;r++)for(var c=0;c<C;c++)if(map[r][c]===EXITL)map[r][c]=EXIT;
-      spark(nx,ny,'#4fc3f7',15);fmsg(nx,ny,'Goi 114!');updHUD();
+      spark(nx,ny,'#4fc3f7',15);fmsg(nx,ny,'Gọi 114!');updHUD();
       showEduTip('<strong>Bài học:</strong> Luôn gọi 114 ngay khi phát hiện cháy - mỗi giây đều quan trọng!');
       return;
     }
     // Hot door - check
     if(t===HDOOR){
-      fmsg(nx,ny,'Cua NONG! Khong mo!');
+      fmsg(nx,ny,'Cửa NÓNG! Khong mo!');
       showEduTip('<strong>Bài học:</strong> Luôn kiểm tra nhiệt độ cửa trước khi mở - cửa nóng = đám cháy phía sau!');
       die('Cửa rất nóng — phía sau đang cháy dữ dội! Phải đi đường khác.');return;
     }
     // Safe door - open
     if(t===SDOOR){
-      map[ny][nx]=F;sc+=20;spark(nx,ny,'#10b981',8);fmsg(nx,ny,'Cua an toan!');updHUD();return;
+      map[ny][nx]=F;sc+=20;spark(nx,ny,'#10b981',8);fmsg(nx,ny,'Cửa an toàn!');updHUD();return;
     }
     // Blockage - push/remove
     if(t===BLCK){
       map[ny][nx]=F;sc+=20;
-      spark(nx,ny,'#a0522d',10);fmsg(nx,ny,'Don do vat!');updHUD();
+      spark(nx,ny,'#a0522d',10);fmsg(nx,ny,'Dọn đồ vật!');updHUD();
       showEduTip('<strong>Bài học:</strong> Luôn giữ lối thoát thoáng rộng, không để đồ đạc chặn đường!');
       return;
     }
@@ -214,25 +242,64 @@ function move(dx,dy){
   var nx=p.x+dx,ny=p.y+dy;
   if(nx<0||nx>=C||ny<0||ny>=R)return;
   var t=map[ny][nx];
-  // Solid blocks
-  if(t===W||t===FUR||t===BLCK||t===BRKR||t===GASV||t===PHONE||t===HDOOR||t===SDOOR)return;
+  // Solid blocks - cannot pass through these under any circumstances
+  if(t===W||t===FUR)return;
+  // These require specific actions/interactions to pass
+  if(t===BLCK||t===BRKR||t===GASV||t===PHONE||t===HDOOR||t===SDOOR)return;
   // Electric - needs breaker off
   if(t===ELEC){if(!breakerOff){die('Bị điện giật! Phải tìm và ngắt cầu dao trước.');return;}else{map[ny][nx]=F;}}
   // Gas leak - can walk but fire nearby = explosion
   if(t===GASL){if(!gasOff){die('Khí gas bùng cháy! Phải khóa van gas trước.');return;}}
   // Fire
   if(t===FIRE){
-    if(inv.bcc){map[ny][nx]=F;inv.bcc=false;sc+=50;spark(nx,ny,'#87ceeb',15);fmsg(nx,ny,'+50 Dap lua!');updInv();
-      showEduTip('<strong>Bài học:</strong> Chỉ dùng bình chữa cháy khi đã tắt điện và khóa gas!');
+    if(inv.bcc){
+      // Use one charge of fire extinguisher (5 charges total)
+      extinguisherCharges = (extinguisherCharges || 0) + 1;
+      if(extinguisherCharges >= 5){
+        inv.bcc = false;
+        extinguisherCharges = 0;
+        showEduTip('<strong>Bài học:</strong> Bình chữa cháy đã hết! Tìm bình mới nếu cần thiết.');
+      }else{
+        showEduTip('<strong>Bài học:</strong> Bình chữa cháy còn ' + (5 - extinguisherCharges) + ' lần sử dụng.');
+      }
+      
+      var cleared = 0;
+      for(var k=1; k<=5; k++){
+        var fx = p.x + dx*k, fy = p.y + dy*k;
+        if(fx>=0 && fx<C && fy>=0 && fy<R && map[fy][fx]===FIRE){
+          map[fy][fx] = F; cleared++;
+          spark(fx,fy,'#87ceeb',15);
+        } else if(fx>=0 && fx<C && fy>=0 && fy<R && (map[fy][fx]===W || map[fy][fx]===FUR)) {
+          break; // Stop stream if wall
+        }
+      }
+      sc+=cleared*50;
+      if(cleared>0) fmsg(nx,ny,'+'+(cleared*50)+' Dập lửa!');
+      updInv();
       return;
     }else{die('Đi vào đám cháy mà không có bình chữa cháy!');}return;
   }
   // Smoke
   if(t===SMK){
-    if(inv.twl){p.x=nx;p.y=ny;crouching=true;fogActive=true;sc+=20;updHUD();
-      showEduTip('<strong>Bài học:</strong> Trong khói: cúi thấp, dùng khăn ướt bít mũi, theo tường để tìm lối ra!');
-      return;
-    }else{die('Hít phải khói độc! Cần khăn ướt bịt mũi miệng.');}return;
+    if(inv.twl){
+      // Wet towel provides 10 seconds of protection (600 ticks at 60fps)
+      wetTowelTimer = (wetTowelTimer || 0) + 1;
+      if(wetTowelTimer >= 600){
+        // Towel has expired
+        inv.twl = false;
+        wetTowelTimer = 0;
+        showEduTip('<strong>Bài học:</strong> Khăn ướt đã hết hiệu lực! Cần tìm chiếc khăn mới.');
+        // Still allow movement but no longer protected from smoke
+        // Fall through to smoke handling below
+      }else{
+        showEduTip('<strong>Bài học:</strong> Khăn ướt còn ' + Math.ceil((600 - wetTowelTimer)/60) + ' giây hiệu lực.');
+        p.x=nx;p.y=ny;crouching=true;sc+=20;updHUD();
+        return;
+      }
+    }
+    // If no towel or towel expired, player takes damage from smoke
+    die('Hít phải khói độc! Cần khăn ướt bịt mũi miệng.');
+    return;
   }
   // Toxic
   if(t===TOX){
@@ -243,32 +310,32 @@ function move(dx,dy){
   }
   // Locked door
   if(t===DLCK){
-    if(inv.key){map[ny][nx]=F;inv.key=false;sc+=40;spark(nx,ny,'#ffd93d',12);fmsg(nx,ny,'Mo khoa!');updInv();
+    if(inv.key){map[ny][nx]=F;inv.key=false;sc+=40;spark(nx,ny,'#ffd93d',12);fmsg(nx,ny,'Mở khóa!');updInv();
       showEduTip('<strong>Bài học:</strong> Luôn mang theo chìa khóa để mở đường thoát trong trường hợp khẩn cấp!');
       return;
-    }else{fmsg(nx,ny,'Can chia khoa!');}return;
+    }else{fmsg(nx,ny,'Cần chìa khóa!');}return;
   }
   // Locked exit (need 114)
   if(t===EXITL){fmsg(nx,ny,'Phai goi 114 truoc!');return;}
   // Pickups
-  if(t===BCC){inv.bcc=true;spark(nx,ny,'#ff6b35',10);fmsg(nx,ny,'Binh chua chay!');sc+=10;map[ny][nx]=F;
+  if(t===BCC){inv.bcc=true;spark(nx,ny,'#ff6b35',10);fmsg(nx,ny,'Bình chữa cháy!');sc+=10;map[ny][nx]=F;
     showEduTip('<strong>Bài học:</strong> Bình chữa cháy là thiết bị đầu tiên cần tìm trong trường hợp cháy!');
     return;
   }
-  if(t===TWL){inv.twl=true;spark(nx,ny,'#87ceeb',10);fmsg(nx,ny,'Khan uot!');sc+=10;map[ny][nx]=F;
+  if(t===TWL){inv.twl=true;spark(nx,ny,'#87ceeb',10);fmsg(nx,ny,'Khăn ướt!');sc+=10;map[ny][nx]=F;
     showEduTip('<strong>Bài học:</strong> Khăn ướt giúp bảo vệ hô hấp khi phải đi qua khu vực khói!');
     return;
   }
-  if(t===MSK){inv.msk=true;spark(nx,ny,'#a0a0ff',10);fmsg(nx,ny,'Mat na!');sc+=10;map[ny][nx]=F;
+  if(t===MSK){inv.msk=true;spark(nx,ny,'#a0a0ff',10);fmsg(nx,ny,'Mặt nạ!');sc+=10;map[ny][nx]=F;
     showEduTip('<strong>Bài học:</strong> Mặt nạ phòng độc bảo vệ khỏi khí độc và khói!');
     return;
   }
-  if(t===KEY){inv.key=true;spark(nx,ny,'#ffd93d',10);fmsg(nx,ny,'Chia khoa!');sc+=10;map[ny][nx]=F;
+  if(t===KEY){inv.key=true;spark(nx,ny,'#ffd93d',10);fmsg(nx,ny,'Chìa khóa!');sc+=10;map[ny][nx]=F;
     showEduTip('<strong>Bài học:</strong> Luôn kiểm tra và mang theo chìa khóa khi thoát hiểm!');
     return;
   }
   // NPC
-  if(t===NPC){npcFollow=true;map[ny][nx]=F;sc+=50;spark(nx,ny,'#ff69b4',15);fmsg(nx,ny,'Cuu nguoi! Di den EXIT!');updHUD();return;}
+  if(t===NPC){npcFollow=true;map[ny][nx]=F;sc+=50;spark(nx,ny,'#ff69b4',15);fmsg(nx,ny,'Cứu người! Đi đến EXIT!');updHUD();return;}
 
   if(t!==SMK){crouching=false;fogActive=false;}
   p.x=nx;p.y=ny;
@@ -306,22 +373,74 @@ function dWall(x,y){cx.fillStyle='#5c5f7a';cx.fillRect(x,y,T,T);cx.fillStyle='#6
 function dFurn(x,y){dFloor(x,y);cx.fillStyle='#8b6914';cx.fillRect(x+5,y+5,T-10,T-10);cx.strokeStyle='#a07d1e';cx.strokeRect(x+5,y+5,T-10,T-10);}
 
 function dFire(x,y){dFloor(x,y);
-  var t=tick;cx.fillStyle='rgba(255,80,0,0.3)';cx.fillRect(x+2,y+2,T-4,T-4);
-  cx.fillStyle='#ff4400';cx.beginPath();
-  cx.moveTo(x+6,y+T-2);cx.quadraticCurveTo(x+4,y+14+Math.sin(t*.15)*4,x+T*.35,y+4+Math.sin(t*.2)*3);
-  cx.quadraticCurveTo(x+T/2,y-2+Math.cos(t*.18)*2,x+T*.65,y+4+Math.sin(t*.15+1)*3);
-  cx.quadraticCurveTo(x+T-4,y+14+Math.cos(t*.15)*4,x+T-6,y+T-2);cx.closePath();cx.fill();
-  cx.fillStyle='#ffcc00';cx.beginPath();
-  cx.moveTo(x+12,y+T-4);cx.quadraticCurveTo(x+10,y+20+Math.sin(t*.2)*3,x+T/2,y+10+Math.cos(t*.25)*2);
-  cx.quadraticCurveTo(x+T-10,y+20+Math.cos(t*.2)*3,x+T-12,y+T-4);cx.closePath();cx.fill();
-  cx.fillStyle='#fff8e0';cx.beginPath();cx.ellipse(x+T/2,y+T*.65,5,8+Math.sin(t*.3)*2,0,0,Math.PI*2);cx.fill();
+  var t=tick;
+  // Dynamic fire base with multiple layers
+  cx.fillStyle='rgba(255,69,0,0.4)';cx.fillRect(x+3,y+3,T-6,T-6);
+
+  // Outer flames
+  cx.fillStyle='#ff4500';
+  cx.beginPath();
+  cx.moveTo(x+5,y+T-3);
+  cx.quadraticCurveTo(x+3,y+12+Math.sin(t*0.2)*3,x+T*0.3,y+5+Math.sin(t*0.25)*2);
+  cx.quadraticCurveTo(x+T/2,y-3+Math.cos(t*0.18)*2,x+T*0.7,y+5+Math.sin(t*0.2)*2);
+  cx.quadraticCurveTo(x+T-5,y+12+Math.cos(t*0.2)*3,x+T-5,y+T-3);
+  cx.closePath();cx.fill();
+
+  // Inner flames
+  cx.fillStyle='#ff8c00';
+  cx.beginPath();
+  cx.moveTo(x+8,y+T-5);
+  cx.quadraticCurveTo(x+6,y+16+Math.sin(t*0.3)*2,x+T*0.4,y+8+Math.sin(t*0.35)*2);
+  cx.quadraticCurveTo(x+T/2,y+2+Math.cos(t*0.2)*2,x+T*0.6,y+8+Math.sin(t*0.3)*2);
+  cx.quadraticCurveTo(x+T-8,y+16+Math.cos(t*0.3)*2,x+T-8,y+T-5);
+  cx.closePath();cx.fill();
+
+  // Core
+  cx.fillStyle='#ffd700';
+  cx.beginPath();
+  cx.ellipse(x+T/2,y+T*0.4,6,4,0,0,Math.PI*2);
+  cx.fill();
+
+  // Sparks
+  if(Math.sin(t*0.5)>0.7){
+    cx.fillStyle='#ffff00';
+    for(var i=0;i<3;i++){
+      var sx=x+5+Math.random()*(T-10);
+      var sy=y+5+Math.random()*(T-10);
+      cx.beginPath();
+      cx.arc(sx,sy,1+Math.random()*2,0,Math.PI*2);
+      cx.fill();
+    }
+  }
+
   cx.fillStyle='#fff';cx.font='bold 8px sans-serif';cx.textAlign='center';cx.fillText('LỬA',x+T/2,y+T-2);
 }
 function dSmoke(x,y){dFloor(x,y);var t=tick;
-  for(var i=0;i<4;i++){var ox=Math.sin(t*.04+i*1.5)*5,oy=Math.cos(t*.03+i*.8)*3;
-    cx.fillStyle='rgba(180,180,190,'+(0.25+Math.sin(t*.02+i)*.08)+')';
-    cx.beginPath();cx.ellipse(x+8+i*8+ox,y+10+i*6+oy,10+i*2,8+i,0,0,Math.PI*2);cx.fill();}
-  cx.fillStyle='rgba(255,255,255,0.5)';cx.font='bold 8px sans-serif';cx.textAlign='center';cx.fillText('KHÓI',x+T/2,y+T-2);
+  // Multiple layers of smoke for depth
+  for(var layer=0;layer<3;layer++){
+    var offset = layer * 12;
+    var alpha = 0.15 + Math.sin(t*0.1 + layer)*0.1;
+    cx.fillStyle='rgba(120,120,130,'+alpha+')';
+    for(var i=0;i<3;i++){
+      var ox=Math.sin(t*0.05+i*2)*4+offset;
+      var oy=Math.cos(t*0.03+i*1.5)*2;
+      cx.beginPath();
+      cx.ellipse(x+6+i*10+ox,y+8+i*6+oy,8+i*2,6+i,0,0,Math.PI*2);
+      cx.fill();
+    }
+  }
+
+  // Rising smoke particles
+  for(var i=0;i<6;i++){
+    var rise = (t*0.1 + i*0.5) % 8;
+    var drift = Math.sin(t*0.07+i)*2;
+    cx.fillStyle='rgba(180,180,190,'+(0.3+Math.sin(t*0.1+i)*0.1)+')';
+    cx.beginPath();
+    cx.arc(x+4+i*12+drift,y+2-rise,2+Math.sin(t*0.2+i),0,Math.PI*2);
+    cx.fill();
+  }
+
+  cx.fillStyle='rgba(255,255,255,0.6)';cx.font='bold 8px sans-serif';cx.textAlign='center';cx.fillText('KHÓI',x+T/2,y+T-2);
 }
 function dToxic(x,y){dFloor(x,y);var a=.25+Math.sin(tick*.05)*.1;
   cx.fillStyle='rgba(80,220,0,'+a+')';cx.fillRect(x+2,y+2,T-4,T-4);
@@ -470,13 +589,62 @@ function dTile(c,r){
 
 function dPlayer(){
   if(!map)return;var x=p.x*T,y=p.y*T;
-  cx.fillStyle='rgba(0,0,0,0.3)';cx.beginPath();cx.ellipse(x+T/2,y+T-4,12,4,0,0,Math.PI*2);cx.fill();
-  if(crouching){cx.fillStyle='#ffd93d';cx.beginPath();cx.ellipse(x+T/2,y+T*.65,14,9,0,0,Math.PI*2);cx.fill();
-    cx.fillStyle='#ffecb3';cx.beginPath();cx.arc(x+T/2-6,y+T*.5,7,0,Math.PI*2);cx.fill();
-  }else{cx.fillStyle='#ffd93d';cx.fillRect(x+11,y+16,18,16);
-    cx.fillStyle='#ffecb3';cx.beginPath();cx.arc(x+T/2,y+12,9,0,Math.PI*2);cx.fill();
-    cx.fillStyle='#333';cx.fillRect(x+16,y+10,3,3);cx.fillRect(x+22,y+10,3,3);
-    cx.fillStyle='#1565c0';cx.fillRect(x+13,y+30,6,6);cx.fillRect(x+21,y+30,6,6);}
+
+  // Player shadow
+  cx.fillStyle='rgba(0,0,0,0.4)';cx.beginPath();cx.ellipse(x+T/2+2,y+T-2,14,5,0,0,Math.PI*2);cx.fill();
+
+  if(crouching){
+    // Crouching player - more detailed
+    cx.fillStyle='#ffd93d'; // Main body
+    cx.beginPath();cx.ellipse(x+T/2,y+T*0.65,16,10,0,0,Math.PI*2);cx.fill();
+
+    // Head
+    cx.fillStyle='#ffecb3';
+    cx.beginPath();cx.arc(x+T/2-6,y+T*0.5,7,0,Math.PI*2);cx.fill();
+    cx.fillStyle='#333';
+    cx.beginPath();cx.arc(x+T/2-4,y+T*0.48,1.5,0,Math.PI*2);cx.fill(); // Eye
+
+    // Safety helmet
+    cx.fillStyle='#1565c0';
+    cx.fillRect(x+T/2-9,y+T*0.35,6,3);
+    cx.fillRect(x+T/2-6,y+T*0.3,12,2);
+
+  }else{
+    // Standing player - more detailed
+    cx.fillStyle='#ffd93d'; // Main body
+    cx.fillRect(x+11,y+16,18,16);
+
+    // Shading
+    cx.fillStyle='#ffecb3';
+    cx.beginPath();cx.arc(x+T/2,y+12,9,0,Math.PI*2);cx.fill();
+
+    // Details
+    cx.fillStyle='#333';
+    cx.fillRect(x+16,y+10,3,3); // Right arm
+    cx.fillRect(x+22,y+10,3,3); // Left arm
+
+    // Safety vest
+    cx.fillStyle='#1565c0';
+    cx.fillRect(x+13,y+30,6,6); // Left stripe
+    cx.fillRect(x+21,y+30,6,6); // Right stripe
+
+    // Head details
+    cx.fillStyle='#ffecb3';
+    cx.beginPath();cx.arc(x+T/2,y+8,7,0,Math.PI*2);cx.fill();
+    cx.fillStyle='#333';
+    cx.beginPath();cx.arc(x+T/2-2,y+6,1,0,Math.PI*2);cx.fill(); // Left eye
+    cx.beginPath();cx.arc(x+T/2+2,y+6,1,0,Math.PI*2);cx.fill(); // Right eye
+  }
+
+  // Vision indicator when limited
+  if(!inv.twl && !inv.msk && !inv.bcc && !inv.key){
+    cx.strokeStyle='rgba(255,215,61,0.5)';
+    cx.lineWidth=1;
+    cx.beginPath();
+    cx.arc(x+T/2,y+T/2,3*T,0,Math.PI*2);
+    cx.stroke();
+  }
+
   cx.fillStyle='rgba(255,215,61,0.08)';cx.beginPath();cx.arc(x+T/2,y+T/2,T*.8,0,Math.PI*2);cx.fill();
 }
 function dNPCFollow(){
@@ -489,18 +657,44 @@ function dNPCFollow(){
 function render(){
   tick++;cx.clearRect(0,0,cv.width,cv.height);cx.fillStyle='#1a1a2e';cx.fillRect(0,0,cv.width,cv.height);
   if(map){
-    // Fog of war: in smoke, only see nearby tiles
-    if(fogActive){
-      for(var r=0;r<R;r++)for(var c=0;c<C;c++){
-        var dist=Math.abs(c-p.x)+Math.abs(r-p.y);
-        if(dist<=3)dTile(c,r);
-        else{cx.fillStyle='rgba(100,100,110,0.85)';cx.fillRect(c*T,r*T,T,T);}
-      }
-    }else{
-      for(var r=0;r<R;r++)for(var c=0;c<C;c++)dTile(c,r);
+    // Limited vision system - always active
+    var visionRadius = 3; 
+
+    if(inv.twl) visionRadius += 1;
+    if(inv.msk) visionRadius += 1;
+    if(inv.bcc) visionRadius += 1;
+    if(inv.key) visionRadius += 1;
+    
+    visionRadius = Math.min(6, visionRadius);
+
+    for(var r=0;r<R;r++)for(var c=0;c<C;c++){
+      dTile(c,r);
     }
     dNPCFollow();dPlayer();
-  }else{cx.fillStyle='#fff';cx.font='18px sans-serif';cx.textAlign='center';cx.fillText('Nhấn BẮT ĐẦU để chơi!',cv.width/2,cv.height/2);}
+
+    // Smooth Radial Fog
+    cx.save();
+    cx.fillStyle = 'rgba(30, 27, 75, 0.98)';
+    cx.fillRect(0,0,cv.width,cv.height);
+    cx.globalCompositeOperation = 'destination-out';
+
+    var curX = p.x*T + T/2;
+    var curY = p.y*T + T/2;
+    var grad = cx.createRadialGradient(curX, curY, visionRadius*T*0.35, curX, curY, visionRadius*T);
+    grad.addColorStop(0, 'rgba(0,0,0,1)');
+    grad.addColorStop(1, 'rgba(0,0,0,0)');
+    cx.fillStyle = grad;
+    cx.beginPath();
+    cx.arc(curX, curY, visionRadius*T, 0, Math.PI*2);
+    cx.fill();
+    cx.restore();
+
+    cx.strokeStyle = 'rgba(79, 70, 229, 0.4)';
+    cx.lineWidth = 1;
+    cx.beginPath();
+    cx.arc(curX, curY, visionRadius*T, 0, Math.PI*2);
+    cx.stroke();
+  }else{cx.fillStyle='#1E1B4B';cx.fillRect(0,0,cv.width,cv.height);cx.fillStyle='#4F46E5';cx.font='bold 24px \'Crimson Pro\', serif';cx.textAlign='center';cx.fillText('Nhấn BẮT ĐẦU để chơi!',cv.width/2,cv.height/2);}
   // Particles & msgs
   var ap=[];for(var i=0;i<particles.length;i++){var q=particles[i];q.x+=q.vx;q.y+=q.vy;q.life--;q.sz*=.96;
     cx.globalAlpha=Math.max(0,q.life/q.ml);cx.fillStyle=q.col;cx.beginPath();cx.arc(q.x,q.y,q.sz,0,Math.PI*2);cx.fill();

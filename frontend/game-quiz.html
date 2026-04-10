@@ -7,96 +7,837 @@
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/games.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700;800;900&family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .quiz-container { max-width: 780px; margin: 24px auto; padding: 0 16px; }
+        .quiz-start-screen {
+            text-align: center; padding: 60px 30px;
+            background: linear-gradient(135deg, rgba(25,28,50,.95), rgba(18,20,38,.98));
+            border: 1px solid rgba(255,217,61,.15); border-radius: 0;
+        }
+        .quiz-start-screen h2 { color: #ffd93d; font-family: 'Roboto Condensed', sans-serif; font-size: 32px; margin: 0 0 8px; letter-spacing: 1px; }
+        .quiz-start-screen p { color: rgba(255,255,255,.65); font-size: 15px; margin: 0 0 30px; line-height: 1.6; }
+        .quiz-start-stats { display: flex; justify-content: center; gap: 32px; margin-bottom: 28px; }
+        .quiz-start-stat { text-align: center; }
+        .quiz-start-stat .stat-val { font-size: 28px; font-weight: 800; color: #ffd93d; display: block; font-family: 'Roboto Condensed'; }
+        .quiz-start-stat .stat-lbl { font-size: 12px; color: rgba(255,255,255,.5); text-transform: uppercase; letter-spacing: 1px; }
+        .quiz-high-score { background: rgba(255,217,61,.08); border: 1px solid rgba(255,217,61,.2); padding: 10px 20px; border-radius: 0; display: inline-block; margin-bottom: 24px; color: #ffd93d; font-size: 14px; font-weight: 600; }
+
+        /* Progress */
+        .quiz-top-bar { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; padding: 12px 16px; background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.06); border-radius: 0; }
+        .quiz-progress-bar { flex: 1; height: 6px; background: rgba(255,255,255,.08); border-radius: 0; overflow: hidden; }
+        .quiz-progress-fill { height: 100%; background: linear-gradient(90deg, #ffd93d, #ff8800); transition: width .4s ease; border-radius: 0; }
+        .quiz-count { color: rgba(255,255,255,.5); font-size: 13px; font-weight: 600; min-width: 44px; text-align: right; }
+        .quiz-score-display { color: #ffd93d; font-size: 14px; font-weight: 700; display: flex; align-items: center; gap: 4px; }
+
+        /* Combo display */
+        .quiz-combo { position: fixed; top: 50%; right: 40px; transform: translateY(-50%); text-align: center; z-index: 100; pointer-events: none; transition: all .3s; opacity: 0; }
+        .quiz-combo.active { opacity: 1; }
+        .quiz-combo-count { font-size: 72px; font-weight: 900; font-family: 'Roboto Condensed'; color: #ffd93d; text-shadow: 0 0 30px rgba(255,217,61,.5), 0 0 60px rgba(255,100,0,.3); line-height: 1; }
+        .quiz-combo-label { font-size: 14px; color: #ff8800; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; }
+        .quiz-combo-msg { font-size: 18px; color: #fff; font-weight: 600; margin-top: 4px; }
+
+        /* Timer bar */
+        .quiz-timer-wrap { height: 5px; background: rgba(255,255,255,.06); margin-bottom: 0; border-radius: 0; overflow: hidden; }
+        .quiz-timer-fill { height: 100%; background: linear-gradient(90deg, #10b981, #ffd93d, #ff4444); transition: width .1s linear; border-radius: 0; }
+
+        /* Question card */
+        .quiz-card {
+            background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.08);
+            padding: 32px 28px; border-radius: 0; position: relative; overflow: hidden;
+            transition: transform .3s, box-shadow .3s;
+        }
+        .quiz-card.shake { animation: cardShake .5s ease; }
+        .quiz-card.correct-flash { box-shadow: 0 0 40px rgba(16,185,129,.3); border-color: rgba(16,185,129,.4); }
+        .quiz-card.wrong-flash { box-shadow: 0 0 40px rgba(255,68,68,.3); border-color: rgba(255,68,68,.4); }
+        @keyframes cardShake { 0%,100%{transform:translateX(0)} 20%{transform:translateX(-8px)} 40%{transform:translateX(8px)} 60%{transform:translateX(-5px)} 80%{transform:translateX(5px)} }
+
+        .quiz-q-number { font-size: 12px; color: rgba(255,255,255,.4); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; }
+        .quiz-question-text { font-size: 20px; font-weight: 600; color: #fff; line-height: 1.6; margin-bottom: 28px; font-family: 'Roboto', sans-serif; }
+
+        /* Options */
+        .quiz-options { display: grid; gap: 10px; }
+        .quiz-option {
+            display: flex; align-items: center; gap: 14px; padding: 14px 18px;
+            background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.1);
+            border-radius: 0; cursor: pointer; transition: all .2s; position: relative; overflow: hidden;
+            font-family: 'Roboto', sans-serif;
+        }
+        .quiz-option:hover:not(.disabled) { background: rgba(255,255,255,.08); border-color: rgba(255,217,61,.3); transform: translateX(4px); }
+        .quiz-option-key {
+            width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;
+            background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.15);
+            border-radius: 0; font-weight: 800; color: #fff; font-size: 15px;
+            font-family: 'Roboto Condensed'; flex-shrink: 0; transition: all .3s;
+        }
+        .quiz-option-text { font-size: 15px; color: rgba(255,255,255,.85); }
+        .quiz-option.correct { background: rgba(16,185,129,.15); border-color: #10b981; }
+        .quiz-option.correct .quiz-option-key { background: #10b981; color: #fff; border-color: #10b981; }
+        .quiz-option.wrong { background: rgba(255,68,68,.12); border-color: #ff4444; }
+        .quiz-option.wrong .quiz-option-key { background: #ff4444; color: #fff; border-color: #ff4444; }
+        .quiz-option.disabled { pointer-events: none; opacity: .7; }
+        .quiz-option .shortcut-hint { position: absolute; right: 14px; font-size: 11px; color: rgba(255,255,255,.25); }
+
+        /* Explanation */
+        .quiz-explanation {
+            margin-top: 20px; padding: 16px 20px; background: rgba(255,217,61,.06);
+            border-left: 3px solid #ffd93d; border-radius: 0;
+            font-size: 14px; color: rgba(255,255,255,.75); line-height: 1.7;
+            display: none; animation: slideDown .3s ease;
+            font-family: 'Roboto', sans-serif;
+        }
+        .quiz-explanation.visible { display: block; }
+        @keyframes slideDown { from{opacity:0;transform:translateY(-10px)} to{opacity:1;transform:translateY(0)} }
+
+        /* Result screen */
+        .quiz-result-screen {
+            text-align: center; padding: 50px 30px;
+            background: linear-gradient(135deg, rgba(25,28,50,.95), rgba(18,20,38,.98));
+            border: 1px solid rgba(255,217,61,.15); border-radius: 0; display: none;
+        }
+        .result-icon-big { font-size: 80px; margin-bottom: 16px; display: block; }
+        .result-title { font-size: 32px; font-weight: 900; font-family: 'Roboto Condensed'; color: #ffd93d; margin: 0 0 8px; }
+        .result-subtitle { color: rgba(255,255,255,.6); font-size: 15px; margin: 0 0 28px; }
+        .result-stats { display: flex; justify-content: center; gap: 40px; margin-bottom: 32px; flex-wrap: wrap; }
+        .result-stat { text-align: center; }
+        .result-stat-val { font-size: 36px; font-weight: 900; font-family: 'Roboto Condensed'; display: block; }
+        .result-stat-val.gold { color: #ffd93d; }
+        .result-stat-val.green { color: #10b981; }
+        .result-stat-val.red { color: #ff6b6b; }
+        .result-stat-lbl { font-size: 11px; color: rgba(255,255,255,.4); text-transform: uppercase; letter-spacing: 1px; }
+        .result-stars { font-size: 40px; margin-bottom: 24px; letter-spacing: 8px; }
+        .result-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+        /* Floating score */
+        .floating-score { position: fixed; pointer-events: none; z-index: 200; font-weight: 900; font-family: 'Roboto Condensed'; font-size: 28px; animation: floatUp 1.2s ease-out forwards; }
+        @keyframes floatUp { 0%{opacity:1;transform:translateY(0) scale(1)} 50%{opacity:1;transform:translateY(-40px) scale(1.2)} 100%{opacity:0;transform:translateY(-80px) scale(.8)} }
+
+        /* Countdown overlay */
+        .quiz-countdown { position: fixed; inset: 0; background: rgba(0,0,0,.8); display: flex; align-items: center; justify-content: center; z-index: 300; }
+        .quiz-countdown-num { font-size: 120px; font-weight: 900; font-family: 'Roboto Condensed'; color: #ffd93d; text-shadow: 0 0 60px rgba(255,217,61,.5); animation: countPulse .8s ease; }
+        @keyframes countPulse { 0%{transform:scale(2);opacity:0} 50%{transform:scale(1);opacity:1} 100%{transform:scale(.8);opacity:.6} }
+
+        @media(max-width:768px) {
+            .quiz-combo { right: 10px; }
+            .quiz-combo-count { font-size: 48px; }
+            .quiz-question-text { font-size: 17px; }
+            .quiz-start-stats { gap: 20px; }
+        }
+    </style>
 </head>
 <body class="has-gov-header game-page-wrapper">
     <div class="gov-top-bar"><div class="container"><span class="gov-top-motto">CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM <span class="separator">•</span> <span class="motto-sub">Độc lập – Tự do – Hạnh phúc</span></span></div></div>
     <header class="gov-header-band"><div class="container">
         <a href="/" class="gov-agency-brand"><div class="gov-emblem"><img src="/img/logo-cand.png" alt="Logo" width="64" height="64" style="object-fit:contain;"></div>
         <div class="gov-agency-name"><span class="gov-agency-parent">CÔNG AN TỈNH BẮC NINH</span><span class="gov-agency-unit">Phòng Cảnh sát PCCC và CNCH</span></div></a>
-        <div class="gov-header-actions"><a href="/games.html" style="color:#fff;text-decoration:none;font-size:14px;font-weight:600;padding:8px 16px;background:rgba(255,255,255,.1);border-radius:8px;">← Quay lại</a></div>
+        <div class="gov-header-actions"><a href="/games.html" style="color:#fff;text-decoration:none;font-size:14px;font-weight:600;padding:8px 16px;background:rgba(255,255,255,.1);border-radius:0;">← Quay lại</a></div>
     </div></header>
 
+    <!-- COMBO DISPLAY -->
+    <div class="quiz-combo" id="combo-display">
+        <div class="quiz-combo-count" id="combo-count">0</div>
+        <div class="quiz-combo-label">COMBO</div>
+        <div class="quiz-combo-msg" id="combo-msg"></div>
+    </div>
+
     <div class="quiz-container">
-        <div class="quiz-header" id="quiz-start-screen">
-            <div style="font-size:56px;margin-bottom:12px;">📝</div>
-            <h2 style="color:#ffd93d;font-family:'Roboto Condensed',sans-serif;font-size:28px;margin:0 0 8px;">Đố vui kiến thức PCCC</h2>
-            <p style="color:rgba(255,255,255,.7);font-size:14px;margin:0 0 20px;">15 câu hỏi — 15 giây mỗi câu — Bạn sẵn sàng chưa?</p>
-            <button class="game-btn game-btn-primary" onclick="startQuiz()">BẮT ĐẦU</button>
+        <!-- START SCREEN -->
+        <div class="quiz-start-screen" id="quiz-start-screen">
+            <div style="font-size:64px;margin-bottom:16px;">🔥</div>
+            <h2>ĐỐ VUI KIẾN THỨC PCCC</h2>
+            <p>15 câu hỏi — 15 giây mỗi câu — Combo streak tăng điểm thưởng!<br>Dùng phím 1-4 hoặc A-D để trả lời nhanh hơn!</p>
+            <div class="quiz-start-stats">
+                <div class="quiz-start-stat"><span class="stat-val">15</span><span class="stat-lbl">Câu hỏi</span></div>
+                <div class="quiz-start-stat"><span class="stat-val">15s</span><span class="stat-lbl">Mỗi câu</span></div>
+                <div class="quiz-start-stat"><span class="stat-val">x5</span><span class="stat-lbl">Max Combo</span></div>
+            </div>
+            <div class="quiz-high-score" id="high-score-display">🏆 Kỷ lục: <span id="hs-val">0</span> điểm</div>
+            <br><br>
+            <button class="game-btn game-btn-primary" onclick="beginCountdown()" style="font-size:18px;padding:14px 48px;">BẮT ĐẦU THI ĐẤU</button>
         </div>
 
+        <!-- GAME SCREEN -->
         <div id="quiz-game" style="display:none;">
-            <div class="quiz-progress">
+            <div class="quiz-top-bar">
                 <div class="quiz-progress-bar"><div class="quiz-progress-fill" id="q-progress" style="width:0%"></div></div>
-                <span class="quiz-progress-text" id="q-count">0/15</span>
-                <span class="hud-item" style="margin-left:12px;"><span class="hud-icon">⭐</span><span class="hud-value" id="q-score">0</span></span>
+                <span class="quiz-count" id="q-count">0/15</span>
+                <div class="quiz-score-display">⭐ <span id="q-score">0</span></div>
             </div>
-            <div class="quiz-timer-bar"><div class="quiz-timer-fill" id="q-timer-bar"></div></div>
-            <div class="quiz-card">
+            <div class="quiz-timer-wrap"><div class="quiz-timer-fill" id="q-timer-bar"></div></div>
+            <div class="quiz-card" id="quiz-card">
+                <div class="quiz-q-number" id="q-number">Câu 1 / 15</div>
                 <div class="quiz-question-text" id="q-text"></div>
                 <div class="quiz-options" id="q-options"></div>
                 <div class="quiz-explanation" id="q-explanation"></div>
             </div>
         </div>
 
-        <div id="quiz-result" style="display:none;" class="quiz-header">
-            <div style="font-size:56px;margin-bottom:12px;" id="result-icon">🏆</div>
-            <h2 style="color:#ffd93d;font-family:'Roboto Condensed',sans-serif;font-size:28px;margin:0 0 8px;" id="result-title">Kết quả</h2>
-            <p style="color:rgba(255,255,255,.7);font-size:16px;margin:0 0 6px;" id="result-score"></p>
-            <p style="color:rgba(255,255,255,.5);font-size:14px;margin:0 0 20px;" id="result-msg"></p>
-            <button class="game-btn game-btn-primary" onclick="startQuiz()">CHƠI LẠI</button>
-            <a href="/games.html" class="game-btn game-btn-secondary">Trò chơi khác</a>
+        <!-- RESULT SCREEN -->
+        <div class="quiz-result-screen" id="quiz-result">
+            <span class="result-icon-big" id="result-icon">🏆</span>
+            <div class="result-stars" id="result-stars">★★★</div>
+            <h2 class="result-title" id="result-title">Xuất sắc!</h2>
+            <p class="result-subtitle" id="result-msg"></p>
+            <div class="result-stats">
+                <div class="result-stat"><span class="result-stat-val gold" id="res-score">0</span><span class="result-stat-lbl">Tổng điểm</span></div>
+                <div class="result-stat"><span class="result-stat-val green" id="res-correct">0</span><span class="result-stat-lbl">Trả lời đúng</span></div>
+                <div class="result-stat"><span class="result-stat-val red" id="res-wrong">0</span><span class="result-stat-lbl">Sai / Hết giờ</span></div>
+                <div class="result-stat"><span class="result-stat-val gold" id="res-combo">0</span><span class="result-stat-lbl">Combo cao nhất</span></div>
+            </div>
+            <div class="result-btns">
+                <button class="game-btn game-btn-primary" onclick="beginCountdown()">CHƠI LẠI</button>
+                <a href="/games.html" class="game-btn game-btn-secondary">Trò chơi khác</a>
+            </div>
         </div>
     </div>
 
+    <!-- COUNTDOWN OVERLAY -->
+    <div class="quiz-countdown" id="countdown-overlay" style="display:none;">
+        <div class="quiz-countdown-num" id="countdown-num">3</div>
+    </div>
+
     <script>
-    const QUESTIONS = [
-        { q: "Khi phát hiện đám cháy, bạn nên gọi số điện thoại nào?", opts: ["113","115","114","112"], ans: 2, exp: "Số 114 là số điện thoại báo cháy và cứu nạn cứu hộ toàn quốc." },
-        { q: "Khi thoát khỏi đám cháy có nhiều khói, bạn nên:", opts: ["Chạy thẳng đứng càng nhanh càng tốt","Cúi thấp người, bò sát mặt đất","Đứng yên chờ cứu hộ","Leo lên tầng cao nhất"], ans: 1, exp: "Khói nóng và khí độc bay lên cao. Cúi thấp người hoặc bò sát mặt đất giúp hít ít khói hơn." },
-        { q: "Bình chữa cháy CO2 KHÔNG nên dùng để chữa loại cháy nào?", opts: ["Cháy thiết bị điện","Cháy xăng dầu","Cháy kim loại kiềm","Cháy giấy, gỗ"], ans: 2, exp: "Bình CO2 không hiệu quả với cháy kim loại kiềm (Na, K, Mg) vì kim loại phản ứng với CO2." },
-        { q: "Khi quần áo bị bắt lửa, bạn nên:", opts: ["Chạy thật nhanh","Dừng - Nằm - Lăn","Dùng tay phủi lửa","Nhảy xuống nước"], ans: 1, exp: "Phương pháp Dừng - Nằm - Lăn (Stop - Drop - Roll) giúp dập tắt lửa trên quần áo hiệu quả nhất." },
-        { q: "Thời gian sử dụng của bình chữa cháy thông thường là bao lâu?", opts: ["1 năm","3 năm","5 năm","10 năm"], ans: 2, exp: "Bình chữa cháy thường có hạn sử dụng khoảng 5 năm, cần kiểm tra định kỳ và thay thế khi hết hạn." },
-        { q: "Khi phát hiện rò rỉ gas trong nhà, việc đầu tiên cần làm là:", opts: ["Bật đèn để tìm chỗ rò","Mở cửa sổ thông gió","Bật quạt hút khí","Gọi điện thoại ngay"], ans: 1, exp: "Mở cửa sổ thông gió ngay. KHÔNG bật/tắt điện, không dùng điện thoại gần khu vực rò gas vì có thể gây tia lửa." },
-        { q: "Lối thoát nạn trong tòa nhà phải đảm bảo chiều rộng tối thiểu:", opts: ["0.6m","0.8m","1.0m","1.2m"], ans: 2, exp: "Theo QCVN 06:2022/BXD, lối thoát nạn phải có chiều rộng tối thiểu 1.0m để đảm bảo di chuyển an toàn." },
-        { q: "Đám cháy chất lỏng (xăng, dầu) thuộc loại cháy nào?", opts: ["Loại A","Loại B","Loại C","Loại D"], ans: 1, exp: "Cháy loại B là cháy chất lỏng dễ cháy (xăng, dầu, sơn...). Dùng bình bọt hoặc bột để chữa." },
-        { q: "Khi bị mắc kẹt trong phòng có cháy, bạn nên:", opts: ["Mở cửa sổ nhảy xuống","Đóng kín cửa, nhét khăn ướt khe cửa, ra hiệu cầu cứu","Chạy xuyên qua đám lửa","Trốn trong tủ"], ans: 1, exp: "Đóng cửa ngăn khói, nhét khăn ướt khe cửa, ra cửa sổ kêu cứu hoặc dùng vải sáng màu vẫy." },
-        { q: "Nguồn nhiệt nào gây ra nhiều vụ cháy nhất ở Việt Nam?", opts: ["Bếp gas","Sự cố điện","Hàn cắt kim loại","Tàn thuốc lá"], ans: 1, exp: "Theo thống kê, sự cố chập điện, quá tải điện là nguyên nhân gây ra hơn 40% số vụ cháy tại Việt Nam." },
-        { q: "Thang máy có được sử dụng khi có cháy không?", opts: ["Được, để thoát nhanh hơn","Chỉ dùng khi ở tầng cao","Không, tuyệt đối không","Được nếu cháy ở tầng khác"], ans: 2, exp: "TUYỆT ĐỐI không dùng thang máy khi có cháy. Thang máy có thể dừng ở tầng đang cháy hoặc mất điện." },
-        { q: "Khoảng cách an toàn khi sử dụng bình chữa cháy bột là bao nhiêu?", opts: ["1m","2-3m","4-5m","7-8m"], ans: 1, exp: "Khoảng cách an toàn khi dùng bình chữa cháy bột ABC là 2-3m tính từ gốc đám cháy." },
-        { q: "Ký hiệu EXIT hoặc biển chỉ dẫn thoát nạn có màu gì?", opts: ["Đỏ","Xanh lá","Vàng","Trắng"], ans: 1, exp: "Biển EXIT / thoát nạn có nền xanh lá, chữ trắng theo tiêu chuẩn quốc tế ISO 7010." },
-        { q: "Khi hít phải khói, triệu chứng nguy hiểm nhất là:", opts: ["Ho","Chảy nước mắt","Mất ý thức","Ngứa da"], ans: 2, exp: "Khí CO trong khói cháy gây mất ý thức nhanh chóng và là nguyên nhân tử vong hàng đầu trong các vụ cháy." },
-        { q: "Mỗi gia đình nên diễn tập thoát nạn bao lâu một lần?", opts: ["1 tháng/lần","3 tháng/lần","6 tháng/lần","1 năm/lần"], ans: 2, exp: "Gia đình nên diễn tập thoát nạn ít nhất 6 tháng/lần. Tập luyện giúp mọi người phản xạ nhanh khi có sự cố." }
-    ];
+    // ==================== SOUND SYSTEM ====================
+    let audioCtx = null;
+    function initAudio() { if (!audioCtx) try { audioCtx = new (window.AudioContext || window.webkitAudioContext)(); } catch(e) {} }
+    function playBeep(freq, dur, type, vol) {
+        if (!audioCtx) return;
+        try {
+            if (audioCtx.state === 'suspended') audioCtx.resume();
+            const o = audioCtx.createOscillator(), g = audioCtx.createGain();
+            o.connect(g); g.connect(audioCtx.destination);
+            o.type = type || 'sine'; o.frequency.setValueAtTime(freq, audioCtx.currentTime);
+            g.gain.setValueAtTime(vol || 0.1, audioCtx.currentTime);
+            g.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + dur);
+            o.start(); o.stop(audioCtx.currentTime + dur);
+        } catch(e) {}
+    }
+    function sfxCorrect() { playBeep(523, .1, 'sine', .12); setTimeout(() => playBeep(659, .1, 'sine', .12), 80); setTimeout(() => playBeep(784, .15, 'sine', .12), 160); }
+    function sfxWrong() { playBeep(200, .3, 'sawtooth', .12); setTimeout(() => playBeep(150, .4, 'sawtooth', .1), 150); }
+    function sfxTick() { playBeep(800, .03, 'square', .04); }
+    function sfxCombo() { playBeep(880, .1, 'sine', .15); setTimeout(() => playBeep(1100, .15, 'sine', .12), 100); }
+    function sfxCountdown() { playBeep(440, .15, 'sine', .1); }
+    function sfxGo() { playBeep(880, .2, 'sine', .15); setTimeout(() => playBeep(1100, .25, 'sine', .12), 120); }
 
+    // ==================== QUESTIONS ====================
+    const ALL_QUESTIONS = [
+    {
+        "q": "Anh/chị hãy cho biết có mấy cách nhận biết đám cháy qua các dấu hiệu ban đầu?",
+        "opts": [
+            "Khói, mùi.",
+            "Ánh lửa, khói.",
+            "Khói, ánh lửa - tiếng nổ - mùi sản phẩm cháy."
+        ],
+        "ans": 2,
+        "exp": "Căn cứ theo Luật Phòng cháy chữa cháy và Cứu nạn cứu hộ sửa đổi mới nhất."
+    },
+    {
+        "q": "Khi phát hiện cháy, anh/chị cần thực hiện các động tác theo trình tự nào dưới đây:",
+        "opts": [
+            "Hô to: Cháy! Cháy! Cháy!, cúp cầu dao điện, tham gia chữa cháy, đồng thời gọi điện thoại báo lực lượng chữa cháy chuyên nghiệp.",
+            "Gọi điện thoại báo lực lượng chữa cháy chuyên nghiệp, cúp cầu dao điện, hô to: Cháy! Cháy! Cháy!, tham gia chữa cháy.",
+            "Hô to: Cháy! Cháy! Cháy!, cúp cầu dao điện, đồng thời gọi điện thoại báo lực lượng chữa cháy chuyên nghiệp."
+        ],
+        "ans": 0,
+        "exp": "Căn cứ theo Luật Phòng cháy chữa cháy và Cứu nạn cứu hộ sửa đổi mới nhất."
+    },
+    {
+        "q": "Người phát hiện cháy phải bằng mọi cách báo ngay cho 01 hoặc tất cả các đơn vị:",
+        "opts": [
+            "Đội dân phòng hoặc Đội PCCC cơ sở nơi xảy ra hỏa hoạn.",
+            "Đơn vị Cảnh sát PCCC gần nhất.",
+            "Chính quyền địa phương sở tại hoặc cơ quan Công an nơi gần nhất.",
+            "Tất cả a, b, c đều đúng."
+        ],
+        "ans": 3,
+        "exp": "Căn cứ theo Luật Phòng cháy chữa cháy và Cứu nạn cứu hộ sửa đổi mới nhất."
+    },
+    {
+        "q": "Khi đang ở trong siêu thị, nếu phát hiện siêu thị đang bị cháy, anh/chị sẽ làm gì?",
+        "opts": [
+            "Hô hoán cho mọi người chạy",
+            "Tới nơi có cháy để chữa cháy",
+            "Gọi điện cho lực lượng Cảnh sát PCCC",
+            "Bình tĩnh, báo động có cháy, ngắt cầu giao điện, dùng phương tiện chữa cháy tại chỗ chữa cháy và gọi điện báo cho lực lượng Cảnh sát PCCC."
+        ],
+        "ans": 3,
+        "exp": "Căn cứ theo Luật Phòng cháy chữa cháy và Cứu nạn cứu hộ sửa đổi mới nhất."
+    },
+    {
+        "q": "Khi đang ở trên tầng 18 của chung cư, mà ở tầng 17 bị cháy không thể xuống phía dưới được, anh/chị sẽ làm gì?",
+        "opts": [
+            "Nhảy xuống",
+            "Cố chạy xuống",
+            "Chạy lên trên tầng cao nhất, dùng khăn ướt bịt mũi và gọi điện để lực lượng Cảnh sát PCCC ứng cứu.",
+            "Ở trong phòng căn hộ đóng kín cửa lại"
+        ],
+        "ans": 2,
+        "exp": "Căn cứ theo Luật Phòng cháy chữa cháy và Cứu nạn cứu hộ sửa đổi mới nhất."
+    },
+    {
+        "q": "Khi bị cháy ở nhà cao tầng, anh/chị sẽ thoát nạn như thế nào?",
+        "opts": [
+            "Chạy lên",
+            "Đi bằng thang máy",
+            "Chạy xuống bằng cầu thang bộ theo biển chỉ dẫn thoát nạn trong tòa nhà.",
+            "Ở trong phòng đóng kín cửa lại"
+        ],
+        "ans": 2,
+        "exp": "Căn cứ theo Luật Phòng cháy chữa cháy và Cứu nạn cứu hộ sửa đổi mới nhất."
+    },
+    {
+        "q": "Trong các ký túc xá, nhà trọ, người ta thường dùng bếp dầu để đun nấu. Khi xảy cháy, bếp dầu do chế dầu lúc đun nấu, phạm vi cháy mới chỉ xung quanh bếp dầu, tại chỗ không có bình chữa cháy, chỉ có: nước, cát, chăn (mền). Anh/chị xử lý thế nào?",
+        "opts": [
+            "Xối nước.",
+            "Tạt cát.",
+            "Lấy chăn (mền) nhúng nước trùm lên."
+        ],
+        "ans": 2,
+        "exp": "Căn cứ theo Luật Phòng cháy chữa cháy và Cứu nạn cứu hộ sửa đổi mới nhất."
+    },
+    {
+        "q": "Anh, chị hãy cho biết khi cháy xảy ra xử lý như thế nào?",
+        "opts": [
+            "Cắt điện, dùng phương tiện chữa cháy dập tắt đám cháy",
+            "Báo động, cắt điện, dùng phương tiện chữa cháy dập tắt đám cháy, gọi điện thoại cho lực lượng chữa cháy số  điện thoại 114",
+            "Dùng phương tiện chữa cháy dập tắt đám cháy"
+        ],
+        "ans": 1,
+        "exp": "Căn cứ theo Luật Phòng cháy chữa cháy và Cứu nạn cứu hộ sửa đổi mới nhất."
+    },
+    {
+        "q": "Trong đêm, anh A đang ngủ thì phát hiện có mùi gas bên trong nhà mình. Theo anh/chị, anh A cần tiến hành xử lý trình tự như thế nào là đúng nhất?",
+        "opts": [
+            "Mở đèn chiếu sáng, khóa bình gas, mở cửa thông thoáng gió.",
+            "Mở cửa thông thoáng gió, mở đèn chiếu sáng, khóa bình gas.",
+            "Mở cửa thông thoáng gió, khóa bình gas, không bật các thiết bị tiêu thụ điện."
+        ],
+        "ans": 2,
+        "exp": "Căn cứ theo Luật Phòng cháy chữa cháy và Cứu nạn cứu hộ sửa đổi mới nhất."
+    },
+    {
+        "q": "Cách tránh ngộ độc khí trong đám cháy?",
+        "opts": [
+            "Phải ngay lập tức mở tất cả các cửa ở hướng không có cháy để giảm áp suất.",
+            "Không được mở cửa ở hướng có cháy và khói xông vào phòng.",
+            "Các phương pháp phòng khói khẩn cấp như khăn ướt luôn có tác dụng tốt vì vậy bạn nên luôn để 1 chai nước trong phòng.",
+            "Cả a,b,c,d đều đúng."
+        ],
+        "ans": 3,
+        "exp": "Căn cứ theo Luật Phòng cháy chữa cháy và Cứu nạn cứu hộ sửa đổi mới nhất."
+    },
+    {
+        "q": "Điều kiện an toàn về PCCC đối với hộ gia đình là:",
+        "opts": [
+            "Nơi đun nấu, nơi thờ cúng, nơi có sử dụng nguồn gây cháy phải đảm bảo an toàn về PCCC.",
+            "Tài sản, vật tư, chất cháy phải bố trí, sắp xếp, bảo quản, sử dụng đúng quy định an toàn PCCC.",
+            "Có dự kiến tình huống cháy thoát nạn và biện pháp chữa cháy có phương tiện chữa cháy ban đầu phù hợp.",
+            "Tất cả a, b, c đều đúng."
+        ],
+        "ans": 3,
+        "exp": "Căn cứ theo Luật Phòng cháy chữa cháy và Cứu nạn cứu hộ sửa đổi mới nhất."
+    },
+    {
+        "q": "Phương án chữa cháy của cơ sở được tổ chức thực tập như thế nào?",
+        "opts": [
+            "Ít nhất mỗi tháng/lần",
+            "Ít nhất mỗi quý/lần",
+            "Ít nhất 6 tháng/lần",
+            "Ít nhất mỗi năm/lần"
+        ],
+        "ans": 3,
+        "exp": "Căn cứ theo Luật Phòng cháy chữa cháy và Cứu nạn cứu hộ sửa đổi mới nhất."
+    },
+    {
+        "q": "Cảnh sát phòng cháy và chữa cháy có trách nhiệm kiểm tra an toàn PCCC đối với cơ sở có nguy hiểm về cháy, nổ mấy lần trong 01 năm?",
+        "opts": [
+            "01 lần/năm",
+            "02 lần/năm",
+            "03 lần/năm",
+            "04 lần/năm"
+        ],
+        "ans": 3,
+        "exp": "Căn cứ theo Luật Phòng cháy chữa cháy và Cứu nạn cứu hộ sửa đổi mới nhất."
+    },
+    {
+        "q": "Điều 5 Luật PCCC quy định trách nhiệm PCCC như thế nào?",
+        "opts": [
+            "Trách nhiệm của Cơ quan, tổ chức",
+            "Trách nhiệm của cá nhân và hộ gia đình",
+            "Cả a và b"
+        ],
+        "ans": 2,
+        "exp": "Căn cứ theo Luật Phòng cháy chữa cháy và Cứu nạn cứu hộ sửa đổi mới nhất."
+    },
+    {
+        "q": "Anh/chị hãy cho biết khi xảy ra cháy, điện thoại cho lực lượng Cảnh sát PCCC theo số điện thoại nào?",
+        "opts": [
+            "113",
+            "114",
+            "115"
+        ],
+        "ans": 1,
+        "exp": "Căn cứ theo Luật Phòng cháy chữa cháy và Cứu nạn cứu hộ sửa đổi mới nhất."
+    },
+    {
+        "q": "Anh/chị hãy cho biết hành vi tổ chức thi công, xây dựng công trình thuộc diện phải thẩm duyệt về phòng cháy và chữa cháy khi chưa có giấy chứng nhận thẩm duyệt về phòng cháy và chữa cháy sẽ xử phạt hành chính như thế nào?",
+        "opts": [
+            "Phạt tiền từ 10.000.000 đồng đến 15.000.000 đồng",
+            "Phạt tiền từ 15.000.000 đồng đến 20.000.000 đồng",
+            "Phạt tiền từ 15.000.000 đồng đến 25.000.000 đồng"
+        ],
+        "ans": 2,
+        "exp": "Căn cứ theo Luật Phòng cháy chữa cháy và Cứu nạn cứu hộ sửa đổi mới nhất."
+    },
+    {
+        "q": "Anh/chị hãy cho biết hành vi không trang bị phương tiện chữa cháy thông dụng cho nhà, công trình theo quy định sẽ xử phạt hành chính như thế nào?",
+        "opts": [
+            "Phạt tiền từ 3.000.000 đồng đến 5.00.000 đồng",
+            "Phạt tiền từ 5.000.000 đồng đến 10.000.000 đồng",
+            "Phạt tiền từ 10.000.000 đồng đến 15.000.000 đồng"
+        ],
+        "ans": 1,
+        "exp": "Căn cứ theo Luật Phòng cháy chữa cháy và Cứu nạn cứu hộ sửa đổi mới nhất."
+    },
+    {
+        "q": "Hành vi làm mất tác dụng hoặc để nội quy, tiêu lệnh, biển báo, biển cấm, biển chỉ dẫn về PCCC cũ, mờ, không nhìn rõ chữ, ký hiệu chỉ dẫn sẽ xử phạt như thế nào?",
+        "opts": [
+            "Phạt cảnh cáo",
+            "Phạt tiền từ 100.000 đồng đến 300.000 đồng",
+            "Phạt cảnh cáo hoặc phạt tiền từ 100.000 đồng đến 300.000 đồng"
+        ],
+        "ans": 2,
+        "exp": "Căn cứ theo Luật Phòng cháy chữa cháy và Cứu nạn cứu hộ sửa đổi mới nhất."
+    },
+    {
+        "q": "Anh, chị hãy cho biết hành vi không xuất trình hồ sơ, tài liệu phục vụ cho kiểm tra an toàn phòng cháy và chữa cháy sẽ xử phạt như thế nào?",
+        "opts": [
+            "Phạt tiền từ 1.000.000 đồng đến 3.000.000 đồng",
+            "Phạt tiền từ 3.000.000 đồng đến 5.000.000 đồng",
+            "Phạt cảnh cáo"
+        ],
+        "ans": 0,
+        "exp": "Căn cứ theo Luật Phòng cháy chữa cháy và Cứu nạn cứu hộ sửa đổi mới nhất."
+    },
+    {
+        "q": "Anh, chị hãy cho biết hành vi không lập hồ sơ quản lý, theo dõi phòng cháy và chữa cháy sẽ xử phạt hành chính như thế nào?",
+        "opts": [
+            "Phạt tiền từ 1.000.000 đồng đến 3.000.000 đồng",
+            "Phạt tiền từ 3.000.000 đồng đến 5.000.000 đồng",
+            "Phạt tiền từ 2.000.000 đồng đến 5.000.000 đồng"
+        ],
+        "ans": 2,
+        "exp": "Căn cứ theo Luật Phòng cháy chữa cháy và Cứu nạn cứu hộ sửa đổi mới nhất."
+    },
+    {
+        "q": "Anh, chị hãy cho biết hành vi vận chuyển chất, hàng nguy hiểm về cháy, nổ mà không có giấy phép vận chuyển chất, hàng nguy hiểm về cháy, nổ sẽ xử phạt hành chính như thế nào?",
+        "opts": [
+            "Phạt tiền từ 5.000.000 đồng đến 10.000.000 đồng",
+            "Phạt tiền từ 10.000.000 đồng đến 15.000.000 đồng",
+            "Phạt tiền từ 20.000.000 đồng đến 30.000.000 đồng"
+        ],
+        "ans": 1,
+        "exp": "Căn cứ theo Luật Phòng cháy chữa cháy và Cứu nạn cứu hộ sửa đổi mới nhất."
+    },
+    {
+        "q": "Anh, chị hãy cho biết hành vi sử dụng nguồn lửa, các thiết bị điện tử hoặc các thiết bị, dụng cụ sinh lửa, sinh nhiệt khác ở những nơi có quy định cấm sẽ xử phạt hành chính như thế nào?",
+        "opts": [
+            "Phạt tiền từ 2.000.000 đồng đến 5.000.000 đồng",
+            "Phạt tiền từ 5.000.000 đồng đến 10.000.000 đồng",
+            "Phạt tiền từ 10.000.000 đồng đến 15.000.000 đồng"
+        ],
+        "ans": 0,
+        "exp": "Căn cứ theo Luật Phòng cháy chữa cháy và Cứu nạn cứu hộ sửa đổi mới nhất."
+    },
+    {
+        "q": "Anh, chị hãy cho biết các trường hợp nào sau đây bị tạm đình chỉ hoạt động đối với cơ sở, phương tiện giao thông cơ giới, hộ gia đình, cá nhân không đảm bảo an toàn về phòng cháy và chữa cháy?",
+        "opts": [
+            "Trong môi trường nguy hiểm cháy, nổ xuất hiện nguồn lửa, nguồn nhiệt hoặc khi đang có nguồn lửa, nguồn nhiệt mà xuất hiện môi trường nguy hiểm cháy, nổ (sau đây gọi là nguy cơ trực tiếp phát sinh cháy, nổ).",
+            "Vi phạm quy định về phòng cháy và chữa cháy nếu không được ngăn chặn kịp thời thì có thể dẫn đến nguy cơ trực tiếp phát sinh cháy, nổ và có thể gây hậu quả đặc biệt nghiêm trọng.",
+            "Vi phạm quy định về phòng cháy và chữa cháy đã được cơ quan Cảnh sát phòng cháy và chữa cháy yêu cầu khắc phục mà không khắc phục hoặc đã bị xử phạt vi phạm hành chính về phòng cháy và chữa cháy mà tiếp tục vi phạm.",
+            "Cả a, b, c"
+        ],
+        "ans": 3,
+        "exp": "Căn cứ theo Luật Phòng cháy chữa cháy và Cứu nạn cứu hộ sửa đổi mới nhất."
+    },
+    {
+        "q": "Anh/chị hãy cho biết hành vi nào bị nghiêm cấm theo Điều 13, Luật phòng cháy và chữa cháy?",
+        "opts": [
+            "Báo cháy giả",
+            "Làm hư hỏng, tự ý thay đổi, di chuyển phương tiện, thiết bị phòng cháy và chữa cháy, biển báo, biển chỉ dẫn và lối thoát nạn",
+            "Làm hư hỏng các trang thiết bị phòng cháy và chữa cháy",
+            "Cả a và b"
+        ],
+        "ans": 3,
+        "exp": "Căn cứ theo Luật Phòng cháy chữa cháy và Cứu nạn cứu hộ sửa đổi mới nhất."
+    },
+    {
+        "q": "Anh, chị hãy cho biết hành vi nào sau đây là vi phạm các quy định về PCCC?",
+        "opts": [
+            "Gọi điện thoại khi đang đổ xăng",
+            "Không trang bị bình chữa cháy tại nhà ở",
+            "Khoá, chèn, chặn cửa thoát nạn",
+            "Cả 3 phương án trên"
+        ],
+        "ans": 3,
+        "exp": "Căn cứ theo Luật Phòng cháy chữa cháy và Cứu nạn cứu hộ sửa đổi mới nhất."
+    },
+    {
+        "q": "Nhà Văn phòng, khách sạn, Nhà nghỉ cao 5 tầng có thuộc diện phải thẩm duyệt về PCCC?",
+        "opts": [
+            "Có",
+            "Không",
+            "Tùy nhu cầu của Văn phòng, khách sạn, Nhà nghỉ",
+            "Chỉ có khách sạn, Nhà nghỉ là thuộc diện phải thẩm duyệt về PCCC."
+        ],
+        "ans": 0,
+        "exp": "Căn cứ theo Luật Phòng cháy chữa cháy và Cứu nạn cứu hộ sửa đổi mới nhất."
+    },
+    {
+        "q": "Cơ sở như thế nào phải mua bảo hiểm cháy nổ bắt buộc?",
+        "opts": [
+            "Hộ gia đình",
+            "Phương tiện giao thông cơ giới",
+            "Người dân",
+            "Cơ sở có nguy hiểm về cháy, nổ"
+        ],
+        "ans": 3,
+        "exp": "Căn cứ theo Luật Phòng cháy chữa cháy và Cứu nạn cứu hộ sửa đổi mới nhất."
+    },
+    {
+        "q": "Cơ sở sản xuất và kinh doanh hóa chất nguy hiểm về cháy, nổ với diện tích 1000m2 có phải xây dựng phương án chữa cháy không?",
+        "opts": [
+            "Có",
+            "Không",
+            "Tùy vào nhu cầu của các cơ sở",
+            "Trên 2000m2 mới cần phải xây dựng phương án chữa cháy"
+        ],
+        "ans": 0,
+        "exp": "Căn cứ theo Luật Phòng cháy chữa cháy và Cứu nạn cứu hộ sửa đổi mới nhất."
+    },
+    {
+        "q": "Công dân từ bao nhiêu tuổi trở lên, đủ sức khoẻ có trách nhiệm tham gia vào đội dân phòng, đội phòng cháy và chữa cháy cơ sở được lập ở nơi cư trú hoặc nơi làm việc khi có yêu cầu?",
+        "opts": [
+            "16 tuổi",
+            "17 tuổi",
+            "18 tuổi",
+            "19 tuổi"
+        ],
+        "ans": 2,
+        "exp": "Căn cứ theo Luật Phòng cháy chữa cháy và Cứu nạn cứu hộ sửa đổi mới nhất."
+    },
+    {
+        "q": "Bình chữa cháy có ký hiệu MT5 là bình chữa cháy loại gì?",
+        "opts": [
+            "Loại bột 5kg.",
+            "Loại khí 5kg.",
+            "Loại bột 50kg.",
+            "Loại khí 50kg."
+        ],
+        "ans": 1,
+        "exp": "Căn cứ theo Luật Phòng cháy chữa cháy và Cứu nạn cứu hộ sửa đổi mới nhất."
+    },
+    {
+        "q": "Bình chữa cháy có ký hiệu MT3 là bình chữa cháy loại gì?",
+        "opts": [
+            "Loại bột 5kg.",
+            "Loại khí 5kg.",
+            "Loại bột 3kg.",
+            "Loại khí 3kg."
+        ],
+        "ans": 3,
+        "exp": "Căn cứ theo Luật Phòng cháy chữa cháy và Cứu nạn cứu hộ sửa đổi mới nhất."
+    },
+    {
+        "q": "Bình chữa cháy có ký hiệu MFZ5 là bình chữa cháy loại gì?",
+        "opts": [
+            "Loại bột 5kg.",
+            "Loại khí 5kg.",
+            "Loại bột 3kg.",
+            "Loại khí 3kg."
+        ],
+        "ans": 0,
+        "exp": "Căn cứ theo Luật Phòng cháy chữa cháy và Cứu nạn cứu hộ sửa đổi mới nhất."
+    },
+    {
+        "q": "Bình chữa cháy có ký hiệu MFZ3 là bình chữa cháy loại gì?",
+        "opts": [
+            "Loại bột 5kg.",
+            "Loại khí 5kg.",
+            "Loại bột 3kg.",
+            "Loại khí 3kg."
+        ],
+        "ans": 2,
+        "exp": "Căn cứ theo Luật Phòng cháy chữa cháy và Cứu nạn cứu hộ sửa đổi mới nhất."
+    },
+    {
+        "q": "Cách sử dụng bình chữa cháy bằng bột như thế nào?",
+        "opts": [
+            "Ném cả bình vào đám cháy.",
+            "Lắc bình, rút chốt, hướng loa phun vào ngọn lửa, bóp cò.",
+            "Đứng tại chỗ phun chất chữa cháy.",
+            "cả a,b,c đều đúng."
+        ],
+        "ans": 1,
+        "exp": "Căn cứ theo Luật Phòng cháy chữa cháy và Cứu nạn cứu hộ sửa đổi mới nhất."
+    },
+    {
+        "q": "Bình chữa cháy bằng bột chữa cháy không hiệu quả đối với đám cháy nào?",
+        "opts": [
+            "Chất rắn",
+            "Chất lỏng",
+            "Chất khí.",
+            "Các kim loại đang nóng đỏ và thiết bị điện tử"
+        ],
+        "ans": 3,
+        "exp": "Căn cứ theo Luật Phòng cháy chữa cháy và Cứu nạn cứu hộ sửa đổi mới nhất."
+    },
+    {
+        "q": "Bình chữa cháy bằng khí chữa cháy hiệu quả ở khu vực nào?",
+        "opts": [
+            "Ngoài trời",
+            "Nơi có gió",
+            "Nơi kín gió",
+            "Tất cả các đáp án trên"
+        ],
+        "ans": 2,
+        "exp": "Căn cứ theo Luật Phòng cháy chữa cháy và Cứu nạn cứu hộ sửa đổi mới nhất."
+    },
+    {
+        "q": "Anh/chị hãy cho biết kiểm tra an toàn về phòng cháy và chữa cháy gồm những nội dung nào?",
+        "opts": [
+            "Điều kiện an toàn về phòng cháy và chữa cháy của cơ sở.",
+            "Việc thực hiện trách nhiệm phòng cháy và chữa cháy.",
+            "Việc chấp hành các quy định của Luật Phòng cháy và chữa cháy.",
+            "Cả a, b, c"
+        ],
+        "ans": 3,
+        "exp": "Căn cứ theo Luật Phòng cháy chữa cháy và Cứu nạn cứu hộ sửa đổi mới nhất."
+    },
+    {
+        "q": "Khi có cháy xảy ra do điện, đầu tiên, ta phải làm gì?",
+        "opts": [
+            "Báo động cho mọi người xung quanh biết, đồng thời gọi 114.",
+            "Ngắt cầu dao điện.",
+            "Nhanh chóng dùng phương tiện chữa cháy tại chỗ để chữa cháy.",
+            "Tất cả đều đúng."
+        ],
+        "ans": 3,
+        "exp": "Căn cứ theo Luật Phòng cháy chữa cháy và Cứu nạn cứu hộ sửa đổi mới nhất."
+    },
+    {
+        "q": "Các biện pháp phòng cháy điện trong hộ gia đình?",
+        "opts": [
+            "Không dùng đồ kém chất lượng.",
+            "Không đặt chất gây cháy gần ổ cắm.",
+            "Không để người tâm thần, trẻ nhỏ dùng bếp điện.",
+            "Tất cả đều đúng."
+        ],
+        "ans": 3,
+        "exp": "Căn cứ theo Luật Phòng cháy chữa cháy và Cứu nạn cứu hộ sửa đổi mới nhất."
+    },
+    {
+        "q": "Để đảm bảo an toàn khi sử dụng khí gas trong gia đình, anh/chị sẽ phải làm gì?",
+        "opts": [
+            "Khóa van an toàn sau mỗi lần sử dụng.",
+            "Thường xuyên vệ sinh bếp và khu vực nấu ăn.",
+            "Trang bị thiết bị cảnh báo rò rỉ khí gas.",
+            "cả a,b,c đều đúng."
+        ],
+        "ans": 3,
+        "exp": "Căn cứ theo Luật Phòng cháy chữa cháy và Cứu nạn cứu hộ sửa đổi mới nhất."
+    },
+    {
+        "q": "Luật PCCC quy định một trong những biện pháp cơ bản đầu tiên trong công tác phòng cháy là gì?",
+        "opts": [
+            "Sử dụng an toàn các chất cháy, chất nổ.",
+            "Quản lý chặt chẽ.",
+            "Quản lý chặt chẽ và sử dụng an toàn các chất cháy, nguồn lửa, thiết bị sinh nhiệt.",
+            "Tự tổ chức kiểm tra."
+        ],
+        "ans": 2,
+        "exp": "Căn cứ theo Luật Phòng cháy chữa cháy và Cứu nạn cứu hộ sửa đổi mới nhất."
+    },
+    {
+        "q": "Khi ngửi thấy mùi khét, khói hoặc thấy lửa thì gọi cho lực lượng nào?",
+        "opts": [
+            "Lực lượng PCCC, qua số 114.",
+            "Lực lượng Cảnh sát 113.",
+            "UBND Phường.",
+            "Cả ba đáp án."
+        ],
+        "ans": 0,
+        "exp": "Căn cứ theo Luật Phòng cháy chữa cháy và Cứu nạn cứu hộ sửa đổi mới nhất."
+    },
+    {
+        "q": "Khi nào thì nên kiểm tra định kỳ bình cứu hỏa?",
+        "opts": [
+            "Cứ sau 6 tháng hoặc khi mốc ở kim chỉ đỏ.",
+            "Cứ sau 1 năm.",
+            "Cứ sau 2 năm.",
+            "Câu b và c đúng."
+        ],
+        "ans": 0,
+        "exp": "Căn cứ theo Luật Phòng cháy chữa cháy và Cứu nạn cứu hộ sửa đổi mới nhất."
+    },
+    {
+        "q": "Bạn nên để bình chữa cháy ở đâu?",
+        "opts": [
+            "Tại nơi dễ thấy, dễ lấy, gần cửa ra vào.",
+            "Để cao khỏi tầm tay trẻ em.",
+            "Cất kín đáo để bảo quản.",
+            "Câu a và b đúng."
+        ],
+        "ans": 0,
+        "exp": "Căn cứ theo Luật Phòng cháy chữa cháy và Cứu nạn cứu hộ sửa đổi mới nhất."
+    },
+    {
+        "q": "Khi ngoài cửa căn hộ đã bị bao vây bởi lửa không thể thoát ra ngoài, bạn làm thế nào?",
+        "opts": [
+            "Ở yên trong phòng, chờ người đến cứu.",
+            "Ra ban công/sân thượng ra hiệu, tuyệt đối không nhảy.",
+            "Chạy đại qua mảng lửa để thoát.",
+            "Dùng chăn quấn chạy nhảy qua ban công."
+        ],
+        "ans": 1,
+        "exp": "Căn cứ theo Luật Phòng cháy chữa cháy và Cứu nạn cứu hộ sửa đổi mới nhất."
+    },
+    {
+        "q": "Xác định vị trí của khói. Nếu khói xuất phát từ tầng dưới phòng bạn thì sao?",
+        "opts": [
+            "Ở yên trong phòng.",
+            "Nhanh chóng di chuyển ra thang bộ để lên thượng hoặc xuống dưới.",
+            "Dùng thang máy.",
+            "Nhảy ra ngoài sổ."
+        ],
+        "ans": 1,
+        "exp": "Căn cứ theo Luật Phòng cháy chữa cháy và Cứu nạn cứu hộ sửa đổi mới nhất."
+    },
+    {
+        "q": "Phương tiện PCCC gồm những loại phương tiện nào?",
+        "opts": [
+            "Bình chữa cháy.",
+            "Báo cháy tự động.",
+            "Chữa cháy tự động.",
+            "Phương tiện cơ giới, thiết bị chuyên PCCC, thô sơ chuyên dụng."
+        ],
+        "ans": 3,
+        "exp": "Căn cứ theo Luật Phòng cháy chữa cháy và Cứu nạn cứu hộ sửa đổi mới nhất."
+    },
+    {
+        "q": "Người đứng đầu khi xảy ra cháy nổ thì chịu hình thức?",
+        "opts": [
+            "Hình sự.",
+            "Phạt tiền.",
+            "Không bị gì.",
+            "Tùy mức độ có thể phạt tiền hoặc truy cứu trách nhiệm hình sự."
+        ],
+        "ans": 3,
+        "exp": "Căn cứ theo Luật Phòng cháy chữa cháy và Cứu nạn cứu hộ sửa đổi mới nhất."
+    },
+    {
+        "q": "Các hành vi bị nghiêm cấm theo quy định của Luật PCCC?",
+        "opts": [
+            "Cố ý gây cháy nổ.",
+            "Cản trở PCCC chống người thi hành công vụ.",
+            "Lợi dụng PCCC xâm hại tài sản.",
+            "Cả a, b, c."
+        ],
+        "ans": 3,
+        "exp": "Căn cứ theo Luật Phòng cháy chữa cháy và Cứu nạn cứu hộ sửa đổi mới nhất."
+    },
+    {
+        "q": "Trách nhiệm phòng cháy và chữa cháy là của ai?",
+        "opts": [
+            "Cảnh sát PCCC",
+            "Lực lượng dân phòng",
+            "Lực lượng PCCC chuyên ngành",
+            "Mỗi cơ quan, tổ chức, hộ gia đình và cá nhân"
+        ],
+        "ans": 3,
+        "exp": "Căn cứ theo Luật Phòng cháy chữa cháy và Cứu nạn cứu hộ sửa đổi mới nhất."
+    }
+];
+
+    let QUESTIONS = [];
+
+
+    // ==================== STATE ====================
     let qIdx = 0, score = 0, timer = null, timeLeft = 15, answered = false;
+    let combo = 0, maxCombo = 0, correctCount = 0, wrongCount = 0;
+    let highScore = parseInt(localStorage.getItem('fras_quiz_highscore') || '0', 10);
 
-    function shuffle(arr) { for(let i=arr.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[arr[i],arr[j]]=[arr[j],arr[i]];} return arr; }
+    document.getElementById('hs-val').textContent = highScore;
 
+    function shuffle(arr) { for(let i = arr.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [arr[i], arr[j]] = [arr[j], arr[i]]; } return arr; }
+
+    // ==================== COUNTDOWN ====================
+    function beginCountdown() {
+        initAudio();
+        document.getElementById('quiz-start-screen').style.display = 'none';
+        document.getElementById('quiz-result').style.display = 'none';
+        document.getElementById('quiz-game').style.display = 'none';
+        const overlay = document.getElementById('countdown-overlay');
+        const numEl = document.getElementById('countdown-num');
+        overlay.style.display = 'flex';
+        let count = 3;
+        numEl.textContent = count;
+        sfxCountdown();
+        const cInt = setInterval(() => {
+            count--;
+            if (count > 0) {
+                numEl.textContent = count;
+                numEl.style.animation = 'none'; numEl.offsetHeight; numEl.style.animation = 'countPulse .8s ease';
+                sfxCountdown();
+            } else if (count === 0) {
+                numEl.textContent = 'BẮT ĐẦU!';
+                numEl.style.fontSize = '64px';
+                numEl.style.animation = 'none'; numEl.offsetHeight; numEl.style.animation = 'countPulse .8s ease';
+                sfxGo();
+            } else {
+                clearInterval(cInt);
+                overlay.style.display = 'none';
+                numEl.style.fontSize = '';
+                startQuiz();
+            }
+        }, 800);
+    }
+
+    // ==================== START ====================
     function startQuiz() {
-        shuffle(QUESTIONS);
-        qIdx = 0; score = 0; answered = false;
+        QUESTIONS = shuffle([...ALL_QUESTIONS]).slice(0, 15);
+        qIdx = 0; score = 0; combo = 0; maxCombo = 0; correctCount = 0; wrongCount = 0; answered = false;
         document.getElementById('quiz-start-screen').style.display = 'none';
         document.getElementById('quiz-result').style.display = 'none';
         document.getElementById('quiz-game').style.display = 'block';
+        hideCombo();
         showQuestion();
     }
 
+    // ==================== SHOW QUESTION ====================
     function showQuestion() {
         if (qIdx >= QUESTIONS.length) { showResult(); return; }
         answered = false;
         const q = QUESTIONS[qIdx];
-        document.getElementById('q-text').textContent = `Câu ${qIdx+1}: ${q.q}`;
-        document.getElementById('q-count').textContent = `${qIdx+1}/${QUESTIONS.length}`;
-        document.getElementById('q-progress').style.width = `${(qIdx/QUESTIONS.length)*100}%`;
+        const card = document.getElementById('quiz-card');
+        card.className = 'quiz-card';
+
+        document.getElementById('q-number').textContent = `CÂU ${qIdx + 1} / ${QUESTIONS.length}`;
+        document.getElementById('q-text').textContent = q.q;
+        document.getElementById('q-count').textContent = `${qIdx + 1}/${QUESTIONS.length}`;
+        document.getElementById('q-progress').style.width = `${(qIdx / QUESTIONS.length) * 100}%`;
         document.getElementById('q-score').textContent = score;
         document.getElementById('q-explanation').classList.remove('visible');
+        document.getElementById('q-explanation').style.display = 'none';
 
         const optsEl = document.getElementById('q-options');
         optsEl.innerHTML = '';
-        const keys = ['A','B','C','D'];
+        const keys = ['A', 'B', 'C', 'D'];
+        const shortcuts = ['1', '2', '3', '4'];
         q.opts.forEach((opt, i) => {
             const div = document.createElement('div');
             div.className = 'quiz-option';
-            div.innerHTML = `<span class="quiz-option-key">${keys[i]}</span><span>${opt}</span>`;
+            div.id = 'opt-' + i;
+            div.innerHTML = `<span class="quiz-option-key">${keys[i]}</span><span class="quiz-option-text">${opt}</span><span class="shortcut-hint">${shortcuts[i]}</span>`;
             div.onclick = () => selectAnswer(i);
             optsEl.appendChild(div);
         });
@@ -106,46 +847,134 @@
         clearInterval(timer);
         timer = setInterval(() => {
             timeLeft -= 0.1;
-            document.getElementById('q-timer-bar').style.width = `${(timeLeft/15)*100}%`;
+            const pct = (timeLeft / 15) * 100;
+            document.getElementById('q-timer-bar').style.width = `${pct}%`;
+            if (timeLeft <= 5 && timeLeft > 0 && Math.floor(timeLeft * 10) % 10 === 0) sfxTick();
             if (timeLeft <= 0) { clearInterval(timer); if (!answered) selectAnswer(-1); }
         }, 100);
     }
 
+    // ==================== SELECT ANSWER ====================
     function selectAnswer(idx) {
         if (answered) return;
         answered = true;
         clearInterval(timer);
         const q = QUESTIONS[qIdx];
+        const card = document.getElementById('quiz-card');
         const opts = document.querySelectorAll('.quiz-option');
+
         opts.forEach((el, i) => {
-            el.onclick = null;
+            el.classList.add('disabled');
             if (i === q.ans) el.classList.add('correct');
             if (i === idx && idx !== q.ans) el.classList.add('wrong');
         });
+
+        let gained = 0;
         if (idx === q.ans) {
-            score += 10 + Math.round(timeLeft);
+            correctCount++;
+            combo++;
+            if (combo > maxCombo) maxCombo = combo;
+            const timeBonus = Math.round(timeLeft);
+            const comboMultiplier = Math.min(combo, 5);
+            gained = (10 + timeBonus) * comboMultiplier;
+            score += gained;
             document.getElementById('q-score').textContent = score;
+            card.classList.add('correct-flash');
+            sfxCorrect();
+            if (combo >= 2) { sfxCombo(); showCombo(); }
+            showFloatingScore(`+${gained}`, '#10b981');
+        } else {
+            combo = 0;
+            wrongCount++;
+            card.classList.add('wrong-flash');
+            card.classList.add('shake');
+            sfxWrong();
+            hideCombo();
+            if (idx >= 0) showFloatingScore('MISS', '#ff4444');
+            else showFloatingScore('⏰ HẾT GIỜ', '#ff8800');
         }
+
         const expEl = document.getElementById('q-explanation');
-        expEl.innerHTML = (idx === q.ans ? '✅ Chính xác! ' : idx === -1 ? '⏰ Hết giờ! ' : '❌ Sai rồi! ') + q.exp;
+        let prefix = '';
+        if (idx === q.ans) prefix = '✅ Chính xác! ';
+        else if (idx === -1) prefix = '⏰ Hết giờ! ';
+        else prefix = '❌ Sai rồi! ';
+        expEl.innerHTML = prefix + q.exp;
+        expEl.style.display = 'block';
         expEl.classList.add('visible');
-        setTimeout(() => { qIdx++; showQuestion(); }, 3000);
+
+        setTimeout(() => { qIdx++; showQuestion(); }, 2800);
     }
 
+    // ==================== COMBO ====================
+    function showCombo() {
+        const el = document.getElementById('combo-display');
+        document.getElementById('combo-count').textContent = combo;
+        const msgs = ['', '', 'Tốt!', 'Tuyệt vời!', 'Siêu đỉnh!', 'THẦN THÁNH!'];
+        document.getElementById('combo-msg').textContent = msgs[Math.min(combo, 5)] || 'HUYỀN THOẠI!';
+        el.classList.add('active');
+        el.style.transform = 'translateY(-50%) scale(1.15)';
+        setTimeout(() => { el.style.transform = 'translateY(-50%) scale(1)'; }, 200);
+    }
+    function hideCombo() { document.getElementById('combo-display').classList.remove('active'); }
+
+    // ==================== FLOATING SCORE ====================
+    function showFloatingScore(text, color) {
+        const el = document.createElement('div');
+        el.className = 'floating-score';
+        el.textContent = text;
+        el.style.color = color;
+        el.style.left = '50%';
+        el.style.top = '40%';
+        el.style.transform = 'translateX(-50%)';
+        document.body.appendChild(el);
+        setTimeout(() => el.remove(), 1200);
+    }
+
+    // ==================== RESULT ====================
     function showResult() {
         clearInterval(timer);
         document.getElementById('quiz-game').style.display = 'none';
+        hideCombo();
+
         const res = document.getElementById('quiz-result');
         res.style.display = 'block';
-        const pct = Math.round(score / (QUESTIONS.length * 25) * 100);
-        let icon = '😅', title = 'Cần cải thiện!', msg = 'Hãy đọc thêm kiến thức PCCC và thử lại!';
-        if (pct >= 80) { icon = '🏆'; title = 'Xuất sắc!'; msg = 'Bạn là chuyên gia PCCC!'; }
-        else if (pct >= 50) { icon = '😊'; title = 'Khá tốt!'; msg = 'Tiếp tục rèn luyện kiến thức PCCC nhé!'; }
+
+        const pct = Math.round((correctCount / QUESTIONS.length) * 100);
+        let icon, title, msg, stars;
+        if (pct >= 90) { icon = '🏆'; title = 'XUẤT SẮC!'; msg = 'Bạn là chuyên gia PCCC thực thụ!'; stars = '★★★'; }
+        else if (pct >= 70) { icon = '🌟'; title = 'GIỎI LẮM!'; msg = 'Kiến thức PCCC của bạn rất tốt!'; stars = '★★☆'; }
+        else if (pct >= 50) { icon = '😊'; title = 'KHÁ TỐT!'; msg = 'Tiếp tục rèn luyện kiến thức PCCC nhé!'; stars = '★☆☆'; }
+        else { icon = '📚'; title = 'CẦN CỐ GẮNG!'; msg = 'Hãy đọc thêm kiến thức PCCC và thử lại!'; stars = '☆☆☆'; }
+
         document.getElementById('result-icon').textContent = icon;
         document.getElementById('result-title').textContent = title;
-        document.getElementById('result-score').textContent = `Điểm: ${score}`;
         document.getElementById('result-msg').textContent = msg;
+        document.getElementById('result-stars').textContent = stars;
+        document.getElementById('res-score').textContent = score;
+        document.getElementById('res-correct').textContent = correctCount + '/' + QUESTIONS.length;
+        document.getElementById('res-wrong').textContent = wrongCount;
+        document.getElementById('res-combo').textContent = maxCombo + 'x';
+
+        // High score
+        if (score > highScore) {
+            highScore = score;
+            localStorage.setItem('fras_quiz_highscore', String(highScore));
+            document.getElementById('hs-val').textContent = highScore;
+            showFloatingScore('🏆 KỶ LỤC MỚI!', '#ffd93d');
+        }
     }
+
+    // ==================== KEYBOARD SHORTCUTS ====================
+    document.addEventListener('keydown', function(e) {
+        if (answered) return;
+        const keyMap = { '1': 0, '2': 1, '3': 2, '4': 3, 'a': 0, 'b': 1, 'c': 2, 'd': 3 };
+        const idx = keyMap[e.key.toLowerCase()];
+        if (idx !== undefined && document.getElementById('quiz-game').style.display !== 'none') {
+            e.preventDefault();
+            selectAnswer(idx);
+        }
+    });
     </script>
 </body>
 </html>

@@ -18,6 +18,15 @@ class UserLogin(BaseModel):
     password: str
 
 
+class PasswordChangeRequest(BaseModel):
+    old_password: str
+    new_password: str = Field(..., min_length=6)
+
+
+class PasswordResetRequest(BaseModel):
+    new_password: str = Field(..., min_length=6)
+
+
 class UserResponse(BaseModel):
     id: str
     email: str

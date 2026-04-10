@@ -10,17 +10,22 @@
         /* ===== FAB Button ===== */
         .fras-fab {
             position: fixed; bottom: 24px; right: 24px;
-            width: 56px; height: 56px; border-radius: 50%;
-            background: #C0202A; border: none; color: #fff;
-            cursor: pointer; box-shadow: 0 4px 16px rgba(192,32,42,0.45);
-            z-index: 9999; transition: transform .2s, box-shadow .2s;
+            width: 64px; height: 64px; border-radius: 50%;
+            background: #fff; border: 3px solid #C0202A; color: #fff;
+            cursor: grab; box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+            z-index: 9999; transition: box-shadow .2s;
             display: flex; align-items: center; justify-content: center;
+            overflow: hidden; padding: 0;
+            background-image: url('/img/ai_chi_avatar.png');
+            background-size: cover;
+            background-position: center;
+            user-select: none;
+            touch-action: none;
         }
-        .fras-fab:hover { transform: scale(1.08); box-shadow: 0 6px 24px rgba(192,32,42,0.6); }
-        .fras-fab svg { width: 26px; height: 26px; }
+        .fras-fab:active { cursor: grabbing; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
         .fras-fab .notif-dot {
             position: absolute; top: 3px; right: 3px;
-            width: 11px; height: 11px; background: #22c55e;
+            width: 12px; height: 12px; background: #22c55e;
             border-radius: 50%; border: 2px solid #fff;
         }
 
@@ -189,9 +194,6 @@
     const wrap = document.createElement('div');
     wrap.innerHTML = `
         <button class="fras-fab" id="fras-fab" title="Hỏi AI về PCCC">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-            </svg>
             <span class="notif-dot"></span>
         </button>
         <div class="fras-panel" id="fras-panel">
@@ -243,6 +245,17 @@
     window.frasChatbot = {
         history: [],
         isOpen: false,
+        suggestionPool: [
+            "Khi cháy phải làm gì?",
+            "Luật PCCC 55/2024 có gì mới?",
+            "Quy định bình chữa cháy?",
+            "Lối thoát nạn an toàn?",
+            "Kiểm tra hệ thống điện",
+            "Sơ cứu người bị ngạt khói",
+            "Quy định PCCC nhà trọ",
+            "Phân loại bình chữa cháy",
+            "Mức phạt vi phạm PCCC"
+        ],
 
         toggle() {
             this.isOpen ? this.close() : this.open();
@@ -255,7 +268,10 @@
             if (dot) dot.style.display = 'none';
             // Show welcome message if empty
             const msgs = document.getElementById('fras-messages');
-            if (!msgs.children.length) this._appendWelcome();
+            if (!msgs.children.length) {
+                this._appendWelcome();
+                this._randomizeSuggestions();
+            }
         },
         close() {
             this.isOpen = false;
@@ -266,6 +282,15 @@
             const msgs = document.getElementById('fras-messages');
             msgs.innerHTML = '';
             this._appendWelcome();
+            this._randomizeSuggestions();
+        },
+        _randomizeSuggestions() {
+            const shuffled = [...this.suggestionPool].sort(() => 0.5 - Math.random());
+            const selected = shuffled.slice(0, 3);
+            const container = document.getElementById('fras-suggestions');
+            container.innerHTML = selected.map(s => 
+                `<button onclick="frasChatbot.ask(this)">${this._esc(s)}</button>`
+            ).join('');
         },
         _appendWelcome() {
             const msgs = document.getElementById('fras-messages');
@@ -406,8 +431,81 @@
         }
     };
 
-    // FAB click
-    document.getElementById('fras-fab').addEventListener('click', () => frasChatbot.toggle());
+    // FAB click & Drag Logic
+    const fab = document.getElementById('fras-fab');
+    let isDragging = false;
+    let startX, startY, initialX, initialY;
+    
+    function startDrag(e) {
+        if (e.type === 'touchstart') {
+            startX = e.touches[0].clientX;
+            startY = e.touches[0].clientY;
+        } else {
+            startX = e.clientX;
+            startY = e.clientY;
+        }
+        
+        isDragging = false;
+        const rect = fab.getBoundingClientRect();
+        initialX = rect.left;
+        initialY = rect.top;
+        
+        document.addEventListener('mousemove', onDrag);
+        document.addEventListener('mouseup', stopDrag);
+        document.addEventListener('touchmove', onDrag, {passive: false});
+        document.addEventListener('touchend', stopDrag);
+    }
+    
+    function onDrag(e) {
+        let clientX, clientY;
+        if (e.type === 'touchmove') {
+            clientX = e.touches[0].clientX;
+            clientY = e.touches[0].clientY;
+        } else {
+            clientX = e.clientX;
+            clientY = e.clientY;
+            e.preventDefault();
+        }
+        
+        const dx = clientX - startX;
+        const dy = clientY - startY;
+        
+        if (Math.abs(dx) > 3 || Math.abs(dy) > 3) {
+            isDragging = true;
+            if (e.type === 'touchmove') e.preventDefault(); // prevent scroll
+            
+            let newX = initialX + dx;
+            let newY = initialY + dy;
+            
+            // Constrain
+            newX = Math.max(0, Math.min(window.innerWidth - fab.offsetWidth, newX));
+            newY = Math.max(0, Math.min(window.innerHeight - fab.offsetHeight, newY));
+            
+            fab.style.left = newX + 'px';
+            fab.style.top = newY + 'px';
+            fab.style.right = 'auto'; 
+            fab.style.bottom = 'auto';
+        }
+    }
+    
+    function stopDrag() {
+        document.removeEventListener('mousemove', onDrag);
+        document.removeEventListener('mouseup', stopDrag);
+        document.removeEventListener('touchmove', onDrag);
+        document.removeEventListener('touchend', stopDrag);
+    }
+    
+    fab.addEventListener('mousedown', startDrag);
+    fab.addEventListener('touchstart', startDrag, {passive: false});
+    
+    fab.addEventListener('click', (e) => {
+        if (isDragging) {
+            e.preventDefault();
+            e.stopPropagation();
+        } else {
+            frasChatbot.toggle();
+        }
+    });
 
     // Enter key
     document.getElementById('fras-input').addEventListener('keypress', (e) => {

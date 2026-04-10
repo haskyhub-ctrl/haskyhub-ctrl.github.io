@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session
 from sqlalchemy import or_
 from database import get_db
 from models import User
-from schemas import UserRegister, UserLogin, UserResponse, UserUpdate, TokenResponse
+from schemas import UserRegister, UserLogin, UserResponse, UserUpdate, TokenResponse, PasswordChangeRequest
 from middleware.auth_middleware import (
     hash_password, verify_password, create_access_token, get_current_user
 )
@@ -102,3 +102,21 @@ def update_profile(
     db.commit()
     db.refresh(current_user)
     return UserResponse.model_validate(current_user)
+
+
+@router.put("/change-password", response_model=dict)
+def change_password(
+    data: PasswordChangeRequest,
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    if not verify_password(data.old_password, current_user.password_hash):
+        raise HTTPException(
+            status_code=400,
+            detail="Mật khẩu cũ không chính xác"
+        )
+    
+    current_user.password_hash = hash_password(data.new_password)
+    current_user.updated_at = datetime.utcnow()
+    db.commit()
+    return {"message": "Đổi mật khẩu thành công"}

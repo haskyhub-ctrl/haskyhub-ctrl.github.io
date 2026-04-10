@@ -9,7 +9,7 @@ from database import get_db
 from models import User, Assessment, AdminAuditLog, QuestionCategory, Question
 from schemas import (
     UserResponse, UserRoleUpdate, UserLockUpdate,
-    AdminStats, AuditLogResponse
+    AdminStats, AuditLogResponse, PasswordResetRequest
 )
 from middleware.auth_middleware import get_current_user, hash_password
 from middleware.rbac import require_role
@@ -142,6 +142,27 @@ def toggle_user_lock(
                ip=request.client.host if request.client else None)
     db.commit()
     return {"status": "ok"}
+
+
+@router.put("/users/{user_id}/reset-password", response_model=dict)
+def reset_user_password(
+    user_id: str,
+    data: PasswordResetRequest,
+    current_admin: User = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    require_role("admin", "superadmin")(current_admin)
+    user = db.query(User).filter(User.id == user_id).first()
+    if not user:
+        raise HTTPException(status_code=404, detail="Không tìm thấy người dùng")
+    
+    user.password_hash = hash_password(data.new_password)
+    user.updated_at = datetime.utcnow()
+    
+    log_action(db, current_admin.id, "reset_password", "user", user_id)
+    db.commit()
+    
+    return {"message": f"Đã đặt lại mật khẩu cho người dùng {user.email}"}
 
 
 @router.post("/users/add")
@@ -364,3 +385,56 @@ def get_map_data(
             })
 
     return results
+
+
+import os
+from fastapi.responses import FileResponse
+from utils.backup_service import backup_db
+
+@router.post("/manual-backup")
+def trigger_manual_backup(
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    """Kích hoạt sao lưu thủ công."""
+    require_role("admin", "superadmin")(current_user)
+    backup_file = backup_db()
+    if backup_file and os.path.exists(backup_file):
+        log_action(db, current_user.id, "manual_backup", "system", None)
+        return {"status": "ok", "message": "Đã sao lưu thành công", "file": os.path.basename(backup_file)}
+    else:
+        raise HTTPException(status_code=500, detail="Sao lưu thất bại, kiểm tra log hệ thống")
+
+@router.get("/download-backup")
+def download_backup(
+    file_name: str,
+    current_user: User = Depends(get_current_user),
+):
+    """Tải xuống file sao lưu."""
+    require_role("admin", "superadmin")(current_user)
+    backup_path = os.path.join("./backups", file_name)
+    if os.path.exists(backup_path):
+        return FileResponse(backup_path, filename=file_name, media_type="application/octet-stream")
+    raise HTTPException(status_code=404, detail="File backup không tồn tại")
+
+@router.get("/backups")
+def list_backups(
+    current_user: User = Depends(get_current_user),
+):
+    """Lấy danh sách các file sao lưu hiện có."""
+    require_role("admin", "superadmin")(current_user)
+    backup_dir = "./backups"
+    if not os.path.exists(backup_dir):
+        return []
+    
+    files = []
+    for f in os.listdir(backup_dir):
+        if f.startswith("fras_backup_") and f.endswith(".db"):
+            path = os.path.join(backup_dir, f)
+            files.append({
+                "file_name": f,
+                "size_kb": round(os.path.getsize(path) / 1024, 2),
+                "created_at": datetime.fromtimestamp(os.path.getmtime(path)).isoformat()
+            })
+    files.sort(key=lambda x: x["created_at"], reverse=True)
+    return files

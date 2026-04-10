@@ -134,12 +134,62 @@ function renderUserTable(users) {
             <td>${u.is_locked ? '<span class="badge badge-critical">Đã khóa</span>' : '<span class="badge badge-safe">Hoạt động</span>'}</td>
             <td>${formatDate(u.created_at)}</td>
             <td>
+                <button class="btn-icon" onclick="showResetPasswordModal('${u.id}', '${u.full_name.replace(/'/g, "\\'")}')" title="Reset Mật khẩu">
+                    🔑
+                </button>
                 <button class="btn-icon" onclick="toggleLockUser('${u.id}', ${!u.is_locked})" title="${u.is_locked ? 'Mở khóa' : 'Khóa'}">
                     ${u.is_locked ? '🔓' : '🔒'}
                 </button>
             </td>
         </tr>
     `).join('');
+}
+
+let targetResetUserId = null;
+
+function showResetPasswordModal(id, name) {
+    targetResetUserId = id;
+    const span = document.getElementById('reset-target-name');
+    if (span) span.textContent = name;
+    const input = document.getElementById('reset-new-password');
+    if (input) input.value = '';
+    
+    const m = document.getElementById('reset-password-modal');
+    if (m) {
+        m.style.display = 'flex';
+        setTimeout(() => m.classList.add('active'), 10);
+    }
+}
+
+function hideResetPasswordModal() {
+    targetResetUserId = null;
+    const m = document.getElementById('reset-password-modal');
+    if (m) {
+        m.classList.remove('active');
+        setTimeout(() => m.style.display = 'none', 300);
+    }
+}
+
+async function doResetPassword() {
+    if (!targetResetUserId) return;
+    const newPassword = document.getElementById('reset-new-password').value;
+    if (newPassword.length < 6) {
+        showToast('Mật khẩu tối thiểu 6 ký tự', 'error');
+        return;
+    }
+    
+    const btn = document.getElementById('btn-do-reset');
+    if (btn) btn.disabled = true;
+    
+    try {
+        await api.put(`/admin/users/${targetResetUserId}/reset-password`, { new_password: newPassword });
+        showToast('Đặt lại mật khẩu thành công!', 'success');
+        hideResetPasswordModal();
+    } catch (err) {
+        showToast(err.message, 'error');
+    } finally {
+        if (btn) btn.disabled = false;
+    }
 }
 
 async function toggleLockUser(userId, lock) {

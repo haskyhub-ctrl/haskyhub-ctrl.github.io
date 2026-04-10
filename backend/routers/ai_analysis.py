@@ -362,10 +362,9 @@ async def ai_chat(
     current_user: User = Depends(get_current_user),
     db: Session = Depends(get_db)
 ):
-    """AI chatbot for fire safety Q&A, optionally contextual to an assessment."""
-    from legal_knowledge import get_legal_context_for_chat
-    legal_context = get_legal_context_for_chat()
-
+    """AI chatbot for fire safety Q&A using RAG Architecture."""
+    from utils.rag_search import ask_ai_chi
+    
     context = ""
     if data.assessment_id:
         if current_user.role in ("admin", "superadmin"):
@@ -376,10 +375,8 @@ async def ai_chat(
         if assessment:
             adata = get_assessment_data(assessment, db)
             context = f"""
-NGỮ CẢNH: Người dùng đang hỏi về đánh giá cháy nổ của cơ sở "{adata['facility_name']}"
-- Loại cơ sở: {adata['facility_type']}
-- Tỷ lệ nguy cơ: {adata['risk_percentage']}% ({adata['risk_level']})
-- Tổng điểm: {adata['total_score']}/{adata['max_possible_score']}
+Người dùng đang hỏi về đánh giá cháy nổ của cơ sở "{adata['facility_name']}" (Loại: {adata['facility_type']}).
+Tỷ lệ nguy cơ: {adata['risk_percentage']}% ({adata['risk_level']}). Điểm: {adata['total_score']}/{adata['max_possible_score']}
 """
 
     # Build conversation history
@@ -389,52 +386,13 @@ NGỮ CẢNH: Người dùng đang hỏi về đánh giá cháy nổ của cơ s
             role = "Người dùng" if msg.get("role") == "user" else "AI"
             history_text += f"{role}: {msg.get('content', '')}\n"
 
-    prompt = f"""Bạn là Trợ lý ảo Chi — chuyên gia tư vấn Phòng cháy chữa cháy (PCCC) và an toàn cháy nổ tại Việt Nam, thuộc hệ thống FRAS của Công an tỉnh Bắc Ninh. Mọi câu trả lời của bạn phải thể hiện sự lịch sự, chuyên nghiệp, xưng "Chi" hoặc "tôi" và gọi người dùng là "bạn" hoặc "anh/chị".
-
-=== CƠ SỞ DỮ LIỆU PHÁP LÝ (ưu tiên sử dụng) ===
-{legal_context}
-=== HẾT CƠ SỞ DỮ LIỆU PHÁP LÝ ===
-
-{context}
-
-{f"LỊCH SỬ HỘI THOẠI:{chr(10)}{history_text}" if history_text else ""}
-
-CÂU HỎI CỦA NGƯỜI DÙNG: {data.message}
-
-NGUYÊN TẮC TRẢ LỜI (theo thứ tự ưu tiên):
-
-1. ƯU TIÊN 1 — DÙNG CƠ SỞ DỮ LIỆU:
-   Nếu câu hỏi liên quan đến pháp luật, quy chuẩn, quy trình PCCC Việt Nam → tìm trong tài liệu pháp lý trên và trả lời với trích dẫn cụ thể (tên văn bản, số điều, khoản).
-
-2. ƯU TIÊN 2 — DÙNG KIẾN THỨC TỔNG HỢP:
-   Nếu câu hỏi không có trong cơ sở dữ liệu hoặc là câu hỏi chung về an toàn cháy nổ, kỹ thuật, khoa học → trả lời dựa trên kiến thức chuyên môn, ghi chú rõ "(Thông tin chung, chưa có trong văn bản pháp lý được cung cấp)".
-
-3. ƯU TIÊN 3 — CÂU HỎI NGOÀI PCCC:
-   Nếu câu hỏi hoàn toàn không liên quan đến PCCC, an toàn cháy nổ hoặc ngữ cảnh đánh giá → vẫn trả lời ngắn gọn và hướng người dùng về chủ đề PCCC nếu phù hợp.
-
-YÊU CẦU THÊM:
-- Trả lời bằng tiếng Việt, rõ ràng, thực tế, dễ áp dụng
-- Nếu câu hỏi liên quan đến ngữ cảnh đánh giá cơ sở cụ thể, đưa ra khuyến nghị riêng cho cơ sở đó
-- Luôn đưa ra gợi ý hành động cụ thể mà người dùng có thể thực hiện ngay
-
-Trả về JSON:
-{{
-    "reply": "string - câu trả lời đầy đủ, thực tế, có viện dẫn nếu có",
-    "source_type": "docs | general | mixed",
-    "suggestions": ["string - 2-3 câu hỏi gợi ý tiếp theo liên quan"],
-    "references": ["string - danh sách văn bản pháp lý đã viện dẫn, để trống nếu dùng kiến thức chung"]
-}}
-"""
-
-    # Try Gemini API
+    # Try RAG Gemini
     try:
-        result = await call_gemini(prompt, temperature=0.3)
+        result = ask_ai_chi(question=data.message, history_text=history_text, context=context)
         return result
     except Exception as e:
-        print(f"[AI Chat] Gemini API error: {e}")
-
-    # Fallback: built-in keyword-based responses
-    return _chat_fallback(data.message)
+        print(f"[AI Chat RAG] Error: {e}")
+        return _chat_fallback(data.message)
 
 
 def _chat_fallback(message: str) -> dict:

@@ -1,0 +1,17 @@
+Ôò¡ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔò«
+Ôöé  setup-mcp ÔÇö Write MCP config for an AI agent  Ôöé
+Ôò░ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔò»
+
+Usage: unity-mcp-cli setup-mcp [options] [agent-id] [path]
+
+Arguments:
+  agent-id                       Agent to configure (use --list to see all)
+  path                           Unity project path (defaults to cwd)
+
+Options:
+  --transport <transport>        Transport method: stdio or http (default: http) (default: "http")
+  --url <url>                    Server URL override (for http transport)
+  --token <token>                Auth token override
+  --list                         List all available agent IDs
+  -v, --verbose                  Enable verbose diagnostic output
+  -h, --help                     display help for command

@@ -1,0 +1,29 @@
+Ôò¡ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔò«
+Ôöé  Unity-MCP CLI  v0.63.3                             Ôöé
+Ôöé  Bridge LLMs with Unity via Model Context Protocol  Ôöé
+Ôò░ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔò»
+
+Usage: unity-mcp-cli [options] [command]
+
+Commands:
+  configure            Configure MCP tools, prompts, and resources in AI-Game-Developer-Config.json
+  create-project       Create a new Unity project
+  install-plugin       Install Unity-MCP plugin into a Unity project
+  install-unity        Install Unity Editor via Unity Hub
+  login                Authenticate with the Unity-MCP cloud server
+  open                 Open a Unity project in Unity Editor, optionally passing MCP connection env vars when connection options (--url, --token, etc.) are provided. Use --no-connect to suppress all MCP env vars.
+  remove-plugin        Remove Unity-MCP plugin from a Unity project
+  run-tool             Execute an MCP tool via the HTTP API
+  run-system-tool      Execute a system tool via the HTTP API (not exposed to MCP clients)
+  setup-mcp            Write MCP config for an AI agent
+  setup-skills         Generate skill files for an AI agent
+  status               Check Unity Editor and MCP server connection status
+  update               Update unity-mcp-cli to the latest version
+  wait-for-ready       Wait until Unity Editor and MCP server are ready to accept tool calls
+
+Options:
+  -V, --version                  output the version number
+  -v, --verbose                  Enable verbose diagnostic output
+  -h, --help                     display help for command
+
+Run unity-mcp-cli <command> --help for detailed usage of each command.

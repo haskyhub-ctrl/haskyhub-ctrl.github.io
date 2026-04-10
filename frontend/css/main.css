@@ -55,7 +55,7 @@
     --shadow-glow: 0 0 20px rgba(185, 28, 28, 0.08);
 
     /* Spacing */
-    --container-max: 1200px;
+    --container-max: 100%;
     --nav-height: 64px;
 
     /* Transitions */

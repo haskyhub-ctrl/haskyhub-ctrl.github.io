@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "ai-game-developer": {
+      "command": "C:/Users/Hasky/.gemini/antigravity/scratch/fras/frontend/unity-dummy/Library/mcp-server/win-x64/unity-mcp-server.exe",
+      "args": [
+        "port=27196",
+        "plugin-timeout=10000",
+        "client-transport=stdio",
+        "authorization=none",
+        "token="
+      ]
+    }
+  }
+}

@@ -371,6 +371,13 @@ function setupNavbar() {
             userSpan.className = 'user-name';
             userSpan.textContent = user.full_name;
             navUser.appendChild(userSpan);
+            const changePwBtn = document.createElement('button');
+            changePwBtn.className = 'btn btn-sm btn-outline';
+            changePwBtn.style.marginRight = '8px';
+            changePwBtn.textContent = 'Đổi mật khẩu';
+            changePwBtn.onclick = showChangePasswordModal;
+            navUser.appendChild(changePwBtn);
+
             const logoutBtn = document.createElement('button');
             logoutBtn.className = 'btn btn-sm btn-secondary';
             logoutBtn.textContent = t('logout');
@@ -481,6 +488,68 @@ document.addEventListener('click', function (e) {
         panel.style.display = 'none';
     }
 });
+
+// ========== Global Change Password ==========
+function showChangePasswordModal() {
+    let m = document.getElementById('global-change-password-modal');
+    if (!m) {
+        m = document.createElement('div');
+        m.id = 'global-change-password-modal';
+        m.style.position = 'fixed';
+        m.style.top = '0'; m.style.left = '0';
+        m.style.width = '100%'; m.style.height = '100%';
+        m.style.background = 'rgba(0,0,0,0.6)';
+        m.style.zIndex = '10000';
+        m.style.alignItems = 'center';
+        m.style.justifyContent = 'center';
+        m.innerHTML = `
+            <div class="modal-content" style="max-width: 400px; width: 90%; background: var(--bg-card, #1e293b); border: 1px solid var(--border-color, #334155); border-radius: 8px;">
+                <div class="modal-header" style="display:flex; justify-content:space-between; padding:16px; border-bottom: 1px solid var(--border-color, #334155);">
+                    <h3 style="margin:0; font-size:1.1rem; color: var(--text-primary, #f8fafc);">🔐 Đổi Mật Khẩu</h3>
+                    <button onclick="document.getElementById('global-change-password-modal').style.display='none'" style="background:none; border:none; cursor:pointer; color:var(--text-secondary); font-size:1.5rem;">&times;</button>
+                </div>
+                <div class="modal-body" style="padding:20px;">
+                    <div class="form-group" style="margin-bottom:12px;">
+                        <label style="display:block; margin-bottom:6px; font-size:0.9rem; color: var(--text-primary, #f8fafc);">Mật khẩu hiện tại *</label>
+                        <input type="password" id="chpw-old" class="form-control" style="width:100%; box-sizing: border-box;" required>
+                    </div>
+                    <div class="form-group" style="margin-bottom:12px;">
+                        <label style="display:block; margin-bottom:6px; font-size:0.9rem; color: var(--text-primary, #f8fafc);">Mật khẩu mới *</label>
+                        <input type="password" id="chpw-new" class="form-control" style="width:100%; box-sizing: border-box;" placeholder="Tối thiểu 6 ký tự" required>
+                    </div>
+                </div>
+                <div class="modal-footer" style="padding:16px; border-top: 1px solid var(--border-color, #334155); display:flex; justify-content:flex-end; gap:8px;">
+                    <button class="btn btn-secondary" onclick="document.getElementById('global-change-password-modal').style.display='none'">Hủy</button>
+                    <button class="btn btn-primary" onclick="doSubmitChangePassword()" id="btn-do-change-pw">Đổi Mật Khẩu</button>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(m);
+    }
+    document.getElementById('chpw-old').value = '';
+    document.getElementById('chpw-new').value = '';
+    m.style.display = 'flex';
+}
+
+async function doSubmitChangePassword() {
+    const oldPw = document.getElementById('chpw-old').value;
+    const newPw = document.getElementById('chpw-new').value;
+    if (!oldPw || newPw.length < 6) {
+        showToast('Vui lòng nhập mật khẩu cũ và mật khẩu mới (tối thiểu 6 ký tự)', 'error');
+        return;
+    }
+    const btn = document.getElementById('btn-do-change-pw');
+    btn.disabled = true;
+    try {
+        await api.put('/auth/change-password', { old_password: oldPw, new_password: newPw });
+        showToast('Đổi mật khẩu thành công!', 'success');
+        document.getElementById('global-change-password-modal').style.display = 'none';
+    } catch (err) {
+        showToast(err.message, 'error');
+    } finally {
+        btn.disabled = false;
+    }
+}
 
 // ========== Auto-load Global AI Chatbot ==========
 (function() {

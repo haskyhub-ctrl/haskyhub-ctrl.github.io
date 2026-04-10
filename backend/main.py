@@ -158,6 +158,9 @@ def seed_database():
         db.close()
 
 
+import asyncio
+from utils.backup_service import auto_backup_task
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     # Startup
@@ -165,8 +168,17 @@ async def lifespan(app: FastAPI):
     # Migrate: add new columns to existing tables
     migrate_db()
     seed_database()
+    
+    # Khởi chạy dịch vụ cron tự động sao lưu CSDL định kỳ
+    backup_task = asyncio.create_task(auto_backup_task())
+    
     yield
     # Shutdown
+    backup_task.cancel()
+    try:
+        await backup_task
+    except asyncio.CancelledError:
+        pass
 
 
 app = FastAPI(

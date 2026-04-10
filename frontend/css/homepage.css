@@ -64,7 +64,7 @@ html, body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -133,7 +133,7 @@ html, body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -257,7 +257,7 @@ html, body {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -464,7 +464,7 @@ body.has-gov-header {
     display: flex;
     align-items: center;
     gap: 16px;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -500,7 +500,7 @@ body.has-gov-header {
     border-bottom: 1px solid var(--gov-border);
 }
 .gov-services .container {
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -616,7 +616,7 @@ body.has-gov-header {
     border-bottom: 4px solid var(--gov-gold);
 }
 .hp-stats .container {
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 0 20px;
 }
