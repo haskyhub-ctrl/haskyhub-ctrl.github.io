@@ -365,6 +365,7 @@ function downloadImportTemplate() {
 }
 
 function showImportModal() {
+    console.log("Opening Import Modal");
     const m = document.getElementById('import-modal');
     if (m) {
         m.style.display = 'flex';

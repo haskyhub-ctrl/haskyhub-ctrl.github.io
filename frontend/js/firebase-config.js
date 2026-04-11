@@ -21,3 +21,5 @@ firebase.initializeApp(firebaseConfig);
 const firebaseAuth = firebase.auth();
 const firebaseDb = firebase.firestore();
 const firebaseAnalytics = firebase.analytics();
+
+console.log('🔥 Firebase initialized successfully');
