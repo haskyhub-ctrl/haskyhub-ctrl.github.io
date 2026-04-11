@@ -39,7 +39,7 @@ async def call_gemini(prompt: str, temperature: float = 0.3) -> dict:
     # Timeout 25s — giữ dưới ngưỡng nginx proxy_read_timeout (thường 30-60s)
     async with httpx.AsyncClient(timeout=25.0) as client:
         resp = await client.post(
-            f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={GEMINI_API_KEY}",
+            f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={GEMINI_API_KEY}",
             json={
                 "contents": [{"parts": [{"text": prompt}]}],
                 "generationConfig": {"temperature": temperature}

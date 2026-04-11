@@ -46,8 +46,9 @@ def ingest_docs():
     # Tách đoạn: khoảng 1000 ký tự sẽ được cắt làm 1 chunk, overlap 100 để không đứt nghĩa
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100)
     chunks = text_splitter.split_documents(docs)
+    chunks = [c for c in chunks if c.page_content.strip()]
     
-    print(f"Đã tạo ra {len(chunks)} chunks. Tiến hành nhúng (Embedding) vào ChromaDB...")
+    print(f"Đã tạo ra {len(chunks)} chunks hợp lệ. Tiến hành nhúng (Embedding) vào ChromaDB...")
     
     # Sử dụng Google Gemini Embeddings
     api_key = os.getenv("GEMINI_API_KEY")
@@ -55,7 +56,7 @@ def ingest_docs():
         print("LỖI: Không tìm thấy GEMINI_API_KEY trong file .env")
         return
         
-    embeddings = GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-2-preview")
+    embeddings = GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-001")
     
     import time
     

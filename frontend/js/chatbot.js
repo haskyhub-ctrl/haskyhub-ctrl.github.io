@@ -345,25 +345,33 @@
             const assessmentId = params.get('id') || null;
 
             try {
-                const token = localStorage.getItem('fras_token');
-                const baseUrl = localStorage.getItem('fras_api_url') || '';
-                const resp = await fetch(`${baseUrl}/api/ai/chat`, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Authorization': `Bearer ${token}`
-                    },
-                    body: JSON.stringify({
+                let result;
+                if (window.api) {
+                    result = await window.api.post('/ai/chat', {
                         assessment_id: assessmentId,
                         message: msg,
                         history: this.history.slice(-6)
-                    })
-                });
+                    });
+                } else {
+                    const token = localStorage.getItem('fras_token');
+                    const baseUrl = localStorage.getItem('fras_api_url') || window.location.origin;
+                    const resp = await fetch(`${baseUrl}/api/ai/chat`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            ...(token ? { 'Authorization': `Bearer ${token}` } : {})
+                        },
+                        body: JSON.stringify({
+                            assessment_id: assessmentId,
+                            message: msg,
+                            history: this.history.slice(-6)
+                        })
+                    });
+                    if (!resp.ok) throw new Error(`Lỗi kết nối (HTTP ${resp.status})`);
+                    result = await resp.json();
+                }
 
                 document.getElementById(typingId)?.remove();
-
-                if (!resp.ok) throw new Error(`Lỗi kết nối (HTTP ${resp.status})`);
-                const result = await resp.json();
 
                 const reply = result.reply || result.raw_text || 'Không thể trả lời lúc này.';
                 this.history.push({ role: 'assistant', content: reply });

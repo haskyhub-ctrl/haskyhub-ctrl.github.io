@@ -227,7 +227,7 @@ Trả lời bằng JSON với format sau (tiếng Việt):
         # Synchronous call for simplicity in FastAPI sync endpoint
         with httpx.Client(timeout=60.0) as client:
             resp = client.post(
-                f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={GEMINI_API_KEY}",
+                f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={GEMINI_API_KEY}",
                 json={
                     "contents": [{"parts": [{"text": prompt}]}],
                     "generationConfig": {"temperature": 0.3}

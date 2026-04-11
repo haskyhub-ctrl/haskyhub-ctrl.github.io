@@ -133,6 +133,7 @@ class FrasAPI {
 
 // Global instance
 const api = new FrasAPI();
+window.api = api;
 
 // Toast notification
 function showToast(message, type = 'success') {
