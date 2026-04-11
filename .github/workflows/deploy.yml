@@ -1,0 +1,37 @@
+name: Deploy to Oracle Server
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploy FRAS Backend
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy to Oracle via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.ORACLE_HOST }}
+          username: ${{ secrets.ORACLE_USER }}
+          key: ${{ secrets.ORACLE_SSH_KEY }}
+          script: |
+            set -e
+
+            echo ">>> Pulling latest code..."
+            cd /home/ubuntu/fras
+            git pull origin main
+
+            echo ">>> Installing new dependencies..."
+            cd /home/ubuntu/fras/backend
+            source venv/bin/activate
+            pip install -r requirements.txt --quiet
+
+            echo ">>> Restarting service..."
+            sudo systemctl restart fras.service
+
+            echo ">>> Checking service status..."
+            sleep 3
+            sudo systemctl is-active fras.service && echo "✅ Service running OK" || echo "❌ Service failed"
