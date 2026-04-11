@@ -1,52 +1,49 @@
 @echo off
 setlocal EnableDelayedExpansion
-chcp 65001 >nul
 title 4. KHOI PHUC BAN CU
 
 echo ==========================================
-echo     [4] CỖ MÁY THỜI GIAN (ROLLBACK)
+echo     [4] CO MAY THOI GIAN - ROLLBACK
 echo ==========================================
 echo.
 echo Lich su 7 lan luu CODE gan nhat cua ban:
 echo ------------------------------------------
-git log -n 7 --pretty=format:"%%h - %%s (%%cr)"
+git log -n 7 --pretty=format:"%%h - %%s"
 echo.
 echo ------------------------------------------
 echo.
 echo LUA CHON:
-echo - De DAO NGUOC nhanh loi cua ban luu gan nhat (Lui ve 1 buoc): Bam ENTER luon khong can nhap gi.
-echo - Hoac nhap 7 ky tu ID dung dau tien o danh sach tren neu muon xoa bo loi cua phien ban do.
+echo - Bam ENTER luon neu muon DAO NGUOC ban vua xay ra loi gan nhat - Lui 1 buoc.
+echo - Hoac nhap 7 chu cai ID o dong tren neu muon dao nguoc phien ban xac dinh.
 echo.
-set /p "TARGET_ID=>> Nhap ID hoac Bam Enter: "
+set /p TARGET_ID=">> Nhap ID hoac Bam Enter: "
 
 if "!TARGET_ID!"=="" (
     set TARGET_ID=HEAD
     echo.
-    echo [Đang xử lý] Dang dao nguoc thay doi cua ban luu gan nhat...
+    echo [Dang xu ly] Dang lui ve trang thai luu khoe manh gan nhat...
 ) else (
     echo.
-    echo [Đang xử lý] Dang dao nguoc thay doi cua ID: !TARGET_ID! 
+    echo [Dang xu ly] Dang xoa thay doi loi cua ID: !TARGET_ID! 
 )
 
-REM Thuc hien revert an toan khong hien thi trinh edit van ban cua git
 git revert !TARGET_ID! --no-edit
 
 if !ERRORLEVEL! equ 0 (
     echo.
     echo ==========================================
     echo [OK] DA KHOI PHUC THANH CONG!
-    echo Code loi do da duoc loai bo khoi thu muc cua ban ma khong lam mat cac file khac!
+    echo Code bi loi da duoc dao nguoc ma khong lam hong form file khac!
     echo.
-    echo 📌 [QUAN TRONG] De Server va Github nhan ra ban da sua sai, 
-    echo VUI LONG CHAY TIEP FILE:
+    echo De Server va Github sua lại thanh ban sạch, hay chay tiep File:
     echo 1. 2_UP_CODE_GITHUB.bat
     echo 2. 3_UP_LEN_ORACLE_FRAS_AI.bat
     echo ==========================================
 ) else (
     echo.
     echo ==========================================
-    echo [ERROR] BI XUNG DOT KHI KHOI PHUC.
-    echo Do ban luu cu do khac biet qua da so voi hien tai. Neu gap loi nay hay nho AI xu ly xung dot Git.
+    echo [ERROR] BI XUNG DOT GIUA CODE CU VA MOI KHI KHOI PHUC.
+    echo Neu gap loi nay hay nho AI xu ly xung dot Git tren Chatboard!
     echo ==========================================
 )
 echo.

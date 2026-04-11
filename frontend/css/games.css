@@ -287,7 +287,7 @@ body {
     background: var(--color-background);
 }
 .game-container {
-    max-width: 900px;
+    max-width: 1120px;
     margin: 20px auto;
     padding: 24px;
     background: #111827;
@@ -823,6 +823,164 @@ body {
     text-align: center;
 }
 
+/* ---- GAME PLAY AREA LAYOUT ---- */
+.game-play-area {
+    display: flex;
+    gap: 16px;
+    align-items: stretch;
+}
+.game-canvas-area {
+    flex: 1;
+    min-width: 0;
+}
+
+/* ---- OBJECTIVES PANEL ---- */
+.objectives-panel {
+    width: 200px;
+    min-width: 200px;
+    background: rgba(255,255,255,.03);
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,.1);
+    border-left: 3px solid #f59e0b;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.objectives-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+}
+.obj-header-icon {
+    font-size: 20px;
+}
+.obj-header-text {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #ffd93d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.objectives-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+}
+.obj-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    background: rgba(255,255,255,.04);
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,.06);
+    transition: all .3s ease;
+}
+.obj-item.obj-done {
+    background: rgba(16,185,129,.1);
+    border-color: rgba(16,185,129,.3);
+}
+.obj-check {
+    font-size: 14px;
+    flex-shrink: 0;
+}
+.obj-text {
+    font-size: 12px;
+    color: #bbb;
+    font-weight: 500;
+    line-height: 1.3;
+}
+.obj-item.obj-done .obj-text {
+    color: #34d399;
+    text-decoration: line-through;
+}
+.exit-status-box {
+    margin-top: auto;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255,255,255,.1);
+}
+.exit-status {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: all .3s ease;
+}
+.exit-status.exit-locked {
+    background: rgba(220,38,38,.15);
+    border: 1px solid rgba(220,38,38,.3);
+    color: #fca5a5;
+    animation: pulse 2s infinite;
+}
+.exit-status.exit-open {
+    background: rgba(16,185,129,.15);
+    border: 1px solid rgba(16,185,129,.3);
+    color: #34d399;
+    animation: none;
+}
+
+/* ---- MINIMAP ---- */
+.minimap-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0,0,0,.75);
+    border-radius: 8px;
+    border: 2px solid rgba(255,255,255,.2);
+    padding: 6px;
+    z-index: 50;
+    backdrop-filter: blur(4px);
+}
+.minimap-header {
+    font-size: 10px;
+    color: #aaa;
+    text-align: center;
+    margin-bottom: 4px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+#minimap-canvas {
+    display: block;
+    border-radius: 4px;
+    image-rendering: pixelated;
+}
+
+/* ---- STAR RATING ---- */
+.star-display {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+.star-icon {
+    font-size: 40px;
+    transition: all .3s ease;
+}
+.star-filled {
+    color: #ffd93d;
+    text-shadow: 0 0 15px rgba(255,215,61,.5);
+    animation: starPop .5s ease-out;
+}
+.star-empty {
+    color: #374151;
+    text-shadow: none;
+}
+@keyframes starPop {
+    0% { transform: scale(0.3); opacity: 0; }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
 /* ---- RESPONSIVE ---- */
 @media (max-width: 768px) {
     .games-grid {
@@ -843,6 +1001,39 @@ body {
     }
     .instructions-grid {
         grid-template-columns: 1fr;
+    }
+    .game-play-area {
+        flex-direction: column;
+    }
+    .objectives-panel {
+        width: 100%;
+        min-width: unset;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 12px;
+    }
+    .objectives-header {
+        width: 100%;
+        padding-bottom: 6px;
+    }
+    .objectives-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+    .obj-item {
+        padding: 6px 8px;
+        font-size: 11px;
+    }
+    .exit-status-box {
+        width: 100%;
+        margin-top: 0;
+        padding-top: 6px;
+    }
+    .game-container {
+        max-width: 100%;
+        padding: 12px;
     }
 }
 @media (max-width: 480px) {

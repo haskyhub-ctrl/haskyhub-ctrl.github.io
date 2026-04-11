@@ -6,7 +6,7 @@
     <title>Thoát khỏi đám cháy - Trò chơi PCCC</title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/games.css">
-    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Crimson+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Crimson+Pro:wght@400;500;600;700&family=Roboto+Condensed:wght@400;700;800&display=swap" rel="stylesheet">
 </head>
 <body class="has-gov-header game-page-wrapper">
     <div class="gov-top-bar"><div class="container"><span class="gov-top-motto">CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM <span class="separator">•</span> <span class="motto-sub">Độc lập – Tự do – Hạnh phúc</span></span></div></div>
@@ -36,23 +36,50 @@
             </div>
         </div>
         <div class="game-level-info" id="level-info">
-            <span class="level-info-text">🎯 <strong>Mục tiêu:</strong> Thu thập vật phẩm và tìm lối thoát nạn!</span>
+            <span class="level-info-text">🎯 <strong>Mục tiêu:</strong> Hoàn thành nhiệm vụ và tìm lối thoát nạn!</span>
             <span class="level-info-objective" id="level-objective">Tìm bình chữa cháy</span>
         </div>
-        <div class="game-canvas-wrapper">
-            <canvas id="game-canvas" width="900" height="684"></canvas>
-            <div class="game-message-overlay" id="msg-overlay">
-                <div class="game-message-box">
-                    <div class="game-message-icon" id="msg-icon">🏠</div>
-                    <div class="game-message-title" id="msg-title">Thoát khỏi đám cháy</div>
-                    <div class="game-message-text" id="msg-text">Di chuyển qua ngôi nhà đang cháy, thu thập vật phẩm và tìm lối thoát nạn an toàn.</div>
-                    <div class="game-message-tip" id="msg-tip">💡 <strong>Mẹo:</strong> Dùng phím ↑↓←→ hoặc WASD để di chuyển. Nhặt bình chữa cháy để dập lửa, khăn ướt để qua vùng khói.</div>
-                    <div id="msg-buttons">
-                        <button class="game-btn game-btn-primary" id="msg-btn-start" onclick="startGame()">BẮT ĐẦU CHƠI</button>
+
+        <!-- Main game area with objectives panel -->
+        <div class="game-play-area">
+            <!-- Objectives Panel -->
+            <div class="objectives-panel" id="objectives-panel">
+                <div class="objectives-header">
+                    <span class="obj-header-icon">📋</span>
+                    <span class="obj-header-text">Nhiệm vụ</span>
+                </div>
+                <div class="objectives-list" id="objectives-list">
+                    <!-- Populated by JS -->
+                </div>
+                <div class="exit-status-box">
+                    <span class="exit-status exit-locked" id="exit-status">🔴 EXIT KHÓA</span>
+                </div>
+            </div>
+
+            <!-- Canvas + Minimap -->
+            <div class="game-canvas-area">
+                <div class="game-canvas-wrapper">
+                    <canvas id="game-canvas" width="880" height="660"></canvas>
+                    <div class="game-message-overlay" id="msg-overlay">
+                        <div class="game-message-box">
+                            <div class="game-message-icon" id="msg-icon">🏠</div>
+                            <div class="game-message-title" id="msg-title">Thoát khỏi đám cháy</div>
+                            <div class="game-message-text" id="msg-text">Di chuyển qua ngôi nhà đang cháy, thu thập vật phẩm và tìm lối thoát nạn an toàn.</div>
+                            <div class="game-message-tip" id="msg-tip">💡 <strong>Mẹo:</strong> Dùng phím ↑↓←→ hoặc WASD để di chuyển. Nhặt bình chữa cháy để dập lửa, khăn ướt để qua vùng khói.</div>
+                            <div id="msg-buttons">
+                                <button class="game-btn game-btn-primary" id="msg-btn-start" onclick="startGame()">BẮT ĐẦU CHƠI</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Minimap -->
+                    <div class="minimap-container" id="minimap-container">
+                        <div class="minimap-header">🗺️ Bản đồ</div>
+                        <canvas id="minimap-canvas" width="80" height="60"></canvas>
                     </div>
                 </div>
             </div>
         </div>
+
         <div class="game-controls-mobile" id="mobile-controls">
             <div class="ctrl-row"><div class="ctrl-spacer"></div><button class="ctrl-btn" data-dir="up">▲</button><div class="ctrl-spacer"></div></div>
             <div class="ctrl-row"><button class="ctrl-btn" data-dir="left">◄</button><button class="ctrl-btn" data-dir="down">▼</button><button class="ctrl-btn" data-dir="right">►</button></div>
@@ -61,14 +88,13 @@
             <h3>📖 Hướng dẫn chơi</h3>
             <div class="instructions-grid">
                 <div class="instruction-item"><div class="instruction-icon">🎮</div><div class="instruction-text"><strong>Di chuyển</strong>Phím ↑↓←→ hoặc WASD</div></div>
-                <div class="instruction-item"><div class="instruction-icon">⌨️</div><div class="instruction-text"><strong>Tương tác</strong>Phím Space/Enter: ngắt điện, khóa gas, gọi 114, dời đồ, kiểm tra cửa</div></div>
+                <div class="instruction-item"><div class="instruction-icon">⌨️</div><div class="instruction-text"><strong>Tương tác</strong>Phím Space/Enter: ngắt điện, khóa gas, gọi 114, dập lửa, mở khóa</div></div>
                 <div class="instruction-item"><div class="instruction-icon">🧯</div><div class="instruction-text"><strong>Bình chữa cháy</strong>Nhặt để dập lửa chắn đường</div></div>
                 <div class="instruction-item"><div class="instruction-icon">🧣</div><div class="instruction-text"><strong>Khăn ướt</strong>Bịt mũi, cúi thấp qua khói</div></div>
                 <div class="instruction-item"><div class="instruction-icon">⚡</div><div class="instruction-text"><strong>Cầu dao điện</strong>Dùng Space ngắt điện trước khi qua dây điện</div></div>
                 <div class="instruction-item"><div class="instruction-icon">⛽</div><div class="instruction-text"><strong>Van gas</strong>Dùng Space khóa gas trước khi dập lửa gần gas</div></div>
-                <div class="instruction-item"><div class="instruction-icon">📞</div><div class="instruction-text"><strong>Gọi 114</strong>Tìm điện thoại, dùng Space gọi 114 để mở EXIT</div></div>
-                <div class="instruction-item"><div class="instruction-icon">🚪</div><div class="instruction-text"><strong>Kiểm tra cửa</strong>Dùng Space kiểm tra: cửa NÓNG thì KHÔNG mở!</div></div>
-                <div class="instruction-item"><div class="instruction-icon">👤</div><div class="instruction-text"><strong>Cứu người</strong>Đi đến NPC để cứu, dẫn ra EXIT</div></div>
+                <div class="instruction-item"><div class="instruction-icon">📞</div><div class="instruction-text"><strong>Gọi 114</strong>Tìm điện thoại, dùng Space gọi 114</div></div>
+                <div class="instruction-item"><div class="instruction-icon">🚪</div><div class="instruction-text"><strong>EXIT bị khóa</strong>Hoàn thành TẤT CẢ nhiệm vụ mới mở EXIT</div></div>
             </div>
         </div>
     </div>
