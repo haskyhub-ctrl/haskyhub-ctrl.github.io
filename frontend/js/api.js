@@ -100,8 +100,10 @@ class FrasAPI {
         });
     }
 
-    async delete(endpoint) {
-        return this.fetch(endpoint, { method: 'DELETE' });
+    async delete(endpoint, body = null) {
+        const opts = { method: 'DELETE' };
+        if (body) opts.body = JSON.stringify(body);
+        return this.fetch(endpoint, opts);
     }
 
     // Auth

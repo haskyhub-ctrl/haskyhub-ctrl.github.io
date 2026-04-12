@@ -38,6 +38,7 @@ def migrate_db():
         "assessments": {
             "latitude": "FLOAT",
             "longitude": "FLOAT",
+            "is_demo": "BOOLEAN DEFAULT 0",
         },
     }
 

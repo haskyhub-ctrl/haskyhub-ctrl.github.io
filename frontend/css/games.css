@@ -284,7 +284,7 @@ body {
    ============================================================ */
 .game-page-wrapper {
     min-height: 100vh;
-    background: var(--color-background);
+    background: linear-gradient(180deg, #0f1118 0%, #1a1d2e 50%, #0f1118 100%);
 }
 .game-container {
     max-width: 1120px;

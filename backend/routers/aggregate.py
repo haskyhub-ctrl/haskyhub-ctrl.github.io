@@ -28,6 +28,9 @@ class AggregateRequest(BaseModel):
     assessment_ids: Optional[List[str]] = None
     facility_type: Optional[str] = None
     risk_level: Optional[str] = None
+    province: Optional[str] = None      # Lọc theo tỉnh (qua User.province)
+    limit: Optional[int] = None         # Giới hạn số lượng bài phân tích (None = tất cả)
+    include_demo: bool = True           # Có bao gồm dữ liệu demo không
 
 
 @router.post("/analyze")
@@ -47,8 +50,26 @@ def generate_aggregate_analysis(
         query = query.filter(Assessment.facility_type == request.facility_type)
     if request.risk_level:
         query = query.filter(Assessment.risk_level == request.risk_level)
+    if not request.include_demo:
+        query = query.filter(Assessment.is_demo == False)
 
-    assessments = query.all()
+    # Lọc theo tỉnh qua User.province
+    if request.province:
+        user_ids_in_province = [
+            u.id for u in db.query(User).filter(User.province == request.province).all()
+        ]
+        # Cũng lọc các assessment demo có địa chỉ chứa tên tỉnh
+        query = query.filter(
+            (Assessment.user_id.in_(user_ids_in_province)) |
+            (Assessment.facility_address.ilike(f"%{request.province}%"))
+        )
+
+    assessments = query.order_by(Assessment.created_at.desc()).all()
+
+    # Áp dụng limit
+    if request.limit and request.limit > 0:
+        assessments = assessments[:request.limit]
+
     if not assessments:
         raise HTTPException(status_code=404, detail="Không tìm thấy đánh giá phù hợp")
 
@@ -143,12 +164,26 @@ def generate_aggregate_analysis(
             })
     high_risk_facilities.sort(key=lambda x: x["risk_percentage"])
 
-    # ===== 7. Generate Rule-Based Recommendations =====
+    # ===== 7. Map Points (Heatmap + Dots) =====
+    map_points = []
+    for a in assessments:
+        if a.latitude and a.longitude:
+            map_points.append({
+                "lat": a.latitude,
+                "lng": a.longitude,
+                "risk_level": a.risk_level,
+                "risk_percentage": a.risk_percentage,
+                "facility_name": a.facility_name,
+                "facility_type": a.facility_type or "unknown",
+                "is_demo": getattr(a, "is_demo", False),
+            })
+
+    # ===== 8. Generate Rule-Based Recommendations =====
     recommendations = _generate_aggregate_recommendations(
         total, risk_counts, avg_risk, worst_categories, facility_distribution, high_risk_facilities
     )
 
-    # ===== 8. AI Analysis (Gemini) =====
+    # ===== 9. AI Analysis (Gemini) =====
     ai_analysis = None
     if GEMINI_API_KEY and total > 0:
         ai_analysis = _generate_ai_aggregate_analysis(
@@ -161,6 +196,8 @@ def generate_aggregate_analysis(
             "avg_risk_percentage": round(avg_risk, 1),
             "avg_total_score": round(avg_total_score, 1),
             "generated_at": datetime.utcnow().isoformat(),
+            "province_filter": request.province,
+            "limit_applied": request.limit,
         },
         "risk_distribution": risk_counts,
         "facility_distribution": facility_distribution,
@@ -169,7 +206,9 @@ def generate_aggregate_analysis(
         "high_risk_facilities": high_risk_facilities,
         "recommendations": recommendations,
         "ai_analysis": ai_analysis,
+        "map_points": map_points,
     }
+
 
 
 def _generate_ai_aggregate_analysis(total, risk_counts, avg_risk, category_analysis, facility_dist, high_risk):

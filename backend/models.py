@@ -113,6 +113,7 @@ class Assessment(Base):
     risk_level = Column(String(20), default="low")
     risk_percentage = Column(Float, default=0.0)
     status = Column(String(20), default="in_progress")  # in_progress, completed, archived
+    is_demo = Column(Boolean, default=False)  # Flag dữ liệu mẫu, dễ xóa hàng loạt
     ai_analysis = Column(Text, nullable=True)
     started_at = Column(DateTime, default=datetime.utcnow)
     completed_at = Column(DateTime, nullable=True)

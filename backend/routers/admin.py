@@ -438,3 +438,270 @@ def list_backups(
             })
     files.sort(key=lambda x: x["created_at"], reverse=True)
     return files
+
+
+# ========================================================================
+# ASSESSMENT MANAGEMENT — Xóa đơn, Xóa hàng loạt, Tạo dữ liệu mẫu
+# ========================================================================
+
+# 34 tỉnh sau sáp nhập 2025 — tọa độ trung tâm
+PROVINCE_COORDS = {
+    "Hà Nội": (21.0285, 105.8542),
+    "Hải Phòng": (20.8449, 106.6881),
+    "Hồ Chí Minh": (10.7769, 106.7009),
+    "Đà Nẵng": (16.0544, 108.2022),
+    "Cần Thơ": (10.0452, 105.7469),
+    "Bắc Ninh": (21.1861, 106.0763),
+    "Quảng Ninh": (21.0064, 107.2925),
+    "Vĩnh Phúc": (21.3609, 105.5474),
+    "Hưng Yên": (20.6463, 106.0511),
+    "Hải Dương": (20.9373, 106.3145),
+    "Thái Bình": (20.4458, 106.3421),
+    "Nam Định": (20.4388, 106.1621),
+    "Ninh Bình": (20.2506, 105.9745),
+    "Thanh Hóa": (19.8071, 105.7852),
+    "Nghệ An": (19.2342, 104.9200),
+    "Hà Tĩnh": (18.3559, 105.8877),
+    "Quảng Bình": (17.4689, 106.6228),
+    "Quảng Trị": (16.7943, 107.0916),
+    "Thừa Thiên Huế": (16.4637, 107.5909),
+    "Quảng Nam": (15.5394, 108.0191),
+    "Quảng Ngãi": (15.1214, 108.7922),
+    "Bình Định": (13.7765, 109.2236),
+    "Phú Yên": (13.0882, 109.0926),
+    "Khánh Hòa": (12.2388, 109.1967),
+    "Ninh Thuận": (11.5645, 108.9882),
+    "Bình Thuận": (11.0904, 108.0721),
+    "Kon Tum": (14.3497, 108.0004),
+    "Gia Lai": (13.9894, 108.0000),
+    "Đắk Lắk": (12.7100, 108.2378),
+    "Đắk Nông": (12.0000, 107.6900),
+    "Lâm Đồng": (11.5424, 108.4272),
+    "Bình Phước": (11.7512, 106.7235),
+    "Tây Ninh": (11.3600, 106.1000),
+    "Bình Dương": (11.1332, 106.4770),
+}
+
+FACILITY_TYPES = [
+    "industrial", "warehouse", "mixed_residence", "hospitality",
+    "medical_education", "fuel_gas", "transport", "residential",
+    "construction", "office", "laboratory", "agriculture"
+]
+
+RISK_LEVELS = ["safe", "low", "medium", "high", "critical"]
+
+
+class BulkDeleteRequest(BaseModel):
+    ids: List[str]
+
+
+class GenerateDemoRequest(BaseModel):
+    count: int = 10
+    risk_distribution: str = "random"  # random | high_focus | balanced
+    province: str = "Bắc Ninh"
+    facility_type: Optional[str] = None  # null = random
+
+
+@router.get("/assessments")
+def list_admin_assessments(
+    risk_level: Optional[str] = None,
+    facility_type: Optional[str] = None,
+    include_demo: bool = True,
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db),
+):
+    """Danh sách tất cả bài đánh giá cho admin (kèm thông tin user)."""
+    require_role("admin", "superadmin")(current_user)
+    query = db.query(Assessment).filter(Assessment.status == "completed")
+    if risk_level:
+        query = query.filter(Assessment.risk_level == risk_level)
+    if facility_type:
+        query = query.filter(Assessment.facility_type == facility_type)
+    if not include_demo:
+        query = query.filter(Assessment.is_demo == False)
+    assessments = query.order_by(Assessment.created_at.desc()).all()
+    result = []
+    for a in assessments:
+        user = db.query(User).filter(User.id == a.user_id).first()
+        result.append({
+            "id": a.id,
+            "facility_name": a.facility_name,
+            "facility_type": a.facility_type,
+            "facility_address": a.facility_address,
+            "total_score": a.total_score,
+            "max_possible_score": a.max_possible_score,
+            "risk_level": a.risk_level,
+            "risk_percentage": a.risk_percentage,
+            "is_demo": getattr(a, "is_demo", False),
+            "completed_at": a.completed_at.isoformat() if a.completed_at else None,
+            "user_name": user.full_name if user else "N/A",
+            "organization": user.organization if user else "N/A",
+            "province": user.province if user else None,
+            "latitude": a.latitude,
+            "longitude": a.longitude,
+        })
+    return result
+
+
+@router.delete("/assessments/demo")
+def delete_all_demo_assessments(
+    request: Request,
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db),
+):
+    """Xóa toàn bộ dữ liệu demo (is_demo=True)."""
+    require_role("admin", "superadmin")(current_user)
+    demos = db.query(Assessment).filter(Assessment.is_demo == True).all()
+    count = len(demos)
+    for a in demos:
+        db.delete(a)
+    db.commit()
+    log_action(db, current_user.id, "delete_all_demo", "assessment", None,
+               None, {"count": count},
+               request.client.host if request.client else None)
+    return {"deleted": count, "message": f"Đã xóa {count} bài đánh giá demo"}
+
+
+@router.delete("/assessments/bulk")
+def bulk_delete_assessments(
+    data: BulkDeleteRequest,
+    request: Request,
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db),
+):
+    """Xóa hàng loạt bài đánh giá theo danh sách ID."""
+    require_role("admin", "superadmin")(current_user)
+    if not data.ids:
+        raise HTTPException(status_code=400, detail="Danh sách ID không được rỗng")
+    deleted = 0
+    for aid in data.ids:
+        a = db.query(Assessment).filter(Assessment.id == aid).first()
+        if a:
+            db.delete(a)
+            deleted += 1
+    db.commit()
+    log_action(db, current_user.id, "bulk_delete_assessments", "assessment", None,
+               None, {"ids": data.ids, "deleted": deleted},
+               request.client.host if request.client else None)
+    return {"deleted": deleted, "message": f"Đã xóa {deleted} bài đánh giá"}
+
+
+@router.delete("/assessments/{assessment_id}")
+def delete_assessment(
+    assessment_id: str,
+    request: Request,
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db),
+):
+    """Xóa một bài đánh giá (admin có thể xóa bất kỳ)."""
+    require_role("admin", "superadmin")(current_user)
+    a = db.query(Assessment).filter(Assessment.id == assessment_id).first()
+    if not a:
+        raise HTTPException(status_code=404, detail="Không tìm thấy bài đánh giá")
+    facility_name = a.facility_name
+    db.delete(a)
+    db.commit()
+    log_action(db, current_user.id, "delete_assessment", "assessment", assessment_id,
+               {"facility_name": facility_name}, None,
+               request.client.host if request.client else None)
+    return {"deleted": True, "message": f"Đã xóa '{facility_name}'"}
+
+
+@router.post("/assessments/generate")
+def generate_demo_assessments(
+    data: GenerateDemoRequest,
+    request: Request,
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db),
+):
+    """Tạo dữ liệu mẫu (is_demo=True) để test phân tích."""
+    import random
+    require_role("admin", "superadmin")(current_user)
+
+    count = max(1, min(data.count, 100))
+    province = data.province if data.province in PROVINCE_COORDS else "Bắc Ninh"
+    base_lat, base_lng = PROVINCE_COORDS[province]
+
+    # Phân bổ nguy cơ
+    if data.risk_distribution == "high_focus":
+        weights = [2, 5, 10, 35, 25]        # safe/low/med/high/critical
+    elif data.risk_distribution == "balanced":
+        weights = [20, 20, 20, 20, 20]
+    else:  # random
+        weights = [10, 20, 30, 25, 15]
+
+    risk_map = {
+        "safe":     (0, 20),
+        "low":      (20, 40),
+        "medium":   (40, 60),
+        "high":     (60, 80),
+        "critical": (80, 100),
+    }
+
+    facility_names_map = {
+        "industrial": ["Xưởng cơ khí", "Nhà máy may", "Xưởng gỗ nội thất", "Nhà máy điện tử", "Xưởng nhựa"],
+        "warehouse":  ["Kho vật tư", "Kho thành phẩm", "Kho hóa chất", "Kho lạnh", "Kho ngoại quan"],
+        "mixed_residence": ["Nhà ở hỗn hợp tầng 1", "Nhà phố kinh doanh", "Chung cư mini"],
+        "hospitality": ["Quán ăn", "Nhà hàng", "Khách sạn", "Quán cà phê"],
+        "residential": ["Khu dân cư liền kề", "Chung cư", "Nhà trọ công nhân", "Biệt thự khu dân cư"],
+        "office": ["Văn phòng công ty", "Tòa nhà văn phòng", "Trung tâm thương mại"],
+        "construction": ["Công trình đang xây", "Nhà xưởng đang xây"],
+        "fuel_gas": ["Cây xăng", "Kho LPG", "Trạm nạp gas"],
+        "medical_education": ["Bệnh viện", "Trường học", "Nhà trẻ", "Trung tâm y tế"],
+        "agriculture": ["Kho nông sản", "Nhà kho thóc lúa"],
+        "transport": ["Bến xe", "Ga tàu", "Xưởng sửa chữa ô tô"],
+        "laboratory": ["Phòng thí nghiệm", "Trung tâm nghiên cứu"],
+    }
+
+    # Dùng admin account làm user_id (hoặc tạo user demo nếu cần)
+    admin_user = db.query(User).filter(User.id == current_user.id).first()
+
+    created = []
+    for i in range(count):
+        ftype = data.facility_type if data.facility_type else random.choice(FACILITY_TYPES)
+        risk_level = random.choices(RISK_LEVELS, weights=weights)[0]
+        rmin, rmax = risk_map[risk_level]
+        risk_pct = round(random.uniform(rmin, rmax), 1)
+
+        names = facility_names_map.get(ftype, ["Cơ sở kinh doanh"])
+        fname = f"{random.choice(names)} số {random.randint(1, 99)}"
+
+        # Rải điểm xung quanh trung tâm tỉnh (±0.15 độ ≈ ~16km)
+        lat = round(base_lat + random.uniform(-0.15, 0.15), 6)
+        lng = round(base_lng + random.uniform(-0.15, 0.15), 6)
+
+        streets = ["Đường Lý Thái Tổ", "Đường Nguyễn Trãi", "Phố Hàn Thuyên",
+                   "Đường Trần Hưng Đạo", "Ngõ Đoàn Kết", "Đường Lê Lợi"]
+        address = f"{random.randint(1, 200)} {random.choice(streets)}, {province}"
+
+        a = Assessment(
+            user_id=current_user.id,
+            facility_name=fname,
+            facility_type=ftype,
+            facility_address=address,
+            facility_area=round(random.uniform(50, 2000), 0),
+            worker_count=random.randint(2, 200),
+            latitude=lat,
+            longitude=lng,
+            total_score=int(risk_pct * 2),
+            max_possible_score=200,
+            risk_level=risk_level,
+            risk_percentage=risk_pct,
+            status="completed",
+            is_demo=True,
+            completed_at=datetime.utcnow(),
+        )
+        db.add(a)
+        created.append({"facility_name": fname, "risk_level": risk_level, "risk_percentage": risk_pct})
+
+    db.commit()
+    log_action(db, current_user.id, "generate_demo", "assessment", None,
+               None, {"count": count, "province": province},
+               request.client.host if request.client else None)
+    return {
+        "created": len(created),
+        "province": province,
+        "message": f"Đã tạo {len(created)} bài đánh giá demo tại {province}",
+        "items": created,
+    }
+

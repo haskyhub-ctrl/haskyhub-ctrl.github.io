@@ -451,6 +451,31 @@ body.has-gov-header {
 }
 .hp-hero-social-proof strong { color: rgba(255,255,255,0.90); }
 
+/* Privacy trust banner in hero */
+.hp-hero-privacy {
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-left: 4px solid var(--gov-red);
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 15px;
+    padding: 12px 24px;
+    margin-bottom: 24px;
+    letter-spacing: 0.2px;
+    line-height: 1.5;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+    animation: privacyFadeIn 1.5s ease 0.5s both;
+}
+.hp-hero-privacy strong {
+    color: #ffd93d;
+}
+@keyframes privacyFadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
 /* ============================================================
    NOTICE TICKER — Thông báo quan trọng
    ============================================================ */
@@ -543,7 +568,7 @@ body.has-gov-header {
 }
 .gov-services-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 1px;
     background: var(--gov-border);
     border: 1px solid var(--gov-border);

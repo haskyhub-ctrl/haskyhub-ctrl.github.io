@@ -37,8 +37,30 @@
             border-radius: 12px; box-shadow: 0 12px 48px rgba(0,0,0,0.18);
             z-index: 10000; flex-direction: column; overflow: hidden;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            min-width: 320px; min-height: 360px;
+            max-width: 90vw; max-height: 85vh;
         }
         .fras-panel.open { display: flex; }
+
+        /* Resize handle - top left corner */
+        .fras-resize-handle {
+            position: absolute; top: 0; left: 0;
+            width: 20px; height: 20px;
+            cursor: nw-resize; z-index: 10001;
+            background: transparent;
+        }
+        .fras-resize-handle::after {
+            content: '';
+            position: absolute; top: 4px; left: 4px;
+            width: 8px; height: 8px;
+            border-top: 2px solid #cbd5e1;
+            border-left: 2px solid #cbd5e1;
+            border-radius: 2px 0 0 0;
+            transition: border-color .2s;
+        }
+        .fras-resize-handle:hover::after {
+            border-color: #C0202A;
+        }
 
         /* ===== Header ===== */
         .fras-header {
@@ -197,6 +219,7 @@
             <span class="notif-dot"></span>
         </button>
         <div class="fras-panel" id="fras-panel">
+            <div class="fras-resize-handle" id="fras-resize-handle" title="Kéo để thay đổi kích thước"></div>
             <div class="fras-header">
                 <div class="fras-header-left">
                     <div class="fras-header-icon">
@@ -519,5 +542,62 @@
     document.getElementById('fras-input').addEventListener('keypress', (e) => {
         if (e.key === 'Enter' && !e.shiftKey) frasChatbot.send();
     });
+
+    // ==================== RESIZE LOGIC ====================
+    const resizeHandle = document.getElementById('fras-resize-handle');
+    const panel = document.getElementById('fras-panel');
+    let isResizing = false;
+    let resizeStartX, resizeStartY, startWidth, startHeight, startBottom, startRight;
+
+    function startResize(e) {
+        isResizing = true;
+        e.preventDefault();
+        e.stopPropagation();
+        
+        const touch = e.type === 'touchstart' ? e.touches[0] : e;
+        resizeStartX = touch.clientX;
+        resizeStartY = touch.clientY;
+        
+        const rect = panel.getBoundingClientRect();
+        startWidth = rect.width;
+        startHeight = rect.height;
+        startBottom = window.innerHeight - rect.bottom;
+        startRight = window.innerWidth - rect.right;
+        
+        panel.style.transition = 'none';
+        
+        document.addEventListener('mousemove', onResize);
+        document.addEventListener('mouseup', stopResize);
+        document.addEventListener('touchmove', onResize, { passive: false });
+        document.addEventListener('touchend', stopResize);
+    }
+    
+    function onResize(e) {
+        if (!isResizing) return;
+        e.preventDefault();
+        
+        const touch = e.type === 'touchmove' ? e.touches[0] : e;
+        const dx = resizeStartX - touch.clientX;  // moving left = increase width
+        const dy = resizeStartY - touch.clientY;  // moving up = increase height
+        
+        let newW = Math.max(320, Math.min(startWidth + dx, window.innerWidth * 0.9));
+        let newH = Math.max(360, Math.min(startHeight + dy, window.innerHeight * 0.85));
+        
+        panel.style.width = newW + 'px';
+        panel.style.maxHeight = newH + 'px';
+        panel.style.height = newH + 'px';
+    }
+    
+    function stopResize() {
+        isResizing = false;
+        panel.style.transition = '';
+        document.removeEventListener('mousemove', onResize);
+        document.removeEventListener('mouseup', stopResize);
+        document.removeEventListener('touchmove', onResize);
+        document.removeEventListener('touchend', stopResize);
+    }
+    
+    resizeHandle.addEventListener('mousedown', startResize);
+    resizeHandle.addEventListener('touchstart', startResize, { passive: false });
 
 })();
