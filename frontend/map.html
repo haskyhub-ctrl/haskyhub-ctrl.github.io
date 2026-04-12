@@ -11,6 +11,8 @@
     <!-- Leaflet MarkerCluster CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+    <!-- Leaflet.heat for heatmap -->
+    <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
     <style>
         .map-container {
             display: flex;
@@ -112,6 +114,79 @@
             height: 10px;
             border-radius: 50%;
             display: inline-block;
+        }
+
+        /* ── View Mode Toggle ── */
+        .view-toggle {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--bg-card, #1e293b);
+            border: 1px solid var(--border-color, #334155);
+            border-radius: 99px;
+            padding: 4px;
+            position: relative;
+        }
+
+        .view-toggle-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            padding: 0 6px 0 4px;
+            white-space: nowrap;
+        }
+
+        .view-toggle-btn {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 6px 14px;
+            border-radius: 99px;
+            border: none;
+            background: transparent;
+            color: var(--text-muted);
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.22s ease;
+            white-space: nowrap;
+        }
+
+        .view-toggle-btn.active {
+            background: var(--accent-orange, #f97316);
+            color: white;
+            box-shadow: 0 2px 8px rgba(249,115,22,0.35);
+        }
+
+        .view-toggle-btn:not(.active):hover {
+            color: var(--text-primary);
+            background: rgba(255,255,255,0.06);
+        }
+
+        /* Heatmap legend */
+        .heatmap-legend {
+            display: none;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            background: var(--bg-card, #1e293b);
+            border: 1px solid var(--border-color, #334155);
+            border-radius: 6px;
+            padding: 4px 10px;
+        }
+
+        .heatmap-legend.visible {
+            display: flex;
+        }
+
+        .heatmap-gradient-bar {
+            width: 80px;
+            height: 10px;
+            border-radius: 4px;
+            background: linear-gradient(to right, #22c55e, #eab308, #f97316, #ef4444);
         }
 
         #map {
@@ -281,19 +356,33 @@
     <div class="map-container">
         <div class="map-toolbar">
             <h2>📍 Bản đồ Nguy cơ Cháy Nổ</h2>
-            <div class="map-filters">
+            <div class="map-filters" id="map-filters">
                 <button class="filter-btn active" onclick="filterMap('')" id="filter-all">Tất cả</button>
                 <button class="filter-btn filter-low" onclick="filterMap('low')" id="filter-low">🟢 Thấp</button>
-                <button class="filter-btn filter-medium" onclick="filterMap('medium')" id="filter-medium">🟡 Trung
-                    bình</button>
+                <button class="filter-btn filter-medium" onclick="filterMap('medium')" id="filter-medium">🟡 Trung bình</button>
                 <button class="filter-btn filter-high" onclick="filterMap('high')" id="filter-high">🟠 Cao</button>
-                <button class="filter-btn filter-critical" onclick="filterMap('critical')" id="filter-critical">🔴 Rất
-                    cao</button>
-                <button class="filter-btn filter-unassessed" onclick="filterMap('unassessed')" id="filter-unassessed">⚪
-                    Chưa
-                    đánh giá</button>
+                <button class="filter-btn filter-critical" onclick="filterMap('critical')" id="filter-critical">🔴 Rất cao</button>
+                <button class="filter-btn filter-unassessed" onclick="filterMap('unassessed')" id="filter-unassessed">⚪ Chưa đánh giá</button>
             </div>
-            <div class="map-stats" id="map-stats"></div>
+            <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+                <!-- View mode toggle -->
+                <div class="view-toggle" id="view-toggle">
+                    <span class="view-toggle-label">Hiển thị</span>
+                    <button class="view-toggle-btn active" id="btn-mode-marker" onclick="setViewMode('marker')">
+                        📍 Điểm
+                    </button>
+                    <button class="view-toggle-btn" id="btn-mode-heatmap" onclick="setViewMode('heatmap')">
+                        🔥 Heatmap
+                    </button>
+                </div>
+                <!-- Heatmap legend (shown only in heatmap mode) -->
+                <div class="heatmap-legend" id="heatmap-legend">
+                    <span>Thấp</span>
+                    <div class="heatmap-gradient-bar"></div>
+                    <span>Rất cao</span>
+                </div>
+                <div class="map-stats" id="map-stats"></div>
+            </div>
         </div>
         <div id="map"></div>
     </div>
@@ -302,12 +391,15 @@
     <!-- Leaflet JS — defer to prevent page freeze while CDN loads -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
     <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js" defer></script>
+    <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js" defer></script>
     <script>
         let map;
         let markerClusterGroup;
+        let heatLayer = null;
         let allMarkers = [];
         let allData = [];
         let activeFilter = '';
+        let viewMode = 'marker'; // 'marker' | 'heatmap'
 
         const riskColors = {
             low: '#22c55e',
@@ -455,12 +547,90 @@
                     if (btn) btn.style.display = 'none';
                 }
 
-                renderMarkers(allData, isAdmin);
+                if (viewMode === 'heatmap') {
+                    renderHeatmap(allData);
+                } else {
+                    renderMarkers(allData, isAdmin);
+                }
                 updateStats(allData);
             } catch (err) {
                 console.error('Error loading map data:', err);
                 showToast('Không thể tải dữ liệu bản đồ: ' + err.message, 'error');
             }
+        }
+
+        /* ─────────────────────────────
+         *  View Mode Switch
+         * ───────────────────────────── */
+        function setViewMode(mode) {
+            viewMode = mode;
+
+            // Update toggle button states
+            document.getElementById('btn-mode-marker').classList.toggle('active', mode === 'marker');
+            document.getElementById('btn-mode-heatmap').classList.toggle('active', mode === 'heatmap');
+
+            // Show/hide heatmap legend
+            document.getElementById('heatmap-legend').classList.toggle('visible', mode === 'heatmap');
+
+            // Show/hide risk filters (not useful in heatmap mode)
+            const filtersEl = document.getElementById('map-filters');
+            if (filtersEl) filtersEl.style.opacity = mode === 'heatmap' ? '0.4' : '1';
+
+            // Clear both layers then re-render
+            markerClusterGroup.clearLayers();
+            allMarkers = [];
+            if (heatLayer) { map.removeLayer(heatLayer); heatLayer = null; }
+
+            if (mode === 'heatmap') {
+                renderHeatmap(allData);
+            } else {
+                // Need to know isAdmin for popups
+                const user = api.getUser();
+                const isAdmin = user && (user.role === 'admin' || user.role === 'superadmin');
+                renderMarkers(allData, isAdmin);
+            }
+        }
+
+        /* ─────────────────────────────
+         *  Heatmap Renderer
+         * ───────────────────────────── */
+        function renderHeatmap(data) {
+            // Remove old heat layer if any
+            if (heatLayer) { map.removeLayer(heatLayer); heatLayer = null; }
+            // Also clear markers
+            markerClusterGroup.clearLayers();
+            allMarkers = [];
+
+            if (!data || data.length === 0) return;
+
+            // Build heatmap points: [lat, lng, intensity 0-1]
+            const riskWeight = { low: 0.25, medium: 0.5, high: 0.75, critical: 1.0, unassessed: 0.1 };
+            const points = data
+                .filter(d => d.latitude && d.longitude)
+                .map(d => {
+                    // Combine discrete risk level weight with continuous percentage
+                    const base = riskWeight[d.risk_level] || 0.2;
+                    const pct  = (d.risk_percentage || 0) / 100;
+                    const intensity = Math.min(1, base * 0.4 + pct * 0.6);
+                    return [d.latitude, d.longitude, intensity];
+                });
+
+            if (points.length === 0) return;
+
+            heatLayer = L.heatLayer(points, {
+                radius: 28,
+                blur: 20,
+                maxZoom: 13,
+                max: 1.0,
+                gradient: {
+                    0.0:  '#22c55e',  // xanh lá — thấp
+                    0.35: '#eab308',  // vàng — trung bình
+                    0.65: '#f97316',  // cam — cao
+                    1.0:  '#ef4444'   // đỏ — rất cao
+                }
+            });
+
+            heatLayer.addTo(map);
         }
 
         function renderMarkers(data, isAdmin = false) {
@@ -587,6 +757,12 @@
                 const group = L.featureGroup(allMarkers);
                 map.fitBounds(group.getBounds().pad(0.1));
             }
+        }
+
+        /* Fit bounds when switching to heatmap (reuse allData coords) */
+        function fitBoundsFromData(data) {
+            const pts = data.filter(d => d.latitude && d.longitude).map(d => [d.latitude, d.longitude]);
+            if (pts.length > 0) map.fitBounds(pts, { padding: [40, 40] });
         }
 
         function updateStats(data) {
