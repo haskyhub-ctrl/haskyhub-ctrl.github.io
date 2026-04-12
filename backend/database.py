@@ -22,9 +22,13 @@ def get_db():
 
 
 def migrate_db():
-    """Add missing columns to existing tables (SQLite doesn't auto-migrate)."""
+    """Add missing columns to existing tables (SQLite + PostgreSQL compatible)."""
     insp = inspect(engine)
     tables = insp.get_table_names()
+
+    # SQLite accepts integer 0/1 for boolean; PostgreSQL requires TRUE/FALSE literal
+    is_sqlite = DATABASE_URL.startswith("sqlite")
+    bool_false = "DEFAULT 0" if is_sqlite else "DEFAULT FALSE"
 
     migrations = {
         "users": {
@@ -38,7 +42,7 @@ def migrate_db():
         "assessments": {
             "latitude": "FLOAT",
             "longitude": "FLOAT",
-            "is_demo": "BOOLEAN DEFAULT 0",
+            "is_demo": f"BOOLEAN {bool_false}",
         },
     }
 
@@ -49,6 +53,10 @@ def migrate_db():
             existing_cols = {c["name"] for c in insp.get_columns(table_name)}
             for col_name, col_type in columns.items():
                 if col_name not in existing_cols:
-                    conn.execute(text(f"ALTER TABLE {table_name} ADD COLUMN {col_name} {col_type}"))
-                    conn.commit()
-
+                    try:
+                        conn.execute(text(f"ALTER TABLE {table_name} ADD COLUMN {col_name} {col_type}"))
+                        conn.commit()
+                        print(f"[migrate] Added column {table_name}.{col_name}")
+                    except Exception as e:
+                        print(f"[migrate] WARN: Could not add {table_name}.{col_name}: {e}")
+                        conn.rollback()
