@@ -7,50 +7,79 @@
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/admin.css">
     <style>
-        .filter-bar { display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin-bottom:16px; }
-        .filter-bar select { background:var(--glass-bg); color:var(--text-primary); border:1px solid var(--border-color); border-radius:0; padding:8px 14px; font-size:.9rem; min-width:160px; }
+        /* ── Filter bar ── */
+        .filter-bar { display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-bottom:14px; }
+        .filter-bar select { background:var(--glass-bg); color:var(--text-primary); border:1px solid var(--border-color); border-radius:0; padding:8px 13px; font-size:.88rem; min-width:148px; cursor:pointer; }
         .view-toggle { display:flex; gap:4px; margin-left:auto; }
-        .view-toggle button { padding:8px 14px; background:transparent; border:1px solid var(--border-color); color:var(--text-secondary); border-radius:0; cursor:pointer; font-size:.85rem; transition:all .2s; }
+        .view-toggle button { padding:7px 14px; background:transparent; border:1px solid var(--border-color); color:var(--text-secondary); border-radius:0; cursor:pointer; font-size:.83rem; transition:all .2s; }
         .view-toggle button.active { background:var(--accent-orange); border-color:var(--accent-orange); color:#fff; }
-        .facility-group { margin-bottom:24px; }
-        .facility-group-header { display:flex; align-items:center; gap:8px; padding:10px 16px; background:var(--glass-bg); border:1px solid var(--border-color); font-weight:600; font-size:.95rem; }
-        .facility-group-header .count { background:rgba(255,255,255,.1); padding:2px 10px; border-radius:0; font-size:.8rem; color:var(--text-muted); }
 
-        /* Bulk action bar */
-        .bulk-bar { display:none; align-items:center; gap:12px; background:rgba(255,140,0,.1); border:1px solid rgba(255,140,0,.4); padding:10px 16px; margin-bottom:12px; }
-        .bulk-bar.visible { display:flex; }
-        .bulk-bar span { font-weight:600; font-size:.9rem; }
-        .btn-danger { background:#c0392b; color:#fff; border:none; padding:7px 16px; cursor:pointer; border-radius:0; font-size:.85rem; font-weight:600; display:inline-flex; align-items:center; gap:6px; transition:background .2s; }
-        .btn-danger:hover { background:#a93226; }
+        /* ── Action buttons ── */
+        .btn-danger  { background:#c0392b; color:#fff; border:none; padding:8px 16px; cursor:pointer; border-radius:0; font-size:.85rem; font-weight:600; display:inline-flex; align-items:center; gap:6px; transition:background .2s; }
+        .btn-danger:hover  { background:#a93226; }
         .btn-generate { background:linear-gradient(135deg,#6c3fc5,#9b59b6); color:#fff; border:none; padding:9px 18px; cursor:pointer; border-radius:0; font-size:.88rem; font-weight:600; display:inline-flex; align-items:center; gap:6px; transition:opacity .2s; }
-        .btn-generate:hover { opacity:.88; }
-        .badge-demo { background:rgba(150,90,220,.25); color:#b07de0; font-size:.7rem; padding:1px 7px; border:1px solid rgba(150,90,220,.4); border-radius:2px; vertical-align:middle; margin-left:4px; }
+        .btn-generate:hover { opacity:.85; }
+        .btn-warning  { background:#e67e22; color:#fff; border:none; padding:8px 16px; cursor:pointer; border-radius:0; font-size:.85rem; font-weight:600; display:inline-flex; align-items:center; gap:6px; transition:background .2s; }
+        .btn-warning:hover  { background:#ca6f1e; }
 
-        /* Checkbox col */
-        th.chk-col, td.chk-col { width:36px; text-align:center; padding:0 6px; }
-        input[type=checkbox] { width:16px; height:16px; cursor:pointer; }
+        /* ── Bulk action bar ── */
+        .bulk-bar { display:none; align-items:center; gap:12px; background:rgba(255,140,0,.1); border:1px solid rgba(255,140,0,.4); padding:10px 16px; margin-bottom:12px; border-radius:2px; }
+        .bulk-bar.visible { display:flex; }
+        .bulk-bar span { font-weight:600; font-size:.9rem; color:var(--accent-orange); }
 
-        /* Generate modal */
+        /* ── Badge demo ── */
+        .badge-demo { background:rgba(150,90,220,.22); color:#b07de0; font-size:.68rem; padding:1px 7px; border:1px solid rgba(150,90,220,.4); border-radius:2px; vertical-align:middle; margin-left:5px; }
+
+        /* ── Checkbox col ── */
+        th.chk-col, td.chk-col { width:36px; text-align:center; padding:0 6px !important; }
+        input[type=checkbox] { width:16px; height:16px; cursor:pointer; accent-color:var(--accent-orange); }
+
+        /* ── Group view ── */
+        .facility-group { margin-bottom:22px; }
+        .facility-group-header { display:flex; align-items:center; gap:8px; padding:9px 15px; background:var(--glass-bg); border:1px solid var(--border-color); font-weight:600; font-size:.93rem; }
+        .facility-group-header .count { background:rgba(255,255,255,.1); padding:2px 10px; font-size:.78rem; color:var(--text-muted); }
+
+        /* ── Generate Modal ── */
         .modal-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,.65); z-index:9999; align-items:center; justify-content:center; }
         .modal-overlay.open { display:flex; }
-        .modal-box { background:#1e2235; border:1px solid var(--border-color); border-radius:8px; width:min(520px,95vw); padding:28px 32px; max-height:90vh; overflow-y:auto; }
+        .modal-box { background:#1e2235; border:1px solid var(--border-color); border-radius:8px; width:min(560px,95vw); padding:28px 30px; max-height:92vh; overflow-y:auto; }
         .modal-box h3 { margin:0 0 20px; font-size:1.1rem; display:flex; align-items:center; gap:8px; }
-        .form-group { margin-bottom:16px; }
-        .form-group label { display:block; font-size:.85rem; color:var(--text-secondary); margin-bottom:6px; font-weight:500; }
-        .form-group select, .form-group input[type=number] { width:100%; background:var(--glass-bg); color:var(--text-primary); border:1px solid var(--border-color); border-radius:0; padding:9px 12px; font-size:.9rem; }
-        .form-group input[type=range] { width:100%; }
-        .radio-group { display:flex; flex-direction:column; gap:8px; }
-        .radio-group label { display:flex; align-items:center; gap:10px; font-size:.88rem; color:var(--text-primary); cursor:pointer; }
-        .modal-footer { display:flex; gap:10px; justify-content:flex-end; margin-top:24px; }
+
+        .form-group { margin-bottom:15px; }
+        .form-group label { display:block; font-size:.83rem; color:var(--text-secondary); margin-bottom:6px; font-weight:500; }
+        .form-group select, .form-group input[type=number] { width:100%; background:var(--glass-bg); color:var(--text-primary); border:1px solid var(--border-color); border-radius:0; padding:9px 12px; font-size:.9rem; box-sizing:border-box; }
+        .form-group input[type=range]  { width:100%; accent-color:var(--accent-orange); }
+
+        .form-row { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+
+        .count-display { font-size:1.5rem; font-weight:700; color:var(--accent-orange); text-align:center; }
+
+        .risk-chips { display:flex; flex-wrap:wrap; gap:8px; margin-top:4px; }
+        .risk-chip  { padding:5px 14px; border:1px solid var(--border-color); border-radius:2px; cursor:pointer; font-size:.83rem; transition:all .2s; background:transparent; color:var(--text-secondary); }
+        .risk-chip:hover, .risk-chip.active { color:#fff; }
+        .risk-chip[data-val=""]        { border-color:#888; }
+        .risk-chip[data-val=""].active { background:#555; border-color:#888; }
+        .risk-chip[data-val="safe"].active   { background:#27ae60; border-color:#27ae60; }
+        .risk-chip[data-val="low"].active    { background:#f1c40f; border-color:#f1c40f; color:#000; }
+        .risk-chip[data-val="medium"].active { background:#e67e22; border-color:#e67e22; }
+        .risk-chip[data-val="high"].active   { background:#c0392b; border-color:#c0392b; }
+        .risk-chip[data-val="critical"].active { background:#6c1e25; border-color:#e74c3c; }
+
+        .modal-footer { display:flex; gap:10px; justify-content:flex-end; margin-top:22px; }
         .btn-cancel { background:transparent; color:var(--text-secondary); border:1px solid var(--border-color); padding:9px 20px; cursor:pointer; border-radius:0; font-size:.88rem; }
         .btn-cancel:hover { background:rgba(255,255,255,.05); }
-        .count-display { font-size:1.4rem; font-weight:700; color:var(--accent-orange); text-align:center; margin:4px 0; }
 
-        /* Confirm modal */
+        /* ── Confirm modal ── */
         .confirm-modal { background:#1e2235; border:1px solid #c0392b; border-radius:8px; width:min(420px,95vw); padding:24px; }
-        .confirm-modal h3 { color:#e74c3c; margin:0 0 12px; }
-        .confirm-modal p { color:var(--text-secondary); font-size:.9rem; margin-bottom:20px; }
-        .confirm-modal .modal-footer { margin-top:0; }
+        .confirm-modal h3 { color:#e74c3c; margin:0 0 10px; }
+        .confirm-modal p  { color:var(--text-secondary); font-size:.9rem; margin-bottom:18px; }
+
+        /* ── Stats bar ── */
+        .stats-bar { display:flex; gap:16px; flex-wrap:wrap; margin-bottom:14px; font-size:.82rem; color:var(--text-muted); align-items:center; }
+        .stats-bar strong { color:var(--text-primary); }
+
+        /* ── Progress toast ── */
+        #gen-progress { display:none; background:rgba(108,63,197,.15); border:1px solid rgba(108,63,197,.4); padding:10px 14px; border-radius:4px; margin-top:10px; font-size:.85rem; color:#b07de0; }
     </style>
 </head>
 
@@ -78,22 +107,25 @@
                 <li><a href="/map.html"><span class="nav-icon">📍</span> Bản đồ</a></li>
             </ul>
         </aside>
+
         <main class="admin-content">
+            <!-- ── Header ── -->
             <div class="page-header" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
                 <h2 style="margin:0;">📋 Quản lý Đánh giá</h2>
                 <div style="margin-left:auto;display:flex;gap:8px;flex-wrap:wrap;">
                     <button class="btn-generate" onclick="openGenerateModal()">✨ Tạo dữ liệu mẫu</button>
-                    <button class="btn-danger" onclick="confirmDeleteAllDemo()">🗑️ Xóa tất cả Demo</button>
+                    <button class="btn-warning"  onclick="confirmDeleteAllDemo()">🧹 Xóa tất cả Demo</button>
                 </div>
             </div>
 
-            <!-- Bulk action bar -->
+            <!-- ── Bulk action bar ── -->
             <div class="bulk-bar" id="bulk-bar">
                 <span id="selected-count">Đã chọn 0 bài</span>
-                <button class="btn-danger" onclick="confirmBulkDelete()">🗑️ Xóa đã chọn</button>
-                <button class="btn-cancel" onclick="clearSelection()" style="margin-left:auto;">Bỏ chọn</button>
+                <button class="btn-danger"  onclick="confirmBulkDelete()">🗑️ Xóa đã chọn</button>
+                <button class="btn-cancel" onclick="clearSelection()" style="margin-left:auto;">✕ Bỏ chọn tất cả</button>
             </div>
 
+            <!-- ── Filters ── -->
             <div class="filter-bar">
                 <select id="filter-risk" onchange="applyFilters()">
                     <option value="">Tất cả mức nguy cơ</option>
@@ -123,11 +155,15 @@
                     <option value="0">Chỉ dữ liệu thực</option>
                 </select>
                 <div class="view-toggle">
-                    <button class="active" id="view-list" onclick="setView('list')">📋 Danh sách</button>
-                    <button id="view-group" onclick="setView('group')">📁 Nhóm theo loại</button>
+                    <button class="active" id="view-list"  onclick="setView('list')">📋 Danh sách</button>
+                    <button               id="view-group" onclick="setView('group')">📁 Nhóm loại</button>
                 </div>
             </div>
 
+            <!-- ── Stats bar ── -->
+            <div class="stats-bar" id="stats-bar"></div>
+
+            <!-- ── Table ── -->
             <div id="assessments-container">
                 <div class="table-wrapper">
                     <table><thead><tr><td colspan="9" style="text-align:center;padding:40px;"><div class="loading-spinner"></div></td></tr></thead></table>
@@ -136,55 +172,91 @@
         </main>
     </div>
 
-    <!-- ===== GENERATE MODAL ===== -->
+    <!-- ══════════════════════════════════════════
+         GENERATE MODAL
+    ═══════════════════════════════════════════ -->
     <div class="modal-overlay" id="modal-generate">
         <div class="modal-box">
             <h3>✨ Tạo dữ liệu mẫu đánh giá</h3>
-            <div class="form-group">
-                <label>Tỉnh / Thành phố</label>
-                <select id="gen-province">
-                    <option>Bắc Ninh</option><option>Hà Nội</option><option>Hải Phòng</option>
-                    <option>Hồ Chí Minh</option><option>Đà Nẵng</option><option>Cần Thơ</option>
-                    <option>Quảng Ninh</option><option>Vĩnh Phúc</option><option>Hưng Yên</option>
-                    <option>Hải Dương</option><option>Thái Bình</option><option>Nam Định</option>
-                    <option>Ninh Bình</option><option>Thanh Hóa</option><option>Nghệ An</option>
-                    <option>Hà Tĩnh</option><option>Quảng Bình</option><option>Quảng Trị</option>
-                    <option>Thừa Thiên Huế</option><option>Quảng Nam</option><option>Quảng Ngãi</option>
-                    <option>Bình Định</option><option>Phú Yên</option><option>Khánh Hòa</option>
-                    <option>Ninh Thuận</option><option>Bình Thuận</option><option>Kon Tum</option>
-                    <option>Gia Lai</option><option>Đắk Lắk</option><option>Đắk Nông</option>
-                    <option>Lâm Đồng</option><option>Bình Phước</option><option>Tây Ninh</option>
-                    <option>Bình Dương</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label>Loại hình cơ sở</label>
-                <select id="gen-facility">
-                    <option value="">Ngẫu nhiên (tất cả loại)</option>
-                    <option value="industrial">🏭 Sản xuất công nghiệp</option>
-                    <option value="warehouse">🏪 Kho hàng</option>
-                    <option value="mixed_residence">🏠 Nhà ở hỗn hợp</option>
-                    <option value="hospitality">🍽️ Nhà hàng, khách sạn</option>
-                    <option value="medical_education">🏥 Bệnh viện, trường học</option>
-                    <option value="fuel_gas">⛽ Xăng dầu, khí gas</option>
-                    <option value="transport">🚌 Giao thông</option>
-                    <option value="residential">🏘️ Khu dân cư</option>
-                    <option value="office">🏛️ Văn phòng</option>
-                    <option value="agriculture">🌾 Nông nghiệp</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label>Số lượng bài đánh giá: <span class="count-display" id="gen-count-display">20</span></label>
-                <input type="range" id="gen-count" min="1" max="100" value="20" oninput="document.getElementById('gen-count-display').textContent=this.value">
-            </div>
-            <div class="form-group">
-                <label>Phân bổ mức nguy cơ</label>
-                <div class="radio-group">
-                    <label><input type="radio" name="gen-dist" value="random" checked> 🎲 Ngẫu nhiên (mặc định)</label>
-                    <label><input type="radio" name="gen-dist" value="high_focus"> 🔴 Tập trung nguy cơ cao (60% cao/rất cao)</label>
-                    <label><input type="radio" name="gen-dist" value="balanced"> ⚖️ Phân bổ đều (20% mỗi mức)</label>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Tỉnh / Thành phố</label>
+                    <select id="gen-province">
+                        <option>Bắc Ninh</option><option>Hà Nội</option><option>Hải Phòng</option>
+                        <option>Hồ Chí Minh</option><option>Đà Nẵng</option><option>Cần Thơ</option>
+                        <option>Quảng Ninh</option><option>Vĩnh Phúc</option><option>Hưng Yên</option>
+                        <option>Hải Dương</option><option>Thái Bình</option><option>Nam Định</option>
+                        <option>Ninh Bình</option><option>Thanh Hóa</option><option>Nghệ An</option>
+                        <option>Hà Tĩnh</option><option>Quảng Bình</option><option>Quảng Trị</option>
+                        <option>Thừa Thiên Huế</option><option>Quảng Nam</option><option>Quảng Ngãi</option>
+                        <option>Bình Định</option><option>Phú Yên</option><option>Khánh Hòa</option>
+                        <option>Ninh Thuận</option><option>Bình Thuận</option><option>Kon Tum</option>
+                        <option>Gia Lai</option><option>Đắk Lắk</option><option>Đắk Nông</option>
+                        <option>Lâm Đồng</option><option>Bình Phước</option><option>Tây Ninh</option>
+                        <option>Bình Dương</option><option>Đồng Nai</option><option>Bà Rịa - Vũng Tàu</option>
+                        <option>Long An</option><option>Tiền Giang</option><option>Bến Tre</option>
+                        <option>Trà Vinh</option><option>Vĩnh Long</option><option>Đồng Tháp</option>
+                        <option>An Giang</option><option>Kiên Giang</option><option>Hậu Giang</option>
+                        <option>Sóc Trăng</option><option>Bạc Liêu</option><option>Cà Mau</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Loại hình cơ sở</label>
+                    <select id="gen-facility">
+                        <option value="">🎲 Ngẫu nhiên (tất cả loại)</option>
+                        <option value="industrial">🏭 Sản xuất công nghiệp</option>
+                        <option value="warehouse">🏪 Kho hàng</option>
+                        <option value="mixed_residence">🏠 Nhà ở hỗn hợp</option>
+                        <option value="hospitality">🍽️ Nhà hàng, khách sạn</option>
+                        <option value="medical_education">🏥 Bệnh viện, trường học</option>
+                        <option value="fuel_gas">⛽ Xăng dầu, khí gas</option>
+                        <option value="transport">🚌 Giao thông</option>
+                        <option value="residential">🏘️ Khu dân cư</option>
+                        <option value="office">🏛️ Văn phòng</option>
+                        <option value="agriculture">🌾 Nông nghiệp</option>
+                    </select>
                 </div>
             </div>
+
+            <div class="form-group">
+                <label>Số lượng bài đánh giá: <span class="count-display" id="gen-count-display">20</span></label>
+                <input type="range" id="gen-count" min="1" max="200" value="20"
+                       oninput="document.getElementById('gen-count-display').textContent=this.value">
+                <div style="display:flex;justify-content:space-between;font-size:.75rem;color:var(--text-muted);margin-top:3px;">
+                    <span>1</span><span>50</span><span>100</span><span>150</span><span>200</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Kết quả nguy cơ (chọn một hoặc để ngẫu nhiên)</label>
+                <div class="risk-chips" id="risk-chips">
+                    <button class="risk-chip active" data-val=""       onclick="selectRiskChip(this)">🎲 Ngẫu nhiên</button>
+                    <button class="risk-chip"        data-val="safe"   onclick="selectRiskChip(this)">🟢 An toàn</button>
+                    <button class="risk-chip"        data-val="low"    onclick="selectRiskChip(this)">🟡 Thấp</button>
+                    <button class="risk-chip"        data-val="medium" onclick="selectRiskChip(this)">🟠 Trung bình</button>
+                    <button class="risk-chip"        data-val="high"   onclick="selectRiskChip(this)">🔴 Cao</button>
+                    <button class="risk-chip"        data-val="critical" onclick="selectRiskChip(this)">⛔ Rất cao</button>
+                </div>
+            </div>
+
+            <div class="form-group" id="dist-group">
+                <label>Phân bổ ngẫu nhiên</label>
+                <div style="display:flex;flex-direction:column;gap:8px;">
+                    <label style="display:flex;align-items:center;gap:10px;font-size:.87rem;color:var(--text-primary);cursor:pointer;">
+                        <input type="radio" name="gen-dist" value="random" checked> 🎲 Ngẫu nhiên tự nhiên
+                    </label>
+                    <label style="display:flex;align-items:center;gap:10px;font-size:.87rem;color:var(--text-primary);cursor:pointer;">
+                        <input type="radio" name="gen-dist" value="high_focus"> 🔴 Tập trung nguy cơ cao (60%)
+                    </label>
+                    <label style="display:flex;align-items:center;gap:10px;font-size:.87rem;color:var(--text-primary);cursor:pointer;">
+                        <input type="radio" name="gen-dist" value="balanced"> ⚖️ Phân bổ đều (20% mỗi mức)
+                    </label>
+                </div>
+            </div>
+
+            <div id="gen-progress">⏳ Đang tạo dữ liệu, vui lòng chờ...</div>
+
             <div class="modal-footer">
                 <button class="btn-cancel" onclick="closeGenerateModal()">Hủy</button>
                 <button class="btn-generate" id="btn-gen-submit" onclick="submitGenerate()">✨ Tạo dữ liệu</button>
@@ -192,14 +264,16 @@
         </div>
     </div>
 
-    <!-- ===== CONFIRM DELETE MODAL ===== -->
+    <!-- ══════════════════════════════════════════
+         CONFIRM MODAL
+    ═══════════════════════════════════════════ -->
     <div class="modal-overlay" id="modal-confirm">
         <div class="confirm-modal">
-            <h3 id="confirm-title">⚠️ Xác nhận xóa</h3>
-            <p id="confirm-msg">Bạn có chắc chắn muốn xóa?</p>
-            <div class="modal-footer">
+            <h3 id="confirm-title">⚠️ Xác nhận</h3>
+            <p  id="confirm-msg">Bạn có chắc chắn?</p>
+            <div class="modal-footer" style="margin-top:0;">
                 <button class="btn-cancel" onclick="closeConfirmModal()">Hủy</button>
-                <button class="btn-danger" id="btn-confirm-ok" onclick="executeConfirm()">🗑️ Xóa</button>
+                <button class="btn-danger" id="btn-confirm-ok" onclick="executeConfirm()">Xác nhận</button>
             </div>
         </div>
     </div>
@@ -207,27 +281,37 @@
     <script src="/js/api.js"></script>
     <script src="/js/admin.js"></script>
     <script>
-        let currentView = 'list';
+        // ══ State ══
+        let currentView   = 'list';
         let allAssessments = [];
-        let selectedIds = new Set();
+        let selectedIds   = new Set();
         let confirmCallback = null;
 
         const riskLabels = { safe:'An toàn', low:'Thấp', medium:'Trung bình', high:'Cao', critical:'Rất cao' };
+        const riskColors = { safe:'#27ae60', low:'#f1c40f', medium:'#e67e22', high:'#c0392b', critical:'#6c1e25' };
         const facilityLabels = {
-            industrial:'🏭 Sản xuất CN', warehouse:'🏪 Kho hàng', mixed_residence:'🏠 Nhà ở HH',
-            hospitality:'🍽️ Nhà hàng/KS', medical_education:'🏥 Y tế/Giáo dục',
-            fuel_gas:'⛽ Xăng dầu/Gas', transport:'🚌 Giao thông', residential:'🏘️ Khu dân cư',
-            construction:'🏗️ Xây dựng', office:'🏛️ Văn phòng', laboratory:'🔬 Phòng thí nghiệm', agriculture:'🌾 Nông nghiệp',
+            industrial:'🏭 SX CN', warehouse:'🏪 Kho hàng', mixed_residence:'🏠 Nhà ở HH',
+            hospitality:'🍽️ Nhà hàng/KS', medical_education:'🏥 Y tế/GD',
+            fuel_gas:'⛽ Xăng/Gas', transport:'🚌 Giao thông', residential:'🏘️ Khu DK',
+            construction:'🏗️ Xây dựng', office:'🏛️ Văn phòng', laboratory:'🔬 PTN', agriculture:'🌾 Nông nghiệp',
         };
 
-        // ===== SELECTION =====
+        // ══ Risk chip selection ══
+        function selectRiskChip(el) {
+            document.querySelectorAll('.risk-chip').forEach(c => c.classList.remove('active'));
+            el.classList.add('active');
+            // Show/hide distribution group based on whether "random" is selected
+            const forced = el.dataset.val;
+            document.getElementById('dist-group').style.display = forced ? 'none' : 'block';
+        }
+
+        // ══ Selection ══
         function toggleSelect(id, el) {
             if (el.checked) selectedIds.add(id); else selectedIds.delete(id);
             updateBulkBar();
         }
         function toggleSelectAll(el) {
-            const checkboxes = document.querySelectorAll('.row-chk');
-            checkboxes.forEach(c => {
+            document.querySelectorAll('.row-chk').forEach(c => {
                 c.checked = el.checked;
                 if (el.checked) selectedIds.add(c.dataset.id); else selectedIds.delete(c.dataset.id);
             });
@@ -249,109 +333,141 @@
             updateBulkBar();
         }
 
-        // ===== GENERATE MODAL =====
-        function openGenerateModal() { document.getElementById('modal-generate').classList.add('open'); }
+        // ══ Generate Modal ══
+        function openGenerateModal()  { document.getElementById('modal-generate').classList.add('open'); }
         function closeGenerateModal() { document.getElementById('modal-generate').classList.remove('open'); }
 
         async function submitGenerate() {
-            const btn = document.getElementById('btn-gen-submit');
+            const btn      = document.getElementById('btn-gen-submit');
+            const progress = document.getElementById('gen-progress');
+            const activeChip  = document.querySelector('.risk-chip.active');
+            const forcedRisk  = activeChip ? activeChip.dataset.val : '';
+            const count = parseInt(document.getElementById('gen-count').value);
+
             btn.disabled = true; btn.textContent = '⏳ Đang tạo...';
+            progress.style.display = 'block';
+            progress.textContent   = `⏳ Đang tạo ${count} bài đánh giá, vui lòng chờ...`;
+
             try {
-                const res = await api.post('/admin/assessments/generate', {
-                    count: parseInt(document.getElementById('gen-count').value),
-                    province: document.getElementById('gen-province').value,
+                const payload = {
+                    count,
+                    province:      document.getElementById('gen-province').value,
                     facility_type: document.getElementById('gen-facility').value || null,
-                    risk_distribution: document.querySelector('input[name="gen-dist"]:checked').value,
-                });
+                };
+                if (forcedRisk) {
+                    payload.forced_risk_level = forcedRisk;
+                    payload.risk_distribution = 'forced';
+                } else {
+                    payload.risk_distribution = document.querySelector('input[name="gen-dist"]:checked').value;
+                }
+
+                const res = await api.post('/admin/assessments/generate', payload);
                 closeGenerateModal();
                 showToast(`✅ ${res.message}`, 'success');
                 await loadAllAssessments();
             } catch(e) {
-                showToast(e.message, 'error');
+                showToast(e.message || 'Lỗi tạo dữ liệu mẫu', 'error');
             } finally {
                 btn.disabled = false; btn.textContent = '✨ Tạo dữ liệu';
+                progress.style.display = 'none';
             }
         }
 
-        // ===== CONFIRM MODAL =====
-        function openConfirmModal(title, msg, cb) {
+        // ══ Confirm Modal ══
+        function openConfirmModal(title, msg, cb, btnText = '🗑️ Xóa', btnClass = 'btn-danger') {
             document.getElementById('confirm-title').textContent = title;
-            document.getElementById('confirm-msg').textContent = msg;
-            confirmCallback = cb;
+            document.getElementById('confirm-msg').textContent   = msg;
+            const okBtn = document.getElementById('btn-confirm-ok');
+            okBtn.textContent  = btnText;
+            okBtn.className    = btnClass;
+            confirmCallback    = cb;
             document.getElementById('modal-confirm').classList.add('open');
         }
         function closeConfirmModal() { document.getElementById('modal-confirm').classList.remove('open'); confirmCallback = null; }
-        function executeConfirm() { closeConfirmModal(); if (confirmCallback) confirmCallback(); }
+        function executeConfirm()   { closeConfirmModal(); if (confirmCallback) confirmCallback(); }
 
-        // ===== DELETE ACTIONS =====
+        // ══ Delete Actions ══
         function confirmDeleteOne(id, name) {
-            openConfirmModal('⚠️ Xác nhận xóa đánh giá', `Xóa bài đánh giá "${name}"? Hành động này không thể hoàn tác.`, () => deleteOne(id));
+            openConfirmModal('⚠️ Xác nhận xóa', `Xóa bài đánh giá "${name}"? Thao tác này không thể hoàn tác.`, () => deleteOne(id));
         }
         async function deleteOne(id) {
             try {
                 const res = await api.delete(`/admin/assessments/${id}`);
                 showToast(`✅ ${res.message}`, 'success');
-                selectedIds.delete(id);
-                updateBulkBar();
+                selectedIds.delete(id); updateBulkBar();
                 await loadAllAssessments();
             } catch(e) { showToast(e.message, 'error'); }
         }
 
         function confirmBulkDelete() {
             if (!selectedIds.size) return;
-            openConfirmModal('⚠️ Xác nhận xóa hàng loạt', `Xóa ${selectedIds.size} bài đánh giá đã chọn? Hành động này không thể hoàn tác.`, bulkDelete);
+            const n = selectedIds.size;
+            openConfirmModal('⚠️ Xóa hàng loạt', `Xóa ${n} bài đánh giá đã chọn (bao gồm cả dữ liệu thật)? Không thể hoàn tác!`, bulkDelete);
         }
         async function bulkDelete() {
             try {
                 const res = await api.delete('/admin/assessments/bulk', { ids: [...selectedIds] });
                 showToast(`✅ ${res.message}`, 'success');
-                selectedIds.clear();
-                updateBulkBar();
+                selectedIds.clear(); updateBulkBar();
                 await loadAllAssessments();
             } catch(e) { showToast(e.message, 'error'); }
         }
 
         function confirmDeleteAllDemo() {
-            openConfirmModal('🗑️ Xóa tất cả dữ liệu Demo', 'Xóa toàn bộ bài đánh giá được đánh dấu Demo? Dữ liệu thực sẽ không bị ảnh hưởng.', deleteAllDemo);
+            openConfirmModal('🧹 Xóa tất cả Demo', 'Xóa toàn bộ bài đánh giá được đánh dấu 📊 Demo? Dữ liệu thật sẽ không bị ảnh hưởng.', deleteAllDemo, '🧹 Xóa Demo', 'btn-warning');
         }
         async function deleteAllDemo() {
             try {
                 const res = await api.delete('/admin/assessments/demo');
                 showToast(`✅ ${res.message}`, 'success');
-                selectedIds.clear();
-                updateBulkBar();
+                selectedIds.clear(); updateBulkBar();
                 await loadAllAssessments();
             } catch(e) { showToast(e.message, 'error'); }
         }
 
-        // ===== LOAD & RENDER =====
-        function setView(view) {
-            currentView = view;
-            document.getElementById('view-list').classList.toggle('active', view === 'list');
-            document.getElementById('view-group').classList.toggle('active', view === 'group');
+        // ══ Load & Render ══
+        function setView(v) {
+            currentView = v;
+            document.getElementById('view-list') .classList.toggle('active', v === 'list');
+            document.getElementById('view-group').classList.toggle('active', v === 'group');
             renderAssessments();
         }
 
         async function applyFilters() {
-            const risk = document.getElementById('filter-risk').value;
+            const risk     = document.getElementById('filter-risk').value;
             const facility = document.getElementById('filter-facility').value;
-            const demo = document.getElementById('filter-demo').value;
+            const demo     = document.getElementById('filter-demo').value;
             await loadAllAssessments(risk, facility, demo);
         }
 
         async function loadAllAssessments(riskLevel='', facilityType='', includeDemo='1') {
             try {
-                let params = new URLSearchParams();
-                if (riskLevel) params.set('risk_level', riskLevel);
+                const params = new URLSearchParams();
+                if (riskLevel)    params.set('risk_level',    riskLevel);
                 if (facilityType) params.set('facility_type', facilityType);
                 params.set('include_demo', includeDemo === '1' ? 'true' : 'false');
                 allAssessments = await api.get('/admin/assessments?' + params.toString());
-                selectedIds.clear();
-                updateBulkBar();
+                selectedIds.clear(); updateBulkBar();
                 renderAssessments();
+                updateStatsBar();
             } catch(e) {
                 showToast(e.message, 'error');
             }
+        }
+
+        function updateStatsBar() {
+            const bar  = document.getElementById('stats-bar');
+            const total = allAssessments.length;
+            const demo  = allAssessments.filter(a => a.is_demo).length;
+            const real  = total - demo;
+            const byRisk = {};
+            allAssessments.forEach(a => { byRisk[a.risk_level] = (byRisk[a.risk_level]||0)+1; });
+            bar.innerHTML = `
+                <span>Tổng: <strong>${total}</strong></span> ·
+                <span>Dữ liệu thật: <strong>${real}</strong></span> ·
+                <span>Demo: <strong style="color:#b07de0">${demo}</strong></span>
+                ${Object.entries(byRisk).map(([k,v])=>`<span style="color:${riskColors[k]||'#aaa'}">● ${riskLabels[k]||k}: ${v}</span>`).join(' ')}
+            `;
         }
 
         function renderAssessments() {
@@ -359,46 +475,47 @@
         }
 
         function rowHtml(a) {
-            const demoTag = a.is_demo ? '<span class="badge-demo">📊 Demo</span>' : '';
+            const demoTag   = a.is_demo ? '<span class="badge-demo">📊 Demo</span>' : '';
+            const checked   = selectedIds.has(a.id) ? 'checked' : '';
+            const riskStyle = `color:${riskColors[a.risk_level]||'#aaa'};font-weight:600;`;
             return `<tr>
-                <td class="chk-col"><input type="checkbox" class="row-chk" data-id="${a.id}" onchange="toggleSelect('${a.id}',this)"></td>
-                <td><strong>${a.facility_name}</strong>${demoTag}<br><small style="color:var(--text-muted)">${a.facility_address || ''}</small></td>
-                <td>${facilityLabels[a.facility_type] || a.facility_type || 'N/A'}</td>
-                <td>${a.user_name || 'N/A'}</td>
-                <td>${a.organization || 'N/A'}</td>
+                <td class="chk-col"><input type="checkbox" class="row-chk" data-id="${a.id}" ${checked} onchange="toggleSelect('${a.id}',this)"></td>
+                <td><strong>${a.facility_name}</strong>${demoTag}<br><small style="color:var(--text-muted)">${a.facility_address||''}</small></td>
+                <td>${facilityLabels[a.facility_type]||a.facility_type||'N/A'}</td>
+                <td>${a.user_name||'N/A'}</td>
+                <td>${a.organization||'N/A'}</td>
                 <td>${a.total_score}/${a.max_possible_score} (${a.risk_percentage}%)</td>
-                <td><span class="status-badge ${a.risk_level}">${riskLabels[a.risk_level] || a.risk_level}</span></td>
+                <td><span class="status-badge ${a.risk_level}" style="${riskStyle}">${riskLabels[a.risk_level]||a.risk_level}</span></td>
                 <td>${a.completed_at ? new Date(a.completed_at).toLocaleDateString('vi-VN') : 'N/A'}</td>
-                <td style="white-space:nowrap; display:flex; gap:4px;">
+                <td style="white-space:nowrap;display:flex;gap:4px;">
                     <a href="/result.html?id=${a.id}" class="btn btn-sm btn-secondary">👁️ Xem</a>
-                    <button class="btn-danger" style="padding:4px 10px;font-size:.78rem;" onclick="confirmDeleteOne('${a.id}','${a.facility_name.replace(/'/g,"\\'")}')">🗑️</button>
+                    <button class="btn-danger" style="padding:4px 10px;font-size:.77rem;" onclick="confirmDeleteOne('${a.id}','${a.facility_name.replace(/'/g,"\\'")}')">🗑️</button>
                 </td>
             </tr>`;
         }
 
         function renderList() {
-            const container = document.getElementById('assessments-container');
             const rows = allAssessments.map(rowHtml).join('');
-            container.innerHTML = `<div class="table-wrapper"><table>
+            document.getElementById('assessments-container').innerHTML = `
+            <div class="table-wrapper"><table>
                 <thead><tr>
                     <th class="chk-col"><input type="checkbox" id="chk-all" onchange="toggleSelectAll(this)" title="Chọn tất cả"></th>
                     <th>Cơ sở</th><th>Loại hình</th><th>Người đánh giá</th><th>Tổ chức</th>
                     <th>Điểm</th><th>Mức nguy cơ</th><th>Ngày</th><th>Thao tác</th>
                 </tr></thead>
-                <tbody>${rows || '<tr><td colspan="9" style="text-align:center;padding:40px;color:var(--text-muted)">Chưa có đánh giá nào</td></tr>'}</tbody>
+                <tbody>${rows||'<tr><td colspan="9" style="text-align:center;padding:40px;color:var(--text-muted)">Chưa có đánh giá nào</td></tr>'}</tbody>
             </table></div>`;
         }
 
         function renderGrouped() {
-            const container = document.getElementById('assessments-container');
             const groups = {};
             allAssessments.forEach(a => {
-                const key = a.facility_type || 'unknown';
-                if (!groups[key]) groups[key] = [];
-                groups[key].push(a);
+                const k = a.facility_type || 'unknown';
+                if (!groups[k]) groups[k] = [];
+                groups[k].push(a);
             });
             if (!Object.keys(groups).length) {
-                container.innerHTML = '<div style="text-align:center;padding:40px;color:var(--text-muted)">Chưa có đánh giá nào</div>';
+                document.getElementById('assessments-container').innerHTML = '<div style="text-align:center;padding:40px;color:var(--text-muted)">Chưa có đánh giá nào</div>';
                 return;
             }
             let html = '';
@@ -406,13 +523,13 @@
                 const rows = items.map(a => `<tr>
                     <td class="chk-col"><input type="checkbox" class="row-chk" data-id="${a.id}" onchange="toggleSelect('${a.id}',this)" ${selectedIds.has(a.id)?'checked':''}></td>
                     <td><strong>${a.facility_name}</strong>${a.is_demo?'<span class="badge-demo">📊 Demo</span>':''}</td>
-                    <td>${a.user_name || 'N/A'}</td>
+                    <td>${a.user_name||'N/A'}</td>
                     <td>${a.total_score}/${a.max_possible_score} (${a.risk_percentage}%)</td>
-                    <td><span class="status-badge ${a.risk_level}">${riskLabels[a.risk_level]||a.risk_level}</span></td>
+                    <td><span class="status-badge ${a.risk_level}" style="color:${riskColors[a.risk_level]||'#aaa'};font-weight:600;">${riskLabels[a.risk_level]||a.risk_level}</span></td>
                     <td>${a.completed_at ? new Date(a.completed_at).toLocaleDateString('vi-VN') : 'N/A'}</td>
                     <td style="white-space:nowrap;display:flex;gap:4px;">
                         <a href="/result.html?id=${a.id}" class="btn btn-sm btn-secondary">👁️</a>
-                        <button class="btn-danger" style="padding:4px 10px;font-size:.78rem;" onclick="confirmDeleteOne('${a.id}','${a.facility_name.replace(/'/g,"\\'")}')">🗑️</button>
+                        <button class="btn-danger" style="padding:4px 10px;font-size:.77rem;" onclick="confirmDeleteOne('${a.id}','${a.facility_name.replace(/'/g,"\\'")}')">🗑️</button>
                     </td>
                 </tr>`).join('');
                 html += `<div class="facility-group">
@@ -423,7 +540,7 @@
                     </table></div>
                 </div>`;
             }
-            container.innerHTML = html;
+            document.getElementById('assessments-container').innerHTML = html;
         }
 
         onReady(() => {

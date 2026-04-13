@@ -497,9 +497,10 @@ class BulkDeleteRequest(BaseModel):
 
 class GenerateDemoRequest(BaseModel):
     count: int = 10
-    risk_distribution: str = "random"  # random | high_focus | balanced
+    risk_distribution: str = "random"  # random | high_focus | balanced | forced
     province: str = "Bắc Ninh"
     facility_type: Optional[str] = None  # null = random
+    forced_risk_level: Optional[str] = None  # safe | low | medium | high | critical (overrides distribution)
 
 
 @router.get("/assessments")
@@ -659,7 +660,13 @@ def generate_demo_assessments(
     created = []
     for i in range(count):
         ftype = data.facility_type if data.facility_type else random.choice(FACILITY_TYPES)
-        risk_level = random.choices(RISK_LEVELS, weights=weights)[0]
+
+        # forced_risk_level overrides distribution
+        if data.forced_risk_level and data.forced_risk_level in risk_map:
+            risk_level = data.forced_risk_level
+        else:
+            risk_level = random.choices(RISK_LEVELS, weights=weights)[0]
+
         rmin, rmax = risk_map[risk_level]
         risk_pct = round(random.uniform(rmin, rmax), 1)
 
