@@ -299,14 +299,6 @@ def ask_ai_chi(question: str, history_text: str = "", context: str = "") -> dict
     Gọi Gemini REST API trực tiếp (httpx) — KHÔNG dùng LangChain ChatGoogleGenerativeAI
     để tránh lỗi model-override PERMISSION_DENIED với gemini-2.5-flash.
     """
-    if not GEMINI_API_KEY:
-        return {
-            "reply": "Xin lỗi, hệ thống AI Chi chưa được cấu hình GEMINI_API_KEY.",
-            "source_type": "error",
-            "suggestions": [],
-            "references": [],
-        }
-
     try:
         source_type = "general"
 
@@ -316,6 +308,21 @@ def ask_ai_chi(question: str, history_text: str = "", context: str = "") -> dict
             notebook_context = search_notebooklm_api(question)
             if notebook_context:
                 source_type = "notebooklm"
+
+        if not GEMINI_API_KEY:
+            if notebook_context:
+                 return {
+                     "reply": f"{notebook_context}\n\n*(Hệ thống đang hiển thị câu trả lời nguyên gốc từ NotebookLM do thiếu API Key Gemini)*",
+                     "source_type": "notebooklm",
+                     "suggestions": [],
+                     "references": []
+                 }
+            return {
+                "reply": "Xin lỗi, hệ thống AI Chi chưa được cấu hình GEMINI_API_KEY và không lấy được thông tin từ NotebookLM.",
+                "source_type": "error",
+                "suggestions": [],
+                "references": [],
+            }
 
         # ── Bước 2: ChromaDB ────────────────────────────────────────
         chroma_context = ""
@@ -410,6 +417,16 @@ TRẢ VỀ JSON THUẦN (không dùng ```json):
     except Exception as e:
         err_msg = str(e)
         _safe_print(f"[ask_ai_chi] ERROR: {err_msg}")
+        
+        # Nếu lỗi Gemini (hết hạn, hết tiền) mà có dữ liệu từ NotebookLM thì trả về raw luôn
+        if 'notebook_context' in locals() and notebook_context:
+             return {
+                 "reply": f"{notebook_context}\n\n*(Lưu ý: API Gemini bị lỗi nên đây là câu trả lời lấy trực tiếp từ NotebookLM)*",
+                 "source_type": "notebooklm_direct",
+                 "suggestions": [],
+                 "references": []
+             }
+             
         return {
             "reply": (
                 f"Hệ thống đang tạm thời gián đoạn (lỗi: {err_msg[:120]}). "
