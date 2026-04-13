@@ -202,42 +202,6 @@ def add_single_user(
     return {"status": "ok", "user_id": new_user.id, "email": data.email}
 
 
-@router.get("/assessments")
-def list_all_assessments(
-    risk_level: Optional[str] = None,
-    facility_type: Optional[str] = None,
-    current_user: User = Depends(get_current_user),
-    db: Session = Depends(get_db)
-):
-    require_role("admin", "superadmin")(current_user)
-    query = db.query(Assessment).filter(Assessment.status == "completed")
-    if risk_level:
-        query = query.filter(Assessment.risk_level == risk_level)
-    if facility_type:
-        query = query.filter(Assessment.facility_type == facility_type)
-    
-    assessments = query.order_by(Assessment.created_at.desc()).all()
-    results = []
-    for a in assessments:
-        user = db.get(User, a.user_id)
-        data = {
-            "id": a.id,
-            "facility_name": a.facility_name,
-            "facility_type": a.facility_type,
-            "facility_address": a.facility_address or "",
-            "total_score": a.total_score,
-            "max_possible_score": a.max_possible_score,
-            "risk_level": a.risk_level,
-            "risk_percentage": a.risk_percentage,
-            "status": a.status,
-            "completed_at": a.completed_at.isoformat() if a.completed_at else None,
-            "user_name": user.full_name if user else "N/A",
-            "user_email": user.email if user else "N/A",
-            "organization": user.organization if user else "N/A",
-        }
-        results.append(data)
-    return results
-
 
 @router.get("/audit-logs", response_model=List[AuditLogResponse])
 def get_audit_logs(
@@ -533,9 +497,11 @@ def list_admin_assessments(
             "max_possible_score": a.max_possible_score,
             "risk_level": a.risk_level,
             "risk_percentage": a.risk_percentage,
+            "status": a.status,
             "is_demo": getattr(a, "is_demo", False),
             "completed_at": a.completed_at.isoformat() if a.completed_at else None,
             "user_name": user.full_name if user else "N/A",
+            "user_email": user.email if user else "N/A",
             "organization": user.organization if user else "N/A",
             "province": user.province if user else None,
             "latitude": a.latitude,
