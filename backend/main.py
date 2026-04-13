@@ -195,12 +195,23 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
-# CORS
+# CORS - Chỉ cho phép các domain được định sẵn để đảm bảo bảo mật
+ALLOWED_ORIGINS = [
+    "http://localhost",
+    "http://localhost:8000",
+    "http://localhost:5500",
+    "http://127.0.0.1",
+    "http://127.0.0.1:8000",
+    "http://127.0.0.1:5500",
+    "https://haskyhub-ctrl.github.io", # Thay thế bằng domain thực tế nếu deploy
+    "https://fras.vn"
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=ALLOWED_ORIGINS,
     allow_credentials=True,
-    allow_methods=["*"],
+    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allow_headers=["*"],
 )
 
