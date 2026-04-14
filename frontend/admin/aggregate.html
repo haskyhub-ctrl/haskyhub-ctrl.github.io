@@ -12,7 +12,23 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <style media="print">
+        body { background: #fff !important; color: #000 !important; }
+        .navbar, .admin-sidebar, .aggregate-filters, #btn-export-pdf,
+        .nav-mobile-toggle, .empty-state, .nav-links { display: none !important; }
+        .admin-content { margin: 0 !important; padding: 10px !important; width: 100% !important; }
+        .admin-layout { display: block !important; }
+        .analysis-section { page-break-inside: avoid; border: 1px solid #ccc !important; background: #f9f9f9 !important; margin-bottom: 16px !important; }
+        .stat-card { border: 1px solid #ccc !important; background: #f0f0f0 !important; color: #000 !important; }
+        .stat-value, .stat-label, h2, h3, h4, p, li, td, th { color: #000 !important; }
+        #pdf-print-header { display: block !important; }
+        canvas { max-width: 100% !important; }
+        .rec-card { border: 1px solid #ccc !important; background: #f9f9f9 !important; page-break-inside: avoid; }
+        .facility-table { border-collapse: collapse; width: 100%; }
+        .facility-table td, .facility-table th { border: 1px solid #ccc; padding: 6px; color: #000 !important; font-size: 11px; }
+        .risk-badge { border: 1px solid #999; padding: 2px 6px; font-size: 10px; }
+        .chart-filter-bar { display: none !important; }
+    </style>
     <style>
         .aggregate-filters {
             display: flex;
@@ -373,12 +389,14 @@
                 </div>
             </div>
 
+            <!-- PDF Print Header (hidden on screen, visible when printing) -->
+            <div id="pdf-print-header" style="display:none; text-align:center; padding:16px 0 12px; border-bottom: 2px solid #334155; margin-bottom:20px;">
+                <h2 style="font-size:1.3rem; margin-bottom:6px;">BÁO CÁO PHÂN TÍCH TỔNG HỢP NGUY CƠ CHÁY NỔ</h2>
+                <p id="pdf-export-time" style="font-size:0.85rem;"></p>
+            </div>
+
             <!-- PDF Export Wrapper -->
             <div id="export-pdf-wrapper" style="background: #0f172a; padding: 20px; border-radius: 8px;">
-                <div id="pdf-header" style="display:none; text-align:center; margin-bottom: 30px;">
-                    <h2 style="color: #fff; margin-bottom: 10px;">BÁO CÁO PHÂN TÍCH TỔNG HỢP NGUY CƠ CHÁY NỔ</h2>
-                    <p style="color: #cbd5e1;" id="pdf-export-time"></p>
-                </div>
 
                 <!-- AI Regional Summary Result -->
                 <div id="ai-regional-result"></div>
@@ -555,13 +573,21 @@
             // High Risk Types & Causes Analysis
             html += `<div class="analysis-section fade-in">
                 <h3>⚠️ Bảng Nhóm Nguy Cơ Cao Nhất</h3>
+                <div class="chart-filter-bar" style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-bottom:16px; padding:12px; background:rgba(255,255,255,0.04); border:1px solid var(--border-color); border-radius:8px;">
+                    <span style="font-size:0.85rem; color:var(--text-secondary); white-space:nowrap;">Lọc theo mức nguy cơ:</span>
+                    <label style="display:flex;align-items:center;gap:6px;cursor:pointer;font-size:0.85rem;"><input type="checkbox" class="chart-risk-filter" value="critical" checked style="accent-color:#ef4444;"> <span style="color:#ef4444;">&#9940; Rất cao</span></label>
+                    <label style="display:flex;align-items:center;gap:6px;cursor:pointer;font-size:0.85rem;"><input type="checkbox" class="chart-risk-filter" value="high" checked style="accent-color:#f97316;"> <span style="color:#f97316;">&#128308; Cao</span></label>
+                    <label style="display:flex;align-items:center;gap:6px;cursor:pointer;font-size:0.85rem;"><input type="checkbox" class="chart-risk-filter" value="medium" style="accent-color:#eab308;"> <span style="color:#eab308;">&#128993; Trung bình</span></label>
+                    <label style="display:flex;align-items:center;gap:6px;cursor:pointer;font-size:0.85rem;"><input type="checkbox" class="chart-risk-filter" value="low" style="accent-color:#84cc16;"> <span style="color:#84cc16;">&#128994; Thấp</span></label>
+                    <label style="display:flex;align-items:center;gap:6px;cursor:pointer;font-size:0.85rem;"><input type="checkbox" class="chart-risk-filter" value="safe" style="accent-color:#22c55e;"> <span style="color:#22c55e;">&#9989; An toàn</span></label>
+                </div>
                 <div style="display:flex; flex-wrap:wrap; gap:20px; align-items:stretch;">
                     <div style="flex:1; min-width:300px; display:flex; flex-direction:column; background:var(--bg-secondary); padding:16px; border-radius:12px; border:1px solid var(--border-color);">
-                        <h4 style="text-align:center; color:var(--text-secondary); margin-bottom:12px; font-size: 0.95rem;">Loại hình nhiều cơ sở nguy cơ cao nhất</h4>
+                        <h4 style="text-align:center; color:var(--text-secondary); margin-bottom:12px; font-size: 0.95rem;">Phân loại nguy cơ cháy cao theo loại hình</h4>
                         <div class="chart-container" style="flex:1;"><canvas id="high-risk-facility-chart"></canvas></div>
                     </div>
                     <div style="flex:1; min-width:300px; display:flex; flex-direction:column; background:var(--bg-secondary); padding:16px; border-radius:12px; border:1px solid var(--border-color);">
-                        <h4 style="text-align:center; color:var(--text-secondary); margin-bottom:12px; font-size: 0.95rem;">Nhóm nguyên nhân có tỷ lệ cao nhất</h4>
+                        <h4 style="text-align:center; color:var(--text-secondary); margin-bottom:12px; font-size: 0.95rem;">Phân loại nguy cơ cháy theo nguyên nhân</h4>
                         <div class="chart-container" style="flex:1;"><canvas id="high-risk-category-chart"></canvas></div>
                     </div>
                 </div>
@@ -610,9 +636,23 @@
             // Render charts after DOM update
             setTimeout(() => {
                 renderRiskDistChart(data.risk_distribution);
-                renderHighRiskCharts(data);
+                const selectedLevels = getSelectedRiskLevels();
+                renderHighRiskCharts(data, selectedLevels);
                 renderRecommendations(data.recommendations);
                 if (data.ai_analysis) renderAIAnalysis(data.ai_analysis);
+
+                // Wire up filter checkboxes
+                document.querySelectorAll('.chart-risk-filter').forEach(cb => {
+                    cb.addEventListener('change', () => {
+                        const lvls = getSelectedRiskLevels();
+                        // Destroy old charts before re-render
+                        ['high-risk-facility-chart', 'high-risk-category-chart'].forEach(id => {
+                            const existing = Chart.getChart(id);
+                            if (existing) existing.destroy();
+                        });
+                        renderHighRiskCharts(data, lvls);
+                    });
+                });
             }, 100);
         }
 
@@ -633,28 +673,49 @@
             });
         }
 
-        function renderHighRiskCharts(data) {
+        function getSelectedRiskLevels() {
+            const checked = Array.from(document.querySelectorAll('.chart-risk-filter:checked')).map(cb => cb.value);
+            return checked.length > 0 ? checked : ['high', 'critical'];
+        }
+
+        function renderHighRiskCharts(data, selectedLevels) {
+            if (!selectedLevels) selectedLevels = ['high', 'critical'];
             const facCanvas = document.getElementById('high-risk-facility-chart');
             const catCanvas = document.getElementById('high-risk-category-chart');
-            
+
+            // Colors: red for critical/high, orange for medium, yellow for low, green for safe
+            const levelColor = { critical: '#ef4444', high: '#f97316', medium: '#eab308', low: '#84cc16', safe: '#22c55e' };
+            const barColor = selectedLevels.includes('critical') ? '#ef4444' :
+                             selectedLevels.includes('high')     ? '#f97316' :
+                             selectedLevels.includes('medium')   ? '#eab308' : '#22c55e';
+
             if (facCanvas && data.facility_distribution) {
+                // Count facilities matching any selected level
                 const facData = Object.entries(data.facility_distribution)
                     .map(([type, stats]) => ({
                         name: facilityTypeLabels[type] || type,
-                        count: stats.high_risk_count || 0
+                        // sum counts for each selected risk level from risk_levels breakdown if available, else fallback
+                        count: selectedLevels.reduce((sum, lvl) => {
+                            if (lvl === 'high' || lvl === 'critical') return sum + (stats.high_risk_count || 0);
+                            // For medium/low/safe we don't have breakdown; compute from total - high_risk_count
+                            // Approximate: total - high_risk_count split equally among remaining
+                            const nonHigh = (stats.count || 0) - (stats.high_risk_count || 0);
+                            const nonHighLevels = selectedLevels.filter(l => l !== 'high' && l !== 'critical');
+                            return sum + (nonHighLevels.length > 0 ? Math.round(nonHigh / Math.max(nonHighLevels.length, 1)) : 0);
+                        }, 0),
+                        rawCount: stats.count || 0
                     }))
                     .filter(x => x.count > 0)
-                    .sort((a,b) => b.count - a.count)
-                    .slice(0, 5);
-                
+                    .sort((a, b) => b.count - a.count);
+
                 new Chart(facCanvas, {
                     type: 'bar',
                     data: {
-                        labels: facData.map(d => d.name.length > 20 ? d.name.substring(0,20)+'...' : d.name),
+                        labels: facData.map(d => d.name.length > 22 ? d.name.substring(0, 22) + '...' : d.name),
                         datasets: [{
-                            label: 'Cơ sở',
+                            label: 'Số cơ sở',
                             data: facData.map(d => d.count),
-                            backgroundColor: '#ef4444',
+                            backgroundColor: barColor,
                             borderRadius: 4
                         }]
                     },
@@ -664,30 +725,38 @@
                         plugins: { legend: { display: false } },
                         scales: {
                             x: { beginAtZero: true, ticks: { precision: 0, color: '#94a3b8' }, grid: { color: 'rgba(255,255,255,0.1)' } },
-                            y: { ticks: { color: '#94a3b8', font: {size: 11} }, grid: { display: false } }
+                            y: { ticks: { color: '#94a3b8', font: { size: 11 } }, grid: { display: false } }
                         }
                     }
                 });
             }
 
             if (catCanvas && data.category_analysis) {
+                const isHighSelected = selectedLevels.some(l => l === 'high' || l === 'critical');
                 const catData = data.category_analysis
                     .map(c => ({
                         name: c.name,
-                        rate: c.high_risk_rate || 0
+                        rate: isHighSelected
+                            ? (c.high_risk_rate || 0)
+                            : (() => {
+                                // For medium/low/safe: compute from risk_levels breakdown
+                                const rl = c.risk_levels || {};
+                                const total = Object.values(rl).reduce((a, b) => a + b, 0);
+                                const selectedCount = selectedLevels.reduce((sum, lvl) => sum + (rl[lvl] || 0), 0);
+                                return total > 0 ? Math.round(selectedCount / total * 100 * 10) / 10 : 0;
+                            })()
                     }))
                     .filter(x => x.rate > 0)
-                    .sort((a,b) => b.rate - a.rate)
-                    .slice(0, 2);
-                
+                    .sort((a, b) => b.rate - a.rate);
+
                 new Chart(catCanvas, {
                     type: 'bar',
                     data: {
-                        labels: catData.map(d => d.name.length > 25 ? d.name.substring(0,25)+'...' : d.name),
+                        labels: catData.map(d => d.name.length > 28 ? d.name.substring(0, 28) + '...' : d.name),
                         datasets: [{
-                            label: 'Tỷ lệ vi phạm nặng (%)',
+                            label: 'Tỷ lệ (%)',
                             data: catData.map(d => d.rate),
-                            backgroundColor: '#f97316',
+                            backgroundColor: barColor,
                             borderRadius: 4
                         }]
                     },
@@ -697,12 +766,11 @@
                         plugins: { legend: { display: false }, tooltip: { callbacks: { label: (ctx) => ctx.raw + '%' } } },
                         scales: {
                             x: { beginAtZero: true, max: 100, ticks: { precision: 0, color: '#94a3b8', callback: v => v + '%' }, grid: { color: 'rgba(255,255,255,0.1)' } },
-                            y: { ticks: { color: '#94a3b8', font: {size: 11} }, grid: { display: false } }
+                            y: { ticks: { color: '#94a3b8', font: { size: 11 } }, grid: { display: false } }
                         }
                     }
                 });
             }
-
         }
 
         function renderRecommendations(recs) {
@@ -923,37 +991,24 @@
 
         async function exportAnalysisToPDF() {
             const btn = document.getElementById('btn-export-pdf');
-            const originalText = btn.innerHTML;
-            btn.innerHTML = '⏳ Đang tạo PDF...';
+            btn.innerHTML = '⏳ Đang chuẩn bị...';
             btn.disabled = true;
 
-            const element = document.getElementById('export-pdf-wrapper');
-            const header = document.getElementById('pdf-header');
+            // Show header in the page before printing
+            const header = document.getElementById('pdf-print-header');
             const timeSpan = document.getElementById('pdf-export-time');
-            
-            // Setup header info for PDF
             const now = new Date();
             timeSpan.textContent = `Thời gian xuất báo cáo: ${now.toLocaleDateString('vi-VN')} ${now.toLocaleTimeString('vi-VN')}`;
             header.style.display = 'block';
 
-            const opt = {
-                margin:       [10, 10, 10, 10], // top, left, bottom, right
-                filename:     `Bao_Cao_PCCC_${now.getTime()}.pdf`,
-                image:        { type: 'jpeg', quality: 0.98 },
-                html2canvas:  { scale: 2, useCORS: true, backgroundColor: '#0f172a' },
-                jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
-            };
+            // Give browser time to render before print
+            await new Promise(r => setTimeout(r, 300));
+            window.print();
 
-            try {
-                await html2pdf().set(opt).from(element).save();
-            } catch (error) {
-                console.error('Lỗi khi xuất PDF:', error);
-                alert('Có lỗi xảy ra khi tạo PDF. Vui lòng thử lại!');
-            } finally {
-                header.style.display = 'none';
-                btn.innerHTML = originalText;
-                btn.disabled = false;
-            }
+            // Restore
+            header.style.display = 'none';
+            btn.innerHTML = '📄 Xuất PDF';
+            btn.disabled = false;
         }
 
         onReady(() => { 
