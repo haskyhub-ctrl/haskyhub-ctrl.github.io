@@ -606,7 +606,7 @@ def _chat_fallback(message: str) -> dict:
 class RegionalRequest(BaseModel):
     province: Optional[str] = None
     facility_type: Optional[str] = None
-    limit: int = 50
+    limit: Optional[int] = None
 
 
 @router.post("/regional-summary")
@@ -626,17 +626,36 @@ async def regional_summary(
     if data.facility_type:
         query = query.filter(Assessment.facility_type == data.facility_type)
 
-    assessments = query.order_by(Assessment.completed_at.desc()).limit(data.limit).all()
+    if data.limit and data.limit > 0:
+        assessments = query.order_by(Assessment.completed_at.desc()).limit(data.limit).all()
+    else:
+        assessments = query.order_by(Assessment.completed_at.desc()).all()
 
     if not assessments:
         raise HTTPException(status_code=404, detail="Không có đánh giá nào phù hợp")
 
+    FACILITY_TYPE_LABELS = {
+        "industrial": "Sản xuất công nghiệp",
+        "warehouse": "Kho hàng",
+        "mixed_residence": "Nhà ở kết hợp kinh doanh",
+        "hospitality": "Nhà hàng, khách sạn",
+        "medical_education": "Bệnh viện, trường học",
+        "fuel_gas": "Xăng dầu, khí gas",
+        "transport": "Giao thông",
+        "residential": "Khu dân cư",
+        "construction": "Xây dựng",
+        "office": "Văn phòng làm việc",
+        "laboratory": "Phòng thí nghiệm",
+        "agriculture": "Nông nghiệp"
+    }
+
     # Build summary data
     summary_data = []
     for a in assessments:
+        ft_vn = FACILITY_TYPE_LABELS.get(a.facility_type, a.facility_type)
         summary_data.append({
             "facility_name": a.facility_name,
-            "facility_type": a.facility_type,
+            "facility_type": ft_vn,
             "risk_percentage": a.risk_percentage,
             "risk_level": a.risk_level,
             "total_score": a.total_score,
@@ -644,24 +663,19 @@ async def regional_summary(
             "completed_at": str(a.completed_at) if a.completed_at else None,
         })
 
-    prompt = f"""Bạn là chuyên gia PCCC cấp tỉnh. Hãy phân tích tổng hợp {len(summary_data)} đánh giá nguy cơ cháy nổ sau.
+    prompt = f"""Bạn là chuyên gia phân tích rủi ro. Dựa vào dữ liệu khảo sát và đánh giá an toàn PCCC, hãy phân tích tổng hợp {len(summary_data)} đánh giá nguy cơ cháy nổ sau. YÊU CẦU BẮT BUỘC: Bạn CHỈ ĐƯỢC phân tích sâu vào nhóm các cơ sở có nguy cơ ở mức "Rất cao" và "Cao". Tuyệt đối không phân tích miên man về các nhóm điểm thấp hơn.
 
 {f"Khu vực: {data.province}" if data.province else "Toàn bộ khu vực"}
-{f"Loại cơ sở: {data.facility_type}" if data.facility_type else "Tất cả loại cơ sở"}
+{f"Loại cơ sở: {FACILITY_TYPE_LABELS.get(data.facility_type, data.facility_type)}" if data.facility_type else "Tất cả loại cơ sở"}
 
-DỮ LIỆU:
+DỮ LIỆU CÁC CƠ SỞ:
 {json.dumps(summary_data, ensure_ascii=False, indent=2)}
 
-YÊU CẦU PHÂN TÍCH:
-1. Tổng quan tình hình an toàn cháy nổ khu vực
-2. Phân bố mức nguy cơ (bao nhiêu % cơ sở ở mỗi mức)
-3. Loại cơ sở có nguy cơ cao nhất
-4. Vấn đề phổ biến nhất
-5. Khuyến nghị cho cơ quan quản lý
+Vui lòng trả về báo cáo phân tích chính xác theo từng gạch đầu dòng dưới đây, điền số liệu thực tế dựa trên dữ liệu hiện có:
 
-Trả về JSON:
+Trả về JSON chính xác theo cấu trúc sau (Tiếng Việt):
 {{
-    "overview": "string - tổng quan 3-5 câu",
+    "overview": "string - tóm tắt ngắn gọn báo cáo (1-2 câu).",
     "total_assessed": {len(summary_data)},
     "risk_distribution": {{
         "low": 0,
@@ -670,14 +684,37 @@ Trả về JSON:
         "critical": 0
     }},
     "avg_risk_percentage": 0.0,
-    "highest_risk_facilities": ["string - tên cơ sở nguy cơ cao nhất (top 5)"],
-    "common_issues": ["string - vấn đề phổ biến"],
-    "recommendations_for_authority": ["string - khuyến nghị cho cơ quan quản lý"],
+    "high_risk_analysis": [
+        "Loại hình có nhiều cơ sở có nguy cơ 'rất cao' nhất: [Tên loại hình], gồm [Số lượng] cơ sở. (Hãy phân tích ngắn gọn lý do cốt lõi/vi phạm phổ biến nhất khiến loại hình này rơi vào mức cực kỳ nguy hiểm).",
+        "Loại hình có nhiều cơ sở có nguy cơ 'cao' nhất: [Tên loại hình], gồm [Số lượng] cơ sở. (Chỉ ra nguyên nhân chính và nguy cơ tiềm ẩn).",
+        "Phân tích chi tiết tổn thất tiềm năng: Nếu xảy ra sự cố cháy nổ đối với các cơ sở thuộc 2 nhóm trên, hậu quả về người và tài sản sẽ ở mức độ nào dựa trên đặc thù hoạt động của chúng? (Chỉ ra 1-2 điểm chí mạng)."
+    ],
+    "specific_recommendations": [
+        "Tổ chức ngay các chuyên đề kiểm tra đột xuất, rà soát chéo (quy mô nhỏ, tập trung) giao nhiệm vụ cụ thể cho từng đội để 'đánh trúng, đánh đúng' vào đúng 2 loại hình có nguy cơ rất cao và cao nêu trên.",
+        "Tăng cường tần suất phối hợp diễn tập phương án chữa cháy, cứu nạn cứu hộ có nhiều lực lượng tham gia tại các cơ sở trọng điểm này.",
+        "Áp dụng biện pháp mạnh (như tạm đình chỉ, đình chỉ hoạt động) đối với các cơ sở có lỗi vi phạm nghiêm trọng kéo dài, đồng thời công khai danh sách trên thông tin đại chúng.",
+        "Mời chủ cơ sở của nhóm nguy cơ Rất Cao và Cao lên làm việc trực tiếp, ký cam kết và đặt ra thời hạn chót để khắc phục triệt để các tồn tại."
+    ],
     "trend_observation": "string - nhận xét xu hướng"
 }}
 """
 
+    # Prevent AI hallucination by calculating exact numbers beforehand
+    actual_risk_dist = {"safe": 0, "low": 0, "medium": 0, "high": 0, "critical": 0}
+    actual_avg = 0
+    if len(assessments) > 0:
+        for a in assessments:
+            if a.risk_level in actual_risk_dist:
+                actual_risk_dist[a.risk_level] += 1
+        actual_avg = sum(a.risk_percentage for a in assessments) / len(assessments)
+
     result = await call_gemini(prompt, temperature=0.3)
+    
+    if isinstance(result, dict):
+        result["total_assessed"] = len(assessments)
+        result["risk_distribution"] = actual_risk_dist
+        result["avg_risk_percentage"] = round(actual_avg, 1)
+
     return result
 
 

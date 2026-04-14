@@ -220,6 +220,14 @@
             </div>
 
             <div class="form-group">
+                <label>Nhóm nguyên nhân thiên lệch <small style="color:var(--text-muted);">(tùy chọn — nhóm này sẽ có nguy cơ cao hơn)</small></label>
+                <select id="gen-category-bias">
+                    <option value="">🎲 Không thiên lệch (tất cả nhóm ngẫu nhiên)</option>
+                </select>
+                <small style="color:var(--text-muted); display:block; margin-top:4px;">Nếu chọn, nhóm nguyên nhân này sẽ có điểm nguy cơ cao hơn ~30-50% so với bình thường trong dữ liệu mẫu được tạo</small>
+            </div>
+
+            <div class="form-group">
                 <label>Số lượng bài đánh giá: <span class="count-display" id="gen-count-display">20</span></label>
                 <input type="range" id="gen-count" min="1" max="200" value="20"
                        oninput="document.getElementById('gen-count-display').textContent=this.value">
@@ -353,6 +361,7 @@
                     count,
                     province:      document.getElementById('gen-province').value,
                     facility_type: document.getElementById('gen-facility').value || null,
+                    category_bias: document.getElementById('gen-category-bias').value || null,
                 };
                 if (forcedRisk) {
                     payload.forced_risk_level = forcedRisk;
@@ -543,10 +552,30 @@
             document.getElementById('assessments-container').innerHTML = html;
         }
 
-        onReady(() => {
+        onReady(async () => {
             setupNavbar();
-            if (requireAuth()) loadAllAssessments();
+            if (requireAuth()) {
+                await loadAllAssessments();
+                await loadCategoryOptions();
+            }
         });
+
+        async function loadCategoryOptions() {
+            try {
+                const cats = await api.get('/questions/categories');
+                const select = document.getElementById('gen-category-bias');
+                if (select && cats && cats.length) {
+                    cats.forEach(c => {
+                        const opt = document.createElement('option');
+                        opt.value = c.id;
+                        opt.textContent = `${c.icon || '📋'} ${c.name}`;
+                        select.appendChild(opt);
+                    });
+                }
+            } catch(e) {
+                console.warn('Could not load categories for bias selector:', e);
+            }
+        }
     </script>
 </body>
 </html>

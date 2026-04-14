@@ -12,6 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <style>
         .aggregate-filters {
             display: flex;
@@ -292,14 +293,10 @@
             <div id="dashboard-container" style="display: none;">
                 <div class="stat-grid fade-in" id="kpi-cards"></div>
                 
-                <div class="stat-grid fade-in" style="grid-template-columns: 2fr 1fr;">
+                <div class="stat-grid fade-in" style="grid-template-columns: 1fr;">
                     <div class="analysis-section" style="margin-bottom: 0;">
                         <h3>Xu hướng 6 tháng gần nhất</h3>
                         <div class="chart-container"><canvas id="trend-chart"></canvas></div>
-                    </div>
-                    <div class="analysis-section" style="margin-bottom: 0;">
-                        <h3>⚠️ Nhóm nguy cơ cao nhất</h3>
-                        <div id="worst-categories-dash"></div>
                     </div>
                 </div>
             </div>
@@ -371,39 +368,28 @@
                     <div style="display:flex; gap:8px; margin-top:6px;">
                         <button class="btn btn-primary" onclick="runAggregateAnalysis()">🔍 Phân tích</button>
                         <button class="btn btn-outline" onclick="runAIRegionalSummary()" style="border-color:#8b5cf6; color:#8b5cf6;">🤖 AI Tổng hợp</button>
+                        <button class="btn btn-outline" onclick="exportAnalysisToPDF()" style="border-color:#ef4444; color:#ef4444; display:none;" id="btn-export-pdf">📄 Xuất PDF</button>
                     </div>
                 </div>
             </div>
 
-            <!-- AI Regional Summary Result -->
-            <div id="ai-regional-result"></div>
-
-            <!-- Risk Map (hidden until results) -->
-            <div id="map-section" style="display:none;">
-                <div class="analysis-section" style="margin-bottom:0;">
-                    <h3>🗺️ Bản đồ phân bố nguy cơ</h3>
-                    <div class="map-toolbar">
-                        <button class="map-mode-btn active" id="btn-heatmap" onclick="setMapMode('heat')">🌡️ Heatmap</button>
-                        <button class="map-mode-btn" id="btn-dots" onclick="setMapMode('dots')">📍 Điểm nguy cơ</button>
-                        <span id="map-point-count" style="margin-left:auto;font-size:.82rem;color:var(--text-muted);"></span>
-                    </div>
-                    <div id="risk-map"></div>
-                    <div class="map-legend">
-                        <span><span class="dot-legend" style="background:#22c55e;"></span> An toàn</span>
-                        <span><span class="dot-legend" style="background:#84cc16;"></span> Thấp</span>
-                        <span><span class="dot-legend" style="background:#eab308;"></span> Trung bình</span>
-                        <span><span class="dot-legend" style="background:#f97316;"></span> Cao</span>
-                        <span><span class="dot-legend" style="background:#ef4444;"></span> Rất cao</span>
-                    </div>
+            <!-- PDF Export Wrapper -->
+            <div id="export-pdf-wrapper" style="background: #0f172a; padding: 20px; border-radius: 8px;">
+                <div id="pdf-header" style="display:none; text-align:center; margin-bottom: 30px;">
+                    <h2 style="color: #fff; margin-bottom: 10px;">BÁO CÁO PHÂN TÍCH TỔNG HỢP NGUY CƠ CHÁY NỔ</h2>
+                    <p style="color: #cbd5e1;" id="pdf-export-time"></p>
                 </div>
-            </div>
 
-            <!-- Results -->
-            <div id="aggregate-results">
-                <div class="empty-state">
-                    <div class="icon">🗺️</div>
-                    <h3>Chọn bộ lọc và nhấn "Phân tích"</h3>
-                    <p>Hệ thống sẽ tổng hợp dữ liệu từ tất cả các đánh giá đã hoàn thành</p>
+                <!-- AI Regional Summary Result -->
+                <div id="ai-regional-result"></div>
+
+                <!-- Results -->
+                <div id="aggregate-results">
+                    <div class="empty-state">
+                        <div class="icon">🗺️</div>
+                        <h3>Chọn bộ lọc và nhấn "Phân tích"</h3>
+                        <p>Hệ thống sẽ tổng hợp dữ liệu từ tất cả các đánh giá đã hoàn thành</p>
+                    </div>
                 </div>
             </div>
         </main>
@@ -414,6 +400,14 @@
     <script>
         const riskLabels = { safe: 'An toàn', low: 'Thấp', medium: 'Trung bình', high: 'Cao', critical: 'Rất cao' };
         const riskColors = { safe: '#22c55e', low: '#84cc16', medium: '#eab308', high: '#f97316', critical: '#ef4444' };
+        const facilityTypeLabels = {
+            industrial: '🏭 Sản xuất công nghiệp', warehouse: '🏪 Kho hàng',
+            mixed_residence: '🏠 Nhà ở hỗn hợp', hospitality: '🍽️ Nhà hàng, khách sạn',
+            medical_education: '🏥 Bệnh viện, trường học', fuel_gas: '⛽ Xăng dầu, khí gas',
+            transport: '🚌 Giao thông', residential: '🏘️ Khu dân cư',
+            construction: '🏗️ Xây dựng', office: '🏛️ Văn phòng',
+            laboratory: '🔬 Phòng thí nghiệm', agriculture: '🌾 Nông nghiệp',
+        };
 
         // Province coords (match backend)
         const PROVINCE_COORDS = {
@@ -500,7 +494,7 @@
                         opacity: 1,
                         fillOpacity: 0.88,
                     });
-                    mk.bindPopup(`<b>${p.facility_name}</b><br>Loại: ${p.facility_type}<br>Nguy cơ: <b style="color:${color}">${riskLabels[p.risk_level]} (${p.risk_percentage}%)</b>`);
+                    mk.bindPopup(`<b>${p.facility_name}</b><br>Loại: ${facilityTypeLabels[p.facility_type] || p.facility_type}<br>Nguy cơ: <b style="color:${color}">${riskLabels[p.risk_level]} (${p.risk_percentage}%)</b>`);
                     group.addLayer(mk);
                 });
                 dotLayer = group.addTo(leafletMap);
@@ -532,12 +526,6 @@
                 const data = await api.post('/admin/aggregate/analyze', params);
                 hideLoading();
                 renderAggregateResults(data);
-                // Render map if there are geo points
-                if (data.map_points && data.map_points.length > 0) {
-                    setTimeout(() => renderMap(data.map_points, province || null), 100);
-                } else {
-                    document.getElementById('map-section').style.display = 'none';
-                }
             } catch (error) {
                 hideLoading();
                 showToast(error.message, 'error');
@@ -564,10 +552,19 @@
                 <div class="chart-container"><canvas id="agg-risk-chart"></canvas></div>
             </div>`;
 
-            // Category Analysis
+            // High Risk Types & Causes Analysis
             html += `<div class="analysis-section fade-in">
-                <h3>📋 Phân tích theo nhóm đánh giá</h3>
-                <div id="category-bars"></div>
+                <h3>⚠️ Bảng Nhóm Nguy Cơ Cao Nhất</h3>
+                <div style="display:flex; flex-wrap:wrap; gap:20px; align-items:stretch;">
+                    <div style="flex:1; min-width:300px; display:flex; flex-direction:column; background:var(--bg-secondary); padding:16px; border-radius:12px; border:1px solid var(--border-color);">
+                        <h4 style="text-align:center; color:var(--text-secondary); margin-bottom:12px; font-size: 0.95rem;">Loại hình nhiều cơ sở nguy cơ cao nhất</h4>
+                        <div class="chart-container" style="flex:1;"><canvas id="high-risk-facility-chart"></canvas></div>
+                    </div>
+                    <div style="flex:1; min-width:300px; display:flex; flex-direction:column; background:var(--bg-secondary); padding:16px; border-radius:12px; border:1px solid var(--border-color);">
+                        <h4 style="text-align:center; color:var(--text-secondary); margin-bottom:12px; font-size: 0.95rem;">Nhóm nguyên nhân có tỷ lệ cao nhất</h4>
+                        <div class="chart-container" style="flex:1;"><canvas id="high-risk-category-chart"></canvas></div>
+                    </div>
+                </div>
             </div>`;
 
             // Recommendations
@@ -587,7 +584,7 @@
                         <tbody>${data.high_risk_facilities.map(f => `
                             <tr>
                                 <td><strong>${f.facility_name}</strong><br><small style="color:var(--text-muted)">${f.organization || ''}</small></td>
-                                <td>${f.facility_type || 'N/A'}</td>
+                                <td>${facilityTypeLabels[f.facility_type] || f.facility_type || 'N/A'}</td>
                                 <td><span class="risk-badge ${f.risk_level}">${riskLabels[f.risk_level] || f.risk_level}</span></td>
                                 <td>${f.total_score}/${f.max_possible_score} (${f.risk_percentage}%)</td>
                                 <td>${f.completed_at ? new Date(f.completed_at).toLocaleDateString('vi-VN') : 'N/A'}</td>
@@ -607,10 +604,13 @@
 
             container.innerHTML = html;
 
+            // Show export button
+            document.getElementById('btn-export-pdf').style.display = 'inline-block';
+
             // Render charts after DOM update
             setTimeout(() => {
                 renderRiskDistChart(data.risk_distribution);
-                renderCategoryBars(data.category_analysis);
+                renderHighRiskCharts(data);
                 renderRecommendations(data.recommendations);
                 if (data.ai_analysis) renderAIAnalysis(data.ai_analysis);
             }, 100);
@@ -633,29 +633,92 @@
             });
         }
 
-        function renderCategoryBars(categories) {
-            const container = document.getElementById('category-bars');
-            if (!container) return;
-            container.innerHTML = categories.map(c => {
-                const pct = c.avg_percentage;
-                const color = pct >= 70 ? '#22c55e' : pct >= 50 ? '#eab308' : pct >= 30 ? '#f97316' : '#ef4444';
-                return `<div class="category-bar">
-                    <div class="name">${c.icon} ${c.name}</div>
-                    <div class="bar-wrap"><div class="bar-fill" style="width:${Math.max(pct, 5)}%; background:${color};">${pct}%</div></div>
-                </div>`;
-            }).join('');
+        function renderHighRiskCharts(data) {
+            const facCanvas = document.getElementById('high-risk-facility-chart');
+            const catCanvas = document.getElementById('high-risk-category-chart');
+            
+            if (facCanvas && data.facility_distribution) {
+                const facData = Object.entries(data.facility_distribution)
+                    .map(([type, stats]) => ({
+                        name: facilityTypeLabels[type] || type,
+                        count: stats.high_risk_count || 0
+                    }))
+                    .filter(x => x.count > 0)
+                    .sort((a,b) => b.count - a.count)
+                    .slice(0, 5);
+                
+                new Chart(facCanvas, {
+                    type: 'bar',
+                    data: {
+                        labels: facData.map(d => d.name.length > 20 ? d.name.substring(0,20)+'...' : d.name),
+                        datasets: [{
+                            label: 'Cơ sở',
+                            data: facData.map(d => d.count),
+                            backgroundColor: '#ef4444',
+                            borderRadius: 4
+                        }]
+                    },
+                    options: {
+                        indexAxis: 'y',
+                        responsive: true, maintainAspectRatio: false,
+                        plugins: { legend: { display: false } },
+                        scales: {
+                            x: { beginAtZero: true, ticks: { precision: 0, color: '#94a3b8' }, grid: { color: 'rgba(255,255,255,0.1)' } },
+                            y: { ticks: { color: '#94a3b8', font: {size: 11} }, grid: { display: false } }
+                        }
+                    }
+                });
+            }
+
+            if (catCanvas && data.category_analysis) {
+                const catData = data.category_analysis
+                    .map(c => ({
+                        name: c.name,
+                        rate: c.high_risk_rate || 0
+                    }))
+                    .filter(x => x.rate > 0)
+                    .sort((a,b) => b.rate - a.rate)
+                    .slice(0, 2);
+                
+                new Chart(catCanvas, {
+                    type: 'bar',
+                    data: {
+                        labels: catData.map(d => d.name.length > 25 ? d.name.substring(0,25)+'...' : d.name),
+                        datasets: [{
+                            label: 'Tỷ lệ vi phạm nặng (%)',
+                            data: catData.map(d => d.rate),
+                            backgroundColor: '#f97316',
+                            borderRadius: 4
+                        }]
+                    },
+                    options: {
+                        indexAxis: 'y',
+                        responsive: true, maintainAspectRatio: false,
+                        plugins: { legend: { display: false }, tooltip: { callbacks: { label: (ctx) => ctx.raw + '%' } } },
+                        scales: {
+                            x: { beginAtZero: true, max: 100, ticks: { precision: 0, color: '#94a3b8', callback: v => v + '%' }, grid: { color: 'rgba(255,255,255,0.1)' } },
+                            y: { ticks: { color: '#94a3b8', font: {size: 11} }, grid: { display: false } }
+                        }
+                    }
+                });
+            }
+
         }
 
         function renderRecommendations(recs) {
             const container = document.getElementById('recommendations-list');
             if (!container) return;
-            container.innerHTML = recs.map(r => `
+            container.innerHTML = recs.map(r => {
+                // Convert newlines in detail to <br> for proper rendering
+                const detailHtml = (r.detail || '').replace(/\n\n/g, '<br><br>').replace(/\n/g, '<br>');
+                return `
                 <div class="rec-card ${r.priority}">
                     <h4>${r.title}</h4>
-                    <p>${r.detail}</p>
+                    <p>${detailHtml}</p>
                     <ul>${(r.actions || []).map(a => `<li>${a}</li>`).join('')}</ul>
                 </div>
-            `).join('');
+            `;
+            }).join('');
         }
 
         function renderAIAnalysis(ai) {
@@ -708,6 +771,7 @@
                     html += `<div class="rec-card ${prioClass}">
                         <h4>${g.tieu_de} <span class="risk-badge ${prioClass}" style="font-size:0.75rem">${g.muc_do_uu_tien || ''}</span></h4>
                         <p>${g.noi_dung}</p>
+                        ${g.hinh_thuc_tuyen_truyen ? `<p style="font-size:0.82rem;color:#818cf8">📢 <strong>Tuyên truyền:</strong> ${g.hinh_thuc_tuyen_truyen}</p>` : ''}
                         ${g.co_so_phap_ly ? `<p style="font-size:0.82rem;color:var(--text-muted)">📜 ${g.co_so_phap_ly}</p>` : ''}
                     </div>`;
                 });
@@ -733,6 +797,7 @@
             const container = document.getElementById('ai-regional-result');
             const province = document.getElementById('filter-province')?.value?.trim() || '';
             const facilityType = document.getElementById('filter-facility-type').value;
+            const limitVal = document.getElementById('filter-limit').value;
 
             container.innerHTML = '<div style="text-align:center; padding:30px;"><div class="loading-spinner"></div><p style="color:var(--text-secondary); margin-top:8px;">🤖 Gemini đang phân tích tổng hợp khu vực...</p></div>';
 
@@ -740,7 +805,7 @@
                 const result = await api.post('/ai/regional-summary', {
                     province: province || null,
                     facility_type: facilityType || null,
-                    limit: 50,
+                    limit: limitVal ? parseInt(limitVal) : null,
                 });
 
                 container.innerHTML = `
@@ -769,18 +834,18 @@
                             </div>
                         ` : ''}
 
-                        ${result.common_issues?.length ? `
-                            <h5 style="color:#f97316; margin:12px 0 8px;">⚠️ Vấn đề phổ biến</h5>
+                        ${result.high_risk_analysis?.length ? `
+                            <h5 style="color:#ef4444; margin:12px 0 8px;">🚨 Phân tích nhóm nguy cơ cao</h5>
                             <ul style="padding-left:20px; color:var(--text-secondary); font-size:0.85rem;">
-                                ${result.common_issues.map(i => `<li style="margin-bottom:4px;">${i}</li>`).join('')}
+                                ${result.high_risk_analysis.map(i => `<li style="margin-bottom:6px;">${i}</li>`).join('')}
                             </ul>
                         ` : ''}
 
-                        ${result.recommendations_for_authority?.length ? `
-                            <h5 style="color:#3b82f6; margin:12px 0 8px;">📋 Khuyến nghị cho cơ quan quản lý</h5>
-                            <ol style="padding-left:20px; color:var(--text-secondary); font-size:0.85rem;">
-                                ${result.recommendations_for_authority.map(r => `<li style="margin-bottom:4px;">${r}</li>`).join('')}
-                            </ol>
+                        ${result.specific_recommendations?.length ? `
+                            <h5 style="color:#3b82f6; margin:16px 0 8px;">💡 Đề xuất giải pháp (Thời gian tới)</h5>
+                            <ul style="padding-left:20px; color:var(--text-secondary); font-size:0.85rem;">
+                                ${result.specific_recommendations.map(r => `<li style="margin-bottom:6px;">${r}</li>`).join('')}
+                            </ul>
                         ` : ''}
 
                         ${result.trend_observation ? `<p style="color:var(--text-muted); font-size:0.82rem; margin-top:8px; font-style:italic;">📈 ${result.trend_observation}</p>` : ''}
@@ -850,23 +915,44 @@
                     });
                 }
 
-                // Render Worst Categories
-                const wcContainer = document.getElementById('worst-categories-dash');
-                if (wcContainer && data.worst_categories) {
-                    wcContainer.innerHTML = data.worst_categories.map(c => `
-                        <div style="margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.05);">
-                            <div style="display:flex; justify-content:space-between; margin-bottom: 6px;">
-                                <span style="font-size:0.9rem">${c.name}</span>
-                                <span style="font-size:0.9rem; font-weight:bold; color: ${c.avg_score < 50 ? '#ef4444' : '#eab308'}">${c.avg_score}%</span>
-                            </div>
-                            <div class="bar-wrap" style="background: rgba(255,255,255,0.05); height: 8px; border-radius: 0; overflow: hidden;">
-                                <div class="bar-fill" style="width: ${c.avg_score}%; height: 100%; background: ${c.avg_score < 50 ? '#ef4444' : '#eab308'};"></div>
-                            </div>
-                        </div>
-                    `).join('');
-                }
+                // Removed Worst Categories per user request
             } catch (err) {
                 console.error("Dashboard load error", err);
+            }
+        }
+
+        async function exportAnalysisToPDF() {
+            const btn = document.getElementById('btn-export-pdf');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '⏳ Đang tạo PDF...';
+            btn.disabled = true;
+
+            const element = document.getElementById('export-pdf-wrapper');
+            const header = document.getElementById('pdf-header');
+            const timeSpan = document.getElementById('pdf-export-time');
+            
+            // Setup header info for PDF
+            const now = new Date();
+            timeSpan.textContent = `Thời gian xuất báo cáo: ${now.toLocaleDateString('vi-VN')} ${now.toLocaleTimeString('vi-VN')}`;
+            header.style.display = 'block';
+
+            const opt = {
+                margin:       [10, 10, 10, 10], // top, left, bottom, right
+                filename:     `Bao_Cao_PCCC_${now.getTime()}.pdf`,
+                image:        { type: 'jpeg', quality: 0.98 },
+                html2canvas:  { scale: 2, useCORS: true, backgroundColor: '#0f172a' },
+                jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+
+            try {
+                await html2pdf().set(opt).from(element).save();
+            } catch (error) {
+                console.error('Lỗi khi xuất PDF:', error);
+                alert('Có lỗi xảy ra khi tạo PDF. Vui lòng thử lại!');
+            } finally {
+                header.style.display = 'none';
+                btn.innerHTML = originalText;
+                btn.disabled = false;
             }
         }
 

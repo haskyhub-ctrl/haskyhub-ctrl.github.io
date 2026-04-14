@@ -6,7 +6,7 @@ from sqlalchemy import func
 from typing import List, Optional
 from pydantic import BaseModel, EmailStr
 from database import get_db
-from models import User, Assessment, AdminAuditLog, QuestionCategory, Question
+from models import User, Assessment, AdminAuditLog, QuestionCategory, Question, CategoryScore
 from schemas import (
     UserResponse, UserRoleUpdate, UserLockUpdate,
     AdminStats, AuditLogResponse, PasswordResetRequest
@@ -465,6 +465,7 @@ class GenerateDemoRequest(BaseModel):
     province: str = "Bắc Ninh"
     facility_type: Optional[str] = None  # null = random
     forced_risk_level: Optional[str] = None  # safe | low | medium | high | critical (overrides distribution)
+    category_bias: Optional[int] = None  # category_id to bias with higher risk scores
 
 
 @router.get("/assessments")
@@ -623,6 +624,15 @@ def generate_demo_assessments(
     # Dùng admin account làm user_id (hoặc tạo user demo nếu cần)
     admin_user = db.query(User).filter(User.id == current_user.id).first()
 
+    # Load all categories for category_bias feature
+    all_categories = db.query(QuestionCategory).filter(QuestionCategory.is_active == True).all()
+    bias_category_id = None
+    if data.category_bias:
+        try:
+            bias_category_id = int(data.category_bias)
+        except (ValueError, TypeError):
+            bias_category_id = None
+
     created = []
     for i in range(count):
         ftype = data.facility_type if data.facility_type else random.choice(FACILITY_TYPES)
@@ -665,11 +675,49 @@ def generate_demo_assessments(
             completed_at=datetime.utcnow(),
         )
         db.add(a)
+        db.flush()  # Get the assessment ID for category scores
+
+        # Generate CategoryScore records for this assessment
+        if all_categories:
+            for cat in all_categories:
+                # For the biased category, give it a much worse score (lower percentage = more risk)
+                if bias_category_id and cat.id == bias_category_id:
+                    # Biased: score between 10-45% (high risk)
+                    cat_pct = round(random.uniform(10, 45), 1)
+                    cat_risk = "critical" if cat_pct < 20 else "high" if cat_pct < 35 else "medium"
+                else:
+                    # Normal: score based on the overall risk level with some variance
+                    base_score = 100 - risk_pct  # Invert: high risk % = low safety score
+                    cat_pct = round(max(5, min(100, base_score + random.uniform(-20, 20))), 1)
+                    if cat_pct >= 75:
+                        cat_risk = "safe"
+                    elif cat_pct >= 55:
+                        cat_risk = "low"
+                    elif cat_pct >= 40:
+                        cat_risk = "medium"
+                    elif cat_pct >= 25:
+                        cat_risk = "high"
+                    else:
+                        cat_risk = "critical"
+
+                cat_max_score = cat.max_score or 20
+                cat_score_obtained = round(cat_max_score * (1 - cat_pct / 100))
+
+                cs = CategoryScore(
+                    assessment_id=a.id,
+                    category_id=cat.id,
+                    score_obtained=cat_score_obtained,
+                    max_score=cat_max_score,
+                    percentage=cat_pct,
+                    risk_level=cat_risk,
+                )
+                db.add(cs)
+
         created.append({"facility_name": fname, "risk_level": risk_level, "risk_percentage": risk_pct})
 
     db.commit()
     log_action(db, current_user.id, "generate_demo", "assessment", None,
-               None, {"count": count, "province": province},
+               None, {"count": count, "province": province, "category_bias": data.category_bias},
                request.client.host if request.client else None)
     return {
         "created": len(created),
