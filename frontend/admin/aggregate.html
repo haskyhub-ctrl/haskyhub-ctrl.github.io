@@ -706,12 +706,15 @@
                         rawCount: stats.count || 0
                     }))
                     .filter(x => x.count > 0)
-                    .sort((a, b) => b.count - a.count);
+                    .sort((a, b) => {
+                        if (b.count !== a.count) return b.count - a.count;
+                        return a.name.localeCompare(b.name);
+                    });
 
                 new Chart(facCanvas, {
                     type: 'bar',
                     data: {
-                        labels: facData.map(d => d.name.length > 22 ? d.name.substring(0, 22) + '...' : d.name),
+                        labels: facData.map(d => d.name), // Hiển thị đầy đủ tên, không cắt bớt
                         datasets: [{
                             label: 'Số cơ sở',
                             data: facData.map(d => d.count),
@@ -725,37 +728,36 @@
                         plugins: { legend: { display: false } },
                         scales: {
                             x: { beginAtZero: true, ticks: { precision: 0, color: '#94a3b8' }, grid: { color: 'rgba(255,255,255,0.1)' } },
-                            y: { ticks: { color: '#94a3b8', font: { size: 11 } }, grid: { display: false } }
+                            y: { ticks: { color: '#94a3b8', font: { size: 9 } }, grid: { display: false } } // Giảm cỡ chữ xuống 9
                         }
                     }
                 });
             }
 
             if (catCanvas && data.category_analysis) {
-                const isHighSelected = selectedLevels.some(l => l === 'high' || l === 'critical');
                 const catData = data.category_analysis
-                    .map(c => ({
-                        name: c.name,
-                        rate: isHighSelected
-                            ? (c.high_risk_rate || 0)
-                            : (() => {
-                                // For medium/low/safe: compute from risk_levels breakdown
-                                const rl = c.risk_levels || {};
-                                const total = Object.values(rl).reduce((a, b) => a + b, 0);
-                                const selectedCount = selectedLevels.reduce((sum, lvl) => sum + (rl[lvl] || 0), 0);
-                                return total > 0 ? Math.round(selectedCount / total * 100 * 10) / 10 : 0;
-                            })()
-                    }))
-                    .filter(x => x.rate > 0)
-                    .sort((a, b) => b.rate - a.rate);
+                    .filter(c => !c.name.toLowerCase().includes('đặc thù:')) // Lọc bỏ các phần dành riêng cho loại hình cơ sở
+                    .map(c => {
+                        const rl = c.risk_levels || {};
+                        const selectedCount = selectedLevels.reduce((sum, lvl) => sum + (rl[lvl] || 0), 0);
+                        return {
+                            name: c.name.replace('Dấu hiệu nguy cơ từ ', '').replace('Nguy cơ từ ', '').trim(),
+                            count: selectedCount // Cộng dồn số hạng mục rơi vào các nguy cơ được chọn
+                        };
+                    })
+                    .filter(c => c.count > 0)
+                    .sort((a, b) => {
+                        if (b.count !== a.count) return b.count - a.count;
+                        return a.name.localeCompare(b.name);
+                    });
 
                 new Chart(catCanvas, {
                     type: 'bar',
                     data: {
-                        labels: catData.map(d => d.name.length > 28 ? d.name.substring(0, 28) + '...' : d.name),
+                        labels: catData.map(d => d.name), // Hiển thị đầy đủ tên nguyên nhân
                         datasets: [{
-                            label: 'Tỷ lệ (%)',
-                            data: catData.map(d => d.rate),
+                            label: 'Số lượng',
+                            data: catData.map(d => d.count),
                             backgroundColor: barColor,
                             borderRadius: 4
                         }]
@@ -763,10 +765,10 @@
                     options: {
                         indexAxis: 'y',
                         responsive: true, maintainAspectRatio: false,
-                        plugins: { legend: { display: false }, tooltip: { callbacks: { label: (ctx) => ctx.raw + '%' } } },
+                        plugins: { legend: { display: false }, tooltip: { callbacks: { label: (ctx) => ctx.raw + ' cơ sở' } } },
                         scales: {
-                            x: { beginAtZero: true, max: 100, ticks: { precision: 0, color: '#94a3b8', callback: v => v + '%' }, grid: { color: 'rgba(255,255,255,0.1)' } },
-                            y: { ticks: { color: '#94a3b8', font: { size: 11 } }, grid: { display: false } }
+                            x: { beginAtZero: true, ticks: { precision: 0, color: '#94a3b8' }, grid: { color: 'rgba(255,255,255,0.1)' } },
+                            y: { ticks: { color: '#94a3b8', font: { size: 9 } }, grid: { display: false } } // Giảm cỡ chữ trục Y xuống 9
                         }
                     }
                 });
