@@ -17,6 +17,7 @@ from utils.image_prompt import build_image_analysis_prompt, parse_vision_respons
 router = APIRouter(prefix="/api/image", tags=["Image Analysis"])
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.5-flash")
 UPLOAD_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "uploads")
 
 # Ensure uploads directory exists
@@ -62,7 +63,8 @@ async def analyze_image(
 
     # Call Gemini Vision API
     analysis_result = None
-    if GEMINI_API_KEY:
+    api_key = os.getenv("GEMINI_API_KEY") or GEMINI_API_KEY
+    if api_key:
         try:
             import httpx
 
@@ -70,39 +72,47 @@ async def analyze_image(
             mime_type = file.content_type or "image/jpeg"
             prompt = build_image_analysis_prompt()
 
-            async with httpx.AsyncClient() as client:
-                resp = await client.post(
-                    f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={GEMINI_API_KEY}",
-                    json={
-                        "contents": [
-                            {
-                                "parts": [
-                                    {"text": prompt},
-                                    {
-                                        "inline_data": {
-                                            "mime_type": mime_type,
-                                            "data": image_b64,
-                                        }
-                                    },
-                                ]
-                            }
-                        ],
-                        "generationConfig": {"temperature": 0.2},
-                    },
-                    timeout=60.0,
-                )
+            primary_model = os.getenv("GEMINI_MODEL", "gemini-3.5-flash")
+            fallback_models = ["gemini-3.5-flash", "gemini-3.8-flash", "gemini-2.5-flash", "gemini-3.5-flash-lite"]
+            models_to_try = [primary_model] + [m for m in fallback_models if m != primary_model]
 
-                if resp.status_code == 200:
-                    data = resp.json()
-                    raw_content = data["candidates"][0]["content"]["parts"][0]["text"]
-                    analysis_result = parse_vision_response(raw_content)
-                else:
-                    analysis_result = {
-                        "hazards": [],
-                        "overall_risk": "unknown",
-                        "summary": f"Lỗi API: {resp.status_code}",
-                        "safe_aspects": "",
-                    }
+            for model_name in models_to_try:
+                try:
+                    async with httpx.AsyncClient(timeout=60.0) as client:
+                        resp = await client.post(
+                            f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={api_key}",
+                            json={
+                                "contents": [
+                                    {
+                                        "parts": [
+                                            {"text": prompt},
+                                            {
+                                                "inline_data": {
+                                                    "mime_type": mime_type,
+                                                    "data": image_b64,
+                                                }
+                                            },
+                                        ]
+                                    }
+                                ],
+                                "generationConfig": {"temperature": 0.2},
+                            },
+                        )
+
+                        if resp.status_code == 200:
+                            data = resp.json()
+                            raw_content = data["candidates"][0]["content"]["parts"][0]["text"]
+                            analysis_result = parse_vision_response(raw_content)
+                            break
+                        else:
+                            print(f"[Vision API] Model {model_name} HTTP {resp.status_code}")
+                            if resp.status_code in (404, 429, 500, 502, 503):
+                                continue
+                            break
+                except Exception as ex:
+                    print(f"[Vision API] Model {model_name} exception: {ex}")
+                    continue
+
         except Exception as e:
             analysis_result = {
                 "hazards": [],

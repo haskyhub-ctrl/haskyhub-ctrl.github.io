@@ -9,7 +9,11 @@ if sys.stderr and hasattr(sys.stderr, 'reconfigure'):
 
 from dotenv import load_dotenv
 
-load_dotenv()  # Load .env file for API keys
+env_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env")
+if os.path.exists(env_path):
+    load_dotenv(dotenv_path=env_path, override=True)
+else:
+    load_dotenv(override=True)
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -203,8 +207,14 @@ ALLOWED_ORIGINS = [
     "http://127.0.0.1",
     "http://127.0.0.1:8000",
     "http://127.0.0.1:5500",
-    "https://haskyhub-ctrl.github.io", # Thay thế bằng domain thực tế nếu deploy
-    "https://fras.vn"
+    "https://haskyhub-ctrl.github.io",
+    "https://fras.vn",
+    "http://fras-ai.com",
+    "https://fras-ai.com",
+    "http://www.fras-ai.com",
+    "https://www.fras-ai.com",
+    "http://158.180.66.124",
+    "http://158.180.66.124:8000"
 ]
 
 app.add_middleware(

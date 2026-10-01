@@ -30,40 +30,62 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
 
 # ======================== HELPER ========================
 
+GEMINI_FALLBACK_MODELS = [
+    "gemini-3.5-flash",
+    "gemini-3.8-flash",
+    "gemini-2.5-flash",
+    "gemini-3.5-flash-lite",
+    "gemini-2.5-flash-lite",
+]
+
 async def call_gemini(prompt: str, temperature: float = 0.3) -> dict:
-    """Call Gemini API and return parsed JSON response."""
-    if not GEMINI_API_KEY:
+    """Call Gemini API and return parsed JSON response with automatic model fallback."""
+    api_key = os.getenv("GEMINI_API_KEY") or GEMINI_API_KEY
+    if not api_key:
         raise ValueError("GEMINI_API_KEY chưa được cấu hình")
 
     import httpx
-    # Timeout 25s — giữ dưới ngưỡng nginx proxy_read_timeout (thường 30-60s)
-    # Sử dụng gemini-2.0-flash-lite — model mới nhất hoạt động với free tier
-    GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.0-flash-lite")
-    async with httpx.AsyncClient(timeout=25.0) as client:
-        resp = await client.post(
-            f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent?key={GEMINI_API_KEY}",
-            json={
-                "contents": [{"parts": [{"text": prompt}]}],
-                "generationConfig": {"temperature": temperature}
-            },
-        )
-        if resp.status_code != 200:
-            error_detail = resp.text[:200] if resp.text else "No response body"
-            print(f"[Gemini API Error] Status: {resp.status_code}, Response: {error_detail}")
-            raise ValueError(f"Gemini API lỗi: {resp.status_code}")
+    primary_model = os.getenv("GEMINI_MODEL", "gemini-3.5-flash")
+    models_to_try = [primary_model] + [m for m in GEMINI_FALLBACK_MODELS if m != primary_model]
 
-        data = resp.json()
-        content = data["candidates"][0]["content"]["parts"][0]["text"]
-
-        # Parse JSON from response
+    last_error = None
+    for model_name in models_to_try:
         try:
-            if "```json" in content:
-                content = content.split("```json")[1].split("```")[0]
-            elif "```" in content:
-                content = content.split("```")[1].split("```")[0]
-            return json.loads(content)
-        except json.JSONDecodeError:
-            return {"raw_text": content}
+            async with httpx.AsyncClient(timeout=25.0) as client:
+                resp = await client.post(
+                    f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={api_key}",
+                    json={
+                        "contents": [{"parts": [{"text": prompt}]}],
+                        "generationConfig": {"temperature": temperature}
+                    },
+                )
+                if resp.status_code == 200:
+                    data = resp.json()
+                    content = data["candidates"][0]["content"]["parts"][0]["text"]
+
+                    # Parse JSON from response
+                    try:
+                        if "```json" in content:
+                            content = content.split("```json")[1].split("```")[0]
+                        elif "```" in content:
+                            content = content.split("```")[1].split("```")[0]
+                        return json.loads(content)
+                    except json.JSONDecodeError:
+                        return {"raw_text": content}
+
+                error_detail = resp.text[:200] if resp.text else "No response body"
+                print(f"[Gemini API Error] Model {model_name}, Status: {resp.status_code}, Detail: {error_detail}")
+                last_error = f"HTTP {resp.status_code} ({model_name})"
+                if resp.status_code in (404, 429, 500, 502, 503):
+                    continue
+                else:
+                    break
+        except Exception as e:
+            print(f"[Gemini API Exception] Model {model_name}: {e}")
+            last_error = str(e)
+            continue
+
+    raise ValueError(f"Gemini API lỗi: {last_error}")
 
 
 def get_assessment_data(assessment: Assessment, db: Session) -> dict:
@@ -390,7 +412,8 @@ Tỷ lệ nguy cơ: {adata['risk_percentage']}% ({adata['risk_level']}). Điểm
 
     # Try RAG Gemini
     try:
-        result = ask_ai_chi(question=data.message, history_text=history_text, context=context)
+        import asyncio
+        result = await asyncio.to_thread(ask_ai_chi, question=data.message, history_text=history_text, context=context)
         return result
     except Exception as e:
         print(f"[AI Chat RAG] Error: {e}")

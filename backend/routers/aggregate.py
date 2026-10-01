@@ -22,6 +22,7 @@ from middleware.rbac import require_role
 router = APIRouter(prefix="/api/admin/aggregate", tags=["Aggregate Analysis"])
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.5-flash")
 
 # Vietnamese labels for facility types
 FACILITY_TYPE_LABELS = {
@@ -319,25 +320,39 @@ Trả lời bằng JSON với format sau (tiếng Việt). LưU Ý:
 }}"""
 
         # Synchronous call for simplicity in FastAPI sync endpoint
-        with httpx.Client(timeout=60.0) as client:
-            resp = client.post(
-                f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={GEMINI_API_KEY}",
-                json={
-                    "contents": [{"parts": [{"text": prompt}]}],
-                    "generationConfig": {"temperature": 0.3}
-                },
-            )
-            if resp.status_code == 200:
-                data = resp.json()
-                content = data["candidates"][0]["content"]["parts"][0]["text"]
-                try:
-                    if "```json" in content:
-                        content = content.split("```json")[1].split("```")[0]
-                    elif "```" in content:
-                        content = content.split("```")[1].split("```")[0]
-                    return json.loads(content)
-                except json.JSONDecodeError:
-                    return {"nhan_dinh_chung": content, "source": "gemini_raw"}
+        api_key = os.getenv("GEMINI_API_KEY") or GEMINI_API_KEY
+        primary_model = os.getenv("GEMINI_MODEL", "gemini-3.5-flash")
+        fallback_models = ["gemini-3.5-flash", "gemini-3.8-flash", "gemini-2.5-flash", "gemini-3.5-flash-lite"]
+        models_to_try = [primary_model] + [m for m in fallback_models if m != primary_model]
+
+        for model_name in models_to_try:
+            try:
+                with httpx.Client(timeout=60.0) as client:
+                    resp = client.post(
+                        f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={api_key}",
+                        json={
+                            "contents": [{"parts": [{"text": prompt}]}],
+                            "generationConfig": {"temperature": 0.3}
+                        },
+                    )
+                    if resp.status_code == 200:
+                        data = resp.json()
+                        content = data["candidates"][0]["content"]["parts"][0]["text"]
+                        try:
+                            if "```json" in content:
+                                content = content.split("```json")[1].split("```")[0]
+                            elif "```" in content:
+                                content = content.split("```")[1].split("```")[0]
+                            return json.loads(content)
+                        except json.JSONDecodeError:
+                            return {"nhan_dinh_chung": content, "source": "gemini_raw"}
+                    elif resp.status_code in (404, 429, 500, 502, 503):
+                        continue
+                    else:
+                        break
+            except Exception as ex:
+                print(f"[AI aggregate] Model {model_name} error: {ex}")
+                continue
     except Exception as e:
         print(f"AI aggregate analysis error: {e}")
         return None

@@ -1,9 +1,13 @@
 """Test ask_ai_chi end-to-end with new API key + model"""
 import sys
 import os
+try:
+    sys.stdout.reconfigure(encoding='utf-8')
+except AttributeError:
+    pass
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from dotenv import load_dotenv
-load_dotenv()
+load_dotenv(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env"), override=True)
 
 from utils.rag_search import ask_ai_chi, GEMINI_API_KEY, GEMINI_MODEL, NOTEBOOKLM_NOTEBOOK_ID
 

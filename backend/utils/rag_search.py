@@ -19,7 +19,11 @@ import subprocess
 import sys
 from dotenv import load_dotenv
 
-load_dotenv()
+env_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), ".env")
+if os.path.exists(env_path):
+    load_dotenv(dotenv_path=env_path, override=True)
+else:
+    load_dotenv(override=True)
 
 
 def _safe_print(msg: str) -> None:
@@ -54,51 +58,127 @@ CHROMA_DB_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "chroma
 NOTEBOOKLM_NOTEBOOK_ID = os.getenv("NOTEBOOKLM_PROJECT_ID", "")
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
 
-# Model được pin cứng — KHÔNG để LangChain tự chọn
-# gemini-2.0-flash-lite: model mới nhất hoạt động với API free tier
-GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.0-flash-lite")
+# Danh sách model Gemini ổn định theo thứ tự ưu tiên (tự động fallback nếu Google đổi model)
+GEMINI_FALLBACK_MODELS = [
+    "gemini-3.5-flash",
+    "gemini-3.8-flash",
+    "gemini-2.5-flash",
+    "gemini-3.5-flash-lite",
+    "gemini-2.5-flash-lite",
+]
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.5-flash")
 GEMINI_EMBED_MODEL = os.getenv("GEMINI_EMBED_MODEL", "models/gemini-embedding-001")
 
-GEMINI_ENDPOINT = (
-    f"https://generativelanguage.googleapis.com/v1beta/models/"
-    f"{GEMINI_MODEL}:generateContent"
-)
-
 
 # ════════════════════════════════════════════════════════════════
-#  HELPER: Gọi Gemini REST API trực tiếp (không dùng LangChain)
+#  HELPER: Gọi Gemini REST API trực tiếp (hỗ trợ tự động fallback model)
 # ════════════════════════════════════════════════════════════════
 
-def _call_gemini_sync(prompt: str, temperature: float = 0.15, max_tokens: int = 2048) -> str:
+def _extract_json_block(text: str) -> dict | None:
+    """Trích xuất và parse object JSON từ phản hồi của mô hình."""
+    if not text:
+        return None
+    # 1. Thử parse trực tiếp
+    try:
+        data = json.loads(text.strip())
+        if isinstance(data, dict):
+            return data
+    except Exception:
+        pass
+
+    # 2. Markdown fence ```json
+    if "```json" in text:
+        try:
+            raw = text.split("```json")[1].split("```")[0].strip()
+            data = json.loads(raw)
+            if isinstance(data, dict):
+                return data
+        except Exception:
+            pass
+
+    if "```" in text:
+        try:
+            raw = text.split("```")[1].split("```")[0].strip()
+            data = json.loads(raw)
+            if isinstance(data, dict):
+                return data
+        except Exception:
+            pass
+
+    # 3. Tìm khối {...} bao quanh
+    start_idx = text.find("{")
+    end_idx = text.rfind("}")
+    if start_idx != -1 and end_idx != -1 and end_idx > start_idx:
+        try:
+            candidate = text[start_idx:end_idx + 1]
+            data = json.loads(candidate)
+            if isinstance(data, dict):
+                return data
+        except Exception:
+            pass
+
+    return None
+
+
+def _call_gemini_sync(prompt: str, temperature: float = 0.15, max_tokens: int = 2048, is_json: bool = False) -> str:
     """
     Gọi Gemini API qua httpx đồng bộ.
-    Trả về text nội dung hoặc raise Exception nếu lỗi.
+    Tự động thử các model dự phòng nếu gặp lỗi 404 (model deprecated), 429 (rate limit), 500, 503.
     """
-    if not GEMINI_API_KEY:
+    api_key = os.getenv("GEMINI_API_KEY") or GEMINI_API_KEY
+    if not api_key:
         raise ValueError("GEMINI_API_KEY chưa được cấu hình")
 
-    url = f"{GEMINI_ENDPOINT}?key={GEMINI_API_KEY}"
-    payload = {
-        "contents": [{"parts": [{"text": prompt}]}],
-        "generationConfig": {
-            "temperature": temperature,
-            "maxOutputTokens": max_tokens,
-        },
+    primary_model = os.getenv("GEMINI_MODEL") or GEMINI_MODEL or "gemini-3.5-flash"
+    models_to_try = [primary_model] + [m for m in GEMINI_FALLBACK_MODELS if m != primary_model]
+
+    gen_config = {
+        "temperature": temperature,
+        "maxOutputTokens": max_tokens,
     }
+    if is_json:
+        gen_config["responseMimeType"] = "application/json"
 
-    with httpx.Client(timeout=30.0) as client:
-        resp = client.post(url, json=payload)
+    last_error = None
+    for model_name in models_to_try:
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={api_key}"
+        payload = {
+            "contents": [{"parts": [{"text": prompt}]}],
+            "generationConfig": gen_config,
+        }
 
-    if resp.status_code != 200:
-        err = resp.text[:300] if resp.text else "No body"
-        print(f"[Gemini REST] ❌ HTTP {resp.status_code}: {err}")
-        raise ValueError(f"Gemini API lỗi HTTP {resp.status_code}: {err}")
+        try:
+            with httpx.Client(timeout=30.0) as client:
+                resp = client.post(url, json=payload)
 
-    data = resp.json()
-    try:
-        return data["candidates"][0]["content"]["parts"][0]["text"]
-    except (KeyError, IndexError) as e:
-        raise ValueError(f"Gemini API: cấu trúc phản hồi không hợp lệ — {e}")
+            if resp.status_code == 200:
+                data = resp.json()
+                try:
+                    text = data["candidates"][0]["content"]["parts"][0]["text"]
+                    if model_name != primary_model:
+                        _safe_print(f"[Gemini REST] Model '{primary_model}' lỗi, đã tự động chuyển sang fallback thành công: '{model_name}'")
+                    return text
+                except (KeyError, IndexError) as e:
+                    raise ValueError(f"Gemini API: cấu trúc phản hồi không hợp lệ — {e}")
+
+            err = resp.text[:200] if resp.text else "No body"
+            _safe_print(f"[Gemini REST] ❌ Model {model_name} HTTP {resp.status_code}: {err}")
+            last_error = f"HTTP {resp.status_code} ({model_name}): {err}"
+            # Thử model tiếp theo nếu gặp lỗi model deprecated / quota / server error
+            if resp.status_code in (404, 429, 500, 502, 503):
+                continue
+            else:
+                break
+        except httpx.TimeoutException:
+            _safe_print(f"[Gemini REST] TIMEOUT với model {model_name}, thử model kế tiếp...")
+            last_error = f"Timeout ({model_name})"
+            continue
+        except Exception as e:
+            _safe_print(f"[Gemini REST] Lỗi khi gọi {model_name}: {e}")
+            last_error = str(e)
+            continue
+
+    raise ValueError(f"Gemini API tất cả model đều lỗi. Lỗi cuối: {last_error}")
 
 
 # ════════════════════════════════════════════════════════════════
@@ -201,6 +281,12 @@ def search_notebooklm_api(question: str) -> str:
         ]
         clean = "\n".join(lines).strip()
 
+        # Loại bỏ các thông báo lỗi xác thực hoặc chuỗi quá ngắn
+        auth_error_keywords = ["re-authenticate", "authenticate", "expired", "permission_denied", "not logged in", "login", "error"]
+        if any(kw in clean.lower() for kw in auth_error_keywords) or len(clean) < 30:
+            _safe_print(f"[NotebookLM CLI] Bỏ qua kết quả không hợp lệ hoặc lỗi phiên: {clean[:60]}")
+            return ""
+
         if clean:
             _safe_print(f"[NotebookLM CLI] OK (text) Got {len(clean)} chars")
             return clean
@@ -226,7 +312,8 @@ def search_chromadb(question: str) -> str:
         _safe_print(f"[ChromaDB] Dir not found: {CHROMA_DB_DIR}")
         return ""
 
-    if not GEMINI_API_KEY:
+    api_key = os.getenv("GEMINI_API_KEY") or GEMINI_API_KEY
+    if not api_key:
         return ""
 
     try:
@@ -235,8 +322,8 @@ def search_chromadb(question: str) -> str:
         from langchain_google_genai import GoogleGenerativeAIEmbeddings
 
         embeddings = GoogleGenerativeAIEmbeddings(
-            model=GEMINI_EMBED_MODEL,
-            google_api_key=GEMINI_API_KEY,
+            model=os.getenv("GEMINI_EMBED_MODEL", GEMINI_EMBED_MODEL),
+            google_api_key=api_key,
         )
         vectorstore = Chroma(
             persist_directory=CHROMA_DB_DIR,
@@ -262,7 +349,8 @@ def search_notebooklm_gemini_grounded(question: str) -> str:
     Fallback: Dùng Gemini REST API với context pháp luật hiện hành.
     Trả về câu trả lời từ Gemini hoặc '' nếu lỗi.
     """
-    if not GEMINI_API_KEY:
+    api_key = os.getenv("GEMINI_API_KEY") or GEMINI_API_KEY
+    if not api_key:
         return ""
 
     legal_context = "\n".join(f"- {ref}" for ref in CURRENT_LEGAL_REFS)
@@ -297,32 +385,20 @@ def ask_ai_chi(question: str, history_text: str = "", context: str = "") -> dict
     Priority: NotebookLM CLI → ChromaDB → Gemini general (có ràng buộc luật mới)
 
     Gọi Gemini REST API trực tiếp (httpx) — KHÔNG dùng LangChain ChatGoogleGenerativeAI
-    để tránh lỗi model-override PERMISSION_DENIED với gemini-2.5-flash.
+    để tránh lỗi model-override PERMISSION_DENIED.
     """
     try:
         source_type = "general"
+        api_key = os.getenv("GEMINI_API_KEY") or GEMINI_API_KEY
 
-        # ── Bước 1: NotebookLM (ưu tiên cao nhất) ──────────────────
+        # ── Bước 1: NotebookLM (ưu tiên cao nhất nếu có CLI cấu hình) ──
         notebook_context = ""
         if NOTEBOOKLM_NOTEBOOK_ID:
             notebook_context = search_notebooklm_api(question)
-            if notebook_context:
+            if notebook_context and len(notebook_context) > 30 and "authenticate" not in notebook_context.lower():
                 source_type = "notebooklm"
-
-        if not GEMINI_API_KEY:
-            if notebook_context:
-                 return {
-                     "reply": f"{notebook_context}\n\n*(Hệ thống đang hiển thị câu trả lời nguyên gốc từ NotebookLM do thiếu API Key Gemini)*",
-                     "source_type": "notebooklm",
-                     "suggestions": [],
-                     "references": []
-                 }
-            return {
-                "reply": "Xin lỗi, hệ thống AI Chi chưa được cấu hình GEMINI_API_KEY và không lấy được thông tin từ NotebookLM.",
-                "source_type": "error",
-                "suggestions": [],
-                "references": [],
-            }
+            else:
+                notebook_context = ""
 
         # ── Bước 2: ChromaDB ────────────────────────────────────────
         chroma_context = ""
@@ -330,6 +406,25 @@ def ask_ai_chi(question: str, history_text: str = "", context: str = "") -> dict
             chroma_context = search_chromadb(question)
             if chroma_context:
                 source_type = "docs"
+
+        # Nếu không có API Key Gemini, ưu tiên dữ liệu nội bộ/NotebookLM
+        if not api_key:
+            if notebook_context:
+                return {
+                    "reply": f"{notebook_context}\n\n*(Hệ thống đang hiển thị thông tin trực tiếp từ NotebookLM)*",
+                    "source_type": "notebooklm",
+                    "suggestions": ["Quy định về bình chữa cháy?", "Khi xảy ra cháy cần làm gì?"],
+                    "references": list(CURRENT_LEGAL_REFS[:2])
+                }
+            if chroma_context:
+                return {
+                    "reply": f"Thông tin quy chuẩn PCCC trích xuất:\n\n{chroma_context[:1000]}",
+                    "source_type": "docs",
+                    "suggestions": ["Quy định về bình chữa cháy?", "Khi xảy ra cháy cần làm gì?"],
+                    "references": list(CURRENT_LEGAL_REFS[:2])
+                }
+            from routers.ai_analysis import _chat_fallback
+            return _chat_fallback(question)
 
         # ── Bước 3: Gemini Grounded (nếu cả hai đều rỗng) ──────────
         grounded_context = ""
@@ -389,50 +484,62 @@ TRẢ VỀ JSON THUẦN (không dùng ```json):
 }}"""
 
         # ── Gọi Gemini REST API trực tiếp ───────────────────────────
-        _safe_print(f"[ask_ai_chi] Gọi Gemini {GEMINI_MODEL} REST API...")
-        content = _call_gemini_sync(template, temperature=0.15, max_tokens=2048)
+        current_model = os.getenv("GEMINI_MODEL", "gemini-3.5-flash")
+        _safe_print(f"[ask_ai_chi] Gọi Gemini API (ưu tiên {current_model})...")
+        content = _call_gemini_sync(template, temperature=0.15, max_tokens=2048, is_json=True)
         _safe_print(f"[ask_ai_chi] OK Got {len(content)} chars")
 
         # ── Parse JSON từ phản hồi ───────────────────────────────────
-        # Loại bỏ markdown fence nếu có
-        stripped = content.strip()
-        if "```json" in stripped:
-            stripped = stripped.split("```json")[1].split("```")[0].strip()
-        elif "```" in stripped:
-            stripped = stripped.split("```")[1].split("```")[0].strip()
-
-        try:
-            result = json.loads(stripped)
-            result["source_type"] = source_type  # Đảm bảo source_type đúng
+        result = _extract_json_block(content)
+        if result and isinstance(result, dict) and "reply" in result:
+            result["source_type"] = source_type
+            if not isinstance(result.get("suggestions"), list):
+                result["suggestions"] = []
+            if not isinstance(result.get("references"), list):
+                result["references"] = list(CURRENT_LEGAL_REFS[:3])
             return result
-        except json.JSONDecodeError:
-            # Gemini trả về text thô (không JSON) — vẫn hữu ích
-            return {
-                "reply": stripped,
-                "source_type": source_type,
-                "suggestions": [],
-                "references": list(CURRENT_LEGAL_REFS[:3]),
-            }
+
+        # Fallback nếu kết quả text không parse được dạng JSON hoàn chỉnh
+        return {
+            "reply": content.strip(),
+            "source_type": source_type,
+            "suggestions": ["Quy định về bình chữa cháy?", "Khi xảy ra cháy cần làm gì?", "Luật PCCC 55/2024 có gì mới?"],
+            "references": list(CURRENT_LEGAL_REFS[:3]),
+        }
 
     except Exception as e:
         err_msg = str(e)
         _safe_print(f"[ask_ai_chi] ERROR: {err_msg}")
-        
-        # Nếu lỗi Gemini (hết hạn, hết tiền) mà có dữ liệu từ NotebookLM thì trả về raw luôn
-        if 'notebook_context' in locals() and notebook_context:
-             return {
-                 "reply": f"{notebook_context}\n\n*(Lưu ý: API Gemini bị lỗi nên đây là câu trả lời lấy trực tiếp từ NotebookLM)*",
-                 "source_type": "notebooklm_direct",
-                 "suggestions": [],
-                 "references": []
-             }
-             
-        return {
-            "reply": (
-                f"Hệ thống đang tạm thời gián đoạn (lỗi: {err_msg[:120]}). "
-                "Vui lòng thử lại sau."
-            ),
-            "source_type": "error",
-            "suggestions": [],
-            "references": [],
-        }
+
+        # Nếu có dữ liệu NotebookLM hợp lệ thì trả về
+        if 'notebook_context' in locals() and notebook_context and len(notebook_context) > 30 and "authenticate" not in notebook_context.lower():
+            return {
+                "reply": f"{notebook_context}\n\n*(Lưu ý: Hệ thống đang trích xuất câu trả lời trực tiếp từ NotebookLM)*",
+                "source_type": "notebooklm_direct",
+                "suggestions": [],
+                "references": list(CURRENT_LEGAL_REFS[:2])
+            }
+
+        # Nếu có ChromaDB context thì phản hồi từ dữ liệu pháp lý nội bộ
+        if 'chroma_context' in locals() and chroma_context and len(chroma_context) > 30:
+            return {
+                "reply": f"Dựa trên cơ sở dữ liệu pháp luật PCCC đã đối soát:\n\n{chroma_context[:1200]}\n\n*(Lưu ý: Hệ thống đang phản hồi từ kho văn bản quy chuẩn nội bộ)*",
+                "source_type": "docs",
+                "suggestions": ["Quy định về bình chữa cháy?", "Khi xảy ra cháy cần làm gì?", "Luật PCCC 55/2024 có gì mới?"],
+                "references": list(CURRENT_LEGAL_REFS[:2])
+            }
+
+        # Fallback về bộ kịch bản kiến thức PCCC tiêu chuẩn
+        try:
+            from routers.ai_analysis import _chat_fallback
+            fb = _chat_fallback(question)
+            return fb
+        except Exception:
+            return {
+                "reply": (
+                    "Hệ thống đang tạm thời gián đoạn kết nối AI. Vui lòng thử lại sau giây lát hoặc liên hệ cán bộ quản lý PCCC."
+                ),
+                "source_type": "error",
+                "suggestions": [],
+                "references": [],
+            }
