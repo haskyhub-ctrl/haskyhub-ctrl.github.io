@@ -181,6 +181,94 @@ def _call_gemini_sync(prompt: str, temperature: float = 0.15, max_tokens: int = 
     raise ValueError(f"Gemini API tất cả model đều lỗi. Lỗi cuối: {last_error}")
 
 
+def _call_9router(prompt: str, temperature: float = 0.15, max_tokens: int = 2048, is_json: bool = False) -> str:
+    """
+    Gọi 9Router OpenAI-compatible endpoint qua tài khoản Google Pro (moonshinemylove@gmail.com).
+    """
+    base_url = os.getenv("ROUTER_BASE_URL", "http://127.0.0.1:20128/v1").rstrip("/")
+    router_url = f"{base_url}/chat/completions"
+    router_key = os.getenv("ROUTER_API_KEY", "")
+    if not router_key:
+        raise ValueError("ROUTER_API_KEY chưa được cấu hình")
+
+    primary_model = os.getenv("ROUTER_MODEL", "ag/gemini-3.8-flash-high")
+    fallback_models = [
+        primary_model,
+        "ag/gemini-pro-agent",
+        "ag/gemini-3.8-flash",
+        "ag/gemini-3.5-flash-high",
+    ]
+    models_to_try = []
+    for m in fallback_models:
+        if m not in models_to_try:
+            models_to_try.append(m)
+
+    headers = {
+        "Authorization": f"Bearer {router_key}",
+        "Content-Type": "application/json",
+    }
+
+    last_error = None
+    for model_name in models_to_try:
+        payload = {
+            "model": model_name,
+            "messages": [
+                {"role": "user", "content": prompt}
+            ],
+            "temperature": temperature,
+            "max_tokens": max_tokens,
+            "stream": False,
+        }
+        if is_json:
+            payload["response_format"] = {"type": "json_object"}
+
+        try:
+            with httpx.Client(timeout=45.0) as client:
+                resp = client.post(router_url, json=payload, headers=headers)
+
+            if resp.status_code == 200:
+                data = resp.json()
+                text = data["choices"][0]["message"]["content"]
+                _safe_print(f"[9Router] OK Thành công với model '{model_name}' (Google Pro)")
+                return text
+
+            err = resp.text[:200] if resp.text else "No body"
+            _safe_print(f"[9Router] ❌ Model {model_name} HTTP {resp.status_code}: {err}")
+            last_error = f"HTTP {resp.status_code} ({model_name}): {err}"
+            if resp.status_code in (400, 404, 429, 500, 502, 503):
+                continue
+            else:
+                break
+        except httpx.TimeoutException:
+            _safe_print(f"[9Router] TIMEOUT với model {model_name}, thử model tiếp theo...")
+            last_error = f"Timeout ({model_name})"
+            continue
+        except Exception as e:
+            _safe_print(f"[9Router] Lỗi khi gọi {model_name}: {e}")
+            last_error = str(e)
+            continue
+
+    raise ValueError(f"9Router tất cả model đều lỗi. Lỗi cuối: {last_error}")
+
+
+def _call_llm(prompt: str, temperature: float = 0.15, max_tokens: int = 2048, is_json: bool = False) -> str:
+    """
+    Hàm gọi LLM hợp nhất:
+    1. Ưu tiên 9Router (Google Pro account: moonshinemylove@gmail.com).
+    2. Tự động fallback sang Google Gemini REST API trực tiếp nếu 9Router tắt hoặc lỗi.
+    """
+    use_9router = os.getenv("USE_9ROUTER", "true").lower() in ("true", "1", "yes")
+    router_key = os.getenv("ROUTER_API_KEY", "")
+
+    if use_9router and router_key:
+        try:
+            return _call_9router(prompt, temperature=temperature, max_tokens=max_tokens, is_json=is_json)
+        except Exception as e:
+            _safe_print(f"[LLM Router] 9Router không phản hồi ({e}), tự động chuyển sang Gemini REST API...")
+
+    return _call_gemini_sync(prompt, temperature=temperature, max_tokens=max_tokens, is_json=is_json)
+
+
 # ════════════════════════════════════════════════════════════════
 #  1. NOTEBOOKLM — qua nlm CLI subprocess
 # ════════════════════════════════════════════════════════════════
@@ -367,7 +455,7 @@ TUYỆT ĐỐI KHÔNG trích dẫn các văn bản đã HẾT HIỆU LỰC sau:
 Cung cấp câu trả lời ngắn gọn, chính xác (200-400 từ), trích dẫn cụ thể điều khoản."""
 
     try:
-        content = _call_gemini_sync(grounding_prompt, temperature=0.1, max_tokens=1024)
+        content = _call_llm(grounding_prompt, temperature=0.1, max_tokens=1024)
         _safe_print(f"[Gemini Grounded] OK Got {len(content)} chars")
         return content
     except Exception as e:
@@ -382,14 +470,16 @@ Cung cấp câu trả lời ngắn gọn, chính xác (200-400 từ), trích d�
 def ask_ai_chi(question: str, history_text: str = "", context: str = "") -> dict:
     """
     Trợ lý Chi — RAG Pipeline:
-    Priority: NotebookLM CLI → ChromaDB → Gemini general (có ràng buộc luật mới)
+    Priority: NotebookLM CLI → ChromaDB → 9Router (Google Pro)/Gemini (có ràng buộc luật mới)
 
-    Gọi Gemini REST API trực tiếp (httpx) — KHÔNG dùng LangChain ChatGoogleGenerativeAI
+    Gọi 9Router (hoặc Gemini REST API dự phòng) — KHÔNG dùng LangChain ChatGoogleGenerativeAI
     để tránh lỗi model-override PERMISSION_DENIED.
     """
     try:
         source_type = "general"
         api_key = os.getenv("GEMINI_API_KEY") or GEMINI_API_KEY
+        use_router = os.getenv("USE_9ROUTER", "true").lower() in ("true", "1", "yes")
+        router_key = os.getenv("ROUTER_API_KEY", "")
 
         # ── Bước 1: NotebookLM (ưu tiên cao nhất nếu có CLI cấu hình) ──
         notebook_context = ""
@@ -407,8 +497,8 @@ def ask_ai_chi(question: str, history_text: str = "", context: str = "") -> dict
             if chroma_context:
                 source_type = "docs"
 
-        # Nếu không có API Key Gemini, ưu tiên dữ liệu nội bộ/NotebookLM
-        if not api_key:
+        # Nếu không có cả API Key Gemini lẫn 9Router Key, ưu tiên dữ liệu nội bộ/NotebookLM
+        if not api_key and not (use_router and router_key):
             if notebook_context:
                 return {
                     "reply": f"{notebook_context}\n\n*(Hệ thống đang hiển thị thông tin trực tiếp từ NotebookLM)*",
@@ -483,10 +573,11 @@ TRẢ VỀ JSON THUẦN (không dùng ```json):
     "references": ["văn bản pháp lý trích dẫn HIỆN HÀNH — chỉ 2024-2025"]
 }}"""
 
-        # ── Gọi Gemini REST API trực tiếp ───────────────────────────
-        current_model = os.getenv("GEMINI_MODEL", "gemini-3.5-flash")
-        _safe_print(f"[ask_ai_chi] Gọi Gemini API (ưu tiên {current_model})...")
-        content = _call_gemini_sync(template, temperature=0.15, max_tokens=2048, is_json=True)
+        # ── Gọi LLM (9Router Google Pro hoặc Gemini REST API) ───────
+        router_model = os.getenv("ROUTER_MODEL", "ag/gemini-3.8-flash-high")
+        current_model = router_model if use_router and router_key else os.getenv("GEMINI_MODEL", "gemini-3.5-flash")
+        _safe_print(f"[ask_ai_chi] Gọi LLM (ưu tiên {current_model})...")
+        content = _call_llm(template, temperature=0.15, max_tokens=2048, is_json=True)
         _safe_print(f"[ask_ai_chi] OK Got {len(content)} chars")
 
         # ── Parse JSON từ phản hồi ───────────────────────────────────
