@@ -14,20 +14,22 @@
 <body>
     <nav class="navbar">
         <div class="container">
-            <a href="/" class="nav-brand"><span class="logo-icon"><img src="/img/logo-cand.png" alt="CAND" width="36" height="36" style="object-fit:contain;filter:brightness(0) invert(1);"></span>
-                <div><span>FRAS Admin</span><small>Quản trị Hệ thống</small></div>
+            <a href="/" class="nav-brand">
+                <span class="logo-icon"><img src="/img/logo-cand.png" alt="CAND" width="38" height="38" style="object-fit:contain;"></span>
+                <div><span>FRAS ADMIN</span><small>Công an tỉnh Bắc Ninh • PCCC & CNCH</small></div>
             </a>
             <ul class="nav-links" id="nav-links">
-                <li><a href="/">Trang chủ</a></li>
+                <li><a href="/"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px;"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Trang chủ</a></li>
             </ul>
             <div class="nav-user" id="nav-user"></div>
+            <button class="nav-mobile-toggle">&#9776;</button>
         </div>
     </nav>
 
     <div class="admin-layout">
         <aside class="admin-sidebar">
             <div class="sidebar-header">
-                <h3>Quản trị</h3>
+                <h3>Quản trị hệ thống</h3>
                 <p>Bảng điều khiển admin</p>
             </div>
             <ul class="sidebar-nav">
@@ -37,6 +39,7 @@
                 <li><a href="/admin/assessments.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span> Đánh giá</a></li>
                 <li><a href="/admin/reports.html" class="active"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span> Báo cáo</a></li>
                 <li><a href="/admin/aggregate.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg></span> Phân tích tổng hợp</a></li>
+                <li><a href="/admin/backups.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></span> Sao lưu dữ liệu</a></li>
             </ul>
         </aside>
         <main class="admin-content">

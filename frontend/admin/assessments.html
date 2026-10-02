@@ -7,96 +7,33 @@
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/admin.css">
     <style>
-        /* ── Filter bar ── */
-        .filter-bar { display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-bottom:14px; }
-        .filter-bar select { background:var(--glass-bg); color:var(--text-primary); border:1px solid var(--border-color); border-radius:0; padding:8px 13px; font-size:.88rem; min-width:148px; cursor:pointer; }
-        .view-toggle { display:flex; gap:4px; margin-left:auto; }
-        .view-toggle button { padding:7px 14px; background:transparent; border:1px solid var(--border-color); color:var(--text-secondary); border-radius:0; cursor:pointer; font-size:.83rem; transition:all .2s; }
-        .view-toggle button.active { background:var(--accent-orange); border-color:var(--accent-orange); color:#fff; }
-
-        /* ── Action buttons ── */
-        .btn-danger  { background:#c0392b; color:#fff; border:none; padding:8px 16px; cursor:pointer; border-radius:0; font-size:.85rem; font-weight:600; display:inline-flex; align-items:center; gap:6px; transition:background .2s; }
-        .btn-danger:hover  { background:#a93226; }
-        .btn-generate { background:linear-gradient(135deg,#6c3fc5,#9b59b6); color:#fff; border:none; padding:9px 18px; cursor:pointer; border-radius:0; font-size:.88rem; font-weight:600; display:inline-flex; align-items:center; gap:6px; transition:opacity .2s; }
-        .btn-generate:hover { opacity:.85; }
-        .btn-warning  { background:#e67e22; color:#fff; border:none; padding:8px 16px; cursor:pointer; border-radius:0; font-size:.85rem; font-weight:600; display:inline-flex; align-items:center; gap:6px; transition:background .2s; }
-        .btn-warning:hover  { background:#ca6f1e; }
-
-        /* ── Bulk action bar ── */
-        .bulk-bar { display:none; align-items:center; gap:12px; background:rgba(255,140,0,.1); border:1px solid rgba(255,140,0,.4); padding:10px 16px; margin-bottom:12px; border-radius:2px; }
-        .bulk-bar.visible { display:flex; }
-        .bulk-bar span { font-weight:600; font-size:.9rem; color:var(--accent-orange); }
-
-        /* ── Badge demo ── */
-        .badge-demo { background:rgba(150,90,220,.22); color:#b07de0; font-size:.68rem; padding:1px 7px; border:1px solid rgba(150,90,220,.4); border-radius:2px; vertical-align:middle; margin-left:5px; }
-
-        /* ── Checkbox col ── */
-        th.chk-col, td.chk-col { width:36px; text-align:center; padding:0 6px !important; }
-        input[type=checkbox] { width:16px; height:16px; cursor:pointer; accent-color:var(--accent-orange); }
-
-        /* ── Group view ── */
-        .facility-group { margin-bottom:22px; }
-        .facility-group-header { display:flex; align-items:center; gap:8px; padding:9px 15px; background:var(--glass-bg); border:1px solid var(--border-color); font-weight:600; font-size:.93rem; }
-        .facility-group-header .count { background:rgba(255,255,255,.1); padding:2px 10px; font-size:.78rem; color:var(--text-muted); }
-
-        /* ── Generate Modal ── */
-        .modal-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,.65); z-index:9999; align-items:center; justify-content:center; opacity:1; visibility:visible; }
-        .modal-overlay.open { display:flex; opacity:1; visibility:visible; }
-        .modal-box { background:#1e2235; border:1px solid var(--border-color); border-radius:8px; width:min(560px,95vw); padding:28px 30px; max-height:92vh; overflow-y:auto; }
-        .modal-box h3 { margin:0 0 20px; font-size:1.1rem; display:flex; align-items:center; gap:8px; }
-
-        .form-group { margin-bottom:15px; }
-        .form-group label { display:block; font-size:.83rem; color:var(--text-secondary); margin-bottom:6px; font-weight:500; }
-        .form-group select, .form-group input[type=number] { width:100%; background:var(--glass-bg); color:var(--text-primary); border:1px solid var(--border-color); border-radius:0; padding:9px 12px; font-size:.9rem; box-sizing:border-box; }
-        .form-group input[type=range]  { width:100%; accent-color:var(--accent-orange); }
-
-        .form-row { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
-
-        .count-display { font-size:1.5rem; font-weight:700; color:var(--accent-orange); text-align:center; }
-
-        .risk-chips { display:flex; flex-wrap:wrap; gap:8px; margin-top:4px; }
-        .risk-chip  { padding:5px 14px; border:1px solid var(--border-color); border-radius:2px; cursor:pointer; font-size:.83rem; transition:all .2s; background:transparent; color:var(--text-secondary); }
-        .risk-chip:hover, .risk-chip.active { color:#fff; }
-        .risk-chip[data-val=""]        { border-color:#888; }
-        .risk-chip[data-val=""].active { background:#555; border-color:#888; }
-        .risk-chip[data-val="safe"].active   { background:#27ae60; border-color:#27ae60; }
-        .risk-chip[data-val="low"].active    { background:#f1c40f; border-color:#f1c40f; color:#000; }
-        .risk-chip[data-val="medium"].active { background:#e67e22; border-color:#e67e22; }
-        .risk-chip[data-val="high"].active   { background:#c0392b; border-color:#c0392b; }
-        .risk-chip[data-val="critical"].active { background:#6c1e25; border-color:#e74c3c; }
-
-        .modal-footer { display:flex; gap:10px; justify-content:flex-end; margin-top:22px; }
-        .btn-cancel { background:transparent; color:var(--text-secondary); border:1px solid var(--border-color); padding:9px 20px; cursor:pointer; border-radius:0; font-size:.88rem; }
-        .btn-cancel:hover { background:rgba(255,255,255,.05); }
-
-        /* ── Confirm modal ── */
-        .confirm-modal { background:#1e2235; border:1px solid #c0392b; border-radius:8px; width:min(420px,95vw); padding:24px; }
-        .confirm-modal h3 { color:#e74c3c; margin:0 0 10px; }
-        .confirm-modal p  { color:var(--text-secondary); font-size:.9rem; margin-bottom:18px; }
-
-        /* ── Stats bar ── */
-        .stats-bar { display:flex; gap:16px; flex-wrap:wrap; margin-bottom:14px; font-size:.82rem; color:var(--text-muted); align-items:center; }
-        .stats-bar strong { color:var(--text-primary); }
-
-        /* ── Progress toast ── */
-        #gen-progress { display:none; background:rgba(108,63,197,.15); border:1px solid rgba(108,63,197,.4); padding:10px 14px; border-radius:4px; margin-top:10px; font-size:.85rem; color:#b07de0; }
+        .badge-demo { background: rgba(26, 58, 107, 0.1); color: var(--gov-navy); font-size: 0.7rem; padding: 2px 8px; border: 1px solid rgba(26, 58, 107, 0.25); border-radius: 4px; vertical-align: middle; margin-left: 5px; font-weight: 600; }
+        th.chk-col, td.chk-col { width: 36px; text-align: center; padding: 0 6px !important; }
+        #gen-progress { display: none; background: var(--gov-navy-light); border: 1px solid rgba(26, 58, 107, 0.3); padding: 10px 14px; border-radius: var(--radius-sm); margin-top: 10px; font-size: 0.85rem; color: var(--gov-navy); font-weight: 600; }
     </style>
 </head>
 
 <body>
     <nav class="navbar">
         <div class="container">
-            <a href="/" class="nav-brand"><span class="logo-icon"><img src="/img/logo-cand.png" alt="CAND" width="36" height="36" style="object-fit:contain;filter:brightness(0) invert(1);"></span>
-                <div><span>FRAS Admin</span><small>Quản trị Hệ thống</small></div>
+            <a href="/" class="nav-brand">
+                <span class="logo-icon"><img src="/img/logo-cand.png" alt="CAND" width="38" height="38" style="object-fit:contain;"></span>
+                <div><span>FRAS ADMIN</span><small>Công an tỉnh Bắc Ninh • PCCC & CNCH</small></div>
             </a>
-            <ul class="nav-links" id="nav-links"><li><a href="/">Trang chủ</a></li></ul>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="/"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px;"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Trang chủ</a></li>
+            </ul>
             <div class="nav-user" id="nav-user"></div>
+            <button class="nav-mobile-toggle">&#9776;</button>
         </div>
     </nav>
 
     <div class="admin-layout">
         <aside class="admin-sidebar">
-            <div class="sidebar-header"><h3>Quản trị</h3><p>Bảng điều khiển admin</p></div>
+            <div class="sidebar-header">
+                <h3>Quản trị hệ thống</h3>
+                <p>Bảng điều khiển admin</p>
+            </div>
             <ul class="sidebar-nav">
                 <li><a href="/admin/"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span> Tổng quan</a></li>
                 <li><a href="/admin/users.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span> Người dùng</a></li>
@@ -104,7 +41,7 @@
                 <li><a href="/admin/assessments.html" class="active"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span> Đánh giá</a></li>
                 <li><a href="/admin/reports.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span> Báo cáo</a></li>
                 <li><a href="/admin/aggregate.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg></span> Phân tích tổng hợp</a></li>
-                <li><a href="/map.html"><span class="nav-icon">📍</span> Bản đồ</a></li>
+                <li><a href="/admin/backups.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke"currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></span> Sao lưu dữ liệu</a></li>
             </ul>
         </aside>
 

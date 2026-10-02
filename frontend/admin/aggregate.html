@@ -29,253 +29,17 @@
         .risk-badge { border: 1px solid #999; padding: 2px 6px; font-size: 10px; }
         .chart-filter-bar { display: none !important; }
     </style>
-    <style>
-        .aggregate-filters {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-            margin-bottom: 24px;
-            align-items: flex-end;
-        }
-
-        .aggregate-filters .form-group {
-            flex: 1;
-            min-width: 180px;
-            margin: 0;
-        }
-
-        .aggregate-filters .form-group label {
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-            margin-bottom: 4px;
-            display: block;
-        }
-
-        .aggregate-filters select,
-        .aggregate-filters input {
-            background: var(--glass-bg);
-            color: var(--text-primary);
-            border: 1px solid var(--border-color);
-            border-radius: 0;
-            padding: 10px 14px;
-            width: 100%;
-            font-size: 0.95rem;
-        }
-
-        .stat-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 16px;
-            margin-bottom: 24px;
-        }
-
-        .stat-card {
-            background: var(--glass-bg);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--border-color);
-            border-radius: 0;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .stat-card .stat-value {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--primary-gradient-from);
-        }
-
-        .stat-card .stat-label {
-            color: var(--text-secondary);
-            font-size: 0.85rem;
-            margin-top: 4px;
-        }
-
-        .analysis-section {
-            background: var(--glass-bg);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--border-color);
-            border-radius: 0;
-            padding: 24px;
-            margin-bottom: 24px;
-        }
-
-        .analysis-section h3 {
-            margin-bottom: 16px;
-            color: var(--text-primary);
-        }
-
-        .rec-card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid var(--border-color);
-            border-radius: 0;
-            padding: 16px;
-            margin-bottom: 12px;
-        }
-
-        .rec-card.critical {
-            border-left: 4px solid #ef4444;
-        }
-
-        .rec-card.high {
-            border-left: 4px solid #f97316;
-        }
-
-        .rec-card.medium {
-            border-left: 4px solid #eab308;
-        }
-
-        .rec-card.low {
-            border-left: 4px solid #22c55e;
-        }
-
-        .rec-card.urgent {
-            border-left: 4px solid #dc2626;
-        }
-
-        .rec-card h4 {
-            margin: 0 0 8px;
-            font-size: 1rem;
-        }
-
-        .rec-card p {
-            color: var(--text-secondary);
-            margin: 0 0 8px;
-            font-size: 0.9rem;
-        }
-
-        .rec-card ul {
-            margin: 0;
-            padding-left: 20px;
-            color: var(--text-secondary);
-            font-size: 0.85rem;
-        }
-
-        .rec-card ul li {
-            margin-bottom: 4px;
-        }
-
-        .facility-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .facility-table th,
-        .facility-table td {
-            padding: 10px 12px;
-            text-align: left;
-            border-bottom: 1px solid var(--border-color);
-            font-size: 0.9rem;
-        }
-
-        .facility-table th {
-            color: var(--text-secondary);
-            font-weight: 600;
-        }
-
-        .risk-badge {
-            padding: 4px 10px;
-            border-radius: 0;
-            font-size: 0.8rem;
-            font-weight: 600;
-            display: inline-block;
-        }
-
-        .risk-badge.critical {
-            background: rgba(239, 68, 68, 0.2);
-            color: #ef4444;
-        }
-
-        .risk-badge.high {
-            background: rgba(249, 115, 22, 0.2);
-            color: #f97316;
-        }
-
-        .risk-badge.medium {
-            background: rgba(234, 179, 8, 0.2);
-            color: #eab308;
-        }
-
-        .risk-badge.low {
-            background: rgba(34, 197, 94, 0.2);
-            color: #22c55e;
-        }
-
-        .risk-badge.safe {
-            background: rgba(34, 197, 94, 0.2);
-            color: #22c55e;
-        }
-
-        .empty-state {
-            text-align: center;
-            padding: 60px 20px;
-            color: var(--text-secondary);
-        }
-
-        .empty-state .icon {
-            font-size: 3rem;
-            margin-bottom: 16px;
-        }
-
-        .chart-container {
-            position: relative;
-            height: 250px;
-        }
-
-        .category-bar {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-            gap: 12px;
-        }
-
-        .category-bar .name {
-            width: 200px;
-            font-size: 0.85rem;
-            text-align: right;
-            color: var(--text-secondary);
-        }
-
-        .category-bar .bar-wrap {
-            flex: 1;
-            background: rgba(255, 255, 255, 0.05);
-            height: 24px;
-            border-radius: 0;
-            overflow: hidden;
-        }
-
-        .category-bar .bar-fill {
-            height: 100%;
-            border-radius: 0;
-            transition: width 0.3s;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            padding-right: 8px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: #fff;
-        }
-
-        /* MAP */
-        #map-section { margin-bottom: 24px; }
-        #risk-map { height: 460px; border-radius: 0; border: 1px solid var(--border-color); z-index: 0; }
-        .map-toolbar { display: flex; gap: 8px; margin-bottom: 10px; align-items: center; }
-        .map-mode-btn { padding: 7px 16px; border: 1px solid var(--border-color); background: transparent; color: var(--text-secondary); cursor: pointer; font-size: .84rem; border-radius: 0; transition: all .2s; }
-        .map-mode-btn.active { background: var(--accent-orange); border-color: var(--accent-orange); color: #fff; }
-        .map-legend { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 8px; font-size: .8rem; }
-        .map-legend span { display: flex; align-items: center; gap: 4px; }
-        .dot-legend { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
-    </style>
 </head>
 
 <body>
     <nav class="navbar">
         <div class="container">
-            <a href="/" class="nav-brand"><span class="logo-icon"><img src="/img/logo-cand.png" alt="CAND" width="36" height="36" style="object-fit:contain;filter:brightness(0) invert(1);"></span>
-                <div><span>FRAS Admin</span><small>Quản trị Hệ thống</small></div>
+            <a href="/" class="nav-brand">
+                <span class="logo-icon"><img src="/img/logo-cand.png" alt="CAND" width="38" height="38" style="object-fit:contain;"></span>
+                <div><span>FRAS ADMIN</span><small>Công an tỉnh Bắc Ninh • PCCC & CNCH</small></div>
             </a>
             <ul class="nav-links" id="nav-links">
-                <li><a href="/">Trang chủ</a></li>
+                <li><a href="/"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px;"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Trang chủ</a></li>
             </ul>
             <div class="nav-user" id="nav-user"></div>
             <button class="nav-mobile-toggle">&#9776;</button>
@@ -285,7 +49,7 @@
     <div class="admin-layout">
         <aside class="admin-sidebar">
             <div class="sidebar-header">
-                <h3>Quản trị</h3>
+                <h3>Quản trị hệ thống</h3>
                 <p>Bảng điều khiển admin</p>
             </div>
             <ul class="sidebar-nav">
@@ -294,8 +58,8 @@
                 <li><a href="/admin/questions.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span> Câu hỏi</a></li>
                 <li><a href="/admin/assessments.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span> Đánh giá</a></li>
                 <li><a href="/admin/reports.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span> Báo cáo</a></li>
-                <li><a href="/admin/aggregate.html" class="active"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg></span> Phân tích tổng
-                        hợp</a></li>
+                <li><a href="/admin/aggregate.html" class="active"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg></span> Phân tích tổng hợp</a></li>
+                <li><a href="/admin/backups.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></span> Sao lưu dữ liệu</a></li>
             </ul>
         </aside>
 
@@ -573,21 +337,21 @@
             // High Risk Types & Causes Analysis
             html += `<div class="analysis-section fade-in">
                 <h3>⚠️ Bảng Nhóm Nguy Cơ Cao Nhất</h3>
-                <div class="chart-filter-bar" style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-bottom:16px; padding:12px; background:rgba(255,255,255,0.04); border:1px solid var(--border-color); border-radius:8px;">
-                    <span style="font-size:0.85rem; color:var(--text-secondary); white-space:nowrap;">Lọc theo mức nguy cơ:</span>
-                    <label style="display:flex;align-items:center;gap:6px;cursor:pointer;font-size:0.85rem;"><input type="checkbox" class="chart-risk-filter" value="critical" checked style="accent-color:#ef4444;"> <span style="color:#ef4444;">&#9940; Rất cao</span></label>
-                    <label style="display:flex;align-items:center;gap:6px;cursor:pointer;font-size:0.85rem;"><input type="checkbox" class="chart-risk-filter" value="high" checked style="accent-color:#f97316;"> <span style="color:#f97316;">&#128308; Cao</span></label>
-                    <label style="display:flex;align-items:center;gap:6px;cursor:pointer;font-size:0.85rem;"><input type="checkbox" class="chart-risk-filter" value="medium" style="accent-color:#eab308;"> <span style="color:#eab308;">&#128993; Trung bình</span></label>
-                    <label style="display:flex;align-items:center;gap:6px;cursor:pointer;font-size:0.85rem;"><input type="checkbox" class="chart-risk-filter" value="low" style="accent-color:#84cc16;"> <span style="color:#84cc16;">&#128994; Thấp</span></label>
-                    <label style="display:flex;align-items:center;gap:6px;cursor:pointer;font-size:0.85rem;"><input type="checkbox" class="chart-risk-filter" value="safe" style="accent-color:#22c55e;"> <span style="color:#22c55e;">&#9989; An toàn</span></label>
+                <div class="chart-filter-bar" style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-bottom:16px; padding:12px; background:#F8FAFC; border:1px solid var(--gov-border); border-radius:var(--radius-sm);">
+                    <span style="font-size:0.85rem; color:var(--gov-navy); font-weight:600; white-space:nowrap;">Lọc theo mức nguy cơ:</span>
+                    <label style="display:flex;align-items:center;gap:6px;cursor:pointer;font-size:0.85rem;"><input type="checkbox" class="chart-risk-filter" value="critical" checked style="accent-color:#ef4444;"> <span style="color:#ef4444;font-weight:600;">&#9940; Rất cao</span></label>
+                    <label style="display:flex;align-items:center;gap:6px;cursor:pointer;font-size:0.85rem;"><input type="checkbox" class="chart-risk-filter" value="high" checked style="accent-color:#f97316;"> <span style="color:#f97316;font-weight:600;">&#128308; Cao</span></label>
+                    <label style="display:flex;align-items:center;gap:6px;cursor:pointer;font-size:0.85rem;"><input type="checkbox" class="chart-risk-filter" value="medium" style="accent-color:#eab308;"> <span style="color:#eab308;font-weight:600;">&#128993; Trung bình</span></label>
+                    <label style="display:flex;align-items:center;gap:6px;cursor:pointer;font-size:0.85rem;"><input type="checkbox" class="chart-risk-filter" value="low" style="accent-color:#84cc16;"> <span style="color:#84cc16;font-weight:600;">&#128994; Thấp</span></label>
+                    <label style="display:flex;align-items:center;gap:6px;cursor:pointer;font-size:0.85rem;"><input type="checkbox" class="chart-risk-filter" value="safe" style="accent-color:#22c55e;"> <span style="color:#22c55e;font-weight:600;">&#9989; An toàn</span></label>
                 </div>
                 <div style="display:flex; flex-wrap:wrap; gap:20px; align-items:stretch;">
-                    <div style="flex:1; min-width:300px; display:flex; flex-direction:column; background:var(--bg-secondary); padding:16px; border-radius:12px; border:1px solid var(--border-color);">
-                        <h4 style="text-align:center; color:var(--text-secondary); margin-bottom:12px; font-size: 0.95rem;">Phân loại nguy cơ cháy cao theo loại hình</h4>
+                    <div style="flex:1; min-width:300px; display:flex; flex-direction:column; background:var(--gov-white); padding:16px; border-radius:var(--radius-sm); border:1px solid var(--gov-border);">
+                        <h4 style="text-align:center; color:var(--gov-navy); margin-bottom:12px; font-size: 0.95rem; font-weight:700;">Phân loại nguy cơ cháy cao theo loại hình</h4>
                         <div class="chart-container" style="flex:1;"><canvas id="high-risk-facility-chart"></canvas></div>
                     </div>
-                    <div style="flex:1; min-width:300px; display:flex; flex-direction:column; background:var(--bg-secondary); padding:16px; border-radius:12px; border:1px solid var(--border-color);">
-                        <h4 style="text-align:center; color:var(--text-secondary); margin-bottom:12px; font-size: 0.95rem;">Phân loại nguy cơ cháy theo nguyên nhân</h4>
+                    <div style="flex:1; min-width:300px; display:flex; flex-direction:column; background:var(--gov-white); padding:16px; border-radius:var(--radius-sm); border:1px solid var(--gov-border);">
+                        <h4 style="text-align:center; color:var(--gov-navy); margin-bottom:12px; font-size: 0.95rem; font-weight:700;">Phân loại nguy cơ cháy theo nguyên nhân</h4>
                         <div class="chart-container" style="flex:1;"><canvas id="high-risk-category-chart"></canvas></div>
                     </div>
                 </div>

@@ -43,20 +43,44 @@ function renderAdminStats(stats) {
 
     container.innerHTML = `
         <div class="admin-stat-card">
-            <div class="stat-label">Tổng người dùng</div>
-            <div class="stat-value">${stats.total_users}</div>
+            <div class="stat-top">
+                <span class="stat-label">Tổng người dùng</span>
+                <span class="stat-icon-wrapper" style="background:#EEF4FC; color:#1A3A6B;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </span>
+            </div>
+            <div class="stat-value">${stats.total_users || 0}</div>
+            <div class="stat-subtext" style="color:#64748B; font-size:0.75rem; margin-top:4px; font-weight:500;">Tài khoản cơ sở quản lý</div>
         </div>
         <div class="admin-stat-card">
-            <div class="stat-label">Tổng đánh giá</div>
-            <div class="stat-value">${stats.total_assessments}</div>
+            <div class="stat-top">
+                <span class="stat-label">Tổng lượt đánh giá</span>
+                <span class="stat-icon-wrapper" style="background:#EFF6FF; color:#2563EB;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                </span>
+            </div>
+            <div class="stat-value">${stats.total_assessments || 0}</div>
+            <div class="stat-subtext" style="color:#64748B; font-size:0.75rem; margin-top:4px; font-weight:500;">Hồ sơ khảo sát nguy cơ</div>
         </div>
         <div class="admin-stat-card">
-            <div class="stat-label">Điểm TB an toàn</div>
-            <div class="stat-value" style="color:${stats.avg_risk_score >= 60 ? 'var(--accent-green)' : 'var(--accent-orange)'}">${stats.avg_risk_score}%</div>
+            <div class="stat-top">
+                <span class="stat-label">Điểm TB an toàn</span>
+                <span class="stat-icon-wrapper" style="background:#ECFDF5; color:#10B981;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </span>
+            </div>
+            <div class="stat-value" style="color:${(stats.avg_risk_score || 0) >= 60 ? '#16A34A' : '#D97706'}">${stats.avg_risk_score || 0}%</div>
+            <div class="stat-subtext" style="color:#64748B; font-size:0.75rem; margin-top:4px; font-weight:500;">Chỉ số an toàn tổng hợp</div>
         </div>
         <div class="admin-stat-card">
-            <div class="stat-label">Nguy cơ cao/rất cao</div>
-            <div class="stat-value" style="color:var(--accent-red)">${stats.high_risk_count}</div>
+            <div class="stat-top">
+                <span class="stat-label">Nguy cơ cao / rất cao</span>
+                <span class="stat-icon-wrapper" style="background:#FEF2F2; color:#C0202A;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                </span>
+            </div>
+            <div class="stat-value" style="color:var(--gov-red)">${stats.high_risk_count || 0}</div>
+            <div class="stat-subtext" style="color:#C0202A; font-size:0.75rem; margin-top:4px; font-weight:600;">Cần kiểm tra khắc phục</div>
         </div>
     `;
 }
@@ -86,7 +110,7 @@ function renderRiskDistribution(dist) {
     if (!canvas) return;
 
     const labels = { low: 'Thấp', medium: 'Trung bình', high: 'Cao', critical: 'Rất cao' };
-    const colors = { low: '#22c55e', medium: '#eab308', high: '#f97316', critical: '#ef4444' };
+    const colors = { low: '#16A34A', medium: '#C9962C', high: '#E07B39', critical: '#C0202A' };
 
     new Chart(canvas, {
         type: 'doughnut',
@@ -94,8 +118,9 @@ function renderRiskDistribution(dist) {
             labels: Object.keys(dist).map(k => labels[k] || k),
             datasets: [{
                 data: Object.values(dist),
-                backgroundColor: Object.keys(dist).map(k => colors[k] || '#94a3b8'),
-                borderWidth: 0,
+                backgroundColor: Object.keys(dist).map(k => colors[k] || '#94A3B8'),
+                borderWidth: 2,
+                borderColor: '#FFFFFF',
             }]
         },
         options: {
@@ -104,7 +129,7 @@ function renderRiskDistribution(dist) {
             plugins: {
                 legend: {
                     position: 'bottom',
-                    labels: { color: '#cbd5e1', padding: 16 }
+                    labels: { color: '#1C2A3A', font: { family: 'Source Sans 3, Roboto, sans-serif', size: 12, weight: '600' }, padding: 14 }
                 }
             }
         }
