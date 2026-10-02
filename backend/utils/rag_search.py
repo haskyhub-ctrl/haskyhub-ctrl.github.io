@@ -17,6 +17,9 @@ import json
 import httpx
 import subprocess
 import sys
+import re
+from html import unescape
+from urllib.parse import unquote
 from dotenv import load_dotenv
 
 env_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), ".env")
@@ -34,10 +37,18 @@ def _safe_print(msg: str) -> None:
         print(msg.encode("ascii", errors="replace").decode("ascii"))
 
 
-# ─── Hằng số luật lỗi thời để nhắc Gemini tránh ───────────────────────────
+# ─── Hướng dẫn đối chiếu và chuyển tiếp quy định cũ → mới ────────────────
+OBSOLETE_TRANSITION_GUIDE = [
+    "Luật PCCC 2001 & Luật sửa đổi PCCC 2013 → ĐÃ HẾT HIỆU LỰC, thay thế bởi Luật PCCC và CNCH số 55/2024/QH15.",
+    "Nghị định 136/2020/NĐ-CP & Nghị định 50/2024/NĐ-CP → ĐÃ HẾT HIỆU LỰC, thay thế bởi Nghị định 105/2025/NĐ-CP và Nghị định 347/2026/NĐ-CP.",
+    "Thông tư 149/2020/TT-BCA → ĐÃ HẾT HIỆU LỰC, thay thế bởi Thông tư 36/2025/TT-BCA.",
+    "TCVN 3890:2009 → ĐÃ THAY THẾ bằng QCVN 10:2025/BCA (Quy chuẩn kỹ thuật về trang bị phương tiện PCCC).",
+    "Nghị định 83/2017/NĐ-CP → Đã tích hợp trực tiếp nội dung cứu nạn cứu hộ vào Luật 55/2024 và NĐ 105/2025.",
+]
+
 OBSOLETE_LAWS = [
     "Luật PCCC 2001", "Luật PCCC 2013", "Luật sửa đổi PCCC 2013",
-    "Nghị định 136/2020/NĐ-CP", "Nghị định 79/2014/NĐ-CP",
+    "Nghị định 136/2020/NĐ-CP", "Nghị định 50/2024/NĐ-CP", "Nghị định 79/2014/NĐ-CP",
     "Thông tư 149/2020/TT-BCA", "Thông tư 66/2014/TT-BCA",
     "TCVN 3890:2009",
 ]
@@ -45,6 +56,8 @@ OBSOLETE_LAWS = [
 CURRENT_LEGAL_REFS = [
     "Luật Phòng cháy, chữa cháy và Cứu nạn, cứu hộ số 55/2024/QH15",
     "Nghị định 105/2025/NĐ-CP ngày 15/5/2025",
+    "Nghị định 347/2026/NĐ-CP (sửa đổi, bổ sung quy định liên quan đến PCCC)",
+    "Nghị quyết 66.18",
     "Nghị định 106/2025/NĐ-CP",
     "Nghị định 189/2025/NĐ-CP",
     "Nghị định 190/2025/NĐ-CP",
@@ -55,8 +68,15 @@ CURRENT_LEGAL_REFS = [
 ]
 
 CHROMA_DB_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "chroma_db")
-NOTEBOOKLM_NOTEBOOK_ID = os.getenv("NOTEBOOKLM_PROJECT_ID", "")
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
+
+
+def _get_notebook_ids() -> list[str]:
+    """Lấy danh sách các Notebook ID (hỗ trợ nhiều sổ cách nhau bằng dấu phẩy)."""
+    raw = os.getenv("NOTEBOOKLM_PROJECT_ID", "")
+    if not raw:
+        return []
+    return [i.strip() for i in raw.split(",") if i.strip()]
 
 # Danh sách model Gemini ổn định theo thứ tự ưu tiên (tự động fallback nếu Google đổi model)
 GEMINI_FALLBACK_MODELS = [
@@ -296,28 +316,15 @@ def _find_nlm_cmd() -> str | None:
     return None
 
 
-def search_notebooklm_api(question: str) -> str:
-    """
-    Query NotebookLM qua nlm CLI.
-    Trả về string kết quả hoặc "" nếu thất bại/không có CLI.
-    """
-    if not NOTEBOOKLM_NOTEBOOK_ID:
-        print("[NotebookLM] NOTEBOOKLM_PROJECT_ID chưa được cấu hình, bỏ qua.")
-        return ""
-
-    nlm_cmd = _find_nlm_cmd()
-    if not nlm_cmd:
-        _safe_print("[NotebookLM] nlm CLI khong tim thay trong PATH, bo qua.")
-        return ""
-
+def _query_single_notebook(nlm_cmd: str, nb_id: str, question: str) -> str:
+    """Query 1 sổ NotebookLM cụ thể."""
     try:
-        # Thiết lập env để nlm dùng UTF-8 trên Windows
         nlm_env = os.environ.copy()
         nlm_env["PYTHONUTF8"] = "1"
         nlm_env["PYTHONIOENCODING"] = "utf-8"
 
         result = subprocess.run(
-            [nlm_cmd, "query", "notebook", NOTEBOOKLM_NOTEBOOK_ID, question],
+            [nlm_cmd, "query", "notebook", nb_id, question],
             capture_output=True,
             text=True,
             timeout=30,
@@ -328,16 +335,12 @@ def search_notebooklm_api(question: str) -> str:
         out = result.stdout.strip()
         err = result.stderr.strip()
 
-        # nlm trên Windows có thể exit code 1 do lỗi Unicode trong Rich console
-        # nhưng JSON output vẫn hợp lệ trong stdout
         if result.returncode not in (0, 1):
-            _safe_print(f"[NotebookLM CLI] FAIL returncode={result.returncode}, stderr={err[:200]}")
+            _safe_print(f"[NotebookLM CLI] Sổ {nb_id[:8]} FAIL returncode={result.returncode}, stderr={err[:150]}")
             return ""
 
-        # Thử parse JSON từ output của nlm — format: {"value": {"answer": "..."}}
         try:
             data = json.loads(out)
-            # nlm trả về {"value": {"answer": "...", "citations": {...}}}
             value = data.get("value", {})
             if isinstance(value, dict):
                 answer = value.get("answer", "") or value.get("text", "") or value.get("response", "")
@@ -347,15 +350,12 @@ def search_notebooklm_api(question: str) -> str:
                 answer = ""
 
             if answer and len(answer.strip()) > 20:
-                # Loại bỏ citation markers như [1], [2]
-                import re
                 clean_answer = re.sub(r'\[\d+\]', '', answer).strip()
-                _safe_print(f"[NotebookLM CLI] OK (JSON) Got {len(clean_answer)} chars")
+                _safe_print(f"[NotebookLM CLI] Sổ {nb_id[:8]} OK (JSON) Got {len(clean_answer)} chars")
                 return clean_answer
         except (json.JSONDecodeError, AttributeError):
-            pass  # Không phải JSON, thử parse text
+            pass
 
-        # Parse text thô — lọc các dòng metadata/warning của nlm
         lines = [
             line for line in out.split("\n")
             if line.strip()
@@ -369,25 +369,96 @@ def search_notebooklm_api(question: str) -> str:
         ]
         clean = "\n".join(lines).strip()
 
-        # Loại bỏ các thông báo lỗi xác thực hoặc chuỗi quá ngắn
         auth_error_keywords = ["re-authenticate", "authenticate", "expired", "permission_denied", "not logged in", "login", "error"]
         if any(kw in clean.lower() for kw in auth_error_keywords) or len(clean) < 30:
-            _safe_print(f"[NotebookLM CLI] Bỏ qua kết quả không hợp lệ hoặc lỗi phiên: {clean[:60]}")
+            _safe_print(f"[NotebookLM CLI] Sổ {nb_id[:8]} Bỏ qua kết quả không hợp lệ/hết phiên: {clean[:60]}")
             return ""
 
         if clean:
-            _safe_print(f"[NotebookLM CLI] OK (text) Got {len(clean)} chars")
+            _safe_print(f"[NotebookLM CLI] Sổ {nb_id[:8]} OK (text) Got {len(clean)} chars")
             return clean
-        else:
-            _safe_print(f"[NotebookLM CLI] WARN Empty response. Raw len: {len(out)}")
-            return ""
-
+        return ""
     except subprocess.TimeoutExpired:
-        _safe_print("[NotebookLM CLI] TIMEOUT after 30s.")
+        _safe_print(f"[NotebookLM CLI] Sổ {nb_id[:8]} TIMEOUT after 30s.")
         return ""
     except Exception as e:
-        _safe_print(f"[NotebookLM CLI] ERROR: {e}")
+        _safe_print(f"[NotebookLM CLI] Sổ {nb_id[:8]} ERROR: {e}")
         return ""
+
+
+def search_notebooklm_api(question: str) -> str:
+    """
+    Query lần lượt tất cả các NotebookLM đã cấu hình (Sổ 1, Sổ 2...).
+    Tổng hợp kết quả từ tất cả các sổ tìm được câu trả lời.
+    """
+    nb_ids = _get_notebook_ids()
+    if not nb_ids:
+        return ""
+
+    nlm_cmd = _find_nlm_cmd()
+    if not nlm_cmd:
+        _safe_print("[NotebookLM] nlm CLI khong tim thay trong PATH, bo qua.")
+        return ""
+
+    collected = []
+    for idx, nb_id in enumerate(nb_ids, 1):
+        ans = _query_single_notebook(nlm_cmd, nb_id, question)
+        if ans:
+            collected.append(f"=== NGUỒN SỔ NOTEBOOKLM {idx} (ID: {nb_id}) ===\n{ans}")
+
+    if collected:
+        return "\n\n".join(collected)
+    return ""
+
+
+# ════════════════════════════════════════════════════════════════
+#  1.5. INTERNET SEARCH — Tra cứu thời gian thực kèm link nguồn
+# ════════════════════════════════════════════════════════════════
+
+def search_internet(query: str, max_results: int = 3) -> list[dict]:
+    """
+    Tra cứu thông tin PCCC trên Internet khi dữ liệu gốc (NotebookLM & ChromaDB) không có.
+    Trích xuất tiêu đề, tóm tắt và đường dẫn URL chính xác.
+    """
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+    }
+    search_q = f"{query} PCCC luật quy định Việt Nam" if "pccc" not in query.lower() else f"{query} quy định"
+    try:
+        with httpx.Client(timeout=10.0, follow_redirects=True) as client:
+            resp = client.post('https://html.duckduckgo.com/html/', data={'q': search_q}, headers=headers)
+            if resp.status_code != 200:
+                return []
+
+            snippets = re.findall(r'<a class="result__snippet[^"]*"[^>]*>(.*?)</a>', resp.text, re.DOTALL)
+            urls = re.findall(r'<a class="result__url"[^>]*href="([^"]*)"', resp.text)
+            titles = re.findall(r'<a class="result__title"[^>]*>(.*?)</a>', resp.text, re.DOTALL)
+
+            results = []
+            for i in range(min(len(snippets), max_results)):
+                raw_snippet = snippets[i] if i < len(snippets) else ""
+                clean_snippet = re.sub(r'<[^>]+>', '', raw_snippet).strip()
+                raw_url = urls[i] if i < len(urls) else ""
+                if "uddg=" in raw_url:
+                    actual_url = unquote(raw_url.split("uddg=")[1].split("&")[0])
+                else:
+                    actual_url = raw_url.strip()
+
+                raw_title = titles[i] if i < len(titles) else ""
+                clean_title = re.sub(r'<[^>]+>', '', raw_title).strip()
+
+                if clean_snippet and actual_url and actual_url.startswith("http"):
+                    results.append({
+                        "title": unescape(clean_title) or "Cổng thông tin pháp luật",
+                        "url": actual_url,
+                        "snippet": unescape(clean_snippet)
+                    })
+            if results:
+                _safe_print(f"[Internet Search] Tìm thấy {len(results)} kết quả tra cứu web cho: '{query[:40]}'")
+            return results
+    except Exception as e:
+        _safe_print(f"[Internet Search] Lỗi tra cứu web: {e}")
+        return []
 
 
 # ════════════════════════════════════════════════════════════════
@@ -470,10 +541,10 @@ Cung cấp câu trả lời ngắn gọn, chính xác (200-400 từ), trích d�
 def ask_ai_chi(question: str, history_text: str = "", context: str = "") -> dict:
     """
     Trợ lý Chi — RAG Pipeline:
-    Priority: NotebookLM CLI → ChromaDB → 9Router (Google Pro)/Gemini (có ràng buộc luật mới)
+    Priority: NotebookLM CLI (Đa sổ 1, 2...) → ChromaDB → Tra cứu Internet thời gian thực → Gemini general
 
-    Gọi 9Router (hoặc Gemini REST API dự phòng) — KHÔNG dùng LangChain ChatGoogleGenerativeAI
-    để tránh lỗi model-override PERMISSION_DENIED.
+    Gọi 9Router (hoặc Gemini REST API dự phòng).
+    Gemini 3.8 đảm nhiệm phân tích, đối chiếu quy định hết hiệu lực và trích dẫn link nguồn.
     """
     try:
         source_type = "general"
@@ -481,68 +552,83 @@ def ask_ai_chi(question: str, history_text: str = "", context: str = "") -> dict
         use_router = os.getenv("USE_9ROUTER", "true").lower() in ("true", "1", "yes")
         router_key = os.getenv("ROUTER_API_KEY", "")
 
-        # ── Bước 1: NotebookLM (ưu tiên cao nhất nếu có CLI cấu hình) ──
+        # ── Bước 1: NotebookLM (Hỗ trợ nhiều sổ cùng lúc) ───────────
         notebook_context = ""
-        if NOTEBOOKLM_NOTEBOOK_ID:
+        nb_ids = _get_notebook_ids()
+        if nb_ids:
             notebook_context = search_notebooklm_api(question)
             if notebook_context and len(notebook_context) > 30 and "authenticate" not in notebook_context.lower():
                 source_type = "notebooklm"
             else:
                 notebook_context = ""
 
-        # ── Bước 2: ChromaDB ────────────────────────────────────────
+        # ── Bước 2: ChromaDB (Kho văn bản nội bộ) ───────────────────
         chroma_context = ""
         if not notebook_context:
             chroma_context = search_chromadb(question)
             if chroma_context:
                 source_type = "docs"
 
-        # Nếu không có cả API Key Gemini lẫn 9Router Key, ưu tiên dữ liệu nội bộ/NotebookLM
-        if not api_key and not (use_router and router_key):
-            if notebook_context:
-                return {
-                    "reply": f"{notebook_context}\n\n*(Hệ thống đang hiển thị thông tin trực tiếp từ NotebookLM)*",
-                    "source_type": "notebooklm",
-                    "suggestions": ["Quy định về bình chữa cháy?", "Khi xảy ra cháy cần làm gì?"],
-                    "references": list(CURRENT_LEGAL_REFS[:2])
-                }
-            if chroma_context:
-                return {
-                    "reply": f"Thông tin quy chuẩn PCCC trích xuất:\n\n{chroma_context[:1000]}",
-                    "source_type": "docs",
-                    "suggestions": ["Quy định về bình chữa cháy?", "Khi xảy ra cháy cần làm gì?"],
-                    "references": list(CURRENT_LEGAL_REFS[:2])
-                }
-            from routers.ai_analysis import _chat_fallback
-            return _chat_fallback(question)
+        # ── Bước 3: Tra cứu Internet thời gian thực ──
+        # Kích hoạt khi:
+        # a) Cả NotebookLM và ChromaDB đều không có kết quả, HOẶC
+        # b) Câu hỏi hỏi về văn bản cụ thể (ví dụ: NĐ 347, NQ 66.18, văn bản 2026...) mà dữ liệu gốc chưa có từ khóa đó
+        internet_context = ""
+        internet_refs = []
+        need_web_search = False
 
-        # ── Bước 3: Gemini Grounded (nếu cả hai đều rỗng) ──────────
-        grounded_context = ""
         if not notebook_context and not chroma_context:
+            need_web_search = True
+        else:
+            combined_context = f"{notebook_context}\n{chroma_context}".lower()
+            # Trích xuất các số hiệu văn bản (ví dụ: '347', '66.18', '2026')
+            doc_codes = re.findall(r'\b(?:\d{2,3}(?:[/\.]\d+)?)\b', question)
+            for code in doc_codes:
+                if code not in ("2024", "2025") and code.lower() not in combined_context:
+                    need_web_search = True
+                    break
+
+        if need_web_search:
+            _safe_print(f"[ask_ai_chi] Dữ liệu gốc chưa đủ, đang tra cứu Internet thời gian thực cho: '{question[:40]}'")
+            web_results = search_internet(question, max_results=3)
+            if web_results:
+                if not notebook_context and not chroma_context:
+                    source_type = "web"
+                web_blocks = []
+                for item in web_results:
+                    web_blocks.append(f"• Tiêu đề: {item['title']}\n  Đường dẫn: {item['url']}\n  Nội dung trích lược: {item['snippet']}")
+                    internet_refs.append(f"{item['title']} ({item['url']})")
+                internet_context = "\n\n".join(web_blocks)
+
+        # ── Bước 4: Gemini Grounded nếu ngay cả Internet cũng không ra ──
+        grounded_context = ""
+        if not notebook_context and not chroma_context and not internet_context:
             grounded_context = search_notebooklm_gemini_grounded(question)
             source_type = "general"
 
         # ── Tổng hợp context ────────────────────────────────────────
         doc_sections = []
         if notebook_context:
-            doc_sections.append(f"=== NGUỒN NOTEBOOKLM (ưu tiên) ===\n{notebook_context}")
+            doc_sections.append(f"=== NGUỒN NOTEBOOKLM (ƯU TIÊN HÀNG ĐẦU) ===\n{notebook_context}")
         if chroma_context:
-            doc_sections.append(f"=== NGUỒN TÀI LIỆU NỘI BỘ ===\n{chroma_context}")
+            doc_sections.append(f"=== NGUỒN TÀI LIỆU NỘI BỘ (CHROMADB) ===\n{chroma_context}")
+        if internet_context:
+            doc_sections.append(f"=== NGUỒN TRA CỨU TỪ INTERNET (BẮT BUỘC TRÍCH DẪN RÕ RÀNG NGUỒN VÀ LINK) ===\n{internet_context}")
         if grounded_context:
-            doc_sections.append(f"=== PHÂN TÍCH PHÁP LÝ ===\n{grounded_context}")
+            doc_sections.append(f"=== PHÂN TÍCH PHÁP LÝ NỀN ===\n{grounded_context}")
 
         doc_context = "\n\n".join(doc_sections) if doc_sections else (
-            "(Không có tài liệu nào phù hợp trong cơ sở dữ liệu. "
-            "Trả lời dựa trên kiến thức chuyên môn PCCC 2024-2025.)"
+            "(Không tìm thấy văn bản liên quan trực tiếp. Trả lời dựa trên kiến thức chuyên môn PCCC 2024-2026.)"
         )
 
         # ── Build prompt cho Gemini ──────────────────────────────────
+        transition_str = "\n".join(f"  ⚡ {t}" for t in OBSOLETE_TRANSITION_GUIDE)
         legal_refs_str = "\n".join(f"  ✅ {r}" for r in CURRENT_LEGAL_REFS)
         obsolete_str = "\n".join(f"  ❌ {l}" for l in OBSOLETE_LAWS)
 
         template = f"""Bạn là Trợ lý ảo AI Chi — chuyên gia tư vấn pháp luật PCCC và an toàn cháy nổ tại Việt Nam (Công an tỉnh Bắc Ninh).
 
-═══ CƠ SỞ DỮ LIỆU PHÁP CHẾ ═══
+═══ CƠ SỞ DỮ LIỆU PHÁP CHẾ / THÔNG TIN THỰC TẾ ═══
 {doc_context}
 ═══ HẾT CƠ SỞ DỮ LIỆU ═══
 
@@ -550,27 +636,36 @@ NGỮ CẢNH CƠ SỞ (nếu có): {context}
 
 LỊCH SỬ HỘI THOẠI: {history_text}
 
-CÂU HỎI: {question}
+CÂU HỎI CỦA NGƯỜI DÙNG: {question}
 
-═══ LUẬT HIỆN HÀNH 2024-2025 (CHỈ ĐƯỢC DÙNG CÁC LUẬT NÀY) ═══
+═══ DANH MỤC VĂN BẢN PHÁP LUẬT HIỆN HÀNH 2024-2026 (ƯU TIÊN CAO NHẤT) ═══
 {legal_refs_str}
 
-═══ LUẬT ĐÃ HẾT HIỆU LỰC (TUYỆT ĐỐI KHÔNG TRÍCH DẪN) ═══
+═══ HƯỚNG DẪN CHUYỂN TIẾP VÀ ĐỐI CHIẾU QUY ĐỊNH CŨ - MỚI ═══
+{transition_str}
+
+═══ DANH SÁCH VĂN BẢN ĐÃ HẾT HIỆU LỰC ═══
 {obsolete_str}
 
-NHIỆM VỤ:
-1. ĐỌC KỸ CƠ SỞ DỮ LIỆU PHÁP CHẾ — ưu tiên dùng thông tin từ NotebookLM nếu có.
-2. CHỈ TRÍCH DẪN các luật HIỆN HÀNH 2024-2025. KHÔNG BAO GIỜ dùng NĐ 136/2020, TT 149/2020, hay luật trước 2024.
-3. Nếu tài liệu không có thông tin → dùng kiến thức chuyên môn PCCC 2024-2025 của bạn, KHÔNG nói "tôi không biết".
-4. Xưng là "Chi" hoặc "Tôi". Trả lời rõ ràng, định dạng Markdown.
-5. Nếu dùng dữ liệu từ CƠ SỞ DỮ LIỆU, trích dẫn [nguồn].
+NHIỆM VỤ CỰC KỲ QUAN TRỌNG:
+1. TỔNG HỢP VÀ ĐỐI CHIẾU QUY ĐỊNH (BẮT BUỘC):
+   - Đọc kỹ toàn bộ cơ sở dữ liệu đã cấp.
+   - PHÂN TÍCH QUY ĐỊNH ĐÃ HẾT HIỆU LỰC: Nếu câu hỏi hoặc dữ liệu có nhắc đến văn bản cũ (như Luật PCCC 2001/2013, NĐ 136/2020, TT 149/2020, TCVN 3890:2009...):
+     -> BẮT BUỘC phân tích và nêu rõ trong câu trả lời:
+        "Quy định [Tên văn bản cũ] trước đây ĐÃ HẾT HIỆU LỰC, hiện nay đã được THAY THẾ bằng [Tên văn bản mới, ví dụ: Luật 55/2024/QH15, Nghị định 105/2025/NĐ-CP, Nghị định 347/2026/NĐ-CP, QCVN 10:2025/BCA...]".
+     -> Giải thích rõ nội dung mới thay đổi thế nào để người dân/doanh nghiệp không áp dụng sai.
+2. TRA CỨU INTERNET VÀ TRÍCH DẪN NGUỒN MINH BẠCH:
+   - Nếu câu trả lời sử dụng thông tin từ mục "NGUỒN TRA CỨU TỪ INTERNET", BẮT BUỘC phải ghi rõ tên cơ quan/nguồn tin và chèn link Markdown (ví dụ: "[Cổng TTĐT Chính phủ](URL)", "[Thư viện Pháp luật](URL)", v.v.) ngay trong nội dung phản hồi để người đọc dễ dàng bấm vào kiểm chứng.
+3. PHONG CÁCH VÀ ĐỊNH DẠNG:
+   - Xưng là "Chi" hoặc "Tôi". Phong cách chuyên nghiệp, ân cần, giải thích cặn kẽ, đúng tác phong chiến sĩ Công an nhân dân.
+   - Trình bày Markdown rõ ràng với tiêu đề, danh sách đánh số, bảng so sánh nếu cần.
 
 TRẢ VỀ JSON THUẦN (không dùng ```json):
 {{
-    "reply": "câu trả lời markdown chi tiết",
+    "reply": "câu trả lời markdown chi tiết, có phân tích đối chiếu luật cũ/mới và trích dẫn link nguồn",
     "source_type": "{source_type}",
     "suggestions": ["gợi ý câu hỏi liên quan 1", "gợi ý 2", "gợi ý 3"],
-    "references": ["văn bản pháp lý trích dẫn HIỆN HÀNH — chỉ 2024-2025"]
+    "references": ["văn bản pháp lý trích dẫn HIỆN HÀNH hoặc link nguồn internet"]
 }}"""
 
         # ── Gọi LLM (9Router Google Pro hoặc Gemini REST API) ───────
@@ -588,14 +683,23 @@ TRẢ VỀ JSON THUẦN (không dùng ```json):
                 result["suggestions"] = []
             if not isinstance(result.get("references"), list):
                 result["references"] = list(CURRENT_LEGAL_REFS[:3])
+            # Bổ sung link internet vào danh mục tài liệu tham khảo nếu có
+            if internet_refs:
+                for ref in internet_refs:
+                    if ref not in result["references"]:
+                        result["references"].append(ref)
             return result
 
         # Fallback nếu kết quả text không parse được dạng JSON hoàn chỉnh
+        fallback_refs = list(CURRENT_LEGAL_REFS[:3])
+        if internet_refs:
+            fallback_refs.extend(internet_refs)
+
         return {
             "reply": content.strip(),
             "source_type": source_type,
             "suggestions": ["Quy định về bình chữa cháy?", "Khi xảy ra cháy cần làm gì?", "Luật PCCC 55/2024 có gì mới?"],
-            "references": list(CURRENT_LEGAL_REFS[:3]),
+            "references": fallback_refs,
         }
 
     except Exception as e:
