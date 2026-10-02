@@ -37,13 +37,36 @@ def _safe_print(msg: str) -> None:
         print(msg.encode("ascii", errors="replace").decode("ascii"))
 
 
-# ─── Hướng dẫn đối chiếu và chuyển tiếp quy định cũ → mới ────────────────
+# ─── Quy định pháp lý cốt lõi năm 2026 (Ưu tiên tuyệt đối) ──────────────
+CORE_LEGAL_PRINCIPLES_2026 = """
+QUY ĐỊNH PHÁP LUẬT PCCC MỚI NHẤT (NĂM 2026) - ƯU TIÊN ÁP DỤNG TUYỆT ĐỐI:
+1. VỀ NGHIỆM THU PCCC (BÃI BỎ THỦ TỤC HÀNH CHÍNH NỘP HỒ SƠ TẠI CƠ QUAN NHÀ NƯỚC):
+   - Căn cứ: Nghị quyết số 66.18/2026/NQ-CP ngày 18/5/2026 của Chính phủ (hiệu lực từ 01/07/2026) và Nghị định số 347/2026/NĐ-CP ngày 08/9/2026 của Chính phủ (hiệu lực từ 15/9/2026) sửa đổi, bổ sung Nghị định số 105/2025/NĐ-CP:
+   - CHÍNH THỨC BÃI BỎ thủ tục hành chính kiểm tra công tác nghiệm thu về PCCC và bãi bỏ việc cấp văn bản chấp thuận kết quả nghiệm thu của cơ quan Công an và cơ quan chuyên môn về xây dựng.
+   - Do đó, chủ đầu tư/chủ sở hữu công trình KHÔNG PHẢI NỘP HỒ SƠ ĐỀ NGHỊ NGHIỆM THU ĐẾN CƠ QUAN CÔNG AN HAY CƠ QUAN XÂY DỰNG NỮA. Mọi quy định cũ trước đây về nộp hồ sơ xin kiểm tra nghiệm thu (như tại Nghị định 105/2025/NĐ-CP cũ và Nghị định 136/2020/NĐ-CP) đều đã bị bãi bỏ.
+   - Trình tự thực hiện hiện nay:
+     + Chủ đầu tư/chủ sở hữu công trình tự tổ chức nghiệm thu các nội dung về PCCC cùng các nhà thầu (tư vấn thiết kế, thi công, tư vấn giám sát) theo đúng hồ sơ thiết kế đã được thẩm duyệt và tiêu chuẩn, quy chuẩn hiện hành.
+     + Chủ đầu tư lập biên bản, hồ sơ nghiệm thu hoàn thành và hoàn toàn tự chịu trách nhiệm trước pháp luật về kết quả nghiệm thu và an toàn PCCC khi đưa công trình vào vận hành.
+     + Trước khi đưa công trình, phương tiện vào sử dụng, chủ đầu tư chỉ cần thực hiện KHAI BÁO THÔNG TIN TRÊN HỆ THỐNG CƠ SỞ DỮ LIỆU VỀ PCCC.
+     + Cơ quan Công an và UBND chuyển sang cơ chế HẬU KIỂM / KIỂM TRA ĐỊNH KỲ (kiểm tra định kỳ 01 năm/lần đối với nhóm có nguy cơ cao; 02 năm/lần đối với nhóm còn lại; có kế hoạch và thông báo trước 03 ngày làm việc).
+
+2. CÁC VĂN BẢN HIỆN HÀNH CHÍNH:
+   - Nghị định số 347/2026/NĐ-CP ngày 08/9/2026 của Chính phủ (hiệu lực 15/9/2026, sửa đổi NĐ 105/2025/NĐ-CP, bãi bỏ văn bản chấp thuận nghiệm thu PCCC)
+   - Nghị quyết số 66.18/2026/NQ-CP ngày 18/5/2026 của Chính phủ (hiệu lực 01/07/2026, bãi bỏ thủ tục kiểm tra nghiệm thu PCCC)
+   - Luật Phòng cháy, chữa cháy và Cứu nạn, cứu hộ số 55/2024/QH15
+   - Nghị định số 105/2025/NĐ-CP (được sửa đổi, bổ sung bởi Nghị định 347/2026/NĐ-CP)
+   - Nghị định số 106/2025/NĐ-CP và Nghị định 69/2026/NĐ-CP (xử phạt vi phạm hành chính PCCC)
+   - QCVN 06:2022/BXD kèm Sửa đổi 1:2023
+   - QCVN 10:2025/BCA (thay thế TCVN 3890:2009)
+"""
+
 OBSOLETE_TRANSITION_GUIDE = [
-    "Luật PCCC 2001 & Luật sửa đổi PCCC 2013 → ĐÃ HẾT HIỆU LỰC, thay thế bởi Luật PCCC và CNCH số 55/2024/QH15.",
-    "Nghị định 136/2020/NĐ-CP & Nghị định 50/2024/NĐ-CP → ĐÃ HẾT HIỆU LỰC, thay thế bởi Nghị định 105/2025/NĐ-CP và Nghị định 347/2026/NĐ-CP.",
-    "Thông tư 149/2020/TT-BCA → ĐÃ HẾT HIỆU LỰC, thay thế bởi Thông tư 36/2025/TT-BCA.",
-    "TCVN 3890:2009 → ĐÃ THAY THẾ bằng QCVN 10:2025/BCA (Quy chuẩn kỹ thuật về trang bị phương tiện PCCC).",
-    "Nghị định 83/2017/NĐ-CP → Đã tích hợp trực tiếp nội dung cứu nạn cứu hộ vào Luật 55/2024 và NĐ 105/2025.",
+    "Nghị quyết 66.18/2026/NQ-CP & Nghị định 347/2026/NĐ-CP: Bãi bỏ thủ tục nộp hồ sơ xin nghiệm thu PCCC tại cơ quan nhà nước; Chủ đầu tư tự tổ chức nghiệm thu với nhà thầu và khai báo CSDL PCCC.",
+    "Nghị định 105/2025/NĐ-CP quy định cũ về nộp hồ sơ nghiệm thu tại cơ quan nhà nước → Đã được bãi bỏ, sửa đổi bởi Nghị quyết 66.18 và Nghị định 347.",
+    "Nghị định 136/2020/NĐ-CP & Nghị định 50/2024/NĐ-CP → Đã hết hiệu lực.",
+    "Luật PCCC 2001 & Luật PCCC 2013 → Đã hết hiệu lực, thay bởi Luật 55/2024/QH15.",
+    "Thông tư 149/2020/TT-BCA → Đã hết hiệu lực.",
+    "TCVN 3890:2009 → Đã thay thế bởi QCVN 10:2025/BCA.",
 ]
 
 OBSOLETE_LAWS = [
@@ -54,17 +77,12 @@ OBSOLETE_LAWS = [
 ]
 
 CURRENT_LEGAL_REFS = [
+    "Nghị quyết số 66.18/2026/NQ-CP ngày 18/5/2026 của Chính phủ",
+    "Nghị định số 347/2026/NĐ-CP ngày 08/9/2026 của Chính phủ",
     "Luật Phòng cháy, chữa cháy và Cứu nạn, cứu hộ số 55/2024/QH15",
-    "Nghị định 105/2025/NĐ-CP ngày 15/5/2025",
-    "Nghị định 347/2026/NĐ-CP (sửa đổi, bổ sung quy định liên quan đến PCCC)",
-    "Nghị quyết 66.18",
-    "Nghị định 106/2025/NĐ-CP",
-    "Nghị định 189/2025/NĐ-CP",
-    "Nghị định 190/2025/NĐ-CP",
+    "Nghị định 105/2025/NĐ-CP (sửa đổi bởi NĐ 347/2026/NĐ-CP)",
     "QCVN 06:2022/BXD kèm Sửa đổi 1:2023",
     "QCVN 10:2025/BCA",
-    "QCVN 25:2025/BCT",
-    "QCVN 25:2025/BKHCN",
 ]
 
 CHROMA_DB_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "chroma_db")
@@ -136,6 +154,16 @@ def _extract_json_block(text: str) -> dict | None:
                 return data
         except Exception:
             pass
+
+    # 4. Regex trích xuất trường "reply" nếu JSON bị cắt cụt hoặc không đóng ngoặc
+    match = re.search(r'"reply"\s*:\s*"((?:[^"\\]|\\.)*)', text)
+    if match:
+        extracted = match.group(1).replace('\\"', '"').replace('\\n', '\n').replace('\\t', '\t')
+        return {
+            "reply": extracted,
+            "suggestions": [],
+            "references": []
+        }
 
     return None
 
@@ -500,6 +528,27 @@ def search_chromadb(question: str) -> str:
 
 
 # ════════════════════════════════════════════════════════════════
+#  1.6. CLEAN FORMATTING — Loại bỏ ký tự markdown thừa (###, **, ---)
+# ════════════════════════════════════════════════════════════════
+
+def _clean_chat_formatting(text: str) -> str:
+    """Loại bỏ các ký tự markdown thừa (###, **, ---) để câu trả lời sạch đẹp, không bị rối."""
+    if not text:
+        return ""
+    # Xóa ký tự tiêu đề markdown ###, ####, ##, # ở đầu dòng
+    text = re.sub(r'^[ \t]*#{1,6}\s*', '', text, flags=re.MULTILINE)
+    # Xóa toàn bộ dấu sao bôi đậm **
+    text = text.replace('**', '')
+    # Xóa dấu in nghiêng * đơn lẻ nếu bao quanh từ
+    text = re.sub(r'(?<!\*)\*([^*]+)\*(?!\*)', r'\1', text)
+    # Xóa các dòng kẻ phân cách --- hoặc ===
+    text = re.sub(r'^[ \t]*[-=_]{3,}[ \t]*$', '', text, flags=re.MULTILINE)
+    # Chuẩn hóa khoảng trống nhiều dòng liên tiếp
+    text = re.sub(r'\n{3,}', '\n\n', text)
+    return text.strip()
+
+
+# ════════════════════════════════════════════════════════════════
 #  3. GEMINI GROUNDED — Fallback dùng kiến thức pháp luật
 # ════════════════════════════════════════════════════════════════
 
@@ -513,22 +562,24 @@ def search_notebooklm_gemini_grounded(question: str) -> str:
         return ""
 
     legal_context = "\n".join(f"- {ref}" for ref in CURRENT_LEGAL_REFS)
-    obsolete_context = "\n".join(f"- {law}" for law in OBSOLETE_LAWS)
 
     grounding_prompt = f"""Câu hỏi: {question}
 
-Trả lời dựa trên các văn bản pháp luật PCCC HIỆN HÀNH sau đây (2024-2025):
+Trả lời dựa trên các văn bản pháp luật PCCC HIỆN HÀNH sau đây (2024-2026):
+{CORE_LEGAL_PRINCIPLES_2026}
 {legal_context}
 
-TUYỆT ĐỐI KHÔNG trích dẫn các văn bản đã HẾT HIỆU LỰC sau:
-{obsolete_context}
-
-Cung cấp câu trả lời ngắn gọn, chính xác (200-400 từ), trích dẫn cụ thể điều khoản."""
+QUY TẮC BẮT BUỘC:
+- Đi thẳng vào quy định mới nhất hiện hành (Nghị quyết 66.18/2026/NQ-CP, Nghị định 347/2026/NĐ-CP, Luật 55/2024/QH15).
+- Nghiệm thu PCCC: ĐÃ BÃI BỎ thủ tục nộp hồ sơ xin nghiệm thu tại cơ quan nhà nước; chủ đầu tư tự tổ chức nghiệm thu với nhà thầu và khai báo CSDL PCCC.
+- Không đưa quy định cũ lan man, chỉ đưa tên văn bản gần nhất trong ngoặc đơn nếu thật sự cần thiết.
+- TUYỆT ĐỐI KHÔNG dùng ký tự markdown gây rối mắt: KHÔNG dùng ###, KHÔNG dùng **.
+- Cung cấp câu trả lời ngắn gọn, rành mạch (200-350 từ)."""
 
     try:
         content = _call_llm(grounding_prompt, temperature=0.1, max_tokens=1024)
         _safe_print(f"[Gemini Grounded] OK Got {len(content)} chars")
-        return content
+        return _clean_chat_formatting(content)
     except Exception as e:
         _safe_print(f"[Gemini Grounded] ERROR: {e}")
         return ""
@@ -544,7 +595,7 @@ def ask_ai_chi(question: str, history_text: str = "", context: str = "") -> dict
     Priority: NotebookLM CLI (Đa sổ 1, 2...) → ChromaDB → Tra cứu Internet thời gian thực → Gemini general
 
     Gọi 9Router (hoặc Gemini REST API dự phòng).
-    Gemini 3.8 đảm nhiệm phân tích, đối chiếu quy định hết hiệu lực và trích dẫn link nguồn.
+    Gemini 3.8 tập trung vào quy định mới nhất 2026, phản hồi sạch sẽ, không rối mắt.
     """
     try:
         source_type = "general"
@@ -572,7 +623,7 @@ def ask_ai_chi(question: str, history_text: str = "", context: str = "") -> dict
         # ── Bước 3: Tra cứu Internet thời gian thực ──
         # Kích hoạt khi:
         # a) Cả NotebookLM và ChromaDB đều không có kết quả, HOẶC
-        # b) Câu hỏi hỏi về văn bản cụ thể (ví dụ: NĐ 347, NQ 66.18, văn bản 2026...) mà dữ liệu gốc chưa có từ khóa đó
+        # b) Câu hỏi hỏi về văn bản/thủ tục mới (NĐ 347, NQ 66.18, nghiệm thu, bãi bỏ...) mà dữ liệu gốc chưa cập nhật
         internet_context = ""
         internet_refs = []
         need_web_search = False
@@ -587,9 +638,13 @@ def ask_ai_chi(question: str, history_text: str = "", context: str = "") -> dict
                 if code not in ("2024", "2025") and code.lower() not in combined_context:
                     need_web_search = True
                     break
+            # Nếu câu hỏi về nghiệm thu hoặc bãi bỏ thủ tục mà dữ liệu nội bộ chưa có thông tin 66.18 / 347
+            reform_keywords = ["66.18", "347", "nghiệm thu", "bãi bỏ", "cải cách", "nộp ở đâu"]
+            if any(kw in question.lower() for kw in reform_keywords) and "66.18" not in combined_context:
+                need_web_search = True
 
         if need_web_search:
-            _safe_print(f"[ask_ai_chi] Dữ liệu gốc chưa đủ, đang tra cứu Internet thời gian thực cho: '{question[:40]}'")
+            _safe_print(f"[ask_ai_chi] Đang tra cứu Internet thời gian thực cho: '{question[:40]}'")
             web_results = search_internet(question, max_results=3)
             if web_results:
                 if not notebook_context and not chroma_context:
@@ -613,24 +668,25 @@ def ask_ai_chi(question: str, history_text: str = "", context: str = "") -> dict
         if chroma_context:
             doc_sections.append(f"=== NGUỒN TÀI LIỆU NỘI BỘ (CHROMADB) ===\n{chroma_context}")
         if internet_context:
-            doc_sections.append(f"=== NGUỒN TRA CỨU TỪ INTERNET (BẮT BUỘC TRÍCH DẪN RÕ RÀNG NGUỒN VÀ LINK) ===\n{internet_context}")
+            doc_sections.append(f"=== NGUỒN TRA CỨU TỪ INTERNET (TRÍCH DẪN RÕ RÀNG NGUỒN VÀ LINK) ===\n{internet_context}")
         if grounded_context:
             doc_sections.append(f"=== PHÂN TÍCH PHÁP LÝ NỀN ===\n{grounded_context}")
 
         doc_context = "\n\n".join(doc_sections) if doc_sections else (
-            "(Không tìm thấy văn bản liên quan trực tiếp. Trả lời dựa trên kiến thức chuyên môn PCCC 2024-2026.)"
+            "(Không tìm thấy văn bản liên quan trực tiếp. Trả lời dựa trên kiến thức pháp luật PCCC 2024-2026.)"
         )
 
         # ── Build prompt cho Gemini ──────────────────────────────────
-        transition_str = "\n".join(f"  ⚡ {t}" for t in OBSOLETE_TRANSITION_GUIDE)
-        legal_refs_str = "\n".join(f"  ✅ {r}" for r in CURRENT_LEGAL_REFS)
-        obsolete_str = "\n".join(f"  ❌ {l}" for l in OBSOLETE_LAWS)
+        legal_refs_str = "\n".join(f"  - {r}" for r in CURRENT_LEGAL_REFS)
 
         template = f"""Bạn là Trợ lý ảo AI Chi — chuyên gia tư vấn pháp luật PCCC và an toàn cháy nổ tại Việt Nam (Công an tỉnh Bắc Ninh).
 
-═══ CƠ SỞ DỮ LIỆU PHÁP CHẾ / THÔNG TIN THỰC TẾ ═══
+═══ CƠ SỞ PHÁP LÝ QUAN TRỌNG NĂM 2026 (ƯU TIÊN CAO NHẤT, VƯỢT TRÊN MỌI TÀI LIỆU CŨ) ═══
+{CORE_LEGAL_PRINCIPLES_2026}
+
+═══ TÀI LIỆU NỘI BỘ VÀ DỮ LIỆU TRA CỨU BỔ TRỢ ═══
 {doc_context}
-═══ HẾT CƠ SỞ DỮ LIỆU ═══
+═══ HẾT TÀI LIỆU ═══
 
 NGỮ CẢNH CƠ SỞ (nếu có): {context}
 
@@ -638,34 +694,41 @@ LỊCH SỬ HỘI THOẠI: {history_text}
 
 CÂU HỎI CỦA NGƯỜI DÙNG: {question}
 
-═══ DANH MỤC VĂN BẢN PHÁP LUẬT HIỆN HÀNH 2024-2026 (ƯU TIÊN CAO NHẤT) ═══
+═══ CÁC VĂN BẢN HIỆN HÀNH ═══
 {legal_refs_str}
 
-═══ HƯỚNG DẪN CHUYỂN TIẾP VÀ ĐỐI CHIẾU QUY ĐỊNH CŨ - MỚI ═══
-{transition_str}
+═══ CÁC QUY TẮC BẮT BUỘC KHI TRẢ LỜI CỦA CHI (TUÂN THỦ 100%) ═══
+1. ĐI THẲNG VÀO NỘI DUNG MỚI NHẤT HIỆN HÀNH (NĂM 2026):
+   - Luôn hướng dẫn theo quy định mới nhất hiện hành (Nghị quyết số 66.18/2026/NQ-CP, Nghị định số 347/2026/NĐ-CP, Luật 55/2024/QH15...).
+   - ĐẶC BIỆT VỀ NGHIỆM THU PCCC:
+     + Nêu rõ ngay: Thủ tục hành chính nộp hồ sơ xin kiểm tra nghiệm thu tại cơ quan Công an hoặc cơ quan Xây dựng ĐÃ ĐƯỢC CHÍNH THỨC BÃI BỎ.
+     + Chủ đầu tư KHÔNG PHẢI NỘP HỒ SƠ ĐỀ NGHỊ NGHIỆM THU ĐẾN CƠ QUAN NÀO NỮA.
+     + Chủ đầu tư tự tổ chức nghiệm thu cùng các nhà thầu (tư vấn thiết kế, thi công, tư vấn giám sát) theo đúng hồ sơ thiết kế đã thẩm duyệt.
+     + Chủ đầu tư lập hồ sơ nghiệm thu, tự chịu trách nhiệm pháp lý và thực hiện khai báo thông tin trên Hệ thống cơ sở dữ liệu về PCCC trước khi đưa công trình vào vận hành.
+     + Cơ quan Công an chuyển sang kiểm tra định kỳ (hậu kiểm: 1 năm/lần với cơ sở rủi ro cao, 2 năm/lần với cơ sở còn lại).
 
-═══ DANH SÁCH VĂN BẢN ĐÃ HẾT HIỆU LỰC ═══
-{obsolete_str}
+2. TUYỆT ĐỐI KHÔNG ĐƯA QUY ĐỊNH CŨ LAN MAN:
+   - KHÔNG lập riêng mục "Đối chiếu quy định cũ - mới".
+   - KHÔNG liệt kê các luật cũ, nghị định cũ xa xưa (Luật 2001, Luật 2013, Nghị định 136/2020, Nghị định 50/2024...).
+   - Quy định cũ chỉ được đưa ra văn bản gần nhất (nếu thật sự cần thiết để người hỏi không nhầm lẫn) và PHẢI ĐẶT TRONG DẤU NGOẶC ĐƠN THẬT NGẮN GỌN (ví dụ: "(thay thế quy định cũ tại Nghị định 105/2025/NĐ-CP trước đây)").
 
-NHIỆM VỤ CỰC KỲ QUAN TRỌNG:
-1. TỔNG HỢP VÀ ĐỐI CHIẾU QUY ĐỊNH (BẮT BUỘC):
-   - Đọc kỹ toàn bộ cơ sở dữ liệu đã cấp.
-   - PHÂN TÍCH QUY ĐỊNH ĐÃ HẾT HIỆU LỰC: Nếu câu hỏi hoặc dữ liệu có nhắc đến văn bản cũ (như Luật PCCC 2001/2013, NĐ 136/2020, TT 149/2020, TCVN 3890:2009...):
-     -> BẮT BUỘC phân tích và nêu rõ trong câu trả lời:
-        "Quy định [Tên văn bản cũ] trước đây ĐÃ HẾT HIỆU LỰC, hiện nay đã được THAY THẾ bằng [Tên văn bản mới, ví dụ: Luật 55/2024/QH15, Nghị định 105/2025/NĐ-CP, Nghị định 347/2026/NĐ-CP, QCVN 10:2025/BCA...]".
-     -> Giải thích rõ nội dung mới thay đổi thế nào để người dân/doanh nghiệp không áp dụng sai.
-2. TRA CỨU INTERNET VÀ TRÍCH DẪN NGUỒN MINH BẠCH:
-   - Nếu câu trả lời sử dụng thông tin từ mục "NGUỒN TRA CỨU TỪ INTERNET", BẮT BUỘC phải ghi rõ tên cơ quan/nguồn tin và chèn link Markdown (ví dụ: "[Cổng TTĐT Chính phủ](URL)", "[Thư viện Pháp luật](URL)", v.v.) ngay trong nội dung phản hồi để người đọc dễ dàng bấm vào kiểm chứng.
-3. PHONG CÁCH VÀ ĐỊNH DẠNG:
-   - Xưng là "Chi" hoặc "Tôi". Phong cách chuyên nghiệp, ân cần, giải thích cặn kẽ, đúng tác phong chiến sĩ Công an nhân dân.
-   - Trình bày Markdown rõ ràng với tiêu đề, danh sách đánh số, bảng so sánh nếu cần.
+3. TUYỆT ĐỐI KHÔNG DÙNG CÁC KÝ TỰ RỐI MẮT (CHỐNG LẠM DỤNG MARKDOWN):
+   - CẤM dùng các tiêu đề cấp bậc markdown: không dùng ###, ####, ##, #.
+   - CẤM dùng dấu sao kép ** để bôi đậm chữ tràn lan trong câu. Trình bày hoàn toàn bằng văn bản thuần, các tiêu đề đoạn chỉ cần viết hoa hoặc in thường rõ ràng.
+   - CẤM dùng các đường kẻ ngang --- hoặc ===.
+   - Trình bày mạch lạc, sạch sẽ, ngắt các ý bằng một dòng trống. Dùng gạch đầu dòng (- ) hoặc đánh số (1., 2.) đơn giản, dễ đọc.
+   - Nếu có thông tin tra cứu từ Internet: ghi tên cơ quan/nguồn tin và kèm đường dẫn trong ngoặc đơn gọn gàng.
+
+4. PHONG CÁCH:
+   - Xưng là "Chi" hoặc "Tôi".
+   - Ân cần, rành mạch, đúng tác phong chuyên môn pháp lý PCCC.
 
 TRẢ VỀ JSON THUẦN (không dùng ```json):
 {{
-    "reply": "câu trả lời markdown chi tiết, có phân tích đối chiếu luật cũ/mới và trích dẫn link nguồn",
+    "reply": "câu trả lời sạch sẽ, không có ###, không có **, tập trung quy định mới 2026",
     "source_type": "{source_type}",
     "suggestions": ["gợi ý câu hỏi liên quan 1", "gợi ý 2", "gợi ý 3"],
-    "references": ["văn bản pháp lý trích dẫn HIỆN HÀNH hoặc link nguồn internet"]
+    "references": ["văn bản pháp lý hiện hành hoặc link nguồn internet"]
 }}"""
 
         # ── Gọi LLM (9Router Google Pro hoặc Gemini REST API) ───────
@@ -678,6 +741,7 @@ TRẢ VỀ JSON THUẦN (không dùng ```json):
         # ── Parse JSON từ phản hồi ───────────────────────────────────
         result = _extract_json_block(content)
         if result and isinstance(result, dict) and "reply" in result:
+            result["reply"] = _clean_chat_formatting(result["reply"])
             result["source_type"] = source_type
             if not isinstance(result.get("suggestions"), list):
                 result["suggestions"] = []
@@ -695,10 +759,16 @@ TRẢ VỀ JSON THUẦN (không dùng ```json):
         if internet_refs:
             fallback_refs.extend(internet_refs)
 
+        raw_reply = content.strip()
+        if raw_reply.startswith("{") and '"reply"' in raw_reply:
+            m = re.search(r'"reply"\s*:\s*"((?:[^"\\]|\\.)*)', raw_reply)
+            if m:
+                raw_reply = m.group(1).replace('\\"', '"').replace('\\n', '\n')
+
         return {
-            "reply": content.strip(),
+            "reply": _clean_chat_formatting(raw_reply),
             "source_type": source_type,
-            "suggestions": ["Quy định về bình chữa cháy?", "Khi xảy ra cháy cần làm gì?", "Luật PCCC 55/2024 có gì mới?"],
+            "suggestions": ["Quy định về nghiệm thu PCCC mới nhất?", "Khai báo cơ sở dữ liệu PCCC thế nào?", "Trách nhiệm của chủ đầu tư về PCCC?"],
             "references": fallback_refs,
         }
 
@@ -709,7 +779,7 @@ TRẢ VỀ JSON THUẦN (không dùng ```json):
         # Nếu có dữ liệu NotebookLM hợp lệ thì trả về
         if 'notebook_context' in locals() and notebook_context and len(notebook_context) > 30 and "authenticate" not in notebook_context.lower():
             return {
-                "reply": f"{notebook_context}\n\n*(Lưu ý: Hệ thống đang trích xuất câu trả lời trực tiếp từ NotebookLM)*",
+                "reply": _clean_chat_formatting(f"{notebook_context}\n\n(Lưu ý: Hệ thống đang trích xuất câu trả lời trực tiếp từ NotebookLM)"),
                 "source_type": "notebooklm_direct",
                 "suggestions": [],
                 "references": list(CURRENT_LEGAL_REFS[:2])
@@ -718,9 +788,9 @@ TRẢ VỀ JSON THUẦN (không dùng ```json):
         # Nếu có ChromaDB context thì phản hồi từ dữ liệu pháp lý nội bộ
         if 'chroma_context' in locals() and chroma_context and len(chroma_context) > 30:
             return {
-                "reply": f"Dựa trên cơ sở dữ liệu pháp luật PCCC đã đối soát:\n\n{chroma_context[:1200]}\n\n*(Lưu ý: Hệ thống đang phản hồi từ kho văn bản quy chuẩn nội bộ)*",
+                "reply": _clean_chat_formatting(f"Dựa trên cơ sở dữ liệu pháp luật PCCC đã đối soát:\n\n{chroma_context[:1200]}\n\n(Lưu ý: Hệ thống đang phản hồi từ kho văn bản quy chuẩn nội bộ)"),
                 "source_type": "docs",
-                "suggestions": ["Quy định về bình chữa cháy?", "Khi xảy ra cháy cần làm gì?", "Luật PCCC 55/2024 có gì mới?"],
+                "suggestions": ["Quy định về nghiệm thu PCCC?", "Khai báo cơ sở dữ liệu PCCC?", "Luật PCCC 55/2024 có gì mới?"],
                 "references": list(CURRENT_LEGAL_REFS[:2])
             }
 
@@ -728,12 +798,12 @@ TRẢ VỀ JSON THUẦN (không dùng ```json):
         try:
             from routers.ai_analysis import _chat_fallback
             fb = _chat_fallback(question)
+            if isinstance(fb, dict) and "reply" in fb:
+                fb["reply"] = _clean_chat_formatting(fb["reply"])
             return fb
         except Exception:
             return {
-                "reply": (
-                    "Hệ thống đang tạm thời gián đoạn kết nối AI. Vui lòng thử lại sau giây lát hoặc liên hệ cán bộ quản lý PCCC."
-                ),
+                "reply": "Hệ thống đang tạm thời gián đoạn kết nối AI. Vui lòng thử lại sau giây lát hoặc liên hệ cán bộ quản lý PCCC.",
                 "source_type": "error",
                 "suggestions": [],
                 "references": [],

@@ -443,16 +443,32 @@
                    </div>`
                 : `<div class="fras-avatar">Chi</div>`;
 
+            const bubbleContent = isUser
+                ? `<pre>${this._esc(text)}</pre>`
+                : `<div class="fras-text" style="white-space:pre-wrap;word-break:break-word;font-family:inherit;font-size:0.84rem;line-height:1.65;">${this._formatText(text)}</div>`;
+
             const div = document.createElement('div');
             div.className = `fras-msg ${isUser ? 'user' : 'ai'}`;
             div.innerHTML = `
                 ${avatarHtml}
                 <div class="fras-bubble" style="${bubbleStyle}">
-                    <pre>${this._esc(text)}</pre>
+                    ${bubbleContent}
                     ${sourceBadge}
                     ${refsHtml}
                 </div>`;
             msgs.appendChild(div);
+        },
+
+        _formatText(text) {
+            if (!text) return '';
+            // Xóa triệt để các ký tự markdown thừa nếu có (###, **, ---)
+            let s = text.replace(/^[ \t]*#{1,6}\s*/gm, '').replace(/\*\*/g, '').replace(/^[ \t]*[-=_]{3,}[ \t]*$/gm, '');
+            s = this._esc(s);
+            // Hỗ trợ chuyển link markdown [Tên](url) thành thẻ <a>
+            s = s.replace(/\[([^\]]+)\]\((https?:\/\/[^\s\)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" style="color:#2563eb;text-decoration:underline;">$1</a>');
+            // Hỗ trợ chuyển link url thuần thành thẻ <a>
+            s = s.replace(/(^|[^">])(https?:\/\/[^\s<]+)/g, '$1<a href="$2" target="_blank" rel="noopener noreferrer" style="color:#2563eb;text-decoration:underline;">$2</a>');
+            return s;
         },
 
         _esc(s) {
