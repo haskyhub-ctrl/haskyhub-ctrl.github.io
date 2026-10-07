@@ -15,8 +15,18 @@ BACKUP_INTERVAL_SECONDS = int(os.environ.get("BACKUP_INTERVAL_SECONDS", 86400))
 BACKUP_DIR = "./backups"
 
 def get_db_info():
-    db_url = os.environ.get("DATABASE_URL", "sqlite:///./fras.db")
-    return db_url
+    db_url = os.environ.get("DATABASE_URL")
+    if not db_url or "sqlite" in db_url:
+        try:
+            from dotenv import load_dotenv
+            backend_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+            env_file = os.path.join(backend_dir, ".env")
+            if os.path.exists(env_file):
+                load_dotenv(env_file, override=True)
+                db_url = os.environ.get("DATABASE_URL")
+        except Exception:
+            pass
+    return db_url or "sqlite:///./fras.db"
 
 async def auto_backup_task():
     """Chạy ngầm định kỳ sao lưu database (hỗ trợ cả PostgreSQL và SQLite)."""
