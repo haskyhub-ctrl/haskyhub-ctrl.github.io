@@ -8,9 +8,116 @@ let surveyState = {
     currentStep: 0, // 0 = facility info, 1..N = categories, N+1 = review
     answers: {},     // { questionId: optionId }
     assessment: null,
+    activeAssessmentId: null,
     facilityInfo: {},
     userLocation: null, // { latitude, longitude }
+    isSubmitting: false,
+    draftBannerDismissed: false,
 };
+
+const DRAFT_STORAGE_KEY = 'fras_survey_draft_v1';
+
+function saveSurveyDraft() {
+    try {
+        const answeredCount = Object.keys(surveyState.answers || {}).length;
+        if (!surveyState.facilityInfo?.facility_name && answeredCount === 0) return;
+        const draft = {
+            facilityInfo: surveyState.facilityInfo || {},
+            answers: surveyState.answers || {},
+            currentStep: surveyState.currentStep || 0,
+            activeAssessmentId: surveyState.activeAssessmentId || null,
+            savedAt: new Date().toISOString(),
+            answeredCount: answeredCount,
+        };
+        localStorage.setItem(DRAFT_STORAGE_KEY, JSON.stringify(draft));
+    } catch (e) {
+        console.warn('Could not save draft to localStorage', e);
+    }
+}
+
+function getSurveyDraft() {
+    try {
+        const raw = localStorage.getItem(DRAFT_STORAGE_KEY);
+        return raw ? JSON.parse(raw) : null;
+    } catch (e) {
+        return null;
+    }
+}
+
+function clearSurveyDraft() {
+    try {
+        localStorage.removeItem(DRAFT_STORAGE_KEY);
+    } catch (e) {}
+}
+
+function exportDraftBackup() {
+    try {
+        const draft = getSurveyDraft() || {
+            facilityInfo: surveyState.facilityInfo,
+            answers: surveyState.answers,
+            activeAssessmentId: surveyState.activeAssessmentId,
+            exportedAt: new Date().toISOString(),
+        };
+        const dataStr = 'data:text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(draft, null, 2));
+        const downloadAnchor = document.createElement('a');
+        downloadAnchor.setAttribute('href', dataStr);
+        downloadAnchor.setAttribute('download', `fras_backup_khao_sat_${Date.now()}.json`);
+        document.body.appendChild(downloadAnchor);
+        downloadAnchor.click();
+        downloadAnchor.remove();
+        showToast('Đã tải xuống bản sao lưu câu trả lời!', 'success');
+    } catch (err) {
+        showToast('Không thể xuất file: ' + err.message, 'error');
+    }
+}
+
+function checkDraftBanner() {
+    if (surveyState.draftBannerDismissed) return '';
+    const draft = getSurveyDraft();
+    if (!draft) return '';
+    const hasData = (draft.facilityInfo && draft.facilityInfo.facility_name) || (draft.answeredCount && draft.answeredCount > 0);
+    if (!hasData) return '';
+
+    return `
+        <div id="draft-banner" class="draft-restore-banner">
+            <div class="draft-restore-content">
+                <span class="draft-restore-icon">💾</span>
+                <div class="draft-restore-text">
+                    <h4>Phát hiện bài làm chưa hoàn tất</h4>
+                    <p>Hệ thống tìm thấy bản nháp cơ sở <strong>${draft.facilityInfo?.facility_name || 'chưa đặt tên'}</strong> (${draft.answeredCount || 0} câu đã làm, lưu lúc ${formatDateTime(draft.savedAt)}).</p>
+                </div>
+            </div>
+            <div class="draft-restore-actions">
+                <button type="button" class="btn btn-outline btn-sm" onclick="discardDraft()">Bỏ qua</button>
+                <button type="button" class="btn btn-primary btn-sm" onclick="restoreDraft()">Khôi phục bài</button>
+            </div>
+        </div>
+    `;
+}
+
+async function restoreDraft() {
+    const draft = getSurveyDraft();
+    if (!draft) return;
+    surveyState.facilityInfo = draft.facilityInfo || {};
+    surveyState.answers = draft.answers || {};
+    surveyState.activeAssessmentId = draft.activeAssessmentId || null;
+    surveyState.draftBannerDismissed = true;
+
+    if (surveyState.facilityInfo.facility_type) {
+        await loadCategoriesForFacilityType(surveyState.facilityInfo.facility_type);
+    }
+    const maxSteps = getTotalSteps();
+    surveyState.currentStep = Math.min(draft.currentStep || 0, maxSteps - 1);
+    renderStep();
+    showToast('Đã khôi phục bài làm thành công!', 'success');
+}
+
+function discardDraft() {
+    clearSurveyDraft();
+    surveyState.draftBannerDismissed = true;
+    renderStep();
+    showToast('Đã bắt đầu bài làm mới.');
+}
 
 const facilityTypes = [
     { value: 'industrial', label: 'Cơ sở sản xuất công nghiệp', icon: '🏭' },
@@ -130,8 +237,12 @@ function renderStep() {
 }
 
 function renderFacilityForm(container) {
-    const info = surveyState.facilityInfo;
+    const info = surveyState.facilityInfo || {};
+    const selectedTypes = (info.facility_type || '').split(',').map(s => s.trim());
+    const draftBannerHtml = checkDraftBanner();
+
     container.innerHTML = `
+        ${draftBannerHtml}
         <div class="facility-form fade-in">
             <div class="card">
                 <h2 style="margin-bottom: 8px;">📋 Thông tin Cơ sở</h2>
@@ -146,7 +257,7 @@ function renderFacilityForm(container) {
                     <label>Loại hình cơ sở *</label>
                     <div class="facility-type-grid" id="facility-type-grid">
                         ${facilityTypes.map(t => `
-                            <div class="facility-type-option ${info.facility_type === t.value ? 'selected' : ''}" data-value="${t.value}">
+                            <div class="facility-type-option ${selectedTypes.includes(t.value) ? 'selected' : ''}" data-value="${t.value}">
                                 <span class="type-icon">${t.icon}</span>
                                 ${t.label}
                             </div>
@@ -235,6 +346,7 @@ function renderCategoryQuestions(container, catIndex) {
 
 function selectOption(questionId, optionId, element) {
     surveyState.answers[questionId] = optionId;
+    saveSurveyDraft();
     const parent = element.closest('.options-list');
     parent.querySelectorAll('.option-item').forEach(el => el.classList.remove('selected'));
     element.classList.add('selected');
@@ -250,7 +362,7 @@ function selectOption(questionId, optionId, element) {
 }
 
 function renderReview(container) {
-    const info = surveyState.facilityInfo;
+    const info = surveyState.facilityInfo || {};
     let categoriesReview = surveyState.categories.map(cat => {
         const questions = cat.questions || [];
         const answered = questions.filter(q => surveyState.answers[q.id]).length;
@@ -277,7 +389,7 @@ function renderReview(container) {
                 
                 <div class="review-section">
                     <h4>📋 Thông tin cơ sở</h4>
-                    <div class="review-item"><span class="label">Tên cơ sở:</span><span class="value">${info.facility_name}</span></div>
+                    <div class="review-item"><span class="label">Tên cơ sở:</span><span class="value">${info.facility_name || '—'}</span></div>
                     <div class="review-item"><span class="label">Loại hình:</span><span class="value">${info.facility_type || 'N/A'}</span></div>
                     <div class="review-item"><span class="label">Địa chỉ:</span><span class="value">${info.facility_address || 'N/A'}</span></div>
                 </div>
@@ -285,10 +397,12 @@ function renderReview(container) {
                 ${categoriesReview}
             </div>
             
-            <div class="survey-nav">
-                <button class="btn btn-secondary" onclick="prevStep()">← Quay lại</button>
+            <div class="survey-nav" id="survey-nav-actions">
+                <button class="btn btn-secondary" onclick="prevStep()" id="prev-btn">← Quay lại</button>
                 <button class="btn btn-primary btn-lg" onclick="submitSurvey()" id="submit-btn">🔥 Gửi Đánh giá</button>
             </div>
+
+            <div id="submission-queue-area" style="display: none;"></div>
         </div>
     `;
 }
@@ -296,6 +410,7 @@ function renderReview(container) {
 function prevStep() {
     if (surveyState.currentStep > 0) {
         surveyState.currentStep--;
+        saveSurveyDraft();
         renderStep();
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
@@ -329,51 +444,255 @@ async function nextStep() {
             latitude: surveyState.userLocation?.latitude || null,
             longitude: surveyState.userLocation?.longitude || null,
         };
+        saveSurveyDraft();
         // Load categories filtered by ALL selected facility types
         await loadCategoriesForFacilityType(surveyState.facilityInfo.facility_type);
     }
 
     if (surveyState.currentStep < getTotalSteps() - 1) {
         surveyState.currentStep++;
+        saveSurveyDraft();
         renderStep();
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 }
 
+// =================== SUBMISSION QUEUE & AUTO-RETRY ENGINE ===================
+
+function preventTabClose(e) {
+    e.preventDefault();
+    e.returnValue = 'Bài khảo sát đang được hệ thống gửi và xếp hàng đợi xử lý. Vui lòng không đóng tab!';
+    return e.returnValue;
+}
+
+function updateQueueStep(stepNum, status) {
+    const el = document.getElementById(`q-step-${stepNum}`);
+    if (!el) return;
+    el.classList.remove('active', 'done');
+    if (status === 'active') {
+        el.classList.add('active');
+        el.querySelector('span:first-child').textContent = '⏳';
+    } else if (status === 'done') {
+        el.classList.add('done');
+        el.querySelector('span:first-child').textContent = '✅';
+    } else {
+        el.querySelector('span:first-child').textContent = '⚪';
+    }
+}
+
+function updateQueueAlert(type, icon, message) {
+    const box = document.getElementById('queue-alert-box');
+    const iconEl = document.getElementById('queue-alert-icon');
+    const textEl = document.getElementById('queue-alert-text');
+    if (!box || !iconEl || !textEl) return;
+
+    box.className = `queue-live-alert ${type}`;
+    iconEl.textContent = icon;
+    textEl.innerHTML = message;
+}
+
+function updateQueueRetryStatus(text) {
+    const el = document.getElementById('queue-retry-status');
+    if (el) el.textContent = text;
+}
+
+function showQueuePanel() {
+    const nav = document.getElementById('survey-nav-actions');
+    const queueArea = document.getElementById('submission-queue-area');
+    if (nav) nav.style.display = 'none';
+    if (!queueArea) return;
+
+    const totalAnswered = Object.keys(surveyState.answers || {}).length;
+    queueArea.style.display = 'block';
+    queueArea.innerHTML = `
+        <div class="queue-status-box" id="queue-box-inner">
+            <div class="queue-header">
+                <div class="queue-spinner-ring" id="queue-spinner"></div>
+                <div class="queue-header-text">
+                    <h3 id="queue-title">Đang điều phối gửi phiếu đánh giá...</h3>
+                    <p id="queue-desc">Hệ thống đang xếp hàng gửi để bảo vệ dữ liệu không bị nghẽn mạng.</p>
+                </div>
+            </div>
+            
+            <div class="queue-steps">
+                <div class="queue-step-item active" id="q-step-1">
+                    <span>⏳</span> <span>1. Khởi tạo hồ sơ</span>
+                </div>
+                <div class="queue-step-item" id="q-step-2">
+                    <span>⚪</span> <span>2. Nộp câu trả lời</span>
+                </div>
+                <div class="queue-step-item" id="q-step-3">
+                    <span>⚪</span> <span>3. Chấm điểm & Xếp loại</span>
+                </div>
+            </div>
+
+            <div class="queue-live-alert info" id="queue-alert-box">
+                <span id="queue-alert-icon">🚀</span>
+                <span id="queue-alert-text">Đang kết nối đến máy chủ an toàn...</span>
+            </div>
+
+            <div class="queue-backup-badge">
+                <span>🛡️ Đã lưu an toàn trên máy (${totalAnswered} câu trả lời)</span>
+                <span id="queue-retry-status" style="font-weight: 600;">Đang gửi lần 1...</span>
+            </div>
+        </div>
+    `;
+    queueArea.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function renderQueueExhaustedUI(error) {
+    const queueArea = document.getElementById('submission-queue-area');
+    if (!queueArea) return;
+
+    const totalAnswered = Object.keys(surveyState.answers || {}).length;
+    queueArea.style.display = 'block';
+    queueArea.innerHTML = `
+        <div class="queue-status-box" style="border-color: var(--accent-red); background: rgba(239, 68, 68, 0.03);">
+            <div class="queue-header">
+                <div style="font-size: 2.2rem; flex-shrink: 0;">⚠️</div>
+                <div class="queue-header-text">
+                    <h3 style="color: var(--accent-red);">Chưa thể hoàn tất kết nối tới máy chủ</h3>
+                    <p>Lưu lượng truy cập hiện tại đang đạt ngưỡng tối đa hoặc mạng của bạn bị gián đoạn.</p>
+                </div>
+            </div>
+            <div class="queue-live-alert error" style="margin-bottom: 16px;">
+                <span>❌</span>
+                <span><strong>Nguyên nhân:</strong> ${error.message || 'Hết thời gian chờ phản hồi'}</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 20px; line-height: 1.6;">
+                🛡️ <strong>Bạn yên tâm:</strong> Toàn bộ <strong>${totalAnswered} câu trả lời</strong> và thông tin cơ sở đã được sao lưu an toàn trong trình duyệt. Dữ liệu của bạn không bị mất!
+            </p>
+            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                <button class="btn btn-primary btn-lg" onclick="submitSurvey()">🔄 Thử gửi lại ngay</button>
+                <button class="btn btn-outline btn-lg" onclick="exportDraftBackup()">💾 Tải bản sao lưu (.json)</button>
+                <button class="btn btn-secondary" onclick="restoreNavFromQueue()">← Xem lại câu trả lời</button>
+            </div>
+        </div>
+    `;
+}
+
+function restoreNavFromQueue() {
+    const nav = document.getElementById('survey-nav-actions');
+    const queueArea = document.getElementById('submission-queue-area');
+    if (nav) nav.style.display = 'flex';
+    if (queueArea) queueArea.style.display = 'none';
+}
+
+async function runWithQueueRetry(stepName, fn, maxRetries = 6) {
+    let attempt = 0;
+    while (attempt < maxRetries) {
+        attempt++;
+        try {
+            updateQueueRetryStatus(attempt === 1 ? 'Đang gửi...' : `Đang thử lại (Lần ${attempt}/${maxRetries})...`);
+            return await fn();
+        } catch (error) {
+            console.warn(`[Queue Retry] ${stepName} failed attempt ${attempt}/${maxRetries}:`, error);
+
+            // Don't retry on Auth error (401) or Validation error (422)
+            if (error.status === 401 || error.status === 422) {
+                throw error;
+            }
+
+            if (attempt >= maxRetries) {
+                throw error;
+            }
+
+            // Exponential backoff with random jitter
+            const backoffDelays = [0, 3, 5, 8, 12, 18];
+            const baseWait = backoffDelays[attempt] || 15;
+            const jitter = Math.floor(Math.random() * 2000);
+            const totalWaitMs = baseWait * 1000 + jitter;
+            const totalWaitSec = Math.round(totalWaitMs / 1000);
+
+            // Countdown timer UI
+            for (let sec = totalWaitSec; sec > 0; sec--) {
+                updateQueueAlert(
+                    'waiting',
+                    '⏳',
+                    `Máy chủ đang tiếp nhận nhiều phiếu cùng lúc. Bài của bạn đang trong hàng đợi xử lý.<br>Hệ thống tự động gửi lại sau <strong>${sec} giây</strong> (Lần ${attempt + 1}/${maxRetries}). Vui lòng giữ tab này!`
+                );
+                updateQueueRetryStatus(`Chờ thử lại trong ${sec}s (${attempt}/${maxRetries})`);
+                await new Promise(r => setTimeout(r, 1000));
+            }
+
+            updateQueueAlert('info', '🔄', `Đang kết nối lại máy chủ (${stepName})...`);
+        }
+    }
+}
+
 async function submitSurvey() {
-    const btn = document.getElementById('submit-btn');
-    btn.disabled = true;
-    btn.innerHTML = '<span class="loading-spinner"></span> Đang xử lý...';
+    if (surveyState.isSubmitting) return;
+    surveyState.isSubmitting = true;
+
+    // Persist latest state
+    saveSurveyDraft();
+
+    // Prevent accidental reload or close
+    window.addEventListener('beforeunload', preventTabClose);
+
+    // Show queue UI
+    showQueuePanel();
 
     try {
-        // 1. Start assessment
-        const assessment = await api.post('/survey/start', surveyState.facilityInfo);
+        // Step 1: Start assessment session (idempotent, reuse if already obtained)
+        updateQueueStep(1, 'active');
+        updateQueueAlert('info', '🚀', 'Đang khởi tạo phiên đánh giá trên hệ thống...');
+        
+        if (!surveyState.activeAssessmentId) {
+            const assessment = await runWithQueueRetry('Khởi tạo hồ sơ', async () => {
+                return await api.post('/survey/start', surveyState.facilityInfo, { timeoutMs: 25000 });
+            });
+            surveyState.activeAssessmentId = assessment.id;
+            saveSurveyDraft();
+        }
+        updateQueueStep(1, 'done');
 
-        // 2. Submit all answers
+        // Step 2: Submit all answers in bulk
+        updateQueueStep(2, 'active');
+        updateQueueAlert('info', '📤', 'Đang lưu danh sách câu trả lời vào máy chủ...');
         const answersList = Object.entries(surveyState.answers).map(([qId, optId]) => ({
-            assessment_id: assessment.id,
+            assessment_id: surveyState.activeAssessmentId,
             question_id: parseInt(qId),
             selected_option_id: optId,
         }));
 
-        await api.post('/survey/submit-all', {
-            assessment_id: assessment.id,
-            answers: answersList,
+        await runWithQueueRetry('Nộp câu trả lời', async () => {
+            return await api.post('/survey/submit-all', {
+                assessment_id: surveyState.activeAssessmentId,
+                answers: answersList,
+            }, { timeoutMs: 25000 });
         });
+        updateQueueStep(2, 'done');
 
-        // 3. Complete assessment
-        const result = await api.post(`/survey/complete/${assessment.id}`, {});
+        // Step 3: Complete assessment and calculate score
+        updateQueueStep(3, 'active');
+        updateQueueAlert('info', '📊', 'Đang tính toán ma trận nguy cơ và hoàn tất đánh giá...');
+        await runWithQueueRetry('Chấm điểm hoàn tất', async () => {
+            return await api.post(`/survey/complete/${surveyState.activeAssessmentId}`, {}, { timeoutMs: 25000 });
+        });
+        updateQueueStep(3, 'done');
 
-        // 4. Trigger AI analysis (async, don't wait)
-        api.post(`/ai/analyze/${assessment.id}`, {}).catch(() => { });
+        // Step 4: Finished!
+        updateQueueAlert('success', '🎉', 'Đã nộp bài thành công! Đang chuyển hướng đến kết quả...');
+        updateQueueRetryStatus('Hoàn thành 100%');
 
-        showToast('Đánh giá hoàn thành!');
-        window.location.href = `/result.html?id=${assessment.id}`;
+        // Async AI trigger
+        api.post(`/ai/analyze/${surveyState.activeAssessmentId}`, {}, { timeoutMs: 60000 }).catch(() => {});
+
+        const finalAssessmentId = surveyState.activeAssessmentId;
+        clearSurveyDraft();
+        window.removeEventListener('beforeunload', preventTabClose);
+        surveyState.isSubmitting = false;
+
+        setTimeout(() => {
+            window.location.href = `/result.html?id=${finalAssessmentId}`;
+        }, 1200);
 
     } catch (error) {
-        showToast(error.message, 'error');
-        btn.disabled = false;
-        btn.textContent = '🔥 Gửi Đánh giá';
+        console.error('Submission failed after retries:', error);
+        window.removeEventListener('beforeunload', preventTabClose);
+        surveyState.isSubmitting = false;
+        renderQueueExhaustedUI(error);
     }
 }
 

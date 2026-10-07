@@ -45,38 +45,72 @@ class FrasAPI {
             headers['Authorization'] = `Bearer ${this.token}`;
         }
 
+        const timeoutMs = options.timeoutMs || 30000;
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
+
         try {
             const response = await fetch(url, {
                 ...options,
                 headers,
+                signal: options.signal || controller.signal,
             });
+            clearTimeout(timeoutId);
 
             if (response.status === 401) {
                 this.clearToken();
                 if (!window.location.pathname.includes('login')) {
                     window.location.href = '/login.html';
                 }
-                throw new Error('Phiên đăng nhập đã hết hạn');
+                const err = new Error('Phiên đăng nhập đã hết hạn');
+                err.status = 401;
+                throw err;
             }
-
-            const data = await response.json();
 
             if (!response.ok) {
-                let errMessage = 'Lỗi không xác định';
-                if (data.detail) {
-                    if (Array.isArray(data.detail)) {
-                        errMessage = data.detail.map(e => `${e.loc ? e.loc.join('.') : ''}: ${e.msg}`).join(' | ');
-                    } else {
-                        errMessage = data.detail;
+                const isBusy = [429, 502, 503, 504, 520, 521, 522, 523, 524].includes(response.status);
+                let errMessage = isBusy 
+                    ? `Máy chủ đang bận hoặc quá tải (Mã ${response.status})`
+                    : `Lỗi máy chủ (${response.status})`;
+
+                try {
+                    const data = await response.json();
+                    if (data && data.detail) {
+                        if (Array.isArray(data.detail)) {
+                            errMessage = data.detail.map(e => `${e.loc ? e.loc.join('.') : ''}: ${e.msg}`).join(' | ');
+                        } else {
+                            errMessage = data.detail;
+                        }
                     }
+                } catch (_) {
+                    // Response is HTML or non-JSON (e.g. Nginx/Cloudflare error page)
                 }
-                throw new Error(errMessage);
+
+                const err = new Error(errMessage);
+                err.status = response.status;
+                err.isServerBusy = isBusy;
+                throw err;
             }
 
-            return data;
+            const contentType = response.headers.get('content-type') || '';
+            if (contentType.includes('application/json')) {
+                return await response.json();
+            }
+            return await response.text();
         } catch (error) {
+            clearTimeout(timeoutId);
+            if (error.name === 'AbortError') {
+                const timeoutErr = new Error('Quá thời gian chờ phản hồi từ máy chủ (Timeout)');
+                timeoutErr.status = 504;
+                timeoutErr.isTimeout = true;
+                timeoutErr.isServerBusy = true;
+                throw timeoutErr;
+            }
             if (error.message === 'Failed to fetch') {
-                throw new Error('Không thể kết nối đến server');
+                const connErr = new Error('Không thể kết nối đến máy chủ hoặc mạng bị gián đoạn');
+                connErr.isNetworkError = true;
+                connErr.isServerBusy = true;
+                throw connErr;
             }
             throw error;
         }
