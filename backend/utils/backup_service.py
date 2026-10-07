@@ -145,3 +145,71 @@ def cleanup_old_backups(keep_count=10):
                 logger.info(f"Đã dọn dẹp bản sao lưu cũ: {old_file}")
     except Exception as e:
         logger.error(f"Lỗi khi dọn dẹp bản backup cũ: {e}")
+
+def restore_db(backup_path: str):
+    """Phục hồi cơ sở dữ liệu từ file sao lưu (PostgreSQL hoặc SQLite)."""
+    try:
+        if not os.path.exists(backup_path):
+            logger.error(f"File sao lưu không tồn tại: {backup_path}")
+            return False, "File sao lưu không tồn tại trên hệ thống"
+
+        db_url = get_db_info()
+
+        if db_url.startswith("postgresql"):
+            parsed = urlparse(db_url)
+            user = parsed.username or "postgres"
+            password = parsed.password or ""
+            host = parsed.hostname or "localhost"
+            port = parsed.port or 5432
+            dbname = parsed.path.lstrip("/") or "fras"
+
+            env = os.environ.copy()
+            if password:
+                env["PGPASSWORD"] = password
+
+            cmd = [
+                "psql",
+                "-U", user,
+                "-h", host,
+                "-p", str(port),
+                "-d", dbname,
+                "-f", backup_path,
+                "-q"
+            ]
+
+            logger.info(f"Đang phục hồi CSDL PostgreSQL từ {backup_path}...")
+            result = subprocess.run(cmd, env=env, capture_output=True, text=True, timeout=180)
+
+            if result.returncode != 0:
+                logger.error(f"psql restore thất bại (code {result.returncode}): {result.stderr}")
+                return False, f"Lỗi psql: {result.stderr[:200]}"
+
+            logger.info(f"✅ Đã phục hồi CSDL PostgreSQL thành công từ: {backup_path}")
+            return True, "Khôi phục dữ liệu PostgreSQL thành công!"
+
+        else:
+            # SQLite restore
+            raw_path = db_url.replace("sqlite:///./", "").replace("sqlite:///", "")
+            if not raw_path or raw_path.startswith("sqlite"):
+                raw_path = "fras.db"
+
+            shutil.copyfile(backup_path, raw_path)
+            logger.info(f"✅ Đã phục hồi CSDL SQLite thành công từ: {backup_path}")
+            return True, "Khôi phục dữ liệu SQLite thành công!"
+
+    except Exception as e:
+        logger.error(f"❌ Lỗi khi phục hồi CSDL: {e}")
+        return False, str(e)
+
+def delete_backup_file(file_name: str):
+    """Xóa file sao lưu chỉ định."""
+    try:
+        backup_path = os.path.join(BACKUP_DIR, file_name)
+        if not os.path.exists(backup_path):
+            return False, "File không tồn tại"
+        os.remove(backup_path)
+        logger.info(f"Đã xóa file sao lưu: {file_name}")
+        return True, "Đã xóa file sao lưu"
+    except Exception as e:
+        logger.error(f"Lỗi khi xóa file sao lưu: {e}")
+        return False, str(e)

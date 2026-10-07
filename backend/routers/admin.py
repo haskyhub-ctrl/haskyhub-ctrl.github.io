@@ -1,6 +1,6 @@
 import json
 from datetime import datetime, timedelta
-from fastapi import APIRouter, Depends, HTTPException, Request
+from fastapi import APIRouter, Depends, HTTPException, Request, UploadFile, File
 from sqlalchemy.orm import Session
 from sqlalchemy import func
 from typing import List, Optional
@@ -403,6 +403,79 @@ def list_backups(
             })
     files.sort(key=lambda x: x["created_at"], reverse=True)
     return files
+
+
+class RestoreBackupRequest(BaseModel):
+    file_name: str
+
+
+@router.post("/restore-backup")
+def trigger_restore_backup(
+    data: RestoreBackupRequest,
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    """Khôi phục CSDL từ file sao lưu có sẵn trên server."""
+    require_role("admin", "superadmin")(current_user)
+    backup_path = os.path.join("./backups", data.file_name)
+    if not os.path.exists(backup_path):
+        raise HTTPException(status_code=404, detail="File sao lưu không tồn tại")
+    
+    from utils.backup_service import restore_db
+    success, msg = restore_db(backup_path)
+    if success:
+        log_action(db, current_user.id, "restore_backup", "system", None, new_value={"file": data.file_name})
+        return {"status": "ok", "message": msg, "file": data.file_name}
+    else:
+        raise HTTPException(status_code=500, detail=msg)
+
+
+@router.post("/upload-and-restore-backup")
+async def upload_and_restore_backup(
+    file: UploadFile = File(...),
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    """Tải lên file sao lưu (.sql hoặc .db) và khôi phục CSDL ngay lập tức."""
+    require_role("admin", "superadmin")(current_user)
+    filename = file.filename or ""
+    if not (filename.endswith(".sql") or filename.endswith(".db")):
+        raise HTTPException(status_code=400, detail="Chỉ chấp nhận file định dạng .sql hoặc .db")
+    
+    os.makedirs("./backups", exist_ok=True)
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    ext = os.path.splitext(filename)[1]
+    saved_filename = f"fras_backup_uploaded_{timestamp}{ext}"
+    saved_path = os.path.join("./backups", saved_filename)
+    
+    with open(saved_path, "wb") as f:
+        content = await file.read()
+        f.write(content)
+        
+    from utils.backup_service import restore_db
+    success, msg = restore_db(saved_path)
+    if success:
+        log_action(db, current_user.id, "upload_restore_backup", "system", None, new_value={"file": saved_filename})
+        return {"status": "ok", "message": f"Đã tải lên và khôi phục thành công! ({saved_filename})", "file": saved_filename}
+    else:
+        raise HTTPException(status_code=500, detail=msg)
+
+
+@router.delete("/delete-backup")
+def delete_backup(
+    file_name: str,
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    """Xóa file sao lưu."""
+    require_role("admin", "superadmin")(current_user)
+    from utils.backup_service import delete_backup_file
+    success, msg = delete_backup_file(file_name)
+    if success:
+        log_action(db, current_user.id, "delete_backup", "system", None, old_value={"file": file_name})
+        return {"status": "ok", "message": msg}
+    else:
+        raise HTTPException(status_code=404, detail=msg)
 
 
 # ========================================================================

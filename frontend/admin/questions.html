@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quản lý Câu hỏi - FRAS Admin</title>
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/admin.css">
+    <link rel="stylesheet" href="/css/main.css?v=2.2">
+    <link rel="stylesheet" href="/css/admin.css?v=2.2">
 </head>
 
 <body>
@@ -86,7 +86,7 @@
     </div>
 
     <!-- Create/Edit Modal -->
-    <div class="edit-modal-overlay" id="edit-modal-overlay" onclick="if(event.target===this) closeEditModal()">
+    <div class="edit-modal-overlay" id="edit-modal-overlay" style="display: none !important;" onclick="if(event.target===this) closeEditModal()">
         <div class="edit-modal">
             <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; border-bottom:2px solid var(--gov-red); padding-bottom:10px;">
                 <h3 id="edit-modal-title" style="margin:0; border:none; padding:0;">➕ Thêm Câu hỏi Mới</h3>
@@ -144,7 +144,7 @@
     </div>
 
     <!-- AI Generate Modal -->
-    <div class="edit-modal-overlay" id="ai-gen-modal-overlay" onclick="if(event.target===this) closeAIGenModal()">
+    <div class="edit-modal-overlay" id="ai-gen-modal-overlay" style="display: none !important;" onclick="if(event.target===this) closeAIGenModal()">
         <div class="edit-modal">
             <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; border-bottom:2px solid #8b5cf6; padding-bottom:10px;">
                 <h3 style="margin:0; border:none; padding:0; color:#8b5cf6;">🤖 AI Tạo Câu hỏi Tự Động</h3>
@@ -186,6 +186,8 @@
         let optionCounter = 0;
 
         onReady(async () => {
+            closeEditModal();
+            closeAIGenModal();
             setupNavbar();
             if (!requireAuth()) return;
             try {
@@ -286,7 +288,9 @@
             optContainer.innerHTML = '';
             ['A', 'B', 'C', 'D'].forEach(key => addOptionRow(key, '', 0, key === 'A' ? 'safe' : key === 'B' ? 'low' : key === 'C' ? 'high' : 'critical'));
 
-            document.getElementById('edit-modal-overlay').classList.add('active');
+            const overlay = document.getElementById('edit-modal-overlay');
+            overlay.style.setProperty('display', 'flex', 'important');
+            overlay.classList.add('active');
         }
 
         function openEditModal(questionId) {
@@ -308,7 +312,9 @@
             optContainer.innerHTML = '';
             (q.options || []).forEach(opt => addOptionRow(opt.option_key, opt.option_text, opt.score, opt.risk_level));
 
-            document.getElementById('edit-modal-overlay').classList.add('active');
+            const overlay = document.getElementById('edit-modal-overlay');
+            overlay.style.setProperty('display', 'flex', 'important');
+            overlay.classList.add('active');
         }
 
         function addOptionRow(key = '', text = '', score = 0, risk = 'safe') {
@@ -341,7 +347,11 @@
         }
 
         function closeEditModal() {
-            document.getElementById('edit-modal-overlay').classList.remove('active');
+            const overlay = document.getElementById('edit-modal-overlay');
+            if (overlay) {
+                overlay.style.setProperty('display', 'none', 'important');
+                overlay.classList.remove('active');
+            }
         }
 
         async function saveQuestion(e) {
@@ -429,11 +439,17 @@
         function openAIGenerateModal() {
             document.getElementById('ai-gen-result').innerHTML = '';
             document.getElementById('ai-gen-topic').value = '';
-            document.getElementById('ai-gen-modal-overlay').classList.add('active');
+            const overlay = document.getElementById('ai-gen-modal-overlay');
+            overlay.style.setProperty('display', 'flex', 'important');
+            overlay.classList.add('active');
         }
 
         function closeAIGenModal() {
-            document.getElementById('ai-gen-modal-overlay').classList.remove('active');
+            const overlay = document.getElementById('ai-gen-modal-overlay');
+            if (overlay) {
+                overlay.style.setProperty('display', 'none', 'important');
+                overlay.classList.remove('active');
+            }
         }
 
         document.addEventListener('keydown', function(e) {

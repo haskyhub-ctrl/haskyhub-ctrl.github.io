@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quản lý Sao lưu - FRAS</title>
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/admin.css">
-    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="stylesheet" href="/css/main.css?v=2.2">
+    <link rel="stylesheet" href="/css/admin.css?v=2.2">
+    <link rel="stylesheet" href="/css/dashboard.css?v=2.2">
 </head>
 
 <body>
@@ -92,23 +92,64 @@
         </aside>
 
         <main class="admin-content">
-            <div class="page-header" style="display: flex; justify-content: space-between; align-items: center;">
-                <h2>Quản lý File Sao lưu CSDL</h2>
-                <button class="btn btn-primary" id="btn-create-backup" onclick="triggerManualBackup()">
-                    + Tạo bản sao mới ngay
-                </button>
+            <div class="page-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+                <div>
+                    <h2>💾 Quản lý Sao lưu & Phục hồi CSDL</h2>
+                    <p style="color: var(--text-secondary); margin-top: 4px;">Tự động sao lưu định kỳ, xuất file snapshot SQL và phục hồi dữ liệu hệ thống bất kỳ lúc nào</p>
+                </div>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                    <button class="btn btn-primary" id="btn-create-backup" onclick="triggerManualBackup()">
+                        ➕ Tạo bản sao mới ngay
+                    </button>
+                    <button class="btn btn-secondary" onclick="document.getElementById('backup-file-input').click()" style="border-color: #8b5cf6; color: #8b5cf6;">
+                        📤 Tải lên & Phục hồi CSDL
+                    </button>
+                    <input type="file" id="backup-file-input" accept=".sql,.db" style="display:none;" onchange="handleBackupUpload(event)">
+                </div>
+            </div>
+
+            <!-- Hướng dẫn & Cấu trúc dữ liệu sao lưu -->
+            <div class="dashboard-section" style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.9)); border: 1px solid var(--border-color); border-radius: 8px; padding: 18px 22px; margin-bottom: 24px;">
+                <h4 style="margin: 0 0 10px 0; color: #38bdf8; display: flex; align-items: center; gap: 8px;">
+                    ℹ️ Thông tin về File Sao lưu Dữ liệu (.sql / .db)
+                </h4>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
+                    <div>
+                        <strong style="color: var(--text-primary);">📦 Dữ liệu bên trong file:</strong>
+                        <ul style="margin: 6px 0 0 18px; padding: 0;">
+                            <li>Toàn bộ tài khoản, mật khẩu phân quyền (Admin, Cán bộ, Cơ sở)</li>
+                            <li>Tất cả phiếu khảo sát PCCC, điểm số, mức độ nguy cơ</li>
+                            <li>Toàn bộ nhận định chuyên sâu của AI & lộ trình khắc phục</li>
+                            <li>Kho 131 câu hỏi, danh mục và các phương án trả lời</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <strong style="color: var(--text-primary);">🔍 Cách xem nội dung file .sql:</strong>
+                        <ul style="margin: 6px 0 0 18px; padding: 0;">
+                            <li>File <code>.sql</code> là văn bản thuần (plain text UTF-8).</li>
+                            <li>Mở trực tiếp bằng <b>Notepad, Notepad++, VS Code</b> để xem các lệnh <code>INSERT</code> dữ liệu.</li>
+                            <li>Mở trực quan bằng các phần mềm quản trị CSDL như <b>DBeaver, pgAdmin 4, Navicat</b>.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <strong style="color: var(--text-primary);">⚡ Tính năng Phục hồi (Restore):</strong>
+                        <ul style="margin: 6px 0 0 18px; padding: 0;">
+                            <li>Cho phép <b>quay ngược trạng thái hệ thống</b> về bất kỳ thời điểm nào bằng nút <i>"🔄 Phục hồi"</i>.</li>
+                            <li>Hỗ trợ tải file <code>.sql</code> từ máy tính lên để nạp lại dữ liệu sau khi cài lại máy chủ.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             
             <div class="dashboard-section">
-                <p>Hệ thống tự động sao lưu dữ liệu mỗi 24 giờ và giữ lại 7 bản sao lưu gần nhất. Bạn có thể nhấn tải xuống để lưu trữ một bản trên máy tính cá nhân hằng tuần.</p>
-                <div class="table-responsive" style="margin-top: 1.5rem;">
+                <div class="table-responsive">
                     <table class="data-table">
                         <thead>
                             <tr>
-                                <th>Tên File</th>
+                                <th>Tên File Sao lưu</th>
                                 <th>Ngày tạo</th>
                                 <th>Dung lượng</th>
-                                <th>Hành động</th>
+                                <th style="text-align: right;">Hành động</th>
                             </tr>
                         </thead>
                         <tbody id="backups-list">
@@ -137,7 +178,7 @@
                 tbody.innerHTML = '';
                 
                 if (!res || res.length === 0) {
-                    tbody.innerHTML = `<tr><td colspan="4" style="text-align:center;">Không có bản sao lưu nào.</td></tr>`;
+                    tbody.innerHTML = `<tr><td colspan="4" style="text-align:center; padding: 30px; color: var(--text-muted);">Chưa có bản sao lưu nào. Hãy nhấn "+ Tạo bản sao mới ngay".</td></tr>`;
                     return;
                 }
 
@@ -145,18 +186,28 @@
                     const dateObj = new Date(item.created_at);
                     const tr = document.createElement('tr');
                     tr.innerHTML = `
-                        <td><strong>${item.file_name}</strong></td>
-                        <td>${dateObj.toLocaleString('vi-VN')}</td>
-                        <td>${item.size_kb} KB</td>
                         <td>
-                            <button class="btn btn-primary btn-sm" onclick="downloadBackup('${item.file_name}')">⏬ Tải xuống</button>
+                            <strong style="color: var(--text-primary); font-family: monospace; font-size: 0.95rem;">${item.file_name}</strong>
+                        </td>
+                        <td>${dateObj.toLocaleString('vi-VN')}</td>
+                        <td><span class="badge" style="background: rgba(59,130,246,0.15); color: #60a5fa; padding: 3px 8px;">${item.size_kb} KB</span></td>
+                        <td style="text-align: right; white-space: nowrap;">
+                            <button class="btn btn-sm btn-outline" onclick="downloadBackup('${item.file_name}')" title="Tải file về máy tính" style="margin-right: 6px;">
+                                ⏬ Tải về
+                            </button>
+                            <button class="btn btn-sm" onclick="triggerRestoreBackup('${item.file_name}')" title="Phục hồi CSDL về bản này" style="margin-right: 6px; background: rgba(139,92,246,0.15); color: #a78bfa; border: 1px solid #8b5cf6;">
+                                🔄 Phục hồi
+                            </button>
+                            <button class="btn btn-sm btn-danger" onclick="triggerDeleteBackup('${item.file_name}')" title="Xóa bản sao lưu">
+                                🗑️ Xóa
+                            </button>
                         </td>
                     `;
                     tbody.appendChild(tr);
                 });
             } catch (err) {
                 console.error(err);
-                document.getElementById('backups-list').innerHTML = `<tr><td colspan="4" style="text-align:center;color:red;">Lỗi khi tải dữ liệu sao lưu</td></tr>`;
+                document.getElementById('backups-list').innerHTML = `<tr><td colspan="4" style="text-align:center;color:red;">Lỗi khi tải dữ liệu sao lưu: ${err.message}</td></tr>`;
             }
         }
 
@@ -174,30 +225,105 @@
                 a.download = fileName;
                 a.click();
                 URL.revokeObjectURL(url);
-                showToast('Đã tải xuống file: ' + fileName);
+                showToast('Đã tải xuống file: ' + fileName, 'success');
             } catch(err) {
                 console.error(err);
-                showToast('Lỗi khi tải file sao lưu', 'error');
+                showToast('Lỗi khi tải file sao lưu: ' + err.message, 'error');
             }
         }
 
         async function triggerManualBackup() {
-            if(!confirm("Hệ thống sẽ ngay lập tức tạo 1 bản sao lưu mới. Tiếp tục?")) return;
+            if(!confirm("Hệ thống sẽ ngay lập tức tạo 1 bản snapshot sao lưu mới. Tiếp tục?")) return;
+            const btn = document.getElementById('btn-create-backup');
+            btn.innerHTML = '⏳ Đang sao lưu...';
+            btn.disabled = true;
             try {
-                const btn = document.getElementById('btn-create-backup');
-                btn.innerHTML = 'Đang xử lý...';
-                btn.disabled = true;
-
                 const res = await api.post('/admin/manual-backup', {});
-                showToast(res.message || "Tạo bản sao lưu thành công!");
-                loadBackups();
+                showToast(res.message || "Tạo bản sao lưu thành công!", 'success');
+                await loadBackups();
             } catch (err) {
                 console.error(err);
-                showToast("Lỗi khi tạo bản sao lưu.", 'error');
+                showToast("Lỗi khi tạo bản sao lưu: " + err.message, 'error');
             } finally {
-                const btn = document.getElementById('btn-create-backup');
-                btn.innerHTML = '+ Tạo bản sao mới ngay';
+                btn.innerHTML = '➕ Tạo bản sao mới ngay';
                 btn.disabled = false;
+            }
+        }
+
+        async function triggerRestoreBackup(fileName) {
+            const confirmed = confirm(
+                `⚠️ CẢNH BÁO QUAN TRỌNG:\n\n` +
+                `Bạn đang yêu cầu khôi phục CSDL từ file:\n"${fileName}"\n\n` +
+                `Thao tác này sẽ GHI ĐÈ toàn bộ dữ liệu hiện tại bằng dữ liệu trong bản sao lưu này.\n\n` +
+                `Bạn có chắc chắn muốn tiến hành khôi phục?`
+            );
+            if (!confirmed) return;
+
+            showToast('⏳ Đang tiến hành khôi phục CSDL, vui lòng đợi...', 'info');
+            try {
+                const res = await api.post('/admin/restore-backup', { file_name: fileName });
+                showToast(`✅ ${res.message || 'Khôi phục thành công!'}`, 'success');
+                setTimeout(() => {
+                    alert("Khôi phục cơ sở dữ liệu thành công! Trang web sẽ tự động tải lại.");
+                    location.reload();
+                }, 1200);
+            } catch (err) {
+                console.error(err);
+                showToast(`❌ Khôi phục thất bại: ${err.message}`, 'error');
+            }
+        }
+
+        async function handleBackupUpload(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            const confirmed = confirm(
+                `⚠️ CẢNH BÁO:\n\n` +
+                `Bạn vừa chọn tải lên file: "${file.name}" (${(file.size/1024).toFixed(1)} KB)\n\n` +
+                `File này sẽ được nạp trực tiếp vào CSDL hệ thống và thay thế toàn bộ dữ liệu hiện hành.\n\n` +
+                `Bạn có chắc chắn muốn tải lên và khôi phục ngay bây giờ?`
+            );
+            if (!confirmed) {
+                event.target.value = '';
+                return;
+            }
+
+            showToast('⏳ Đang tải file lên máy chủ và nạp vào CSDL...', 'info');
+            const formData = new FormData();
+            formData.append('file', file);
+
+            try {
+                const token = localStorage.getItem('fras_token');
+                const response = await fetch(`${API_BASE}/admin/upload-and-restore-backup`, {
+                    method: 'POST',
+                    headers: { 'Authorization': `Bearer ${token}` },
+                    body: formData
+                });
+                const res = await response.json();
+                if (!response.ok) throw new Error(res.detail || 'Lỗi khi khôi phục từ file tải lên');
+
+                showToast(`✅ ${res.message || 'Khôi phục CSDL thành công!'}`, 'success');
+                setTimeout(() => {
+                    alert("Đã khôi phục dữ liệu từ file thành công! Hệ thống sẽ tải lại trang.");
+                    location.reload();
+                }, 1200);
+            } catch (err) {
+                console.error(err);
+                showToast(`❌ Lỗi: ${err.message}`, 'error');
+            } finally {
+                event.target.value = '';
+            }
+        }
+
+        async function triggerDeleteBackup(fileName) {
+            if (!confirm(`Bạn có chắc muốn xóa bản sao lưu "${fileName}" khỏi máy chủ?`)) return;
+            try {
+                const res = await api.delete(`/admin/delete-backup?file_name=${encodeURIComponent(fileName)}`);
+                showToast(res.message || 'Đã xóa bản sao lưu', 'success');
+                await loadBackups();
+            } catch (err) {
+                console.error(err);
+                showToast(`Lỗi khi xóa: ${err.message}`, 'error');
             }
         }
     </script>
