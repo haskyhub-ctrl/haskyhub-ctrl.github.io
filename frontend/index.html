@@ -134,6 +134,111 @@
     </section>
 
     <!-- ============================================================
+         AI COPILOT / TRỢ LÝ ẢO CHI — Embedded Homepage Chatbot
+         ============================================================ -->
+    <section class="hp-ai-section" id="ai-assistant">
+        <div class="container">
+            <div class="gov-section-header">
+                <span class="gov-section-eyebrow">Trợ Lý Trí Tuệ Nhân Tạo 24/7</span>
+                <h2 class="gov-section-title">Hỏi Đáp Pháp Luật & An Toàn PCCC Trực Tuyến</h2>
+                <p class="gov-section-subtitle">Giải đáp tức thì mọi thắc mắc về Luật PCCC số 55/2024/QH15, kỹ thuật an toàn điện, lối thoát nạn và giải pháp khắc phục nguy cơ cháy nổ</p>
+            </div>
+
+            <div class="hp-ai-grid">
+                <!-- Cột trái: Giới thiệu Trợ lý Chi & Chủ đề phổ biến -->
+                <div class="hp-ai-profile-card">
+                    <div class="hp-ai-officer-header">
+                        <div class="hp-ai-avatar-wrapper">
+                            <img src="/img/ai_chi_avatar.png" alt="Trợ lý ảo Chi" class="hp-ai-avatar-img">
+                            <span class="hp-ai-online-status" title="Đang trực tuyến"></span>
+                        </div>
+                        <div class="hp-ai-officer-meta">
+                            <div class="hp-ai-officer-name">Trợ lý Ảo Chi</div>
+                            <div class="hp-ai-officer-dept">Phòng Cảnh sát PCCC & CNCH Bắc Ninh</div>
+                            <span class="hp-ai-officer-badge">Cố vấn An toàn PCCC</span>
+                        </div>
+                    </div>
+
+                    <p class="hp-ai-bio">
+                        "Chào bạn! Chi được huấn luyện trên cơ sở dữ liệu pháp luật PCCC mới nhất và hàng ngàn kịch bản xử lý thực tế. Bạn hãy chọn câu hỏi nhanh bên dưới hoặc gõ trực tiếp vào ô trò chuyện bên cạnh nhé!"
+                    </p>
+
+                    <div class="hp-ai-quick-box">
+                        <div class="hp-ai-quick-title">
+                            <span>💡 Chủ đề người dân tra cứu nhiều nhất:</span>
+                        </div>
+                        <div class="hp-ai-pills">
+                            <button type="button" class="hp-quick-pill" onclick="hpAskChi(this)">🚨 Khi cháy chung cư mini phải làm gì?</button>
+                            <button type="button" class="hp-quick-pill" onclick="hpAskChi(this)">📜 Điểm mới nổi bật của Luật PCCC 55/2024?</button>
+                            <button type="button" class="hp-quick-pill" onclick="hpAskChi(this)">🧯 Cách kiểm tra hạn dùng bình chữa cháy?</button>
+                            <button type="button" class="hp-quick-pill" onclick="hpAskChi(this)">🏠 Nhà ở kết hợp kinh doanh cần trang bị gì?</button>
+                            <button type="button" class="hp-quick-pill" onclick="hpAskChi(this)">⚡ Hướng dẫn an toàn khi sạc pin xe điện?</button>
+                            <button type="button" class="hp-quick-pill" onclick="hpAskChi(this)">🚪 Quy chuẩn lối thoát nạn thứ 2 nhà ống?</button>
+                        </div>
+                    </div>
+
+                    <div class="hp-ai-features-list">
+                        <div class="hp-ai-feat-item">
+                            <span class="hp-ai-feat-icon">⚡</span>
+                            <span>Trả lời tự động tức thì trong 1 giây</span>
+                        </div>
+                        <div class="hp-ai-feat-item">
+                            <span class="hp-ai-feat-icon">⚖️</span>
+                            <span>Dẫn chứng số điều luật & nghị định chuẩn xác</span>
+                        </div>
+                        <div class="hp-ai-feat-item">
+                            <span class="hp-ai-feat-icon">🔒</span>
+                            <span>Hoàn toàn miễn phí & bảo mật thông tin</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cột phải: Hộp thoại chat tương tác trực tiếp -->
+                <div class="hp-ai-chatbox">
+                    <div class="hp-chatbox-top">
+                        <div class="hp-chatbox-title">
+                            <span class="hp-chat-dot"></span>
+                            <span>Khung tương tác Trợ lý Ảo Chi</span>
+                            <span class="hp-chat-status-text">Sẵn sàng phản hồi</span>
+                        </div>
+                        <button type="button" class="hp-chatbox-clear" onclick="hpClearChat()" title="Làm mới cuộc trò chuyện">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/>
+                                <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+                            </svg>
+                            Làm mới
+                        </button>
+                    </div>
+
+                    <div class="hp-chatbox-messages" id="hp-chat-messages">
+                        <!-- Tin nhắn sẽ được render động bởi JavaScript -->
+                    </div>
+
+                    <form class="hp-chatbox-form" id="hp-chat-form" onsubmit="hpHandleSend(event)">
+                        <div class="hp-chatbox-input-wrap">
+                            <textarea 
+                                id="hp-chat-input" 
+                                rows="1" 
+                                placeholder="Nhập câu hỏi về luật PCCC, kiểm tra an toàn, thiết bị chữa cháy..." 
+                                onkeydown="hpHandleKeydown(event)"
+                            ></textarea>
+                            <button type="submit" id="hp-chat-send-btn" class="hp-chat-send-btn">
+                                <span>Gửi</span>
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="hp-chatbox-hints">
+                            <span>💡 Nhấn <strong>Enter</strong> để gửi câu hỏi • Shift + Enter xuống dòng</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
          TESTIMONIALS — Moved above Services for social proof
          ============================================================ -->
     <section class="hp-testimonials" id="testimonials">

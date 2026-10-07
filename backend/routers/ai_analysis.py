@@ -18,7 +18,7 @@ from typing import Optional, List
 from pydantic import BaseModel
 from database import get_db
 from models import User, Assessment, AssessmentAnswer, CategoryScore, Question, QuestionOption, QuestionCategory
-from middleware.auth_middleware import get_current_user
+from middleware.auth_middleware import get_current_user, get_optional_user
 from middleware.rbac import require_role
 from utils.ai_prompt import build_analysis_prompt, build_fallback_analysis
 
@@ -383,14 +383,14 @@ class ChatRequest(BaseModel):
 @router.post("/chat")
 async def ai_chat(
     data: ChatRequest,
-    current_user: User = Depends(get_current_user),
+    current_user: Optional[User] = Depends(get_optional_user),
     db: Session = Depends(get_db)
 ):
-    """AI chatbot for fire safety Q&A using RAG Architecture."""
+    """AI chatbot for fire safety Q&A using RAG Architecture (hỗ trợ cả khách vãng lai và người đã đăng nhập)."""
     from utils.rag_search import ask_ai_chi
     
     context = ""
-    if data.assessment_id:
+    if data.assessment_id and current_user:
         if current_user.role in ("admin", "superadmin"):
             assessment = db.query(Assessment).filter(Assessment.id == data.assessment_id).first()
         else:

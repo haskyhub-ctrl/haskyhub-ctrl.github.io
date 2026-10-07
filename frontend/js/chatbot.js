@@ -3,38 +3,80 @@
  * Auto-injects chatbot widget on every page when user is logged in.
  */
 (function () {
-    if (!localStorage.getItem('fras_token')) return;
-
     const style = document.createElement('style');
     style.textContent = `
-        /* ===== FAB Button ===== */
-        .fras-fab {
+        /* ===== FAB Wrap & Speech Badge ===== */
+        .fras-fab-wrap {
             position: fixed; bottom: 24px; right: 24px;
+            z-index: 9999; display: flex; align-items: center; gap: 10px;
+            user-select: none;
+        }
+
+        .fras-fab-badge {
+            background: #ffffff; color: #C0202A;
+            padding: 8px 18px; border-radius: 999px;
+            box-shadow: 0 6px 20px rgba(192, 32, 42, 0.28), 0 2px 6px rgba(0,0,0,0.08);
+            border: 2px solid #C0202A;
+            font-weight: 800; font-size: 0.92rem;
+            cursor: pointer; display: flex; align-items: center; gap: 7px;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: fras-badge-float 3.5s infinite ease-in-out;
+            white-space: nowrap; position: relative;
+        }
+        .fras-fab-badge::after {
+            content: ''; position: absolute; right: -7px; top: 50%;
+            transform: translateY(-50%);
+            border-width: 5px 0 5px 7px; border-style: solid;
+            border-color: transparent transparent transparent #C0202A;
+        }
+        .fras-fab-badge:hover {
+            transform: translateY(-3px) scale(1.04);
+            box-shadow: 0 8px 26px rgba(192, 32, 42, 0.4);
+            background: #fef2f2;
+        }
+        .fras-fab-badge .badge-icon { font-size: 1.1rem; line-height: 1; }
+        .fras-fab-badge .badge-pulse-dot {
+            width: 8px; height: 8px; background: #22c55e;
+            border-radius: 50%; display: inline-block;
+            animation: fras-dot-pulse 1.8s infinite;
+        }
+
+        @keyframes fras-badge-float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-4px); }
+        }
+        @keyframes fras-dot-pulse {
+            0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+            70% { box-shadow: 0 0 0 6px rgba(34, 197, 94, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+        }
+
+        /* ===== FAB Avatar Button ===== */
+        .fras-fab {
             width: 64px; height: 64px; border-radius: 50%;
             background: #fff; border: 3px solid #C0202A; color: #fff;
-            cursor: grab; box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-            z-index: 9999; transition: box-shadow .2s;
+            cursor: pointer; box-shadow: 0 6px 20px rgba(0,0,0,0.22);
+            transition: transform .2s, box-shadow .2s;
             display: flex; align-items: center; justify-content: center;
             overflow: hidden; padding: 0;
             background-image: url('/img/ai_chi_avatar.png');
-            background-size: cover;
-            background-position: center;
-            user-select: none;
-            touch-action: none;
+            background-size: cover; background-position: center;
+            flex-shrink: 0; position: relative;
         }
-        .fras-fab:active { cursor: grabbing; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+        .fras-fab:hover { transform: scale(1.06); box-shadow: 0 8px 24px rgba(192,32,42,0.4); }
+        .fras-fab:active { transform: scale(0.96); }
         .fras-fab .notif-dot {
             position: absolute; top: 3px; right: 3px;
-            width: 12px; height: 12px; background: #22c55e;
+            width: 13px; height: 13px; background: #22c55e;
             border-radius: 50%; border: 2px solid #fff;
         }
 
         /* ===== Chat Panel ===== */
         .fras-panel {
-            display: none; position: fixed; bottom: 92px; right: 24px;
+            display: none; position: fixed; bottom: 96px; right: 24px;
             width: 420px; max-height: 580px;
             background: #ffffff; border: 1px solid #e2e8f0;
-            border-radius: 12px; box-shadow: 0 12px 48px rgba(0,0,0,0.18);
+            border-radius: 14px; box-shadow: 0 16px 54px rgba(0,0,0,0.22);
             z-index: 10000; flex-direction: column; overflow: hidden;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             min-width: 320px; min-height: 360px;
@@ -215,9 +257,16 @@
     // HTML structure
     const wrap = document.createElement('div');
     wrap.innerHTML = `
-        <button class="fras-fab" id="fras-fab" title="Hỏi AI về PCCC">
-            <span class="notif-dot"></span>
-        </button>
+        <div class="fras-fab-wrap" id="fras-fab-wrap">
+            <div class="fras-fab-badge" id="fras-fab-badge" onclick="frasChatbot.toggle()" title="Bấm để đặt câu hỏi về PCCC">
+                <span class="badge-icon">💬</span>
+                <span>Đặt câu hỏi</span>
+                <span class="badge-pulse-dot"></span>
+            </div>
+            <button class="fras-fab" id="fras-fab" title="Hỏi AI về PCCC">
+                <span class="notif-dot"></span>
+            </button>
+        </div>
         <div class="fras-panel" id="fras-panel">
             <div class="fras-resize-handle" id="fras-resize-handle" title="Kéo để thay đổi kích thước"></div>
             <div class="fras-header">
@@ -289,6 +338,8 @@
             document.getElementById('fras-input').focus();
             const dot = document.querySelector('.fras-fab .notif-dot');
             if (dot) dot.style.display = 'none';
+            const badge = document.getElementById('fras-fab-badge');
+            if (badge) badge.style.display = 'none';
             // Show welcome message if empty
             const msgs = document.getElementById('fras-messages');
             if (!msgs.children.length) {
@@ -299,6 +350,8 @@
         close() {
             this.isOpen = false;
             document.getElementById('fras-panel').classList.remove('open');
+            const badge = document.getElementById('fras-fab-badge');
+            if (badge) badge.style.display = 'flex';
         },
         clear() {
             this.history = [];
@@ -315,6 +368,15 @@
                 `<button onclick="frasChatbot.ask(this)">${this._esc(s)}</button>`
             ).join('');
         },
+        askText(text) {
+            if (!text) return;
+            if (!this.isOpen) this.open();
+            document.getElementById('fras-input').value = text;
+            this.send();
+        },
+        ask(btn) {
+            this.askText(btn.textContent.trim());
+        },
         _appendWelcome() {
             const msgs = document.getElementById('fras-messages');
             this._addBubble('ai',
@@ -328,10 +390,6 @@
                 'Hãy đặt câu hỏi cho Chi nhé!',
                 null, null
             );
-        },
-        ask(btn) {
-            document.getElementById('fras-input').value = btn.textContent;
-            this.send();
         },
         async send() {
             const input = document.getElementById('fras-input');
@@ -479,6 +537,7 @@
     };
 
     // FAB click & Drag Logic
+    const fabWrap = document.getElementById('fras-fab-wrap');
     const fab = document.getElementById('fras-fab');
     let isDragging = false;
     let startX, startY, initialX, initialY;
@@ -493,7 +552,8 @@
         }
         
         isDragging = false;
-        const rect = fab.getBoundingClientRect();
+        const targetEl = fabWrap || fab;
+        const rect = targetEl.getBoundingClientRect();
         initialX = rect.left;
         initialY = rect.top;
         
@@ -521,17 +581,18 @@
             isDragging = true;
             if (e.type === 'touchmove') e.preventDefault(); // prevent scroll
             
+            const targetEl = fabWrap || fab;
             let newX = initialX + dx;
             let newY = initialY + dy;
             
             // Constrain
-            newX = Math.max(0, Math.min(window.innerWidth - fab.offsetWidth, newX));
-            newY = Math.max(0, Math.min(window.innerHeight - fab.offsetHeight, newY));
+            newX = Math.max(0, Math.min(window.innerWidth - targetEl.offsetWidth, newX));
+            newY = Math.max(0, Math.min(window.innerHeight - targetEl.offsetHeight, newY));
             
-            fab.style.left = newX + 'px';
-            fab.style.top = newY + 'px';
-            fab.style.right = 'auto'; 
-            fab.style.bottom = 'auto';
+            targetEl.style.left = newX + 'px';
+            targetEl.style.top = newY + 'px';
+            targetEl.style.right = 'auto'; 
+            targetEl.style.bottom = 'auto';
         }
     }
     
