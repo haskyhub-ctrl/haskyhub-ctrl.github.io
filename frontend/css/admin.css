@@ -770,16 +770,24 @@ button.btn-action,
     height: 100%;
     background: rgba(15, 35, 71, 0.65) !important;
     backdrop-filter: blur(4px);
-    display: flex;
+    display: none; /* Mặc định ẩn, chỉ hiện khi có class active */
     align-items: center;
     justify-content: center;
     z-index: 2000;
     animation: fadeIn 0.2s ease;
 }
 
+.modal-overlay.active,
+.edit-modal-overlay.active {
+    display: flex !important;
+}
+
+#ai-gen-modal-overlay {
+    z-index: 2150 !important;
+}
+
 .modal-content,
-.modal-box,
-.edit-modal {
+.modal-box {
     background: var(--gov-white) !important;
     color: var(--gov-text) !important;
     border: 1px solid var(--gov-border) !important;
@@ -791,6 +799,72 @@ button.btn-action,
     box-shadow: 0 25px 50px -12px rgba(15, 35, 71, 0.35) !important;
     animation: slideUp 0.25s ease;
     padding: 0 !important;
+}
+
+.edit-modal {
+    background: var(--gov-white) !important;
+    color: var(--gov-text) !important;
+    border: 1px solid var(--gov-border) !important;
+    border-radius: var(--radius-lg) !important;
+    width: 92%;
+    max-width: 660px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 25px 50px -12px rgba(15, 35, 71, 0.4) !important;
+    animation: slideUp 0.25s ease;
+    padding: 24px 28px !important;
+}
+
+.edit-modal h3 {
+    margin: 0 0 20px 0;
+    font-size: 1.25rem;
+    color: var(--gov-text);
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--gov-red);
+}
+
+.option-edit-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    background: var(--gov-bg-alt);
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid var(--gov-border);
+}
+
+.option-edit-row .score-input {
+    width: 80px;
+    text-align: center;
+}
+
+.option-edit-row .risk-select {
+    width: 120px;
+}
+
+.btn-remove-opt {
+    background: transparent;
+    border: none;
+    color: var(--accent-red);
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background 0.15s;
+}
+
+.btn-remove-opt:hover {
+    background: rgba(239, 68, 68, 0.1);
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid var(--gov-border);
 }
 
 .modal-header {

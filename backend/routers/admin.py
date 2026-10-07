@@ -392,8 +392,9 @@ def list_backups(
         return []
     
     files = []
+    valid_exts = (".db", ".sql", ".dump", ".sql.gz")
     for f in os.listdir(backup_dir):
-        if f.startswith("fras_backup_") and f.endswith(".db"):
+        if f.startswith("fras_backup_") and any(f.endswith(ext) for ext in valid_exts):
             path = os.path.join(backup_dir, f)
             files.append({
                 "file_name": f,

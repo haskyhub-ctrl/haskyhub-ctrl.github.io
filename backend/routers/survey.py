@@ -16,6 +16,36 @@ from utils.scoring import calculate_category_scores, calculate_total_score, calc
 
 router = APIRouter(prefix="/api/survey", tags=["Survey"])
 
+FACILITY_CODE_MAP = {
+    "industrial": "A",
+    "warehouse": "B",
+    "mixed_residence": "C",
+    "hospitality": "D",
+    "medical_education": "E",
+    "fuel_gas": "F",
+    "transport": "G",
+    "residential": "H",
+    "construction": "I",
+    "office": "J",
+    "laboratory": "K",
+    "agriculture": "L",
+}
+REVERSE_FACILITY_CODE_MAP = {v: k for k, v in FACILITY_CODE_MAP.items()}
+
+def normalize_facility_types(types_list):
+    """Chuẩn hóa loại hình cơ sở: chấp nhận cả tên tiếng Anh ('industrial') và mã ký tự ('A')."""
+    res = set()
+    for t in types_list:
+        if not t:
+            continue
+        clean_t = str(t).strip()
+        res.add(clean_t)
+        if clean_t in FACILITY_CODE_MAP:
+            res.add(FACILITY_CODE_MAP[clean_t])
+        if clean_t in REVERSE_FACILITY_CODE_MAP:
+            res.add(REVERSE_FACILITY_CODE_MAP[clean_t])
+    return res
+
 
 @router.get("/categories")
 def get_survey_categories(facility_type: str = None, db: Session = Depends(get_db)):
@@ -24,9 +54,10 @@ def get_survey_categories(facility_type: str = None, db: Session = Depends(get_d
     and questions matching ANY of the specified facility types.
     """
     # Parse comma-separated facility types
-    selected_types = []
+    selected_types = set()
     if facility_type:
-        selected_types = [t.strip() for t in facility_type.split(",") if t.strip()]
+        raw_types = [t.strip() for t in facility_type.split(",") if t.strip()]
+        selected_types = normalize_facility_types(raw_types)
     
     # Query categories
     categories = (
@@ -245,9 +276,10 @@ def complete_assessment(
         raise HTTPException(status_code=400, detail="Chưa có câu trả lời nào")
     
     # Parse facility types (comma-separated)
-    selected_types = []
+    selected_types = set()
     if assessment.facility_type:
-        selected_types = [t.strip() for t in assessment.facility_type.split(",") if t.strip()]
+        raw_types = [t.strip() for t in assessment.facility_type.split(",") if t.strip()]
+        selected_types = normalize_facility_types(raw_types)
     
     # Get answered question IDs
     answered_question_ids = {a.question_id for a in answers}

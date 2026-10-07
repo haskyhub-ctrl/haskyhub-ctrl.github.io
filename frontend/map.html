@@ -363,6 +363,9 @@
                 <button class="filter-btn filter-high" onclick="filterMap('high')" id="filter-high">🟠 Cao</button>
                 <button class="filter-btn filter-critical" onclick="filterMap('critical')" id="filter-critical">🔴 Rất cao</button>
                 <button class="filter-btn filter-unassessed" onclick="filterMap('unassessed')" id="filter-unassessed">⚪ Chưa đánh giá</button>
+                <span style="border-left: 1px solid var(--border-color); height: 20px; margin: 0 4px;"></span>
+                <button class="filter-btn" onclick="zoomTo([21.18, 106.07], 11)" title="Xem tỉnh Bắc Ninh" style="border-color:#dc2626; color:#dc2626; font-weight:600;">📍 Bắc Ninh</button>
+                <button class="filter-btn" onclick="zoomTo([16.0, 106.0], 6)" title="Xem toàn quốc">🇻🇳 Toàn quốc</button>
             </div>
             <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
                 <!-- View mode toggle -->
@@ -432,7 +435,7 @@
             // Vietnam bounding box — prevents panning outside
             const vietnamBounds = L.latLngBounds([7.5, 101.0], [23.5, 110.0]);
 
-            // Center on Vietnam with bounds lock
+            // Center on Bac Ninh by default with bounds lock
             map = L.map('map', {
                 preferCanvas: true,
                 zoomAnimation: true,
@@ -441,17 +444,99 @@
                 maxBounds: vietnamBounds.pad(0.15),
                 maxBoundsViscosity: 1.0,
                 minZoom: 5,
-                maxZoom: 18
-            }).setView([16.0, 106.0], 6);
+                maxZoom: 20
+            }).setView([21.18, 106.07], 11);
 
-            // CartoDB Voyager — clean, modern base map that highlights data points
-            L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-                attribution: '&copy; <a href="https://carto.com/">CARTO</a> &copy; <a href="https://www.openstreetmap.org/copyright">OSM</a>',
+            // 1. Google Cadastral / Roads (Chi tiết địa chính, tên đường phố, ngõ ngách, UBND xã/phường)
+            const googleRoads = L.tileLayer('https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+                attribution: '&copy; Google Maps',
+                maxZoom: 20,
+                subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+            });
+
+            // 2. Google Hybrid Satellite (Vệ tinh có địa danh đường phố chi tiết)
+            const googleHybrid = L.tileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', {
+                attribution: '&copy; Google Maps',
+                maxZoom: 20,
+                subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+            });
+
+            // 3. CartoDB Voyager
+            const cartoVoyager = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+                attribution: '&copy; CARTO &copy; OSM',
                 maxZoom: 18,
                 updateWhenIdle: true,
                 updateWhenZooming: false,
                 keepBuffer: 4
-            }).addTo(map);
+            });
+
+            // 4. OpenStreetMap
+            const osmMap = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; OpenStreetMap contributors',
+                maxZoom: 19
+            });
+
+            // Mặc định nạp Bản đồ Địa chính Google
+            googleRoads.addTo(map);
+
+            const baseMaps = {
+                "🗺️ Địa chính Google": googleRoads,
+                "🛰️ Vệ tinh Google": googleHybrid,
+                "🎨 Bản đồ Carto": cartoVoyager,
+                "🌐 Bản đồ OpenStreetMap": osmMap
+            };
+
+            const overlayMaps = {};
+            const layerControl = L.control.layers(baseMaps, overlayMaps, { position: 'topright' }).addTo(map);
+
+            // Tải và hiển thị ranh giới 99 Xã/Phường Bắc Ninh
+            fetch('/data/bacninh_communes.geojson')
+                .then(response => {
+                    if (!response.ok) throw new Error("Network response was not ok");
+                    return response.json();
+                })
+                .then(geojsonData => {
+                    const bacNinhLayer = L.geoJSON(geojsonData, {
+                        style: function () {
+                            return {
+                                color: '#e11d48',
+                                weight: 1.5,
+                                opacity: 0.85,
+                                fillColor: '#f43f5e',
+                                fillOpacity: 0.05,
+                                dashArray: '4, 4'
+                            };
+                        },
+                        onEachFeature: function (feature, layer) {
+                            if (feature.properties) {
+                                const p = feature.properties;
+                                const tooltipHtml = `
+                                    <div style="font-size:0.85rem; line-height:1.4;">
+                                        <strong style="color:#e11d48;">${p.loai || ''} ${p.ten_xa || ''}</strong><br>
+                                        ${p.sap_nhap ? `<small style="color:#64748b;">(Gồm: ${p.sap_nhap})</small><br>` : ''}
+                                        <span>📏 Diện tích: <b>${p.dtich_km2 || '—'} km²</b></span><br>
+                                        <span>👥 Dân số: <b>${p.dan_so ? Number(p.dan_so).toLocaleString('vi-VN') : '—'}</b></span>
+                                    </div>
+                                `;
+                                layer.bindTooltip(tooltipHtml, {
+                                    permanent: false,
+                                    direction: "center",
+                                    className: "province-tooltip",
+                                    sticky: true
+                                });
+                            }
+                            layer.on('mouseover', function(e) {
+                                e.target.setStyle({ fillOpacity: 0.22, weight: 2.5, color: '#be123c' });
+                            });
+                            layer.on('mouseout', function(e) {
+                                bacNinhLayer.resetStyle(e.target);
+                            });
+                        }
+                    }).addTo(map);
+                    layerControl.addOverlay(bacNinhLayer, "📍 Ranh giới 99 Xã/Phường (Bắc Ninh)");
+                }).catch(err => {
+                    console.warn('[Map] Không thể tải ranh giới xã/phường Bắc Ninh:', err);
+                });
 
             // Tải và hiển thị ranh giới Tỉnh thành sau sáp nhập
             fetch('/data/vietnam_merged_optimized.geojson')
@@ -460,15 +545,15 @@
                     return response.json();
                 })
                 .then(geojsonData => {
-                    L.geoJSON(geojsonData, {
+                    const vnLayer = L.geoJSON(geojsonData, {
                         style: function (feature) {
                             return {
-                                color: '#475569', // Xanh dương slate đậm vừa
+                                color: '#475569',
                                 weight: 1.5,
                                 opacity: 0.85,
                                 fillColor: '#94a3b8',
-                                fillOpacity: 0.05, // Tint rất nhẹ để bắt event chuốt nhưng không làm mờ nền
-                                dashArray: '5, 5' // Nét đứt phân tách rõ ràng
+                                fillOpacity: 0.03,
+                                dashArray: '5, 5'
                             };
                         },
                         onEachFeature: function (feature, layer) {
@@ -477,11 +562,12 @@
                                     permanent: false,
                                     direction: "center",
                                     className: "province-tooltip",
-                                    sticky: true // Tooltip đi theo chuột
+                                    sticky: true
                                 });
                             }
                         }
                     }).addTo(map);
+                    layerControl.addOverlay(vnLayer, "🇻🇳 Ranh giới Tỉnh/Thành Toàn quốc");
                 }).catch(err => {
                     console.warn('[Map] Không thể tải ranh giới sáp nhập:', err);
                 });
@@ -792,6 +878,12 @@
             }
 
             loadMapData();
+        }
+
+        function zoomTo(latlng, zoom) {
+            if (map) {
+                map.flyTo(latlng, zoom, { duration: 1.2 });
+            }
         }
 
         // Init — dùng 'load' thay 'DOMContentLoaded' vì Leaflet scripts dùng defer
