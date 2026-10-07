@@ -461,18 +461,15 @@
                 subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
             });
 
-            // 3. CartoDB Voyager
-            const cartoVoyager = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-                attribution: '&copy; CARTO &copy; OSM',
-                maxZoom: 18,
-                updateWhenIdle: true,
-                updateWhenZooming: false,
-                keepBuffer: 4
-            });
-
-            // 4. OpenStreetMap
+            // 3. OpenStreetMap
             const osmMap = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '&copy; OpenStreetMap contributors',
+                maxZoom: 19
+            });
+
+            // 4. Esri ArcGIS World Street Map (Miễn phí, không cần API Key)
+            const esriStreet = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+                attribution: '&copy; Esri &copy; USGS',
                 maxZoom: 19
             });
 
@@ -482,8 +479,8 @@
             const baseMaps = {
                 "🗺️ Địa chính Google": googleRoads,
                 "🛰️ Vệ tinh Google": googleHybrid,
-                "🎨 Bản đồ Carto": cartoVoyager,
-                "🌐 Bản đồ OpenStreetMap": osmMap
+                "🌐 Bản đồ OpenStreetMap": osmMap,
+                "🏛️ Bản đồ Esri ArcGIS": esriStreet
             };
 
             const overlayMaps = {};

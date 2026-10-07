@@ -726,8 +726,10 @@ function openMapPicker() {
              [21.0285, 105.8542]; // Default to Hanoi
              
         pickerMap = L.map('picker-map-container').setView(center, 13);
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-            attribution: '&copy; CARTO'
+        L.tileLayer('https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+            attribution: '&copy; Google Maps',
+            maxZoom: 20,
+            subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
         }).addTo(pickerMap);
         
         pickerMarker = L.marker(center, {draggable: true}).addTo(pickerMap);
