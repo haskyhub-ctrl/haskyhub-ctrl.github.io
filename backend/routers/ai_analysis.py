@@ -10,6 +10,7 @@ Provides AI-powered features using Gemini API:
 """
 import os
 import json
+import asyncio
 from datetime import datetime, timedelta
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
@@ -245,55 +246,67 @@ def get_assessment_data(assessment: Assessment, db: Session) -> dict:
 @router.post("/analyze/{assessment_id}")
 async def analyze_assessment(
     assessment_id: str,
+    force: bool = False,
     current_user: Optional[User] = Depends(get_optional_user),
     db: Session = Depends(get_db)
 ):
     """Run dual AI analysis (Gemini 3.8 Flash vs RAG ChromaDB) on a completed assessment."""
     if current_user and current_user.role in ("admin", "superadmin"):
-        assessment = db.query(Assessment).filter(
-            Assessment.id == assessment_id,
-            Assessment.status == "completed"
-        ).first()
+        assessment = db.query(Assessment).filter(Assessment.id == assessment_id).first()
     else:
-        q = db.query(Assessment).filter(Assessment.id == assessment_id, Assessment.status == "completed")
+        q = db.query(Assessment).filter(Assessment.id == assessment_id)
         if current_user:
             q = q.filter(Assessment.user_id == current_user.id)
         assessment = q.first()
+        if not assessment:
+            # Fallback to direct ID match
+            assessment = db.query(Assessment).filter(Assessment.id == assessment_id).first()
 
     if not assessment:
-        raise HTTPException(status_code=404, detail="Không tìm thấy đánh giá hoàn thành")
+        raise HTTPException(status_code=404, detail="Không tìm thấy đánh giá")
+
+    # Fast cached response if already analyzed and not forcing re-analysis
+    if not force and assessment.ai_analysis:
+        try:
+            cached = json.loads(assessment.ai_analysis)
+            if cached and isinstance(cached, dict) and (cached.get("overall_assessment") or cached.get("gemini_38")):
+                return cached
+        except Exception:
+            pass
 
     assessment_data = get_assessment_data(assessment, db)
+    prompt = build_analysis_prompt(assessment_data)
 
-    # 1. Chạy tư vấn từ Gemini 3.8 Flash (9Router VPS)
-    gemini_38 = None
-    try:
-        prompt = build_analysis_prompt(assessment_data)
-        gemini_38 = await call_gemini(prompt, temperature=0.3)
-        gemini_38["source"] = "gemini_38_flash"
-    except Exception as e:
-        print(f"[Gemini 3.8 Flash] Error: {e}")
+    # 1. Runner for Gemini 3.8 Flash (9Router VPS)
+    async def run_gemini():
+        try:
+            res = await call_gemini(prompt, temperature=0.3)
+            res["source"] = "gemini_38_flash"
+            return res
+        except Exception as e:
+            print(f"[Gemini 3.8 Flash] Error: {e}")
+            fallback = build_fallback_analysis(assessment_data)
+            fallback["source"] = "gemini_fallback"
+            return fallback
 
-    # 2. Chạy đối soát từ RAG và CSDL Vector ChromaDB
-    rag_chroma = None
-    try:
-        rag_chroma = await call_rag_analysis(assessment_data, db)
-    except Exception as e:
-        print(f"[RAG ChromaDB] Error: {e}")
+    # 2. Runner for RAG & ChromaDB legal verification
+    async def run_rag():
+        try:
+            return await call_rag_analysis(assessment_data, db)
+        except Exception as e:
+            print(f"[RAG ChromaDB] Error: {e}")
+            fallback = build_fallback_analysis(assessment_data)
+            fallback["source"] = "rag_fallback"
+            return fallback
 
-    # Fallback dự phòng nếu lỗi
-    if not gemini_38:
-        gemini_38 = build_fallback_analysis(assessment_data)
-        gemini_38["source"] = "gemini_fallback"
-    if not rag_chroma:
-        rag_chroma = build_fallback_analysis(assessment_data)
-        rag_chroma["source"] = "rag_fallback"
+    # Execute both runners concurrently via asyncio.gather
+    gemini_38, rag_chroma = await asyncio.gather(run_gemini(), run_rag())
 
     dual_analysis = {
         "dual_mode": True,
         "gemini_38": gemini_38,
         "rag_chroma": rag_chroma,
-        # Giữ các trường tiêu chuẩn cho tương thích ngược
+        # Standard fields for backwards compatibility
         "overall_assessment": gemini_38.get("overall_assessment") or rag_chroma.get("overall_assessment"),
         "strengths": gemini_38.get("strengths") or rag_chroma.get("strengths"),
         "critical_weaknesses": gemini_38.get("critical_weaknesses") or rag_chroma.get("critical_weaknesses"),
@@ -303,8 +316,10 @@ async def analyze_assessment(
         "legal_references": gemini_38.get("legal_references") or rag_chroma.get("legal_references"),
     }
 
-    # Lưu kết quả phân tích song song vào CSDL
+    # Save to DB
     assessment.ai_analysis = json.dumps(dual_analysis, ensure_ascii=False)
+    if assessment.status != "completed":
+        assessment.status = "completed"
     db.commit()
 
     return dual_analysis

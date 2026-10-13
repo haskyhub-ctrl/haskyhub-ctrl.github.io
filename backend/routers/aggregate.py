@@ -1,7 +1,7 @@
 """
 Aggregate Analysis Router
 Provides locality-wide fire risk assessment reports for administrators.
-Includes AI-powered analysis from the perspective of Phòng Cảnh sát PCCC và CNCH Công an tỉnh.
+Includes AI-powered analysis from the perspective of Phòng Cảnh sát PCCC và CNCH Công an thành phố.
 """
 import os
 import json
@@ -271,7 +271,7 @@ def _generate_ai_aggregate_analysis(total, risk_counts, avg_risk, category_analy
         high_critical = risk_counts.get("high", 0) + risk_counts.get("critical", 0)
         high_critical_rate = (high_critical / total * 100) if total > 0 else 0
 
-        prompt = f"""Bạn là chuyên gia Phòng cháy chữa cháy và Cứu nạn cứu hộ (PCCC&CNCH), đang làm việc tại Phòng Cảnh sát PCCC và CNCH, Công an tỉnh. 
+        prompt = f"""Bạn là chuyên gia Phòng cháy chữa cháy và Cứu nạn cứu hộ (PCCC&CNCH), đang làm việc tại Phòng Cảnh sát PCCC và CNCH, Công an thành phố. 
 Hãy phân tích dữ liệu tổng hợp đánh giá nguy cơ cháy nổ dưới đây và đưa ra nhận định, phương hướng, giải pháp với góc nhìn quản lý nhà nước.
 
 ## DỮ LIỆU TỔNG HỢP:

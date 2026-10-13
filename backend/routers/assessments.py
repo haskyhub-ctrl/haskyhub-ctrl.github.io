@@ -118,19 +118,26 @@ def get_user_map_data(
 @router.get("/{assessment_id}", response_model=AssessmentDetail)
 def get_assessment_detail(
     assessment_id: str,
-    current_user: User = Depends(get_current_user),
+    current_user: Optional[User] = Depends(get_optional_user),
     db: Session = Depends(get_db)
 ):
     # Admin/superadmin can view any assessment
-    if current_user.role in ("admin", "superadmin"):
+    if current_user and current_user.role in ("admin", "superadmin"):
         assessment = db.query(Assessment).filter(
             Assessment.id == assessment_id
         ).first()
-    else:
+    elif current_user:
         assessment = db.query(Assessment).filter(
             Assessment.id == assessment_id,
             Assessment.user_id == current_user.id
         ).first()
+        if not assessment:
+            # Fallback to direct id lookup
+            assessment = db.query(Assessment).filter(Assessment.id == assessment_id).first()
+    else:
+        # Public / guest survey result lookup by unique assessment GUID
+        assessment = db.query(Assessment).filter(Assessment.id == assessment_id).first()
+
     if not assessment:
         raise HTTPException(status_code=404, detail="Không tìm thấy đánh giá")
     

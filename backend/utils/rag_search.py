@@ -679,7 +679,7 @@ def ask_ai_chi(question: str, history_text: str = "", context: str = "") -> dict
         # ── Build prompt cho Gemini ──────────────────────────────────
         legal_refs_str = "\n".join(f"  - {r}" for r in CURRENT_LEGAL_REFS)
 
-        template = f"""Bạn là Trợ lý ảo AI Chi — chuyên gia tư vấn pháp luật PCCC và an toàn cháy nổ tại Việt Nam (Công an tỉnh Bắc Ninh).
+        template = f"""Bạn là Trợ lý ảo AI Chi — chuyên gia tư vấn pháp luật PCCC và an toàn cháy nổ tại Việt Nam (Công an thành phố Bắc Ninh).
 
 ═══ CƠ SỞ PHÁP LÝ QUAN TRỌNG NĂM 2026 (ƯU TIÊN CAO NHẤT, VƯỢT TRÊN MỌI TÀI LIỆU CŨ) ═══
 {CORE_LEGAL_PRINCIPLES_2026}

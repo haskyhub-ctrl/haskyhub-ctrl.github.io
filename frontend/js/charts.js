@@ -157,7 +157,7 @@ function createBarChart(canvasId, categoryScores) {
                 label: 'Tỷ lệ nguy cơ (%)',
                 data: categoryScores.map(c => c.percentage),
                 backgroundColor: categoryScores.map(c => riskColors[c.risk_level] || '#94a3b8'),
-                borderRadius: 6,
+                borderRadius: 0,
                 maxBarThickness: 40,
             }]
         },

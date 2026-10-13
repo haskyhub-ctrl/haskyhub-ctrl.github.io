@@ -4,79 +4,496 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kết quả Đánh giá - FRAS</title>
+    <title>Kết quả Đánh giá Nguy cơ Cháy Nổ - FRAS AI | Công an TP Bắc Ninh</title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700;800;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <style>
-        .ai-dual-container {
-            margin-top: 24px;
+        /* ============================================================
+           STRICT NO-BORDER-RADIUS & OFFICIAL POLICE COMMAND CENTER STYLE
+           "nhớ là không bo tròn bất cứ thứ gì cả" -> border-radius: 0 !important;
+           ============================================================ */
+        * {
+            border-radius: 0 !important;
         }
-        .ai-tab-bar {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 20px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            padding-bottom: 12px;
-            flex-wrap: wrap;
+
+        :root {
+            --gov-navy-dark: #091322;
+            --gov-navy-card: #0f1c30;
+            --gov-navy-surface: #152744;
+            --gov-navy-border: #233b63;
+            --gov-red-brand: #b91c1c;
+            --gov-red-accent: #dc2626;
+            --gov-gold: #d97706;
+            --gov-gold-light: #fbbf24;
+            --gov-green: #15803d;
+            --gov-green-light: #22c55e;
+            --gov-text-light: #f8fafc;
+            --gov-text-muted: #94a3b8;
         }
-        .ai-tab-btn {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            color: var(--text-secondary);
-            padding: 10px 18px;
-            border-radius: 8px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
+
+        body {
+            background-color: var(--gov-navy-dark);
+            color: var(--gov-text-light);
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
         }
-        .ai-tab-btn:hover {
-            background: rgba(255, 255, 255, 0.1);
-            color: var(--text-primary);
+
+        .result-docket {
+            background: #ffffff;
+            color: #0f172a;
+            border: 2px solid #0f172a;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            margin-bottom: 24px;
         }
-        .ai-tab-btn.active {
-            background: #dc2626;
-            border-color: #dc2626;
+
+        .docket-gov-header {
+            background: #991b1b;
             color: #ffffff;
-            box-shadow: 0 4px 14px rgba(220, 38, 38, 0.35);
-        }
-        .ai-compare-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-        @media (max-width: 992px) {
-            .ai-compare-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        .ai-compare-card {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 12px;
-            padding: 20px;
-        }
-        .ai-compare-header {
+            padding: 18px 24px;
+            border-bottom: 3px solid #7f1d1d;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding-bottom: 12px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .docket-emblem-group {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .docket-titles h2 {
+            margin: 0;
+            font-size: 1.25rem;
+            font-weight: 900;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            font-family: 'Roboto Condensed', sans-serif;
+            color: #ffffff;
+        }
+
+        .docket-titles p {
+            margin: 2px 0 0;
+            font-size: 0.85rem;
+            opacity: 0.92;
+            font-weight: 500;
+        }
+
+        .docket-doc-meta {
+            text-align: right;
+            font-size: 0.82rem;
+            color: #fecaca;
+            line-height: 1.4;
+        }
+
+        .docket-doc-meta strong {
+            color: #ffffff;
+        }
+
+        .docket-meta-strip {
+            background: #f1f5f9;
+            border-bottom: 1px solid #cbd5e1;
+            padding: 14px 24px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) 100px;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .meta-field-label {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #64748b;
+            letter-spacing: 0.5px;
+            margin-bottom: 2px;
+        }
+
+        .meta-field-value {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .docket-body {
+            padding: 24px;
+            background: #ffffff;
+        }
+
+        /* ACTIONS BAR */
+        .result-actions-strip {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .btn-gov {
+            background: #0f172a;
+            color: #ffffff;
+            border: 1px solid #0f172a;
+            padding: 10px 18px;
+            font-size: 0.88rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.15s ease;
+        }
+
+        .btn-gov:hover {
+            background: #1e293b;
+            border-color: #1e293b;
+            color: #ffffff;
+        }
+
+        .btn-gov-danger {
+            background: #dc2626;
+            border-color: #dc2626;
+            color: #ffffff;
+        }
+
+        .btn-gov-danger:hover {
+            background: #b91c1c;
+            border-color: #b91c1c;
+        }
+
+        .btn-gov-outline {
+            background: #ffffff;
+            color: #0f172a;
+            border: 1px solid #94a3b8;
+        }
+
+        .btn-gov-outline:hover {
+            background: #f1f5f9;
+            border-color: #0f172a;
+        }
+
+        /* KEY METRICS GRID */
+        .metrics-grid-sharp {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 860px) {
+            .metrics-grid-sharp {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .metric-card-sharp {
+            background: #f8fafc;
+            border: 1px solid #cbd5e1;
+            border-left: 6px solid #0f172a;
+            padding: 18px;
+            position: relative;
+        }
+
+        .metric-card-sharp.danger { border-left-color: #dc2626; }
+        .metric-card-sharp.warning { border-left-color: #d97706; }
+        .metric-card-sharp.success { border-left-color: #16a34a; }
+
+        .metric-title-sharp {
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #64748b;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+
+        .metric-value-sharp {
+            font-size: 2.4rem;
+            font-weight: 900;
+            font-family: 'Roboto Condensed', sans-serif;
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+
+        .metric-desc-sharp {
+            font-size: 0.82rem;
+            color: #475569;
+            line-height: 1.4;
+        }
+
+        /* EXPLANATION BOX - % NGUY CƠ LÀ GÌ? */
+        .risk-explainer-box {
+            background: #fffbeb;
+            border: 1px solid #fde68a;
+            border-left: 6px solid #d97706;
+            padding: 18px 20px;
+            margin-bottom: 28px;
+        }
+
+        .risk-explainer-title {
+            font-size: 1rem;
+            font-weight: 800;
+            color: #92400e;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .risk-explainer-content {
+            font-size: 0.88rem;
+            color: #78350f;
+            line-height: 1.55;
+        }
+
+        .risk-scale-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            margin-top: 14px;
+        }
+        @media (max-width: 768px) {
+            .risk-scale-row {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .risk-scale-step {
+            padding: 8px 10px;
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            font-size: 0.78rem;
+        }
+        .risk-scale-step.active {
+            border: 2px solid #0f172a;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+        }
+        .risk-scale-step .step-tag {
+            font-weight: 800;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        /* AI SECTION CONTAINER */
+        .ai-command-section {
+            background: #f8fafc;
+            border: 2px solid #0f172a;
+            margin-bottom: 28px;
+        }
+
+        .ai-command-header {
+            background: #0f172a;
+            color: #ffffff;
+            padding: 14px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .ai-command-header h3 {
+            margin: 0;
+            font-size: 1.05rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .ai-tab-strip {
+            display: flex;
+            background: #e2e8f0;
+            border-bottom: 2px solid #0f172a;
+            flex-wrap: wrap;
+        }
+
+        .ai-tab-btn-sharp {
+            background: #e2e8f0;
+            border: none;
+            border-right: 1px solid #cbd5e1;
+            padding: 12px 20px;
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: #475569;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .ai-tab-btn-sharp:hover {
+            background: #cbd5e1;
+            color: #0f172a;
+        }
+
+        .ai-tab-btn-sharp.active {
+            background: #ffffff;
+            color: #b91c1c;
+            border-bottom: 3px solid #b91c1c;
+            margin-bottom: -2px;
+        }
+
+        .ai-tab-body {
+            padding: 24px;
+            background: #ffffff;
+        }
+
+        /* SECTION HEADINGS INSIDE AI */
+        .ai-h-tag {
+            font-size: 0.95rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin: 18px 0 10px;
+            padding-bottom: 6px;
+            border-bottom: 1.5px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .ai-h-tag.danger { color: #dc2626; border-bottom-color: #fee2e2; }
+        .ai-h-tag.warning { color: #d97706; border-bottom-color: #fef3c7; }
+        .ai-h-tag.success { color: #16a34a; border-bottom-color: #dcfce7; }
+        .ai-h-tag.primary { color: #1e3a8a; border-bottom-color: #dbeafe; }
+
+        .ai-recommendation-card {
+            background: #f8fafc;
+            border: 1px solid #cbd5e1;
+            border-left: 5px solid #94a3b8;
+            padding: 14px 16px;
+            margin-bottom: 12px;
+        }
+
+        .ai-recommendation-card.urgent { border-left-color: #dc2626; }
+        .ai-recommendation-card.high { border-left-color: #ea580c; }
+        .ai-recommendation-card.medium { border-left-color: #d97706; }
+        .ai-recommendation-card.low { border-left-color: #16a34a; }
+
+        .ai-phase-box {
+            border: 1px solid #e2e8f0;
             margin-bottom: 16px;
+        }
+        .ai-phase-header {
+            padding: 10px 16px;
+            font-weight: 800;
+            font-size: 0.92rem;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+
+        /* CHARTS CONTAINER */
+        .charts-row-sharp {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 20px;
+            margin-bottom: 24px;
+        }
+        @media (max-width: 900px) {
+            .charts-row-sharp {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .chart-panel-sharp {
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            padding: 18px;
+        }
+
+        .chart-panel-sharp h4 {
+            margin: 0 0 14px;
+            font-size: 0.95rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: #0f172a;
+            border-bottom: 2px solid #0f172a;
+            padding-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        /* TABLE OF CATEGORIES */
+        .category-table-sharp {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.88rem;
+            margin-top: 10px;
+        }
+
+        .category-table-sharp th {
+            background: #0f172a;
+            color: #ffffff;
+            text-align: left;
+            padding: 10px 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.5px;
+            border: 1px solid #0f172a;
+        }
+
+        .category-table-sharp td {
+            padding: 12px 14px;
+            border: 1px solid #e2e8f0;
+            color: #1e293b;
+        }
+
+        .category-table-sharp tr:nth-child(even) {
+            background: #f8fafc;
+        }
+
+        .badge-sharp {
+            display: inline-block;
+            padding: 3px 8px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border: 1px solid currentColor;
+        }
+        .badge-sharp.danger { color: #dc2626; background: #fef2f2; }
+        .badge-sharp.warning { color: #d97706; background: #fffbeb; }
+        .badge-sharp.success { color: #16a34a; background: #f0fdf4; }
+        .badge-sharp.info { color: #0284c7; background: #f0f9ff; }
+
+        /* LOADING SPINNER SHARP */
+        .ai-loading-box {
+            text-align: center;
+            padding: 36px 20px;
+            background: #f8fafc;
+            border: 2px dashed #0f172a;
+        }
+        .pulse-siren {
+            font-size: 2.6rem;
+            display: inline-block;
+            animation: pulseSiren 1s infinite alternate;
+        }
+        @keyframes pulseSiren {
+            from { transform: scale(0.95); opacity: 0.8; }
+            to { transform: scale(1.1); opacity: 1; }
         }
     </style>
 </head>
 
 <body>
-    <nav class="navbar">
+    <!-- HEADER BAR -->
+    <nav class="navbar" style="border-bottom: 2px solid #b91c1c;">
         <div class="container">
-            <a href="/" class="nav-brand"><span class="logo-icon"><img src="/img/logo-cand.png" alt="CAND" width="36" height="36" style="object-fit:contain;filter:brightness(0) invert(1);"></span>
-                <div><span>FRAS</span><small>Đánh giá Nguy cơ Cháy Nổ</small></div>
+            <a href="/" class="nav-brand">
+                <span class="logo-icon"><img src="/img/logo-cand.png" alt="CAND" width="36" height="36" style="object-fit:contain; filter:brightness(0) invert(1);"></span>
+                <div><span>FRAS</span><small>Hệ thống Khảo sát & Đánh giá Nguy cơ Cháy Nổ AI</small></div>
             </a>
             <ul class="nav-links" id="nav-links"></ul>
             <div class="nav-user" id="nav-user"></div>
@@ -84,11 +501,12 @@
         </div>
     </nav>
 
-    <div class="page-content">
-        <div class="container" id="result-container">
-            <div style="text-align:center; padding:60px;">
+    <div class="page-content" style="padding-top: 24px;">
+        <div class="container" id="result-container" style="max-width: 1180px;">
+            <div style="text-align:center; padding:80px 20px; background:#ffffff; color:#0f172a; border:2px solid #0f172a;">
                 <div class="loading-spinner"></div>
-                <p class="mt-2" style="color:var(--text-secondary)">Đang tải kết quả...</p>
+                <h3 style="margin-top:16px; font-weight:800; text-transform:uppercase;">Đang truy xuất hồ sơ thẩm định...</h3>
+                <p style="color:#64748b; font-size:0.9rem;">Vui lòng đợi giây lát trong khi hệ thống nạp dữ liệu kết quả</p>
             </div>
         </div>
     </div>
@@ -97,102 +515,254 @@
     <script src="/js/charts.js"></script>
     <script src="/js/export.js"></script>
     <script>
+        let currentAssessmentData = null;
+        let isAiAnalyzing = false;
+
         onReady(async () => {
             setupNavbar();
-            if (!requireAuth()) return;
             const params = new URLSearchParams(window.location.search);
             const id = params.get('id');
-            if (!id) { window.location.href = '/history.html'; return; }
+            if (!id) {
+                window.location.href = '/history.html';
+                return;
+            }
+
             try {
                 const data = await api.get(`/assessments/${id}`);
+                currentAssessmentData = data;
                 renderResult(data);
             } catch (error) {
-                document.getElementById('result-container').innerHTML = `<div class="alert alert-danger">${error.message}</div>`;
+                document.getElementById('result-container').innerHTML = `
+                    <div style="background:#fef2f2; border:2px solid #dc2626; color:#991b1b; padding:24px; text-align:center;">
+                        <h3 style="margin:0 0 8px; font-weight:800;">⚠️ KHÔNG THỂ TẢI HỒ SƠ ĐÁNH GIÁ</h3>
+                        <p style="margin:0 0 16px;">${error.message || 'Mã hồ sơ không tồn tại hoặc phiên đánh giá đã kết thúc.'}</p>
+                        <a href="/survey.html" class="btn-gov btn-gov-danger">Làm bài khảo sát mới →</a>
+                    </div>
+                `;
             }
         });
 
         function renderResult(data) {
             const c = document.getElementById('result-container');
-            const riskColors = { low: '#22c55e', medium: '#eab308', high: '#f97316', critical: '#ef4444' };
-            const riskColor = riskColors[data.risk_level] || '#94a3b8';
+            if (!c) return;
 
-            let aiHtml = '';
+            const riskColors = { low: '#16a34a', medium: '#d97706', high: '#ea580c', critical: '#dc2626' };
+            const riskLabels = { low: 'AN TOÀN / NGUY CƠ THẤP', medium: 'TRUNG BÌNH / CẦN CẢI THIỆN', high: 'NGUY CƠ CAO', critical: 'RẤT CAO / CẤP BÁO' };
+            const riskColor = riskColors[data.risk_level] || '#0f172a';
+            const riskText = riskLabels[data.risk_level] || 'CHƯA XÁC ĐỊNH';
+            const cardClass = data.risk_level === 'critical' || data.risk_level === 'high' ? 'danger' : data.risk_level === 'medium' ? 'warning' : 'success';
+
+            // Check if AI is already analyzed
+            let aiObj = null;
             if (data.ai_analysis) {
                 try {
-                    const ai = typeof data.ai_analysis === 'string' ? JSON.parse(data.ai_analysis) : data.ai_analysis;
-                    aiHtml = buildAiSection(ai);
-                } catch (e) { aiHtml = ''; }
+                    aiObj = typeof data.ai_analysis === 'string' ? JSON.parse(data.ai_analysis) : data.ai_analysis;
+                } catch (e) {
+                    aiObj = null;
+                }
             }
 
             c.innerHTML = `
-        <div class="page-header" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
-            <div style="display:flex; align-items:center; gap:20px;">
-                <div id="qr-code-container" style="display:flex; align-items:center;">
-                    <div style="width:80px; height:80px; border-radius:0; background:rgba(255,255,255,0.1); border:1px solid var(--border-color); display:flex; align-items:center; justify-content:center; font-size:0.8rem; color:var(--text-muted)">QR</div>
-                </div>
-                <div>
-                    <h1 class="fade-in">📊 Kết quả Đánh giá</h1>
-                    <p style="color:var(--text-secondary);">${data.facility_name} • ${formatDate(data.completed_at)}</p>
-                </div>
-            </div>
-            <div style="display:flex; gap:8px; flex-wrap:wrap;">
-                <button class="btn btn-outline" onclick="exportPDF('${data.id}')">📄 Xuất PDF</button>
-                <button class="btn btn-primary" onclick="requestAI('${data.id}')" id="btn-ai">🤖 Trợ lý Chi phân tích</button>
-            </div>
-        </div>
-
-        <div class="stats-grid fade-in" style="display:grid; grid-template-columns: repeat(3, 1fr); gap:20px;">
-            <div class="stat-card"><div class="stat-icon">📊</div><div class="stat-value" style="color:${riskColor};">${data.risk_percentage}%</div><div class="stat-label">Tỷ lệ nguy cơ</div></div>
-            <div class="stat-card"><div class="stat-icon">🔥</div><div class="stat-value">${data.total_score}/${data.max_possible_score}</div><div class="stat-label">Tổng điểm</div></div>
-            <div class="stat-card"><div class="stat-icon">⚡</div><div class="stat-value">${getRiskBadge(data.risk_level)}</div><div class="stat-label">Mức nguy cơ</div></div>
-        </div>
-
-        <div style="display:grid; grid-template-columns: 1.5fr 1fr; gap:20px; margin-top:20px;" class="fade-in">
-            <div class="dashboard-section">
-                <div class="section-title"><h3>📈 Biểu đồ Radar</h3></div>
-                <div class="chart-container"><canvas id="radar-chart"></canvas></div>
-            </div>
-            <div class="dashboard-section">
-                <div class="section-title"><h3>🎯 Mức độ Nguy cơ</h3></div>
-                <div class="chart-container" style="height:250px;"><canvas id="gauge-chart"></canvas></div>
-            </div>
-        </div>
-
-        ${data.category_scores && data.category_scores.length ? `
-        <div class="dashboard-section mt-3 fade-in">
-            <div class="section-title"><h3>📊 Điểm theo Nhóm</h3></div>
-            <div class="chart-container" style="height:${Math.max(300, data.category_scores.length * 35)}px;"><canvas id="bar-chart"></canvas></div>
-        </div>
-        <div class="dashboard-section mt-3 fade-in">
-            <div class="section-title"><h3>📋 Chi tiết theo Nhóm</h3></div>
-            ${data.category_scores.map(cs => `
-                <div style="display:flex; align-items:center; justify-content:space-between; padding:14px 0; border-bottom:1px solid rgba(255,255,255,0.05);">
-                    <div style="display:flex; align-items:center; gap:12px;">
-                        <span style="font-size:1.3rem;">${cs.category_icon || '📋'}</span>
-                        <div>
-                            <div style="font-weight:600;">${cs.category_name}</div>
-                            <div style="font-size:0.82rem; color:var(--text-muted);">${cs.score_obtained}/${cs.max_score} điểm</div>
+            <div class="result-docket">
+                <!-- DOCKET OFFICIAL HEADER -->
+                <div class="docket-gov-header">
+                    <div class="docket-emblem-group">
+                        <img src="/img/logo-cand.png" alt="CAND" width="56" height="56" style="object-fit:contain;">
+                        <div class="docket-titles">
+                            <h2>CÔNG AN THÀNH PHỐ BẮC NINH</h2>
+                            <p>Phòng Cảnh sát PCCC và Cứu nạn, cứu hộ • Hệ thống FRAS-AI</p>
                         </div>
                     </div>
-                    <div style="text-align:right;">
-                        <div style="font-weight:700; color:${riskColors[cs.risk_level] || '#94a3b8'};">${cs.percentage}%</div>
-                        ${getRiskBadge(cs.risk_level)}
+                    <div class="docket-doc-meta">
+                        <div>CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</div>
+                        <div style="font-size:0.75rem;">Độc lập – Tự do – Hạnh phúc</div>
+                        <div style="margin-top:4px;">Số hồ sơ: <strong>FRAS-${(data.id || '').substring(0, 8).toUpperCase()}</strong></div>
                     </div>
                 </div>
-            `).join('')}
-        </div>` : ''}
 
+                <!-- DOCKET METADATA STRIP -->
+                <div class="docket-meta-strip">
+                    <div>
+                        <div class="meta-field-label">Tên cơ sở / Công trình</div>
+                        <div class="meta-field-value">${data.facility_name || 'Khảo sát tự do'}</div>
+                    </div>
+                    <div>
+                        <div class="meta-field-label">Loại hình cơ sở</div>
+                        <div class="meta-field-value">${data.facility_type || 'Đa loại hình'}</div>
+                    </div>
+                    <div>
+                        <div class="meta-field-label">Địa bàn quản lý</div>
+                        <div class="meta-field-value">${data.facility_address || 'TP Bắc Ninh'}</div>
+                    </div>
+                    <div>
+                        <div class="meta-field-label">Thời gian thẩm định</div>
+                        <div class="meta-field-value">${formatDate(data.completed_at || data.created_at)}</div>
+                    </div>
+                    <div id="qr-code-box" style="text-align:right;">
+                        <div style="width:72px; height:72px; background:#ffffff; border:1px solid #cbd5e1; display:flex; align-items:center; justify-content:center; font-size:0.75rem; color:#94a3b8; margin-left:auto;">QR CODE</div>
+                    </div>
+                </div>
 
+                <div class="docket-body">
+                    <!-- ACTIONS STRIP -->
+                    <div class="result-actions-strip">
+                        <div style="display:flex; align-items:center; gap:8px;">
+                            <span class="badge-sharp ${cardClass}">KẾT QUẢ: ${riskText}</span>
+                            <span style="font-size:0.82rem; color:#64748b;">(Căn cứ ma trận đánh giá 8 nhóm nguyên nhân cháy nổ)</span>
+                        </div>
+                        <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                            <button type="button" class="btn-gov btn-gov-outline" onclick="window.print()">🖨️ In Biên bản</button>
+                            <button type="button" class="btn-gov btn-gov-outline" onclick="exportPDF('${data.id}')">📄 Xuất File PDF</button>
+                            <button type="button" class="btn-gov" onclick="triggerForceAiAnalyze('${data.id}')" id="btn-force-ai">🤖 Phân tích lại bằng AI</button>
+                            <a href="/survey.html" class="btn-gov btn-gov-danger">🔥 Khảo sát mới</a>
+                        </div>
+                    </div>
 
-        ${aiHtml}
+                    <!-- 1. KEY METRICS CARDS -->
+                    <div class="metrics-grid-sharp">
+                        <div class="metric-card-sharp ${cardClass}">
+                            <div class="metric-title-sharp">Tỷ lệ Nguy cơ Tổng hợp (Risk Index)</div>
+                            <div class="metric-value-sharp" style="color:${riskColor};">${data.risk_percentage}%</div>
+                            <div class="metric-desc-sharp">
+                                Mức độ: <strong style="color:${riskColor};">${riskText}</strong>.<br>
+                                Thước đo tỷ lệ tích tụ hiểm họa cháy nổ tại cơ sở.
+                            </div>
+                        </div>
 
-        <div id="ai-result-container"></div>
+                        <div class="metric-card-sharp">
+                            <div class="metric-title-sharp">Điểm Vi phạm / Điểm Tối đa</div>
+                            <div class="metric-value-sharp" style="color:#0f172a;">${data.total_score} <span style="font-size:1.2rem; font-weight:500; color:#64748b;">/ ${data.max_possible_score || 100}</span></div>
+                            <div class="metric-desc-sharp">
+                                Tổng số điểm nguy cơ ghi nhận từ các câu trả lời.<br>
+                                <em>(Càng ít điểm vi phạm, cơ sở càng an toàn).</em>
+                            </div>
+                        </div>
 
-        <div style="text-align:center; margin-top:32px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
-            <a href="/history.html" class="btn btn-secondary">📋 Lịch sử Đánh giá</a>
-            <a href="/survey.html" class="btn btn-primary">🔥 Đánh giá mới</a>
-        </div>`;
+                        <div class="metric-card-sharp">
+                            <div class="metric-title-sharp">Thời hạn Khắc phục Đề xuất</div>
+                            <div class="metric-value-sharp" style="color:#b91c1c;">
+                                ${data.risk_level === 'critical' ? 'Khẩn cấp' : data.risk_level === 'high' ? '30 ngày' : data.risk_level === 'medium' ? '60 ngày' : 'Định kỳ'}
+                            </div>
+                            <div class="metric-desc-sharp">
+                                Lộ trình hoàn thiện theo quy định của Luật PCCC và các Nghị định hướng dẫn thi hành.
+                            </div>
+                        </div>
+                    </div>
 
+                    <!-- 2. EXPLANATION BOX: % NGUY CƠ NÀY LÀ THẾ NÀO? NÓI LÊN ĐIỀU GÌ? -->
+                    <div class="risk-explainer-box">
+                        <div class="risk-explainer-title">
+                            <span>📖</span> HƯỚNG DẪN ĐỌC HIỂU: TỶ LỆ % NGUY CƠ NÀY LÀ GÌ VÀ THỂ HIỆN ĐIỀU GÌ?
+                        </div>
+                        <div class="risk-explainer-content">
+                            <p style="margin:0 0 8px;">
+                                <strong>Bản chất của chỉ số:</strong> Tỷ lệ <strong>${data.risk_percentage}% nguy cơ</strong> không phải là điểm số thi cử đạt/trượt, mà là <strong>thước đo mức độ tích tụ hiểm họa cháy nổ</strong> của công trình dựa trên ma trận xác suất thống kê thực tế tại Việt Nam (trong đó: sự cố hệ thống điện chiếm <strong>50%</strong> trọng số nguyên nhân cháy; bất cẩn nguồn lửa/nhiệt chiếm <strong>15%</strong>; lối thoát nạn & trang bị PCCC chiếm <strong>12%</strong> quyết định khả năng sống còn).
+                            </p>
+                            <p style="margin:0 0 10px;">
+                                <strong>Quy tắc bảo vệ tính mạng (Max-Domination):</strong> Dù tổng điểm của cơ sở có thể thấp, nhưng nếu xuất hiện bất kỳ vi phạm nghiêm trọng nào tại các nhóm "tử huyệt" (như dây dẫn điện hở, quá tải nhiệt, hoặc lối thoát nạn duy nhất bị bịt kín), hệ thống sẽ lập tức kích hoạt mức cảnh báo nguy cơ cao để cơ sở không được chủ quan.
+                            </p>
+
+                            <!-- 4-step scale -->
+                            <div class="risk-scale-row">
+                                <div class="risk-scale-step ${data.risk_percentage <= 20 ? 'active' : ''}" style="border-top: 4px solid #16a34a;">
+                                    <span class="step-tag" style="color:#16a34a;">🟢 0% - 20%: AN TOÀN</span>
+                                    Tuân thủ tốt quy chuẩn PCCC, nguy cơ phát sinh cháy nổ ở mức tối thiểu.
+                                </div>
+                                <div class="risk-scale-step ${data.risk_percentage > 20 && data.risk_percentage <= 45 ? 'active' : ''}" style="border-top: 4px solid #d97706;">
+                                    <span class="step-tag" style="color:#d97706;">🟡 21% - 45%: CẦN CẢI THIỆN</span>
+                                    Đã xuất hiện mầm mống rủi ro (quá tải điện nhẹ, thiếu bảo dưỡng), cần tự chấn chỉnh sớm.
+                                </div>
+                                <div class="risk-scale-step ${data.risk_percentage > 45 && data.risk_percentage <= 70 ? 'active' : ''}" style="border-top: 4px solid #ea580c;">
+                                    <span class="step-tag" style="color:#ea580c;">🟠 46% - 70%: NGUY CƠ CAO</span>
+                                    Tồn tại vi phạm nghiêm trọng có thể trực tiếp phát sinh hỏa hoạn. Phải khắc phục ngay trong 30 ngày.
+                                </div>
+                                <div class="risk-scale-step ${data.risk_percentage > 70 ? 'active' : ''}" style="border-top: 4px solid #dc2626;">
+                                    <span class="step-tag" style="color:#dc2626;">🔴 71% - 100%: CẤP BÁO</span>
+                                    Điều kiện an toàn cực kỳ nguy hiểm, đe dọa trực tiếp tính mạng con người!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. AI ANALYSIS & RECOMMENDATIONS SECTION (PROMINENT TOP POSITION) -->
+                    <div id="ai-main-container">
+                        ${aiObj ? renderAiSectionHtml(aiObj) : renderAiLoadingHtml(data.id)}
+                    </div>
+
+                    <!-- 4. RADAR & GAUGE CHARTS ROW -->
+                    <div class="charts-row-sharp">
+                        <div class="chart-panel-sharp">
+                            <h4>📈 Biểu đồ Radar Phân bổ Nguy cơ theo Các Trục</h4>
+                            <div style="height: 320px; position:relative;">
+                                <canvas id="radar-chart"></canvas>
+                            </div>
+                        </div>
+                        <div class="chart-panel-sharp">
+                            <h4>🎯 Thước đo Cấp độ Nguy cơ Cháy nổ</h4>
+                            <div style="height: 250px; position:relative;">
+                                <canvas id="gauge-chart"></canvas>
+                            </div>
+                            <div style="text-align:center; margin-top:10px; font-size:0.85rem; color:#64748b;">
+                                Chỉ số thực tế: <strong style="color:${riskColor}; font-size:1.1rem;">${data.risk_percentage}%</strong> (${riskText})
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. DETAILED CATEGORY SCORES TABLE & BAR CHART -->
+                    ${data.category_scores && data.category_scores.length ? `
+                    <div class="chart-panel-sharp" style="margin-bottom: 24px;">
+                        <h4>📊 Phân tích Tỷ lệ Nguy cơ theo Từng Nhóm Câu hỏi</h4>
+                        <div style="height:${Math.max(260, data.category_scores.length * 36)}px; position:relative; margin-bottom: 20px;">
+                            <canvas id="bar-chart"></canvas>
+                        </div>
+
+                        <h4>📋 Bảng Thống kê Chi tiết các Nhóm Rà soát</h4>
+                        <table class="category-table-sharp">
+                            <thead>
+                                <tr>
+                                    <th style="width: 40px;">STT</th>
+                                    <th>Nhóm Nguy cơ / Hạng mục kiểm tra</th>
+                                    <th style="width: 140px; text-align:center;">Điểm ghi nhận</th>
+                                    <th style="width: 120px; text-align:center;">Tỷ lệ %</th>
+                                    <th style="width: 150px; text-align:center;">Đánh giá</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${data.category_scores.map((cs, idx) => `
+                                <tr>
+                                    <td style="text-align:center; font-weight:700;">${idx + 1}</td>
+                                    <td>
+                                        <div style="font-weight:700; color:#0f172a;">${cs.category_icon || '📋'} ${cs.category_name}</div>
+                                    </td>
+                                    <td style="text-align:center; font-weight:600;">
+                                        ${cs.score_obtained} / ${cs.max_score} điểm
+                                    </td>
+                                    <td style="text-align:center; font-weight:800; color:${riskColors[cs.risk_level] || '#0f172a'}; font-size:0.95rem;">
+                                        ${cs.percentage}%
+                                    </td>
+                                    <td style="text-align:center;">
+                                        <span class="badge-sharp ${cs.risk_level === 'critical' || cs.risk_level === 'high' ? 'danger' : cs.risk_level === 'medium' ? 'warning' : 'success'}">
+                                            ${cs.risk_level === 'low' ? 'ĐẠT CHUẨN' : cs.risk_level === 'medium' ? 'CẦN LƯU Ý' : 'NGUY HIỂM'}
+                                        </span>
+                                    </td>
+                                </tr>
+                                `).join('')}
+                            </tbody>
+                        </table>
+                    </div>
+                    ` : ''}
+
+                    <!-- FOOTER ACTIONS -->
+                    <div style="display:flex; justify-content:center; gap:12px; margin-top:32px; padding-top:20px; border-top:1px solid #e2e8f0; flex-wrap:wrap;">
+                        <a href="/history.html" class="btn-gov btn-gov-outline">📋 Xem Lịch sử các bài đánh giá</a>
+                        <a href="/survey.html" class="btn-gov btn-gov-danger">🔥 Thực hiện bài Khảo sát mới</a>
+                        <button type="button" class="btn-gov" onclick="window.scrollTo({top:0, behavior:'smooth'})">⬆️ Lên đầu trang</button>
+                    </div>
+                </div>
+            </div>
+            `;
+
+            // Render Charts
             if (data.category_scores && data.category_scores.length) {
                 setTimeout(() => {
                     createRadarChart('radar-chart', data.category_scores);
@@ -201,280 +771,352 @@
                 }, 100);
             }
 
-            // Auto-trigger AI analysis if not already done
-            if (!data.ai_analysis) {
-                setTimeout(() => requestAI(data.id), 500);
-            }
+            // Load QR code
+            loadDocketQRCode(data.id);
 
-            // Load QR Code
-            setTimeout(() => loadQRCode(data.id), 200);
+            // AUTO-TRIGGER AI IF NOT YET ANALYZED
+            if (!aiObj && !isAiAnalyzing) {
+                setTimeout(() => triggerAiAnalyze(data.id), 400);
+            }
         }
 
-        async function loadQRCode(id) {
+        function renderAiLoadingHtml(id) {
+            return `
+            <div class="ai-command-section">
+                <div class="ai-command-header">
+                    <h3><span>🤖</span> TRUNG TÂM PHÂN TÍCH TRÍ TUỆ NHÂN TẠO (AI ADVISORY & RAG ENGINE)</h3>
+                    <span style="font-size:0.8rem; background:rgba(255,255,255,0.15); padding:3px 10px;">TIẾN TRÌNH TỰ ĐỘNG</span>
+                </div>
+                <div class="ai-tab-body">
+                    <div class="ai-loading-box">
+                        <div class="pulse-siren">🚨</div>
+                        <h3 style="margin:16px 0 8px; font-weight:800; color:#0f172a; text-transform:uppercase;">
+                            ĐANG TỰ ĐỘNG PHÂN TÍCH HỒ SƠ & TỔNG HỢP KHUYẾN CÁO...
+                        </h3>
+                        <p style="color:#64748b; font-size:0.9rem; max-width:680px; margin:0 auto 16px; line-height:1.5;">
+                            Hệ thống đang đồng thời đối soát dữ liệu khảo sát với mô hình <strong>Gemini 3.8 Flash</strong> và <strong>CSDL Văn bản Pháp luật (NĐ 105/2025, NĐ 106/2025, Luật PCCC số 55/2024/QH15)</strong> để xuất biên bản khuyến cáo thực tế và kế hoạch khắc phục 90 ngày.
+                        </p>
+                        <div style="display:inline-flex; align-items:center; gap:8px; font-size:0.85rem; color:#b91c1c; font-weight:700;">
+                            <div class="loading-spinner" style="width:20px; height:20px; border-width:2px;"></div>
+                            Vui lòng đợi khoảng 5-10 giây...
+                        </div>
+                    </div>
+                </div>
+            </div>
+            `;
+        }
+
+        async function triggerAiAnalyze(id, force = false) {
+            if (isAiAnalyzing) return;
+            isAiAnalyzing = true;
+
+            const btnForce = document.getElementById('btn-force-ai');
+            if (btnForce) {
+                btnForce.disabled = true;
+                btnForce.innerHTML = '⏳ Đang phân tích...';
+            }
+
             try {
-                // Determine base URL since api.js might not export it directly
-                const token = localStorage.getItem('token');
-                const baseUrl = typeof API_BASE_URL !== 'undefined' ? API_BASE_URL : '/api';
-                const response = await fetch(`${baseUrl}/export/qrcode/${id}`, {
-                    headers: { 'Authorization': `Bearer ${token}` }
-                });
-                
-                if (response.ok) {
-                    const blob = await response.blob();
-                    const url = URL.createObjectURL(blob);
-                    const container = document.getElementById('qr-code-container');
-                    if(container) {
-                        container.innerHTML = `<img src="${url}" alt="QR" style="width:80px; height:80px; border-radius:0; border:4px solid white; background:white;">`;
-                    }
+                const url = force ? `/ai/analyze/${id}?force=true` : `/ai/analyze/${id}`;
+                const result = await api.post(url, {});
+                const ai = result.analysis || result;
+
+                // Update current assessment data
+                if (currentAssessmentData) {
+                    currentAssessmentData.ai_analysis = ai;
+                }
+
+                // Render into container
+                const container = document.getElementById('ai-main-container');
+                if (container) {
+                    container.innerHTML = renderAiSectionHtml(ai);
+                }
+
+                if (btnForce) {
+                    btnForce.disabled = false;
+                    btnForce.innerHTML = '✅ Đã hoàn tất phân tích';
                 }
             } catch (err) {
-                console.error("Failed to load QR code:", err);
+                console.error("AI Analysis failed:", err);
+                const container = document.getElementById('ai-main-container');
+                if (container) {
+                    container.innerHTML = `
+                    <div class="ai-command-section">
+                        <div class="ai-command-header" style="background:#dc2626;">
+                            <h3><span>⚠️</span> THÔNG BÁO TẠM THỜI VỀ PHÂN TÍCH AI</h3>
+                        </div>
+                        <div class="ai-tab-body" style="text-align:center; padding:24px;">
+                            <p style="color:#dc2626; font-weight:700; margin:0 0 12px;">Chưa thể kết nối tới máy chủ AI: ${err.message || 'Hết thời gian chờ phản hồi'}</p>
+                            <button type="button" class="btn-gov btn-gov-danger" onclick="triggerAiAnalyze('${id}', true)">
+                                🔄 Bấm để thử phân tích lại ngay
+                            </button>
+                        </div>
+                    </div>
+                    `;
+                }
+                if (btnForce) {
+                    btnForce.disabled = false;
+                    btnForce.innerHTML = '🔄 Thử lại AI';
+                }
+            } finally {
+                isAiAnalyzing = false;
             }
         }
 
-
+        function triggerForceAiAnalyze(id) {
+            triggerAiAnalyze(id, true);
+        }
 
         function switchAiTab(tabName) {
-            document.querySelectorAll('.ai-tab-btn').forEach(b => b.classList.remove('active'));
-            document.querySelectorAll('.ai-tab-panel').forEach(p => p.style.display = 'none');
-            const activeBtn = document.getElementById(`btn-tab-${tabName}`);
-            const activePanel = document.getElementById(`panel-tab-${tabName}`);
+            document.querySelectorAll('.ai-tab-btn-sharp').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.ai-tab-content-panel').forEach(p => p.style.display = 'none');
+            const activeBtn = document.getElementById(`btn-ai-tab-${tabName}`);
+            const activePanel = document.getElementById(`panel-ai-tab-${tabName}`);
             if (activeBtn) activeBtn.classList.add('active');
             if (activePanel) activePanel.style.display = 'block';
         }
 
         function renderSingleEngineContent(ai, engineTitle, badgeText, badgeColor) {
-            if (!ai) return '<p style="color:var(--text-muted);">Không có dữ liệu phân tích từ mô hình này.</p>';
-            const pc = { urgent: '#ef4444', high: '#f97316', medium: '#eab308', low: '#22c55e' };
+            if (!ai) return '<p style="color:#64748b; padding:12px;">Đang cập nhật dữ liệu phân tích từ mô hình này...</p>';
             let h = '';
-            
+
             if (engineTitle) {
                 h += `
-                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; flex-wrap:wrap; gap:8px;">
-                    <h4 style="margin:0; font-size:1.1rem; color:var(--text-primary);">${engineTitle}</h4>
-                    <span style="background:${badgeColor}20; color:${badgeColor}; border:1px solid ${badgeColor}40; padding:3px 10px; border-radius:6px; font-size:0.78rem; font-weight:700;">${badgeText}</span>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:18px; padding-bottom:12px; border-bottom:2px solid #e2e8f0; flex-wrap:wrap; gap:8px;">
+                    <div style="font-size:1.05rem; font-weight:800; color:#0f172a; text-transform:uppercase;">${engineTitle}</div>
+                    <span class="badge-sharp info" style="color:${badgeColor}; border-color:${badgeColor};">${badgeText}</span>
                 </div>`;
             }
 
+            // Overall Assessment
             if (ai.overall_assessment) {
-                h += `<div class="alert alert-info" style="margin-bottom:16px; font-size:0.95rem; line-height:1.5;">${ai.overall_assessment}</div>`;
+                h += `
+                <div style="background:#f0f9ff; border:1px solid #bae6fd; border-left:6px solid #0284c7; padding:16px; margin-bottom:20px; font-size:0.92rem; color:#0369a1; line-height:1.6;">
+                    <strong style="display:block; margin-bottom:4px; font-size:0.95rem; text-transform:uppercase;">📌 KẾT LUẬN THẨM ĐỊNH TỔNG QUAN:</strong>
+                    ${ai.overall_assessment}
+                </div>`;
             }
 
+            // Strengths
             if (ai.strengths?.length) {
-                h += `<h5 style="margin:14px 0 8px; color:#22c55e;">✅ Ưu điểm & Điểm đạt chuẩn</h5><ul style="padding-left:20px;color:var(--text-secondary);font-size:0.9rem;">${ai.strengths.map(s => `<li style="margin-bottom:4px;">${s}</li>`).join('')}</ul>`;
+                h += `
+                <div class="ai-h-tag success"><span>✅</span> ĐIỂM MẠNH & CÁC ĐIỀU KIỆN ĐẠT CHUẨN (${ai.strengths.length})</div>
+                <ul style="padding-left:22px; margin:0 0 18px; color:#1e293b; font-size:0.88rem; line-height:1.6;">
+                    ${ai.strengths.map(s => `<li style="margin-bottom:6px;">${s}</li>`).join('')}
+                </ul>`;
             }
 
+            // Critical Weaknesses / Hazards
             if (ai.critical_weaknesses?.length) {
-                h += `<h5 style="margin:14px 0 8px; color:#ef4444;">⚠️ Tồn tại, vi phạm & nguy cơ cháy nổ</h5><ul style="padding-left:20px;color:var(--text-secondary);font-size:0.9rem;">${ai.critical_weaknesses.map(s => `<li style="margin-bottom:4px;">${s}</li>`).join('')}</ul>`;
+                h += `
+                <div class="ai-h-tag danger"><span>⚠️</span> TỒN TẠI, VI PHẠM & NGUY CƠ CHÁY NỔ TIỀM ẨN (${ai.critical_weaknesses.length})</div>
+                <ul style="padding-left:22px; margin:0 0 20px; color:#991b1b; font-size:0.88rem; line-height:1.6;">
+                    ${ai.critical_weaknesses.map(w => `<li style="margin-bottom:6px; font-weight:600;">${w}</li>`).join('')}
+                </ul>`;
             }
 
+            // Detailed Recommendations
             if (ai.detailed_recommendations?.length) {
-                h += `<h5 style="margin:18px 0 10px; color:#f97316;">🔧 Khuyến cáo chi tiết (${ai.detailed_recommendations.length} khuyến cáo)</h5>`;
+                h += `<div class="ai-h-tag warning"><span>🔧</span> KHUYẾN CÁO & GIẢI PHÁP KỸ THUẬT KHẮC PHỤC (${ai.detailed_recommendations.length} HẠNG MỤC)</div>`;
                 ai.detailed_recommendations.forEach((r, i) => {
-                    const c = pc[r.priority] || '#94a3b8';
-                    h += `<div style="background:rgba(255,255,255,0.03); border-radius:8px; padding:14px; margin-bottom:10px; border-left:3px solid ${c}; border:1px solid rgba(255,255,255,0.06); border-left-width:3px;">
-                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
-                            <strong style="color:var(--text-primary); font-size:0.92rem;">${i + 1}. ${r.title || ''}</strong>
-                            <span style="background:${c}20; color:${c}; padding:2px 8px; border-radius:4px; font-size:0.75rem; font-weight:600;">${(r.priority || '').toUpperCase()}</span>
+                    const priorityClass = (r.priority || '').toLowerCase();
+                    h += `
+                    <div class="ai-recommendation-card ${priorityClass}">
+                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px; flex-wrap:wrap; gap:8px;">
+                            <strong style="color:#0f172a; font-size:0.95rem;">${i + 1}. ${r.title || ''}</strong>
+                            <span class="badge-sharp ${priorityClass === 'urgent' ? 'danger' : priorityClass === 'high' ? 'warning' : 'info'}">
+                                ${(r.priority || 'ƯU TIÊN').toUpperCase()}
+                            </span>
                         </div>
-                        <p style="color:var(--text-secondary); font-size:0.85rem; margin:0 0 6px; line-height:1.5;">${r.description || ''}</p>
-                        <div style="color:var(--text-muted); font-size:0.78rem; display:flex; flex-wrap:wrap; gap:8px;">
-                            <span>⏰ ${r.deadline || '30 ngày'}</span>
-                            ${r.category ? `<span>📂 ${r.category}</span>` : ''}
-                            ${r.estimated_cost ? `<span>💰 ${r.estimated_cost}</span>` : ''}
-                            ${r.responsible_party ? `<span>👤 ${r.responsible_party}</span>` : ''}
+                        <p style="color:#334155; font-size:0.88rem; margin:0 0 8px; line-height:1.5;">${r.description || ''}</p>
+                        <div style="display:flex; flex-wrap:wrap; gap:12px; font-size:0.8rem; color:#64748b; font-weight:600;">
+                            <span>⏰ Hạn hoàn thành: <strong style="color:#0f172a;">${r.deadline || '30 ngày'}</strong></span>
+                            ${r.estimated_cost ? `<span>💰 Chi phí dự kiến: <strong style="color:#0f172a;">${r.estimated_cost}</strong></span>` : ''}
+                            ${r.responsible_party ? `<span>👤 Phụ trách: <strong>${r.responsible_party}</strong></span>` : ''}
                         </div>
-                        ${r.legal_basis ? `<div style="color:#8b5cf6; font-size:0.75rem; margin-top:6px;">📜 ${r.legal_basis}</div>` : ''}
+                        ${r.legal_basis ? `<div style="color:#7c3aed; font-size:0.78rem; font-weight:600; margin-top:6px;">📜 Căn cứ: ${r.legal_basis}</div>` : ''}
                     </div>`;
                 });
-            } else if (ai.priority_actions?.length) {
-                h += `<h5 style="margin:12px 0 8px; color:#f97316;">🎯 Hành động ưu tiên</h5><div class="action-list">${ai.priority_actions.map(a => `<div class="action-item ${a.priority}"><div class="action-title">${a.action}</div><div class="action-deadline">⏰ ${a.deadline || a.priority}</div></div>`).join('')}</div>`;
             }
 
+            // Daily Checklist
             if (ai.daily_checklist?.length) {
-                h += `<h5 style="margin:18px 0 8px; color:#06b6d4;">📋 Danh mục kiểm tra an toàn hàng ngày</h5>`;
-                h += `<div style="background:rgba(6,182,212,0.06); border-radius:8px; padding:14px; border-left:3px solid #06b6d4;">`;
-                h += `<ul style="padding-left:20px; margin:0; color:var(--text-secondary); font-size:0.85rem;">`;
-                ai.daily_checklist.forEach(item => {
-                    h += `<li style="margin-bottom:6px;">☑️ ${item}</li>`;
-                });
-                h += `</ul></div>`;
+                h += `
+                <div class="ai-h-tag primary"><span>📋</span> DANH MỤC TỰ KIỂM TRA AN TOÀN HÀNG NGÀY (DAILY CHECKLIST)</div>
+                <div style="background:#f8fafc; border:1px solid #cbd5e1; padding:16px; margin-bottom:20px;">
+                    <ul style="padding-left:20px; margin:0; font-size:0.88rem; color:#1e293b; line-height:1.6;">
+                        ${ai.daily_checklist.map(item => `<li style="margin-bottom:6px;">☑️ <strong>${item}</strong></li>`).join('')}
+                    </ul>
+                </div>`;
             }
 
+            // 90-Day Improvement Plan
             if (ai.improvement_plan) {
                 const p = ai.improvement_plan;
                 const phases = [
-                    { key: '30_days', label: '🔴 GIAI ĐOẠN 1: 30 ngày đầu (Khẩn cấp)', color: '#ef4444', bg: 'rgba(239,68,68,0.08)', desc: 'Xử lý ngay các nguy cơ cháy nổ nghiêm trọng nhất, đảm bảo an toàn tối thiểu' },
-                    { key: '60_days', label: '🟠 GIAI ĐOẠN 2: 30-60 ngày (Ưu tiên)', color: '#f97316', bg: 'rgba(249,115,22,0.08)', desc: 'Nâng cấp cơ sở hạ tầng PCCC, hoàn thiện quy trình và huấn luyện' },
-                    { key: '90_days', label: '🟢 GIAI ĐOẠN 3: 60-90 ngày (Hoàn thiện)', color: '#22c55e', bg: 'rgba(34,197,94,0.08)', desc: 'Đánh giá lại, xây dựng kế hoạch duy trì dài hạn, hoàn thiện hồ sơ' },
+                    { key: '30_days', label: '🔴 GIAI ĐOẠN 1: 30 NGÀY ĐẦU (XỬ LÝ KHẨN CẤP)', color: '#dc2626', desc: 'Triệt tiêu ngay các nguy cơ phát sinh cháy nổ nguy hiểm nhất, thông thoáng lối thoát nạn' },
+                    { key: '60_days', label: '🟠 GIAI ĐOẠN 2: 30 - 60 NGÀY (NÂNG CẤP HẠ TẦNG & TRANG THIẾT BỊ)', color: '#ea580c', desc: 'Kiểm định hệ thống điện, bảo dưỡng bình chữa cháy, huấn luyện kỹ năng PCCC cho nhân sự' },
+                    { key: '90_days', label: '🟢 GIAI ĐOẠN 3: 60 - 90 NGÀY (HOÀN THIỆN & DUY TRÌ BỀN VỮNG)', color: '#16a34a', desc: 'Rà soát hồ sơ quản lý PCCC, diễn tập phương án chữa cháy nội bộ, đánh giá lại định kỳ' },
                 ];
-                h += '<h5 style="margin:20px 0 12px; color:#3b82f6; font-size:1rem;">📅 Kế hoạch Cải thiện Chi tiết (90 ngày)</h5>';
+
+                h += `<div class="ai-h-tag primary"><span>📅</span> KẾ HOẠCH HÀNH ĐỘNG KHẮC PHỤC CHI TIẾT (LỘ TRÌNH 90 NGÀY)</div>`;
                 phases.forEach(phase => {
                     const items = p[phase.key];
                     if (!items?.length) return;
-                    h += `<div style="background:${phase.bg}; border-radius: 8px; padding:16px; margin-bottom:14px; border-left:4px solid ${phase.color};">`;
-                    h += `<div style="margin-bottom:10px;"><strong style="color:${phase.color}; font-size:0.92rem;">${phase.label}</strong>`;
-                    h += `<p style="color:var(--text-muted); font-size:0.78rem; margin:4px 0 0;">${phase.desc}</p></div>`;
-                    items.forEach((item, idx) => {
-                        if (typeof item === 'string') {
-                            h += `<div style="display:flex; gap:8px; margin-bottom:8px; padding:8px 10px; background:rgba(255,255,255,0.03); border-radius: 6px;">
-                                <span style="color:${phase.color}; font-weight:700; min-width:20px;">${idx+1}.</span>
-                                <span style="color:var(--text-secondary); font-size:0.84rem; line-height:1.5;">${item}</span>
-                            </div>`;
-                        } else {
-                            h += `<div style="margin-bottom:10px; padding:10px 12px; background:rgba(255,255,255,0.03); border-radius: 6px;">
-                                <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:4px;">
-                                    <strong style="color:var(--text-primary); font-size:0.86rem;">${idx+1}. ${item.task || item.title || ''}</strong>
-                                </div>
-                                ${item.detail || item.description ? `<p style="color:var(--text-secondary); font-size:0.82rem; margin:4px 0 6px; line-height:1.5;">${item.detail || item.description}</p>` : ''}
-                                <div style="display:flex; flex-wrap:wrap; gap:8px; font-size:0.75rem; color:var(--text-muted);">
-                                    ${item.responsible ? `<span>👤 ${item.responsible}</span>` : ''}
-                                    ${item.cost || item.estimated_cost ? `<span>💰 ${item.cost || item.estimated_cost}</span>` : ''}
-                                    ${item.criteria || item.completion_criteria ? `<span>✅ ${item.criteria || item.completion_criteria}</span>` : ''}
-                                    ${item.legal_basis ? `<span style="color:#8b5cf6;">📜 ${item.legal_basis}</span>` : ''}
-                                </div>
-                            </div>`;
-                        }
-                    });
-                    h += '</div>';
+                    h += `
+                    <div class="ai-phase-box">
+                        <div class="ai-phase-header" style="background:${phase.color};">
+                            ${phase.label}
+                        </div>
+                        <div style="padding:14px; background:#ffffff;">
+                            <p style="color:#64748b; font-size:0.8rem; margin:0 0 10px; font-style:italic;">${phase.desc}</p>
+                            ${items.map((item, idx) => {
+                                if (typeof item === 'string') {
+                                    return `
+                                    <div style="display:flex; gap:8px; margin-bottom:8px; padding:8px 10px; background:#f8fafc; border:1px solid #e2e8f0; font-size:0.86rem;">
+                                        <span style="color:${phase.color}; font-weight:800; min-width:20px;">${idx+1}.</span>
+                                        <span style="color:#1e293b;">${item}</span>
+                                    </div>`;
+                                } else {
+                                    return `
+                                    <div style="margin-bottom:10px; padding:10px 12px; background:#f8fafc; border:1px solid #e2e8f0;">
+                                        <div style="font-weight:700; color:#0f172a; font-size:0.88rem; margin-bottom:4px;">
+                                            ${idx+1}. ${item.task || item.title || ''}
+                                        </div>
+                                        ${item.detail || item.description ? `<p style="color:#475569; font-size:0.82rem; margin:0 0 6px;">${item.detail || item.description}</p>` : ''}
+                                        <div style="display:flex; flex-wrap:wrap; gap:10px; font-size:0.75rem; color:#64748b; font-weight:600;">
+                                            ${item.responsible ? `<span>👤 ${item.responsible}</span>` : ''}
+                                            ${item.cost || item.estimated_cost ? `<span>💰 ${item.cost || item.estimated_cost}</span>` : ''}
+                                            ${item.legal_basis ? `<span style="color:#7c3aed;">📜 ${item.legal_basis}</span>` : ''}
+                                        </div>
+                                    </div>`;
+                                }
+                            }).join('')}
+                        </div>
+                    </div>`;
                 });
             }
 
+            // Legal References
             if (ai.legal_references?.length) {
-                h += `<h5 style="margin:18px 0 8px; color:#8b5cf6;">📜 Tham chiếu văn bản quy phạm pháp luật</h5><ul style="padding-left:20px; color:var(--text-muted); font-size:0.82rem;">${ai.legal_references.map(r => `<li style="margin-bottom:3px;">${r}</li>`).join('')}</ul>`;
+                h += `
+                <div class="ai-h-tag primary"><span>📜</span> CĂN CỨ VĂN BẢN QUY PHẠM PHÁP LUẬT & TIÊU CHUẨN KỸ THUẬT</div>
+                <ul style="padding-left:22px; color:#475569; font-size:0.82rem; line-height:1.6; margin:0 0 10px;">
+                    ${ai.legal_references.map(r => `<li style="margin-bottom:4px;">${r}</li>`).join('')}
+                </ul>`;
             }
 
             return h;
         }
 
-        function buildAiSection(ai) {
-            // Check if dual mode is active
-            if (ai.dual_mode && (ai.gemini_38 || ai.rag_chroma)) {
-                const g = ai.gemini_38;
-                const r = ai.rag_chroma;
+        function renderAiSectionHtml(ai) {
+            const g = ai.gemini_38 || ai;
+            const r = ai.rag_chroma || ai;
 
-                return `
-                <div class="dashboard-section mt-3">
-                    <div class="section-title" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
-                        <h3>🤖 Đánh giá & Khuyến cáo Song song (Dual AI)</h3>
-                        <span style="background:rgba(59,130,246,0.15); color:#60a5fa; padding:4px 12px; border-radius:20px; font-size:0.82rem; font-weight:600;">
-                            ⚡ Gemini 3.8 Flash vs 📚 RAG ChromaDB
-                        </span>
+            return `
+            <div class="ai-command-section">
+                <div class="ai-command-header">
+                    <h3><span>🤖</span> KẾT QUẢ ĐỐI SOÁT & KHUYẾN CÁO TỪ TRÍ TUỆ NHÂN TẠO (DUAL AI ADVISORY)</h3>
+                    <span style="font-size:0.78rem; background:rgba(255,255,255,0.15); padding:4px 10px; font-weight:700; text-transform:uppercase;">
+                        ⚡ Gemini 3.8 Flash vs 📚 RAG ChromaDB
+                    </span>
+                </div>
+
+                <div class="ai-tab-strip">
+                    <button type="button" class="ai-tab-btn-sharp active" id="btn-ai-tab-gemini" onclick="switchAiTab('gemini')">
+                        ⚡ 1. Khuyến cáo Thực tế (Gemini 3.8 Flash - Ưu tiên)
+                    </button>
+                    <button type="button" class="ai-tab-btn-sharp" id="btn-ai-tab-rag" onclick="switchAiTab('rag')">
+                        📚 2. Thẩm định Pháp lý & Chế tài (RAG ChromaDB)
+                    </button>
+                    <button type="button" class="ai-tab-btn-sharp" id="btn-ai-tab-compare" onclick="switchAiTab('compare')">
+                        ⚖️ 3. So sánh Song song (2 Cột)
+                    </button>
+                </div>
+
+                <div class="ai-tab-body">
+                    <!-- PANEL 1: GEMINI 3.8 FLASH -->
+                    <div class="ai-tab-content-panel" id="panel-ai-tab-gemini">
+                        ${renderSingleEngineContent(g, "Tư vấn & Giải pháp Thực tế từ Mô hình Gemini 3.8 Flash", "MÔ HÌNH ƯU TIÊN THỰC TIỄN", "#2563eb")}
                     </div>
 
-                    <div class="alert alert-info" style="margin-bottom:18px; font-size:0.88rem; line-height:1.5;">
-                        ⚖️ <strong>Hệ thống phân tích đồng thời bằng 2 mô hình AI để quý vị đối chiếu:</strong><br>
-                        • <strong>1. Gemini 3.8 Flash (9Router VPS):</strong> Mô hình ưu tiên khuyến cáo thực tế, giải pháp kỹ thuật và lộ trình khắc phục cho cơ sở.<br>
-                        • <strong>2. RAG & CSDL ChromaDB:</strong> Hệ thống đối soát trực tiếp từ CSDL văn bản pháp luật (NĐ 105, NĐ 106/2025, Luật 55/2024/QH15) chỉ rõ điều khoản vi phạm và chế tài xử phạt.
+                    <!-- PANEL 2: RAG CHROMADB -->
+                    <div class="ai-tab-content-panel" id="panel-ai-tab-rag" style="display:none;">
+                        ${renderSingleEngineContent(r, "Đối soát Quy chuẩn Pháp luật & Vi phạm từ RAG ChromaDB", "ĐỐI SOÁT QUY PHẠM PHÁP LUẬT", "#7c3aed")}
                     </div>
 
-                    <div class="ai-tab-bar">
-                        <button type="button" class="ai-tab-btn active" id="btn-tab-gemini" onclick="switchAiTab('gemini')">
-                            ⚡ 1. Tư vấn từ Gemini 3.8 Flash (Ưu tiên)
-                        </button>
-                        <button type="button" class="ai-tab-btn" id="btn-tab-rag" onclick="switchAiTab('rag')">
-                            📚 2. Thẩm định từ RAG & CSDL ChromaDB
-                        </button>
-                        <button type="button" class="ai-tab-btn" id="btn-tab-compare" onclick="switchAiTab('compare')">
-                            ⚖️ 3. So sánh trực tiếp (2 Cột song song)
-                        </button>
-                    </div>
-
-                    <!-- Panel 1: Gemini 3.8 Flash -->
-                    <div class="ai-tab-panel" id="panel-tab-gemini">
-                        ${renderSingleEngineContent(g, "Khuyến cáo Thực tế từ Gemini 3.8 Flash (9Router VPS)", "MÔ HÌNH ƯU TIÊN", "#2563eb")}
-                    </div>
-
-                    <!-- Panel 2: RAG ChromaDB -->
-                    <div class="ai-tab-panel" id="panel-tab-rag" style="display:none;">
-                        ${renderSingleEngineContent(r, "Thẩm định Pháp lý & Vi phạm từ RAG ChromaDB", "CSDL ĐỐI SOÁT", "#8b5cf6")}
-                    </div>
-
-                    <!-- Panel 3: Side-by-side comparison -->
-                    <div class="ai-tab-panel" id="panel-tab-compare" style="display:none;">
-                        <div class="ai-compare-grid">
-                            <!-- Cột 1: Gemini 3.8 Flash -->
-                            <div class="ai-compare-card">
-                                <div class="ai-compare-header">
-                                    <div>
-                                        <strong style="color:#60a5fa; font-size:1.05rem;">⚡ Gemini 3.8 Flash</strong>
-                                        <div style="font-size:0.75rem; color:var(--text-muted);">9Router Endpoint VPS</div>
-                                    </div>
-                                    <span style="background:rgba(37,99,235,0.2); color:#60a5fa; padding:2px 8px; border-radius:4px; font-size:0.72rem; font-weight:700;">THỰC TẾ CƠ SỞ</span>
+                    <!-- PANEL 3: SIDE BY SIDE -->
+                    <div class="ai-tab-content-panel" id="panel-ai-tab-compare" style="display:none;">
+                        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:20px;">
+                            <!-- Column 1 -->
+                            <div style="border:1px solid #cbd5e1; padding:18px; background:#f8fafc;">
+                                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; padding-bottom:8px; border-bottom:2px solid #2563eb;">
+                                    <strong style="color:#2563eb; font-size:1rem; text-transform:uppercase;">⚡ Gemini 3.8 Flash</strong>
+                                    <span class="badge-sharp info">Thực tiễn cơ sở</span>
                                 </div>
-                                <div style="font-size:0.86rem; line-height:1.5; color:var(--text-secondary); margin-bottom:14px;">
-                                    <strong style="color:var(--text-primary); display:block; margin-bottom:4px;">📌 Đánh giá tổng quan:</strong>
+                                <p style="font-size:0.86rem; color:#1e293b; line-height:1.5; margin-bottom:14px;">
                                     ${g?.overall_assessment || 'Đang cập nhật'}
-                                </div>
-                                <div style="margin-bottom:14px;">
-                                    <strong style="color:#ef4444; font-size:0.85rem; display:block; margin-bottom:6px;">⚠️ Tồn tại & Nguy cơ:</strong>
-                                    <ul style="padding-left:18px; margin:0; font-size:0.82rem; color:var(--text-secondary);">
-                                        ${(g?.critical_weaknesses || []).map(w => `<li style="margin-bottom:4px;">${w}</li>`).join('')}
-                                    </ul>
-                                </div>
-                                <div>
-                                    <strong style="color:#f97316; font-size:0.85rem; display:block; margin-bottom:6px;">🔧 Khuyến cáo giải pháp:</strong>
-                                    <ul style="padding-left:18px; margin:0; font-size:0.82rem; color:var(--text-secondary);">
-                                        ${(g?.detailed_recommendations || []).slice(0, 4).map(r => `<li style="margin-bottom:6px;"><strong>${r.title}</strong>: ${r.description} (Chi phí: ${r.estimated_cost || 'N/A'})</li>`).join('')}
-                                    </ul>
-                                </div>
+                                </p>
+                                <div style="font-weight:700; color:#dc2626; font-size:0.82rem; text-transform:uppercase; margin-bottom:6px;">Tồn tại & Nguy cơ:</div>
+                                <ul style="padding-left:18px; font-size:0.82rem; color:#334155; margin-bottom:14px;">
+                                    ${(g?.critical_weaknesses || []).map(w => `<li style="margin-bottom:4px;">${w}</li>`).join('')}
+                                </ul>
+                                <div style="font-weight:700; color:#d97706; font-size:0.82rem; text-transform:uppercase; margin-bottom:6px;">Giải pháp trọng tâm:</div>
+                                <ul style="padding-left:18px; font-size:0.82rem; color:#334155;">
+                                    ${(g?.detailed_recommendations || []).slice(0, 4).map(r => `<li style="margin-bottom:4px;"><strong>${r.title}</strong>: ${r.description}</li>`).join('')}
+                                </ul>
                             </div>
 
-                            <!-- Cột 2: RAG ChromaDB -->
-                            <div class="ai-compare-card">
-                                <div class="ai-compare-header">
-                                    <div>
-                                        <strong style="color:#c084fc; font-size:1.05rem;">📚 RAG & ChromaDB</strong>
-                                        <div style="font-size:0.75rem; color:var(--text-muted);">CSDL Văn bản & Quy chuẩn</div>
-                                    </div>
-                                    <span style="background:rgba(139,92,246,0.2); color:#c084fc; padding:2px 8px; border-radius:4px; font-size:0.72rem; font-weight:700;">ĐỐI SOÁT PHÁP LÝ</span>
+                            <!-- Column 2 -->
+                            <div style="border:1px solid #cbd5e1; padding:18px; background:#f8fafc;">
+                                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; padding-bottom:8px; border-bottom:2px solid #7c3aed;">
+                                    <strong style="color:#7c3aed; font-size:1rem; text-transform:uppercase;">📚 RAG ChromaDB</strong>
+                                    <span class="badge-sharp" style="color:#7c3aed; border-color:#7c3aed;">Quy chuẩn & Pháp lý</span>
                                 </div>
-                                <div style="font-size:0.86rem; line-height:1.5; color:var(--text-secondary); margin-bottom:14px;">
-                                    <strong style="color:var(--text-primary); display:block; margin-bottom:4px;">📌 Thẩm định tuân thủ:</strong>
+                                <p style="font-size:0.86rem; color:#1e293b; line-height:1.5; margin-bottom:14px;">
                                     ${r?.overall_assessment || 'Đang cập nhật'}
-                                </div>
-                                <div style="margin-bottom:14px;">
-                                    <strong style="color:#ef4444; font-size:0.85rem; display:block; margin-bottom:6px;">⚖️ Điều khoản vi phạm & Chế tài:</strong>
-                                    <ul style="padding-left:18px; margin:0; font-size:0.82rem; color:var(--text-secondary);">
-                                        ${(r?.critical_weaknesses || []).map(w => `<li style="margin-bottom:4px;">${w}</li>`).join('')}
-                                    </ul>
-                                </div>
-                                <div>
-                                    <strong style="color:#a855f7; font-size:0.85rem; display:block; margin-bottom:6px;">📜 Viện dẫn quy chuẩn & Nghị định:</strong>
-                                    <ul style="padding-left:18px; margin:0; font-size:0.82rem; color:var(--text-secondary);">
-                                        ${(r?.legal_references || []).slice(0, 4).map(ref => `<li style="margin-bottom:4px;">${ref}</li>`).join('')}
-                                    </ul>
-                                </div>
+                                </p>
+                                <div style="font-weight:700; color:#dc2626; font-size:0.82rem; text-transform:uppercase; margin-bottom:6px;">Điều khoản vi phạm:</div>
+                                <ul style="padding-left:18px; font-size:0.82rem; color:#334155; margin-bottom:14px;">
+                                    ${(r?.critical_weaknesses || []).map(w => `<li style="margin-bottom:4px;">${w}</li>`).join('')}
+                                </ul>
+                                <div style="font-weight:700; color:#7c3aed; font-size:0.82rem; text-transform:uppercase; margin-bottom:6px;">Viện dẫn căn cứ:</div>
+                                <ul style="padding-left:18px; font-size:0.82rem; color:#334155;">
+                                    ${(r?.legal_references || []).slice(0, 4).map(ref => `<li style="margin-bottom:4px;">${ref}</li>`).join('')}
+                                </ul>
                             </div>
                         </div>
                     </div>
-                </div>`;
-            }
-
-            // Single engine fallback
-            return `<div class="dashboard-section mt-3">
-                <div class="section-title"><h3>👩‍💼 Khuyến cáo từ Trợ lý Chi</h3></div>
-                ${renderSingleEngineContent(ai, null, "", "")}
-            </div>`;
+                </div>
+            </div>
+            `;
         }
 
-        async function requestAI(id) {
-            const btnAI = document.getElementById('btn-ai');
-            const container = document.getElementById('ai-result-container');
-            if (btnAI) { btnAI.disabled = true; btnAI.innerHTML = '⏳ Đang phân tích...'; }
-            if (container) container.innerHTML = '<div style="text-align:center; padding:30px;"><div class="loading-spinner"></div><p style="color:var(--text-secondary); margin-top:12px;">🤖 AI đang phân tích dữ liệu khảo sát...</p></div>';
+        async function loadDocketQRCode(id) {
             try {
-                const result = await api.post(`/ai/analyze/${id}`, {});
-                const ai = result.analysis || result;
-                if (btnAI) { btnAI.innerHTML = '✅ Đã phân tích'; }
-                if (container) container.innerHTML = buildAiSection(ai);
-            } catch (error) {
-                if (btnAI) { btnAI.disabled = false; btnAI.innerHTML = '🤖 Phân tích AI'; }
-                if (container) container.innerHTML = '';
-                showToast('Lỗi phân tích AI: ' + error.message, 'error');
+                const token = localStorage.getItem('fras_token') || localStorage.getItem('token');
+                const baseUrl = '/api';
+                const response = await fetch(`${baseUrl}/export/qrcode/${id}`, {
+                    headers: token ? { 'Authorization': `Bearer ${token}` } : {}
+                });
+
+                if (response.ok) {
+                    const blob = await response.blob();
+                    const url = URL.createObjectURL(blob);
+                    const container = document.getElementById('qr-code-box');
+                    if (container) {
+                        container.innerHTML = `
+                            <div style="text-align:right;">
+                                <img src="${url}" alt="QR Code" style="width:72px; height:72px; border:1px solid #0f172a; display:block; margin-left:auto;">
+                                <div style="font-size:0.65rem; color:#64748b; margin-top:2px; font-weight:700;">XÁC THỰC</div>
+                            </div>
+                        `;
+                    }
+                }
+            } catch (err) {
+                console.warn("Could not load QR code:", err);
             }
         }
     </script>
 </body>
-
 </html>
