@@ -59,10 +59,14 @@ class FrasAPI {
 
             if (response.status === 401) {
                 this.clearToken();
-                if (!window.location.pathname.includes('login')) {
+                const isAuthEndpoint = endpoint.includes('/auth/login');
+                const isPublicPage = window.location.pathname === '/' || 
+                                     window.location.pathname.includes('index') || 
+                                     window.location.pathname.includes('survey');
+                if (!window.location.pathname.includes('login') && !isAuthEndpoint && !isPublicPage) {
                     window.location.href = '/login.html';
                 }
-                const err = new Error('Phiên đăng nhập đã hết hạn');
+                const err = new Error(isAuthEndpoint ? 'Mã định danh cơ sở hoặc mật khẩu không chính xác' : 'Phiên đăng nhập đã hết hạn');
                 err.status = 401;
                 throw err;
             }
@@ -426,11 +430,16 @@ function setupNavbar() {
         } else {
             navUser.innerHTML = '';
             navUser.appendChild(controls);
-            const loginLink = document.createElement('a');
-            loginLink.href = '/login.html';
-            loginLink.className = 'btn btn-sm btn-primary';
-            loginLink.textContent = t('login');
-            navUser.appendChild(loginLink);
+            const isHomeOrSurvey = window.location.pathname === '/' || 
+                                   window.location.pathname.includes('index') || 
+                                   window.location.pathname.includes('survey');
+            if (!isHomeOrSurvey) {
+                const loginLink = document.createElement('a');
+                loginLink.href = '/login.html';
+                loginLink.className = 'btn btn-sm btn-primary';
+                loginLink.textContent = t('login');
+                navUser.appendChild(loginLink);
+            }
         }
 
         updateThemeButton();

@@ -63,12 +63,12 @@
             </div>
             <form id="login-form">
                 <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="email@example.com" required>
+                    <label for="email">Mã cơ sở (13 số) hoặc Email</label>
+                    <input type="text" class="form-control" id="email" placeholder="Nhập mã cơ sở (VD: 2426200091153) hoặc Email" required>
                 </div>
                 <div class="form-group">
                     <label for="password">Mật khẩu</label>
-                    <input type="password" class="form-control" id="password" placeholder="Nhập mật khẩu" required>
+                    <input type="password" class="form-control" id="password" placeholder="Mặc định cơ sở: Pc07@123" required>
                 </div>
                 <button type="submit" class="btn btn-primary" style="width:100%; margin-top: 8px;">Đăng nhập</button>
             </form>
@@ -82,7 +82,21 @@
     </div>
     <script src="/js/api.js"></script>
     <script src="/js/auth.js"></script>
-    <script>onReady(() => { if (api.isLoggedIn()) window.location.href = '/dashboard.html'; setupLoginForm(); });</script>
+    <script>
+        onReady(() => {
+            if (api.isLoggedIn()) {
+                const u = api.getUser();
+                if (u && (u.role === 'admin' || u.role === 'superadmin')) {
+                    window.location.href = '/admin/';
+                } else if (u && u.facility_code) {
+                    window.location.href = '/survey.html?role=facility';
+                } else {
+                    window.location.href = '/survey.html';
+                }
+            }
+            setupLoginForm();
+        });
+    </script>
 </body>
 
 </html>

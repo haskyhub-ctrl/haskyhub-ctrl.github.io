@@ -4,7 +4,10 @@ from sqlalchemy.orm import sessionmaker, declarative_base
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DEFAULT_DB_PATH = os.path.join(BASE_DIR, "fras.db").replace("\\", "/")
-DATABASE_URL = os.getenv("DATABASE_URL", f"sqlite:///{DEFAULT_DB_PATH}")
+DATABASE_URL = os.getenv("DATABASE_URL", "")
+if not DATABASE_URL or DATABASE_URL.startswith("sqlite:///.") or "sqlite:///" in DATABASE_URL and not os.path.isabs(DATABASE_URL.replace("sqlite:///", "")):
+    DATABASE_URL = f"sqlite:///{DEFAULT_DB_PATH}"
+
 
 if DATABASE_URL.startswith("sqlite"):
     engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False})
