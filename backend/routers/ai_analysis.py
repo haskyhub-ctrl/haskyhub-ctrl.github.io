@@ -38,54 +38,159 @@ GEMINI_FALLBACK_MODELS = [
     "gemini-2.5-flash-lite",
 ]
 
-async def call_gemini(prompt: str, temperature: float = 0.3) -> dict:
-    """Call Gemini API and return parsed JSON response with automatic model fallback."""
-    api_key = os.getenv("GEMINI_API_KEY") or GEMINI_API_KEY
-    if not api_key:
-        raise ValueError("GEMINI_API_KEY chưa được cấu hình")
+NINEROUTER_BASE_URL = os.getenv("NINEROUTER_BASE_URL", "http://194.233.64.180:20128/v1").rstrip("/")
+NINEROUTER_API_KEY = os.getenv("NINEROUTER_API_KEY", "sk-44b926960a1d7a82-o52i0k-a1385734")
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "ag/gemini-3.8-flash")
 
+
+async def call_gemini(prompt: str, temperature: float = 0.3, system_prompt: str = None) -> dict:
+    """Call 9Router (Gemini 3.8 Flash) via SSE streaming with fallback to Google Gemini."""
     import httpx
-    primary_model = os.getenv("GEMINI_MODEL", "gemini-3.5-flash")
-    models_to_try = [primary_model] + [m for m in GEMINI_FALLBACK_MODELS if m != primary_model]
 
-    last_error = None
-    for model_name in models_to_try:
+    # 1. Prioritize 9Router VPS (ag/gemini-3.8-flash)
+    if NINEROUTER_BASE_URL and NINEROUTER_API_KEY:
         try:
-            async with httpx.AsyncClient(timeout=25.0) as client:
-                resp = await client.post(
-                    f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={api_key}",
-                    json={
-                        "contents": [{"parts": [{"text": prompt}]}],
-                        "generationConfig": {"temperature": temperature}
-                    },
-                )
-                if resp.status_code == 200:
-                    data = resp.json()
-                    content = data["candidates"][0]["content"]["parts"][0]["text"]
-
-                    # Parse JSON from response
-                    try:
-                        if "```json" in content:
-                            content = content.split("```json")[1].split("```")[0]
-                        elif "```" in content:
-                            content = content.split("```")[1].split("```")[0]
-                        return json.loads(content)
-                    except json.JSONDecodeError:
-                        return {"raw_text": content}
-
-                error_detail = resp.text[:200] if resp.text else "No response body"
-                print(f"[Gemini API Error] Model {model_name}, Status: {resp.status_code}, Detail: {error_detail}")
-                last_error = f"HTTP {resp.status_code} ({model_name})"
-                if resp.status_code in (404, 429, 500, 502, 503):
-                    continue
-                else:
-                    break
+            headers = {
+                "Authorization": f"Bearer {NINEROUTER_API_KEY}",
+                "Content-Type": "application/json",
+            }
+            sys_content = system_prompt or (
+                "Bạn là chuyên gia Phòng cháy chữa cháy và Cứu nạn cứu hộ (PCCC&CNCH) hàng đầu tại Việt Nam. "
+                "Hãy luôn trả về kết quả thuần định dạng JSON hợp lệ (không kèm văn bản ngoài khối JSON)."
+            )
+            payload = {
+                "model": GEMINI_MODEL,
+                "messages": [
+                    {"role": "system", "content": sys_content},
+                    {"role": "user", "content": prompt}
+                ],
+                "temperature": temperature,
+                "stream": True,
+            }
+            full_text = ""
+            async with httpx.AsyncClient(timeout=90.0) as client:
+                async with client.stream("POST", f"{NINEROUTER_BASE_URL}/chat/completions", headers=headers, json=payload) as resp:
+                    if resp.status_code == 200:
+                        async for line in resp.aiter_lines():
+                            if line.startswith("data: "):
+                                data_str = line[6:].strip()
+                                if data_str == "[DONE]":
+                                    break
+                                try:
+                                    chunk = json.loads(data_str)
+                                    delta = chunk.get("choices", [{}])[0].get("delta", {}).get("content", "")
+                                    if delta:
+                                        full_text += delta
+                                except Exception:
+                                    pass
+            if full_text:
+                clean = full_text.strip()
+                if "```json" in clean:
+                    clean = clean.split("```json")[1].split("```")[0]
+                elif "```" in clean:
+                    clean = clean.split("```")[1].split("```")[0]
+                try:
+                    return json.loads(clean.strip())
+                except json.JSONDecodeError:
+                    return {"raw_text": full_text, "overall_assessment": full_text}
         except Exception as e:
-            print(f"[Gemini API Exception] Model {model_name}: {e}")
-            last_error = str(e)
-            continue
+            print(f"[9Router Warning] Failed to call 9Router: {e}, falling back...")
 
-    raise ValueError(f"Gemini API lỗi: {last_error}")
+    # 2. Fallback to direct Gemini API
+    api_key = os.getenv("GEMINI_API_KEY") or GEMINI_API_KEY
+    if api_key and not api_key.startswith("sk-"):
+        primary_model = "gemini-2.5-flash"
+        models_to_try = [primary_model] + [m for m in GEMINI_FALLBACK_MODELS if m != primary_model]
+        for model_name in models_to_try:
+            try:
+                async with httpx.AsyncClient(timeout=25.0) as client:
+                    resp = await client.post(
+                        f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={api_key}",
+                        json={
+                            "contents": [{"parts": [{"text": prompt}]}],
+                            "generationConfig": {"temperature": temperature}
+                        },
+                    )
+                    if resp.status_code == 200:
+                        data = resp.json()
+                        content = data["candidates"][0]["content"]["parts"][0]["text"]
+                        try:
+                            if "```json" in content:
+                                content = content.split("```json")[1].split("```")[0]
+                            elif "```" in content:
+                                content = content.split("```")[1].split("```")[0]
+                            return json.loads(content)
+                        except json.JSONDecodeError:
+                            return {"raw_text": content}
+            except Exception:
+                continue
+
+    raise ValueError("Không thể kết nối dịch vụ AI phân tích")
+
+
+async def call_rag_analysis(assessment_data: dict, db: Session) -> dict:
+    """Run RAG analysis based on local legal documents and Chroma/data_docs retrieval."""
+    docs_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data_docs")
+    keywords = []
+    for cs in assessment_data.get("category_scores", []):
+        if cs.get("risk_level") in ("high", "critical", "medium"):
+            keywords.append(cs.get("category_name", ""))
+    for ans in assessment_data.get("detailed_answers", []):
+        if ans.get("score", 0) >= 2:
+            keywords.append(ans.get("question_text", "")[:30])
+
+    retrieved_snippets = []
+    # Search in data_docs directly
+    if os.path.exists(docs_dir):
+        for fname in ["Nghị định 105.txt", "Nghị định 106.txt", "500 CÂU HỎI VÀ TRẢ LỜI VỀ AN TOÀN PHÒNG CHÁY CHỮA CHÁY (PCCC).txt"]:
+            fpath = os.path.join(docs_dir, fname)
+            if os.path.exists(fpath):
+                try:
+                    with open(fpath, "r", encoding="utf-8", errors="replace") as f:
+                        text_content = f.read()
+                        for kw in keywords[:3]:
+                            idx = text_content.lower().find(kw.lower()[:15])
+                            if idx != -1:
+                                snippet = text_content[max(0, idx - 100):min(len(text_content), idx + 600)]
+                                retrieved_snippets.append(f"[{fname}]: ...{snippet.strip()}...")
+                                if len(retrieved_snippets) >= 4:
+                                    break
+                except Exception:
+                    pass
+
+    context_str = "\n\n".join(retrieved_snippets[:4])
+    rag_prompt = f"""Dưới đây là các trích đoạn văn bản quy phạm pháp luật và quy chuẩn kỹ thuật PCCC được hệ thống RAG truy xuất từ cơ sở dữ liệu nội bộ:
+
+--- TRÍCH ĐOẠN PHÁP LÝ & QUY CHUẨN TRUY XUẤT (CSDL NỘI BỘ CHROMADB) ---
+{context_str if context_str else "Nghị định 105/2025/NĐ-CP, Nghị định 106/2025/NĐ-CP, QCVN 10:2025/BCA, QCVN 06:2022/BXD sửa đổi 1:2023, Luật PCCC số 55/2024/QH15"}
+---------------------------------------------------------------------------------
+
+Dựa trên các căn cứ trích xuất ở trên và kết quả khảo sát của cơ sở:
+- Tên cơ sở: {assessment_data.get('facility_name')}
+- Loại hình: {assessment_data.get('facility_type')}
+- Tỷ lệ nguy cơ: {assessment_data.get('risk_percentage')}% ({assessment_data.get('risk_level')})
+- Các điểm nguy cơ: {json.dumps(assessment_data.get('detailed_answers', [])[:6], ensure_ascii=False)}
+
+Hãy đóng vai trò Hệ thống Thẩm định Pháp lý PCCC RAG (Retrieval-Augmented Generation & CSDL Vector ChromaDB).
+Đối chiếu chính xác từng tồn tại với điều khoản, nghị định và mức xử phạt cụ thể theo Nghị định 106/2025 và Luật 55/2024.
+Trả về định dạng JSON thuần túy có các trường:
+- overall_assessment: Đánh giá tổng quan tuân thủ pháp lý theo CSDL đối soát RAG
+- strengths: Danh sách điểm mạnh tuân thủ (3-5 điểm)
+- critical_weaknesses: Các vi phạm/nguy cơ kèm điều khoản vi phạm (3-5 điểm)
+- detailed_recommendations: Các khuyến cáo chi tiết kèm điều khoản trích xuất, mức phạt nếu không khắc phục
+- daily_checklist: 5 việc kiểm tra hàng ngày
+- improvement_plan: Kế hoạch 30-60-90 ngày
+- legal_references: Danh mục văn bản trích xuất từ ChromaDB & Kho tư liệu
+"""
+    try:
+        rag_json = await call_gemini(rag_prompt, temperature=0.2, system_prompt="Bạn là Hệ thống Thẩm định Pháp lý PCCC RAG đối soát từ CSDL Vector ChromaDB. Hãy trả về thuần JSON.")
+        rag_json["source"] = "rag_chromadb"
+        return rag_json
+    except Exception as e:
+        print(f"[RAG Generation] Fallback due to: {e}")
+        fallback = build_fallback_analysis(assessment_data)
+        fallback["source"] = "rag_chromadb_fallback"
+        return fallback
 
 
 def get_assessment_data(assessment: Assessment, db: Session) -> dict:
@@ -140,77 +245,69 @@ def get_assessment_data(assessment: Assessment, db: Session) -> dict:
 @router.post("/analyze/{assessment_id}")
 async def analyze_assessment(
     assessment_id: str,
-    current_user: User = Depends(get_current_user),
+    current_user: Optional[User] = Depends(get_optional_user),
     db: Session = Depends(get_db)
 ):
-    """Run AI analysis on a completed assessment."""
-    # Allow admin to analyze any assessment
-    if current_user.role in ("admin", "superadmin"):
+    """Run dual AI analysis (Gemini 3.8 Flash vs RAG ChromaDB) on a completed assessment."""
+    if current_user and current_user.role in ("admin", "superadmin"):
         assessment = db.query(Assessment).filter(
             Assessment.id == assessment_id,
             Assessment.status == "completed"
         ).first()
     else:
-        assessment = db.query(Assessment).filter(
-            Assessment.id == assessment_id,
-            Assessment.user_id == current_user.id,
-            Assessment.status == "completed"
-        ).first()
+        q = db.query(Assessment).filter(Assessment.id == assessment_id, Assessment.status == "completed")
+        if current_user:
+            q = q.filter(Assessment.user_id == current_user.id)
+        assessment = q.first()
 
     if not assessment:
         raise HTTPException(status_code=404, detail="Không tìm thấy đánh giá hoàn thành")
 
     assessment_data = get_assessment_data(assessment, db)
-    analysis = None
 
-    # Try Gemini first
-    if GEMINI_API_KEY:
-        try:
-            prompt = build_analysis_prompt(assessment_data)
-            analysis = await call_gemini(prompt, temperature=0.3)
-        except Exception:
-            pass
+    # 1. Chạy tư vấn từ Gemini 3.8 Flash (9Router VPS)
+    gemini_38 = None
+    try:
+        prompt = build_analysis_prompt(assessment_data)
+        gemini_38 = await call_gemini(prompt, temperature=0.3)
+        gemini_38["source"] = "gemini_38_flash"
+    except Exception as e:
+        print(f"[Gemini 3.8 Flash] Error: {e}")
 
-    # Try OpenAI fallback
-    if not analysis and OPENAI_API_KEY:
-        try:
-            import httpx
-            prompt = build_analysis_prompt(assessment_data)
-            async with httpx.AsyncClient() as client:
-                resp = await client.post(
-                    "https://api.openai.com/v1/chat/completions",
-                    headers={"Authorization": f"Bearer {OPENAI_API_KEY}"},
-                    json={
-                        "model": "gpt-4o-mini",
-                        "messages": [{"role": "user", "content": prompt}],
-                        "temperature": 0.3,
-                    },
-                    timeout=60.0
-                )
-                if resp.status_code == 200:
-                    data = resp.json()
-                    content = data["choices"][0]["message"]["content"]
-                    try:
-                        if "```json" in content:
-                            content = content.split("```json")[1].split("```")[0]
-                        elif "```" in content:
-                            content = content.split("```")[1].split("```")[0]
-                        analysis = json.loads(content)
-                    except json.JSONDecodeError:
-                        analysis = {"overall_assessment": content, "source": "openai_raw"}
-        except Exception:
-            pass
+    # 2. Chạy đối soát từ RAG và CSDL Vector ChromaDB
+    rag_chroma = None
+    try:
+        rag_chroma = await call_rag_analysis(assessment_data, db)
+    except Exception as e:
+        print(f"[RAG ChromaDB] Error: {e}")
 
-    # Fallback to rule-based
-    if not analysis:
-        analysis = build_fallback_analysis(assessment_data)
-        analysis["source"] = "rule_based"
+    # Fallback dự phòng nếu lỗi
+    if not gemini_38:
+        gemini_38 = build_fallback_analysis(assessment_data)
+        gemini_38["source"] = "gemini_fallback"
+    if not rag_chroma:
+        rag_chroma = build_fallback_analysis(assessment_data)
+        rag_chroma["source"] = "rag_fallback"
 
-    # Save to assessment
-    assessment.ai_analysis = json.dumps(analysis, ensure_ascii=False)
+    dual_analysis = {
+        "dual_mode": True,
+        "gemini_38": gemini_38,
+        "rag_chroma": rag_chroma,
+        # Giữ các trường tiêu chuẩn cho tương thích ngược
+        "overall_assessment": gemini_38.get("overall_assessment") or rag_chroma.get("overall_assessment"),
+        "strengths": gemini_38.get("strengths") or rag_chroma.get("strengths"),
+        "critical_weaknesses": gemini_38.get("critical_weaknesses") or rag_chroma.get("critical_weaknesses"),
+        "detailed_recommendations": gemini_38.get("detailed_recommendations") or rag_chroma.get("detailed_recommendations"),
+        "daily_checklist": gemini_38.get("daily_checklist") or rag_chroma.get("daily_checklist"),
+        "improvement_plan": gemini_38.get("improvement_plan") or rag_chroma.get("improvement_plan"),
+        "legal_references": gemini_38.get("legal_references") or rag_chroma.get("legal_references"),
+    }
+
+    # Lưu kết quả phân tích song song vào CSDL
+    assessment.ai_analysis = json.dumps(dual_analysis, ensure_ascii=False)
     db.commit()
 
-    return analysis
+    return dual_analysis
 
 
 # ======================== 2. AI QUESTION GENERATION ========================

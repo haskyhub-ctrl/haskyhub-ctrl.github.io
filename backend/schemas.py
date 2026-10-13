@@ -169,9 +169,11 @@ class CategoryWithQuestions(CategoryResponse):
 # ======================== ASSESSMENT SCHEMAS ========================
 
 class AssessmentStart(BaseModel):
-    facility_name: str
+    facility_name: Optional[str] = "Công trình / Nhà ở khảo sát"
     facility_type: Optional[str] = None
-    facility_address: str = Field(..., min_length=5, description="Địa chỉ cơ sở (bắt buộc)")
+    facility_address: Optional[str] = None
+    province: Optional[str] = None
+    ward: Optional[str] = None
     facility_area: Optional[float] = None
     worker_count: Optional[int] = None
     latitude: Optional[float] = None
@@ -248,6 +250,7 @@ class AssessmentResponse(BaseModel):
     started_at: Optional[datetime] = None
     completed_at: Optional[datetime] = None
     created_at: Optional[datetime] = None
+    access_token: Optional[str] = None
 
     class Config:
         from_attributes = True

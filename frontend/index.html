@@ -57,13 +57,6 @@
                     <span class="gov-hotline-number">114</span>
                 </a>
                 <div class="gov-nav-user" id="nav-user"></div>
-                <a href="/login.html" class="gov-login-btn" id="gov-login-link">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                        <circle cx="12" cy="7" r="4"/>
-                    </svg>
-                    <span>Đăng nhập</span>
-                </a>
             </div>
             <button class="gov-mobile-toggle" id="gov-mobile-toggle" aria-label="Menu">&#9776;</button>
         </div>
@@ -77,7 +70,7 @@
             <ul class="gov-nav-menu" id="gov-nav-menu">
                 <li class="active"><a href="/">Trang chủ</a></li>
                 <li><a href="#services">Dịch vụ</a></li>
-                <li><a href="/survey.html">Bắt đầu khảo sát</a></li>
+                <li><a href="javascript:void(0)" onclick="openRoleModal()">Bắt đầu khảo sát</a></li>
                 <li><a href="#process">Hướng dẫn</a></li>
                 <li><a href="/dashboard.html">Tra cứu kết quả</a></li>
                 <li><a href="https://phongchay.edu.vn/thu-vien-khoa-hoc" target="_blank" rel="noopener">📚 Học kiến thức - Kỹ năng bằng video</a></li>
@@ -117,7 +110,7 @@
                 🔒 <strong>Kết quả khảo sát là ẩn danh</strong>, không ai có thể biết kể cả Quản trị viên
             </div>
             <div class="gov-hero-actions">
-                <a href="/survey.html" class="hp-cta-btn hp-cta-primary" id="hero-cta">
+                <a href="javascript:void(0)" class="hp-cta-btn hp-cta-primary" id="hero-cta" onclick="openRoleModal()">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                         <path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
                     </svg>
@@ -714,7 +707,7 @@
             </div>
             <div class="gov-services-grid">
                 <!-- Dịch vụ 1 -->
-                <a href="/survey.html" class="gov-service-card">
+                <a href="javascript:void(0)" onclick="openRoleModal()" class="gov-service-card">
                     <div class="gov-service-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
@@ -879,7 +872,7 @@
     <section class="hp-mid-cta">
         <div class="container">
             <p class="hp-mid-quote">"Khoảng cách giữa <strong>nguy cơ</strong> và <strong>thảm họa</strong> thường chỉ là một hành động nhỏ chưa được thực hiện"</p>
-            <a href="/survey.html" class="hp-cta-btn hp-cta-primary">Thực hiện khảo sát ngay — Miễn phí</a>
+            <a href="javascript:void(0)" onclick="openRoleModal()" class="hp-cta-btn hp-cta-primary">Thực hiện khảo sát ngay — Miễn phí</a>
         </div>
     </section>
 
@@ -1062,7 +1055,7 @@
                 <h2>THỰC HIỆN KHẢO SÁT AN TOÀN NGAY HÔM NAY</h2>
                 <p class="hp-final-subtitle">Cháy nổ không báo trước. Nhưng nguy cơ luôn có dấu hiệu.<br>Hãy để AI giúp bạn phát hiện trước khi quá muộn.</p>
                 <p class="hp-final-slogan">"Phòng cháy — Chữa cháy — Cứu nạn, cứu hộ là trách nhiệm của toàn dân"</p>
-                <a href="/survey.html" class="hp-cta-btn hp-cta-primary" id="final-cta-btn">
+                <a href="javascript:void(0)" onclick="openRoleModal()" class="hp-cta-btn hp-cta-primary" id="final-cta-btn">
                     Bắt đầu đánh giá an toàn — 100% Miễn phí
                 </a>
                 <p class="hp-final-tagline">Hành động hôm nay — An tâm mãi mãi</p>
@@ -1137,9 +1130,434 @@
 
     <!-- Sticky CTA Mobile -->
     <div class="hp-sticky-cta" id="sticky-cta">
-        <a href="/survey.html" class="hp-cta-btn hp-cta-primary hp-cta-sticky">
+        <a href="javascript:void(0)" onclick="openRoleModal()" class="hp-cta-btn hp-cta-primary hp-cta-sticky">
             Bắt đầu khảo sát ngay
         </a>
+    </div>
+
+    <!-- MODAL "BẠN LÀ" (XÁC ĐỊNH ĐỐI TƯỢNG KHẢO SÁT) -->
+    <style>
+    /* ROLE MODAL STYLES */
+    .role-modal-backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(15, 23, 42, 0.78);
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        z-index: 10000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 16px;
+        animation: roleFadeIn 0.22s ease-out;
+    }
+    @keyframes roleFadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    .role-modal-container {
+        background: #ffffff;
+        border-radius: 18px;
+        max-width: 600px;
+        width: 100%;
+        max-height: 90vh;
+        overflow-y: auto;
+        position: relative;
+        padding: 32px 28px;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(0, 0, 0, 0.05);
+        animation: roleSlideUp 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    @keyframes roleSlideUp {
+        from { transform: translateY(20px) scale(0.97); opacity: 0; }
+        to { transform: translateY(0) scale(1); opacity: 1; }
+    }
+    .role-modal-close {
+        position: absolute;
+        top: 16px;
+        right: 18px;
+        background: #f1f5f9;
+        border: none;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        font-size: 1.4rem;
+        line-height: 1;
+        color: #475569;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s;
+    }
+    .role-modal-close:hover {
+        background: #e2e8f0;
+        color: #0f172a;
+        transform: rotate(90deg);
+    }
+    .role-modal-header {
+        margin-bottom: 22px;
+    }
+    .role-badge-step {
+        display: inline-block;
+        background: #EFF6FF;
+        color: #1D4ED8;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        padding: 4px 10px;
+        border-radius: 9999px;
+        margin-bottom: 8px;
+        text-transform: uppercase;
+    }
+    .role-modal-title {
+        font-size: 1.55rem;
+        font-weight: 800;
+        color: #0f172a;
+        margin: 0 0 6px;
+        line-height: 1.25;
+    }
+    .role-modal-subtitle {
+        font-size: 0.92rem;
+        color: #64748b;
+        margin: 0;
+        line-height: 1.5;
+    }
+    .role-options-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    .role-option-card {
+        display: flex;
+        gap: 18px;
+        padding: 20px 22px;
+        border: 2px solid #e2e8f0;
+        border-radius: 14px;
+        background: #ffffff;
+        cursor: pointer;
+        transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+        align-items: flex-start;
+    }
+    .role-option-card:hover {
+        border-color: #2563eb;
+        background: #f8fafc;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.12);
+    }
+    .role-option-card.role-card-citizen:hover {
+        border-color: #059669;
+        box-shadow: 0 10px 25px -5px rgba(5, 150, 105, 0.12);
+    }
+    .role-card-icon {
+        font-size: 2.2rem;
+        line-height: 1;
+        background: #f1f5f9;
+        padding: 12px;
+        border-radius: 12px;
+        flex-shrink: 0;
+    }
+    .role-option-card:hover .role-card-icon {
+        background: #dbeafe;
+    }
+    .role-card-citizen:hover .role-card-icon {
+        background: #d1fae5;
+    }
+    .role-card-body {
+        flex: 1;
+    }
+    .role-card-tag {
+        display: inline-block;
+        font-size: 0.72rem;
+        font-weight: 700;
+        padding: 2px 8px;
+        border-radius: 4px;
+        margin-bottom: 6px;
+        text-transform: uppercase;
+    }
+    .tag-managed {
+        background: #fef2f2;
+        color: #b91c1c;
+        border: 1px solid #fecaca;
+    }
+    .tag-citizen {
+        background: #ecfdf5;
+        color: #047857;
+        border: 1px solid #a7f3d0;
+    }
+    .role-card-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #0f172a;
+        margin: 0 0 6px;
+        line-height: 1.35;
+    }
+    .role-card-desc {
+        font-size: 0.85rem;
+        color: #64748b;
+        margin: 0 0 12px;
+        line-height: 1.45;
+    }
+    .role-card-action {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 0.84rem;
+        font-weight: 700;
+        color: #2563eb;
+    }
+    .role-card-action.citizen-action {
+        color: #059669;
+    }
+    .role-card-action .arrow {
+        font-size: 1.1rem;
+        transition: transform 0.2s;
+    }
+    .role-option-card:hover .arrow {
+        transform: translateX(4px);
+    }
+    /* Form styles */
+    .role-btn-back {
+        background: none;
+        border: none;
+        color: #64748b;
+        font-size: 0.85rem;
+        font-weight: 600;
+        cursor: pointer;
+        padding: 0;
+        margin-bottom: 8px;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+    }
+    .role-btn-back:hover {
+        color: #0f172a;
+        text-decoration: underline;
+    }
+    .role-form-group {
+        margin-bottom: 16px;
+    }
+    .role-form-group label {
+        display: block;
+        font-size: 0.86rem;
+        font-weight: 600;
+        color: #334155;
+        margin-bottom: 6px;
+    }
+    .role-input {
+        width: 100%;
+        padding: 11px 14px;
+        border: 1.5px solid #cbd5e1;
+        border-radius: 8px;
+        font-size: 0.95rem;
+        color: #0f172a;
+        transition: border-color 0.2s, box-shadow 0.2s;
+        box-sizing: border-box;
+    }
+    .role-input:focus {
+        border-color: #2563eb;
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+    }
+    .role-toggle-pw {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 1.1rem;
+        padding: 4px;
+        opacity: 0.6;
+    }
+    .role-toggle-pw:hover {
+        opacity: 1;
+    }
+    .role-login-hint {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        padding: 10px 14px;
+        font-size: 0.82rem;
+        color: #475569;
+        line-height: 1.45;
+    }
+    .role-login-hint code {
+        background: #e2e8f0;
+        color: #dc2626;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-weight: 700;
+        font-family: monospace;
+    }
+    .role-btn-primary {
+        display: block;
+        background: #dc2626;
+        color: #ffffff;
+        border: none;
+        border-radius: 8px;
+        padding: 13px 20px;
+        font-size: 0.98rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.2s;
+        text-align: center;
+        text-decoration: none;
+    }
+    .role-btn-primary:hover {
+        background: #b91c1c;
+        box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+    }
+    .role-btn-primary:disabled {
+        background: #94a3b8;
+        cursor: not-allowed;
+        box-shadow: none;
+    }
+    .role-btn-ghost {
+        background: transparent;
+        border: 1.5px solid #cbd5e1;
+        color: #475569;
+        border-radius: 8px;
+        padding: 10px 16px;
+        font-size: 0.88rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s;
+        width: 100%;
+    }
+    .role-btn-ghost:hover {
+        background: #f1f5f9;
+        color: #0f172a;
+    }
+    .role-alert-error {
+        background: #fef2f2;
+        border: 1px solid #fecaca;
+        color: #b91c1c;
+        padding: 10px 14px;
+        border-radius: 8px;
+        font-size: 0.86rem;
+        margin-bottom: 14px;
+        line-height: 1.45;
+    }
+    .role-logged-box {
+        background: #eff6ff;
+        border: 1.5px solid #bfdbfe;
+        border-radius: 10px;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+    </style>
+
+    <div id="role-modal" class="role-modal-backdrop" style="display:none;" onclick="if(event.target===this) closeRoleModal()">
+        <div class="role-modal-container">
+            <button type="button" class="role-modal-close" onclick="closeRoleModal()" title="Đóng">&times;</button>
+            
+            <!-- Trạng thái 0: Người dùng đã đăng nhập sẵn tài khoản cơ sở -->
+            <div id="role-step-already-logged" style="display:none;">
+                <div class="role-modal-header">
+                    <span class="role-badge-step">TÀI KHOẢN ĐANG ĐĂNG NHẬP</span>
+                    <h3 class="role-modal-title">Cơ sở của bạn đã sẵn sàng</h3>
+                    <p class="role-modal-subtitle">Hệ thống ghi nhận bạn đang đăng nhập tài khoản cơ sở thuộc diện quản lý PCCC.</p>
+                </div>
+                <div class="role-logged-box" id="role-logged-info"></div>
+                <div style="display:flex; flex-direction:column; gap:10px; margin-top:20px;">
+                    <a href="/survey.html" class="role-btn-primary">
+                        Tiếp tục bài Khảo sát cho cơ sở này →
+                    </a>
+                    <button type="button" class="role-btn-ghost" onclick="roleLogoutAndChoose()">
+                        Đăng xuất tài khoản này & Chọn đối tượng khác
+                    </button>
+                </div>
+            </div>
+
+            <!-- Trạng thái 1: Lựa chọn BẠN LÀ (Option 1 vs Option 2) -->
+            <div id="role-step-select">
+                <div class="role-modal-header">
+                    <span class="role-badge-step">BƯỚC 1: XÁC ĐỊNH ĐỐI TƯỢNG</span>
+                    <h3 class="role-modal-title">BẠN LÀ?</h3>
+                    <p class="role-modal-subtitle">Vui lòng lựa chọn hình thức phù hợp để hệ thống thiết lập bộ câu hỏi và lưu trữ kết quả:</p>
+                </div>
+
+                <div class="role-options-grid">
+                    <!-- Option 1: Cơ sở diện quản lý -->
+                    <div class="role-option-card" onclick="openFacilityLoginStep()">
+                        <div class="role-card-icon">🏢</div>
+                        <div class="role-card-body">
+                            <div class="role-card-tag tag-managed">Có trong danh sách quản lý</div>
+                            <h4 class="role-card-title">1. Cơ sở thuộc diện quản lý về PCCC</h4>
+                            <p class="role-card-desc">
+                                Doanh nghiệp, nhà máy, xí nghiệp, kho tàng, nhà hàng, khách sạn... có trong danh mục quản lý của cơ quan Cảnh sát PCCC.
+                            </p>
+                            <div class="role-card-action">
+                                <span>Đăng nhập bằng Mã cơ sở (13 chữ số)</span>
+                                <span class="arrow">→</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Option 2: Không thuộc diện quản lý -->
+                    <div class="role-option-card role-card-citizen" onclick="startCitizenSurvey()">
+                        <div class="role-card-icon">🏡</div>
+                        <div class="role-card-body">
+                            <div class="role-card-tag tag-citizen">Khảo sát tự do • Bảo mật ẩn danh</div>
+                            <h4 class="role-card-title">2. Không thuộc diện quản lý về PCCC</h4>
+                            <p class="role-card-desc">
+                                Hộ gia đình, nhà ở riêng lẻ, nhà ở kết hợp kinh doanh nhỏ lẻ, cá nhân... tự nguyện tham gia khảo sát đánh giá an toàn.
+                            </p>
+                            <div class="role-card-action citizen-action">
+                                <span>Vào khảo sát ngay (Không cần tài khoản)</span>
+                                <span class="arrow">→</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trạng thái 2: Form đăng nhập Mã cơ sở (Option 1) -->
+            <div id="role-step-login" style="display:none;">
+                <div class="role-modal-header">
+                    <button type="button" class="role-btn-back" onclick="backToRoleSelect()">← Chọn đối tượng khác</button>
+                    <div style="margin-top:6px;"><span class="role-badge-step">CƠ SỞ DIỆN QUẢN LÝ PCCC</span></div>
+                    <h3 class="role-modal-title" style="margin-top:4px;">Đăng nhập bằng Mã cơ sở</h3>
+                    <p class="role-modal-subtitle">
+                        Nhập mã cơ sở (13 chữ số trên Trung tâm chỉ huy). Hệ thống sẽ tự động liên kết danh sách và gán bộ câu hỏi theo loại hình cơ sở.
+                    </p>
+                </div>
+
+                <form id="facility-modal-login-form" onsubmit="handleFacilityLogin(event)">
+                    <div id="facility-login-error" class="role-alert-error" style="display:none;"></div>
+
+                    <div class="role-form-group">
+                        <label for="fac-code-input">Mã cơ sở (13 chữ số trên danh sách TTCH) <span style="color:#dc2626;">*</span></label>
+                        <input type="text" id="fac-code-input" class="role-input" placeholder="VD: 2426200091153" required autofocus>
+                    </div>
+
+                    <div class="role-form-group">
+                        <div style="display:flex; justify-content:space-between; align-items:center;">
+                            <label for="fac-pass-input">Mật khẩu <span style="color:#dc2626;">*</span></label>
+                            <span style="font-size:0.75rem; color:#64748b;">Mặc định: <strong>Pc07@123</strong></span>
+                        </div>
+                        <div style="position:relative;">
+                            <input type="password" id="fac-pass-input" class="role-input" value="Pc07@123" required>
+                            <button type="button" class="role-toggle-pw" onclick="toggleFacilityPw()">👁️</button>
+                        </div>
+                    </div>
+
+                    <div class="role-login-hint">
+                        💡 <strong>Thông báo:</strong> Toàn bộ 43.800+ cơ sở quản lý trên toàn tỉnh đã được tạo tài khoản sẵn với mật khẩu mặc định là <code>Pc07@123</code>.
+                    </div>
+
+                    <button type="submit" id="fac-login-btn" class="role-btn-primary" style="width:100%; margin-top:16px;">
+                        Đăng nhập & Bắt đầu Khảo sát →
+                    </button>
+                </form>
+            </div>
+        </div>
     </div>
 
     <script src="/js/api.js"></script>
@@ -1170,6 +1588,125 @@
                 menu.style.padding = '8px 0';
                 menu.style.zIndex = '999';
             }
+        });
+
+        // BẠN LÀ Modal logic
+        function openRoleModal() {
+            const modal = document.getElementById('role-modal');
+            if (!modal) return;
+            
+            const user = api.getUser();
+            const isFacility = !!(user && user.facility_code);
+
+            const stepAlready = document.getElementById('role-step-already-logged');
+            const stepSelect = document.getElementById('role-step-select');
+            const stepLogin = document.getElementById('role-step-login');
+
+            if (isFacility) {
+                stepAlready.style.display = 'block';
+                stepSelect.style.display = 'none';
+                stepLogin.style.display = 'none';
+
+                const infoBox = document.getElementById('role-logged-info');
+                if (infoBox) {
+                    infoBox.innerHTML = `
+                        <div style="font-weight:700; color:#1e3a8a; font-size:1.02rem;">🏢 ${user.full_name || 'Cơ sở'}</div>
+                        <div style="font-size:0.84rem; color:#475569;">Mã quản lý: <strong style="color:#dc2626;">${user.facility_code}</strong></div>
+                        <div style="font-size:0.84rem; color:#475569;">Địa chỉ: ${[user.ward, user.province].filter(Boolean).join(', ') || 'Chưa cập nhật'}</div>
+                        <div style="font-size:0.82rem; color:#059669; font-weight:600; margin-top:2px;">Loại hình: ${user.facility_types || 'Chưa có loại hình'}</div>
+                    `;
+                }
+            } else {
+                stepAlready.style.display = 'none';
+                stepSelect.style.display = 'block';
+                stepLogin.style.display = 'none';
+            }
+
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeRoleModal() {
+            const modal = document.getElementById('role-modal');
+            if (modal) modal.style.display = 'none';
+            document.body.style.overflow = '';
+        }
+
+        function roleLogoutAndChoose() {
+            api.clearToken();
+            const stepAlready = document.getElementById('role-step-already-logged');
+            const stepSelect = document.getElementById('role-step-select');
+            if (stepAlready) stepAlready.style.display = 'none';
+            if (stepSelect) stepSelect.style.display = 'block';
+        }
+
+        function openFacilityLoginStep() {
+            document.getElementById('role-step-select').style.display = 'none';
+            document.getElementById('role-step-login').style.display = 'block';
+            const err = document.getElementById('facility-login-error');
+            if (err) err.style.display = 'none';
+            setTimeout(() => {
+                document.getElementById('fac-code-input')?.focus();
+            }, 100);
+        }
+
+        function backToRoleSelect() {
+            document.getElementById('role-step-login').style.display = 'none';
+            document.getElementById('role-step-select').style.display = 'block';
+        }
+
+        function startCitizenSurvey() {
+            api.clearToken();
+            sessionStorage.setItem('fras_survey_role', 'citizen');
+            window.location.href = '/survey.html?role=citizen';
+        }
+
+        function toggleFacilityPw() {
+            const input = document.getElementById('fac-pass-input');
+            if (input) {
+                input.type = input.type === 'password' ? 'text' : 'password';
+            }
+        }
+
+        async function handleFacilityLogin(event) {
+            event.preventDefault();
+            const code = document.getElementById('fac-code-input').value.trim();
+            const pass = document.getElementById('fac-pass-input').value;
+            const btn = document.getElementById('fac-login-btn');
+            const errBox = document.getElementById('facility-login-error');
+
+            if (!code || !pass) {
+                if (errBox) {
+                    errBox.textContent = 'Vui lòng nhập đầy đủ Mã cơ sở và Mật khẩu.';
+                    errBox.style.display = 'block';
+                }
+                return;
+            }
+
+            btn.disabled = true;
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<span class="loading-spinner"></span> Đang xác thực tài khoản cơ sở...';
+            if (errBox) errBox.style.display = 'none';
+
+            try {
+                await api.login(code, pass);
+                btn.innerHTML = '✅ Xác thực thành công! Đang chuyển tiếp...';
+                setTimeout(() => {
+                    window.location.href = '/survey.html?role=facility';
+                }, 300);
+            } catch (err) {
+                btn.disabled = false;
+                btn.innerHTML = originalText;
+                if (errBox) {
+                    errBox.innerHTML = `⚠️ <strong>Đăng nhập không thành công:</strong> ${err.message || 'Mã cơ sở hoặc mật khẩu chưa đúng. Vui lòng kiểm tra lại theo danh sách quản lý của PC07.'}`;
+                    errBox.style.display = 'block';
+                }
+            }
+        }
+
+        // Escape key to close modal
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeRoleModal();
         });
 
         onReady(() => { setupNavbar(); });

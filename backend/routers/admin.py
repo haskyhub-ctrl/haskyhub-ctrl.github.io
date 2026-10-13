@@ -2,8 +2,8 @@ import json
 from datetime import datetime, timedelta
 from fastapi import APIRouter, Depends, HTTPException, Request, UploadFile, File
 from sqlalchemy.orm import Session
-from sqlalchemy import func
-from typing import List, Optional
+from sqlalchemy import func, or_
+from typing import List, Optional, Any
 from pydantic import BaseModel, EmailStr
 from database import get_db
 from models import User, Assessment, AdminAuditLog, QuestionCategory, Question, CategoryScore
@@ -539,7 +539,29 @@ class GenerateDemoRequest(BaseModel):
     province: str = "Bắc Ninh"
     facility_type: Optional[str] = None  # null = random
     forced_risk_level: Optional[str] = None  # safe | low | medium | high | critical (overrides distribution)
-    category_bias: Optional[int] = None  # category_id to bias with higher risk scores
+    category_bias: Optional[Any] = None  # category_id to bias with higher risk scores
+
+
+def _cascade_delete_assessments(db: Session, assessment_ids: List[str]):
+    """Xóa an toàn toàn bộ bài đánh giá và các bản ghi con liên quan."""
+    if not assessment_ids:
+        return
+    from models import AssessmentAnswer, CategoryScore, ImageAnalysis, ImprovementPlan, ImprovementTask
+    try:
+        plan_ids = [p.id for p in db.query(ImprovementPlan).filter(ImprovementPlan.assessment_id.in_(assessment_ids)).all()]
+        if plan_ids:
+            db.query(ImprovementTask).filter(ImprovementTask.plan_id.in_(plan_ids)).delete(synchronize_session=False)
+            db.query(ImprovementPlan).filter(ImprovementPlan.id.in_(plan_ids)).delete(synchronize_session=False)
+        db.query(ImageAnalysis).filter(ImageAnalysis.assessment_id.in_(assessment_ids)).delete(synchronize_session=False)
+        db.query(AssessmentAnswer).filter(AssessmentAnswer.assessment_id.in_(assessment_ids)).delete(synchronize_session=False)
+        db.query(CategoryScore).filter(CategoryScore.assessment_id.in_(assessment_ids)).delete(synchronize_session=False)
+        db.query(Assessment).filter(Assessment.id.in_(assessment_ids)).delete(synchronize_session=False)
+    except Exception as e:
+        print(f"[cascade_delete] Warning: {e}")
+        for aid in assessment_ids:
+            a = db.query(Assessment).filter(Assessment.id == aid).first()
+            if a:
+                db.delete(a)
 
 
 @router.get("/assessments")
@@ -558,7 +580,7 @@ def list_admin_assessments(
     if facility_type:
         query = query.filter(Assessment.facility_type == facility_type)
     if not include_demo:
-        query = query.filter(Assessment.is_demo == False)
+        query = query.filter(or_(Assessment.is_demo == False, Assessment.is_demo.is_(None)))
     assessments = query.order_by(Assessment.created_at.desc()).all()
     result = []
     for a in assessments:
@@ -593,11 +615,12 @@ def delete_all_demo_assessments(
 ):
     """Xóa toàn bộ dữ liệu demo (is_demo=True)."""
     require_role("admin", "superadmin")(current_user)
-    demos = db.query(Assessment).filter(Assessment.is_demo == True).all()
+    demos = db.query(Assessment).filter(or_(Assessment.is_demo == True, Assessment.is_demo == 1)).all()
     count = len(demos)
-    for a in demos:
-        db.delete(a)
-    db.commit()
+    demo_ids = [d.id for d in demos]
+    if demo_ids:
+        _cascade_delete_assessments(db, demo_ids)
+        db.commit()
     log_action(db, current_user.id, "delete_all_demo", "assessment", None,
                None, {"count": count},
                request.client.host if request.client else None)
@@ -615,12 +638,8 @@ def bulk_delete_assessments(
     require_role("admin", "superadmin")(current_user)
     if not data.ids:
         raise HTTPException(status_code=400, detail="Danh sách ID không được rỗng")
-    deleted = 0
-    for aid in data.ids:
-        a = db.query(Assessment).filter(Assessment.id == aid).first()
-        if a:
-            db.delete(a)
-            deleted += 1
+    deleted = len(data.ids)
+    _cascade_delete_assessments(db, data.ids)
     db.commit()
     log_action(db, current_user.id, "bulk_delete_assessments", "assessment", None,
                None, {"ids": data.ids, "deleted": deleted},
@@ -641,7 +660,7 @@ def delete_assessment(
     if not a:
         raise HTTPException(status_code=404, detail="Không tìm thấy bài đánh giá")
     facility_name = a.facility_name
-    db.delete(a)
+    _cascade_delete_assessments(db, [assessment_id])
     db.commit()
     log_action(db, current_user.id, "delete_assessment", "assessment", assessment_id,
                {"facility_name": facility_name}, None,

@@ -1,7 +1,8 @@
+import uuid
 from datetime import datetime
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session, joinedload, subqueryload
-from typing import List
+from typing import List, Optional
 from database import get_db
 from models import (
     User, QuestionCategory, Question, QuestionOption,
@@ -11,7 +12,7 @@ from schemas import (
     AssessmentStart, AnswerSubmit, BulkAnswerSubmit,
     CategoryWithQuestions, AssessmentResponse
 )
-from middleware.auth_middleware import get_current_user
+from middleware.auth_middleware import get_current_user, get_optional_user, create_access_token, hash_password
 from utils.scoring import calculate_category_scores, calculate_total_score, calculate_risk_level
 
 router = APIRouter(prefix="/api/survey", tags=["Survey"])
@@ -156,25 +157,72 @@ def get_survey_categories(facility_type: str = None, db: Session = Depends(get_d
 @router.post("/start", response_model=AssessmentResponse)
 def start_assessment(
     data: AssessmentStart,
-    current_user: User = Depends(get_current_user),
+    current_user: Optional[User] = Depends(get_optional_user),
     db: Session = Depends(get_db)
 ):
-    """Start a new assessment session."""
+    """Start a new assessment session (supports both logged-in facilities and anonymous citizens)."""
+    access_token = None
+
+    # Case 2: Citizen / unmanaged facility without account -> auto-create guest session user
+    if current_user is None:
+        guest_uuid = str(uuid.uuid4())
+        guest_email = f"citizen_{guest_uuid[:8]}@fras.vn"
+        fname = data.facility_name.strip() if data.facility_name else "Công trình / Nhà ở tự do"
+        current_user = User(
+            id=guest_uuid,
+            email=guest_email,
+            password_hash=hash_password("citizen@123"),
+            full_name=fname,
+            organization="Khảo sát tự nguyện (Hộ gia đình/Công trình)",
+            province=data.province or "Tỉnh Bắc Ninh",
+            ward=data.ward,
+            latitude=data.latitude,
+            longitude=data.longitude,
+            facility_types=data.facility_type,
+            role="user",
+        )
+        db.add(current_user)
+        db.flush()
+        access_token = create_access_token({"sub": current_user.id, "role": current_user.role})
+    else:
+        # Case 1: Managed facility logged in. If facility had no coordinates in list, update GPS!
+        if data.latitude is not None and data.longitude is not None:
+            if current_user.latitude is None or current_user.longitude is None:
+                current_user.latitude = data.latitude
+                current_user.longitude = data.longitude
+                db.add(current_user)
+                db.flush()
+
+    # Determine facility address
+    addr = data.facility_address
+    if not addr:
+        parts = [p for p in [data.ward, data.province] if p]
+        addr = ", ".join(parts) if parts else (f"{current_user.ward or ''}, {current_user.province or ''}".strip(", ") or "Bắc Ninh")
+
+    fname = data.facility_name.strip() if (data.facility_name and data.facility_name.strip()) else (current_user.full_name or "Cơ sở khảo sát")
+    ftype = data.facility_type or current_user.facility_types
+
+    lat = data.latitude if data.latitude is not None else current_user.latitude
+    lng = data.longitude if data.longitude is not None else current_user.longitude
+
     assessment = Assessment(
         user_id=current_user.id,
-        facility_name=data.facility_name,
-        facility_type=data.facility_type,
-        facility_address=data.facility_address,
+        facility_name=fname,
+        facility_type=ftype,
+        facility_address=addr,
         facility_area=data.facility_area,
         worker_count=data.worker_count,
-        latitude=data.latitude if data.latitude is not None else current_user.latitude,
-        longitude=data.longitude if data.longitude is not None else current_user.longitude,
+        latitude=lat,
+        longitude=lng,
         status="in_progress",
     )
     db.add(assessment)
     db.commit()
     db.refresh(assessment)
-    return AssessmentResponse.model_validate(assessment)
+
+    resp = AssessmentResponse.model_validate(assessment)
+    resp.access_token = access_token
+    return resp
 
 
 @router.post("/answer")

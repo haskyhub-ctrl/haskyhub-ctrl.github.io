@@ -135,23 +135,30 @@ const facilityTypes = [
 ];
 
 async function initSurvey() {
-    if (!requireAuth()) return;
-
-    // Check if user has pre-assigned location (imported accounts)
     const user = api.getUser();
-    const isImportedUser = !!(user && user.facility_code);
+    surveyState.user = user;
+    surveyState.isImportedUser = !!(user && user.facility_code);
+    surveyState.isCitizen = !user;
 
-    if (isImportedUser && user.latitude && user.longitude) {
-        // Pre-fill location from user profile (imported account)
-        surveyState.userLocation = {
-            latitude: user.latitude,
-            longitude: user.longitude,
+    if (user) {
+        // Pre-fill location & details from user profile (managed facility account)
+        surveyState.facilityInfo = {
+            facility_name: user.full_name || '',
+            facility_type: user.facility_types || '',
+            province: user.province || 'Tỉnh Bắc Ninh',
+            ward: user.ward || '',
+            facility_address: [user.ward, user.province].filter(Boolean).join(', '),
         };
-        surveyState.isImportedUser = true;
-        console.log('📍 Location pre-set from profile:', surveyState.userLocation);
+        if (user.latitude && user.longitude) {
+            surveyState.userLocation = {
+                latitude: user.latitude,
+                longitude: user.longitude,
+            };
+        } else {
+            detectUserLocation();
+        }
     } else {
-        // Self-registered user: detect GPS
-        surveyState.isImportedUser = false;
+        // Unmanaged citizen / free survey: detect GPS in background
         detectUserLocation();
     }
     renderStep();
@@ -237,27 +244,79 @@ function renderStep() {
 }
 
 function renderFacilityForm(container) {
+    const user = api.getUser();
     const info = surveyState.facilityInfo || {};
-    const selectedTypes = (info.facility_type || '').split(',').map(s => s.trim());
     const draftBannerHtml = checkDraftBanner();
+    const isFacility = !!(user && user.facility_code);
+
+    // Parse pre-selected types
+    const rawTypes = (info.facility_type || '').split(',').map(s => s.trim()).filter(Boolean);
+    const hasNoType = !info.facility_type || info.facility_type === 'Chưa có loại hình';
+
+    let headerHtml = '';
+    let facilityNotice = '';
+
+    if (isFacility) {
+        headerHtml = `
+            <div class="alert alert-info" style="margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; background: rgba(30, 58, 138, 0.08); border: 1px solid rgba(30, 58, 138, 0.2); padding: 14px 18px; border-radius: 10px;">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <span style="font-size: 1.8rem;">🏢</span>
+                    <div>
+                        <div style="font-weight: 700; color: #1e3a8a; font-size: 1.05rem;">${user.full_name}</div>
+                        <div style="font-size: 0.85rem; color: var(--text-secondary);">Mã quản lý PCCC: <strong style="color: #dc2626;">${user.facility_code}</strong> • ${user.organization || 'Đơn vị quản lý'}</div>
+                    </div>
+                </div>
+                <span class="role-badge" style="background: #1e3a8a; color: white; padding: 4px 10px; border-radius: 6px; font-size: 0.8rem;">Cơ sở diện quản lý PCCC</span>
+            </div>
+        `;
+
+        if (hasNoType) {
+            facilityNotice = `
+                <div class="alert alert-warning" style="margin-bottom: 20px; background: #fffbeb; border: 1px solid #fcd34d; color: #92400e; padding: 14px 18px; border-radius: 8px;">
+                    <div style="font-weight: 700; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <span>⚠️</span> CHƯA CÓ LOẠI HÌNH TRONG DANH SÁCH
+                    </div>
+                    <p style="margin: 6px 0 0; font-size: 0.88rem; line-height: 1.5;">
+                        Cơ sở của bạn hiện chưa được gắn loại hình hoạt động. Vui lòng <strong>chọn ít nhất một loại hình</strong> trong danh mục bên dưới để hệ thống thiết lập bộ câu hỏi khảo sát phù hợp nhất trước khi bắt đầu!
+                    </p>
+                </div>
+            `;
+        }
+    } else {
+        headerHtml = `
+            <div class="alert" style="margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.2); padding: 14px 18px; border-radius: 10px;">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <span style="font-size: 1.8rem;">🏡</span>
+                    <div>
+                        <div style="font-weight: 700; color: #065f46; font-size: 1.05rem;">Khảo sát tự nguyện (Hộ gia đình / Công trình)</div>
+                        <div style="font-size: 0.85rem; color: var(--text-secondary);">Khảo sát miễn phí, kết quả bảo mật ẩn danh, không cần tài khoản.</div>
+                    </div>
+                </div>
+                <span class="role-badge" style="background: #10b981; color: white; padding: 4px 10px; border-radius: 6px; font-size: 0.8rem;">Không thuộc diện quản lý</span>
+            </div>
+        `;
+    }
 
     container.innerHTML = `
         ${draftBannerHtml}
         <div class="facility-form fade-in">
+            ${headerHtml}
             <div class="card">
-                <h2 style="margin-bottom: 8px;">📋 Thông tin Cơ sở</h2>
-                <p style="color: var(--text-secondary); margin-bottom: 24px;">Vui lòng nhập thông tin cơ sở cần đánh giá</p>
+                <h2 style="margin-bottom: 8px;">📋 Thông tin Khảo sát</h2>
+                <p style="color: var(--text-secondary); margin-bottom: 24px;">Vui lòng điền thông tin để hệ thống nạp bộ câu hỏi tương ứng</p>
                 
+                ${facilityNotice}
+
                 <div class="form-group">
-                    <label>Tên cơ sở / Công ty *</label>
-                    <input type="text" class="form-control" id="f_name" placeholder="VD: Công ty TNHH ABC" value="${info.facility_name || ''}" required>
+                    <label>Tên công trình / Nhà ở / Cơ sở khảo sát ${isFacility ? '*' : '<span style="color:var(--text-muted); font-weight:normal;">(Tùy chọn - có thể để trống)</span>'}</label>
+                    <input type="text" class="form-control" id="f_name" placeholder="${isFacility ? 'Tên cơ sở' : 'VD: Nhà ở kết hợp buôn bán / Hộ gia đình...'}" value="${info.facility_name || ''}">
                 </div>
                 
                 <div class="form-group">
-                    <label>Loại hình cơ sở *</label>
+                    <label>Bảng các loại hình hoạt động * <span style="font-size:0.82rem; color:var(--text-muted); font-weight:normal;">(Có thể chọn 2 loại hình trở lên)</span></label>
                     <div class="facility-type-grid" id="facility-type-grid">
                         ${facilityTypes.map(t => `
-                            <div class="facility-type-option ${selectedTypes.includes(t.value) ? 'selected' : ''}" data-value="${t.value}">
+                            <div class="facility-type-option ${rawTypes.includes(t.value) ? 'selected' : ''}" data-value="${t.value}">
                                 <span class="type-icon">${t.icon}</span>
                                 ${t.label}
                             </div>
@@ -265,15 +324,27 @@ function renderFacilityForm(container) {
                     </div>
                 </div>
                 
+                ${isFacility ? `
                 <div class="form-group">
-                    <label>Địa chỉ</label>
-                    <input type="text" class="form-control" id="f_address" placeholder="Địa chỉ cơ sở" value="${info.facility_address || ''}">
-                    ${!surveyState.isImportedUser ? `
-                    <button type="button" class="btn" style="margin-top: 12px; width: 100%; border: 1px dashed var(--border-color); background: transparent; color: var(--text-secondary); display: flex; align-items: center; justify-content: center; gap: 8px;" onclick="openMapPicker()">
-                        <span id="map-picker-text">📍 Ấn để chọn vị trí trên bản đồ (Tùy chọn)</span>
-                    </button>
-                    ` : ''}
+                    <label>Địa chỉ cơ sở</label>
+                    <input type="text" class="form-control" id="f_address" value="${info.facility_address || ''}" readonly style="background: rgba(0,0,0,0.02);">
                 </div>
+                ` : `
+                <div class="form-group">
+                    <label>Địa chỉ công trình / nhà ở *</label>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 10px;">
+                        <div>
+                            <label style="font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 4px; display: block;">Tỉnh / Thành phố</label>
+                            <select id="f_province" class="form-control" style="width: 100%;"></select>
+                        </div>
+                        <div>
+                            <label style="font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 4px; display: block;">Xã / Phường</label>
+                            <select id="f_ward" class="form-control" style="width: 100%;"></select>
+                        </div>
+                    </div>
+                    <input type="text" class="form-control" id="f_address_street" placeholder="Số nhà, đường/phố, thôn/xóm (Tùy chọn)" value="${info.street || ''}">
+                </div>
+                `}
             </div>
             
             <div class="survey-nav">
@@ -283,12 +354,17 @@ function renderFacilityForm(container) {
         </div>
     `;
 
-    // Facility type selection — MULTI-SELECT toggle
+    // Multi-select toggle
     document.querySelectorAll('.facility-type-option').forEach(opt => {
         opt.addEventListener('click', () => {
             opt.classList.toggle('selected');
         });
     });
+
+    // Populate dropdowns for citizen
+    if (!isFacility && typeof setupLocationDropdowns === 'function') {
+        setupLocationDropdowns('f_province', 'f_ward', info.province || 'Tỉnh Bắc Ninh', info.ward || '');
+    }
 }
 
 function renderCategoryQuestions(container, catIndex) {
@@ -419,28 +495,44 @@ function prevStep() {
 async function nextStep() {
     // Validate current step
     if (surveyState.currentStep === 0) {
-        const name = document.getElementById('f_name')?.value.trim();
+        const user = api.getUser();
+        const isFacility = !!(user && user.facility_code);
+
+        const nameInput = document.getElementById('f_name')?.value.trim();
+        let name = nameInput;
         if (!name) {
-            showToast('Vui lòng nhập tên cơ sở', 'error');
-            return;
+            name = isFacility ? user.full_name : 'Công trình / Nhà ở khảo sát';
         }
+
         const selectedTypes = document.querySelectorAll('.facility-type-option.selected');
         if (selectedTypes.length === 0) {
-            showToast('Vui lòng chọn ít nhất một loại hình cơ sở', 'error');
+            showToast('Vui lòng chọn ít nhất một loại hình hoạt động để nạp bộ câu hỏi', 'error');
             return;
         }
-        const address = document.getElementById('f_address')?.value.trim();
-        if (!address || address.length < 5) {
-            showToast('Vui lòng nhập địa chỉ cơ sở (tối thiểu 5 ký tự)', 'error');
-            document.getElementById('f_address')?.focus();
-            return;
+
+        let address = '';
+        let province = '';
+        let ward = '';
+
+        if (isFacility) {
+            province = user.province || 'Tỉnh Bắc Ninh';
+            ward = user.ward || '';
+            address = document.getElementById('f_address')?.value.trim() || [ward, province].filter(Boolean).join(', ');
+        } else {
+            province = document.getElementById('f_province')?.value || 'Tỉnh Bắc Ninh';
+            ward = document.getElementById('f_ward')?.value || '';
+            const street = document.getElementById('f_address_street')?.value.trim() || '';
+            address = [street, ward, province].filter(Boolean).join(', ');
+            if (!address) address = 'Tỉnh Bắc Ninh';
         }
-        // Collect all selected types as comma-separated
+
         const typesArray = Array.from(selectedTypes).map(el => el.dataset.value);
         surveyState.facilityInfo = {
             facility_name: name,
             facility_type: typesArray.join(','),
             facility_address: address,
+            province: province,
+            ward: ward,
             latitude: surveyState.userLocation?.latitude || null,
             longitude: surveyState.userLocation?.longitude || null,
         };
@@ -643,6 +735,9 @@ async function submitSurvey() {
                 return await api.post('/survey/start', surveyState.facilityInfo, { timeoutMs: 25000 });
             });
             surveyState.activeAssessmentId = assessment.id;
+            if (assessment.access_token) {
+                api.setToken(assessment.access_token);
+            }
             saveSurveyDraft();
         }
         updateQueueStep(1, 'done');

@@ -7,7 +7,7 @@ from models import (
     Question, QuestionOption, QuestionCategory, Recommendation
 )
 from schemas import AssessmentResponse, AssessmentDetail, CategoryScoreResponse, RecommendationResponse
-from middleware.auth_middleware import get_current_user
+from middleware.auth_middleware import get_current_user, get_optional_user
 from utils.recommendations import get_recommendations_for_assessment
 
 router = APIRouter(prefix="/api/assessments", tags=["Assessments"])
@@ -33,7 +33,7 @@ def list_assessments(
 @router.get("/map-data")
 def get_user_map_data(
     risk_level: Optional[str] = None,
-    current_user: User = Depends(get_current_user),
+    current_user: Optional[User] = Depends(get_optional_user),
     db: Session = Depends(get_db),
 ):
     """Get all completed assessments + imported facilities for map display, but hide info of others."""
@@ -56,7 +56,7 @@ def get_user_map_data(
                 
             assessed_user_ids.add(a.user_id)
             
-            is_own = a.user_id == current_user.id
+            is_own = (current_user is not None and a.user_id == current_user.id)
             results.append({
                 "id": a.id if is_own else "hidden",
                 "facility_name": a.facility_name if is_own else "",
@@ -76,30 +76,39 @@ def get_user_map_data(
 
     # 2. Imported facilities (users with coordinates) that have no assessment
     if not risk_level or risk_level == "unassessed":
-        facility_users = db.query(User).filter(
+        facility_users = db.query(
+            User.id,
+            User.full_name,
+            User.facility_types,
+            User.ward,
+            User.province,
+            User.latitude,
+            User.longitude,
+            User.organization,
+        ).filter(
             User.latitude.isnot(None),
             User.longitude.isnot(None),
             User.facility_code.isnot(None),
         ).all()
-        for u in facility_users:
-            if u.id in assessed_user_ids:
+        for u_id, u_full_name, u_types, u_ward, u_prov, u_lat, u_lng, u_org in facility_users:
+            if u_id in assessed_user_ids:
                 continue
                 
-            is_own = u.id == current_user.id
+            is_own = (current_user is not None and u_id == current_user.id)
             results.append({
-                "id": u.id if is_own else "hidden",
-                "facility_name": u.full_name if is_own else "Cơ sở chưa đánh giá",
-                "facility_type": u.facility_types,
-                "facility_address": f"{u.ward or ''}, {u.province or ''}".strip(", ") if is_own else "***",
-                "latitude": u.latitude,
-                "longitude": u.longitude,
+                "id": u_id if is_own else "hidden",
+                "facility_name": u_full_name if is_own else "Cơ sở chưa đánh giá",
+                "facility_type": u_types,
+                "facility_address": f"{u_ward or ''}, {u_prov or ''}".strip(", ") if is_own else "***",
+                "latitude": u_lat,
+                "longitude": u_lng,
                 "risk_level": "unassessed",
                 "risk_percentage": 0,
                 "total_score": 0,
                 "max_possible_score": 0,
                 "completed_at": None,
-                "user_name": u.full_name if is_own else "***",
-                "organization": (u.organization or u.full_name) if is_own else "***",
+                "user_name": u_full_name if is_own else "***",
+                "organization": (u_org or u_full_name) if is_own else "***",
                 "source": "facility",
             })
 

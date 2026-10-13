@@ -4,7 +4,7 @@ from sqlalchemy import (
     Column, String, Integer, Float, Boolean, Text, DateTime,
     ForeignKey, Enum as SAEnum
 )
-from sqlalchemy.orm import relationship
+from sqlalchemy.orm import relationship, backref
 from database import Base
 
 
@@ -122,6 +122,8 @@ class Assessment(Base):
     user = relationship("User", back_populates="assessments")
     answers = relationship("AssessmentAnswer", back_populates="assessment", cascade="all, delete-orphan")
     category_scores = relationship("CategoryScore", back_populates="assessment", cascade="all, delete-orphan")
+    image_analyses = relationship("ImageAnalysis", back_populates="assessment", cascade="all, delete-orphan")
+    improvement_plans = relationship("ImprovementPlan", back_populates="assessment", cascade="all, delete-orphan")
 
 
 class AssessmentAnswer(Base):
@@ -208,7 +210,7 @@ class ImageAnalysis(Base):
     created_at = Column(DateTime, default=datetime.utcnow)
 
     user = relationship("User", backref="image_analyses")
-    assessment = relationship("Assessment", backref="image_analyses")
+    assessment = relationship("Assessment", back_populates="image_analyses")
 
 
 class Notification(Base):
@@ -223,7 +225,7 @@ class Notification(Base):
     is_read = Column(Boolean, default=False)
     created_at = Column(DateTime, default=datetime.utcnow)
 
-    user = relationship("User", backref="notifications")
+    user = relationship("User", backref=backref("notifications", cascade="all, delete-orphan"))
 
 
 class ImprovementPlan(Base):
@@ -240,7 +242,7 @@ class ImprovementPlan(Base):
     created_at = Column(DateTime, default=datetime.utcnow)
     updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
 
-    assessment = relationship("Assessment", backref="improvement_plans")
+    assessment = relationship("Assessment", back_populates="improvement_plans")
     user = relationship("User", backref="improvement_plans")
     tasks = relationship("ImprovementTask", back_populates="plan", cascade="all, delete-orphan")
 
