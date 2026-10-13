@@ -262,3 +262,20 @@ class ImprovementTask(Base):
     created_at = Column(DateTime, default=datetime.utcnow)
 
     plan = relationship("ImprovementPlan", back_populates="tasks")
+
+
+class FireReport(Base):
+    __tablename__ = "fire_reports"
+
+    id = Column(String(36), primary_key=True, default=generate_uuid)
+    phone = Column(String(20), nullable=False)
+    location_address = Column(String(500), nullable=False)
+    latitude = Column(Float, nullable=True)
+    longitude = Column(Float, nullable=True)
+    fire_type = Column(String(100), nullable=False)
+    severity = Column(String(50), nullable=False)
+    notes = Column(Text, nullable=True)
+    image_url = Column(String(500), nullable=True)
+    status = Column(String(30), default="received")  # received, verified, dispatching, resolved, false_alarm
+    created_at = Column(DateTime, default=datetime.utcnow)
+

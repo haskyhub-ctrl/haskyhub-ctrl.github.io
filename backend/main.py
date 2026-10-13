@@ -27,7 +27,7 @@ from models import (
 from middleware.auth_middleware import hash_password
 
 # Import routers
-from routers import auth, survey, questions, assessments, admin, ai_analysis, export, aggregate, import_users, image_analysis, notifications, improvement
+from routers import auth, survey, questions, assessments, admin, ai_analysis, export, aggregate, import_users, image_analysis, notifications, improvement, emergency
 
 
 def seed_database():
@@ -238,6 +238,7 @@ app.include_router(import_users.router)
 app.include_router(image_analysis.router)
 app.include_router(notifications.router)
 app.include_router(improvement.router)
+app.include_router(emergency.router)
 
 # Serve uploaded files
 uploads_dir = os.path.join(os.path.dirname(__file__), "uploads")

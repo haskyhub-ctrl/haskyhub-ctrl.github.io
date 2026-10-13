@@ -1,0 +1,14 @@
+[
+  {
+    "id": "a506c7a3-fe37-44f6-bce3-7fdf7469162b",
+    "created_at": "14:57:50 13/10/2026",
+    "phone": "0912345678",
+    "location_address": "KCN Yên Phong, xã Long Châu, huyện Yên Phong",
+    "latitude": 21.1982,
+    "longitude": 105.9754,
+    "fire_type": "Kho hàng / Nhà xưởng",
+    "severity": "Lửa bốc cao, đang lan rộng",
+    "notes": "Khu vực xưởng 2 đang bốc khói đen đặc, có tiếng nổ",
+    "status": "received"
+  }
+]

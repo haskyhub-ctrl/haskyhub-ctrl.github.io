@@ -52,7 +52,7 @@
                 </div>
             </a>
             <div class="gov-header-actions">
-                <a href="tel:114" class="gov-hotline-btn" aria-label="Đường dây khẩn cấp 114">
+                <a href="javascript:void(0)" onclick="openEmergencyModal()" class="gov-hotline-btn" aria-label="Báo cháy khẩn cấp 114" title="Bấm để gửi thông tin báo cháy khẩn cấp 114">
                     <span class="gov-hotline-label">Báo cháy</span>
                     <span class="gov-hotline-number">114</span>
                 </a>
@@ -1560,6 +1560,454 @@
         </div>
     </div>
 
+    <!-- ============================================================
+         EMERGENCY FIRE REPORT MODAL (BÁO CHÁY 114)
+         Tối ưu đặc biệt cho điện thoại di động & màn hình cảm ứng
+         ============================================================ -->
+    <style>
+    .em-modal-backdrop {
+        position: fixed;
+        inset: 0;
+        background: rgba(15, 23, 42, 0.82);
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        z-index: 10000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px;
+        overflow-y: auto;
+    }
+    .em-modal-container {
+        background: #ffffff;
+        width: 100%;
+        max-width: 520px;
+        border-radius: 16px;
+        box-shadow: 0 25px 50px -12px rgba(220, 38, 38, 0.35), 0 0 0 1px rgba(220, 38, 38, 0.2);
+        overflow: hidden;
+        position: relative;
+        animation: emModalIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        margin: auto;
+    }
+    @keyframes emModalIn {
+        from { opacity: 0; transform: scale(0.94) translateY(12px); }
+        to { opacity: 1; transform: scale(1) translateY(0); }
+    }
+    .em-modal-header {
+        background: linear-gradient(135deg, #b91c1c 0%, #dc2626 50%, #991b1b 100%);
+        color: #ffffff;
+        padding: 16px 20px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+    .em-siren-icon {
+        font-size: 2rem;
+        line-height: 1;
+        animation: emPulse 1.2s infinite alternate ease-in-out;
+    }
+    @keyframes emPulse {
+        from { transform: scale(1); filter: drop-shadow(0 0 2px rgba(255,255,255,0.8)); }
+        to { transform: scale(1.15); filter: drop-shadow(0 0 8px rgba(254,202,202,1)); }
+    }
+    .em-header-text h3 {
+        margin: 0;
+        font-size: 1.15rem;
+        font-weight: 900;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        color: #fff;
+    }
+    .em-header-text p {
+        margin: 2px 0 0;
+        font-size: 0.78rem;
+        opacity: 0.92;
+        font-weight: 500;
+    }
+    .em-modal-close {
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        background: rgba(0,0,0,0.25);
+        border: none;
+        color: #fff;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 1.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.2s;
+    }
+    .em-modal-close:hover {
+        background: rgba(0,0,0,0.45);
+    }
+    .em-modal-body {
+        padding: 18px 20px 22px;
+        max-height: calc(88vh - 80px);
+        overflow-y: auto;
+    }
+    .em-legal-warning {
+        background: #fef2f2;
+        border: 1px solid #fecaca;
+        border-left: 4px solid #dc2626;
+        border-radius: 8px;
+        padding: 10px 12px;
+        margin-bottom: 16px;
+        font-size: 0.8rem;
+        color: #991b1b;
+        line-height: 1.45;
+    }
+    .em-legal-warning strong {
+        color: #7f1d1d;
+    }
+    .em-form-group {
+        margin-bottom: 14px;
+    }
+    .em-label {
+        display: block;
+        font-size: 0.86rem;
+        font-weight: 700;
+        color: #1e293b;
+        margin-bottom: 6px;
+    }
+    .em-label span.req {
+        color: #dc2626;
+    }
+    .em-input {
+        width: 100%;
+        padding: 11px 14px;
+        border: 1.5px solid #cbd5e1;
+        border-radius: 10px;
+        font-size: 0.95rem;
+        color: #0f172a;
+        background: #ffffff;
+        box-sizing: border-box;
+        transition: border-color 0.2s, box-shadow 0.2s;
+        font-family: inherit;
+    }
+    .em-input:focus {
+        outline: none;
+        border-color: #dc2626;
+        box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15);
+    }
+    .em-loc-bar {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 6px;
+    }
+    .em-btn-loc {
+        background: #eff6ff;
+        border: 1px solid #bfdbfe;
+        color: #1d4ed8;
+        font-size: 0.82rem;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        transition: all 0.2s;
+    }
+    .em-btn-loc:hover {
+        background: #dbeafe;
+        border-color: #93c5fd;
+    }
+    .em-chips-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+    @media (min-width: 440px) {
+        .em-chips-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    .em-chip {
+        padding: 10px 8px;
+        border: 1.5px solid #e2e8f0;
+        border-radius: 10px;
+        background: #f8fafc;
+        font-size: 0.82rem;
+        font-weight: 600;
+        color: #334155;
+        cursor: pointer;
+        text-align: center;
+        user-select: none;
+        transition: all 0.2s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+    }
+    .em-chip .em-chip-icon {
+        font-size: 1.3rem;
+    }
+    .em-chip.selected {
+        border-color: #dc2626;
+        background: #fef2f2;
+        color: #991b1b;
+        box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.2);
+    }
+    .em-severity-list {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+    .em-severity-item {
+        padding: 10px 14px;
+        border: 1.5px solid #e2e8f0;
+        border-radius: 10px;
+        background: #f8fafc;
+        font-size: 0.85rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        transition: all 0.2s;
+        user-select: none;
+    }
+    .em-severity-item.selected {
+        border-color: #dc2626;
+        background: #fff1f2;
+        font-weight: 700;
+        color: #991b1b;
+    }
+    .em-submit-btn {
+        width: 100%;
+        background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+        color: #ffffff;
+        border: none;
+        padding: 14px 20px;
+        border-radius: 12px;
+        font-size: 1.05rem;
+        font-weight: 900;
+        letter-spacing: 0.5px;
+        cursor: pointer;
+        box-shadow: 0 10px 20px -5px rgba(220, 38, 38, 0.4);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        transition: transform 0.15s, box-shadow 0.15s;
+        text-transform: uppercase;
+        margin-top: 14px;
+    }
+    .em-submit-btn:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 14px 24px -5px rgba(220, 38, 38, 0.5);
+    }
+    .em-submit-btn:active {
+        transform: translateY(1px);
+    }
+    .em-submit-btn:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+    .em-call-direct {
+        text-align: center;
+        margin-top: 12px;
+        padding-top: 10px;
+        border-top: 1px dashed #e2e8f0;
+    }
+    .em-call-link {
+        color: #dc2626;
+        font-weight: 700;
+        font-size: 0.95rem;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+    }
+    .em-call-link:hover {
+        text-decoration: underline;
+    }
+    .em-success-box {
+        text-align: center;
+        padding: 24px 12px 16px;
+    }
+    .em-success-icon {
+        font-size: 3.8rem;
+        line-height: 1;
+        margin-bottom: 12px;
+        animation: emPop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    @keyframes emPop {
+        from { transform: scale(0.5); opacity: 0; }
+        to { transform: scale(1); opacity: 1; }
+    }
+    </style>
+
+    <div id="emergency-modal" class="em-modal-backdrop" style="display:none;" onclick="if(event.target===this) closeEmergencyModal()">
+        <div class="em-modal-container">
+            <div class="em-modal-header">
+                <span class="em-siren-icon">🚨</span>
+                <div class="em-header-text">
+                    <h3>BÁO CHÁY KHẨN CẤP 114</h3>
+                    <p>Trung tâm Thông tin Chỉ huy 114 — Cảnh sát PCCC & CNCH Bắc Ninh</p>
+                </div>
+                <button type="button" class="em-modal-close" onclick="closeEmergencyModal()" title="Đóng">&times;</button>
+            </div>
+
+            <div class="em-modal-body">
+                <!-- CẢNH BÁO PHÁP LÝ -->
+                <div class="em-legal-warning">
+                    <strong>⚠️ CẢNH BÁO PHÁP LÝ:</strong> Hành vi báo cháy giả, cung cấp thông tin sai sự thật sẽ bị xử phạt vi phạm hành chính từ <strong>4.000.000đ đến 6.000.000đ</strong> theo Điều 42 Nghị định 144/2021/NĐ-CP và có thể bị truy cứu trách nhiệm hình sự nếu gây hậu quả nghiêm trọng!
+                </div>
+
+                <!-- Form báo cháy -->
+                <form id="emergency-form" onsubmit="submitFireReport(event)">
+                    <div id="em-alert-error" style="display:none; background:#fee2e2; border:1px solid #f87171; color:#991b1b; padding:10px 14px; border-radius:8px; font-size:0.85rem; margin-bottom:12px;"></div>
+
+                    <!-- 1. Địa điểm cháy -->
+                    <div class="em-form-group">
+                        <label class="em-label" for="em-address">
+                            📍 Địa điểm xảy ra cháy <span class="req">*</span>
+                        </label>
+                        <input type="text" id="em-address" class="em-input" placeholder="Số nhà, tên đường, thôn xóm, xã/phường (hoặc tên công trình)..." required>
+                        <div class="em-loc-bar">
+                            <button type="button" class="em-btn-loc" id="em-btn-gps" onclick="handleEmergencyLocation()">
+                                <span id="em-gps-icon">📍</span> <span id="em-gps-btn-text">Định vị GPS đám cháy</span>
+                            </button>
+                            <span id="em-gps-status" style="font-size:0.78rem; color:#64748b;">(Bấm để gửi tọa độ chính xác)</span>
+                        </div>
+                        <input type="hidden" id="em-lat">
+                        <input type="hidden" id="em-lng">
+                    </div>
+
+                    <!-- 2. Loại hình cháy -->
+                    <div class="em-form-group">
+                        <label class="em-label">
+                            🏢 Loại hình xảy ra cháy <span class="req">*</span>
+                        </label>
+                        <div class="em-chips-grid" id="em-type-grid">
+                            <div class="em-chip selected" onclick="selectFireType(this, 'Nhà ở / Nhà trọ')">
+                                <span class="em-chip-icon">🏠</span>
+                                <span>Nhà ở / Nhà trọ</span>
+                            </div>
+                            <div class="em-chip" onclick="selectFireType(this, 'Kho hàng / Nhà xưởng')">
+                                <span class="em-chip-icon">🏭</span>
+                                <span>Kho hàng / Xưởng</span>
+                            </div>
+                            <div class="em-chip" onclick="selectFireType(this, 'Chung cư / Nhà cao tầng')">
+                                <span class="em-chip-icon">🏢</span>
+                                <span>Chung cư / Tòa nhà</span>
+                            </div>
+                            <div class="em-chip" onclick="selectFireType(this, 'Nhà hàng / Quán karaoke')">
+                                <span class="em-chip-icon">🍽️</span>
+                                <span>Nhà hàng / Karaoke</span>
+                            </div>
+                            <div class="em-chip" onclick="selectFireType(this, 'Phương tiện giao thông')">
+                                <span class="em-chip-icon">🚗</span>
+                                <span>Xe / Phương tiện</span>
+                            </div>
+                            <div class="em-chip" onclick="selectFireType(this, 'Rác / Phế liệu / Cỏ cây')">
+                                <span class="em-chip-icon">🌲</span>
+                                <span>Rác / Phế liệu / Khác</span>
+                            </div>
+                        </div>
+                        <input type="hidden" id="em-fire-type" value="Nhà ở / Nhà trọ">
+                    </div>
+
+                    <!-- 3. Số điện thoại người cung cấp thông tin -->
+                    <div class="em-form-group">
+                        <label class="em-label" for="em-phone">
+                            📞 Số điện thoại người báo tin <span class="req">*</span>
+                        </label>
+                        <input type="tel" id="em-phone" class="em-input" placeholder="VD: 0912345678" pattern="[0-9]{9,11}" required>
+                        <div style="font-size:0.78rem; color:#64748b; margin-top:4px;">
+                            Cán bộ trực chỉ huy 114 sẽ <strong>gọi lại ngay lập tức</strong> để xác minh và hướng dẫn cứu nạn.
+                        </div>
+                    </div>
+
+                    <!-- 4. Mức độ cháy -->
+                    <div class="em-form-group">
+                        <label class="em-label">
+                            🔥 Mức độ cháy / Tình hình hiện tại <span class="req">*</span>
+                        </label>
+                        <div class="em-severity-list">
+                            <div class="em-severity-item" onclick="selectSeverity(this, 'Khói nhiều / Lửa nhỏ mới phát sinh')">
+                                <span style="font-size:1.2rem;">🟡</span>
+                                <div>
+                                    <div style="font-weight:600;">Khói bốc lên, lửa nhỏ (mới phát sinh)</div>
+                                    <div style="font-size:0.75rem; color:#64748b;">Đang dùng phương tiện tại chỗ dập nhưng chưa tắt</div>
+                                </div>
+                            </div>
+                            <div class="em-severity-item selected" onclick="selectSeverity(this, 'Lửa bốc cao, đang lan rộng')">
+                                <span style="font-size:1.2rem;">🟠</span>
+                                <div>
+                                    <div style="font-weight:600;">Lửa bốc cao, có tiếng nổ (đang lan rộng)</div>
+                                    <div style="font-size:0.75rem; color:#64748b;">Có nguy cơ cháy lan sang các nhà/khu vực lân cận</div>
+                                </div>
+                            </div>
+                            <div class="em-severity-item" onclick="selectSeverity(this, 'Cháy dữ dội / Có người mắc kẹt (CẤP BÁO)')">
+                                <span style="font-size:1.2rem;">🔴</span>
+                                <div>
+                                    <div style="font-weight:700; color:#dc2626;">Cháy dữ dội / Có người mắc kẹt (CẤP BÁO)</div>
+                                    <div style="font-size:0.75rem; color:#dc2626;">Cần lực lượng cứu hộ và xe thang đến khẩn cấp!</div>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="hidden" id="em-severity" value="Lửa bốc cao, đang lan rộng">
+                    </div>
+
+                    <!-- 5. Ghi chú thêm (Tùy chọn) -->
+                    <div class="em-form-group">
+                        <label class="em-label" for="em-notes">
+                            📝 Ghi chú hiện trường <span style="font-weight:normal; color:#64748b; font-size:0.8rem;">(Tùy chọn)</span>
+                        </label>
+                        <textarea id="em-notes" class="em-input" rows="2" placeholder="VD: Đường vào ngõ rộng 3m, có bình gas ở tầng 1, người đang ở ban công tầng 2..."></textarea>
+                    </div>
+
+                    <!-- 6. NÚT BÁO CHÁY TO -->
+                    <button type="submit" id="em-submit-button" class="em-submit-btn">
+                        <span>🔥</span> BÁO CHÁY NGAY CHO 114
+                    </button>
+                    
+                    <div class="em-call-direct">
+                        <a href="tel:114" class="em-call-link">
+                            <span>📞</span> Hoặc bấm để gọi trực tiếp đường dây nóng 114
+                        </a>
+                    </div>
+                </form>
+
+                <!-- Màn hình kết quả sau khi gửi thành công -->
+                <div id="em-success-view" class="em-success-box" style="display:none;">
+                    <div class="em-success-icon">🚒</div>
+                    <h3 style="color:#15803d; font-size:1.35rem; font-weight:900; margin:0 0 10px; text-transform:uppercase;">
+                        ✅ ĐÃ TIẾP NHẬN THÔNG TIN!
+                    </h3>
+                    <div style="background:#f0fdf4; border:1px solid #86efac; border-radius:12px; padding:16px; margin-bottom:18px; text-align:left;">
+                        <p style="font-size:1rem; color:#166534; margin:0 0 10px; font-weight:600; line-height:1.5;">
+                            Vui lòng <strong>nghe máy để xác minh thông tin!</strong>
+                        </p>
+                        <p style="font-size:0.88rem; color:#1e293b; margin:0; line-height:1.5;">
+                            Cán bộ Trung tâm Chỉ huy 114 - Cảnh sát PCCC Bắc Ninh đang liên hệ lại ngay tới số điện thoại: <strong id="em-confirm-phone" style="color:#dc2626; font-size:1.05rem;"></strong> để xác minh và điều động xe chữa cháy tới hiện trường!
+                        </p>
+                    </div>
+                    
+                    <div style="font-size:0.8rem; color:#64748b; margin-bottom:18px;">
+                        Mã tin báo: <strong id="em-confirm-id" style="color:#0f172a;"></strong> • Thời gian tiếp nhận: <span id="em-confirm-time"></span>
+                    </div>
+
+                    <div style="display:flex; flex-direction:column; gap:10px;">
+                        <a href="tel:114" class="em-submit-btn" style="text-decoration:none; background:#dc2626;">
+                            <span>📞</span> BẤM GỌI 114 TRỰC TIẾP
+                        </a>
+                        <button type="button" class="role-btn-ghost" onclick="closeEmergencyModal()" style="border:1px solid #cbd5e1; padding:10px; border-radius:10px; background:#f8fafc; font-weight:600; cursor:pointer;">
+                            Đóng cửa sổ
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="/js/api.js"></script>
     <script src="/js/homepage.js"></script>
     <script>
@@ -1704,9 +2152,184 @@
             }
         }
 
-        // Escape key to close modal
+        // ============================================================
+        // EMERGENCY FIRE REPORT 114 MODAL LOGIC
+        // ============================================================
+        function openEmergencyModal() {
+            const modal = document.getElementById('emergency-modal');
+            if (!modal) return;
+
+            // Reset form view
+            const form = document.getElementById('emergency-form');
+            const successView = document.getElementById('em-success-view');
+            const errBox = document.getElementById('em-alert-error');
+            const submitBtn = document.getElementById('em-submit-button');
+
+            if (form) form.style.display = 'block';
+            if (successView) successView.style.display = 'none';
+            if (errBox) errBox.style.display = 'none';
+            if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<span>🔥</span> BÁO CHÁY NGAY CHO 114';
+            }
+
+            // Pre-fill phone or location if known from user
+            const user = (typeof api !== 'undefined') ? api.getUser() : null;
+            if (user) {
+                const phoneInput = document.getElementById('em-phone');
+                if (phoneInput && !phoneInput.value && user.phone) {
+                    phoneInput.value = user.phone;
+                }
+                const addrInput = document.getElementById('em-address');
+                if (addrInput && !addrInput.value) {
+                    const fullAddr = [user.full_name, user.ward, user.province].filter(Boolean).join(', ');
+                    if (fullAddr) addrInput.value = fullAddr;
+                }
+            }
+
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+            setTimeout(() => {
+                document.getElementById('em-address')?.focus();
+            }, 100);
+        }
+
+        function closeEmergencyModal() {
+            const modal = document.getElementById('emergency-modal');
+            if (modal) modal.style.display = 'none';
+            document.body.style.overflow = '';
+        }
+
+        function selectFireType(el, typeName) {
+            document.querySelectorAll('#em-type-grid .em-chip').forEach(c => c.classList.remove('selected'));
+            el.classList.add('selected');
+            document.getElementById('em-fire-type').value = typeName;
+        }
+
+        function selectSeverity(el, severityName) {
+            document.querySelectorAll('.em-severity-item').forEach(c => c.classList.remove('selected'));
+            el.classList.add('selected');
+            document.getElementById('em-severity').value = severityName;
+        }
+
+        function handleEmergencyLocation() {
+            const btnText = document.getElementById('em-gps-btn-text');
+            const btnIcon = document.getElementById('em-gps-icon');
+            const statusEl = document.getElementById('em-gps-status');
+
+            if (!('geolocation' in navigator)) {
+                if (statusEl) statusEl.textContent = 'Trình duyệt không hỗ trợ định vị';
+                return;
+            }
+
+            if (btnText) btnText.textContent = 'Đang định vị...';
+            if (btnIcon) btnIcon.textContent = '⏳';
+            if (statusEl) statusEl.innerHTML = '<span style="color:#d97706;">Đang lấy tọa độ GPS... Vui lòng bấm "Cho phép"</span>';
+
+            navigator.geolocation.getCurrentPosition(
+                (pos) => {
+                    const lat = pos.coords.latitude;
+                    const lng = pos.coords.longitude;
+                    document.getElementById('em-lat').value = lat;
+                    document.getElementById('em-lng').value = lng;
+                    if (btnText) btnText.textContent = 'Đã có tọa độ';
+                    if (btnIcon) btnIcon.textContent = '✓';
+                    if (statusEl) {
+                        statusEl.innerHTML = `<span style="color:#16a34a; font-weight:600;">✓ GPS: ${lat.toFixed(5)}, ${lng.toFixed(5)}</span>`;
+                    }
+                },
+                (err) => {
+                    if (btnText) btnText.textContent = 'Thử lại GPS';
+                    if (btnIcon) btnIcon.textContent = '📍';
+                    if (statusEl) {
+                        statusEl.innerHTML = `<span style="color:#dc2626;">Chưa lấy được GPS (vui lòng gõ địa chỉ vào ô)</span>`;
+                    }
+                },
+                { enableHighAccuracy: true, timeout: 8000 }
+            );
+        }
+
+        async function submitFireReport(event) {
+            event.preventDefault();
+            const address = document.getElementById('em-address').value.trim();
+            const phone = document.getElementById('em-phone').value.trim();
+            const fireType = document.getElementById('em-fire-type').value;
+            const severity = document.getElementById('em-severity').value;
+            const notes = document.getElementById('em-notes').value.trim();
+            const latVal = document.getElementById('em-lat').value;
+            const lngVal = document.getElementById('em-lng').value;
+            const errBox = document.getElementById('em-alert-error');
+            const btn = document.getElementById('em-submit-button');
+
+            if (!address) {
+                if (errBox) {
+                    errBox.textContent = 'Vui lòng cung cấp địa điểm xảy ra đám cháy.';
+                    errBox.style.display = 'block';
+                }
+                return;
+            }
+            if (!phone) {
+                if (errBox) {
+                    errBox.textContent = 'Vui lòng cung cấp số điện thoại để cán bộ 114 liên hệ xác minh ngay.';
+                    errBox.style.display = 'block';
+                }
+                return;
+            }
+
+            btn.disabled = true;
+            btn.innerHTML = '<span class="loading-spinner"></span> Đang gửi tin báo tới Trung tâm Chỉ huy 114...';
+            if (errBox) errBox.style.display = 'none';
+
+            const payload = {
+                phone: phone,
+                location_address: address,
+                fire_type: fireType,
+                severity: severity,
+                notes: notes || null,
+                latitude: latVal ? parseFloat(latVal) : null,
+                longitude: lngVal ? parseFloat(lngVal) : null
+            };
+
+            try {
+                const response = await fetch('/api/emergency/report', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    const errorData = await response.json().catch(() => ({}));
+                    throw new Error(errorData.detail || 'Không thể gửi tin báo cháy lúc này');
+                }
+
+                const result = await response.json();
+
+                // Switch to success view
+                document.getElementById('emergency-form').style.display = 'none';
+                const successView = document.getElementById('em-success-view');
+                if (successView) {
+                    document.getElementById('em-confirm-phone').textContent = phone;
+                    document.getElementById('em-confirm-id').textContent = result.report_id ? result.report_id.substring(0, 8).toUpperCase() : '114-BN';
+                    const timeStr = new Date().toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit', second: '2-digit' }) + ' ' + new Date().toLocaleDateString('vi-VN');
+                    document.getElementById('em-confirm-time').textContent = timeStr;
+                    successView.style.display = 'block';
+                }
+            } catch (err) {
+                btn.disabled = false;
+                btn.innerHTML = '<span>🔥</span> BÁO CHÁY NGAY CHO 114';
+                if (errBox) {
+                    errBox.textContent = '⚠️ Lỗi gửi tin báo: ' + err.message + '. Vui lòng gọi trực tiếp 114 ngay lập tức!';
+                    errBox.style.display = 'block';
+                }
+            }
+        }
+
+        // Escape key to close modals
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') closeRoleModal();
+            if (e.key === 'Escape') {
+                closeRoleModal();
+                closeEmergencyModal();
+            }
         });
 
         onReady(() => { setupNavbar(); });

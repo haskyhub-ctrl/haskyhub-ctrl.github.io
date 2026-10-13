@@ -154,37 +154,57 @@ async function initSurvey() {
                 latitude: user.latitude,
                 longitude: user.longitude,
             };
-        } else {
-            detectUserLocation();
         }
-    } else {
-        // Unmanaged citizen / free survey: detect GPS in background
-        detectUserLocation();
     }
+    // Do NOT trigger browser geolocation automatically on load - let user click manually if desired
     renderStep();
 }
 
-function detectUserLocationUI() {
-    // Chạy ngầm lập tức để lấy vị trí, không hiển thị giao diện tải
-    if ('geolocation' in navigator) {
-        navigator.geolocation.getCurrentPosition(
-            (pos) => {
-                surveyState.userLocation = {
-                    latitude: pos.coords.latitude,
-                    longitude: pos.coords.longitude,
-                };
-                console.log('📍 Location detected silently:', surveyState.userLocation);
-            },
-            (err) => {
-                console.log('📍 Location not available silently:', err.message);
-            },
-            { timeout: 10000, enableHighAccuracy: true }
-        );
-    }
-}
+function handleManualGetLocation() {
+    const btnText = document.getElementById('loc-btn-text');
+    const btnIcon = document.getElementById('loc-btn-icon');
+    const badge = document.getElementById('loc-status-badge');
 
-function detectUserLocation() {
-    detectUserLocationUI();
+    if (!('geolocation' in navigator)) {
+        showToast('Trình duyệt của bạn không hỗ trợ định vị GPS.', 'warning');
+        return;
+    }
+
+    if (btnText) btnText.textContent = 'Đang lấy vị trí...';
+    if (btnIcon) btnIcon.textContent = '⏳';
+    if (badge) badge.innerHTML = '<span style="color:#d97706;">⏳ Đang yêu cầu quyền GPS từ thiết bị... Vui lòng bấm "Cho phép" khi trình duyệt hỏi.</span>';
+
+    navigator.geolocation.getCurrentPosition(
+        (pos) => {
+            surveyState.userLocation = {
+                latitude: pos.coords.latitude,
+                longitude: pos.coords.longitude,
+            };
+            if (btnText) btnText.textContent = 'Cập nhật lại vị trí';
+            if (btnIcon) btnIcon.textContent = '📍';
+            if (badge) {
+                badge.innerHTML = `<span style="color: #16a34a; font-weight: 500;">✓ Đã xác định tọa độ GPS: <strong>${pos.coords.latitude.toFixed(5)}, ${pos.coords.longitude.toFixed(5)}</strong> (Độ chính xác: ±${Math.round(pos.coords.accuracy)}m)</span>`;
+            }
+            showToast('Đã xác định vị trí thành công!', 'success');
+        },
+        (err) => {
+            if (btnText) btnText.textContent = 'Thử lấy lại vị trí';
+            if (btnIcon) btnIcon.textContent = '📍';
+            let errMsg = 'Không lấy được vị trí GPS.';
+            if (err.code === 1) { // PERMISSION_DENIED
+                errMsg = 'Bạn đã từ chối cấp quyền vị trí (không bắt buộc, bạn vẫn hoàn thành khảo sát bình thường).';
+            } else if (err.code === 2) {
+                errMsg = 'Không thể xác định vị trí của thiết bị.';
+            } else if (err.code === 3) {
+                errMsg = 'Quá thời gian chờ phản hồi GPS.';
+            }
+            if (badge) {
+                badge.innerHTML = `<span style="color: #64748b;">ℹ️ ${errMsg} Hệ thống sẽ tự động sử dụng vị trí xã/phường.</span>`;
+            }
+            showToast(errMsg, 'info');
+        },
+        { enableHighAccuracy: true, timeout: 10000, maximumAge: 60000 }
+    );
 }
 
 async function loadCategoriesForFacilityType(facilityType) {
@@ -345,6 +365,27 @@ function renderFacilityForm(container) {
                     <input type="text" class="form-control" id="f_address_street" placeholder="Số nhà, đường/phố, thôn/xóm (Tùy chọn)" value="${info.street || ''}">
                 </div>
                 `}
+
+                <div class="form-group" style="margin-top: 20px; padding: 16px; background: #f8fafc; border-radius: 10px; border: 1px dashed #cbd5e1;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px;">
+                        <div style="flex: 1; min-width: 260px;">
+                            <label style="font-weight: 600; font-size: 0.95rem; color: #1e293b; margin-bottom: 4px; display: block;">
+                                📍 Vị trí tọa độ GPS <span style="font-weight: normal; font-size: 0.85rem; color: #64748b;">(có thể bỏ trống)</span>
+                            </label>
+                            <div style="font-size: 0.83rem; color: #64748b; line-height: 1.45;">
+                                📍 Vị trí chỉ dùng để gắn chấm an toàn lên Bản đồ rủi ro PCCC Bắc Ninh và tính khoảng cách tới trụ nước gần nhất (có thể bỏ trống).
+                            </div>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-outline btn-sm" id="btn-get-location" onclick="handleManualGetLocation()" style="display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; font-weight: 600; border-color: #0284c7; color: #0284c7;">
+                                <span id="loc-btn-icon">📍</span> <span id="loc-btn-text">${surveyState.userLocation ? 'Cập nhật lại vị trí' : 'Lấy vị trí hiện tại'}</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="loc-status-badge" style="margin-top: 10px; font-size: 0.85rem; ${surveyState.userLocation ? 'color: #16a34a; font-weight: 500;' : 'color: #64748b;'}">
+                        ${surveyState.userLocation ? `✓ Đã xác định tọa độ: <strong>${surveyState.userLocation.latitude.toFixed(5)}, ${surveyState.userLocation.longitude.toFixed(5)}</strong>` : 'Chưa thu thập tọa độ (hệ thống sẽ tự động ước tính theo vị trí xã/phường nếu bỏ trống).'}
+                    </div>
+                </div>
             </div>
             
             <div class="survey-nav">
