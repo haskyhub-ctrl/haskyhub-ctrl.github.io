@@ -12,36 +12,54 @@
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            padding: 20px;
+            padding: 24px 16px;
+            background: linear-gradient(135deg, #0b132b 0%, #1c2541 100%);
         }
 
         .auth-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-xl);
-            padding: 40px;
+            background: #ffffff;
+            border: 2px solid #b91c1c;
+            border-radius: 0 !important;
+            padding: 36px 32px;
             width: 100%;
             max-width: 480px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
         }
 
         .auth-card .logo {
             text-align: center;
-            margin-bottom: 32px;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 2px solid #f1f5f9;
         }
 
-        .auth-card .logo .icon {
-            font-size: 2.5rem;
-            display: block;
-            margin-bottom: 8px;
+        .auth-card .logo img {
+            width: 64px;
+            height: 64px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+
+        .auth-card .agency-title {
+            font-size: 0.82rem;
+            font-weight: 800;
+            color: #b91c1c;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 4px;
         }
 
         .auth-card .logo h2 {
-            font-size: 1.4rem;
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: #0f172a;
+            text-transform: uppercase;
         }
 
         .auth-card .logo p {
             color: var(--text-secondary);
-            font-size: 0.9rem;
+            font-size: 0.88rem;
+            margin-top: 4px;
         }
 
         .auth-footer {
@@ -57,9 +75,10 @@
     <div class="auth-page">
         <div class="auth-card fade-in">
             <div class="logo">
-                <span class="icon"></span>
+                <img src="/img/logo-cand.png" alt="CAND">
+                <div class="agency-title">Công an TP Bắc Ninh • PCCC & CNCH</div>
                 <h2>Đăng ký tài khoản</h2>
-                <p>Tạo tài khoản để bắt đầu đánh giá</p>
+                <p>Tạo tài khoản phục vụ khảo sát an toàn PCCC</p>
             </div>
             <form id="register-form">
                 <div class="form-group">

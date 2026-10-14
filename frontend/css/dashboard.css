@@ -2,6 +2,10 @@
    Dashboard Styles
    ===================================================== */
 
+* {
+    border-radius: 0 !important;
+}
+
 .dashboard-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
