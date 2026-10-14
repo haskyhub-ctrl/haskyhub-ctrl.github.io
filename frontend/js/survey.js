@@ -276,7 +276,9 @@ function renderFacilityForm(container) {
     const user = api.getUser();
     const info = surveyState.facilityInfo || {};
     const draftBannerHtml = checkDraftBanner();
-    const isFacility = !!(user && user.facility_code);
+    const isFacility = !!(user && user.facility_code) || !!info.facility_code;
+    const facCode = (user && user.facility_code) || info.facility_code || '';
+    const facName = (user && user.full_name) || info.facility_name || (facCode ? `Cơ sở quản lý PCCC (${facCode})` : 'Cơ sở quản lý');
 
     // Parse pre-selected types
     const rawTypes = (info.facility_type || '').split(',').map(s => s.trim()).filter(Boolean);
@@ -287,15 +289,15 @@ function renderFacilityForm(container) {
 
     if (isFacility) {
         headerHtml = `
-            <div class="alert alert-info" style="margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; background: rgba(30, 58, 138, 0.08); border: 1px solid rgba(30, 58, 138, 0.2); padding: 14px 18px; border-radius: 10px;">
+            <div class="alert alert-info" style="margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; background: rgba(30, 58, 138, 0.08); border: 1px solid rgba(30, 58, 138, 0.2); padding: 14px 18px; border-radius: 0 !important;">
                 <div style="display: flex; align-items: center; gap: 12px;">
                     <span style="font-size: 1.8rem;">🏢</span>
                     <div>
-                        <div style="font-weight: 700; color: #1e3a8a; font-size: 1.05rem;">${user.full_name}</div>
-                        <div style="font-size: 0.85rem; color: var(--text-secondary);">Mã quản lý PCCC: <strong style="color: #dc2626;">${user.facility_code}</strong> • ${user.organization || 'Đơn vị quản lý'}</div>
+                        <div style="font-weight: 700; color: #1e3a8a; font-size: 1.05rem;">${facName}</div>
+                        <div style="font-size: 0.85rem; color: var(--text-secondary);">Mã quản lý PCCC: <strong style="color: #dc2626;">${facCode}</strong> • Công an TP Bắc Ninh</div>
                     </div>
                 </div>
-                <span class="role-badge" style="background: #1e3a8a; color: white; padding: 4px 10px; border-radius: 6px; font-size: 0.8rem;">Cơ sở diện quản lý PCCC</span>
+                <span class="role-badge" style="background: #1e3a8a; color: white; padding: 4px 10px; border-radius: 0; font-size: 0.8rem; font-weight:700;">Cơ sở diện quản lý PCCC</span>
             </div>
         `;
 

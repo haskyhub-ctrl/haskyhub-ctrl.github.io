@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cổng Đăng nhập Cán bộ Quản trị - PCCC Bắc Ninh</title>
+    <title>Đăng nhập Hệ thống - PCCC Bắc Ninh</title>
     <link rel="stylesheet" href="/css/main.css">
     <style>
         .admin-auth-page {
@@ -24,7 +24,7 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
             padding: 36px 32px;
             width: 100%;
-            max-width: 440px;
+            max-width: 450px;
         }
 
         .admin-auth-header {
@@ -50,7 +50,7 @@
         }
 
         .admin-auth-title {
-            font-size: 1.15rem;
+            font-size: 1.25rem;
             font-weight: 700;
             color: #0f172a;
             margin: 6px 0 4px 0;
@@ -58,15 +58,15 @@
         }
 
         .admin-auth-sub {
-            font-size: 0.8rem;
+            font-size: 0.82rem;
             color: #64748b;
         }
 
         .admin-auth-badge {
             display: inline-block;
-            background: #fef2f2;
-            color: #b91c1c;
-            border: 1px solid #fecaca;
+            background: #f1f5f9;
+            color: #1e3a8a;
+            border: 1px solid #cbd5e1;
             font-size: 0.72rem;
             font-weight: 700;
             text-transform: uppercase;
@@ -128,12 +128,12 @@
 
         .admin-sec-notice {
             background: #f8fafc;
-            border-left: 3px solid #b91c1c;
+            border-left: 3px solid #1e3a8a;
             padding: 10px 12px;
             margin-top: 20px;
-            font-size: 0.75rem;
-            line-height: 1.45;
-            color: #475569;
+            font-size: 0.78rem;
+            line-height: 1.5;
+            color: #334155;
         }
 
         .admin-auth-back {
@@ -141,6 +141,9 @@
             margin-top: 20px;
             padding-top: 14px;
             border-top: 1px solid #f1f5f9;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
         }
 
         .admin-auth-back a {
@@ -173,47 +176,55 @@
             <div class="admin-auth-header">
                 <img src="/img/logo-cand.png" alt="Biểu tượng Công an nhân dân Việt Nam">
                 <div class="admin-auth-agency">Công an thành phố Bắc Ninh</div>
-                <h1 class="admin-auth-title">Cổng Cán bộ Quản trị</h1>
+                <h1 class="admin-auth-title">Đăng nhập Hệ thống</h1>
                 <div class="admin-auth-sub">Hệ thống Đánh giá Nguy cơ Cháy Nổ (FRAS)</div>
-                <div class="admin-auth-badge">Khu vực bảo mật nội bộ</div>
+                <div class="admin-auth-badge">Dành cho Cơ sở Quản lý & Cán bộ PCCC</div>
             </div>
 
             <div id="login-error" class="role-alert-error" style="display:none;"></div>
 
-            <form id="admin-login-form" onsubmit="handleAdminLogin(event)">
+            <form id="admin-login-form" onsubmit="handleUnifiedLogin(event)">
                 <div class="form-group">
-                    <label for="admin-email">Tài khoản / Email công vụ <span style="color:#b91c1c;">*</span></label>
-                    <input type="text" id="admin-email" placeholder="Ví dụ: admin@fras.vn" required autofocus autocomplete="username">
+                    <label for="admin-email">Mã cơ sở (13 số) hoặc Email Cán bộ <span style="color:#b91c1c;">*</span></label>
+                    <input type="text" id="admin-email" placeholder="Ví dụ: 2426200090176 hoặc admin@fras.vn" required autofocus autocomplete="username">
                 </div>
                 <div class="form-group">
-                    <label for="admin-password">Mật khẩu công vụ <span style="color:#b91c1c;">*</span></label>
+                    <div style="display:flex; justify-content:space-between; align-items:center;">
+                        <label for="admin-password">Mật khẩu <span style="color:#b91c1c;">*</span></label>
+                        <span style="font-size:0.75rem; color:#64748b;">Mặc định cơ sở: <strong>Pc07@123</strong></span>
+                    </div>
                     <input type="password" id="admin-password" placeholder="Nhập mật khẩu" required autocomplete="current-password">
                 </div>
                 <button type="submit" id="admin-submit-btn" class="admin-login-btn">
-                    Đăng nhập Quản trị →
+                    Đăng nhập & Tiếp tục →
                 </button>
             </form>
 
             <div class="admin-sec-notice">
-                🛡️ <strong>Lưu ý bảo mật:</strong> Cổng đăng nhập này chỉ dành riêng cho Cán bộ, Chiến sĩ Cảnh sát PCCC & CNCH và Ban chỉ huy được phân quyền. Cơ sở kinh doanh và người dân khảo sát an toàn PCCC vui lòng thực hiện trực tiếp tại Trang chủ.
+                💡 <strong>Tự động phân luồng:</strong>
+                <ul style="margin: 4px 0 0 18px; padding: 0;">
+                    <li><strong>Cơ sở diện quản lý:</strong> Vào thẳng bài khảo sát và bảng chọn loại hình cơ sở.</li>
+                    <li><strong>Cán bộ Quản trị:</strong> Vào thẳng Trung tâm điều hành và Bản đồ nguy cơ PCCC.</li>
+                </ul>
             </div>
 
             <div class="admin-auth-back">
-                <a href="/">← Quay về Trang chủ khảo sát</a>
+                <a href="/survey.html?role=citizen" style="color: #059669; font-weight: 700;">🏡 Khảo sát cho Người dân / Hộ gia đình (Không cần tài khoản) →</a>
+                <a href="/">← Quay về Trang chủ</a>
             </div>
         </div>
     </div>
 
     <script src="/js/api.js"></script>
     <script>
-        async function handleAdminLogin(event) {
+        async function handleUnifiedLogin(event) {
             event.preventDefault();
-            const email = document.getElementById('admin-email').value.trim();
+            const ident = document.getElementById('admin-email').value.trim();
             const password = document.getElementById('admin-password').value;
             const btn = document.getElementById('admin-submit-btn');
             const errBox = document.getElementById('login-error');
 
-            if (!email || !password) return;
+            if (!ident || !password) return;
 
             btn.disabled = true;
             const originalText = btn.innerHTML;
@@ -221,25 +232,33 @@
             if (errBox) errBox.style.display = 'none';
 
             try {
-                const data = await api.login(email, password);
-                btn.innerHTML = '✓ Đăng nhập thành công! Đang chuyển tiếp...';
-                
-                setTimeout(() => {
-                    const u = data.user || api.getUser();
-                    if (u && (u.role === 'admin' || u.role === 'superadmin')) {
-                        window.location.href = '/admin/';
-                    } else if (u && u.facility_code) {
-                        // Trường hợp cơ sở đăng nhập nhầm vào cổng admin
-                        window.location.href = '/survey.html?role=facility';
-                    } else {
-                        window.location.href = '/admin/';
-                    }
-                }, 300);
+                const data = await api.login(ident, password);
+                const u = data.user || api.getUser();
+
+                if (u && (u.role === 'admin' || u.role === 'superadmin')) {
+                    btn.innerHTML = '✅ Chào mừng Cán bộ Quản trị! Đang vào hệ thống...';
+                    setTimeout(() => { window.location.href = '/admin/'; }, 300);
+                } else {
+                    btn.innerHTML = '✅ Xác thực thành công! Đang mở khảo sát cơ sở...';
+                    setTimeout(() => { window.location.href = '/survey.html?role=facility'; }, 300);
+                }
             } catch (err) {
+                // Nếu người dùng nhập mã cơ sở (chuỗi số từ 6 đến 16 số):
+                // Tự động mở luôn bài khảo sát và bảng chọn loại hình cho cơ sở!
+                const isNumericCode = /^\d{6,16}$/.test(ident);
+                if (isNumericCode) {
+                    btn.innerHTML = '🏢 Đang mở bảng chọn loại hình cho cơ sở...';
+                    sessionStorage.setItem('fras_survey_role', 'facility');
+                    setTimeout(() => {
+                        window.location.href = `/survey.html?role=facility&code=${encodeURIComponent(ident)}`;
+                    }, 300);
+                    return;
+                }
+
                 btn.disabled = false;
                 btn.innerHTML = originalText;
                 if (errBox) {
-                    errBox.textContent = err.message || 'Tài khoản hoặc mật khẩu không chính xác. Vui lòng kiểm tra lại.';
+                    errBox.textContent = err.message || 'Tài khoản hoặc mật khẩu không chính xác.';
                     errBox.style.display = 'block';
                 }
             }

@@ -2,6 +2,7 @@ import os
 import json
 from datetime import datetime
 from typing import Optional, List
+import httpx
 from pydantic import BaseModel
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
@@ -14,6 +15,80 @@ Base.metadata.create_all(bind=engine, tables=[FireReport.__table__])
 router = APIRouter(prefix="/api/emergency", tags=["Emergency Fire Report 114"])
 
 REPORTS_LOG_FILE = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "fire_reports.json")
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "8685857438:AAE4m0Ew0yh1ov_gnN3ANEz2_wu8GALN-3Y")
+TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "")
+
+
+def get_target_chat_ids() -> List[str]:
+    """Get chat IDs from env or dynamically discover from Telegram getUpdates."""
+    chat_ids = set()
+    if TELEGRAM_CHAT_ID:
+        for cid in TELEGRAM_CHAT_ID.split(","):
+            cid = cid.strip()
+            if cid:
+                chat_ids.add(cid)
+
+    # Discover recent chats from bot updates
+    if TELEGRAM_BOT_TOKEN:
+        try:
+            url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/getUpdates"
+            resp = httpx.get(url, timeout=5)
+            if resp.status_code == 200:
+                data = resp.json()
+                for item in data.get("result", []):
+                    # Check message
+                    msg = item.get("message") or item.get("channel_post") or item.get("my_chat_member")
+                    if msg:
+                        chat = msg.get("chat") if isinstance(msg, dict) and "chat" in msg else msg
+                        if isinstance(chat, dict) and "id" in chat:
+                            chat_ids.add(str(chat["id"]))
+        except Exception as e:
+            print(f"[Telegram Discovery] Error: {e}")
+
+    return list(chat_ids)
+
+
+def send_telegram_alert(report: FireReport):
+    """Send emergency 114 notification to Telegram bot/group."""
+    if not TELEGRAM_BOT_TOKEN:
+        return
+
+    chat_ids = get_target_chat_ids()
+    if not chat_ids:
+        print("[Telegram Alert] Notice: No chat IDs found. Please send a message to @BAOCHAY114_bot or add it to your group.")
+        return
+
+    maps_link = ""
+    if report.latitude and report.longitude:
+        maps_link = f"\n🗺️ <b>Bản đồ dẫn đường:</b> <a href=\"https://www.google.com/maps?q={report.latitude},{report.longitude}\">Mở vị trí hiện trường</a>"
+
+    text = (
+        f"🚨 <b>BÁO CHÁY KHẨN CẤP 114 - BẮC NINH</b> 🚨\n"
+        f"━━━━━━━━━━━━━━━━━━\n"
+        f"⏰ <b>Thời gian:</b> {report.created_at.strftime('%H:%M:%S ngày %d/%m/%Y')}\n"
+        f"📞 <b>Người báo:</b> <code>{report.phone}</code> (<a href=\"tel:{report.phone}\">Bấm gọi ngay</a>)\n"
+        f"📍 <b>Địa chỉ:</b> {report.location_address}\n"
+        f"🏠 <b>Loại hình:</b> {report.fire_type}\n"
+        f"🔥 <b>Mức độ:</b> {report.severity}\n"
+        f"{maps_link}\n"
+    )
+    if report.notes:
+        text += f"📝 <b>Ghi chú:</b> {report.notes}\n"
+    text += f"━━━━━━━━━━━━━━━━━━\n<i>Hệ thống Cảnh báo Cháy Thông minh PCCC Bắc Ninh</i>"
+
+    for cid in chat_ids:
+        try:
+            send_url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
+            payload = {
+                "chat_id": cid,
+                "text": text,
+                "parse_mode": "HTML",
+                "disable_web_page_preview": False
+            }
+            httpx.post(send_url, json=payload, timeout=6)
+            print(f"[Telegram Alert] Sent notification to chat {cid}")
+        except Exception as e:
+            print(f"[Telegram Alert] Failed to send to chat {cid}: {e}")
 
 
 class EmergencyReportCreate(BaseModel):
@@ -74,7 +149,7 @@ def submit_fire_report(data: EmergencyReportCreate, db: Session = Depends(get_db
         if os.path.exists(REPORTS_LOG_FILE):
             with open(REPORTS_LOG_FILE, "r", encoding="utf-8") as f:
                 current_logs = json.load(f)
-        
+
         current_logs.insert(0, {
             "id": report.id,
             "created_at": report.created_at.strftime("%H:%M:%S %d/%m/%Y"),
@@ -91,6 +166,12 @@ def submit_fire_report(data: EmergencyReportCreate, db: Session = Depends(get_db
             json.dump(current_logs, f, ensure_ascii=False, indent=2)
     except Exception as e:
         print(f"[Fire Report Log] Warning: could not write to JSON log: {e}")
+
+    # Send instant Telegram alert to Officers
+    try:
+        send_telegram_alert(report)
+    except Exception as e:
+        print(f"[Telegram Error] Could not send alert: {e}")
 
     return {
         "status": "ok",
@@ -119,3 +200,15 @@ def get_fire_reports(db: Session = Depends(get_db)):
         }
         for r in reports
     ]
+
+
+@router.get("/telegram-status")
+def get_telegram_status():
+    """Check Telegram bot status and active chat IDs."""
+    chats = get_target_chat_ids()
+    return {
+        "bot_configured": bool(TELEGRAM_BOT_TOKEN),
+        "bot_token_preview": TELEGRAM_BOT_TOKEN[:10] + "..." if TELEGRAM_BOT_TOKEN else None,
+        "active_chat_ids": chats,
+        "status": "ready" if chats else "waiting_for_user_chat"
+    }
