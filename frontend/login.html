@@ -191,7 +191,7 @@
                 <div class="form-group">
                     <div style="display:flex; justify-content:space-between; align-items:center;">
                         <label for="admin-password">Mật khẩu <span style="color:#b91c1c;">*</span></label>
-                        <span style="font-size:0.75rem; color:#64748b;">Mặc định cơ sở: <strong>Pc07@123</strong></span>
+                        <span style="font-size:0.75rem; color:#64748b;">Mặc định: <strong>admin123</strong> (Cán bộ) • <strong>Pc07@123</strong> (Cơ sở)</span>
                     </div>
                     <input type="password" id="admin-password" placeholder="Nhập mật khẩu" required autocomplete="current-password">
                 </div>
@@ -237,7 +237,8 @@
                     setTimeout(() => { window.location.href = '/admin/'; }, 300);
                 } else {
                     btn.innerHTML = '✅ Xác thực thành công! Đang mở khảo sát cơ sở...';
-                    setTimeout(() => { window.location.href = /survey.html?role=facility&code=; }, 300);
+                    const codeVal = (u && u.facility_code) ? u.facility_code : ident;
+                    setTimeout(() => { window.location.href = '/survey.html?role=facility&code=' + encodeURIComponent(codeVal); }, 300);
                 }
             } catch (err) {
                 // Nếu người dùng nhập mã cơ sở (chuỗi số từ 6 đến 16 số):
