@@ -16,8 +16,9 @@ dist/
 build/
 .idea/
 .vscode/
-Việt Nam (phường xã) - 34 (1).geojson
 *.csv
+!danh_sach_210_cau_hoi.csv
+!danh_sach_co_so_latest.csv
 .gemini/
 .agents/
 GEMINI.md

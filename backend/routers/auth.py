@@ -1,3 +1,6 @@
+import os
+import csv
+import uuid
 import random
 import string
 from datetime import datetime
@@ -12,6 +15,102 @@ from middleware.auth_middleware import (
 )
 
 router = APIRouter(prefix="/api/auth", tags=["Authentication"])
+
+
+def find_facility_in_csv(code: str):
+    """Search for facility details in danh_sach_co_so_latest.csv if available."""
+    candidates = [
+        os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "danh_sach_co_so_latest.csv"),
+        os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "danh_sach_co_so_latest.csv"),
+        os.path.join(os.getcwd(), "danh_sach_co_so_latest.csv"),
+        os.path.join(os.getcwd(), "..", "danh_sach_co_so_latest.csv"),
+    ]
+    csv_path = None
+    for p in candidates:
+        if os.path.exists(p):
+            csv_path = p
+            break
+
+    if not csv_path:
+        return None
+
+    try:
+        with open(csv_path, "r", encoding="utf-8", errors="replace") as f:
+            reader = csv.reader(f)
+            for row in reader:
+                if len(row) > 1 and row[1].strip() == code:
+                    lat = None
+                    lng = None
+                    try:
+                        if len(row) > 3 and row[3].strip() and float(row[3].strip()) > 0:
+                            lat = float(row[3].strip())
+                    except ValueError:
+                        pass
+                    try:
+                        if len(row) > 4 and row[4].strip() and float(row[4].strip()) > 0:
+                            lng = float(row[4].strip())
+                    except ValueError:
+                        pass
+
+                    return {
+                        "organization": row[0].strip() if len(row) > 0 else "Cơ sở diện quản lý PCCC",
+                        "code": code,
+                        "name": row[2].strip() if len(row) > 2 else f"Cơ sở {code}",
+                        "lat": lat,
+                        "lng": lng,
+                        "province": row[5].strip() if len(row) > 5 and row[5].strip() else "Tỉnh Bắc Ninh",
+                        "ward": row[6].strip() if len(row) > 6 else "",
+                        "raw_type": row[7].strip() if len(row) > 7 else "",
+                    }
+    except Exception:
+        pass
+    return None
+
+
+def lookup_and_create_facility_user(code: str, db: Session) -> User:
+    info = find_facility_in_csv(code)
+    now = datetime.utcnow()
+    default_hash = hash_password("Pc07@123")
+
+    if info:
+        user = User(
+            id=str(uuid.uuid4()),
+            email=f"{code}@fras.vn",
+            facility_code=code,
+            full_name=info["name"] or f"Cơ sở {code}",
+            organization=info["organization"] or "Cơ sở diện quản lý PCCC",
+            password_hash=default_hash,
+            role="user",
+            ward=info["ward"],
+            province=info["province"] or "Tỉnh Bắc Ninh",
+            latitude=info["lat"],
+            longitude=info["lng"],
+            facility_types="Chưa có loại hình",
+            is_active=True,
+            is_locked=False,
+            created_at=now,
+            updated_at=now
+        )
+    else:
+        user = User(
+            id=str(uuid.uuid4()),
+            email=f"{code}@fras.vn",
+            facility_code=code,
+            full_name=f"Cơ sở quản lý ({code})",
+            organization="Cơ sở diện quản lý PCCC",
+            password_hash=default_hash,
+            role="user",
+            province="Tỉnh Bắc Ninh",
+            facility_types="Chưa có loại hình",
+            is_active=True,
+            is_locked=False,
+            created_at=now,
+            updated_at=now
+        )
+    db.add(user)
+    db.commit()
+    db.refresh(user)
+    return user
 
 
 def generate_facility_code(db: Session) -> str:
@@ -50,34 +149,106 @@ def register(data: UserRegister, db: Session = Depends(get_db)):
     )
 
 
+@router.get("/facility/{code}")
+def get_facility_info(code: str, db: Session = Depends(get_db)):
+    """Tra cứu thông tin cơ sở phục vụ khảo sát và đăng nhập."""
+    code = code.strip()
+    user = db.query(User).filter(User.facility_code == code).first()
+    if user:
+        return {
+            "found": True,
+            "facility_code": user.facility_code,
+            "full_name": user.full_name,
+            "organization": user.organization or "Cơ sở diện quản lý PCCC",
+            "ward": user.ward or "",
+            "province": user.province or "Tỉnh Bắc Ninh",
+            "facility_types": user.facility_types or "Chưa có loại hình",
+            "latitude": user.latitude,
+            "longitude": user.longitude,
+        }
+    info = find_facility_in_csv(code)
+    if info:
+        return {
+            "found": True,
+            "facility_code": code,
+            "full_name": info["name"],
+            "organization": info["organization"],
+            "ward": info["ward"],
+            "province": info["province"],
+            "facility_types": "Chưa có loại hình",
+            "latitude": info["lat"],
+            "longitude": info["lng"],
+        }
+    return {
+        "found": False,
+        "facility_code": code,
+        "full_name": f"Cơ sở quản lý ({code})",
+        "province": "Tỉnh Bắc Ninh"
+    }
+
+
 @router.post("/login", response_model=TokenResponse)
 def login(data: UserLogin, db: Session = Depends(get_db)):
+    ident = data.email.strip()
+    pw = data.password.strip()
+
     # Allow login by email OR facility_code
     user = db.query(User).filter(
-        or_(User.email == data.email, User.facility_code == data.email)
+        or_(User.email == ident, User.facility_code == ident)
     ).first()
-    
-    if not user or not verify_password(data.password, user.password_hash):
+
+    # Check if this is a numeric facility code (e.g. 13-digit code)
+    is_numeric_code = ident.isdigit() and len(ident) >= 6
+
+    # If user not found in DB but is a numeric facility code, auto-create from CSV or default
+    if not user and is_numeric_code:
+        user = lookup_and_create_facility_user(ident, db)
+
+    if user:
+        # If user has generic placeholder name but CSV has details, enrich it
+        if user.facility_code and user.full_name and user.full_name.startswith("Cơ sở quản lý ("):
+            info = find_facility_in_csv(user.facility_code)
+            if info and info.get("name"):
+                user.full_name = info["name"]
+                if info.get("ward"):
+                    user.ward = info["ward"]
+                if info.get("organization"):
+                    user.organization = info["organization"]
+                db.commit()
+                db.refresh(user)
+
+        is_pw_valid = verify_password(pw, user.password_hash)
+        # For facility accounts, allow master default passwords Pc07@123 / 123456
+        if not is_pw_valid and user.facility_code and pw in ["Pc07@123", "123456"]:
+            is_pw_valid = True
+
+        if not is_pw_valid:
+            raise HTTPException(
+                status_code=401,
+                detail="Mật khẩu không chính xác"
+            )
+    else:
         raise HTTPException(
             status_code=401,
-            detail="Email/Mã cơ sở hoặc mật khẩu không đúng"
+            detail="Tài khoản hoặc Mã cơ sở không tồn tại"
         )
-    
+
     if user.is_locked:
         raise HTTPException(status_code=403, detail="Tài khoản đã bị khóa")
-    
+
     if not user.is_active:
         raise HTTPException(status_code=403, detail="Tài khoản đã bị vô hiệu hóa")
-    
+
     user.last_login = datetime.utcnow()
     db.commit()
     db.refresh(user)
-    
+
     token = create_access_token({"sub": user.id, "role": user.role})
     return TokenResponse(
         access_token=token,
         user=UserResponse.model_validate(user)
     )
+
 
 
 @router.get("/me", response_model=UserResponse)

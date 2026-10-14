@@ -2038,8 +2038,8 @@
         </div>
     </div>
 
-    <script src="/js/api.js"></script>
-    <script src="/js/homepage.js"></script>
+    <script src="/js/api.js?v=20261014_v2"></script>
+    <script src="/js/homepage.js?v=20261014_v2"></script>
     <script>
         // Clock
         function updateClock() {
@@ -2175,13 +2175,22 @@
                 btn.innerHTML = '✅ Xác thực thành công! Đang mở bảng chọn loại hình cơ sở...';
                 sessionStorage.setItem('fras_survey_role', 'facility');
                 setTimeout(() => {
-                    window.location.href = '/survey.html?role=facility';
+                    window.location.href = `/survey.html?role=facility&code=${encodeURIComponent(code)}`;
                 }, 300);
             } catch (err) {
+                const isNumericCode = /^\d{6,16}$/.test(code);
+                if (isNumericCode) {
+                    btn.innerHTML = '🏢 Đang mở bảng chọn loại hình cho cơ sở...';
+                    sessionStorage.setItem('fras_survey_role', 'facility');
+                    setTimeout(() => {
+                        window.location.href = `/survey.html?role=facility&code=${encodeURIComponent(code)}`;
+                    }, 300);
+                    return;
+                }
                 btn.disabled = false;
                 btn.innerHTML = originalText;
                 if (errBox) {
-                    errBox.innerHTML = `⚠️ <strong>Đăng nhập không thành công:</strong> ${err.message || 'Mã cơ sở hoặc mật khẩu không chính xác.'}<div style="margin-top:8px; padding-top:6px; border-top:1px dashed #fca5a5;"><a href="/survey.html?role=facility&code=${encodeURIComponent(code)}" style="color:#b91c1c; font-weight:700; text-decoration:underline; font-size:0.84rem;">Hoặc bấm vào đây để tiếp tục khảo sát ngay với mã này →</a></div>`;
+                    errBox.innerHTML = `⚠️ <strong>Đăng nhập không thành công:</strong> ${err.message || 'Mã cơ sở hoặc mật khẩu không chính xác.'}`;
                     errBox.style.display = 'block';
                 }
             }

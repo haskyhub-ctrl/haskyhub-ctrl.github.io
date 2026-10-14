@@ -30,6 +30,7 @@ jobs:
             source venv/bin/activate
             pip install -r requirements.txt --quiet
             python ../add_enhanced_questions.py || true
+            python import_facilities_batch.py || true
 
             echo ">>> Restarting service..."
             sudo systemctl restart fras.service
