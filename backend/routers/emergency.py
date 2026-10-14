@@ -17,17 +17,18 @@ router = APIRouter(prefix="/api/emergency", tags=["Emergency Fire Report 114"])
 
 REPORTS_LOG_FILE = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "fire_reports.json")
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "8685857438:AAE4m0Ew0yh1ov_gnN3ANEz2_wu8GALN-3Y")
-TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "")
+TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "-1003941425126")
 
 
 def get_target_chat_ids() -> List[str]:
-    """Get chat IDs from env or dynamically discover from Telegram getUpdates."""
+    """Get target Telegram chat/channel IDs."""
     chat_ids = set()
     if TELEGRAM_CHAT_ID:
         for cid in TELEGRAM_CHAT_ID.split(","):
             cid = cid.strip()
             if cid:
                 chat_ids.add(cid)
+        return list(chat_ids)
 
     # Discover recent chats from bot updates
     if TELEGRAM_BOT_TOKEN:
