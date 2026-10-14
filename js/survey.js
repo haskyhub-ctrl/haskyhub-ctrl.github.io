@@ -140,6 +140,9 @@ async function initSurvey() {
     surveyState.isImportedUser = !!(user && user.facility_code);
     surveyState.isCitizen = !user;
 
+    const urlParams = new URLSearchParams(window.location.search);
+    const codeParam = urlParams.get('code');
+
     if (user) {
         // Pre-fill location & details from user profile (managed facility account)
         surveyState.facilityInfo = {
@@ -155,6 +158,12 @@ async function initSurvey() {
                 longitude: user.longitude,
             };
         }
+    } else if (codeParam) {
+        surveyState.facilityInfo = {
+            facility_code: codeParam,
+            province: 'Tỉnh Bắc Ninh'
+        };
+        surveyState.isImportedUser = true;
     }
     // Do NOT trigger browser geolocation automatically on load - let user click manually if desired
     renderStep();

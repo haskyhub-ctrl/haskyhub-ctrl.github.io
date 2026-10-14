@@ -180,6 +180,33 @@ async def lifespan(app: FastAPI):
     migrate_db()
     seed_database()
     
+    # Ensure superadmin exists with standard credentials
+    try:
+        s_db = SessionLocal()
+        admin_u = s_db.query(User).filter(User.email == "admin@fras.vn").first()
+        if not admin_u:
+            admin_u = User(
+                email="admin@fras.vn",
+                password_hash=hash_password("admin123"),
+                full_name="Quản trị viên Hệ thống",
+                organization="Công an thành phố Bắc Ninh",
+                role="superadmin",
+            )
+            s_db.add(admin_u)
+            s_db.commit()
+            print("✅ Ensured default superadmin: admin@fras.vn / admin123")
+        s_db.close()
+    except Exception as e:
+        print(f"Notice admin check: {e}")
+    try:
+        root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        if root_dir not in sys.path:
+            sys.path.insert(0, root_dir)
+        from add_enhanced_questions import add_enhanced_questions
+        add_enhanced_questions()
+    except Exception as e:
+        print(f"Notice seeding enhanced questions: {e}")
+    
     # Khởi chạy dịch vụ cron tự động sao lưu CSDL định kỳ
     backup_task = asyncio.create_task(auto_backup_task())
     

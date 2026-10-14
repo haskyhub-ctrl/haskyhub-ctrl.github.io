@@ -56,7 +56,13 @@
                     <span class="gov-hotline-label">Báo cháy</span>
                     <span class="gov-hotline-number">114</span>
                 </a>
-                <div class="gov-nav-user" id="nav-user"></div>
+                <a href="/login.html" class="gov-login-btn" id="gov-admin-link" title="Dành riêng cho Cán bộ Cảnh sát PCCC & CNCH và Ban Chỉ huy">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                    <span>Cán bộ Quản trị</span>
+                </a>
+                <div class="gov-nav-user" id="nav-user" style="display:none;"></div>
             </div>
             <button class="gov-mobile-toggle" id="gov-mobile-toggle" aria-label="Menu">&#9776;</button>
         </div>
@@ -2151,7 +2157,7 @@
                 btn.disabled = false;
                 btn.innerHTML = originalText;
                 if (errBox) {
-                    errBox.innerHTML = `⚠️ <strong>Đăng nhập không thành công:</strong> ${err.message || 'Mã cơ sở hoặc mật khẩu chưa đúng. Vui lòng kiểm tra lại theo danh sách quản lý của PC07.'}`;
+                    errBox.innerHTML = `⚠️ <strong>Đăng nhập không thành công:</strong> ${err.message || 'Mã cơ sở hoặc mật khẩu chưa đúng.'}<div style="margin-top:10px; padding-top:8px; border-top:1px dashed #fca5a5;"><a href="/survey.html?role=facility&code=${encodeURIComponent(code)}" style="color:#b91c1c; font-weight:700; text-decoration:underline; font-size:0.85rem;">Hoặc bấm vào đây để tiếp tục khảo sát ngay với mã này →</a></div>`;
                     errBox.style.display = 'block';
                 }
             }
