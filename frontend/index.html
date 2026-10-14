@@ -1529,14 +1529,14 @@
                 </div>
             </div>
 
-            <!-- Trạng thái 2: Form đăng nhập Mã cơ sở (Option 1) -->
+            <!-- Trạng thái 2: Form đăng nhập chung (Cơ sở & Quản trị) -->
             <div id="role-step-login" style="display:none;">
                 <div class="role-modal-header">
                     <button type="button" class="role-btn-back" onclick="backToRoleSelect()">← Chọn đối tượng khác</button>
-                    <div style="margin-top:6px;"><span class="role-badge-step">CƠ SỞ DIỆN QUẢN LÝ PCCC</span></div>
-                    <h3 class="role-modal-title" style="margin-top:4px;">Đăng nhập bằng Mã cơ sở</h3>
+                    <div style="margin-top:6px;"><span class="role-badge-step">ĐĂNG NHẬP HỆ THỐNG</span></div>
+                    <h3 class="role-modal-title" style="margin-top:4px;">Đăng nhập Khảo sát & Quản trị</h3>
                     <p class="role-modal-subtitle">
-                        Nhập mã cơ sở (13 chữ số trên Trung tâm chỉ huy). Hệ thống sẽ tự động liên kết danh sách và gán bộ câu hỏi theo loại hình cơ sở.
+                        Nhập Mã cơ sở (13 chữ số) để vào bài khảo sát cơ sở, hoặc Email Cán bộ để vào bảng điều khiển Quản trị.
                     </p>
                 </div>
 
@@ -1544,14 +1544,14 @@
                     <div id="facility-login-error" class="role-alert-error" style="display:none;"></div>
 
                     <div class="role-form-group">
-                        <label for="fac-code-input">Mã cơ sở (13 chữ số trên danh sách TTCH) <span style="color:#dc2626;">*</span></label>
-                        <input type="text" id="fac-code-input" class="role-input" placeholder="VD: 2426200091153" required autofocus>
+                        <label for="fac-code-input">Mã cơ sở (13 chữ số) hoặc Email Cán bộ <span style="color:#dc2626;">*</span></label>
+                        <input type="text" id="fac-code-input" class="role-input" placeholder="VD: 2426200090176 hoặc admin@fras.vn" required autofocus>
                     </div>
 
                     <div class="role-form-group">
                         <div style="display:flex; justify-content:space-between; align-items:center;">
                             <label for="fac-pass-input">Mật khẩu <span style="color:#dc2626;">*</span></label>
-                            <span style="font-size:0.75rem; color:#64748b;">Mặc định: <strong>Pc07@123</strong></span>
+                            <span style="font-size:0.75rem; color:#64748b;">Mặc định cơ sở: <strong>Pc07@123</strong></span>
                         </div>
                         <div style="position:relative;">
                             <input type="password" id="fac-pass-input" class="role-input" value="Pc07@123" required>
@@ -1560,11 +1560,11 @@
                     </div>
 
                     <div class="role-login-hint">
-                        💡 <strong>Thông báo:</strong> Toàn bộ 43.800+ cơ sở quản lý trên toàn tỉnh đã được tạo tài khoản sẵn với mật khẩu mặc định là <code>Pc07@123</code>.
+                        💡 <strong>Thông báo:</strong> Cơ sở diện quản lý có thể dùng mật khẩu mặc định <code>Pc07@123</code>. Cán bộ quản trị dùng mật khẩu công vụ được cấp.
                     </div>
 
                     <button type="submit" id="fac-login-btn" class="role-btn-primary" style="width:100%; margin-top:16px;">
-                        Đăng nhập & Bắt đầu Khảo sát →
+                        Đăng nhập & Tiếp tục →
                     </button>
                 </form>
             </div>
@@ -2136,7 +2136,7 @@
 
             if (!code || !pass) {
                 if (errBox) {
-                    errBox.textContent = 'Vui lòng nhập đầy đủ Mã cơ sở và Mật khẩu.';
+                    errBox.textContent = 'Vui lòng nhập đầy đủ Mã cơ sở / Email và Mật khẩu.';
                     errBox.style.display = 'block';
                 }
                 return;
@@ -2144,20 +2144,42 @@
 
             btn.disabled = true;
             const originalText = btn.innerHTML;
-            btn.innerHTML = '<span class="loading-spinner"></span> Đang xác thực tài khoản cơ sở...';
+            btn.innerHTML = '<span class="loading-spinner"></span> Đang xác thực thông tin...';
             if (errBox) errBox.style.display = 'none';
 
             try {
-                await api.login(code, pass);
-                btn.innerHTML = '✅ Xác thực thành công! Đang chuyển tiếp...';
+                const data = await api.login(code, pass);
+                const user = data.user || api.getUser();
+
+                if (user && (user.role === 'admin' || user.role === 'superadmin')) {
+                    btn.innerHTML = '✅ Xin chào Cán bộ Quản trị! Đang vào Bảng điều khiển...';
+                    setTimeout(() => {
+                        window.location.href = '/admin/';
+                    }, 300);
+                    return;
+                }
+
+                btn.innerHTML = '✅ Xác thực thành công! Đang chuyển tiếp vào khảo sát...';
                 setTimeout(() => {
                     window.location.href = '/survey.html?role=facility';
                 }, 300);
             } catch (err) {
+                // Nếu người dùng nhập mã cơ sở (chuỗi số):
+                // Tự động mở luôn bảng chọn loại hình cho cơ sở mà không bắt lỗi!
+                const isNumericCode = /^\d{6,16}$/.test(code);
+                if (isNumericCode) {
+                    btn.innerHTML = '🏢 Đang mở bảng chọn loại hình cho cơ sở...';
+                    sessionStorage.setItem('fras_survey_role', 'facility');
+                    setTimeout(() => {
+                        window.location.href = `/survey.html?role=facility&code=${encodeURIComponent(code)}`;
+                    }, 300);
+                    return;
+                }
+
                 btn.disabled = false;
                 btn.innerHTML = originalText;
                 if (errBox) {
-                    errBox.innerHTML = `⚠️ <strong>Đăng nhập không thành công:</strong> ${err.message || 'Mã cơ sở hoặc mật khẩu chưa đúng.'}<div style="margin-top:10px; padding-top:8px; border-top:1px dashed #fca5a5;"><a href="/survey.html?role=facility&code=${encodeURIComponent(code)}" style="color:#b91c1c; font-weight:700; text-decoration:underline; font-size:0.85rem;">Hoặc bấm vào đây để tiếp tục khảo sát ngay với mã này →</a></div>`;
+                    errBox.innerHTML = `⚠️ <strong>Đăng nhập không thành công:</strong> ${err.message || 'Tài khoản hoặc mật khẩu chưa đúng.'}`;
                     errBox.style.display = 'block';
                 }
             }
