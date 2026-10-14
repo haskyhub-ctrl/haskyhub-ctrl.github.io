@@ -325,21 +325,21 @@ function renderFacilityForm(container) {
 
     if (isFacility) {
         headerHtml = `
-            <div class="alert alert-info" style="margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; background: rgba(30, 58, 138, 0.08); border: 1px solid rgba(30, 58, 138, 0.2); padding: 14px 18px; border-radius: 0 !important;">
+            <div class="alert alert-info facility-banner" style="margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding: 14px 18px; border-radius: 0 !important;">
                 <div style="display: flex; align-items: center; gap: 12px;">
                     <span style="font-size: 1.8rem;">🏢</span>
                     <div>
-                        <div style="font-weight: 700; color: #1e3a8a; font-size: 1.05rem;">${facName}</div>
+                        <div class="banner-title" style="font-weight: 700; font-size: 1.05rem;">${facName}</div>
                         <div style="font-size: 0.85rem; color: var(--text-secondary);">${facCode ? `Mã quản lý PCCC: <strong style="color: #dc2626;">${facCode}</strong> • ` : ''}Công an TP Bắc Ninh</div>
                     </div>
                 </div>
-                <span class="role-badge" style="background: #1e3a8a; color: white; padding: 4px 10px; border-radius: 0; font-size: 0.8rem; font-weight:700;">Cơ sở diện quản lý PCCC</span>
+                <span class="role-badge" style="background: var(--gov-navy, #1e3a8a); color: white; padding: 4px 10px; border-radius: 0; font-size: 0.8rem; font-weight:700;">Cơ sở diện quản lý PCCC</span>
             </div>
         `;
 
         if (hasNoType) {
             facilityNotice = `
-                <div class="alert alert-warning" style="margin-bottom: 20px; background: #fffbeb; border: 1.5px solid #fcd34d; border-left: 5px solid #d97706; color: #92400e; padding: 14px 18px; border-radius: 0 !important;">
+                <div class="alert alert-warning" style="margin-bottom: 20px; padding: 14px 18px; border-radius: 0 !important;">
                     <div style="font-weight: 800; font-size: 0.95rem; display: flex; align-items: center; gap: 8px; text-transform: uppercase;">
                         <span>⚠️</span> CHƯA CÓ LOẠI HÌNH TRONG DANH SÁCH
                     </div>
@@ -351,15 +351,15 @@ function renderFacilityForm(container) {
         }
     } else {
         headerHtml = `
-            <div class="alert" style="margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; background: rgba(30, 58, 138, 0.06); border: 1.5px solid rgba(30, 58, 138, 0.2); border-left: 5px solid #1A3A6B; padding: 14px 18px; border-radius: 0 !important;">
+            <div class="alert facility-banner" style="margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; border-left: 5px solid var(--gov-navy, #1A3A6B); padding: 14px 18px; border-radius: 0 !important;">
                 <div style="display: flex; align-items: center; gap: 12px;">
                     <span style="font-size: 1.8rem;">🏡</span>
                     <div>
-                        <div style="font-weight: 800; color: #0F2347; font-size: 1.05rem;">Khảo sát an toàn PCCC (Hộ gia đình / Cơ sở khảo sát tự nguyện)</div>
+                        <div class="banner-title" style="font-weight: 800; font-size: 1.05rem;">Khảo sát an toàn PCCC (Hộ gia đình / Cơ sở khảo sát tự nguyện)</div>
                         <div style="font-size: 0.85rem; color: var(--text-secondary);">Khảo sát miễn phí, kết quả bảo mật ẩn danh, không cần tài khoản.</div>
                     </div>
                 </div>
-                <span class="role-badge" style="background: #1A3A6B; color: white; padding: 4px 10px; border-radius: 0 !important; font-size: 0.8rem; font-weight:700;">Khảo sát tự nguyện</span>
+                <span class="role-badge" style="background: var(--gov-navy, #1A3A6B); color: white; padding: 4px 10px; border-radius: 0 !important; font-size: 0.8rem; font-weight:700;">Khảo sát tự nguyện</span>
             </div>
         `;
     }
@@ -387,7 +387,7 @@ function renderFacilityForm(container) {
                 ` : ''}
                 
                 <div class="form-group">
-                    <label style="font-weight:700; color:#0F2347; text-transform:uppercase; letter-spacing:0.3px; display:flex; justify-content:space-between; align-items:center;">
+                    <label style="font-weight:700; color:var(--gov-navy-dark, var(--text-primary)); text-transform:uppercase; letter-spacing:0.3px; display:flex; justify-content:space-between; align-items:center;">
                         <span>BẢNG CÁC LOẠI HÌNH HOẠT ĐỘNG <span style="color:#dc2626;">*</span></span>
                         <span style="font-size:0.8rem; color:var(--text-muted); font-weight:normal; text-transform:none;">(Có thể chọn 2 loại hình trở lên)</span>
                     </label>
@@ -417,13 +417,13 @@ function renderFacilityForm(container) {
                     <input type="text" class="form-control" id="f_address_street" placeholder="${isFacility ? 'Số nhà, đường/phố, khu công nghiệp...' : 'Số nhà, đường/phố, thôn/xóm...'}" value="${info.street || info.facility_address || ''}">
                 </div>
 
-                <div class="form-group" style="margin-top: 20px; padding: 16px; background: #f8fafc; border-radius: 0; border: 1px dashed #cbd5e1;">
+                <div class="form-group survey-gps-box" style="margin-top: 20px; padding: 16px; border-radius: 0; border: 1px dashed var(--gov-border, #cbd5e1);">
                     <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px;">
                         <div style="flex: 1; min-width: 260px;">
-                            <label style="font-weight: 600; font-size: 0.95rem; color: #1e293b; margin-bottom: 4px; display: block;">
-                                📍 Vị trí tọa độ GPS <span style="font-weight: normal; font-size: 0.85rem; color: #64748b;">(có thể bỏ trống)</span>
+                            <label style="font-weight: 600; font-size: 0.95rem; margin-bottom: 4px; display: block;">
+                                📍 Vị trí tọa độ GPS <span style="font-weight: normal; font-size: 0.85rem; color: var(--text-muted);">(có thể bỏ trống)</span>
                             </label>
-                            <div style="font-size: 0.83rem; color: #64748b; line-height: 1.45;">
+                            <div style="font-size: 0.83rem; color: var(--text-secondary); line-height: 1.45;">
                                 Vị trí chỉ dùng để tính khoảng cách tới trụ nước gần nhất và lực lượng Cảnh sát PCCC và CNCH sẽ đến chỗ bạn nhanh hơn khi có cháy và sự cố, tai nạn.
                             </div>
                         </div>
