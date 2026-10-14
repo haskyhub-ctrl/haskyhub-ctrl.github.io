@@ -3,7 +3,7 @@
  * Handles all API communication with JWT authentication
  */
 
-const API_BASE = window.location.origin + '/api';
+const API_BASE = `${window.location.origin}/api`;
 
 class FrasAPI {
     constructor() {
@@ -45,55 +45,115 @@ class FrasAPI {
             headers['Authorization'] = `Bearer ${this.token}`;
         }
 
+        const isAiEndpoint = (typeof endpoint === 'string' && endpoint.includes('/ai/')) || (typeof url === 'string' && url.includes('/ai/'));
+        const defaultTimeout = isAiEndpoint ? 120000 : 30000;
+        const timeoutMs = options.timeoutMs || defaultTimeout;
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
+
         try {
             const response = await fetch(url, {
                 ...options,
                 headers,
+                signal: options.signal || controller.signal,
             });
+            clearTimeout(timeoutId);
 
             if (response.status === 401) {
                 this.clearToken();
-                if (!window.location.pathname.includes('login')) {
+                const isAuthEndpoint = endpoint.includes('/auth/login');
+                const isPublicPage = window.location.pathname === '/' || 
+                                     window.location.pathname.includes('index') || 
+                                     window.location.pathname.includes('survey');
+                if (!window.location.pathname.includes('login') && !isAuthEndpoint && !isPublicPage) {
                     window.location.href = '/login.html';
                 }
-                throw new Error('Phiên đăng nhập đã hết hạn');
+                const err = new Error(isAuthEndpoint ? 'Mã định danh cơ sở hoặc mật khẩu không chính xác' : 'Phiên đăng nhập đã hết hạn');
+                err.status = 401;
+                throw err;
             }
-
-            const data = await response.json();
 
             if (!response.ok) {
-                throw new Error(data.detail || 'Lỗi không xác định');
+                const isBusy = [429, 502, 503, 504, 520, 521, 522, 523, 524].includes(response.status);
+                let errMessage = isBusy 
+                    ? `Máy chủ đang bận hoặc quá tải (Mã ${response.status})`
+                    : `Lỗi máy chủ (${response.status})`;
+
+                try {
+                    const data = await response.json();
+                    if (data && data.detail) {
+                        if (Array.isArray(data.detail)) {
+                            errMessage = data.detail.map(e => `${e.loc ? e.loc.join('.') : ''}: ${e.msg}`).join(' | ');
+                        } else {
+                            errMessage = data.detail;
+                        }
+                    }
+                } catch (_) {
+                    // Response is HTML or non-JSON (e.g. Nginx/Cloudflare error page)
+                }
+
+                const err = new Error(errMessage);
+                err.status = response.status;
+                err.isServerBusy = isBusy;
+                throw err;
             }
 
-            return data;
+            const contentType = response.headers.get('content-type') || '';
+            if (contentType.includes('application/json')) {
+                return await response.json();
+            }
+            return await response.text();
         } catch (error) {
+            clearTimeout(timeoutId);
+            if (error.name === 'AbortError') {
+                const timeoutErr = new Error('Quá thời gian chờ phản hồi từ máy chủ (Timeout)');
+                timeoutErr.status = 504;
+                timeoutErr.isTimeout = true;
+                timeoutErr.isServerBusy = true;
+                throw timeoutErr;
+            }
             if (error.message === 'Failed to fetch') {
-                throw new Error('Không thể kết nối đến server');
+                const connErr = new Error('Không thể kết nối đến máy chủ hoặc mạng bị gián đoạn');
+                connErr.isNetworkError = true;
+                connErr.isServerBusy = true;
+                throw connErr;
             }
             throw error;
         }
     }
 
-    async get(endpoint) {
-        return this.fetch(endpoint, { method: 'GET' });
+    async get(endpoint, options = {}) {
+        return this.fetch(endpoint, { ...options, method: 'GET' });
     }
 
-    async post(endpoint, body) {
+    async post(endpoint, body = {}, options = {}) {
         return this.fetch(endpoint, {
+            ...options,
             method: 'POST',
             body: JSON.stringify(body),
         });
     }
 
-    async put(endpoint, body) {
+    async put(endpoint, body = {}, options = {}) {
         return this.fetch(endpoint, {
+            ...options,
             method: 'PUT',
             body: JSON.stringify(body),
         });
     }
 
-    async delete(endpoint) {
-        return this.fetch(endpoint, { method: 'DELETE' });
+    async patch(endpoint, body = {}, options = {}) {
+        return this.fetch(endpoint, {
+            ...options,
+            method: 'PATCH',
+            body: JSON.stringify(body),
+        });
+    }
+
+    async delete(endpoint, body = null, options = {}) {
+        const opts = { ...options, method: 'DELETE' };
+        if (body) opts.body = JSON.stringify(body);
+        return this.fetch(endpoint, opts);
     }
 
     // Auth
@@ -125,6 +185,7 @@ class FrasAPI {
 
 // Global instance
 const api = new FrasAPI();
+window.api = api;
 
 // Toast notification
 function showToast(message, type = 'success') {
@@ -300,29 +361,33 @@ function setupNavbar() {
     const navLinks = document.querySelector('.nav-links');
 
     if (user && navLinks) {
-        // Add user links
-        const dashLink = document.createElement('li');
-        dashLink.innerHTML = `<a href="/dashboard.html">${t('dashboard')}</a>`;
-        const histLink = document.createElement('li');
-        histLink.innerHTML = `<a href="/history.html">${t('history')}</a>`;
-        const imgLink = document.createElement('li');
-        imgLink.innerHTML = `<a href="/image_assessment.html">📸 Hình ảnh AI</a>`;
-        const impLink = document.createElement('li');
-        impLink.innerHTML = `<a href="/improvement.html">📋 Cải thiện</a>`;
+        const isAdmin = user.role === 'admin' || user.role === 'superadmin';
 
-        // Check if links already present
-        if (!navLinks.querySelector('a[href="/dashboard.html"]')) {
-            navLinks.insertBefore(dashLink, navLinks.firstChild);
-            navLinks.insertBefore(histLink, dashLink.nextSibling);
-            navLinks.insertBefore(imgLink, histLink.nextSibling);
-            navLinks.insertBefore(impLink, imgLink.nextSibling);
-        }
+        if (!isAdmin) {
+            // Normal User Links
+            const dashLink = document.createElement('li');
+            dashLink.innerHTML = `<a href="/dashboard.html">${t('dashboard')}</a>`;
+            const histLink = document.createElement('li');
+            histLink.innerHTML = `<a href="/history.html">${t('history')}</a>`;
 
-        if (user.role === 'admin' || user.role === 'superadmin') {
+            if (!navLinks.querySelector('a[href="/dashboard.html"]')) {
+                navLinks.insertBefore(dashLink, navLinks.firstChild);
+                navLinks.insertBefore(histLink, dashLink.nextSibling);
+
+                const mapLink = document.createElement('li');
+                mapLink.innerHTML = `<a href="/map.html">Bản đồ</a>`;
+                navLinks.insertBefore(mapLink, histLink.nextSibling);
+            }
+        } else {
+            // Admin Links
             if (!navLinks.querySelector('a[href="/admin/"]')) {
                 const adminLink = document.createElement('li');
-                adminLink.innerHTML = `<a href="/admin/">${t('admin')}</a>`;
-                navLinks.appendChild(adminLink);
+                adminLink.innerHTML = `<a href="/admin/">Bảng điều khiển Admin</a>`;
+                navLinks.insertBefore(adminLink, navLinks.firstChild);
+                
+                const mapLink = document.createElement('li');
+                mapLink.innerHTML = `<a href="/map.html">Bản đồ Rủi ro</a>`;
+                navLinks.insertBefore(mapLink, adminLink.nextSibling);
             }
         }
     }
@@ -359,6 +424,13 @@ function setupNavbar() {
             userSpan.className = 'user-name';
             userSpan.textContent = user.full_name;
             navUser.appendChild(userSpan);
+            const changePwBtn = document.createElement('button');
+            changePwBtn.className = 'btn btn-sm btn-outline';
+            changePwBtn.style.marginRight = '8px';
+            changePwBtn.textContent = 'Đổi mật khẩu';
+            changePwBtn.onclick = showChangePasswordModal;
+            navUser.appendChild(changePwBtn);
+
             const logoutBtn = document.createElement('button');
             logoutBtn.className = 'btn btn-sm btn-secondary';
             logoutBtn.textContent = t('logout');
@@ -370,11 +442,16 @@ function setupNavbar() {
         } else {
             navUser.innerHTML = '';
             navUser.appendChild(controls);
-            const loginLink = document.createElement('a');
-            loginLink.href = '/login.html';
-            loginLink.className = 'btn btn-sm btn-primary';
-            loginLink.textContent = t('login');
-            navUser.appendChild(loginLink);
+            const isHomeOrSurvey = window.location.pathname === '/' || 
+                                   window.location.pathname.includes('index') || 
+                                   window.location.pathname.includes('survey');
+            if (!isHomeOrSurvey) {
+                const loginLink = document.createElement('a');
+                loginLink.href = '/login.html';
+                loginLink.className = 'btn btn-sm btn-primary';
+                loginLink.textContent = t('login');
+                navUser.appendChild(loginLink);
+            }
         }
 
         updateThemeButton();
@@ -434,7 +511,7 @@ function toggleNotifPanel(e) {
 
 async function loadNotifList() {
     try {
-        const data = await api.get('/notifications/');
+        const data = await api.get('/notifications');
         const body = document.getElementById('notif-panel-body');
         if (!data.length) {
             body.innerHTML = '<div style="padding:24px; text-align:center; color:var(--text-muted);">Không có thông báo</div>';
@@ -469,3 +546,73 @@ document.addEventListener('click', function (e) {
         panel.style.display = 'none';
     }
 });
+
+// ========== Global Change Password ==========
+function showChangePasswordModal() {
+    let m = document.getElementById('global-change-password-modal');
+    if (!m) {
+        m = document.createElement('div');
+        m.id = 'global-change-password-modal';
+        m.style.position = 'fixed';
+        m.style.top = '0'; m.style.left = '0';
+        m.style.width = '100%'; m.style.height = '100%';
+        m.style.background = 'rgba(0,0,0,0.6)';
+        m.style.zIndex = '10000';
+        m.style.alignItems = 'center';
+        m.style.justifyContent = 'center';
+        m.innerHTML = `
+            <div class="modal-content" style="max-width: 400px; width: 90%; background: var(--bg-card, #1e293b); border: 1px solid var(--border-color, #334155); border-radius: 8px;">
+                <div class="modal-header" style="display:flex; justify-content:space-between; padding:16px; border-bottom: 1px solid var(--border-color, #334155);">
+                    <h3 style="margin:0; font-size:1.1rem; color: var(--text-primary, #f8fafc);">🔐 Đổi Mật Khẩu</h3>
+                    <button onclick="document.getElementById('global-change-password-modal').style.display='none'" style="background:none; border:none; cursor:pointer; color:var(--text-secondary); font-size:1.5rem;">&times;</button>
+                </div>
+                <div class="modal-body" style="padding:20px;">
+                    <div class="form-group" style="margin-bottom:12px;">
+                        <label style="display:block; margin-bottom:6px; font-size:0.9rem; color: var(--text-primary, #f8fafc);">Mật khẩu hiện tại *</label>
+                        <input type="password" id="chpw-old" class="form-control" style="width:100%; box-sizing: border-box;" required>
+                    </div>
+                    <div class="form-group" style="margin-bottom:12px;">
+                        <label style="display:block; margin-bottom:6px; font-size:0.9rem; color: var(--text-primary, #f8fafc);">Mật khẩu mới *</label>
+                        <input type="password" id="chpw-new" class="form-control" style="width:100%; box-sizing: border-box;" placeholder="Tối thiểu 6 ký tự" required>
+                    </div>
+                </div>
+                <div class="modal-footer" style="padding:16px; border-top: 1px solid var(--border-color, #334155); display:flex; justify-content:flex-end; gap:8px;">
+                    <button class="btn btn-secondary" onclick="document.getElementById('global-change-password-modal').style.display='none'">Hủy</button>
+                    <button class="btn btn-primary" onclick="doSubmitChangePassword()" id="btn-do-change-pw">Đổi Mật Khẩu</button>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(m);
+    }
+    document.getElementById('chpw-old').value = '';
+    document.getElementById('chpw-new').value = '';
+    m.style.display = 'flex';
+}
+
+async function doSubmitChangePassword() {
+    const oldPw = document.getElementById('chpw-old').value;
+    const newPw = document.getElementById('chpw-new').value;
+    if (!oldPw || newPw.length < 6) {
+        showToast('Vui lòng nhập mật khẩu cũ và mật khẩu mới (tối thiểu 6 ký tự)', 'error');
+        return;
+    }
+    const btn = document.getElementById('btn-do-change-pw');
+    btn.disabled = true;
+    try {
+        await api.put('/auth/change-password', { old_password: oldPw, new_password: newPw });
+        showToast('Đổi mật khẩu thành công!', 'success');
+        document.getElementById('global-change-password-modal').style.display = 'none';
+    } catch (err) {
+        showToast(err.message, 'error');
+    } finally {
+        btn.disabled = false;
+    }
+}
+
+// ========== Auto-load Global AI Chatbot ==========
+(function() {
+    const s = document.createElement('script');
+    s.src = '/js/chatbot.js?v=' + Date.now();
+    s.defer = true;
+    document.body ? document.body.appendChild(s) : document.addEventListener('DOMContentLoaded', () => document.body.appendChild(s));
+})();

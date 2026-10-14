@@ -4,30 +4,509 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kết quả Đánh giá - FRAS</title>
+    <title>Kết quả Đánh giá Nguy cơ Cháy Nổ - FRAS AI | Công an TP Bắc Ninh</title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700;800;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <style>
+        /* ============================================================
+           STRICT NO-BORDER-RADIUS & OFFICIAL POLICE COMMAND CENTER STYLE
+           "nhớ là không bo tròn bất cứ thứ gì cả" -> border-radius: 0 !important;
+           ============================================================ */
+        * {
+            border-radius: 0 !important;
+        }
+
+        :root {
+            --gov-navy-dark: #091322;
+            --gov-navy-card: #0f1c30;
+            --gov-navy-surface: #152744;
+            --gov-navy-border: #233b63;
+            --gov-red-brand: #b91c1c;
+            --gov-red-accent: #dc2626;
+            --gov-gold: #d97706;
+            --gov-gold-light: #fbbf24;
+            --gov-green: #15803d;
+            --gov-green-light: #22c55e;
+            --gov-text-light: #f8fafc;
+            --gov-text-muted: #94a3b8;
+        }
+
+        body {
+            background-color: var(--gov-navy-dark);
+            color: var(--gov-text-light);
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        .result-docket {
+            background: #ffffff;
+            color: #0f172a;
+            border: 2px solid #0f172a;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            margin-bottom: 24px;
+        }
+
+        .docket-gov-header {
+            background: #991b1b;
+            color: #ffffff;
+            padding: 18px 24px;
+            border-bottom: 3px solid #7f1d1d;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .docket-emblem-group {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .docket-titles h2 {
+            margin: 0;
+            font-size: 1.25rem;
+            font-weight: 900;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            font-family: 'Roboto Condensed', sans-serif;
+            color: #ffffff;
+        }
+
+        .docket-titles p {
+            margin: 2px 0 0;
+            font-size: 0.85rem;
+            opacity: 0.92;
+            font-weight: 500;
+        }
+
+        .docket-doc-meta {
+            text-align: right;
+            font-size: 0.82rem;
+            color: #fecaca;
+            line-height: 1.4;
+        }
+
+        .docket-doc-meta strong {
+            color: #ffffff;
+        }
+
+        .docket-meta-strip {
+            background: #f1f5f9;
+            border-bottom: 1px solid #cbd5e1;
+            padding: 14px 24px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) 100px;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .meta-field-label {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #64748b;
+            letter-spacing: 0.5px;
+            margin-bottom: 2px;
+        }
+
+        .meta-field-value {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .docket-body {
+            padding: 24px;
+            background: #ffffff;
+        }
+
+        /* ACTIONS BAR */
+        .result-actions-strip {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .btn-gov {
+            background: #0f172a;
+            color: #ffffff;
+            border: 1px solid #0f172a;
+            padding: 10px 18px;
+            font-size: 0.88rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.15s ease;
+        }
+
+        .btn-gov:hover {
+            background: #1e293b;
+            border-color: #1e293b;
+            color: #ffffff;
+        }
+
+        .btn-gov-danger {
+            background: #dc2626;
+            border-color: #dc2626;
+            color: #ffffff;
+        }
+
+        .btn-gov-danger:hover {
+            background: #b91c1c;
+            border-color: #b91c1c;
+        }
+
+        .btn-gov-outline {
+            background: #ffffff;
+            color: #0f172a;
+            border: 1px solid #94a3b8;
+        }
+
+        .btn-gov-outline:hover {
+            background: #f1f5f9;
+            border-color: #0f172a;
+        }
+
+        /* KEY METRICS GRID */
+        .metrics-grid-sharp {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 860px) {
+            .metrics-grid-sharp {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .metric-card-sharp {
+            background: #f8fafc;
+            border: 1px solid #cbd5e1;
+            border-left: 6px solid #0f172a;
+            padding: 18px;
+            position: relative;
+        }
+
+        .metric-card-sharp.danger { border-left-color: #dc2626; }
+        .metric-card-sharp.warning { border-left-color: #d97706; }
+        .metric-card-sharp.success { border-left-color: #16a34a; }
+
+        .metric-title-sharp {
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #64748b;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+
+        .metric-value-sharp {
+            font-size: 2.4rem;
+            font-weight: 900;
+            font-family: 'Roboto Condensed', sans-serif;
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+
+        .metric-desc-sharp {
+            font-size: 0.82rem;
+            color: #475569;
+            line-height: 1.4;
+        }
+
+        /* EXPLANATION BOX - % NGUY CƠ LÀ GÌ? */
+        .risk-explainer-box {
+            background: #fffbeb;
+            border: 1px solid #fde68a;
+            border-left: 6px solid #d97706;
+            padding: 18px 20px;
+            margin-bottom: 28px;
+        }
+
+        .risk-explainer-title {
+            font-size: 1rem;
+            font-weight: 800;
+            color: #92400e;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .risk-explainer-content {
+            font-size: 0.88rem;
+            color: #78350f;
+            line-height: 1.55;
+        }
+
+        .risk-scale-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            margin-top: 14px;
+        }
+        @media (max-width: 768px) {
+            .risk-scale-row {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .risk-scale-step {
+            padding: 8px 10px;
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            font-size: 0.78rem;
+        }
+        .risk-scale-step.active {
+            border: 2px solid #0f172a;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+        }
+        .risk-scale-step .step-tag {
+            font-weight: 800;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        /* AI SECTION CONTAINER */
+        .ai-command-section {
+            background: #f8fafc;
+            border: 2px solid #0f172a;
+            margin-bottom: 28px;
+        }
+
+        .ai-command-header {
+            background: #0f172a;
+            color: #ffffff;
+            padding: 14px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .ai-command-header h3 {
+            margin: 0;
+            font-size: 1.05rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .ai-tab-strip {
+            display: flex;
+            background: #e2e8f0;
+            border-bottom: 2px solid #0f172a;
+            flex-wrap: wrap;
+        }
+
+        .ai-tab-btn-sharp {
+            background: #e2e8f0;
+            border: none;
+            border-right: 1px solid #cbd5e1;
+            padding: 12px 20px;
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: #475569;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .ai-tab-btn-sharp:hover {
+            background: #cbd5e1;
+            color: #0f172a;
+        }
+
+        .ai-tab-btn-sharp.active {
+            background: #ffffff;
+            color: #b91c1c;
+            border-bottom: 3px solid #b91c1c;
+            margin-bottom: -2px;
+        }
+
+        .ai-tab-body {
+            padding: 24px;
+            background: #ffffff;
+        }
+
+        /* SECTION HEADINGS INSIDE AI */
+        .ai-h-tag {
+            font-size: 0.95rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin: 18px 0 10px;
+            padding-bottom: 6px;
+            border-bottom: 1.5px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .ai-h-tag.danger { color: #dc2626; border-bottom-color: #fee2e2; }
+        .ai-h-tag.warning { color: #d97706; border-bottom-color: #fef3c7; }
+        .ai-h-tag.success { color: #16a34a; border-bottom-color: #dcfce7; }
+        .ai-h-tag.primary { color: #1e3a8a; border-bottom-color: #dbeafe; }
+
+        .ai-recommendation-card {
+            background: #f8fafc;
+            border: 1px solid #cbd5e1;
+            border-left: 5px solid #94a3b8;
+            padding: 14px 16px;
+            margin-bottom: 12px;
+        }
+
+        .ai-recommendation-card.urgent { border-left-color: #dc2626; }
+        .ai-recommendation-card.high { border-left-color: #ea580c; }
+        .ai-recommendation-card.medium { border-left-color: #d97706; }
+        .ai-recommendation-card.low { border-left-color: #16a34a; }
+
+        .ai-phase-box {
+            border: 1px solid #e2e8f0;
+            margin-bottom: 16px;
+        }
+        .ai-phase-header {
+            padding: 10px 16px;
+            font-weight: 800;
+            font-size: 0.92rem;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+
+        /* CHARTS CONTAINER */
+        .charts-row-sharp {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 20px;
+            margin-bottom: 24px;
+        }
+        @media (max-width: 900px) {
+            .charts-row-sharp {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .chart-panel-sharp {
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            padding: 18px;
+        }
+
+        .chart-panel-sharp h4 {
+            margin: 0 0 14px;
+            font-size: 0.95rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: #0f172a;
+            border-bottom: 2px solid #0f172a;
+            padding-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        /* TABLE OF CATEGORIES */
+        .category-table-sharp {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.88rem;
+            margin-top: 10px;
+        }
+
+        .category-table-sharp th {
+            background: #0f172a;
+            color: #ffffff;
+            text-align: left;
+            padding: 10px 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.5px;
+            border: 1px solid #0f172a;
+        }
+
+        .category-table-sharp td {
+            padding: 12px 14px;
+            border: 1px solid #e2e8f0;
+            color: #1e293b;
+        }
+
+        .category-table-sharp tr:nth-child(even) {
+            background: #f8fafc;
+        }
+
+        .badge-sharp {
+            display: inline-block;
+            padding: 3px 8px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border: 1px solid currentColor;
+        }
+        .badge-sharp.danger { color: #dc2626; background: #fef2f2; }
+        .badge-sharp.warning { color: #d97706; background: #fffbeb; }
+        .badge-sharp.success { color: #16a34a; background: #f0fdf4; }
+        .badge-sharp.info { color: #0284c7; background: #f0f9ff; }
+
+        /* LOADING SPINNER SHARP */
+        .ai-loading-box {
+            text-align: center;
+            padding: 36px 20px;
+            background: #f8fafc;
+            border: 2px dashed #0f172a;
+        }
+        .pulse-siren {
+            font-size: 2.6rem;
+            display: inline-block;
+            animation: pulseSiren 1s infinite alternate;
+        }
+        @keyframes pulseSiren {
+            from { transform: scale(0.95); opacity: 0.8; }
+            to { transform: scale(1.1); opacity: 1; }
+        }
+    </style>
 </head>
 
 <body>
-    <nav class="navbar">
+    <!-- HEADER BAR -->
+    <nav class="navbar" style="border-bottom: 2px solid #b91c1c;">
         <div class="container">
-            <a href="/" class="nav-brand"><span class="logo-icon">🔥</span>
-                <div><span>FRAS</span><small>Đánh giá Nguy cơ Cháy Nổ</small></div>
+            <a href="/" class="nav-brand">
+                <span class="logo-icon"><img src="/img/logo-cand.png" alt="CAND" width="36" height="36" style="object-fit:contain; filter:brightness(0) invert(1);"></span>
+                <div><span>FRAS</span><small>Hệ thống Khảo sát & Đánh giá Nguy cơ Cháy Nổ AI</small></div>
             </a>
             <ul class="nav-links" id="nav-links"></ul>
             <div class="nav-user" id="nav-user"></div>
-            <button class="nav-mobile-toggle">☰</button>
+            <button class="nav-mobile-toggle">&#9776;</button>
         </div>
     </nav>
 
-    <div class="page-content">
-        <div class="container" id="result-container">
-            <div style="text-align:center; padding:60px;">
+    <div class="page-content" style="padding-top: 85px;">
+        <div class="container" id="result-container" style="max-width: 1180px;">
+            <div style="text-align:center; padding:80px 20px; background:#ffffff; color:#0f172a; border:2px solid #0f172a;">
                 <div class="loading-spinner"></div>
-                <p class="mt-2" style="color:var(--text-secondary)">Đang tải kết quả...</p>
+                <h3 style="margin-top:16px; font-weight:800; text-transform:uppercase;">Đang truy xuất hồ sơ thẩm định...</h3>
+                <p style="color:#64748b; font-size:0.9rem;">Vui lòng đợi giây lát trong khi hệ thống nạp dữ liệu kết quả</p>
             </div>
         </div>
     </div>
@@ -36,97 +515,278 @@
     <script src="/js/charts.js"></script>
     <script src="/js/export.js"></script>
     <script>
+        let currentAssessmentData = null;
+        let isAiAnalyzing = false;
+
         onReady(async () => {
             setupNavbar();
-            if (!requireAuth()) return;
             const params = new URLSearchParams(window.location.search);
             const id = params.get('id');
-            if (!id) { window.location.href = '/history.html'; return; }
+            if (!id) {
+                window.location.href = '/history.html';
+                return;
+            }
+
             try {
                 const data = await api.get(`/assessments/${id}`);
+                currentAssessmentData = data;
                 renderResult(data);
             } catch (error) {
-                document.getElementById('result-container').innerHTML = `<div class="alert alert-danger">${error.message}</div>`;
+                document.getElementById('result-container').innerHTML = `
+                    <div style="background:#fef2f2; border:2px solid #dc2626; color:#991b1b; padding:24px; text-align:center;">
+                        <h3 style="margin:0 0 8px; font-weight:800;">⚠️ KHÔNG THỂ TẢI HỒ SƠ ĐÁNH GIÁ</h3>
+                        <p style="margin:0 0 16px;">${error.message || 'Mã hồ sơ không tồn tại hoặc phiên đánh giá đã kết thúc.'}</p>
+                        <a href="/survey.html" class="btn-gov btn-gov-danger">Làm bài khảo sát mới →</a>
+                    </div>
+                `;
             }
         });
 
+        function formatFacilityType(type) {
+            if (!type) return 'Chưa phân loại';
+            const dict = {
+                'hospitality': 'Nhà hàng, khách sạn, dịch vụ lưu trú, ăn uống',
+                'commercial': 'Trung tâm thương mại, siêu thị, chợ, cửa hàng',
+                'industrial': 'Cơ sở sản xuất công nghiệp, nhà xưởng, kho hàng',
+                'residential': 'Nhà ở kết hợp sản xuất kinh doanh, nhà ở nhiều hộ',
+                'gas_station': 'Cửa hàng kinh doanh xăng dầu, khí đốt hóa lỏng (LPG)',
+                'karaoke': 'Cơ sở kinh doanh dịch vụ karaoke, vũ trường, quán bar',
+                'educational': 'Cơ sở giáo dục, trường học, nhà trẻ, mầm non',
+                'medical': 'Cơ sở khám chữa bệnh, bệnh viện, phòng khám',
+                'office': 'Tòa nhà văn phòng làm việc'
+            };
+            return dict[type.toLowerCase()] || type;
+        }
+
         function renderResult(data) {
             const c = document.getElementById('result-container');
-            const riskColors = { low: '#22c55e', medium: '#eab308', high: '#f97316', critical: '#ef4444' };
-            const riskColor = riskColors[data.risk_level] || '#94a3b8';
+            if (!c) return;
 
-            let aiHtml = '';
+            const riskColors = { low: '#16a34a', medium: '#d97706', high: '#ea580c', critical: '#dc2626' };
+            const riskLabels = { low: 'AN TOÀN / NGUY CƠ THẤP', medium: 'TRUNG BÌNH / CẦN CẢI THIỆN', high: 'NGUY CƠ CAO', critical: 'RẤT CAO / CẤP BÁO' };
+            const riskColor = riskColors[data.risk_level] || '#0f172a';
+            const riskText = riskLabels[data.risk_level] || 'CHƯA XÁC ĐỊNH';
+            const cardClass = data.risk_level === 'critical' || data.risk_level === 'high' ? 'danger' : data.risk_level === 'medium' ? 'warning' : 'success';
+
+            // Check if AI is already analyzed
+            let aiObj = null;
             if (data.ai_analysis) {
                 try {
-                    const ai = typeof data.ai_analysis === 'string' ? JSON.parse(data.ai_analysis) : data.ai_analysis;
-                    aiHtml = buildAiSection(ai);
-                } catch (e) { aiHtml = ''; }
+                    aiObj = typeof data.ai_analysis === 'string' ? JSON.parse(data.ai_analysis) : data.ai_analysis;
+                } catch (e) {
+                    aiObj = null;
+                }
             }
 
             c.innerHTML = `
-        <div class="page-header" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
-            <div>
-                <h1 class="fade-in">📊 Kết quả Đánh giá</h1>
-                <p style="color:var(--text-secondary);">${data.facility_name} • ${formatDate(data.completed_at)}</p>
-            </div>
-            <div style="display:flex; gap:8px; flex-wrap:wrap;">
-                <button class="btn btn-outline" onclick="exportPDF('${data.id}')">📄 Xuất PDF</button>
-                <button class="btn btn-primary" onclick="requestAI('${data.id}')" id="btn-ai">🤖 Phân tích AI</button>
-            </div>
-        </div>
-
-        <div class="stats-grid fade-in" style="display:grid; grid-template-columns: repeat(3, 1fr); gap:20px;">
-            <div class="stat-card"><div class="stat-icon">📊</div><div class="stat-value" style="color:${riskColor};">${data.risk_percentage}%</div><div class="stat-label">Tỷ lệ nguy cơ</div></div>
-            <div class="stat-card"><div class="stat-icon">🔥</div><div class="stat-value">${data.total_score}/${data.max_possible_score}</div><div class="stat-label">Tổng điểm</div></div>
-            <div class="stat-card"><div class="stat-icon">⚡</div><div class="stat-value">${getRiskBadge(data.risk_level)}</div><div class="stat-label">Mức nguy cơ</div></div>
-        </div>
-
-        <div style="display:grid; grid-template-columns: 1.5fr 1fr; gap:20px; margin-top:20px;" class="fade-in">
-            <div class="dashboard-section">
-                <div class="section-title"><h3>📈 Biểu đồ Radar</h3></div>
-                <div class="chart-container"><canvas id="radar-chart"></canvas></div>
-            </div>
-            <div class="dashboard-section">
-                <div class="section-title"><h3>🎯 Mức độ Nguy cơ</h3></div>
-                <div class="chart-container" style="height:250px;"><canvas id="gauge-chart"></canvas></div>
-            </div>
-        </div>
-
-        ${data.category_scores && data.category_scores.length ? `
-        <div class="dashboard-section mt-3 fade-in">
-            <div class="section-title"><h3>📊 Điểm theo Nhóm</h3></div>
-            <div class="chart-container" style="height:${Math.max(300, data.category_scores.length * 35)}px;"><canvas id="bar-chart"></canvas></div>
-        </div>
-        <div class="dashboard-section mt-3 fade-in">
-            <div class="section-title"><h3>📋 Chi tiết theo Nhóm</h3></div>
-            ${data.category_scores.map(cs => `
-                <div style="display:flex; align-items:center; justify-content:space-between; padding:14px 0; border-bottom:1px solid rgba(255,255,255,0.05);">
-                    <div style="display:flex; align-items:center; gap:12px;">
-                        <span style="font-size:1.3rem;">${cs.category_icon || '📋'}</span>
-                        <div>
-                            <div style="font-weight:600;">${cs.category_name}</div>
-                            <div style="font-size:0.82rem; color:var(--text-muted);">${cs.score_obtained}/${cs.max_score} điểm</div>
+            <div class="result-docket">
+                <!-- DOCKET OFFICIAL HEADER -->
+                <div class="docket-gov-header">
+                    <div class="docket-emblem-group">
+                        <img src="/img/logo-cand.png" alt="CAND" width="56" height="56" style="object-fit:contain;">
+                        <div class="docket-titles">
+                            <h2>CÔNG AN THÀNH PHỐ BẮC NINH</h2>
+                            <p>Phòng Cảnh sát PCCC và Cứu nạn, cứu hộ • Hệ thống FRAS-AI</p>
                         </div>
                     </div>
-                    <div style="text-align:right;">
-                        <div style="font-weight:700; color:${riskColors[cs.risk_level] || '#94a3b8'};">${cs.percentage}%</div>
-                        ${getRiskBadge(cs.risk_level)}
+                    <div class="docket-doc-meta">
+                        <div>CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</div>
+                        <div style="font-size:0.75rem;">Độc lập – Tự do – Hạnh phúc</div>
+                        <div style="margin-top:4px;">Số hồ sơ: <strong>FRAS-${(data.id || '').substring(0, 8).toUpperCase()}</strong></div>
                     </div>
                 </div>
-            `).join('')}
-        </div>` : ''}
 
-        ${data.recommendations && data.recommendations.length ? renderGroupedRecs(data.recommendations) : ''}
+                <!-- DOCKET METADATA STRIP -->
+                <div class="docket-meta-strip">
+                    <div>
+                        <div class="meta-field-label">Tên cơ sở / Công trình</div>
+                        <div class="meta-field-value">${data.facility_name || 'Khảo sát tự do'}</div>
+                    </div>
+                    <div>
+                        <div class="meta-field-label">Loại hình cơ sở</div>
+                        <div class="meta-field-value">${formatFacilityType(data.facility_type)}</div>
+                    </div>
+                    <div>
+                        <div class="meta-field-label">Địa chỉ</div>
+                        <div class="meta-field-value">${data.facility_address || 'TP Bắc Ninh'}</div>
+                    </div>
+                    <div>
+                        <div class="meta-field-label">Thời gian khảo sát</div>
+                        <div class="meta-field-value">${formatDate(data.completed_at || data.created_at)}</div>
+                    </div>
+                    <div id="qr-code-box" style="text-align:right;">
+                        <div style="width:72px; height:72px; background:#ffffff; border:1px solid #cbd5e1; display:flex; align-items:center; justify-content:center; font-size:0.75rem; color:#94a3b8; margin-left:auto;">QR CODE</div>
+                    </div>
+                </div>
 
-        ${aiHtml}
+                <div class="docket-body">
+                    <!-- ACTIONS STRIP -->
+                    <div class="result-actions-strip">
+                        <div style="display:flex; align-items:center; gap:8px;">
+                            <span class="badge-sharp ${cardClass}">KẾT QUẢ: ${riskText}</span>
+                            <span style="font-size:0.82rem; color:#64748b;">(Căn cứ ma trận đánh giá 8 nhóm nguyên nhân cháy nổ)</span>
+                        </div>
+                        <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                            <button type="button" class="btn-gov btn-gov-outline" onclick="window.print()">In Biên bản</button>
+                            <button type="button" class="btn-gov btn-gov-outline" onclick="exportPDF('${data.id}')">Xuất File PDF</button>
+                            <button type="button" class="btn-gov" onclick="triggerForceAiAnalyze('${data.id}')" id="btn-force-ai">Phân tích lại bằng AI</button>
+                            <a href="/survey.html" class="btn-gov btn-gov-danger">Khảo sát mới</a>
+                        </div>
+                    </div>
 
-        <div id="ai-result-container"></div>
+                    <!-- LƯU Ý KHẢO SÁT TRUNG THỰC -->
+                    <div style="background:#fffbeb; border:1px solid #fef3c7; border-left:4px solid #d97706; padding:12px 16px; margin-bottom:20px; font-size:0.92rem; color:#92400e; line-height:1.5;">
+                        ℹ️ <strong>Lưu ý quan trọng:</strong> Kết quả đánh giá dựa trên câu trả lời khảo sát của bạn, hãy khảo sát trung thực để đánh giá thực tế nhất nguy cơ cháy nổ của cơ sở.
+                    </div>
 
-        <div style="text-align:center; margin-top:32px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
-            <a href="/history.html" class="btn btn-secondary">📋 Lịch sử Đánh giá</a>
-            <a href="/survey.html" class="btn btn-primary">🔥 Đánh giá mới</a>
-        </div>`;
+                    <!-- 1. KEY METRICS CARDS -->
+                    <div class="metrics-grid-sharp">
+                        <div class="metric-card-sharp ${cardClass}">
+                            <div class="metric-title-sharp">Tỷ lệ Nguy cơ Tổng hợp</div>
+                            <div class="metric-value-sharp" style="color:${riskColor};">${data.risk_percentage}%</div>
+                            <div class="metric-desc-sharp">
+                                Mức độ: <strong style="color:${riskColor};">${riskText}</strong>.<br>
+                                Thước đo tỷ lệ tích tụ hiểm họa cháy nổ tại cơ sở.
+                            </div>
+                        </div>
 
+                        <div class="metric-card-sharp">
+                            <div class="metric-title-sharp">Điểm Nguy cơ / Điểm Tối đa</div>
+                            <div class="metric-value-sharp" style="color:#0f172a;">${data.total_score} <span style="font-size:1.2rem; font-weight:500; color:#64748b;">/ ${data.max_possible_score || 100}</span></div>
+                            <div class="metric-desc-sharp">
+                                Tổng số điểm nguy cơ ghi nhận từ các câu trả lời.<br>
+                                <em>(Điểm nguy cơ càng thấp, cơ sở càng an toàn).</em>
+                            </div>
+                        </div>
+
+                        <div class="metric-card-sharp">
+                            <div class="metric-title-sharp">Thời hạn Khắc phục Đề xuất</div>
+                            <div class="metric-value-sharp" style="color:#b91c1c;">
+                                ${data.risk_level === 'critical' || data.risk_level === 'high' ? 'Khắc phục ngay' : data.risk_level === 'medium' ? '30 - 60 ngày' : 'Định kỳ'}
+                            </div>
+                            <div class="metric-desc-sharp">
+                                ${data.risk_level === 'critical' || data.risk_level === 'high' ? 'Khắc phục ngay (trong 24h - 48h) đối với các nguy cơ chập cháy điện và nguồn nhiệt.' : 'Thực hiện tự kiểm tra định kỳ và duy trì các điều kiện an toàn PCCC.'}
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. EXPLANATION BOX: % NGUY CƠ NÀY LÀ THẾ NÀO? NÓI LÊN ĐIỀU GÌ? -->
+                    <div class="risk-explainer-box">
+                        <div class="risk-explainer-title">
+                            HƯỚNG DẪN ĐỌC HIỂU: TỶ LỆ % NGUY CƠ NÀY LÀ GÌ VÀ THỂ HIỆN ĐIỀU GÌ?
+                        </div>
+                        <div class="risk-explainer-content">
+                            <p style="margin:0 0 8px;">
+                                <strong>Bản chất của chỉ số:</strong> Tỷ lệ <strong>${data.risk_percentage}% nguy cơ</strong> không phải là điểm số thi cử đạt/trượt, mà là <strong>thước đo mức độ tích tụ hiểm họa cháy nổ</strong> của công trình dựa trên ma trận xác suất thống kê thực tế tại Việt Nam (trong đó: <strong>sự cố hệ thống thiết bị điện chiếm hơn 50%</strong> trọng số các nguyên nhân gây ra cháy; <strong>bất cẩn nguồn lửa/nhiệt chiếm 15%</strong>... Tồn tại về lối thoát nạn và trang bị phương tiện PCCC là các điều kiện quyết định khả năng thoát nạn sống còn và hạn chế thiệt hại khi xảy ra hỏa hoạn, không phải nguyên nhân phát sinh cháy).
+                            </p>
+                            <p style="margin:0 0 10px;">
+                                <strong>Quy tắc an toàn tính mạng:</strong> Dù tổng điểm nguy cơ của cơ sở có thể thấp, nhưng nếu xuất hiện bất kỳ nguy cơ nghiêm trọng nào tại các nhóm có tỷ lệ xảy ra cao (như sự cố chập cháy hệ thống điện, thiết bị phát nhiệt quá mức, rò rỉ khí gas, hoặc lối thoát nạn duy nhất bị bịt kín), hệ thống sẽ lập tức kích hoạt mức cảnh báo nguy cơ cao để chủ cơ sở không được chủ quan.
+                            </p>
+
+                            <!-- 4-step scale -->
+                            <div class="risk-scale-row">
+                                <div class="risk-scale-step ${data.risk_percentage <= 20 ? 'active' : ''}" style="border-top: 4px solid #16a34a;">
+                                    <span class="step-tag" style="color:#16a34a;">MỨC 1: 0% - 20% (AN TOÀN)</span>
+                                    Tuân thủ tốt quy chuẩn PCCC, nguy cơ phát sinh cháy nổ ở mức tối thiểu.
+                                </div>
+                                <div class="risk-scale-step ${data.risk_percentage > 20 && data.risk_percentage <= 45 ? 'active' : ''}" style="border-top: 4px solid #d97706;">
+                                    <span class="step-tag" style="color:#d97706;">MỨC 2: 21% - 45% (CẦN CẢI THIỆN)</span>
+                                    Đã xuất hiện mầm mống rủi ro (quá tải điện nhẹ, thiếu bảo dưỡng thiết bị), cần tự chấn chỉnh sớm.
+                                </div>
+                                <div class="risk-scale-step ${data.risk_percentage > 45 && data.risk_percentage <= 70 ? 'active' : ''}" style="border-top: 4px solid #ea580c;">
+                                    <span class="step-tag" style="color:#ea580c;">MỨC 3: 46% - 70% (NGUY CƠ CAO)</span>
+                                    Tồn tại vi phạm nghiêm trọng có thể trực tiếp phát sinh hỏa hoạn. Phải khắc phục ngay các nguy cơ điện/nhiệt trong 24h - 48h.
+                                </div>
+                                <div class="risk-scale-step ${data.risk_percentage > 70 ? 'active' : ''}" style="border-top: 4px solid #dc2626;">
+                                    <span class="step-tag" style="color:#dc2626;">MỨC 4: 71% - 100% (CẤP BÁO)</span>
+                                    Điều kiện an toàn cực kỳ nguy hiểm, nguy cơ cháy nổ tức thời đe dọa trực tiếp tính mạng con người!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. DETAILED CATEGORY SCORES TABLE & BAR CHART (MOVED UP PER USER REQUEST) -->
+                    ${data.category_scores && data.category_scores.length ? `
+                    <div class="chart-panel-sharp" style="margin-bottom: 24px;">
+                        <h4>Phân tích Tỷ lệ Nguy cơ theo Từng Nhóm Câu hỏi</h4>
+                        <div style="height:${Math.max(260, data.category_scores.length * 36)}px; position:relative; margin-bottom: 20px;">
+                            <canvas id="bar-chart"></canvas>
+                        </div>
+
+                        <h4>Bảng Thống kê Chi tiết các Nhóm Rà soát</h4>
+                        <table class="category-table-sharp">
+                            <thead>
+                                <tr>
+                                    <th style="width: 40px; text-align:center;">STT</th>
+                                    <th>Nhóm Nguy cơ / Hạng mục rà soát</th>
+                                    <th style="width: 140px; text-align:center;">Điểm ghi nhận</th>
+                                    <th style="width: 120px; text-align:center;">Tỷ lệ nguy cơ</th>
+                                    <th style="width: 150px; text-align:center;">Đánh giá</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${data.category_scores.map((cs, idx) => `
+                                <tr>
+                                    <td style="text-align:center; font-weight:700;">${idx + 1}</td>
+                                    <td>
+                                        <div style="font-weight:700; color:#0f172a;">${cs.category_name}</div>
+                                    </td>
+                                    <td style="text-align:center; font-weight:600;">
+                                        ${cs.score_obtained} / ${cs.max_score} điểm
+                                    </td>
+                                    <td style="text-align:center; font-weight:800; color:${riskColors[cs.risk_level] || '#0f172a'}; font-size:0.95rem;">
+                                        ${cs.percentage}%
+                                    </td>
+                                    <td style="text-align:center;">
+                                        <span class="badge-sharp ${cs.risk_level === 'critical' || cs.risk_level === 'high' ? 'danger' : cs.risk_level === 'medium' ? 'warning' : 'success'}">
+                                            ${cs.risk_level === 'low' ? 'NGUY CƠ THẤP' : cs.risk_level === 'medium' ? 'CẦN LƯU Ý' : 'NGUY HIỂM'}
+                                        </span>
+                                    </td>
+                                </tr>
+                                `).join('')}
+                            </tbody>
+                        </table>
+                    </div>
+                    ` : ''}
+
+                    <!-- 4. RADAR & GAUGE CHARTS ROW -->
+                    <div class="charts-row-sharp">
+                        <div class="chart-panel-sharp">
+                            <h4>Biểu đồ Radar Phân bổ Nguy cơ theo Các Trục</h4>
+                            <div style="height: 320px; position:relative;">
+                                <canvas id="radar-chart"></canvas>
+                            </div>
+                        </div>
+                        <div class="chart-panel-sharp">
+                            <h4>Thước đo Cấp độ Nguy cơ Cháy nổ</h4>
+                            <div style="height: 250px; position:relative;">
+                                <canvas id="gauge-chart"></canvas>
+                            </div>
+                            <div style="text-align:center; margin-top:10px; font-size:0.85rem; color:#64748b;">
+                                Chỉ số thực tế: <strong style="color:${riskColor}; font-size:1.1rem;">${data.risk_percentage}%</strong> (${riskText})
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. REALTIME DEFICIENCY MITIGATION & REASSESSMENT CHECKLIST -->
+                    <div id="mitigation-main-container" style="margin-bottom: 28px;"></div>
+
+                    <!-- 6. AI ANALYSIS & RECOMMENDATIONS SECTION -->
+                    <div id="ai-main-container">
+                        ${aiObj ? renderAiSectionHtml(aiObj) : renderAiLoadingHtml(data.id)}
+                    </div>
+
+                    <!-- FOOTER ACTIONS -->
+                    <div style="display:flex; justify-content:center; gap:12px; margin-top:32px; padding-top:20px; border-top:1px solid #e2e8f0; flex-wrap:wrap;">
+                        <a href="/history.html" class="btn-gov btn-gov-outline">Xem Lịch sử các bài đánh giá</a>
+                        <a href="/survey.html" class="btn-gov btn-gov-danger">Thực hiện bài Khảo sát mới</a>
+                        <button type="button" class="btn-gov" onclick="window.scrollTo({top:0, behavior:'smooth'})">Lên đầu trang</button>
+                    </div>
+                </div>
+            </div>
+            `;
+
+            // Render Charts
             if (data.category_scores && data.category_scores.length) {
                 setTimeout(() => {
                     createRadarChart('radar-chart', data.category_scores);
@@ -135,97 +795,623 @@
                 }, 100);
             }
 
-            // Auto-trigger AI analysis if not already done
-            if (!data.ai_analysis) {
-                setTimeout(() => requestAI(data.id), 500);
+            // Load QR code
+            loadDocketQRCode(data.id);
+
+            // Load Realtime Mitigation Checklist
+            loadMitigationChecklist(data.id);
+
+            // AUTO-TRIGGER AI IF NOT YET ANALYZED
+            if (!aiObj && !isAiAnalyzing) {
+                setTimeout(() => triggerAiAnalyze(data.id), 400);
             }
         }
 
-        function renderGroupedRecs(recs) {
-            const seen = new Set();
-            const unique = recs.filter(r => {
-                if (seen.has(r.recommendation_text)) return false;
-                seen.add(r.recommendation_text);
-                return true;
-            });
-            const groups = { urgent: [], high: [], medium: [] };
-            unique.forEach(r => { (groups[r.priority] || groups.medium).push(r); });
-
-            const pInfo = {
-                urgent: { label: '🚨 Cần xử lý NGAY', color: '#ef4444' },
-                high: { label: '⚠️ Ưu tiên cao', color: '#f97316' },
-                medium: { label: '📋 Cần cải thiện', color: '#eab308' }
-            };
-
-            let html = '<div class="dashboard-section mt-3"><div class="section-title"><h3>📝 Khuyến cáo theo đánh giá</h3></div>';
-            for (const [pri, items] of Object.entries(groups)) {
-                if (!items.length) continue;
-                const inf = pInfo[pri];
-                html += `<div style="margin-bottom:16px;">
-                    <h5 style="color:${inf.color}; margin:12px 0 8px; font-size:0.95rem;">${inf.label} (${items.length})</h5>
-                    <div style="background:rgba(255,255,255,0.03); border-radius:12px; padding:12px; border-left:3px solid ${inf.color};">`;
-                items.forEach(r => {
-                    html += `<div style="padding:8px 0; border-bottom:1px solid rgba(255,255,255,0.04); font-size:0.88rem;">
-                        <div style="color:var(--text-primary); margin-bottom:4px;">• ${r.recommendation_text}</div>
-                        <div style="color:var(--text-muted); font-size:0.8rem;">⏰ ${r.deadline_days} ngày${r.legal_reference ? ` | 📜 ${r.legal_reference}` : ''}</div>
-                    </div>`;
-                });
-                html += '</div></div>';
-            }
-            return html + '</div>';
-        }
-
-        function buildAiSection(ai) {
-            const pc = { urgent: '#ef4444', high: '#f97316', medium: '#eab308', low: '#22c55e' };
-            let h = '<div class="dashboard-section mt-3"><div class="section-title"><h3>🤖 Phân tích & Khuyến cáo từ AI</h3></div>';
-            if (ai.overall_assessment) h += `<div class="alert alert-info" style="margin-bottom:16px; font-size:0.95rem;">${ai.overall_assessment}</div>`;
-            if (ai.strengths?.length) h += `<h5 style="margin:12px 0 8px; color:#22c55e;">✅ Ưu điểm</h5><ul style="padding-left:20px;color:var(--text-secondary);font-size:0.9rem;">${ai.strengths.map(s => `<li style="margin-bottom:4px;">${s}</li>`).join('')}</ul>`;
-            if (ai.critical_weaknesses?.length) h += `<h5 style="margin:12px 0 8px; color:#ef4444;">⚠️ Tồn tại, nguy cơ cháy, nổ</h5><ul style="padding-left:20px;color:var(--text-secondary);font-size:0.9rem;">${ai.critical_weaknesses.map(s => `<li style="margin-bottom:4px;">${s}</li>`).join('')}</ul>`;
-            if (ai.detailed_recommendations?.length) {
-                h += `<h5 style="margin:16px 0 8px; color:#f97316;">🔧 Khuyến cáo chi tiết từ AI</h5>`;
-                ai.detailed_recommendations.forEach((r, i) => {
-                    const c = pc[r.priority] || '#94a3b8';
-                    h += `<div style="background:rgba(255,255,255,0.03); border-radius:10px; padding:14px; margin-bottom:10px; border-left:3px solid ${c};">
-                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
-                            <strong style="color:var(--text-primary); font-size:0.92rem;">${i + 1}. ${r.title || ''}</strong>
-                            <span style="background:${c}20; color:${c}; padding:2px 8px; border-radius:4px; font-size:0.75rem; font-weight:600;">${(r.priority || '').toUpperCase()}</span>
+        function renderAiLoadingHtml(id) {
+            return `
+            <div class="ai-command-section">
+                <div class="ai-command-header">
+                    <h3><span>🤖</span> TRUNG TÂM PHÂN TÍCH TRÍ TUỆ NHÂN TẠO (AI ADVISORY & RAG ENGINE)</h3>
+                    <span style="font-size:0.8rem; background:rgba(255,255,255,0.15); padding:3px 10px;">TIẾN TRÌNH TỰ ĐỘNG</span>
+                </div>
+                <div class="ai-tab-body">
+                    <div class="ai-loading-box">
+                        <div class="pulse-siren">🚨</div>
+                        <h3 style="margin:16px 0 8px; font-weight:800; color:#0f172a; text-transform:uppercase;">
+                            ĐANG TỰ ĐỘNG PHÂN TÍCH HỒ SƠ & TỔNG HỢP KHUYẾN CÁO...
+                        </h3>
+                        <p style="color:#64748b; font-size:0.9rem; max-width:680px; margin:0 auto 16px; line-height:1.5;">
+                            Hệ thống đang đồng thời đối soát dữ liệu khảo sát với mô hình <strong>Gemini 3.8 Flash</strong> và <strong>CSDL Văn bản Pháp luật (NĐ 105/2025, NĐ 106/2025, Luật PCCC số 55/2024/QH15)</strong> để xuất biên bản khuyến cáo thực tế và kế hoạch khắc phục 90 ngày.
+                        </p>
+                        <div style="display:inline-flex; align-items:center; gap:8px; font-size:0.85rem; color:#b91c1c; font-weight:700;">
+                            <div class="loading-spinner" style="width:20px; height:20px; border-width:2px;"></div>
+                            Vui lòng đợi khoảng 5-10 giây...
                         </div>
-                        <p style="color:var(--text-secondary); font-size:0.85rem; margin:0 0 6px; line-height:1.5;">${r.description || ''}</p>
-                        <div style="color:var(--text-muted); font-size:0.78rem;">⏰ ${r.deadline || '30 ngày'}${r.category ? ` | 📂 ${r.category}` : ''}</div>
+                    </div>
+                </div>
+            </div>
+            `;
+        }
+
+        async function triggerAiAnalyze(id, force = false) {
+            if (isAiAnalyzing) return;
+            isAiAnalyzing = true;
+
+            const btnForce = document.getElementById('btn-force-ai');
+            if (btnForce) {
+                btnForce.disabled = true;
+                btnForce.innerHTML = '⏳ Đang phân tích...';
+            }
+
+            try {
+                const url = force ? `/ai/analyze/${id}?force=true` : `/ai/analyze/${id}`;
+                const result = await api.post(url, {}, { timeoutMs: 90000 });
+                const ai = result.analysis || result;
+
+                // Update current assessment data
+                if (currentAssessmentData) {
+                    currentAssessmentData.ai_analysis = ai;
+                }
+
+                // Render into container
+                const container = document.getElementById('ai-main-container');
+                if (container) {
+                    container.innerHTML = renderAiSectionHtml(ai);
+                }
+
+                // Reload mitigation checklist with newly generated recommendations
+                loadMitigationChecklist(id);
+
+                if (btnForce) {
+                    btnForce.disabled = false;
+                    btnForce.innerHTML = '✅ Đã hoàn tất phân tích';
+                }
+            } catch (err) {
+                console.error("AI Analysis failed:", err);
+                const container = document.getElementById('ai-main-container');
+                if (container) {
+                    container.innerHTML = `
+                    <div class="ai-command-section">
+                        <div class="ai-command-header" style="background:#dc2626;">
+                            <h3><span>⚠️</span> THÔNG BÁO TẠM THỜI VỀ PHÂN TÍCH AI</h3>
+                        </div>
+                        <div class="ai-tab-body" style="text-align:center; padding:24px;">
+                            <p style="color:#dc2626; font-weight:700; margin:0 0 12px;">Chưa thể kết nối tới máy chủ AI: ${err.message || 'Hết thời gian chờ phản hồi'}</p>
+                            <button type="button" class="btn-gov btn-gov-danger" onclick="triggerAiAnalyze('${id}', true)">
+                                🔄 Bấm để thử phân tích lại ngay
+                            </button>
+                        </div>
+                    </div>
+                    `;
+                }
+                if (btnForce) {
+                    btnForce.disabled = false;
+                    btnForce.innerHTML = '🔄 Thử lại AI';
+                }
+            } finally {
+                isAiAnalyzing = false;
+            }
+        }
+
+        function triggerForceAiAnalyze(id) {
+            triggerAiAnalyze(id, true);
+        }
+
+        function switchAiTab(tabName) {
+            document.querySelectorAll('.ai-tab-btn-sharp').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.ai-tab-content-panel').forEach(p => p.style.display = 'none');
+            const activeBtn = document.getElementById(`btn-ai-tab-${tabName}`);
+            const activePanel = document.getElementById(`panel-ai-tab-${tabName}`);
+            if (activeBtn) activeBtn.classList.add('active');
+            if (activePanel) activePanel.style.display = 'block';
+        }
+
+        function renderSingleEngineContent(ai, engineTitle, badgeText, badgeColor) {
+            if (!ai) return '<p style="color:#64748b; padding:12px;">Đang cập nhật dữ liệu phân tích từ mô hình này...</p>';
+            let h = '';
+
+            if (engineTitle) {
+                h += `
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:18px; padding-bottom:12px; border-bottom:2px solid #e2e8f0; flex-wrap:wrap; gap:8px;">
+                    <div style="font-size:1.05rem; font-weight:800; color:#0f172a; text-transform:uppercase;">${engineTitle}</div>
+                    <span class="badge-sharp info" style="color:${badgeColor}; border-color:${badgeColor};">${badgeText}</span>
+                </div>`;
+            }
+
+            // Overall Assessment
+            if (ai.overall_assessment) {
+                h += `
+                <div style="background:#f0f9ff; border:1px solid #bae6fd; border-left:6px solid #0284c7; padding:16px; margin-bottom:20px; font-size:0.92rem; color:#0369a1; line-height:1.6;">
+                    <strong style="display:block; margin-bottom:4px; font-size:0.95rem; text-transform:uppercase;">KẾT LUẬN THẨM ĐỊNH TỔNG QUAN:</strong>
+                    ${ai.overall_assessment}
+                </div>`;
+            }
+
+            // Strengths -> Ưu điểm (Point 9)
+            if (ai.strengths?.length) {
+                h += `
+                <div class="ai-h-tag success">ƯU ĐIỂM (${ai.strengths.length})</div>
+                <ul style="padding-left:22px; margin:0 0 18px; color:#1e293b; font-size:0.88rem; line-height:1.6;">
+                    ${ai.strengths.map(s => `<li style="margin-bottom:6px;">${s}</li>`).join('')}
+                </ul>`;
+            }
+
+            // Critical Weaknesses / Hazards
+            if (ai.critical_weaknesses?.length) {
+                h += `
+                <div class="ai-h-tag danger">TỒN TẠI, VI PHẠM & NGUY CƠ CHÁY NỔ TIỀM ẨN (${ai.critical_weaknesses.length})</div>
+                <ul style="padding-left:22px; margin:0 0 20px; color:#991b1b; font-size:0.88rem; line-height:1.6;">
+                    ${ai.critical_weaknesses.map(w => `<li style="margin-bottom:6px; font-weight:600;">${w}</li>`).join('')}
+                </ul>`;
+            }
+
+            // Detailed Recommendations
+            if (ai.detailed_recommendations?.length) {
+                h += `<div class="ai-h-tag warning">KHUYẾN CÁO & GIẢI PHÁP KỸ THUẬT KHẮC PHỤC (${ai.detailed_recommendations.length} HẠNG MỤC)</div>`;
+                const priorityLabels = {
+                    'urgent': 'KHẨN CẤP (TRONG 24H - 48H)',
+                    'high': 'ƯU TIÊN CAO',
+                    'medium': 'TRUNG BÌNH',
+                    'low': 'THẤP'
+                };
+                ai.detailed_recommendations.forEach((r, i) => {
+                    const priorityClass = (r.priority || '').toLowerCase();
+                    const priorityText = priorityLabels[priorityClass] || (r.priority || 'ƯU TIÊN').toUpperCase();
+                    h += `
+                    <div class="ai-recommendation-card ${priorityClass}">
+                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px; flex-wrap:wrap; gap:8px;">
+                            <strong style="color:#0f172a; font-size:0.95rem;">${i + 1}. ${r.title || ''}</strong>
+                            <span class="badge-sharp ${priorityClass === 'urgent' ? 'danger' : priorityClass === 'high' ? 'warning' : 'info'}">
+                                ${priorityText}
+                            </span>
+                        </div>
+                        <p style="color:#334155; font-size:0.88rem; margin:0 0 8px; line-height:1.5;">${r.description || ''}</p>
+                        <div style="display:flex; flex-wrap:wrap; gap:12px; font-size:0.8rem; color:#64748b; font-weight:600;">
+                            <span>Hạn hoàn thành: <strong style="color:#0f172a;">${r.deadline || (priorityClass === 'urgent' ? 'Khắc phục ngay trong 24h - 48h' : '30 ngày')}</strong></span>
+                            ${r.estimated_cost ? `<span>Chi phí dự kiến: <strong style="color:#0f172a;">${r.estimated_cost}</strong></span>` : ''}
+                            ${r.responsible_party ? `<span>Phụ trách: <strong>${r.responsible_party}</strong></span>` : ''}
+                        </div>
+                        ${r.legal_basis ? `<div style="color:#7c3aed; font-size:0.78rem; font-weight:600; margin-top:6px;">Căn cứ pháp lý: ${r.legal_basis}</div>` : ''}
                     </div>`;
                 });
-            } else if (ai.priority_actions?.length) {
-                h += `<h5 style="margin:12px 0 8px; color:#f97316;">🎯 Hành động ưu tiên</h5><div class="action-list">${ai.priority_actions.map(a => `<div class="action-item ${a.priority}"><div class="action-title">${a.action}</div><div class="action-deadline">⏰ ${a.deadline || a.priority}</div></div>`).join('')}</div>`;
             }
+
+            // Daily Checklist (Point 6)
+            if (ai.daily_checklist?.length) {
+                h += `
+                <div class="ai-h-tag primary">DANH MỤC TỰ KIỂM TRA AN TOÀN HÀNG NGÀY</div>
+                <div style="background:#f8fafc; border:1px solid #cbd5e1; padding:16px; margin-bottom:20px;">
+                    <ul style="padding-left:20px; margin:0; font-size:0.88rem; color:#1e293b; line-height:1.6;">
+                        ${ai.daily_checklist.map(item => `<li style="margin-bottom:6px;"><strong>${item}</strong></li>`).join('')}
+                    </ul>
+                </div>`;
+            }
+
+            // 90-Day Improvement Plan (Point 8)
             if (ai.improvement_plan) {
                 const p = ai.improvement_plan;
-                h += `<h5 style="margin:16px 0 8px; color:#3b82f6;">📅 Kế hoạch cải thiện</h5><div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:10px;">`;
-                if (p['30_days']?.length) h += `<div style="background:rgba(239,68,68,0.08); border-radius:8px; padding:12px;"><strong style="color:#ef4444; font-size:0.85rem;">30 ngày đầu</strong><ul style="padding-left:16px; margin:8px 0 0; color:var(--text-secondary); font-size:0.82rem;">${p['30_days'].map(s => `<li style="margin-bottom:3px;">${s}</li>`).join('')}</ul></div>`;
-                if (p['60_days']?.length) h += `<div style="background:rgba(249,115,22,0.08); border-radius:8px; padding:12px;"><strong style="color:#f97316; font-size:0.85rem;">30-60 ngày</strong><ul style="padding-left:16px; margin:8px 0 0; color:var(--text-secondary); font-size:0.82rem;">${p['60_days'].map(s => `<li style="margin-bottom:3px;">${s}</li>`).join('')}</ul></div>`;
-                if (p['90_days']?.length) h += `<div style="background:rgba(34,197,94,0.08); border-radius:8px; padding:12px;"><strong style="color:#22c55e; font-size:0.85rem;">60-90 ngày</strong><ul style="padding-left:16px; margin:8px 0 0; color:var(--text-secondary); font-size:0.82rem;">${p['90_days'].map(s => `<li style="margin-bottom:3px;">${s}</li>`).join('')}</ul></div>`;
-                h += '</div>';
+                const phases = [
+                    { key: '30_days', label: 'GIAI ĐOẠN 1: KHẮC PHỤC NGAY (24H - 48H) VÀ 30 NGÀY ĐẦU (XỬ LÝ NGUY CƠ TRỰC TIẾP)', color: '#dc2626', desc: 'Triệt tiêu ngay các nguy cơ phát sinh cháy nổ nguy hiểm nhất (điện, thiết bị sinh nhiệt, rò rỉ gas), thông thoáng lối thoát nạn' },
+                    { key: '60_days', label: 'GIAI ĐOẠN 2: 30 - 60 NGÀY (NÂNG CẤP HẠ TẦNG & TRANG THIẾT BỊ)', color: '#ea580c', desc: 'Kiểm định hệ thống điện, bảo dưỡng bình chữa cháy, huấn luyện kỹ năng PCCC cho nhân sự' },
+                    { key: '90_days', label: 'GIAI ĐOẠN 3: 60 - 90 NGÀY (HOÀN THIỆN & DUY TRÌ BỀN VỮNG)', color: '#16a34a', desc: 'Rà soát hồ sơ quản lý PCCC, diễn tập phương án chữa cháy nội bộ, đánh giá lại định kỳ' },
+                ];
+
+                h += `<div class="ai-h-tag primary">KẾ HOẠCH HÀNH ĐỘNG KHẮC PHỤC CHI TIẾT (LỘ TRÌNH 90 NGÀY)</div>`;
+                phases.forEach(phase => {
+                    const items = p[phase.key];
+                    if (!items?.length) return;
+                    h += `
+                    <div class="ai-phase-box">
+                        <div class="ai-phase-header" style="background:${phase.color};">
+                            ${phase.label}
+                        </div>
+                        <div style="padding:14px; background:#ffffff;">
+                            <p style="color:#64748b; font-size:0.8rem; margin:0 0 10px; font-style:italic;">${phase.desc}</p>
+                            ${items.map((item, idx) => {
+                                if (typeof item === 'string') {
+                                    return `
+                                    <div style="display:flex; gap:8px; margin-bottom:8px; padding:8px 10px; background:#f8fafc; border:1px solid #e2e8f0; font-size:0.86rem;">
+                                        <span style="color:${phase.color}; font-weight:800; min-width:20px;">${idx+1}.</span>
+                                        <span style="color:#1e293b;">${item}</span>
+                                    </div>`;
+                                } else {
+                                    return `
+                                    <div style="margin-bottom:10px; padding:10px 12px; background:#f8fafc; border:1px solid #e2e8f0;">
+                                        <div style="font-weight:700; color:#0f172a; font-size:0.88rem; margin-bottom:4px;">
+                                            ${idx+1}. ${item.task || item.title || ''}
+                                        </div>
+                                        ${item.detail || item.description ? `<p style="color:#475569; font-size:0.82rem; margin:0 0 6px;">${item.detail || item.description}</p>` : ''}
+                                        <div style="display:flex; flex-wrap:wrap; gap:10px; font-size:0.75rem; color:#64748b; font-weight:600;">
+                                            ${item.responsible ? `<span>Phụ trách: <strong>${item.responsible}</strong></span>` : ''}
+                                            ${item.cost || item.estimated_cost ? `<span>Chi phí: <strong>${item.cost || item.estimated_cost}</strong></span>` : ''}
+                                            ${item.legal_basis ? `<span style="color:#7c3aed;">Căn cứ: <strong>${item.legal_basis}</strong></span>` : ''}
+                                        </div>
+                                    </div>`;
+                                }
+                            }).join('')}
+                        </div>
+                    </div>`;
+                });
             }
-            if (ai.legal_references?.length) h += `<h5 style="margin:16px 0 8px; color:#8b5cf6;">📜 Tham chiếu pháp lý</h5><ul style="padding-left:20px; color:var(--text-muted); font-size:0.82rem;">${ai.legal_references.map(r => `<li style="margin-bottom:3px;">${r}</li>`).join('')}</ul>`;
-            return h + '</div>';
+
+            // Legal References
+            if (ai.legal_references?.length) {
+                h += `
+                <div class="ai-h-tag primary">CĂN CỨ VĂN BẢN QUY PHẠM PHÁP LUẬT & TIÊU CHUẨN KỸ THUẬT HIỆN HÀNH</div>
+                <ul style="padding-left:22px; color:#475569; font-size:0.82rem; line-height:1.6; margin:0 0 10px;">
+                    ${ai.legal_references.map(r => `<li style="margin-bottom:4px;">${r}</li>`).join('')}
+                </ul>`;
+            }
+
+            return h;
         }
 
-        async function requestAI(id) {
-            const btnAI = document.getElementById('btn-ai');
-            const container = document.getElementById('ai-result-container');
-            if (btnAI) { btnAI.disabled = true; btnAI.innerHTML = '⏳ Đang phân tích...'; }
-            if (container) container.innerHTML = '<div style="text-align:center; padding:30px;"><div class="loading-spinner"></div><p style="color:var(--text-secondary); margin-top:12px;">🤖 AI đang phân tích dữ liệu khảo sát...</p></div>';
+        function renderAiSectionHtml(ai) {
+            const g = ai.gemini_38 || ai;
+            const r = ai.rag_chroma || ai;
+
+            return `
+            <div class="ai-command-section">
+                <div class="ai-command-header">
+                    <h3>KẾT QUẢ ĐỐI SOÁT & KHUYẾN CÁO TỪ TRÍ TUỆ NHÂN TẠO</h3>
+                    <span style="font-size:0.78rem; background:rgba(255,255,255,0.15); padding:4px 10px; font-weight:700; text-transform:uppercase;">
+                        Gemini 3.8 Flash vs RAG ChromaDB
+                    </span>
+                </div>
+
+                <div class="ai-tab-strip">
+                    <button type="button" class="ai-tab-btn-sharp active" id="btn-ai-tab-gemini" onclick="switchAiTab('gemini')">
+                        1. Khuyến cáo Thực tế (Gemini 3.8 Flash - Ưu tiên)
+                    </button>
+                    <button type="button" class="ai-tab-btn-sharp" id="btn-ai-tab-rag" onclick="switchAiTab('rag')">
+                        2. Thẩm định Pháp lý & Chế tài (RAG ChromaDB)
+                    </button>
+                    <button type="button" class="ai-tab-btn-sharp" id="btn-ai-tab-compare" onclick="switchAiTab('compare')">
+                        3. So sánh Song song (2 Cột)
+                    </button>
+                </div>
+
+                <div class="ai-tab-body">
+                    <!-- PANEL 1: GEMINI 3.8 FLASH -->
+                    <div class="ai-tab-content-panel" id="panel-ai-tab-gemini">
+                        ${renderSingleEngineContent(g, "Tư vấn & Giải pháp Thực tế từ Mô hình Gemini 3.8 Flash", "MÔ HÌNH ƯU TIÊN THỰC TIỄN", "#2563eb")}
+                    </div>
+
+                    <!-- PANEL 2: RAG CHROMADB -->
+                    <div class="ai-tab-content-panel" id="panel-ai-tab-rag" style="display:none;">
+                        ${renderSingleEngineContent(r, "Đối soát Quy chuẩn Pháp luật & Vi phạm từ RAG ChromaDB", "ĐỐI SOÁT QUY PHẠM PHÁP LUẬT", "#7c3aed")}
+                    </div>
+
+                    <!-- PANEL 3: SIDE BY SIDE -->
+                    <div class="ai-tab-content-panel" id="panel-ai-tab-compare" style="display:none;">
+                        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:20px;">
+                            <!-- Column 1 -->
+                            <div style="border:1px solid #cbd5e1; padding:18px; background:#f8fafc;">
+                                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; padding-bottom:8px; border-bottom:2px solid #2563eb;">
+                                    <strong style="color:#2563eb; font-size:1rem; text-transform:uppercase;">Gemini 3.8 Flash</strong>
+                                    <span class="badge-sharp info">Thực tiễn cơ sở</span>
+                                </div>
+                                <p style="font-size:0.86rem; color:#1e293b; line-height:1.5; margin-bottom:14px;">
+                                    ${g?.overall_assessment || 'Đang cập nhật'}
+                                </p>
+                                <div style="font-weight:700; color:#16a34a; font-size:0.82rem; text-transform:uppercase; margin-bottom:6px;">Ưu điểm:</div>
+                                <ul style="padding-left:18px; font-size:0.82rem; color:#334155; margin-bottom:14px;">
+                                    ${(g?.strengths || []).map(s => `<li style="margin-bottom:4px;">${s}</li>`).join('')}
+                                </ul>
+                                <div style="font-weight:700; color:#dc2626; font-size:0.82rem; text-transform:uppercase; margin-bottom:6px;">Tồn tại & Nguy cơ:</div>
+                                <ul style="padding-left:18px; font-size:0.82rem; color:#334155; margin-bottom:14px;">
+                                    ${(g?.critical_weaknesses || []).map(w => `<li style="margin-bottom:4px;">${w}</li>`).join('')}
+                                </ul>
+                                <div style="font-weight:700; color:#d97706; font-size:0.82rem; text-transform:uppercase; margin-bottom:6px;">Giải pháp trọng tâm:</div>
+                                <ul style="padding-left:18px; font-size:0.82rem; color:#334155;">
+                                    ${(g?.detailed_recommendations || []).slice(0, 5).map(r => `<li style="margin-bottom:4px;"><strong>${r.title}</strong>: ${r.description} <em>(Hạn: ${r.deadline || '30 ngày'})</em></li>`).join('')}
+                                </ul>
+                            </div>
+
+                            <!-- Column 2 -->
+                            <div style="border:1px solid #cbd5e1; padding:18px; background:#f8fafc;">
+                                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; padding-bottom:8px; border-bottom:2px solid #7c3aed;">
+                                    <strong style="color:#7c3aed; font-size:1rem; text-transform:uppercase;">RAG ChromaDB</strong>
+                                    <span class="badge-sharp" style="color:#7c3aed; border-color:#7c3aed;">Quy chuẩn & Pháp lý</span>
+                                </div>
+                                <p style="font-size:0.86rem; color:#1e293b; line-height:1.5; margin-bottom:14px;">
+                                    ${r?.overall_assessment || 'Đang cập nhật'}
+                                </p>
+                                <div style="font-weight:700; color:#16a34a; font-size:0.82rem; text-transform:uppercase; margin-bottom:6px;">Ưu điểm tuân thủ:</div>
+                                <ul style="padding-left:18px; font-size:0.82rem; color:#334155; margin-bottom:14px;">
+                                    ${(r?.strengths || []).map(s => `<li style="margin-bottom:4px;">${s}</li>`).join('')}
+                                </ul>
+                                <div style="font-weight:700; color:#dc2626; font-size:0.82rem; text-transform:uppercase; margin-bottom:6px;">Điều khoản vi phạm & Chế tài:</div>
+                                <ul style="padding-left:18px; font-size:0.82rem; color:#334155; margin-bottom:14px;">
+                                    ${(r?.critical_weaknesses || []).map(w => `<li style="margin-bottom:4px;">${w}</li>`).join('')}
+                                </ul>
+                                <div style="font-weight:700; color:#7c3aed; font-size:0.82rem; text-transform:uppercase; margin-bottom:6px;">Viện dẫn căn cứ:</div>
+                                <ul style="padding-left:18px; font-size:0.82rem; color:#334155;">
+                                    ${(r?.legal_references || []).slice(0, 5).map(ref => `<li style="margin-bottom:4px;">${ref}</li>`).join('')}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            `;
+        }
+
+        async function loadDocketQRCode(id) {
             try {
-                const result = await api.post(`/ai/analyze/${id}`, {});
-                const ai = result.analysis || result;
-                if (btnAI) { btnAI.innerHTML = '✅ Đã phân tích'; }
-                if (container) container.innerHTML = buildAiSection(ai);
-            } catch (error) {
-                if (btnAI) { btnAI.disabled = false; btnAI.innerHTML = '🤖 Phân tích AI'; }
-                if (container) container.innerHTML = '';
-                showToast('Lỗi phân tích AI: ' + error.message, 'error');
+                const token = localStorage.getItem('fras_token') || localStorage.getItem('token');
+                const baseUrl = '/api';
+                const response = await fetch(`${baseUrl}/export/qrcode/${id}`, {
+                    headers: token ? { 'Authorization': `Bearer ${token}` } : {}
+                });
+
+                if (response.ok) {
+                    const blob = await response.blob();
+                    const url = URL.createObjectURL(blob);
+                    const container = document.getElementById('qr-code-box');
+                    if (container) {
+                        container.innerHTML = `
+                            <div style="text-align:right;">
+                                <img src="${url}" alt="QR Code" style="width:72px; height:72px; border:1px solid #0f172a; display:block; margin-left:auto;">
+                                <div style="font-size:0.6rem; color:#475569; margin-top:3px; font-weight:800; text-transform:uppercase;">MÃ CHỐNG LÀM GIẢ KHẢO SÁT</div>
+                            </div>
+                        `;
+                    }
+                }
+            } catch (err) {
+                console.warn("Could not load QR code:", err);
+            }
+        let currentMitigationData = null;
+
+        async function loadMitigationChecklist(assessmentId) {
+            const container = document.getElementById('mitigation-main-container');
+            if (!container) return;
+
+            try {
+                const data = await api.get('/assessments/' + assessmentId + '/mitigation');
+                currentMitigationData = data;
+                renderMitigationHtml(data, assessmentId);
+            } catch (err) {
+                console.warn("Could not load mitigation checklist:", err);
+                container.innerHTML = `
+                <div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #b91c1c; padding:18px;">
+                    <div style="font-weight:700; color:#b91c1c; margin-bottom:6px; text-transform:uppercase;">BẢNG TIẾN ĐỘ KHẮC PHỤC NGUY CƠ REALTIME</div>
+                    <p style="color:#64748b; font-size:0.86rem; margin:0 0 10px;">Chưa thể tải danh mục tồn tại. Nhấn nút bên dưới để thử lại.</p>
+                    <button type="button" class="btn-gov btn-gov-outline" onclick="loadMitigationChecklist('${assessmentId}')">Tải lại danh mục</button>
+                </div>`;
+            }
+        }
+
+        function renderMitigationHtml(data, assessmentId) {
+            const container = document.getElementById('mitigation-main-container');
+            if (!container) return;
+
+            const items = data.items || [];
+            const resolvedCount = items.filter(it => it.resolved).length;
+            const totalCount = items.length;
+            const progressPct = totalCount > 0 ? Math.round((resolvedCount / totalCount) * 100) : 0;
+
+            const priorityBadge = {
+                'urgent': '<span class="badge-sharp danger">Khẩn cấp (24h - 48h)</span>',
+                'high': '<span class="badge-sharp warning">Ưu tiên cao</span>',
+                'medium': '<span class="badge-sharp info">Trung bình</span>',
+                'low': '<span class="badge-sharp">Thấp</span>',
+            };
+
+            const riskLevelText = {
+                'safe': 'Nguy cơ Thấp (Vùng Xanh)',
+                'low': 'Nguy cơ Thấp',
+                'medium': 'Nguy cơ Trung bình',
+                'high': 'Nguy cơ Cao',
+                'critical': 'Nguy cơ Rất cao',
+            };
+
+            const riskLevelColor = {
+                'safe': '#16a34a',
+                'low': '#16a34a',
+                'medium': '#d97706',
+                'high': '#ea580c',
+                'critical': '#dc2626',
+            };
+
+            const curLevel = data.current_risk_level || 'medium';
+            const curColor = riskLevelColor[curLevel] || '#dc2626';
+
+            let h = `
+            <div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #b91c1c; padding:20px;">
+                <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:16px; flex-wrap:wrap; gap:12px; border-bottom:1px solid #e2e8f0; padding-bottom:14px;">
+                    <div>
+                        <h3 style="font-size:1.05rem; font-weight:800; color:#0f172a; margin:0 0 6px; text-transform:uppercase; display:flex; align-items:center; gap:8px;">
+                            <span>📋</span> BẢNG TIẾN ĐỘ KHẮC PHỤC TỒN TẠI & TRẠNG THÁI NGUY CƠ REALTIME
+                        </h3>
+                        <p style="color:#64748b; font-size:0.86rem; margin:0; line-height:1.5;">
+                            Sau khi cơ sở khắc phục xong các tồn tại thực tế, hãy tích chọn các hạng mục dưới đây và bấm <strong>"Cập nhật tiến độ"</strong>. Mức nguy cơ và chấm an toàn trên <strong>Bản đồ Rủi ro PCCC Bắc Ninh</strong> sẽ được cập nhật tự động ngay lập tức.
+                        </p>
+                    </div>
+                    <div style="display:flex; gap:12px; align-items:center; flex-wrap:wrap;">
+                        <span class="badge-sharp info" style="font-size:0.82rem; padding:6px 12px;">ĐỒNG BỘ REALTIME ADMIN MAP</span>
+                    </div>
+                </div>
+
+                <!-- SCORE & PROGRESS STRIP -->
+                <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:12px; margin-bottom:18px;">
+                    <div style="background:#f8fafc; border:1px solid #e2e8f0; padding:12px 14px;">
+                        <div style="font-size:0.75rem; color:#64748b; font-weight:700; text-transform:uppercase; margin-bottom:4px;">Tỷ lệ Nguy cơ Ban đầu</div>
+                        <div style="font-size:1.4rem; font-weight:900; color:#0f172a;">${data.initial_risk_percentage}%</div>
+                        <div style="font-size:0.75rem; color:#64748b;">Điểm ban đầu: ${data.initial_total_score} điểm</div>
+                    </div>
+                    <div style="background:#f8fafc; border:1px solid #e2e8f0; border-left:4px solid ${curColor}; padding:12px 14px;">
+                        <div style="font-size:0.75rem; color:#64748b; font-weight:700; text-transform:uppercase; margin-bottom:4px;">Tỷ lệ Nguy cơ Hiện tại (Realtime)</div>
+                        <div style="font-size:1.4rem; font-weight:900; color:${curColor};" id="mitigation-live-pct">${data.current_risk_percentage}%</div>
+                        <div style="font-size:0.75rem; color:${curColor}; font-weight:700;" id="mitigation-live-level">${riskLevelText[curLevel] || curLevel}</div>
+                    </div>
+                    <div style="background:#f8fafc; border:1px solid #e2e8f0; padding:12px 14px;">
+                        <div style="font-size:0.75rem; color:#64748b; font-weight:700; text-transform:uppercase; margin-bottom:4px;">Tiến độ Khắc phục</div>
+                        <div style="font-size:1.4rem; font-weight:900; color:#16a34a;" id="mitigation-live-progress">${resolvedCount}/${totalCount} <span style="font-size:0.9rem; font-weight:600; color:#64748b;">(${progressPct}%)</span></div>
+                        <div style="font-size:0.75rem; color:#64748b;">Hạng mục đã hoàn thành</div>
+                    </div>
+                </div>
+
+                <!-- PROGRESS BAR -->
+                <div style="margin-bottom:20px;">
+                    <div style="height:10px; background:#e2e8f0; width:100%; position:relative;">
+                        <div id="mitigation-progress-bar" style="height:100%; width:${progressPct}%; background:${progressPct === 100 ? '#16a34a' : '#2563eb'}; transition:width 0.4s ease;"></div>
+                    </div>
+                </div>
+
+                <!-- CHECKLIST ITEMS -->
+                <div style="margin-bottom:20px;">
+                    <div style="font-weight:700; color:#0f172a; font-size:0.9rem; text-transform:uppercase; margin-bottom:10px;">
+                        DANH MỤC CÁC TỒN TẠI, VI PHẠM CẦN KHẮC PHỤC (${totalCount} HẠNG MỤC):
+                    </div>
+                    <div style="display:flex; flex-direction:column; gap:10px;">
+            `;
+
+            items.forEach((item, i) => {
+                const isChecked = !!item.resolved;
+                const pBadge = priorityBadge[item.priority] || priorityBadge['medium'];
+                h += `
+                <div style="border:1px solid ${isChecked ? '#bbf7d0' : '#e2e8f0'}; background:${isChecked ? '#f0fdf4' : '#fafafa'}; padding:14px; transition:all 0.2s;">
+                    <div style="display:flex; align-items:flex-start; gap:12px;">
+                        <input type="checkbox" id="chk-mitigation-${item.id}" class="chk-mitigation-item" data-id="${item.id}" ${isChecked ? 'checked' : ''} style="width:20px; height:20px; cursor:pointer; margin-top:2px; accent-color:#16a34a;" onchange="handleMitigationLivePreview()">
+                        <div style="flex:1;">
+                            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:4px;">
+                                <label for="chk-mitigation-${item.id}" style="font-weight:700; color:#0f172a; font-size:0.92rem; cursor:pointer; margin:0;">
+                                    ${i + 1}. ${item.title}
+                                </label>
+                                <div style="display:flex; gap:6px; align-items:center;">
+                                    ${pBadge}
+                                    <span class="badge-sharp ${isChecked ? 'success' : 'danger'}" id="status-badge-${item.id}">
+                                        ${isChecked ? 'ĐÃ KHẮC PHỤC' : 'CHƯA XỬ LÝ'}
+                                    </span>
+                                </div>
+                            </div>
+                            ${item.description ? `<p style="color:#475569; font-size:0.84rem; margin:0 0 6px; line-height:1.5;">${item.description}</p>` : ''}
+                            <div style="display:flex; flex-wrap:wrap; gap:12px; font-size:0.78rem; color:#64748b; margin-bottom:8px;">
+                                <span>Thời hạn: <strong style="color:#0f172a;">${item.deadline || 'Trong 30 ngày'}</strong></span>
+                                ${item.legal_basis ? `<span style="color:#7c3aed;">Căn cứ: <strong>${item.legal_basis}</strong></span>` : ''}
+                                ${item.resolved_at ? `<span style="color:#16a34a;">Xác nhận: ${new Date(item.resolved_at).toLocaleString('vi-VN')}</span>` : ''}
+                            </div>
+                            <input type="text" id="note-mitigation-${item.id}" class="note-mitigation-item" data-id="${item.id}" value="${item.notes || ''}" placeholder="Nhập ghi chú hoặc bằng chứng khắc phục (Ví dụ: Đã thay thế dây dẫn điện, đã lắp đặt thêm aptomat chống giật...)" style="width:100%; padding:8px 10px; font-size:0.82rem; border:1px solid #cbd5e1; background:#ffffff; box-sizing:border-box; border-radius:0;">
+                        </div>
+                    </div>
+                </div>
+                `;
+            });
+
+            h += `
+                    </div>
+                </div>
+
+                <!-- ACTION BUTTON -->
+                <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; padding-top:14px; border-top:1px solid #e2e8f0;">
+                    <div style="font-size:0.82rem; color:#64748b;">
+                        <em>* Tích chọn các mục cơ sở đã xử lý thực tế và bấm nút bên phải để lưu kết quả và đồng bộ lên Bản đồ Rủi ro PCCC.</em>
+                    </div>
+                    <button type="button" class="btn-gov btn-gov-primary" style="padding:12px 24px; font-weight:800; font-size:0.92rem; text-transform:uppercase;" id="btn-save-mitigation" onclick="saveMitigationProgress('${assessmentId}')">
+                        💾 LƯU TIẾN ĐỘ KHẮC PHỤC & ĐỒNG BỘ NGUY CƠ REALTIME
+                    </button>
+                </div>
+
+                <!-- AI FEEDBACK BOX -->
+                ${data.ai_feedback ? `
+                <div style="background:#f0fdf4; border:1px solid #bbf7d0; border-left:5px solid #16a34a; padding:16px; margin-top:20px; font-size:0.88rem; color:#166534; line-height:1.6;" id="mitigation-ai-feedback-box">
+                    <strong style="display:block; margin-bottom:4px; font-size:0.92rem; text-transform:uppercase; color:#15803d;">
+                        Ý KIẾN ĐÁNH GIÁ CỦA HỆ THỐNG AI VỀ TIẾN ĐỘ KHẮC PHỤC:
+                    </strong>
+                    ${data.ai_feedback}
+                </div>` : ''}
+            </div>
+            `;
+
+            container.innerHTML = h;
+        }
+
+        function handleMitigationLivePreview() {
+            if (!currentMitigationData) return;
+            const items = currentMitigationData.items || [];
+            const checkboxes = document.querySelectorAll('.chk-mitigation-item');
+            let resolvedCount = 0;
+
+            checkboxes.forEach(cb => {
+                const itId = parseInt(cb.dataset.id, 10);
+                const statusBadge = document.getElementById(`status-badge-${itId}`);
+                if (cb.checked) {
+                    resolvedCount++;
+                    if (statusBadge) {
+                        statusBadge.className = 'badge-sharp success';
+                        statusBadge.innerText = 'ĐÃ KHẮC PHỤC (CHƯA LƯU)';
+                    }
+                } else {
+                    if (statusBadge) {
+                        statusBadge.className = 'badge-sharp danger';
+                        statusBadge.innerText = 'CHƯA XỬ LÝ';
+                    }
+                }
+            });
+
+            const totalCount = items.length;
+            const progressPct = totalCount > 0 ? Math.round((resolvedCount / totalCount) * 100) : 0;
+            const progressBar = document.getElementById('mitigation-progress-bar');
+            if (progressBar) {
+                progressBar.style.width = progressPct + '%';
+            }
+            const liveProgress = document.getElementById('mitigation-live-progress');
+            if (liveProgress) {
+                liveProgress.innerHTML = `${resolvedCount}/${totalCount} <span style="font-size:0.9rem; font-weight:600; color:#64748b;">(${progressPct}%)</span>`;
+            }
+        }
+
+        async function saveMitigationProgress(assessmentId) {
+            const btn = document.getElementById('btn-save-mitigation');
+            if (btn) {
+                btn.disabled = true;
+                btn.innerHTML = '⏳ Đang lưu & cập nhật bản đồ...';
+            }
+
+            try {
+                const checkboxes = document.querySelectorAll('.chk-mitigation-item');
+                const itemsPayload = [];
+                checkboxes.forEach(cb => {
+                    const id = parseInt(cb.dataset.id, 10);
+                    const noteInput = document.getElementById(`note-mitigation-${id}`);
+                    itemsPayload.push({
+                        id: id,
+                        resolved: cb.checked,
+                        notes: noteInput ? noteInput.value.trim() : ''
+                    });
+                });
+
+                const updatedData = await api.post(`/assessments/${assessmentId}/mitigation`, {
+                    items: itemsPayload
+                });
+
+                currentMitigationData = updatedData;
+                renderMitigationHtml(updatedData, assessmentId);
+
+                // Update live gauge on page
+                if (updatedData.current_risk_percentage !== undefined && typeof createRiskGauge === 'function') {
+                    createRiskGauge('gauge-chart', updatedData.current_risk_percentage, updatedData.current_risk_level);
+                }
+
+                if (typeof showToast === 'function') {
+                    showToast('✅ Đã cập nhật tiến độ và đồng bộ lên Bản đồ Rủi ro PCCC thành công!', 'success');
+                } else {
+                    alert('Đã cập nhật tiến độ và đồng bộ lên Bản đồ Rủi ro PCCC thành công!');
+                }
+            } catch (err) {
+                console.error("Save mitigation failed:", err);
+                if (typeof showToast === 'function') {
+                    showToast('Không thể lưu tiến độ: ' + (err.message || 'Lỗi kết nối'), 'error');
+                } else {
+                    alert('Không thể lưu tiến độ: ' + (err.message || 'Lỗi kết nối'));
+                }
+                if (btn) {
+                    btn.disabled = false;
+                    btn.innerHTML = '💾 LƯU TIẾN ĐỘ KHẮC PHỤC & ĐỒNG BỘ NGUY CƠ REALTIME';
+                }
             }
         }
     </script>
 </body>
-
 </html>

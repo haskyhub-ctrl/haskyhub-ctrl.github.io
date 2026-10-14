@@ -1,0 +1,24 @@
+__pycache__/
+*.pyc
+*.pyo
+*.db
+*.sqlite3
+.env
+venv/
+env/
+node_modules/
+uploads/
+*.log
+.DS_Store
+Thumbs.db
+*.egg-info/
+dist/
+build/
+.idea/
+.vscode/
+Việt Nam (phường xã) - 34 (1).geojson
+*.csv
+.gemini/
+.agents/
+GEMINI.md
+

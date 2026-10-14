@@ -28,8 +28,10 @@ function setupLoginForm() {
             const user = api.getUser();
             if (user.role === 'admin' || user.role === 'superadmin') {
                 window.location.href = '/admin/';
+            } else if (user.facility_code) {
+                window.location.href = '/survey.html?role=facility';
             } else {
-                window.location.href = '/dashboard.html';
+                window.location.href = '/survey.html';
             }
         } catch (error) {
             showToast(error.message, 'error');

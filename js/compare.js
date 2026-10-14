@@ -53,11 +53,16 @@ function renderCompareSelect() {
                 </div>
             `).join('')}
         </div>
-        <div style="text-align:center; margin-top:16px;">
+        <div style="text-align:center; margin-top:16px; display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
             <button class="btn btn-primary" onclick="runCompare()" id="compare-btn" ${compareState.selected.length < 2 ? 'disabled' : ''}>
-                So sánh (${compareState.selected.length} đã chọn)
+                📊 So sánh (${compareState.selected.length} đã chọn)
+            </button>
+            <button class="btn btn-outline" onclick="runAITrend()" id="ai-trend-btn" ${compareState.selected.length < 2 ? 'disabled' : ''}
+                style="border-color:#8b5cf6; color:#8b5cf6;">
+                🤖 AI Phân tích Xu hướng
             </button>
         </div>
+        <div id="ai-trend-result"></div>
         <div id="compare-results"></div>
     `;
 }
@@ -76,9 +81,13 @@ function toggleCompareSelect(id, el) {
     }
 
     const btn = document.getElementById('compare-btn');
+    const aiBtn = document.getElementById('ai-trend-btn');
     if (btn) {
         btn.disabled = compareState.selected.length < 2;
-        btn.textContent = `So sánh (${compareState.selected.length} đã chọn)`;
+        btn.textContent = `📊 So sánh (${compareState.selected.length} đã chọn)`;
+    }
+    if (aiBtn) {
+        aiBtn.disabled = compareState.selected.length < 2;
     }
 }
 
@@ -141,5 +150,67 @@ function renderCompareResults(results) {
 
     if (radarDatasets.length > 0) {
         createCompareRadar('compare-radar', radarDatasets);
+    }
+}
+
+// ========== AI TREND ANALYSIS ==========
+async function runAITrend() {
+    const container = document.getElementById('ai-trend-result');
+    const btn = document.getElementById('ai-trend-btn');
+    if (!container || compareState.selected.length < 2) return;
+
+    btn.disabled = true;
+    btn.innerHTML = '⏳ AI đang phân tích...';
+    container.innerHTML = '<div style="text-align:center; padding:30px;"><div class="loading-spinner"></div><p style="color:var(--text-secondary); margin-top:8px;">🤖 Gemini đang phân tích xu hướng...</p></div>';
+
+    try {
+        const result = await api.post('/ai/compare-trend', {
+            assessment_ids: compareState.selected,
+        });
+
+        const trendIcon = { improving: '📈', declining: '📉', stable: '➡️' };
+        const trendColor = { improving: '#22c55e', declining: '#ef4444', stable: '#eab308' };
+        const trendText = { improving: 'Đang cải thiện', declining: 'Đang xấu đi', stable: 'Ổn định' };
+        const t = result.trend || 'stable';
+
+        container.innerHTML = `
+            <div class="dashboard-section mt-3" style="padding:24px; border-left:4px solid ${trendColor[t]};">
+                <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
+                    <span style="font-size:2.5rem;">${trendIcon[t]}</span>
+                    <div>
+                        <h3 style="margin:0; color:${trendColor[t]};">${trendText[t]}</h3>
+                        <p style="margin:4px 0 0; color:var(--text-secondary); font-size:0.9rem;">${result.summary || ''}</p>
+                    </div>
+                </div>
+
+                ${result.improved_areas?.length ? `
+                    <h5 style="color:#22c55e; margin:12px 0 8px;">✅ Lĩnh vực cải thiện</h5>
+                    <ul style="padding-left:20px; color:var(--text-secondary); font-size:0.85rem;">
+                        ${result.improved_areas.map(a => `<li style="margin-bottom:4px;">${a}</li>`).join('')}
+                    </ul>
+                ` : ''}
+
+                ${result.declined_areas?.length ? `
+                    <h5 style="color:#ef4444; margin:12px 0 8px;">⚠️ Lĩnh vực xấu đi</h5>
+                    <ul style="padding-left:20px; color:var(--text-secondary); font-size:0.85rem;">
+                        ${result.declined_areas.map(a => `<li style="margin-bottom:4px;">${a}</li>`).join('')}
+                    </ul>
+                ` : ''}
+
+                ${result.overall_trend_detail ? `<p style="color:var(--text-muted); font-size:0.85rem; margin-top:12px; line-height:1.6;">${result.overall_trend_detail}</p>` : ''}
+
+                ${result.priority_recommendations?.length ? `
+                    <h5 style="color:#f97316; margin:16px 0 8px;">🎯 Đề xuất ưu tiên</h5>
+                    <ol style="padding-left:20px; color:var(--text-secondary); font-size:0.85rem;">
+                        ${result.priority_recommendations.map(r => `<li style="margin-bottom:4px;">${r}</li>`).join('')}
+                    </ol>
+                ` : ''}
+            </div>
+        `;
+    } catch (err) {
+        container.innerHTML = `<div class="alert alert-danger" style="margin-top:12px;">Lỗi AI: ${err.message}</div>`;
+    } finally {
+        btn.disabled = false;
+        btn.innerHTML = '🤖 AI Phân tích Xu hướng';
     }
 }

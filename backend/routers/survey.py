@@ -1,0 +1,441 @@
+import uuid
+from datetime import datetime
+from fastapi import APIRouter, Depends, HTTPException
+from sqlalchemy.orm import Session, joinedload, subqueryload
+from typing import List, Optional
+from database import get_db
+from models import (
+    User, QuestionCategory, Question, QuestionOption,
+    Assessment, AssessmentAnswer, CategoryScore
+)
+from schemas import (
+    AssessmentStart, AnswerSubmit, BulkAnswerSubmit,
+    CategoryWithQuestions, AssessmentResponse
+)
+from middleware.auth_middleware import get_current_user, get_optional_user, create_access_token, hash_password
+from utils.scoring import calculate_category_scores, calculate_total_score, calculate_risk_level
+
+router = APIRouter(prefix="/api/survey", tags=["Survey"])
+
+FACILITY_CODE_MAP = {
+    "industrial": "A",
+    "warehouse": "B",
+    "mixed_residence": "C",
+    "hospitality": "D",
+    "medical_education": "E",
+    "fuel_gas": "F",
+    "transport": "G",
+    "residential": "H",
+    "construction": "I",
+    "office": "J",
+    "laboratory": "K",
+    "agriculture": "L",
+}
+REVERSE_FACILITY_CODE_MAP = {v: k for k, v in FACILITY_CODE_MAP.items()}
+
+def normalize_facility_types(types_list):
+    """Chuẩn hóa loại hình cơ sở: chấp nhận cả tên tiếng Anh ('industrial') và mã ký tự ('A')."""
+    res = set()
+    for t in types_list:
+        if not t:
+            continue
+        clean_t = str(t).strip()
+        res.add(clean_t)
+        if clean_t in FACILITY_CODE_MAP:
+            res.add(FACILITY_CODE_MAP[clean_t])
+        if clean_t in REVERSE_FACILITY_CODE_MAP:
+            res.add(REVERSE_FACILITY_CODE_MAP[clean_t])
+    return res
+
+
+@router.get("/categories")
+def get_survey_categories(facility_type: str = None, db: Session = Depends(get_db)):
+    """Get all active categories with their questions and options.
+    If facility_type is provided (comma-separated), only return common questions
+    and questions matching ANY of the specified facility types.
+    """
+    # Parse comma-separated facility types
+    selected_types = set()
+    if facility_type:
+        raw_types = [t.strip() for t in facility_type.split(",") if t.strip()]
+        selected_types = normalize_facility_types(raw_types)
+    
+    # Query categories
+    categories = (
+        db.query(QuestionCategory)
+        .filter(QuestionCategory.is_active == True)
+        .order_by(QuestionCategory.order_index)
+        .all()
+    )
+    
+    # Query ALL active questions at once
+    all_questions = (
+        db.query(Question)
+        .filter(Question.is_active == True)
+        .order_by(Question.order_index)
+        .all()
+    )
+    
+    # Query ALL options at once
+    all_options = (
+        db.query(QuestionOption)
+        .order_by(QuestionOption.order_index)
+        .all()
+    )
+    
+    # Build lookup maps
+    options_by_question = {}
+    for opt in all_options:
+        options_by_question.setdefault(opt.question_id, []).append(opt)
+    
+    questions_by_category = {}
+    for q in all_questions:
+        questions_by_category.setdefault(q.category_id, []).append(q)
+    
+    total_q = sum(len(qs) for qs in questions_by_category.values())
+    print(f"[DEBUG] categories={len(categories)}, questions={len(all_questions)}, options={len(all_options)}, grouped_q={total_q}")
+    
+    result = []
+    for cat in categories:
+        questions_list = []
+        cat_questions = questions_by_category.get(cat.id, [])
+        
+        for q in cat_questions:
+            # If facility_type specified, filter questions
+            if selected_types:
+                if q.facility_type and q.facility_type != "all" and q.facility_type not in selected_types:
+                    continue
+            
+            q_options = options_by_question.get(q.id, [])
+            options_list = [{
+                "id": opt.id,
+                "option_key": opt.option_key,
+                "option_text": opt.option_text,
+                "score": opt.score,
+                "risk_level": opt.risk_level,
+                "order_index": opt.order_index,
+            } for opt in q_options]
+            
+            questions_list.append({
+                "id": q.id,
+                "category_id": q.category_id,
+                "question_text": q.question_text,
+                "question_type": q.question_type,
+                "facility_type": q.facility_type,
+                "is_conditional": q.is_conditional,
+                "condition_question_id": q.condition_question_id,
+                "condition_answer": q.condition_answer,
+                "help_text": q.help_text,
+                "reference": q.reference,
+                "order_index": q.order_index,
+                "is_active": q.is_active,
+                "created_at": q.created_at.isoformat() if q.created_at else None,
+                "options": options_list,
+            })
+        
+        # Skip empty categories
+        if not questions_list:
+            continue
+        
+        result.append({
+            "id": cat.id,
+            "name": cat.name,
+            "description": cat.description,
+            "max_score": cat.max_score,
+            "weight": cat.weight,
+            "order_index": cat.order_index,
+            "icon": cat.icon,
+            "color": cat.color,
+            "is_active": cat.is_active,
+            "created_at": cat.created_at.isoformat() if cat.created_at else None,
+            "questions": questions_list,
+        })
+    
+    return result
+
+
+@router.post("/start", response_model=AssessmentResponse)
+def start_assessment(
+    data: AssessmentStart,
+    current_user: Optional[User] = Depends(get_optional_user),
+    db: Session = Depends(get_db)
+):
+    """Start a new assessment session (supports both logged-in facilities and anonymous citizens)."""
+    access_token = None
+
+    # Case 2: Citizen / unmanaged facility without account -> auto-create guest session user
+    if current_user is None:
+        guest_uuid = str(uuid.uuid4())
+        guest_email = f"citizen_{guest_uuid[:8]}@fras.vn"
+        fname = data.facility_name.strip() if data.facility_name else "Công trình / Nhà ở tự do"
+        current_user = User(
+            id=guest_uuid,
+            email=guest_email,
+            password_hash=hash_password("citizen@123"),
+            full_name=fname,
+            organization="Khảo sát tự nguyện (Hộ gia đình/Công trình)",
+            province=data.province or "Tỉnh Bắc Ninh",
+            ward=data.ward,
+            latitude=data.latitude,
+            longitude=data.longitude,
+            facility_types=data.facility_type,
+            role="user",
+        )
+        db.add(current_user)
+        db.flush()
+        access_token = create_access_token({"sub": current_user.id, "role": current_user.role})
+    else:
+        # Case 1: Managed facility logged in. If facility had no coordinates in list, update GPS!
+        if data.latitude is not None and data.longitude is not None:
+            if current_user.latitude is None or current_user.longitude is None:
+                current_user.latitude = data.latitude
+                current_user.longitude = data.longitude
+                db.add(current_user)
+                db.flush()
+
+    # Determine facility address
+    addr = data.facility_address
+    if not addr:
+        parts = [p for p in [data.ward, data.province] if p]
+        addr = ", ".join(parts) if parts else (f"{current_user.ward or ''}, {current_user.province or ''}".strip(", ") or "Bắc Ninh")
+
+    fname = data.facility_name.strip() if (data.facility_name and data.facility_name.strip()) else (current_user.full_name or "Cơ sở khảo sát")
+    ftype = data.facility_type or current_user.facility_types
+
+    lat = data.latitude if data.latitude is not None else current_user.latitude
+    lng = data.longitude if data.longitude is not None else current_user.longitude
+
+    assessment = Assessment(
+        user_id=current_user.id,
+        facility_name=fname,
+        facility_type=ftype,
+        facility_address=addr,
+        facility_area=data.facility_area,
+        worker_count=data.worker_count,
+        latitude=lat,
+        longitude=lng,
+        status="in_progress",
+    )
+    db.add(assessment)
+    db.commit()
+    db.refresh(assessment)
+
+    resp = AssessmentResponse.model_validate(assessment)
+    resp.access_token = access_token
+    return resp
+
+
+@router.post("/answer")
+def submit_answer(
+    data: AnswerSubmit,
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    """Submit a single answer."""
+    assessment = db.query(Assessment).filter(
+        Assessment.id == data.assessment_id,
+        Assessment.user_id == current_user.id
+    ).first()
+    if not assessment:
+        raise HTTPException(status_code=404, detail="Không tìm thấy phiên đánh giá")
+    
+    option = db.query(QuestionOption).filter(QuestionOption.id == data.selected_option_id).first()
+    if not option:
+        raise HTTPException(status_code=404, detail="Đáp án không hợp lệ")
+    
+    # Upsert answer
+    existing = db.query(AssessmentAnswer).filter(
+        AssessmentAnswer.assessment_id == data.assessment_id,
+        AssessmentAnswer.question_id == data.question_id
+    ).first()
+    
+    if existing:
+        existing.selected_option_id = data.selected_option_id
+        existing.score_obtained = option.score
+    else:
+        answer = AssessmentAnswer(
+            assessment_id=data.assessment_id,
+            question_id=data.question_id,
+            selected_option_id=data.selected_option_id,
+            score_obtained=option.score,
+        )
+        db.add(answer)
+    
+    db.commit()
+    return {"status": "ok", "score": option.score}
+
+
+@router.post("/submit-all")
+def submit_all_answers(
+    data: BulkAnswerSubmit,
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    """Submit all answers at once."""
+    assessment = db.query(Assessment).filter(
+        Assessment.id == data.assessment_id,
+        Assessment.user_id == current_user.id
+    ).first()
+    if not assessment:
+        raise HTTPException(status_code=404, detail="Không tìm thấy phiên đánh giá")
+    
+    # Delete existing answers 
+    db.query(AssessmentAnswer).filter(
+        AssessmentAnswer.assessment_id == data.assessment_id
+    ).delete()
+    
+    for ans in data.answers:
+        option = db.query(QuestionOption).filter(QuestionOption.id == ans.selected_option_id).first()
+        score = option.score if option else 0
+        answer = AssessmentAnswer(
+            assessment_id=data.assessment_id,
+            question_id=ans.question_id,
+            selected_option_id=ans.selected_option_id,
+            score_obtained=score,
+        )
+        db.add(answer)
+    
+    db.commit()
+    return {"status": "ok", "answers_count": len(data.answers)}
+
+
+@router.post("/complete/{assessment_id}", response_model=AssessmentResponse)
+def complete_assessment(
+    assessment_id: str,
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    """Complete an assessment and calculate final scores.
+    Only counts questions that were actually answered AND match the facility's types.
+    """
+    assessment = db.query(Assessment).filter(
+        Assessment.id == assessment_id,
+        Assessment.user_id == current_user.id
+    ).first()
+    if not assessment:
+        raise HTTPException(status_code=404, detail="Không tìm thấy phiên đánh giá")
+    
+    # Get answers
+    answers = db.query(AssessmentAnswer).filter(
+        AssessmentAnswer.assessment_id == assessment_id
+    ).all()
+    
+    if not answers:
+        raise HTTPException(status_code=400, detail="Chưa có câu trả lời nào")
+    
+    # Parse facility types (comma-separated)
+    selected_types = set()
+    if assessment.facility_type:
+        raw_types = [t.strip() for t in assessment.facility_type.split(",") if t.strip()]
+        selected_types = normalize_facility_types(raw_types)
+    
+    # Get answered question IDs
+    answered_question_ids = {a.question_id for a in answers}
+    
+    # Get categories and questions
+    categories = (
+        db.query(QuestionCategory)
+        .filter(QuestionCategory.is_active == True)
+        .order_by(QuestionCategory.order_index)
+        .all()
+    )
+    
+    questions = (
+        db.query(Question)
+        .filter(Question.is_active == True)
+        .options(joinedload(Question.options))
+        .all()
+    )
+    
+    # CRITICAL FIX: Only include questions that match the facility's types
+    # AND were actually answered
+    questions_by_category = {}
+    for q in questions:
+        # Check if question matches facility type
+        type_match = (
+            not q.facility_type
+            or q.facility_type == "all"
+            or (selected_types and q.facility_type in selected_types)
+        )
+        # Only include if type matches AND was answered  
+        if type_match and q.id in answered_question_ids:
+            questions_by_category.setdefault(q.category_id, []).append(q)
+    
+    # Calculate category scores
+    cat_scores = calculate_category_scores(answers, questions_by_category, categories)
+    
+    # Delete old category scores
+    db.query(CategoryScore).filter(CategoryScore.assessment_id == assessment_id).delete()
+    
+    # Save category scores
+    for cs in cat_scores:
+        db_cs = CategoryScore(
+            assessment_id=assessment_id,
+            category_id=cs["category_id"],
+            score_obtained=cs["score_obtained"],
+            max_score=cs["max_score"],
+            percentage=cs["percentage"],
+            risk_level=cs["risk_level"],
+        )
+        db.add(db_cs)
+    
+    # Calculate total score
+    totals = calculate_total_score(cat_scores)
+    
+    assessment.total_score = totals["total_score"]
+    assessment.max_possible_score = totals["max_possible_score"]
+    assessment.risk_percentage = totals["risk_percentage"]
+    assessment.risk_level = totals["risk_level"]
+    assessment.status = "completed"
+    assessment.completed_at = datetime.utcnow()
+    
+    db.commit()
+    db.refresh(assessment)
+    
+    # Notify user of completion for all assessments
+    from routers.notifications import create_notification
+    create_notification(
+        db=db, user_id=current_user.id,
+        notification_type="assessment_completed",
+        title=f"✅ Hoàn thành đánh giá: {assessment.facility_name}",
+        message=f"Đánh giá cơ sở '{assessment.facility_name}' đã hoàn thành. Mức nguy cơ: {assessment.risk_percentage}%.",
+        link=f"/result.html?id={assessment.id}"
+    )
+
+    # Trigger notifications for high/critical risk
+    if assessment.risk_level in ("high", "critical"):
+        _trigger_risk_notifications(db, assessment, current_user)
+    
+    return AssessmentResponse.model_validate(assessment)
+
+
+def _trigger_risk_notifications(db, assessment, current_user):
+    """Create notifications when high/critical risk is detected."""
+    from routers.notifications import create_notification
+    risk_label = "Nguy cơ Cao" if assessment.risk_level == "high" else "Nguy cơ Rất cao"
+    
+    # Notify user
+    create_notification(
+        db=db, user_id=current_user.id,
+        notification_type="high_risk",
+        title=f"⚠️ {risk_label}: {assessment.facility_name}",
+        message=f"Đánh giá cơ sở '{assessment.facility_name}' cho thấy mức {risk_label} ({assessment.risk_percentage}%).",
+        link=f"/result.html?id={assessment.id}"
+    )
+    
+    # Notify admins
+    from models import User
+    admins = db.query(User).filter(
+        User.role.in_(["admin", "superadmin"]),
+        User.is_active == True,
+    ).all()
+    
+    for admin_user in admins:
+        if admin_user.id != current_user.id:
+            create_notification(
+                db=db, user_id=admin_user.id,
+                notification_type="high_risk",
+                title=f"⚠️ {risk_label}: {assessment.facility_name}",
+                message=f"{current_user.full_name} vừa đánh giá '{assessment.facility_name}' - {risk_label} ({assessment.risk_percentage}%).",
+                link=f"/admin/assessments.html"
+            )

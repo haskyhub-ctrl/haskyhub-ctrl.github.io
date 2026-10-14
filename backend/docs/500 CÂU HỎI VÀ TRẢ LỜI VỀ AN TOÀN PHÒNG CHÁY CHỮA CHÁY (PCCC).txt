@@ -1,0 +1,946 @@
+
+
+================================================================================
+   500 CÂU HỎI VÀ TRẢ LỜI VỀ AN TOÀN PHÒNG CHÁY CHỮA CHÁY (PCCC)
+   Biên soạn phục vụ đào tạo, tập huấn và nâng cao nhận thức cộng đồng
+================================================================================
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PHẦN 1: KỸ NĂNG XỬ LÝ TÌNH HUỐNG KHI CÓ CHÁY NỔ (Câu 1–100)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Câu 1: Khi phát hiện cháy, việc đầu tiên cần làm là gì?
+Trả lời: Hô to "CHÁY! CHÁY!" để báo động cho mọi người xung quanh, sau đó kích hoạt hệ thống báo cháy (nếu có), gọi số 114, và thực hiện sơ tán theo phương án đã chuẩn bị.
+
+Câu 2: Số điện thoại khẩn cấp để gọi khi có cháy tại Việt Nam là bao nhiêu?
+Trả lời: Số 114 là đường dây khẩn cấp của Cảnh sát Phòng cháy Chữa cháy. Ngoài ra có thể gọi 113 (Công an) và 115 (Cấp cứu) khi có thương vong.
+
+Câu 3: Khi gọi 114 cần cung cấp những thông tin gì?
+Trả lời: Cần cung cấp: địa chỉ chính xác nơi xảy ra cháy (số nhà, đường, phường/xã, quận/huyện), loại đối tượng cháy (nhà ở, kho hàng, nhà máy...), tình trạng đám cháy (lớn hay nhỏ, có nổ không), có người bị kẹt không, và số điện thoại liên lạc của người gọi.
+
+Câu 4: Nguyên tắc RACE trong xử lý cháy là gì?
+Trả lời: RACE là viết tắt của: R (Rescue - Cứu người bị nạn nếu an toàn), A (Alert - Báo động), C (Contain - Ngăn chặn cháy lan bằng cách đóng cửa), E (Extinguish/Evacuate - Dập cháy hoặc Sơ tán tùy tình huống).
+
+Câu 5: Khi nào nên cố dập cháy và khi nào nên sơ tán ngay?
+Trả lời: Chỉ dập cháy khi: đám cháy còn nhỏ (chưa lan rộng quá 1m²), bạn đã gọi 114, có lối thoát hiểm sau lưng, biết sử dụng bình chữa cháy và không có khói độc đặc. Nếu không đáp ứng một trong các điều kiện trên thì sơ tán ngay.
+
+Câu 6: Quy tắc "thấp xuống dưới khói" được thực hiện như thế nào?
+Trả lời: Khi di chuyển trong khói, bò thấp xuống sàn nhà vì không khí sạch ở tầng thấp. Giữ mặt cách sàn khoảng 30–60cm. Dùng khăn ướt che miệng và mũi nếu có. Di chuyển nhanh về phía lối thoát đã xác định từ trước.
+
+Câu 7: Tại sao không được dùng thang máy khi có cháy?
+Trả lời: Thang máy có thể bị ngắt điện đột ngột, mắc kẹt giữa các tầng khi có sự cố điện. Hơn nữa, hầm thang máy hoạt động như ống dẫn khói, nhanh chóng tích tụ khói độc. Luôn dùng cầu thang bộ khi sơ tán.
+
+Câu 8: Khi mở cửa để thoát nạn, cần kiểm tra gì trước?
+Trả lời: Dùng mu bàn tay (không dùng lòng bàn tay) chạm vào mặt cửa và tay nắm cửa. Nếu nóng thì không mở — có thể lửa đang ở phía bên kia. Nếu mát thì mở cẩn thận, đứng sang một bên, tránh không khí nóng phụt vào mặt.
+
+Câu 9: Khi bị mắc kẹt trong phòng không thoát được, phải làm gì?
+Trả lời: Dùng khăn, quần áo, băng dán bịt kín khe dưới cửa để ngăn khói. Gọi 114 báo vị trí. Ra ban công, cửa sổ vẫy tay, dùng đèn flash điện thoại để thu hút sự chú ý của lực lượng cứu hộ. Không nhảy xuống nếu cao quá 3 tầng.
+
+Câu 10: Nên dùng gì để che miệng và mũi khi thoát nạn trong khói?
+Trả lời: Tốt nhất là khăn ướt gấp nhiều lớp. Nếu không có nước, khăn khô vẫn tốt hơn không có gì. Tuy nhiên, khăn chỉ lọc được bụi và một phần khói — không lọc được khí CO (carbon monoxide). Cần thoát khỏi khu vực khói càng nhanh càng tốt.
+
+Câu 11: Khí CO nguy hiểm như thế nào và làm thế nào để nhận biết?
+Trả lời: CO (carbon monoxide) không màu, không mùi, không vị — hoàn toàn không thể phát hiện bằng giác quan. Gây ngộ độc rất nhanh, mất ý thức trong vài phút ở nồng độ cao. Triệu chứng: đau đầu, chóng mặt, buồn nôn, rồi mất ý thức. Cần lắp cảm biến CO để phát hiện sớm.
+
+Câu 12: Thứ tự ưu tiên khi sơ tán đám đông là gì?
+Trả lời: Ưu tiên theo thứ tự: (1) Người trong khu vực nguy hiểm trực tiếp, (2) Người khuyết tật, người già, trẻ em, phụ nữ có thai, (3) Người ở các tầng gần đám cháy, (4) Toàn bộ những người còn lại theo lối thoát hiểm đã định.
+
+Câu 13: Điểm tập kết sau sơ tán nên được chọn ở đâu?
+Trả lời: Điểm tập kết phải: cách tòa nhà tối thiểu 15–20m, không cản trở đường xe cứu hỏa vào, có đủ không gian cho mọi người tập hợp, dễ nhận biết (gốc cây lớn, góc đường...). Phải được thỏa thuận và phổ biến trước cho tất cả mọi người.
+
+Câu 14: Sau khi sơ tán, tại sao không được quay lại tòa nhà đang cháy?
+Trả lời: Đám cháy phát triển không thể dự đoán, kết cấu tòa nhà có thể sụp đổ bất cứ lúc nào. Hơn nữa, việc quay lại cản trở hoạt động chữa cháy của lực lượng chuyên nghiệp và gây nguy hiểm cho chính bản thân. Chỉ lực lượng PCCC có trang bị mới được vào tòa nhà đang cháy.
+
+Câu 15: Khi quần áo đang cháy, phải làm gì?
+Trả lời: Áp dụng nguyên tắc DỪNG – NẰM XUỐNG – LĂN: Dừng lại (không chạy vì chạy làm lửa to hơn), nằm xuống đất, lăn qua lại để dập tắt lửa. Che mặt bằng tay khi lăn. Nếu có người khác thì dùng chăn, thảm phủ lên người đang cháy và ấn chặt.
+
+Câu 16: Làm thế nào để thoát nạn từ tầng cao khi cầu thang bị lửa và khói chặn?
+Trả lời: Thoát nạn theo thứ tự ưu tiên: (1) Dùng cầu thang bộ thoát nạn thứ 2 nếu có, (2) Dùng thang dây hoặc thiết bị thoát hiểm được trang bị sẵn, (3) Thoát qua ban công sang căn bên cạnh, (4) Kêu cứu và chờ lực lượng PCCC giải cứu. Tuyệt đối không nhảy từ tầng 3 trở lên.
+
+Câu 17: Khi phát hiện cháy lúc đang ngủ và phòng đầy khói, phải làm gì ngay lập tức?
+Trả lời: Lăn khỏi giường xuống sàn (không ngồi dậy vì khói ở trên cao), bò đến cửa phòng, kiểm tra nhiệt độ cửa, nếu mát thì mở và bò ra ngoài. Giữ đường thoát về phía trước, không dừng lại lấy đồ đạc. Kéo cửa phòng ngủ đóng lại khi thoát ra.
+
+Câu 18: Tại sao nên đóng cửa lại khi thoát nạn?
+Trả lời: Đóng cửa (không khóa) giúp ngăn lửa và khói lan sang khu vực khác, tranh thủ thêm thời gian cho người còn chưa thoát được. Một cánh cửa gỗ thông thường có thể làm chậm đám cháy từ 10–20 phút. Cửa chống cháy có thể làm chậm đến 60–120 phút.
+
+Câu 19: Cháy dầu mỡ trong bếp thì xử lý như thế nào?
+Trả lời: (1) Tắt nguồn nhiệt ngay (tắt bếp), (2) Đậy nắp vung lên chảo dầu đang cháy để cắt oxy, (3) Nếu không có nắp thì dùng khăn ướt đắp lên (cẩn thận tránh bỏng hơi nước), (4) Dùng bình CO₂ hoặc bình loại K, (5) KHÔNG dùng nước vì dầu nóng gặp nước sẽ bắn tung và bùng cháy dữ dội.
+
+Câu 20: Cháy điện xử lý như thế nào?
+Trả lời: (1) Ngắt nguồn điện ngay (cầu dao, CB), (2) Dùng bình CO₂ hoặc bột khô để dập, (3) KHÔNG dùng nước hoặc bình bọt (foam) vì điện dẫn qua chất lỏng gây điện giật, (4) Nếu không ngắt được điện thì sơ tán và gọi 114.
+
+Câu 21: Cháy hóa chất dung môi (xăng, cồn, sơn) xử lý như thế nào?
+Trả lời: (1) Sơ tán người khỏi khu vực, (2) Không dùng nước (có thể làm lan rộng đám cháy), (3) Dùng bình bột ABC hoặc CO₂, (4) Ngăn chặn hóa chất chảy lan ra bằng cát hoặc bờ chắn, (5) Gọi 114 và thông báo loại hóa chất đang cháy để lực lượng chuẩn bị đúng loại chất chữa cháy.
+
+Câu 22: Cháy gas (bình LPG) xử lý như thế nào?
+Trả lời: (1) Không dập tắt ngọn lửa gas trước khi đóng van — lửa tắt nhưng gas vẫn tiếp tục thoát ra sẽ tích tụ và gây nổ, (2) Đóng van bình gas trước, (3) Dùng khăn ướt làm mát bình gas, (4) Di chuyển bình ra ngoài nơi thông gió nếu an toàn, (5) Gọi 114 nếu không kiểm soát được.
+
+Câu 23: Cháy rừng hoặc đồng cỏ gần khu dân cư, phải làm gì?
+Trả lời: (1) Gọi 114 và kiểm lâm địa phương ngay, (2) Sơ tán theo hướng ngược chiều gió và vuông góc với hướng cháy, (3) Không chạy thẳng theo hướng lửa lan, (4) Tìm khu vực đất trống, sông, hồ để ẩn nấp nếu bị cháy bao vây, (5) Phun ướt mái và tường nhà nếu có đủ thời gian và nước.
+
+Câu 24: Khi nào thì một đám cháy vượt ngoài tầm kiểm soát của người dân?
+Trả lời: Đám cháy vượt tầm kiểm soát khi: lửa đã lan rộng hơn 1m², có khói đặc và tầm nhìn dưới 3m, cảm thấy nhiệt quá mạnh không thể đứng gần, đám cháy có dấu hiệu lan nhanh, hoặc bình chữa cháy đã phun hết mà chưa dập được. Trong tất cả các trường hợp này, sơ tán ngay là ưu tiên tuyệt đối.
+
+Câu 25: Nguyên nhân chính gây chết người trong đám cháy là gì?
+Trả lời: Ngạt khói và khí độc (CO, HCN) chiếm khoảng 70–80% nguyên nhân tử vong trong hỏa hoạn — nhiều hơn bỏng do lửa trực tiếp. Khói gây mất ý thức rất nhanh, đặc biệt khi nạn nhân đang ngủ. Đây là lý do cảm biến khói và hệ thống báo cháy sớm cực kỳ quan trọng.
+
+Câu 26: Làm thế nào để xử lý người bị bỏng do cháy?
+Trả lời: (1) Đưa nạn nhân ra khỏi nguồn nhiệt, (2) Làm mát vết bỏng bằng nước mát (không lạnh) trong 20 phút, (3) Không dùng đá lạnh, kem đánh răng, dầu hoặc bất kỳ thứ gì khác, (4) Che vết bỏng bằng vải sạch không xơ (không dùng bông), (5) Gọi 115 ngay nếu bỏng rộng, bỏng sâu hoặc bỏng ở mặt, tay, chân, vùng kín.
+
+Câu 27: Khi phát hiện người bị điện giật trong đám cháy, làm gì?
+Trả lời: KHÔNG trực tiếp chạm vào người bị điện giật khi chưa ngắt điện — bạn sẽ bị giật theo. Ngắt điện tại cầu dao hoặc CB ngay. Nếu không ngắt được điện thì dùng vật không dẫn điện (gậy gỗ khô, dây nhựa) để tách nạn nhân khỏi nguồn điện. Sau đó sơ cứu và gọi 115.
+
+Câu 28: Khi thoát nạn qua hành lang đầy khói, nên giữ tay ở đâu?
+Trả lời: Giữ một tay chạm vào tường để định hướng (không bị lạc hướng trong khói dày). Bò thấp, giữ đầu cách sàn 30–60cm. Đếm số cửa hoặc nhớ khoảng cách đến lối thoát đã học trước. Di chuyển có hệ thống, không hoảng loạn chạy bừa.
+
+Câu 29: Tại sao không nên mở cửa sổ khi có cháy trong phòng?
+Trả lời: Mở cửa sổ cung cấp thêm oxy cho đám cháy, làm lửa bùng to hơn và lan nhanh hơn. Ngoại lệ duy nhất là khi phòng đầy khói và bạn cần không khí để thở trong khi chờ cứu hộ — trong trường hợp này chỉ mở hé, không mở hoàn toàn.
+
+Câu 30: Cách sơ cứu người ngạt khói?
+Trả lời: (1) Đưa nạn nhân ra không khí trong lành ngay, (2) Đặt ở tư thế hồi phục nếu còn thở, (3) Nếu ngừng thở: thực hiện hô hấp nhân tạo (CPR), (4) Không cho uống nước nếu mất ý thức, (5) Gọi 115 ngay. Triệu chứng ngộ độc CO có thể xuất hiện chậm — luôn đưa đến bệnh viện dù nạn nhân có vẻ tỉnh.
+
+Câu 31: Cháy lớp học có trẻ em, ưu tiên xử lý thế nào?
+Trả lời: (1) Thầy/cô giáo bình tĩnh, ra lệnh nhanh và rõ ràng, (2) Bảo học sinh che miệng mũi bằng khăn, (3) Cho thoát theo lối đã diễn tập, không chạy loạn, (4) Giáo viên đi cuối để kiểm tra không bỏ sót học sinh, (5) Tập hợp ở điểm an toàn và điểm danh ngay, (6) Gọi 114 và phụ huynh.
+
+Câu 32: Cháy xảy ra ban đêm khi đang ngủ, dấu hiệu nào đánh thức người trước khi lửa vào phòng?
+Trả lời: Cảm biến khói là dấu hiệu cảnh báo sớm và đáng tin cậy nhất. Ngoài ra: mùi khói, âm thanh lạ (tiếng nổ lép bép, tiếng đổ vỡ), ánh sáng cam/đỏ qua khe cửa, nhiệt độ phòng tăng đột ngột, hoặc chuông báo cháy của tòa nhà. Không bao giờ dựa vào bản năng tự thức — cần cảm biến khói.
+
+Câu 33: Xử lý thế nào khi thấy khói bay ra từ ổ điện hoặc thiết bị điện?
+Trả lời: (1) Ngắt điện ngay tại CB hoặc cầu dao, không rút phích cắm trước (có thể bị giật), (2) Không đổ nước, (3) Rút phích cắm chỉ khi đã ngắt điện ở CB, (4) Nếu có bình CO₂ thì phun, (5) Nếu khói nhiều hoặc lửa bùng — gọi 114 và sơ tán.
+
+Câu 34: Cháy trong buồng thang bộ, thoát nạn như thế nào?
+Trả lời: Nếu khói đã vào buồng thang: quay lại, đóng cửa vào buồng thang, di chuyển lên tầng thượng (nếu có lối ra mái) hoặc vào phòng gần nhất, bịt khe cửa bằng khăn/băng dán, gọi 114 báo vị trí và ra cửa sổ kêu cứu. Không cố đi qua buồng thang đầy khói.
+
+Câu 35: Sau khi dập tắt đám cháy nhỏ, cần làm gì tiếp theo?
+Trả lời: (1) Đảm bảo lửa đã tắt hoàn toàn (đốm than tàn vẫn có thể bùng lại), (2) Thông gió khu vực, (3) Báo cáo sự cố cho người phụ trách và cơ quan PCCC, (4) Không sử dụng lại thiết bị liên quan cho đến khi được kiểm tra, (5) Điều tra nguyên nhân và khắc phục để tránh tái phát.
+
+Câu 36: Cháy tại siêu thị hoặc trung tâm thương mại, người mua sắm cần làm gì?
+Trả lời: (1) Giữ bình tĩnh, không chen lấn, xô đẩy, (2) Nghe theo hướng dẫn của nhân viên và hệ thống loa phát thanh, (3) Thoát theo biển EXIT gần nhất — không nhất thiết phải là lối vào, (4) Bỏ lại túi xách, xe đẩy hàng, (5) Không dùng thang máy, (6) Tập hợp tại điểm an toàn và đợi kiểm tra.
+
+Câu 37: Cách xác định hướng thoát nạn trong một tòa nhà lạ?
+Trả lời: Khi mới vào bất kỳ tòa nhà nào: quan sát vị trí cầu thang bộ và biển EXIT, đếm số phòng từ vị trí của mình đến cầu thang (để tìm trong tối), chú ý đèn chỉ dẫn thoát nạn màu xanh, xác nhận lối thoát thực sự có thể mở được. Đây là thói quen an toàn cần hình thành.
+
+Câu 38: Ô tô bị cháy trên đường, xử lý thế nào?
+Trả lời: (1) Dừng xe ngay, tắt máy, (2) Tất cả người trên xe ra ngoài ngay lập tức — cách xa xe tối thiểu 30m, (3) Gọi 114, (4) Nếu cháy nhỏ ở khoang động cơ và có bình chữa cháy: mở hé capô (không mở hoàn toàn — tránh oxy vào), phun bình vào, (5) Không trở lại xe lấy đồ. Bình nhiên liệu ô tô có thể nổ.
+
+Câu 39: Nhà máy công nghiệp bị cháy, trình tự ưu tiên xử lý là gì?
+Trả lời: (1) Kích hoạt hệ thống báo động, (2) Gọi 114, (3) Ngắt các nguồn năng lượng nguy hiểm (điện, gas, hơi, khí nén) theo quy trình khẩn cấp, (4) Sơ tán toàn bộ công nhân, (5) Đội PCCC cơ sở triển khai chữa cháy ban đầu trong khả năng, (6) Bàn giao cho Cảnh sát PCCC khi đến nơi.
+
+Câu 40: Tại sao phải thực hành diễn tập sơ tán định kỳ?
+Trả lời: Diễn tập tạo ra phản xạ có điều kiện — khi xảy ra cháy thực, não người hoảng loạn không thể suy nghĩ rõ ràng, nhưng cơ thể sẽ hành động theo những gì đã được luyện tập. Diễn tập còn giúp phát hiện lỗ hổng trong phương án (lối thoát bị chặn, không đủ người phụ trách...) trước khi sự cố thật xảy ra.
+
+Câu 41: Người già và người khuyết tật cần được hỗ trợ thoát nạn như thế nào?
+Trả lời: Trước khi có sự cố: xác định và lập danh sách những người cần hỗ trợ, phân công người phụ trách cụ thể. Khi có cháy: người phụ trách đến ngay phòng/vị trí của họ, hỗ trợ di chuyển ra cầu thang bộ. Nếu không thể đi cầu thang: đưa vào "vùng cứu hộ" (rescue area) ở chiếu nghỉ cầu thang và thông báo cho lực lượng PCCC.
+
+Câu 42: Khói màu đen, trắng và màu khác thì nguy hiểm ra sao?
+Trả lời: Khói đen: cháy vật liệu hữu cơ (nhựa, cao su, dầu mỡ) — chứa nhiều hạt bồ hóng và chất độc, rất nguy hiểm. Khói trắng: cháy gỗ, giấy, rơm — ít độc hơn nhưng vẫn nguy hiểm. Khói vàng/xanh: cháy hóa chất, chất nổ — cực kỳ độc hại, phải sơ tán ngay và không tiếp cận nếu không có thiết bị bảo hộ.
+
+Câu 43: Cháy phòng khách sạn lúc đang ở trong đó, làm gì?
+Trả lời: (1) Không mở cửa phòng ngay — kiểm tra nhiệt độ cửa trước, (2) Gọi lễ tân và 114 báo phòng số bao nhiêu, (3) Nếu hành lang an toàn: mang theo thẻ phòng, thoát theo biển EXIT, (4) Nếu hành lang đầy khói: ở lại phòng, bịt khe cửa, ra ban công kêu cứu, (5) Không dùng thang máy.
+
+Câu 44: Biển báo EXIT màu xanh hay màu đỏ?
+Trả lời: Theo tiêu chuẩn ISO 3864 được áp dụng tại Việt Nam (và hầu hết thế giới), biển EXIT (lối thoát nạn) có nền màu xanh lá cây với hình người đang chạy màu trắng. Màu xanh lá được chọn vì dễ nhìn thấy trong khói và ánh sáng yếu hơn màu đỏ.
+
+Câu 45: Sau sự cố cháy, khi nào thì an toàn để vào lại tòa nhà?
+Trả lời: Chỉ được vào lại khi: lực lượng PCCC hoặc cơ quan chức năng cho phép bằng văn bản hoặc thông báo chính thức, kết cấu tòa nhà đã được kiểm tra an toàn, không còn nguy cơ cháy lại hoặc sụp đổ. Không tự ý vào trước khi được phép dù cho rằng "đã an toàn".
+
+Câu 46: Phương tiện PCCC cơ bản tối thiểu cần có trong hộ gia đình?
+Trả lời: Tối thiểu: (1) Bình chữa cháy ABC 1–2kg (tốt hơn là 4kg), (2) Cảm biến khói ở mỗi phòng ngủ và hành lang, (3) Đèn pin sạc dự phòng, (4) Khăn dày (dùng ướt che miệng mũi). Nâng cao hơn: thang dây thoát hiểm (cho nhà nhiều tầng), mặt nạ lọc khói.
+
+Câu 47: Khi thấy khói từ xa nhưng chưa rõ nguồn gốc, nên làm gì?
+Trả lời: Gọi 114 ngay — để lực lượng chuyên nghiệp xác định và xử lý. Không tự đi tìm kiếm nguồn khói nếu không có trang bị bảo hộ. Cảnh báo cho người xung quanh. Chuẩn bị sơ tán nếu khói ngày càng dày và gần hơn.
+
+Câu 48: Cháy trong nhà kho tối và không quen địa hình, thoát nạn như thế nào?
+Trả lời: Nếu có đèn pin: chiếu thấp theo hướng lối đi. Nếu không có: bò theo tường về phía lối ra (tay luôn chạm tường). Tránh đi giữa kho vì dễ bị lạc. Nếu có hàng hóa chặn đường: bò qua hoặc tìm lối khác. Gọi 114 và la to để đội cứu hộ xác định vị trí.
+
+Câu 49: Tại sao không nên chạy khi quần áo đang cháy?
+Trả lời: Chạy tạo ra luồng khí thổi thêm oxy vào ngọn lửa, làm lửa bùng to và lan nhanh hơn trên cơ thể. Đồng thời làm lửa lan lên phần trên người và vào mặt. Vì vậy cần DỪNG ngay, NẰM XUỐNG, và LĂN để dập tắt lửa bằng cách cắt oxy.
+
+Câu 50: Người bị bỏng nặng cần được sơ cứu ngay gì trước khi xe cấp cứu đến?
+Trả lời: (1) Đưa ra khỏi nguồn nhiệt, (2) Làm mát bằng nước mát (15–20°C) liên tục trong 20 phút, (3) Che vết bỏng bằng vải sạch không dính (khăn ướt sạch), (4) Giữ ấm phần cơ thể không bị bỏng để tránh sốc nhiệt, (5) Không bóc vỡ bọng nước, (6) Gọi 115 và theo dõi hô hấp.
+
+Câu 51: Cách nhận biết một tòa nhà có hệ thống PCCC tốt?
+Trả lời: Nhận biết qua: biển EXIT và đèn chỉ dẫn thoát nạn sáng rõ, đầu báo khói/nhiệt trên trần, đầu phun sprinkler, bình chữa cháy đặt ở vị trí dễ thấy và lấy, cửa thoát hiểm không bị khóa và mở dễ dàng từ bên trong, sơ đồ thoát nạn trên tường, hộp chứa vòi chữa cháy vách tường, và hệ thống còi/loa báo động.
+
+Câu 52: Khi thoát nạn từ tầng cao, nên mang theo gì?
+Trả lời: Mang theo: chìa khóa phòng (để quay lại được nếu hành lang nguy hiểm), điện thoại di động (đã sạc), giấy tờ tùy thân quan trọng (nếu gần và an toàn). KHÔNG dừng lại để lấy: tiền, đồ trang sức, laptop, quần áo, vali. Mỗi giây dừng lại có thể trả giá bằng tính mạng.
+
+Câu 53: Khi phát hiện bình gas rò rỉ trong bếp mà chưa có lửa, làm gì?
+Trả lời: (1) Không bật bất kỳ công tắc điện nào (kể cả đèn, quạt — tia lửa điện có thể gây nổ), (2) Không dùng điện thoại trong phòng, (3) Mở cửa sổ, cửa chính để thông gió, (4) Đóng van bình gas, (5) Thoát ra ngoài, (6) Gọi công ty gas và 114 từ bên ngoài.
+
+Câu 54: Nguyên tắc tam giác lửa và ứng dụng trong chữa cháy?
+Trả lời: Lửa cần 3 yếu tố để cháy: nhiên liệu + oxy + nguồn nhiệt (nhiệt độ đủ để bắt cháy). Loại bỏ bất kỳ yếu tố nào thì lửa tắt: Làm lạnh (nước làm giảm nhiệt), Cách ly (đậy nắp, dùng bọt foam cắt oxy), Loại nhiên liệu (tắt van gas, di chuyển vật liệu dễ cháy). Hiểu tam giác lửa giúp chọn đúng phương pháp chữa cháy.
+
+Câu 55: Cháy nổ do bình gas mini (loại dùng cho bếp dã ngoại) xử lý thế nào?
+Trả lời: Bình gas mini áp suất cao khi bị nhiệt có thể nổ rất mạnh (BLEVE). Nếu bình đang cháy tại van: làm mát bình bằng nước từ xa và an toàn, cố đóng van nếu tiếp cận được. Nếu không kiểm soát được: sơ tán ngay bán kính 50m và gọi 114. Không bao giờ ném bình vào nước hoặc di chuyển bình đang cháy.
+
+Câu 56: Hiệu ứng "backdraft" là gì và nguy hiểm như thế nào?
+Trả lời: Backdraft xảy ra khi đám cháy thiếu oxy bỗng nhận được không khí đột ngột (khi mở cửa, vỡ kính). Lửa và khí cháy tích tụ bùng nổ dữ dội ra phía ngoài. Dấu hiệu: cửa nóng, khói màu vàng nâu, hút ngược vào khe cửa, lửa trông "thở". Khi thấy dấu hiệu này: không mở cửa và gọi 114 ngay.
+
+Câu 57: Cháy "flashover" là gì?
+Trả lời: Flashover là thời điểm toàn bộ vật liệu trong một căn phòng đồng loạt bốc cháy (khi nhiệt độ phòng đạt 600°C). Xảy ra rất nhanh — thường chỉ 3–5 phút sau khi cháy bắt đầu. Sau flashover không ai sống sót được trong phòng đó. Đây là lý do cần thoát khỏi phòng cháy càng sớm càng tốt.
+
+Câu 58: Tại sao cần kiểm tra bình chữa cháy ngay cả khi chưa dùng?
+Trả lời: Bình chữa cháy có thể mất áp suất theo thời gian dù không dùng. Chất chữa cháy bên trong có thể bị biến chất, đóng cục. Van có thể bị rỉ sét. Khi cần dùng mà bình hỏng thì hoàn toàn vô dụng. Kiểm tra hàng tháng (áp kế, niêm phong) và bảo dưỡng định kỳ 6 tháng đến 1 năm/lần.
+
+Câu 59: Khi có người bị mắc kẹt trong xe ô tô đang cháy, làm gì?
+Trả lời: (1) Gọi 114, 115 ngay, (2) Dùng búa phá kính (emergency hammer) đập vào góc cửa kính, không đập chính giữa, (3) Nếu không có búa: dùng đầu đai lưng ghế (headrest rod) hoặc vật nhọn cứng, (4) Tắt điện xe nếu có thể (chìa khóa off), (5) Kéo nạn nhân ra, di chuyển ra xa xe tối thiểu 30m, (6) Sơ cứu và chờ y tế.
+
+Câu 60: Làm thế nào để bảo vệ cơ sở khỏi cháy lan từ bên ngoài (cháy rừng, cháy nhà hàng xóm)?
+Trả lời: (1) Dọn sạch vật liệu dễ cháy xung quanh nhà bán kính 5m, (2) Đóng kín cửa sổ, cửa chính bằng cửa không cháy, (3) Bịt các khe hở trên mái và tường, (4) Phun ướt mái và các bề mặt dễ cháy nếu có đủ nước, (5) Đặt bình chữa cháy ở vị trí sẵn sàng, (6) Chuẩn bị sơ tán ngay khi tình hình vượt tầm kiểm soát.
+
+Câu 61: Nguyên nhân phổ biến nhất của cháy nhà ở Việt Nam là gì?
+Trả lời: Theo thống kê của Cảnh sát PCCC Việt Nam, nguyên nhân phổ biến nhất là: (1) Sự cố hệ thống và thiết bị điện (chiếm khoảng 50–60%), (2) Bất cẩn trong dùng lửa (đốt vàng mã, sử dụng bếp gas), (3) Trẻ em nghịch lửa, (4) Vi phạm quy định PCCC trong sản xuất kinh doanh.
+
+Câu 62: Cháy xảy ra vào ban đêm nguy hiểm hơn ban ngày như thế nào?
+Trả lời: Nguy hiểm hơn vì: người đang ngủ không thể phát hiện cháy bằng thị giác, khói CO gây mê man trong khi ngủ nên không tỉnh dậy được, thời gian phản ứng chậm hơn do chưa tỉnh táo hoàn toàn, lực lượng cứu hộ ít và thời gian tiếp cận có thể chậm hơn. Đây là lý do cảm biến khói trong phòng ngủ là thiết bị bảo vệ quan trọng nhất.
+
+Câu 63: Lửa lan nhanh hơn khi nào?
+Trả lời: Lửa lan nhanh hơn khi: gió mạnh (cung cấp oxy và mang tàn lửa), nhiều vật liệu dễ cháy xếp gần nhau, không gian hẹp và kín (tích nhiệt nhanh), độ ẩm thấp (mùa khô), hàng hóa xếp chặn đường nước phun sprinkler. Hiểu điều này giúp bố trí cơ sở an toàn hơn.
+
+Câu 64: Sprinkler tự động hoạt động như thế nào?
+Trả lời: Mỗi đầu phun sprinkler có bóng thủy tinh chứa chất lỏng giãn nở nhiệt. Khi nhiệt độ đủ cao (thường 68°C), bóng thủy tinh vỡ, cho phép nước phun ra. Chỉ đầu phun ngay trên đám cháy kích hoạt — không phải toàn bộ hệ thống. Sprinkler kích hoạt sớm và chữa cháy hiệu quả trước khi xe cứu hỏa đến.
+
+Câu 65: Có những loại sprinkler nào?
+Trả lời: Các loại phổ biến: (1) Wet pipe (ướt): luôn có nước sẵn trong ống — phổ biến nhất, (2) Dry pipe (khô): ống chứa khí nén, nước chỉ vào khi kích hoạt — dùng cho khu vực có thể đóng băng, (3) Pre-action: cần 2 tín hiệu để kích hoạt — dùng cho phòng máy chủ, (4) Deluge: tất cả đầu phun mở đồng thời — dùng cho khu vực nguy hiểm cao.
+
+Câu 66: Hệ thống báo cháy địa chỉ là gì và có ưu điểm gì?
+Trả lời: Hệ thống báo cháy địa chỉ (addressable) cho phép trung tâm biết chính xác đầu báo nào đang kích hoạt (phòng nào, tầng nào) thay vì chỉ biết có cháy ở đâu đó. Ưu điểm: xác định nhanh vị trí cháy, phân biệt báo nhầm với cháy thật, dễ bảo trì và kiểm tra từng đầu báo riêng lẻ.
+
+Câu 67: Đầu báo khói ion và quang điện khác nhau như thế nào?
+Trả lời: Ion (ionization): phát hiện khói từ đám cháy nhanh, lửa bùng mạnh (như cháy giấy, xăng). Quang điện (photoelectric): phát hiện khói dày, âm ỉ (như cháy nhựa, xốp, đệm). Đầu báo nhiệt: phát hiện khi nhiệt độ đạt ngưỡng — chậm hơn nhưng ít báo nhầm hơn. Nên kết hợp nhiều loại trong cùng hệ thống.
+
+Câu 68: Tại sao không được đặt cảm biến khói trong bếp hoặc nhà tắm?
+Trả lời: Bếp sinh ra khói và hơi khi nấu ăn có thể kích hoạt cảm biến khói liên tục (báo nhầm). Nhà tắm có hơi nước ẩm cũng gây báo nhầm. Đặt cảm biến trong bếp hoặc nhà tắm sẽ bị tắt đi vì báo nhầm quá nhiều — và khi cháy thật thì không có ai cảnh báo. Nên đặt cảm biến ở hành lang ngoài bếp.
+
+Câu 69: Kiểm tra cảm biến khói như thế nào và bao lâu một lần?
+Trả lời: Bấm nút TEST trên cảm biến — chuông phải kêu to. Nếu không kêu: thay pin hoặc thay thiết bị. Kiểm tra hàng tháng. Thay pin ít nhất một năm một lần (hoặc khi cảm biến phát ra tiếng bíp ngắn báo pin yếu). Thay toàn bộ thiết bị sau 10 năm vì linh kiện lão hóa.
+
+Câu 70: Hệ thống báo cháy tự động cần được kiểm tra định kỳ như thế nào?
+Trả lời: Theo quy định PCCC Việt Nam: kiểm tra hoạt động hàng ngày (do nhân viên cơ sở), bảo trì và kiểm định 6 tháng/lần (do đơn vị có chứng chỉ), kiểm tra toàn diện 1 năm/lần. Nhật ký kiểm tra phải được ghi chép và lưu trữ đầy đủ.
+
+Câu 71: Cách thoát nạn khỏi xe buýt hoặc xe khách khi có cháy?
+Trả lời: (1) Ra hiệu cho lái xe dừng ngay, (2) Mở cửa chính hoặc cửa thoát hiểm (thường ở phía sau hoặc hông), (3) Dùng búa phá kính khẩn cấp đập vào góc kính nếu cần, (4) Thoát theo thứ tự có tổ chức, không chen lấn, (5) Di chuyển xa xe tối thiểu 30m, (6) Gọi 114 và 115.
+
+Câu 72: Khi ngửi thấy mùi gas trong tòa nhà nhiều tầng, cần báo ai?
+Trả lời: (1) Không bật/tắt bất kỳ công tắc điện nào, (2) Ra ngoài ngay lập tức và yêu cầu mọi người xung quanh cũng ra ngoài, (3) Gọi 114 và công ty cung cấp gas từ bên ngoài tòa nhà, (4) Không hút thuốc, không dùng lửa, (5) Đợi lực lượng chuyên nghiệp kiểm tra và xử lý trước khi quay lại.
+
+Câu 73: Vì sao đám cháy ở tầng hầm nguy hiểm hơn tầng trên?
+Trả lời: Khói và nhiệt luôn bốc lên — cháy tầng hầm làm toàn bộ cầu thang bộ và tầng trên đầy khói nhanh chóng. Đường vào chữa cháy hạn chế. Ít cửa sổ thông gió. Điều kiện tối tăm, khó định hướng. Nhiệt tích tụ nhanh hơn. Vì vậy cháy tầng hầm thường gây thương vong cao hơn.
+
+Câu 74: Cháy tầng hầm để xe, người đang trong đó thoát như thế nào?
+Trả lời: (1) Không dùng thang máy, (2) Tìm cầu thang bộ thoát hiểm — thường được chỉ dẫn bằng biển EXIT xanh, (3) Bò thấp dưới khói, (4) Nếu cầu thang bộ đầy khói: thoát về phía đường lên dốc (ramp xe) ra ngoài, (5) Nếu không thoát được: tìm vị trí thoáng, gọi 114 báo vị trí.
+
+Câu 75: Phương án PCCC của cơ sở cần có những nội dung gì?
+Trả lời: Phương án PCCC cần có: sơ đồ mặt bằng, danh sách nguồn nguy hiểm cháy nổ, phân công lực lượng chữa cháy và thoát nạn, quy trình báo động và thông tin liên lạc, phương án sử dụng phương tiện PCCC, phương án phối hợp với Cảnh sát PCCC, phương án cứu người bị nạn, danh sách số điện thoại khẩn cấp.
+
+Câu 76: Khi không có bình chữa cháy, có thể dùng gì thay thế để dập đám cháy nhỏ?
+Trả lời: Tùy loại đám cháy: nước (cho cháy gỗ, giấy, vải — không dùng cho điện và dầu mỡ), cát/đất (cho cháy dầu mỡ nhỏ, hóa chất), chăn dày (đắp lên để cắt oxy), nắp vung (đậy lên chảo dầu cháy). Lưu ý: những biện pháp này chỉ hiệu quả với đám cháy rất nhỏ, mới bắt đầu.
+
+Câu 77: Diện tích cháy bao nhiêu m² thì không nên tự chữa mà phải sơ tán?
+Trả lời: Thực tế không có con số tuyệt đối, nhưng nguyên tắc chung: nếu đám cháy lớn hơn một chiếc ghế (khoảng 1m²), lan nhanh, có khói đặc, hoặc đã cháy quá 30 giây mà bình chữa cháy chưa dập được — hãy bỏ bình lại và sơ tán. Không có tài sản nào đáng đổi bằng tính mạng.
+
+Câu 78: Ai là người chịu trách nhiệm cuối cùng trong công tác PCCC tại cơ sở?
+Trả lời: Theo Luật PCCC, người đứng đầu cơ sở (chủ doanh nghiệp, giám đốc, trưởng cơ quan) chịu trách nhiệm trực tiếp và toàn diện về công tác PCCC. Trách nhiệm bao gồm: tổ chức thực hiện quy định PCCC, đào tạo nhân viên, mua sắm phương tiện, xây dựng phương án, kiểm tra định kỳ và khắc phục tồn tại.
+
+Câu 79: Nhân viên mới vào làm việc cần được đào tạo PCCC những gì?
+Trả lời: Tối thiểu cần biết: vị trí bình chữa cháy gần nhất, cách sử dụng bình chữa cháy, vị trí và cách thoát nạn, điểm tập kết sau sơ tán, số điện thoại khẩn cấp, cách kích hoạt báo động, người phụ trách PCCC của cơ sở. Đào tạo thực hành (không chỉ lý thuyết) và có ký nhận xác nhận đã học.
+
+Câu 80: Tần suất tổ chức diễn tập PCCC tại cơ sở là bao lâu?
+Trả lời: Theo Nghị định 136/2020/NĐ-CP: cơ sở thuộc diện phải có phương án PCCC phải tổ chức thực tập phương án ít nhất 1 lần/năm. Cơ sở nguy hiểm cháy nổ cao (xăng dầu, hóa chất, kho chứa hàng lớn) nên thực tập 2 lần/năm. Mỗi lần thực tập cần có đánh giá và rút kinh nghiệm.
+
+Câu 81: Điều gì xảy ra với cơ sở nếu không chấp hành quy định PCCC?
+Trả lời: Theo Nghị định 144/2021/NĐ-CP, vi phạm PCCC có thể bị: phạt tiền từ 100.000đ đến 100 triệu đồng, đình chỉ hoạt động có thời hạn hoặc vĩnh viễn, thu hồi giấy phép kinh doanh. Trường hợp để xảy ra cháy gây thiệt hại lớn, người đứng đầu có thể bị truy cứu trách nhiệm hình sự.
+
+Câu 82: Cháy tại cơ sở sản xuất hóa chất nguy hiểm, tại sao không được tự ý dập cháy?
+Trả lời: Hóa chất nguy hiểm có thể: phản ứng dữ dội với nước (natri, kali), gây nổ thứ cấp, tạo ra khí độc khi cháy. Cần biết chính xác loại hóa chất để chọn đúng chất chữa cháy. Lực lượng PCCC chuyên nghiệp có MSDS (phiếu an toàn hóa chất), trang thiết bị bảo hộ và quy trình chuyên dụng. Người dân chỉ cần sơ tán và báo 114.
+
+Câu 83: Tại sao cần có "người kiểm tra cuối cùng" trước khi đóng cửa cơ sở?
+Trả lời: "Người kiểm tra cuối cùng" có nhiệm vụ đi vòng toàn bộ cơ sở trước khi khóa cửa để kiểm tra: không còn nguồn lửa nào (bếp, nến, thuốc), tắt các thiết bị điện không cần thiết, đóng van gas, không có vật liệu dễ cháy gần nguồn nhiệt, hệ thống báo cháy hoạt động. Ký nhận vào nhật ký kiểm tra.
+
+Câu 84: Khi nào cần gọi 115 (y tế) thay vì chỉ gọi 114?
+Trả lời: Gọi 115 ngay khi có: người bị thương, bỏng, ngạt khói, ngộ độc CO, điện giật, hoặc bất kỳ trường hợp nào có thương vong. Trong thực tế, nên gọi đồng thời cả 114 và 115. Cũng có thể gọi đường dây khẩn cấp thống nhất 112 để được điều phối đồng thời nhiều lực lượng.
+
+Câu 85: Bình xịt khói (smoke canister) trong diễn tập có giống với khói thật không?
+Trả lời: Khói trong diễn tập (từ máy tạo khói) thường an toàn, không độc, và thường có mùi dịu. Khói trong đám cháy thật chứa CO, HCN, dioxin và nhiều chất độc khác, không màu sắc rõ ràng, và có thể gây tử vong trong vài phút. Diễn tập cần nhận thức rõ sự khác biệt này để không chủ quan.
+
+Câu 86: Cách đóng gói và bảo quản tài liệu quan trọng để giảm thiệt hại nếu xảy ra cháy?
+Trả lời: (1) Số hóa và lưu trữ trên đám mây (cloud) hoặc ổ cứng ngoài đặt ở nơi khác, (2) Bảo quản bản gốc quan trọng trong két sắt chống cháy, (3) Giữ bản sao tại ngân hàng (safe deposit box), (4) Chụp ảnh và gửi email cho bản thân, (5) Cập nhật bản sao định kỳ. Tài liệu pháp lý, hợp đồng, giấy tờ nhà đất cần được bảo vệ đặc biệt.
+
+Câu 87: Bảo hiểm cháy nổ mua như thế nào và cần mua không?
+Trả lời: Bảo hiểm cháy nổ bắt buộc áp dụng cho các cơ sở có nguy hiểm cháy nổ theo danh mục của Nghị định 23/2018/NĐ-CP (kho hàng, nhà máy, trạm xăng...). Cơ sở khác và hộ gia đình nên mua bảo hiểm cháy nổ tự nguyện. Mua tại các công ty bảo hiểm được cấp phép. Cần khai báo đúng giá trị tài sản để được bồi thường đầy đủ.
+
+Câu 88: Cháy trong khu dân cư chật hẹp, xe cứu hỏa không vào được thì sao?
+Trả lời: Đây là tình huống thường gặp ở nhiều đô thị Việt Nam. Lực lượng PCCC có thể: dùng mô tô chữa cháy (xe nhỏ vào được hẻm hẹp), bơm nước từ nguồn nước gần nhất qua đường ống dài, dùng bình chữa cháy xách tay và mang vác vào. Cộng đồng cần chuẩn bị sẵn: nguồn nước, xô chậu, bình chữa cháy, và đường đi thông thoáng.
+
+Câu 89: Hệ thống chữa cháy bằng khí (gas suppression) dùng ở đâu và cần lưu ý gì?
+Trả lời: Dùng cho phòng có thiết bị điện tử nhạy cảm (phòng server, phòng điều khiển) vì không gây hư hỏng thiết bị như nước. Loại phổ biến: FM-200, Novec 1230, CO₂. Lưu ý quan trọng: khi hệ thống kích hoạt, nồng độ khí trong phòng đủ để ngạt — phải sơ tán ngay khi có tín hiệu cảnh báo và không vào lại cho đến khi được thông gió đầy đủ.
+
+Câu 90: Đội chữa cháy cơ sở cần có những ai và được đào tạo gì?
+Trả lời: Theo quy định, đội chữa cháy cơ sở gồm nhân viên của chính cơ sở được phân công. Cần đào tạo: sử dụng bình chữa cháy, vận hành hệ thống chữa cháy cố định, quy trình báo động và sơ tán, sơ cứu cơ bản, phối hợp với Cảnh sát PCCC. Tổ chức huấn luyện và cấp chứng nhận bởi đơn vị có thẩm quyền.
+
+Câu 91: Cháy trong siêu thị có hàng triệu sản phẩm, tại sao nguy hiểm đặc biệt?
+Trả lời: Siêu thị có: tải cháy rất lớn (hàng hóa nhiều và dày đặc), nhiều loại vật liệu cháy khác nhau (nhựa, giấy, vải, thực phẩm), nhiều người và khó kiểm soát sơ tán, kệ hàng cao che khuất đầu phun sprinkler, hệ thống thông gió phức tạp phân tán khói. Sprinkler thường được thiết kế đặc biệt cho kho/siêu thị với mật độ phun cao hơn.
+
+Câu 92: Hệ thống chữa cháy vách tường (fire hose reel) sử dụng như thế nào?
+Trả lời: (1) Mở van cấp nước (van chặn), (2) Kéo vòi ra khỏi cuộn đến gần đám cháy, (3) Mở van đầu vòi, (4) Điều chỉnh tia nước (tia đặc cho đám cháy xa, tia phun sương cho đám cháy gần hoặc khói), (5) Chữa cháy từ phía ngoài vào, từ dưới lên, (6) Không đứng trước cửa mở khi phun — khói và nhiệt có thể bùng ra.
+
+Câu 93: Tại sao nên có ít nhất 2 người khi sử dụng vòi chữa cháy?
+Trả lời: Vòi chữa cháy có áp lực nước mạnh — phản lực khi phun rất lớn, một người không thể giữ vững và điều hướng chính xác. Một người cầm vòi điều khiển hướng phun, người thứ hai hỗ trợ giữ dây vòi phía sau để giảm phản lực. Hoạt động phối hợp giúp chữa cháy hiệu quả và an toàn hơn.
+
+Câu 94: Khi phun nước chữa cháy, nên phun vào đâu?
+Trả lời: Phun vào gốc của ngọn lửa (nơi vật liệu đang cháy), không phun vào ngọn lửa ở trên (không hiệu quả). Di chuyển tia nước quét qua lại ở gốc lửa. Không đứng thẳng trước đám cháy, đứng ở góc hoặc bên cạnh. Làm mát vật liệu xung quanh để ngăn cháy lan.
+
+Câu 95: Khi nào thì có thể tắt hệ thống báo cháy đã kích hoạt?
+Trả lời: CHỈ tắt báo động sau khi: xác nhận đây là báo nhầm (không có cháy thật), hoặc đám cháy đã được dập tắt hoàn toàn và được xác nhận bởi người có thẩm quyền. Không tắt báo động khi đám cháy còn đang xảy ra — nhiều người chưa sơ tán cần tiếng báo động để hành động.
+
+Câu 96: Hộ gia đình có cần làm "phương án PCCC" không?
+Trả lời: Theo quy định, hộ gia đình không bắt buộc có phương án PCCC bằng văn bản như cơ sở kinh doanh. Nhưng mỗi gia đình nên có "kế hoạch thoát nạn" thực tế: xác định 2 đường thoát từ mỗi phòng, điểm tập kết ngoài nhà, phân công ai trông trẻ em/người già, ai gọi 114, và thực hành ít nhất 1 lần/năm.
+
+Câu 97: Tại sao cần phổ biến quy trình PCCC cho cả khách thăm và nhà thầu bên ngoài?
+Trả lời: Người lạ không biết bố cục cơ sở, không biết vị trí lối thoát, không biết hệ thống báo động hoạt động ra sao. Trong đám cháy, họ sẽ hoảng loạn và không tự thoát được. Cần phổ biến tối thiểu: vị trí lối thoát gần nhất, điểm tập kết, và phải đi theo hướng dẫn của nhân viên nội bộ khi có báo động.
+
+Câu 98: Tại sao một số vụ cháy có thể phát sinh trở lại sau khi đã "dập tắt"?
+Trả lời: "Cháy lại" xảy ra khi: than hồng còn ẩn trong đống tro, vật liệu bên trong chưa nguội hẳn, khí gas hoặc hơi dung môi vẫn còn trong không gian, hoặc nguồn lửa gốc chưa được loại bỏ. Sau khi dập cháy, cần đảo tro, kiểm tra toàn bộ vật liệu xung quanh, và duy trì giám sát ít nhất 1 giờ sau.
+
+Câu 99: Đặc điểm nhận biết đám cháy đang trong giai đoạn "phát triển" (growth stage)?
+Trả lời: Giai đoạn phát triển: lửa đang lớn dần, nhiệt độ tăng nhanh, khói ngày càng đặc hơn, có thể thấy ngọn lửa rõ ràng. Đây vẫn là giai đoạn có thể chữa cháy hiệu quả nếu có phương tiện đúng và đủ. Sau giai đoạn này là "đám cháy phát triển toàn phần" — rất khó kiểm soát mà không có phương tiện chuyên nghiệp.
+
+Câu 100: Cháy và nổ khác nhau như thế nào?
+Trả lời: Cháy là quá trình oxy hóa xảy ra liên tục và tương đối chậm, tạo ra nhiệt và ánh sáng. Nổ là quá trình oxy hóa xảy ra cực kỳ nhanh (micro/mili giây), tạo ra sóng áp suất mạnh có thể phá hủy kết cấu. Nổ thường xảy ra khi hỗn hợp khí/bụi dễ cháy đạt nồng độ nhất định gặp nguồn kích hoạt. Một vụ cháy có thể dẫn đến nổ nếu điều kiện thích hợp.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PHẦN 2: CÁCH SỬ DỤNG BÌNH CHỮA CHÁY (Câu 101–170)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Câu 101: Quy tắc PASS trong sử dụng bình chữa cháy là gì?
+Trả lời: PASS là viết tắt của 4 bước: P (Pull - Rút chốt an toàn), A (Aim - Hướng vòi phun vào gốc lửa), S (Squeeze - Bóp cò/tay cầm để phun), S (Sweep - Quét ngang qua lại ở gốc lửa). Đây là quy trình chuẩn quốc tế áp dụng cho hầu hết các loại bình chữa cháy xách tay.
+
+Câu 102: Các loại bình chữa cháy phổ biến nhất hiện nay là gì?
+Trả lời: (1) Bình bột ABC (MFZ): dùng cho hầu hết đám cháy thông thường, (2) Bình CO₂ (MT): dùng cho cháy điện và thiết bị điện tử, (3) Bình bọt (foam): dùng cho cháy dầu mỡ và xăng dầu, (4) Bình nước (water): dùng cho cháy loại A (gỗ, giấy, vải), (5) Bình loại K (wet chemical): dùng riêng cho bếp nấu dầu mỡ công nghiệp.
+
+Câu 103: Các đám cháy được phân loại như thế nào?
+Trả lời: Theo tiêu chuẩn quốc tế: Loại A - vật liệu rắn (gỗ, giấy, vải, nhựa), Loại B - chất lỏng và khí dễ cháy (xăng, dầu, gas, cồn), Loại C - thiết bị điện đang có điện, Loại D - kim loại cháy (natri, kali, magiê), Loại F/K - dầu ăn và mỡ trong thiết bị nấu. Biết phân loại để chọn đúng bình chữa cháy.
+
+Câu 104: Bình bột ABC có thể dập được những loại đám cháy nào?
+Trả lời: Bình bột ABC (bột khô đa năng) có thể dập: Loại A (gỗ, giấy, vải), Loại B (xăng, dầu, dung môi), Loại C (thiết bị điện). Đây là loại bình chữa cháy đa năng phổ biến nhất, phù hợp cho hầu hết môi trường dân dụng và văn phòng. Hạn chế: bột để lại cặn, gây hỏng thiết bị điện tử tinh vi.
+
+Câu 105: Bình CO₂ có ưu và nhược điểm gì so với bình bột?
+Trả lời: Ưu điểm CO₂: không để lại cặn, không hỏng thiết bị điện tử, sạch sẽ, dùng được trong phòng máy tính. Nhược điểm: hiệu quả kém hơn bột ABC, CO₂ phân tán nhanh (không hiệu quả ngoài trời có gió), nguy cơ lạnh cóng tay khi cầm, tầm phun ngắn (1–2m), không có tác dụng làm mát lâu dài nên có thể cháy lại.
+
+Câu 106: Khoảng cách nào là phù hợp khi bắt đầu phun bình chữa cháy?
+Trả lời: Tiếp cận đám cháy với khoảng cách bằng tầm phun tối đa của bình (thường 2–5m tùy loại), sau đó phun và tiến dần vào gần hơn khi đám cháy yếu đi. Không đứng quá gần ngay từ đầu vì nhiệt có thể bỏng người. Không đứng quá xa vì bột/CO₂ không đủ hiệu quả.
+
+Câu 107: Thời gian phun của bình chữa cháy thông thường là bao lâu?
+Trả lời: Thời gian phun rất ngắn: bình 1kg khoảng 6–8 giây, bình 2kg khoảng 8–12 giây, bình 4kg khoảng 12–16 giây, bình 8kg khoảng 20–25 giây. Do thời gian phun ngắn, không được lãng phí — chỉ bắt đầu phun khi đã ở đúng vị trí và hướng vào gốc lửa.
+
+Câu 108: Vì sao phải rút chốt an toàn trước khi phun bình chữa cháy?
+Trả lời: Chốt an toàn (chốt khóa) ngăn không cho bình phun khi vô tình bóp cò. Khi bình được vận chuyển, lắc hoặc va đập, chốt an toàn bảo vệ tránh phun ngoài ý muốn. Khi sử dụng thực sự, rút chốt là bước bắt buộc đầu tiên trong quy trình PASS.
+
+Câu 109: Cần đứng ở vị trí nào khi sử dụng bình chữa cháy?
+Trả lời: Đứng xuôi chiều gió (gió thổi từ phía lưng về phía đám cháy) để tránh khói và chất chữa cháy thổi ngược vào mặt. Đứng ở góc để có lối thoát sau lưng — không bao giờ để đám cháy ở giữa bạn và lối ra. Đứng ở khoảng cách phù hợp với tầm phun của bình.
+
+Câu 110: Tại sao phải phun vào gốc lửa chứ không phun vào ngọn lửa?
+Trả lời: Ngọn lửa chỉ là phần lửa đang cháy trong không khí — dập tắt ngọn lửa không ngăn vật liệu tiếp tục cháy. Gốc lửa là nơi vật liệu đang cháy và sinh ra hơi cháy. Phun vào gốc sẽ làm mát vật liệu và cắt đứt nguồn cung cấp hơi cháy, từ đó dập tắt hoàn toàn đám cháy.
+
+Câu 111: Kỹ thuật "quét ngang" khi phun bình chữa cháy thực hiện như thế nào?
+Trả lời: Giữ vòi ở gốc lửa, di chuyển vòi quét từ trái sang phải rồi từ phải sang trái (như đánh chổi), mỗi lần quét tiến thêm một bước về phía trước khi lửa yếu đi. Kỹ thuật quét đảm bảo phủ đều toàn bộ bề mặt đang cháy thay vì chỉ tập trung một điểm.
+
+Câu 112: Bình chữa cháy đã dùng một phần có thể cất lại và dùng sau không?
+Trả lời: Về kỹ thuật có thể, nhưng không nên và nguy hiểm: áp suất bên trong giảm, khi cần dùng tiếp có thể không đủ lực phun. Bột bên trong có thể đóng cục do ẩm. Không biết còn bao nhiêu và đủ dập cháy không. Nguyên tắc: bình đã dùng dù một phần phải được nạp lại ngay.
+
+Câu 113: Cách kiểm tra bình chữa cháy còn sử dụng được không?
+Trả lời: (1) Kiểm tra đồng hồ áp suất: kim chỉ vùng xanh là đủ áp, vùng đỏ là thiếu hoặc quá áp, (2) Kiểm tra chốt an toàn và niêm phong còn nguyên, (3) Kiểm tra vòi phun không bị tắc hay nứt vỡ, (4) Lắc nhẹ bình bột để bột không bị đóng cục, (5) Kiểm tra nhãn còn đọc rõ và trong hạn kiểm định.
+
+Câu 114: Bình chữa cháy nên đặt ở vị trí nào trong nhà hoặc văn phòng?
+Trả lời: Đặt ở: vị trí dễ thấy và tiếp cận ngay (không cất trong tủ kín), gần lối ra vào, cạnh nguồn nguy hiểm (bếp, tủ điện, kho), ở độ cao 1–1,5m (tay cầm), không đặt trong góc khuất hoặc sau cửa, không đặt nơi quá nóng hoặc ẩm ướt. Dán biển chỉ vị trí bình nếu bình không nhìn thấy trực tiếp.
+
+Câu 115: Bình chữa cháy CO₂ nguy hiểm như thế nào khi sử dụng?
+Trả lời: Nguy hiểm từ CO₂: (1) Nhiệt độ miệng phun cực lạnh (xuống –78°C) gây bỏng lạnh nếu chạm tay — luôn cầm tay cầm, không chạm miệng phun, (2) CO₂ nồng độ cao gây ngạt — không dùng trong không gian kín nhỏ, mở cửa sau khi dùng, (3) Không hiệu quả ngoài trời hoặc khi có gió.
+
+Câu 116: Cách sử dụng bình chữa cháy bọt (foam) đúng kỹ thuật?
+Trả lời: Với cháy dầu mỡ trong xô/thùng: KHÔNG phun thẳng vào mặt dầu vì sẽ bắn tung dầu đang cháy. Phun foam lên thành thùng/bình để foam chảy xuống mặt dầu một cách nhẹ nhàng, tạo lớp phủ kín cắt oxy. Với cháy chất lỏng đổ tràn: phun quét từ mép ngoài vào giữa.
+
+Câu 117: Sự khác nhau giữa bình chữa cháy loại nước và loại nước thêm phụ gia là gì?
+Trả lời: Bình nước thông thường: chỉ dập cháy loại A bằng cách làm mát. Bình nước thêm phụ gia (AFFF water mist): phụ gia giảm sức căng bề mặt nước, thấm sâu hơn vào vật liệu rắn, làm mát hiệu quả hơn, một số loại còn tạo lớp bọt mỏng. Loại này hiệu quả hơn nhưng không dùng được cho cháy điện nếu không ghi rõ.
+
+Câu 118: Tại sao bình chữa cháy cho phòng ngủ nên là loại nào?
+Trả lời: Phòng ngủ nên có bình bột ABC (đa năng) hoặc bình bọt. Ưu tiên bình nhỏ (1–2kg) để dễ cầm khi vừa thức dậy còn ngái ngủ. Không nên dùng bình CO₂ trong phòng ngủ kín vì CO₂ gây ngạt trong không gian nhỏ. Đặt ở vị trí dễ lấy ngay từ giường — không cất trong tủ.
+
+Câu 119: Có thể dùng bình bột để dập cháy điện không?
+Trả lời: Về lý thuyết: bột ABC không dẫn điện, có thể dùng cho cháy điện nếu điện áp dưới 1000V và khoảng cách an toàn (thường 1m). Nhưng thực tế nên ngắt điện trước rồi dùng bình bột, hoặc dùng bình CO₂ sẽ an toàn hơn và không để lại cặn làm hỏng thiết bị.
+
+Câu 120: Tại sao không dùng nước để dập cháy điện?
+Trả lời: Nước là chất dẫn điện. Phun nước vào thiết bị điện đang có điện sẽ tạo đường dẫn điện từ nguồn điện qua nước đến người đang cầm vòi, gây điện giật. Nước cũng có thể gây nổ mạch điện. Nguyên tắc: ngắt điện trước mọi can thiệp, hoặc dùng bình CO₂/bột khô không dẫn điện.
+
+Câu 121: Số lượng bình chữa cháy cần thiết trong văn phòng được tính như thế nào?
+Trả lời: Theo TCVN 3890:2009: trong điều kiện thông thường, bố trí tối thiểu 1 bình chữa cháy cho mỗi 50–100m² sàn (tùy mức nguy hiểm cháy nổ). Khoảng cách di chuyển từ bất kỳ điểm nào đến bình chữa cháy gần nhất không quá 20–25m. Khu vực có nguy cơ cao cần mật độ dày hơn.
+
+Câu 122: Bình chữa cháy CO₂ cỡ nào phù hợp cho phòng server?
+Trả lời: Phòng server nhỏ (dưới 20m²): bình CO₂ 2–3kg. Phòng server lớn hơn: nhiều bình 3–5kg hoặc hệ thống chữa cháy khí tự động (FM-200, Novec). Lưu ý: CO₂ trong không gian kín có thể gây ngạt — khi có hệ thống tự động phun, phải sơ tán trước. Không dùng bình bột cho phòng server vì bột gây hỏng thiết bị.
+
+Câu 123: Khi bình chữa cháy không hoạt động (bóp cò nhưng không ra), phải làm gì?
+Trả lời: (1) Kiểm tra chốt an toàn đã rút chưa, (2) Kiểm tra vòi phun có bị tắc không (dùng vật nhỏ thông nhẹ), (3) Kiểm tra đồng hồ áp suất — kim ở vùng đỏ nghĩa là hết áp, (4) Nếu vẫn không hoạt động: bỏ bình lại, sơ tán và gọi 114. Không cố gắng sửa bình trong khi đám cháy đang diễn ra.
+
+Câu 124: Bình chữa cháy dạng aerosol mini (nhỏ như chai xịt tóc) có hiệu quả không?
+Trả lời: Bình aerosol mini chứa hóa chất chữa cháy dạng xịt, có thể dập tắt đám cháy rất nhỏ (cháy bếp gas nhỏ, cháy giấy). Nhưng lượng chất chữa cháy rất ít, không đủ cho đám cháy trung bình. Phù hợp để dùng trong xe ô tô, bếp gia đình như biện pháp sơ cứu ban đầu — không thay thế được bình chữa cháy thực thụ.
+
+Câu 125: Cách cầm bình chữa cháy CO₂ đúng cách?
+Trả lời: Tay thuận cầm tay cầm/cò, tay còn lại giữ đuôi bình. KHÔNG cầm vào miệng phun (loa phun) vì nhiệt độ cực lạnh (–78°C). Một số bình CO₂ có tay cầm riêng cho loa phun — nếu có thì dùng. Giữ bình thẳng đứng khi phun (bình CO₂ phun hiệu quả hơn khi thẳng đứng).
+
+Câu 126: Bình chữa cháy có thể để ở nhiệt độ nào và điều kiện gì?
+Trả lời: Nhiệt độ bảo quản: thường từ –10°C đến +55°C (xem nhãn từng loại). Tránh: ánh nắng trực tiếp kéo dài, nhiệt độ cao (gần lò, trên mái tôn), ẩm ướt (bình kim loại bị rỉ sét), va đập mạnh (có thể hỏng van), gần hóa chất ăn mòn. Không để bình nằm ngang (trừ loại được thiết kế nằm ngang).
+
+Câu 127: Sau khi dập cháy thành công, có cần làm gì với bình chữa cháy?
+Trả lời: (1) Đặt bình xuống — không dựng lại vào vị trí cũ vì bình đã dùng cần nạp lại, (2) Đánh dấu bình đã dùng để tránh nhầm lẫn, (3) Đưa bình đi nạp lại sớm nhất có thể (ngay trong ngày hoặc ngày hôm sau), (4) Kiểm tra xem có cần bổ sung bình khác ngay không, (5) Ghi vào nhật ký kiểm tra/sử dụng.
+
+Câu 128: Người dùng bình chữa cháy cần mặc trang bị bảo hộ gì?
+Trả lời: Lý tưởng: găng tay chống nhiệt, mặt nạ lọc khói. Thực tế (khi không có trang bị): che miệng mũi bằng khăn ướt, không đứng trong luồng khói, đứng ở góc an toàn, luôn giữ lối thoát phía sau. Bình CO₂: cần tránh không chạm miệng phun. Bình bột: che mắt nếu bột thổi ngược vào.
+
+Câu 129: Tại sao phải đứng xuôi chiều gió khi phun bình chữa cháy?
+Trả lời: Nếu đứng ngược chiều gió: bột/bọt/CO₂ sẽ bị gió thổi ngược vào mặt (gây khó thở, mờ mắt), giảm hiệu quả phun vì chất chữa cháy bị thổi đi trước khi đến gốc lửa. Đứng xuôi chiều gió (gió sau lưng): chất chữa cháy được đẩy về phía đám cháy, đồng thời gió đẩy khói ra xa người dùng.
+
+Câu 130: Bình chữa cháy có thể bị "nổ" không? Khi nào?
+Trả lời: Bình chữa cháy được thiết kế chịu áp cao và có van an toàn. Nguy cơ nổ xảy ra khi: đặt bình trong môi trường nhiệt độ cực cao (như trong đám cháy) làm áp suất tăng vượt ngưỡng, bình bị rỉ sét nghiêm trọng làm vỏ yếu, hoặc van an toàn bị hỏng. Đây là lý do không nên để bình trong xe ô tô đậu nơi nắng nóng lâu và phải kiểm tra định kỳ.
+
+Câu 131: Bình chữa cháy dùng cho xe ô tô cần có đặc điểm gì?
+Trả lời: Cần: kích thước nhỏ gọn (thường 1–2kg), dễ lấy và sử dụng trong không gian hạn chế của xe, loại bột ABC hoặc CO₂, có giá đỡ cố định (không để lăn lóc), nhiệt độ sử dụng phù hợp với điều kiện bên trong xe. Đặt ở vị trí dễ lấy (dưới ghế lái hoặc cạnh ghế lái) — không đặt trong cốp sau xa tầm với.
+
+Câu 132: Cách sử dụng bình chữa cháy khi cháy bếp gas?
+Trả lời: Bước 1: Tắt van gas ngay (ưu tiên số 1). Bước 2: Nếu lửa vẫn cháy từ gas còn trong đường ống: phun bình bột ABC vào ngọn lửa ở gốc van. Bước 3: Quét ngang cho đến khi lửa tắt. Bước 4: Kiểm tra không còn gas rò rỉ. Lưu ý: Không bao giờ dập tắt lửa gas mà chưa đóng van — gas sẽ tiếp tục thoát ra và gây nổ.
+
+Câu 133: Bình chữa cháy loại K (wet chemical) khác gì so với bình bọt thông thường?
+Trả lời: Bình loại K chứa dung dịch alkaline (thường là kali acetate hoặc kali bicarbonate) được thiết kế đặc biệt cho cháy dầu mỡ trong bếp công nghiệp. Cơ chế: hóa chất phản ứng với dầu tạo lớp xà phòng làm mát và cách ly mặt dầu. Hiệu quả hơn bọt foam đối với dầu mỡ nhiệt độ cao. Không dùng được cho cháy điện.
+
+Câu 134: Khi nào nên dùng chăn chữa cháy (fire blanket) thay vì bình chữa cháy?
+Trả lời: Chăn chữa cháy phù hợp khi: cháy quần áo trên người (phủ lên người và ấn chặt), cháy chảo dầu nhỏ (đặt lên và giữ nguyên không nhấc lên), cháy thiết bị điện nhỏ. Không phù hợp cho đám cháy đã lan rộng. Sau khi phủ chăn: giữ nguyên ít nhất 15 phút cho đến khi nguội hẳn trước khi nhấc chăn lên.
+
+Câu 135: Quy trình nạp lại bình chữa cháy cần kiểm tra những gì?
+Trả lời: Khi đưa đi nạp, cơ sở nạp phải: kiểm tra vỏ bình (rỉ sét, vết nứt, biến dạng), kiểm tra và vệ sinh van, kiểm tra vòi phun và béc, nạp đúng loại và đúng trọng lượng chất chữa cháy, nạp khí đẩy đủ áp suất, kiểm tra đồng hồ áp suất, lắp lại chốt an toàn và niêm phong mới, dán tem kiểm định với ngày nạp và ngày hết hạn.
+
+Câu 136: Bình chữa cháy hết hạn kiểm định có còn dùng được không?
+Trả lời: Về mặt kỹ thuật có thể vẫn hoạt động, nhưng về mặt pháp lý và an toàn là không nên. Bình hết hạn kiểm định: không đảm bảo áp suất đủ, bột có thể bị ẩm và đóng cục, vỏ có thể yếu do ăn mòn. Khi cần dùng thực sự mà bình hỏng thì vô ích. Phải nạp lại và kiểm định trước khi tiếp tục sử dụng.
+
+Câu 137: Người cao tuổi và trẻ em có sử dụng bình chữa cháy không?
+Trả lời: Bình chữa cháy 1–2kg: người trưởng thành bình thường dễ sử dụng. Trẻ em và người cao tuổi có thể gặp khó khăn với bình 4kg+ vì nặng và cần lực tay. Giải pháp: trang bị bình nhỏ hơn (1–2kg), thực hành để quen, hoặc phân công người khỏe hơn xử lý bình. Quan trọng hơn: đảm bảo trẻ em và người cao tuổi biết đường thoát nạn.
+
+Câu 138: Bình chữa cháy có thể dùng một mình hay cần hai người?
+Trả lời: Bình chữa cháy xách tay một người hoàn toàn có thể dùng hiệu quả. Tuy nhiên, khi chữa cháy thực tế nên có người thứ hai để: quan sát và cảnh báo nếu tình huống nguy hiểm, cầm thêm bình dự phòng, hỗ trợ nếu người chữa cháy gặp sự cố, giữ thông đường thoát nạn. Không bao giờ một mình vào khu vực cháy mà không có người biết.
+
+Câu 139: Cách phân biệt bình chữa cháy thật và bình giả/kém chất lượng?
+Trả lời: Bình thật đảm bảo chất lượng: có nhãn đầy đủ thông tin (loại, trọng lượng, hạn sử dụng, nhà sản xuất, tiêu chuẩn), có đồng hồ áp suất (bình bột), có tem kiểm định từ cơ quan có thẩm quyền, vỏ bình dày và chắc chắn, van bằng đồng chất lượng. Mua từ đơn vị được phép kinh doanh phương tiện PCCC.
+
+Câu 140: Chữa cháy từ hướng nào là đúng?
+Trả lời: Luôn chữa cháy theo hướng từ ngoài vào trong (từ rìa đám cháy vào tâm), từ dưới lên trên (phun vào gốc lửa dưới thấp trước). Không đứng chính diện với cửa khi phun vào phòng đang cháy — đứng bên cạnh tường và phun xiên vào. Đảm bảo luôn có đường rút lui sau lưng.
+
+Câu 141: Bình chữa cháy 8kg và 12kg khác bình 4kg ở điểm gì ngoài kích thước?
+Trả lời: Bình lớn hơn: thời gian phun lâu hơn, tầm phun có thể xa hơn, lượng chất chữa cháy nhiều hơn để xử lý đám cháy lớn hơn. Nhưng cũng nặng hơn (cần 2 tay hoặc 2 người), khó cơ động. Thường dùng trên xe tải, nhà máy, garage. Bình 4kg là kích thước phổ biến nhất cho văn phòng và hộ gia đình.
+
+Câu 142: Tại sao không nên đặt bình chữa cháy trong khu bếp ngay cạnh bếp lửa?
+Trả lời: Nếu bếp bắt cháy, bình ở ngay cạnh bếp sẽ bị nhiệt làm nóng và có thể gây tăng áp suất nguy hiểm. Hơn nữa, không thể tiếp cận bình khi lửa đã bùng to. Đặt bình ở gần bếp nhưng không sát (cách ít nhất 1–2m) hoặc ngay bên ngoài cửa bếp — dễ lấy mà không phải đi qua vùng lửa.
+
+Câu 143: Bình chữa cháy treo tường cần chú ý gì về độ cao?
+Trả lời: Theo tiêu chuẩn: tay cầm bình ở độ cao 1–1,5m so với sàn. Đây là độ cao để người trưởng thành có thể lấy bình nhanh mà không phải nhón chân hay cúi người. Bình nặng hơn 18kg đặt trên sàn. Biển chỉ dẫn đặt phía trên bình ở độ cao dễ thấy từ xa.
+
+Câu 144: Có cần thực hành dùng bình chữa cháy thực tế không?
+Trả lời: Có, rất cần. Thực hành thực tế giúp: biết cảm giác trọng lượng bình khi cầm, hiểu lực phun và phản lực thực tế, làm quen với mùi và tiếng ồn khi phun, xây dựng phản xạ tự nhiên. Nhiều người biết quy trình PASS nhưng lúng túng khi cầm bình thật. Thực hành 1–2 năm/lần với bình thật hoặc bình tập luyện.
+
+Câu 145: Các lỗi phổ biến nhất khi sử dụng bình chữa cháy là gì?
+Trả lời: Lỗi phổ biến: (1) Quên rút chốt an toàn, (2) Phun vào ngọn lửa thay vì gốc, (3) Đứng quá xa nên không hiệu quả, (4) Phun hết bình vào một chỗ thay vì quét rộng, (5) Đứng ngược chiều gió, (6) Không giữ lối thoát sau lưng, (7) Dùng sai loại bình cho loại đám cháy, (8) Dùng bình hết áp hoặc quá hạn.
+
+Câu 146: Sau khi dùng bình chữa cháy bột, bột để lại cần vệ sinh như thế nào?
+Trả lời: Bột ABC (mono ammonium phosphate) ăn mòn kim loại nếu để lâu. Vệ sinh: (1) Hút bột bằng máy hút bụi, (2) Lau sạch bề mặt bằng vải ẩm, (3) Vệ sinh thiết bị điện tử bằng không khí nén, (4) Rửa nước những gì có thể rửa được, (5) Thiết bị điện tử bị dính bột cần được kỹ thuật viên vệ sinh chuyên nghiệp.
+
+Câu 147: Bình chữa cháy loại nước điều áp (stored pressure water) khác loại bình nước CO₂ (gas cartridge water) thế nào?
+Trả lời: Stored pressure: nước và khí đẩy chung trong một bình, áp suất duy trì liên tục. Gas cartridge: có bình CO₂ nhỏ bên ngoài hoặc bên trong, đập vỡ khi cần để tạo áp. Stored pressure phổ biến hơn vì cấu tạo đơn giản hơn. Cartridge type: áp suất mạnh hơn nhưng phức tạp và cần kiểm tra bình CO₂ phụ.
+
+Câu 148: Tại sao bình chữa cháy phải có màu đỏ?
+Trả lời: Màu đỏ là màu quốc tế quy định để dễ nhận diện trong tình huống khẩn cấp, đặc biệt trong môi trường nhiều khói hoặc ánh sáng yếu. Một số nước quy định màu đỏ cho toàn bình, một số quy định phần thân đỏ còn phần chứa loại chất chữa cháy có màu phân biệt (xanh dương: CO₂, kem: foam, đen: bột...). Tại Việt Nam: bình chữa cháy tiêu chuẩn màu đỏ.
+
+Câu 149: Khi nào nên sử dụng chăn chống lửa (fire blanket) cho trường hợp người đang cháy?
+Trả lời: Khi quần áo người đang cháy: (1) Hô người đó DỪNG và NẰM XUỐNG, (2) Mở chăn ra hoàn toàn che kín toàn bộ phần đang cháy, (3) Ấn chặt chăn vào người từ đầu xuống (che mặt trước), (4) Giữ nguyên không cử động. Không bao giờ ném chăn lên người đứng thẳng — cần nằm xuống mới hiệu quả.
+
+Câu 150: Bình chữa cháy khí halon (halon) là gì và vì sao không còn được sản xuất?
+Trả lời: Halon là chất chữa cháy cực hiệu quả, không để lại cặn, dùng được cho mọi loại cháy. Nhưng halon phá hủy tầng ozone cực mạnh (gấp 1000–16000 lần CO₂). Nghị định thư Montreal (1987) cấm sản xuất. Halon cũ vẫn được phép dùng trong một số ứng dụng hàng không và quân sự, nhưng không được sản xuất mới. Thay thế bằng: FM-200, Novec 1230, CO₂.
+
+Câu 151: Bình chữa cháy ABC bột khô có thể để ở xe ô tô dưới nắng không?
+Trả lời: Không nên để lâu ngày dưới nắng trực tiếp: nhiệt độ trong xe có thể lên 60–80°C vào mùa hè, gây tăng áp suất bình và làm lão hóa vòi phun. Nếu phải để trong xe: đặt ở khoang hành khách có điều hòa hoặc trong hộc chứa đồ, không để trong cốp xe phía sau nơi nóng nhất. Kiểm tra thường xuyên hơn (mỗi tháng).
+
+Câu 152: Vì sao không dùng bình CO₂ cho cháy kim loại (loại D)?
+Trả lời: Một số kim loại (như natri, kali, magiê) phản ứng mạnh với CO₂ và tiếp tục cháy hoặc phát nổ. Hơn nữa, CO₂ không đủ làm mát kim loại đang cháy ở nhiệt độ cực cao (magiê cháy ở 650°C+). Đám cháy kim loại cần chất chữa cháy đặc biệt loại D (cát khô, muối natri clorua, bột đồng) — không phải bình thông thường.
+
+Câu 153: Bình chữa cháy 1kg có đủ dập cháy phòng bếp gia đình không?
+Trả lời: Bình 1kg có thời gian phun khoảng 6–8 giây — đủ để dập tắt đám cháy rất nhỏ mới bắt đầu (như cháy giấy, vải nhỏ, cháy chảo dầu nhỏ). Không đủ cho đám cháy đã lan sang tường, tủ. Với bếp gia đình: bình 2–4kg ABC là phù hợp hơn, hoặc cặp đôi 1 bình bột + 1 bình CO₂ cho phòng bếp.
+
+Câu 154: Có cần bình chữa cháy trong phòng ngủ không?
+Trả lời: Lý tưởng là có. Đám cháy phát hiện lúc mới bùng trong phòng ngủ (do ổ điện, nến quên tắt...) có thể được dập nhanh bằng bình nhỏ trước khi lan rộng. Nên đặt bình 1–2kg ABC gần cửa phòng ngủ (dễ lấy khi thoát ra). Nhưng quan trọng hơn: nếu đám cháy lớn hoặc có nhiều khói — ưu tiên thoát nạn, không dừng lại dùng bình.
+
+Câu 155: Loại bình chữa cháy nào phù hợp cho cơ sở kinh doanh xăng dầu?
+Trả lời: Cơ sở xăng dầu cần: (1) Bình bột ABC cho cháy xăng nhỏ, (2) Bình bọt AFFF (Aqueous Film Forming Foam) cho cháy xăng dầu diện tích lớn — foam tạo lớp phủ kín mặt xăng, (3) Hệ thống chữa cháy cố định dùng bọt cho bể chứa lớn, (4) Bình CO₂ cho khu vực điện. Tuyệt đối không dùng nước cho cháy xăng dầu.
+
+Câu 156: Foam AFFF là gì?
+Trả lời: AFFF (Aqueous Film Forming Foam) là bọt tạo màng nước - loại bọt chữa cháy hiệu quả nhất cho cháy xăng dầu. Bọt AFFF tạo lớp màng nước mỏng trên mặt xăng, cách ly hơi xăng với oxy và làm mát mặt thoáng. Ưu điểm: kích hoạt nhanh, hiệu quả cao. Hạn chế: chứa PFAS (hóa chất gây ô nhiễm môi trường lâu dài), đang được thay thế bằng foam không chứa fluoro.
+
+Câu 157: Bình chữa cháy cần ghi những thông tin gì trên nhãn?
+Trả lời: Nhãn phải có: tên và loại sản phẩm, loại chất chữa cháy, trọng lượng tổng và trọng lượng chất chữa cháy, áp suất làm việc, nhiệt độ sử dụng, hướng dẫn sử dụng tóm tắt, các loại đám cháy phù hợp (A/B/C/F), ngày sản xuất/hạn kiểm định, nhà sản xuất và địa chỉ, tiêu chuẩn áp dụng (TCVN, EN...).
+
+Câu 158: Loại bình chữa cháy nào hiệu quả nhất cho đám cháy ngoài trời?
+Trả lời: Ngoài trời có gió làm giảm hiệu quả của CO₂ và foam. Bình bột ABC hiệu quả nhất ngoài trời vì bột có trọng lượng và không bị gió thổi đi nhiều. Đứng xuôi chiều gió, tiếp cận gần hơn. Với đám cháy lớn ngoài trời: cần vòi chữa cháy hoặc xe cứu hỏa chuyên nghiệp.
+
+Câu 159: Cần lưu ý gì khi bố trí bình chữa cháy trong kho hàng?
+Trả lời: Kho hàng: bố trí bình ở lối đi chính (không để giữa kho — khó tiếp cận), cách nhau không quá 20–25m, tính toán đủ số lượng theo diện tích và tải cháy của hàng hóa, dán biển chỉ dẫn nhìn thấy từ xa, đảm bảo không bị hàng hóa chất che khuất, kiểm tra hàng tháng vì trong kho bụi bẩn nhiều.
+
+Câu 160: Bình chữa cháy xách tay và bình chữa cháy xe đẩy khác nhau thế nào?
+Trả lời: Xách tay: 1–12kg, một người sử dụng, di động linh hoạt, tầm phun 2–6m. Xe đẩy: 25–100kg+, cần 1–2 người, dùng cho đám cháy lớn và khu vực nguy hiểm cao (kho nhiên liệu, nhà máy), tầm phun 5–12m, thời gian phun 30–120 giây. Xe đẩy thường được trang bị tại cơ sở công nghiệp, sân bay, cảng.
+
+Câu 161: Bình chữa cháy dùng cho đám cháy lớp F (dầu ăn, mỡ) cần có đặc điểm gì?
+Trả lời: Loại F/K phải phun nhẹ nhàng, không làm bắn dầu sôi ra ngoài. Dung dịch alkaline khi tiếp xúc dầu nóng tạo phản ứng xà phòng hóa (saponification), tạo lớp bọt dày làm mát và cách ly mặt dầu. Kỹ thuật: phun thành tia mỏng lên thành nồi/chảo, để dung dịch chảy nhẹ nhàng xuống mặt dầu — không phun thẳng vào mặt dầu.
+
+Câu 162: Có thể tự kiểm tra bình chữa cháy mà không cần kỹ thuật viên không?
+Trả lời: Người dùng thông thường có thể tự kiểm tra hàng tháng: xem áp kế, kiểm tra niêm phong và chốt, kiểm tra bình ngoài, lắc nhẹ bình bột. Nhưng bảo dưỡng định kỳ 1 năm/lần (kiểm tra bên trong, van, vòi, nạp lại nếu cần) PHẢI do kỹ thuật viên có chứng nhận thực hiện. Không tự tháo van hoặc tháo bình ra để kiểm tra.
+
+Câu 163: Cách bố trí bình chữa cháy trong nhà hàng?
+Trả lời: Nhà hàng cần: (1) Bình loại K (wet chemical) trong bếp cho cháy dầu mỡ, (2) Bình CO₂ hoặc bột ABC trong phòng ăn và quầy bar, (3) Bình bột ABC tại khu vực kho, (4) Mỗi tầng có ít nhất 1 bình, (5) Bình đặt gần lối ra, dễ lấy, không bị bàn ghế che khuất. Nhân viên phục vụ phải được đào tạo sử dụng.
+
+Câu 164: Bình chữa cháy khô (dry chemical) và ướt (wet chemical) dùng khi nào?
+Trả lời: Khô (dry chemical/bột): đa năng, dùng cho A, B, C — phổ biến nhất. Ướt (wet chemical): chuyên dụng cho cháy dầu mỡ (loại F/K) — dùng trong bếp nhà hàng, công nghiệp thực phẩm. Không thay thế nhau được — nhà hàng cần CẢ HAI loại cho các khu vực khác nhau.
+
+Câu 165: Bình chữa cháy nên mua của hãng nào là đáng tin cậy?
+Trả lời: Nên mua bình có chứng nhận TCVN hoặc tiêu chuẩn quốc tế (EN 3, UL 711...), có tem kiểm định của cơ quan có thẩm quyền, từ đơn vị được phép kinh doanh phương tiện PCCC (có Giấy chứng nhận đủ điều kiện kinh doanh PCCC). Một số thương hiệu uy tín tại Việt Nam: Việt Tiệp, MINIMAX, Amerex, Kidde, Gloria. Tránh hàng không nhãn mác hoặc giá quá rẻ.
+
+Câu 166: Làm thế nào để biết bình chữa cháy cần nạp lại hay chưa?
+Trả lời: Cần nạp lại khi: (1) Đồng hồ áp suất kim ở vùng đỏ hoặc dưới 0, (2) Đã sử dụng dù chỉ một lần, (3) Hết hạn kiểm định theo tem (thường 1–2 năm/lần), (4) Bình bị rơi mạnh hoặc va đập, (5) Niêm phong bị phá, (6) Thời gian từ lần nạp cuối quá 1 năm (dù chưa dùng — áp suất có thể giảm tự nhiên).
+
+Câu 167: Bình bột chữa cháy có hại sức khỏe không?
+Trả lời: Bột chữa cháy ABC (monoammonium phosphate) không độc hại nghiêm trọng nhưng: gây kích ứng mắt và đường hô hấp, không nên hít nhiều. Khi dùng: tránh để bột bay vào mặt, ra ngoài vùng bột sau khi dập cháy. Người có bệnh hô hấp cần đặc biệt cẩn thận. Sau dập cháy: thông gió khu vực và vệ sinh sạch.
+
+Câu 168: Khoảng cách an toàn tối thiểu khi dùng bình CO₂ chữa cháy điện là bao nhiêu?
+Trả lời: Theo hướng dẫn an toàn: giữ khoảng cách tối thiểu 1m với thiết bị điện đang có điện khi phun CO₂. Tuy nhiên, nên ngắt điện trước khi dập cháy bất cứ khi nào có thể. CO₂ không dẫn điện, nhưng nếu có nước trong bình (do kết tủa) thì nguy hiểm.
+
+Câu 169: Có nên mua bình chữa cháy qua mạng không?
+Trả lời: Mua qua mạng có rủi ro: khó kiểm tra chất lượng thực, có thể nhận hàng giả/kém chất lượng, không có hướng dẫn sử dụng trực tiếp. Nếu mua online: chỉ mua từ đơn vị có giấy phép kinh doanh PCCC, yêu cầu xem tem kiểm định, yêu cầu hóa đơn đỏ, kiểm tra kỹ khi nhận hàng. Tốt nhất mua trực tiếp tại cơ sở được cấp phép để kiểm tra trực tiếp.
+
+Câu 170: Bình chữa cháy cần được vệ sinh bên ngoài như thế nào?
+Trả lời: Lau bên ngoài bình định kỳ bằng vải ẩm, đặc biệt phần van và vòi phun. Kiểm tra và vệ sinh béc phun nếu bị bụi tắc (dùng kim nhỏ thông nhẹ). Không dùng hóa chất tẩy rửa mạnh có thể ăn mòn vỏ kim loại. Lau khô sau khi vệ sinh để tránh rỉ sét. Kiểm tra nhãn còn rõ và dính chắc.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PHẦN 3: BẢO DƯỠNG BÌNH CHỮA CHÁY (Câu 171–220)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Câu 171: Chu kỳ kiểm tra bình chữa cháy theo quy định là bao lâu?
+Trả lời: Theo TCVN 7435 và quy định PCCC Việt Nam: kiểm tra hàng tháng (do người dùng/cơ sở), bảo dưỡng và kiểm định 1 năm/lần (do đơn vị có chứng chỉ), kiểm tra thủy lực vỏ bình (hydrostatic test) 5 năm/lần (bình bột và CO₂). Bình hết chu kỳ kiểm định phải nạp lại trước khi tiếp tục sử dụng.
+
+Câu 172: Kiểm tra hàng tháng bình chữa cháy gồm những bước nào?
+Trả lời: Kiểm tra hàng tháng: (1) Vị trí bình đúng nơi quy định và dễ tiếp cận, (2) Đồng hồ áp suất kim ở vùng xanh, (3) Chốt an toàn còn nguyên và chưa bị rút, (4) Niêm phong chưa bị phá, (5) Vỏ bình không bị biến dạng, rỉ sét, móp méo, (6) Vòi và béc phun không bị tắc hay nứt, (7) Nhãn còn đọc rõ, (8) Ghi ngày kiểm tra vào nhật ký.
+
+Câu 173: Nhật ký kiểm tra bình chữa cháy cần ghi những gì?
+Trả lời: Nhật ký ghi: ngày kiểm tra, người kiểm tra (tên và chữ ký), số bình hoặc vị trí bình, trạng thái từng hạng mục kiểm tra (áp suất, niêm phong, vỏ, vòi...), kết quả tổng thể (đạt/không đạt), hành động đã thực hiện (nếu có vấn đề), ngày kiểm tra tiếp theo. Lưu trữ nhật ký ít nhất 3 năm.
+
+Câu 174: Bảo dưỡng hàng năm bình chữa cháy do ai thực hiện và gồm những gì?
+Trả lời: Do đơn vị có chứng chỉ PCCC thực hiện. Gồm: tháo và kiểm tra van, kiểm tra bên trong bình (gỉ sét, ăn mòn, cặn bẩn), kiểm tra và vệ sinh béc phun và vòi, kiểm tra đệm làm kín van, cân trọng lượng chất chữa cháy (bình CO₂), kiểm tra chất lượng bột (bình bột), nạp lại nếu cần, kiểm tra áp suất, lắp lại và niêm phong mới, dán tem kiểm định.
+
+Câu 175: Thử thủy lực (hydrostatic test) bình chữa cháy là gì và tại sao cần thiết?
+Trả lời: Thử thủy lực là bơm áp suất nước cao (thường 1,5–2 lần áp suất thiết kế) vào bình để kiểm tra độ bền vỏ bình. Phát hiện: nứt vỡ vi mô, điểm yếu do ăn mòn, biến dạng không nhìn thấy bằng mắt thường. Thực hiện 5 năm/lần hoặc khi vỏ bình có dấu hiệu nghi ngờ. Bình không đạt phải loại bỏ.
+
+Câu 176: Dấu hiệu nào cho thấy bình chữa cháy phải loại bỏ?
+Trả lời: Loại bỏ khi: vỏ bình bị móp méo, rỉ sét sâu hoặc thủng, đã qua 12 năm sử dụng (tùy loại — xem nhãn), không qua được thử thủy lực, van bị hỏng không thể sửa chữa, vết nứt hoặc biến dạng trên vỏ, không rõ nguồn gốc hoặc không có nhãn, cháy qua một lần và bị nhiệt ảnh hưởng.
+
+Câu 177: Bình chữa cháy CO₂ được kiểm tra như thế nào để biết còn đủ khí?
+Trả lời: Bình CO₂ không có đồng hồ áp suất. Cách kiểm tra: cân trọng lượng bình và so sánh với trọng lượng ghi trên nhãn (bình đầy). Nếu nhẹ hơn 10% so với quy định — cần nạp lại. Cách đơn giản hơn: lắc bình — nếu nghe tiếng CO₂ lỏng bên trong là còn, nếu nghe rỗng là cần nạp. Bảo dưỡng định kỳ 1 năm/lần bắt buộc.
+
+Câu 178: Tại sao bình chữa cháy bột phải được lắc định kỳ?
+Trả lời: Bột chữa cháy (monoammonium phosphate) có thể đóng cục theo thời gian, đặc biệt khi bị ẩm hoặc bình không được di chuyển. Bột đóng cục sẽ tắc vòi phun khi cần dùng. Lắc bình nhẹ hàng tháng (khi kiểm tra) giúp bột không bị vón cục và đảm bảo hoạt động khi cần.
+
+Câu 179: Bình chữa cháy để ngoài trời cần bảo quản thế nào?
+Trả lời: Nếu bắt buộc để ngoài trời: dùng tủ bảo quản bình chữa cháy chuyên dụng có mái che và có lỗ thông gió (không kín hoàn toàn), sơn hoặc bảo vệ bình khỏi rỉ sét, kiểm tra thường xuyên hơn (2 tuần/lần), không để bình trong nắng trực tiếp lâu dài. Một số bình có lớp bảo vệ đặc biệt cho môi trường ngoài trời.
+
+Câu 180: Sau bao lâu phải nạp lại bình chữa cháy dù chưa dùng?
+Trả lời: Bình bột ABC: nạp lại sau 5 năm nếu chưa dùng (áp suất có thể giảm, bột có thể ẩm). Bình CO₂: nạp lại sau 5 năm hoặc khi cân thấy thiếu khối lượng. Thực tế: kiểm định hàng năm sẽ phát hiện khi cần nạp. Không đợi đến 5 năm nếu phát hiện áp suất thấp hoặc bình bất thường.
+
+Câu 181: Chi phí nạp lại bình chữa cháy như thế nào so với mua mới?
+Trả lời: Chi phí nạp lại thường khoảng 30–60% giá mua mới, tùy loại và kích thước bình. Nếu vỏ bình còn tốt, nạp lại kinh tế hơn mua mới. Nhưng nếu bình cũ, rỉ sét, hoặc sắp đến chu kỳ thử thủy lực — nên mua mới. Bình rẻ tiền kém chất lượng: mua mới còn an toàn hơn nạp lại.
+
+Câu 182: Đơn vị nào được phép bảo dưỡng và nạp lại bình chữa cháy?
+Trả lời: Đơn vị phải có: Giấy chứng nhận đủ điều kiện kinh doanh dịch vụ PCCC do Cảnh sát PCCC cấp, thợ kỹ thuật có chứng chỉ nghiệp vụ PCCC, trang thiết bị nạp bình đạt chuẩn. Không đưa bình cho các cơ sở không có giấy phép vì: không đảm bảo chất lượng nạp, không chịu trách nhiệm pháp lý nếu bình hỏng.
+
+Câu 183: Có thể tự nạp lại bình chữa cháy tại nhà không?
+Trả lời: KHÔNG. Tự nạp bình chữa cháy tại nhà là nguy hiểm và bất hợp pháp. Quá trình nạp cần: thiết bị nạp chuyên dụng, áp suất cao, chất chữa cháy đúng tiêu chuẩn, kỹ thuật viên được đào tạo. Nạp sai áp suất có thể làm bình nổ. Nạp sai loại chất có thể làm bình không hoạt động đúng.
+
+Câu 184: Biên bản bàn giao bảo dưỡng bình chữa cháy cần có nội dung gì?
+Trả lời: Biên bản cần có: ngày thực hiện, tên và địa chỉ cơ sở, tên đơn vị thực hiện bảo dưỡng và số giấy phép, danh sách bình (số serial, loại, kích thước), hạng mục kiểm tra từng bình, kết quả (đạt/không đạt/đã nạp), ngày kiểm định tiếp theo, chữ ký đại diện hai bên. Lưu trữ cùng nhật ký kiểm tra.
+
+Câu 185: Bình chữa cháy bị rơi hoặc va đập mạnh cần xử lý thế nào?
+Trả lời: Sau khi bình bị rơi hoặc va đập mạnh: (1) Kiểm tra ngay đồng hồ áp suất, (2) Kiểm tra vỏ bình có bị biến dạng không, (3) Kiểm tra van và chốt an toàn còn nguyên không, (4) Kiểm tra vòi phun không bị nứt. Nếu có bất kỳ dấu hiệu bất thường: đưa đi kiểm tra bởi kỹ thuật viên trước khi sử dụng lại.
+
+Câu 186: Nhiệt độ bảo quản bình chữa cháy ảnh hưởng thế nào đến tuổi thọ?
+Trả lời: Nhiệt độ cao: làm tăng áp suất (có thể kích hoạt van an toàn), lão hóa đệm cao su van, ăn mòn nhanh hơn, bột hút ẩm nếu bình bị giãn nở co lại. Nhiệt độ thấp: CO₂ lỏng bên trong thay đổi áp suất (ít ảnh hưởng hơn), nhưng bình trong môi trường đóng băng rồi tan có thể bị ăn mòn bên trong. Bảo quản trong nhiệt độ ổn định, khô ráo là tốt nhất.
+
+Câu 187: Khi bình chữa cháy phát ra tiếng rít hoặc xì khí, phải làm gì?
+Trả lời: Tiếng rít hoặc xì là dấu hiệu bình đang rò rỉ áp suất. Hành động: (1) Di chuyển bình ra nơi thoáng khí, tránh xa nguồn lửa, (2) Không để mặt gần van hoặc miệng phun, (3) Gọi đơn vị kỹ thuật PCCC đến xử lý, (4) Dán nhãn "NGUY HIỂM - KHÔNG SỬ DỤNG" và cách ly. Không tự tháo van khi bình còn áp.
+
+Câu 188: Niêm phong (seal) của bình chữa cháy có tác dụng gì?
+Trả lời: Niêm phong (thường là vòng nhựa hoặc dây chì qua chốt an toàn) có tác dụng: xác nhận bình chưa được sử dụng kể từ lần bảo dưỡng cuối, ngăn bình vô tình bị kích hoạt, và là bằng chứng kiểm tra khi tuần tra. Niêm phong bị phá nhưng bình chưa dùng: cần kiểm tra ngay và bảo dưỡng lại.
+
+Câu 189: Bình chữa cháy trong xe cứu hỏa khác gì bình thông thường?
+Trả lời: Bình chữa cháy trên xe cứu hỏa thường: kích thước lớn hơn (4–12kg), được thiết kế để sử dụng thường xuyên hơn và chịu điều kiện khắc nghiệt, được kiểm tra hàng ngày bởi nhân viên chuyên nghiệp, được bảo dưỡng theo quy trình nghiêm ngặt hơn. Ngoài ra xe cứu hỏa còn có hệ thống vòi và máy bơm áp lực cao hoàn toàn khác với bình xách tay.
+
+Câu 190: Có thể dùng lại bình chữa cháy đã sử dụng toàn bộ lần trước không?
+Trả lời: Về nguyên tắc: bình chữa cháy được thiết kế để tái sử dụng sau khi nạp lại. Nhưng phải qua bảo dưỡng đầy đủ: kiểm tra vỏ, van, vòi, nạp đúng loại và lượng chất chữa cháy, kiểm tra áp suất. Không được dùng bình cũ mà chưa nạp lại chỉ vì trông vẫn còn tốt bên ngoài.
+
+Câu 191: Bình chữa cháy trường học cần kiểm tra những gì thêm so với bình thông thường?
+Trả lời: Trường học cần kiểm tra thêm: bình không bị trẻ em nghịch phá (chốt còn nguyên, niêm phong chưa bị kéo), vị trí bình có đặt cao hơn tầm tay trẻ em nhỏ (nhưng giáo viên vẫn lấy được), bình không bị che khuất bởi bảng, tủ, đồ đạc, và đảm bảo bình đúng vị trí đã phổ biến cho học sinh lớn/giáo viên.
+
+Câu 192: Cách loại bỏ bình chữa cháy hỏng an toàn và đúng quy định?
+Trả lời: KHÔNG tự ý vứt bình vào thùng rác hay đổ chất bên trong ra môi trường. Quy trình đúng: (1) Liên hệ đơn vị PCCC hoặc đơn vị xử lý chất thải nguy hại, (2) Xả hết áp suất bình qua van một cách an toàn tại cơ sở có chuyên môn, (3) Chọc thủng bình để tránh tái sử dụng sai mục đích, (4) Bình kim loại có thể tái chế sau khi được xử lý an toàn.
+
+Câu 193: Bảo dưỡng bình chữa cháy khác gì với kiểm định bình chữa cháy?
+Trả lời: Bảo dưỡng: kiểm tra, vệ sinh, nạp lại nếu cần — thực hiện định kỳ. Kiểm định: đánh giá kỹ thuật chính thức để xác nhận bình đạt tiêu chuẩn — do cơ quan/đơn vị được cấp phép thực hiện, kết quả được ghi nhận bằng tem kiểm định có giá trị pháp lý. Cơ sở phải có bình được kiểm định khi cơ quan quản lý kiểm tra.
+
+Câu 194: Tem kiểm định bình chữa cháy có những thông tin gì?
+Trả lời: Tem kiểm định thường có: tên đơn vị kiểm định, ngày kiểm định, ngày hết hạn kiểm định tiếp theo, số serial hoặc ký hiệu bình, kết quả kiểm định (đạt), chữ ký/dấu của người kiểm định. Tem phải được dán ở vị trí dễ thấy trên bình và không bị cạo bỏ.
+
+Câu 195: Khi mua bình chữa cháy mới cần kiểm tra gì trước khi nhận hàng?
+Trả lời: Kiểm tra khi nhận: (1) Đồng hồ áp suất kim ở vùng xanh, (2) Chốt an toàn và niêm phong còn nguyên, (3) Nhãn đầy đủ thông tin và đọc được rõ ràng, (4) Vỏ bình không có vết nứt, móp méo, rỉ sét, (5) Vòi phun không bị nứt hoặc tắc, (6) Có tem kiểm định còn hạn, (7) Có hóa đơn đỏ và phiếu bảo hành. Yêu cầu đổi nếu có vấn đề.
+
+Câu 196: Bình chữa cháy cần đăng ký với cơ quan nào không?
+Trả lời: Tại Việt Nam, bình chữa cháy xách tay thông thường không cần đăng ký riêng với cơ quan nhà nước. Tuy nhiên, toàn bộ hệ thống PCCC của cơ sở (bao gồm số lượng và loại bình) phải được thể hiện trong hồ sơ PCCC nộp cho Cảnh sát PCCC khi thẩm duyệt và nghiệm thu cơ sở.
+
+Câu 197: Trong điều kiện thời tiết ẩm ướt, bảo dưỡng bình chữa cháy cần chú ý gì thêm?
+Trả lời: Vùng ẩm ướt: kiểm tra rỉ sét thường xuyên hơn (hàng tháng), bôi dầu chống rỉ lên phần kim loại bên ngoài, kiểm tra đệm cao su van có bị phồng rộp không, đảm bảo nơi bảo quản thực sự khô (không ẩm ngầm dù không thấy nước). Bình rỉ sét bên ngoài cần kiểm tra kỹ bên trong vì ẩm có thể đã thấm vào.
+
+Câu 198: Có cần vệ sinh bên trong bình chữa cháy không?
+Trả lời: Bên trong bình chữa cháy được vệ sinh trong chu kỳ bảo dưỡng hàng năm do kỹ thuật viên thực hiện: làm sạch cặn bột đóng, loại bỏ bụi và ẩm, kiểm tra ăn mòn bên trong. Người dùng thông thường KHÔNG tự làm việc này. Đây là một trong các lý do bảo dưỡng hàng năm quan trọng.
+
+Câu 199: Bình chữa cháy cũ hơn 10 năm có nên tiếp tục dùng không?
+Trả lời: Tùy thuộc vào kết quả kiểm tra thủy lực và tình trạng thực tế, không phải chỉ tuổi. Nhiều loại bình thiết kế tuổi thọ 10–25 năm nếu được bảo dưỡng đúng. Nhưng bình trên 10 năm cần: thử thủy lực nghiêm ngặt, kiểm tra ăn mòn bên trong, đánh giá toàn diện bởi kỹ thuật viên. Nếu không đạt bất kỳ tiêu chí nào — loại bỏ, không tiếc.
+
+Câu 200: Hệ thống sprinkler cần bảo dưỡng như thế nào?
+Trả lời: Bảo dưỡng sprinkler định kỳ: kiểm tra áp suất đường ống, kiểm tra van chính mở hoàn toàn, kiểm tra đầu phun không bị sơn, bụi hoặc che chắn, thử nghiệm tín hiệu báo động lưu lượng, kiểm tra bể nước và máy bơm chữa cháy, kiểm tra hệ thống điện điều khiển. Tần suất: kiểm tra hàng tuần (van, áp lực), hàng quý (thử nghiệm), hàng năm (toàn diện) bởi đơn vị có chứng chỉ.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PHẦN 4: DẤU HIỆU QUÁ TẢI ĐIỆN VÀ SỰ CỐ ĐIỆN (Câu 201–270)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Câu 201: Dấu hiệu rõ ràng nhất của quá tải điện là gì?
+Trả lời: Dấu hiệu quá tải điện: CB (aptomat) thường xuyên nhảy khi dùng nhiều thiết bị, đèn nhấp nháy hoặc độ sáng thay đổi khi bật/tắt thiết bị lớn, ổ cắm và đầu phích bị nóng khi sờ tay, mùi nhựa cháy từ ổ điện hoặc dây dẫn, tiếng bực bực từ hộp cầu dao, điện áp đo được thấp hơn bình thường (dưới 190V).
+
+Câu 202: Tại sao CB thường xuyên nhảy là dấu hiệu nguy hiểm chứ không phải "CB tốt"?
+Trả lời: CB nhảy thường xuyên nghĩa là mạch điện đang vận hành ở mức gần hoặc vượt ngưỡng an toàn. CB là thiết bị bảo vệ cuối cùng — khi nó phải hoạt động liên tục, hệ thống đang trong trạng thái nguy hiểm. Nếu không tìm và khắc phục nguyên nhân mà chỉ đóng lại CB, nguy cơ cháy do dây dẫn quá nhiệt tăng dần.
+
+Câu 203: Mùi nhựa cháy từ ổ điện cho thấy điều gì?
+Trả lời: Mùi nhựa cháy từ ổ điện cho thấy: tiếp điểm bên trong đang bị quá nhiệt do tiếp xúc không tốt hoặc quá tải, cách điện của dây bên trong đang bị nung chảy, hoặc có hồ quang điện bên trong. Đây là dấu hiệu cháy sắp xảy ra. Hành động ngay: ngắt điện ổ cắm đó tại CB, không dùng cho đến khi được kỹ thuật viên kiểm tra.
+
+Câu 204: Ổ cắm nóng khi sờ tay là do nguyên nhân gì?
+Trả lời: Ổ cắm nóng có thể do: tiếp xúc điện không tốt (tiếp điểm ổ cắm bị mòn hoặc lỏng), quá tải (tổng công suất thiết bị cắm vào vượt định mức ổ cắm), dây dẫn đến ổ cắm quá nhỏ (tiết diện không đủ), ổ cắm kém chất lượng. Ổ cắm chỉ nên ấm nhẹ khi mang tải — nóng đến mức không chịu được là bất thường và nguy hiểm.
+
+Câu 205: Đèn nhấp nháy hoặc thay đổi độ sáng báo hiệu điều gì?
+Trả lời: Đèn nhấp nháy hoặc mờ đi khi bật thiết bị lớn (máy lạnh, bơm...) cho thấy: điện áp đường dây bị sụt do dây dẫn quá nhỏ (điện trở cao), hoặc máy biến áp khu vực bị quá tải, hoặc tiếp điểm dây dẫn bị lỏng (điện trở tăng đột ngột khi có tải). Sụt áp thường xuyên gây hỏng thiết bị và dây bị nóng quá mức.
+
+Câu 206: Ô nhiễm sóng hài (harmonics) ảnh hưởng đến hệ thống điện và nguy cơ cháy như thế nào?
+Trả lời: Sóng hài sinh ra từ thiết bị điện tử phi tuyến (máy tính, biến tần, đèn LED, máy lạnh inverter). Tác hại: làm nóng dây dẫn vượt mức thiết kế (đặc biệt dây trung tính), gây quá nhiệt tụ điện bù công suất, làm biến áp nóng, tăng tổn thất điện năng. Nguy cơ cháy: dây trung tính nóng dẫn đến chập mạch. Giải pháp: lắp bộ lọc sóng hài, kiểm tra và nâng tiết diện dây trung tính.
+
+Câu 207: Tiết diện dây dẫn điện được chọn dựa trên yếu tố nào?
+Trả lời: Tiết diện dây phụ thuộc: dòng điện tải (A), chiều dài dây (m), nhiệt độ môi trường, cách lắp đặt (trong ống, âm tường, ngoài trời), và đặc tính thiết bị (khởi động, liên tục). Dây nhỏ hơn yêu cầu: điện trở cao → sinh nhiệt → cháy cách điện. Phải tính toán đúng theo TCVN 7447 hoặc nhờ kỹ sư điện thiết kế.
+
+Câu 208: Dây dẫn điện lão hóa có những dấu hiệu nhận biết nào?
+Trả lời: Dấu hiệu lão hóa: vỏ cách điện giòn, nứt khi uốn, màu sắc thay đổi (vàng hoặc nâu), lớp cách điện bong tróc, dây bên trong bị ăn mòn (chuyển màu xanh đối với dây đồng), mối nối dây bị lỏng hoặc rỉ sét. Dây điện có tuổi thọ khoảng 20–30 năm — nhà cũ cần kiểm tra toàn bộ hệ thống điện.
+
+Câu 209: Tại sao không nên dùng dây kéo dài (extension cord) thay cho ổ điện cố định?
+Trả lời: Dây kéo dài không được thiết kế để sử dụng vĩnh viễn: tiết diện nhỏ hơn dây cố định, điểm nối ổ cắm di động bị mòn theo thời gian, không chịu được tải liên tục lâu dài như dây âm tường, dễ bị đứt cách điện khi bị kéo, kẹp cửa, đè dưới thảm. Chỉ dùng tạm thời — kéo dài vĩnh viễn là nguy cơ cháy.
+
+Câu 210: Hiện tượng phóng điện hồ quang (arc flash) trong hệ thống điện là gì?
+Trả lời: Hồ quang điện xảy ra khi dòng điện "nhảy" qua không khí giữa hai điểm có hiệu điện thế khác nhau (dây bị hở, tiếp điểm lỏng, chất bẩn dẫn điện). Nhiệt độ hồ quang có thể đạt 5.000–35.000°C — nóng hơn bề mặt mặt trời. Gây cháy tức thì và có thể gây nổ trong tủ điện. Dấu hiệu: tiếng bực bực, mùi khét, vết cháy sém trên thiết bị.
+
+Câu 211: Nối đất (tiếp địa) quan trọng như thế nào trong phòng ngừa cháy điện?
+Trả lời: Nối đất có hai vai trò: bảo vệ người (dẫn dòng rò đất, ngăn điện giật) và bảo vệ thiết bị (hạn chế quá áp do sét). Khi không có nối đất: dòng rò tích tụ trên vỏ thiết bị, có thể gây điện giật và cháy do tiếp xúc điện không kiểm soát. Kiểm tra điện trở nối đất định kỳ — phải đạt dưới 4 Ohm theo tiêu chuẩn.
+
+Câu 212: Tại sao điện giật có thể gây cháy?
+Trả lời: Điện giật gây cháy khi: người bị giật bất tỉnh vẫn đang tiếp xúc với nguồn điện tạo điểm nóng, tia lửa điện khi bị giật đốt cháy vật liệu dễ cháy xung quanh, hoặc khi xử lý người bị giật sai cách (dùng nước — gây chập điện thêm). Ngắt điện trước khi tiếp cận nạn nhân bị điện giật là nguyên tắc tuyệt đối.
+
+Câu 213: Thiết bị chống rò điện (ELCB/RCD) hoạt động như thế nào?
+Trả lời: ELCB (Earth Leakage Circuit Breaker) / RCD (Residual Current Device) so sánh dòng điện vào và ra của mạch liên tục. Khi có rò rỉ (dòng điện "trốn" qua đường không mong muốn như người hoặc dây hỏng), sự chênh lệch vượt ngưỡng (thường 30mA) — ELCB ngắt điện tức thì trong vòng 30ms. Bảo vệ người khỏi điện giật chết người và phòng cháy do rò điện.
+
+Câu 214: ELCB cần kiểm tra như thế nào?
+Trả lời: ELCB có nút "TEST" cho phép kiểm tra hoạt động định kỳ. Bấm nút TEST hàng tháng: ELCB phải nhảy ngay — nếu không nhảy là hỏng. Sau khi nhảy: đóng lại. Kiểm tra toàn bộ hệ thống ELCB bởi kỹ thuật viên 1 năm/lần. ELCB hỏng mà không biết là nguy hiểm hơn không có vì tạo cảm giác an toàn giả.
+
+Câu 215: Quá tải pha trong hệ thống điện 3 pha ảnh hưởng thế nào?
+Trả lời: Hệ thống 3 pha cần phân bố tải đều giữa 3 pha. Mất cân bằng pha: pha nặng bị quá tải → dây pha đó nóng hơn, pha nhẹ điện áp tăng cao hơn bình thường → hỏng thiết bị. Dây trung tính mang dòng mất cân bằng — nếu đứt trung tính thì thiết bị điện áp thấp sẽ chịu điện áp đầy đủ (220V → 380V) và hỏng ngay.
+
+Câu 216: Hiện tượng "mạch vòng" (ground loop) trong hệ thống điện là gì?
+Trả lời: Mạch vòng xảy ra khi có nhiều đường nối đất khác nhau ở các điểm khác nhau tạo ra vòng khép kín. Khi có chênh lệch điện thế giữa các điểm đất, dòng điện chạy trong vòng này — gây nhiễu thiết bị điện tử và tiềm ẩn nguy cơ nhiệt. Giải pháp: sử dụng một điểm nối đất chung (single-point grounding) cho hệ thống.
+
+Câu 217: Cầu chì và CB (aptomat) khác nhau thế nào?
+Trả lời: Cầu chì: dùng một lần, khi quá tải/ngắn mạch thì dây chì đứt → phải thay. Ưu điểm: rẻ, đơn giản. Nhược điểm: phải có cầu chì dự phòng đúng loại, có thể bị thay sai (dây đồng thay cầu chì). CB (aptomat): tự ngắt khi sự cố, đóng lại được sau khi xử lý nguyên nhân. Ưu điểm: tiện dụng, không cần thay. Nhược điểm: đắt hơn, không bảo vệ được chống quá tải mãn tính ở mức thấp như cầu chì.
+
+Câu 218: Sử dụng dây đồng thay cầu chì nguy hiểm thế nào?
+Trả lời: Cực kỳ nguy hiểm. Dây đồng có điện trở cực thấp, không bao giờ đứt ở dòng điện bình thường → không có bảo vệ quá tải. Khi ngắn mạch: dòng điện cực lớn chạy qua → dây dẫn và thiết bị bị nung cháy mà không có gì ngắt. Đây là vi phạm nghiêm trọng quy định điện và là nguyên nhân phổ biến của nhiều vụ cháy. Luôn thay cầu chì đúng loại và đúng ampe.
+
+Câu 219: Dòng ngắn mạch (short circuit) là gì và tại sao nguy hiểm?
+Trả lời: Ngắn mạch xảy ra khi pha và trung tính (hoặc hai pha) tiếp xúc trực tiếp không qua tải. Điện trở gần bằng 0 → dòng điện tăng vọt lên hàng trăm hoặc hàng ngàn ampere. Nhiệt sinh ra cực lớn, đủ nung chảy dây dẫn và đốt cháy vật liệu xung quanh trong vài giây. CB sẽ ngắt nếu đúng loại và còn hoạt động tốt.
+
+Câu 220: Cách phát hiện mạch điện bị quá tải trước khi xảy ra sự cố?
+Trả lời: Đo dòng điện bằng ampe kìm (clamp meter) tại CB — nếu dòng đo được gần hoặc vượt định mức CB: mạch đang quá tải. Đo nhiệt độ dây và ổ cắm bằng nhiệt kế hồng ngoại — trên 40–50°C là bất thường. Tính toán tổng công suất thiết bị đang cắm và so sánh với công suất thiết kế mạch.
+
+Câu 221: Tại sao không nên cắm nhiều thiết bị vào một ổ cắm đa năng (mạch nhánh)?
+Trả lời: Mỗi mạch nhánh có dây dẫn với tiết diện nhất định, chịu được dòng tối đa nhất định (thường 10–16A). Cắm nhiều thiết bị vào một ổ đa năng: tổng dòng có thể vượt ngưỡng dây dẫn dù CB chưa nhảy (vì CB bảo vệ tổng mạch, không bảo vệ nhánh nhỏ). Dây từ CB đến ổ cắm nóng dần → cháy cách điện.
+
+Câu 222: Điện trở tiếp xúc (contact resistance) trong ổ cắm ảnh hưởng như thế nào?
+Trả lời: Ổ cắm cũ hoặc kém chất lượng: lá tiếp xúc bị mòn → tiếp xúc không tốt → điện trở tiếp xúc tăng. Theo công thức P = I²R: dù dòng điện nhỏ, điện trở lớn sinh nhiệt đáng kể. Đây là nguyên nhân ổ cắm nóng, chảy nhựa, hoặc cháy tại ổ cắm dù chỉ cắm một thiết bị không quá lớn.
+
+Câu 223: Sóng hài bậc 3 (triple harmonics) đặc biệt nguy hiểm vì sao?
+Trả lời: Trong hệ thống 3 pha, sóng hài bậc 3 (và bội số của 3: 3, 6, 9...) không triệt tiêu nhau trên dây trung tính như sóng cơ bản. Thay vào đó, chúng cộng lại trên dây trung tính. Kết quả: dây trung tính mang dòng điện hài gấp 3 lần dây pha trong điều kiện tải thuần bậc 3. Dây trung tính thiết kế cho dòng nhỏ hơn sẽ bị quá tải và nóng.
+
+Câu 224: Kiểm tra hệ thống điện bằng camera nhiệt (thermal camera) cho thấy gì?
+Trả lời: Camera nhiệt chụp phân bố nhiệt trên bề mặt thiết bị điện. Điểm nóng bất thường (hotspot) cho thấy: tiếp điểm lỏng hoặc ăn mòn, quá tải cục bộ, mất cân bằng pha, linh kiện sắp hỏng. Kiểm tra bằng camera nhiệt định kỳ (thermographic inspection) là phương pháp phát hiện sớm sự cố điện trước khi xảy ra cháy — rất hiệu quả cho tủ điện và cáp điện.
+
+Câu 225: Hệ số công suất (cos φ) thấp ảnh hưởng thế nào đến nguy cơ cháy?
+Trả lời: Hệ số công suất thấp (dưới 0,85) nghĩa là hệ thống đang kéo dòng điện lớn hơn cần thiết để cung cấp công suất thực. Dòng lớn hơn → dây dẫn và thiết bị nóng hơn → tăng nguy cơ quá tải dây. Ngoài ra: tiền điện cao hơn và tiền phạt từ điện lực. Giải pháp: lắp tụ bù công suất phản kháng — giảm dòng và giảm nhiệt.
+
+Câu 226: Cáp điện ngầm dưới đất bị sự cố có dấu hiệu nhận biết nào?
+Trả lời: Dấu hiệu cáp ngầm sự cố: mùi khét đặc trưng từ đất hoặc gần đường cáp, CB nhảy liên tục không rõ nguyên nhân, điện áp không ổn định, điểm đất có thể thấy hơi bốc lên (khi cáp bị nung), đất nóng bất thường trên đường cáp đi. Xử lý: ngắt điện đường cáp đó và mời kỹ thuật viên điện đến kiểm tra bằng thiết bị chuyên dụng.
+
+Câu 227: Máy biến áp quá tải có dấu hiệu gì?
+Trả lời: Biến áp quá tải: kêu vo vo to hơn bình thường, vỏ nóng hơn thiết kế (có thể đo bằng nhiệt kế hồng ngoại), điện áp ra thấp hơn định mức, mùi dầu cách điện cháy (đối với biến áp ngâm dầu), relay nhiệt bảo vệ kích hoạt. Biến áp quá tải kéo dài → cách điện cuộn dây bị lão hóa nhanh → chập giữa các vòng dây → cháy.
+
+Câu 228: Tại sao không nên bật nhiều thiết bị điện cùng một lúc sau khi mất điện trở lại?
+Trả lời: Khi điện trở lại đột ngột, tất cả động cơ và thiết bị điện đều khởi động cùng lúc. Dòng khởi động của động cơ gấp 5–8 lần dòng vận hành bình thường. Tổng dòng khởi động của nhiều thiết bị cùng lúc có thể vượt nhiều lần công suất thiết kế → CB nhảy, quá tải dây tạm thời, và trong trường hợp xấu có thể gây sự cố. Nừng bật thiết bị từ từ, tuần tự.
+
+Câu 229: Sự khác nhau giữa quá tải (overload) và ngắn mạch (short circuit)?
+Trả lời: Quá tải: dòng điện vượt định mức nhưng nhỏ hơn dòng ngắn mạch — diễn ra chậm hơn, CB nhảy nhiệt (thermal trip) sau vài giây đến vài phút. Ngắn mạch: dòng điện cực lớn (hàng ngàn ampere) do điện trở gần 0 — CB nhảy từ ngay lập tức (magnetic trip). Cả hai đều nguy hiểm nhưng ngắn mạch nhanh hơn và nguy hiểm hơn nếu CB không hoạt động.
+
+Câu 230: Hệ thống điện sau bao lâu cần được kiểm tra tổng thể?
+Trả lời: Không có quy định cụ thể cho hộ dân, nhưng khuyến cáo: kiểm tra toàn bộ hệ thống điện khi mua nhà cũ hoặc thuê nhà mới, sau 15–20 năm lắp đặt, khi sửa chữa mở rộng thêm thiết bị lớn, khi phát hiện các dấu hiệu bất thường (CB hay nhảy, ổ cắm nóng, đèn nhấp nháy). Cơ sở kinh doanh: kiểm tra theo quy định PCCC định kỳ 1 năm/lần.
+
+Câu 231: Cách tính tổng tải điện đang sử dụng trong nhà?
+Trả lời: Tổng công suất (W) = Tổng số ampe × Điện áp (220V). Hoặc cộng công suất ghi trên nhãn từng thiết bị đang bật. So sánh với tổng công suất CB tổng: CB 20A × 220V = 4400W tối đa. Ví dụ: điều hòa 1200W + bình nóng lạnh 2000W + bếp từ 2000W = 5200W > 4400W → đang quá tải.
+
+Câu 232: Màu dây điện theo tiêu chuẩn Việt Nam là gì?
+Trả lời: Theo TCVN 7447 (phù hợp IEC 60446): Dây pha L1: nâu, L2: đen, L3: xám (hoặc đỏ, vàng, tím cho hệ cũ). Dây trung tính N: xanh lam. Dây bảo vệ đất PE: xanh lá/vàng. Dây hỗn hợp PEN: xanh lá/vàng hoặc xanh lam/xanh lá. Phân biệt màu dây quan trọng để tránh nối sai khi sửa chữa.
+
+Câu 233: Cách kiểm tra ổ cắm điện có bị rò điện không?
+Trả lời: Dùng bút thử điện (bút điện) kiểm tra: cắm vào lỗ pha phải sáng, lỗ trung tính không sáng. Dùng đồng hồ đo điện (VOM) đo giữa pha và đất: phải khoảng 220V. Đo giữa trung tính và đất: phải gần 0V (nếu cao hơn vài volt có thể có vấn đề hệ thống). Đo giữa vỏ kim loại thiết bị và đất: phải 0V (nếu có điện áp là bị rò điện ra vỏ).
+
+Câu 234: Tại sao tủ điện phải được đặt trong không gian thông thoáng và khô ráo?
+Trả lời: Tủ điện sinh nhiệt trong quá trình hoạt động bình thường. Không thông thoáng: nhiệt tích tụ → thiết bị trong tủ hoạt động ở nhiệt độ cao hơn thiết kế → tuổi thọ giảm → nguy cơ sự cố tăng. Ẩm ướt: gây rỉ sét tiếp điểm → điện trở tiếp xúc tăng → sinh nhiệt và hồ quang điện. Tủ phải có khoảng cách tối thiểu từ tường và trần theo thiết kế.
+
+Câu 235: Cách nhận biết dây điện đã bị quá nhiệt trong quá khứ?
+Trả lời: Vỏ cách điện bị xỉn màu (đen hoặc nâu) bất thường so với phần dây không bị nhiệt, vỏ giòn và nứt khi uốn nhẹ, có mùi nhựa cháy nhẹ khi sờ vào, vỏ nhựa bị biến dạng hoặc chảy nhão rồi cứng lại không đều. Dây đã bị quá nhiệt cần được thay toàn bộ — không chỉ phần nhìn thấy vì bên trong kim loại cũng có thể bị oxy hóa.
+
+Câu 236: Hệ thống điện mặt trời (solar) có thể gây cháy không?
+Trả lời: Có. Nguy cơ cháy từ hệ thống solar: dây DC áp cao (lên đến 600–1000V) nếu lỏng tiếp xúc gây hồ quang điện DC (khó dập hơn AC vì không có điểm 0 trong chu kỳ), pin mặt trời bị lỗi tạo hotspot trên tấm pin, inverter hỏng. Lắp đặt phải đúng kỹ thuật với thiết bị ngắt DC chuyên dụng và kiểm tra định kỳ mối nối dây DC.
+
+Câu 237: Máy sạc pin điện thoại để qua đêm có nguy cơ cháy không?
+Trả lời: Nguy cơ thực sự: adapter sạc kém chất lượng (hàng nhái) có thể quá nhiệt, phát ra tia lửa, và đốt cháy vật xung quanh. Pin điện thoại đã cũ hoặc phồng khi sạc quá lâu có thể bị thermal runaway. Sạc chính hãng với adapter tốt thì pin hiện đại có mạch bảo vệ và khá an toàn khi đầy. Vẫn nên: sạc trên mặt cứng thoáng mát, không đặt dưới gối hoặc drap.
+
+Câu 238: Máy tính bảng, laptop đặt trên đệm/gối để sạc có nguy cơ gì?
+Trả lời: Laptop và tablet tản nhiệt qua đáy máy. Đặt trên đệm, gối, hoặc chăn bịt kín lỗ thông gió: nhiệt độ trong máy tăng vọt → pin nóng quá → nguy cơ phồng pin hoặc cháy. Đệm và gối cũng là vật liệu dễ cháy nếu máy phát nhiệt đủ cao. Luôn đặt laptop trên mặt cứng phẳng hoặc đế tản nhiệt.
+
+Câu 239: Tại sao máy giặt, máy sấy, và tủ lạnh là những thiết bị dễ gây cháy?
+Trả lời: Máy giặt/sấy: bụi và xơ vải tích tụ trong bộ lọc và hộp điều khiển → cháy. Motor khi quá tải (do hỏng bạc đạn) → sinh nhiệt → cháy. Tủ lạnh: motor máy nén và relay khởi động là điểm hỏng thường xuyên → quá nhiệt. Bụi bám quanh dàn nóng tủ lạnh làm tản nhiệt kém → motor nóng hơn bình thường. Cần vệ sinh lọc xơ và dàn nóng định kỳ.
+
+Câu 240: Cách kiểm tra ổ cắm và phích cắm đảm bảo an toàn điện?
+Trả lời: Kiểm tra ổ cắm: chân cắm vào giữ chắc (không bị lỏng lẻo, lắc qua lại), không có vết cháy sém hoặc đổi màu, lỗ cắm nguyên vẹn (không bị nứt vỡ), không nóng khi đang mang tải. Kiểm tra phích cắm: chân phích thẳng, không bị cong hoặc xỉn màu, dây ra khỏi phích không bị gập gãy, vỏ nhựa phích không nứt.
+
+Câu 241: Biến tần (inverter/VFD) ảnh hưởng đến hệ thống điện như thế nào?
+Trả lời: Biến tần chuyển đổi điện áp/tần số cho motor điều khiển tốc độ. Tác hại phụ: tạo sóng hài cao làm nóng dây, nhiễu điện từ ảnh hưởng thiết bị khác, tạo dòng rò ký sinh. Biến tần cần lắp bộ lọc đầu vào và đầu ra, dây nối motor phải đúng loại chịu được sóng hài. Kiểm tra nhiệt độ biến tần và tủ điện chứa biến tần định kỳ.
+
+Câu 242: Hiện tượng "tiếng bực bực" từ tủ điện cho thấy điều gì?
+Trả lời: Tiếng bực bực (cracking/buzzing) từ tủ điện là dấu hiệu đặc trưng của hồ quang điện (arc). Nguyên nhân: tiếp điểm CB lỏng hoặc mòn, dây đấu vào CB bị lỏng, bụi bẩn hoặc ẩm tạo đường phóng điện. Hồ quang điện sinh nhiệt cực cao và có thể gây cháy tủ điện. Hành động: ngắt điện ngay và gọi thợ điện kiểm tra.
+
+Câu 243: Mùi khét khi bật điều hòa cho thấy điều gì?
+Trả lời: Mùi khét khi bật điều hòa có thể do: bụi tích tụ trên dàn lạnh và quạt bị đốt nóng khi hoạt động (mùi thoáng qua), cuộn dây motor quạt bị chập (mùi kéo dài và đặc hơn), bo mạch điều khiển bị nóng hoặc hỏng. Nếu mùi kéo dài hơn vài phút đầu: tắt điều hòa ngay và gọi kỹ thuật. Không bật lại cho đến khi được kiểm tra.
+
+Câu 244: Bình nóng lạnh điện có những nguy cơ cháy nổ gì?
+Trả lời: Bình nóng lạnh: thanh điện trở nung nóng có thể bị cháy nếu không có nước (bình rỗng mà bật điện), bình bị ăn mòn rỉ sét bên trong gây rò điện ra vỏ và điện giật. Van xả áp hỏng có thể gây nổ bình khi áp suất tăng cao. Lắp đặt cần: nối đất vỏ bình, lắp ELCB riêng, van áp suất xả đúng vị trí, đúng công suất điện áp.
+
+Câu 245: Tại sao đèn LED có thể gây cháy?
+Trả lời: Đèn LED chất lượng thấp: driver (nguồn điện) bên trong overheating, tụ điện trong driver kém chất lượng nổ/cháy, vỏ nhựa không chịu được nhiệt lâu dài. Đèn LED âm trần đặt trong trần xốp cách nhiệt: nhiệt tích tụ không thoát được → cháy xốp. Mua đèn có chứng nhận chất lượng, đảm bảo lắp đúng theo hướng dẫn (không để sát vật liệu dễ cháy).
+
+Câu 246: Hiện tượng điện một chiều (DC) khó dập hơn xoay chiều (AC) là tại sao?
+Trả lời: Hồ quang điện AC tự triệt tiêu 100–120 lần/giây (mỗi lần dòng điện qua điểm 0). Hồ quang điện DC duy trì liên tục vì không có điểm 0. Do đó hồ quang DC cháy lâu hơn và khó cắt hơn. Hệ thống DC (solar, xe điện, UPS) cần thiết bị ngắt chuyên dụng cho DC — không dùng CB thông thường thiết kế cho AC.
+
+Câu 247: Cách phát hiện dây điện bị chuột cắn?
+Trả lời: Chuột cắn dây điện bỏ lại vết răng trên vỏ cách điện, đôi khi lộ lõi dây bên trong. Dấu hiệu gián tiếp: CB nhảy không giải thích được, thiết bị hoạt động không ổn định, thấy phân chuột gần hộp điện hoặc đường dây. Kiểm tra bằng cách rà soát trực quan dọc đường dây, đặc biệt trong trần giả và hộc tủ. Cần diệt chuột và thay đoạn dây bị cắn.
+
+Câu 248: Bảo vệ quá áp (overvoltage protection) quan trọng như thế nào?
+Trả lời: Quá áp (điện áp cao hơn 250V trên lưới 220V) xảy ra khi: sét đánh, đứt dây trung tính, sự cố lưới điện. Quá áp đốt cháy thiết bị điện tử trong tích tắc và có thể gây cháy. Thiết bị bảo vệ: SPD (Surge Protective Device / Van chống sét) lắp tại tủ điện, và phích cắm có bảo vệ quá áp (surge protector) cho thiết bị quan trọng.
+
+Câu 249: Tại sao tủ điện không được đặt trong buồng thang hoặc lối thoát hiểm?
+Trả lời: Tủ điện trong buồng thang thoát hiểm: khi xảy ra sự cố điện gây cháy tủ, đường thoát nạn bị ảnh hưởng trực tiếp. Hơn nữa, buồng thang là đường đi của khói từ tầng dưới lên — ẩm và khói ảnh hưởng thiết bị điện trong tủ. Theo quy chuẩn PCCC, thiết bị điện không được đặt trong buồng thang bộ thoát nạn.
+
+Câu 250: Hệ thống điện nhà cũ hơn 20 năm cần kiểm tra và nâng cấp những gì?
+Trả lời: Nhà cũ trên 20 năm cần kiểm tra và có thể nâng cấp: toàn bộ dây dẫn (cách điện lão hóa, có thể cần thay), ổ cắm và công tắc (tiếp điểm mòn), CB tổng và CB nhánh (thiết bị bảo vệ cũ kém tin cậy), nối đất (bổ sung nếu nhà cũ chưa có), lắp ELCB nếu chưa có. Mời kỹ sư điện kiểm tra toàn bộ trước khi thêm nhiều thiết bị lớn.
+
+Câu 251: Ổ cắm chống trẻ em (safety outlet) bảo vệ như thế nào?
+Trả lời: Ổ cắm chống trẻ em có cơ chế chốt bên trong: chỉ mở được khi cả hai lỗ được ép vào cùng lúc (như khi cắm phích) — ngăn trẻ em dùng vật nhỏ nhọn thọc vào một lỗ gây điện giật. Một số loại còn có nắp đậy phải xoay hoặc trượt để mở. Nên lắp ổ cắm chống trẻ em ở độ cao thấp và trong mọi ổ ở khu vực có trẻ nhỏ.
+
+Câu 252: Cổng USB sạc điện trong ổ cắm có nguy cơ gì?
+Trả lời: Ổ cắm tích hợp cổng USB sạc: nếu chất lượng thấp, mạch chuyển đổi 5V bên trong có thể quá nhiệt, đặc biệt khi sạc nhiều thiết bị đồng thời. Mua ổ cắm có cổng USB từ thương hiệu uy tín với chứng nhận CE, UL. Đảm bảo ổ có tản nhiệt tốt, không đặt trong tủ kín. Tháo các thiết bị ra khi đã sạc đầy.
+
+Câu 253: Điện trở cách điện của dây dẫn (megger test) đo được giá trị thế nào là an toàn?
+Trả lời: Kiểm tra megger (đo điện trở cách điện bằng điện áp cao DC): điện trở cách điện phải đạt ít nhất 1 MΩ cho mỗi 1000V điện áp danh định (theo IEC 60364). Với hệ thống 220/380V: tối thiểu 0,5 MΩ, khuyến nghị trên 1 MΩ. Dưới 0,5 MΩ: cách điện đang xuống cấp, cần kiểm tra và có thể thay. Đo khi tất cả thiết bị điện đã ngắt.
+
+Câu 254: Tại sao phải ngắt điện trước khi sửa chữa bất kỳ điều gì liên quan đến điện?
+Trả lời: Điện 220V AC có thể gây tử vong với dòng chỉ 30–50mA qua tim. Ngắt điện tại CB hoặc cầu dao và kiểm tra không còn điện bằng bút thử trước khi chạm vào bất kỳ dây nào. Ngoài ra: dán nhãn "ĐANG SỬA CHỮA - KHÔNG ĐÓNG ĐIỆN" tại CB. Không tin vào ký ức ("tôi nhớ đã tắt rồi") — phải kiểm tra thực tế bằng thiết bị đo.
+
+Câu 255: Cầu dao điện chính (main switch) trong nhà cần đặt ở đâu và điều kiện thế nào?
+Trả lời: Cầu dao chính phải: dễ tiếp cận trong trường hợp khẩn cấp (không bị che khuất hoặc khóa kín), ở vị trí mà người lớn có thể thao tác nhanh (thường cạnh cửa vào hoặc đầu hành lang), không trong buồng thang, được dán nhãn rõ ràng "CẦU DAO TỔNG", và mọi thành viên gia đình biết vị trí và cách sử dụng.
+
+Câu 256: Điện áp sụt thường xuyên gây hậu quả gì cho thiết bị và nguy cơ cháy?
+Trả lời: Điện áp sụt thường xuyên: motor điện (máy lạnh, tủ lạnh, máy bơm) phải kéo dòng cao hơn để duy trì công suất → motor nóng → cháy cuộn dây. Đèn huỳnh quỳnh và ballast bị quá nhiệt. Thiết bị điện tử có thể hỏng nguồn. Giải pháp: lắp ổn áp (voltage regulator) hoặc báo cáo điện lực để kiểm tra chất lượng điện khu vực.
+
+Câu 257: Tại sao không nên dùng đèn có công suất lớn hơn đui đèn thiết kế?
+Trả lời: Đui đèn có định mức công suất tối đa (thường 40W, 60W, 100W...). Dùng bóng lớn hơn: nhiệt độ đui đèn vượt thiết kế → nhựa hoặc vỏ đèn bị nóng chảy → cháy. Đặc biệt nguy hiểm với đèn đặt trong chụp đèn kín hoặc âm trần không thông gió. Luôn kiểm tra công suất tối đa ghi trên đuôi đèn và không vượt quá.
+
+Câu 258: Tiêu chuẩn TCVN 7447 (IEC 60364) quy định gì về hệ thống điện?
+Trả lời: TCVN 7447 (Hệ thống lắp đặt điện của các tòa nhà) quy định toàn diện về: thiết kế, lắp đặt và kiểm tra hệ thống điện hạ áp. Bao gồm: chọn tiết diện dây theo tải và điều kiện lắp đặt, thiết bị bảo vệ, hệ thống nối đất, thiết bị cắt điện khẩn cấp, phòng ngừa cháy nổ, phòng chống ảnh hưởng nhiệt. Đây là tiêu chuẩn bắt buộc cho mọi công trình xây dựng tại Việt Nam.
+
+Câu 259: Thiết bị bảo vệ chống hồ quang điện (AFCI) là gì?
+Trả lời: AFCI (Arc Fault Circuit Interrupter) phát hiện đặc tính hồ quang điện trong dòng điện và ngắt mạch trước khi hồ quang gây cháy. Khác với ELCB (phát hiện dòng rò) và CB thông thường (phát hiện quá dòng): AFCI phát hiện cả hồ quang dòng thấp không đủ làm nhảy CB nhưng đủ gây cháy (như dây bị chuột cắn). Phổ biến ở Bắc Mỹ, đang được áp dụng dần ở các nước khác.
+
+Câu 260: Cách đấu nối dây điện an toàn tại hộp nối (junction box)?
+Trả lời: Nối dây trong hộp nối đúng cách: dùng đầu cosse hoặc cút nối (wago/wire connector) chất lượng tốt — không xoắn vào nhau và bọc băng keo. Hộp nối phải đặt ở vị trí truy cập được, không âm tường kín (để có thể kiểm tra). Kết nối đúng màu (pha với pha, trung tính với trung tính, đất với đất). Siết chặt đủ lực — không lỏng. Đóng nắp hộp sau khi hoàn thành.
+
+Câu 261: Tại sao lắp đặt điện không đúng kỹ thuật gây nguy hiểm lâu dài?
+Trả lời: Lắp điện sai: dây nối lỏng tạo điện trở cao sinh nhiệt âm ỉ trong nhiều tháng trước khi cháy, dây tiết diện nhỏ bị quá nhiệt liên tục làm lão hóa cách điện nhanh, không có nối đất gây điện giật tiềm ẩn. Nguy hiểm là không có dấu hiệu rõ ràng trong thời gian dài — đến khi cháy thì đã muộn. Phải mời thợ điện có tay nghề và dùng vật tư đúng tiêu chuẩn.
+
+Câu 262: Đường dây điện bên ngoài tòa nhà (treo hở, ngoài trời) cần bảo trì như thế nào?
+Trả lời: Dây điện ngoài trời: kiểm tra định kỳ (nhất là sau bão) tình trạng: dây bị đứt, bị cành cây che phủ/đè lên (gây rò điện khi ẩm), điểm kẹp dây bị lỏng, cách điện bị rách do nắng mưa, vật lạ vướng vào dây. Dây sát mái nhà/tường phải có khoảng cách tối thiểu và cách điện tốt. Báo điện lực khi phát hiện bất thường.
+
+Câu 263: Van chống sét (SPD) lắp ở đâu và chọn loại nào?
+Trả lời: SPD lắp ở: tủ điện chính (SPD loại 1 - chịu sét trực tiếp), tủ phân phối tầng (SPD loại 2 - quá áp chuyển tiếp), tại thiết bị nhạy cảm (SPD loại 3 - bảo vệ thiết bị). Chọn SPD theo: điện áp danh định (220/230V), dòng xung (kA), điện áp bảo vệ (Up), và tiêu chuẩn IEC 61643. SPD phải được thay sau mỗi lần chịu sét lớn hoặc theo khuyến cáo nhà sản xuất.
+
+Câu 264: Độ ẩm cao ảnh hưởng thế nào đến hệ thống điện?
+Trả lời: Ẩm cao: làm giảm điện trở cách điện (nước là chất dẫn điện) → tăng dòng rò → tiêu tốn năng lượng và gây điện giật. Ẩm thấm vào thiết bị: gây rỉ sét tiếp điểm (điện trở cao → nhiệt), làm hỏng bo mạch điều khiển. Ẩm tích tụ trong hộp điện → phóng điện bề mặt (tracking). Khu vực ẩm cao cần dùng thiết bị điện có cấp bảo vệ IP phù hợp (IP44 trở lên cho ẩm cao).
+
+Câu 265: Pin lithium-ion trong xe điện và thiết bị công nghiệp có rủi ro PCCC đặc biệt gì?
+Trả lời: Pin Li-ion: khi hỏng (do va đập, quá sạc, nhiệt độ cao) xảy ra thermal runaway — phản ứng tự gia tốc sinh nhiệt cực lớn không thể ngăn chặn, tỏa khí HF và CO độc. Cháy pin Li-ion nhiệt độ lên đến 800°C, không dập được bằng CO₂ hay bột. Chỉ có nước lớn lượng mới kiểm soát được. Cần hệ thống phát hiện sớm (nhiệt, khí) và khu vực bảo quản pin riêng biệt.
+
+Câu 266: Cách đọc thông số trên bình ổn áp (AVR) để chọn phù hợp với tải điện?
+Trả lời: Các thông số cần chú ý: công suất đầu vào (VA hoặc W), điện áp đầu vào chịu được (dải thường 90–250V AC), điện áp đầu ra ổn định (220V hoặc 110V), tốc độ ổn áp (ms), loại ổn áp (liên tiếp/nhảy bậc). Chọn công suất AVR lớn hơn tổng tải ít nhất 30% (hệ số an toàn). Ổn áp cho tủ lạnh, điều hòa cần loại có tốc độ ổn áp nhanh.
+
+Câu 267: Nguồn điện không gián đoạn UPS ảnh hưởng đến an toàn cháy nổ thế nào?
+Trả lời: UPS (Uninterruptible Power Supply) chứa pin ắc-quy axit hoặc Li-ion. Nguy cơ: ắc-quy axit khi sạc phát khí H₂ dễ cháy nổ → cần thông gió phòng UPS. Pin Li-ion khi hỏng gây thermal runaway. UPS quá nhiệt do thông gió kém hoặc quá tải → cháy. Bảo dưỡng UPS: kiểm tra pin hàng năm, thay pin theo chu kỳ (thường 3–5 năm), đảm bảo thông gió phòng UPS.
+
+Câu 268: Cách chọn dây dẫn điện đúng cho từng ứng dụng?
+Trả lời: Tiêu chí chọn dây: (1) Vật liệu: đồng tốt hơn nhôm, (2) Tiết diện: tính theo dòng tải và chiều dài (tra bảng TCVN 7447), (3) Điện áp định mức: phù hợp với điện áp lưới, (4) Nhiệt độ: dây chịu nhiệt cao cho môi trường nóng, (5) Môi trường: dây đơn cho trong ống gen, cáp bọc cho âm tường/ngoài trời, cáp giáp thép cho ngầm đất, (6) Tiêu chuẩn: TCVN, IEC, hoặc tương đương.
+
+Câu 269: Hiện tượng điện áp lệch pha (phase unbalance) ảnh hưởng thế nào đến motor?
+Trả lời: Mất cân bằng điện áp 3 pha gây: dòng điện mất cân bằng lớn hơn nhiều (quy tắc ngón tay cái: mất cân bằng 1% điện áp → mất cân bằng dòng 6–10%). Motor quay bất đối xứng → rung và ồn hơn, mòn ổ bi nhanh hơn, cuộn dây nóng quá → cháy. Giới hạn an toàn: mất cân bằng điện áp không quá 1% theo NEMA. Kiểm tra điện áp 3 pha định kỳ.
+
+Câu 270: Khi nào cần lắp cầu dao cắt điện khẩn cấp (Emergency Stop Button) trong cơ sở?
+Trả lời: Cần lắp nút Emergency Stop (màu đỏ nổi bật, dễ tiếp cận): tại mỗi khu vực nguy hiểm cháy nổ, gần thiết bị công nghiệp lớn, tại lối ra vào của phòng điều khiển, tại khu vực bơm xăng dầu. Nút nhấn ngắt toàn bộ điện khu vực đó trong tình huống khẩn cấp. Phải được kiểm tra định kỳ và mọi nhân viên phải biết vị trí.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PHẦN 5: CHỌN APTOMAT (CB) PHÙ HỢP (Câu 271–330)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Câu 271: CB (Circuit Breaker/Aptomat) là gì và chức năng chính là gì?
+Trả lời: CB (Cầu dao tự động/Aptomat) là thiết bị bảo vệ mạch điện tự động ngắt điện khi phát hiện quá tải hoặc ngắn mạch. Khác với cầu chì (dùng một lần), CB có thể đóng lại sau khi xử lý sự cố. Có hai cơ chế ngắt: nhiệt (thermal - cho quá tải chậm) và từ (magnetic - cho ngắn mạch nhanh).
+
+Câu 272: Dòng định mức (rated current) của CB được chọn theo nguyên tắc nào?
+Trả lời: Dòng định mức CB (In) phải thỏa mãn: dòng tải (Ib) ≤ In ≤ dòng chịu đựng của dây dẫn (Iz). Ví dụ: tải 15A, dây chịu 25A → có thể chọn CB 16A hoặc 20A. Không chọn CB lớn hơn dòng dây cho phép — sẽ không bảo vệ được dây khi quá tải. Không chọn CB nhỏ hơn dòng tải — CB sẽ nhảy liên tục.
+
+Câu 273: Dòng cắt ngắn mạch (breaking capacity/Icu) của CB là gì?
+Trả lời: Icu là dòng ngắn mạch tối đa mà CB có thể cắt an toàn. Đơn vị: kA (kilo-Ampere). Ví dụ: CB 6kA chỉ được dùng ở vị trí mà dòng ngắn mạch tối đa không vượt 6kA. Dùng CB có Icu nhỏ hơn dòng ngắn mạch thực tế: CB sẽ hỏng khi cắt, có thể gây cháy nổ. Tính dòng ngắn mạch tại vị trí lắp đặt để chọn CB đúng.
+
+Câu 274: Các loại CB phổ biến theo đặc tính tác động là gì?
+Trả lời: Theo IEC 60898 (dân dụng): B (tác động từ 3–5×In — dùng cho tải thuần trở), C (tác động từ 5–10×In — phổ biến nhất, dùng cho tải hỗn hợp và motor nhỏ), D (tác động từ 10–20×In — dùng cho tải khởi động cao như motor lớn, máy hàn). Chọn sai loại: CB nhảy không cần thiết (quá nhạy) hoặc không bảo vệ được đúng lúc (quá chậm).
+
+Câu 275: Cách tính CB cho mạch chiếu sáng văn phòng?
+Trả lời: Ví dụ: văn phòng 50m², dùng đèn LED 12W, số lượng 20 bóng. Tổng tải: 20 × 12W = 240W. Dòng điện: 240W / 220V = 1,1A. Thêm dự phòng 25%: 1,1 × 1,25 = 1,4A. Chọn CB loại B hoặc C, 6A (không chọn 2A vì khi bật tất cả cùng lúc có dòng khởi động nhỏ). Dây dẫn: 1,5mm² đủ (chịu 15–16A).
+
+Câu 276: Cách tính CB cho máy điều hòa không khí?
+Trả lời: Ví dụ: điều hòa 12000BTU, công suất 1200W, dòng vận hành 5,5A, dòng khởi động ~16A. Chọn CB: 10A loại C (chịu được dòng khởi động gấp 5–10 lần = 50–100A). Hoặc 16A loại B. Dây dẫn: 2,5mm² (chịu 20–25A). CB phải có khoảng cách an toàn với dòng khởi động để không nhảy khi điều hòa bật.
+
+Câu 277: CB 1 pha, 2 pha, và 3 pha dùng khi nào?
+Trả lời: CB 1 pha (1P): cho mạch nhánh dân dụng 220V đơn giản. CB 2 pha (2P): cho mạch 220V khi cần ngắt cả pha lẫn trung tính cùng lúc (an toàn hơn cho người sửa chữa). CB 3 pha (3P): cho tải 3 pha như motor công nghiệp, tủ điện 3 pha. CB 4 pha (3P+N): cho mạch 3 pha có trung tính, ngắt cả 4 dây cùng lúc.
+
+Câu 278: Phân biệt CB MCB, MCCB, và ACB?
+Trả lời: MCB (Miniature Circuit Breaker): dòng đến 125A, dùng cho mạch nhánh dân dụng và văn phòng. MCCB (Molded Case Circuit Breaker): dòng từ 16A đến 3200A, dùng cho tủ điện phân phối công nghiệp. ACB (Air Circuit Breaker): dòng từ 800A trở lên, dùng cho tổng nguồn lớn (tòa nhà lớn, nhà máy). ACB có nhiều tính năng hơn và cơ chế dập hồ quang bằng không khí.
+
+Câu 279: Cách phân biệt CB chất lượng tốt và CB kém chất lượng?
+Trả lời: CB tốt: có nhãn đầy đủ thông số (In, Icu, điện áp, loại B/C/D, tiêu chuẩn IEC/TCVN), tem chứng nhận thử nghiệm (CE, KEMA...), cơ chế đóng ngắt chắc tay, thông số thực tế phù hợp nhãn. CB kém: nhãn mờ hoặc thiếu, giá quá rẻ bất thường, nhựa vỏ dễ gãy, không cắt được đúng dòng định mức. Mua từ đại lý ủy quyền thương hiệu uy tín.
+
+Câu 280: Thương hiệu CB nào được tin dùng nhất tại Việt Nam?
+Trả lời: Các thương hiệu phổ biến và được tin cậy tại Việt Nam: Schneider Electric, ABB, Siemens, Mitsubishi, LS (Hàn Quốc), Chint (Trung Quốc chất lượng cao), Panasonic, Fuji Electric. Tránh CB không nhãn mác hoặc nhãn giả mạo thương hiệu nổi tiếng. Mua từ đại lý chính hãng và yêu cầu hóa đơn.
+
+Câu 281: CB cần bảo vệ đường dây hay bảo vệ thiết bị?
+Trả lời: Về nguyên tắc cơ bản: CB bảo vệ ĐƯỜNG DÂY, không phải thiết bị. Dòng định mức CB phải ≤ dòng chịu đựng của dây dẫn. Thiết bị tự bảo vệ bằng cầu chì nội bộ hoặc thiết bị bảo vệ riêng. Ví dụ: không chọn CB 32A cho máy lạnh 10A chỉ vì muốn CB không nhảy — phải chọn CB phù hợp bảo vệ dây và lắp dây đủ tiết diện.
+
+Câu 282: CB cho mạch bình nóng lạnh cần chọn thế nào?
+Trả lời: Bình nóng lạnh thường 2000–4000W. Tính dòng: 4000W / 220V = 18A. CB 20A loại C, dây 2,5mm² (chịu 20–25A). Bình nóng lạnh là tải thuần trở, không có dòng khởi động lớn → CB loại B hoặc C đều phù hợp. Nên lắp CB riêng cho bình và lắp ELCB 30mA đi kèm vì bình nóng lạnh là thiết bị nguy cơ điện giật cao (nước + điện).
+
+Câu 283: CB cho bếp từ, bếp điện cần chú ý gì?
+Trả lời: Bếp từ 2000–4000W, dòng 9–18A. Chọn CB 20A loại C, dây 2,5–4mm². Bếp điện trở thì tương tự. Bếp từ inverter có thể tạo dòng hài → dây trung tính nóng hơn bình thường. Nên lắp CB riêng cho bếp, không dùng chung với mạch bếp điện khác. ELCB 30mA nên lắp cho khu vực bếp.
+
+Câu 284: CB dùng cho máy bơm nước cần đặc điểm gì?
+Trả lời: Motor bơm có dòng khởi động cao (5–8 lần dòng vận hành). CB phải chịu được dòng khởi động mà không nhảy. Chọn CB loại D (ngưỡng từ 10–20×In) hoặc loại C với In lớn hơn so với dòng vận hành. Ví dụ: bơm 0,5kW, dòng vận hành 3A, khởi động ~21A → CB loại D 4A hoặc C 6A. Cộng thêm relay bảo vệ motor (overload relay) cho bơm công nghiệp.
+
+Câu 285: RCBO là gì và khác CB thông thường thế nào?
+Trả lời: RCBO (Residual Current Breaker with Overcurrent protection) kết hợp chức năng của CB (bảo vệ quá tải, ngắn mạch) VÀ ELCB (bảo vệ rò điện) trong một thiết bị. Ưu điểm: tiết kiệm không gian tủ điện, bảo vệ toàn diện hơn, phối hợp bảo vệ tốt. Sử dụng cho mạch nhà bếp, nhà tắm, ngoài trời — nơi cần cả 2 loại bảo vệ.
+
+Câu 286: Phối hợp bảo vệ (discrimination/selectivity) giữa các CB là gì?
+Trả lời: Phối hợp bảo vệ đảm bảo: khi sự cố xảy ra, chỉ CB gần sự cố nhất nhảy (CB nhánh) mà CB tổng không nhảy theo. Điều này tránh mất điện toàn bộ khi chỉ một nhánh có sự cố. Thực hiện bằng cách: CB tổng có dòng định mức lớn hơn CB nhánh, và thời gian trễ ngắt của CB tổng lớn hơn CB nhánh.
+
+Câu 287: Dòng ngắn mạch tại điểm lắp CB phải tính như thế nào?
+Trả lời: Dòng ngắn mạch phụ thuộc vào: công suất máy biến áp cấp nguồn, tổng trở hệ thống (máy biến áp + đường cáp từ MBA đến điểm tính). Công thức đơn giản: Icc = Upha / (√3 × Ztổng). Đây là tính toán chuyên môn — cần kỹ sư điện. Nguyên tắc: CB tại đầu nguồn (gần MBA) cần Icu lớn hơn CB phân phối xa nguồn hơn.
+
+Câu 288: Tại sao CB không nên chọn quá lớn so với tải?
+Trả lời: CB chọn quá lớn: không bảo vệ được dây dẫn khi quá tải (dây nóng mà CB chưa nhảy), phải chọn dây to hơn để phù hợp — tốn kém. Ví dụ: tải 5A nhưng chọn CB 32A + dây 1,5mm² (chịu 15A): khi quá tải 20A, dây đã nóng nguy hiểm nhưng CB 32A chưa nhảy. Chọn CB đúng là chọn theo dây, không chọn theo "cho chắc không nhảy".
+
+Câu 289: ELCB 30mA và 300mA dùng cho mục đích gì?
+Trả lời: ELCB 30mA (nhạy cao): bảo vệ người khỏi điện giật — dùng cho ổ cắm, nhà bếp, nhà tắm, khu vực ngoài trời. ELCB 300mA (ít nhạy hơn): bảo vệ chống cháy do rò điện (không phải bảo vệ người) — dùng làm tổng trên đường cấp điện cho cả tòa nhà. Hệ thống lý tưởng: ELCB 300mA ở tổng + ELCB 30mA ở từng nhánh.
+
+Câu 290: Lắp ELCB có thể thay thế nối đất (tiếp địa) không?
+Trả lời: KHÔNG. ELCB và tiếp địa có chức năng bổ sung nhau, không thay thế nhau. Tiếp địa: tạo đường dẫn dòng rò an toàn về đất, giảm điện thế trên vỏ thiết bị. ELCB: phát hiện dòng rò và ngắt điện nhanh. Không có tiếp địa: ELCB vẫn hoạt động nhưng độ nhạy bảo vệ kém hơn. Cần có CẢ HAI để bảo vệ tối ưu.
+
+Câu 291: CB loại đường cong B, C, D — khi nào chọn mỗi loại?
+Trả lời: B (nhảy từ 3–5×In): cho tải thuần trở (đèn điện trở, bình nóng lạnh, sưởi điện), mạch chiếu sáng. C (nhảy từ 5–10×In): phổ biến nhất, cho tải hỗn hợp, motor nhỏ, điều hòa, tủ lạnh, máy giặt. D (nhảy từ 10–20×In): cho motor lớn, máy hàn, máy biến áp, tải có dòng khởi động rất cao. Chọn sai loại → CB nhảy oan (quá nhạy) hoặc không bảo vệ được (quá chậm).
+
+Câu 292: Cách lắp đặt CB trong tủ điện đúng kỹ thuật?
+Trả lời: Lắp CB đúng: kẹp vào thanh ray DIN đúng cách (nghe "click" là vào đúng), không bắt vít mà không dùng ray đúng, đấu dây vào đầu vào (điện vào từ trên, ra từ dưới theo tiêu chuẩn — tùy mẫu), siết vít đầu đấu đủ lực moment (tra bảng nhà sản xuất), dây vào và ra có tiết diện phù hợp, ghi nhãn từng CB.
+
+Câu 293: CB cần được kiểm tra định kỳ như thế nào?
+Trả lời: Kiểm tra CB: nút test (nếu có) bấm thử hàng năm, kiểm tra siết chặt đầu đấu dây 1 năm/lần (nhiệt làm nới lỏng dây theo thời gian), kiểm tra tình trạng vật lý (không nứt vỡ), đo nhiệt độ bằng camera nhiệt. CB cũ (hơn 15–20 năm): nên thay dù trông còn tốt vì tiếp điểm bên trong mòn. CB sau sự cố ngắn mạch lớn: nên thay vì tiếp điểm có thể bị hỏng.
+
+Câu 294: Tại sao CB nhảy mà không tìm nguyên nhân và đóng lại ngay là nguy hiểm?
+Trả lời: CB nhảy là cảnh báo có sự cố. Đóng lại ngay mà không tìm nguyên nhân: nếu nguyên nhân là ngắn mạch → CB sẽ nhảy lại (tốt) nhưng có thể gây hồ quang thêm. Nếu nguyên nhân là quá tải → thiết bị và dây tiếp tục nóng. Đóng lại nhiều lần mà CB vẫn nhảy: CB có thể bị hỏng tiếp điểm → không còn bảo vệ được nữa. Phải tìm và loại bỏ nguyên nhân trước khi đóng lại.
+
+Câu 295: Cách chọn CB cho mạch ổ cắm văn phòng?
+Trả lời: Mạch ổ cắm văn phòng thông thường: CB 16A loại C, dây 2,5mm², đi dây với không quá 10–12 ổ cắm trên một mạch. Không cắm tổng tải vượt 3500W trên một mạch 16A. Nên chia nhiều mạch nhánh riêng cho khu vực có tải lớn (khu bếp, khu máy tính lớn). Văn phòng lớn: phân tích tải và thiết kế mạch theo từng khu.
+
+Câu 296: CB cho máy lạnh có cần ELCB đi kèm không?
+Trả lời: Nên có ELCB cho mạch máy lạnh, đặc biệt khi: máy lạnh đặt ở nơi ẩm ướt, gần nhà vệ sinh, hoặc có nguy cơ rò rỉ nước vào. Máy lạnh inverter mới thường có cách điện tốt, nhưng vẫn nên có ELCB 30mA cho an toàn, đặc biệt với trẻ em. Kết hợp: RCBO = CB + ELCB trong một thiết bị, tiện lắp đặt hơn.
+
+Câu 297: CB dành cho mạch ngoài trời (ngoài nhà) cần cấp bảo vệ IP bao nhiêu?
+Trả lời: CB và tủ điện ngoài trời cần: IP54 (bụi và nước bắn từ mọi hướng) ở mức tối thiểu cho môi trường thường, IP65 (bụi hoàn toàn + nước phun từ vòi áp thấp) cho môi trường khắc nghiệt hơn. CB trong tủ điện ngoài trời: tủ đạt IP nhưng CB bên trong có thể tiêu chuẩn — miễn là tủ kín tốt. Ở khu vực ven biển thêm chống ăn mòn muối biển.
+
+Câu 298: Phân biệt CB nhảy nhiệt (thermal trip) và CB nhảy từ (magnetic trip)?
+Trả lời: Nhảy nhiệt: do quá tải kéo dài, phần tử lưỡng kim bị cong vì nhiệt → ngắt sau vài giây đến vài phút (tùy mức quá tải). Nhảy từ: do ngắn mạch, từ trường của cuộn dây tác động cơ cấu nhảy → ngắt tức thì (ms). Khi CB nhảy do ngắn mạch: đóng lại được ngay (sau khi xử lý). Nhảy nhiệt: phải chờ CB nguội (~2–5 phút) mới đóng lại được.
+
+Câu 299: Có thể dùng CB ba pha thay thế ba CB một pha không?
+Trả lời: Không nên và không tương đương. CB 3 pha cắt cả 3 pha đồng thời — đảm bảo motor 3 pha không chạy thiếu pha (mất pha gây cháy motor). Ba CB 1 pha riêng lẻ: một pha nhảy, hai pha còn lại vẫn có điện → motor chạy thiếu pha → dòng cực cao → cháy motor. Với tải 3 pha phải dùng CB 3 pha.
+
+Câu 300: Cách tính số lượng CB cần thiết cho toàn bộ ngôi nhà?
+Trả lời: Phân chia mạch điện nhà ở theo nguyên tắc: mỗi phòng ngủ 1 mạch, phòng khách 1–2 mạch, bếp 2–3 mạch (bếp điện riêng, bình nóng lạnh riêng, ổ cắm chung 1), nhà tắm 1 mạch (có ELCB), điều hòa mỗi phòng 1 mạch riêng. Tổng cộng nhà 3 phòng ngủ: khoảng 10–15 CB nhánh + 1 CB tổng + ELCB. Phân chia càng nhỏ: sự cố một mạch không ảnh hưởng toàn bộ nhà.
+
+Câu 301: CB tổng nhà cần dòng định mức bao nhiêu?
+Trả lời: CB tổng phải ≥ tổng tải dự kiến sử dụng đồng thời (không phải tổng tải lắp đặt). Ví dụ nhà ở: 2 điều hòa (3kW) + bình nóng lạnh (2kW) + bếp từ (2kW) + đèn + thiết bị khác (2kW) = ~9kW / 220V = ~41A. CB tổng 50A + dây tổng 10mm². Nên có hệ số dự phòng 25–30% cho tương lai lắp thêm thiết bị.
+
+Câu 302: CB chịu nhiệt (high ambient temperature) dùng khi nào?
+Trả lời: CB tiêu chuẩn được thiết kế ở nhiệt độ môi trường 40°C. Khi lắp trong tủ điện nóng hoặc khu vực nhiệt độ cao hơn: dòng thực tế CB chịu được giảm xuống (derating). Ví dụ: tủ điện 50°C → CB 20A chỉ chịu được ~16–17A. Phải tính hệ số giảm dòng theo nhiệt độ hoặc chọn CB đặc biệt chịu nhiệt cao.
+
+Câu 303: Khi nào cần dùng CB chống rung (vibration-resistant)?
+Trả lời: Dùng CB chống rung trong: tủ điện trên tàu thuyền, xe tải, thiết bị di động, hoặc gần máy móc tạo rung động mạnh (máy nén, máy ép...). CB thông thường có thể nhảy oan hoặc không nhảy đúng lúc do rung động ảnh hưởng cơ cấu bên trong. CB chống rung có cơ chế khóa đặc biệt.
+
+Câu 304: Cách đấu nối đúng cho CB tổng và CB nhánh trong tủ điện?
+Trả lời: CB tổng: đầu vào nối với cáp nguồn từ điện lực hoặc máy biến áp (dây to hơn), đầu ra nối với thanh cái (busbar) phân phối. CB nhánh: đầu vào nối với thanh cái (qua đầu nối an toàn), đầu ra nối với dây đến tải. Đảm bảo: pha đúng màu, siết vít đúng lực moment, dây không bị kẹp sượt vỏ.
+
+Câu 305: CB điều chỉnh được dòng định mức (adjustable CB) dùng trong trường hợp nào?
+Trả lời: CB điều chỉnh được (thường là MCCB) cho phép chỉnh dòng định mức và thời gian trễ ngắt trong dải nhất định. Dùng khi: không có CB đúng dòng cố định, muốn linh hoạt điều chỉnh theo thay đổi tải, phối hợp bảo vệ phức tạp. Chỉ người có chuyên môn mới chỉnh — chỉnh sai có thể làm mất bảo vệ hoặc nhảy oan.
+
+Câu 306: CB loại MCCB có tính năng thêm gì so với MCB?
+Trả lời: MCCB ngoài cắt quá tải và ngắn mạch như MCB, còn có thể có: điều chỉnh dòng định mức (adjustable trip), đơn vị tác động điện tử (electronic trip unit) thay cho cơ nhiệt/từ, phụ kiện bổ sung (shunt trip, under voltage release, auxiliary contact), kết nối vào hệ thống giám sát. Dùng cho tủ điện phân phối công nghi
+
+
