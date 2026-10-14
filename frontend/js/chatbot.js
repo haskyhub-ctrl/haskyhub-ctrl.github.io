@@ -53,30 +53,30 @@
 
         /* ===== FAB Avatar Button ===== */
         .fras-fab {
-            width: 64px; height: 64px; border-radius: 50%;
-            background: #fff; border: 3px solid #C0202A; color: #fff;
-            cursor: pointer; box-shadow: 0 6px 20px rgba(0,0,0,0.22);
+            width: 58px; height: 58px; border-radius: 0 !important;
+            background: #ffffff; border: 2.5px solid #C0202A; color: #fff;
+            cursor: pointer; box-shadow: 0 4px 16px rgba(0,0,0,0.22);
             transition: transform .2s, box-shadow .2s;
             display: flex; align-items: center; justify-content: center;
-            overflow: hidden; padding: 0;
-            background-image: url('/img/ai_chi_avatar.png');
-            background-size: cover; background-position: center;
+            overflow: hidden; padding: 4px;
+            background-image: url('/img/logo-cand.png');
+            background-size: 82% 82%; background-repeat: no-repeat; background-position: center;
             flex-shrink: 0; position: relative;
         }
-        .fras-fab:hover { transform: scale(1.06); box-shadow: 0 8px 24px rgba(192,32,42,0.4); }
+        .fras-fab:hover { transform: scale(1.05); box-shadow: 0 6px 20px rgba(192,32,42,0.4); }
         .fras-fab:active { transform: scale(0.96); }
         .fras-fab .notif-dot {
-            position: absolute; top: 3px; right: 3px;
-            width: 13px; height: 13px; background: #22c55e;
-            border-radius: 50%; border: 2px solid #fff;
+            position: absolute; top: 2px; right: 2px;
+            width: 10px; height: 10px; background: #22c55e;
+            border-radius: 0; border: 1.5px solid #fff;
         }
 
         /* ===== Chat Panel ===== */
         .fras-panel {
-            display: none; position: fixed; bottom: 96px; right: 24px;
+            display: none; position: fixed; bottom: 88px; right: 24px;
             width: 420px; max-height: 580px;
-            background: #ffffff; border: 1px solid #e2e8f0;
-            border-radius: 14px; box-shadow: 0 16px 54px rgba(0,0,0,0.22);
+            background: #ffffff; border: 2px solid #C0202A;
+            border-radius: 0 !important; box-shadow: 0 16px 54px rgba(0,0,0,0.28);
             z-index: 10000; flex-direction: column; overflow: hidden;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             min-width: 320px; min-height: 360px;
@@ -260,10 +260,10 @@
         <div class="fras-fab-wrap" id="fras-fab-wrap">
             <div class="fras-fab-badge" id="fras-fab-badge" onclick="frasChatbot.toggle()" title="Bấm để đặt câu hỏi về PCCC">
                 <span class="badge-icon">💬</span>
-                <span>Đặt câu hỏi</span>
+                <span>Tư vấn PCCC</span>
                 <span class="badge-pulse-dot"></span>
             </div>
-            <button class="fras-fab" id="fras-fab" title="Hỏi AI về PCCC">
+            <button class="fras-fab" id="fras-fab" title="Tư vấn & Hướng dẫn PCCC">
                 <span class="notif-dot"></span>
             </button>
         </div>
@@ -271,15 +271,12 @@
             <div class="fras-resize-handle" id="fras-resize-handle" title="Kéo để thay đổi kích thước"></div>
             <div class="fras-header">
                 <div class="fras-header-left">
-                    <div class="fras-header-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                            <path d="M12 2a10 10 0 1 1 0 20A10 10 0 0 1 12 2z"/>
-                            <path d="M12 8v4l3 3"/>
-                        </svg>
+                    <div class="fras-header-icon" style="background:transparent; border-radius:0;">
+                        <img src="/img/logo-cand.png" alt="CAND" width="28" height="28" style="object-fit:contain;">
                     </div>
                     <div>
-                        <div class="fras-header-title">Trợ lý ảo Chi</div>
-                        <div class="fras-header-sub">Phòng Cảnh sát PCCC & CNCH Bắc Ninh</div>
+                        <div class="fras-header-title">Tư vấn & Hướng dẫn PCCC</div>
+                        <div class="fras-header-sub">Công an thành phố Bắc Ninh • PCCC & CNCH</div>
                     </div>
                 </div>
                 <div class="fras-header-actions">
@@ -297,7 +294,7 @@
             </div>
             <div class="fras-status">
                 <span class="fras-status-dot"></span>
-                <span>Hệ thống AI đang hoạt động • Hỏi về pháp luật, kỹ thuật PCCC</span>
+                <span>Hệ thống trực tuyến 24/7 • Hỏi đáp pháp luật, quy chuẩn, kỹ thuật PCCC</span>
             </div>
             <div class="fras-messages" id="fras-messages"></div>
             <div class="fras-suggestions" id="fras-suggestions">
@@ -380,14 +377,14 @@
         _appendWelcome() {
             const msgs = document.getElementById('fras-messages');
             this._addBubble('ai',
-                'Xin chào! Tôi là trợ lý ảo Chi, chuyên gia tư vấn về Phòng cháy chữa cháy.\n\n' +
-                'Tôi có thể tư vấn về:\n' +
-                '• Xử lý tình huống khẩn cấp khi có cháy\n' +
-                '• Pháp luật PCCC 2024-2025 (Luật 55/2024, NĐ 105...)\n' +
-                '• Quy định trang bị thiết bị PCCC\n' +
-                '• An toàn điện, gas, lối thoát nạn\n' +
-                '• Huấn luyện và diễn tập PCCC\n\n' +
-                'Hãy đặt câu hỏi cho Chi nhé!',
+                'Xin chào quý công dân và chủ cơ sở!\n\n' +
+                'Đây là kênh tiếp nhận thông tin và giải đáp trực tuyến về công tác Phòng cháy chữa cháy & Cứu nạn cứu hộ (Công an TP Bắc Ninh).\n\n' +
+                'Nội dung hỗ trợ giải đáp:\n' +
+                '• Quy định Luật PCCC số 55/2024/QH15 và các Nghị định, Thông tư mới nhất\n' +
+                '• Tiêu chuẩn trang bị bình chữa cháy, hệ thống báo cháy tự động\n' +
+                '• Giải pháp lối thoát nạn, an toàn nguồn điện, khí gas\n' +
+                '• Khắc phục các tồn tại, nguy cơ mất an toàn PCCC\n\n' +
+                'Vui lòng chọn câu hỏi gợi ý hoặc nhập nội dung cần giải đáp bên dưới.',
                 null, null
             );
         },

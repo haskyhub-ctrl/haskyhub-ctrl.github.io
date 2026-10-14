@@ -104,11 +104,11 @@ function hpRenderWelcome() {
     container.innerHTML = `
         <div class="hp-msg-row ai">
             <div class="hp-msg-avatar">
-                <img src="/img/ai_chi_avatar.png" alt="Chi">
+                <img src="/img/logo-cand.png" alt="CAND" style="object-fit:contain;">
             </div>
             <div class="hp-msg-bubble">
                 <div class="hp-msg-meta">
-                    <span>Trợ lý Ảo Chi • Cảnh sát PCCC</span>
+                    <span>Bộ phận Tư vấn PCCC • Công an TP Bắc Ninh</span>
                 </div>
                 <div class="hp-msg-text">Xin chào quý người dân và chủ cơ sở! Tôi là <strong>Trợ lý ảo Chi</strong>, hỗ trợ trực tuyến 24/7 về công tác Phòng cháy chữa cháy & Cứu nạn cứu hộ.
 
@@ -203,7 +203,7 @@ async function hpSubmitQuestion(text) {
     typingRow.id = typingId;
     typingRow.innerHTML = `
         <div class="hp-msg-avatar">
-            <img src="/img/ai_chi_avatar.png" alt="Chi">
+            <img src="/img/logo-cand.png" alt="CAND" style="object-fit:contain;">
         </div>
         <div class="hp-typing-bubble">
             <div class="hp-typing-dot"></div>
@@ -284,11 +284,11 @@ async function hpSubmitQuestion(text) {
         aiRow.className = 'hp-msg-row ai';
         aiRow.innerHTML = `
             <div class="hp-msg-avatar">
-                <img src="/img/ai_chi_avatar.png" alt="Chi">
+                <img src="/img/logo-cand.png" alt="CAND" style="object-fit:contain;">
             </div>
             <div class="hp-msg-bubble">
                 <div class="hp-msg-meta">
-                    <span>Trợ lý Ảo Chi • Cảnh sát PCCC</span>
+                    <span>Bộ phận Tư vấn PCCC • Công an TP Bắc Ninh</span>
                 </div>
                 <div class="hp-msg-text">${hpFormatText(reply)}</div>
                 ${sourceBadge}
@@ -303,7 +303,7 @@ async function hpSubmitQuestion(text) {
         errRow.className = 'hp-msg-row ai';
         errRow.innerHTML = `
             <div class="hp-msg-avatar">
-                <img src="/img/ai_chi_avatar.png" alt="Chi">
+                <img src="/img/logo-cand.png" alt="CAND" style="object-fit:contain;">
             </div>
             <div class="hp-msg-bubble" style="background:#FEF2F2;border-color:#FCA5A5;color:#991B1B;">
                 <div class="hp-msg-meta" style="color:#DC2626;">

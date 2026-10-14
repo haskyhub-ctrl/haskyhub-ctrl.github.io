@@ -58,8 +58,8 @@ function renderCompareSelect() {
                 📊 So sánh (${compareState.selected.length} đã chọn)
             </button>
             <button class="btn btn-outline" onclick="runAITrend()" id="ai-trend-btn" ${compareState.selected.length < 2 ? 'disabled' : ''}
-                style="border-color:#8b5cf6; color:#8b5cf6;">
-                🤖 AI Phân tích Xu hướng
+                style="border-color:#1e3a8a; color:#1e3a8a;">
+                Phân tích Xu hướng Tự động
             </button>
         </div>
         <div id="ai-trend-result"></div>
@@ -160,8 +160,8 @@ async function runAITrend() {
     if (!container || compareState.selected.length < 2) return;
 
     btn.disabled = true;
-    btn.innerHTML = '⏳ AI đang phân tích...';
-    container.innerHTML = '<div style="text-align:center; padding:30px;"><div class="loading-spinner"></div><p style="color:var(--text-secondary); margin-top:8px;">🤖 Gemini đang phân tích xu hướng...</p></div>';
+    btn.innerHTML = '⏳ Đang phân tích xu hướng...';
+    container.innerHTML = '<div style="text-align:center; padding:30px;"><div class="loading-spinner"></div><p style="color:var(--text-secondary); margin-top:8px;">Hệ thống đang đối chiếu và phân tích xu hướng...</p></div>';
 
     try {
         const result = await api.post('/ai/compare-trend', {
@@ -208,9 +208,9 @@ async function runAITrend() {
             </div>
         `;
     } catch (err) {
-        container.innerHTML = `<div class="alert alert-danger" style="margin-top:12px;">Lỗi AI: ${err.message}</div>`;
+        container.innerHTML = `<div class="alert alert-danger" style="margin-top:12px;">Lỗi: ${err.message}</div>`;
     } finally {
         btn.disabled = false;
-        btn.innerHTML = '🤖 AI Phân tích Xu hướng';
+        btn.innerHTML = 'Phân tích Xu hướng Tự động';
     }
 }
