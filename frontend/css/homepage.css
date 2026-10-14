@@ -1,0 +1,1629 @@
+/* homepage.css: Government Portal Design System */
+
+/* ============================================================
+   VARIABLES: Official Government Color System
+   ============================================================ */
+:root {
+    --gov-red:        #C0202A;   /* Đỏ cờ chính thức */
+    --gov-red-dark:   #8B0000;   /* Đỏ đậm (hover) */
+    --gov-red-light:  #fdf2f2;   /* Nền nhạt đỏ */
+    --gov-navy:       #1A3A6B;   /* Xanh navy cơ quan */
+    --gov-navy-dark:  #0F2347;   /* Navy đậm (hover) */
+    --gov-gold:       #C9962C;   /* Vàng phù hiệu */
+    --gov-bg:         #F2F4F8;   /* Nền xám nhạt */
+    --gov-white:      #FFFFFF;
+    --gov-text:       #1C2A3A;   /* Xanh đen văn bản */
+    --gov-text-sub:   #4A5568;   /* Xám phụ */
+    --gov-border:     #D8DCE6;   /* Viền */
+    --gov-footer:     #111827;   /* Nền footer */
+
+    /* Giữ tương thích với code cũ */
+    --hp-primary-red: #C0202A;
+    --hp-white: #FFFFFF;
+    --hp-bg-light: #F2F4F8;
+    --hp-text-main: #1C2A3A;
+    --hp-text-sub: #4A5568;
+    --hp-footer-bg: #111827;
+    --hp-red-danger: #C0202A;
+    --hp-orange-warn: #E07B39;
+    --hp-yellow-warn: #D4A017;
+    --hp-green-safe: #1E7E34;
+    --hp-accent-blue: #1A3A6B;
+    --hp-accent-yellow: #C9962C;
+}
+
+/* ============================================================
+   BASE
+   ============================================================ */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    font-family: 'Roboto', 'Source Sans 3', sans-serif;
+    color: var(--gov-text);
+    background: var(--gov-bg);
+}
+.text-red { color: var(--gov-red); }
+
+/* ============================================================
+   TOP AUTHORITY BAR: "CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM"
+   ============================================================ */
+.gov-top-bar {
+    background: var(--gov-navy);
+    height: 38px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1100;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+.gov-top-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.gov-top-motto {
+    font-size: 11.5px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.90);
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+.gov-top-motto .separator {
+    color: var(--gov-gold);
+    margin: 0 8px;
+    font-weight: 400;
+}
+.gov-top-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.gov-top-clock {
+    font-size: 11.5px;
+    color: rgba(255,255,255,0.75);
+    font-family: 'Roboto Condensed', monospace;
+    letter-spacing: 0.5px;
+}
+.gov-font-size-btns {
+    display: flex;
+    gap: 2px;
+}
+.gov-font-btn {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.25);
+    color: rgba(255,255,255,0.80);
+    padding: 1px 6px;
+    cursor: pointer;
+    font-size: 10px;
+    font-family: inherit;
+    transition: all 0.2s;
+    line-height: 1.6;
+}
+.gov-font-btn:hover {
+    background: rgba(255,255,255,0.15);
+    color: white;
+}
+
+/* ============================================================
+   OFFICIAL HEADER BAND: Logo + Agency Name + Hotline
+   ============================================================ */
+.gov-header-band {
+    background: var(--gov-white);
+    border-bottom: 4px solid var(--gov-red);
+    height: 88px;
+    position: fixed;
+    top: 38px;
+    left: 0;
+    right: 0;
+    z-index: 1050;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.gov-header-band .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.gov-agency-brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+}
+/* Quốc huy placeholder: hình tròn vàng-đỏ */
+.gov-emblem {
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.gov-emblem svg {
+    width: 64px;
+    height: 64px;
+}
+.gov-agency-name {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+.gov-agency-parent {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--gov-navy);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    line-height: 1.3;
+}
+.gov-agency-unit {
+    font-size: 19px;
+    font-weight: 800;
+    color: var(--gov-red);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+    font-family: 'Roboto Condensed', 'Roboto', sans-serif;
+}
+.gov-agency-system {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--gov-text-sub);
+    letter-spacing: 0.3px;
+}
+.gov-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.gov-hotline-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 18px;
+    border: 2px solid var(--gov-red);
+    color: var(--gov-red);
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.2s;
+    line-height: 1.3;
+}
+.gov-hotline-btn:hover {
+    background: var(--gov-red);
+    color: var(--gov-white);
+}
+.gov-hotline-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    opacity: 0.8;
+}
+.gov-hotline-number {
+    font-size: 22px;
+    font-weight: 900;
+    font-family: 'Roboto Condensed', sans-serif;
+    letter-spacing: 1px;
+}
+.gov-login-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 9px 20px;
+    background: var(--gov-navy);
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.2s;
+}
+.gov-login-btn:hover {
+    background: var(--gov-navy-dark);
+    color: white;
+}
+
+/* ============================================================
+   NAVIGATION BAR: Red menu bar
+   ============================================================ */
+.gov-navbar {
+    background: var(--gov-red);
+    height: 48px;
+    position: fixed;
+    top: 126px;   /* 38px top-bar + 88px header */
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.20);
+}
+.gov-navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.gov-nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+    height: 48px;
+}
+.gov-nav-menu li a {
+    display: flex;
+    align-items: center;
+    height: 48px;
+    padding: 0 18px;
+    color: rgba(255,255,255,0.92);
+    text-decoration: none;
+    font-size: 13.5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    transition: background 0.15s;
+    border-bottom: 3px solid transparent;
+}
+.gov-nav-menu li a:hover,
+.gov-nav-menu li.active a {
+    background: rgba(255,255,255,0.14);
+    color: white;
+    border-bottom-color: white;
+}
+.gov-nav-search {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+.gov-nav-search input {
+    width: 200px;
+    padding: 6px 12px;
+    border: none;
+    outline: none;
+    font-size: 13px;
+    background: rgba(255,255,255,0.15);
+    color: white;
+}
+.gov-nav-search input::placeholder { color: rgba(255,255,255,0.6); }
+.gov-nav-search button {
+    padding: 6px 12px;
+    background: rgba(255,255,255,0.2);
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.15s;
+}
+.gov-nav-search button:hover { background: rgba(255,255,255,0.3); }
+.gov-mobile-toggle {
+    display: none;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.4);
+    color: white;
+    padding: 4px 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* ============================================================
+   PAGE OFFSET: push content below fixed header stack
+   ============================================================ */
+body.has-gov-header {
+    padding-top: 174px;  /* 38 + 88 + 48 */
+}
+
+/* ============================================================
+   HERO BANNER: Official government announcement style
+   ============================================================ */
+.hp-hero {
+    position: relative;
+    min-height: 82vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: url('../img/hero.png') center/cover no-repeat;
+    margin-top: 0;
+}
+.hp-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(26, 58, 107, 0.82) 0%,
+        rgba(192, 32, 42, 0.65) 100%
+    );
+}
+.hp-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1060px;
+    padding: 0 24px;
+}
+.hp-hero-security-note {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.88);
+    margin: 14px auto 0;
+    max-width: 1000px;
+    line-height: 1.45;
+    text-wrap: balance;
+}
+@media (min-width: 992px) {
+    .hp-hero-security-note {
+        white-space: nowrap;
+    }
+}
+/* Official badge above title */
+.gov-hero-badge {
+    display: inline-block;
+    background: var(--gov-gold);
+    color: var(--gov-navy-dark);
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 5px 16px;
+    margin-bottom: 20px;
+}
+.hp-hero-title {
+    font-family: 'Roboto Condensed', 'Montserrat', sans-serif;
+    font-size: 42px;
+    font-weight: 800;
+    color: var(--gov-white);
+    text-shadow: 1px 2px 10px rgba(0,0,0,0.6);
+    margin-bottom: 16px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.hp-hero-highlight {
+    font-weight: 900;
+    color: #F9D77E;   /* Vàng nhạt, dễ đọc trên overlay */
+}
+.hp-hero-subtitle {
+    font-size: 18px;
+    color: rgba(255,255,255,0.92);
+    margin-bottom: 12px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+    font-weight: 400;
+    line-height: 1.6;
+}
+.hp-hero-slogan {
+    font-size: 15px;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 36px;
+    font-style: italic;
+    font-weight: 400;
+}
+.gov-hero-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.hp-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 36px;
+    border-radius: 0;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    border: 2px solid transparent;
+}
+.hp-cta-primary {
+    background: var(--gov-red);
+    color: var(--gov-white);
+    border-color: var(--gov-red);
+}
+.hp-cta-primary:hover {
+    background: var(--gov-red-dark);
+    border-color: var(--gov-red-dark);
+    color: var(--gov-white);
+}
+.hp-cta-white {
+    background: transparent;
+    color: var(--gov-white);
+    border-color: rgba(255,255,255,0.7);
+}
+.hp-cta-white:hover {
+    background: rgba(255,255,255,0.15);
+    border-color: white;
+    color: white;
+}
+.hp-hero-social-proof {
+    margin-top: 28px;
+    color: rgba(255,255,255,0.70);
+    font-size: 13px;
+}
+.hp-hero-social-proof strong { color: rgba(255,255,255,0.90); }
+
+/* Privacy trust banner in hero */
+.hp-hero-privacy {
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-left: 4px solid var(--gov-red);
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 15px;
+    padding: 12px 24px;
+    margin-bottom: 24px;
+    letter-spacing: 0.2px;
+    line-height: 1.5;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+    animation: privacyFadeIn 1.5s ease 0.5s both;
+}
+.hp-hero-privacy strong {
+    color: #ffd93d;
+}
+@keyframes privacyFadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================================
+   NOTICE TICKER: Thông báo quan trọng
+   ============================================================ */
+.gov-notice-bar {
+    background: #FFF8E1;
+    border-top: 3px solid var(--gov-gold);
+    border-bottom: 1px solid #F0D080;
+    padding: 10px 0;
+}
+.gov-notice-bar .container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.gov-notice-label {
+    background: var(--gov-gold);
+    color: var(--gov-navy-dark);
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 3px 10px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+.gov-notice-text {
+    font-size: 13px;
+    color: var(--gov-text);
+    font-weight: 500;
+}
+.gov-notice-text a {
+    color: var(--gov-red);
+    font-weight: 700;
+    text-decoration: none;
+}
+.gov-notice-text a:hover { text-decoration: underline; }
+
+/* ============================================================
+   SERVICES SECTION: Dịch vụ trực tuyến (4 cột)
+   ============================================================ */
+.gov-services {
+    background: var(--gov-white);
+    padding: 60px 0;
+    border-bottom: 1px solid var(--gov-border);
+}
+.gov-services .container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.gov-section-header {
+    margin-bottom: 36px;
+}
+.gov-section-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--gov-red);
+    margin-bottom: 8px;
+    display: block;
+}
+.gov-section-title {
+    font-family: 'Roboto Condensed', 'Roboto', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--gov-text);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0 0 8px;
+    position: relative;
+    display: inline-block;
+}
+.gov-section-title::after {
+    content: '';
+    display: block;
+    width: 48px;
+    height: 4px;
+    background: var(--gov-red);
+    margin-top: 10px;
+}
+.gov-section-subtitle {
+    color: var(--gov-text-sub);
+    font-size: 15px;
+    margin-top: 16px;
+    max-width: 600px;
+}
+.gov-services-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1px;
+    background: var(--gov-border);
+    border: 1px solid var(--gov-border);
+}
+.gov-service-card {
+    background: var(--gov-white);
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: all 0.2s;
+    text-decoration: none;
+    color: var(--gov-text);
+    border-left: 4px solid transparent;
+    cursor: pointer;
+}
+.gov-service-card:hover {
+    background: #EEF2F9;
+    border-left-color: var(--gov-red);
+    color: var(--gov-text);
+}
+.gov-service-icon {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gov-bg);
+    color: var(--gov-navy);
+    flex-shrink: 0;
+}
+.gov-service-icon svg {
+    width: 24px;
+    height: 24px;
+    stroke: var(--gov-navy);
+}
+.gov-service-card:hover .gov-service-icon {
+    background: var(--gov-red);
+}
+.gov-service-card:hover .gov-service-icon svg {
+    stroke: white;
+}
+.gov-service-name {
+    font-size: 14.5px;
+    font-weight: 700;
+    color: var(--gov-text);
+    line-height: 1.3;
+}
+.gov-service-desc {
+    font-size: 13px;
+    color: var(--gov-text-sub);
+    line-height: 1.5;
+    flex: 1;
+}
+.gov-service-arrow {
+    font-size: 18px;
+    color: var(--gov-red);
+    font-weight: 700;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+.gov-service-card:hover .gov-service-arrow { opacity: 1; }
+
+/* ============================================================
+   STATS SECTION: Navy background, gold numbers
+   ============================================================ */
+.hp-stats {
+    background: var(--gov-navy);
+    padding: 60px 0;
+    border-bottom: 4px solid var(--gov-gold);
+}
+.hp-stats .container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.hp-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+}
+.hp-stat-item {
+    padding: 20px 30px;
+    border-right: 1px solid rgba(255,255,255,0.12);
+}
+.hp-stat-item:last-child { border-right: none; }
+.hp-stat-number {
+    font-size: 52px;
+    font-weight: 800;
+    color: var(--gov-gold) !important;
+    font-family: 'Roboto Condensed', 'Montserrat', sans-serif;
+    letter-spacing: -1px;
+    margin-bottom: 6px;
+    line-height: 1;
+}
+.hp-stat-label {
+    font-size: 14px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.90) !important;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 4px;
+}
+.hp-stat-sub {
+    color: rgba(255,255,255,0.55) !important;
+    font-size: 12px;
+}
+
+/* ============================================================
+   WHY SECTION: giữ lại cho tương thích code cũ (hidden)
+   ============================================================ */
+.hp-why { background: var(--gov-bg); padding: 60px 0; }
+.hp-why-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+.hp-why-card {
+    background: var(--gov-white);
+    border-left: 4px solid var(--gov-red);
+    border-bottom: none;
+    border-radius: 0;
+    padding: 28px;
+}
+.hp-why-card:hover { background: #F8FAFE; }
+.hp-why-icon {
+    font-size: 32px;
+    margin-bottom: 16px;
+    color: var(--gov-red);
+    font-weight: 800;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.hp-why-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--gov-text);
+    min-height: auto;
+}
+.hp-mini-stat {
+    margin-bottom: 8px;
+    padding-left: 14px;
+    border-left: 3px solid var(--gov-red);
+    font-size: 14px;
+    color: var(--gov-text) !important;
+}
+.hp-mini-stat strong { color: var(--gov-text) !important; }
+.hp-why-story, .hp-law-box {
+    background: var(--gov-red-light);
+    padding: 14px;
+    margin: 12px 0;
+    font-size: 13px;
+    border-left: 3px solid var(--gov-red);
+    color: var(--gov-text) !important;
+}
+.hp-why-list { margin: 12px 0 12px 18px; color: var(--gov-text); }
+.hp-why-list-check li, .hp-why-list-question li {
+    list-style: none;
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: var(--gov-text) !important;
+}
+.hp-why-list-check li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--gov-red);
+    font-weight: 700;
+}
+.hp-why-list-question li::before {
+    content: '›';
+    position: absolute;
+    left: 2px;
+    color: var(--gov-navy);
+    font-weight: 700;
+    font-size: 18px;
+    top: -1px;
+}
+.hp-why-warning { color: var(--gov-red) !important; font-weight: 600; font-size: 13px; margin: 12px 0; }
+.hp-free-badge {
+    display: inline-block;
+    background: var(--hp-green-safe);
+    color: white;
+    padding: 3px 10px;
+    font-weight: 700;
+    font-size: 13px;
+    margin: 8px 0;
+}
+.hp-why-cta-text {
+    font-weight: 700;
+    color: var(--hp-green-safe) !important;
+    margin-top: 16px;
+    border-top: 1px solid var(--gov-border);
+    padding-top: 12px;
+    font-size: 14px;
+}
+.hp-why-intro { color: var(--gov-text) !important; font-size: 14px; }
+.hp-why-applies { color: var(--gov-text-sub) !important; font-size: 13px; margin: 8px 0; }
+.hp-law-box p, .hp-law-box li, .hp-law-box strong { color: var(--gov-text) !important; }
+.hp-why-story p, .hp-why-story em { color: var(--gov-text) !important; }
+
+/* Section title (hp- compat) */
+.hp-section-title {
+    font-family: 'Roboto Condensed', 'Roboto', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    text-align: center;
+    color: var(--gov-text) !important;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+}
+.hp-section-subtitle {
+    text-align: center;
+    color: var(--gov-text-sub) !important;
+    font-size: 16px;
+    max-width: 700px;
+    margin: 0 auto 36px;
+}
+
+/* ============================================================
+   MID CTA BANNER
+   ============================================================ */
+.hp-mid-cta {
+    background: var(--gov-navy);
+    padding: 56px 0;
+    text-align: center;
+}
+.hp-mid-cta, .hp-mid-cta p, .hp-mid-cta strong { color: white !important; }
+.hp-mid-quote {
+    font-size: 24px;
+    font-style: italic;
+    margin-bottom: 24px;
+    color: rgba(255,255,255,0.90) !important;
+}
+.hp-mid-cta .hp-cta-btn {
+    background: var(--gov-red);
+    color: white;
+    border-color: var(--gov-red);
+}
+.hp-mid-cta .hp-cta-btn:hover {
+    background: var(--gov-red-dark);
+    border-color: var(--gov-red-dark);
+}
+
+/* ============================================================
+   TRUST SECTION
+   ============================================================ */
+.hp-trust { padding: 72px 0; background: var(--gov-white); }
+.hp-trust-badge-label {
+    text-align: center;
+    color: var(--gov-text-sub);
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+.hp-trust-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+.hp-commit-item {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 16px;
+    background: var(--gov-bg);
+    padding: 14px;
+    border-left: 3px solid var(--gov-red);
+}
+.hp-commit-item strong { color: var(--gov-text) !important; display: block; font-size: 15px; margin-bottom: 3px; }
+.hp-commit-item p { color: var(--gov-text-sub) !important; font-size: 13px; margin: 0; line-height: 1.5; }
+.hp-commit-icon { font-size: 20px; }
+.hp-recognition-box {
+    border: 2px solid var(--gov-red);
+    padding: 28px;
+    background: var(--gov-red-light);
+}
+.hp-recognition-box p { color: var(--gov-text) !important; font-size: 15px; line-height: 1.6; }
+.hp-recognition-box blockquote {
+    font-style: italic;
+    font-size: 17px;
+    border-left: 4px solid var(--gov-red);
+    padding-left: 18px;
+    margin-top: 18px;
+    color: var(--gov-red) !important;
+}
+.hp-trust-commitments h3, .hp-trust-recognition h3 {
+    color: var(--gov-text) !important;
+    font-size: 20px;
+    margin-bottom: 18px;
+}
+
+/* ============================================================
+   PROCESS TIMELINE
+   ============================================================ */
+.hp-process { background: var(--gov-bg); padding: 72px 0; }
+.hp-process-timeline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.hp-process-step { text-align: center; width: 220px; }
+.hp-step-number {
+    width: 56px;
+    height: 56px;
+    background: var(--gov-red);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 800;
+    margin: 0 auto 16px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.hp-step-icon { font-size: 32px; margin-bottom: 12px; }
+.hp-step-time { color: var(--gov-text-sub) !important; font-style: italic; margin-top: 8px; font-size: 13px; }
+.hp-process-step h4 { color: var(--gov-text) !important; font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+.hp-process-step p { color: var(--gov-text-sub) !important; font-size: 13px; line-height: 1.5; }
+.hp-process-arrow { font-size: 24px; color: var(--gov-red); font-weight: bold; }
+
+/* ============================================================
+   PRINCIPLES
+   ============================================================ */
+.hp-principles { padding: 72px 0; background: var(--gov-white); }
+.hp-principles-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.hp-principles-grid-5 { grid-template-columns: repeat(3, 1fr); }
+.hp-principle-card {
+    background: var(--gov-navy);
+    color: white;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+}
+.hp-principle-number { font-size: 32px; margin-bottom: 12px; color: var(--gov-gold); }
+.hp-principle-quote { font-style: italic; opacity: 0.85; margin-top: 8px; color: white !important; font-size: 13px; }
+.hp-principle-card h4 { color: white !important; font-size: 15px; margin-bottom: 10px; min-height: auto; }
+.hp-principle-list { list-style: none; padding: 0; margin: 0; }
+.hp-principle-list li {
+    color: rgba(255,255,255,0.88) !important;
+    font-size: 13px;
+    line-height: 1.5;
+    padding: 5px 0 5px 18px;
+    position: relative;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+.hp-principle-list li:last-child { border-bottom: none; }
+.hp-principle-list li::before { content: '›'; position: absolute; left: 2px; color: var(--gov-gold); font-weight: bold; font-size: 16px; top: 3px; }
+.hp-principle-list li strong { color: white !important; }
+
+/* ============================================================
+   TRỢ LÝ ẢO CHI: KHUNG CHAT TRỰC TUYẾN TRANG CHỦ
+   ============================================================ */
+.hp-ai-section {
+    background: #F4F6F9;
+    padding: 50px 0 64px;
+    border-bottom: 1px solid #D8DCE6;
+    position: relative;
+}
+
+.hp-chat-container {
+    max-width: 940px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #CBD5E1;
+    box-shadow: 0 10px 32px rgba(26, 58, 107, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 600px;
+}
+
+.hp-chat-header {
+    background: linear-gradient(135deg, #1A3A6B 0%, #0F2347 100%);
+    color: #ffffff;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid #C0202A;
+    flex-shrink: 0;
+}
+
+.hp-chat-officer-info {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.hp-chat-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    position: relative;
+    flex-shrink: 0;
+    border: 2px solid #C0202A;
+    background: #ffffff;
+}
+
+.hp-chat-avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+.hp-online-dot {
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    width: 12px;
+    height: 12px;
+    background: #22c55e;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 6px #22c55e;
+}
+
+.hp-chat-name {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    line-height: 1.25;
+}
+
+.hp-chat-role-tag {
+    background: #C0202A;
+    color: #ffffff;
+    font-size: 0.68rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 999px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.hp-chat-sub {
+    font-size: 0.78rem;
+    color: #93C5FD;
+    margin-top: 2px;
+    font-weight: 400;
+}
+
+.hp-chat-reset-btn {
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    color: #ffffff;
+    padding: 6px 13px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s;
+}
+
+.hp-chat-reset-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.hp-chat-quick-bar {
+    background: #F8FAFC;
+    border-bottom: 1px solid #E2E8F0;
+    padding: 10px 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    overflow-x: auto;
+}
+
+.hp-quick-label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #1A3A6B;
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.hp-quick-scroll {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 2px;
+    scrollbar-width: thin;
+}
+
+.hp-quick-chip {
+    background: #ffffff;
+    border: 1px solid #CBD5E1;
+    color: #334155;
+    padding: 6px 13px;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.18s ease;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+    flex-shrink: 0;
+}
+
+.hp-quick-chip:hover {
+    background: #FEF2F2;
+    border-color: #C0202A;
+    color: #C0202A;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(192, 32, 42, 0.14);
+}
+
+.hp-chat-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background: #F8FAFD;
+    scroll-behavior: smooth;
+}
+
+.hp-msg-row {
+    display: flex;
+    gap: 12px;
+    max-width: 86%;
+    animation: hpMsgFade 0.22s ease-out;
+}
+
+@keyframes hpMsgFade {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hp-msg-row.user {
+    align-self: flex-end;
+    flex-direction: row-reverse;
+}
+
+.hp-msg-row.ai {
+    align-self: flex-start;
+}
+
+.hp-msg-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: #ffffff;
+    border: 2px solid #C0202A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hp-msg-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hp-msg-avatar.user-avatar {
+    background: #1A3A6B;
+    border-color: #1A3A6B;
+    color: #ffffff;
+}
+
+.hp-msg-bubble {
+    border-radius: 14px;
+    padding: 14px 18px;
+    font-size: 0.9rem;
+    line-height: 1.62;
+    word-break: break-word;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.hp-msg-row.user .hp-msg-bubble {
+    background: #1A3A6B;
+    color: #ffffff;
+    border-bottom-right-radius: 2px;
+}
+
+.hp-msg-row.ai .hp-msg-bubble {
+    background: #ffffff;
+    color: #1E293B;
+    border: 1px solid #E2E8F0;
+    border-bottom-left-radius: 2px;
+}
+
+.hp-msg-meta {
+    font-size: 0.76rem;
+    font-weight: 700;
+    color: #C0202A;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.hp-msg-text {
+    white-space: pre-wrap;
+}
+
+.hp-msg-text a {
+    color: #2563EB;
+    text-decoration: underline;
+}
+
+.hp-source-tag {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 6px;
+    background: #EFF6FF;
+    color: #1E40AF;
+    border: 1px solid #BFDBFE;
+}
+
+.hp-source-tag.docs {
+    background: #F0FDF4;
+    color: #166534;
+    border-color: #BBF7D0;
+}
+
+.hp-legal-refs {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: #F8FAFC;
+    border-left: 3px solid #C0202A;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.78rem;
+    color: #475569;
+}
+
+.hp-legal-refs strong {
+    color: #1A3A6B;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.hp-followup-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px dashed #E2E8F0;
+}
+
+.hp-chip-btn {
+    background: #F1F5F9;
+    border: 1px solid #CBD5E1;
+    color: #334155;
+    font-size: 0.76rem;
+    font-weight: 600;
+    padding: 5px 11px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.18s;
+}
+
+.hp-chip-btn:hover {
+    background: #FEF2F2;
+    border-color: #C0202A;
+    color: #C0202A;
+}
+
+.hp-typing-bubble {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 12px 18px;
+    background: #ffffff;
+    border: 1px solid #E2E8F0;
+    border-radius: 14px;
+}
+
+.hp-typing-dot {
+    width: 7px;
+    height: 7px;
+    background: #C0202A;
+    border-radius: 50%;
+    animation: hpDotPulse 1.2s infinite ease-in-out;
+}
+.hp-typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.hp-typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes hpDotPulse {
+    0%, 80%, 100% { transform: scale(0.6); opacity: 0.4; }
+    40% { transform: scale(1.1); opacity: 1; }
+}
+
+.hp-chat-input-bar {
+    background: #ffffff;
+    border-top: 1px solid #E2E8F0;
+    padding: 14px 20px;
+    flex-shrink: 0;
+}
+
+.hp-input-field-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #F8FAFC;
+    border: 1.5px solid #CBD5E1;
+    border-radius: 12px;
+    padding: 6px 8px 6px 14px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.hp-input-field-wrap:focus-within {
+    border-color: #C0202A;
+    box-shadow: 0 0 0 3px rgba(192, 32, 42, 0.12);
+    background: #ffffff;
+}
+
+.hp-input-field-wrap textarea {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: 0.9rem;
+    line-height: 1.45;
+    resize: none;
+    max-height: 90px;
+    color: #1E293B;
+}
+
+.hp-input-field-wrap textarea::placeholder {
+    color: #94A3B8;
+}
+
+.hp-send-button {
+    background: #C0202A;
+    color: #ffffff;
+    border: none;
+    padding: 9px 18px;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: background 0.2s, transform 0.15s;
+    flex-shrink: 0;
+}
+
+.hp-send-button:hover {
+    background: #8B0000;
+}
+
+.hp-send-button:active {
+    transform: scale(0.97);
+}
+
+.hp-send-button:disabled {
+    background: #94A3B8;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.hp-input-footer-hint {
+    font-size: 0.74rem;
+    color: #64748B;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.hp-privacy-tag {
+    font-weight: 600;
+    color: #166534;
+}
+
+/* ============================================================
+   TESTIMONIALS
+   ============================================================ */
+.hp-testimonials { background: var(--gov-bg); padding: 72px 0; }
+.hp-testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.hp-testimonial-card {
+    background: var(--gov-white);
+    padding: 28px;
+    border-top: 4px solid var(--gov-red);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.hp-testimonial-card:hover { border-top-color: var(--gov-navy); }
+.hp-avatar-placeholder { display: none; }
+.hp-testimonial-text {
+    font-style: italic;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--gov-text) !important;
+    flex: 1;
+}
+.hp-testimonial-author {
+    border-top: 1px solid var(--gov-border);
+    padding-top: 12px;
+    margin-top: auto;
+}
+.hp-testimonial-author strong {
+    display: block;
+    color: var(--gov-text);
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+.hp-testimonial-author span { font-size: 12px; color: var(--gov-text-sub) !important; }
+.hp-testimonial-stars { font-size: 13px; letter-spacing: 2px; margin-bottom: 6px; color: var(--gov-gold); }
+
+/* ============================================================
+   FINAL CTA
+   ============================================================ */
+.hp-final-cta {
+    background: var(--gov-navy-dark);
+    padding: 80px 0;
+    text-align: center;
+    color: white;
+}
+.hp-final-cta h2 { font-size: 36px; color: white; margin-bottom: 16px; font-family: 'Roboto Condensed', sans-serif; }
+.hp-final-subtitle { font-size: 18px; margin-bottom: 24px; color: rgba(255,255,255,0.85); }
+.hp-final-slogan { font-style: italic; font-size: 16px; margin-bottom: 36px; opacity: 0.7; max-width: 600px; margin-left: auto; margin-right: auto; }
+.hp-final-tagline { margin-top: 28px; font-size: 16px; font-weight: 700; color: var(--gov-gold); }
+.hp-final-cta, .hp-final-cta p, .hp-final-cta h2 { color: white !important; }
+
+/* ============================================================
+   FOOTER: 4 cột, government institutional style
+   ============================================================ */
+.hp-footer {
+    background: var(--gov-footer);
+    color: #CBD5E0;
+    padding: 56px 0 0;
+    border-top: 4px solid var(--gov-red);
+}
+.hp-footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.2fr;
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.10);
+}
+.hp-footer-col-title {
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--gov-red);
+    display: inline-block;
+}
+.hp-footer-agency-name {
+    font-size: 16px;
+    font-weight: 800;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+    font-family: 'Roboto Condensed', sans-serif;
+    line-height: 1.3;
+}
+.hp-footer-agency-sub {
+    font-size: 12px;
+    color: rgba(255,255,255,0.55);
+    margin-bottom: 16px;
+}
+.hp-footer-address {
+    font-size: 13px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.70);
+}
+.hp-footer-address strong { color: rgba(255,255,255,0.85); }
+.hp-footer-links { list-style: none; padding: 0; margin: 0; }
+.hp-footer-links li { margin-bottom: 10px; }
+.hp-footer-links a {
+    color: rgba(255,255,255,0.65);
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.hp-footer-links a::before { content: '›'; color: var(--gov-red); font-weight: bold; }
+.hp-footer-links a:hover { color: white; }
+.hp-footer-hotline-box {
+    background: rgba(192,32,42,0.15);
+    border: 1px solid rgba(192,32,42,0.30);
+    padding: 16px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+.hp-footer-hotline-label { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.55); margin-bottom: 4px; }
+.hp-footer-hotline-number { font-size: 36px; font-weight: 900; color: var(--gov-red); font-family: 'Roboto Condensed', sans-serif; line-height: 1; }
+.hp-footer-hotline-sub { font-size: 11px; color: rgba(255,255,255,0.45); margin-top: 4px; }
+.hp-footer-copy {
+    text-align: center;
+    padding: 16px 0;
+    font-size: 12px;
+    color: rgba(255,255,255,0.40);
+}
+.hp-footer-dev { font-size: 11px; color: rgba(255,255,255,0.28); margin-top: 4px; text-align: center; padding-bottom: 16px; }
+
+/* Legacy footer compat */
+.hp-footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(255,255,255,0.10);
+}
+.hp-footer-logo { font-size: 16px; font-weight: 700; max-width: 300px; }
+.hp-footer, .hp-footer p, .hp-footer strong, .hp-footer div { color: rgba(255,255,255,0.75) !important; }
+
+/* ============================================================
+   STICKY CTA MOBILE
+   ============================================================ */
+.hp-sticky-cta {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 12px 16px;
+    box-shadow: 0 -2px 12px rgba(0,0,0,0.12);
+    z-index: 1000;
+    border-top: 3px solid var(--gov-red);
+}
+.hp-cta-sticky {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+}
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+.slide-up {
+    animation: slideUp 0.7s ease-out forwards;
+}
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: all 0.7s ease;
+}
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1100px) {
+    .gov-services-grid { grid-template-columns: repeat(2, 1fr); }
+    .hp-footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 991px) {
+    .hp-hero-title { font-size: 32px; }
+    .hp-why-grid { grid-template-columns: 1fr; }
+    .hp-trust-grid { grid-template-columns: 1fr; }
+    .hp-process-timeline { flex-direction: column; gap: 24px; }
+    .hp-process-arrow { transform: rotate(90deg); }
+    .hp-principles-grid, .hp-principles-grid-5 { grid-template-columns: 1fr; }
+    .hp-testimonials-grid { grid-template-columns: 1fr 1fr; }
+    .gov-top-motto { font-size: 10px; letter-spacing: 0; }
+    body.has-gov-header { padding-top: 174px; }
+}
+
+@media (max-width: 768px) {
+    .gov-top-motto .separator { display: none; }
+    .gov-top-motto span.motto-sub { display: none; }
+    .gov-top-right .gov-font-size-btns { display: none; }
+    .gov-header-band { height: 72px; top: 38px; }
+    .gov-agency-unit { font-size: 14px; }
+    .gov-agency-parent { font-size: 11px; }
+    .gov-emblem { width: 48px; height: 48px; }
+    .gov-emblem svg { width: 48px; height: 48px; }
+    .gov-login-btn span { display: none; }
+    .gov-navbar { top: 110px; }
+    body.has-gov-header { padding-top: 158px; }
+    .gov-nav-menu { display: none; }
+    .gov-mobile-toggle { display: block; }
+    .gov-nav-search { display: none; }
+    .gov-services-grid { grid-template-columns: 1fr 1fr; }
+    .hp-stats-grid { grid-template-columns: 1fr; }
+    .hp-stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.12); padding: 20px; }
+    .hp-stat-item:last-child { border-bottom: none; }
+    .hp-why-card { max-width: 100%; }
+    .hp-testimonials-grid { grid-template-columns: 1fr; }
+    .hp-ai-section { padding: 36px 0 46px; }
+    .hp-chat-container { height: 520px; border-radius: 12px; }
+    .hp-chat-header { padding: 12px 14px; }
+    .hp-chat-sub { display: none; }
+    .hp-chat-body { padding: 14px; }
+    .hp-msg-row { max-width: 95%; }
+    .hp-chat-input-bar { padding: 10px 12px; }
+    .hp-input-footer-hint { display: none; }
+    .hp-sticky-cta { display: block; }
+    body { padding-bottom: 72px; }
+    .hp-footer-grid { grid-template-columns: 1fr; }
+    .gov-hero-actions { flex-direction: column; align-items: center; }
+    .hp-cta-btn { width: 100%; max-width: 320px; justify-content: center; }
+}
+
+@media (max-width: 480px) {
+    .gov-services-grid { grid-template-columns: 1fr; }
+    .hp-hero-title { font-size: 26px; }
+    .gov-agency-brand { gap: 10px; }
+}

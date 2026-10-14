@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký - FRAS</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <style>
+        .auth-page {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 24px 16px;
+            background: linear-gradient(135deg, #0b132b 0%, #1c2541 100%);
+        }
+
+        .auth-card {
+            background: #ffffff;
+            border: 2px solid #b91c1c;
+            border-radius: 0 !important;
+            padding: 36px 32px;
+            width: 100%;
+            max-width: 480px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+        }
+
+        .auth-card .logo {
+            text-align: center;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 2px solid #f1f5f9;
+        }
+
+        .auth-card .logo img {
+            width: 64px;
+            height: 64px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+
+        .auth-card .agency-title {
+            font-size: 0.82rem;
+            font-weight: 800;
+            color: #b91c1c;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .auth-card .logo h2 {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: #0f172a;
+            text-transform: uppercase;
+        }
+
+        .auth-card .logo p {
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+            margin-top: 4px;
+        }
+
+        .auth-footer {
+            text-align: center;
+            margin-top: 24px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="auth-page">
+        <div class="auth-card fade-in">
+            <div class="logo">
+                <img src="/img/logo-cand.png" alt="CAND">
+                <div class="agency-title">Công an TP Bắc Ninh • PCCC & CNCH</div>
+                <h2>Đăng ký tài khoản</h2>
+                <p>Tạo tài khoản phục vụ khảo sát an toàn PCCC</p>
+            </div>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="full_name">Họ và tên *</label>
+                    <input type="text" class="form-control" id="full_name" placeholder="Nguyễn Văn A" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" class="form-control" id="email" placeholder="email@example.com" required>
+                </div>
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+                    <div class="form-group">
+                        <label for="password">Mật khẩu *</label>
+                        <input type="password" class="form-control" id="password" placeholder="Tối thiểu 6 ký tự"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm_password">Xác nhận *</label>
+                        <input type="password" class="form-control" id="confirm_password"
+                            placeholder="Nhập lại mật khẩu" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="organization">Tổ chức / Công ty</label>
+                    <input type="text" class="form-control" id="organization" placeholder="Tên cơ sở/tổ chức">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Số điện thoại</label>
+                    <input type="tel" class="form-control" id="phone" placeholder="0xxx xxx xxx">
+                </div>
+                <button type="submit" class="btn btn-primary" style="width:100%; margin-top: 8px;">Đăng ký</button>
+            </form>
+            <div class="auth-footer">
+                Đã có tài khoản? <a href="/login.html">Đăng nhập</a>
+            </div>
+        </div>
+    </div>
+    <script src="/js/api.js"></script>
+    <script src="/js/auth.js"></script>
+    <script>onReady(() => { if (api.isLoggedIn()) window.location.href = '/dashboard.html'; setupRegisterForm(); });</script>
+</body>
+
+</html>

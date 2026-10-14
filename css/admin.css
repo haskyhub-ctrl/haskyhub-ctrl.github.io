@@ -36,12 +36,17 @@
     --accent-orange:     #C0202A;   /* Chuyển toàn bộ cam cũ sang Đỏ CAND */
     --glass-bg:          #FFFFFF;
 
-    /* Professional Radius */
-    --radius-sm:         6px;
-    --radius-md:         8px;
-    --radius-lg:         10px;
-    --radius-xl:         14px;
-    --radius-full:       9999px;
+    /* Professional Sharp Radius: Strict Zero Border Radius */
+    --radius-sm:         0px !important;
+    --radius-md:         0px !important;
+    --radius-lg:         0px !important;
+    --radius-xl:         0px !important;
+    --radius-full:       0px !important;
+}
+
+/* Zero Border Radius Enforcement for Police / Government Rectangular Theme */
+*, *::before, *::after {
+    border-radius: 0 !important;
 }
 
 /* ==========================================================================
@@ -215,7 +220,7 @@
     display: inline-block;
     width: 6px;
     height: 6px;
-    border-radius: 50%;
+    border-radius: 0;
     background: var(--gov-red);
 }
 
@@ -830,7 +835,7 @@ button.btn-action,
     margin-bottom: 10px;
     background: var(--gov-bg-alt);
     padding: 8px 12px;
-    border-radius: 6px;
+    border-radius: 0 !important;
     border: 1px solid var(--gov-border);
 }
 
@@ -850,7 +855,7 @@ button.btn-action,
     font-size: 1.1rem;
     cursor: pointer;
     padding: 4px 8px;
-    border-radius: 4px;
+    border-radius: 0 !important;
     transition: background 0.15s;
 }
 
@@ -890,7 +895,7 @@ button.btn-action,
     font-size: 1.4rem;
     cursor: pointer;
     padding: 2px 6px;
-    border-radius: 4px;
+    border-radius: 0 !important;
     transition: all 0.15s;
     line-height: 1;
 }
@@ -1486,7 +1491,7 @@ button.btn-action,
 .dot-legend {
     width: 12px;
     height: 12px;
-    border-radius: 50%;
+    border-radius: 0 !important;
     display: inline-block;
 }
 

@@ -339,8 +339,8 @@ function renderFacilityForm(container) {
 
         if (hasNoType) {
             facilityNotice = `
-                <div class="alert alert-warning" style="margin-bottom: 20px; background: #fffbeb; border: 1px solid #fcd34d; color: #92400e; padding: 14px 18px; border-radius: 8px;">
-                    <div style="font-weight: 700; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                <div class="alert alert-warning" style="margin-bottom: 20px; background: #fffbeb; border: 1.5px solid #fcd34d; border-left: 5px solid #d97706; color: #92400e; padding: 14px 18px; border-radius: 0 !important;">
+                    <div style="font-weight: 800; font-size: 0.95rem; display: flex; align-items: center; gap: 8px; text-transform: uppercase;">
                         <span>⚠️</span> CHƯA CÓ LOẠI HÌNH TRONG DANH SÁCH
                     </div>
                     <p style="margin: 6px 0 0; font-size: 0.88rem; line-height: 1.5;">
@@ -351,15 +351,15 @@ function renderFacilityForm(container) {
         }
     } else {
         headerHtml = `
-            <div class="alert" style="margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.2); padding: 14px 18px; border-radius: 10px;">
+            <div class="alert" style="margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; background: rgba(30, 58, 138, 0.06); border: 1.5px solid rgba(30, 58, 138, 0.2); border-left: 5px solid #1A3A6B; padding: 14px 18px; border-radius: 0 !important;">
                 <div style="display: flex; align-items: center; gap: 12px;">
                     <span style="font-size: 1.8rem;">🏡</span>
                     <div>
-                        <div style="font-weight: 700; color: #065f46; font-size: 1.05rem;">Khảo sát tự nguyện (Hộ gia đình / Công trình)</div>
+                        <div style="font-weight: 800; color: #0F2347; font-size: 1.05rem;">Khảo sát an toàn PCCC (Hộ gia đình / Cơ sở khảo sát tự nguyện)</div>
                         <div style="font-size: 0.85rem; color: var(--text-secondary);">Khảo sát miễn phí, kết quả bảo mật ẩn danh, không cần tài khoản.</div>
                     </div>
                 </div>
-                <span class="role-badge" style="background: #10b981; color: white; padding: 4px 10px; border-radius: 6px; font-size: 0.8rem;">Không thuộc diện quản lý</span>
+                <span class="role-badge" style="background: #1A3A6B; color: white; padding: 4px 10px; border-radius: 0 !important; font-size: 0.8rem; font-weight:700;">Khảo sát tự nguyện</span>
             </div>
         `;
     }
@@ -375,24 +375,28 @@ function renderFacilityForm(container) {
                 ${facilityNotice}
 
                 <div class="form-group">
-                    <label>Tên công trình / Nhà ở / Cơ sở khảo sát ${isFacility ? '<span style="color:#dc2626;">*</span>' : '<span style="color:var(--text-muted); font-weight:normal;">(Tùy chọn - có thể để trống)</span>'}</label>
+                    <label style="font-weight:700;">Tên công trình / Nhà ở / Cơ sở khảo sát ${isFacility ? '<span style="color:#dc2626;">*</span>' : '<span style="color:var(--text-muted); font-weight:normal;">(Tùy chọn - có thể để trống)</span>'}</label>
                     <input type="text" class="form-control" id="f_name" placeholder="${isFacility ? 'Nhập tên doanh nghiệp / cơ sở / nhà máy...' : 'VD: Nhà ở kết hợp buôn bán / Hộ gia đình...'}" value="${info.facility_name || ''}">
                 </div>
 
                 ${isFacility ? `
                 <div class="form-group">
-                    <label>Mã quản lý cơ sở PCCC <span style="font-size:0.82rem; color:var(--text-muted); font-weight:normal;">(13 chữ số, nếu có)</span></label>
+                    <label style="font-weight:700;">Mã quản lý cơ sở PCCC <span style="font-size:0.82rem; color:var(--text-muted); font-weight:normal;">(13 chữ số, nếu có)</span></label>
                     <input type="text" class="form-control" id="f_code" placeholder="Ví dụ: 2426200090176 (Tùy chọn - có thể để trống)" value="${facCode}">
                 </div>
                 ` : ''}
                 
                 <div class="form-group">
-                    <label>Bảng các loại hình hoạt động * <span style="font-size:0.82rem; color:var(--text-muted); font-weight:normal;">(Có thể chọn 2 loại hình trở lên)</span></label>
+                    <label style="font-weight:700; color:#0F2347; text-transform:uppercase; letter-spacing:0.3px; display:flex; justify-content:space-between; align-items:center;">
+                        <span>BẢNG CÁC LOẠI HÌNH HOẠT ĐỘNG <span style="color:#dc2626;">*</span></span>
+                        <span style="font-size:0.8rem; color:var(--text-muted); font-weight:normal; text-transform:none;">(Có thể chọn 2 loại hình trở lên)</span>
+                    </label>
                     <div class="facility-type-grid" id="facility-type-grid">
                         ${facilityTypes.map(t => `
                             <div class="facility-type-option ${rawTypes.includes(t.value) ? 'selected' : ''}" data-value="${t.value}">
                                 <span class="type-icon">${t.icon}</span>
-                                ${t.label}
+                                <span class="type-label">${t.label}</span>
+                                <span class="type-check-badge">✓ ĐÃ CHỌN</span>
                             </div>
                         `).join('')}
                     </div>
@@ -882,8 +886,8 @@ function openMapPicker() {
     // Create modal dynamically
     const modalHtml = `
     <div id="mapPickerModal" style="position: fixed; inset: 0; z-index: 9999; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.7); padding: 20px;">
-        <div style="background: var(--bg-card); width: 100%; max-width: 600px; border-radius: 8px; overflow: hidden; display: flex; flex-direction: column;">
-            <div style="padding: 16px; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;">
+        <div style="background: var(--bg-card); width: 100%; max-width: 600px; border-radius: 0 !important; border: 2px solid var(--gov-navy, #1A3A6B); overflow: hidden; display: flex; flex-direction: column;">
+            <div style="padding: 16px; border-bottom: 1.5px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;">
                 <h3 style="margin: 0;">Chọn vị trí cơ sở</h3>
                 <button onclick="closeMapPicker()" style="background: transparent; border: none; font-size: 1.5rem; color: var(--text-muted); cursor: pointer;">&times;</button>
             </div>
