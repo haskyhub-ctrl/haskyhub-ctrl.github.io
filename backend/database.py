@@ -1,4 +1,12 @@
 import os
+from dotenv import load_dotenv
+
+env_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env")
+if os.path.exists(env_path):
+    load_dotenv(dotenv_path=env_path, override=True)
+else:
+    load_dotenv(override=True)
+
 from sqlalchemy import create_engine, text, inspect
 from sqlalchemy.orm import sessionmaker, declarative_base
 

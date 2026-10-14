@@ -179,6 +179,14 @@ async def lifespan(app: FastAPI):
     # Migrate: add new columns to existing tables
     migrate_db()
     seed_database()
+    try:
+        root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        if root_dir not in sys.path:
+            sys.path.insert(0, root_dir)
+        from add_enhanced_questions import add_enhanced_questions
+        add_enhanced_questions()
+    except Exception as e:
+        print(f"Notice seeding enhanced questions: {e}")
     
     # Khởi chạy dịch vụ cron tự động sao lưu CSDL định kỳ
     backup_task = asyncio.create_task(auto_backup_task())
