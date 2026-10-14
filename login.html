@@ -176,40 +176,34 @@
             <div class="admin-auth-header">
                 <img src="/img/logo-cand.png" alt="Biểu tượng Công an nhân dân Việt Nam">
                 <div class="admin-auth-agency">Công an thành phố Bắc Ninh</div>
-                <h1 class="admin-auth-title">Đăng nhập Hệ thống</h1>
+                <h1 class="admin-auth-title">Đăng nhập Cán bộ Quản trị</h1>
                 <div class="admin-auth-sub">Hệ thống Đánh giá Nguy cơ Cháy Nổ (FRAS)</div>
-                <div class="admin-auth-badge">Dành cho Cơ sở Quản lý & Cán bộ PCCC</div>
+                <div class="admin-auth-badge">Dành riêng cho Cán bộ Cảnh sát PCCC & Ban Chỉ huy</div>
             </div>
 
             <div id="login-error" class="role-alert-error" style="display:none;"></div>
 
             <form id="admin-login-form" onsubmit="handleUnifiedLogin(event)">
                 <div class="form-group">
-                    <label for="admin-email">Mã cơ sở (13 số) hoặc Email Cán bộ <span style="color:#b91c1c;">*</span></label>
-                    <input type="text" id="admin-email" placeholder="Ví dụ: 2426200090176 hoặc admin@fras.vn" required autofocus autocomplete="username">
+                    <label for="admin-email">Email Cán bộ / Tài khoản Quản trị <span style="color:#b91c1c;">*</span></label>
+                    <input type="text" id="admin-email" placeholder="Ví dụ: admin@fras.vn" required autofocus autocomplete="username">
                 </div>
                 <div class="form-group">
-                    <div style="display:flex; justify-content:space-between; align-items:center;">
-                        <label for="admin-password">Mật khẩu <span style="color:#b91c1c;">*</span></label>
-                        <span style="font-size:0.75rem; color:#64748b;">Mặc định cơ sở: <strong>Pc07@123</strong></span>
-                    </div>
+                    <label for="admin-password">Mật khẩu công vụ <span style="color:#b91c1c;">*</span></label>
                     <input type="password" id="admin-password" placeholder="Nhập mật khẩu" required autocomplete="current-password">
                 </div>
                 <button type="submit" id="admin-submit-btn" class="admin-login-btn">
-                    Đăng nhập & Tiếp tục →
+                    Đăng nhập Hệ thống Quản trị →
                 </button>
             </form>
 
-            <div class="admin-sec-notice">
-                💡 <strong>Tự động phân luồng:</strong>
-                <ul style="margin: 4px 0 0 18px; padding: 0;">
-                    <li><strong>Cơ sở diện quản lý:</strong> Vào thẳng bài khảo sát và bảng chọn loại hình cơ sở.</li>
-                    <li><strong>Cán bộ Quản trị:</strong> Vào thẳng Trung tâm điều hành và Bản đồ nguy cơ PCCC.</li>
-                </ul>
+            <div style="margin-top: 18px; padding: 14px; background: #eff6ff; border: 1px solid #bfdbfe; text-align: center;">
+                <div style="font-weight: 700; color: #1e3a8a; font-size: 0.95rem; margin-bottom: 4px;">🏢 Bạn là Cơ sở hoặc Người dân làm khảo sát?</div>
+                <div style="font-size: 0.82rem; color: #475569; margin-bottom: 8px;">Cơ sở diện quản lý và hộ gia đình không cần tài khoản đăng nhập tại đây.</div>
+                <a href="/survey.html" style="display: inline-block; background: #1e3a8a; color: #fff; padding: 8px 16px; text-decoration: none; font-weight: 700; font-size: 0.85rem;">Vào Khảo sát PCCC Ngay →</a>
             </div>
 
-            <div class="admin-auth-back">
-                <a href="/survey.html?role=citizen" style="color: #059669; font-weight: 700;">🏡 Khảo sát cho Người dân / Hộ gia đình (Không cần tài khoản) →</a>
+            <div class="admin-auth-back" style="margin-top: 16px;">
                 <a href="/">← Quay về Trang chủ</a>
             </div>
         </div>

@@ -1,5 +1,6 @@
 import os
 import json
+import base64
 from datetime import datetime
 from typing import Optional, List
 import httpx
@@ -48,8 +49,11 @@ def get_target_chat_ids() -> List[str]:
     return list(chat_ids)
 
 
-def send_telegram_alert(report: FireReport):
-    """Send emergency 114 notification to Telegram bot/group."""
+def send_telegram_alert(report: FireReport, image_bytes: Optional[bytes] = None):
+    """Send emergency 114 notification to Telegram bot/group.
+    Zero disk usage: If image_bytes is provided, it streams directly to Telegram sendPhoto
+    and is never saved to the server disk.
+    """
     if not TELEGRAM_BOT_TOKEN:
         return
 
@@ -60,7 +64,7 @@ def send_telegram_alert(report: FireReport):
 
     maps_link = ""
     if report.latitude and report.longitude:
-        maps_link = f"\n🗺️ <b>Bản đồ dẫn đường:</b> <a href=\"https://www.google.com/maps?q={report.latitude},{report.longitude}\">Mở vị trí hiện trường</a>"
+        maps_link = f"\n🗺️ <b>Bản đồ:</b> <a href=\"https://www.google.com/maps?q={report.latitude},{report.longitude}\">Mở vị trí hiện trường</a>"
 
     text = (
         f"🚨 <b>BÁO CHÁY KHẨN CẤP 114 - BẮC NINH</b> 🚨\n"
@@ -78,15 +82,27 @@ def send_telegram_alert(report: FireReport):
 
     for cid in chat_ids:
         try:
-            send_url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
-            payload = {
-                "chat_id": cid,
-                "text": text,
-                "parse_mode": "HTML",
-                "disable_web_page_preview": False
-            }
-            httpx.post(send_url, json=payload, timeout=6)
-            print(f"[Telegram Alert] Sent notification to chat {cid}")
+            if image_bytes:
+                # Direct stream to Telegram sendPhoto (0 bytes saved on VPS disk!)
+                photo_url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendPhoto"
+                files = {"photo": ("fire_scene.jpg", image_bytes, "image/jpeg")}
+                data = {
+                    "chat_id": cid,
+                    "caption": text[:1024],
+                    "parse_mode": "HTML"
+                }
+                resp = httpx.post(photo_url, data=data, files=files, timeout=15)
+                print(f"[Telegram Alert] Sent photo alert to chat {cid}: status {resp.status_code}")
+            else:
+                send_url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
+                payload = {
+                    "chat_id": cid,
+                    "text": text,
+                    "parse_mode": "HTML",
+                    "disable_web_page_preview": False
+                }
+                httpx.post(send_url, json=payload, timeout=8)
+                print(f"[Telegram Alert] Sent notification to chat {cid}")
         except Exception as e:
             print(f"[Telegram Alert] Failed to send to chat {cid}: {e}")
 
@@ -100,6 +116,7 @@ class EmergencyReportCreate(BaseModel):
     severity: str = "Khói nhiều / Lửa bốc cao"
     notes: Optional[str] = None
     image_url: Optional[str] = None
+    image_base64: Optional[str] = None  # Direct stream to Telegram, 0 disk usage
 
 
 class EmergencyReportResponse(BaseModel):
@@ -167,9 +184,21 @@ def submit_fire_report(data: EmergencyReportCreate, db: Session = Depends(get_db
     except Exception as e:
         print(f"[Fire Report Log] Warning: could not write to JSON log: {e}")
 
+    # Decode image in RAM only (never written to disk)
+    image_bytes = None
+    if data.image_base64:
+        try:
+            b64_str = data.image_base64
+            if "," in b64_str:
+                b64_str = b64_str.split(",", 1)[1]
+            image_bytes = base64.b64decode(b64_str)
+            print(f"[Fire Report] Received image of size: {len(image_bytes)} bytes. Forwarding to Telegram (0 disk usage).")
+        except Exception as e:
+            print(f"[Fire Report] Warning: Could not decode base64 image: {e}")
+
     # Send instant Telegram alert to Officers
     try:
-        send_telegram_alert(report)
+        send_telegram_alert(report, image_bytes=image_bytes)
     except Exception as e:
         print(f"[Telegram Error] Could not send alert: {e}")
 

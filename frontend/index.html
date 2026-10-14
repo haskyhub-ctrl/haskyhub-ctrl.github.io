@@ -1496,7 +1496,7 @@
 
                 <div class="role-options-grid">
                     <!-- Option 1: Cơ sở diện quản lý -->
-                    <div class="role-option-card" onclick="openFacilityLoginStep()">
+                    <div class="role-option-card" onclick="startFacilitySurvey()">
                         <div class="role-card-icon">🏢</div>
                         <div class="role-card-body">
                             <div class="role-card-tag tag-managed">Có trong danh sách quản lý</div>
@@ -1505,7 +1505,7 @@
                                 Doanh nghiệp, nhà máy, xí nghiệp, kho tàng, nhà hàng, khách sạn... có trong danh mục quản lý của cơ quan Cảnh sát PCCC.
                             </p>
                             <div class="role-card-action">
-                                <span>Đăng nhập bằng Mã cơ sở (13 chữ số)</span>
+                                <span>Vào bài khảo sát cơ sở ngay</span>
                                 <span class="arrow">→</span>
                             </div>
                         </div>
@@ -1527,46 +1527,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Trạng thái 2: Form đăng nhập chung (Cơ sở & Quản trị) -->
-            <div id="role-step-login" style="display:none;">
-                <div class="role-modal-header">
-                    <button type="button" class="role-btn-back" onclick="backToRoleSelect()">← Chọn đối tượng khác</button>
-                    <div style="margin-top:6px;"><span class="role-badge-step">ĐĂNG NHẬP HỆ THỐNG</span></div>
-                    <h3 class="role-modal-title" style="margin-top:4px;">Đăng nhập Khảo sát & Quản trị</h3>
-                    <p class="role-modal-subtitle">
-                        Nhập Mã cơ sở (13 chữ số) để vào bài khảo sát cơ sở, hoặc Email Cán bộ để vào bảng điều khiển Quản trị.
-                    </p>
-                </div>
-
-                <form id="facility-modal-login-form" onsubmit="handleFacilityLogin(event)">
-                    <div id="facility-login-error" class="role-alert-error" style="display:none;"></div>
-
-                    <div class="role-form-group">
-                        <label for="fac-code-input">Mã cơ sở (13 chữ số) hoặc Email Cán bộ <span style="color:#dc2626;">*</span></label>
-                        <input type="text" id="fac-code-input" class="role-input" placeholder="VD: 2426200090176 hoặc admin@fras.vn" required autofocus>
-                    </div>
-
-                    <div class="role-form-group">
-                        <div style="display:flex; justify-content:space-between; align-items:center;">
-                            <label for="fac-pass-input">Mật khẩu <span style="color:#dc2626;">*</span></label>
-                            <span style="font-size:0.75rem; color:#64748b;">Mặc định cơ sở: <strong>Pc07@123</strong></span>
-                        </div>
-                        <div style="position:relative;">
-                            <input type="password" id="fac-pass-input" class="role-input" value="Pc07@123" required>
-                            <button type="button" class="role-toggle-pw" onclick="toggleFacilityPw()">👁️</button>
-                        </div>
-                    </div>
-
-                    <div class="role-login-hint">
-                        💡 <strong>Thông báo:</strong> Cơ sở diện quản lý có thể dùng mật khẩu mặc định <code>Pc07@123</code>. Cán bộ quản trị dùng mật khẩu công vụ được cấp.
-                    </div>
-
-                    <button type="submit" id="fac-login-btn" class="role-btn-primary" style="width:100%; margin-top:16px;">
-                        Đăng nhập & Tiếp tục →
-                    </button>
-                </form>
             </div>
         </div>
     </div>
@@ -1975,6 +1935,25 @@
                         <textarea id="em-notes" class="em-input" rows="2" placeholder="VD: Đường vào ngõ rộng 3m, có bình gas ở tầng 1, người đang ở ban công tầng 2..."></textarea>
                     </div>
 
+                    <!-- 5.1. Hình ảnh hiện trường (Gửi trực tiếp lên Telegram không lưu VPS) -->
+                    <div class="em-form-group">
+                        <label class="em-label">
+                            📷 Ảnh hiện trường đám cháy <span style="font-weight:normal; color:#64748b; font-size:0.8rem;">(Tùy chọn - Chụp/Tải ảnh gửi trực tiếp tới Telegram 114)</span>
+                        </label>
+                        <div class="em-photo-box" onclick="document.getElementById('em-photo-input').click()" style="border: 2px dashed #cbd5e1; border-radius: 10px; padding: 12px; text-align: center; cursor: pointer; background: #f8fafc; transition: all 0.2s;">
+                            <input type="file" id="em-photo-input" accept="image/*" capture="environment" style="display:none;" onchange="handleEmergencyPhoto(event)">
+                            <div id="em-photo-placeholder">
+                                <span style="font-size: 1.8rem; display: block; margin-bottom: 2px;">📸</span>
+                                <span style="font-size: 0.88rem; font-weight: 700; color: #1e293b;">Bấm để chụp ảnh hoặc tải ảnh hiện trường</span>
+                                <div style="font-size: 0.76rem; color: #64748b; margin-top: 2px;">Ảnh được gửi thẳng vào Telegram Trực ban tác chiến 114 (không lưu trên máy chủ)</div>
+                            </div>
+                            <div id="em-photo-preview-wrap" style="display:none; position:relative; text-align:center;">
+                                <img id="em-photo-preview" src="" alt="Ảnh hiện trường" style="max-height: 180px; max-width: 100%; border-radius: 8px; object-fit: contain;">
+                                <button type="button" onclick="event.stopPropagation(); removeEmergencyPhoto();" style="position:absolute; top:4px; right:4px; background:rgba(220,38,38,0.9); color:#fff; border:none; border-radius:50%; width:28px; height:28px; font-weight:bold; cursor:pointer;" title="Xóa ảnh">✕</button>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- 6. NÚT BÁO CHÁY TO -->
                     <button type="submit" id="em-submit-button" class="em-submit-btn">
                         <span>🔥</span> BÁO CHÁY NGAY CHO 114
@@ -2078,7 +2057,6 @@
             } else {
                 stepAlready.style.display = 'none';
                 stepSelect.style.display = 'block';
-                stepLogin.style.display = 'none';
             }
 
             modal.style.display = 'flex';
@@ -2099,19 +2077,9 @@
             if (stepSelect) stepSelect.style.display = 'block';
         }
 
-        function openFacilityLoginStep() {
-            document.getElementById('role-step-select').style.display = 'none';
-            document.getElementById('role-step-login').style.display = 'block';
-            const err = document.getElementById('facility-login-error');
-            if (err) err.style.display = 'none';
-            setTimeout(() => {
-                document.getElementById('fac-code-input')?.focus();
-            }, 100);
-        }
-
-        function backToRoleSelect() {
-            document.getElementById('role-step-login').style.display = 'none';
-            document.getElementById('role-step-select').style.display = 'block';
+        function startFacilitySurvey() {
+            sessionStorage.setItem('fras_survey_role', 'facility');
+            window.location.href = '/survey.html?role=facility';
         }
 
         function startCitizenSurvey() {
@@ -2120,79 +2088,75 @@
             window.location.href = '/survey.html?role=citizen';
         }
 
-        function toggleFacilityPw() {
-            const input = document.getElementById('fac-pass-input');
-            if (input) {
-                input.type = input.type === 'password' ? 'text' : 'password';
-            }
-        }
+        // ============================================================
+        // EMERGENCY FIRE REPORT 114 MODAL LOGIC & DIRECT TELEGRAM PHOTO
+        // ============================================================
+        let emPhotoBase64 = null;
 
-        async function handleFacilityLogin(event) {
-            event.preventDefault();
-            const code = document.getElementById('fac-code-input').value.trim();
-            const pass = document.getElementById('fac-pass-input').value;
-            const btn = document.getElementById('fac-login-btn');
-            const errBox = document.getElementById('facility-login-error');
+        function handleEmergencyPhoto(event) {
+            const file = event.target.files && event.target.files[0];
+            if (!file) return;
 
-            if (!code || !pass) {
-                if (errBox) {
-                    errBox.textContent = 'Vui lòng nhập đầy đủ Mã cơ sở / Email và Mật khẩu.';
-                    errBox.style.display = 'block';
-                }
+            if (!file.type.startsWith('image/')) {
+                alert('Vui lòng chọn tệp hình ảnh (JPG, PNG, WEBP).');
                 return;
             }
 
-            btn.disabled = true;
-            const originalText = btn.innerHTML;
-            btn.innerHTML = '<span class="loading-spinner"></span> Đang xác thực thông tin...';
-            if (errBox) errBox.style.display = 'none';
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const img = new Image();
+                img.onload = function() {
+                    const canvas = document.createElement('canvas');
+                    let width = img.width;
+                    let height = img.height;
+                    const maxDim = 1200;
 
-            try {
-                const data = await api.login(code, pass);
-                const user = data.user || api.getUser();
+                    if (width > maxDim || height > maxDim) {
+                        if (width > height) {
+                            height = Math.round((height * maxDim) / width);
+                            width = maxDim;
+                        } else {
+                            width = Math.round((width * maxDim) / height);
+                            height = maxDim;
+                        }
+                    }
 
-                if (user && (user.role === 'admin' || user.role === 'superadmin')) {
-                    btn.innerHTML = '✅ Xin chào Cán bộ Quản trị! Đang vào Bảng điều khiển...';
-                    setTimeout(() => {
-                        window.location.href = '/admin/';
-                    }, 300);
-                    return;
-                }
+                    canvas.width = width;
+                    canvas.height = height;
+                    const ctx = canvas.getContext('2d');
+                    ctx.drawImage(img, 0, 0, width, height);
 
-                btn.innerHTML = '✅ Xác thực thành công! Đang chuyển tiếp vào khảo sát...';
-                setTimeout(() => {
-                    window.location.href = '/survey.html?role=facility';
-                }, 300);
-            } catch (err) {
-                // Nếu người dùng nhập mã cơ sở (chuỗi số):
-                // Tự động mở luôn bảng chọn loại hình cho cơ sở mà không bắt lỗi!
-                const isNumericCode = /^\d{6,16}$/.test(code);
-                if (isNumericCode) {
-                    btn.innerHTML = '🏢 Đang mở bảng chọn loại hình cho cơ sở...';
-                    sessionStorage.setItem('fras_survey_role', 'facility');
-                    setTimeout(() => {
-                        window.location.href = `/survey.html?role=facility&code=${encodeURIComponent(code)}`;
-                    }, 300);
-                    return;
-                }
+                    emPhotoBase64 = canvas.toDataURL('image/jpeg', 0.82);
 
-                btn.disabled = false;
-                btn.innerHTML = originalText;
-                if (errBox) {
-                    errBox.innerHTML = `⚠️ <strong>Đăng nhập không thành công:</strong> ${err.message || 'Tài khoản hoặc mật khẩu chưa đúng.'}`;
-                    errBox.style.display = 'block';
-                }
-            }
+                    const previewImg = document.getElementById('em-photo-preview');
+                    const previewWrap = document.getElementById('em-photo-preview-wrap');
+                    const placeholder = document.getElementById('em-photo-placeholder');
+
+                    if (previewImg) previewImg.src = emPhotoBase64;
+                    if (previewWrap) previewWrap.style.display = 'block';
+                    if (placeholder) placeholder.style.display = 'none';
+                };
+                img.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
         }
 
-        // ============================================================
-        // EMERGENCY FIRE REPORT 114 MODAL LOGIC
-        // ============================================================
+        function removeEmergencyPhoto() {
+            emPhotoBase64 = null;
+            const input = document.getElementById('em-photo-input');
+            if (input) input.value = '';
+            const previewWrap = document.getElementById('em-photo-preview-wrap');
+            const placeholder = document.getElementById('em-photo-placeholder');
+            if (previewWrap) previewWrap.style.display = 'none';
+            if (placeholder) placeholder.style.display = 'block';
+        }
+
         function openEmergencyModal() {
             const modal = document.getElementById('emergency-modal');
             if (!modal) return;
 
-            // Reset form view
+            // Reset form view & photos
+            removeEmergencyPhoto();
             const form = document.getElementById('emergency-form');
             const successView = document.getElementById('em-success-view');
             const errBox = document.getElementById('em-alert-error');
@@ -2320,7 +2284,8 @@
                 severity: severity,
                 notes: notes || null,
                 latitude: latVal ? parseFloat(latVal) : null,
-                longitude: lngVal ? parseFloat(lngVal) : null
+                longitude: lngVal ? parseFloat(lngVal) : null,
+                image_base64: emPhotoBase64 || null
             };
 
             try {
