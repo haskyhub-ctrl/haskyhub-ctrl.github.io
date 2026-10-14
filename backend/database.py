@@ -81,3 +81,12 @@ def migrate_db():
                     except Exception as e:
                         print(f"[migrate] WARN: Could not add {table_name}.{col_name}: {e}")
                         conn.rollback()
+
+        if not is_sqlite and "users" in tables:
+            try:
+                conn.execute(text("ALTER TABLE users ALTER COLUMN full_name TYPE TEXT"))
+                conn.execute(text("ALTER TABLE users ALTER COLUMN organization TYPE TEXT"))
+                conn.commit()
+                print("[migrate] Altered users.full_name and organization to TEXT")
+            except Exception as e:
+                conn.rollback()

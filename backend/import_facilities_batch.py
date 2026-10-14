@@ -178,6 +178,13 @@ def parse_lat_lng(lat_str, lng_str):
     return lat, lng
 
 def run_import():
+    # Ensure database migrations (e.g. TEXT columns) are applied first
+    try:
+        from database import migrate_db
+        migrate_db()
+    except Exception as e:
+        print(f"Migration check: {e}")
+
     csv_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'danh_sach_co_so_latest.csv')
     if not os.path.exists(csv_file):
         csv_file = 'danh_sach_co_so_latest.csv'
@@ -193,15 +200,37 @@ def run_import():
         print("🔐 Precomputing default password hash for Pc07@123...")
         default_pwd_hash = hash_password("Pc07@123")
         
-        # Check existing codes to avoid duplicate inserts
+        # Check existing codes and emails to avoid duplicate inserts
         print("🔍 Checking existing accounts in database...")
         existing_codes = set(c[0] for c in db.query(User.facility_code).filter(User.facility_code.isnot(None)).all())
-        print(f"Already in database: {len(existing_codes)} facility accounts")
+        existing_emails = set(e[0] for e in db.query(User.email).all())
+        print(f"Already in database: {len(existing_codes)} facility accounts, {len(existing_emails)} total users")
 
         batch = []
         batch_size = 2000
         total_added = 0
         now = datetime.utcnow()
+
+        def commit_batch(items):
+            nonlocal total_added
+            if not items:
+                return
+            try:
+                db.bulk_insert_mappings(User, items)
+                db.commit()
+                total_added += len(items)
+                print(f"  Inserted {total_added} facilities...")
+            except Exception as b_err:
+                db.rollback()
+                print(f"  Batch failed ({b_err}), trying individual rows...")
+                for single_u in items:
+                    try:
+                        db.bulk_insert_mappings(User, [single_u])
+                        db.commit()
+                        total_added += 1
+                    except Exception as s_err:
+                        db.rollback()
+                        print(f"    Skipping row {single_u.get('facility_code')}: {s_err}")
 
         for idx, r in enumerate(rows):
             if len(r) < 8:
@@ -211,13 +240,16 @@ def run_import():
                 continue
             if code in existing_codes:
                 continue
+            email = f"{code}@fras.vn"
+            if email in existing_emails:
+                continue
             
-            team = r[0].strip()
-            name = r[2].strip() or f"Cơ sở {code}"
+            team = r[0].strip()[:500]
+            name = (r[2].strip() or f"Cơ sở {code}")[:500]
             lat_raw = r[3].strip()
             lng_raw = r[4].strip()
-            province = r[5].strip() or "Tỉnh Bắc Ninh"
-            ward = r[6].strip()
+            province = (r[5].strip() or "Tỉnh Bắc Ninh")[:100]
+            ward = r[6].strip()[:100]
             raw_type = r[7].strip()
 
             lat, lng = parse_lat_lng(lat_raw, lng_raw)
@@ -232,7 +264,7 @@ def run_import():
 
             u_dict = {
                 "id": str(uuid.uuid4()),
-                "email": f"{code}@fras.vn",
+                "email": email,
                 "facility_code": code,
                 "password_hash": default_pwd_hash,
                 "full_name": name,
@@ -251,18 +283,14 @@ def run_import():
             }
             batch.append(u_dict)
             existing_codes.add(code)
+            existing_emails.add(email)
 
             if len(batch) >= batch_size:
-                db.bulk_insert_mappings(User, batch)
-                db.commit()
-                total_added += len(batch)
-                print(f"  Inserted {total_added} facilities...")
+                commit_batch(batch)
                 batch = []
 
         if batch:
-            db.bulk_insert_mappings(User, batch)
-            db.commit()
-            total_added += len(batch)
+            commit_batch(batch)
 
         print(f"🎉 Import complete! Successfully inserted {total_added} facilities.")
         total_users = db.query(User).count()

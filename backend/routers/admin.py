@@ -547,22 +547,25 @@ def _cascade_delete_assessments(db: Session, assessment_ids: List[str]):
     """Xóa an toàn toàn bộ bài đánh giá và các bản ghi con liên quan."""
     if not assessment_ids:
         return
-    from models import AssessmentAnswer, CategoryScore, ImageAnalysis, ImprovementPlan, ImprovementTask
-    try:
-        plan_ids = [p.id for p in db.query(ImprovementPlan).filter(ImprovementPlan.assessment_id.in_(assessment_ids)).all()]
-        if plan_ids:
-            db.query(ImprovementTask).filter(ImprovementTask.plan_id.in_(plan_ids)).delete(synchronize_session=False)
-            db.query(ImprovementPlan).filter(ImprovementPlan.id.in_(plan_ids)).delete(synchronize_session=False)
-        db.query(ImageAnalysis).filter(ImageAnalysis.assessment_id.in_(assessment_ids)).delete(synchronize_session=False)
-        db.query(AssessmentAnswer).filter(AssessmentAnswer.assessment_id.in_(assessment_ids)).delete(synchronize_session=False)
-        db.query(CategoryScore).filter(CategoryScore.assessment_id.in_(assessment_ids)).delete(synchronize_session=False)
-        db.query(Assessment).filter(Assessment.id.in_(assessment_ids)).delete(synchronize_session=False)
-    except Exception as e:
-        print(f"[cascade_delete] Warning: {e}")
-        for aid in assessment_ids:
-            a = db.query(Assessment).filter(Assessment.id == aid).first()
-            if a:
-                db.delete(a)
+    from sqlalchemy import text
+    chunk_size = 100
+    for i in range(0, len(assessment_ids), chunk_size):
+        chunk = tuple(assessment_ids[i:i + chunk_size])
+        if not chunk:
+            continue
+        stmts = [
+            text("DELETE FROM improvement_tasks WHERE plan_id IN (SELECT id FROM improvement_plans WHERE assessment_id IN :ids)"),
+            text("DELETE FROM improvement_plans WHERE assessment_id IN :ids"),
+            text("DELETE FROM image_analyses WHERE assessment_id IN :ids"),
+            text("DELETE FROM assessment_answers WHERE assessment_id IN :ids"),
+            text("DELETE FROM category_scores WHERE assessment_id IN :ids"),
+            text("DELETE FROM assessments WHERE id IN :ids"),
+        ]
+        for stmt in stmts:
+            try:
+                db.execute(stmt.bindparams(ids=chunk))
+            except Exception as e:
+                print(f"[cascade_delete] Warning: {e}")
 
 
 @router.get("/assessments")
@@ -616,16 +619,35 @@ def delete_all_demo_assessments(
 ):
     """Xóa toàn bộ dữ liệu demo (is_demo=True)."""
     require_role("admin", "superadmin")(current_user)
-    demos = db.query(Assessment).filter(or_(Assessment.is_demo == True, Assessment.is_demo == 1)).all()
-    count = len(demos)
-    demo_ids = [d.id for d in demos]
-    if demo_ids:
-        _cascade_delete_assessments(db, demo_ids)
-        db.commit()
-    log_action(db, current_user.id, "delete_all_demo", "assessment", None,
-               None, {"count": count},
-               request.client.host if request.client else None)
-    return {"deleted": count, "message": f"Đã xóa {count} bài đánh giá demo"}
+    from sqlalchemy import text
+    try:
+        count = db.query(func.count(Assessment.id)).filter(
+            or_(Assessment.is_demo == True, Assessment.is_demo == 1)
+        ).scalar() or 0
+
+        if count > 0:
+            statements = [
+                "DELETE FROM improvement_tasks WHERE plan_id IN (SELECT id FROM improvement_plans WHERE assessment_id IN (SELECT id FROM assessments WHERE is_demo = TRUE OR is_demo = 1))",
+                "DELETE FROM improvement_plans WHERE assessment_id IN (SELECT id FROM assessments WHERE is_demo = TRUE OR is_demo = 1)",
+                "DELETE FROM image_analyses WHERE assessment_id IN (SELECT id FROM assessments WHERE is_demo = TRUE OR is_demo = 1)",
+                "DELETE FROM assessment_answers WHERE assessment_id IN (SELECT id FROM assessments WHERE is_demo = TRUE OR is_demo = 1)",
+                "DELETE FROM category_scores WHERE assessment_id IN (SELECT id FROM assessments WHERE is_demo = TRUE OR is_demo = 1)",
+                "DELETE FROM assessments WHERE is_demo = TRUE OR is_demo = 1",
+            ]
+            for sql in statements:
+                try:
+                    db.execute(text(sql))
+                except Exception as sql_err:
+                    print(f"[delete_all_demo] Warning: {sql_err}")
+            db.commit()
+
+        log_action(db, current_user.id, "delete_all_demo", "assessment", None,
+                   None, {"count": count},
+                   request.client.host if request.client else None)
+        return {"deleted": count, "message": f"Đã xóa {count} bài đánh giá demo"}
+    except Exception as e:
+        db.rollback()
+        raise HTTPException(status_code=500, detail=f"Lỗi khi xóa bài đánh giá demo: {str(e)}")
 
 
 @router.delete("/assessments/bulk")
