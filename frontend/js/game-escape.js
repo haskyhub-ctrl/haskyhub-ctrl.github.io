@@ -1,5 +1,5 @@
 /* ============================================================
-   FIRE ESCAPE GAME ENGINE v5 — Complete Rewrite
+   FIRE ESCAPE GAME ENGINE v5: Complete Rewrite
    Features:
    - Objectives system (EXIT locked until all complete)
    - Smooth movement animation
@@ -519,7 +519,7 @@
     // Hard blocks
     if (t === W || t === FUR) return;
 
-    // Interactive objects — block until activated, then walkable
+    // Interactive objects: block until activated, then walkable
     if (t === BRKR) {
       if (!breakerOff) { fmsg(nx, ny, 'Nhấn Space!'); return; }
       // already activated → walk through
@@ -542,7 +542,7 @@
       if (!gasOff) { die('Khí gas bùng cháy! Phải khóa van gas trước.'); return; }
     }
 
-    // Fire — use BCC to extinguish, otherwise DIE
+    // Fire: use BCC to extinguish, otherwise DIE
     if (t === FIRE) {
       if (inv.bcc) {
         _useBccAt(nx, ny);

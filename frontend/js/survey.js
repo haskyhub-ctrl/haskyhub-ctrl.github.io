@@ -199,7 +199,7 @@ function handleManualGetLocation() {
                 errMsg = 'Quá thời gian chờ phản hồi GPS.';
             }
             if (badge) {
-                badge.innerHTML = `<span style="color: #64748b;">ℹ️ ${errMsg} Hệ thống sẽ tự động sử dụng vị trí xã/phường.</span>`;
+                badge.innerHTML = `<span style="color: #64748b;">ℹ️ ${errMsg}</span>`;
             }
             showToast(errMsg, 'info');
         },
@@ -366,24 +366,24 @@ function renderFacilityForm(container) {
                 </div>
                 `}
 
-                <div class="form-group" style="margin-top: 20px; padding: 16px; background: #f8fafc; border-radius: 10px; border: 1px dashed #cbd5e1;">
+                <div class="form-group" style="margin-top: 20px; padding: 16px; background: #f8fafc; border-radius: 0; border: 1px dashed #cbd5e1;">
                     <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px;">
                         <div style="flex: 1; min-width: 260px;">
                             <label style="font-weight: 600; font-size: 0.95rem; color: #1e293b; margin-bottom: 4px; display: block;">
                                 📍 Vị trí tọa độ GPS <span style="font-weight: normal; font-size: 0.85rem; color: #64748b;">(có thể bỏ trống)</span>
                             </label>
                             <div style="font-size: 0.83rem; color: #64748b; line-height: 1.45;">
-                                📍 Vị trí chỉ dùng để gắn chấm an toàn lên Bản đồ rủi ro PCCC Bắc Ninh và tính khoảng cách tới trụ nước gần nhất (có thể bỏ trống).
+                                Vị trí chỉ dùng để tính khoảng cách tới trụ nước gần nhất và lực lượng Cảnh sát PCCC và CNCH sẽ đến chỗ bạn nhanh hơn khi có cháy và sự cố, tai nạn.
                             </div>
                         </div>
                         <div>
-                            <button type="button" class="btn btn-outline btn-sm" id="btn-get-location" onclick="handleManualGetLocation()" style="display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; font-weight: 600; border-color: #0284c7; color: #0284c7;">
+                            <button type="button" class="btn btn-outline btn-sm" id="btn-get-location" onclick="handleManualGetLocation()" style="display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; font-weight: 600; border-color: #0284c7; color: #0284c7; border-radius: 0;">
                                 <span id="loc-btn-icon">📍</span> <span id="loc-btn-text">${surveyState.userLocation ? 'Cập nhật lại vị trí' : 'Lấy vị trí hiện tại'}</span>
                             </button>
                         </div>
                     </div>
                     <div id="loc-status-badge" style="margin-top: 10px; font-size: 0.85rem; ${surveyState.userLocation ? 'color: #16a34a; font-weight: 500;' : 'color: #64748b;'}">
-                        ${surveyState.userLocation ? `✓ Đã xác định tọa độ: <strong>${surveyState.userLocation.latitude.toFixed(5)}, ${surveyState.userLocation.longitude.toFixed(5)}</strong>` : 'Chưa thu thập tọa độ (hệ thống sẽ tự động ước tính theo vị trí xã/phường nếu bỏ trống).'}
+                        ${surveyState.userLocation ? `✓ Đã xác định tọa độ: <strong>${surveyState.userLocation.latitude.toFixed(5)}, ${surveyState.userLocation.longitude.toFixed(5)}</strong>` : ''}
                     </div>
                 </div>
             </div>
@@ -488,7 +488,7 @@ function renderReview(container) {
             const opt = q.options.find(o => o.id === optId);
             return `<div class="review-item">
                 <span class="label">${q.question_text.substring(0, 60)}...</span>
-                <span class="value">${opt ? opt.option_key : '—'}</span>
+                <span class="value">${opt ? opt.option_key : '-'}</span>
             </div>`;
         }).join('');
 
@@ -502,11 +502,14 @@ function renderReview(container) {
         <div class="survey-container fade-in">
             <div class="card">
                 <h2 style="margin-bottom: 8px;">📝 Xác nhận & Gửi</h2>
-                <p style="color: var(--text-secondary); margin-bottom: 24px;">Kiểm tra lại thông tin trước khi gửi đánh giá</p>
+                <p style="color: var(--text-secondary); margin-bottom: 16px;">Kiểm tra lại thông tin trước khi gửi đánh giá</p>
+                <div style="background:#fffbeb; border-left:4px solid #d97706; padding:10px 14px; margin-bottom: 20px; font-size:0.88rem; color:#92400e; line-height:1.45;">
+                    ℹ️ <strong>Lưu ý:</strong> Kết quả đánh giá dựa trên câu trả lời khảo sát của bạn, hãy khảo sát trung thực để đánh giá thực tế nhất nguy cơ cháy nổ của cơ sở.
+                </div>
                 
                 <div class="review-section">
                     <h4>📋 Thông tin cơ sở</h4>
-                    <div class="review-item"><span class="label">Tên cơ sở:</span><span class="value">${info.facility_name || '—'}</span></div>
+                    <div class="review-item"><span class="label">Tên cơ sở:</span><span class="value">${info.facility_name || 'Chưa đặt tên'}</span></div>
                     <div class="review-item"><span class="label">Loại hình:</span><span class="value">${info.facility_type || 'N/A'}</span></div>
                     <div class="review-item"><span class="label">Địa chỉ:</span><span class="value">${info.facility_address || 'N/A'}</span></div>
                 </div>

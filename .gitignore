@@ -18,4 +18,7 @@ build/
 .vscode/
 Việt Nam (phường xã) - 34 (1).geojson
 *.csv
+.gemini/
+.agents/
+GEMINI.md
 

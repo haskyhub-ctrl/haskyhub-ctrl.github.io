@@ -11,7 +11,7 @@ async function initAdminDashboard() {
         return;
     }
 
-    // Run all 3 independently — one failure won't block the others
+    // Run all 3 independently: one failure won't block the others
     const [statsResult, logsResult, distResult] = await Promise.allSettled([
         api.get('/admin/stats'),
         api.get('/admin/audit-logs?limit=10'),

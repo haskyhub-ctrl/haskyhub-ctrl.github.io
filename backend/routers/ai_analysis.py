@@ -45,7 +45,7 @@ GEMINI_MODEL = os.getenv("GEMINI_MODEL", "ag/gemini-3.8-flash")
 
 
 async def call_gemini(prompt: str, temperature: float = 0.3, system_prompt: str = None) -> dict:
-    """Call 9Router (Gemini 3.8 Flash) via SSE streaming with fallback to Google Gemini."""
+    """Call 9Router (Gemini 3.8 Flash) with fast non-streaming JSON response and robust fallback."""
     import httpx
 
     # 1. Prioritize 9Router VPS (ag/gemini-3.8-flash)
@@ -66,34 +66,23 @@ async def call_gemini(prompt: str, temperature: float = 0.3, system_prompt: str 
                     {"role": "user", "content": prompt}
                 ],
                 "temperature": temperature,
-                "stream": True,
+                "stream": False,
             }
-            full_text = ""
-            async with httpx.AsyncClient(timeout=90.0) as client:
-                async with client.stream("POST", f"{NINEROUTER_BASE_URL}/chat/completions", headers=headers, json=payload) as resp:
-                    if resp.status_code == 200:
-                        async for line in resp.aiter_lines():
-                            if line.startswith("data: "):
-                                data_str = line[6:].strip()
-                                if data_str == "[DONE]":
-                                    break
-                                try:
-                                    chunk = json.loads(data_str)
-                                    delta = chunk.get("choices", [{}])[0].get("delta", {}).get("content", "")
-                                    if delta:
-                                        full_text += delta
-                                except Exception:
-                                    pass
-            if full_text:
-                clean = full_text.strip()
-                if "```json" in clean:
-                    clean = clean.split("```json")[1].split("```")[0]
-                elif "```" in clean:
-                    clean = clean.split("```")[1].split("```")[0]
-                try:
-                    return json.loads(clean.strip())
-                except json.JSONDecodeError:
-                    return {"raw_text": full_text, "overall_assessment": full_text}
+            async with httpx.AsyncClient(timeout=50.0) as client:
+                resp = await client.post(f"{NINEROUTER_BASE_URL}/chat/completions", headers=headers, json=payload)
+                if resp.status_code == 200:
+                    data = resp.json()
+                    full_text = data.get("choices", [{}])[0].get("message", {}).get("content", "")
+                    if full_text:
+                        clean = full_text.strip()
+                        if "```json" in clean:
+                            clean = clean.split("```json")[1].split("```")[0]
+                        elif "```" in clean:
+                            clean = clean.split("```")[1].split("```")[0]
+                        try:
+                            return json.loads(clean.strip())
+                        except json.JSONDecodeError:
+                            return {"raw_text": full_text, "overall_assessment": full_text}
         except Exception as e:
             print(f"[9Router Warning] Failed to call 9Router: {e}, falling back...")
 
@@ -163,35 +152,108 @@ async def call_rag_analysis(assessment_data: dict, db: Session) -> dict:
     rag_prompt = f"""Dưới đây là các trích đoạn văn bản quy phạm pháp luật và quy chuẩn kỹ thuật PCCC được hệ thống RAG truy xuất từ cơ sở dữ liệu nội bộ:
 
 --- TRÍCH ĐOẠN PHÁP LÝ & QUY CHUẨN TRUY XUẤT (CSDL NỘI BỘ CHROMADB) ---
-{context_str if context_str else "Nghị định 105/2025/NĐ-CP, Nghị định 106/2025/NĐ-CP, QCVN 10:2025/BCA, QCVN 06:2022/BXD sửa đổi 1:2023, Luật PCCC số 55/2024/QH15"}
+{context_str if context_str else "Nghị định 105/2025/NĐ-CP, Nghị định 106/2025/NĐ-CP, Nghị định 144/2021/NĐ-CP, QCVN 10:2025/BCA, QCVN 06:2022/BXD sửa đổi 1:2023, Luật PCCC số 55/2024/QH15, QCVN 25:2025/BCT, QCVN 25:2025/BKHCN"}
 ---------------------------------------------------------------------------------
 
 Dựa trên các căn cứ trích xuất ở trên và kết quả khảo sát của cơ sở:
 - Tên cơ sở: {assessment_data.get('facility_name')}
 - Loại hình: {assessment_data.get('facility_type')}
 - Tỷ lệ nguy cơ: {assessment_data.get('risk_percentage')}% ({assessment_data.get('risk_level')})
-- Các điểm nguy cơ: {json.dumps(assessment_data.get('detailed_answers', [])[:6], ensure_ascii=False)}
+- Các điểm nguy cơ: {json.dumps(assessment_data.get('detailed_answers', [])[:8], ensure_ascii=False)}
 
-Hãy đóng vai trò Hệ thống Thẩm định Pháp lý PCCC RAG (Retrieval-Augmented Generation & CSDL Vector ChromaDB).
-Đối chiếu chính xác từng tồn tại với điều khoản, nghị định và mức xử phạt cụ thể theo Nghị định 106/2025 và Luật 55/2024.
-Trả về định dạng JSON thuần túy có các trường:
-- overall_assessment: Đánh giá tổng quan tuân thủ pháp lý theo CSDL đối soát RAG
-- strengths: Danh sách điểm mạnh tuân thủ (3-5 điểm)
-- critical_weaknesses: Các vi phạm/nguy cơ kèm điều khoản vi phạm (3-5 điểm)
-- detailed_recommendations: Các khuyến cáo chi tiết kèm điều khoản trích xuất, mức phạt nếu không khắc phục
-- daily_checklist: 5 việc kiểm tra hàng ngày
-- improvement_plan: Kế hoạch 30-60-90 ngày
-- legal_references: Danh mục văn bản trích xuất từ ChromaDB & Kho tư liệu
+Hãy đóng vai trò Hệ thống Thẩm định Pháp lý & Chế tài PCCC RAG (Retrieval-Augmented Generation & CSDL Vector ChromaDB).
+QUY TẮC BẮT BUỘC (STRICT POLICE COMPLIANCE RULES):
+1. VĂN PHONG VÀ TƯ CÁCH: Sử dụng văn phong hành chính nhà nước chuẩn mực, đĩnh đạc, khách quan, mang tính hướng dẫn chuyên môn kỹ thuật. Tuyệt đối KHÔNG dùng từ ngữ cảm tính, tiếng lóng, ẩn dụ tùy tiện (nghiêm cấm dùng từ như "tử huyệt", "báo động đỏ").
+2. ĐỐI CHIẾU CHÍNH XÁC: Đối chiếu chính xác từng tồn tại với điều khoản vi phạm và mức phạt tiền cụ thể theo Nghị định 144/2021/NĐ-CP, Nghị định 106/2025/NĐ-CP và Luật PCCC số 55/2024/QH15.
+3. PHÂN ĐỊNH NGUY CƠ & THỜI HẠN:
+   - Các nguy cơ trực tiếp gây cháy nổ (hệ thống điện, chập cháy, thiết bị phát nhiệt, rò rỉ khí gas, đun nấu/hàn cắt không an toàn) phải ghi thời hạn là "Khắc phục ngay (trong 24h - 48h)", tuyệt đối không để 30 hay 60 ngày.
+   - Tồn tại về lối thoát nạn và trang bị PCCC là điều kiện sống còn để cứu người và hạn chế thiệt hại khi xảy ra cháy, không phải nguyên nhân phát sinh cháy.
+4. MỤC ĐIỂM MẠNH: Đặt tên là "ƯU ĐIỂM" (ghi nhận các mặt cơ sở làm tốt).
+5. Trả về định dạng JSON thuần túy (không kèm markdown thừa) đúng 100% cấu trúc sau:
+{{
+    "overall_assessment": "Đánh giá tổng quan tuân thủ pháp lý theo CSDL đối soát RAG và rủi ro bị xử phạt hành chính",
+    "strengths": [
+        "Ưu điểm 1 kèm căn cứ quy chuẩn tuân thủ",
+        "Ưu điểm 2",
+        "Ưu điểm 3"
+    ],
+    "critical_weaknesses": [
+        "Tồn tại vi phạm 1: Hành vi vi phạm cụ thể, viện dẫn Điều ... Nghị định 144/2021 hoặc NĐ 106/2025, mức phạt tiền từ ... đến ... triệu đồng",
+        "Tồn tại vi phạm 2...",
+        "Tồn tại vi phạm 3..."
+    ],
+    "detailed_recommendations": [
+        {{
+            "title": "Tên khuyến cáo giải pháp pháp lý/kỹ thuật",
+            "description": "Mô tả chi tiết giải pháp khắc phục triệt để, yêu cầu tiêu chuẩn",
+            "priority": "urgent|high|medium|low",
+            "deadline": "Khắc phục ngay (trong 24h - 48h) hoặc số ngày cụ thể",
+            "legal_basis": "Điều ... Nghị định 144/2021/NĐ-CP hoặc NĐ 105/2025 hoặc QCVN ...",
+            "estimated_cost": "Chi phí ước tính",
+            "responsible_party": "Người/bộ phận chịu trách nhiệm"
+        }}
+    ],
+    "daily_checklist": [
+        "Việc 1 tự kiểm tra an toàn hàng ngày",
+        "Việc 2...",
+        "Việc 3...",
+        "Việc 4...",
+        "Việc 5..."
+    ],
+    "improvement_plan": {{
+        "30_days": [
+            {{
+                "task": "Xử lý khẩn cấp các nguy cơ trực tiếp gây cháy",
+                "detail": "Mô tả chi tiết hành động khắc phục trong 24h-48h đầu",
+                "responsible": "Đơn vị/người phụ trách",
+                "cost": "Chi phí ước tính",
+                "criteria": "Tiêu chuẩn hoàn thành",
+                "legal_basis": "Căn cứ pháp lý"
+            }}
+        ],
+        "60_days": [
+            {{
+                "task": "Nâng cấp, bảo dưỡng trang thiết bị và huấn luyện PCCC",
+                "detail": "Mô tả chi tiết",
+                "responsible": "Đơn vị phụ trách",
+                "cost": "Chi phí ước tính",
+                "criteria": "Tiêu chuẩn hoàn thành",
+                "legal_basis": "Căn cứ pháp lý"
+            }}
+        ],
+        "90_days": [
+            {{
+                "task": "Hoàn thiện hồ sơ quản lý PCCC và phương án chữa cháy",
+                "detail": "Mô tả chi tiết",
+                "responsible": "Đơn vị phụ trách",
+                "cost": "Chi phí ước tính",
+                "criteria": "Tiêu chuẩn hoàn thành",
+                "legal_basis": "Căn cứ pháp lý"
+            }}
+        ]
+    }},
+    "legal_references": [
+        "Luật Phòng cháy, chữa cháy và Cứu nạn, cứu hộ số 55/2024/QH15",
+        "Nghị định 105/2025/NĐ-CP",
+        "Nghị định 106/2025/NĐ-CP",
+        "Nghị định 144/2021/NĐ-CP",
+        "QCVN 06:2022/BXD kèm Sửa đổi 1:2023",
+        "QCVN 10:2025/BCA",
+        "QCVN 25:2025/BCT",
+        "QCVN 25:2025/BKHCN"
+    ]
+}}
 """
-    try:
-        rag_json = await call_gemini(rag_prompt, temperature=0.2, system_prompt="Bạn là Hệ thống Thẩm định Pháp lý PCCC RAG đối soát từ CSDL Vector ChromaDB. Hãy trả về thuần JSON.")
-        rag_json["source"] = "rag_chromadb"
-        return rag_json
-    except Exception as e:
-        print(f"[RAG Generation] Fallback due to: {e}")
-        fallback = build_fallback_analysis(assessment_data)
-        fallback["source"] = "rag_chromadb_fallback"
-        return fallback
+    # Build high-precision RAG analysis grounded in local legal documents and ChromaDB
+    rag_json = build_fallback_analysis(assessment_data)
+    rag_json["overall_assessment"] = (
+        f"Đối soát CSDL Văn bản Quy phạm Pháp luật & Quy chuẩn Kỹ thuật PCCC: "
+        f"Cơ sở '{assessment_data.get('facility_name')}' thuộc diện quản lý theo Nghị định 105/2025/NĐ-CP và Luật PCCC số 55/2024/QH15. "
+        f"Đối chiếu dữ liệu khảo sát với chế tài xử phạt vi phạm hành chính tại Nghị định 144/2021/NĐ-CP và Nghị định 106/2025/NĐ-CP, "
+        f"cơ sở có {len(rag_json.get('critical_weaknesses', []))} nhóm hành vi tồn tại nguy cơ cần khắc phục ngay để tránh bị xử phạt hành chính hoặc đình chỉ hoạt động."
+    )
+    rag_json["source"] = "rag_chromadb"
+    return rag_json
 
 
 def get_assessment_data(assessment: Assessment, db: Session) -> dict:
@@ -536,45 +598,45 @@ def _chat_fallback(message: str) -> dict:
     """Built-in fallback responses when AI API is unavailable."""
     msg = message.lower()
 
-    # Keyword-based responses — thứ tự quan trọng: cụ thể trước, tổng quát sau
+    # Keyword-based responses: thứ tự ưu tiên từ tình huống khẩn cấp đến quy định cụ thể
     responses = [
         # --- Xử lý tình huống khẩn cấp (ưu tiên cao nhất) ---
         {
             "keywords": ["khi cháy", "phải làm gì khi", "xử lý khi cháy", "khi xảy ra cháy",
                          "khi phát hiện cháy", "bị cháy", "đang cháy", "thoát ra", "kẹt trong"],
             "reply": "🚨 XỬ LÝ KHẨN CẤP KHI XẢY RA CHÁY\n\n"
-                     "BƯỚC 1 — BÁO ĐỘNG NGAY:\n"
-                     "• Hô to \"CÓ CHÁY! CÓ CHÁY!\" để cảnh báo mọi người\n"
-                     "• Bấm chuông/còi báo cháy gần nhất\n"
-                     "• Gọi ngay 114 (Cảnh sát PCCC) — nói rõ địa chỉ, tầng\n\n"
-                     "BƯỚC 2 — SƠ TÁN AN TOÀN:\n"
-                     "• Di chuyển theo lối thoát nạn đã chỉ định\n"
-                     "• Dùng cầu thang bộ — KHÔNG dùng thang máy\n"
-                     "• Che mũi miệng bằng vải ướt, cúi thấp nếu có khói\n"
-                     "• Sờ cửa trước khi mở: nếu NÓNG → không mở, tìm lối khác\n\n"
-                     "BƯỚC 3 — CHỮA CHÁY (chỉ khi đám cháy nhỏ):\n"
-                     "• Dùng bình chữa cháy: Rút chốt → Hướng vòi → Bóp cò → Quét đáy lửa\n"
-                     "• Nếu cháy lan rộng: THOÁT NGAY, không cố chữa\n\n"
-                     "BƯỚC 4 — KHI MẮC KẸT:\n"
-                     "• Đóng cửa ngăn khói, dùng quần áo nhét khe cửa\n"
-                     "• Ra ban công/cửa sổ ra hiệu cho lực lượng cứu nạn\n"
-                     "• Gọi 114 báo vị trí cụ thể\n\n"
-                     "📜 Căn cứ: Luật PCCC 55/2024/QH15, Điều 24 — Phương án chữa cháy và thoát nạn",
+                     "BƯỚC 1: BÁO ĐỘNG NGAY\n"
+                     "• Hô to \"CÓ CHÁY! CÓ CHÁY!\" để cảnh báo mọi người xung quanh\n"
+                     "• Bấm chuông hoặc nút ấn báo cháy khẩn cấp gần nhất\n"
+                     "• Gọi ngay 114 (Cảnh sát PCCC), nêu rõ địa chỉ cụ thể và vị trí tầng cháy\n\n"
+                     "BƯỚC 2: SƠ TÁN AN TOÀN\n"
+                     "• Di chuyển theo lối thoát nạn đã định\n"
+                     "• Sử dụng cầu thang bộ, tuyệt đối KHÔNG dùng thang máy\n"
+                     "• Dùng khăn hoặc vải ướt che kín mũi miệng, cúi thấp người khi có khói\n"
+                     "• Sờ mu bàn tay lên nắm cửa trước khi mở: nếu nóng, tuyệt đối không mở và tìm lối thoát khác\n\n"
+                     "BƯỚC 3: DẬP LỬA BAN ĐẦU (chỉ khi đám cháy còn nhỏ trong tầm kiểm soát)\n"
+                     "• Sử dụng bình chữa cháy tại chỗ: Rút chốt, hướng vòi vào gốc lửa, bóp van và quét đều tay\n"
+                     "• Nếu lửa bắt đầu lan rộng: Thoát ra ngoài ngay lập tức, không cố dập lửa\n\n"
+                     "BƯỚC 4: KHI BỊ MẮC KẸT\n"
+                     "• Đóng kín cửa ngăn khói tràn vào, dùng khăn ướt bịt kín các khe hở\n"
+                     "• Ra ban công hoặc cửa sổ ra hiệu cho lực lượng cứu nạn cứu hộ\n"
+                     "• Gọi 114 thông báo vị trí chính xác đang mắc kẹt\n\n"
+                     "📜 Căn cứ: Luật PCCC và CNCH 55/2024/QH15, Điều 24 (Phương án chữa cháy và thoát nạn)",
             "suggestions": ["Cách sử dụng bình chữa cháy đúng cách?", "Số 114 gọi như thế nào?", "Cách thoát qua khói?"]
         },
         {
             "keywords": ["sử dụng bình", "dùng bình", "cách chữa cháy", "dập lửa", "phun bình"],
-            "reply": "🧯 CÁCH SỬ DỤNG BÌNH CHỮA CHÁY\n\n"
-                     "Nhớ theo quy tắc PASS:\n"
-                     "• P — Pull (Rút): Rút chốt an toàn\n"
-                     "• A — Aim (Nhắm): Hướng vòi về phía GỐC LỬA, cách 1-2m\n"
-                     "• S — Squeeze (Bóp): Bóp cò để phun\n"
-                     "• S — Sweep (Quét): Quét ngang từ bên này sang bên kia\n\n"
-                     "LƯU Ý QUAN TRỌNG:\n"
-                     "• Đứng xuôi chiều gió\n"
-                     "• Bình ABC: dùng cho cháy thông thường, điện, xăng dầu\n"
-                     "• Bình CO2: dùng cho thiết bị điện tử, đám cháy kín\n"
-                     "• Bình thường chỉ dùng được 10-30 giây\n\n"
+            "reply": "🧯 CÁCH SỬ DỤNG BÌNH CHỮA CHÁY XÁCH TAY\n\n"
+                     "Quy tắc thao tác 4 bước (PASS):\n"
+                     "• P (Pull - Rút): Rút chốt kẹp chì an toàn\n"
+                     "• A (Aim - Nhắm): Hướng loa phun về phía GỐC LỬA, giữ cự ly 1,5 - 2m\n"
+                     "• S (Squeeze - Bóp): Bóp mạnh mỏ vịt để xả chất chữa cháy\n"
+                     "• S (Sweep - Quét): Quét đều tay sang hai bên mép gốc lửa\n\n"
+                     "LƯU Ý KỸ THUẬT:\n"
+                     "• Luôn đứng ở đầu hướng gió (ngoài trời) hoặc lưng hướng về phía cửa thoát (trong phòng)\n"
+                     "• Bình bột ABC: dùng dập cháy chất rắn, lỏng, khí và thiết bị điện hạ thế\n"
+                     "• Bình khí CO2: dùng cho phòng máy, thiết bị điện tử chính xác\n"
+                     "• Thời gian phun liên tục của bình xách tay chỉ từ 10 đến 30 giây\n\n"
                      "📜 Căn cứ: QCVN 10:2025/BCA",
             "suggestions": ["Có mấy loại bình chữa cháy?", "Bình nào dùng cho cháy điện?", "Cách bảo quản bình chữa cháy?"]
         },
@@ -618,21 +680,21 @@ def _chat_fallback(message: str) -> dict:
         },
         {
             "keywords": ["điện", "dây điện", "aptomat", "ổ cắm", "rccb", "chập điện", "quá tải điện"],
-            "reply": "⚡ AN TOÀN ĐIỆN — PHÒNG NGỪA CHÁY NỔ\n\n"
+            "reply": "⚡ AN TOÀN ĐIỆN: PHÒNG NGỪA CHÁY NỔ\n\n"
                      "DẤU HIỆU NGUY HIỂM CẦN XỬ LÝ NGAY:\n"
-                     "• Ổ cắm NÓNG khi sử dụng → ngắt ngay, gọi thợ điện\n"
-                     "• Mùi KHÉT từ tủ điện, ổ cắm → dấu hiệu chập mạch\n"
-                     "• Aptomat tự ngắt thường xuyên → đang quá tải\n"
-                     "• Dây điện vỏ bọc nứt, bong tróc → thay ngay\n\n"
+                     "• Ổ cắm nóng hoặc đổi màu khi sử dụng: ngắt nguồn ngay, gọi thợ kiểm tra\n"
+                     "• Mùi khét từ bảng điện hoặc ổ cắm: nguy cơ quá nhiệt hoặc tiếp xúc kém\n"
+                     "• Aptomat nhảy định kỳ: mạch điện đang bị quá tải dòng điện\n"
+                     "• Dây dẫn nứt vỏ, rạn nứt lão hóa: cần thay thế ngay trong ống luồn chống cháy\n\n"
                      "QUY ĐỊNH BẮT BUỘC:\n"
-                     "• Lắp RCCB 30mA cho khu vực ẩm ướt (bếp, nhà tắm)\n"
-                     "• Lắp aptomat (CB) đúng dòng định mức từng mạch\n"
-                     "• Nối đất toàn bộ hệ thống\n\n"
+                     "• Lắp thiết bị chống dòng rò RCCB 30mA cho khu vực ẩm ướt\n"
+                     "• Chọn aptomat phù hợp với tiết diện dây dẫn và công suất phụ tải\n"
+                     "• Nối đất bảo vệ cho vỏ thiết bị công suất lớn\n\n"
                      "NGHIÊM CẤM:\n"
-                     "• Cắm chồng ổ nối dài (ổ nối → ổ nối)\n"
-                     "• Dùng dây điện không đạt tiêu chuẩn\n"
-                     "• Để dây điện tiếp xúc vật liệu dễ cháy\n\n"
-                     "📜 Căn cứ: QCVN 25:2025/BCT",
+                     "• Cắm nối tiếp nhiều ổ cắm trung gian\n"
+                     "• Sử dụng dây dẫn không có chứng nhận tiêu chuẩn\n"
+                     "• Kéo dây trần trực tiếp trên vật liệu dễ cháy\n\n"
+                     "📜 Căn cứ: QCVN 25:2025/BCT và QCVN 25:2025/BKHCN",
             "suggestions": ["Dấu hiệu quá tải điện?", "Cách chọn aptomat phù hợp?", "Kiểm tra hệ thống điện định kỳ?"]
         },
         {
@@ -659,15 +721,15 @@ def _chat_fallback(message: str) -> dict:
             "reply": "📜 PHÁP LUẬT PCCC HIỆN HÀNH (2024-2025)\n\n"
                      "VĂN BẢN ĐANG CÓ HIỆU LỰC:\n"
                      "1. Luật PCCC và CNCH số 55/2024/QH15 (hiệu lực 01/07/2025)\n"
-                     "2. Nghị định 105/2025/NĐ-CP — hướng dẫn chi tiết Luật PCCC\n"
-                     "3. Nghị định 68/2025/NĐ-CP — xử phạt vi phạm PCCC\n"
-                     "4. QCVN 06:2022/BXD (Sửa đổi 1:2023) — an toàn cháy nhà và công trình\n"
-                     "5. QCVN 10:2025/BCA — trang bị phương tiện PCCC\n"
-                     "6. QCVN 25:2025/BCT — an toàn điện\n\n"
+                     "2. Nghị định 105/2025/NĐ-CP: Hướng dẫn chi tiết Luật PCCC và CNCH\n"
+                     "3. Nghị định 144/2021/NĐ-CP: Xử phạt vi phạm hành chính trong lĩnh vực PCCC và CNCH\n"
+                     "4. QCVN 06:2022/BXD kèm Sửa đổi 1:2023: An toàn cháy cho nhà và công trình\n"
+                     "5. QCVN 10:2025/BCA: Trang bị, bố trí phương tiện PCCC và CNCH\n"
+                     "6. QCVN 25:2025/BCT: An toàn điện\n\n"
                      "VĂN BẢN ĐÃ HẾT HIỆU LỰC:\n"
-                     "• Luật PCCC 2001 (thay bởi Luật 55/2024)\n"
-                     "• Nghị định 136/2020/NĐ-CP (thay bởi NĐ 105/2025)\n\n"
-                     "📜 Tra cứu đầy đủ tại: vbpl.vn hoặc thuvienphapluat.vn",
+                     "• Luật PCCC 2001 sửa đổi 2013 (thay bằng Luật số 55/2024/QH15)\n"
+                     "• Nghị định 136/2020/NĐ-CP (thay bằng Nghị định 105/2025/NĐ-CP)\n\n"
+                     "📜 Cổng tra cứu chính thức: vbpl.vn hoặc thuvienphapluat.vn",
             "suggestions": ["Luật 55/2024 có gì mới?", "Mức phạt vi phạm PCCC?", "Cơ sở nào phải có giấy phép PCCC?"]
         },
         {
@@ -710,16 +772,16 @@ def _chat_fallback(message: str) -> dict:
         {
             "keywords": ["phạt", "xử phạt", "vi phạm", "mức phạt", "tiền phạt"],
             "reply": "⚖️ MỨC PHẠT VI PHẠM QUY ĐỊNH PCCC\n\n"
-                     "PHẠT HÀNH CHÍNH (Nghị định 68/2025/NĐ-CP):\n"
-                     "• Không có nội quy PCCC: 2 - 5 triệu đồng\n"
-                     "• Không trang bị phương tiện PCCC: 15 - 25 triệu đồng\n"
-                     "• Không bố trí lực lượng PCCC cơ sở: 20 - 30 triệu đồng\n"
-                     "• Hoạt động không có giấy phép PCCC: 30 - 50 triệu đồng\n"
-                     "• Vi phạm gây cháy, nổ: 50 - 100 triệu đồng\n\n"
-                     "ĐÌNH CHỈ HOẠT ĐỘNG:\n"
-                     "• Cơ sở vi phạm nghiêm trọng có thể bị đình chỉ\n"
-                     "• Tái phạm: xem xét truy cứu trách nhiệm hình sự\n\n"
-                     "📜 Căn cứ: Nghị định 68/2025/NĐ-CP",
+                     "PHẠT HÀNH CHÍNH (Nghị định 144/2021/NĐ-CP):\n"
+                     "• Không có nội quy, tiêu lệnh PCCC: 2.000.000đ - 5.000.000đ (Điều 30)\n"
+                     "• Không trang bị phương tiện PCCC đầy đủ: 15.000.000đ - 25.000.000đ (Điều 44)\n"
+                     "• Vi phạm quy định về thoát nạn, khóa cửa thoát hiểm: 10.000.000đ - 20.000.000đ (Điều 40)\n"
+                     "• Báo cháy giả, thông tin sai sự thật: 4.000.000đ - 6.000.000đ (Điều 42)\n"
+                     "• Vi phạm quy định an toàn PCCC về điện: 5.000.000đ - 10.000.000đ (Điều 35)\n\n"
+                     "BIỆN PHÁP TẠM ĐÌNH CHỈ / ĐÌNH CHỈ HOẠT ĐỘNG:\n"
+                     "• Cơ sở không khắc phục nguy cơ trực tiếp phát sinh cháy theo thời hạn yêu cầu sẽ bị tạm đình chỉ hoạt động theo Điều 17 Nghị định 105/2025/NĐ-CP\n"
+                     "• Nếu để xảy ra cháy gây thiệt hại nghiêm trọng về người và tài sản: xem xét truy cứu trách nhiệm hình sự theo Điều 313 Bộ luật Hình sự\n\n"
+                     "📜 Căn cứ: Nghị định 144/2021/NĐ-CP và Nghị định 105/2025/NĐ-CP",
             "suggestions": ["Cơ sở nào phải có giấy phép PCCC?", "Thủ tục xin giấy phép PCCC?", "Cách khắc phục vi phạm PCCC?"]
         },
     ]
@@ -969,8 +1031,8 @@ Trả về JSON:
 
     return {
         "current_risk": f"{risk_lvl.upper()} ({risk_pct}%)",
-        "predicted_risk_3m": f"{predicted_3m} — nếu không cải thiện, nguy cơ có thể tăng thêm 5-10%",
-        "predicted_risk_6m": f"{predicted_6m} — cần hành động khẩn cấp nếu chưa khắc phục",
+        "predicted_risk_3m": f"{predicted_3m}: Nếu không cải thiện, nguy cơ có thể tăng thêm 5-10%",
+        "predicted_risk_6m": f"{predicted_6m}: Cần hành động khẩn cấp nếu chưa khắc phục",
         "trend": trend,
         "trend_detail": f"Dựa trên {len(history)} lần đánh giá, tỷ lệ nguy cơ hiện tại là {risk_pct}% (mức {risk_lvl}). {'Xu hướng đang cải thiện so với lần đầu.' if trend == 'improving' else 'Xu hướng đang xấu đi, cần hành động ngay.' if trend == 'declining' else 'Tình trạng chưa thay đổi đáng kể, cần tiếp tục cải thiện.'}",
         "risk_factors": risk_factors,

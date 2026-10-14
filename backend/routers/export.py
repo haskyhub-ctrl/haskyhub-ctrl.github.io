@@ -9,7 +9,8 @@ from models import (
     User, Assessment, AssessmentAnswer, CategoryScore,
     Question, QuestionOption, QuestionCategory
 )
-from middleware.auth_middleware import get_current_user
+from typing import Optional
+from middleware.auth_middleware import get_current_user, get_optional_user
 from utils.scoring import get_risk_label_vi
 
 router = APIRouter(prefix="/api/export", tags=["Export"])
@@ -129,15 +130,19 @@ def export_excel(
 @router.get("/data/{assessment_id}")
 def export_data(
     assessment_id: str,
-    current_user: User = Depends(get_current_user),
+    current_user: Optional[User] = Depends(get_optional_user),
     db: Session = Depends(get_db)
 ):
     """Export assessment data as JSON for client-side PDF generation."""
-    assessment = db.query(Assessment).filter(
-        Assessment.id == assessment_id,
-        Assessment.user_id == current_user.id,
-        Assessment.status == "completed"
-    ).first()
+    if current_user and current_user.role in ("admin", "superadmin"):
+        assessment = db.query(Assessment).filter(Assessment.id == assessment_id).first()
+    elif current_user:
+        assessment = db.query(Assessment).filter(Assessment.id == assessment_id, Assessment.user_id == current_user.id).first()
+        if not assessment:
+            assessment = db.query(Assessment).filter(Assessment.id == assessment_id).first()
+    else:
+        assessment = db.query(Assessment).filter(Assessment.id == assessment_id).first()
+
     if not assessment:
         raise HTTPException(status_code=404, detail="Không tìm thấy đánh giá")
     
@@ -203,15 +208,11 @@ def export_data(
 def generate_qrcode(
     assessment_id: str,
     request: Request,
-    current_user: User = Depends(get_current_user),
+    current_user: Optional[User] = Depends(get_optional_user),
     db: Session = Depends(get_db),
 ):
     """Generate a QR code for an assessment result."""
-    assessment = db.query(Assessment).filter(
-        Assessment.id == assessment_id,
-        Assessment.user_id == current_user.id,
-        Assessment.status == "completed",
-    ).first()
+    assessment = db.query(Assessment).filter(Assessment.id == assessment_id).first()
     if not assessment:
         raise HTTPException(status_code=404, detail="Không tìm thấy đánh giá")
 

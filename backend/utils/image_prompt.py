@@ -1,5 +1,5 @@
 """
-Prompt builder for Gemini Vision API — Fire Risk Image Analysis.
+Prompt builder for Gemini Vision API: Fire Risk Image Analysis.
 
 IMPORTANT PRINCIPLE: Only identify hazards that are VISIBLE in the image.
 Do NOT infer or assume missing safety features that cannot be seen.

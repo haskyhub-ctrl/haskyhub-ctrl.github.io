@@ -45,7 +45,9 @@ class FrasAPI {
             headers['Authorization'] = `Bearer ${this.token}`;
         }
 
-        const timeoutMs = options.timeoutMs || 30000;
+        const isAiEndpoint = (typeof endpoint === 'string' && endpoint.includes('/ai/')) || (typeof url === 'string' && url.includes('/ai/'));
+        const defaultTimeout = isAiEndpoint ? 120000 : 30000;
+        const timeoutMs = options.timeoutMs || defaultTimeout;
         const controller = new AbortController();
         const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
 
@@ -120,26 +122,36 @@ class FrasAPI {
         }
     }
 
-    async get(endpoint) {
-        return this.fetch(endpoint, { method: 'GET' });
+    async get(endpoint, options = {}) {
+        return this.fetch(endpoint, { ...options, method: 'GET' });
     }
 
-    async post(endpoint, body) {
+    async post(endpoint, body = {}, options = {}) {
         return this.fetch(endpoint, {
+            ...options,
             method: 'POST',
             body: JSON.stringify(body),
         });
     }
 
-    async put(endpoint, body) {
+    async put(endpoint, body = {}, options = {}) {
         return this.fetch(endpoint, {
+            ...options,
             method: 'PUT',
             body: JSON.stringify(body),
         });
     }
 
-    async delete(endpoint, body = null) {
-        const opts = { method: 'DELETE' };
+    async patch(endpoint, body = {}, options = {}) {
+        return this.fetch(endpoint, {
+            ...options,
+            method: 'PATCH',
+            body: JSON.stringify(body),
+        });
+    }
+
+    async delete(endpoint, body = null, options = {}) {
+        const opts = { ...options, method: 'DELETE' };
         if (body) opts.body = JSON.stringify(body);
         return this.fetch(endpoint, opts);
     }

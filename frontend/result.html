@@ -501,7 +501,7 @@
         </div>
     </nav>
 
-    <div class="page-content" style="padding-top: 24px;">
+    <div class="page-content" style="padding-top: 85px;">
         <div class="container" id="result-container" style="max-width: 1180px;">
             <div style="text-align:center; padding:80px 20px; background:#ffffff; color:#0f172a; border:2px solid #0f172a;">
                 <div class="loading-spinner"></div>
@@ -541,6 +541,22 @@
                 `;
             }
         });
+
+        function formatFacilityType(type) {
+            if (!type) return 'Chưa phân loại';
+            const dict = {
+                'hospitality': 'Nhà hàng, khách sạn, dịch vụ lưu trú, ăn uống',
+                'commercial': 'Trung tâm thương mại, siêu thị, chợ, cửa hàng',
+                'industrial': 'Cơ sở sản xuất công nghiệp, nhà xưởng, kho hàng',
+                'residential': 'Nhà ở kết hợp sản xuất kinh doanh, nhà ở nhiều hộ',
+                'gas_station': 'Cửa hàng kinh doanh xăng dầu, khí đốt hóa lỏng (LPG)',
+                'karaoke': 'Cơ sở kinh doanh dịch vụ karaoke, vũ trường, quán bar',
+                'educational': 'Cơ sở giáo dục, trường học, nhà trẻ, mầm non',
+                'medical': 'Cơ sở khám chữa bệnh, bệnh viện, phòng khám',
+                'office': 'Tòa nhà văn phòng làm việc'
+            };
+            return dict[type.toLowerCase()] || type;
+        }
 
         function renderResult(data) {
             const c = document.getElementById('result-container');
@@ -588,14 +604,14 @@
                     </div>
                     <div>
                         <div class="meta-field-label">Loại hình cơ sở</div>
-                        <div class="meta-field-value">${data.facility_type || 'Đa loại hình'}</div>
+                        <div class="meta-field-value">${formatFacilityType(data.facility_type)}</div>
                     </div>
                     <div>
-                        <div class="meta-field-label">Địa bàn quản lý</div>
+                        <div class="meta-field-label">Địa chỉ</div>
                         <div class="meta-field-value">${data.facility_address || 'TP Bắc Ninh'}</div>
                     </div>
                     <div>
-                        <div class="meta-field-label">Thời gian thẩm định</div>
+                        <div class="meta-field-label">Thời gian khảo sát</div>
                         <div class="meta-field-value">${formatDate(data.completed_at || data.created_at)}</div>
                     </div>
                     <div id="qr-code-box" style="text-align:right;">
@@ -611,17 +627,22 @@
                             <span style="font-size:0.82rem; color:#64748b;">(Căn cứ ma trận đánh giá 8 nhóm nguyên nhân cháy nổ)</span>
                         </div>
                         <div style="display:flex; gap:8px; flex-wrap:wrap;">
-                            <button type="button" class="btn-gov btn-gov-outline" onclick="window.print()">🖨️ In Biên bản</button>
-                            <button type="button" class="btn-gov btn-gov-outline" onclick="exportPDF('${data.id}')">📄 Xuất File PDF</button>
-                            <button type="button" class="btn-gov" onclick="triggerForceAiAnalyze('${data.id}')" id="btn-force-ai">🤖 Phân tích lại bằng AI</button>
-                            <a href="/survey.html" class="btn-gov btn-gov-danger">🔥 Khảo sát mới</a>
+                            <button type="button" class="btn-gov btn-gov-outline" onclick="window.print()">In Biên bản</button>
+                            <button type="button" class="btn-gov btn-gov-outline" onclick="exportPDF('${data.id}')">Xuất File PDF</button>
+                            <button type="button" class="btn-gov" onclick="triggerForceAiAnalyze('${data.id}')" id="btn-force-ai">Phân tích lại bằng AI</button>
+                            <a href="/survey.html" class="btn-gov btn-gov-danger">Khảo sát mới</a>
                         </div>
+                    </div>
+
+                    <!-- LƯU Ý KHẢO SÁT TRUNG THỰC -->
+                    <div style="background:#fffbeb; border:1px solid #fef3c7; border-left:4px solid #d97706; padding:12px 16px; margin-bottom:20px; font-size:0.92rem; color:#92400e; line-height:1.5;">
+                        ℹ️ <strong>Lưu ý quan trọng:</strong> Kết quả đánh giá dựa trên câu trả lời khảo sát của bạn, hãy khảo sát trung thực để đánh giá thực tế nhất nguy cơ cháy nổ của cơ sở.
                     </div>
 
                     <!-- 1. KEY METRICS CARDS -->
                     <div class="metrics-grid-sharp">
                         <div class="metric-card-sharp ${cardClass}">
-                            <div class="metric-title-sharp">Tỷ lệ Nguy cơ Tổng hợp (Risk Index)</div>
+                            <div class="metric-title-sharp">Tỷ lệ Nguy cơ Tổng hợp</div>
                             <div class="metric-value-sharp" style="color:${riskColor};">${data.risk_percentage}%</div>
                             <div class="metric-desc-sharp">
                                 Mức độ: <strong style="color:${riskColor};">${riskText}</strong>.<br>
@@ -630,21 +651,21 @@
                         </div>
 
                         <div class="metric-card-sharp">
-                            <div class="metric-title-sharp">Điểm Vi phạm / Điểm Tối đa</div>
+                            <div class="metric-title-sharp">Điểm Nguy cơ / Điểm Tối đa</div>
                             <div class="metric-value-sharp" style="color:#0f172a;">${data.total_score} <span style="font-size:1.2rem; font-weight:500; color:#64748b;">/ ${data.max_possible_score || 100}</span></div>
                             <div class="metric-desc-sharp">
                                 Tổng số điểm nguy cơ ghi nhận từ các câu trả lời.<br>
-                                <em>(Càng ít điểm vi phạm, cơ sở càng an toàn).</em>
+                                <em>(Điểm nguy cơ càng thấp, cơ sở càng an toàn).</em>
                             </div>
                         </div>
 
                         <div class="metric-card-sharp">
                             <div class="metric-title-sharp">Thời hạn Khắc phục Đề xuất</div>
                             <div class="metric-value-sharp" style="color:#b91c1c;">
-                                ${data.risk_level === 'critical' ? 'Khẩn cấp' : data.risk_level === 'high' ? '30 ngày' : data.risk_level === 'medium' ? '60 ngày' : 'Định kỳ'}
+                                ${data.risk_level === 'critical' || data.risk_level === 'high' ? 'Khắc phục ngay' : data.risk_level === 'medium' ? '30 - 60 ngày' : 'Định kỳ'}
                             </div>
                             <div class="metric-desc-sharp">
-                                Lộ trình hoàn thiện theo quy định của Luật PCCC và các Nghị định hướng dẫn thi hành.
+                                ${data.risk_level === 'critical' || data.risk_level === 'high' ? 'Khắc phục ngay (trong 24h - 48h) đối với các nguy cơ chập cháy điện và nguồn nhiệt.' : 'Thực hiện tự kiểm tra định kỳ và duy trì các điều kiện an toàn PCCC.'}
                             </div>
                         </div>
                     </div>
@@ -652,78 +673,54 @@
                     <!-- 2. EXPLANATION BOX: % NGUY CƠ NÀY LÀ THẾ NÀO? NÓI LÊN ĐIỀU GÌ? -->
                     <div class="risk-explainer-box">
                         <div class="risk-explainer-title">
-                            <span>📖</span> HƯỚNG DẪN ĐỌC HIỂU: TỶ LỆ % NGUY CƠ NÀY LÀ GÌ VÀ THỂ HIỆN ĐIỀU GÌ?
+                            HƯỚNG DẪN ĐỌC HIỂU: TỶ LỆ % NGUY CƠ NÀY LÀ GÌ VÀ THỂ HIỆN ĐIỀU GÌ?
                         </div>
                         <div class="risk-explainer-content">
                             <p style="margin:0 0 8px;">
-                                <strong>Bản chất của chỉ số:</strong> Tỷ lệ <strong>${data.risk_percentage}% nguy cơ</strong> không phải là điểm số thi cử đạt/trượt, mà là <strong>thước đo mức độ tích tụ hiểm họa cháy nổ</strong> của công trình dựa trên ma trận xác suất thống kê thực tế tại Việt Nam (trong đó: sự cố hệ thống điện chiếm <strong>50%</strong> trọng số nguyên nhân cháy; bất cẩn nguồn lửa/nhiệt chiếm <strong>15%</strong>; lối thoát nạn & trang bị PCCC chiếm <strong>12%</strong> quyết định khả năng sống còn).
+                                <strong>Bản chất của chỉ số:</strong> Tỷ lệ <strong>${data.risk_percentage}% nguy cơ</strong> không phải là điểm số thi cử đạt/trượt, mà là <strong>thước đo mức độ tích tụ hiểm họa cháy nổ</strong> của công trình dựa trên ma trận xác suất thống kê thực tế tại Việt Nam (trong đó: <strong>sự cố hệ thống thiết bị điện chiếm hơn 50%</strong> trọng số các nguyên nhân gây ra cháy; <strong>bất cẩn nguồn lửa/nhiệt chiếm 15%</strong>... Tồn tại về lối thoát nạn và trang bị phương tiện PCCC là các điều kiện quyết định khả năng thoát nạn sống còn và hạn chế thiệt hại khi xảy ra hỏa hoạn, không phải nguyên nhân phát sinh cháy).
                             </p>
                             <p style="margin:0 0 10px;">
-                                <strong>Quy tắc bảo vệ tính mạng (Max-Domination):</strong> Dù tổng điểm của cơ sở có thể thấp, nhưng nếu xuất hiện bất kỳ vi phạm nghiêm trọng nào tại các nhóm "tử huyệt" (như dây dẫn điện hở, quá tải nhiệt, hoặc lối thoát nạn duy nhất bị bịt kín), hệ thống sẽ lập tức kích hoạt mức cảnh báo nguy cơ cao để cơ sở không được chủ quan.
+                                <strong>Quy tắc an toàn tính mạng:</strong> Dù tổng điểm nguy cơ của cơ sở có thể thấp, nhưng nếu xuất hiện bất kỳ nguy cơ nghiêm trọng nào tại các nhóm có tỷ lệ xảy ra cao (như sự cố chập cháy hệ thống điện, thiết bị phát nhiệt quá mức, rò rỉ khí gas, hoặc lối thoát nạn duy nhất bị bịt kín), hệ thống sẽ lập tức kích hoạt mức cảnh báo nguy cơ cao để chủ cơ sở không được chủ quan.
                             </p>
 
                             <!-- 4-step scale -->
                             <div class="risk-scale-row">
                                 <div class="risk-scale-step ${data.risk_percentage <= 20 ? 'active' : ''}" style="border-top: 4px solid #16a34a;">
-                                    <span class="step-tag" style="color:#16a34a;">🟢 0% - 20%: AN TOÀN</span>
+                                    <span class="step-tag" style="color:#16a34a;">MỨC 1: 0% - 20% (AN TOÀN)</span>
                                     Tuân thủ tốt quy chuẩn PCCC, nguy cơ phát sinh cháy nổ ở mức tối thiểu.
                                 </div>
                                 <div class="risk-scale-step ${data.risk_percentage > 20 && data.risk_percentage <= 45 ? 'active' : ''}" style="border-top: 4px solid #d97706;">
-                                    <span class="step-tag" style="color:#d97706;">🟡 21% - 45%: CẦN CẢI THIỆN</span>
-                                    Đã xuất hiện mầm mống rủi ro (quá tải điện nhẹ, thiếu bảo dưỡng), cần tự chấn chỉnh sớm.
+                                    <span class="step-tag" style="color:#d97706;">MỨC 2: 21% - 45% (CẦN CẢI THIỆN)</span>
+                                    Đã xuất hiện mầm mống rủi ro (quá tải điện nhẹ, thiếu bảo dưỡng thiết bị), cần tự chấn chỉnh sớm.
                                 </div>
                                 <div class="risk-scale-step ${data.risk_percentage > 45 && data.risk_percentage <= 70 ? 'active' : ''}" style="border-top: 4px solid #ea580c;">
-                                    <span class="step-tag" style="color:#ea580c;">🟠 46% - 70%: NGUY CƠ CAO</span>
-                                    Tồn tại vi phạm nghiêm trọng có thể trực tiếp phát sinh hỏa hoạn. Phải khắc phục ngay trong 30 ngày.
+                                    <span class="step-tag" style="color:#ea580c;">MỨC 3: 46% - 70% (NGUY CƠ CAO)</span>
+                                    Tồn tại vi phạm nghiêm trọng có thể trực tiếp phát sinh hỏa hoạn. Phải khắc phục ngay các nguy cơ điện/nhiệt trong 24h - 48h.
                                 </div>
                                 <div class="risk-scale-step ${data.risk_percentage > 70 ? 'active' : ''}" style="border-top: 4px solid #dc2626;">
-                                    <span class="step-tag" style="color:#dc2626;">🔴 71% - 100%: CẤP BÁO</span>
-                                    Điều kiện an toàn cực kỳ nguy hiểm, đe dọa trực tiếp tính mạng con người!
+                                    <span class="step-tag" style="color:#dc2626;">MỨC 4: 71% - 100% (CẤP BÁO)</span>
+                                    Điều kiện an toàn cực kỳ nguy hiểm, nguy cơ cháy nổ tức thời đe dọa trực tiếp tính mạng con người!
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- 3. AI ANALYSIS & RECOMMENDATIONS SECTION (PROMINENT TOP POSITION) -->
-                    <div id="ai-main-container">
-                        ${aiObj ? renderAiSectionHtml(aiObj) : renderAiLoadingHtml(data.id)}
-                    </div>
-
-                    <!-- 4. RADAR & GAUGE CHARTS ROW -->
-                    <div class="charts-row-sharp">
-                        <div class="chart-panel-sharp">
-                            <h4>📈 Biểu đồ Radar Phân bổ Nguy cơ theo Các Trục</h4>
-                            <div style="height: 320px; position:relative;">
-                                <canvas id="radar-chart"></canvas>
-                            </div>
-                        </div>
-                        <div class="chart-panel-sharp">
-                            <h4>🎯 Thước đo Cấp độ Nguy cơ Cháy nổ</h4>
-                            <div style="height: 250px; position:relative;">
-                                <canvas id="gauge-chart"></canvas>
-                            </div>
-                            <div style="text-align:center; margin-top:10px; font-size:0.85rem; color:#64748b;">
-                                Chỉ số thực tế: <strong style="color:${riskColor}; font-size:1.1rem;">${data.risk_percentage}%</strong> (${riskText})
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 5. DETAILED CATEGORY SCORES TABLE & BAR CHART -->
+                    <!-- 3. DETAILED CATEGORY SCORES TABLE & BAR CHART (MOVED UP PER USER REQUEST) -->
                     ${data.category_scores && data.category_scores.length ? `
                     <div class="chart-panel-sharp" style="margin-bottom: 24px;">
-                        <h4>📊 Phân tích Tỷ lệ Nguy cơ theo Từng Nhóm Câu hỏi</h4>
+                        <h4>Phân tích Tỷ lệ Nguy cơ theo Từng Nhóm Câu hỏi</h4>
                         <div style="height:${Math.max(260, data.category_scores.length * 36)}px; position:relative; margin-bottom: 20px;">
                             <canvas id="bar-chart"></canvas>
                         </div>
 
-                        <h4>📋 Bảng Thống kê Chi tiết các Nhóm Rà soát</h4>
+                        <h4>Bảng Thống kê Chi tiết các Nhóm Rà soát</h4>
                         <table class="category-table-sharp">
                             <thead>
                                 <tr>
-                                    <th style="width: 40px;">STT</th>
-                                    <th>Nhóm Nguy cơ / Hạng mục kiểm tra</th>
+                                    <th style="width: 40px; text-align:center;">STT</th>
+                                    <th>Nhóm Nguy cơ / Hạng mục rà soát</th>
                                     <th style="width: 140px; text-align:center;">Điểm ghi nhận</th>
-                                    <th style="width: 120px; text-align:center;">Tỷ lệ %</th>
+                                    <th style="width: 120px; text-align:center;">Tỷ lệ nguy cơ</th>
                                     <th style="width: 150px; text-align:center;">Đánh giá</th>
                                 </tr>
                             </thead>
@@ -732,7 +729,7 @@
                                 <tr>
                                     <td style="text-align:center; font-weight:700;">${idx + 1}</td>
                                     <td>
-                                        <div style="font-weight:700; color:#0f172a;">${cs.category_icon || '📋'} ${cs.category_name}</div>
+                                        <div style="font-weight:700; color:#0f172a;">${cs.category_name}</div>
                                     </td>
                                     <td style="text-align:center; font-weight:600;">
                                         ${cs.score_obtained} / ${cs.max_score} điểm
@@ -742,7 +739,7 @@
                                     </td>
                                     <td style="text-align:center;">
                                         <span class="badge-sharp ${cs.risk_level === 'critical' || cs.risk_level === 'high' ? 'danger' : cs.risk_level === 'medium' ? 'warning' : 'success'}">
-                                            ${cs.risk_level === 'low' ? 'ĐẠT CHUẨN' : cs.risk_level === 'medium' ? 'CẦN LƯU Ý' : 'NGUY HIỂM'}
+                                            ${cs.risk_level === 'low' ? 'NGUY CƠ THẤP' : cs.risk_level === 'medium' ? 'CẦN LƯU Ý' : 'NGUY HIỂM'}
                                         </span>
                                     </td>
                                 </tr>
@@ -752,11 +749,38 @@
                     </div>
                     ` : ''}
 
+                    <!-- 4. RADAR & GAUGE CHARTS ROW -->
+                    <div class="charts-row-sharp">
+                        <div class="chart-panel-sharp">
+                            <h4>Biểu đồ Radar Phân bổ Nguy cơ theo Các Trục</h4>
+                            <div style="height: 320px; position:relative;">
+                                <canvas id="radar-chart"></canvas>
+                            </div>
+                        </div>
+                        <div class="chart-panel-sharp">
+                            <h4>Thước đo Cấp độ Nguy cơ Cháy nổ</h4>
+                            <div style="height: 250px; position:relative;">
+                                <canvas id="gauge-chart"></canvas>
+                            </div>
+                            <div style="text-align:center; margin-top:10px; font-size:0.85rem; color:#64748b;">
+                                Chỉ số thực tế: <strong style="color:${riskColor}; font-size:1.1rem;">${data.risk_percentage}%</strong> (${riskText})
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. REALTIME DEFICIENCY MITIGATION & REASSESSMENT CHECKLIST -->
+                    <div id="mitigation-main-container" style="margin-bottom: 28px;"></div>
+
+                    <!-- 6. AI ANALYSIS & RECOMMENDATIONS SECTION -->
+                    <div id="ai-main-container">
+                        ${aiObj ? renderAiSectionHtml(aiObj) : renderAiLoadingHtml(data.id)}
+                    </div>
+
                     <!-- FOOTER ACTIONS -->
                     <div style="display:flex; justify-content:center; gap:12px; margin-top:32px; padding-top:20px; border-top:1px solid #e2e8f0; flex-wrap:wrap;">
-                        <a href="/history.html" class="btn-gov btn-gov-outline">📋 Xem Lịch sử các bài đánh giá</a>
-                        <a href="/survey.html" class="btn-gov btn-gov-danger">🔥 Thực hiện bài Khảo sát mới</a>
-                        <button type="button" class="btn-gov" onclick="window.scrollTo({top:0, behavior:'smooth'})">⬆️ Lên đầu trang</button>
+                        <a href="/history.html" class="btn-gov btn-gov-outline">Xem Lịch sử các bài đánh giá</a>
+                        <a href="/survey.html" class="btn-gov btn-gov-danger">Thực hiện bài Khảo sát mới</a>
+                        <button type="button" class="btn-gov" onclick="window.scrollTo({top:0, behavior:'smooth'})">Lên đầu trang</button>
                     </div>
                 </div>
             </div>
@@ -773,6 +797,9 @@
 
             // Load QR code
             loadDocketQRCode(data.id);
+
+            // Load Realtime Mitigation Checklist
+            loadMitigationChecklist(data.id);
 
             // AUTO-TRIGGER AI IF NOT YET ANALYZED
             if (!aiObj && !isAiAnalyzing) {
@@ -818,7 +845,7 @@
 
             try {
                 const url = force ? `/ai/analyze/${id}?force=true` : `/ai/analyze/${id}`;
-                const result = await api.post(url, {});
+                const result = await api.post(url, {}, { timeoutMs: 90000 });
                 const ai = result.analysis || result;
 
                 // Update current assessment data
@@ -831,6 +858,9 @@
                 if (container) {
                     container.innerHTML = renderAiSectionHtml(ai);
                 }
+
+                // Reload mitigation checklist with newly generated recommendations
+                loadMitigationChecklist(id);
 
                 if (btnForce) {
                     btnForce.disabled = false;
@@ -892,15 +922,15 @@
             if (ai.overall_assessment) {
                 h += `
                 <div style="background:#f0f9ff; border:1px solid #bae6fd; border-left:6px solid #0284c7; padding:16px; margin-bottom:20px; font-size:0.92rem; color:#0369a1; line-height:1.6;">
-                    <strong style="display:block; margin-bottom:4px; font-size:0.95rem; text-transform:uppercase;">📌 KẾT LUẬN THẨM ĐỊNH TỔNG QUAN:</strong>
+                    <strong style="display:block; margin-bottom:4px; font-size:0.95rem; text-transform:uppercase;">KẾT LUẬN THẨM ĐỊNH TỔNG QUAN:</strong>
                     ${ai.overall_assessment}
                 </div>`;
             }
 
-            // Strengths
+            // Strengths -> Ưu điểm (Point 9)
             if (ai.strengths?.length) {
                 h += `
-                <div class="ai-h-tag success"><span>✅</span> ĐIỂM MẠNH & CÁC ĐIỀU KIỆN ĐẠT CHUẨN (${ai.strengths.length})</div>
+                <div class="ai-h-tag success">ƯU ĐIỂM (${ai.strengths.length})</div>
                 <ul style="padding-left:22px; margin:0 0 18px; color:#1e293b; font-size:0.88rem; line-height:1.6;">
                     ${ai.strengths.map(s => `<li style="margin-bottom:6px;">${s}</li>`).join('')}
                 </ul>`;
@@ -909,7 +939,7 @@
             // Critical Weaknesses / Hazards
             if (ai.critical_weaknesses?.length) {
                 h += `
-                <div class="ai-h-tag danger"><span>⚠️</span> TỒN TẠI, VI PHẠM & NGUY CƠ CHÁY NỔ TIỀM ẨN (${ai.critical_weaknesses.length})</div>
+                <div class="ai-h-tag danger">TỒN TẠI, VI PHẠM & NGUY CƠ CHÁY NỔ TIỀM ẨN (${ai.critical_weaknesses.length})</div>
                 <ul style="padding-left:22px; margin:0 0 20px; color:#991b1b; font-size:0.88rem; line-height:1.6;">
                     ${ai.critical_weaknesses.map(w => `<li style="margin-bottom:6px; font-weight:600;">${w}</li>`).join('')}
                 </ul>`;
@@ -917,49 +947,56 @@
 
             // Detailed Recommendations
             if (ai.detailed_recommendations?.length) {
-                h += `<div class="ai-h-tag warning"><span>🔧</span> KHUYẾN CÁO & GIẢI PHÁP KỸ THUẬT KHẮC PHỤC (${ai.detailed_recommendations.length} HẠNG MỤC)</div>`;
+                h += `<div class="ai-h-tag warning">KHUYẾN CÁO & GIẢI PHÁP KỸ THUẬT KHẮC PHỤC (${ai.detailed_recommendations.length} HẠNG MỤC)</div>`;
+                const priorityLabels = {
+                    'urgent': 'KHẨN CẤP (TRONG 24H - 48H)',
+                    'high': 'ƯU TIÊN CAO',
+                    'medium': 'TRUNG BÌNH',
+                    'low': 'THẤP'
+                };
                 ai.detailed_recommendations.forEach((r, i) => {
                     const priorityClass = (r.priority || '').toLowerCase();
+                    const priorityText = priorityLabels[priorityClass] || (r.priority || 'ƯU TIÊN').toUpperCase();
                     h += `
                     <div class="ai-recommendation-card ${priorityClass}">
                         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px; flex-wrap:wrap; gap:8px;">
                             <strong style="color:#0f172a; font-size:0.95rem;">${i + 1}. ${r.title || ''}</strong>
                             <span class="badge-sharp ${priorityClass === 'urgent' ? 'danger' : priorityClass === 'high' ? 'warning' : 'info'}">
-                                ${(r.priority || 'ƯU TIÊN').toUpperCase()}
+                                ${priorityText}
                             </span>
                         </div>
                         <p style="color:#334155; font-size:0.88rem; margin:0 0 8px; line-height:1.5;">${r.description || ''}</p>
                         <div style="display:flex; flex-wrap:wrap; gap:12px; font-size:0.8rem; color:#64748b; font-weight:600;">
-                            <span>⏰ Hạn hoàn thành: <strong style="color:#0f172a;">${r.deadline || '30 ngày'}</strong></span>
-                            ${r.estimated_cost ? `<span>💰 Chi phí dự kiến: <strong style="color:#0f172a;">${r.estimated_cost}</strong></span>` : ''}
-                            ${r.responsible_party ? `<span>👤 Phụ trách: <strong>${r.responsible_party}</strong></span>` : ''}
+                            <span>Hạn hoàn thành: <strong style="color:#0f172a;">${r.deadline || (priorityClass === 'urgent' ? 'Khắc phục ngay trong 24h - 48h' : '30 ngày')}</strong></span>
+                            ${r.estimated_cost ? `<span>Chi phí dự kiến: <strong style="color:#0f172a;">${r.estimated_cost}</strong></span>` : ''}
+                            ${r.responsible_party ? `<span>Phụ trách: <strong>${r.responsible_party}</strong></span>` : ''}
                         </div>
-                        ${r.legal_basis ? `<div style="color:#7c3aed; font-size:0.78rem; font-weight:600; margin-top:6px;">📜 Căn cứ: ${r.legal_basis}</div>` : ''}
+                        ${r.legal_basis ? `<div style="color:#7c3aed; font-size:0.78rem; font-weight:600; margin-top:6px;">Căn cứ pháp lý: ${r.legal_basis}</div>` : ''}
                     </div>`;
                 });
             }
 
-            // Daily Checklist
+            // Daily Checklist (Point 6)
             if (ai.daily_checklist?.length) {
                 h += `
-                <div class="ai-h-tag primary"><span>📋</span> DANH MỤC TỰ KIỂM TRA AN TOÀN HÀNG NGÀY (DAILY CHECKLIST)</div>
+                <div class="ai-h-tag primary">DANH MỤC TỰ KIỂM TRA AN TOÀN HÀNG NGÀY</div>
                 <div style="background:#f8fafc; border:1px solid #cbd5e1; padding:16px; margin-bottom:20px;">
                     <ul style="padding-left:20px; margin:0; font-size:0.88rem; color:#1e293b; line-height:1.6;">
-                        ${ai.daily_checklist.map(item => `<li style="margin-bottom:6px;">☑️ <strong>${item}</strong></li>`).join('')}
+                        ${ai.daily_checklist.map(item => `<li style="margin-bottom:6px;"><strong>${item}</strong></li>`).join('')}
                     </ul>
                 </div>`;
             }
 
-            // 90-Day Improvement Plan
+            // 90-Day Improvement Plan (Point 8)
             if (ai.improvement_plan) {
                 const p = ai.improvement_plan;
                 const phases = [
-                    { key: '30_days', label: '🔴 GIAI ĐOẠN 1: 30 NGÀY ĐẦU (XỬ LÝ KHẨN CẤP)', color: '#dc2626', desc: 'Triệt tiêu ngay các nguy cơ phát sinh cháy nổ nguy hiểm nhất, thông thoáng lối thoát nạn' },
-                    { key: '60_days', label: '🟠 GIAI ĐOẠN 2: 30 - 60 NGÀY (NÂNG CẤP HẠ TẦNG & TRANG THIẾT BỊ)', color: '#ea580c', desc: 'Kiểm định hệ thống điện, bảo dưỡng bình chữa cháy, huấn luyện kỹ năng PCCC cho nhân sự' },
-                    { key: '90_days', label: '🟢 GIAI ĐOẠN 3: 60 - 90 NGÀY (HOÀN THIỆN & DUY TRÌ BỀN VỮNG)', color: '#16a34a', desc: 'Rà soát hồ sơ quản lý PCCC, diễn tập phương án chữa cháy nội bộ, đánh giá lại định kỳ' },
+                    { key: '30_days', label: 'GIAI ĐOẠN 1: KHẮC PHỤC NGAY (24H - 48H) VÀ 30 NGÀY ĐẦU (XỬ LÝ NGUY CƠ TRỰC TIẾP)', color: '#dc2626', desc: 'Triệt tiêu ngay các nguy cơ phát sinh cháy nổ nguy hiểm nhất (điện, thiết bị sinh nhiệt, rò rỉ gas), thông thoáng lối thoát nạn' },
+                    { key: '60_days', label: 'GIAI ĐOẠN 2: 30 - 60 NGÀY (NÂNG CẤP HẠ TẦNG & TRANG THIẾT BỊ)', color: '#ea580c', desc: 'Kiểm định hệ thống điện, bảo dưỡng bình chữa cháy, huấn luyện kỹ năng PCCC cho nhân sự' },
+                    { key: '90_days', label: 'GIAI ĐOẠN 3: 60 - 90 NGÀY (HOÀN THIỆN & DUY TRÌ BỀN VỮNG)', color: '#16a34a', desc: 'Rà soát hồ sơ quản lý PCCC, diễn tập phương án chữa cháy nội bộ, đánh giá lại định kỳ' },
                 ];
 
-                h += `<div class="ai-h-tag primary"><span>📅</span> KẾ HOẠCH HÀNH ĐỘNG KHẮC PHỤC CHI TIẾT (LỘ TRÌNH 90 NGÀY)</div>`;
+                h += `<div class="ai-h-tag primary">KẾ HOẠCH HÀNH ĐỘNG KHẮC PHỤC CHI TIẾT (LỘ TRÌNH 90 NGÀY)</div>`;
                 phases.forEach(phase => {
                     const items = p[phase.key];
                     if (!items?.length) return;
@@ -985,9 +1022,9 @@
                                         </div>
                                         ${item.detail || item.description ? `<p style="color:#475569; font-size:0.82rem; margin:0 0 6px;">${item.detail || item.description}</p>` : ''}
                                         <div style="display:flex; flex-wrap:wrap; gap:10px; font-size:0.75rem; color:#64748b; font-weight:600;">
-                                            ${item.responsible ? `<span>👤 ${item.responsible}</span>` : ''}
-                                            ${item.cost || item.estimated_cost ? `<span>💰 ${item.cost || item.estimated_cost}</span>` : ''}
-                                            ${item.legal_basis ? `<span style="color:#7c3aed;">📜 ${item.legal_basis}</span>` : ''}
+                                            ${item.responsible ? `<span>Phụ trách: <strong>${item.responsible}</strong></span>` : ''}
+                                            ${item.cost || item.estimated_cost ? `<span>Chi phí: <strong>${item.cost || item.estimated_cost}</strong></span>` : ''}
+                                            ${item.legal_basis ? `<span style="color:#7c3aed;">Căn cứ: <strong>${item.legal_basis}</strong></span>` : ''}
                                         </div>
                                     </div>`;
                                 }
@@ -1000,7 +1037,7 @@
             // Legal References
             if (ai.legal_references?.length) {
                 h += `
-                <div class="ai-h-tag primary"><span>📜</span> CĂN CỨ VĂN BẢN QUY PHẠM PHÁP LUẬT & TIÊU CHUẨN KỸ THUẬT</div>
+                <div class="ai-h-tag primary">CĂN CỨ VĂN BẢN QUY PHẠM PHÁP LUẬT & TIÊU CHUẨN KỸ THUẬT HIỆN HÀNH</div>
                 <ul style="padding-left:22px; color:#475569; font-size:0.82rem; line-height:1.6; margin:0 0 10px;">
                     ${ai.legal_references.map(r => `<li style="margin-bottom:4px;">${r}</li>`).join('')}
                 </ul>`;
@@ -1016,21 +1053,21 @@
             return `
             <div class="ai-command-section">
                 <div class="ai-command-header">
-                    <h3><span>🤖</span> KẾT QUẢ ĐỐI SOÁT & KHUYẾN CÁO TỪ TRÍ TUỆ NHÂN TẠO (DUAL AI ADVISORY)</h3>
+                    <h3>KẾT QUẢ ĐỐI SOÁT & KHUYẾN CÁO TỪ TRÍ TUỆ NHÂN TẠO</h3>
                     <span style="font-size:0.78rem; background:rgba(255,255,255,0.15); padding:4px 10px; font-weight:700; text-transform:uppercase;">
-                        ⚡ Gemini 3.8 Flash vs 📚 RAG ChromaDB
+                        Gemini 3.8 Flash vs RAG ChromaDB
                     </span>
                 </div>
 
                 <div class="ai-tab-strip">
                     <button type="button" class="ai-tab-btn-sharp active" id="btn-ai-tab-gemini" onclick="switchAiTab('gemini')">
-                        ⚡ 1. Khuyến cáo Thực tế (Gemini 3.8 Flash - Ưu tiên)
+                        1. Khuyến cáo Thực tế (Gemini 3.8 Flash - Ưu tiên)
                     </button>
                     <button type="button" class="ai-tab-btn-sharp" id="btn-ai-tab-rag" onclick="switchAiTab('rag')">
-                        📚 2. Thẩm định Pháp lý & Chế tài (RAG ChromaDB)
+                        2. Thẩm định Pháp lý & Chế tài (RAG ChromaDB)
                     </button>
                     <button type="button" class="ai-tab-btn-sharp" id="btn-ai-tab-compare" onclick="switchAiTab('compare')">
-                        ⚖️ 3. So sánh Song song (2 Cột)
+                        3. So sánh Song song (2 Cột)
                     </button>
                 </div>
 
@@ -1051,38 +1088,46 @@
                             <!-- Column 1 -->
                             <div style="border:1px solid #cbd5e1; padding:18px; background:#f8fafc;">
                                 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; padding-bottom:8px; border-bottom:2px solid #2563eb;">
-                                    <strong style="color:#2563eb; font-size:1rem; text-transform:uppercase;">⚡ Gemini 3.8 Flash</strong>
+                                    <strong style="color:#2563eb; font-size:1rem; text-transform:uppercase;">Gemini 3.8 Flash</strong>
                                     <span class="badge-sharp info">Thực tiễn cơ sở</span>
                                 </div>
                                 <p style="font-size:0.86rem; color:#1e293b; line-height:1.5; margin-bottom:14px;">
                                     ${g?.overall_assessment || 'Đang cập nhật'}
                                 </p>
+                                <div style="font-weight:700; color:#16a34a; font-size:0.82rem; text-transform:uppercase; margin-bottom:6px;">Ưu điểm:</div>
+                                <ul style="padding-left:18px; font-size:0.82rem; color:#334155; margin-bottom:14px;">
+                                    ${(g?.strengths || []).map(s => `<li style="margin-bottom:4px;">${s}</li>`).join('')}
+                                </ul>
                                 <div style="font-weight:700; color:#dc2626; font-size:0.82rem; text-transform:uppercase; margin-bottom:6px;">Tồn tại & Nguy cơ:</div>
                                 <ul style="padding-left:18px; font-size:0.82rem; color:#334155; margin-bottom:14px;">
                                     ${(g?.critical_weaknesses || []).map(w => `<li style="margin-bottom:4px;">${w}</li>`).join('')}
                                 </ul>
                                 <div style="font-weight:700; color:#d97706; font-size:0.82rem; text-transform:uppercase; margin-bottom:6px;">Giải pháp trọng tâm:</div>
                                 <ul style="padding-left:18px; font-size:0.82rem; color:#334155;">
-                                    ${(g?.detailed_recommendations || []).slice(0, 4).map(r => `<li style="margin-bottom:4px;"><strong>${r.title}</strong>: ${r.description}</li>`).join('')}
+                                    ${(g?.detailed_recommendations || []).slice(0, 5).map(r => `<li style="margin-bottom:4px;"><strong>${r.title}</strong>: ${r.description} <em>(Hạn: ${r.deadline || '30 ngày'})</em></li>`).join('')}
                                 </ul>
                             </div>
 
                             <!-- Column 2 -->
                             <div style="border:1px solid #cbd5e1; padding:18px; background:#f8fafc;">
                                 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; padding-bottom:8px; border-bottom:2px solid #7c3aed;">
-                                    <strong style="color:#7c3aed; font-size:1rem; text-transform:uppercase;">📚 RAG ChromaDB</strong>
+                                    <strong style="color:#7c3aed; font-size:1rem; text-transform:uppercase;">RAG ChromaDB</strong>
                                     <span class="badge-sharp" style="color:#7c3aed; border-color:#7c3aed;">Quy chuẩn & Pháp lý</span>
                                 </div>
                                 <p style="font-size:0.86rem; color:#1e293b; line-height:1.5; margin-bottom:14px;">
                                     ${r?.overall_assessment || 'Đang cập nhật'}
                                 </p>
-                                <div style="font-weight:700; color:#dc2626; font-size:0.82rem; text-transform:uppercase; margin-bottom:6px;">Điều khoản vi phạm:</div>
+                                <div style="font-weight:700; color:#16a34a; font-size:0.82rem; text-transform:uppercase; margin-bottom:6px;">Ưu điểm tuân thủ:</div>
+                                <ul style="padding-left:18px; font-size:0.82rem; color:#334155; margin-bottom:14px;">
+                                    ${(r?.strengths || []).map(s => `<li style="margin-bottom:4px;">${s}</li>`).join('')}
+                                </ul>
+                                <div style="font-weight:700; color:#dc2626; font-size:0.82rem; text-transform:uppercase; margin-bottom:6px;">Điều khoản vi phạm & Chế tài:</div>
                                 <ul style="padding-left:18px; font-size:0.82rem; color:#334155; margin-bottom:14px;">
                                     ${(r?.critical_weaknesses || []).map(w => `<li style="margin-bottom:4px;">${w}</li>`).join('')}
                                 </ul>
                                 <div style="font-weight:700; color:#7c3aed; font-size:0.82rem; text-transform:uppercase; margin-bottom:6px;">Viện dẫn căn cứ:</div>
                                 <ul style="padding-left:18px; font-size:0.82rem; color:#334155;">
-                                    ${(r?.legal_references || []).slice(0, 4).map(ref => `<li style="margin-bottom:4px;">${ref}</li>`).join('')}
+                                    ${(r?.legal_references || []).slice(0, 5).map(ref => `<li style="margin-bottom:4px;">${ref}</li>`).join('')}
                                 </ul>
                             </div>
                         </div>
@@ -1108,13 +1153,263 @@
                         container.innerHTML = `
                             <div style="text-align:right;">
                                 <img src="${url}" alt="QR Code" style="width:72px; height:72px; border:1px solid #0f172a; display:block; margin-left:auto;">
-                                <div style="font-size:0.65rem; color:#64748b; margin-top:2px; font-weight:700;">XÁC THỰC</div>
+                                <div style="font-size:0.6rem; color:#475569; margin-top:3px; font-weight:800; text-transform:uppercase;">MÃ CHỐNG LÀM GIẢ KHẢO SÁT</div>
                             </div>
                         `;
                     }
                 }
             } catch (err) {
                 console.warn("Could not load QR code:", err);
+            }
+        let currentMitigationData = null;
+
+        async function loadMitigationChecklist(assessmentId) {
+            const container = document.getElementById('mitigation-main-container');
+            if (!container) return;
+
+            try {
+                const data = await api.get('/assessments/' + assessmentId + '/mitigation');
+                currentMitigationData = data;
+                renderMitigationHtml(data, assessmentId);
+            } catch (err) {
+                console.warn("Could not load mitigation checklist:", err);
+                container.innerHTML = `
+                <div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #b91c1c; padding:18px;">
+                    <div style="font-weight:700; color:#b91c1c; margin-bottom:6px; text-transform:uppercase;">BẢNG TIẾN ĐỘ KHẮC PHỤC NGUY CƠ REALTIME</div>
+                    <p style="color:#64748b; font-size:0.86rem; margin:0 0 10px;">Chưa thể tải danh mục tồn tại. Nhấn nút bên dưới để thử lại.</p>
+                    <button type="button" class="btn-gov btn-gov-outline" onclick="loadMitigationChecklist('${assessmentId}')">Tải lại danh mục</button>
+                </div>`;
+            }
+        }
+
+        function renderMitigationHtml(data, assessmentId) {
+            const container = document.getElementById('mitigation-main-container');
+            if (!container) return;
+
+            const items = data.items || [];
+            const resolvedCount = items.filter(it => it.resolved).length;
+            const totalCount = items.length;
+            const progressPct = totalCount > 0 ? Math.round((resolvedCount / totalCount) * 100) : 0;
+
+            const priorityBadge = {
+                'urgent': '<span class="badge-sharp danger">Khẩn cấp (24h - 48h)</span>',
+                'high': '<span class="badge-sharp warning">Ưu tiên cao</span>',
+                'medium': '<span class="badge-sharp info">Trung bình</span>',
+                'low': '<span class="badge-sharp">Thấp</span>',
+            };
+
+            const riskLevelText = {
+                'safe': 'Nguy cơ Thấp (Vùng Xanh)',
+                'low': 'Nguy cơ Thấp',
+                'medium': 'Nguy cơ Trung bình',
+                'high': 'Nguy cơ Cao',
+                'critical': 'Nguy cơ Rất cao',
+            };
+
+            const riskLevelColor = {
+                'safe': '#16a34a',
+                'low': '#16a34a',
+                'medium': '#d97706',
+                'high': '#ea580c',
+                'critical': '#dc2626',
+            };
+
+            const curLevel = data.current_risk_level || 'medium';
+            const curColor = riskLevelColor[curLevel] || '#dc2626';
+
+            let h = `
+            <div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #b91c1c; padding:20px;">
+                <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:16px; flex-wrap:wrap; gap:12px; border-bottom:1px solid #e2e8f0; padding-bottom:14px;">
+                    <div>
+                        <h3 style="font-size:1.05rem; font-weight:800; color:#0f172a; margin:0 0 6px; text-transform:uppercase; display:flex; align-items:center; gap:8px;">
+                            <span>📋</span> BẢNG TIẾN ĐỘ KHẮC PHỤC TỒN TẠI & TRẠNG THÁI NGUY CƠ REALTIME
+                        </h3>
+                        <p style="color:#64748b; font-size:0.86rem; margin:0; line-height:1.5;">
+                            Sau khi cơ sở khắc phục xong các tồn tại thực tế, hãy tích chọn các hạng mục dưới đây và bấm <strong>"Cập nhật tiến độ"</strong>. Mức nguy cơ và chấm an toàn trên <strong>Bản đồ Rủi ro PCCC Bắc Ninh</strong> sẽ được cập nhật tự động ngay lập tức.
+                        </p>
+                    </div>
+                    <div style="display:flex; gap:12px; align-items:center; flex-wrap:wrap;">
+                        <span class="badge-sharp info" style="font-size:0.82rem; padding:6px 12px;">ĐỒNG BỘ REALTIME ADMIN MAP</span>
+                    </div>
+                </div>
+
+                <!-- SCORE & PROGRESS STRIP -->
+                <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:12px; margin-bottom:18px;">
+                    <div style="background:#f8fafc; border:1px solid #e2e8f0; padding:12px 14px;">
+                        <div style="font-size:0.75rem; color:#64748b; font-weight:700; text-transform:uppercase; margin-bottom:4px;">Tỷ lệ Nguy cơ Ban đầu</div>
+                        <div style="font-size:1.4rem; font-weight:900; color:#0f172a;">${data.initial_risk_percentage}%</div>
+                        <div style="font-size:0.75rem; color:#64748b;">Điểm ban đầu: ${data.initial_total_score} điểm</div>
+                    </div>
+                    <div style="background:#f8fafc; border:1px solid #e2e8f0; border-left:4px solid ${curColor}; padding:12px 14px;">
+                        <div style="font-size:0.75rem; color:#64748b; font-weight:700; text-transform:uppercase; margin-bottom:4px;">Tỷ lệ Nguy cơ Hiện tại (Realtime)</div>
+                        <div style="font-size:1.4rem; font-weight:900; color:${curColor};" id="mitigation-live-pct">${data.current_risk_percentage}%</div>
+                        <div style="font-size:0.75rem; color:${curColor}; font-weight:700;" id="mitigation-live-level">${riskLevelText[curLevel] || curLevel}</div>
+                    </div>
+                    <div style="background:#f8fafc; border:1px solid #e2e8f0; padding:12px 14px;">
+                        <div style="font-size:0.75rem; color:#64748b; font-weight:700; text-transform:uppercase; margin-bottom:4px;">Tiến độ Khắc phục</div>
+                        <div style="font-size:1.4rem; font-weight:900; color:#16a34a;" id="mitigation-live-progress">${resolvedCount}/${totalCount} <span style="font-size:0.9rem; font-weight:600; color:#64748b;">(${progressPct}%)</span></div>
+                        <div style="font-size:0.75rem; color:#64748b;">Hạng mục đã hoàn thành</div>
+                    </div>
+                </div>
+
+                <!-- PROGRESS BAR -->
+                <div style="margin-bottom:20px;">
+                    <div style="height:10px; background:#e2e8f0; width:100%; position:relative;">
+                        <div id="mitigation-progress-bar" style="height:100%; width:${progressPct}%; background:${progressPct === 100 ? '#16a34a' : '#2563eb'}; transition:width 0.4s ease;"></div>
+                    </div>
+                </div>
+
+                <!-- CHECKLIST ITEMS -->
+                <div style="margin-bottom:20px;">
+                    <div style="font-weight:700; color:#0f172a; font-size:0.9rem; text-transform:uppercase; margin-bottom:10px;">
+                        DANH MỤC CÁC TỒN TẠI, VI PHẠM CẦN KHẮC PHỤC (${totalCount} HẠNG MỤC):
+                    </div>
+                    <div style="display:flex; flex-direction:column; gap:10px;">
+            `;
+
+            items.forEach((item, i) => {
+                const isChecked = !!item.resolved;
+                const pBadge = priorityBadge[item.priority] || priorityBadge['medium'];
+                h += `
+                <div style="border:1px solid ${isChecked ? '#bbf7d0' : '#e2e8f0'}; background:${isChecked ? '#f0fdf4' : '#fafafa'}; padding:14px; transition:all 0.2s;">
+                    <div style="display:flex; align-items:flex-start; gap:12px;">
+                        <input type="checkbox" id="chk-mitigation-${item.id}" class="chk-mitigation-item" data-id="${item.id}" ${isChecked ? 'checked' : ''} style="width:20px; height:20px; cursor:pointer; margin-top:2px; accent-color:#16a34a;" onchange="handleMitigationLivePreview()">
+                        <div style="flex:1;">
+                            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:4px;">
+                                <label for="chk-mitigation-${item.id}" style="font-weight:700; color:#0f172a; font-size:0.92rem; cursor:pointer; margin:0;">
+                                    ${i + 1}. ${item.title}
+                                </label>
+                                <div style="display:flex; gap:6px; align-items:center;">
+                                    ${pBadge}
+                                    <span class="badge-sharp ${isChecked ? 'success' : 'danger'}" id="status-badge-${item.id}">
+                                        ${isChecked ? 'ĐÃ KHẮC PHỤC' : 'CHƯA XỬ LÝ'}
+                                    </span>
+                                </div>
+                            </div>
+                            ${item.description ? `<p style="color:#475569; font-size:0.84rem; margin:0 0 6px; line-height:1.5;">${item.description}</p>` : ''}
+                            <div style="display:flex; flex-wrap:wrap; gap:12px; font-size:0.78rem; color:#64748b; margin-bottom:8px;">
+                                <span>Thời hạn: <strong style="color:#0f172a;">${item.deadline || 'Trong 30 ngày'}</strong></span>
+                                ${item.legal_basis ? `<span style="color:#7c3aed;">Căn cứ: <strong>${item.legal_basis}</strong></span>` : ''}
+                                ${item.resolved_at ? `<span style="color:#16a34a;">Xác nhận: ${new Date(item.resolved_at).toLocaleString('vi-VN')}</span>` : ''}
+                            </div>
+                            <input type="text" id="note-mitigation-${item.id}" class="note-mitigation-item" data-id="${item.id}" value="${item.notes || ''}" placeholder="Nhập ghi chú hoặc bằng chứng khắc phục (Ví dụ: Đã thay thế dây dẫn điện, đã lắp đặt thêm aptomat chống giật...)" style="width:100%; padding:8px 10px; font-size:0.82rem; border:1px solid #cbd5e1; background:#ffffff; box-sizing:border-box; border-radius:0;">
+                        </div>
+                    </div>
+                </div>
+                `;
+            });
+
+            h += `
+                    </div>
+                </div>
+
+                <!-- ACTION BUTTON -->
+                <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; padding-top:14px; border-top:1px solid #e2e8f0;">
+                    <div style="font-size:0.82rem; color:#64748b;">
+                        <em>* Tích chọn các mục cơ sở đã xử lý thực tế và bấm nút bên phải để lưu kết quả và đồng bộ lên Bản đồ Rủi ro PCCC.</em>
+                    </div>
+                    <button type="button" class="btn-gov btn-gov-primary" style="padding:12px 24px; font-weight:800; font-size:0.92rem; text-transform:uppercase;" id="btn-save-mitigation" onclick="saveMitigationProgress('${assessmentId}')">
+                        💾 LƯU TIẾN ĐỘ KHẮC PHỤC & ĐỒNG BỘ NGUY CƠ REALTIME
+                    </button>
+                </div>
+
+                <!-- AI FEEDBACK BOX -->
+                ${data.ai_feedback ? `
+                <div style="background:#f0fdf4; border:1px solid #bbf7d0; border-left:5px solid #16a34a; padding:16px; margin-top:20px; font-size:0.88rem; color:#166534; line-height:1.6;" id="mitigation-ai-feedback-box">
+                    <strong style="display:block; margin-bottom:4px; font-size:0.92rem; text-transform:uppercase; color:#15803d;">
+                        Ý KIẾN ĐÁNH GIÁ CỦA HỆ THỐNG AI VỀ TIẾN ĐỘ KHẮC PHỤC:
+                    </strong>
+                    ${data.ai_feedback}
+                </div>` : ''}
+            </div>
+            `;
+
+            container.innerHTML = h;
+        }
+
+        function handleMitigationLivePreview() {
+            if (!currentMitigationData) return;
+            const items = currentMitigationData.items || [];
+            const checkboxes = document.querySelectorAll('.chk-mitigation-item');
+            let resolvedCount = 0;
+
+            checkboxes.forEach(cb => {
+                const itId = parseInt(cb.dataset.id, 10);
+                const statusBadge = document.getElementById(`status-badge-${itId}`);
+                if (cb.checked) {
+                    resolvedCount++;
+                    if (statusBadge) {
+                        statusBadge.className = 'badge-sharp success';
+                        statusBadge.innerText = 'ĐÃ KHẮC PHỤC (CHƯA LƯU)';
+                    }
+                } else {
+                    if (statusBadge) {
+                        statusBadge.className = 'badge-sharp danger';
+                        statusBadge.innerText = 'CHƯA XỬ LÝ';
+                    }
+                }
+            });
+
+            const totalCount = items.length;
+            const progressPct = totalCount > 0 ? Math.round((resolvedCount / totalCount) * 100) : 0;
+            const progressBar = document.getElementById('mitigation-progress-bar');
+            if (progressBar) {
+                progressBar.style.width = progressPct + '%';
+            }
+            const liveProgress = document.getElementById('mitigation-live-progress');
+            if (liveProgress) {
+                liveProgress.innerHTML = `${resolvedCount}/${totalCount} <span style="font-size:0.9rem; font-weight:600; color:#64748b;">(${progressPct}%)</span>`;
+            }
+        }
+
+        async function saveMitigationProgress(assessmentId) {
+            const btn = document.getElementById('btn-save-mitigation');
+            if (btn) {
+                btn.disabled = true;
+                btn.innerHTML = '⏳ Đang lưu & cập nhật bản đồ...';
+            }
+
+            try {
+                const checkboxes = document.querySelectorAll('.chk-mitigation-item');
+                const itemsPayload = [];
+                checkboxes.forEach(cb => {
+                    const id = parseInt(cb.dataset.id, 10);
+                    const noteInput = document.getElementById(`note-mitigation-${id}`);
+                    itemsPayload.push({
+                        id: id,
+                        resolved: cb.checked,
+                        notes: noteInput ? noteInput.value.trim() : ''
+                    });
+                });
+
+                const updatedData = await api.post(`/assessments/${assessmentId}/mitigation`, {
+                    items: itemsPayload
+                });
+
+                currentMitigationData = updatedData;
+                renderMitigationHtml(updatedData, assessmentId);
+
+                // Update live gauge on page
+                if (updatedData.current_risk_percentage !== undefined && typeof createRiskGauge === 'function') {
+                    createRiskGauge('gauge-chart', updatedData.current_risk_percentage, updatedData.current_risk_level);
+                }
+
+                if (typeof showToast === 'function') {
+                    showToast('✅ Đã cập nhật tiến độ và đồng bộ lên Bản đồ Rủi ro PCCC thành công!', 'success');
+                } else {
+                    alert('Đã cập nhật tiến độ và đồng bộ lên Bản đồ Rủi ro PCCC thành công!');
+                }
+            } catch (err) {
+                console.error("Save mitigation failed:", err);
+                if (typeof showToast === 'function') {
+                    showToast('Không thể lưu tiến độ: ' + (err.message || 'Lỗi kết nối'), 'error');
+                } else {
+                    alert('Không thể lưu tiến độ: ' + (err.message || 'Lỗi kết nối'));
+                }
+                if (btn) {
+                    btn.disabled = false;
+                    btn.innerHTML = '💾 LƯU TIẾN ĐỘ KHẮC PHỤC & ĐỒNG BỘ NGUY CƠ REALTIME';
+                }
             }
         }
     </script>

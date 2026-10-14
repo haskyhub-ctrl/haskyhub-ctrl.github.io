@@ -1,5 +1,5 @@
 """
-RAG Search — Trợ lý Chi
+RAG Search: Trợ lý Chi
 Priority: NotebookLM CLI (1) → ChromaDB (2) → Gemini general knowledge (3)
 
 Luật hiện hành 2024-2025 (cứng):
@@ -207,7 +207,7 @@ def _call_gemini_sync(prompt: str, temperature: float = 0.15, max_tokens: int = 
                         _safe_print(f"[Gemini REST] Model '{primary_model}' lỗi, đã tự động chuyển sang fallback thành công: '{model_name}'")
                     return text
                 except (KeyError, IndexError) as e:
-                    raise ValueError(f"Gemini API: cấu trúc phản hồi không hợp lệ — {e}")
+                    raise ValueError(f"Gemini API: cấu trúc phản hồi không hợp lệ: {e}")
 
             err = resp.text[:200] if resp.text else "No body"
             _safe_print(f"[Gemini REST] ❌ Model {model_name} HTTP {resp.status_code}: {err}")
@@ -318,7 +318,7 @@ def _call_llm(prompt: str, temperature: float = 0.15, max_tokens: int = 2048, is
 
 
 # ════════════════════════════════════════════════════════════════
-#  1. NOTEBOOKLM — qua nlm CLI subprocess
+#  1. NOTEBOOKLM: qua nlm CLI subprocess
 # ════════════════════════════════════════════════════════════════
 
 def _find_nlm_cmd() -> str | None:
@@ -440,7 +440,7 @@ def search_notebooklm_api(question: str) -> str:
 
 
 # ════════════════════════════════════════════════════════════════
-#  1.5. INTERNET SEARCH — Tra cứu thời gian thực kèm link nguồn
+#  1.5. INTERNET SEARCH: Tra cứu thời gian thực kèm link nguồn
 # ════════════════════════════════════════════════════════════════
 
 def search_internet(query: str, max_results: int = 3) -> list[dict]:
@@ -490,7 +490,7 @@ def search_internet(query: str, max_results: int = 3) -> list[dict]:
 
 
 # ════════════════════════════════════════════════════════════════
-#  2. CHROMADB — Vector similarity search
+#  2. CHROMADB: Vector similarity search
 # ════════════════════════════════════════════════════════════════
 
 def search_chromadb(question: str) -> str:
@@ -528,7 +528,7 @@ def search_chromadb(question: str) -> str:
 
 
 # ════════════════════════════════════════════════════════════════
-#  1.6. CLEAN FORMATTING — Loại bỏ ký tự markdown thừa (###, **, ---)
+#  1.6. CLEAN FORMATTING: Loại bỏ ký tự markdown thừa (###, **, ---)
 # ════════════════════════════════════════════════════════════════
 
 def _clean_chat_formatting(text: str) -> str:
@@ -549,7 +549,7 @@ def _clean_chat_formatting(text: str) -> str:
 
 
 # ════════════════════════════════════════════════════════════════
-#  3. GEMINI GROUNDED — Fallback dùng kiến thức pháp luật
+#  3. GEMINI GROUNDED: Fallback dùng kiến thức pháp luật
 # ════════════════════════════════════════════════════════════════
 
 def search_notebooklm_gemini_grounded(question: str) -> str:
@@ -586,12 +586,12 @@ QUY TẮC BẮT BUỘC:
 
 
 # ════════════════════════════════════════════════════════════════
-#  4. MAIN FUNCTION — ask_ai_chi
+#  4. MAIN FUNCTION: ask_ai_chi
 # ════════════════════════════════════════════════════════════════
 
 def ask_ai_chi(question: str, history_text: str = "", context: str = "") -> dict:
     """
-    Trợ lý Chi — RAG Pipeline:
+    Trợ lý Chi: RAG Pipeline:
     Priority: NotebookLM CLI (Đa sổ 1, 2...) → ChromaDB → Tra cứu Internet thời gian thực → Gemini general
 
     Gọi 9Router (hoặc Gemini REST API dự phòng).
@@ -679,7 +679,7 @@ def ask_ai_chi(question: str, history_text: str = "", context: str = "") -> dict
         # ── Build prompt cho Gemini ──────────────────────────────────
         legal_refs_str = "\n".join(f"  - {r}" for r in CURRENT_LEGAL_REFS)
 
-        template = f"""Bạn là Trợ lý ảo AI Chi — chuyên gia tư vấn pháp luật PCCC và an toàn cháy nổ tại Việt Nam (Công an thành phố Bắc Ninh).
+        template = f"""Bạn là Trợ lý ảo AI Chi, chuyên gia tư vấn pháp luật PCCC và an toàn cháy nổ tại Việt Nam (Công an thành phố Bắc Ninh).
 
 ═══ CƠ SỞ PHÁP LÝ QUAN TRỌNG NĂM 2026 (ƯU TIÊN CAO NHẤT, VƯỢT TRÊN MỌI TÀI LIỆU CŨ) ═══
 {CORE_LEGAL_PRINCIPLES_2026}
@@ -698,6 +698,12 @@ CÂU HỎI CỦA NGƯỜI DÙNG: {question}
 {legal_refs_str}
 
 ═══ CÁC QUY TẮC BẮT BUỘC KHI TRẢ LỜI CỦA CHI (TUÂN THỦ 100%) ═══
+0. CHUẨN MỰC HÀNH VĂN NGƯỜI THẬT (0% AI HUMAN WRITING):
+   - Tuyệt đối CẤM sử dụng dấu gạch ngang dài (em dash ":"). Luôn dùng dấu phẩy, dấu chấm, dấu hai chấm hoặc ngoặc đơn.
+   - CẤM sáo ngữ robot: "Trong bối cảnh...", "Không thể phủ nhận rằng...", "Đóng vai trò vô cùng quan trọng...", "Mang lại lợi ích đáng kể...", "Tối ưu hóa", "Đột phá".
+   - CẤM các câu mở đầu hoặc kết bài xã giao kiểu chatbot ("Hy vọng câu trả lời này hữu ích với bạn", "Nếu bạn cần thêm thông tin..."). Đi thẳng vào nội dung chuyên môn.
+   - Trộn câu ngắn dài tự nhiên, hành văn dứt khoát, chuẩn xác của chuyên gia luật PCCC.
+
 1. ĐI THẲNG VÀO NỘI DUNG MỚI NHẤT HIỆN HÀNH (NĂM 2026):
    - Luôn hướng dẫn theo quy định mới nhất hiện hành (Nghị quyết số 66.18/2026/NQ-CP, Nghị định số 347/2026/NĐ-CP, Luật 55/2024/QH15...).
    - ĐẶC BIỆT VỀ NGHIỆM THU PCCC:

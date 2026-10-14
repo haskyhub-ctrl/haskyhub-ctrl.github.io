@@ -131,7 +131,7 @@
             <div class="dash-stat"><div class="stat-header"><div class="stat-icon" style="background:rgba(59,130,246,0.15);">📊</div></div><div class="stat-value">${completed.length}</div><div class="stat-label">Tổng đánh giá</div></div>
             <div class="dash-stat"><div class="stat-header"><div class="stat-icon" style="background:rgba(34,197,94,0.15);">📈</div></div><div class="stat-value" style="color:${avgScore >= 60 ? 'var(--accent-green)' : 'var(--accent-orange)'}">${avgScore}%</div><div class="stat-label">Điểm TB an toàn</div></div>
             <div class="dash-stat"><div class="stat-header"><div class="stat-icon" style="background:rgba(239,68,68,0.15);">⚠️</div></div><div class="stat-value" style="color:var(--accent-red)">${highRisk}</div><div class="stat-label">Nguy cơ cao</div></div>
-            <div class="dash-stat"><div class="stat-header"><div class="stat-icon" style="background:rgba(249,115,22,0.15);">🔥</div></div><div class="stat-value">${latest ? getRiskBadge(latest.risk_level) : '—'}</div><div class="stat-label">Đánh giá gần nhất</div></div>
+            <div class="dash-stat"><div class="stat-header"><div class="stat-icon" style="background:rgba(249,115,22,0.15);">🔥</div></div><div class="stat-value">${latest ? getRiskBadge(latest.risk_level) : '-'}</div><div class="stat-label">Đánh giá gần nhất</div></div>
         `;
 
             // Trend chart

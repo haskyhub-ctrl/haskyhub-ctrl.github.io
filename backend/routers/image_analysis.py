@@ -1,5 +1,5 @@
 """
-Image Analysis Router — AI Visual Fire Risk Assessment.
+Image Analysis Router: AI Visual Fire Risk Assessment.
 Upload/capture photos of facilities, Gemini Vision API identifies visible fire hazards.
 """
 import os

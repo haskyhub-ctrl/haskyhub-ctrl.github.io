@@ -1,4 +1,4 @@
-# seed_recommendations.py — Generate unique recommendations per option
+# seed_recommendations.py: Generate unique recommendations per option
 # Each recommendation is specific to the answer given, not generic to category
 
 from models import Recommendation

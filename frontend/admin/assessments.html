@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/admin.css">
     <style>
-        .badge-demo { background: rgba(26, 58, 107, 0.1); color: var(--gov-navy); font-size: 0.7rem; padding: 2px 8px; border: 1px solid rgba(26, 58, 107, 0.25); border-radius: 4px; vertical-align: middle; margin-left: 5px; font-weight: 600; }
+        .badge-demo { background: rgba(26, 58, 107, 0.1); color: var(--gov-navy); font-size: 0.7rem; padding: 2px 8px; border: 1px solid rgba(26, 58, 107, 0.25); border-radius: 0; vertical-align: middle; margin-left: 5px; font-weight: 600; }
         th.chk-col, td.chk-col { width: 36px; text-align: center; padding: 0 6px !important; }
-        #gen-progress { display: none; background: var(--gov-navy-light); border: 1px solid rgba(26, 58, 107, 0.3); padding: 10px 14px; border-radius: var(--radius-sm); margin-top: 10px; font-size: 0.85rem; color: var(--gov-navy); font-weight: 600; }
+        #gen-progress { display: none; background: var(--gov-navy-light); border: 1px solid rgba(26, 58, 107, 0.3); padding: 10px 14px; border-radius: 0; margin-top: 10px; font-size: 0.85rem; color: var(--gov-navy); font-weight: 600; }
     </style>
 </head>
 
@@ -157,7 +157,7 @@
             </div>
 
             <div class="form-group">
-                <label>Nhóm nguyên nhân thiên lệch <small style="color:var(--text-muted);">(tùy chọn — nhóm này sẽ có nguy cơ cao hơn)</small></label>
+                <label>Nhóm nguyên nhân thiên lệch <small style="color:var(--text-muted);">(tùy chọn: nhóm này sẽ có nguy cơ cao hơn)</small></label>
                 <select id="gen-category-bias">
                     <option value="">🎲 Không thiên lệch (tất cả nhóm ngẫu nhiên)</option>
                 </select>

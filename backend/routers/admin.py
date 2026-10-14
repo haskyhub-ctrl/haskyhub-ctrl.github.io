@@ -290,7 +290,7 @@ def get_map_data(
     results = []
     assessed_user_ids = set()
 
-    # 1. Completed assessments — try assessment coords first, fallback to user coords
+    # 1. Completed assessments: try assessment coords first, fallback to user coords
     query = db.query(Assessment).filter(Assessment.status == "completed")
     if risk_level and risk_level != "unassessed":
         query = query.filter(Assessment.risk_level == risk_level)
@@ -319,6 +319,7 @@ def get_map_data(
                 "user_name": user.full_name if user else "N/A",
                 "organization": user.organization if user else "N/A",
                 "source": "assessment",
+                "mitigation_data": a.mitigation_data,
             })
 
     # 2. Imported facilities (users with coordinates) that have no assessment
@@ -479,10 +480,10 @@ def delete_backup(
 
 
 # ========================================================================
-# ASSESSMENT MANAGEMENT — Xóa đơn, Xóa hàng loạt, Tạo dữ liệu mẫu
+# ASSESSMENT MANAGEMENT: Xóa đơn, Xóa hàng loạt, Tạo dữ liệu mẫu
 # ========================================================================
 
-# 34 tỉnh sau sáp nhập 2025 — tọa độ trung tâm
+# 34 tỉnh sau sáp nhập 2025: tọa độ trung tâm
 PROVINCE_COORDS = {
     "Hà Nội": (21.0285, 105.8542),
     "Hải Phòng": (20.8449, 106.6881),

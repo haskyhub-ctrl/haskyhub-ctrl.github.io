@@ -32,13 +32,13 @@ function getChartDefaults() {
 /**
  * Create a radar chart for category scores
  */
-function createRadarChart(canvasId, categoryScores, label = 'Điểm đánh giá') {
+function createRadarChart(canvasId, categoryScores, label = 'Tỷ lệ nguy cơ (%)') {
     const ctx = document.getElementById(canvasId);
     if (!ctx) return null;
 
     const labels = categoryScores.map(c => c.category_name || c.name || '');
     const data = categoryScores.map(c => c.percentage);
-    const colors = categoryScores.map(c => riskColors[c.risk_level] || '#94a3b8');
+    const colors = categoryScores.map(c => riskColors[c.risk_level] || '#b91c1c');
 
     return new Chart(ctx, {
         type: 'radar',
@@ -47,13 +47,14 @@ function createRadarChart(canvasId, categoryScores, label = 'Điểm đánh giá
             datasets: [{
                 label: label,
                 data: data,
-                backgroundColor: 'rgba(249, 115, 22, 0.15)',
-                borderColor: '#f97316',
+                backgroundColor: 'rgba(185, 28, 28, 0.20)',
+                borderColor: '#b91c1c',
                 borderWidth: 2,
-                pointBackgroundColor: colors,
-                pointBorderColor: colors,
-                pointRadius: 5,
-                pointHoverRadius: 7,
+                pointBackgroundColor: '#b91c1c',
+                pointBorderColor: '#ffffff',
+                pointBorderWidth: 1,
+                pointRadius: 2.5,
+                pointHoverRadius: 5,
             }]
         },
         options: {
@@ -65,16 +66,17 @@ function createRadarChart(canvasId, categoryScores, label = 'Điểm đánh giá
                     max: 100,
                     ticks: {
                         stepSize: 25,
-                        color: '#64748b',
-                        backdropColor: 'transparent',
-                        font: { size: 10 },
+                        color: '#475569',
+                        backdropColor: 'rgba(255,255,255,0.92)',
+                        showLabelBackdrop: true,
+                        font: { size: 10, weight: '700' },
                     },
-                    grid: { color: 'rgba(255,255,255,0.08)' },
+                    grid: { color: '#cbd5e1', lineWidth: 1.2 },
                     pointLabels: {
-                        color: '#cbd5e1',
-                        font: { size: 11, weight: '500' },
+                        color: '#0f172a',
+                        font: { size: 11.5, weight: '700', family: "'Roboto', sans-serif" },
                     },
-                    angleLines: { color: 'rgba(255,255,255,0.06)' },
+                    angleLines: { color: '#94a3b8', lineWidth: 1.2 },
                 }
             },
             plugins: {
@@ -104,9 +106,9 @@ function createRiskGauge(canvasId, percentage, riskLevel) {
             labels: ['Nguy cơ', 'An toàn'],
             datasets: [{
                 data: [percentage, 100 - percentage],
-                backgroundColor: [color, 'rgba(255,255,255,0.05)'],
+                backgroundColor: [color, '#e2e8f0'],
                 borderWidth: 0,
-                cutout: '75%',
+                cutout: '74%',
             }]
         },
         options: {
@@ -128,13 +130,13 @@ function createRiskGauge(canvasId, percentage, riskLevel) {
                 ctx.textAlign = 'center';
                 ctx.textBaseline = 'middle';
 
-                ctx.font = 'bold 28px Inter, sans-serif';
+                ctx.font = '900 32px "Roboto Condensed", sans-serif';
                 ctx.fillStyle = color;
                 ctx.fillText(`${percentage}%`, cx, cy - 8);
 
-                ctx.font = '12px Inter, sans-serif';
-                ctx.fillStyle = '#94a3b8';
-                ctx.fillText('Tỷ lệ nguy cơ', cx, cy + 18);
+                ctx.font = '700 12px "Roboto", sans-serif';
+                ctx.fillStyle = '#475569';
+                ctx.fillText('TỶ LỆ NGUY CƠ', cx, cy + 18);
 
                 ctx.restore();
             }
@@ -158,7 +160,7 @@ function createBarChart(canvasId, categoryScores) {
                 data: categoryScores.map(c => c.percentage),
                 backgroundColor: categoryScores.map(c => riskColors[c.risk_level] || '#94a3b8'),
                 borderRadius: 0,
-                maxBarThickness: 40,
+                maxBarThickness: 34,
             }]
         },
         options: {
@@ -169,16 +171,28 @@ function createBarChart(canvasId, categoryScores) {
                 x: {
                     beginAtZero: true,
                     max: 100,
-                    ticks: { color: '#94a3b8' },
-                    grid: { color: 'rgba(255,255,255,0.05)' },
+                    ticks: {
+                        color: '#475569',
+                        font: { size: 11, weight: '700' },
+                        callback: (v) => `${v}%`
+                    },
+                    grid: { color: '#e2e8f0' },
                 },
                 y: {
-                    ticks: { color: '#cbd5e1', font: { size: 11 } },
+                    ticks: {
+                        color: '#0f172a',
+                        font: { size: 12, weight: '700', family: "'Roboto', sans-serif" }
+                    },
                     grid: { display: false },
                 }
             },
             plugins: {
                 legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        label: (ctx) => ` Tỷ lệ nguy cơ: ${ctx.parsed.x}%`
+                    }
+                }
             }
         }
     });

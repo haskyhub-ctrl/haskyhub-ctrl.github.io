@@ -1,5 +1,5 @@
 """
-Notifications Router — Alert & Notification System.
+Notifications Router: Alert & Notification System.
 Manages user notifications for high-risk assessments, reminders, etc.
 """
 from fastapi import APIRouter, Depends, HTTPException

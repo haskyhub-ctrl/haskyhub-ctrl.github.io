@@ -1,7 +1,7 @@
-/* homepage.css — Government Portal Design System */
+/* homepage.css: Government Portal Design System */
 
 /* ============================================================
-   VARIABLES — Official Government Color System
+   VARIABLES: Official Government Color System
    ============================================================ */
 :root {
     --gov-red:        #C0202A;   /* Đỏ cờ chính thức */
@@ -45,7 +45,7 @@ html, body {
 .text-red { color: var(--gov-red); }
 
 /* ============================================================
-   TOP AUTHORITY BAR — "CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM"
+   TOP AUTHORITY BAR: "CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM"
    ============================================================ */
 .gov-top-bar {
     background: var(--gov-navy);
@@ -113,7 +113,7 @@ html, body {
 }
 
 /* ============================================================
-   OFFICIAL HEADER BAND — Logo + Agency Name + Hotline
+   OFFICIAL HEADER BAND: Logo + Agency Name + Hotline
    ============================================================ */
 .gov-header-band {
     background: var(--gov-white);
@@ -143,7 +143,7 @@ html, body {
     gap: 16px;
     text-decoration: none;
 }
-/* Quốc huy placeholder — hình tròn vàng-đỏ */
+/* Quốc huy placeholder: hình tròn vàng-đỏ */
 .gov-emblem {
     width: 64px;
     height: 64px;
@@ -238,7 +238,7 @@ html, body {
 }
 
 /* ============================================================
-   NAVIGATION BAR — Red menu bar
+   NAVIGATION BAR: Red menu bar
    ============================================================ */
 .gov-navbar {
     background: var(--gov-red);
@@ -326,14 +326,14 @@ html, body {
 }
 
 /* ============================================================
-   PAGE OFFSET — push content below fixed header stack
+   PAGE OFFSET: push content below fixed header stack
    ============================================================ */
 body.has-gov-header {
     padding-top: 174px;  /* 38 + 88 + 48 */
 }
 
 /* ============================================================
-   HERO BANNER — Official government announcement style
+   HERO BANNER: Official government announcement style
    ============================================================ */
 .hp-hero {
     position: relative;
@@ -357,8 +357,21 @@ body.has-gov-header {
 .hp-hero-content {
     position: relative;
     z-index: 2;
-    max-width: 860px;
+    max-width: 1060px;
     padding: 0 24px;
+}
+.hp-hero-security-note {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.88);
+    margin: 14px auto 0;
+    max-width: 1000px;
+    line-height: 1.45;
+    text-wrap: balance;
+}
+@media (min-width: 992px) {
+    .hp-hero-security-note {
+        white-space: nowrap;
+    }
 }
 /* Official badge above title */
 .gov-hero-badge {
@@ -477,7 +490,7 @@ body.has-gov-header {
 }
 
 /* ============================================================
-   NOTICE TICKER — Thông báo quan trọng
+   NOTICE TICKER: Thông báo quan trọng
    ============================================================ */
 .gov-notice-bar {
     background: #FFF8E1;
@@ -517,7 +530,7 @@ body.has-gov-header {
 .gov-notice-text a:hover { text-decoration: underline; }
 
 /* ============================================================
-   SERVICES SECTION — Dịch vụ trực tuyến (4 cột)
+   SERVICES SECTION: Dịch vụ trực tuyến (4 cột)
    ============================================================ */
 .gov-services {
     background: var(--gov-white);
@@ -633,7 +646,7 @@ body.has-gov-header {
 .gov-service-card:hover .gov-service-arrow { opacity: 1; }
 
 /* ============================================================
-   STATS SECTION — Navy background, gold numbers
+   STATS SECTION: Navy background, gold numbers
    ============================================================ */
 .hp-stats {
     background: var(--gov-navy);
@@ -678,7 +691,7 @@ body.has-gov-header {
 }
 
 /* ============================================================
-   WHY SECTION — giữ lại cho tương thích code cũ (hidden)
+   WHY SECTION: giữ lại cho tương thích code cũ (hidden)
    ============================================================ */
 .hp-why { background: var(--gov-bg); padding: 60px 0; }
 .hp-why-grid {
@@ -927,7 +940,7 @@ body.has-gov-header {
 .hp-principle-list li strong { color: white !important; }
 
 /* ============================================================
-   TRỢ LÝ ẢO CHI — KHUNG CHAT TRỰC TUYẾN TRANG CHỦ
+   TRỢ LÝ ẢO CHI: KHUNG CHAT TRỰC TUYẾN TRANG CHỦ
    ============================================================ */
 .hp-ai-section {
     background: #F4F6F9;
@@ -1422,7 +1435,7 @@ body.has-gov-header {
 .hp-final-cta, .hp-final-cta p, .hp-final-cta h2 { color: white !important; }
 
 /* ============================================================
-   FOOTER — 4 cột, government institutional style
+   FOOTER: 4 cột, government institutional style
    ============================================================ */
 .hp-footer {
     background: var(--gov-footer);

@@ -1,6 +1,9 @@
+import json
+from datetime import datetime
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session, joinedload
-from typing import List, Optional
+from typing import List, Optional, Dict, Any
+from pydantic import BaseModel
 from database import get_db
 from models import (
     User, Assessment, AssessmentAnswer, CategoryScore,
@@ -72,6 +75,7 @@ def get_user_map_data(
                 "user_name": user.full_name if (user and is_own) else "",
                 "organization": user.organization if (user and is_own) else "",
                 "source": "assessment",
+                "mitigation_data": a.mitigation_data if is_own else None,
             })
 
     # 2. Imported facilities (users with coordinates) that have no assessment
@@ -208,3 +212,225 @@ def archive_assessment(
     assessment.status = "archived"
     db.commit()
     return {"status": "ok"}
+
+
+# ======================== REALTIME DEFICIENCY MITIGATION & MAP SYNC ========================
+
+class MitigationItemUpdate(BaseModel):
+    id: int
+    resolved: bool
+    notes: Optional[str] = None
+    resolved_at: Optional[str] = None
+
+
+class MitigationUpdateRequest(BaseModel):
+    items: List[MitigationItemUpdate]
+
+
+def _build_default_mitigation_data(assessment: Assessment, db: Session) -> dict:
+    """Build initial deficiency checklist from AI analysis and assessment answers."""
+    items = []
+    idx = 0
+
+    # 1. Try to extract from AI recommendations / weaknesses
+    if assessment.ai_analysis:
+        try:
+            ai = json.loads(assessment.ai_analysis)
+            gemini = ai.get("gemini_38") or ai
+            recs = gemini.get("detailed_recommendations", [])
+            for r in recs:
+                p = (r.get("priority") or "medium").lower()
+                weight = 4 if p == "urgent" else 3 if p == "high" else 2 if p == "medium" else 1
+                items.append({
+                    "id": idx,
+                    "title": r.get("title", f"Hạng mục kiến nghị {idx+1}"),
+                    "description": r.get("description", ""),
+                    "priority": p,
+                    "deadline": r.get("deadline", "Khắc phục ngay trong 24h - 48h" if p == "urgent" else "30 ngày"),
+                    "category": "Khuyến cáo kỹ thuật",
+                    "weight_score": weight,
+                    "resolved": False,
+                    "notes": "",
+                    "resolved_at": None,
+                    "legal_basis": r.get("legal_basis", "Quy định an toàn PCCC"),
+                })
+                idx += 1
+        except Exception:
+            pass
+
+    # 2. Fallback to database recommendations from risky answers if AI didn't provide enough items
+    if len(items) < 3:
+        db_recs = get_recommendations_for_assessment(db, assessment.id)
+        for r in db_recs:
+            # avoid duplicating titles
+            if any(it["title"] == r["recommendation_text"][:80] for it in items):
+                continue
+            p = (r.get("priority") or "medium").lower()
+            weight = 4 if p == "urgent" else 3 if p == "high" else 2 if p == "medium" else 1
+            items.append({
+                "id": idx,
+                "title": r.get("recommendation_text", f"Hạng mục {idx+1}")[:100],
+                "description": f"Câu hỏi: {r.get('question_text') or ''}. Yêu cầu xử lý dứt điểm.",
+                "priority": p,
+                "deadline": "Khắc phục ngay trong 24h - 48h" if p == "urgent" else f"{r.get('deadline_days', 30)} ngày",
+                "category": r.get("category_name", "An toàn PCCC"),
+                "weight_score": weight,
+                "resolved": False,
+                "notes": "",
+                "resolved_at": None,
+                "legal_basis": r.get("legal_reference", "Luật PCCC số 55/2024/QH15"),
+            })
+            idx += 1
+
+    return {
+        "initial_risk_percentage": assessment.risk_percentage,
+        "initial_risk_level": assessment.risk_level,
+        "initial_total_score": assessment.total_score,
+        "current_risk_percentage": assessment.risk_percentage,
+        "current_risk_level": assessment.risk_level,
+        "current_total_score": assessment.total_score,
+        "items": items,
+        "ai_feedback": "Hệ thống đã lập danh mục các tồn tại, vi phạm an toàn PCCC cần khắc phục. Cơ sở sau khi xử lý xong ngoài thực tế hãy tích chọn để cập nhật mức nguy cơ theo thời gian thực và đồng bộ lên Bản đồ Rủi ro PCCC Bắc Ninh.",
+        "last_updated": datetime.utcnow().isoformat(),
+    }
+
+
+@router.get("/{assessment_id}/mitigation")
+def get_assessment_mitigation(
+    assessment_id: str,
+    current_user: Optional[User] = Depends(get_optional_user),
+    db: Session = Depends(get_db)
+):
+    """Lấy danh mục các tồn tại cần khắc phục và trạng thái nguy cơ realtime."""
+    assessment = db.query(Assessment).filter(Assessment.id == assessment_id).first()
+    if not assessment:
+        raise HTTPException(status_code=404, detail="Không tìm thấy đánh giá")
+
+    if assessment.mitigation_data:
+        try:
+            return json.loads(assessment.mitigation_data)
+        except Exception:
+            pass
+
+    # Initialize default
+    data = _build_default_mitigation_data(assessment, db)
+    assessment.mitigation_data = json.dumps(data, ensure_ascii=False)
+    db.commit()
+    return data
+
+
+@router.post("/{assessment_id}/mitigation")
+def update_assessment_mitigation(
+    assessment_id: str,
+    payload: MitigationUpdateRequest,
+    current_user: Optional[User] = Depends(get_optional_user),
+    db: Session = Depends(get_db)
+):
+    """Cập nhật tiến độ khắc phục từng hạng mục, tự động tính lại điểm nguy cơ và cập nhật Bản đồ Admin Realtime."""
+    assessment = db.query(Assessment).filter(Assessment.id == assessment_id).first()
+    if not assessment:
+        raise HTTPException(status_code=404, detail="Không tìm thấy đánh giá")
+
+    # Load current data
+    if assessment.mitigation_data:
+        try:
+            data = json.loads(assessment.mitigation_data)
+        except Exception:
+            data = _build_default_mitigation_data(assessment, db)
+    else:
+        data = _build_default_mitigation_data(assessment, db)
+
+    items = data.get("items", [])
+    updates_map = {u.id: u for u in payload.items}
+
+    now_iso = datetime.utcnow().isoformat()
+    for it in items:
+        it_id = it.get("id")
+        if it_id in updates_map:
+            u = updates_map[it_id]
+            was_resolved = it.get("resolved", False)
+            it["resolved"] = u.resolved
+            if u.notes is not None:
+                it["notes"] = u.notes
+            if u.resolved and not was_resolved:
+                it["resolved_at"] = u.resolved_at or now_iso
+            elif not u.resolved:
+                it["resolved_at"] = None
+
+    # Recalculate Risk Score & Risk Percentage
+    total_count = len(items)
+    resolved_count = sum(1 for it in items if it.get("resolved"))
+    total_weight = sum(it.get("weight_score", 1) for it in items) or 1
+    resolved_weight = sum(it.get("weight_score", 1) for it in items if it.get("resolved"))
+
+    ratio = resolved_weight / total_weight if total_weight > 0 else 0
+    init_pct = float(data.get("initial_risk_percentage", assessment.risk_percentage or 50.0))
+    init_score = int(data.get("initial_total_score", assessment.total_score or 30))
+
+    if total_count == 0:
+        new_risk_pct = 0.0
+        new_score = 0
+        new_risk_level = "low"
+    elif resolved_count == total_count:
+        # 100% resolved: drop to minimal baseline risk (5%)
+        new_risk_pct = min(init_pct, 5.0)
+        new_score = max(0, round(init_score * 0.05))
+        new_risk_level = "low"
+    else:
+        # Proportionally reduce risk up to 80% reduction
+        reduction = 0.80 * ratio
+        new_risk_pct = round(max(8.0, init_pct * (1.0 - reduction)), 1)
+        new_score = max(0, round(init_score * (1.0 - reduction)))
+        
+        # Risk thresholds
+        if new_risk_pct < 25.0:
+            new_risk_level = "low"
+        elif new_risk_pct < 50.0:
+            new_risk_level = "medium"
+        elif new_risk_pct < 75.0:
+            new_risk_level = "high"
+        else:
+            new_risk_level = "critical"
+
+    # AI Confirmation & Guidance Note
+    if total_count > 0 and resolved_count == total_count:
+        ai_feedback = (
+            f"Xuất sắc: Cơ sở '{assessment.facility_name}' đã hoàn thành khắc phục toàn bộ 100% ({total_count}/{total_count}) tồn tại, vi phạm an toàn PCCC. "
+            f"Tỷ lệ nguy cơ cháy nổ thực tế đã hạ từ {init_pct}% xuống {new_risk_pct}% (Nguy cơ Thấp - Vùng Xanh An toàn). "
+            f"Hệ thống đã tự động cập nhật chấm an toàn trên Bản đồ Rủi ro PCCC Bắc Ninh. Đề nghị cơ sở tiếp tục duy trì chế độ tự kiểm tra định kỳ theo quy định."
+        )
+    elif resolved_count >= total_count / 2 and resolved_count > 0:
+        pct_progress = round((resolved_count / total_count) * 100)
+        ai_feedback = (
+            f"Ghi nhận nỗ lực tích cực: Cơ sở đã khắc phục thành công {resolved_count}/{total_count} hạng mục trọng yếu ({pct_progress}% tiến độ). "
+            f"Nguy cơ cháy nổ đã giảm từ {init_pct}% xuống {new_risk_pct}%. Trạng thái an toàn trên Bản đồ Rủi ro PCCC đã được cập nhật tương ứng. "
+            f"Đề nghị cơ sở khẩn trương hoàn thiện các nội dung còn lại để đưa cơ sở về trạng thái an toàn tuyệt đối."
+        )
+    elif resolved_count > 0:
+        ai_feedback = (
+            f"Cơ sở đã bắt đầu tiến trình khắc phục ({resolved_count}/{total_count} hạng mục). "
+            f"Tỷ lệ nguy cơ hiện tại là {new_risk_pct}%. Lưu ý ưu tiên xử lý dứt điểm các nguy cơ trực tiếp gây cháy (hệ thống thiết bị điện, nguồn nhiệt) trong vòng 24h - 48h."
+        )
+    else:
+        ai_feedback = (
+            f"Chưa ghi nhận hạng mục nào được khắc phục. Tỷ lệ nguy cơ vẫn giữ ở mức ban đầu {init_pct}% ({new_risk_level.upper()}). "
+            f"Khuyến cáo cơ sở khẩn trương rà soát và xử lý các tồn tại nguy cơ cao để đảm bảo an toàn PCCC."
+        )
+
+    # Update metadata
+    data["current_risk_percentage"] = new_risk_pct
+    data["current_risk_level"] = new_risk_level
+    data["current_total_score"] = new_score
+    data["ai_feedback"] = ai_feedback
+    data["last_updated"] = now_iso
+    data["items"] = items
+
+    # Synchronize to Assessment database record (Realtime Admin Map Sync)
+    assessment.risk_percentage = new_risk_pct
+    assessment.risk_level = new_risk_level
+    assessment.total_score = new_score
+    assessment.mitigation_data = json.dumps(data, ensure_ascii=False)
+    db.commit()
+
+    return data
+

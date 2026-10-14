@@ -1,5 +1,5 @@
 """
-Improvement Plan Router — Manage improvement action plans from assessments.
+Improvement Plan Router: Manage improvement action plans from assessments.
 Close the loop: assess → plan → improve → re-assess.
 """
 import json

@@ -55,6 +55,7 @@ def migrate_db():
             "latitude": "FLOAT",
             "longitude": "FLOAT",
             "is_demo": f"BOOLEAN {bool_false}",
+            "mitigation_data": "TEXT",
         },
     }
 

@@ -1,12 +1,12 @@
 """Scoring engine for fire risk assessment.
 
-Quy tắc tính điểm — Weighted Scoring + Max-Domination Rule:
+Quy tắc tính điểm: Weighted Scoring + Max-Domination Rule:
 
 Trọng số theo 8 nhóm nguyên nhân cháy (dựa trên thống kê thực tế Việt Nam):
   1. Dấu hiệu nguy cơ từ hệ thống điện:     50 điểm (50%)
      → Chiếm >50% nguyên nhân vụ cháy tại VN (Cục CS PCCC)
   2. Nguy cơ từ nguồn lửa/nhiệt:              15 điểm (15%)
-     → Bất cẩn dùng lửa, bếp gas, hàn cắt — nguyên nhân phổ biến thứ 2
+     → Bất cẩn dùng lửa, bếp gas, hàn cắt: nguyên nhân phổ biến thứ 2
   3. Lối thoát nạn và trang bị PCCC:           12 điểm (12%)
      → Quyết định hậu quả khi xảy ra cháy (người chết/sống)
   4. Dấu hiệu bất thường từ máy móc:           7 điểm (7%)
@@ -14,11 +14,11 @@ Trọng số theo 8 nhóm nguyên nhân cháy (dựa trên thống kê thực t�
   5. Tác động từ thiên nhiên:                   4 điểm (4%)
      → Yếu tố môi trường, ít kiểm soát được
   6. Nguy cơ tự cháy:                           5 điểm (5%)
-     → Pin lithium, hóa chất — xu hướng tăng
+     → Pin lithium, hóa chất: xu hướng tăng
   7. Phương tiện giao thông:                    4 điểm (4%)
-     → Xe máy, xe điện đỗ trong nhà — rất phổ biến tại VN
+     → Xe máy, xe điện đỗ trong nhà: rất phổ biến tại VN
   8. Nguy cơ bổ sung:                           3 điểm (3%)
-     → Rác thải, phá hoại, sự kiện — yếu tố phụ
+     → Rác thải, phá hoại, sự kiện: yếu tố phụ
 
 Max-Domination Rule:
   - Nếu BẤT KỲ nhóm nào = CRITICAL -> tổng thể tối thiểu = HIGH

@@ -160,7 +160,7 @@
             </div>
 
             <!-- PDF Export Wrapper -->
-            <div id="export-pdf-wrapper" style="background: #0f172a; padding: 20px; border-radius: 8px;">
+            <div id="export-pdf-wrapper" style="background: #0f172a; padding: 20px; border-radius: 0;">
 
                 <!-- AI Regional Summary Result -->
                 <div id="ai-regional-result"></div>
@@ -366,7 +366,7 @@
             // High Risk Facilities
             if (data.high_risk_facilities.length > 0) {
                 html += `<div class="analysis-section fade-in">
-                    <h3>🔴 Danh sách cơ sở nguy cơ cao — Ưu tiên kiểm tra</h3>
+                    <h3>🔴 Danh sách cơ sở nguy cơ cao: Ưu tiên kiểm tra</h3>
                     <table class="facility-table">
                         <thead><tr>
                             <th>Cơ sở</th><th>Loại hình</th><th>Nguy cơ</th><th>Điểm</th><th>Thời gian</th>
@@ -387,7 +387,7 @@
             // AI Analysis Section
             if (data.ai_analysis) {
                 html += `<div class="analysis-section fade-in">
-                    <h3>🤖 Phân tích AI — Góc nhìn Quản lý Nhà nước PCCC</h3>
+                    <h3>🤖 Phân tích AI: Góc nhìn Quản lý Nhà nước PCCC</h3>
                     <div id="ai-analysis-content"></div>
                 </div>`;
             }

@@ -293,7 +293,7 @@
 
         /* Leaflet performance: use hardware acceleration, remove expensive filters */
         .leaflet-tile-pane {
-            /* Removed: filter: brightness(0.7) contrast(1.2) saturate(0.8); — this caused severe lag */
+            /* Removed: filter: brightness(0.7) contrast(1.2) saturate(0.8);: this caused severe lag */
             will-change: transform;
             transform: translateZ(0);
         }
@@ -391,7 +391,7 @@
     </div>
 
     <script src="/js/api.js"></script>
-    <!-- Leaflet JS — defer to prevent page freeze while CDN loads -->
+    <!-- Leaflet JS: defer to prevent page freeze while CDN loads -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
     <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js" defer></script>
     <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js" defer></script>
@@ -432,7 +432,7 @@
 
         function initMap() {
             try {
-            // Vietnam bounding box — prevents panning outside
+            // Vietnam bounding box: prevents panning outside
             const vietnamBounds = L.latLngBounds([7.5, 101.0], [23.5, 110.0]);
 
             // Center on Bac Ninh by default with bounds lock
@@ -511,8 +511,8 @@
                                     <div style="font-size:0.85rem; line-height:1.4;">
                                         <strong style="color:#e11d48;">${p.loai || ''} ${p.ten_xa || ''}</strong><br>
                                         ${p.sap_nhap ? `<small style="color:#64748b;">(Gồm: ${p.sap_nhap})</small><br>` : ''}
-                                        <span>📏 Diện tích: <b>${p.dtich_km2 || '—'} km²</b></span><br>
-                                        <span>👥 Dân số: <b>${p.dan_so ? Number(p.dan_so).toLocaleString('vi-VN') : '—'}</b></span>
+                                        <span>📏 Diện tích: <b>${p.dtich_km2 || '-'} km²</b></span><br>
+                                        <span>👥 Dân số: <b>${p.dan_so ? Number(p.dan_so).toLocaleString('vi-VN') : '-'}</b></span>
                                     </div>
                                 `;
                                 layer.bindTooltip(tooltipHtml, {
@@ -599,7 +599,7 @@
             }
         }
 
-        // Returns circleMarker options instead of an icon — used with L.circleMarker
+        // Returns circleMarker options instead of an icon: used with L.circleMarker
         function getCircleMarkerStyle(riskLevel) {
             const color = riskColors[riskLevel] || '#94a3b8';
             return {
@@ -706,10 +706,10 @@
                 maxZoom: 13,
                 max: 1.0,
                 gradient: {
-                    0.0:  '#22c55e',  // xanh lá — thấp
-                    0.35: '#eab308',  // vàng — trung bình
-                    0.65: '#f97316',  // cam — cao
-                    1.0:  '#ef4444'   // đỏ — rất cao
+                    0.0:  '#22c55e',  // xanh lá: thấp
+                    0.35: '#eab308',  // vàng: trung bình
+                    0.65: '#f97316',  // cam: cao
+                    1.0:  '#ef4444'   // đỏ: rất cao
                 }
             });
 
@@ -734,7 +734,24 @@
                 const isOwn = item.id !== 'hidden';
                 const riskClass = `popup-risk-${item.risk_level}`;
 
-                // Luôn hiển thị popup — backend đã xử lý ẩn tên/địa chỉ cho bài của người khác
+                let mitigationNote = '';
+                if (item.mitigation_data) {
+                    try {
+                        const m = typeof item.mitigation_data === 'string' ? JSON.parse(item.mitigation_data) : item.mitigation_data;
+                        const items = m.items || [];
+                        const resolved = items.filter(x => x.resolved).length;
+                        const total = items.length;
+                        if (total > 0) {
+                            mitigationNote = `
+                            <div class="popup-row" style="background:#f0fdf4; padding:5px 8px; border:1px solid #bbf7d0; margin-top:5px; font-size:0.78rem;">
+                                <span class="popup-label" style="color:#166534; font-weight:700;">Tiến độ khắc phục:</span>
+                                <span class="popup-value" style="color:#166534; font-weight:800;">Đã xử lý ${resolved}/${total} mục (${m.initial_risk_percentage}% ➔ ${m.current_risk_percentage}%)</span>
+                            </div>`;
+                        }
+                    } catch (_) {}
+                }
+
+                // Luôn hiển thị popup: backend đã xử lý ẩn tên/địa chỉ cho bài của người khác
                 let popupRows = '';
 
                 if (isAdmin) {
@@ -756,6 +773,7 @@
                             <span class="popup-label">Mức nguy cơ:</span>
                             <span class="popup-risk ${riskClass}">${riskLabels[item.risk_level] || 'N/A'}</span>
                         </div>
+                        ${mitigationNote}
                         <div class="popup-row">
                             <span class="popup-label">Điểm:</span>
                             <span class="popup-value">${item.total_score}/${item.max_possible_score}</span>
@@ -802,7 +820,7 @@
                         </div>
                     `;
                 } else {
-                    // User: xem bài của người khác — chỉ hiện mức nguy cơ, ẩn tên
+                    // User: xem bài của người khác: chỉ hiện mức nguy cơ, ẩn tên
                     popupRows = `
                         <div class="popup-row">
                             <span class="popup-label">Loại cơ sở:</span>
@@ -883,7 +901,7 @@
             }
         }
 
-        // Init — dùng 'load' thay 'DOMContentLoaded' vì Leaflet scripts dùng defer
+        // Init: dùng 'load' thay 'DOMContentLoaded' vì Leaflet scripts dùng defer
         window.addEventListener('load', () => {
             if (typeof onReady === 'function') onReady(() => {});
             setupNavbar();

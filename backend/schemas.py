@@ -247,6 +247,7 @@ class AssessmentResponse(BaseModel):
     risk_percentage: float
     status: str
     ai_analysis: Optional[str] = None
+    mitigation_data: Optional[str] = None
     started_at: Optional[datetime] = None
     completed_at: Optional[datetime] = None
     created_at: Optional[datetime] = None

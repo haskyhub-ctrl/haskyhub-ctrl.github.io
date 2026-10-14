@@ -84,7 +84,7 @@
                 ? `<th>Người đánh giá</th><th>Tổ chức</th>`
                 : '';
             const adminCells = (a) => _isAdmin
-                ? `<td>${a.user_name || '—'}</td><td>${a.organization || '—'}</td>`
+                ? `<td>${a.user_name || '-'}</td><td>${a.organization || '-'}</td>`
                 : '';
             const deleteBtn = (a) => _isAdmin ? '' :
                 `<button class="btn-icon" onclick="deleteAssessment('${a.id}')" title="Xóa">🗑️</button>`;
@@ -107,7 +107,7 @@
                 ${assessments.map(a => `
                 <tr>
                     <td><strong>${a.facility_name}</strong></td>
-                    <td>${a.facility_type || '—'}</td>
+                    <td>${a.facility_type || '-'}</td>
                     ${adminCells(a)}
                     <td><strong>${a.risk_percentage}%</strong> <span style="color:var(--text-muted); font-size:0.8rem;">(${a.total_score}/${a.max_possible_score})</span></td>
                     <td>${getRiskBadge(a.risk_level)}</td>

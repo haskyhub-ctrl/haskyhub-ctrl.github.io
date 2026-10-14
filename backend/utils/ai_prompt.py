@@ -4,9 +4,9 @@ Cập nhật pháp lý 2025:
 - Luật PCCC số 55/2024/QH15 (thay Luật PCCC 2001 sửa đổi 2013)
 - QCVN 06:2022/BXD kèm Sửa đổi 1:2023
 - Nghị định 105/2025/NĐ-CP (thay NĐ 136/2020/NĐ-CP)
-- QCVN 10:2025/BCA (thay TCVN 3890:2009) — ban hành 04/11/2025, hiệu lực 30/12/2025
-- QCVN 25:2025/BCT — An toàn điện
-- QCVN 25:2025/BKHCN — Thiết bị điện gia đình
+- QCVN 10:2025/BCA (thay TCVN 3890:2009): ban hành 04/11/2025, hiệu lực 30/12/2025
+- QCVN 25:2025/BCT: An toàn điện
+- QCVN 25:2025/BKHCN: Thiết bị điện gia đình
 """
 
 import json
@@ -15,11 +15,11 @@ import json
 # Current legal references (2024-2025)
 CURRENT_LEGAL_REFERENCES = [
     "Luật Phòng cháy, chữa cháy và Cứu nạn, cứu hộ số 55/2024/QH15",
-    "QCVN 06:2022/BXD kèm Sửa đổi 1:2023 QCVN 06:2022/BXD — Quy chuẩn kỹ thuật quốc gia về An toàn cháy cho nhà và công trình",
+    "QCVN 06:2022/BXD kèm Sửa đổi 1:2023 QCVN 06:2022/BXD: Quy chuẩn kỹ thuật quốc gia về An toàn cháy cho nhà và công trình",
     "Nghị định 105/2025/NĐ-CP ngày 15/5/2025 quy định chi tiết một số điều và biện pháp thi hành Luật PCCC và CNCH",
-    "QCVN 10:2025/BCA — Quy chuẩn kỹ thuật quốc gia về trang bị, bố trí phương tiện phòng cháy, chữa cháy, cứu nạn, cứu hộ cho nhà và công trình (ban hành 04/11/2025, hiệu lực 30/12/2025)",
-    "QCVN 25:2025/BCT — Quy chuẩn kỹ thuật quốc gia về An toàn điện",
-    "QCVN 25:2025/BKHCN — Quy chuẩn kỹ thuật quốc gia về Thiết bị điện dùng cho lắp đặt điện trong gia đình và hệ thống điện tương tự",
+    "QCVN 10:2025/BCA: Quy chuẩn kỹ thuật quốc gia về trang bị, bố trí phương tiện phòng cháy, chữa cháy, cứu nạn, cứu hộ cho nhà và công trình (ban hành 04/11/2025, hiệu lực 30/12/2025)",
+    "QCVN 25:2025/BCT: Quy chuẩn kỹ thuật quốc gia về An toàn điện",
+    "QCVN 25:2025/BKHCN: Quy chuẩn kỹ thuật quốc gia về Thiết bị điện dùng cho lắp đặt điện trong gia đình và hệ thống điện tương tự",
 ]
 
 
@@ -45,15 +45,21 @@ TỶ LỆ NGUY CƠ: {assessment_data.get('risk_percentage', 0)}%
 MỨC NGUY CƠ TỔNG: {assessment_data.get('risk_level', 'N/A')}
 """
     
-    answers_info = "CÂU TRẢ LỜI CHI TIẾT:\n"
-    for ans in assessment_data.get("detailed_answers", []):
-        answers_info += f"- Câu hỏi: {ans.get('question_text', '')}\n"
-        answers_info += f"  Trả lời: {ans.get('answer_text', '')} (Điểm nguy cơ: {ans.get('score', 0)})\n"
+    risky_answers = [a for a in assessment_data.get("detailed_answers", []) if a.get("score", 0) >= 2]
+    safe_answers = [a for a in assessment_data.get("detailed_answers", []) if a.get("score", 0) == 0]
+    
+    answers_info = f"CÁC ĐIỂM TỒN TẠI NGUY CƠ CẦN PHÂN TÍCH ({len(risky_answers)} điểm vi phạm/nguy cơ):\n"
+    for ans in risky_answers:
+        answers_info += f"- [NGUY CƠ] {ans.get('question_text', '')}: {ans.get('answer_text', '')} (Điểm: {ans.get('score', 0)})\n"
+    
+    answers_info += f"\nCÁC TIÊU CHÍ AN TOÀN ĐẠT YÊU CẦU ({len(safe_answers)} tiêu chí tốt):\n"
+    for ans in safe_answers[:5]:
+        answers_info += f"- [TỐT] {ans.get('question_text', '')}: {ans.get('answer_text', '')}\n"
     
     legal_refs = "\n".join(f"  - {r}" for r in CURRENT_LEGAL_REFERENCES)
     
-    prompt = f"""Bạn là chuyên gia Phòng cháy chữa cháy và Cứu nạn cứu hộ (PCCC&CNCH) tại Việt Nam với 20 năm kinh nghiệm.
-Hãy phân tích kết quả đánh giá nguy cơ cháy nổ sau đây và đưa ra báo cáo chuyên sâu, CHI TIẾT, CỤ THỂ bằng tiếng Việt.
+    prompt = f"""Bạn là chuyên gia tư vấn kỹ thuật an toàn Phòng cháy chữa cháy và Cứu nạn cứu hộ (PCCC&CNCH), thực hiện nhiệm vụ theo định hướng chỉ đạo của Phòng Cảnh sát PCCC và CNCH - Công an thành phố Bắc Ninh.
+Hãy phân tích kết quả khảo sát nguy cơ cháy nổ sau đây và đưa ra báo cáo chuyên sâu, CHI TIẾT, CỤ THỂ, TRANG TRỌNG bằng tiếng Việt.
 
 {facility_info}
 
@@ -66,50 +72,52 @@ Hãy phân tích kết quả đánh giá nguy cơ cháy nổ sau đây và đưa
 CĂN CỨ PHÁP LÝ HIỆN HÀNH (2024-2025):
 {legal_refs}
 
+QUY TẮC BẮT BUỘC (STRICT GOVERNMENT RULES - KHÔNG ĐƯỢC VI PHẠM):
+0. CHUẨN MỰC HÀNH VĂN NGƯỜI THẬT (0% AI / HUMAN WRITING):
+   - Tuyệt đối CẤM sử dụng dấu gạch ngang dài (em dash "—"). Luôn dùng dấu phẩy, dấu chấm, dấu hai chấm hoặc ngoặc đơn.
+   - Tuyệt đối CẤM các từ nối sáo rỗng robot: "Trong bối cảnh...", "Không thể phủ nhận rằng...", "Đóng vai trò vô cùng quan trọng...", "Mang lại lợi ích đáng kể...", "Giải pháp toàn diện", "Đột phá", "Tối ưu hóa".
+   - Tuyệt đối CẤM cấu trúc giả tạo "không chỉ... mà còn...", không ép danh sách phải đủ 3 ý, không dùng ngôn ngữ quảng cáo tô vẽ.
+   - Độ biến thiên câu (burstiness): Trộn câu ngắn gọn dứt khoát (2-5 từ) và câu phân tích kỹ thuật. Viết như một cán bộ kiểm tra PCCC dày dạn kinh nghiệm thực tế đang chỉ dẫn trực tiếp cho chủ cơ sở.
+1. VĂN PHONG VÀ TƯ CÁCH: Sử dụng văn phong hành chính nhà nước chuẩn mực, đĩnh đạc, khách quan, mang tính hướng dẫn chuyên môn kỹ thuật. Tuyệt đối KHÔNG dùng từ ngữ cảm tính, tiếng lóng, ẩn dụ tùy tiện (nghiêm cấm dùng các từ như "tử huyệt", "báo động đỏ").
+2. NGHIÊM CẤM BỊA ĐẶT VĂN BẢN QUY PHẠM PHÁP LUẬT: Tuyệt đối chỉ viện dẫn các văn bản pháp luật thực tế đang có hiệu lực tại Việt Nam: Luật PCCC và CNCH số 55/2024/QH15; Nghị định 105/2025/NĐ-CP; Nghị định 106/2025/NĐ-CP; Nghị định 144/2021/NĐ-CP; QCVN 06:2022/BXD kèm Sửa đổi 1:2023; QCVN 10:2025/BCA; QCVN 25:2025/BCT; QCVN 25:2025/BKHCN; Thông tư 149/2020/TT-BCA. Nghiêm cấm tự sáng tác số hiệu luật, điều khoản giả mạo!
+3. PHÂN ĐỊNH BẢN CHẤT NGUY CƠ:
+   - Sự cố hệ thống, thiết bị điện (>50%) và bất cẩn nguồn lửa/nguồn nhiệt (15%) là nguyên nhân trực tiếp dẫn đến cháy.
+   - Tồn tại về lối thoát nạn và trang bị PCCC là điều kiện an toàn, phương tiện cứu người và hạn chế hậu quả khi xảy ra cháy, KHÔNG PHẢI là nguyên nhân phát sinh cháy.
+4. THỜI HẠN KHẮC PHỤC:
+   - Các tồn tại có nguy cơ trực tiếp dẫn đến cháy (dây điện hở, thiết bị phát nhiệt quá mức, rò rỉ gas, hàn cắt không che chắn): Phải ghi rõ thời hạn là "Khắc phục ngay (trong 24h - 48h)", tuyệt đối không để 30 hay 60 ngày!
+   - Các tồn tại về bổ sung phương tiện, bảo dưỡng thiết bị: 15 - 30 ngày.
+   - Cải tạo kết cấu, thẩm duyệt: theo lộ trình kế hoạch.
+5. ĐỔI MỤC ĐIỂM MẠNH: Đặt tên là "ƯU ĐIỂM" (ghi nhận các mặt cơ sở làm tốt, không vội kết luận đạt chuẩn khi chưa kiểm tra thực địa).
+
 YÊU CẦU PHÂN TÍCH (viết CHI TIẾT, không viết chung chung):
 
-1. ĐÁNH GIÁ TỔNG QUAN: Nhận xét tổng thể về tình trạng an toàn cháy nổ (3-5 câu), bao gồm đánh giá mức độ tuân thủ pháp luật hiện hành.
+1. ĐÁNH GIÁ TỔNG QUAN: Nhận xét tổng thể về tình trạng an toàn PCCC của cơ sở (3-5 câu), đánh giá mức độ rủi ro khách quan theo quy chuẩn hiện hành.
 
-2. ĐIỂM MẠNH (Phân tích chi tiết): 
-   - Dựa vào các nhóm có tỷ lệ nguy cơ THẤP (dưới 25%), giải thích CỤ THỂ tại sao cơ sở làm tốt ở lĩnh vực đó.
-   - So sánh với yêu cầu của QCVN 06:2022/BXD (Sửa đổi 1:2023) và Luật PCCC 55/2024.
-   - Nêu rõ biện pháp nào cơ sở đang thực hiện đúng.
-   - Liệt kê 3-5 điểm mạnh cụ thể.
+2. ƯU ĐIỂM (Phân tích chi tiết): 
+   - Dựa vào các nhóm có tỷ lệ nguy cơ THẤP (dưới 25%), nêu cụ thể các biện pháp tốt mà cơ sở đang duy trì.
+   - Liệt kê 3-5 ưu điểm cụ thể.
 
-3. ĐIỂM YẾU NGHIÊM TRỌNG (Phân tích chi tiết):
-   - Dựa vào các nhóm có tỷ lệ nguy cơ CAO (trên 40%), chỉ ra RỦI RO CỤ THỂ.
-   - Nêu hậu quả có thể xảy ra nếu không khắc phục.
-   - Đối với nhóm "Sự cố hệ thống, thiết bị điện": viện dẫn QCVN 25:2025/BCT và QCVN 25:2025/BKHCN.
-   - Liệt kê 3-5 điểm yếu nghiêm trọng.
+3. TỒN TẠI & NGUY CƠ CHÁY NỔ TIỀM ẨN:
+   - Dựa vào các nhóm có điểm nguy cơ cao, chỉ ra nguy cơ trực tiếp và hậu quả nếu xảy ra sự cố.
+   - Đối với nhóm điện: viện dẫn quy định về an toàn điện.
+   - Liệt kê 3-5 tồn tại cụ thể.
 
-4. KHUYẾN CÁO CHI TIẾT: Đây là phần QUAN TRỌNG NHẤT. Đưa ra 10-15 khuyến cáo CỤ THỂ, CHI TIẾT, THỰC TẾ, CÓ KHẢ NĂNG THỰC HIỆN ĐƯỢC, bao gồm:
-   - Hành động cụ thể đến từng bước (ví dụ: "Bước 1: Ngắt nguồn điện tổng. Bước 2: Kiểm tra từng đoạn dây...")
-   - Kiểm tra cụ thể bằng giác quan (ví dụ: "Sờ ổ cắm khi đang sử dụng — nếu nóng thì cần thay", "Ngửi xem có mùi khét ở tủ điện không")
-   - Biện pháp khắc phục chi tiết — liệt kê vật tư, thiết bị cần mua, NƠI MUA (cửa hàng điện dân dụng, Điện máy xanh, Lazada, Shopee, cửa hàng PCCC)
-   - Ước tính chi phí THỰC TẾ theo thị trường Việt Nam 2025 (VD: "Bình chữa cháy ABC 4kg: 300.000-600.000đ tại cửa hàng PCCC", "Aptomat Sino/LS: 80.000-200.000đ", "RCCB 30mA Schneider: 400.000-800.000đ", "Đầu báo khói độc lập: 150.000-300.000đ trên Shopee")
-   - KHÔNG đề xuất những thứ quá đắt hoặc phức tạp nếu cơ sở nhỏ (VD: không đề xuất lắp hệ thống sprinkler cho nhà ở, không đề xuất thuê tư vấn nếu chỉ cần thay ổ cắm)
-   - Ưu tiên những việc chủ cơ sở TỰ LÀM ĐƯỢC trước (dọn lối thoát, rút phích cắm, mua bình chữa cháy)
-   - Chỉ đề xuất thuê thợ/chuyên gia khi thực sự cần (sửa hệ thống điện, kiểm định thiết bị)
-   - Người chịu trách nhiệm (VD: "Chủ cơ sở tự làm", "Thợ điện địa phương", "Cơ quan PCCC huyện/quận")
-   - Thời hạn thực hiện (Ngay lập tức / 7 ngày / 30 ngày / 60 ngày / 90 ngày)
-   - Mức ưu tiên (urgent/high/medium/low)
-   - Căn cứ pháp lý CỤ THỂ đến từng điều khoản (VD: "Điều 15, Luật PCCC 55/2024")
-   - Đối với lĩnh vực điện: áp dụng QCVN 25:2025/BCT và QCVN 25:2025/BKHCN cụ thể
+4. KHUYẾN CÁO CHI TIẾT: Đưa ra 8-12 khuyến cáo CỤ THỂ, THỰC TẾ, DỄ THỰC HIỆN:
+   - Hành động từng bước rõ ràng.
+   - Các tồn tại có nguy cơ phát sinh cháy cao phải ghi rõ "Khắc phục ngay" (trong 24h - 48h).
+   - Biện pháp khắc phục chi tiết, vật tư cần trang bị, nơi mua sắm uy tín.
+   - Ước tính chi phí thực tế theo thị trường Việt Nam.
+   - Người chịu trách nhiệm cụ thể.
+   - Căn cứ pháp lý chính xác (Điều, Khoản).
 
-5. DANH MỤC KIỂM TRA HÀNG NGÀY: Liệt kê 5-8 mục kiểm tra an toàn mà cơ sở cần thực hiện hàng ngày/hàng tuần.
+5. DANH MỤC TỰ KIỂM TRA AN TOÀN HÀNG NGÀY: 5-8 việc chủ cơ sở/người phụ trách tự kiểm tra đầu giờ hoặc cuối ngày.
 
-6. KẾ HOẠCH CẢI THIỆN CHI TIẾT: Đây là phần RẤT QUAN TRỌNG. Lập lộ trình 30-60-90 ngày. Mỗi giai đoạn gồm 7-10 hành động CỤ THỂ. Mỗi hành động phải có:
-   - Tên công việc ngắn gọn (task)
-   - Mô tả chi tiết các bước thực hiện (detail) — viết DÀI, 2-4 câu cho mỗi hành động
-   - Người/đơn vị chịu trách nhiệm (responsible)
-   - Chi phí ước tính bằng VNĐ (cost)
-   - Tiêu chí đo lường hoàn thành (criteria)
-   - Căn cứ pháp lý nếu có (legal_basis)
-   30 ngày đầu: tập trung khắc phục khẩn cấp — ngắt nguồn nguy hiểm, kiểm tra hệ thống điện, mua bình chữa cháy, dọn lối thoát
-   30-60 ngày: nâng cấp — thay thế thiết bị, huấn luyện PCCC, lắp đặt hệ thống cảnh báo, hoàn thiện hồ sơ
-   60-90 ngày: hoàn thiện — đánh giá lại, xây dựng quy trình dài hạn, đào tạo chuyên sâu, kiểm định bên thứ ba
+6. KẾ HOẠCH KHẮC PHỤC THEO LỘ TRÌNH:
+   - 30 ngày đầu: Ưu tiên xử lý ngay các nguy cơ cháy nổ cao (trong 24-48h đầu), dọn thông lối thoát, kiểm tra hệ thống điện.
+   - 30-60 ngày: Bảo dưỡng, bổ sung trang thiết bị, huấn luyện nghiệp vụ PCCC.
+   - 60-90 ngày: Hoàn thiện hồ sơ quản lý PCCC, tự kiểm tra định kỳ.
 
-7. THAM CHIẾU PHÁP LÝ: Sử dụng ĐÚNG các quy định pháp luật hiện hành đã liệt kê ở trên. KHÔNG sử dụng các văn bản đã hết hiệu lực.
+7. THAM CHIẾU VĂN BẢN QUY PHẠM PHÁP LUẬT: Viện dẫn chính xác văn bản hiện hành.
 
 Hãy trả về kết quả dưới dạng JSON với cấu trúc:
 {{
@@ -175,11 +183,11 @@ def build_fallback_analysis(assessment_data: dict) -> dict:
         pct = cat.get("percentage", 0)
         name = cat.get("category_name", "")
         if pct <= 20:
-            strengths.append(f"{name}: Tỷ lệ nguy cơ chỉ {pct}% — Cơ sở thực hiện tốt các quy định an toàn trong lĩnh vực này, đáp ứng yêu cầu theo QCVN 06:2022/BXD")
+            strengths.append(f"{name}: Tỷ lệ nguy cơ ở mức thấp ({pct}%). Cơ sở thực hiện tốt các biện pháp an toàn trong nhóm này theo định hướng QCVN 06:2022/BXD.")
         elif pct <= 30:
-            strengths.append(f"{name}: Tỷ lệ nguy cơ {pct}% — Mức chấp nhận được, cần duy trì và cải thiện thêm")
+            strengths.append(f"{name}: Tỷ lệ nguy cơ {pct}%, cơ bản chấp nhận được, cần tiếp tục duy trì và kiểm tra định kỳ.")
     if not strengths:
-        strengths = ["Cơ sở đã thực hiện khảo sát đánh giá nguy cơ cháy nổ, cho thấy sự quan tâm đến an toàn PCCC theo Luật PCCC 55/2024"]
+        strengths = ["Cơ sở đã chủ động thực hiện khảo sát đánh giá nguy cơ cháy nổ theo tinh thần Luật PCCC và CNCH 55/2024."]
     
     # Detailed weaknesses
     weaknesses = []
@@ -189,13 +197,13 @@ def build_fallback_analysis(assessment_data: dict) -> dict:
         name_lower = name.lower()
         if pct >= 60:
             if "điện" in name_lower:
-                weaknesses.append(f"{name}: Tỷ lệ nguy cơ {pct}% — NGHIÊM TRỌNG. Vi phạm quy định an toàn điện tại QCVN 25:2025/BCT. Nguy cơ cháy do chập điện, quá tải rất cao. Cần kiểm tra ngay hệ thống điện theo QCVN 25:2025/BKHCN")
+                weaknesses.append(f"{name}: Tỷ lệ nguy cơ {pct}%, mức độ nghiêm trọng. Nguy cơ cháy do sự cố thiết bị điện rất cao. Cần rà soát và khắc phục ngay theo QCVN 25:2025/BCT và QCVN 25:2025/BKHCN trong 24h - 48h.")
             else:
-                weaknesses.append(f"{name}: Tỷ lệ nguy cơ {pct}% — NGHIÊM TRỌNG. Không đáp ứng yêu cầu theo QCVN 06:2022/BXD. Có thể bị xử phạt theo Nghị định 105/2025/NĐ-CP")
+                weaknesses.append(f"{name}: Tỷ lệ nguy cơ {pct}%, mức độ nghiêm trọng. Chưa đáp ứng yêu cầu kỹ thuật theo QCVN 06:2022/BXD. Cần có biện pháp xử lý kịp thời để tránh nguy cơ vi phạm Nghị định 105/2025/NĐ-CP.")
         elif pct >= 40:
-            weaknesses.append(f"{name}: Tỷ lệ nguy cơ {pct}% — Cần cải thiện để đáp ứng tiêu chuẩn. Nguy cơ sự cố nếu không khắc phục kịp thời")
+            weaknesses.append(f"{name}: Tỷ lệ nguy cơ {pct}%. Cần sớm cải thiện để phòng ngừa sự cố phát sinh.")
     if not weaknesses:
-        weaknesses = ["Không phát hiện điểm yếu nghiêm trọng. Tuy nhiên cần kiểm tra định kỳ theo Nghị định 105/2025/NĐ-CP"]
+        weaknesses = ["Chưa phát hiện điểm nguy cơ nghiêm trọng vượt ngưỡng. Cơ sở cần duy trì kiểm tra an toàn PCCC định kỳ theo Nghị định 105/2025/NĐ-CP."]
     
     # Generate detailed recommendations from answers
     detailed_recs = _generate_fallback_recommendations(detailed_answers, weak_cats)
@@ -283,7 +291,7 @@ def _answer_to_recommendation(question: str, answer: str, score: int) -> dict:
     if "nối đất" in q_lower or "tiếp đất" in q_lower:
         return {"title": "Kiểm tra hệ thống nối đất", "description": "Đo điện trở nối đất, yêu cầu không quá 4 ohm theo QCVN 25:2025/BCT. Bổ sung dây nối đất cho thiết bị chưa có. Kiểm tra hệ thống chống sét.", "priority": priority, "deadline": deadline, "category": "Hệ thống điện", "legal_basis": "QCVN 25:2025/BCT"}
     if "ổ cắm" in q_lower:
-        return {"title": "Sửa chữa ổ cắm điện", "description": "Thay ổ cắm hỏng, méo, biến dạng. Không cắm chồng ổ nối dài. Sờ ổ cắm khi đang dùng — nếu nóng thì ngắt ngay. Ngửi xem có mùi khét không. Sử dụng ổ cắm đạt chuẩn QCVN 25:2025/BKHCN.", "priority": priority, "deadline": deadline, "category": "Hệ thống điện", "legal_basis": "QCVN 25:2025/BKHCN"}
+        return {"title": "Sửa chữa ổ cắm điện", "description": "Thay ổ cắm hỏng, méo, biến dạng. Không cắm chồng ổ nối dài. Sờ ổ cắm khi đang dùng, nếu thấy nóng thì ngắt ngay. Ngửi xem có mùi khét không. Sử dụng ổ cắm đạt chuẩn QCVN 25:2025/BKHCN.", "priority": priority, "deadline": deadline, "category": "Hệ thống điện", "legal_basis": "QCVN 25:2025/BKHCN"}
     if "tủ điện" in q_lower:
         return {"title": "Dọn dẹp khu vực tủ điện", "description": "Di chuyển vật liệu dễ cháy ra xa tủ điện tối thiểu 1 mét. Lắp khóa và biển cảnh báo nguy hiểm. Đảm bảo thông thoáng khu vực tủ điện theo QCVN 06:2022/BXD.", "priority": priority, "deadline": deadline, "category": "Hệ thống điện", "legal_basis": "QCVN 06:2022/BXD (Sửa đổi 1:2023)"}
     if "nóng" in q_lower or "khét" in q_lower:

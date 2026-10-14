@@ -429,7 +429,7 @@ def _generate_aggregate_recommendations(total, risk_counts, avg_risk, worst_cats
                 ]
             })
 
-    # Facility type specific recommendations — WITH DETAILED CAUSE ANALYSIS
+    # Facility type specific recommendations: WITH DETAILED CAUSE ANALYSIS
     for ft, fd in facility_dist.items():
         if fd["high_risk_count"] > 0 and fd["count"] > 0:
             hr_rate = fd["high_risk_count"] / fd["count"] * 100

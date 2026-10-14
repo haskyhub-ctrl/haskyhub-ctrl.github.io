@@ -33,7 +33,7 @@ var _=0,W=1,I=2,S=3,X=4,B=5,T=6,M=7,K=8,D=9,
 window.GAME_LEVELS = [
 
 /* ======================================================
-   LEVEL 1 — "Bước đầu tiên" (20x15)
+   LEVEL 1: "Bước đầu tiên" (20x15)
    Objectives: Ngắt điện, Thu BCC, Thu chìa khóa
    Layout: Player top-left, EXIT bottom-right behind locked door
    Obstacles: Electric wire blocks path, fire blocks another path
@@ -70,7 +70,7 @@ window.GAME_LEVELS = [
 },
 
 /* ======================================================
-   LEVEL 2 — "Hành lang khói" (20x15)
+   LEVEL 2: "Hành lang khói" (20x15)
    Objectives: Ngắt điện, BCC, Chìa khóa, Khăn ướt
    Smoke corridor blocks path to EXIT area
    ====================================================== */
@@ -107,7 +107,7 @@ window.GAME_LEVELS = [
 },
 
 /* ======================================================
-   LEVEL 3 — "Khu vực nguy hiểm" (20x15)
+   LEVEL 3: "Khu vực nguy hiểm" (20x15)
    Objectives: Ngắt điện, BCC, Chìa khóa, Khăn ướt, Gọi 114
    Phone (114) required - EXIT area locked behind call
    ====================================================== */
@@ -145,7 +145,7 @@ window.GAME_LEVELS = [
 },
 
 /* ======================================================
-   LEVEL 4 — "Rò rỉ gas" (20x15)
+   LEVEL 4: "Rò rỉ gas" (20x15)
    Objectives: Ngắt điện, BCC, Chìa khóa, Khăn ướt, Khóa gas, Gọi 114
    Gas leak near fire = deadly combo
    ====================================================== */
@@ -184,7 +184,7 @@ window.GAME_LEVELS = [
 },
 
 /* ======================================================
-   LEVEL 5 — "Nhiệm vụ toàn diện" (20x15)
+   LEVEL 5: "Nhiệm vụ toàn diện" (20x15)
    Objectives: ALL (Ngắt điện, BCC, Key, TWL, Gas, Mask, 114)
    First level with all objectives
    ====================================================== */
@@ -224,7 +224,7 @@ window.GAME_LEVELS = [
 },
 
 /* ======================================================
-   LEVEL 6 — "Mê cung lửa" (20x15)
+   LEVEL 6: "Mê cung lửa" (20x15)
    Objectives: ALL - Different layout, more fire
    ====================================================== */
 {
@@ -263,7 +263,7 @@ window.GAME_LEVELS = [
 },
 
 /* ======================================================
-   LEVEL 7 — "Tòa nhà văn phòng" (20x15)
+   LEVEL 7: "Tòa nhà văn phòng" (20x15)
    Objectives: ALL - Office layout with corridors
    ====================================================== */
 {
@@ -302,7 +302,7 @@ window.GAME_LEVELS = [
 },
 
 /* ======================================================
-   LEVEL 8 — "Nhà kho" (20x15)
+   LEVEL 8: "Nhà kho" (20x15)
    Objectives: ALL - Warehouse with tight corridors
    ====================================================== */
 {
@@ -341,7 +341,7 @@ window.GAME_LEVELS = [
 },
 
 /* ======================================================
-   LEVEL 9 — "Tầng hầm" (20x15)
+   LEVEL 9: "Tầng hầm" (20x15)
    Objectives: ALL - Harder, faster fire. Basement setting.
    ====================================================== */
 {
@@ -380,7 +380,7 @@ window.GAME_LEVELS = [
 },
 
 /* ======================================================
-   LEVEL 10 — "Thử thách cuối cùng" (20x15)
+   LEVEL 10: "Thử thách cuối cùng" (20x15)
    Objectives: ALL - Hardest. Very fast fire, tight time.
    ====================================================== */
 {

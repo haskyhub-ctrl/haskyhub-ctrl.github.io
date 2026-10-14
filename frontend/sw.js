@@ -1,4 +1,4 @@
-// FRAS Service Worker — Basic caching for offline support
+// FRAS Service Worker: Basic caching for offline support
 const CACHE_NAME = 'fras-cache-v1';
 const STATIC_ASSETS = [
     '/',
@@ -19,7 +19,7 @@ const STATIC_ASSETS = [
     '/js/export.js',
 ];
 
-// Install — cache static assets
+// Install: cache static assets
 self.addEventListener('install', event => {
     event.waitUntil(
         caches.open(CACHE_NAME).then(cache => {
@@ -29,7 +29,7 @@ self.addEventListener('install', event => {
     self.skipWaiting();
 });
 
-// Activate — clean old caches
+// Activate: clean old caches
 self.addEventListener('activate', event => {
     event.waitUntil(
         caches.keys().then(keys =>
@@ -39,7 +39,7 @@ self.addEventListener('activate', event => {
     self.clients.claim();
 });
 
-// Fetch — network first, cache fallback for pages
+// Fetch: network first, cache fallback for pages
 self.addEventListener('fetch', event => {
     const { request } = event;
 
@@ -59,7 +59,7 @@ self.addEventListener('fetch', event => {
         }).catch(() => {
             // Fallback to cache
             return caches.match(request).then(cached => {
-                return cached || new Response('Offline — Vui lòng kết nối mạng', {
+                return cached || new Response('Offline: Vui lòng kết nối mạng', {
                     status: 503,
                     headers: { 'Content-Type': 'text/html; charset=utf-8' }
                 });
