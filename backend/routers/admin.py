@@ -544,28 +544,25 @@ class GenerateDemoRequest(BaseModel):
 
 
 def _cascade_delete_assessments(db: Session, assessment_ids: List[str]):
-    """Xóa an toàn toàn bộ bài đánh giá và các bản ghi con liên quan."""
+    """Xóa an toàn toàn bộ bài đánh giá và các bản ghi con liên quan theo lô."""
     if not assessment_ids:
         return
-    from sqlalchemy import text
+    from models import AssessmentAnswer, CategoryScore, ImageAnalysis, ImprovementPlan, ImprovementTask
     chunk_size = 100
     for i in range(0, len(assessment_ids), chunk_size):
-        chunk = tuple(assessment_ids[i:i + chunk_size])
-        if not chunk:
-            continue
-        stmts = [
-            text("DELETE FROM improvement_tasks WHERE plan_id IN (SELECT id FROM improvement_plans WHERE assessment_id IN :ids)"),
-            text("DELETE FROM improvement_plans WHERE assessment_id IN :ids"),
-            text("DELETE FROM image_analyses WHERE assessment_id IN :ids"),
-            text("DELETE FROM assessment_answers WHERE assessment_id IN :ids"),
-            text("DELETE FROM category_scores WHERE assessment_id IN :ids"),
-            text("DELETE FROM assessments WHERE id IN :ids"),
-        ]
-        for stmt in stmts:
-            try:
-                db.execute(stmt.bindparams(ids=chunk))
-            except Exception as e:
-                print(f"[cascade_delete] Warning: {e}")
+        chunk = assessment_ids[i:i + chunk_size]
+        try:
+            plan_objs = db.query(ImprovementPlan.id).filter(ImprovementPlan.assessment_id.in_(chunk)).all()
+            plan_ids = [p[0] for p in plan_objs]
+            if plan_ids:
+                db.query(ImprovementTask).filter(ImprovementTask.plan_id.in_(plan_ids)).delete(synchronize_session=False)
+                db.query(ImprovementPlan).filter(ImprovementPlan.id.in_(plan_ids)).delete(synchronize_session=False)
+            db.query(ImageAnalysis).filter(ImageAnalysis.assessment_id.in_(chunk)).delete(synchronize_session=False)
+            db.query(AssessmentAnswer).filter(AssessmentAnswer.assessment_id.in_(chunk)).delete(synchronize_session=False)
+            db.query(CategoryScore).filter(CategoryScore.assessment_id.in_(chunk)).delete(synchronize_session=False)
+            db.query(Assessment).filter(Assessment.id.in_(chunk)).delete(synchronize_session=False)
+        except Exception as e:
+            print(f"[cascade_delete] Warning: {e}")
 
 
 @router.get("/assessments")
@@ -622,17 +619,17 @@ def delete_all_demo_assessments(
     from sqlalchemy import text
     try:
         count = db.query(func.count(Assessment.id)).filter(
-            or_(Assessment.is_demo == True, Assessment.is_demo == 1)
+            Assessment.is_demo.is_(True)
         ).scalar() or 0
 
         if count > 0:
             statements = [
-                "DELETE FROM improvement_tasks WHERE plan_id IN (SELECT id FROM improvement_plans WHERE assessment_id IN (SELECT id FROM assessments WHERE is_demo = TRUE OR is_demo = 1))",
-                "DELETE FROM improvement_plans WHERE assessment_id IN (SELECT id FROM assessments WHERE is_demo = TRUE OR is_demo = 1)",
-                "DELETE FROM image_analyses WHERE assessment_id IN (SELECT id FROM assessments WHERE is_demo = TRUE OR is_demo = 1)",
-                "DELETE FROM assessment_answers WHERE assessment_id IN (SELECT id FROM assessments WHERE is_demo = TRUE OR is_demo = 1)",
-                "DELETE FROM category_scores WHERE assessment_id IN (SELECT id FROM assessments WHERE is_demo = TRUE OR is_demo = 1)",
-                "DELETE FROM assessments WHERE is_demo = TRUE OR is_demo = 1",
+                "DELETE FROM improvement_tasks WHERE plan_id IN (SELECT id FROM improvement_plans WHERE assessment_id IN (SELECT id FROM assessments WHERE is_demo IS TRUE))",
+                "DELETE FROM improvement_plans WHERE assessment_id IN (SELECT id FROM assessments WHERE is_demo IS TRUE)",
+                "DELETE FROM image_analyses WHERE assessment_id IN (SELECT id FROM assessments WHERE is_demo IS TRUE)",
+                "DELETE FROM assessment_answers WHERE assessment_id IN (SELECT id FROM assessments WHERE is_demo IS TRUE)",
+                "DELETE FROM category_scores WHERE assessment_id IN (SELECT id FROM assessments WHERE is_demo IS TRUE)",
+                "DELETE FROM assessments WHERE is_demo IS TRUE",
             ]
             for sql in statements:
                 try:
