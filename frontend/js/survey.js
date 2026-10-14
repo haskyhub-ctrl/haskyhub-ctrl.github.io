@@ -137,15 +137,19 @@ const facilityTypes = [
 async function initSurvey() {
     const user = api.getUser();
     surveyState.user = user;
-    surveyState.isImportedUser = !!(user && user.facility_code);
-    surveyState.isCitizen = !user;
-
     const urlParams = new URLSearchParams(window.location.search);
+    const roleParam = urlParams.get('role') || sessionStorage.getItem('fras_survey_role');
     const codeParam = urlParams.get('code');
 
-    if (user) {
+    const isFacilityRole = (roleParam === 'facility') || !!(user && user.facility_code) || !!codeParam;
+    surveyState.isFacility = isFacilityRole;
+    surveyState.isImportedUser = !!(user && user.facility_code) || !!codeParam;
+    surveyState.isCitizen = !isFacilityRole;
+
+    if (user && user.facility_code) {
         // Pre-fill location & details from user profile (managed facility account)
         surveyState.facilityInfo = {
+            facility_code: user.facility_code,
             facility_name: user.full_name || '',
             facility_type: user.facility_types || '',
             province: user.province || 'Tỉnh Bắc Ninh',
@@ -158,12 +162,11 @@ async function initSurvey() {
                 longitude: user.longitude,
             };
         }
-    } else if (codeParam) {
+    } else if (isFacilityRole) {
         surveyState.facilityInfo = {
-            facility_code: codeParam,
+            facility_code: codeParam || '',
             province: 'Tỉnh Bắc Ninh'
         };
-        surveyState.isImportedUser = true;
     }
     // Do NOT trigger browser geolocation automatically on load - let user click manually if desired
     renderStep();
@@ -276,9 +279,9 @@ function renderFacilityForm(container) {
     const user = api.getUser();
     const info = surveyState.facilityInfo || {};
     const draftBannerHtml = checkDraftBanner();
-    const isFacility = !!(user && user.facility_code) || !!info.facility_code;
+    const isFacility = surveyState.isFacility || !!(user && user.facility_code) || !!info.facility_code;
     const facCode = (user && user.facility_code) || info.facility_code || '';
-    const facName = (user && user.full_name) || info.facility_name || (facCode ? `Cơ sở quản lý PCCC (${facCode})` : 'Cơ sở quản lý');
+    const facName = (user && user.full_name) || info.facility_name || (facCode ? `Cơ sở quản lý PCCC (${facCode})` : 'Cơ sở diện quản lý PCCC');
 
     // Parse pre-selected types
     const rawTypes = (info.facility_type || '').split(',').map(s => s.trim()).filter(Boolean);
@@ -294,7 +297,7 @@ function renderFacilityForm(container) {
                     <span style="font-size: 1.8rem;">🏢</span>
                     <div>
                         <div style="font-weight: 700; color: #1e3a8a; font-size: 1.05rem;">${facName}</div>
-                        <div style="font-size: 0.85rem; color: var(--text-secondary);">Mã quản lý PCCC: <strong style="color: #dc2626;">${facCode}</strong> • Công an TP Bắc Ninh</div>
+                        <div style="font-size: 0.85rem; color: var(--text-secondary);">${facCode ? `Mã quản lý PCCC: <strong style="color: #dc2626;">${facCode}</strong> • ` : ''}Công an TP Bắc Ninh</div>
                     </div>
                 </div>
                 <span class="role-badge" style="background: #1e3a8a; color: white; padding: 4px 10px; border-radius: 0; font-size: 0.8rem; font-weight:700;">Cơ sở diện quản lý PCCC</span>
@@ -339,9 +342,16 @@ function renderFacilityForm(container) {
                 ${facilityNotice}
 
                 <div class="form-group">
-                    <label>Tên công trình / Nhà ở / Cơ sở khảo sát ${isFacility ? '*' : '<span style="color:var(--text-muted); font-weight:normal;">(Tùy chọn - có thể để trống)</span>'}</label>
-                    <input type="text" class="form-control" id="f_name" placeholder="${isFacility ? 'Tên cơ sở' : 'VD: Nhà ở kết hợp buôn bán / Hộ gia đình...'}" value="${info.facility_name || ''}">
+                    <label>Tên công trình / Nhà ở / Cơ sở khảo sát ${isFacility ? '<span style="color:#dc2626;">*</span>' : '<span style="color:var(--text-muted); font-weight:normal;">(Tùy chọn - có thể để trống)</span>'}</label>
+                    <input type="text" class="form-control" id="f_name" placeholder="${isFacility ? 'Nhập tên doanh nghiệp / cơ sở / nhà máy...' : 'VD: Nhà ở kết hợp buôn bán / Hộ gia đình...'}" value="${info.facility_name || ''}">
                 </div>
+
+                ${isFacility ? `
+                <div class="form-group">
+                    <label>Mã quản lý cơ sở PCCC <span style="font-size:0.82rem; color:var(--text-muted); font-weight:normal;">(13 chữ số, nếu có)</span></label>
+                    <input type="text" class="form-control" id="f_code" placeholder="Ví dụ: 2426200090176 (Tùy chọn - có thể để trống)" value="${facCode}">
+                </div>
+                ` : ''}
                 
                 <div class="form-group">
                     <label>Bảng các loại hình hoạt động * <span style="font-size:0.82rem; color:var(--text-muted); font-weight:normal;">(Có thể chọn 2 loại hình trở lên)</span></label>
@@ -355,14 +365,8 @@ function renderFacilityForm(container) {
                     </div>
                 </div>
                 
-                ${isFacility ? `
                 <div class="form-group">
-                    <label>Địa chỉ cơ sở</label>
-                    <input type="text" class="form-control" id="f_address" value="${info.facility_address || ''}" readonly style="background: rgba(0,0,0,0.02);">
-                </div>
-                ` : `
-                <div class="form-group">
-                    <label>Địa chỉ công trình / nhà ở *</label>
+                    <label>Địa chỉ ${isFacility ? 'cơ sở' : 'công trình / nhà ở'} *</label>
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 10px;">
                         <div>
                             <label style="font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 4px; display: block;">Tỉnh / Thành phố</label>
@@ -373,9 +377,8 @@ function renderFacilityForm(container) {
                             <select id="f_ward" class="form-control" style="width: 100%;"></select>
                         </div>
                     </div>
-                    <input type="text" class="form-control" id="f_address_street" placeholder="Số nhà, đường/phố, thôn/xóm (Tùy chọn)" value="${info.street || ''}">
+                    <input type="text" class="form-control" id="f_address_street" placeholder="${isFacility ? 'Số nhà, đường/phố, khu công nghiệp...' : 'Số nhà, đường/phố, thôn/xóm...'}" value="${info.street || info.facility_address || ''}">
                 </div>
-                `}
 
                 <div class="form-group" style="margin-top: 20px; padding: 16px; background: #f8fafc; border-radius: 0; border: 1px dashed #cbd5e1;">
                     <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px;">
@@ -413,8 +416,8 @@ function renderFacilityForm(container) {
         });
     });
 
-    // Populate dropdowns for citizen
-    if (!isFacility && typeof setupLocationDropdowns === 'function') {
+    // Populate dropdowns for all
+    if (typeof setupLocationDropdowns === 'function') {
         setupLocationDropdowns('f_province', 'f_ward', info.province || 'Tỉnh Bắc Ninh', info.ward || '');
     }
 }
@@ -551,12 +554,13 @@ async function nextStep() {
     // Validate current step
     if (surveyState.currentStep === 0) {
         const user = api.getUser();
-        const isFacility = !!(user && user.facility_code);
+        const isFacility = surveyState.isFacility || !!(user && user.facility_code);
 
         const nameInput = document.getElementById('f_name')?.value.trim();
+        const codeInput = document.getElementById('f_code')?.value.trim();
         let name = nameInput;
         if (!name) {
-            name = isFacility ? user.full_name : 'Công trình / Nhà ở khảo sát';
+            name = (user && user.full_name) || (codeInput ? `Cơ sở ${codeInput}` : (isFacility ? 'Cơ sở diện quản lý PCCC' : 'Công trình / Nhà ở khảo sát'));
         }
 
         const selectedTypes = document.querySelectorAll('.facility-type-option.selected');
@@ -565,24 +569,15 @@ async function nextStep() {
             return;
         }
 
-        let address = '';
-        let province = '';
-        let ward = '';
-
-        if (isFacility) {
-            province = user.province || 'Tỉnh Bắc Ninh';
-            ward = user.ward || '';
-            address = document.getElementById('f_address')?.value.trim() || [ward, province].filter(Boolean).join(', ');
-        } else {
-            province = document.getElementById('f_province')?.value || 'Tỉnh Bắc Ninh';
-            ward = document.getElementById('f_ward')?.value || '';
-            const street = document.getElementById('f_address_street')?.value.trim() || '';
-            address = [street, ward, province].filter(Boolean).join(', ');
-            if (!address) address = 'Tỉnh Bắc Ninh';
-        }
+        const province = document.getElementById('f_province')?.value || (user && user.province) || 'Tỉnh Bắc Ninh';
+        const ward = document.getElementById('f_ward')?.value || (user && user.ward) || '';
+        const street = document.getElementById('f_address_street')?.value.trim() || '';
+        let address = [street, ward, province].filter(Boolean).join(', ');
+        if (!address) address = 'Tỉnh Bắc Ninh';
 
         const typesArray = Array.from(selectedTypes).map(el => el.dataset.value);
         surveyState.facilityInfo = {
+            facility_code: codeInput || (user && user.facility_code) || null,
             facility_name: name,
             facility_type: typesArray.join(','),
             facility_address: address,
