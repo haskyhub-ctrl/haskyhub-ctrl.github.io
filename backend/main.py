@@ -193,8 +193,11 @@ async def lifespan(app: FastAPI):
                 role="superadmin",
             )
             s_db.add(admin_u)
-            s_db.commit()
-            print("✅ Ensured default superadmin: admin@fras.vn / admin123")
+        else:
+            admin_u.password_hash = hash_password("admin123")
+            admin_u.role = "superadmin"
+        s_db.commit()
+        print("✅ Ensured default superadmin: admin@fras.vn / admin123")
         s_db.close()
     except Exception as e:
         print(f"Notice admin check: {e}")
