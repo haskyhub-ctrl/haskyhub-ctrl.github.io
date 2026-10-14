@@ -135,12 +135,45 @@ const facilityTypes = [
 ];
 
 async function initSurvey() {
-    const user = api.getUser();
-    surveyState.user = user;
+    let user = api.getUser();
     const urlParams = new URLSearchParams(window.location.search);
     const roleParam = urlParams.get('role') || sessionStorage.getItem('fras_survey_role');
     const codeParam = urlParams.get('code');
 
+    // If facility code is present but user session is missing, auto-authenticate or fetch facility details
+    if (!user && codeParam) {
+        try {
+            const loginRes = await api.login(codeParam, 'Pc07@123');
+            if (loginRes && loginRes.user) {
+                user = loginRes.user;
+            }
+        } catch (e) {
+            console.warn('Facility auto-login attempt failed, trying direct lookup:', e);
+            try {
+                const facData = await api.get(`/auth/facility/${encodeURIComponent(codeParam)}`);
+                if (facData && facData.found) {
+                    surveyState.facilityInfo = {
+                        facility_code: facData.facility_code,
+                        facility_name: facData.full_name || '',
+                        facility_type: facData.facility_types || '',
+                        province: facData.province || 'Tỉnh Bắc Ninh',
+                        ward: facData.ward || '',
+                        facility_address: [facData.ward, facData.province].filter(Boolean).join(', '),
+                    };
+                    if (facData.latitude && facData.longitude) {
+                        surveyState.userLocation = {
+                            latitude: facData.latitude,
+                            longitude: facData.longitude,
+                        };
+                    }
+                }
+            } catch (err2) {
+                console.warn('Facility lookup failed:', err2);
+            }
+        }
+    }
+
+    surveyState.user = user;
     const isFacilityRole = (roleParam === 'facility') || !!(user && user.facility_code) || !!codeParam;
     surveyState.isFacility = isFacilityRole;
     surveyState.isImportedUser = !!(user && user.facility_code) || !!codeParam;
@@ -162,7 +195,7 @@ async function initSurvey() {
                 longitude: user.longitude,
             };
         }
-    } else if (isFacilityRole) {
+    } else if (isFacilityRole && !surveyState.facilityInfo) {
         surveyState.facilityInfo = {
             facility_code: codeParam || '',
             province: 'Tỉnh Bắc Ninh'
