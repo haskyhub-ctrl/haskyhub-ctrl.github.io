@@ -386,17 +386,18 @@ body.has-gov-header {
     padding: 0 24px;
 }
 .hp-hero-security-note {
-    font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.88);
-    margin: 14px auto 0;
-    max-width: 1000px;
-    line-height: 1.45;
-    text-wrap: balance;
+    font-size: 0.98rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.95);
+    margin: 16px auto 0;
+    max-width: 900px;
+    line-height: 1.6;
+    text-align: center;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
 }
-@media (min-width: 992px) {
-    .hp-hero-security-note {
-        white-space: nowrap;
-    }
+.hp-hero-security-note strong {
+    color: #F9D77E;
+    font-weight: 700;
 }
 /* Official badge above title */
 .gov-hero-badge {
