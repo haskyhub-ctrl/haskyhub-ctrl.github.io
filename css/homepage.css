@@ -484,11 +484,20 @@ body.has-gov-header {
     color: white;
 }
 .hp-hero-social-proof {
-    margin-top: 28px;
-    color: rgba(255,255,255,0.70);
-    font-size: 13px;
+    margin-top: 24px;
+    margin-bottom: 6px;
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 1.05rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 }
-.hp-hero-social-proof strong { color: rgba(255,255,255,0.90); }
+.hp-hero-social-proof strong {
+    color: #F9D77E;
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin: 0 4px;
+}
 
 /* Privacy trust banner in hero */
 .hp-hero-privacy {
