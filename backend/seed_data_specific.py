@@ -1474,29 +1474,29 @@ SPECIFIC_CATEGORY_H = {
             ]
         },
         {
-            "text": "Chuồng cọp, lưới chống trộm có lối mở khẩn cấp không? Mọi người có biết cách mở không?",
+            "text": "Khu vực ban công, logia hoặc cửa sổ có lắp khung sắt bảo vệ (chuồng cọp) hiện đã bố trí ô cửa mở thoát hiểm dự phòng ra ngoài chưa?",
             "options": [
                 {
                     "key": "A",
-                    "text": "Không có chuồng cọp, hoặc có lối mở, chìa để cạnh, mọi người biết",
+                    "text": "Không lắp khung sắt kín, hoặc đã mở sẵn ô cửa thoát hiểm có chốt mở nhanh bên trong",
                     "score": 0,
                     "risk": "safe"
                 },
                 {
                     "key": "B",
-                    "text": "Có cửa mở nhưng chìa cất trong phòng, phải tìm",
+                    "text": "Có trổ ô cửa thoát nạn nhưng chìa khóa đang cất ở vị trí khác",
                     "score": 1,
                     "risk": "low"
                 },
                 {
                     "key": "C",
-                    "text": "Chuồng cọp hàn kín, chỉ 1 cửa ra vào chính",
+                    "text": "Khung sắt bảo vệ hàn cố định, chưa mở ô thoát nạn dự phòng",
                     "score": 2,
                     "risk": "high"
                 },
                 {
                     "key": "D",
-                    "text": "Hàn kín toàn bộ cửa sổ và ban công, không lối mở nào",
+                    "text": "Toàn bộ ban công và cửa sổ các tầng đều hàn khung sắt kiên cố, chưa trổ ô mở",
                     "score": 3,
                     "risk": "critical"
                 }

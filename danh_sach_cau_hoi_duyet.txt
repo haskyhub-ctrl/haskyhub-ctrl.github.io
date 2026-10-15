@@ -34,17 +34,17 @@ B. Có tiếng vo nhẹ từ ballast đèn huỳnh quang cũ
 C. Tiếng lạch cạch hoặc xì xì từ ổ cắm/hộp nối khi dùng thiết bị
 D. Tiếng nổ lách tách kèm tia lửa nhỏ nhìn thấy được
 
-ID6. Aptomat (CB) hoặc cầu chì có tự nhảy (ngắt) thường xuyên không?
-A. Chưa bao giờ tự nhảy, hoặc rất hiếm khi
-B. Nhảy 1-2 lần/tháng khi bật nhiều thiết bị cùng lúc
-C. Nhảy thường xuyên hàng tuần, phải đóng lại liên tục
-D. CB nhảy liên tục nên đã phải nối tắt (bypass) hoặc dùng dây đồng thay cầu chì
+ID6. Tần suất aptomat (cầu dao tự động) bị ngắt điện khi cơ sở vận hành các thiết bị điện như thế nào?
+A. Hoạt động ổn định, hầu như không bao giờ bị ngắt điện do quá tải
+B. Thỉnh thoảng ngắt 1-2 lần khi cùng lúc bật nhiều thiết bị công suất cao
+C. Thường xuyên bị ngắt điện hàng tuần, phải bật lại aptomat nhiều lần
+D. Aptomat ngắt liên tục do quá tải hoặc đang phải đấu nối tạm để duy trì hoạt động
 
-ID7. Dây điện có bị bong tróc, nứt vỏ cách điện, lộ lõi đồng hoặc có mối nối quấn băng keo không?
+ID7. Hiện trạng lắp đặt và tình trạng vỏ cách điện của hệ thống dây dẫn điện tại cơ sở ra sao?
 A. Dây điện vỏ nguyên vẹn, luồn ống hoặc máng cáp gọn gàng
-B. Có 1-2 chỗ vỏ hơi cũ nhưng chưa lộ lõi
-C. Nhiều chỗ bong tróc, lộ lõi đồng, mối nối quấn băng keo điện
-D. Dây cũ nát, lõi lộ nhiều chỗ, rỉ sét mối nối, đã có dấu hiệu chạm chập
+B. Có một vài chỗ dây đi nổi trên tường, lớp vỏ ngoài còn nguyên vẹn
+C. Có một số đoạn dây đi nối thêm hoặc có quấn băng dính cách điện
+D. Nhiều đoạn dây đã cũ theo thời gian, có vết trầy xước hoặc đi sát mép kim loại
 
 ID8. Ổ cắm kéo dài (dây nối dài) có bị nóng, chân cắm lỏng hoặc nối chồng nhiều cái không?
 A. Không dùng ổ kéo dài, hoặc dùng ít, không nóng
@@ -64,11 +64,11 @@ B. Có thấy chuột trong nhà nhưng chưa phát hiện gặm dây
 C. Đã thấy dây điện bị gặm hở vỏ 1-2 chỗ
 D. Chuột gặm nhiều dây, đã từng chập điện do chuột
 
-ID11. Vật liệu dễ cháy (giấy, vải, hàng hóa) có đang chất gần hoặc sát ổ cắm, tủ điện không?
-A. Tủ điện và ổ cắm đều thông thoáng, cách vật dễ cháy >1m
-B. Đôi chỗ có đồ gần ổ cắm nhưng không che khuất tủ điện
-C. Hàng hóa xếp sát tủ điện và ổ cắm, che khuất một phần
-D. Tủ điện bị chôn vùi trong hàng hóa dễ cháy, không thể tiếp cận
+ID11. Khoảng cách giữa các vật liệu dễ cháy (hàng hóa, giấy, vải...) với ổ cắm và bảng điện ra sao?
+A. Bảng điện và ổ cắm đều thông thoáng, cách vật dễ cháy trên 1 mét
+B. Đôi chỗ có đồ đạc gần ổ cắm nhưng không che khuất bảng điện
+C. Hàng hóa để khá gần bảng điện hoặc che khuất một phần ổ cắm
+D. Hàng hóa xếp sát kín xung quanh bảng điện, khó tiếp cận nhanh
 
 ID12. Thiết bị điện nung nóng (bếp, bàn ủi, lò sưởi, ấm nước) có đang đặt gần vật dễ cháy hoặc chạy không giám sát không?
 A. Luôn cách xa vật dễ cháy, rút phích khi không dùng
@@ -129,23 +129,23 @@ D. Đốt lửa gần kho hàng, bãi xe, cỏ khô
 
 --- NHÓM: LỐI THOÁT NẠN VÀ TRANG BỊ PCCC ---
 
-ID21. Lối thoát nạn (cửa thoát hiểm, cầu thang bộ) có đang bị chặn bởi hàng hóa, xe máy hoặc khóa cứng không?
-A. Tất cả lối thoát thông thoáng, cửa mở dễ dàng
-B. Lối thoát chính thông, có đồ đạc nhẹ bên cạnh nhưng không cản trở
-C. Lối thoát bị thu hẹp bởi hàng hóa/xe máy, phải len qua
-D. Lối thoát duy nhất bị chặn hoàn toàn hoặc cửa bị khóa cứng
+ID21. Từ khu vực sinh hoạt hoặc làm việc chính, hiện có bao nhiêu lối có thể trực tiếp đi hoặc thoát ra ngoài an toàn (cửa chính, cửa phụ, ban công, lối thoát khẩn cấp)?
+A. Có từ 2 lối thoát độc lập trở lên, cửa luôn mở sẵn sàng
+B. Có 2 lối thoát nhưng 1 lối phụ thường khép hoặc cần chìa khóa để ngay gần
+C. Chỉ có 1 lối thoát chính duy nhất, dọc lối đi có để một số xe cộ hoặc đồ đạc
+D. Chỉ có 1 lối thoát duy nhất và lối đi hẹp hoặc cửa thường xuyên khóa nhiều lớp
 
-ID22. Bạn có nhìn thấy bình chữa cháy gần nhất không? Nó có dễ lấy không?
-A. Nhìn thấy ngay, dễ lấy, kim đồng hồ ở vùng xanh
-B. Có bình nhưng hơi xa hoặc để dưới thấp khó thấy
-C. Bình bị hàng hóa che khuất, phải dọn mới lấy được
-D. Không thấy bình nào, hoặc bình hết hạn/hỏng van
+ID22. Tại cơ sở hoặc gia đình của bạn, phương tiện chữa cháy tại chỗ (như bình chữa cháy xách tay) hiện được bố trí như thế nào?
+A. Có sẵn bình chữa cháy ở nơi dễ thấy dễ lấy, kim đồng hồ chỉ vạch xanh
+B. Có bình chữa cháy nhưng đang để ở góc khuất hoặc lâu chưa kiểm tra kim áp
+C. Hiện dùng các phương tiện thay thế (vòi nước, xô cát, chăn dập lửa)
+D. Chưa trang bị bình chữa cháy hoặc bình đã quá cũ chưa bảo dưỡng
 
-ID23. Đèn EXIT (chỉ lối thoát) và đèn chiếu sáng khẩn cấp có sáng không?
-A. Đèn EXIT sáng rõ, đèn khẩn cấp hoạt động khi test, không thuộc diện phải trang bị đèn exit
-B. Đèn EXIT sáng nhưng chưa test đèn khẩn cấp gần đây
-C. Một số đèn EXIT đã tắt/hỏng, chưa thay
-D. Không có đèn EXIT hoặc tất cả đã hỏng
+ID23. Khi xảy ra sự cố mất điện vào ban đêm, phương án chiếu sáng chỉ dẫn lối ra tại cơ sở hiện như thế nào?
+A. Có hệ thống đèn EXIT và đèn sự cố tự sáng khi mất điện (hoặc công trình nhỏ không thuộc diện trang bị)
+B. Có đèn chiếu sáng sự cố nhưng lâu rồi chưa kiểm tra pin lưu điện
+C. Dùng đèn pin hoặc một số đèn chỉ dẫn đã mờ, chưa thay thế
+D. Chưa có phương án chiếu sáng dự phòng khi mất điện ban đêm
 
 ID24. Đầu phun sprinkler (nếu có) có bị hàng hóa che khuất hoặc sơn phủ lên không?
 A. Không có sprinkler, hoặc có và đầu phun đều thông thoáng, không thuộc diện phải trang bị đầu phun sprinkler
@@ -153,17 +153,17 @@ B. Hầu hết thông thoáng, 1-2 chỗ hàng xếp gần sát
 C. Nhiều đầu phun bị kệ hàng che khuất hoặc bị sơn phủ
 D. Đầu phun bị chôn vùi trong hàng hóa, không thể phun được
 
-ID25. Bạn có biết đường thoát nạn gần nhất từ vị trí hiện tại không? Có sơ đồ dán trên tường không?
-A. Biết rõ, có sơ đồ thoát nạn rõ ràng dán mỗi tầng
-B. Biết đường đi nhưng sơ đồ cũ/mờ chữ
-C. Không chắc đường nào, không thấy sơ đồ
-D. Không biết, Không để ý
+ID25. Khi có tình huống khẩn cấp, mức độ nắm rõ phương hướng thoát hiểm của các thành viên hoặc nhân sự tại đây ra sao?
+A. Mọi người đều thuộc rõ đường thoát hiểm và có bảng sơ đồ chỉ dẫn rõ ràng
+B. Mọi người biết đường đi ra ngoài nhưng chưa có sơ đồ chỉ dẫn
+C. Chỉ một số người quen thuộc địa hình, khách hoặc người mới khó định hình
+D. Chưa từng hướng dẫn hay trao đổi về phương hướng thoát nạn khi có sự cố
 
-ID26. Hàng hóa, vật tư trong kho có đang xếp chật tràn lan, che khuất tủ điện không?
-A. Xếp gọn gàng, lối đi thông, tủ điện dễ tiếp cận
-B. Có lối đi nhưng hơi hẹp, tủ điện vẫn tiếp cận được
-C. Lối đi bị thu hẹp, hàng dễ cháy để lẫn lộn, tủ điện bị chắn
-D. Hàng chất tràn lan, không lối đi, tủ điện bị chôn vùi
+ID26. Khoảng cách giữa các lối đi lại và khả năng tiếp cận khu vực tủ điện, bảng điện hiện nay như thế nào?
+A. Lối đi rộng rãi thông thoáng, bảng điện luôn trống trải dễ thao tác ngay
+B. Lối đi đủ người qua lại, bảng điện vẫn với tay ngắt aptomat được
+C. Lối đi hơi hẹp do tận dụng để đồ, cần dịch chuyển đồ đạc mới tới được bảng điện
+D. Hàng hóa xếp sát kín xung quanh bảng điện, khó tiếp cận nhanh
 
 --- NHÓM: DẤU HIỆU BẤT THƯỜNG TỪ MÁY MÓC ---
 
@@ -293,11 +293,11 @@ B. Đỗ trong nhà, kiểm tra thường, chưa phát hiện rò rỉ
 C. Có vết dầu loang dưới xe, chưa xác định nguồn
 D. Xe rò xăng rõ ràng, mùi xăng nồng, vẫn đỗ trong nhà
 
-ID47. Xe đỗ trong nhà có đang chắn lối thoát nạn duy nhất không?
-A. Xe đỗ không cản trở lối thoát, có ≥2 lối ra
-B. Xe đỗ gần cầu thang nhưng vẫn đi qua được
-C. Xe đỗ chật tầng 1, phải len qua mới lên lầu
-D. Nhiều xe chặn lối thoát duy nhất, khi cháy không ra được
+ID47. Vào ban đêm hoặc giờ cao điểm, khu vực để xe máy/ô tô tại tầng 1 (hoặc sân trước) được sắp xếp như thế nào so với lối di chuyển ra cửa?
+A. Khu để xe tách biệt với lối đi hoặc cơ sở có từ 2 cửa ra vào độc lập
+B. Xe để gọn một bên, vẫn còn khoảng trống rộng trên 0.8m để đi lại dễ dàng
+C. Xe để khá chật, cần phải lách người qua các tay lái để đi ra cửa
+D. Xe xếp kín khu vực tầng 1 từ cửa ra vào tới cầu thang
 
 ID48. Can xăng, dầu nhớt dự trữ có đang để trong nhà gần ổ cắm điện không?
 A. Không dự trữ xăng dầu, hoặc để khu riêng xa nhà
@@ -337,11 +337,11 @@ B. Dùng đèn LED, cắm ổ cắm hiện có, chưa tính tải
 C. Nhiều đèn sợi đốt, nối chồng ổ cắm kéo dài
 D. Đèn khắp nơi gần rèm/vải, nối chéo, CB nhảy phải nối tắt
 
-ID55. Mọi người có biết gọi số 114 khi xảy ra cháy và biết dùng bình chữa cháy không?
-A. Biết số 114, biết dùng bình chữa cháy, đã thực hành, đã được tập huấn
-B. Biết số 114 nhưng chưa thực hành dùng bình chữa cháy, chưa được tập huấn.
-C. Không biết số 114, không biết bình chữa cháy ở đâu.
-D. Không ai biết gì về PCCC, chưa từng được hướng dẫn, tập huấn, nhà không có bình chữa cháy
+ID55. Mọi người trong gia đình hoặc nhân sự tại cơ sở đã từng thao tác bình chữa cháy hoặc tham gia buổi hướng dẫn PCCC nào chưa?
+A. Đã từng thực hành sử dụng bình chữa cháy và nắm rõ cách gọi 114
+B. Nhớ số khẩn cấp 114 nhưng chưa trực tiếp cầm bình xịt thao tác lần nào
+C. Mới chỉ xem hướng dẫn qua truyền hình, mạng xã hội hoặc tờ rơi
+D. Chưa có dịp tiếp cận hay tham gia hướng dẫn kỹ năng PCCC thực tế
 
 ============================================================
 PHẦN 2: CÂU HỎI ĐẶC THÙ NGÀNH
@@ -651,11 +651,11 @@ B. 2 lối nhưng 1 lối phụ (ban công, cửa sổ), lối chính thông
 C. Chỉ 1 cầu thang duy nhất, cửa phụ bị khóa hoặc chặn đồ
 D. 1 lối duy nhất, khóa cổng sắt ban đêm, không ai có chìa dự phòng
 
-ID104. Chuồng cọp, lưới chống trộm có lối mở khẩn cấp không? Mọi người có biết cách mở không?
-A. Không có chuồng cọp, hoặc có lối mở, chìa để cạnh, mọi người biết
-B. Có cửa mở nhưng chìa cất trong phòng, phải tìm
-C. Chuồng cọp hàn kín, chỉ 1 cửa ra vào chính
-D. Hàn kín toàn bộ cửa sổ và ban công, không lối mở nào
+ID104. Khu vực ban công, logia hoặc cửa sổ có lắp khung sắt bảo vệ (chuồng cọp) hiện đã bố trí ô cửa mở thoát hiểm dự phòng ra ngoài chưa?
+A. Không lắp khung sắt kín, hoặc đã mở sẵn ô cửa thoát hiểm có chốt mở nhanh bên trong
+B. Có trổ ô cửa thoát nạn nhưng chìa khóa đang cất ở vị trí khác
+C. Khung sắt bảo vệ hàn cố định, chưa mở ô thoát nạn dự phòng
+D. Toàn bộ ban công và cửa sổ các tầng đều hàn khung sắt kiên cố, chưa trổ ô mở
 
 ID105. Mỗi phòng trọ có aptomat (CB) riêng không? Hay nhiều phòng dùng chung?
 A. Mỗi phòng CB riêng, có CB chống rò tổng

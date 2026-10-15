@@ -274,36 +274,36 @@ GROUP1_QUESTIONS = [
         ]
     },
     {
-        "text": "Aptomat (CB) hoặc cầu chì có tự nhảy (ngắt) thường xuyên không?",
+        "text": "Tần suất aptomat (cầu dao tự động) bị ngắt điện khi cơ sở vận hành các thiết bị điện như thế nào?",
         "options": [
             {
                 "key": "A",
-                "text": "Chưa bao giờ tự nhảy, hoặc rất hiếm khi",
+                "text": "Hoạt động ổn định, hầu như không bao giờ bị ngắt điện do quá tải",
                 "score": 0,
                 "risk": "safe"
             },
             {
                 "key": "B",
-                "text": "Nhảy 1-2 lần/tháng khi bật nhiều thiết bị cùng lúc",
+                "text": "Thỉnh thoảng ngắt 1-2 lần khi cùng lúc bật nhiều thiết bị công suất cao",
                 "score": 1,
                 "risk": "low"
             },
             {
                 "key": "C",
-                "text": "Nhảy thường xuyên hàng tuần, phải đóng lại liên tục",
+                "text": "Thường xuyên bị ngắt điện hàng tuần, phải bật lại aptomat nhiều lần",
                 "score": 2,
                 "risk": "high"
             },
             {
                 "key": "D",
-                "text": "CB nhảy liên tục nên đã phải nối tắt (bypass) hoặc dùng dây đồng thay cầu chì",
+                "text": "Aptomat ngắt liên tục do quá tải hoặc đang phải đấu nối tạm để duy trì hoạt động",
                 "score": 3,
                 "risk": "critical"
             }
         ]
     },
     {
-        "text": "Dây điện có bị bong tróc, nứt vỏ cách điện, lộ lõi đồng hoặc có mối nối quấn băng keo không?",
+        "text": "Hiện trạng lắp đặt và tình trạng vỏ cách điện của hệ thống dây dẫn điện tại cơ sở ra sao?",
         "options": [
             {
                 "key": "A",
@@ -313,19 +313,19 @@ GROUP1_QUESTIONS = [
             },
             {
                 "key": "B",
-                "text": "Có 1-2 chỗ vỏ hơi cũ nhưng chưa lộ lõi",
+                "text": "Có một vài chỗ dây đi nổi trên tường, lớp vỏ ngoài còn nguyên vẹn",
                 "score": 1,
                 "risk": "low"
             },
             {
                 "key": "C",
-                "text": "Nhiều chỗ bong tróc, lộ lõi đồng, mối nối quấn băng keo điện",
+                "text": "Có một số đoạn dây đi nối thêm hoặc có quấn băng dính cách điện",
                 "score": 2,
                 "risk": "high"
             },
             {
                 "key": "D",
-                "text": "Dây cũ nát, lõi lộ nhiều chỗ, rỉ sét mối nối, đã có dấu hiệu chạm chập",
+                "text": "Nhiều đoạn dây đã cũ theo thời gian, có vết trầy xước hoặc đi sát mép kim loại",
                 "score": 3,
                 "risk": "critical"
             }
@@ -419,29 +419,29 @@ GROUP1_QUESTIONS = [
         ]
     },
     {
-        "text": "Vật liệu dễ cháy (giấy, vải, hàng hóa) có đang chất gần hoặc sát ổ cắm, tủ điện không?",
+        "text": "Khoảng cách giữa các vật liệu dễ cháy (hàng hóa, giấy, vải...) với ổ cắm và bảng điện ra sao?",
         "options": [
             {
                 "key": "A",
-                "text": "Tủ điện và ổ cắm đều thông thoáng, cách vật dễ cháy >1m",
+                "text": "Bảng điện và ổ cắm đều thông thoáng, cách vật dễ cháy trên 1 mét",
                 "score": 0,
                 "risk": "safe"
             },
             {
                 "key": "B",
-                "text": "Đôi chỗ có đồ gần ổ cắm nhưng không che khuất tủ điện",
+                "text": "Đôi chỗ có đồ đạc gần ổ cắm nhưng không che khuất bảng điện",
                 "score": 1,
                 "risk": "low"
             },
             {
                 "key": "C",
-                "text": "Hàng hóa xếp sát tủ điện và ổ cắm, che khuất một phần",
+                "text": "Hàng hóa để khá gần bảng điện hoặc che khuất một phần ổ cắm",
                 "score": 2,
                 "risk": "high"
             },
             {
                 "key": "D",
-                "text": "Tủ điện bị chôn vùi trong hàng hóa dễ cháy, không thể tiếp cận",
+                "text": "Hàng hóa xếp sát kín xung quanh bảng điện, khó tiếp cận nhanh",
                 "score": 3,
                 "risk": "critical"
             }
@@ -715,87 +715,87 @@ GROUP2_QUESTIONS = [
 
 GROUP3_QUESTIONS = [
     {
-        "text": "Lối thoát nạn (cửa thoát hiểm, cầu thang bộ) có đang bị chặn bởi hàng hóa, xe máy hoặc khóa cứng không?",
+        "text": "Từ khu vực sinh hoạt hoặc làm việc chính, hiện có bao nhiêu lối có thể trực tiếp đi hoặc thoát ra ngoài an toàn (cửa chính, cửa phụ, ban công, lối thoát khẩn cấp)?",
         "options": [
             {
                 "key": "A",
-                "text": "Tất cả lối thoát thông thoáng, cửa mở dễ dàng",
+                "text": "Có từ 2 lối thoát độc lập trở lên, cửa luôn mở sẵn sàng",
                 "score": 0,
                 "risk": "safe"
             },
             {
                 "key": "B",
-                "text": "Lối thoát chính thông, có đồ đạc nhẹ bên cạnh nhưng không cản trở",
+                "text": "Có 2 lối thoát nhưng 1 lối phụ thường khép hoặc cần chìa khóa để ngay gần",
                 "score": 1,
                 "risk": "low"
             },
             {
                 "key": "C",
-                "text": "Lối thoát bị thu hẹp bởi hàng hóa/xe máy, phải len qua",
+                "text": "Chỉ có 1 lối thoát chính duy nhất, dọc lối đi có để một số xe cộ hoặc đồ đạc",
                 "score": 2,
                 "risk": "high"
             },
             {
                 "key": "D",
-                "text": "Lối thoát duy nhất bị chặn hoàn toàn hoặc cửa bị khóa cứng",
+                "text": "Chỉ có 1 lối thoát duy nhất và lối đi hẹp hoặc cửa thường xuyên khóa nhiều lớp",
                 "score": 3,
                 "risk": "critical"
             }
         ]
     },
     {
-        "text": "Bạn có nhìn thấy bình chữa cháy gần nhất không? Nó có dễ lấy không?",
+        "text": "Tại cơ sở hoặc gia đình của bạn, phương tiện chữa cháy tại chỗ (như bình chữa cháy xách tay) hiện được bố trí như thế nào?",
         "options": [
             {
                 "key": "A",
-                "text": "Nhìn thấy ngay, dễ lấy, kim đồng hồ ở vùng xanh",
+                "text": "Có sẵn bình chữa cháy ở nơi dễ thấy dễ lấy, kim đồng hồ chỉ vạch xanh",
                 "score": 0,
                 "risk": "safe"
             },
             {
                 "key": "B",
-                "text": "Có bình nhưng hơi xa hoặc để dưới thấp khó thấy",
+                "text": "Có bình chữa cháy nhưng đang để ở góc khuất hoặc lâu chưa kiểm tra kim áp",
                 "score": 1,
                 "risk": "low"
             },
             {
                 "key": "C",
-                "text": "Bình bị hàng hóa che khuất, phải dọn mới lấy được",
+                "text": "Hiện dùng các phương tiện thay thế (vòi nước, xô cát, chăn dập lửa)",
                 "score": 2,
                 "risk": "high"
             },
             {
                 "key": "D",
-                "text": "Không thấy bình nào, hoặc bình hết hạn/hỏng van",
+                "text": "Chưa trang bị bình chữa cháy hoặc bình đã quá cũ chưa bảo dưỡng",
                 "score": 3,
                 "risk": "critical"
             }
         ]
     },
     {
-        "text": "Đèn EXIT (chỉ lối thoát) và đèn chiếu sáng khẩn cấp có sáng không?",
+        "text": "Khi xảy ra sự cố mất điện vào ban đêm, phương án chiếu sáng chỉ dẫn lối ra tại cơ sở hiện như thế nào?",
         "options": [
             {
                 "key": "A",
-                "text": "Đèn EXIT sáng rõ, đèn khẩn cấp hoạt động khi test, không thuộc diện phải trang bị đèn exit",
+                "text": "Có hệ thống đèn EXIT và đèn sự cố tự sáng khi mất điện (hoặc công trình nhỏ không thuộc diện trang bị)",
                 "score": 0,
                 "risk": "safe"
             },
             {
                 "key": "B",
-                "text": "Đèn EXIT sáng nhưng chưa test đèn khẩn cấp gần đây",
+                "text": "Có đèn chiếu sáng sự cố nhưng lâu rồi chưa kiểm tra pin lưu điện",
                 "score": 1,
                 "risk": "low"
             },
             {
                 "key": "C",
-                "text": "Một số đèn EXIT đã tắt/hỏng, chưa thay",
+                "text": "Dùng đèn pin hoặc một số đèn chỉ dẫn đã mờ, chưa thay thế",
                 "score": 2,
                 "risk": "high"
             },
             {
                 "key": "D",
-                "text": "Không có đèn EXIT hoặc tất cả đã hỏng",
+                "text": "Chưa có phương án chiếu sáng dự phòng khi mất điện ban đêm",
                 "score": 3,
                 "risk": "critical"
             }
@@ -831,58 +831,58 @@ GROUP3_QUESTIONS = [
         ]
     },
     {
-        "text": "Bạn có biết đường thoát nạn gần nhất từ vị trí hiện tại không? Có sơ đồ dán trên tường không?",
+        "text": "Khi có tình huống khẩn cấp, mức độ nắm rõ phương hướng thoát hiểm của các thành viên hoặc nhân sự tại đây ra sao?",
         "options": [
             {
                 "key": "A",
-                "text": "Biết rõ, có sơ đồ thoát nạn rõ ràng dán mỗi tầng",
+                "text": "Mọi người đều thuộc rõ đường thoát hiểm và có bảng sơ đồ chỉ dẫn rõ ràng",
                 "score": 0,
                 "risk": "safe"
             },
             {
                 "key": "B",
-                "text": "Biết đường đi nhưng sơ đồ cũ/mờ chữ",
+                "text": "Mọi người biết đường đi ra ngoài nhưng chưa có sơ đồ chỉ dẫn",
                 "score": 0,
                 "risk": "safe"
             },
             {
                 "key": "C",
-                "text": "Không chắc đường nào, không thấy sơ đồ",
+                "text": "Chỉ một số người quen thuộc địa hình, khách hoặc người mới khó định hình",
                 "score": 1,
                 "risk": "low"
             },
             {
                 "key": "D",
-                "text": "Không biết, Không để ý",
+                "text": "Chưa từng hướng dẫn hay trao đổi về phương hướng thoát nạn khi có sự cố",
                 "score": 2,
                 "risk": "high"
             }
         ]
     },
     {
-        "text": "Hàng hóa, vật tư trong kho có đang xếp chật tràn lan, che khuất tủ điện không?",
+        "text": "Khoảng cách giữa các lối đi lại và khả năng tiếp cận khu vực tủ điện, bảng điện hiện nay như thế nào?",
         "options": [
             {
                 "key": "A",
-                "text": "Xếp gọn gàng, lối đi thông, tủ điện dễ tiếp cận",
+                "text": "Lối đi rộng rãi thông thoáng, bảng điện luôn trống trải dễ thao tác ngay",
                 "score": 0,
                 "risk": "safe"
             },
             {
                 "key": "B",
-                "text": "Có lối đi nhưng hơi hẹp, tủ điện vẫn tiếp cận được",
+                "text": "Lối đi đủ người qua lại, bảng điện vẫn với tay ngắt aptomat được",
                 "score": 1,
                 "risk": "low"
             },
             {
                 "key": "C",
-                "text": "Lối đi bị thu hẹp, hàng dễ cháy để lẫn lộn, tủ điện bị chắn",
+                "text": "Lối đi hơi hẹp do tận dụng để đồ, cần dịch chuyển đồ đạc mới tới được bảng điện",
                 "score": 2,
                 "risk": "high"
             },
             {
                 "key": "D",
-                "text": "Hàng chất tràn lan, không lối đi, tủ điện bị chôn vùi",
+                "text": "Hàng hóa xếp sát kín xung quanh bảng điện, khó tiếp cận nhanh",
                 "score": 3,
                 "risk": "critical"
             }
@@ -1481,29 +1481,29 @@ GROUP7_QUESTIONS = [
         ]
     },
     {
-        "text": "Xe đỗ trong nhà có đang chắn lối thoát nạn duy nhất không?",
+        "text": "Vào ban đêm hoặc giờ cao điểm, khu vực để xe máy/ô tô tại tầng 1 (hoặc sân trước) được sắp xếp như thế nào so với lối di chuyển ra cửa?",
         "options": [
             {
                 "key": "A",
-                "text": "Xe đỗ không cản trở lối thoát, có ≥2 lối ra",
+                "text": "Khu để xe tách biệt với lối đi hoặc cơ sở có từ 2 cửa ra vào độc lập",
                 "score": 0,
                 "risk": "safe"
             },
             {
                 "key": "B",
-                "text": "Xe đỗ gần cầu thang nhưng vẫn đi qua được",
+                "text": "Xe để gọn một bên, vẫn còn khoảng trống rộng trên 0.8m để đi lại dễ dàng",
                 "score": 1,
                 "risk": "low"
             },
             {
                 "key": "C",
-                "text": "Xe đỗ chật tầng 1, phải len qua mới lên lầu",
+                "text": "Xe để khá chật, cần phải lách người qua các tay lái để đi ra cửa",
                 "score": 2,
                 "risk": "high"
             },
             {
                 "key": "D",
-                "text": "Nhiều xe chặn lối thoát duy nhất, khi cháy không ra được",
+                "text": "Xe xếp kín khu vực tầng 1 từ cửa ra vào tới cầu thang",
                 "score": 3,
                 "risk": "critical"
             }
@@ -1687,29 +1687,29 @@ GROUP8_QUESTIONS = [
         ]
     },
     {
-        "text": "Mọi người có biết gọi số 114 khi xảy ra cháy và biết dùng bình chữa cháy không?",
+        "text": "Mọi người trong gia đình hoặc nhân sự tại cơ sở đã từng thao tác bình chữa cháy hoặc tham gia buổi hướng dẫn PCCC nào chưa?",
         "options": [
             {
                 "key": "A",
-                "text": "Biết số 114, biết dùng bình chữa cháy, đã thực hành, đã được tập huấn",
+                "text": "Đã từng thực hành sử dụng bình chữa cháy và nắm rõ cách gọi 114",
                 "score": 0,
                 "risk": "safe"
             },
             {
                 "key": "B",
-                "text": "Biết số 114 nhưng chưa thực hành dùng bình chữa cháy, chưa được tập huấn.",
+                "text": "Nhớ số khẩn cấp 114 nhưng chưa trực tiếp cầm bình xịt thao tác lần nào",
                 "score": 0,
                 "risk": "safe"
             },
             {
                 "key": "C",
-                "text": "Không biết số 114, không biết bình chữa cháy ở đâu.",
+                "text": "Mới chỉ xem hướng dẫn qua truyền hình, mạng xã hội hoặc tờ rơi",
                 "score": 1,
                 "risk": "low"
             },
             {
                 "key": "D",
-                "text": "Không ai biết gì về PCCC, chưa từng được hướng dẫn, tập huấn, nhà không có bình chữa cháy",
+                "text": "Chưa có dịp tiếp cận hay tham gia hướng dẫn kỹ năng PCCC thực tế",
                 "score": 2,
                 "risk": "high"
             }
