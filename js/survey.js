@@ -331,6 +331,7 @@ function renderFacilityForm(container) {
                     <div>
                         <div class="banner-title" style="font-weight: 700; font-size: 1.05rem;">${facName}</div>
                         <div style="font-size: 0.85rem; color: var(--text-secondary);">${facCode ? `Mã quản lý PCCC: <strong style="color: #dc2626;">${facCode}</strong> • ` : ''}Công an TP Bắc Ninh</div>
+                        <div style="font-size: 0.82rem; color: #15803d; margin-top: 3px; font-weight: 500;">🛡️ Tự rà soát phòng ngừa rủi ro &amp; nhận khuyến cáo miễn phí (không dùng làm căn cứ kiểm tra hay xử phạt).</div>
                     </div>
                 </div>
                 <span class="role-badge" style="background: var(--gov-navy, #1e3a8a); color: white; padding: 4px 10px; border-radius: 0; font-size: 0.8rem; font-weight:700;">Cơ sở diện quản lý PCCC</span>
@@ -356,7 +357,8 @@ function renderFacilityForm(container) {
                     <span style="font-size: 1.8rem;">🏡</span>
                     <div>
                         <div class="banner-title" style="font-weight: 800; font-size: 1.05rem;">Khảo sát an toàn PCCC (Hộ gia đình / Cơ sở khảo sát tự nguyện)</div>
-                        <div style="font-size: 0.85rem; color: var(--text-secondary);">Khảo sát miễn phí, kết quả bảo mật ẩn danh, không cần tài khoản.</div>
+                        <div style="font-size: 0.85rem; color: var(--text-secondary);">Khảo sát miễn phí, bảo mật thông tin, đồng hành vì sự an toàn của gia đình bạn.</div>
+                        <div style="font-size: 0.82rem; color: #15803d; margin-top: 3px; font-weight: 500;">🛡️ Phục vụ tự phòng ngừa tai nạn, cháy nổ • Không lưu danh tính xử phạt.</div>
                     </div>
                 </div>
                 <span class="role-badge" style="background: var(--gov-navy, #1A3A6B); color: white; padding: 4px 10px; border-radius: 0 !important; font-size: 0.8rem; font-weight:700;">Khảo sát tự nguyện</span>

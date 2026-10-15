@@ -350,9 +350,34 @@ body.has-gov-header {
     inset: 0;
     background: linear-gradient(
         135deg,
-        rgba(26, 58, 107, 0.82) 0%,
-        rgba(192, 32, 42, 0.65) 100%
+        rgba(15, 23, 42, 0.88) 0%,
+        rgba(26, 58, 107, 0.82) 50%,
+        rgba(139, 0, 0, 0.70) 100%
     );
+    backdrop-filter: blur(1.5px);
+}
+.hp-hero-quote-highlight {
+    background: rgba(15, 23, 42, 0.78);
+    border-left: 4px solid #f59e0b;
+    border-right: 4px solid #f59e0b;
+    border-radius: 0 !important;
+    padding: 14px 24px;
+    margin: 16px auto 22px;
+    max-width: 860px;
+    color: #fef3c7;
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.6;
+    letter-spacing: 0.3px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+    text-wrap: balance;
+}
+.hp-quote-mark {
+    color: #f59e0b;
+    font-size: 1.35rem;
+    font-weight: 900;
+    margin: 0 4px;
 }
 .hp-hero-content {
     position: relative;
