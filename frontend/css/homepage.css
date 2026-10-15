@@ -342,7 +342,7 @@ body.has-gov-header {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: url('../img/hero.png') center/cover no-repeat;
+    background: url('../img/hero_dome_sunset.jpg?v=20261015_dome') center/cover no-repeat;
     margin-top: 0;
 }
 .hp-hero-overlay {
@@ -368,11 +368,16 @@ body.has-gov-header {
     overflow: hidden;
 }
 
+.hp-pulse-node,
+.hp-pulse-node::before,
+.hp-pulse-node::after {
+    border-radius: 50% !important; /* Force perfect circle, override universal reset */
+}
+
 .hp-pulse-node {
     position: absolute;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
+    width: 9px;
+    height: 9px;
     transform: translate(-50%, -50%);
     pointer-events: none;
 }
