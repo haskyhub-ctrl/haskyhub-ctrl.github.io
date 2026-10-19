@@ -290,6 +290,12 @@ function renderProgressBar() {
             html += `<div class="step-line ${isCompleted ? 'completed' : ''}"></div>`;
         }
     }
+    const cur = Math.min(surveyState.currentStep, total - 1);
+    const pct = total > 1 ? Math.round(cur / (total - 1) * 100) : 0;
+    html += `<div class="progress-compact" aria-label="Tiến độ khảo sát">
+        <div class="progress-compact-text"><b>Bước ${cur + 1}/${total}</b><span>${stepLabels[cur] || ''}</span></div>
+        <div class="progress-compact-bar"><div class="progress-compact-fill" style="width:${pct}%"></div></div>
+    </div>`;
     container.innerHTML = html;
 }
 
@@ -406,7 +412,7 @@ function renderFacilityForm(container) {
                 
                 <div class="form-group">
                     <label>Địa chỉ ${isFacility ? 'cơ sở' : 'công trình / nhà ở'} *</label>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 10px;">
+                    <div class="addr-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 10px;">
                         <div>
                             <label style="font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 4px; display: block;">Tỉnh / Thành phố</label>
                             <select id="f_province" class="form-control" style="width: 100%;"></select>
@@ -421,7 +427,7 @@ function renderFacilityForm(container) {
 
                 <div class="form-group survey-gps-box" style="margin-top: 20px; padding: 16px; border-radius: 0; border: 1px dashed var(--gov-border, #cbd5e1);">
                     <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px;">
-                        <div style="flex: 1; min-width: 260px;">
+                        <div style="flex: 1 1 220px; min-width: 0;">
                             <label style="font-weight: 600; font-size: 0.95rem; margin-bottom: 4px; display: block;">
                                 📍 Vị trí tọa độ GPS <span style="font-weight: normal; font-size: 0.85rem; color: var(--text-muted);">(có thể bỏ trống)</span>
                             </label>
@@ -468,7 +474,7 @@ function renderCategoryQuestions(container, catIndex) {
     let questionsHtml = questions.map((q, qi) => {
         const selectedOptionId = surveyState.answers[q.id];
         return `
-            <div class="question-card">
+            <div class="question-card" id="qcard-${q.id}">
                 <div class="question-text">
                     <span class="question-number">${qi + 1}</span>
                     <span>${q.question_text}</span>
@@ -529,6 +535,18 @@ function selectOption(questionId, optionId, element) {
     if (progressText) progressText.textContent = `${answered}/${cat.questions.length} câu đã trả lời`;
     const progressFill = document.querySelector('.survey-category-header .progress-fill');
     if (progressFill) progressFill.style.width = `${(answered / cat.questions.length) * 100}%`;
+
+    // Điện thoại: tự cuộn tới câu chưa trả lời kế tiếp để người dùng không phải vuốt tìm
+    if (window.matchMedia('(max-width: 640px)').matches) {
+        const idx = cat.questions.findIndex(q => q.id === questionId);
+        const next = cat.questions.slice(idx + 1).find(q => !surveyState.answers[q.id]);
+        if (next) {
+            setTimeout(() => {
+                const el = document.getElementById('qcard-' + next.id);
+                if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 220);
+        }
+    }
 }
 
 function renderReview(container) {

@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kết quả Đánh giá Nguy cơ Cháy Nổ - FRAS AI | Công an TP Bắc Ninh</title>
-    <link rel="stylesheet" href="/css/main.css?v=20261014_gov2">
+    <link rel="stylesheet" href="/css/main.css?v=20261021_m4">
     <link rel="stylesheet" href="/css/dashboard.css?v=20261014_gov2">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700;800;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-    <link rel="stylesheet" href="/css/docket.css?v=20261019">
+    <link rel="stylesheet" href="/css/docket.css?v=20261021_m3">
 </head>
 
 <body>
@@ -71,17 +71,26 @@
         function formatFacilityType(type) {
             if (!type) return 'Chưa phân loại';
             const dict = {
-                'hospitality': 'Nhà hàng, khách sạn, dịch vụ lưu trú, ăn uống',
+                'industrial': 'Cơ sở sản xuất công nghiệp',
+                'warehouse': 'Kho hàng, kho vật liệu',
+                'mixed_residence': 'Nhà ở kết hợp kinh doanh',
+                'hospitality': 'Nhà hàng, khách sạn, chợ, TTTM',
+                'medical_education': 'Bệnh viện, trường học, y tế',
+                'fuel_gas': 'Xăng dầu, khí gas, vật liệu nổ',
+                'transport': 'Phương tiện giao thông',
+                'residential': 'Khu dân cư, nhà ở, nhà trọ',
+                'construction': 'Công trình xây dựng',
+                'office': 'Cơ quan, văn phòng, trụ sở',
+                'laboratory': 'Nghiên cứu, phòng thí nghiệm',
+                'agriculture': 'Nông nghiệp, chế biến nông lâm sản',
                 'commercial': 'Trung tâm thương mại, siêu thị, chợ, cửa hàng',
-                'industrial': 'Cơ sở sản xuất công nghiệp, nhà xưởng, kho hàng',
-                'residential': 'Nhà ở kết hợp sản xuất kinh doanh, nhà ở nhiều hộ',
                 'gas_station': 'Cửa hàng kinh doanh xăng dầu, khí đốt hóa lỏng (LPG)',
                 'karaoke': 'Cơ sở kinh doanh dịch vụ karaoke, vũ trường, quán bar',
                 'educational': 'Cơ sở giáo dục, trường học, nhà trẻ, mầm non',
-                'medical': 'Cơ sở khám chữa bệnh, bệnh viện, phòng khám',
-                'office': 'Tòa nhà văn phòng làm việc'
+                'medical': 'Cơ sở khám chữa bệnh, bệnh viện, phòng khám'
             };
-            return dict[type.toLowerCase()] || type;
+            return String(type).split(',').map(t => t.trim()).filter(Boolean)
+                .map(t => dict[t.toLowerCase()] || t).join('; ');
         }
 
         // Mức nguy cơ cao hơn mức tương ứng với tỷ lệ % (do quy tắc cờ đỏ / nhóm trọng yếu)

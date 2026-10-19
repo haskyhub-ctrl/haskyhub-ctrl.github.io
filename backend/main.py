@@ -179,6 +179,11 @@ async def lifespan(app: FastAPI):
     # Migrate: add new columns to existing tables
     migrate_db()
     seed_database()
+    try:
+        from soften_legacy_questions import soften_legacy_questions
+        soften_legacy_questions()
+    except Exception as e:
+        print(f"Notice softening legacy questions: {e}")
     
     # Ensure the superadmin account exists. Never overwrite an existing password:
     # it is changed from the web UI ("Đổi mật khẩu"), or once via the ADMIN_PASSWORD env var.
@@ -213,6 +218,12 @@ async def lifespan(app: FastAPI):
         add_enhanced_questions()
     except Exception as e:
         print(f"Notice seeding enhanced questions: {e}")
+
+    try:
+        from add_specific_expansion import add_specific_expansion
+        add_specific_expansion()
+    except Exception as e:
+        print(f"Notice seeding specific expansion: {e}")
     
     # Khởi chạy dịch vụ cron tự động sao lưu CSDL định kỳ
     backup_task = asyncio.create_task(auto_backup_task())

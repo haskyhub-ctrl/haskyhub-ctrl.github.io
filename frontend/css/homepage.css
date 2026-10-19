@@ -1756,3 +1756,9 @@ body.has-gov-header {
     .hp-hero-title { font-size: 26px; }
     .gov-agency-brand { gap: 10px; }
 }
+
+/* Máy tính: dòng tiêu đề nổi bật luôn nằm trên một dòng, không rớt chữ "NỔ" xuống dòng lẻ */
+@media (min-width: 992px) {
+    .hp-hero-title { font-size: clamp(26px, 2.9vw, 38px); }
+    .hp-hero-highlight { white-space: nowrap; }
+}

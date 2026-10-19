@@ -2371,3 +2371,26 @@ ALL_SPECIFIC_CATEGORIES = [
     SPECIFIC_CATEGORY_K,
     SPECIFIC_CATEGORY_L,
 ]
+
+
+# =====================================================================
+# LÀM MỀM: giữ lại nội dung gốc (để cập nhật CSDL đang chạy) rồi thay bằng bản mềm
+# trong seed_data_specific_soft.py. Bản mềm song song, cùng thứ tự với câu gốc.
+# =====================================================================
+from seed_data_specific_soft import SOFT as _SOFT
+
+LEGACY_QUESTIONS = {}
+for _cat in ALL_SPECIFIC_CATEGORIES:
+    _letter = _cat["facility_type"]
+    _soft_items = _SOFT[_letter]
+    assert len(_soft_items) == len(_cat["questions"]), f"Lệch số câu ở nhóm {_letter}"
+    LEGACY_QUESTIONS[_letter] = []
+    for _q, _s in zip(_cat["questions"], _soft_items):
+        LEGACY_QUESTIONS[_letter].append({
+            "old_text": _q["text"],
+            "new_text": _s[0],
+            "options": {_o["key"]: _t for _o, _t in zip(_q["options"], _s[1:])},
+        })
+        _q["text"] = _s[0]
+        for _o, _t in zip(_q["options"], _s[1:]):
+            _o["text"] = _t
