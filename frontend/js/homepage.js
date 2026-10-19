@@ -104,21 +104,22 @@ function hpRenderWelcome() {
     container.innerHTML = `
         <div class="hp-msg-row ai">
             <div class="hp-msg-avatar">
-                <img src="/img/logo-cand.png" alt="CAND" style="object-fit:contain;">
+                <img src="/img/ai_chi_avatar_256.png" alt="Trợ lý ảo">
             </div>
             <div class="hp-msg-bubble">
                 <div class="hp-msg-meta">
-                    <span>Bộ phận Tư vấn PCCC • Công an TP Bắc Ninh</span>
+                    <span>Trợ lý ảo • Công an TP Bắc Ninh</span>
                 </div>
-                <div class="hp-msg-text">Xin chào quý người dân và chủ cơ sở! Tôi là <strong>Trợ lý ảo Chi</strong>, hỗ trợ trực tuyến 24/7 về công tác Phòng cháy chữa cháy & Cứu nạn cứu hộ.
+                <div class="hp-msg-text">Xin chào quý người dân và chủ cơ sở! Tôi là <strong>trợ lý ảo</strong> hỗ trợ giải đáp pháp luật và thủ tục hành chính (TTHC) về Phòng cháy chữa cháy & Cứu nạn cứu hộ, trực tuyến 24/7.
 
 Tôi có thể hỗ trợ bạn:
 • Tra cứu <strong>Luật PCCC số 55/2024/QH15</strong> và các Nghị định mới nhất.
+• Hướng dẫn thủ tục hành chính về PCCC: hồ sơ, trình tự, thời hạn giải quyết.
 • Quy định trang bị bình chữa cháy, đèn sự cố, hệ thống báo cháy.
 • Kỹ năng thoát nạn khẩn cấp, an toàn điện, gas và sạc pin xe điện.
 • Khắc phục các vi phạm an toàn PCCC thường gặp.
 
-Bạn có thể bấm vào các gợi ý bên dưới hoặc gửi câu hỏi trực tiếp cho Chi nhé!</div>
+Bạn có thể bấm vào các gợi ý bên dưới hoặc gửi câu hỏi trực tiếp nhé!</div>
                 <div class="hp-followup-chips">
                     <button type="button" class="hp-chip-btn" onclick="hpAskChi(this)">🚨 Khi cháy chung cư mini phải làm gì?</button>
                     <button type="button" class="hp-chip-btn" onclick="hpAskChi(this)">📜 Điểm mới Luật PCCC 55/2024?</button>
@@ -203,13 +204,13 @@ async function hpSubmitQuestion(text) {
     typingRow.id = typingId;
     typingRow.innerHTML = `
         <div class="hp-msg-avatar">
-            <img src="/img/logo-cand.png" alt="CAND" style="object-fit:contain;">
+            <img src="/img/ai_chi_avatar_256.png" alt="Trợ lý ảo">
         </div>
         <div class="hp-typing-bubble">
             <div class="hp-typing-dot"></div>
             <div class="hp-typing-dot"></div>
             <div class="hp-typing-dot"></div>
-            <span style="font-size:0.78rem;color:#64748B;margin-left:6px;">Chi đang tra cứu dữ liệu pháp luật...</span>
+            <span style="font-size:0.78rem;color:#64748B;margin-left:6px;">Trợ lý ảo đang tra cứu dữ liệu pháp luật...</span>
         </div>
     `;
     messages.appendChild(typingRow);
@@ -284,11 +285,11 @@ async function hpSubmitQuestion(text) {
         aiRow.className = 'hp-msg-row ai';
         aiRow.innerHTML = `
             <div class="hp-msg-avatar">
-                <img src="/img/logo-cand.png" alt="CAND" style="object-fit:contain;">
+                <img src="/img/ai_chi_avatar_256.png" alt="Trợ lý ảo">
             </div>
             <div class="hp-msg-bubble">
                 <div class="hp-msg-meta">
-                    <span>Bộ phận Tư vấn PCCC • Công an TP Bắc Ninh</span>
+                    <span>Trợ lý ảo • Công an TP Bắc Ninh</span>
                 </div>
                 <div class="hp-msg-text">${hpFormatText(reply)}</div>
                 ${sourceBadge}
@@ -303,7 +304,7 @@ async function hpSubmitQuestion(text) {
         errRow.className = 'hp-msg-row ai';
         errRow.innerHTML = `
             <div class="hp-msg-avatar">
-                <img src="/img/logo-cand.png" alt="CAND" style="object-fit:contain;">
+                <img src="/img/ai_chi_avatar_256.png" alt="Trợ lý ảo">
             </div>
             <div class="hp-msg-bubble" style="background:#FEF2F2;border-color:#FCA5A5;color:#991B1B;">
                 <div class="hp-msg-meta" style="color:#DC2626;">

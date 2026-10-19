@@ -374,9 +374,9 @@ function setupNavbar() {
                 navLinks.insertBefore(dashLink, navLinks.firstChild);
                 navLinks.insertBefore(histLink, dashLink.nextSibling);
 
-                const mapLink = document.createElement('li');
-                mapLink.innerHTML = `<a href="/map.html">Bản đồ</a>`;
-                navLinks.insertBefore(mapLink, histLink.nextSibling);
+                const fixLink = document.createElement('li');
+                fixLink.innerHTML = `<a href="/mitigation.html">Khắc phục</a>`;
+                navLinks.insertBefore(fixLink, histLink.nextSibling);
             }
         } else {
             // Admin Links

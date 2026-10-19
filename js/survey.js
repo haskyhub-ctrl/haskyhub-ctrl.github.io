@@ -803,6 +803,23 @@ async function runWithQueueRetry(stepName, fn, maxRetries = 6) {
 
 async function submitSurvey() {
     if (surveyState.isSubmitting) return;
+
+    // Bắt buộc trả lời hết: bỏ trống câu có nguy cơ sẽ làm tỷ lệ nguy cơ thấp hơn thực tế
+    let missing = 0;
+    let firstMissingCat = -1;
+    surveyState.categories.forEach((cat, idx) => {
+        const n = (cat.questions || []).filter(q => !surveyState.answers[q.id]).length;
+        missing += n;
+        if (n && firstMissingCat < 0) firstMissingCat = idx;
+    });
+    if (missing > 0) {
+        showToast(`Còn ${missing} câu chưa trả lời. Vui lòng trả lời đầy đủ trước khi gửi.`, 'error');
+        surveyState.currentStep = firstMissingCat + 1;
+        saveSurveyDraft();
+        renderStep();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        return;
+    }
     surveyState.isSubmitting = true;
 
     // Persist latest state
