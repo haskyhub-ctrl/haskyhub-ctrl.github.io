@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trò chơi An toàn PCCC - FRAS</title>
     <meta name="description" content="Học kỹ năng phòng cháy chữa cháy qua các trò chơi tương tác thú vị. Miễn phí, phát triển bởi Công an thành phố Bắc Ninh.">
-    <link rel="stylesheet" href="/css/main.css?v=20261014_gov2">
-    <link rel="stylesheet" href="/css/games.css">
+    <link rel="stylesheet" href="/css/main.css?v=20261019_fix">
+    <link rel="stylesheet" href="/css/homepage.css?v=20261019_fix">
+    <link rel="stylesheet" href="/css/games.css?v=20261019_fix">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700;800;900&family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
@@ -18,7 +19,7 @@
             <span class="gov-top-motto">
                 CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
                 <span class="separator">•</span>
-                <span class="motto-sub">Độc lập – Tự do – Hạnh phúc</span>
+                <span class="motto-sub">Độc lập - Tự do - Hạnh phúc</span>
             </span>
             <div class="gov-top-right">
                 <span class="gov-top-clock" id="gov-clock">--:-- --/--/----</span>
@@ -219,6 +220,27 @@
         }
         updateClock();
         setInterval(updateClock, 30000);
+
+        // Mobile Menu Toggle
+        const toggleBtn = document.getElementById('gov-mobile-toggle');
+        const navMenu = document.getElementById('gov-nav-menu');
+        if (toggleBtn && navMenu) {
+            toggleBtn.addEventListener('click', () => {
+                const isOpen = navMenu.style.display === 'flex';
+                navMenu.style.display = isOpen ? 'none' : 'flex';
+                if (!isOpen) {
+                    navMenu.style.flexDirection = 'column';
+                    navMenu.style.position = 'absolute';
+                    navMenu.style.top = '48px';
+                    navMenu.style.left = '0';
+                    navMenu.style.right = '0';
+                    navMenu.style.background = 'var(--gov-red, #C0202A)';
+                    navMenu.style.height = 'auto';
+                    navMenu.style.padding = '8px 0';
+                    navMenu.style.boxShadow = '0 6px 12px rgba(0,0,0,0.3)';
+                }
+            });
+        }
     </script>
 </body>
 </html>

@@ -198,6 +198,345 @@ h5 { font-size: 1.1rem; }
     max-width: 700px;
 }
 
+/* ============================================================
+   OFFICIAL GOVERNMENT & POLICE HEADER SYSTEM (SHARED)
+   ============================================================ */
+.gov-top-bar {
+    background: var(--gov-navy, #1A3A6B);
+    height: 38px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1100;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+.gov-top-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.gov-top-motto {
+    font-size: 11.5px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.90);
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+.gov-top-motto .separator {
+    color: var(--gov-gold, #C9962C);
+    margin: 0 8px;
+    font-weight: 400;
+}
+.gov-top-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.gov-top-clock {
+    font-size: 11.5px;
+    color: rgba(255,255,255,0.75);
+    font-family: 'Roboto Condensed', monospace;
+    letter-spacing: 0.5px;
+}
+.gov-font-size-btns {
+    display: flex;
+    gap: 2px;
+}
+.gov-font-btn {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.25);
+    color: rgba(255,255,255,0.80);
+    padding: 1px 6px;
+    cursor: pointer;
+    font-size: 10px;
+    font-family: inherit;
+    transition: all 0.2s;
+    line-height: 1.6;
+    border-radius: 0 !important;
+}
+.gov-font-btn:hover {
+    background: rgba(255,255,255,0.15);
+    color: white;
+}
+
+/* OFFICIAL HEADER BAND: Logo + Agency Name + Hotline */
+.gov-header-band {
+    background: #FFFFFF;
+    border-bottom: 4px solid var(--gov-red, #C0202A);
+    height: 88px;
+    position: fixed;
+    top: 38px;
+    left: 0;
+    right: 0;
+    z-index: 1050;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.gov-header-band .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.gov-agency-brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+}
+.gov-emblem {
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.gov-emblem img,
+.gov-emblem svg {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+}
+.gov-agency-name {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+.gov-agency-parent {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--gov-navy, #1A3A6B);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    line-height: 1.3;
+}
+.gov-agency-unit {
+    font-size: 19px;
+    font-weight: 800;
+    color: var(--gov-red, #C0202A);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+    font-family: 'Roboto Condensed', 'Roboto', sans-serif;
+}
+.gov-agency-system {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--gov-text-sub, #4A5568);
+    letter-spacing: 0.3px;
+}
+.gov-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.gov-hotline-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 18px;
+    border: 2px solid var(--gov-red, #C0202A);
+    color: var(--gov-red, #C0202A);
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.2s;
+    line-height: 1.3;
+    border-radius: 0 !important;
+}
+.gov-hotline-btn:hover {
+    background: var(--gov-red, #C0202A);
+    color: #FFFFFF;
+}
+.gov-hotline-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    opacity: 0.8;
+}
+.gov-hotline-number {
+    font-size: 22px;
+    font-weight: 900;
+    font-family: 'Roboto Condensed', sans-serif;
+    letter-spacing: 1px;
+}
+.gov-login-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 9px 20px;
+    background: var(--gov-navy, #1A3A6B);
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.2s;
+    border-radius: 0 !important;
+}
+.gov-login-btn:hover {
+    background: var(--gov-navy-dark, #0F2347);
+    color: white;
+}
+
+/* NAVIGATION BAR: Official red navbar */
+.gov-navbar {
+    background: var(--gov-red, #C0202A);
+    height: 48px;
+    position: fixed;
+    top: 126px;   /* 38px top-bar + 88px header */
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.20);
+}
+.gov-navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.gov-nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+    height: 48px;
+}
+.gov-nav-menu li {
+    list-style: none;
+}
+.gov-nav-menu li a {
+    display: flex;
+    align-items: center;
+    height: 48px;
+    padding: 0 18px;
+    color: rgba(255,255,255,0.92);
+    text-decoration: none;
+    font-size: 13.5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    transition: background 0.15s;
+    border-bottom: 3px solid transparent;
+}
+.gov-nav-menu li a:hover,
+.gov-nav-menu li.active a {
+    background: rgba(255,255,255,0.14);
+    color: white;
+    border-bottom-color: white;
+}
+.gov-nav-search {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+.gov-nav-search input {
+    width: 200px;
+    padding: 6px 12px;
+    border: none;
+    outline: none;
+    font-size: 13px;
+    background: rgba(255,255,255,0.15);
+    color: white;
+    border-radius: 0 !important;
+}
+.gov-nav-search input::placeholder { color: rgba(255,255,255,0.6); }
+.gov-nav-search button {
+    padding: 6px 12px;
+    background: rgba(255,255,255,0.2);
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.15s;
+    border-radius: 0 !important;
+}
+.gov-nav-search button:hover { background: rgba(255,255,255,0.3); }
+.gov-mobile-toggle {
+    display: none;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.4);
+    color: white;
+    padding: 4px 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 0 !important;
+}
+
+body.has-gov-header {
+    padding-top: 174px !important;  /* 38 + 88 + 48 */
+}
+
+/* FOOTER */
+.hp-footer {
+    background: #111827 !important;
+    border-top: 4px solid var(--gov-red, #C0202A) !important;
+    padding: 30px 0 20px !important;
+    color: rgba(255,255,255,0.75) !important;
+}
+.hp-footer-copy {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.85);
+    text-align: center;
+    margin-bottom: 6px;
+}
+.hp-footer-dev {
+    font-size: 12px;
+    color: rgba(255,255,255,0.45);
+    text-align: center;
+}
+
+@media (max-width: 992px) {
+    .gov-agency-system { display: none; }
+    .gov-agency-unit { font-size: 16px; }
+}
+
+@media (max-width: 768px) {
+    .gov-top-motto .separator { display: none; }
+    .gov-top-motto span.motto-sub { display: none; }
+    .gov-top-right .gov-font-size-btns { display: none; }
+    .gov-header-band { height: 72px; top: 38px; }
+    .gov-agency-unit { font-size: 14px; }
+    .gov-agency-parent { font-size: 11px; }
+    .gov-emblem { width: 48px; height: 48px; }
+    .gov-emblem img, .gov-emblem svg { width: 48px; height: 48px; }
+    .gov-login-btn span { display: none; }
+    .gov-navbar { top: 110px; }
+    body.has-gov-header { padding-top: 158px !important; }
+    .gov-nav-menu { display: none; }
+    .gov-mobile-toggle { display: block; }
+    .gov-nav-search { display: none; }
+}
+
+@media (max-width: 480px) {
+    .gov-agency-brand { gap: 10px; }
+    .gov-hotline-btn { padding: 4px 10px; }
+    .gov-hotline-number { font-size: 18px; }
+}
+
 /* =================== NAVBAR: OFFICIAL POLICE DESIGN =================== */
 .navbar {
     position: fixed;
