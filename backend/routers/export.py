@@ -18,6 +18,28 @@ from utils.recommendations import get_recommendations_for_assessment
 router = APIRouter(prefix="/api/export", tags=["Export"])
 
 
+def _survey_result(assessment) -> dict:
+    """Điểm, tỷ lệ, mức nguy cơ tại thời điểm khảo sát.
+
+    Khi cơ sở cập nhật tiến độ khắc phục, các trường của assessment bị ghi đè bằng nguy cơ hiện tại
+    (để đồng bộ bản đồ). Biên bản khảo sát vẫn phải giữ kết quả gốc, lưu trong mitigation_data.
+    """
+    result = {
+        "total_score": assessment.total_score,
+        "risk_percentage": assessment.risk_percentage,
+        "risk_level": assessment.risk_level,
+    }
+    if assessment.mitigation_data:
+        try:
+            m = json.loads(assessment.mitigation_data)
+            result["total_score"] = m.get("initial_total_score", result["total_score"])
+            result["risk_percentage"] = m.get("initial_risk_percentage", result["risk_percentage"])
+            result["risk_level"] = m.get("initial_risk_level", result["risk_level"])
+        except Exception:
+            pass
+    return result
+
+
 @router.get("/excel/{assessment_id}")
 def export_excel(
     assessment_id: str,
@@ -53,6 +75,7 @@ def export_excel(
     ws["A1"].fill = header_fill
     ws["A1"].alignment = Alignment(horizontal="center")
     
+    survey = _survey_result(assessment)
     info = [
         ("Tên cơ sở:", assessment.facility_name),
         ("Loại hình:", assessment.facility_type or "N/A"),
@@ -60,9 +83,9 @@ def export_excel(
         ("Diện tích:", f"{assessment.facility_area or 'N/A'} m²"),
         ("Số người:", str(assessment.worker_count or "N/A")),
         ("Ngày đánh giá:", assessment.completed_at.strftime("%d/%m/%Y") if assessment.completed_at else "N/A"),
-        ("Tổng điểm:", f"{assessment.total_score}/{assessment.max_possible_score}"),
-        ("Tỷ lệ nguy cơ:", f"{assessment.risk_percentage}%"),
-        ("Mức nguy cơ:", get_risk_label_vi(assessment.risk_level)),
+        ("Tổng điểm:", f"{survey['total_score']}/{assessment.max_possible_score}"),
+        ("Tỷ lệ nguy cơ:", f"{survey['risk_percentage']}%"),
+        ("Mức nguy cơ:", get_risk_label_vi(survey['risk_level'])),
     ]
     
     for i, (label, value) in enumerate(info, start=3):
@@ -210,10 +233,8 @@ def export_data(
         "facility_address": assessment.facility_address,
         "facility_area": assessment.facility_area,
         "worker_count": assessment.worker_count,
-        "total_score": assessment.total_score,
+        **_survey_result(assessment),
         "max_possible_score": assessment.max_possible_score,
-        "risk_percentage": assessment.risk_percentage,
-        "risk_level": assessment.risk_level,
         "completed_at": assessment.completed_at.isoformat() if assessment.completed_at else None,
         "category_scores": cat_data,
         "answers": answer_data,

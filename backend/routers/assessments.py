@@ -12,6 +12,7 @@ from models import (
 from schemas import AssessmentResponse, AssessmentDetail, CategoryScoreResponse, RecommendationResponse
 from middleware.auth_middleware import get_current_user, get_optional_user
 from utils.recommendations import get_recommendations_for_assessment
+from utils.scoring import score_assessment, calculate_risk_level, is_key_category
 
 router = APIRouter(prefix="/api/assessments", tags=["Assessments"])
 
@@ -40,6 +41,9 @@ def get_user_map_data(
     db: Session = Depends(get_db),
 ):
     """Get all completed assessments + imported facilities for map display, but hide info of others."""
+    # Bản đồ rủi ro chỉ dành cho cán bộ quản trị
+    if not current_user or current_user.role not in ("admin", "superadmin"):
+        raise HTTPException(status_code=403, detail="Bản đồ rủi ro chỉ dành cho cán bộ quản lý")
     results = []
     assessed_user_ids = set()
 
@@ -263,70 +267,79 @@ class MitigationUpdateRequest(BaseModel):
     items: List[MitigationItemUpdate]
 
 
-def _build_default_mitigation_data(assessment: Assessment, db: Session) -> dict:
-    """Build initial deficiency checklist from AI analysis and assessment answers."""
-    items = []
-    idx = 0
+PRIORITY_ORDER = {"urgent": 0, "high": 1, "medium": 2, "low": 3}
+PRIORITY_DEADLINE = {
+    "urgent": "Khắc phục ngay (trong 24h - 48h)",
+    "high": "Trong 15 ngày",
+    "medium": "Trong 30 ngày",
+    "low": "Trong 60 ngày",
+}
+MITIGATION_MIN_SCORE = 2  # Câu trả lời từ 2 điểm trở lên được đưa vào danh mục khắc phục
 
-    # 1. Try to extract from AI recommendations / weaknesses
-    if assessment.ai_analysis:
-        try:
-            ai = json.loads(assessment.ai_analysis)
-            gemini = ai.get("gemini_38") or ai
-            recs = gemini.get("detailed_recommendations", [])
-            for r in recs:
-                p = (r.get("priority") or "medium").lower()
-                weight = 4 if p == "urgent" else 3 if p == "high" else 2 if p == "medium" else 1
-                items.append({
-                    "id": idx,
-                    "title": r.get("title", f"Hạng mục kiến nghị {idx+1}"),
-                    "description": r.get("description", ""),
-                    "priority": p,
-                    "deadline": r.get("deadline", "Khắc phục ngay trong 24h - 48h" if p == "urgent" else "30 ngày"),
-                    "category": "Khuyến cáo kỹ thuật",
-                    "weight_score": weight,
-                    "resolved": False,
-                    "notes": "",
-                    "resolved_at": None,
-                    "legal_basis": r.get("legal_basis", "Quy định an toàn PCCC"),
-                })
-                idx += 1
-        except Exception:
-            pass
 
-    # 2. Fallback to database recommendations from risky answers if AI didn't provide enough items
-    if len(items) < 3:
-        db_recs = get_recommendations_for_assessment(db, assessment.id)
-        for r in db_recs:
-            # avoid duplicating titles
-            if any(it["title"] == r["recommendation_text"][:80] for it in items):
-                continue
-            p = (r.get("priority") or "medium").lower()
-            weight = 4 if p == "urgent" else 3 if p == "high" else 2 if p == "medium" else 1
-            items.append({
-                "id": idx,
-                "title": r.get("recommendation_text", f"Hạng mục {idx+1}")[:100],
-                "description": f"Câu hỏi: {r.get('question_text') or ''}. Yêu cầu xử lý dứt điểm.",
-                "priority": p,
-                "deadline": "Khắc phục ngay trong 24h - 48h" if p == "urgent" else f"{r.get('deadline_days', 30)} ngày",
-                "category": r.get("category_name", "An toàn PCCC"),
-                "weight_score": weight,
-                "resolved": False,
-                "notes": "",
-                "resolved_at": None,
-                "legal_basis": r.get("legal_reference", "Luật PCCC số 55/2024/QH15"),
-            })
-            idx += 1
+def _build_default_mitigation_data(assessment: Assessment, db: Session, initial: Optional[dict] = None) -> dict:
+    """Lập danh mục khắc phục từ các câu trả lời có nguy cơ.
 
-    return {
+    Mỗi hạng mục gắn với một câu hỏi gốc (question_id). Khi cơ sở tích "đã khắc phục", câu hỏi đó được tính
+    0 điểm và nguy cơ được tính lại bằng chính công thức chấm điểm của bài khảo sát.
+    """
+    initial = initial or {
         "initial_risk_percentage": assessment.risk_percentage,
         "initial_risk_level": assessment.risk_level,
         "initial_total_score": assessment.total_score,
-        "current_risk_percentage": assessment.risk_percentage,
-        "current_risk_level": assessment.risk_level,
-        "current_total_score": assessment.total_score,
+    }
+    answers = db.query(AssessmentAnswer).filter(AssessmentAnswer.assessment_id == assessment.id).all()
+    items = []
+    for ans in answers:
+        if (ans.score_obtained or 0) < MITIGATION_MIN_SCORE or not ans.selected_option_id:
+            continue
+        q = db.query(Question).get(ans.question_id)
+        if not q:
+            continue
+        opt = db.query(QuestionOption).get(ans.selected_option_id)
+        cat = db.query(QuestionCategory).get(q.category_id)
+        rec = (
+            db.query(Recommendation)
+            .filter(Recommendation.question_option_id == ans.selected_option_id, Recommendation.is_active == True)
+            .first()
+        )
+        severe = ans.score_obtained >= 3
+        priority = "urgent" if severe and cat and is_key_category(cat) else "high" if severe else "medium"
+        if rec and rec.priority in PRIORITY_ORDER and PRIORITY_ORDER[rec.priority] < PRIORITY_ORDER[priority]:
+            priority = rec.priority
+        if priority == "urgent":
+            deadline = PRIORITY_DEADLINE["urgent"]
+        elif rec and rec.deadline_days:
+            deadline = f"Trong {rec.deadline_days} ngày"
+        else:
+            deadline = PRIORITY_DEADLINE[priority]
+        items.append({
+            "question_id": q.id,
+            "title": (rec.recommendation_text if rec else f"Khắc phục: {q.question_text}")[:200],
+            "description": f"Câu hỏi: {q.question_text} Hiện trạng khi khảo sát: {opt.option_text if opt else ''}",
+            "priority": priority,
+            "deadline": deadline,
+            "category": cat.name if cat else "",
+            "score": ans.score_obtained,
+            "resolved": False,
+            "notes": "",
+            "resolved_at": None,
+            "legal_basis": (rec.legal_reference if rec and rec.legal_reference else ""),
+        })
+    items.sort(key=lambda it: (PRIORITY_ORDER.get(it["priority"], 9), -it["score"]))
+    for i, it in enumerate(items):
+        it["id"] = i
+
+    return {
+        **initial,
+        "current_risk_percentage": initial["initial_risk_percentage"],
+        "current_risk_level": initial["initial_risk_level"],
+        "current_total_score": initial["initial_total_score"],
         "items": items,
-        "ai_feedback": "Hệ thống đã lập danh mục các tồn tại, vi phạm an toàn PCCC cần khắc phục. Cơ sở sau khi xử lý xong ngoài thực tế hãy tích chọn để cập nhật mức nguy cơ theo thời gian thực và đồng bộ lên Bản đồ Rủi ro PCCC Bắc Ninh.",
+        "linked_to_questions": True,
+        "history": [],
+        "ai_feedback_source": "template",
+        "ai_feedback": "Hệ thống đã lập danh mục các tồn tại, nguy cơ về an toàn PCCC cần khắc phục theo câu trả lời khảo sát. Cơ sở xử lý xong ngoài thực tế thì tích chọn và ghi chú cách đã khắc phục, hệ thống sẽ tính lại mức nguy cơ.",
         "last_updated": datetime.utcnow().isoformat(),
     }
 
@@ -337,35 +350,74 @@ def get_assessment_mitigation(
     current_user: Optional[User] = Depends(get_optional_user),
     db: Session = Depends(get_db)
 ):
-    """Lấy danh mục các tồn tại cần khắc phục và trạng thái nguy cơ realtime."""
+    """Lấy danh mục các tồn tại cần khắc phục và trạng thái nguy cơ hiện tại."""
     assessment = db.query(Assessment).filter(Assessment.id == assessment_id).first()
     if not assessment:
         raise HTTPException(status_code=404, detail="Không tìm thấy đánh giá")
 
     if assessment.mitigation_data:
         try:
-            return json.loads(assessment.mitigation_data)
+            data = json.loads(assessment.mitigation_data)
+            # Danh mục kiểu cũ (lập từ khuyến cáo AI, không gắn câu hỏi) mà chưa tích mục nào thì lập lại
+            no_progress = not any(it.get("resolved") for it in data.get("items", []))
+            if not data.get("linked_to_questions") and no_progress:
+                initial = {k: data[k] for k in ("initial_risk_percentage", "initial_risk_level", "initial_total_score") if k in data}
+                data = _build_default_mitigation_data(assessment, db, initial if len(initial) == 3 else None)
+                assessment.mitigation_data = json.dumps(data, ensure_ascii=False)
+                db.commit()
+            return data
         except Exception:
             pass
 
-    # Initialize default
     data = _build_default_mitigation_data(assessment, db)
     assessment.mitigation_data = json.dumps(data, ensure_ascii=False)
     db.commit()
     return data
 
 
+async def _ai_mitigation_feedback(assessment: Assessment, items: list, init_pct: float, new_pct: float) -> Optional[str]:
+    """Nhờ AI nhận xét tiến độ khắc phục. Trả về None nếu AI không phản hồi."""
+    import asyncio
+    from routers.ai_analysis import call_gemini
+
+    done = [f"- {it.get('title')}" + (f" (ghi chú: {it.get('notes')})" if it.get("notes") else "")
+            for it in items if it.get("resolved")]
+    todo = [f"- [{it.get('priority', 'medium')}] {it.get('title')}" for it in items if not it.get("resolved")]
+    prompt = f"""Cơ sở: {assessment.facility_name} ({assessment.facility_type or 'chưa rõ loại hình'}).
+Tỷ lệ nguy cơ khi khảo sát: {init_pct}%. Tỷ lệ nguy cơ tính lại sau khắc phục: {new_pct}%.
+
+Các hạng mục cơ sở báo đã khắc phục ({len(done)}):
+{chr(10).join(done) or '- Chưa có'}
+
+Các hạng mục chưa khắc phục ({len(todo)}):
+{chr(10).join(todo) or '- Không còn'}
+
+Hãy viết nhận xét ngắn (3-5 câu) gửi chủ cơ sở về tiến độ khắc phục: ghi nhận phần đã làm, chỉ rõ 1-3 việc cần ưu tiên tiếp theo (nguy cơ điện, nguồn lửa/nhiệt phải làm trước), nhắc giữ lại bằng chứng khắc phục.
+Văn phong hành chính, khách quan, không dùng dấu gạch ngang dài, không nêu chi phí, không bịa số hiệu văn bản pháp luật.
+Trả về JSON: {{"advice": "nội dung nhận xét"}}"""
+    try:
+        res = await asyncio.wait_for(call_gemini(prompt, temperature=0.3), timeout=40)
+        advice = (res.get("advice") or res.get("overall_assessment") or "").strip()
+        return advice or None
+    except Exception as e:
+        print(f"[Mitigation AI] {e}")
+        return None
+
+
 @router.post("/{assessment_id}/mitigation")
-def update_assessment_mitigation(
+async def update_assessment_mitigation(
     assessment_id: str,
     payload: MitigationUpdateRequest,
-    current_user: Optional[User] = Depends(get_optional_user),
+    current_user: User = Depends(get_current_user),
     db: Session = Depends(get_db)
 ):
     """Cập nhật tiến độ khắc phục từng hạng mục, tự động tính lại điểm nguy cơ và cập nhật Bản đồ Admin Realtime."""
     assessment = db.query(Assessment).filter(Assessment.id == assessment_id).first()
     if not assessment:
         raise HTTPException(status_code=404, detail="Không tìm thấy đánh giá")
+    # Chỉ chủ hồ sơ hoặc cán bộ quản trị mới được cập nhật tiến độ
+    if assessment.user_id != current_user.id and current_user.role not in ("admin", "superadmin"):
+        raise HTTPException(status_code=403, detail="Bạn không có quyền cập nhật tiến độ khắc phục của hồ sơ này")
 
     # Load current data
     if assessment.mitigation_data:
@@ -393,53 +445,42 @@ def update_assessment_mitigation(
             elif not u.resolved:
                 it["resolved_at"] = None
 
-    # Recalculate Risk Score & Risk Percentage
+    # Tính lại nguy cơ
     total_count = len(items)
     resolved_count = sum(1 for it in items if it.get("resolved"))
-    total_weight = sum(it.get("weight_score", 1) for it in items) or 1
-    resolved_weight = sum(it.get("weight_score", 1) for it in items if it.get("resolved"))
+    init_pct = float(data.get("initial_risk_percentage", assessment.risk_percentage or 0))
+    init_score = int(data.get("initial_total_score", assessment.total_score or 0))
 
-    ratio = resolved_weight / total_weight if total_weight > 0 else 0
-    init_pct = float(data.get("initial_risk_percentage", assessment.risk_percentage or 50.0))
-    init_score = int(data.get("initial_total_score", assessment.total_score or 30))
-
-    if total_count == 0:
-        new_risk_pct = 0.0
-        new_score = 0
-        new_risk_level = "low"
-    elif resolved_count == total_count:
-        # 100% resolved: drop to minimal baseline risk (5%)
-        new_risk_pct = min(init_pct, 5.0)
-        new_score = max(0, round(init_score * 0.05))
-        new_risk_level = "low"
+    if data.get("linked_to_questions"):
+        # Câu hỏi đã khắc phục tính 0 điểm, chấm lại bằng đúng công thức của bài khảo sát
+        resolved_qids = {it["question_id"] for it in items if it.get("resolved") and it.get("question_id") is not None}
+        _, totals = score_assessment(db, assessment, resolved_qids)
+        new_risk_pct = totals["risk_percentage"]
+        new_risk_level = totals["risk_level"]
+        new_score = totals["total_score"]
     else:
-        # Proportionally reduce risk up to 80% reduction
-        reduction = 0.80 * ratio
-        new_risk_pct = round(max(8.0, init_pct * (1.0 - reduction)), 1)
+        # Danh mục kiểu cũ đã có tiến độ: giữ cách tính tỷ lệ cũ, dùng thang mức chung
+        total_weight = sum(it.get("weight_score", 1) for it in items) or 1
+        resolved_weight = sum(it.get("weight_score", 1) for it in items if it.get("resolved"))
+        reduction = 0.80 * (resolved_weight / total_weight)
+        new_risk_pct = round(max(0.0, init_pct * (1.0 - reduction)), 1)
         new_score = max(0, round(init_score * (1.0 - reduction)))
-        
-        # Risk thresholds
-        if new_risk_pct < 25.0:
-            new_risk_level = "low"
-        elif new_risk_pct < 50.0:
-            new_risk_level = "medium"
-        elif new_risk_pct < 75.0:
-            new_risk_level = "high"
-        else:
-            new_risk_level = "critical"
+        new_risk_level = calculate_risk_level(new_risk_pct)
+
+    level_vi = {"low": "Nguy cơ Thấp", "medium": "Nguy cơ Trung bình", "high": "Nguy cơ Cao", "critical": "Nguy cơ Rất cao"}.get(new_risk_level, new_risk_level)
 
     # AI Confirmation & Guidance Note
     if total_count > 0 and resolved_count == total_count:
         ai_feedback = (
-            f"Xuất sắc: Cơ sở '{assessment.facility_name}' đã hoàn thành khắc phục toàn bộ 100% ({total_count}/{total_count}) tồn tại, vi phạm an toàn PCCC. "
-            f"Tỷ lệ nguy cơ cháy nổ thực tế đã hạ từ {init_pct}% xuống {new_risk_pct}% (Nguy cơ Thấp - Vùng Xanh An toàn). "
-            f"Hệ thống đã tự động cập nhật chấm an toàn trên Bản đồ Rủi ro PCCC Bắc Ninh. Đề nghị cơ sở tiếp tục duy trì chế độ tự kiểm tra định kỳ theo quy định."
+            f"Xuất sắc: Cơ sở '{assessment.facility_name}' đã hoàn thành khắc phục toàn bộ 100% ({total_count}/{total_count}) tồn tại, nguy cơ về an toàn PCCC. "
+            f"Tỷ lệ nguy cơ đã giảm từ {init_pct}% xuống {new_risk_pct}% ({level_vi}). "
+            f"Kết quả đã được cập nhật tới cơ quan quản lý. Đề nghị cơ sở tiếp tục duy trì chế độ tự kiểm tra định kỳ theo quy định."
         )
     elif resolved_count >= total_count / 2 and resolved_count > 0:
         pct_progress = round((resolved_count / total_count) * 100)
         ai_feedback = (
             f"Ghi nhận nỗ lực tích cực: Cơ sở đã khắc phục thành công {resolved_count}/{total_count} hạng mục trọng yếu ({pct_progress}% tiến độ). "
-            f"Nguy cơ cháy nổ đã giảm từ {init_pct}% xuống {new_risk_pct}%. Trạng thái an toàn trên Bản đồ Rủi ro PCCC đã được cập nhật tương ứng. "
+            f"Nguy cơ cháy nổ đã giảm từ {init_pct}% xuống {new_risk_pct}% ({level_vi}). "
             f"Đề nghị cơ sở khẩn trương hoàn thiện các nội dung còn lại để đưa cơ sở về trạng thái an toàn tuyệt đối."
         )
     elif resolved_count > 0:
@@ -449,9 +490,27 @@ def update_assessment_mitigation(
         )
     else:
         ai_feedback = (
-            f"Chưa ghi nhận hạng mục nào được khắc phục. Tỷ lệ nguy cơ vẫn giữ ở mức ban đầu {init_pct}% ({new_risk_level.upper()}). "
+            f"Chưa ghi nhận hạng mục nào được khắc phục. Tỷ lệ nguy cơ vẫn giữ ở mức ban đầu {init_pct}% ({level_vi}). "
             f"Khuyến cáo cơ sở khẩn trương rà soát và xử lý các tồn tại nguy cơ cao để đảm bảo an toàn PCCC."
         )
+
+    # AI nhận xét tiến độ; nếu AI không phản hồi thì dùng nhận xét soạn sẵn ở trên
+    ai_advice = await _ai_mitigation_feedback(assessment, items, init_pct, new_risk_pct)
+    data["ai_feedback_source"] = "ai" if ai_advice else "template"
+    if ai_advice:
+        ai_feedback = ai_advice
+
+    # Lưu lịch sử mỗi lần cập nhật để theo dõi diễn biến nguy cơ
+    history = data.get("history") or []
+    history.append({
+        "at": now_iso,
+        "risk_percentage": new_risk_pct,
+        "risk_level": new_risk_level,
+        "resolved": resolved_count,
+        "total": total_count,
+        "by": current_user.full_name,
+    })
+    data["history"] = history[-50:]
 
     # Update metadata
     data["current_risk_percentage"] = new_risk_pct

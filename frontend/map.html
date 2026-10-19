@@ -388,7 +388,7 @@
         <div id="map"></div>
     </div>
 
-    <script src="/js/api.js"></script>
+    <script src="/js/api.js?v=20261019"></script>
     <!-- Leaflet JS: defer to prevent page freeze while CDN loads -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
     <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js" defer></script>
@@ -904,6 +904,12 @@
             if (typeof onReady === 'function') onReady(() => {});
             setupNavbar();
             if (requireAuth()) {
+                // Bản đồ rủi ro chỉ dành cho cán bộ quản trị
+                const u = api.getUser();
+                if (!u || (u.role !== 'admin' && u.role !== 'superadmin')) {
+                    window.location.href = '/dashboard.html';
+                    return;
+                }
                 showMapLoading();
                 initMap();
             }

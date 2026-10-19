@@ -44,7 +44,7 @@ NINEROUTER_API_KEY = os.getenv("NINEROUTER_API_KEY", "sk-44b926960a1d7a82-o52i0k
 GEMINI_MODEL = os.getenv("GEMINI_MODEL", "ag/gemini-3.8-flash")
 
 
-async def call_gemini(prompt: str, temperature: float = 0.3, system_prompt: str = None) -> dict:
+async def call_gemini(prompt: str, temperature: float = 0.3, system_prompt: str = None, timeout: float = 50.0) -> dict:
     """Call 9Router (Gemini 3.8 Flash) with fast non-streaming JSON response and robust fallback."""
     import httpx
 
@@ -68,7 +68,8 @@ async def call_gemini(prompt: str, temperature: float = 0.3, system_prompt: str 
                 "temperature": temperature,
                 "stream": False,
             }
-            async with httpx.AsyncClient(timeout=50.0) as client:
+            # connect ngắn để báo lỗi nhanh khi máy chủ AI ngừng; read dài vì bản phân tích đầy đủ mất ~60 giây
+            async with httpx.AsyncClient(timeout=httpx.Timeout(timeout, connect=10.0)) as client:
                 resp = await client.post(f"{NINEROUTER_BASE_URL}/chat/completions", headers=headers, json=payload)
                 if resp.status_code == 200:
                     data = resp.json()
@@ -152,7 +153,7 @@ async def call_rag_analysis(assessment_data: dict, db: Session) -> dict:
     rag_prompt = f"""Dưới đây là các trích đoạn văn bản quy phạm pháp luật và quy chuẩn kỹ thuật PCCC được hệ thống RAG truy xuất từ cơ sở dữ liệu nội bộ:
 
 --- TRÍCH ĐOẠN PHÁP LÝ & QUY CHUẨN TRUY XUẤT (CSDL NỘI BỘ CHROMADB) ---
-{context_str if context_str else "Nghị định 105/2025/NĐ-CP, Nghị định 106/2025/NĐ-CP, Nghị định 144/2021/NĐ-CP, QCVN 10:2025/BCA, QCVN 06:2022/BXD sửa đổi 1:2023, Luật PCCC số 55/2024/QH15, QCVN 25:2025/BCT, QCVN 25:2025/BKHCN"}
+{context_str if context_str else "Nghị định 105/2025/NĐ-CP, Nghị định 106/2025/NĐ-CP, Nghị định 69/2026/NĐ-CP, QCVN 10:2025/BCA, QCVN 06:2022/BXD sửa đổi 1:2023, Luật PCCC số 55/2024/QH15, QCVN 25:2025/BCT, QCVN 25:2025/BKHCN"}
 ---------------------------------------------------------------------------------
 
 Dựa trên các căn cứ trích xuất ở trên và kết quả khảo sát của cơ sở:
@@ -164,7 +165,7 @@ Dựa trên các căn cứ trích xuất ở trên và kết quả khảo sát c
 Hãy đóng vai trò Hệ thống Thẩm định Pháp lý & Chế tài PCCC RAG (Retrieval-Augmented Generation & CSDL Vector ChromaDB).
 QUY TẮC BẮT BUỘC (STRICT POLICE COMPLIANCE RULES):
 1. VĂN PHONG VÀ TƯ CÁCH: Sử dụng văn phong hành chính nhà nước chuẩn mực, đĩnh đạc, khách quan, mang tính hướng dẫn chuyên môn kỹ thuật. Tuyệt đối KHÔNG dùng từ ngữ cảm tính, tiếng lóng, ẩn dụ tùy tiện (nghiêm cấm dùng từ như "tử huyệt", "báo động đỏ").
-2. ĐỐI CHIẾU CHÍNH XÁC: Đối chiếu chính xác từng tồn tại với điều khoản vi phạm và mức phạt tiền cụ thể theo Nghị định 144/2021/NĐ-CP, Nghị định 106/2025/NĐ-CP và Luật PCCC số 55/2024/QH15.
+2. ĐỐI CHIẾU CHÍNH XÁC: Đối chiếu chính xác từng tồn tại với điều khoản vi phạm và mức phạt tiền cụ thể theo Nghị định 106/2025/NĐ-CP, Nghị định 69/2026/NĐ-CP và Luật PCCC số 55/2024/QH15.
 3. PHÂN ĐỊNH NGUY CƠ & THỜI HẠN:
    - Các nguy cơ trực tiếp gây cháy nổ (hệ thống điện, chập cháy, thiết bị phát nhiệt, rò rỉ khí gas, đun nấu/hàn cắt không an toàn) phải ghi thời hạn là "Khắc phục ngay (trong 24h - 48h)", tuyệt đối không để 30 hay 60 ngày.
    - Tồn tại về lối thoát nạn và trang bị PCCC là điều kiện sống còn để cứu người và hạn chế thiệt hại khi xảy ra cháy, không phải nguyên nhân phát sinh cháy.
@@ -178,7 +179,7 @@ QUY TẮC BẮT BUỘC (STRICT POLICE COMPLIANCE RULES):
         "Ưu điểm 3"
     ],
     "critical_weaknesses": [
-        "Tồn tại vi phạm 1: Hành vi vi phạm cụ thể, viện dẫn Điều ... Nghị định 144/2021 hoặc NĐ 106/2025, mức phạt tiền từ ... đến ... triệu đồng",
+        "Tồn tại vi phạm 1: Hành vi vi phạm cụ thể, viện dẫn Điều ... Nghị định 106/2025/NĐ-CP, mức phạt tiền từ ... đến ... triệu đồng",
         "Tồn tại vi phạm 2...",
         "Tồn tại vi phạm 3..."
     ],
@@ -188,8 +189,7 @@ QUY TẮC BẮT BUỘC (STRICT POLICE COMPLIANCE RULES):
             "description": "Mô tả chi tiết giải pháp khắc phục triệt để, yêu cầu tiêu chuẩn",
             "priority": "urgent|high|medium|low",
             "deadline": "Khắc phục ngay (trong 24h - 48h) hoặc số ngày cụ thể",
-            "legal_basis": "Điều ... Nghị định 144/2021/NĐ-CP hoặc NĐ 105/2025 hoặc QCVN ...",
-            "estimated_cost": "Chi phí ước tính",
+            "legal_basis": "Điều ... Nghị định 106/2025/NĐ-CP hoặc NĐ 105/2025 hoặc QCVN ...",
             "responsible_party": "Người/bộ phận chịu trách nhiệm"
         }}
     ],
@@ -206,7 +206,6 @@ QUY TẮC BẮT BUỘC (STRICT POLICE COMPLIANCE RULES):
                 "task": "Xử lý khẩn cấp các nguy cơ trực tiếp gây cháy",
                 "detail": "Mô tả chi tiết hành động khắc phục trong 24h-48h đầu",
                 "responsible": "Đơn vị/người phụ trách",
-                "cost": "Chi phí ước tính",
                 "criteria": "Tiêu chuẩn hoàn thành",
                 "legal_basis": "Căn cứ pháp lý"
             }}
@@ -216,7 +215,6 @@ QUY TẮC BẮT BUỘC (STRICT POLICE COMPLIANCE RULES):
                 "task": "Nâng cấp, bảo dưỡng trang thiết bị và huấn luyện PCCC",
                 "detail": "Mô tả chi tiết",
                 "responsible": "Đơn vị phụ trách",
-                "cost": "Chi phí ước tính",
                 "criteria": "Tiêu chuẩn hoàn thành",
                 "legal_basis": "Căn cứ pháp lý"
             }}
@@ -226,7 +224,6 @@ QUY TẮC BẮT BUỘC (STRICT POLICE COMPLIANCE RULES):
                 "task": "Hoàn thiện hồ sơ quản lý PCCC và phương án chữa cháy",
                 "detail": "Mô tả chi tiết",
                 "responsible": "Đơn vị phụ trách",
-                "cost": "Chi phí ước tính",
                 "criteria": "Tiêu chuẩn hoàn thành",
                 "legal_basis": "Căn cứ pháp lý"
             }}
@@ -236,7 +233,7 @@ QUY TẮC BẮT BUỘC (STRICT POLICE COMPLIANCE RULES):
         "Luật Phòng cháy, chữa cháy và Cứu nạn, cứu hộ số 55/2024/QH15",
         "Nghị định 105/2025/NĐ-CP",
         "Nghị định 106/2025/NĐ-CP",
-        "Nghị định 144/2021/NĐ-CP",
+        "Nghị định 69/2026/NĐ-CP",
         "QCVN 06:2022/BXD kèm Sửa đổi 1:2023",
         "QCVN 10:2025/BCA",
         "QCVN 25:2025/BCT",
@@ -249,7 +246,7 @@ QUY TẮC BẮT BUỘC (STRICT POLICE COMPLIANCE RULES):
     rag_json["overall_assessment"] = (
         f"Đối soát CSDL Văn bản Quy phạm Pháp luật & Quy chuẩn Kỹ thuật PCCC: "
         f"Cơ sở '{assessment_data.get('facility_name')}' thuộc diện quản lý theo Nghị định 105/2025/NĐ-CP và Luật PCCC số 55/2024/QH15. "
-        f"Đối chiếu dữ liệu khảo sát với chế tài xử phạt vi phạm hành chính tại Nghị định 144/2021/NĐ-CP và Nghị định 106/2025/NĐ-CP, "
+        f"Đối chiếu dữ liệu khảo sát với chế tài xử phạt vi phạm hành chính tại Nghị định 106/2025/NĐ-CP, "
         f"cơ sở có {len(rag_json.get('critical_weaknesses', []))} nhóm hành vi tồn tại nguy cơ cần khắc phục ngay để tránh bị xử phạt hành chính hoặc đình chỉ hoạt động."
     )
     rag_json["source"] = "rag_chromadb"
@@ -342,7 +339,7 @@ async def analyze_assessment(
     # 1. Runner for Gemini 3.8 Flash (9Router VPS)
     async def run_gemini():
         try:
-            res = await call_gemini(prompt, temperature=0.3)
+            res = await call_gemini(prompt, temperature=0.3, timeout=85.0)
             res["source"] = "gemini_38_flash"
             return res
         except Exception as e:
@@ -792,7 +789,7 @@ def _chat_fallback(message: str) -> dict:
 
     # Default response
     return {
-        "reply": "Cảm ơn câu hỏi của bạn! Tôi là Trợ lý ảo Chi.\n\nHiện tại tôi có thể tư vấn các vấn đề về PCCC như:\n• ⚡ An toàn hệ thống điện\n• 🔥 Phòng cháy bếp gas, nguồn nhiệt\n• 🧯 Bình chữa cháy và thiết bị PCCC\n• 🚪 Lối thoát nạn\n• 📜 Pháp luật PCCC 2024-2025\n• 🎓 Huấn luyện và diễn tập PCCC\n• 🔍 Dấu hiệu nhận biết nguy cơ cháy\n\nHãy đặt câu hỏi cụ thể hơn để Chi tư vấn chi tiết cho bạn nhé!",
+        "reply": "Cảm ơn câu hỏi của bạn! Tôi là trợ lý ảo hỗ trợ giải đáp pháp luật và TTHC về PCCC.\n\nHiện tại tôi có thể tư vấn các vấn đề về PCCC như:\n• ⚡ An toàn hệ thống điện\n• 🔥 Phòng cháy bếp gas, nguồn nhiệt\n• 🧯 Bình chữa cháy và thiết bị PCCC\n• 🚪 Lối thoát nạn\n• 📜 Pháp luật PCCC 2024-2025\n• 🎓 Huấn luyện và diễn tập PCCC\n• 🔍 Dấu hiệu nhận biết nguy cơ cháy\n\nHãy đặt câu hỏi cụ thể hơn để tôi tư vấn chi tiết cho bạn nhé!",
         "suggestions": ["Dấu hiệu nào cho thấy hệ thống điện sắp gây cháy?", "Quy định bình chữa cháy?", "Luật PCCC 55/2024 có gì mới?"],
         "references": []
     }

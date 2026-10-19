@@ -4,6 +4,31 @@
  * Standard Government Letterhead & Police Assessment Dossier Format
  */
 
+// Danh mục căn cứ pháp lý chuẩn, dùng chung cho trang kết quả và file PDF.
+// Giữ đồng bộ với CURRENT_LEGAL_REFERENCES trong backend/utils/ai_prompt.py.
+const FRAS_LEGAL_REFERENCES = [
+    'Luật Phòng cháy, chữa cháy và Cứu nạn, cứu hộ số 55/2024/QH15',
+    'Luật Điện lực số 61/2024/QH15',
+    'Luật Xử lý vi phạm hành chính số 15/2012/QH13 và các văn bản sửa đổi, bổ sung',
+    'Nghị quyết số 66.18/2026/NQ-CP ngày 18/5/2026 của Chính phủ',
+    'Nghị định số 105/2025/NĐ-CP quy định chi tiết một số điều và biện pháp thi hành Luật Phòng cháy, chữa cháy và Cứu nạn, cứu hộ (sửa đổi, bổ sung bởi Nghị định số 347/2026/NĐ-CP)',
+    'Nghị định số 106/2025/NĐ-CP và Nghị định số 69/2026/NĐ-CP quy định xử phạt vi phạm hành chính về phòng cháy, chữa cháy và cứu nạn, cứu hộ',
+    'QCVN 06:2022/BXD và Sửa đổi 1:2023: Quy chuẩn kỹ thuật quốc gia về An toàn cháy cho nhà và công trình',
+    'QCVN 10:2025/BCA: Quy chuẩn kỹ thuật quốc gia về trang bị, bố trí phương tiện phòng cháy, chữa cháy, cứu nạn, cứu hộ cho nhà và công trình',
+    'QCVN 01:2021/BXD: Quy chuẩn kỹ thuật quốc gia về Quy hoạch xây dựng',
+    'QCVN 13:2018/BXD: Quy chuẩn kỹ thuật quốc gia về Gara ô tô',
+    'QCVN 01:2020/BCT: Quy chuẩn kỹ thuật quốc gia về yêu cầu thiết kế cửa hàng xăng dầu',
+    'QCVN 25:2025/BCT: Quy chuẩn kỹ thuật quốc gia về An toàn điện',
+    'QCVN 25:2025/BKHCN: Quy chuẩn kỹ thuật quốc gia về Thiết bị điện dùng cho lắp đặt điện trong gia đình và hệ thống điện tương tự',
+    'TCVN 3890:2023: Phương tiện phòng cháy và chữa cháy cho nhà và công trình, trang bị, bố trí, kiểm tra, bảo dưỡng',
+    'TCVN 5738:2021: Phòng cháy chữa cháy, hệ thống báo cháy tự động, yêu cầu kỹ thuật',
+    'TCVN 7336:2021: Phòng cháy chữa cháy, hệ thống sprinkler tự động, yêu cầu thiết kế và lắp đặt',
+    'TCVN 9385:2012: Chống sét cho công trình xây dựng, hướng dẫn thiết kế, kiểm tra và bảo trì hệ thống',
+    'TCVN 6223:2017: Cửa hàng khí dầu mỏ hóa lỏng (LPG), yêu cầu chung về an toàn',
+    'TCVN 5307:2009: Kho dầu mỏ và sản phẩm dầu mỏ, yêu cầu thiết kế',
+    'Các văn bản quy phạm pháp luật, quy chuẩn, tiêu chuẩn kỹ thuật khác có liên quan',
+];
+
 function getAuthToken() {
     return localStorage.getItem('fras_token') || (typeof api !== 'undefined' ? api.token : null);
 }
@@ -126,7 +151,7 @@ async function generatePDFFromHTML(data) {
             aiHtml += `
             <div class="pdf-avoid-break" style="margin-bottom: 14px;">
                 <div style="font-weight: bold; color: #dc2626; font-size: 13px; text-transform: uppercase; border-bottom: 1.5px solid #dc2626; padding-bottom: 3px; margin-bottom: 6px;">
-                    3. TỒN TẠI, VI PHẠM & NGUY CƠ CHÁY NỔ TIỀM ẨN (${aiObj.critical_weaknesses.length})
+                    3. TỒN TẠI & NGUY CƠ CHÁY NỔ TIỀM ẨN (${aiObj.critical_weaknesses.length})
                 </div>
                 <ul style="font-size: 12px; color: #991b1b; padding-left: 20px; margin: 0; line-height: 1.55;">
                     ${aiObj.critical_weaknesses.map(w => `<li style="margin-bottom: 4px; font-weight: bold;">${w}</li>`).join('')}
@@ -159,7 +184,6 @@ async function generatePDFFromHTML(data) {
                     <div style="font-size: 11.5px; color: #334155; line-height: 1.45; margin-bottom: 4px;">${r.description || ''}</div>
                     <div style="font-size: 10.5px; color: #64748b; line-height: 1.4;">
                         <strong>Hạn hoàn thành:</strong> ${r.deadline || (pClass === 'urgent' ? 'Khắc phục ngay trong 24h - 48h' : '30 ngày')}
-                        ${r.estimated_cost ? ` | <strong>Chi phí:</strong> ${r.estimated_cost}` : ''}
                         ${r.responsible_party ? ` | <strong>Phụ trách:</strong> ${r.responsible_party}` : ''}
                     </div>
                     ${r.legal_basis ? `<div style="font-size: 10.5px; color: #7c3aed; margin-top: 3px;"><strong>Căn cứ:</strong> ${r.legal_basis}</div>` : ''}
@@ -212,7 +236,6 @@ async function generatePDFFromHTML(data) {
                                 ${item.detail || item.description ? `<div style="color: #475569; margin: 2px 0;">${item.detail || item.description}</div>` : ''}
                                 <div style="color: #64748b; font-size: 10.5px;">
                                     ${item.responsible ? `Phụ trách: ${item.responsible}` : ''}
-                                    ${item.cost ? ` | Chi phí: ${item.cost}` : ''}
                                     ${item.legal_basis ? ` | Căn cứ: ${item.legal_basis}` : ''}
                                 </div>
                             </div>`;
@@ -223,14 +246,14 @@ async function generatePDFFromHTML(data) {
             aiHtml += `</div>`;
         }
 
-        if (aiObj.legal_references?.length) {
+        {
             aiHtml += `
             <div class="pdf-avoid-break" style="margin-bottom: 14px;">
                 <div style="font-weight: bold; color: #475569; font-size: 12px; text-transform: uppercase; border-bottom: 1.5px solid #cbd5e1; padding-bottom: 3px; margin-bottom: 6px;">
                     7. CĂN CỨ VĂN BẢN QUY PHẠM PHÁP LUẬT & QUY CHUẨN KỸ THUẬT HIỆN HÀNH
                 </div>
                 <ul style="font-size: 11px; color: #475569; padding-left: 20px; margin: 0; line-height: 1.5;">
-                    ${aiObj.legal_references.map(r => `<li style="margin-bottom: 3px;">${r}</li>`).join('')}
+                    ${FRAS_LEGAL_REFERENCES.map(r => `<li style="margin-bottom: 3px;">${r}</li>`).join('')}
                 </ul>
             </div>`;
         }

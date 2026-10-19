@@ -679,7 +679,7 @@ def ask_ai_chi(question: str, history_text: str = "", context: str = "") -> dict
         # ── Build prompt cho Gemini ──────────────────────────────────
         legal_refs_str = "\n".join(f"  - {r}" for r in CURRENT_LEGAL_REFS)
 
-        template = f"""Bạn là Trợ lý ảo AI Chi, chuyên gia tư vấn pháp luật PCCC và an toàn cháy nổ tại Việt Nam (Công an thành phố Bắc Ninh).
+        template = f"""Bạn là Trợ lý ảo hỗ trợ giải đáp pháp luật và thủ tục hành chính (TTHC) về PCCC, chuyên gia tư vấn pháp luật PCCC và an toàn cháy nổ tại Việt Nam (Công an thành phố Bắc Ninh).
 
 ═══ CƠ SỞ PHÁP LÝ QUAN TRỌNG NĂM 2026 (ƯU TIÊN CAO NHẤT, VƯỢT TRÊN MỌI TÀI LIỆU CŨ) ═══
 {CORE_LEGAL_PRINCIPLES_2026}
@@ -726,7 +726,7 @@ CÂU HỎI CỦA NGƯỜI DÙNG: {question}
    - Nếu có thông tin tra cứu từ Internet: ghi tên cơ quan/nguồn tin và kèm đường dẫn trong ngoặc đơn gọn gàng.
 
 4. PHONG CÁCH:
-   - Xưng là "Chi" hoặc "Tôi".
+   - Xưng là "Tôi". Không tự đặt tên riêng cho mình.
    - Ân cần, rành mạch, đúng tác phong chuyên môn pháp lý PCCC.
 
 TRẢ VỀ JSON THUẦN (không dùng ```json):

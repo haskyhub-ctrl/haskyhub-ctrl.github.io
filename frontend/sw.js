@@ -8,6 +8,7 @@ const STATIC_ASSETS = [
     '/dashboard.html',
     '/history.html',
     '/result.html',
+    '/mitigation.html',
     '/image_assessment.html',
     '/improvement.html',
     '/css/main.css',

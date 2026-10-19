@@ -13,7 +13,7 @@ from schemas import (
     CategoryWithQuestions, AssessmentResponse
 )
 from middleware.auth_middleware import get_current_user, get_optional_user, create_access_token, hash_password
-from utils.scoring import calculate_category_scores, calculate_total_score, calculate_risk_level
+from utils.scoring import calculate_risk_level, score_assessment
 
 router = APIRouter(prefix="/api/survey", tags=["Survey"])
 
@@ -323,47 +323,9 @@ def complete_assessment(
     if not answers:
         raise HTTPException(status_code=400, detail="Chưa có câu trả lời nào")
     
-    # Parse facility types (comma-separated)
-    selected_types = set()
-    if assessment.facility_type:
-        raw_types = [t.strip() for t in assessment.facility_type.split(",") if t.strip()]
-        selected_types = normalize_facility_types(raw_types)
-    
-    # Get answered question IDs
-    answered_question_ids = {a.question_id for a in answers}
-    
-    # Get categories and questions
-    categories = (
-        db.query(QuestionCategory)
-        .filter(QuestionCategory.is_active == True)
-        .order_by(QuestionCategory.order_index)
-        .all()
-    )
-    
-    questions = (
-        db.query(Question)
-        .filter(Question.is_active == True)
-        .options(joinedload(Question.options))
-        .all()
-    )
-    
-    # CRITICAL FIX: Only include questions that match the facility's types
-    # AND were actually answered
-    questions_by_category = {}
-    for q in questions:
-        # Check if question matches facility type
-        type_match = (
-            not q.facility_type
-            or q.facility_type == "all"
-            or (selected_types and q.facility_type in selected_types)
-        )
-        # Only include if type matches AND was answered  
-        if type_match and q.id in answered_question_ids:
-            questions_by_category.setdefault(q.category_id, []).append(q)
-    
-    # Calculate category scores
-    cat_scores = calculate_category_scores(answers, questions_by_category, categories)
-    
+    # Chấm điểm (chỉ tính câu đã trả lời và phù hợp loại hình cơ sở)
+    cat_scores, totals = score_assessment(db, assessment)
+
     # Delete old category scores
     db.query(CategoryScore).filter(CategoryScore.assessment_id == assessment_id).delete()
     
@@ -378,9 +340,6 @@ def complete_assessment(
             risk_level=cs["risk_level"],
         )
         db.add(db_cs)
-    
-    # Calculate total score
-    totals = calculate_total_score(cat_scores)
     
     assessment.total_score = totals["total_score"]
     assessment.max_possible_score = totals["max_possible_score"]
