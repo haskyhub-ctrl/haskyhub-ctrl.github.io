@@ -9,10 +9,8 @@
 const FRAS_LEGAL_REFERENCES = [
     'Luật Phòng cháy, chữa cháy và Cứu nạn, cứu hộ số 55/2024/QH15',
     'Luật Điện lực số 61/2024/QH15',
-    'Luật Xử lý vi phạm hành chính số 15/2012/QH13 và các văn bản sửa đổi, bổ sung',
     'Nghị quyết số 66.18/2026/NQ-CP ngày 18/5/2026 của Chính phủ',
     'Nghị định số 105/2025/NĐ-CP quy định chi tiết một số điều và biện pháp thi hành Luật Phòng cháy, chữa cháy và Cứu nạn, cứu hộ (sửa đổi, bổ sung bởi Nghị định số 347/2026/NĐ-CP)',
-    'Nghị định số 106/2025/NĐ-CP và Nghị định số 69/2026/NĐ-CP quy định xử phạt vi phạm hành chính về phòng cháy, chữa cháy và cứu nạn, cứu hộ',
     'QCVN 06:2022/BXD và Sửa đổi 1:2023: Quy chuẩn kỹ thuật quốc gia về An toàn cháy cho nhà và công trình',
     'QCVN 10:2025/BCA: Quy chuẩn kỹ thuật quốc gia về trang bị, bố trí phương tiện phòng cháy, chữa cháy, cứu nạn, cứu hộ cho nhà và công trình',
     'QCVN 01:2021/BXD: Quy chuẩn kỹ thuật quốc gia về Quy hoạch xây dựng',
@@ -130,7 +128,7 @@ async function generatePDFFromHTML(data) {
         if (aiObj.overall_assessment) {
             aiHtml += `
             <div class="pdf-avoid-break" style="background: #f8fafc; border: 1px solid #cbd5e1; border-left: 5px solid #0f172a; padding: 12px 14px; margin-bottom: 14px;">
-                <div style="font-weight: bold; color: #0f172a; font-size: 13px; text-transform: uppercase; margin-bottom: 4px;">1. KẾT LUẬN THẨM ĐỊNH TỔNG QUAN</div>
+                <div style="font-weight: bold; color: #0f172a; font-size: 13px; text-transform: uppercase; margin-bottom: 4px;">1. NHẬN ĐỊNH TỔNG QUAN</div>
                 <div style="font-size: 12px; color: #1e293b; line-height: 1.55;">${aiObj.overall_assessment}</div>
             </div>`;
         }
@@ -287,7 +285,7 @@ async function generatePDFFromHTML(data) {
         aiHtml += `</div>`;
     }
     const sectionFourTitle = aiObj
-        ? 'IV. KẾT LUẬN THẨM ĐỊNH & KHUYẾN CÁO KHẮC PHỤC TỪ TRÍ TUỆ NHÂN TẠO'
+        ? 'IV. NHẬN ĐỊNH & KHUYẾN CÁO KHẮC PHỤC TỪ TRÍ TUỆ NHÂN TẠO'
         : 'IV. KHUYẾN CÁO KHẮC PHỤC';
 
     // Build the complete PDF document HTML
@@ -305,17 +303,17 @@ async function generatePDFFromHTML(data) {
         <div style="border-bottom: 2.5px solid #991b1b; padding-bottom: 14px; margin-bottom: 16px;">
             <table style="width: 100%; border-collapse: collapse; border: none;">
                 <tr style="border: none;">
-                    <td style="width: 55%; vertical-align: top; border: none; padding: 0;">
+                    <td style="width: 55%; vertical-align: top; text-align: center; border: none; padding: 0;">
                         <div style="font-size: 13px; font-weight: bold; color: #991b1b; text-transform: uppercase; letter-spacing: 0.5px;">CÔNG AN THÀNH PHỐ BẮC NINH</div>
                         <div style="font-size: 11.5px; font-weight: bold; color: #0f172a; text-transform: uppercase; margin-top: 2px;">PHÒNG CẢNH SÁT PCCC VÀ CNCH</div>
                         <div style="font-size: 10.5px; color: #64748b; margin-top: 3px;">Hệ thống Khảo sát & Đánh giá Nguy cơ Cháy nổ FRAS AI</div>
                     </td>
-                    <td style="width: 45%; vertical-align: top; text-align: right; border: none; padding: 0;">
+                    <td style="width: 45%; vertical-align: top; text-align: center; border: none; padding: 0;">
                         <div style="font-size: 12px; font-weight: bold; color: #0f172a;">CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</div>
                         <div style="font-size: 11px; font-style: italic; color: #0f172a;">Độc lập - Tự do - Hạnh phúc</div>
                         <div style="font-size: 10.5px; color: #64748b; margin-top: 4px;">Số hồ sơ: <strong style="color: #0f172a;">${docNumber}</strong></div>
                         <div style="font-size: 9px; color: #475569; font-weight: bold; text-transform: uppercase; margin-top: 2px;">Mã chống làm giả khảo sát: ${docNumber}</div>
-                        ${data.id ? `<img src="/api/export/qrcode/${data.id}" alt="QR" style="width: 64px; height: 64px; margin-top: 4px; border: 1px solid #0f172a;">` : ''}
+                        ${data.id ? `<img src="/api/export/qrcode/${data.id}" alt="QR" style="width: 64px; height: 64px; margin: 4px auto 0; display: block; border: 1px solid #0f172a;">` : ''}
                     </td>
                 </tr>
             </table>

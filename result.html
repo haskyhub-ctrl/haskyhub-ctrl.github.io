@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kết quả Đánh giá Nguy cơ Cháy Nổ - FRAS AI | Công an TP Bắc Ninh</title>
-    <link rel="stylesheet" href="/css/main.css?v=20261014_gov2">
+    <link rel="stylesheet" href="/css/main.css?v=20261022_c1">
     <link rel="stylesheet" href="/css/dashboard.css?v=20261014_gov2">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700;800;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-    <link rel="stylesheet" href="/css/docket.css?v=20261019">
+    <link rel="stylesheet" href="/css/docket.css?v=20261022_c1">
 </head>
 
 <body>
@@ -37,7 +37,7 @@
         </div>
     </div>
 
-    <script src="/js/api.js?v=20261019"></script>
+    <script src="/js/api.js?v=20261021_t1"></script>
     <script src="/js/charts.js"></script>
     <script src="/js/export.js?v=20261019c"></script>
     <script>
@@ -71,17 +71,26 @@
         function formatFacilityType(type) {
             if (!type) return 'Chưa phân loại';
             const dict = {
-                'hospitality': 'Nhà hàng, khách sạn, dịch vụ lưu trú, ăn uống',
+                'industrial': 'Cơ sở sản xuất công nghiệp',
+                'warehouse': 'Kho hàng, kho vật liệu',
+                'mixed_residence': 'Nhà ở kết hợp kinh doanh',
+                'hospitality': 'Nhà hàng, khách sạn, chợ, TTTM',
+                'medical_education': 'Bệnh viện, trường học, y tế',
+                'fuel_gas': 'Xăng dầu, khí gas, vật liệu nổ',
+                'transport': 'Phương tiện giao thông',
+                'residential': 'Khu dân cư, nhà ở, nhà trọ',
+                'construction': 'Công trình xây dựng',
+                'office': 'Cơ quan, văn phòng, trụ sở',
+                'laboratory': 'Nghiên cứu, phòng thí nghiệm',
+                'agriculture': 'Nông nghiệp, chế biến nông lâm sản',
                 'commercial': 'Trung tâm thương mại, siêu thị, chợ, cửa hàng',
-                'industrial': 'Cơ sở sản xuất công nghiệp, nhà xưởng, kho hàng',
-                'residential': 'Nhà ở kết hợp sản xuất kinh doanh, nhà ở nhiều hộ',
                 'gas_station': 'Cửa hàng kinh doanh xăng dầu, khí đốt hóa lỏng (LPG)',
                 'karaoke': 'Cơ sở kinh doanh dịch vụ karaoke, vũ trường, quán bar',
                 'educational': 'Cơ sở giáo dục, trường học, nhà trẻ, mầm non',
-                'medical': 'Cơ sở khám chữa bệnh, bệnh viện, phòng khám',
-                'office': 'Tòa nhà văn phòng làm việc'
+                'medical': 'Cơ sở khám chữa bệnh, bệnh viện, phòng khám'
             };
-            return dict[type.toLowerCase()] || type;
+            return String(type).split(',').map(t => t.trim()).filter(Boolean)
+                .map(t => dict[t.toLowerCase()] || t).join('; ');
         }
 
         // Mức nguy cơ cao hơn mức tương ứng với tỷ lệ % (do quy tắc cờ đỏ / nhóm trọng yếu)
@@ -126,6 +135,7 @@
             if (data.ai_analysis) {
                 try {
                     aiObj = typeof data.ai_analysis === 'string' ? JSON.parse(data.ai_analysis) : data.ai_analysis;
+                    aiObj = normalizeAiObject(aiObj);
                 } catch (e) {
                     aiObj = null;
                 }
@@ -144,7 +154,7 @@
                     </div>
                     <div class="docket-doc-meta">
                         <div>CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</div>
-                        <div style="font-size:0.75rem;">Độc lập – Tự do – Hạnh phúc</div>
+                        <div style="font-size:0.75rem;">Độc lập - Tự do - Hạnh phúc</div>
                         <div style="margin-top:4px;">Số hồ sơ: <strong>FRAS-${(data.id || '').substring(0, 8).toUpperCase()}</strong></div>
                     </div>
                 </div>
@@ -366,7 +376,7 @@
             <div class="ai-command-section">
                 <div class="ai-command-header">
                     <h3><span>📊</span> TRUNG TÂM PHÂN TÍCH CHUYÊN SÂU & THAM MƯU PCCC</h3>
-                    <span style="font-size:0.8rem; background:rgba(255,255,255,0.15); padding:3px 10px;">TIẾN TRÌNH TỰ ĐỘNG</span>
+                    <span style="font-size:0.8rem; background:rgba(255,255,255,0.15); padding:3px 10px;">AI ĐANG PHÂN TÍCH</span>
                 </div>
                 <div class="ai-tab-body">
                     <div class="ai-loading-box">
@@ -375,7 +385,7 @@
                             ĐANG TỰ ĐỘNG PHÂN TÍCH HỒ SƠ & TỔNG HỢP KHUYẾN CÁO...
                         </h3>
                         <p style="color:#64748b; font-size:0.9rem; max-width:680px; margin:0 auto 16px; line-height:1.5;">
-                            Hệ thống đang đồng thời đối soát dữ liệu khảo sát với mô hình <strong>Gemini 3.8 Flash</strong> và <strong>CSDL Văn bản Pháp luật (NĐ 105/2025, NĐ 106/2025, Luật PCCC số 55/2024/QH15)</strong> để xuất biên bản khuyến cáo thực tế và kế hoạch khắc phục 90 ngày.
+                            Trí tuệ nhân tạo đang đọc kết quả khảo sát của cơ sở để viết nhận định, khuyến nghị và lộ trình khắc phục trong 90 ngày.
                         </p>
                         <div style="display:inline-flex; align-items:center; gap:8px; font-size:0.85rem; color:#b91c1c; font-weight:700;">
                             <div class="loading-spinner" style="width:20px; height:20px; border-width:2px;"></div>
@@ -448,15 +458,6 @@
             triggerAiAnalyze(id, true);
         }
 
-        function switchAiTab(tabName) {
-            document.querySelectorAll('.ai-tab-btn-sharp').forEach(b => b.classList.remove('active'));
-            document.querySelectorAll('.ai-tab-content-panel').forEach(p => p.style.display = 'none');
-            const activeBtn = document.getElementById(`btn-ai-tab-${tabName}`);
-            const activePanel = document.getElementById(`panel-ai-tab-${tabName}`);
-            if (activeBtn) activeBtn.classList.add('active');
-            if (activePanel) activePanel.style.display = 'block';
-        }
-
         function renderSingleEngineContent(ai, engineTitle, badgeText, badgeColor) {
             if (!ai) return '<p style="color:#64748b; padding:12px;">Đang cập nhật dữ liệu phân tích từ mô hình này...</p>';
             let h = '';
@@ -473,7 +474,7 @@
             if (ai.overall_assessment) {
                 h += `
                 <div style="background:#f0f9ff; border:1px solid #bae6fd; border-left:6px solid #0284c7; padding:16px; margin-bottom:20px; font-size:0.92rem; color:#0369a1; line-height:1.6;">
-                    <strong style="display:block; margin-bottom:4px; font-size:0.95rem; text-transform:uppercase;">KẾT LUẬN THẨM ĐỊNH TỔNG QUAN:</strong>
+                    <strong style="display:block; margin-bottom:4px; font-size:0.95rem; text-transform:uppercase;">NHẬN ĐỊNH TỔNG QUAN:</strong>
                     ${ai.overall_assessment}
                 </div>`;
             }
@@ -593,92 +594,21 @@
             return h;
         }
 
-        function renderAiSectionHtml(ai) {
-            const g = ai.gemini_38 || ai;
-            const r = ai.rag_chroma || ai;
+        // Bản cũ lưu hai luồng (gemini_38, rag_chroma): chỉ lấy một luồng để hiển thị
+        function normalizeAiObject(ai) {
+            if (ai && ai.dual_mode) return Object.assign({}, ai.gemini_38 || {}, ai);
+            return ai;
+        }
 
+        function renderAiSectionHtml(rawAi) {
+            const ai = normalizeAiObject(rawAi);
             return `
             <div class="ai-command-section">
                 <div class="ai-command-header">
-                    <h3>KẾT QUẢ ĐỐI SOÁT & KHUYẾN CÁO TỪ TRÍ TUỆ NHÂN TẠO</h3>
-                    <span style="font-size:0.78rem; background:rgba(255,255,255,0.15); padding:4px 10px; font-weight:700; text-transform:uppercase;">
-                        Gemini 3.8 Flash vs RAG ChromaDB
-                    </span>
+                    <h3>PHÂN TÍCH VÀ KHUYẾN CÁO CỦA TRÍ TUỆ NHÂN TẠO (AI)</h3>
                 </div>
-
-                <div class="ai-tab-strip">
-                    <button type="button" class="ai-tab-btn-sharp active" id="btn-ai-tab-gemini" onclick="switchAiTab('gemini')">
-                        1. Khuyến cáo Thực tế (Gemini 3.8 Flash - Ưu tiên)
-                    </button>
-                    <button type="button" class="ai-tab-btn-sharp" id="btn-ai-tab-rag" onclick="switchAiTab('rag')">
-                        2. Thẩm định Pháp lý & Chế tài (RAG ChromaDB)
-                    </button>
-                    <button type="button" class="ai-tab-btn-sharp" id="btn-ai-tab-compare" onclick="switchAiTab('compare')">
-                        3. So sánh Song song (2 Cột)
-                    </button>
-                </div>
-
                 <div class="ai-tab-body">
-                    <!-- PANEL 1: GEMINI 3.8 FLASH -->
-                    <div class="ai-tab-content-panel" id="panel-ai-tab-gemini">
-                        ${renderSingleEngineContent(g, "Tư vấn & Giải pháp Thực tế từ Mô hình Gemini 3.8 Flash", "MÔ HÌNH ƯU TIÊN THỰC TIỄN", "#2563eb")}
-                    </div>
-
-                    <!-- PANEL 2: RAG CHROMADB -->
-                    <div class="ai-tab-content-panel" id="panel-ai-tab-rag" style="display:none;">
-                        ${renderSingleEngineContent(r, "Đối soát Quy chuẩn Pháp luật & Vi phạm từ RAG ChromaDB", "ĐỐI SOÁT QUY PHẠM PHÁP LUẬT", "#7c3aed")}
-                    </div>
-
-                    <!-- PANEL 3: SIDE BY SIDE -->
-                    <div class="ai-tab-content-panel" id="panel-ai-tab-compare" style="display:none;">
-                        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:20px;">
-                            <!-- Column 1 -->
-                            <div style="border:1px solid #cbd5e1; padding:18px; background:#f8fafc;">
-                                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; padding-bottom:8px; border-bottom:2px solid #2563eb;">
-                                    <strong style="color:#2563eb; font-size:1rem; text-transform:uppercase;">Gemini 3.8 Flash</strong>
-                                    <span class="badge-sharp info">Thực tiễn cơ sở</span>
-                                </div>
-                                <p style="font-size:0.86rem; color:#1e293b; line-height:1.5; margin-bottom:14px;">
-                                    ${g?.overall_assessment || 'Đang cập nhật'}
-                                </p>
-                                <div style="font-weight:700; color:#16a34a; font-size:0.82rem; text-transform:uppercase; margin-bottom:6px;">Ưu điểm:</div>
-                                <ul style="padding-left:18px; font-size:0.82rem; color:#334155; margin-bottom:14px;">
-                                    ${(g?.strengths || []).map(s => `<li style="margin-bottom:4px;">${s}</li>`).join('')}
-                                </ul>
-                                <div style="font-weight:700; color:#dc2626; font-size:0.82rem; text-transform:uppercase; margin-bottom:6px;">Tồn tại & Nguy cơ:</div>
-                                <ul style="padding-left:18px; font-size:0.82rem; color:#334155; margin-bottom:14px;">
-                                    ${(g?.critical_weaknesses || []).map(w => `<li style="margin-bottom:4px;">${w}</li>`).join('')}
-                                </ul>
-                                <div style="font-weight:700; color:#d97706; font-size:0.82rem; text-transform:uppercase; margin-bottom:6px;">Giải pháp trọng tâm:</div>
-                                <ul style="padding-left:18px; font-size:0.82rem; color:#334155;">
-                                    ${(g?.detailed_recommendations || []).slice(0, 5).map(r => `<li style="margin-bottom:4px;"><strong>${r.title}</strong>: ${r.description} <em>(Hạn: ${r.deadline || '30 ngày'})</em></li>`).join('')}
-                                </ul>
-                            </div>
-
-                            <!-- Column 2 -->
-                            <div style="border:1px solid #cbd5e1; padding:18px; background:#f8fafc;">
-                                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; padding-bottom:8px; border-bottom:2px solid #7c3aed;">
-                                    <strong style="color:#7c3aed; font-size:1rem; text-transform:uppercase;">RAG ChromaDB</strong>
-                                    <span class="badge-sharp" style="color:#7c3aed; border-color:#7c3aed;">Quy chuẩn & Pháp lý</span>
-                                </div>
-                                <p style="font-size:0.86rem; color:#1e293b; line-height:1.5; margin-bottom:14px;">
-                                    ${r?.overall_assessment || 'Đang cập nhật'}
-                                </p>
-                                <div style="font-weight:700; color:#16a34a; font-size:0.82rem; text-transform:uppercase; margin-bottom:6px;">Ưu điểm tuân thủ:</div>
-                                <ul style="padding-left:18px; font-size:0.82rem; color:#334155; margin-bottom:14px;">
-                                    ${(r?.strengths || []).map(s => `<li style="margin-bottom:4px;">${s}</li>`).join('')}
-                                </ul>
-                                <div style="font-weight:700; color:#dc2626; font-size:0.82rem; text-transform:uppercase; margin-bottom:6px;">Điều khoản vi phạm & Chế tài:</div>
-                                <ul style="padding-left:18px; font-size:0.82rem; color:#334155; margin-bottom:14px;">
-                                    ${(r?.critical_weaknesses || []).map(w => `<li style="margin-bottom:4px;">${w}</li>`).join('')}
-                                </ul>
-                                <div style="font-weight:700; color:#7c3aed; font-size:0.82rem; text-transform:uppercase; margin-bottom:6px;">Viện dẫn căn cứ:</div>
-                                <ul style="padding-left:18px; font-size:0.82rem; color:#334155;">
-                                    ${(r?.legal_references || []).slice(0, 5).map(ref => `<li style="margin-bottom:4px;">${ref}</li>`).join('')}
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    ${renderSingleEngineContent(ai, null, null, null)}
                 </div>
             </div>
             `;
@@ -719,7 +649,9 @@
                 const lvl = mitigation.current_risk_level;
                 status = `Đã khắc phục <strong>${done}/${mitigation.items.length}</strong> hạng mục. Nguy cơ hiện tại: <strong style="color:${levelColor[lvl] || '#0f172a'};">${mitigation.current_risk_percentage}% (${levelText[lvl] || lvl})</strong>.`;
             }
+            setTimeout(() => renderTrackingBox(document.getElementById('tracking-box'), data.id), 0);
             return `
+                    <div id="tracking-box" style="margin-bottom:14px;"></div>
                     <div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #b91c1c; padding:18px 20px; margin-bottom:28px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px;">
                         <div style="flex:1; min-width:260px;">
                             <div style="font-weight:800; color:#0f172a; text-transform:uppercase; margin-bottom:6px;">Theo dõi khắc phục tồn tại & nguy cơ</div>

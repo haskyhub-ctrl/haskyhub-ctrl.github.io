@@ -159,6 +159,8 @@ html, body {
 .gov-agency-name {
     display: flex;
     flex-direction: column;
+    align-items: center;   /* các dòng tên đơn vị căn giữa với nhau */
+    text-align: center;
     gap: 3px;
 }
 .gov-agency-parent {
@@ -1755,4 +1757,10 @@ body.has-gov-header {
     .gov-services-grid { grid-template-columns: 1fr; }
     .hp-hero-title { font-size: 26px; }
     .gov-agency-brand { gap: 10px; }
+}
+
+/* Máy tính: dòng tiêu đề nổi bật luôn nằm trên một dòng, không rớt chữ "NỔ" xuống dòng lẻ */
+@media (min-width: 992px) {
+    .hp-hero-title { font-size: clamp(26px, 2.9vw, 38px); }
+    .hp-hero-highlight { white-space: nowrap; }
 }

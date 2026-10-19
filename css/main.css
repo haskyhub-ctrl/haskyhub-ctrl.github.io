@@ -1516,3 +1516,73 @@ tbody tr:hover {
         right: -60px;
     }
 }
+/* =====================================================
+   MOBILE POLISH (<= 640px): dùng chung cho mọi trang
+   Vùng chạm >= 44px, ô nhập 16px (tránh iPhone tự phóng to khi bấm vào ô)
+   ===================================================== */
+@media (max-width: 640px) {
+    /* Thu nhỏ chữ nền: mọi cỡ chữ tính bằng rem/em co lại khoảng 12% so với máy tính */
+    html { font-size: 14px; }
+
+    .btn,
+    .admin-login-btn,
+    .gov-login-btn,
+    .gov-mobile-toggle,
+    .nav-mobile-toggle {
+        min-height: 40px;
+        touch-action: manipulation;
+    }
+    .gov-mobile-toggle,
+    .nav-mobile-toggle { min-width: 40px; }
+    .btn { padding: 8px 16px; }
+    .btn-lg { padding: 10px 20px; }
+
+    input:not([type="checkbox"]):not([type="radio"]):not([type="range"]),
+    select,
+    textarea,
+    .form-control {
+        font-size: 16px;   /* giữ 16px để iPhone không tự phóng to khi bấm vào ô nhập */
+        min-height: 42px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+    .admin-auth-back a,
+    .auth-footer a,
+    .form-footer a {
+        display: inline-block;
+        padding: 8px 6px;
+    }
+
+    .hp-quick-chip { min-height: 34px; padding: 6px 12px; }
+    .hp-send-button { min-height: 40px; min-width: 40px; }
+    .hp-footer-grid a,
+    footer a { display: inline-block; padding: 7px 0; }
+    a[href="/survey.html"][style*="inline-block"] { min-height: 40px; line-height: 24px; }
+}
+
+/* Thanh menu gọn trên điện thoại: bỏ dòng phụ để khỏi tràn ngang */
+@media (max-width: 640px) {
+    .navbar .container { gap: 8px; min-width: 0; }
+    .nav-brand { gap: 8px; min-width: 0; flex: 1 1 auto; }
+    .nav-brand small { display: none; }
+    .nav-user { gap: 6px; flex-shrink: 0; }
+    .nav-user .user-name { display: none; }
+}
+
+
+/* Khung mã theo dõi cho người khảo sát không tài khoản */
+.tracking-box { background: #FFFBEB; border: 1px solid #F3D98B; border-left: 5px solid #C9962C; padding: 16px 18px; margin: 0 0 22px; }
+.tracking-title { font-size: 0.78rem; font-weight: 800; text-transform: uppercase; color: #7A5A0F; letter-spacing: 0.4px; }
+.tracking-code { font-family: Consolas, 'Courier New', monospace; font-size: 1.6rem; font-weight: 900; letter-spacing: 3px; color: #0F2347; margin: 6px 0 8px; word-break: break-all; }
+.tracking-note { font-size: 0.86rem; color: #5B4A1A; line-height: 1.55; margin: 0 0 10px; }
+.tracking-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.tracking-entry { max-width: 520px; margin: 0 auto; text-align: center; padding: 28px 16px; }
+.tracking-entry input { width: 100%; text-align: center; font-family: Consolas, 'Courier New', monospace; font-size: 1.2rem; letter-spacing: 2px; text-transform: uppercase; padding: 12px; border: 1.5px solid #94A3B8; box-sizing: border-box; margin: 12px 0; }
+
+/* Thể thức văn bản: quốc hiệu, tiêu ngữ và tên đơn vị căn giữa */
+body .gov-agency-name { align-items: center; text-align: center; }
+@media (min-width: 769px) {
+    body .gov-top-bar .container { position: relative; justify-content: center; }
+    body .gov-top-bar .gov-top-right { position: absolute; right: 20px; top: 50%; transform: translateY(-50%); }
+}

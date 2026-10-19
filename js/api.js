@@ -616,3 +616,51 @@ async function doSubmitChangePassword() {
     s.defer = true;
     document.body ? document.body.appendChild(s) : document.addEventListener('DOMContentLoaded', () => document.body.appendChild(s));
 })();
+
+
+// ========== Mã theo dõi cho người khảo sát không tài khoản ==========
+// Vào lại bảng theo dõi khắc phục bằng mã, không cần đăng ký tài khoản.
+FrasAPI.prototype.trackByCode = async function (code) {
+    const data = await this.post('/survey/track', { code });
+    this.setToken(data.access_token);
+    return data;   // { access_token, assessment_id, facility_name }
+};
+
+function copyToClipboard(text) {
+    if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(text);
+    const ta = document.createElement('textarea');
+    ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+    document.body.appendChild(ta); ta.select();
+    try { document.execCommand('copy'); } finally { document.body.removeChild(ta); }
+    return Promise.resolve();
+}
+
+// Hiện khung "Mã theo dõi của bạn" trong phần tử el (chỉ hiện cho chủ hồ sơ không tài khoản)
+async function renderTrackingBox(el, assessmentId) {
+    if (!el || !assessmentId || !api.isLoggedIn()) return;
+    try {
+        const t = await api.get(`/assessments/${assessmentId}/tracking`);
+        if (!t || !t.tracking_code) return;
+        const raw = t.tracking_code.replace(/-/g, '');
+        const link = `${location.origin}/mitigation.html?id=${assessmentId}#k=${raw}`;
+        el.innerHTML = `
+        <div class="tracking-box">
+            <div class="tracking-title">Mã theo dõi của bạn</div>
+            <div class="tracking-code">${t.tracking_code}</div>
+            <p class="tracking-note">
+                Bạn không cần tài khoản. Hãy lưu lại mã này (chụp màn hình hoặc sao chép liên kết) để vào lại bảng theo dõi khắc phục
+                trên bất kỳ điện thoại hay máy tính nào. Mỗi lần bạn cập nhật, cơ quan quản lý nhìn thấy tiến độ ngay.
+            </p>
+            <div class="tracking-actions">
+                <button type="button" class="btn-gov btn-gov-outline" data-copy="${t.tracking_code}">Sao chép mã</button>
+                <button type="button" class="btn-gov btn-gov-outline" data-copy="${link}">Sao chép liên kết theo dõi</button>
+            </div>
+        </div>`;
+        el.querySelectorAll('[data-copy]').forEach(b => b.addEventListener('click', () => {
+            copyToClipboard(b.dataset.copy).then(() => {
+                const old = b.textContent; b.textContent = 'Đã sao chép';
+                setTimeout(() => { b.textContent = old; }, 1600);
+            });
+        }));
+    } catch (e) { /* không phải chủ hồ sơ hoặc chưa đăng nhập: không hiện */ }
+}
