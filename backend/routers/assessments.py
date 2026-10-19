@@ -119,6 +119,42 @@ def get_user_map_data(
     return results
 
 
+@router.get("/compare/list")
+def compare_assessments(
+    ids: str,
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    """Return 2-4 assessments with their category scores for the compare page."""
+    id_list = [i.strip() for i in ids.split(",") if i.strip()][:4]
+    query = db.query(Assessment).filter(Assessment.id.in_(id_list))
+    if current_user.role not in ("admin", "superadmin"):
+        query = query.filter(Assessment.user_id == current_user.id)
+    by_id = {a.id: a for a in query.all()}
+
+    results = []
+    for aid in id_list:  # keep the order the user picked
+        a = by_id.get(aid)
+        if not a:
+            continue
+        scores = []
+        for cs in db.query(CategoryScore).filter(CategoryScore.assessment_id == a.id).all():
+            cat = db.query(QuestionCategory).get(cs.category_id)
+            scores.append({
+                "category_id": cs.category_id,
+                "category_name": cat.name if cat else "",
+                "score_obtained": cs.score_obtained,
+                "max_score": cs.max_score,
+                "percentage": cs.percentage,
+                "risk_level": cs.risk_level,
+            })
+        results.append({
+            "assessment": AssessmentResponse.model_validate(a).model_dump(mode="json"),
+            "category_scores": scores,
+        })
+    return results
+
+
 @router.get("/{assessment_id}", response_model=AssessmentDetail)
 def get_assessment_detail(
     assessment_id: str,

@@ -8,7 +8,9 @@ from pydantic import BaseModel
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 from database import get_db, engine, Base
-from models import FireReport
+from models import FireReport, User
+from middleware.auth_middleware import get_current_user
+from middleware.rbac import require_role
 
 # Ensure fire_reports table exists
 Base.metadata.create_all(bind=engine, tables=[FireReport.__table__])
@@ -212,8 +214,9 @@ def submit_fire_report(data: EmergencyReportCreate, db: Session = Depends(get_db
 
 
 @router.get("/reports")
-def get_fire_reports(db: Session = Depends(get_db)):
-    """View all received emergency fire reports."""
+def get_fire_reports(current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
+    """View all received emergency fire reports (admin only: contains phone numbers)."""
+    require_role("admin", "superadmin")(current_user)
     reports = db.query(FireReport).order_by(FireReport.created_at.desc()).limit(100).all()
     return [
         {
@@ -233,8 +236,9 @@ def get_fire_reports(db: Session = Depends(get_db)):
 
 
 @router.get("/telegram-status")
-def get_telegram_status():
-    """Check Telegram bot status and active chat IDs."""
+def get_telegram_status(current_user: User = Depends(get_current_user)):
+    """Check Telegram bot status and active chat IDs (admin only)."""
+    require_role("admin", "superadmin")(current_user)
     chats = get_target_chat_ids()
     return {
         "bot_configured": bool(TELEGRAM_BOT_TOKEN),

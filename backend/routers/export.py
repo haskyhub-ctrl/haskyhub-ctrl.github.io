@@ -1,5 +1,6 @@
 import io
 import json
+from urllib.parse import quote
 from datetime import datetime
 from fastapi import APIRouter, Depends, HTTPException, Request
 from fastapi.responses import StreamingResponse
@@ -12,6 +13,7 @@ from models import (
 from typing import Optional
 from middleware.auth_middleware import get_current_user, get_optional_user
 from utils.scoring import get_risk_label_vi
+from utils.recommendations import get_recommendations_for_assessment
 
 router = APIRouter(prefix="/api/export", tags=["Export"])
 
@@ -25,6 +27,7 @@ def export_excel(
     """Export assessment results to Excel."""
     from openpyxl import Workbook
     from openpyxl.styles import Font, Alignment, PatternFill, Border, Side
+    from openpyxl.utils import get_column_letter
     
     assessment = db.query(Assessment).filter(
         Assessment.id == assessment_id,
@@ -58,7 +61,7 @@ def export_excel(
         ("Số người:", str(assessment.worker_count or "N/A")),
         ("Ngày đánh giá:", assessment.completed_at.strftime("%d/%m/%Y") if assessment.completed_at else "N/A"),
         ("Tổng điểm:", f"{assessment.total_score}/{assessment.max_possible_score}"),
-        ("Tỷ lệ an toàn:", f"{assessment.risk_percentage}%"),
+        ("Tỷ lệ nguy cơ:", f"{assessment.risk_percentage}%"),
         ("Mức nguy cơ:", get_risk_label_vi(assessment.risk_level)),
     ]
     
@@ -111,19 +114,22 @@ def export_excel(
     
     # Auto-width columns
     for sheet in [ws, ws2, ws3]:
-        for col in sheet.columns:
+        for idx, col in enumerate(sheet.columns, start=1):
             max_length = max(len(str(cell.value or "")) for cell in col)
-            sheet.column_dimensions[col[0].column_letter].width = min(max_length + 3, 50)
+            # col[0] may be a merged cell (row 1 title), which has no column_letter
+            sheet.column_dimensions[get_column_letter(idx)].width = min(max_length + 3, 50)
     
     output = io.BytesIO()
     wb.save(output)
     output.seek(0)
     
     filename = f"FRAS_Report_{assessment.facility_name}_{datetime.now().strftime('%Y%m%d')}.xlsx"
+    # HTTP headers are latin-1 only: send an ASCII fallback plus the UTF-8 (Vietnamese) name
+    ascii_name = filename.encode("ascii", "ignore").decode() or "FRAS_Report.xlsx"
     return StreamingResponse(
         output,
         media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-        headers={"Content-Disposition": f"attachment; filename={filename}"}
+        headers={"Content-Disposition": f"attachment; filename=\"{ascii_name}\"; filename*=UTF-8''{quote(filename)}"}
     )
 
 
@@ -185,7 +191,20 @@ def export_data(
         except json.JSONDecodeError:
             ai_analysis = {"raw": assessment.ai_analysis}
     
+    # Rule-based recommendations, used by the PDF when there is no AI analysis
+    seen = set()
+    recommendations = []
+    for r in get_recommendations_for_assessment(db, assessment_id):
+        if r["recommendation_text"] in seen:
+            continue
+        seen.add(r["recommendation_text"])
+        recommendations.append({k: r.get(k) for k in (
+            "recommendation_text", "priority", "deadline_days", "legal_reference",
+            "question_text", "category_name")})
+
     return {
+        "id": assessment.id,
+        "recommendations": recommendations,
         "facility_name": assessment.facility_name,
         "facility_type": assessment.facility_type,
         "facility_address": assessment.facility_address,

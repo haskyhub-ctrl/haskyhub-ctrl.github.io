@@ -354,7 +354,7 @@ def get_map_data(
 
 import os
 from fastapi.responses import FileResponse
-from utils.backup_service import backup_db
+from utils.backup_service import backup_db, safe_backup_path, BACKUP_DIR, VALID_BACKUP_EXTS
 
 @router.post("/manual-backup")
 def trigger_manual_backup(
@@ -377,8 +377,8 @@ def download_backup(
 ):
     """Tải xuống file sao lưu."""
     require_role("admin", "superadmin")(current_user)
-    backup_path = os.path.join("./backups", file_name)
-    if os.path.exists(backup_path):
+    backup_path = safe_backup_path(file_name)
+    if backup_path and os.path.exists(backup_path):
         return FileResponse(backup_path, filename=file_name, media_type="application/octet-stream")
     raise HTTPException(status_code=404, detail="File backup không tồn tại")
 
@@ -388,14 +388,13 @@ def list_backups(
 ):
     """Lấy danh sách các file sao lưu hiện có."""
     require_role("admin", "superadmin")(current_user)
-    backup_dir = "./backups"
+    backup_dir = BACKUP_DIR
     if not os.path.exists(backup_dir):
         return []
     
     files = []
-    valid_exts = (".db", ".sql", ".dump", ".sql.gz")
     for f in os.listdir(backup_dir):
-        if f.startswith("fras_backup_") and any(f.endswith(ext) for ext in valid_exts):
+        if f.startswith("fras_backup_") and f.endswith(VALID_BACKUP_EXTS):
             path = os.path.join(backup_dir, f)
             files.append({
                 "file_name": f,
@@ -418,11 +417,12 @@ def trigger_restore_backup(
 ):
     """Khôi phục CSDL từ file sao lưu có sẵn trên server."""
     require_role("admin", "superadmin")(current_user)
-    backup_path = os.path.join("./backups", data.file_name)
-    if not os.path.exists(backup_path):
+    backup_path = safe_backup_path(data.file_name)
+    if not backup_path or not os.path.exists(backup_path):
         raise HTTPException(status_code=404, detail="File sao lưu không tồn tại")
     
     from utils.backup_service import restore_db
+    db.rollback()  # release this request's own table locks before psql replaces the tables
     success, msg = restore_db(backup_path)
     if success:
         log_action(db, current_user.id, "restore_backup", "system", None, new_value={"file": data.file_name})
@@ -443,17 +443,18 @@ async def upload_and_restore_backup(
     if not (filename.endswith(".sql") or filename.endswith(".db")):
         raise HTTPException(status_code=400, detail="Chỉ chấp nhận file định dạng .sql hoặc .db")
     
-    os.makedirs("./backups", exist_ok=True)
+    os.makedirs(BACKUP_DIR, exist_ok=True)
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     ext = os.path.splitext(filename)[1]
     saved_filename = f"fras_backup_uploaded_{timestamp}{ext}"
-    saved_path = os.path.join("./backups", saved_filename)
+    saved_path = os.path.join(BACKUP_DIR, saved_filename)
     
     with open(saved_path, "wb") as f:
         content = await file.read()
         f.write(content)
         
     from utils.backup_service import restore_db
+    db.rollback()  # release this request's own table locks before psql replaces the tables
     success, msg = restore_db(saved_path)
     if success:
         log_action(db, current_user.id, "upload_restore_backup", "system", None, new_value={"file": saved_filename})

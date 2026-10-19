@@ -249,7 +249,7 @@
 
         async function loadPlans() {
             try {
-                const plans = await api.get('/improvement/');
+                const plans = await api.get('/improvement');
                 const container = document.getElementById('plans-container');
                 if (!plans.length) return;
 

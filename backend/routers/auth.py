@@ -67,46 +67,33 @@ def find_facility_in_csv(code: str):
     return None
 
 
-def lookup_and_create_facility_user(code: str, db: Session) -> User:
-    info = find_facility_in_csv(code)
-    now = datetime.utcnow()
-    default_hash = hash_password("Pc07@123")
+DEFAULT_FACILITY_PASSWORD = "Pc07@123"
 
-    if info:
-        user = User(
-            id=str(uuid.uuid4()),
-            email=f"{code}@fras.vn",
-            facility_code=code,
-            full_name=info["name"] or f"Cơ sở {code}",
-            organization=info["organization"] or "Cơ sở diện quản lý PCCC",
-            password_hash=default_hash,
-            role="user",
-            ward=info["ward"],
-            province=info["province"] or "Tỉnh Bắc Ninh",
-            latitude=info["lat"],
-            longitude=info["lng"],
-            facility_types="Chưa có loại hình",
-            is_active=True,
-            is_locked=False,
-            created_at=now,
-            updated_at=now
-        )
-    else:
-        user = User(
-            id=str(uuid.uuid4()),
-            email=f"{code}@fras.vn",
-            facility_code=code,
-            full_name=f"Cơ sở quản lý ({code})",
-            organization="Cơ sở diện quản lý PCCC",
-            password_hash=default_hash,
-            role="user",
-            province="Tỉnh Bắc Ninh",
-            facility_types="Chưa có loại hình",
-            is_active=True,
-            is_locked=False,
-            created_at=now,
-            updated_at=now
-        )
+
+def lookup_and_create_facility_user(code: str, db: Session):
+    """Create an account on first login, but only for facilities on the official list."""
+    info = find_facility_in_csv(code)
+    if not info:
+        return None
+    now = datetime.utcnow()
+    user = User(
+        id=str(uuid.uuid4()),
+        email=f"{code}@fras.vn",
+        facility_code=code,
+        full_name=info["name"] or f"Cơ sở {code}",
+        organization=info["organization"] or "Cơ sở diện quản lý PCCC",
+        password_hash=hash_password(DEFAULT_FACILITY_PASSWORD),
+        role="user",
+        ward=info["ward"],
+        province=info["province"] or "Tỉnh Bắc Ninh",
+        latitude=info["lat"],
+        longitude=info["lng"],
+        facility_types="Chưa có loại hình",
+        is_active=True,
+        is_locked=False,
+        created_at=now,
+        updated_at=now
+    )
     db.add(user)
     db.commit()
     db.refresh(user)
@@ -201,8 +188,8 @@ def login(data: UserLogin, db: Session = Depends(get_db)):
     # Check if this is a numeric facility code (e.g. 13-digit code)
     is_numeric_code = ident.isdigit() and len(ident) >= 6
 
-    # If user not found in DB but is a numeric facility code, auto-create from CSV or default
-    if not user and is_numeric_code:
+    # First login of a listed facility: create its account (default password only)
+    if not user and is_numeric_code and pw == DEFAULT_FACILITY_PASSWORD:
         user = lookup_and_create_facility_user(ident, db)
 
     if user:
@@ -218,16 +205,7 @@ def login(data: UserLogin, db: Session = Depends(get_db)):
                 db.commit()
                 db.refresh(user)
 
-        is_pw_valid = verify_password(pw, user.password_hash)
-        # For facility accounts, allow master default passwords Pc07@123 / 123456
-        if not is_pw_valid and user.facility_code and pw in ["Pc07@123", "123456"]:
-            is_pw_valid = True
-
-        # For admin/superadmin accounts, allow standard admin passwords
-        if not is_pw_valid and user.role in ["admin", "superadmin"] and pw in ["admin123", "admin@123", "Admin@123", "admin", "Pc07@123", "admin123456"]:
-            is_pw_valid = True
-
-        if not is_pw_valid:
+        if not verify_password(pw, user.password_hash):
             raise HTTPException(
                 status_code=401,
                 detail="Mật khẩu không chính xác"

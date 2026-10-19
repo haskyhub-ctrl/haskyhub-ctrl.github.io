@@ -180,24 +180,28 @@ async def lifespan(app: FastAPI):
     migrate_db()
     seed_database()
     
-    # Ensure superadmin exists with standard credentials
+    # Ensure the superadmin account exists. Never overwrite an existing password:
+    # it is changed from the web UI ("Đổi mật khẩu"), or once via the ADMIN_PASSWORD env var.
     try:
         s_db = SessionLocal()
         admin_u = s_db.query(User).filter(User.email == "admin@fras.vn").first()
+        env_pw = os.getenv("ADMIN_PASSWORD", "").strip()
         if not admin_u:
             admin_u = User(
                 email="admin@fras.vn",
-                password_hash=hash_password("admin123"),
+                password_hash=hash_password(env_pw or "admin123"),
                 full_name="Quản trị viên Hệ thống",
                 organization="Công an thành phố Bắc Ninh",
                 role="superadmin",
             )
             s_db.add(admin_u)
+            print("✅ Created superadmin admin@fras.vn")
         else:
-            admin_u.password_hash = hash_password("admin123")
             admin_u.role = "superadmin"
+            if env_pw:
+                admin_u.password_hash = hash_password(env_pw)
+                print("✅ Superadmin password set from ADMIN_PASSWORD")
         s_db.commit()
-        print("✅ Ensured default superadmin: admin@fras.vn / admin123")
         s_db.close()
     except Exception as e:
         print(f"Notice admin check: {e}")

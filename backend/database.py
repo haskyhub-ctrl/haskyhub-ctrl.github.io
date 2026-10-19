@@ -15,6 +15,11 @@ DEFAULT_DB_PATH = os.path.join(BASE_DIR, "fras.db").replace("\\", "/")
 DATABASE_URL = os.getenv("DATABASE_URL", "")
 if not DATABASE_URL or DATABASE_URL.startswith("sqlite:///.") or "sqlite:///" in DATABASE_URL and not os.path.isabs(DATABASE_URL.replace("sqlite:///", "")):
     DATABASE_URL = f"sqlite:///{DEFAULT_DB_PATH}"
+# SQLAlchemy 2.1+ maps plain "postgresql://" to psycopg v3, but this project ships psycopg2
+if DATABASE_URL.startswith("postgresql://"):
+    DATABASE_URL = "postgresql+psycopg2://" + DATABASE_URL[len("postgresql://"):]
+elif DATABASE_URL.startswith("postgres://"):
+    DATABASE_URL = "postgresql+psycopg2://" + DATABASE_URL[len("postgres://"):]
 
 
 if DATABASE_URL.startswith("sqlite"):

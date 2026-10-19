@@ -513,7 +513,7 @@
 
     <script src="/js/api.js"></script>
     <script src="/js/charts.js"></script>
-    <script src="/js/export.js"></script>
+    <script src="/js/export.js?v=20261019"></script>
     <script>
         let currentAssessmentData = null;
         let isAiAnalyzing = false;
@@ -1161,6 +1161,8 @@
             } catch (err) {
                 console.warn("Could not load QR code:", err);
             }
+        }
+
         let currentMitigationData = null;
 
         async function loadMitigationChecklist(assessmentId) {

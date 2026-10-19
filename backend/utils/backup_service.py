@@ -14,27 +14,45 @@ logger = logging.getLogger("backup_service")
 BACKUP_INTERVAL_SECONDS = int(os.environ.get("BACKUP_INTERVAL_SECONDS", 86400))
 BACKUP_DIR = "./backups"
 
+VALID_BACKUP_EXTS = (".db", ".sql", ".dump", ".sql.gz")
+
+
 def get_db_info():
-    db_url = os.environ.get("DATABASE_URL")
-    if not db_url or "sqlite" in db_url:
-        try:
-            from dotenv import load_dotenv
-            backend_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-            env_file = os.path.join(backend_dir, ".env")
-            if os.path.exists(env_file):
-                load_dotenv(env_file, override=True)
-                db_url = os.environ.get("DATABASE_URL")
-        except Exception:
-            pass
-    return db_url or "sqlite:///./fras.db"
+    # Same URL the app itself uses (already resolves SQLite to an absolute path)
+    from database import DATABASE_URL
+    return DATABASE_URL
+
+
+def safe_backup_path(file_name: str):
+    """Return the full path of a backup file, or None if the name is not a plain backup file name.
+    Blocks names like '../main.py' that would reach files outside the backups folder."""
+    if not file_name or os.path.basename(file_name) != file_name:
+        return None
+    if not file_name.startswith("fras_backup_") or not file_name.endswith(VALID_BACKUP_EXTS):
+        return None
+    return os.path.join(BACKUP_DIR, file_name)
+
+
+def _latest_backup_age_seconds():
+    if not os.path.isdir(BACKUP_DIR):
+        return None
+    times = [os.path.getmtime(os.path.join(BACKUP_DIR, f)) for f in os.listdir(BACKUP_DIR)
+             if f.startswith("fras_backup_") and f.endswith(VALID_BACKUP_EXTS)]
+    return (time.time() - max(times)) if times else None
+
 
 async def auto_backup_task():
     """Chạy ngầm định kỳ sao lưu database (hỗ trợ cả PostgreSQL và SQLite)."""
     os.makedirs(BACKUP_DIR, exist_ok=True)
     logger.info(f"Bắt đầu dịch vụ tự động sao lưu định kỳ mỗi {BACKUP_INTERVAL_SECONDS/3600:.1f} giờ.")
     
-    # Thực hiện 1 lần sao lưu khi khởi động
-    backup_db()
+    # Sao lưu khi khởi động, trừ khi đã có bản sao lưu gần đây
+    # (mỗi lần deploy đều khởi động lại; không để các lần deploy đẩy mất bản sao lưu của các ngày trước)
+    age = _latest_backup_age_seconds()
+    if age is None or age >= BACKUP_INTERVAL_SECONDS:
+        backup_db()
+    else:
+        logger.info(f"Bỏ qua sao lưu khi khởi động: đã có bản sao lưu {age/3600:.1f} giờ trước.")
         
     while True:
         try:
@@ -51,7 +69,7 @@ def backup_db():
     """Thực hiện sao lưu cơ sở dữ liệu (tự động phân biệt PostgreSQL hoặc SQLite)."""
     try:
         os.makedirs(BACKUP_DIR, exist_ok=True)
-        cleanup_old_backups(keep_count=10)
+        cleanup_old_backups(keep_count=14)
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         db_url = get_db_info()
 
@@ -123,15 +141,15 @@ def backup_db():
         logger.error(f"❌ Lỗi khi thực hiện sao lưu: {e}")
         return None
 
-def cleanup_old_backups(keep_count=10):
+def cleanup_old_backups(keep_count=14):
     """Giữ lại 'keep_count' bản backup mới nhất để tránh đầy ổ cứng."""
     try:
         if not os.path.exists(BACKUP_DIR):
             return
         backups = []
-        valid_exts = (".db", ".sql", ".dump", ".sql.gz")
         for f in os.listdir(BACKUP_DIR):
-            if f.startswith("fras_backup_") and any(f.endswith(ext) for ext in valid_exts):
+            # Files uploaded by an admin are kept; only automatic/manual backups rotate
+            if f.startswith("fras_backup_") and not f.startswith("fras_backup_uploaded_") and f.endswith(VALID_BACKUP_EXTS):
                 full_path = os.path.join(BACKUP_DIR, f)
                 backups.append((full_path, os.path.getmtime(full_path)))
                 
@@ -167,6 +185,15 @@ def restore_db(backup_path: str):
             if password:
                 env["PGPASSWORD"] = password
 
+            # Never wait forever for table locks held by open requests (that froze the whole site)
+            env["PGOPTIONS"] = "-c lock_timeout=60000"
+            # Close idle pooled connections so they don't hold locks on the tables being replaced
+            try:
+                from database import engine
+                engine.dispose()
+            except Exception:
+                pass
+
             cmd = [
                 "psql",
                 "-U", user,
@@ -174,7 +201,9 @@ def restore_db(backup_path: str):
                 "-p", str(port),
                 "-d", dbname,
                 "-f", backup_path,
-                "-q"
+                "-q",
+                "--single-transaction",     # all-or-nothing: a failed restore leaves data untouched
+                "-v", "ON_ERROR_STOP=1",
             ]
 
             logger.info(f"Đang phục hồi CSDL PostgreSQL từ {backup_path}...")
@@ -204,8 +233,8 @@ def restore_db(backup_path: str):
 def delete_backup_file(file_name: str):
     """Xóa file sao lưu chỉ định."""
     try:
-        backup_path = os.path.join(BACKUP_DIR, file_name)
-        if not os.path.exists(backup_path):
+        backup_path = safe_backup_path(file_name)
+        if not backup_path or not os.path.exists(backup_path):
             return False, "File không tồn tại"
         os.remove(backup_path)
         logger.info(f"Đã xóa file sao lưu: {file_name}")
