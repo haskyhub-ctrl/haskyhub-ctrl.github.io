@@ -159,8 +159,6 @@ html, body {
 .gov-agency-name {
     display: flex;
     flex-direction: column;
-    align-items: center;   /* các dòng tên đơn vị căn giữa với nhau */
-    text-align: center;
     gap: 3px;
 }
 .gov-agency-parent {
