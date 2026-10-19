@@ -303,17 +303,17 @@ async function generatePDFFromHTML(data) {
         <div style="border-bottom: 2.5px solid #991b1b; padding-bottom: 14px; margin-bottom: 16px;">
             <table style="width: 100%; border-collapse: collapse; border: none;">
                 <tr style="border: none;">
-                    <td style="width: 55%; vertical-align: top; text-align: center; border: none; padding: 0;">
+                    <td style="width: 55%; vertical-align: top; border: none; padding: 0;">
                         <div style="font-size: 13px; font-weight: bold; color: #991b1b; text-transform: uppercase; letter-spacing: 0.5px;">CÔNG AN THÀNH PHỐ BẮC NINH</div>
                         <div style="font-size: 11.5px; font-weight: bold; color: #0f172a; text-transform: uppercase; margin-top: 2px;">PHÒNG CẢNH SÁT PCCC VÀ CNCH</div>
                         <div style="font-size: 10.5px; color: #64748b; margin-top: 3px;">Hệ thống Khảo sát & Đánh giá Nguy cơ Cháy nổ FRAS AI</div>
                     </td>
-                    <td style="width: 45%; vertical-align: top; text-align: center; border: none; padding: 0;">
+                    <td style="width: 45%; vertical-align: top; text-align: right; border: none; padding: 0;">
                         <div style="font-size: 12px; font-weight: bold; color: #0f172a;">CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</div>
                         <div style="font-size: 11px; font-style: italic; color: #0f172a;">Độc lập - Tự do - Hạnh phúc</div>
                         <div style="font-size: 10.5px; color: #64748b; margin-top: 4px;">Số hồ sơ: <strong style="color: #0f172a;">${docNumber}</strong></div>
                         <div style="font-size: 9px; color: #475569; font-weight: bold; text-transform: uppercase; margin-top: 2px;">Mã chống làm giả khảo sát: ${docNumber}</div>
-                        ${data.id ? `<img src="/api/export/qrcode/${data.id}" alt="QR" style="width: 64px; height: 64px; margin: 4px auto 0; display: block; border: 1px solid #0f172a;">` : ''}
+                        ${data.id ? `<img src="/api/export/qrcode/${data.id}" alt="QR" style="width: 64px; height: 64px; margin-top: 4px; border: 1px solid #0f172a;">` : ''}
                     </td>
                 </tr>
             </table>

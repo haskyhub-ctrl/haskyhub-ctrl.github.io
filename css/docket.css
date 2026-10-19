@@ -54,10 +54,6 @@ body {
     gap: 16px;
 }
 
-.docket-titles {
-    text-align: center;   /* tên đơn vị và dòng phụ căn giữa với nhau */
-}
-
 .docket-titles h2 {
     margin: 0;
     font-size: 1.25rem;
@@ -76,7 +72,7 @@ body {
 }
 
 .docket-doc-meta {
-    text-align: center;   /* quốc hiệu, tiêu ngữ căn giữa với nhau */
+    text-align: right;
     font-size: 0.82rem;
     color: #fecaca;
     line-height: 1.4;
