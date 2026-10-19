@@ -59,8 +59,8 @@
             transition: transform .2s, box-shadow .2s;
             display: flex; align-items: center; justify-content: center;
             overflow: hidden; padding: 4px;
-            background-image: url('/img/logo-cand.png');
-            background-size: 82% 82%; background-repeat: no-repeat; background-position: center;
+            background-image: url('/img/ai_chi_avatar_256.png');
+            background-size: 100% 100%; background-repeat: no-repeat; background-position: center;
             flex-shrink: 0; position: relative;
         }
         .fras-fab:hover { transform: scale(1.05); box-shadow: 0 6px 20px rgba(192,32,42,0.4); }
@@ -160,7 +160,8 @@
             flex-shrink: 0; display: flex; align-items: center; justify-content: center;
             font-size: 0.8rem; font-weight: 700;
         }
-        .fras-msg.ai .fras-avatar { background: #C0202A; color: #fff; font-size: 0.65rem; }
+        .fras-msg.ai .fras-avatar { background: #fff; overflow: hidden; border: 1.5px solid #C0202A; }
+        .fras-msg.ai .fras-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
         .fras-msg.user .fras-avatar { background: #1A3A6B; color: #fff; }
 
         .fras-bubble {
@@ -258,12 +259,12 @@
     const wrap = document.createElement('div');
     wrap.innerHTML = `
         <div class="fras-fab-wrap" id="fras-fab-wrap">
-            <div class="fras-fab-badge" id="fras-fab-badge" onclick="frasChatbot.toggle()" title="Bấm để đặt câu hỏi về PCCC">
+            <div class="fras-fab-badge" id="fras-fab-badge" onclick="frasChatbot.toggle()" title="Hỏi Trợ lý ảo Chi về pháp luật, TTHC PCCC">
                 <span class="badge-icon">💬</span>
-                <span>Tư vấn PCCC</span>
+                <span>Trợ lý ảo Chi</span>
                 <span class="badge-pulse-dot"></span>
             </div>
-            <button class="fras-fab" id="fras-fab" title="Tư vấn & Hướng dẫn PCCC">
+            <button class="fras-fab" id="fras-fab" title="Trợ lý ảo hỗ trợ giải đáp pháp luật và TTHC về PCCC">
                 <span class="notif-dot"></span>
             </button>
         </div>
@@ -271,11 +272,11 @@
             <div class="fras-resize-handle" id="fras-resize-handle" title="Kéo để thay đổi kích thước"></div>
             <div class="fras-header">
                 <div class="fras-header-left">
-                    <div class="fras-header-icon" style="background:transparent; border-radius:0;">
-                        <img src="/img/logo-cand.png" alt="CAND" width="28" height="28" style="object-fit:contain;">
+                    <div class="fras-header-icon" style="background:#fff; overflow:hidden; width:36px; height:36px; flex-shrink:0;">
+                        <img src="/img/ai_chi_avatar_256.png" alt="Trợ lý ảo Chi" width="36" height="36" style="object-fit:cover; display:block;">
                     </div>
                     <div>
-                        <div class="fras-header-title">Tư vấn & Hướng dẫn PCCC</div>
+                        <div class="fras-header-title">Trợ lý ảo hỗ trợ giải đáp pháp luật và TTHC về PCCC</div>
                         <div class="fras-header-sub">Công an thành phố Bắc Ninh • PCCC & CNCH</div>
                     </div>
                 </div>
@@ -294,7 +295,7 @@
             </div>
             <div class="fras-status">
                 <span class="fras-status-dot"></span>
-                <span>Hệ thống trực tuyến 24/7 • Hỏi đáp pháp luật, quy chuẩn, kỹ thuật PCCC</span>
+                <span>Trực tuyến 24/7 • Hỏi đáp pháp luật, thủ tục hành chính, quy chuẩn PCCC</span>
             </div>
             <div class="fras-messages" id="fras-messages"></div>
             <div class="fras-suggestions" id="fras-suggestions">
@@ -378,9 +379,10 @@
             const msgs = document.getElementById('fras-messages');
             this._addBubble('ai',
                 'Xin chào quý công dân và chủ cơ sở!\n\n' +
-                'Đây là kênh tiếp nhận thông tin và giải đáp trực tuyến về công tác Phòng cháy chữa cháy & Cứu nạn cứu hộ (Công an TP Bắc Ninh).\n\n' +
+                'Tôi là Chi, trợ lý ảo hỗ trợ giải đáp pháp luật và thủ tục hành chính (TTHC) về Phòng cháy chữa cháy & Cứu nạn cứu hộ của Công an TP Bắc Ninh.\n\n' +
                 'Nội dung hỗ trợ giải đáp:\n' +
                 '• Quy định Luật PCCC số 55/2024/QH15 và các Nghị định, Thông tư mới nhất\n' +
+                '• Thủ tục hành chính về PCCC: hồ sơ, trình tự, thời hạn giải quyết\n' +
                 '• Tiêu chuẩn trang bị bình chữa cháy, hệ thống báo cháy tự động\n' +
                 '• Giải pháp lối thoát nạn, an toàn nguồn điện, khí gas\n' +
                 '• Khắc phục các tồn tại, nguy cơ mất an toàn PCCC\n\n' +
@@ -408,7 +410,7 @@
             const typingId = 'fras-typing-' + Date.now();
             msgs.innerHTML += `
                 <div class="fras-msg ai fras-typing" id="${typingId}">
-                    <div class="fras-avatar">Chi</div>
+                    <div class="fras-avatar"><img src="/img/ai_chi_avatar_256.png" alt="Chi"></div>
                     <div class="fras-bubble">
                         <div class="fras-typing-dot"></div>
                         <div class="fras-typing-dot"></div>
@@ -496,7 +498,7 @@
                             <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
                         </svg>
                    </div>`
-                : `<div class="fras-avatar">Chi</div>`;
+                : `<div class="fras-avatar"><img src="/img/ai_chi_avatar_256.png" alt="Chi"></div>`;
 
             const bubbleContent = isUser
                 ? `<pre>${this._esc(text)}</pre>`
