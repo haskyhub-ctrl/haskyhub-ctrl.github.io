@@ -1,0 +1,69 @@
+name: Cập nhật khóa trên server (.env)
+
+# Chạy tay: tab Actions -> chọn workflow này -> Run workflow.
+# Lấy các khóa từ GitHub Secrets (Settings -> Secrets and variables -> Actions) rồi ghi vào
+# /home/ubuntu/fras/backend/.env trên server và khởi động lại dịch vụ. Khóa không hiện trong nhật ký.
+# Secret nào để trống thì giữ nguyên giá trị đang có trên server.
+
+on:
+  workflow_dispatch:
+    inputs:
+      rotate_secret_key:
+        description: "Tạo SECRET_KEY mới (mọi người đang đăng nhập sẽ bị đăng xuất một lần)"
+        type: boolean
+        default: true
+
+jobs:
+  set-env:
+    name: Ghi khóa vào .env trên server
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ghi .env qua SSH
+        uses: appleboy/ssh-action@v1.0.3
+        env:
+          NINEROUTER_API_KEY: ${{ secrets.NINEROUTER_API_KEY }}
+          NINEROUTER_BASE_URL: ${{ secrets.NINEROUTER_BASE_URL }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          ROTATE: ${{ inputs.rotate_secret_key }}
+        with:
+          host: ${{ secrets.ORACLE_HOST }}
+          username: ${{ secrets.ORACLE_USER }}
+          key: ${{ secrets.ORACLE_SSH_KEY }}
+          envs: NINEROUTER_API_KEY,NINEROUTER_BASE_URL,TELEGRAM_BOT_TOKEN,TELEGRAM_CHAT_ID,GEMINI_API_KEY,ROTATE
+          script_stop: true
+          script: |
+            set -e
+            cd /home/ubuntu/fras/backend
+            touch .env
+            cp .env ".env.bak.$(date +%Y%m%d%H%M%S)"
+            chmod 600 .env .env.bak.* 2>/dev/null || true
+
+            # set_var TÊN GIÁ_TRỊ: thay hoặc thêm dòng TÊN=GIÁ_TRỊ; bỏ qua nếu giá trị rỗng
+            set_var() {
+              [ -z "$2" ] && return 0
+              grep -v "^$1=" .env > .env.tmp || true
+              printf '%s=%s\n' "$1" "$2" >> .env.tmp
+              mv .env.tmp .env
+              chmod 600 .env
+              echo "Đã ghi: $1"
+            }
+
+            set_var NINEROUTER_API_KEY "$NINEROUTER_API_KEY"
+            set_var ROUTER_API_KEY "$NINEROUTER_API_KEY"
+            set_var NINEROUTER_BASE_URL "$NINEROUTER_BASE_URL"
+            set_var ROUTER_BASE_URL "$NINEROUTER_BASE_URL"
+            set_var TELEGRAM_BOT_TOKEN "$TELEGRAM_BOT_TOKEN"
+            set_var TELEGRAM_CHAT_ID "$TELEGRAM_CHAT_ID"
+            set_var GEMINI_API_KEY "$GEMINI_API_KEY"
+
+            # SECRET_KEY (ký phiên đăng nhập): tạo mới nếu được yêu cầu hoặc nếu chưa có
+            if [ "$ROTATE" = "true" ] || ! grep -q '^SECRET_KEY=.' .env; then
+              set_var SECRET_KEY "$(openssl rand -hex 32)"
+            fi
+
+            echo ">>> Khởi động lại dịch vụ..."
+            sudo systemctl restart fras.service
+            sleep 3
+            sudo systemctl is-active fras.service && echo "Dịch vụ đang chạy" || (echo "Dịch vụ lỗi"; exit 1)

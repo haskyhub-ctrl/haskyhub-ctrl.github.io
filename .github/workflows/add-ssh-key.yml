@@ -1,0 +1,45 @@
+name: Thêm khóa SSH của máy tính vào server
+
+# Chạy tay: tab Actions -> chọn workflow này -> Run workflow.
+# Dùng khi máy tính mới bị báo "Permission denied (publickey)": workflow dùng khóa đã lưu trong GitHub Secrets
+# (ORACLE_SSH_KEY) để thêm khóa CÔNG KHAI của máy tính vào server. Khóa công khai (file .pub) không phải bí mật.
+
+on:
+  workflow_dispatch:
+    inputs:
+      public_key:
+        description: "Nội dung file .pub của máy tính (mặc định là khóa oracle_key.pub của máy ADMIN11)"
+        required: true
+        default: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDH0w3wWTn5JFEVwZ7zWqzGx0OADt19xbfVf+AMmLB/hIC1L/3wudtjUTpV7bC7nFJulEmkvaUvg9wEwk9huemUduPfO9QKj/5x4wT1SB3/fO56WnWpoRgJxlvntBvd2WQEzzV7Nl74j2h9ssiQwTly95TDwv341rc5pVw5GpOrfoOSnnV0DmNY+RZyG21tTwwpgKzwINax+goOvVj8/ITzKogKLNJVMb3n4dTqRByGu9heKYgi0WD1lIcNvOnAwbyOZvQzENAzHWiMOYzaPpd3OelqYty4RvpkX5n2vxhxV4EAfpKxmqulh74fQg6+Cv0nurwqrZQQKNSAR4pz5MKWCM8KOatcwP8YORamZt2XUwW06f8lomFK7U4/orpEpCTVSVczuuAoU9gKF0Yn+2hvWiS2byjI3xmnYiHNGwnq6JzOv3GOwDFy9BSJFC/p8q7HcbQCgVT6+juoegcJT8FxOdvaTPcv0jxuIzCCyPz8WjKyPC5mpBHqkpfyeIA6omvn/yCREm/JPb6RgytI8ewyXcoWVGe76n5BIAqipunMwHntzZEx1XHIZeHhgSyNROc2ZLLpNIvwPFkQDtmbocempT2+ZJc+zUfknCWbb/HxVaoRrYBqpJMcsWyjwaRQ3oPm2ZGTGC7y7w0JpcZvreY9KUEALrozvwoFzp8OjweHLw== admin11@THANHLONGDES"
+
+jobs:
+  add-key:
+    name: Thêm khóa vào authorized_keys
+    runs-on: ubuntu-latest
+    steps:
+      - name: Thêm khóa qua SSH
+        uses: appleboy/ssh-action@v1.0.3
+        env:
+          PUBKEY: ${{ inputs.public_key }}
+        with:
+          host: ${{ secrets.ORACLE_HOST }}
+          username: ${{ secrets.ORACLE_USER }}
+          key: ${{ secrets.ORACLE_SSH_KEY }}
+          envs: PUBKEY
+          script_stop: true
+          script: |
+            set -e
+            case "$PUBKEY" in
+              ssh-rsa\ *|ssh-ed25519\ *|ecdsa-sha2-*) ;;
+              *) echo "Nội dung không phải khóa công khai SSH"; exit 1 ;;
+            esac
+            mkdir -p ~/.ssh
+            chmod 700 ~/.ssh
+            touch ~/.ssh/authorized_keys
+            if grep -qxF "$PUBKEY" ~/.ssh/authorized_keys; then
+              echo "Khóa đã có sẵn trên server"
+            else
+              printf '%s\n' "$PUBKEY" >> ~/.ssh/authorized_keys
+              echo "Đã thêm khóa mới"
+            fi
+            chmod 600 ~/.ssh/authorized_keys
