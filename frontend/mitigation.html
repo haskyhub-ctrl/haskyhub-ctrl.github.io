@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Theo dõi Khắc phục Tồn tại & Nguy cơ - FRAS AI | Công an TP Bắc Ninh</title>
-    <link rel="stylesheet" href="/css/main.css?v=20261021_m4">
+    <link rel="stylesheet" href="/css/main.css?v=20261021_m5">
     <link rel="stylesheet" href="/css/dashboard.css?v=20261014_gov2">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700;800;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/docket.css?v=20261021_m3">
+    <link rel="stylesheet" href="/css/docket.css?v=20261021_m4">
     <style>
         .mt-picker { display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-bottom:16px; }
         .mt-picker select { flex:1; min-width:240px; padding:9px 10px; border:1px solid #94a3b8; background:#ffffff; color:#0f172a; font-size:0.9rem; }
@@ -62,7 +62,7 @@
         </div>
     </div>
 
-    <script src="/js/api.js?v=20261019"></script>
+    <script src="/js/api.js?v=20261021_t1"></script>
     <script>
         const LEVEL_TEXT = { safe: 'Nguy cơ Thấp', low: 'Nguy cơ Thấp', medium: 'Nguy cơ Trung bình', high: 'Nguy cơ Cao', critical: 'Nguy cơ Rất cao' };
         const LEVEL_COLOR = { safe: '#16a34a', low: '#16a34a', medium: '#d97706', high: '#ea580c', critical: '#dc2626' };
@@ -83,7 +83,20 @@
 
         onReady(async () => {
             setupNavbar();
-            if (!requireAuth()) return;
+
+            // Liên kết theo dõi có kèm mã (#k=...): tự vào bằng mã rồi xóa mã khỏi thanh địa chỉ
+            const hashCode = new URLSearchParams(location.hash.replace(/^#/, '')).get('k');
+            if (hashCode) {
+                try {
+                    const t = await api.trackByCode(hashCode);
+                    history.replaceState(null, '', `/mitigation.html?id=${t.assessment_id}`);
+                } catch (e) {
+                    showCodeEntry(e.message);
+                    return;
+                }
+            }
+            // Chưa có phiên: cho nhập mã theo dõi (người dân không tài khoản) hoặc đăng nhập (cơ sở diện quản lý)
+            if (!api.isLoggedIn()) { showCodeEntry(); return; }
 
             const user = api.getUser();
             const isAdmin = user && (user.role === 'admin' || user.role === 'superadmin');
@@ -109,6 +122,37 @@
             await loadAssessment(urlId || assessments[0].id);
         });
 
+        function showCodeEntry(message) {
+            document.getElementById('mt-root').innerHTML = `
+                <div class="tracking-entry">
+                    <h3 style="margin:0 0 6px; color:#0f172a;">Theo dõi khắc phục bằng mã</h3>
+                    <p style="color:#475569; font-size:0.9rem; line-height:1.55; margin:0;">
+                        Nhập mã theo dõi đã nhận sau khi khảo sát (dạng ABCD-EFGH-JK). Không cần tài khoản.
+                    </p>
+                    <form id="track-form">
+                        <input type="text" id="track-code" placeholder="ABCD-EFGH-JK" maxlength="14" autocomplete="off" autocapitalize="characters">
+                        <button type="submit" class="btn-gov btn-gov-danger" style="width:100%;">Vào theo dõi</button>
+                    </form>
+                    <div id="track-msg" style="color:#b91c1c; font-weight:700; font-size:0.88rem; min-height:22px; margin-top:8px;">${esc(message || '')}</div>
+                    <p style="font-size:0.84rem; color:#64748b; margin:14px 0 0;">
+                        Cơ sở thuộc diện quản lý PCCC: <a href="/login.html">đăng nhập bằng mã cơ sở</a> hoặc
+                        <a href="/survey.html">làm khảo sát mới</a>.
+                    </p>
+                </div>`;
+            document.getElementById('track-form').addEventListener('submit', async (ev) => {
+                ev.preventDefault();
+                const btn = ev.target.querySelector('button');
+                btn.disabled = true;
+                try {
+                    const t = await api.trackByCode(document.getElementById('track-code').value);
+                    location.href = `/mitigation.html?id=${t.assessment_id}`;
+                } catch (err) {
+                    document.getElementById('track-msg').textContent = err.message || 'Không vào được, vui lòng thử lại.';
+                    btn.disabled = false;
+                }
+            });
+        }
+
         async function loadAssessment(id) {
             currentId = id;
             const root = document.getElementById('mt-root');
@@ -121,6 +165,7 @@
                     } catch (e) { /* bỏ qua, vẫn hiển thị danh mục */ }
                 }
                 render();
+                renderTrackingBox(document.getElementById('mt-tracking-box'), id);
                 history.replaceState(null, '', `/mitigation.html?id=${id}`);
             } catch (err) {
                 root.innerHTML = `
@@ -153,6 +198,7 @@
                     <a href="/result.html?id=${esc(currentId)}" class="btn-gov btn-gov-outline">Xem kết quả khảo sát</a>
                     <a href="/survey.html" class="btn-gov">Khảo sát lại</a>
                 </div>
+                <div id="mt-tracking-box"></div>
                 <p style="color:#64748b; font-size:0.86rem; margin:0 0 16px; line-height:1.5;">
                     Cơ sở khắc phục xong hạng mục nào thì tích chọn, ghi rõ cách đã xử lý và bấm <strong>Lưu tiến độ</strong>.
                     Hệ thống chấm lại các câu đã khắc phục theo đúng công thức của bài khảo sát, cập nhật cho cơ quan quản lý và AI đưa ra nhận xét.

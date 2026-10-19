@@ -1,8 +1,9 @@
 import uuid
-from datetime import datetime
-from fastapi import APIRouter, Depends, HTTPException
+from datetime import datetime, timedelta
+from fastapi import APIRouter, Depends, HTTPException, Request
 from sqlalchemy.orm import Session, joinedload, subqueryload
 from typing import List, Optional
+from pydantic import BaseModel
 from database import get_db
 from models import (
     User, QuestionCategory, Question, QuestionOption,
@@ -14,6 +15,7 @@ from schemas import (
 )
 from middleware.auth_middleware import get_current_user, get_optional_user, create_access_token, hash_password
 from utils.scoring import calculate_risk_level, score_assessment
+from utils import tracking
 
 router = APIRouter(prefix="/api/survey", tags=["Survey"])
 
@@ -183,7 +185,8 @@ def start_assessment(
         )
         db.add(current_user)
         db.flush()
-        access_token = create_access_token({"sub": current_user.id, "role": current_user.role})
+        # Phiên của người khảo sát không tài khoản: 30 ngày (quay lại sau vẫn dùng được; mất thì vào lại bằng mã theo dõi)
+        access_token = create_access_token({"sub": current_user.id, "role": current_user.role}, expires_delta=timedelta(days=30))
     else:
         # Case 1: Managed facility logged in. If facility had no coordinates in list, update GPS!
         if data.latitude is not None and data.longitude is not None:
@@ -398,3 +401,36 @@ def _trigger_risk_notifications(db, assessment, current_user):
                 message=f"{current_user.full_name} vừa đánh giá '{assessment.facility_name}' - {risk_label} ({assessment.risk_percentage}%).",
                 link=f"/admin/assessments.html"
             )
+
+
+class TrackRequest(BaseModel):
+    code: str
+
+
+@router.post("/track")
+def track_by_code(data: TrackRequest, request: Request, db: Session = Depends(get_db)):
+    """Người dân, hộ gia đình (không tài khoản) vào lại bảng theo dõi khắc phục bằng mã theo dõi.
+
+    Trả về phiên làm việc của chính hồ sơ đó. Không áp dụng cho cơ sở diện quản lý (đã có tài khoản)
+    và cán bộ quản trị.
+    """
+    client = (request.headers.get("x-forwarded-for") or (request.client.host if request.client else "")).split(",")[0].strip()
+    if tracking.is_blocked(client):
+        raise HTTPException(status_code=429, detail="Nhập sai quá nhiều lần. Vui lòng thử lại sau ít phút.")
+
+    code = tracking.normalize_code(data.code)
+    assessment = None
+    if len(code) == tracking.CODE_LENGTH:
+        assessment = db.query(Assessment).filter(Assessment.tracking_code == code).first()
+    user = assessment.user if assessment else None
+    if not assessment or not user or user.facility_code or user.role != "user":
+        tracking.record_failure(client)
+        raise HTTPException(status_code=404, detail="Mã theo dõi không đúng. Vui lòng kiểm tra lại.")
+
+    tracking.clear_failures(client)
+    token = create_access_token({"sub": user.id, "role": user.role}, expires_delta=timedelta(days=30))
+    return {
+        "access_token": token,
+        "assessment_id": assessment.id,
+        "facility_name": assessment.facility_name,
+    }

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng nhập Hệ thống - PCCC Bắc Ninh</title>
-    <link rel="stylesheet" href="/css/main.css?v=20261021_m4">
+    <link rel="stylesheet" href="/css/main.css?v=20261021_m5">
     <style>
         .admin-auth-page {
             display: flex;
@@ -206,13 +206,24 @@
                 <a href="/survey.html" style="display: inline-block; background: #1e3a8a; color: #fff; padding: 8px 16px; text-decoration: none; font-weight: 700; font-size: 0.85rem;">Vào Khảo sát PCCC Ngay →</a>
             </div>
 
+            <div style="margin-top: 12px; padding: 14px; background: #f8fafc; border: 1px solid #e2e8f0;">
+                <div style="font-weight: 700; color: #0f172a; font-size: 0.95rem; margin-bottom: 4px;">Đã khảo sát? Theo dõi khắc phục bằng mã</div>
+                <div style="font-size: 0.82rem; color: #475569; margin-bottom: 8px; line-height: 1.45;">Nhập mã theo dõi nhận được sau khi khảo sát. Không cần tài khoản.</div>
+                <form id="track-form" style="display: flex; gap: 8px;">
+                    <input type="text" id="track-code" placeholder="ABCD-EFGH-JK" maxlength="14" autocomplete="off" autocapitalize="characters"
+                           style="flex: 1; min-width: 0; padding: 9px 10px; border: 1.5px solid #94a3b8; font-family: Consolas, monospace; letter-spacing: 1px; text-transform: uppercase;">
+                    <button type="submit" style="background: #1e3a8a; color: #fff; border: none; padding: 9px 14px; font-weight: 700; cursor: pointer;">Vào theo dõi</button>
+                </form>
+                <div id="track-msg" style="color: #b91c1c; font-size: 0.82rem; font-weight: 700; margin-top: 6px; min-height: 18px;"></div>
+            </div>
+
             <div class="admin-auth-back" style="margin-top: 16px;">
                 <a href="/">← Quay về Trang chủ</a>
             </div>
         </div>
     </div>
 
-    <script src="/js/api.js?v=20261019"></script>
+    <script src="/js/api.js?v=20261021_t1"></script>
     <script>
         async function handleUnifiedLogin(event) {
             event.preventDefault();
@@ -272,6 +283,19 @@
                 }
             }
         });
+    </script>
+<script>
+    document.getElementById('track-form').addEventListener('submit', async (ev) => {
+        ev.preventDefault();
+        const btn = ev.target.querySelector('button'); btn.disabled = true;
+        try {
+            const t = await api.trackByCode(document.getElementById('track-code').value);
+            location.href = `/mitigation.html?id=${t.assessment_id}`;
+        } catch (err) {
+            document.getElementById('track-msg').textContent = err.message || 'Không vào được, vui lòng thử lại.';
+            btn.disabled = false;
+        }
+    });
     </script>
 </body>
 

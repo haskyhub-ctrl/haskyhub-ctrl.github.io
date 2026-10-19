@@ -16,10 +16,8 @@ import json
 CURRENT_LEGAL_REFERENCES = [
     "Luật Phòng cháy, chữa cháy và Cứu nạn, cứu hộ số 55/2024/QH15",
     "Luật Điện lực số 61/2024/QH15",
-    "Luật Xử lý vi phạm hành chính số 15/2012/QH13 và các văn bản sửa đổi, bổ sung",
     "Nghị quyết số 66.18/2026/NQ-CP ngày 18/5/2026 của Chính phủ",
     "Nghị định số 105/2025/NĐ-CP quy định chi tiết một số điều và biện pháp thi hành Luật Phòng cháy, chữa cháy và Cứu nạn, cứu hộ (sửa đổi, bổ sung bởi Nghị định số 347/2026/NĐ-CP)",
-    "Nghị định số 106/2025/NĐ-CP và Nghị định số 69/2026/NĐ-CP quy định xử phạt vi phạm hành chính về phòng cháy, chữa cháy và cứu nạn, cứu hộ",
     "QCVN 06:2022/BXD và Sửa đổi 1:2023: Quy chuẩn kỹ thuật quốc gia về An toàn cháy cho nhà và công trình",
     "QCVN 10:2025/BCA: Quy chuẩn kỹ thuật quốc gia về trang bị, bố trí phương tiện phòng cháy, chữa cháy, cứu nạn, cứu hộ cho nhà và công trình",
     "QCVN 01:2021/BXD: Quy chuẩn kỹ thuật quốc gia về Quy hoạch xây dựng",
@@ -37,231 +35,138 @@ CURRENT_LEGAL_REFERENCES = [
 ]
 
 
+FACILITY_TYPE_LABELS = {
+    "industrial": "Cơ sở sản xuất công nghiệp",
+    "warehouse": "Kho hàng, kho vật liệu",
+    "mixed_residence": "Nhà ở kết hợp kinh doanh",
+    "hospitality": "Nhà hàng, khách sạn, chợ, trung tâm thương mại",
+    "medical_education": "Bệnh viện, trường học, cơ sở y tế",
+    "fuel_gas": "Xăng dầu, khí gas, vật liệu nổ",
+    "transport": "Phương tiện giao thông",
+    "residential": "Khu dân cư, nhà ở, nhà trọ",
+    "construction": "Công trình xây dựng đang thi công",
+    "office": "Cơ quan, văn phòng, trụ sở",
+    "laboratory": "Nghiên cứu, phòng thí nghiệm",
+    "agriculture": "Nông nghiệp, chế biến nông lâm sản",
+}
+
+
+def facility_type_text(raw) -> str:
+    """Đổi mã loại hình (có thể nhiều mã, cách nhau dấu phẩy) thành tên tiếng Việt."""
+    if not raw:
+        return "chưa rõ loại hình"
+    parts = [p.strip() for p in str(raw).split(",") if p.strip()]
+    return "; ".join(FACILITY_TYPE_LABELS.get(p, p) for p in parts)
+
+
+def split_answers(assessment_data: dict):
+    """Tách các câu trả lời theo mức: rất cao (3), cao (2), trung bình (1), an toàn (0)."""
+    ans = assessment_data.get("detailed_answers", []) or []
+    red = [a for a in ans if a.get("score", 0) >= 3]
+    high = [a for a in ans if a.get("score", 0) == 2]
+    mid = [a for a in ans if a.get("score", 0) == 1]
+    safe = [a for a in ans if a.get("score", 0) == 0]
+    return red, high, mid, safe
+
+
+def numbered_risky_answers(assessment_data: dict):
+    """Danh sách đánh số các câu trả lời có nguy cơ (3 điểm trước, rồi 2 điểm). Dùng chung cho lời nhắc,
+    kiểm tra độ phủ và kho tri thức để cùng một số thứ tự."""
+    red, high, _mid, _safe = split_answers(assessment_data)
+    return red + high
+
+
 def build_analysis_prompt(assessment_data: dict) -> str:
-    """Build a structured prompt for AI analysis of fire risk assessment."""
-    
-    facility_info = f"""
-CƠ SỞ ĐƯỢC ĐÁNH GIÁ:
-- Tên cơ sở: {assessment_data.get('facility_name', 'N/A')}
-- Loại hình: {assessment_data.get('facility_type', 'N/A')}
+    """Lời nhắc gửi AI phân tích kết quả khảo sát. Quy tắc nằm ở utils/ai_rules.py."""
+    from utils.ai_rules import rules_as_prompt, LEVEL_LABELS, LEVEL_TONE
+
+    level = assessment_data.get("risk_level", "medium")
+    level_text = LEVEL_LABELS.get(level, "trung bình")
+    tone = LEVEL_TONE.get(level, LEVEL_TONE["medium"])
+
+    facility_info = f"""THÔNG TIN CƠ SỞ (do cơ sở tự khai):
+- Tên: {assessment_data.get('facility_name', 'N/A')}
+- Loại hình hoạt động: {facility_type_text(assessment_data.get('facility_type'))}
 - Địa chỉ: {assessment_data.get('facility_address', 'N/A')}
-- Diện tích: {assessment_data.get('facility_area', 'N/A')} m²
-- Số người làm việc: {assessment_data.get('worker_count', 'N/A')}
-"""
-    
-    scores_info = "KẾT QUẢ ĐÁNH GIÁ THEO NHÓM:\n"
+- Diện tích: {assessment_data.get('facility_area') or 'chưa khai'} m2
+- Số người làm việc, sinh hoạt: {assessment_data.get('worker_count') or 'chưa khai'}"""
+
+    scores_info = "KẾT QUẢ THEO NHÓM (do hệ thống tính):\n"
     for cs in assessment_data.get("category_scores", []):
-        scores_info += f"- {cs['category_name']}: {cs['score_obtained']}/{cs['max_score']} ({cs['percentage']}%) - Mức nguy cơ: {cs['risk_level']}\n"
-    
-    total_info = f"""
-TỔNG ĐIỂM NGUY CƠ: {assessment_data.get('total_score', 0)}/{assessment_data.get('max_possible_score', 0)}
-TỶ LỆ NGUY CƠ: {assessment_data.get('risk_percentage', 0)}%
-MỨC NGUY CƠ TỔNG: {assessment_data.get('risk_level', 'N/A')}
-"""
-    
-    risky_answers = [a for a in assessment_data.get("detailed_answers", []) if a.get("score", 0) >= 2]
-    safe_answers = [a for a in assessment_data.get("detailed_answers", []) if a.get("score", 0) == 0]
-    
-    answers_info = f"CÁC ĐIỂM TỒN TẠI NGUY CƠ CẦN PHÂN TÍCH ({len(risky_answers)} điểm vi phạm/nguy cơ):\n"
-    for ans in risky_answers:
-        answers_info += f"- [NGUY CƠ] {ans.get('question_text', '')}: {ans.get('answer_text', '')} (Điểm: {ans.get('score', 0)})\n"
-    
-    answers_info += f"\nCÁC TIÊU CHÍ AN TOÀN ĐẠT YÊU CẦU ({len(safe_answers)} tiêu chí tốt):\n"
-    for ans in safe_answers[:5]:
-        answers_info += f"- [TỐT] {ans.get('question_text', '')}: {ans.get('answer_text', '')}\n"
-    
+        lv = LEVEL_LABELS.get(cs.get("risk_level"), cs.get("risk_level"))
+        scores_info += f"- {cs['category_name']}: {cs['percentage']}% (mức {lv})\n"
+
+    total_info = (
+        f"MỨC NGUY CƠ TỔNG THỂ (do hệ thống tính, KHÔNG được tự thay đổi): {assessment_data.get('risk_percentage', 0)}%, "
+        f"mức {level_text.upper()}.\nGiọng văn phù hợp mức này: {tone}."
+    )
+
+    red, high, mid, safe = split_answers(assessment_data)
+    risky = red + high
+    answers_info = f"CÁC CÂU TRẢ LỜI CÓ NGUY CƠ ({len(red)} câu mức rất cao, {len(high)} câu mức cao). Số trong [ ] dùng để gắn khuyến nghị:\n"
+    for i, a in enumerate(risky, 1):
+        tag = "RẤT CAO" if a.get("score", 0) >= 3 else "CAO"
+        cat = f" ({a.get('category')})" if a.get("category") else ""
+        answers_info += f"[{i}] MỨC {tag}{cat}\n    Câu hỏi: {a.get('question_text', '')}\n    Cơ sở trả lời: {a.get('answer_text', '')}\n"
+
+    answers_info += f"\nCÁC CÂU TRẢ LỜI AN TOÀN ({len(safe)} câu, dùng cho phần ƯU ĐIỂM):\n"
+    for a in safe[:12]:
+        answers_info += f"- {a.get('question_text', '')} => {a.get('answer_text', '')}\n"
+    answers_info += f"\n(Ngoài ra có {len(mid)} câu ở mức nguy cơ thấp, chỉ cần nhắc duy trì, không cần phân tích riêng.)"
+
     legal_refs = "\n".join(f"  - {r}" for r in CURRENT_LEGAL_REFERENCES)
-    
-    prompt = f"""Bạn là chuyên gia tư vấn kỹ thuật an toàn Phòng cháy chữa cháy và Cứu nạn cứu hộ (PCCC&CNCH), thực hiện nhiệm vụ theo định hướng chỉ đạo của Phòng Cảnh sát PCCC và CNCH - Công an thành phố Bắc Ninh.
-Hãy phân tích kết quả khảo sát nguy cơ cháy nổ sau đây và đưa ra báo cáo chuyên sâu, CHI TIẾT, CỤ THỂ, TRANG TRỌNG bằng tiếng Việt.
+
+    return f"""Bạn là chuyên gia tư vấn an toàn phòng cháy chữa cháy và cứu nạn cứu hộ, hỗ trợ Phòng Cảnh sát PCCC và CNCH, Công an thành phố Bắc Ninh.
+Hệ thống FRAS là công cụ để người dân và cơ sở TỰ KIỂM TRA, nhận hướng dẫn an toàn miễn phí; kết quả không dùng để xử phạt. Hãy viết bản phân tích như một cán bộ PCCC tận tình đang hướng dẫn trực tiếp chủ cơ sở.
 
 {facility_info}
 
 {scores_info}
-
 {total_info}
 
 {answers_info}
 
-CĂN CỨ PHÁP LÝ HIỆN HÀNH (2024-2025):
+DANH MỤC VĂN BẢN ĐƯỢC PHÉP VIỆN DẪN (chỉ dùng trong trường legal_basis, như căn cứ tham khảo):
 {legal_refs}
 
-QUY TẮC BẮT BUỘC (STRICT GOVERNMENT RULES - KHÔNG ĐƯỢC VI PHẠM):
-0. CHUẨN MỰC HÀNH VĂN NGƯỜI THẬT (0% AI / HUMAN WRITING):
-   - Tuyệt đối CẤM sử dụng dấu gạch ngang dài (em dash "—"). Luôn dùng dấu phẩy, dấu chấm, dấu hai chấm hoặc ngoặc đơn.
-   - Tuyệt đối CẤM các từ nối sáo rỗng robot: "Trong bối cảnh...", "Không thể phủ nhận rằng...", "Đóng vai trò vô cùng quan trọng...", "Mang lại lợi ích đáng kể...", "Giải pháp toàn diện", "Đột phá", "Tối ưu hóa".
-   - Tuyệt đối CẤM cấu trúc giả tạo "không chỉ... mà còn...", không ép danh sách phải đủ 3 ý, không dùng ngôn ngữ quảng cáo tô vẽ.
-   - Độ biến thiên câu (burstiness): Trộn câu ngắn gọn dứt khoát (2-5 từ) và câu phân tích kỹ thuật. Viết như một cán bộ kiểm tra PCCC dày dạn kinh nghiệm thực tế đang chỉ dẫn trực tiếp cho chủ cơ sở.
-1. VĂN PHONG VÀ TƯ CÁCH: Sử dụng văn phong hành chính nhà nước chuẩn mực, đĩnh đạc, khách quan, mang tính hướng dẫn chuyên môn kỹ thuật. Tuyệt đối KHÔNG dùng từ ngữ cảm tính, tiếng lóng, ẩn dụ tùy tiện (nghiêm cấm dùng các từ như "tử huyệt", "báo động đỏ").
-2. NGHIÊM CẤM BỊA ĐẶT VĂN BẢN QUY PHẠM PHÁP LUẬT: Chỉ viện dẫn các văn bản trong danh mục CĂN CỨ PHÁP LÝ HIỆN HÀNH ở trên. Xử phạt vi phạm hành chính về PCCC áp dụng Nghị định 106/2025/NĐ-CP và Nghị định 69/2026/NĐ-CP (không dùng Nghị định 144/2021/NĐ-CP cho lĩnh vực PCCC). Không chắc chắn số Điều, Khoản thì chỉ ghi tên văn bản. Nghiêm cấm tự sáng tác số hiệu luật, điều khoản giả mạo!
-3. PHÂN ĐỊNH BẢN CHẤT NGUY CƠ:
-   - Sự cố hệ thống, thiết bị điện (>50%) và bất cẩn nguồn lửa/nguồn nhiệt (15%) là nguyên nhân trực tiếp dẫn đến cháy.
-   - Tồn tại về lối thoát nạn và trang bị PCCC là điều kiện an toàn, phương tiện cứu người và hạn chế hậu quả khi xảy ra cháy, KHÔNG PHẢI là nguyên nhân phát sinh cháy.
-4. THỜI HẠN KHẮC PHỤC:
-   - Các tồn tại có nguy cơ trực tiếp dẫn đến cháy (dây điện hở, thiết bị phát nhiệt quá mức, rò rỉ gas, hàn cắt không che chắn): Phải ghi rõ thời hạn là "Khắc phục ngay (trong 24h - 48h)", tuyệt đối không để 30 hay 60 ngày!
-   - Các tồn tại về bổ sung phương tiện, bảo dưỡng thiết bị: 15 - 30 ngày.
-   - Cải tạo kết cấu, thẩm duyệt: theo lộ trình kế hoạch.
-5. ĐỔI MỤC ĐIỂM MẠNH: Đặt tên là "ƯU ĐIỂM" (ghi nhận các mặt cơ sở làm tốt, không vội kết luận đạt chuẩn khi chưa kiểm tra thực địa).
+QUY TẮC BẮT BUỘC:
+{rules_as_prompt()}
 
-YÊU CẦU PHÂN TÍCH (viết CHI TIẾT, không viết chung chung):
+NỘI DUNG CẦN VIẾT:
+1. overall_assessment: 3-5 câu. Nêu loại hình, mức nguy cơ tổng thể (đúng nhãn hệ thống), 2-3 nhóm cần chú ý nhất, và nói rõ kết quả dựa trên thông tin cơ sở cung cấp, chưa qua kiểm tra thực địa.
+2. strengths: 3-5 ưu điểm lấy từ các câu trả lời an toàn.
+3. critical_weaknesses: mỗi tồn tại một câu mô tả tình trạng theo đúng câu trả lời và hậu quả có thể xảy ra, không viện dẫn pháp luật, không dùng từ vi phạm. Nêu đủ MỌI câu mức rất cao (gộp được nếu cùng chủ đề), sau đó các câu mức cao quan trọng nhất. Tối đa 10 mục.
+4. detailed_recommendations: 8-12 khuyến nghị. Mỗi khuyến nghị gồm "answers": danh sách số [ ] của các câu trả lời mà khuyến nghị này xử lý (bắt buộc, để hệ thống kiểm tra độ phủ), "issue": một câu mô tả tình trạng ghi nhận, "title", "description" (các bước cụ thể), "priority" (urgent|high|medium|low), "deadline" (chỉ dùng nhãn thời hạn chuẩn), "responsible_party", "legal_basis".
+5. daily_checklist: 5-8 việc tự kiểm tra hằng ngày gắn với các tồn tại của cơ sở này.
+6. improvement_plan: lộ trình 30_days, 60_days, 90_days (mỗi giai đoạn 2-4 việc, gồm task, detail, responsible, criteria, legal_basis). Là lộ trình tổng hợp, không chép lại nguyên khuyến nghị.
+7. legal_references: chọn các văn bản trong danh mục thực sự liên quan.
+8. risk_summary: một câu tóm tắt.
 
-1. ĐÁNH GIÁ TỔNG QUAN: Nhận xét tổng thể về tình trạng an toàn PCCC của cơ sở (3-5 câu), đánh giá mức độ rủi ro khách quan theo quy chuẩn hiện hành.
-
-2. ƯU ĐIỂM (Phân tích chi tiết): 
-   - Dựa vào các nhóm có tỷ lệ nguy cơ THẤP (dưới 25%), nêu cụ thể các biện pháp tốt mà cơ sở đang duy trì.
-   - Liệt kê 3-5 ưu điểm cụ thể.
-
-3. TỒN TẠI & NGUY CƠ CHÁY NỔ TIỀM ẨN:
-   - Dựa vào các nhóm có điểm nguy cơ cao, chỉ ra nguy cơ trực tiếp và hậu quả nếu xảy ra sự cố.
-   - Đối với nhóm điện: viện dẫn quy định về an toàn điện.
-   - Liệt kê 3-5 tồn tại cụ thể.
-
-4. KHUYẾN CÁO CHI TIẾT: Đưa ra 8-12 khuyến cáo CỤ THỂ, THỰC TẾ, DỄ THỰC HIỆN:
-   - Hành động từng bước rõ ràng.
-   - Các tồn tại có nguy cơ phát sinh cháy cao phải ghi rõ "Khắc phục ngay" (trong 24h - 48h).
-   - Biện pháp khắc phục chi tiết, vật tư, thiết bị cần trang bị (đạt chuẩn, có nguồn gốc rõ ràng).
-   - KHÔNG nêu chi phí, giá tiền, tên hãng hay nơi bán.
-   - Người chịu trách nhiệm cụ thể.
-   - Căn cứ pháp lý chính xác (Điều, Khoản).
-
-5. DANH MỤC TỰ KIỂM TRA AN TOÀN HÀNG NGÀY: 5-8 việc chủ cơ sở/người phụ trách tự kiểm tra đầu giờ hoặc cuối ngày.
-
-6. KẾ HOẠCH KHẮC PHỤC THEO LỘ TRÌNH:
-   - 30 ngày đầu: Ưu tiên xử lý ngay các nguy cơ cháy nổ cao (trong 24-48h đầu), dọn thông lối thoát, kiểm tra hệ thống điện.
-   - 30-60 ngày: Bảo dưỡng, bổ sung trang thiết bị, huấn luyện nghiệp vụ PCCC.
-   - 60-90 ngày: Hoàn thiện hồ sơ quản lý PCCC, tự kiểm tra định kỳ.
-
-7. THAM CHIẾU VĂN BẢN QUY PHẠM PHÁP LUẬT: Viện dẫn chính xác văn bản hiện hành.
-
-Hãy trả về kết quả dưới dạng JSON với cấu trúc:
+Trả về đúng một khối JSON:
 {{
-    "overall_assessment": "string - đánh giá tổng quan 3-5 câu, có viện dẫn pháp luật",
-    "strengths": ["string - điểm mạnh chi tiết, có so sánh với quy chuẩn"],
-    "critical_weaknesses": ["string - điểm yếu nghiêm trọng với hậu quả và viện dẫn pháp lý"],
-    "detailed_recommendations": [
-        {{
-            "title": "string - tiêu đề ngắn gọn",
-            "description": "string - mô tả chi tiết từng bước hành động, bước kiểm tra cụ thể, vật tư cần thiết",
-            "priority": "urgent|high|medium|low",
-            "deadline": "string - thời hạn (VD: Ngay lập tức, 7 ngày, 30 ngày)",
-            "category": "string - nhóm liên quan",
-            "legal_basis": "string - căn cứ pháp lý cụ thể đến điều khoản",
-            "responsible_party": "string - người/đơn vị chịu trách nhiệm"
-        }}
-    ],
-    "daily_checklist": ["string - mục kiểm tra hàng ngày/hàng tuần"],
-    "improvement_plan": {{
-        "30_days": [
-            {{
-                "task": "string - tên công việc",
-                "detail": "string - mô tả chi tiết 2-4 câu, các bước cụ thể cần làm",
-                "responsible": "string - người/đơn vị chịu trách nhiệm",
-                "criteria": "string - tiêu chí hoàn thành",
-                "legal_basis": "string - căn cứ pháp lý"
-            }}
-        ],
-        "60_days": ["cùng cấu trúc object như 30_days"],
-        "90_days": ["cùng cấu trúc object như 30_days"]
-    }},
-    "legal_references": ["string - chỉ pháp luật hiện hành 2024-2025"],
-    "risk_summary": "string - tóm tắt ngắn 1 câu"
+  "overall_assessment": "...",
+  "strengths": ["..."],
+  "critical_weaknesses": ["..."],
+  "detailed_recommendations": [
+    {{"answers": [1], "issue": "...", "title": "...", "description": "...", "priority": "urgent|high|medium|low",
+      "deadline": "...", "responsible_party": "...", "legal_basis": "..."}}
+  ],
+  "daily_checklist": ["..."],
+  "improvement_plan": {{
+    "30_days": [{{"task": "...", "detail": "...", "responsible": "...", "criteria": "...", "legal_basis": "..."}}],
+    "60_days": [],
+    "90_days": []
+  }},
+  "legal_references": ["..."],
+  "risk_summary": "..."
 }}
 """
-    return prompt
 
 
 def build_fallback_analysis(assessment_data: dict) -> dict:
-    """Generate rule-based analysis when AI is not available."""
-    
-    risk_level = assessment_data.get("risk_level", "medium")
-    risk_pct = assessment_data.get("risk_percentage", 50)
-    category_scores = assessment_data.get("category_scores", [])
-    detailed_answers = assessment_data.get("detailed_answers", [])
-    
-    # Higher percentage = more risk, so worst categories = highest percentage
-    weak_cats = sorted(category_scores, key=lambda c: c.get("percentage", 0), reverse=True)
-    strong_cats = sorted(category_scores, key=lambda c: c.get("percentage", 100))
-    
-    overall = {
-        "critical": f"Cơ sở có mức nguy cơ cháy nổ RẤT CAO (tỷ lệ nguy cơ {risk_pct}%). Cần hành động khắc phục NGAY LẬP TỨC theo Luật PCCC 55/2024.",
-        "high": f"Cơ sở có mức nguy cơ cháy nổ CAO (tỷ lệ nguy cơ {risk_pct}%). Cần lập kế hoạch khắc phục khẩn cấp theo quy định tại Nghị định 105/2025/NĐ-CP.",
-        "medium": f"Cơ sở có mức nguy cơ cháy nổ TRUNG BÌNH (tỷ lệ nguy cơ {risk_pct}%). Cần cải thiện một số vấn đề để đáp ứng QCVN 06:2022/BXD.",
-        "low": f"Cơ sở có mức nguy cơ cháy nổ THẤP (tỷ lệ nguy cơ {risk_pct}%). Tiếp tục duy trì các biện pháp an toàn hiện tại."
-    }
-    
-    # Detailed strengths
-    strengths = []
-    for cat in strong_cats[:4]:
-        pct = cat.get("percentage", 0)
-        name = cat.get("category_name", "")
-        if pct <= 20:
-            strengths.append(f"{name}: Tỷ lệ nguy cơ ở mức thấp ({pct}%). Cơ sở thực hiện tốt các biện pháp an toàn trong nhóm này theo định hướng QCVN 06:2022/BXD.")
-        elif pct <= 30:
-            strengths.append(f"{name}: Tỷ lệ nguy cơ {pct}%, cơ bản chấp nhận được, cần tiếp tục duy trì và kiểm tra định kỳ.")
-    if not strengths:
-        strengths = ["Cơ sở đã chủ động thực hiện khảo sát đánh giá nguy cơ cháy nổ theo tinh thần Luật PCCC và CNCH 55/2024."]
-    
-    # Detailed weaknesses
-    weaknesses = []
-    for cat in weak_cats[:4]:
-        pct = cat.get("percentage", 0)
-        name = cat.get("category_name", "")
-        name_lower = name.lower()
-        if pct >= 60:
-            if "điện" in name_lower:
-                weaknesses.append(f"{name}: Tỷ lệ nguy cơ {pct}%, mức độ nghiêm trọng. Nguy cơ cháy do sự cố thiết bị điện rất cao. Cần rà soát và khắc phục ngay theo QCVN 25:2025/BCT và QCVN 25:2025/BKHCN trong 24h - 48h.")
-            else:
-                weaknesses.append(f"{name}: Tỷ lệ nguy cơ {pct}%, mức độ nghiêm trọng. Chưa đáp ứng yêu cầu kỹ thuật theo QCVN 06:2022/BXD. Cần có biện pháp xử lý kịp thời để tránh nguy cơ vi phạm Nghị định 105/2025/NĐ-CP.")
-        elif pct >= 40:
-            weaknesses.append(f"{name}: Tỷ lệ nguy cơ {pct}%. Cần sớm cải thiện để phòng ngừa sự cố phát sinh.")
-    if not weaknesses:
-        weaknesses = ["Chưa phát hiện điểm nguy cơ nghiêm trọng vượt ngưỡng. Cơ sở cần duy trì kiểm tra an toàn PCCC định kỳ theo Nghị định 105/2025/NĐ-CP."]
-    
-    # Generate detailed recommendations from answers
-    detailed_recs = _generate_fallback_recommendations(detailed_answers, weak_cats)
-    
-    priority_actions = []
-    for cat in weak_cats[:5]:
-        pct = cat.get("percentage", 0)
-        if pct >= 25:
-            priority = "urgent" if pct >= 70 else "high" if pct >= 50 else "medium"
-            deadline = "7 ngày" if priority == "urgent" else "30 ngày" if priority == "high" else "60 ngày"
-            priority_actions.append({
-                "action": f"Khắc phục các vấn đề trong lĩnh vực \"{cat['category_name']}\" (tỷ lệ nguy cơ {pct}%)",
-                "priority": priority,
-                "deadline": deadline
-            })
-    
-    return {
-        "overall_assessment": overall.get(risk_level, overall["medium"]),
-        "strengths": strengths,
-        "critical_weaknesses": weaknesses,
-        "detailed_recommendations": detailed_recs,
-        "priority_actions": priority_actions,
-        "improvement_plan": {
-            "30_days": [
-                {"task": "Khắc phục ngay các nguy cơ cháy nổ nghiêm trọng nhất", "detail": "Tự tay rà soát cơ sở: sờ từng ổ cắm xem có nóng không, ngửi xem tủ điện có mùi khét không, kiểm tra lối thoát có bị chặn không. Ngắt nguồn các mạch bất thường. Dọn hàng hóa/xe máy ra xa tủ điện và lối thoát.", "responsible": "Chủ cơ sở tự làm", "criteria": "100% điểm nguy cơ cao được xử lý hoặc cách ly", "legal_basis": "Luật PCCC 55/2024"},
-                {"task": "Mời thợ điện kiểm tra hệ thống", "detail": "Thuê thợ điện địa phương kiểm tra dây dẫn, aptomat, nối đất. Thay ổ cắm hỏng, thay aptomat đúng dòng định mức. Lắp RCCB 30mA cho mạch ở khu vực ẩm ướt.", "responsible": "Thợ điện địa phương", "criteria": "Hệ thống điện không nóng, CB không nhảy, có RCCB", "legal_basis": "QCVN 25:2025/BCT"},
-                {"task": "Mua bình chữa cháy", "detail": "Trang bị bình bột ABC 4kg có tem kiểm định, mua tại cơ sở kinh doanh thiết bị PCCC có nguồn gốc rõ ràng. Tối thiểu 1 bình/50m² sàn. Treo ở độ cao 0,8-1,5m, nơi dễ thấy và dễ lấy. Kiểm tra kim đồng hồ ở vùng xanh hàng tháng.", "responsible": "Chủ cơ sở tự mua", "criteria": "Đủ số lượng, treo đúng vị trí, kim vùng xanh", "legal_basis": "QCVN 10:2025/BCA"},
-                {"task": "Dọn thông thoáng lối thoát nạn", "detail": "Tự dọn xe máy, hàng hóa, đồ đạc cản trở lối thoát. Không khóa cửa thoát nạn trong giờ hoạt động. Lắp đầu báo khói độc lập tại hành lang, phòng ngủ.", "responsible": "Chủ cơ sở tự làm", "criteria": "Lối thoát rộng ≥ 1,2m, không bị cản trở", "legal_basis": "QCVN 06:2022/BXD (Sửa đổi 1:2023)"},
-                {"task": "Phổ biến kiến thức PCCC cho mọi người", "detail": "Dạy gia đình/nhân viên: cách gọi 114, cách dùng bình chữa cháy (Rút chốt → Hướng vòi vào gốc lửa → Bóp cò → Quét ngang), đường thoát nạn. Tổ chức thực hành theo hướng dẫn của cơ quan Cảnh sát PCCC địa phương.", "responsible": "Chủ cơ sở", "criteria": "100% người biết gọi 114 và biết dùng bình chữa cháy", "legal_basis": "Luật PCCC 55/2024"}
-            ],
-            "60_days": [
-                {"task": "Lắp thêm đầu báo khói và đèn chiếu sáng sự cố", "detail": "Gắn đầu báo khói độc lập vào trần mỗi phòng. Lắp đèn chiếu sáng sự cố có pin tại hành lang, cầu thang. Tự lắp được bằng khoan và vít.", "responsible": "Chủ cơ sở tự lắp", "criteria": "Mỗi phòng/tầng có ít nhất 1 đầu báo khói, hành lang có đèn sự cố", "legal_basis": "Nghị định 105/2025/NĐ-CP"},
-                {"task": "In sơ đồ thoát nạn và dán tại mỗi tầng", "detail": "Vẽ sơ đồ thoát nạn đơn giản, in khổ A3 và ép nhựa. Dán ở cầu thang, hành lang mỗi tầng. Chỉ cần ghi rõ: lối thoát, vị trí bình chữa cháy, vị trí tủ điện, số gọi 114.", "responsible": "Chủ cơ sở tự làm", "criteria": "Mỗi tầng có sơ đồ, mọi người biết đường thoát", "legal_basis": "Luật PCCC 55/2024"},
-                {"task": "Thay dây điện cũ và aptomat không đạt chuẩn", "detail": "Thay dây điện trên 15 năm bằng dây đạt chuẩn, đúng tiết diện (dây 2,5mm² cho ổ cắm, 4mm² cho điều hòa). Lắp aptomat đúng dòng định mức. Luồn dây trong ống bảo vệ.", "responsible": "Thợ điện địa phương", "criteria": "Dây mới, luồn ống, CB đúng dòng, RCCB 30mA khu ẩm", "legal_basis": "QCVN 25:2025/BCT, QCVN 25:2025/BKHCN"},
-                {"task": "Thực hành dùng bình chữa cháy", "detail": "Lấy 1 bình chữa cháy cũ/hết hạn để thực hành cho gia đình/nhân viên. Hướng dẫn theo quy tắc PASS: Rút chốt → Hướng vòi vào GỐC lửa (cách 1-2m) → Bóp cò → Quét ngang. Mỗi người thử 1 lần. Liên hệ PCCC địa phương để hỗ trợ miễn phí nếu cần.", "responsible": "Chủ cơ sở + PCCC quận/huyện", "criteria": "100% người biết dùng bình chữa cháy", "legal_basis": "Nghị định 105/2025/NĐ-CP"}
-            ],
-            "90_days": [
-                {"task": "Đánh giá lại bằng FRAS", "detail": "Vào fras-ai.com làm lại bài đánh giá nguy cơ cháy nổ. So sánh kết quả trước và sau khắc phục. Nếu tỷ lệ nguy cơ vẫn cao, kiểm tra lại các mục chưa khắc phục.", "responsible": "Chủ cơ sở", "criteria": "Tỷ lệ nguy cơ giảm ít nhất 30% so với lần đầu"},
-                {"task": "Lập checklist kiểm tra hàng tháng", "detail": "In ra bảng checklist đơn giản gồm: (1) Sờ ổ cắm có nóng không, (2) Ngửi tủ điện có mùi khét không, (3) Kiểm tra bình chữa cháy kim còn xanh, (4) Lối thoát có thông thoáng, (5) Đèn EXIT có sáng. Dán bảng tại tủ điện, mỗi tháng tick 1 lần.", "responsible": "Chủ cơ sở", "criteria": "Checklist được kiểm tra đều đặn hàng tháng"},
-                {"task": "Lắp van ngắt gas tự động (nếu dùng bếp gas)", "detail": "Lắp van ngắt gas tự động khi rò rỉ hoặc đầu dò gas kèm van ngắt, đặt sau van bình gas. Kiểm tra ống dẫn gas, nếu cũ trên 3 năm thì thay mới.", "responsible": "Chủ cơ sở tự lắp", "criteria": "Van tự ngắt khi rò gas, ống dẫn còn mới", "legal_basis": "Nghị định 105/2025/NĐ-CP"},
-                {"task": "Mua thang dây thoát nạn (nhà từ 2 tầng trở lên)", "detail": "Trang bị thang dây thoát hiểm 5-10m, treo sẵn tại ban công hoặc cửa sổ tầng cao. Hướng dẫn gia đình cách sử dụng. Thay thế cho lối thoát thứ hai khi cầu thang bị cháy.", "responsible": "Chủ cơ sở tự mua", "criteria": "Mỗi tầng có ít nhất 1 phương tiện thoát nạn dự phòng", "legal_basis": "Luật PCCC 55/2024"}
-            ]
-        },
-        "legal_references": CURRENT_LEGAL_REFERENCES,
-        "risk_summary": f"Tỷ lệ nguy cơ: {risk_pct}%. Mức nguy cơ: {risk_level.upper()}."
-    }
+    """Phân tích dự phòng khi AI không hoạt động: soạn từ kho tri thức (analysis_library)."""
+    from utils.analysis_library import compose_analysis
+    return compose_analysis(assessment_data)
 
 
 def _generate_fallback_recommendations(detailed_answers, weak_cats):

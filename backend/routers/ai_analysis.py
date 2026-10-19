@@ -22,6 +22,8 @@ from models import User, Assessment, AssessmentAnswer, CategoryScore, Question, 
 from middleware.auth_middleware import get_current_user, get_optional_user
 from middleware.rbac import require_role
 from utils.ai_prompt import build_analysis_prompt, build_fallback_analysis
+from utils.ai_rules import sanitize_analysis
+from utils.analysis_library import learn_from_analysis, ensure_red_flag_coverage, normalize_deadline
 
 router = APIRouter(prefix="/api/ai", tags=["AI Analysis"])
 
@@ -119,140 +121,6 @@ async def call_gemini(prompt: str, temperature: float = 0.3, system_prompt: str 
     raise ValueError("Không thể kết nối dịch vụ AI phân tích")
 
 
-async def call_rag_analysis(assessment_data: dict, db: Session) -> dict:
-    """Run RAG analysis based on local legal documents and Chroma/data_docs retrieval."""
-    docs_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data_docs")
-    keywords = []
-    for cs in assessment_data.get("category_scores", []):
-        if cs.get("risk_level") in ("high", "critical", "medium"):
-            keywords.append(cs.get("category_name", ""))
-    for ans in assessment_data.get("detailed_answers", []):
-        if ans.get("score", 0) >= 2:
-            keywords.append(ans.get("question_text", "")[:30])
-
-    retrieved_snippets = []
-    # Search in data_docs directly
-    if os.path.exists(docs_dir):
-        for fname in ["Nghị định 105.txt", "Nghị định 106.txt", "500 CÂU HỎI VÀ TRẢ LỜI VỀ AN TOÀN PHÒNG CHÁY CHỮA CHÁY (PCCC).txt"]:
-            fpath = os.path.join(docs_dir, fname)
-            if os.path.exists(fpath):
-                try:
-                    with open(fpath, "r", encoding="utf-8", errors="replace") as f:
-                        text_content = f.read()
-                        for kw in keywords[:3]:
-                            idx = text_content.lower().find(kw.lower()[:15])
-                            if idx != -1:
-                                snippet = text_content[max(0, idx - 100):min(len(text_content), idx + 600)]
-                                retrieved_snippets.append(f"[{fname}]: ...{snippet.strip()}...")
-                                if len(retrieved_snippets) >= 4:
-                                    break
-                except Exception:
-                    pass
-
-    context_str = "\n\n".join(retrieved_snippets[:4])
-    rag_prompt = f"""Dưới đây là các trích đoạn văn bản quy phạm pháp luật và quy chuẩn kỹ thuật PCCC được hệ thống RAG truy xuất từ cơ sở dữ liệu nội bộ:
-
---- TRÍCH ĐOẠN PHÁP LÝ & QUY CHUẨN TRUY XUẤT (CSDL NỘI BỘ CHROMADB) ---
-{context_str if context_str else "Nghị định 105/2025/NĐ-CP, Nghị định 106/2025/NĐ-CP, Nghị định 69/2026/NĐ-CP, QCVN 10:2025/BCA, QCVN 06:2022/BXD sửa đổi 1:2023, Luật PCCC số 55/2024/QH15, QCVN 25:2025/BCT, QCVN 25:2025/BKHCN"}
----------------------------------------------------------------------------------
-
-Dựa trên các căn cứ trích xuất ở trên và kết quả khảo sát của cơ sở:
-- Tên cơ sở: {assessment_data.get('facility_name')}
-- Loại hình: {assessment_data.get('facility_type')}
-- Tỷ lệ nguy cơ: {assessment_data.get('risk_percentage')}% ({assessment_data.get('risk_level')})
-- Các điểm nguy cơ: {json.dumps(assessment_data.get('detailed_answers', [])[:8], ensure_ascii=False)}
-
-Hãy đóng vai trò Hệ thống Thẩm định Pháp lý & Chế tài PCCC RAG (Retrieval-Augmented Generation & CSDL Vector ChromaDB).
-QUY TẮC BẮT BUỘC (STRICT POLICE COMPLIANCE RULES):
-1. VĂN PHONG VÀ TƯ CÁCH: Sử dụng văn phong hành chính nhà nước chuẩn mực, đĩnh đạc, khách quan, mang tính hướng dẫn chuyên môn kỹ thuật. Tuyệt đối KHÔNG dùng từ ngữ cảm tính, tiếng lóng, ẩn dụ tùy tiện (nghiêm cấm dùng từ như "tử huyệt", "báo động đỏ").
-2. ĐỐI CHIẾU CHÍNH XÁC: Đối chiếu chính xác từng tồn tại với điều khoản vi phạm và mức phạt tiền cụ thể theo Nghị định 106/2025/NĐ-CP, Nghị định 69/2026/NĐ-CP và Luật PCCC số 55/2024/QH15.
-3. PHÂN ĐỊNH NGUY CƠ & THỜI HẠN:
-   - Các nguy cơ trực tiếp gây cháy nổ (hệ thống điện, chập cháy, thiết bị phát nhiệt, rò rỉ khí gas, đun nấu/hàn cắt không an toàn) phải ghi thời hạn là "Khắc phục ngay (trong 24h - 48h)", tuyệt đối không để 30 hay 60 ngày.
-   - Tồn tại về lối thoát nạn và trang bị PCCC là điều kiện sống còn để cứu người và hạn chế thiệt hại khi xảy ra cháy, không phải nguyên nhân phát sinh cháy.
-4. MỤC ĐIỂM MẠNH: Đặt tên là "ƯU ĐIỂM" (ghi nhận các mặt cơ sở làm tốt).
-5. Trả về định dạng JSON thuần túy (không kèm markdown thừa) đúng 100% cấu trúc sau:
-{{
-    "overall_assessment": "Đánh giá tổng quan tuân thủ pháp lý theo CSDL đối soát RAG và rủi ro bị xử phạt hành chính",
-    "strengths": [
-        "Ưu điểm 1 kèm căn cứ quy chuẩn tuân thủ",
-        "Ưu điểm 2",
-        "Ưu điểm 3"
-    ],
-    "critical_weaknesses": [
-        "Tồn tại vi phạm 1: Hành vi vi phạm cụ thể, viện dẫn Điều ... Nghị định 106/2025/NĐ-CP, mức phạt tiền từ ... đến ... triệu đồng",
-        "Tồn tại vi phạm 2...",
-        "Tồn tại vi phạm 3..."
-    ],
-    "detailed_recommendations": [
-        {{
-            "title": "Tên khuyến cáo giải pháp pháp lý/kỹ thuật",
-            "description": "Mô tả chi tiết giải pháp khắc phục triệt để, yêu cầu tiêu chuẩn",
-            "priority": "urgent|high|medium|low",
-            "deadline": "Khắc phục ngay (trong 24h - 48h) hoặc số ngày cụ thể",
-            "legal_basis": "Điều ... Nghị định 106/2025/NĐ-CP hoặc NĐ 105/2025 hoặc QCVN ...",
-            "responsible_party": "Người/bộ phận chịu trách nhiệm"
-        }}
-    ],
-    "daily_checklist": [
-        "Việc 1 tự kiểm tra an toàn hàng ngày",
-        "Việc 2...",
-        "Việc 3...",
-        "Việc 4...",
-        "Việc 5..."
-    ],
-    "improvement_plan": {{
-        "30_days": [
-            {{
-                "task": "Xử lý khẩn cấp các nguy cơ trực tiếp gây cháy",
-                "detail": "Mô tả chi tiết hành động khắc phục trong 24h-48h đầu",
-                "responsible": "Đơn vị/người phụ trách",
-                "criteria": "Tiêu chuẩn hoàn thành",
-                "legal_basis": "Căn cứ pháp lý"
-            }}
-        ],
-        "60_days": [
-            {{
-                "task": "Nâng cấp, bảo dưỡng trang thiết bị và huấn luyện PCCC",
-                "detail": "Mô tả chi tiết",
-                "responsible": "Đơn vị phụ trách",
-                "criteria": "Tiêu chuẩn hoàn thành",
-                "legal_basis": "Căn cứ pháp lý"
-            }}
-        ],
-        "90_days": [
-            {{
-                "task": "Hoàn thiện hồ sơ quản lý PCCC và phương án chữa cháy",
-                "detail": "Mô tả chi tiết",
-                "responsible": "Đơn vị phụ trách",
-                "criteria": "Tiêu chuẩn hoàn thành",
-                "legal_basis": "Căn cứ pháp lý"
-            }}
-        ]
-    }},
-    "legal_references": [
-        "Luật Phòng cháy, chữa cháy và Cứu nạn, cứu hộ số 55/2024/QH15",
-        "Nghị định 105/2025/NĐ-CP",
-        "Nghị định 106/2025/NĐ-CP",
-        "Nghị định 69/2026/NĐ-CP",
-        "QCVN 06:2022/BXD kèm Sửa đổi 1:2023",
-        "QCVN 10:2025/BCA",
-        "QCVN 25:2025/BCT",
-        "QCVN 25:2025/BKHCN"
-    ]
-}}
-"""
-    # Build high-precision RAG analysis grounded in local legal documents and ChromaDB
-    rag_json = build_fallback_analysis(assessment_data)
-    rag_json["overall_assessment"] = (
-        f"Đối soát CSDL Văn bản Quy phạm Pháp luật & Quy chuẩn Kỹ thuật PCCC: "
-        f"Cơ sở '{assessment_data.get('facility_name')}' thuộc diện quản lý theo Nghị định 105/2025/NĐ-CP và Luật PCCC số 55/2024/QH15. "
-        f"Đối chiếu dữ liệu khảo sát với chế tài xử phạt vi phạm hành chính tại Nghị định 106/2025/NĐ-CP, "
-        f"cơ sở có {len(rag_json.get('critical_weaknesses', []))} nhóm hành vi tồn tại nguy cơ cần khắc phục ngay để tránh bị xử phạt hành chính hoặc đình chỉ hoạt động."
-    )
-    rag_json["source"] = "rag_chromadb"
-    return rag_json
-
-
 def get_assessment_data(assessment: Assessment, db: Session) -> dict:
     """Build assessment data dict for AI prompts."""
     cat_scores = db.query(CategoryScore).filter(
@@ -282,6 +150,7 @@ def get_assessment_data(assessment: Assessment, db: Session) -> dict:
             "question_text": q.question_text if q else "",
             "answer_text": opt.option_text if opt else "",
             "score": ans.score_obtained,
+            "category": (q.category.name if q and q.category else ""),
         })
 
     return {
@@ -309,7 +178,11 @@ async def analyze_assessment(
     current_user: Optional[User] = Depends(get_optional_user),
     db: Session = Depends(get_db)
 ):
-    """Run dual AI analysis (Gemini 3.8 Flash vs RAG ChromaDB) on a completed assessment."""
+    """Phân tích kết quả khảo sát bằng AI (một luồng duy nhất).
+
+    AI không phản hồi hoặc trả về sai cấu trúc thì dùng kho tri thức phân tích (utils/analysis_library.py),
+    cùng cấu trúc và giọng văn nên người dùng không thấy khác biệt.
+    """
     if current_user and current_user.role in ("admin", "superadmin"):
         assessment = db.query(Assessment).filter(Assessment.id == assessment_id).first()
     else:
@@ -324,11 +197,11 @@ async def analyze_assessment(
     if not assessment:
         raise HTTPException(status_code=404, detail="Không tìm thấy đánh giá")
 
-    # Fast cached response if already analyzed and not forcing re-analysis
+    # Trả ngay bản đã phân tích (đổi cấu trúc cũ hai luồng sang một luồng nếu gặp)
     if not force and assessment.ai_analysis:
         try:
-            cached = json.loads(assessment.ai_analysis)
-            if cached and isinstance(cached, dict) and (cached.get("overall_assessment") or cached.get("gemini_38")):
+            cached = flatten_analysis(json.loads(assessment.ai_analysis))
+            if cached and cached.get("overall_assessment"):
                 return cached
         except Exception:
             pass
@@ -336,52 +209,43 @@ async def analyze_assessment(
     assessment_data = get_assessment_data(assessment, db)
     prompt = build_analysis_prompt(assessment_data)
 
-    # 1. Runner for Gemini 3.8 Flash (9Router VPS)
-    async def run_gemini():
-        try:
-            res = await call_gemini(prompt, temperature=0.3, timeout=85.0)
-            res["source"] = "gemini_38_flash"
-            return res
-        except Exception as e:
-            print(f"[Gemini 3.8 Flash] Error: {e}")
-            fallback = build_fallback_analysis(assessment_data)
-            fallback["source"] = "gemini_fallback"
-            return fallback
+    analysis = None
+    try:
+        res = await call_gemini(prompt, temperature=0.3, timeout=85.0)
+        if isinstance(res, dict) and res.get("overall_assessment") and res.get("detailed_recommendations"):
+            analysis = sanitize_analysis(res)
+            for rec in analysis.get("detailed_recommendations", []):
+                rec["deadline"] = normalize_deadline(rec.get("deadline"), rec.get("priority"))
+            try:
+                learn_from_analysis(assessment_data, analysis)   # lưu vào kho tri thức dự phòng
+            except Exception as e:
+                print(f"[analysis_library] Không lưu được: {e}")
+            analysis = ensure_red_flag_coverage(assessment_data, analysis)
+            analysis["source"] = "ai"
+    except Exception as e:
+        print(f"[AI analysis] Lỗi gọi AI: {e}")
 
-    # 2. Runner for RAG & ChromaDB legal verification
-    async def run_rag():
-        try:
-            return await call_rag_analysis(assessment_data, db)
-        except Exception as e:
-            print(f"[RAG ChromaDB] Error: {e}")
-            fallback = build_fallback_analysis(assessment_data)
-            fallback["source"] = "rag_fallback"
-            return fallback
+    if analysis is None:
+        analysis = build_fallback_analysis(assessment_data)
 
-    # Execute both runners concurrently via asyncio.gather
-    gemini_38, rag_chroma = await asyncio.gather(run_gemini(), run_rag())
-
-    dual_analysis = {
-        "dual_mode": True,
-        "gemini_38": gemini_38,
-        "rag_chroma": rag_chroma,
-        # Standard fields for backwards compatibility
-        "overall_assessment": gemini_38.get("overall_assessment") or rag_chroma.get("overall_assessment"),
-        "strengths": gemini_38.get("strengths") or rag_chroma.get("strengths"),
-        "critical_weaknesses": gemini_38.get("critical_weaknesses") or rag_chroma.get("critical_weaknesses"),
-        "detailed_recommendations": gemini_38.get("detailed_recommendations") or rag_chroma.get("detailed_recommendations"),
-        "daily_checklist": gemini_38.get("daily_checklist") or rag_chroma.get("daily_checklist"),
-        "improvement_plan": gemini_38.get("improvement_plan") or rag_chroma.get("improvement_plan"),
-        "legal_references": gemini_38.get("legal_references") or rag_chroma.get("legal_references"),
-    }
-
-    # Save to DB
-    assessment.ai_analysis = json.dumps(dual_analysis, ensure_ascii=False)
+    assessment.ai_analysis = json.dumps(analysis, ensure_ascii=False)
     if assessment.status != "completed":
         assessment.status = "completed"
     db.commit()
 
-    return dual_analysis
+    return analysis
+
+
+def flatten_analysis(obj):
+    """Bản cũ lưu hai luồng (gemini_38 và rag_chroma); chỉ giữ một luồng."""
+    if isinstance(obj, dict) and obj.get("dual_mode"):
+        base = obj.get("gemini_38") or {}
+        flat = {k: obj.get(k) or base.get(k) for k in (
+            "overall_assessment", "strengths", "critical_weaknesses", "detailed_recommendations",
+            "daily_checklist", "improvement_plan", "legal_references")}
+        flat["risk_summary"] = base.get("risk_summary", "")
+        return sanitize_analysis(flat)
+    return obj
 
 
 # ======================== 2. AI QUESTION GENERATION ========================

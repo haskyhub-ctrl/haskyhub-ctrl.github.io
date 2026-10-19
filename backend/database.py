@@ -69,6 +69,7 @@ def migrate_db():
             "longitude": "FLOAT",
             "is_demo": f"BOOLEAN {bool_false}",
             "mitigation_data": "TEXT",
+            "tracking_code": "VARCHAR(16)",
         },
     }
 

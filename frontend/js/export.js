@@ -9,10 +9,8 @@
 const FRAS_LEGAL_REFERENCES = [
     'Luật Phòng cháy, chữa cháy và Cứu nạn, cứu hộ số 55/2024/QH15',
     'Luật Điện lực số 61/2024/QH15',
-    'Luật Xử lý vi phạm hành chính số 15/2012/QH13 và các văn bản sửa đổi, bổ sung',
     'Nghị quyết số 66.18/2026/NQ-CP ngày 18/5/2026 của Chính phủ',
     'Nghị định số 105/2025/NĐ-CP quy định chi tiết một số điều và biện pháp thi hành Luật Phòng cháy, chữa cháy và Cứu nạn, cứu hộ (sửa đổi, bổ sung bởi Nghị định số 347/2026/NĐ-CP)',
-    'Nghị định số 106/2025/NĐ-CP và Nghị định số 69/2026/NĐ-CP quy định xử phạt vi phạm hành chính về phòng cháy, chữa cháy và cứu nạn, cứu hộ',
     'QCVN 06:2022/BXD và Sửa đổi 1:2023: Quy chuẩn kỹ thuật quốc gia về An toàn cháy cho nhà và công trình',
     'QCVN 10:2025/BCA: Quy chuẩn kỹ thuật quốc gia về trang bị, bố trí phương tiện phòng cháy, chữa cháy, cứu nạn, cứu hộ cho nhà và công trình',
     'QCVN 01:2021/BXD: Quy chuẩn kỹ thuật quốc gia về Quy hoạch xây dựng',
@@ -130,7 +128,7 @@ async function generatePDFFromHTML(data) {
         if (aiObj.overall_assessment) {
             aiHtml += `
             <div class="pdf-avoid-break" style="background: #f8fafc; border: 1px solid #cbd5e1; border-left: 5px solid #0f172a; padding: 12px 14px; margin-bottom: 14px;">
-                <div style="font-weight: bold; color: #0f172a; font-size: 13px; text-transform: uppercase; margin-bottom: 4px;">1. KẾT LUẬN THẨM ĐỊNH TỔNG QUAN</div>
+                <div style="font-weight: bold; color: #0f172a; font-size: 13px; text-transform: uppercase; margin-bottom: 4px;">1. NHẬN ĐỊNH TỔNG QUAN</div>
                 <div style="font-size: 12px; color: #1e293b; line-height: 1.55;">${aiObj.overall_assessment}</div>
             </div>`;
         }
@@ -287,7 +285,7 @@ async function generatePDFFromHTML(data) {
         aiHtml += `</div>`;
     }
     const sectionFourTitle = aiObj
-        ? 'IV. KẾT LUẬN THẨM ĐỊNH & KHUYẾN CÁO KHẮC PHỤC TỪ TRÍ TUỆ NHÂN TẠO'
+        ? 'IV. NHẬN ĐỊNH & KHUYẾN CÁO KHẮC PHỤC TỪ TRÍ TUỆ NHÂN TẠO'
         : 'IV. KHUYẾN CÁO KHẮC PHỤC';
 
     // Build the complete PDF document HTML

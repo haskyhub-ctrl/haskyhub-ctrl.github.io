@@ -13,6 +13,7 @@ from schemas import AssessmentResponse, AssessmentDetail, CategoryScoreResponse,
 from middleware.auth_middleware import get_current_user, get_optional_user
 from utils.recommendations import get_recommendations_for_assessment
 from utils.scoring import score_assessment, calculate_risk_level, is_key_category
+from utils import tracking
 
 router = APIRouter(prefix="/api/assessments", tags=["Assessments"])
 
@@ -344,6 +345,24 @@ def _build_default_mitigation_data(assessment: Assessment, db: Session, initial:
     }
 
 
+@router.get("/{assessment_id}/tracking")
+def get_assessment_tracking(
+    assessment_id: str,
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    """Mã theo dõi của hồ sơ, chỉ chủ hồ sơ xem được. Chỉ cấp cho người khảo sát không tài khoản."""
+    assessment = db.query(Assessment).filter(Assessment.id == assessment_id, Assessment.user_id == current_user.id).first()
+    if not assessment:
+        raise HTTPException(status_code=404, detail="Không tìm thấy hồ sơ của bạn")
+    if current_user.facility_code or current_user.role != "user":
+        return {"tracking_code": None, "managed_account": True}
+    if not assessment.tracking_code:
+        assessment.tracking_code = tracking.new_code(db, Assessment)
+        db.commit()
+    return {"tracking_code": tracking.format_code(assessment.tracking_code), "managed_account": False}
+
+
 @router.get("/{assessment_id}/mitigation")
 def get_assessment_mitigation(
     assessment_id: str,
@@ -393,11 +412,12 @@ Các hạng mục chưa khắc phục ({len(todo)}):
 {chr(10).join(todo) or '- Không còn'}
 
 Hãy viết nhận xét ngắn (3-5 câu) gửi chủ cơ sở về tiến độ khắc phục: ghi nhận phần đã làm, chỉ rõ 1-3 việc cần ưu tiên tiếp theo (nguy cơ điện, nguồn lửa/nhiệt phải làm trước), nhắc giữ lại bằng chứng khắc phục.
-Văn phong hành chính, khách quan, không dùng dấu gạch ngang dài, không nêu chi phí, không bịa số hiệu văn bản pháp luật.
+Giọng hướng dẫn, động viên, không dùng các từ vi phạm, xử phạt, chế tài, đình chỉ; không dùng dấu gạch ngang dài, không nêu chi phí, không bịa số hiệu văn bản pháp luật; chỉ nêu điều có trong dữ liệu.
 Trả về JSON: {{"advice": "nội dung nhận xét"}}"""
     try:
         res = await asyncio.wait_for(call_gemini(prompt, temperature=0.3), timeout=40)
-        advice = (res.get("advice") or res.get("overall_assessment") or "").strip()
+        from utils.ai_rules import sanitize_text
+        advice = sanitize_text((res.get("advice") or res.get("overall_assessment") or "").strip())
         return advice or None
     except Exception as e:
         print(f"[Mitigation AI] {e}")

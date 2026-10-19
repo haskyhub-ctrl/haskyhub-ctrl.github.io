@@ -1569,3 +1569,13 @@ tbody tr:hover {
     .nav-user { gap: 6px; flex-shrink: 0; }
     .nav-user .user-name { display: none; }
 }
+
+
+/* Khung mã theo dõi cho người khảo sát không tài khoản */
+.tracking-box { background: #FFFBEB; border: 1px solid #F3D98B; border-left: 5px solid #C9962C; padding: 16px 18px; margin: 0 0 22px; }
+.tracking-title { font-size: 0.78rem; font-weight: 800; text-transform: uppercase; color: #7A5A0F; letter-spacing: 0.4px; }
+.tracking-code { font-family: Consolas, 'Courier New', monospace; font-size: 1.6rem; font-weight: 900; letter-spacing: 3px; color: #0F2347; margin: 6px 0 8px; word-break: break-all; }
+.tracking-note { font-size: 0.86rem; color: #5B4A1A; line-height: 1.55; margin: 0 0 10px; }
+.tracking-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.tracking-entry { max-width: 520px; margin: 0 auto; text-align: center; padding: 28px 16px; }
+.tracking-entry input { width: 100%; text-align: center; font-family: Consolas, 'Courier New', monospace; font-size: 1.2rem; letter-spacing: 2px; text-transform: uppercase; padding: 12px; border: 1.5px solid #94A3B8; box-sizing: border-box; margin: 12px 0; }

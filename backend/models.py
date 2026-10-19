@@ -116,6 +116,7 @@ class Assessment(Base):
     is_demo = Column(Boolean, default=False)  # Flag dữ liệu mẫu, dễ xóa hàng loạt
     ai_analysis = Column(Text, nullable=True)
     mitigation_data = Column(Text, nullable=True)
+    tracking_code = Column(String(16), nullable=True, index=True)  # mã theo dõi cho người khảo sát không tài khoản
     started_at = Column(DateTime, default=datetime.utcnow)
     completed_at = Column(DateTime, nullable=True)
     created_at = Column(DateTime, default=datetime.utcnow)

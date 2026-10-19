@@ -12,10 +12,10 @@ Quy tắc tính điểm: Weighted Scoring + Cờ đỏ (red flag):
 2. Mức nguy cơ (dùng chung cho tổng thể, từng nhóm và theo dõi khắc phục):
      0-20% LOW • 21-45% MEDIUM • 46-70% HIGH • 71-100% CRITICAL
 
-3. Nâng mức (chỉ áp dụng cho các nhóm trọng yếu: điện, lửa/nhiệt, thoát nạn & PCCC, máy móc,
-   tự cháy, phương tiện giao thông và các nhóm đặc thù; không áp dụng cho thiên nhiên, bổ sung):
-   - Có ít nhất 1 câu trả lời ở mức nghiêm trọng nhất (cờ đỏ, 3 điểm) -> tổng thể tối thiểu HIGH
-   - Có nhóm trọng yếu ở mức CRITICAL -> tối thiểu HIGH
+3. Nâng mức:
+   - Có ít nhất 1 câu trả lời ở mức nghiêm trọng nhất (cờ đỏ, 3 điểm) ở BẤT KỲ nhóm nào -> tổng thể tối thiểu HIGH
+   - Có nhóm trọng yếu (điện, lửa/nhiệt, thoát nạn & PCCC, máy móc, tự cháy, phương tiện, các nhóm đặc thù;
+     không gồm thiên nhiên, bổ sung) ở mức CRITICAL -> tối thiểu HIGH
    - Có nhóm trọng yếu ở mức HIGH     -> tối thiểu MEDIUM
 """
 
@@ -127,7 +127,9 @@ def calculate_category_scores(answers, questions_by_category, categories, zero_q
             if not answer or q.id in zero_question_ids:
                 continue
             obtained += answer.score_obtained
-            if key and q_max >= RED_FLAG_SCORE and answer.score_obtained >= RED_FLAG_SCORE:
+            # Câu trả lời mức nghiêm trọng nhất (cờ đỏ) được đếm ở MỌI nhóm, kể cả thiên nhiên và bổ sung:
+            # một nguy cơ rất cao ở đâu cũng phải kéo mức chung lên, dù các mục khác thấp.
+            if q_max >= RED_FLAG_SCORE and answer.score_obtained >= RED_FLAG_SCORE:
                 red_flags += 1
 
         percentage = (obtained / max_score * 100) if max_score > 0 else 0

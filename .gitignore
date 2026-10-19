@@ -23,3 +23,7 @@ build/
 .agents/
 GEMINI.md
 
+
+# Dữ liệu chạy của kho phân tích AI (không đưa lên git, không bị ghi đè khi cập nhật code)
+backend/data/
+backend/chroma_analysis/
