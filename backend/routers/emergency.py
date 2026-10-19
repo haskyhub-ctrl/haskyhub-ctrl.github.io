@@ -18,8 +18,9 @@ Base.metadata.create_all(bind=engine, tables=[FireReport.__table__])
 router = APIRouter(prefix="/api/emergency", tags=["Emergency Fire Report 114"])
 
 REPORTS_LOG_FILE = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "fire_reports.json")
-TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "8685857438:AAE4m0Ew0yh1ov_gnN3ANEz2_wu8GALN-3Y")
-TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "-1003941425126")
+# Token bot và ID nhóm đọc từ biến môi trường (file backend/.env trên máy chủ), không ghi cứng trong mã nguồn.
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
+TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "")
 
 
 def get_target_chat_ids() -> List[str]:
@@ -242,7 +243,6 @@ def get_telegram_status(current_user: User = Depends(get_current_user)):
     chats = get_target_chat_ids()
     return {
         "bot_configured": bool(TELEGRAM_BOT_TOKEN),
-        "bot_token_preview": TELEGRAM_BOT_TOKEN[:10] + "..." if TELEGRAM_BOT_TOKEN else None,
         "active_chat_ids": chats,
         "status": "ready" if chats else "waiting_for_user_chat"
     }

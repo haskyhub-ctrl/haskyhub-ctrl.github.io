@@ -41,8 +41,10 @@ GEMINI_FALLBACK_MODELS = [
     "gemini-2.5-flash-lite",
 ]
 
-NINEROUTER_BASE_URL = os.getenv("NINEROUTER_BASE_URL", "http://194.233.64.180:20128/v1").rstrip("/")
-NINEROUTER_API_KEY = os.getenv("NINEROUTER_API_KEY", "sk-44b926960a1d7a82-o52i0k-a1385734")
+# Khóa và địa chỉ 9router đọc từ biến môi trường (file backend/.env trên máy chủ), không ghi cứng trong mã nguồn.
+# Dùng chung biến ROUTER_* với chatbot nếu không đặt riêng NINEROUTER_*.
+NINEROUTER_BASE_URL = (os.getenv("NINEROUTER_BASE_URL") or os.getenv("ROUTER_BASE_URL") or "http://127.0.0.1:20128/v1").rstrip("/")
+NINEROUTER_API_KEY = os.getenv("NINEROUTER_API_KEY") or os.getenv("ROUTER_API_KEY") or ""
 GEMINI_MODEL = os.getenv("GEMINI_MODEL", "ag/gemini-3.8-flash")
 
 
