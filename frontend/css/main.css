@@ -1579,3 +1579,10 @@ tbody tr:hover {
 .tracking-actions { display: flex; flex-wrap: wrap; gap: 8px; }
 .tracking-entry { max-width: 520px; margin: 0 auto; text-align: center; padding: 28px 16px; }
 .tracking-entry input { width: 100%; text-align: center; font-family: Consolas, 'Courier New', monospace; font-size: 1.2rem; letter-spacing: 2px; text-transform: uppercase; padding: 12px; border: 1.5px solid #94A3B8; box-sizing: border-box; margin: 12px 0; }
+
+/* Thể thức văn bản: quốc hiệu, tiêu ngữ và tên đơn vị căn giữa */
+body .gov-agency-name { align-items: center; text-align: center; }
+@media (min-width: 769px) {
+    body .gov-top-bar .container { position: relative; justify-content: center; }
+    body .gov-top-bar .gov-top-right { position: absolute; right: 20px; top: 50%; transform: translateY(-50%); }
+}
