@@ -154,7 +154,7 @@ sudo netfilter-persistent save
 sudo -u postgres psql
 
 # 2. Trong PostgreSQL, chạy các lệnh sau:
-CREATE USER frasuser WITH PASSWORD 'FrasSecure2024!';
+CREATE USER frasuser WITH PASSWORD '<mật khẩu CSDL tự đặt>';
 CREATE DATABASE fras OWNER frasuser;
 GRANT ALL PRIVILEGES ON DATABASE fras TO frasuser;
 \q
@@ -190,10 +190,15 @@ nano .env
 Dán nội dung sau vào (nhấn Ctrl+Shift+V để dán):
 
 ```
-# Backend Environment Variables
-GEMINI_API_KEY="AIzaSyBdf88j0uRkjX00ov5YsCqu5NQ2PY82_bI"
-SECRET_KEY="fras-production-secret-key-oracle-2024"
-DATABASE_URL="postgresql://frasuser:FrasSecure2024!@localhost:5432/fras"
+# Backend Environment Variables (xem mẫu đầy đủ ở backend/.env.example)
+# KHÔNG dán giá trị thật vào tài liệu hay đưa lên git.
+GEMINI_API_KEY="<khóa Gemini>"
+SECRET_KEY="<chuỗi ngẫu nhiên dài, tạo bằng: openssl rand -hex 32>"
+DATABASE_URL="postgresql://frasuser:<mật khẩu CSDL>@localhost:5432/fras"
+NINEROUTER_API_KEY="<khóa 9router>"
+ROUTER_API_KEY="<khóa 9router>"
+TELEGRAM_BOT_TOKEN="<token bot>"
+TELEGRAM_CHAT_ID="<ID nhóm>"
 ```
 
 Nhấn `Ctrl + O` → Enter để lưu, `Ctrl + X` để thoát.

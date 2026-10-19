@@ -10,6 +10,8 @@ from database import get_db
 from models import User
 
 SECRET_KEY = os.getenv("SECRET_KEY", "fras-secret-key-change-in-production-2024")
+if SECRET_KEY == "fras-secret-key-change-in-production-2024":
+    print("[CẢNH BÁO BẢO MẬT] SECRET_KEY đang dùng giá trị mặc định công khai. Hãy đặt SECRET_KEY riêng trong backend/.env.")
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_HOURS = 24
 
