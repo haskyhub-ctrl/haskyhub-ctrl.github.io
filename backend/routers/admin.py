@@ -328,7 +328,7 @@ def get_map_data(
             User.latitude.isnot(None),
             User.longitude.isnot(None),
             User.facility_code.isnot(None),
-        ).all()
+        ).limit(2000).all()
         for u in facility_users:
             if u.id in assessed_user_ids:
                 continue

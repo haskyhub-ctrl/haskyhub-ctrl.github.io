@@ -93,7 +93,7 @@ def get_user_map_data(
             User.latitude.isnot(None),
             User.longitude.isnot(None),
             User.facility_code.isnot(None),
-        ).all()
+        ).limit(1000).all()
         for u_id, u_full_name, u_types, u_ward, u_prov, u_lat, u_lng, u_org in facility_users:
             if u_id in assessed_user_ids:
                 continue
