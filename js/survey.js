@@ -581,7 +581,7 @@ function renderReview(container) {
                 <div class="review-section">
                     <h4>📋 Thông tin cơ sở</h4>
                     <div class="review-item"><span class="label">Tên cơ sở:</span><span class="value">${info.facility_name || 'Chưa đặt tên'}</span></div>
-                    <div class="review-item"><span class="label">Loại hình:</span><span class="value">${info.facility_type || 'N/A'}</span></div>
+                    <div class="review-item"><span class="label">Loại hình:</span><span class="value">${(info.facility_type || '').split(',').map(v => (facilityTypes.find(t => t.value === v.trim()) || {}).label || v.trim()).filter(Boolean).join('; ') || 'N/A'}</span></div>
                     <div class="review-item"><span class="label">Địa chỉ:</span><span class="value">${info.facility_address || 'N/A'}</span></div>
                 </div>
                 
