@@ -39,7 +39,7 @@
 
     <script src="/js/api.js?v=20261021_t1"></script>
     <script src="/js/charts.js"></script>
-    <script src="/js/export.js?v=20261019c"></script>
+    <script src="/js/export.js?v=20261022_p1"></script>
     <script>
         let currentAssessmentData = null;
         let isAiAnalyzing = false;
@@ -125,7 +125,7 @@
                 : rawData;
 
             const riskColors = { low: '#16a34a', medium: '#d97706', high: '#ea580c', critical: '#dc2626' };
-            const riskLabels = { low: 'AN TOÀN / NGUY CƠ THẤP', medium: 'TRUNG BÌNH / CẦN CẢI THIỆN', high: 'NGUY CƠ CAO', critical: 'RẤT CAO / CẤP BÁO' };
+            const riskLabels = { low: 'AN TOÀN / NGUY CƠ THẤP', medium: 'TRUNG BÌNH / CẦN CẢI THIỆN', high: 'NGUY CƠ CAO', critical: 'RẤT CAO / CẦN XỬ LÝ NGAY' };
             const riskColor = riskColors[data.risk_level] || '#0f172a';
             const riskText = riskLabels[data.risk_level] || 'CHƯA XÁC ĐỊNH';
             const cardClass = data.risk_level === 'critical' || data.risk_level === 'high' ? 'danger' : data.risk_level === 'medium' ? 'warning' : 'success';
@@ -246,7 +246,7 @@
                                 <strong>Bản chất của chỉ số:</strong> Tỷ lệ <strong>${data.risk_percentage}% nguy cơ</strong> không phải là điểm số thi cử đạt/trượt, mà là <strong>thước đo mức độ tích tụ hiểm họa cháy nổ</strong> của công trình dựa trên ma trận xác suất thống kê thực tế tại Việt Nam (trong đó: <strong>sự cố hệ thống thiết bị điện chiếm hơn 50%</strong> trọng số các nguyên nhân gây ra cháy; <strong>bất cẩn nguồn lửa/nhiệt chiếm 15%</strong>... Tồn tại về lối thoát nạn và trang bị phương tiện PCCC là các điều kiện quyết định khả năng thoát nạn sống còn và hạn chế thiệt hại khi xảy ra hỏa hoạn, không phải nguyên nhân phát sinh cháy).
                             </p>
                             <p style="margin:0 0 10px;">
-                                <strong>Quy tắc an toàn tính mạng:</strong> Dù tổng điểm nguy cơ của cơ sở có thể thấp, nhưng nếu xuất hiện bất kỳ nguy cơ nghiêm trọng nào tại các nhóm có tỷ lệ xảy ra cao (như sự cố chập cháy hệ thống điện, thiết bị phát nhiệt quá mức, rò rỉ khí gas, hoặc lối thoát nạn duy nhất bị bịt kín), hệ thống sẽ lập tức kích hoạt mức cảnh báo nguy cơ cao để chủ cơ sở không được chủ quan.
+                                <strong>Quy tắc an toàn tính mạng:</strong> Dù tổng điểm nguy cơ của cơ sở có thể thấp, nhưng nếu xuất hiện bất kỳ nguy cơ nghiêm trọng nào tại các nhóm có tỷ lệ xảy ra cao (như sự cố chập cháy hệ thống điện, thiết bị phát nhiệt quá mức, rò rỉ khí gas, hoặc lối thoát nạn duy nhất bị chắn), hệ thống sẽ lập tức kích hoạt mức cảnh báo nguy cơ cao để chủ cơ sở không được chủ quan.
                             </p>
 
                             ${isEscalated(data) ? `
@@ -257,19 +257,19 @@
                             <div class="risk-scale-row">
                                 <div class="risk-scale-step ${data.risk_level === 'low' ? 'active' : ''}" style="border-top: 4px solid #16a34a;">
                                     <span class="step-tag" style="color:#16a34a;">MỨC 1: 0% - 20% (AN TOÀN)</span>
-                                    Tuân thủ tốt quy chuẩn PCCC, nguy cơ phát sinh cháy nổ ở mức tối thiểu.
+                                    Điều kiện an toàn tốt, nguy cơ phát sinh cháy nổ ở mức tối thiểu.
                                 </div>
                                 <div class="risk-scale-step ${data.risk_level === 'medium' ? 'active' : ''}" style="border-top: 4px solid #d97706;">
                                     <span class="step-tag" style="color:#d97706;">MỨC 2: 21% - 45% (CẦN CẢI THIỆN)</span>
-                                    Đã xuất hiện mầm mống rủi ro (quá tải điện nhẹ, thiếu bảo dưỡng thiết bị), cần tự chấn chỉnh sớm.
+                                    Đã xuất hiện mầm mống rủi ro (quá tải điện nhẹ, thiếu bảo dưỡng thiết bị), nên tự chấn chỉnh sớm.
                                 </div>
                                 <div class="risk-scale-step ${data.risk_level === 'high' ? 'active' : ''}" style="border-top: 4px solid #ea580c;">
                                     <span class="step-tag" style="color:#ea580c;">MỨC 3: 46% - 70% (NGUY CƠ CAO)</span>
-                                    Tồn tại vi phạm nghiêm trọng có thể trực tiếp phát sinh hỏa hoạn. Phải khắc phục ngay các nguy cơ điện/nhiệt trong 24h - 48h.
+                                    Có tồn tại có thể trực tiếp phát sinh hỏa hoạn. Nên xử lý ngay các nguy cơ điện, nhiệt trong 24h - 48h.
                                 </div>
                                 <div class="risk-scale-step ${data.risk_level === 'critical' ? 'active' : ''}" style="border-top: 4px solid #dc2626;">
-                                    <span class="step-tag" style="color:#dc2626;">MỨC 4: 71% - 100% (CẤP BÁO)</span>
-                                    Điều kiện an toàn cực kỳ nguy hiểm, nguy cơ cháy nổ tức thời đe dọa trực tiếp tính mạng con người!
+                                    <span class="step-tag" style="color:#dc2626;">MỨC 4: 71% - 100% (RẤT CAO)</span>
+                                    Nguy cơ cháy nổ rất cao, cần ưu tiên xử lý ngay để bảo vệ tính mạng và tài sản.
                                 </div>
                             </div>
                         </div>

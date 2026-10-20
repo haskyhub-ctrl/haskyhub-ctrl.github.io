@@ -57,10 +57,97 @@ function formatPdfFacilityType(type) {
         .map(t => dict[t.toLowerCase()] || t).join('; ');
 }
 
+
+// ---------- Các phần bổ sung để biên bản PDF đầy đủ như trang kết quả ----------
+function pdfHasAiAnalysis(data) {
+    try {
+        let a = typeof data.ai_analysis === 'string' ? JSON.parse(data.ai_analysis) : data.ai_analysis;
+        if (a && a.dual_mode) a = Object.assign({}, a.gemini_38 || {}, a);
+        return !!(a && a.overall_assessment);
+    } catch (e) { return false; }
+}
+
+// Mức nguy cơ cao hơn mức tương ứng với tỷ lệ % (do cờ đỏ hoặc nhóm trọng yếu), giống trang kết quả
+function pdfIsEscalated(data) {
+    const rank = { low: 0, medium: 1, high: 2, critical: 3 };
+    const p = data.risk_percentage;
+    const byPct = p <= 20 ? 0 : p <= 45 ? 1 : p <= 70 ? 2 : 3;
+    return (rank[data.risk_level] ?? 0) > byPct;
+}
+
+function pdfDeadlineText(level) {
+    if (level === 'critical' || level === 'high') return 'Khắc phục ngay (trong 24h - 48h) đối với các nguy cơ chập cháy điện và nguồn nhiệt.';
+    if (level === 'medium') return 'Khắc phục trong 30 - 60 ngày, ưu tiên các nội dung về điện, nguồn nhiệt, lối thoát nạn.';
+    return 'Duy trì kiểm tra định kỳ, tiếp tục giữ các điều kiện an toàn hiện có.';
+}
+
+// Ảnh biểu đồ lấy trực tiếp từ các biểu đồ đang hiển thị trên trang kết quả (nếu có)
+function pdfChartImg(id, widthPx) {
+    const c = document.getElementById(id);
+    if (!c || !c.width || !c.height) return '';
+    try {
+        const url = c.toDataURL('image/png');
+        const h = Math.round(widthPx * c.height / c.width);
+        return `<img src="${url}" alt="" style="width:${widthPx}px; height:${h}px; display:block; margin:0 auto;">`;
+    } catch (e) { return ''; }
+}
+
+function pdfChartsHtml() {
+    const bar = pdfChartImg('bar-chart', 740);
+    const radar = pdfChartImg('radar-chart', 330);
+    const gauge = pdfChartImg('gauge-chart', 330);
+    if (!bar && !radar && !gauge) return '';
+    const head = (t) => `<div style="font-size: 11.5px; font-weight: bold; color: #0f172a; text-transform: uppercase; margin: 0 0 6px;">${t}</div>`;
+    return `
+        <div class="pdf-avoid-break" style="margin-bottom: 16px;">
+            <div style="font-size: 13px; font-weight: bold; color: #0f172a; text-transform: uppercase; background: #f1f5f9; padding: 6px 10px; border-left: 4px solid #991b1b; margin-bottom: 8px;">
+                III. BIỂU ĐỒ PHÂN BỔ NGUY CƠ
+            </div>
+            ${bar ? `<div style="border: 1px solid #e2e8f0; padding: 8px; margin-bottom: 8px;">${head('Tỷ lệ nguy cơ theo từng nhóm câu hỏi')}${bar}</div>` : ''}
+            ${(radar || gauge) ? `
+            <table style="width: 100%; border-collapse: collapse;"><tr>
+                ${radar ? `<td style="width: 50%; border: 1px solid #e2e8f0; padding: 8px; vertical-align: top;">${head('Biểu đồ radar theo các trục')}${radar}</td>` : ''}
+                ${gauge ? `<td style="width: 50%; border: 1px solid #e2e8f0; padding: 8px; vertical-align: top;">${head('Thước đo cấp độ nguy cơ')}${gauge}</td>` : ''}
+            </tr></table>` : ''}
+        </div>`;
+}
+
+// Phần hướng dẫn đọc hiểu chỉ số và thang 4 mức, giống trang kết quả
+function pdfExplainerHtml(data, riskText, riskColor) {
+    const levels = [
+        { k: 'low', c: '#16a34a', t: 'MỨC 1: 0% - 20% (AN TOÀN)', d: 'Điều kiện an toàn tốt, nguy cơ phát sinh cháy nổ ở mức tối thiểu.' },
+        { k: 'medium', c: '#d97706', t: 'MỨC 2: 21% - 45% (CẦN CẢI THIỆN)', d: 'Đã xuất hiện mầm mống rủi ro (quá tải điện nhẹ, thiếu bảo dưỡng thiết bị), nên tự chấn chỉnh sớm.' },
+        { k: 'high', c: '#ea580c', t: 'MỨC 3: 46% - 70% (NGUY CƠ CAO)', d: 'Có tồn tại có thể trực tiếp phát sinh hỏa hoạn. Nên xử lý ngay các nguy cơ điện, nhiệt trong 24h - 48h.' },
+        { k: 'critical', c: '#dc2626', t: 'MỨC 4: 71% - 100% (RẤT CAO)', d: 'Nguy cơ cháy nổ rất cao, cần ưu tiên xử lý ngay để bảo vệ tính mạng và tài sản.' },
+    ];
+    return `
+            <div style="font-size: 11px; color: #334155; line-height: 1.5; background: #f8fafc; border: 1px solid #e2e8f0; padding: 8px 12px; margin-bottom: 8px;">
+                <div style="font-weight: bold; color: #0f172a; text-transform: uppercase; font-size: 11px; margin-bottom: 4px;">Hướng dẫn đọc hiểu: tỷ lệ % nguy cơ là gì và thể hiện điều gì?</div>
+                <p style="margin: 0 0 5px;"><strong>Bản chất của chỉ số:</strong> tỷ lệ <strong>${data.risk_percentage}% nguy cơ</strong> không phải điểm thi đạt hay trượt, mà là thước đo mức độ tích tụ hiểm họa cháy nổ của công trình dựa trên thống kê thực tế tại Việt Nam (sự cố hệ thống điện chiếm hơn 50% trọng số các nguyên nhân gây cháy; bất cẩn nguồn lửa, nhiệt chiếm 15%...). Lối thoát nạn và phương tiện PCCC là điều kiện quyết định khả năng thoát nạn và hạn chế thiệt hại, không phải nguyên nhân phát sinh cháy.</p>
+                <p style="margin: 0 0 5px;"><strong>Quy tắc an toàn tính mạng:</strong> dù tổng điểm có thể thấp, nếu xuất hiện bất kỳ nguy cơ ở mức rất cao tại các nhóm quan trọng (chập cháy điện, thiết bị phát nhiệt, rò rỉ gas, lối thoát nạn duy nhất bị chắn), hệ thống sẽ nâng mức cảnh báo để chủ cơ sở không chủ quan.</p>
+                ${pdfIsEscalated(data) ? `<p style="margin: 0 0 5px; padding: 6px 10px; background: #fff7ed; border: 1px solid #fdba74; color: #9a3412;"><strong>Mức nguy cơ được nâng lên:</strong> tỷ lệ chung là ${data.risk_percentage}% nhưng cơ sở có câu trả lời ở mức nghiêm trọng nhất hoặc có nhóm quan trọng (điện, nguồn lửa/nhiệt, thoát nạn...) ở mức cao, nên hệ thống xếp vào mức <strong>${riskText}</strong>.</p>` : ''}
+            </div>
+            <table style="width: 100%; border-collapse: collapse; font-size: 10.5px; margin-bottom: 8px;"><tr>
+                ${levels.map(l => `<td style="width: 25%; vertical-align: top; padding: 6px 7px; border: 1px solid #cbd5e1; border-top: 4px solid ${l.c}; background: ${data.risk_level === l.k ? '#fef2f2' : '#ffffff'};">
+                    <div style="font-weight: bold; color: ${l.c}; margin-bottom: 3px;">${l.t}</div>${l.d}</td>`).join('')}
+            </tr></table>
+            <div style="font-size: 11px; color: #0f172a; background: #fffbeb; border: 1px solid #fde68a; border-left: 4px solid #d97706; padding: 6px 10px;">
+                <strong>Thời hạn khắc phục đề xuất:</strong> ${pdfDeadlineText(data.risk_level)}
+            </div>`;
+}
+
 async function exportPDF(assessmentId) {
     if (typeof showLoading === 'function') showLoading('Đang khởi tạo biên bản PDF chuẩn hóa...');
     try {
-        const data = await api.get(`/export/data/${assessmentId}`);
+        let data = await api.get(`/export/data/${assessmentId}`);
+        // Biên bản phải có phần phân tích của AI như trang kết quả: nếu chưa có thì chờ AI phân tích xong rồi mới xuất
+        if (!pdfHasAiAnalysis(data)) {
+            if (typeof showLoading === 'function') showLoading('Đang chờ AI phân tích để đưa vào biên bản (khoảng 1 phút)...');
+            try {
+                await api.post(`/ai/analyze/${assessmentId}`, {}, { timeoutMs: 98000 });
+            } catch (e) { /* vẫn xuất bản hiện có nếu AI chưa phản hồi */ }
+            data = await api.get(`/export/data/${assessmentId}`);
+        }
         await generatePDFFromHTML(data);
         if (typeof hideLoading === 'function') hideLoading();
         if (typeof showToast === 'function') showToast('Đã xuất biên bản PDF thành công!');
@@ -75,7 +162,7 @@ async function generatePDFFromHTML(data) {
         low: 'AN TOÀN / NGUY CƠ THẤP',
         medium: 'TRUNG BÌNH / CẦN CẢI THIỆN',
         high: 'NGUY CƠ CAO',
-        critical: 'RẤT CAO / CẤP BÁO'
+        critical: 'RẤT CAO / CẦN XỬ LÝ NGAY'
     };
     const riskColors = {
         low: '#16a34a',
@@ -115,8 +202,8 @@ async function generatePDFFromHTML(data) {
     if (data.ai_analysis) {
         try {
             aiObj = typeof data.ai_analysis === 'string' ? JSON.parse(data.ai_analysis) : data.ai_analysis;
-            if (aiObj && aiObj.gemini_38) {
-                aiObj = aiObj.gemini_38;
+            if (aiObj && aiObj.dual_mode) {
+                aiObj = Object.assign({}, aiObj.gemini_38 || {}, aiObj);
             }
         } catch (e) {
             aiObj = null;
@@ -285,8 +372,8 @@ async function generatePDFFromHTML(data) {
         aiHtml += `</div>`;
     }
     const sectionFourTitle = aiObj
-        ? 'IV. NHẬN ĐỊNH & KHUYẾN CÁO KHẮC PHỤC TỪ TRÍ TUỆ NHÂN TẠO'
-        : 'IV. KHUYẾN CÁO KHẮC PHỤC';
+        ? 'V. NHẬN ĐỊNH & KHUYẾN CÁO KHẮC PHỤC TỪ TRÍ TUỆ NHÂN TẠO'
+        : 'V. KHUYẾN CÁO KHẮC PHỤC';
 
     // Build the complete PDF document HTML
     const formattedDate = data.completed_at ? new Date(data.completed_at).toLocaleDateString('vi-VN') : new Date().toLocaleDateString('vi-VN');
@@ -384,15 +471,15 @@ async function generatePDFFromHTML(data) {
                     </td>
                 </tr>
             </table>
-            <div style="font-size: 11px; color: #64748b; font-style: italic; line-height: 1.45; background: #f8fafc; border: 1px solid #e2e8f0; padding: 8px 12px;">
-                * <strong>Lưu ý nghiệp vụ:</strong> Tỷ lệ % nguy cơ thể hiện mức độ tích tụ hiểm họa cháy nổ (trong đó sự cố hệ thống điện chiếm hơn 50% nguyên nhân phát sinh cháy; bất cẩn nguồn lửa/nhiệt chiếm 15%... Tồn tại về lối thoát nạn và phương tiện PCCC quyết định khả năng thoát nạn sống còn và hạn chế thiệt hại khi xảy ra cháy).
-            </div>
+            ${pdfExplainerHtml(data, riskText, riskColor)}
         </div>
+
+        ${pdfChartsHtml()}
 
         <!-- III. ĐIỂM THEO CÁC NHÓM RÀ SOÁT -->
         <div class="pdf-avoid-break" style="margin-bottom: 16px;">
             <div style="font-size: 13px; font-weight: bold; color: #0f172a; text-transform: uppercase; background: #f1f5f9; padding: 6px 10px; border-left: 4px solid #991b1b; margin-bottom: 8px;">
-                III. KẾT QUẢ RÀ SOÁT THEO CÁC NHÓM NGUY CƠ
+                IV. KẾT QUẢ RÀ SOÁT THEO CÁC NHÓM NGUY CƠ
             </div>
             <table style="width: 100%; border-collapse: collapse; font-size: 11.5px;">
                 <thead>
