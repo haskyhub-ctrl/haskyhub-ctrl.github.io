@@ -236,7 +236,7 @@ def generate_aggregate_analysis(
 
     # ===== 9. AI Analysis (Gemini) =====
     ai_analysis = None
-    if GEMINI_API_KEY and total > 0:
+    if (os.getenv("ROUTER_API_KEY") or os.getenv("GEMINI_API_KEY") or GEMINI_API_KEY) and total > 0:
         ai_analysis = _generate_ai_aggregate_analysis(
             total, risk_counts, avg_risk, category_analysis, facility_distribution, high_risk_facilities
         )
@@ -263,7 +263,7 @@ def generate_aggregate_analysis(
 
 
 def _generate_ai_aggregate_analysis(total, risk_counts, avg_risk, category_analysis, facility_dist, high_risk):
-    """Call Gemini API to generate aggregate analysis from PCCC management perspective."""
+    """Gọi AI (9router) viết phân tích tổng hợp theo góc nhìn quản lý nhà nước về PCCC."""
     try:
         import httpx
 
@@ -319,40 +319,13 @@ Trả lời bằng JSON với format sau (tiếng Việt). LưU Ý:
   "kien_nghi": ["Các kiến nghị gửi cấp trên hoặc các ngành liên quan VỚI ĐƠN VỊ CỤ THỂ (2-3 items)"]
 }}"""
 
-        # Synchronous call for simplicity in FastAPI sync endpoint
-        api_key = os.getenv("GEMINI_API_KEY") or GEMINI_API_KEY
-        primary_model = os.getenv("GEMINI_MODEL", "gemini-3.5-flash")
-        fallback_models = ["gemini-3.5-flash", "gemini-3.8-flash", "gemini-2.5-flash", "gemini-3.5-flash-lite"]
-        models_to_try = [primary_model] + [m for m in fallback_models if m != primary_model]
-
-        for model_name in models_to_try:
-            try:
-                with httpx.Client(timeout=60.0) as client:
-                    resp = client.post(
-                        f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={api_key}",
-                        json={
-                            "contents": [{"parts": [{"text": prompt}]}],
-                            "generationConfig": {"temperature": 0.3}
-                        },
-                    )
-                    if resp.status_code == 200:
-                        data = resp.json()
-                        content = data["candidates"][0]["content"]["parts"][0]["text"]
-                        try:
-                            if "```json" in content:
-                                content = content.split("```json")[1].split("```")[0]
-                            elif "```" in content:
-                                content = content.split("```")[1].split("```")[0]
-                            return json.loads(content)
-                        except json.JSONDecodeError:
-                            return {"nhan_dinh_chung": content, "source": "gemini_raw"}
-                    elif resp.status_code in (404, 429, 500, 502, 503):
-                        continue
-                    else:
-                        break
-            except Exception as ex:
-                print(f"[AI aggregate] Model {model_name} error: {ex}")
-                continue
+        # Gọi AI qua 9router (có dự phòng Gemini trực tiếp nếu có khóa), dùng chung hàm của chatbot
+        from utils.rag_search import _call_llm, _extract_json_block
+        content = _call_llm(prompt, temperature=0.3, max_tokens=4096, is_json=True)
+        data = _extract_json_block(content)
+        if isinstance(data, dict) and data:
+            return data
+        return {"nhan_dinh_chung": (content or "").strip(), "source": "ai_raw"}
     except Exception as e:
         print(f"AI aggregate analysis error: {e}")
         return None

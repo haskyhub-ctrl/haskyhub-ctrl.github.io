@@ -494,7 +494,17 @@ def search_internet(query: str, max_results: int = 3) -> list[dict]:
 # ════════════════════════════════════════════════════════════════
 
 def search_chromadb(question: str) -> str:
-    """Tìm kiếm ChromaDB local. Trả về context string hoặc ''."""
+    """Tra cứu kho tài liệu nội bộ (RAG). Trả về context string hoặc ''.
+
+    Ưu tiên tra cứu cục bộ BM25 trên thư mục data_docs (utils/local_rag.py): không cần khóa Gemini, không gọi dịch vụ ngoài.
+    Chỉ khi không tìm được gì và có khóa Gemini mới thử thêm vector ChromaDB như trước.
+    """
+    from utils.local_rag import search_context
+    local_ctx = search_context(question, k=4)
+    if local_ctx:
+        _safe_print("[RAG cục bộ] OK tìm thấy tài liệu liên quan trong kho")
+        return local_ctx
+
     if not os.path.exists(CHROMA_DB_DIR):
         _safe_print(f"[ChromaDB] Dir not found: {CHROMA_DB_DIR}")
         return ""
@@ -557,8 +567,7 @@ def search_notebooklm_gemini_grounded(question: str) -> str:
     Fallback: Dùng Gemini REST API với context pháp luật hiện hành.
     Trả về câu trả lời từ Gemini hoặc '' nếu lỗi.
     """
-    api_key = os.getenv("GEMINI_API_KEY") or GEMINI_API_KEY
-    if not api_key:
+    if not (os.getenv("ROUTER_API_KEY") or os.getenv("GEMINI_API_KEY") or GEMINI_API_KEY):
         return ""
 
     legal_context = "\n".join(f"- {ref}" for ref in CURRENT_LEGAL_REFS)
