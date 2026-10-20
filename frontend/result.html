@@ -197,6 +197,9 @@
                         </div>
                     </div>
 
+                    <!-- MÃ THEO DÕI (chỉ hiện cho người khảo sát không tài khoản), đặt ở đầu trang để dễ thấy -->
+                    <div id="tracking-box" style="margin-bottom:16px;"></div>
+
                     <!-- LƯU Ý KHẢO SÁT TRUNG THỰC -->
                     <div style="background:#fffbeb; border:1px solid #fef3c7; border-left:4px solid #d97706; padding:12px 16px; margin-bottom:20px; font-size:0.92rem; color:#92400e; line-height:1.5;">
                         ℹ️ <strong>Lưu ý quan trọng:</strong> Kết quả đánh giá dựa trên câu trả lời khảo sát của bạn, hãy khảo sát trung thực để đánh giá thực tế nhất nguy cơ cháy nổ của cơ sở.
@@ -651,7 +654,6 @@
             }
             setTimeout(() => renderTrackingBox(document.getElementById('tracking-box'), data.id), 0);
             return `
-                    <div id="tracking-box" style="margin-bottom:14px;"></div>
                     <div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #b91c1c; padding:18px 20px; margin-bottom:28px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px;">
                         <div style="flex:1; min-width:260px;">
                             <div style="font-weight:800; color:#0f172a; text-transform:uppercase; margin-bottom:6px;">Theo dõi khắc phục tồn tại & nguy cơ</div>
