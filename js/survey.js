@@ -205,6 +205,41 @@ async function initSurvey() {
     renderStep();
 }
 
+// Từ tọa độ GPS, tự xác định xã phường (theo ranh giới địa giới) và điền vào ô địa chỉ
+async function applyLocationWard(lat, lng) {
+    const badge = document.getElementById('loc-status-badge');
+    const note = (html) => {
+        let el = document.getElementById('loc-ward-note');
+        if (!el && badge) {
+            el = document.createElement('div');
+            el.id = 'loc-ward-note';
+            el.style.cssText = 'margin-top:6px;font-size:0.85rem;';
+            badge.insertAdjacentElement('afterend', el);
+        }
+        if (el) el.innerHTML = html;
+    };
+    try {
+        const r = await api.get(`/geo/locate?lat=${lat}&lng=${lng}`);
+        if (!r.found) {
+            note('<span style="color:#d97706;">Vị trí này nằm ngoài tỉnh Bắc Ninh. Bạn vẫn có thể chọn địa chỉ thủ công.</span>');
+            return;
+        }
+        const prov = document.getElementById('f_province');
+        const ward = document.getElementById('f_ward');
+        if (prov && prov.value !== r.province) {
+            prov.value = r.province;
+            prov.dispatchEvent(new Event('change'));
+        }
+        if (ward) {
+            const opt = [...ward.options].find(o => o.value === r.ward);
+            if (opt) ward.value = r.ward;
+        }
+        note(`<span style="color:#16a34a;">📍 Vị trí này thuộc <strong>${r.ward}</strong>, ${r.province}. Đã tự điền vào ô Xã / Phường, bạn có thể sửa nếu chưa đúng.</span>`);
+    } catch (e) {
+        // Không xác định được địa bàn thì bỏ qua, người dùng vẫn tự chọn như bình thường
+    }
+}
+
 function handleManualGetLocation() {
     const btnText = document.getElementById('loc-btn-text');
     const btnIcon = document.getElementById('loc-btn-icon');
@@ -231,6 +266,7 @@ function handleManualGetLocation() {
                 badge.innerHTML = `<span style="color: #16a34a; font-weight: 500;">✓ Đã xác định tọa độ GPS: <strong>${pos.coords.latitude.toFixed(5)}, ${pos.coords.longitude.toFixed(5)}</strong> (Độ chính xác: ±${Math.round(pos.coords.accuracy)}m)</span>`;
             }
             showToast('Đã xác định vị trí thành công!', 'success');
+            applyLocationWard(pos.coords.latitude, pos.coords.longitude);
         },
         (err) => {
             if (btnText) btnText.textContent = 'Thử lấy lại vị trí';
@@ -979,6 +1015,7 @@ function confirmMapPicker() {
         if(textBtn) {
             textBtn.innerHTML = `<span style="color:#22c55e">✓ Đã chọn: ${pos.lat.toFixed(4)}, ${pos.lng.toFixed(4)}</span>`;
         }
+        applyLocationWard(pos.lat, pos.lng);
     }
     closeMapPicker();
 }

@@ -18,6 +18,11 @@
 .tm-filters select, .tm-filters input[type="text"] { min-width: 210px; padding: 8px 10px; border: 1.5px solid #94A3B8; background: #fff; color: #0F2347; font-size: 0.9rem; text-transform: none; font-weight: 500; }
 .tm-filters .tm-auto { flex-direction: row; align-items: center; gap: 6px; text-transform: none; font-weight: 600; margin-left: auto; }
 
+.tm-audit { margin: 0 0 14px; padding: 12px 14px; background: #FFF9EC; border: 1px solid #E5D3A3; border-left: 6px solid #C9962C; }
+.tm-audit-head { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: baseline; margin-bottom: 8px; }
+.tm-audit-head span { font-size: 0.82rem; color: #64748b; }
+.tm-audit-body { display: flex; flex-wrap: wrap; gap: 8px 22px; align-items: center; font-size: 0.92rem; }
+.tm-audit-body b { font-size: 1.15rem; }
 .tm-tabs { display: flex; gap: 0; margin: 0 0 10px; border-bottom: 2px solid #1A3A6B; }
 .tm-tab { padding: 8px 16px; border: 1px solid #D8DCE6; border-bottom: none; background: #F1F5F9; color: #334155; font-weight: 700; cursor: pointer; font-size: 0.88rem; }
 .tm-tab.active { background: #1A3A6B; color: #fff; border-color: #1A3A6B; }
