@@ -182,6 +182,32 @@
             margin: 0; font-family: inherit; font-size: 0.84rem;
         }
 
+        /* ===== Câu trả lời có cấu trúc ===== */
+        .fras-msg.ai .fras-bubble { max-width: 92%; }
+        .fras-rich { font-size: 0.86rem; line-height: 1.6; color: #1e293b; word-break: break-word; }
+        .fras-rich p { margin: 0 0 8px; }
+        .fras-rich strong { color: #0F2347; font-weight: 800; }
+        .fras-rich mark { background: #FFF1B8; color: inherit; padding: 0 2px; }
+        .fras-answer { background: #EEF4FC; border-left: 4px solid #1A3A6B; padding: 9px 12px; margin: 0 0 10px; font-weight: 600; color: #0F2347; }
+        .fras-h { margin: 12px 0 6px; padding-bottom: 3px; border-bottom: 2px solid #C0202A; color: #C0202A; font-weight: 800; font-size: 0.8rem; letter-spacing: .4px; text-transform: uppercase; }
+        .fras-warn { background: #FFF7E6; border-left: 4px solid #C9962C; padding: 8px 12px; margin: 8px 0; color: #7a4b00; font-weight: 600; }
+        .fras-steps { list-style: none; counter-reset: step; margin: 4px 0 8px; padding: 0; }
+        .fras-steps li { counter-increment: step; position: relative; padding: 5px 0 5px 34px; margin: 0 0 4px; }
+        .fras-steps li::before { content: counter(step); position: absolute; left: 0; top: 4px; width: 24px; height: 24px; background: #1A3A6B; color: #fff; font-weight: 800; font-size: 0.78rem; text-align: center; line-height: 24px; }
+        .fras-rich ul { margin: 4px 0 8px; padding-left: 20px; }
+        .fras-rich ul li { margin: 0 0 3px; }
+        .fras-rich ul li::marker { color: #C0202A; }
+        .fras-cite { display: inline-block; font-size: 0.72rem; font-weight: 600; color: #1A3A6B; background: #E8EEF8; border: 1px solid #C5D3EA; padding: 0 6px; margin: 0 1px; white-space: normal; }
+        .fras-table { width: 100%; border-collapse: collapse; margin: 6px 0 10px; font-size: 0.8rem; }
+        .fras-table th { background: #1A3A6B; color: #fff; padding: 5px 8px; text-align: left; font-weight: 700; }
+        .fras-table td { padding: 5px 8px; border: 1px solid #D8DCE6; vertical-align: top; }
+        .fras-table tr:nth-child(even) td { background: #F6F8FC; }
+        .fras-foot { margin-top: 8px; font-size: 0.72rem; font-style: italic; color: #64748b; }
+        .fras-feedback { display: flex; gap: 6px; align-items: center; margin-top: 8px; font-size: 0.72rem; color: #64748b; }
+        .fras-feedback button { background: #fff; border: 1px solid #cbd5e1; padding: 2px 8px; cursor: pointer; font-size: 0.75rem; }
+        .fras-feedback button:hover { border-color: #C0202A; }
+        .fras-status-text { margin-left: 8px; font-size: 0.75rem; color: #64748b; }
+
         /* Source badge */
         .fras-source-badge {
             display: inline-block; font-size: 0.68rem; font-weight: 600;
@@ -378,9 +404,8 @@
         _appendWelcome() {
             const msgs = document.getElementById('fras-messages');
             this._addBubble('ai',
-                'Xin chào quý công dân và chủ cơ sở!\n\n' +
-                'Tôi là trợ lý ảo hỗ trợ giải đáp pháp luật và thủ tục hành chính (TTHC) về Phòng cháy chữa cháy & Cứu nạn cứu hộ của Công an TP Bắc Ninh.\n\n' +
-                'Tôi có thể hỗ trợ giải đáp về nhiều nội dung, trong đó có:\n' +
+                '>> Chào bạn, Chi là trợ lý ảo hỗ trợ giải đáp pháp luật và thủ tục hành chính về Phòng cháy chữa cháy và Cứu nạn cứu hộ của Công an TP Bắc Ninh.\n\n' +
+                '## Chi có thể giúp bạn\n' +
                 '• Quy định pháp luật: Luật PCCC và CNCH số 55/2024/QH15, các Nghị định, Thông tư hướng dẫn\n' +
                 '• Thủ tục hành chính: thẩm duyệt thiết kế, nghiệm thu, kiểm tra, cấp giấy chứng nhận, thời hạn giải quyết\n' +
                 '• Điều kiện an toàn PCCC theo từng loại hình cơ sở: nhà ở, chung cư, cơ sở kinh doanh, sản xuất, kho, trường học, bệnh viện...\n' +
@@ -389,7 +414,7 @@
                 '• Tổ chức lực lượng: đội PCCC cơ sở, huấn luyện, phương án chữa cháy và CNCH\n' +
                 '• Kỹ năng xử lý khi xảy ra cháy, thoát hiểm, sơ cứu\n' +
                 '• Khắc phục tồn tại, nguy cơ mất an toàn và cách hạ mức nguy cơ trên hệ thống\n\n' +
-                'Vui lòng chọn câu hỏi gợi ý hoặc nhập nội dung cần giải đáp bên dưới.',
+                '\n!! Bạn chọn câu hỏi gợi ý hoặc nhập nội dung cần giải đáp ở bên dưới nhé.',
                 null, null
             );
         },
@@ -418,9 +443,12 @@
                         <div class="fras-typing-dot"></div>
                         <div class="fras-typing-dot"></div>
                         <div class="fras-typing-dot"></div>
+                        <span class="fras-status-text" id="${typingId}-t">Chi đang tra cứu văn bản...</span>
                     </div>
                 </div>`;
             msgs.scrollTop = msgs.scrollHeight;
+            const stages = [[5000, 'Chi đang đối chiếu các quy định...'], [12000, 'Chi đang kiểm tra hiệu lực của căn cứ...'], [22000, 'Sắp xong rồi, Chi đang hoàn thiện câu trả lời...']];
+            const timers = stages.map(([ms, txt]) => setTimeout(() => { const el = document.getElementById(typingId + '-t'); if (el) el.textContent = txt; }, ms));
 
             this.history.push({ role: 'user', content: msg });
 
@@ -454,12 +482,14 @@
                     result = await resp.json();
                 }
 
+                timers.forEach(clearTimeout);
                 document.getElementById(typingId)?.remove();
 
                 const reply = result.reply || result.raw_text || 'Không thể trả lời lúc này.';
                 this.history.push({ role: 'assistant', content: reply });
 
                 this._addBubble('ai', reply, result.source_type, result.references);
+                this._addFeedback(msg, reply);
 
                 // Update suggestions
                 if (result.suggestions?.length) {
@@ -469,6 +499,7 @@
                         ).join('');
                 }
             } catch (err) {
+                timers.forEach(clearTimeout);
                 document.getElementById(typingId)?.remove();
                 this._addBubble('ai-error', `Không thể kết nối AI: ${err.message}\n\nVui lòng thử lại hoặc liên hệ quản trị viên.`, null, null);
             }
@@ -505,7 +536,7 @@
 
             const bubbleContent = isUser
                 ? `<pre>${this._esc(text)}</pre>`
-                : `<div class="fras-text" style="white-space:pre-wrap;word-break:break-word;font-family:inherit;font-size:0.84rem;line-height:1.65;">${this._formatText(text)}</div>`;
+                : `<div class="fras-rich">${this._renderRich(text)}</div>`;
 
             const div = document.createElement('div');
             div.className = `fras-msg ${isUser ? 'user' : 'ai'}`;
@@ -517,6 +548,80 @@
                     ${refsHtml}
                 </div>`;
             msgs.appendChild(div);
+        },
+
+        // Hiển thị câu trả lời có cấu trúc: >> kết luận, ## tiêu đề, !! lưu ý, ~~ chú thích, bước đánh số, gạch đầu dòng, bảng, **đậm**, ==nổi==, {{căn cứ}}
+        _renderRich(raw) {
+            if (!raw) return '';
+            const link = (m, a, b) => `<a href="${b || a}" target="_blank" rel="noopener noreferrer" style="color:#2563eb;text-decoration:underline;">${a}</a>`;
+            const inline = (t) => {
+                let h = this._esc(t);
+                h = h.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+                h = h.replace(/==([^=]+)==/g, '<mark>$1</mark>');
+                h = h.replace(/\{\{([^}]+)\}\}/g, '<span class="fras-cite">$1</span>');
+                h = h.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, (m, a, b) => link(m, a, b));
+                h = h.replace(/(^|[^">])(https?:\/\/[^\s<]+)/g, (m, pre, url) => pre + link(m, url, url));
+                return h;
+            };
+            const lines = String(raw).replace(/\r/g, '').split('\n');
+            const out = [];
+            let list = null;                       // 'ol' hoặc 'ul' đang mở
+            const closeList = () => { if (list) { out.push(`</${list}>`); list = null; } };
+            for (let i = 0; i < lines.length; i++) {
+                const line = lines[i];
+                if (!line.trim()) { closeList(); continue; }
+                let m;
+                if ((m = line.match(/^\s*>>\s+(.*)$/))) { closeList(); out.push(`<div class="fras-answer">${inline(m[1])}</div>`); continue; }
+                if ((m = line.match(/^\s*##\s+(.*)$/))) { closeList(); out.push(`<div class="fras-h">${inline(m[1])}</div>`); continue; }
+                if ((m = line.match(/^\s*!!\s+(.*)$/))) { closeList(); out.push(`<div class="fras-warn">⚠ ${inline(m[1])}</div>`); continue; }
+                if ((m = line.match(/^\s*~~\s+(.*)$/))) { closeList(); out.push(`<div class="fras-foot">${inline(m[1])}</div>`); continue; }
+                if (/^\s*\|/.test(line) && i + 1 < lines.length && /^\s*\|?[\s:|-]+\|[\s:|-]*$/.test(lines[i + 1]) && /-/.test(lines[i + 1])) {
+                    closeList();
+                    const cells = (l) => l.trim().replace(/^\||\|$/g, '').split('|').map(c => c.trim());
+                    const head = cells(line);
+                    let j = i + 2;
+                    const rows = [];
+                    while (j < lines.length && /^\s*\|/.test(lines[j])) { rows.push(cells(lines[j])); j++; }
+                    out.push('<table class="fras-table"><thead><tr>' + head.map(c => `<th>${inline(c)}</th>`).join('') + '</tr></thead><tbody>' +
+                        rows.map(r => '<tr>' + r.map(c => `<td>${inline(c)}</td>`).join('') + '</tr>').join('') + '</tbody></table>');
+                    i = j - 1;
+                    continue;
+                }
+                if ((m = line.match(/^\s*(\d+)[.)]\s+(.*)$/))) {
+                    if (list !== 'ol') { closeList(); out.push('<ol class="fras-steps">'); list = 'ol'; }
+                    out.push(`<li>${inline(m[2])}</li>`);
+                    continue;
+                }
+                if ((m = line.match(/^\s*[-*•]\s+(.*)$/))) {
+                    if (list !== 'ul') { closeList(); out.push('<ul>'); list = 'ul'; }
+                    out.push(`<li>${inline(m[1])}</li>`);
+                    continue;
+                }
+                closeList();
+                out.push(`<p>${inline(line)}</p>`);
+            }
+            closeList();
+            return out.join('');
+        },
+
+        // Nút phản hồi: câu trả lời chưa tốt sẽ được gửi vào hàng chờ câu hỏi khó để cán bộ bổ sung đáp án chuẩn
+        _addFeedback(question, reply) {
+            const msgs = document.getElementById('fras-messages');
+            const last = msgs.lastElementChild;
+            const bubble = last && last.querySelector('.fras-bubble');
+            if (!bubble) return;
+            const box = document.createElement('div');
+            box.className = 'fras-feedback';
+            box.innerHTML = 'Câu trả lời này có giúp được bạn không? <button data-v="1">👍 Có</button> <button data-v="0">👎 Chưa</button>';
+            box.querySelectorAll('button').forEach(b => b.addEventListener('click', async () => {
+                const helpful = b.dataset.v === '1';
+                box.textContent = helpful ? 'Cảm ơn bạn đã phản hồi.' : 'Cảm ơn bạn. Chi đã ghi lại để cán bộ bổ sung câu trả lời chuẩn.';
+                try {
+                    const baseUrl = localStorage.getItem('fras_api_url') || window.location.origin;
+                    await fetch(`${baseUrl}/api/ai/chat/feedback`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ message: question, reply: reply.slice(0, 1500), helpful }) });
+                } catch (e) { /* bỏ qua */ }
+            }));
+            bubble.appendChild(box);
         },
 
         _formatText(text) {
