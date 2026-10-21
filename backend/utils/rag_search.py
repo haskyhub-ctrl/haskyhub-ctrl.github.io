@@ -50,6 +50,13 @@ QUY ĐỊNH PHÁP LUẬT PCCC MỚI NHẤT (NĂM 2026) - ƯU TIÊN ÁP DỤNG TU
      + Trước khi đưa công trình, phương tiện vào sử dụng, chủ đầu tư chỉ cần thực hiện KHAI BÁO THÔNG TIN TRÊN HỆ THỐNG CƠ SỞ DỮ LIỆU VỀ PCCC.
      + Cơ quan Công an và UBND chuyển sang cơ chế HẬU KIỂM / KIỂM TRA ĐỊNH KỲ (kiểm tra định kỳ 01 năm/lần đối với nhóm có nguy cơ cao; 02 năm/lần đối với nhóm còn lại; có kế hoạch và thông báo trước 03 ngày làm việc).
 
+1b. VỀ PHỤC HỒI HOẠT ĐỘNG SAU KHI BỊ TẠM ĐÌNH CHỈ, ĐÌNH CHỈ (ĐÃ BÃI BỎ THỦ TỤC):
+   - Theo Nghị quyết số 66.18/2026/NQ-CP, thủ tục hành chính phục hồi hoạt động của cơ sở, phương tiện, hộ gia đình đã bị tạm đình chỉ hoạt động, đình chỉ hoạt động ĐÃ ĐƯỢC BÃI BỎ.
+   - Khi người dùng hỏi về thủ tục, hồ sơ, trình tự, thời hạn phục hồi hoạt động: nói rõ ngay thủ tục này đã được bãi bỏ, cơ sở KHÔNG phải làm hồ sơ đề nghị phục hồi hoạt động và KHÔNG có bước nộp hồ sơ hay chờ cơ quan kiểm tra rồi ra quyết định phục hồi.
+   - TUYỆT ĐỐI KHÔNG mô tả lại quy trình cũ: không nêu đơn đề nghị phục hồi, không nêu hồ sơ nộp qua bưu chính hay Cổng dịch vụ công, không nêu thời hạn 05 ngày làm việc, không nêu quyết định phục hồi hoạt động. Các nội dung này (từ Điều 18 Nghị định 136/2020/NĐ-CP, Nghị định 50/2024/NĐ-CP hay các tài liệu nội bộ cũ) đã hết hiệu lực.
+   - Chỉ nêu những gì có căn cứ trong tài liệu hiện hành. Nếu chưa có hướng dẫn chi tiết về cách thực hiện sau khi bãi bỏ, nói thẳng điều đó và mời người hỏi liên hệ cán bộ Cảnh sát PCCC và CNCH đã ra quyết định hoặc đang quản lý cơ sở để được hướng dẫn. Không tự bịa quy trình thay thế.
+   - Lời khuyên chung vẫn đúng: khắc phục triệt để các vi phạm, tồn tại, giữ lại bằng chứng khắc phục (ảnh, biên bản, hóa đơn).
+
 2. CÁC VĂN BẢN HIỆN HÀNH CHÍNH:
    - Nghị định số 347/2026/NĐ-CP ngày 08/9/2026 của Chính phủ (hiệu lực 15/9/2026, sửa đổi NĐ 105/2025/NĐ-CP, bãi bỏ văn bản chấp thuận nghiệm thu PCCC)
    - Nghị quyết số 66.18/2026/NQ-CP ngày 18/5/2026 của Chính phủ (hiệu lực 01/07/2026, bãi bỏ thủ tục kiểm tra nghiệm thu PCCC)
@@ -63,6 +70,7 @@ QUY ĐỊNH PHÁP LUẬT PCCC MỚI NHẤT (NĂM 2026) - ƯU TIÊN ÁP DỤNG TU
 OBSOLETE_TRANSITION_GUIDE = [
     "Nghị quyết 66.18/2026/NQ-CP & Nghị định 347/2026/NĐ-CP: Bãi bỏ thủ tục nộp hồ sơ xin nghiệm thu PCCC tại cơ quan nhà nước; Chủ đầu tư tự tổ chức nghiệm thu với nhà thầu và khai báo CSDL PCCC.",
     "Nghị định 105/2025/NĐ-CP quy định cũ về nộp hồ sơ nghiệm thu tại cơ quan nhà nước → Đã được bãi bỏ, sửa đổi bởi Nghị quyết 66.18 và Nghị định 347.",
+    "Thủ tục phục hồi hoạt động sau khi bị tạm đình chỉ, đình chỉ (Điều 18 NĐ 136/2020/NĐ-CP, NĐ 50/2024/NĐ-CP) → Đã bị bãi bỏ theo Nghị quyết 66.18/2026/NQ-CP, không còn hồ sơ đề nghị hay thời hạn giải quyết.",
     "Nghị định 136/2020/NĐ-CP & Nghị định 50/2024/NĐ-CP → Đã hết hiệu lực.",
     "Luật PCCC 2001 & Luật PCCC 2013 → Đã hết hiệu lực, thay bởi Luật 55/2024/QH15.",
     "Thông tư 149/2020/TT-BCA → Đã hết hiệu lực.",
@@ -685,6 +693,12 @@ def ask_ai_chi(question: str, history_text: str = "", context: str = "") -> dict
             "(Không tìm thấy văn bản liên quan trực tiếp. Trả lời dựa trên kiến thức pháp luật PCCC 2024-2026.)"
         )
 
+        # Thủ tục phục hồi hoạt động đã bị bãi bỏ (NQ 66.18/2026): không để các đoạn tài liệu cũ về quy trình này lọt vào câu trả lời
+        if re.search(r"phục hồi|phuc hoi", question, re.I):
+            kept = [p for p in re.split(r"\n{2,}|\n(?=\s*[-•]|\d+[.)]\s)", doc_context)
+                    if not re.search(r"phục hồi hoạt động|136/2020|50/2024", p, re.I)]
+            doc_context = "\n\n".join(kept)
+
         # ── Build prompt cho Gemini ──────────────────────────────────
         legal_refs_str = "\n".join(f"  - {r}" for r in CURRENT_LEGAL_REFS)
 
@@ -712,6 +726,8 @@ CÂU HỎI CỦA NGƯỜI DÙNG: {question}
    - CẤM sáo ngữ robot: "Trong bối cảnh...", "Không thể phủ nhận rằng...", "Đóng vai trò vô cùng quan trọng...", "Mang lại lợi ích đáng kể...", "Tối ưu hóa", "Đột phá".
    - CẤM các câu mở đầu hoặc kết bài xã giao kiểu chatbot ("Hy vọng câu trả lời này hữu ích với bạn", "Nếu bạn cần thêm thông tin..."). Đi thẳng vào nội dung chuyên môn.
    - Trộn câu ngắn dài tự nhiên, hành văn dứt khoát, chuẩn xác của chuyên gia luật PCCC.
+
+00. PHẠM VI TRẢ LỜI: Chi chỉ trả lời các câu hỏi thuộc lĩnh vực phòng cháy, chữa cháy, cứu nạn cứu hộ, an toàn cháy nổ và cách dùng Hệ thống FRAS-AI. Nếu câu hỏi không thuộc các lĩnh vực này (kể cả khi có nhắc từ khóa liên quan nhưng nội dung là chuyện khác), KHÔNG trả lời nội dung đó. Chỉ đáp ngắn gọn, nhã nhặn: câu hỏi nằm ngoài lĩnh vực Chi phụ trách, và mời người dùng hỏi về PCCC. Không giải thích dài, không phê bình người hỏi.
 
 1. ĐI THẲNG VÀO NỘI DUNG MỚI NHẤT HIỆN HÀNH (NĂM 2026):
    - Luôn hướng dẫn theo quy định mới nhất hiện hành (Nghị quyết số 66.18/2026/NQ-CP, Nghị định số 347/2026/NĐ-CP, Luật 55/2024/QH15...).
@@ -767,6 +783,7 @@ TRẢ VỀ JSON THUẦN (không dùng ```json):
                 for ref in internet_refs:
                     if ref not in result["references"]:
                         result["references"].append(ref)
+            result["_doc_context"] = doc_context   # dùng cho bước thẩm định hiệu lực, được bỏ trước khi gửi
             return result
 
         # Fallback nếu kết quả text không parse được dạng JSON hoàn chỉnh

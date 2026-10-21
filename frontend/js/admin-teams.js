@@ -41,7 +41,37 @@
             if (p.get('q')) document.getElementById('tm-q').value = p.get('q');
             this.pendingWard = p.get('ward') || '';
             this.load();
+            this.loadAudit();
             this.setAuto(true);
+        },
+        async loadAudit() {
+            const box = document.getElementById('tm-audit-body');
+            if (!box) return;
+            try {
+                const d = await api.get('/admin/teams/geo-audit');
+                const s = d.summary;
+                const bad = s.mismatch + s.outside;
+                box.innerHTML = `<span>Đã đối chiếu <b>${num(s.ok + bad)}</b> cơ sở có tọa độ</span>` +
+                    `<span style="color:#15803D;">Khớp xã phường: <b>${num(s.ok)}</b></span>` +
+                    `<span style="color:#B45309;">Lệch xã phường: <b>${num(s.mismatch)}</b></span>` +
+                    `<span style="color:#B91C1C;">Ngoài địa giới tỉnh: <b>${num(s.outside)}</b></span>` +
+                    `<span style="color:#64748B;">Chưa có tọa độ: <b>${num(s.no_coords)}</b></span>` +
+                    `<button class="btn btn-secondary btn-sm" onclick="TM.exportAudit()">⬇ Tải danh sách cần kiểm tra (Excel)</button>`;
+            } catch (e) {
+                box.textContent = 'Chưa rà soát được: ' + (e.message || e);
+            }
+        },
+        async exportAudit() {
+            try {
+                const res = await fetch(`${window.location.origin}/api/admin/teams/geo-audit/export`, {
+                    headers: { Authorization: 'Bearer ' + (localStorage.getItem('fras_token') || '') },
+                });
+                if (!res.ok) throw new Error('Không tải được (mã ' + res.status + ')');
+                const a = document.createElement('a');
+                a.href = URL.createObjectURL(await res.blob());
+                a.download = 'Ra_soat_toa_do_' + new Date().toISOString().slice(0, 10) + '.xlsx';
+                document.body.appendChild(a); a.click(); a.remove();
+            } catch (e) { alert(e.message || e); }
         },
         setAuto(on) {
             clearInterval(this.timer);

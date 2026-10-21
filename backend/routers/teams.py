@@ -405,3 +405,135 @@ def team_export(
     _style_sheet(ws, [6, 18, 48, 26, 40, 16, 14, 16, 20, 8, 18])
     safe = "".join(ch if ch.isalnum() or ch in " _-" else "_" for ch in team).strip().replace(" ", "_")
     return _xlsx_response(wb, f"DS_{safe}_{datetime.now():%Y%m%d}.xlsx")
+
+
+# ------------------------------------------------------------------ rà soát tọa độ
+def _audit_rows(db, team=None):
+    from utils import geo_wards
+    qry = db.query(User.facility_code, User.full_name, User.management_team, User.ward, User.latitude, User.longitude) \
+        .filter(User.management_team.isnot(None))
+    if team:
+        qry = qry.filter(User.management_team == team)
+    rows = qry.all()
+    have = [r for r in rows if r.latitude is not None and r.longitude is not None]
+    actual = geo_wards.locate_many([(r.latitude, r.longitude) for r in have])
+    out = []
+    for r, a in zip(have, actual):
+        if a is None:
+            status = "outside"
+        elif geo_wards.ward_key(a) == geo_wards.ward_key(r.ward):
+            status = "ok"
+        else:
+            status = "mismatch"
+        out.append((r, a, status))
+    return rows, out
+
+
+@router.get("/geo-audit")
+def geo_audit(
+    team: Optional[str] = None,
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db),
+):
+    """Rà tọa độ: so xã phường ghi trong danh sách với xã phường thực tế chứa điểm tọa độ (theo ranh giới địa giới)."""
+    require_role("admin", "superadmin")(current_user)
+    rows, out = _audit_rows(db, team)
+    summary = {"total": len(rows), "no_coords": len(rows) - len(out), "ok": 0, "mismatch": 0, "outside": 0}
+    by_team = {}
+    for r, a, st in out:
+        summary[st] += 1
+        t = by_team.setdefault(r.management_team, {"team": r.management_team, "checked": 0, "mismatch": 0, "outside": 0})
+        t["checked"] += 1
+        if st != "ok":
+            t[st] += 1
+    teams_list = sorted(by_team.values(), key=lambda t: -(t["mismatch"] + t["outside"]))
+    for t in teams_list:
+        bad = t["mismatch"] + t["outside"]
+        t["bad"] = bad
+        t["bad_percent"] = round(bad * 100.0 / t["checked"], 1) if t["checked"] else 0.0
+    return {"summary": summary, "teams": teams_list[:60]}
+
+
+@router.get("/geo-audit/export")
+def geo_audit_export(
+    team: Optional[str] = None,
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db),
+):
+    """Tải danh sách cơ sở có tọa độ nghi sai hoặc chưa có tọa độ (Excel), kèm đường dẫn mở trên Google Maps."""
+    require_role("admin", "superadmin")(current_user)
+    rows, out = _audit_rows(db, team)
+    wb = Workbook()
+    ws = wb.active
+    ws.title = "Tọa độ cần kiểm tra"
+    ws.append(["STT", "Mã cơ sở", "Tên cơ sở", "Đội quản lý", "Xã phường ghi trong danh sách", "Xã phường theo tọa độ", "Kết luận", "Vĩ độ", "Kinh độ", "Mở bản đồ"])
+    n = 0
+    for r, a, st in out:
+        if st == "ok":
+            continue
+        n += 1
+        ws.append([n, str(r.facility_code or ""), r.full_name, r.management_team, r.ward or "", a or "(ngoài địa giới tỉnh)",
+                   "Lệch xã phường" if st == "mismatch" else "Ngoài địa giới tỉnh", r.latitude, r.longitude,
+                   f"https://www.google.com/maps?q={r.latitude},{r.longitude}"])
+    have = {(x[0].facility_code) for x in out}
+    for r in rows:
+        if r.facility_code not in have:
+            n += 1
+            ws.append([n, str(r.facility_code or ""), r.full_name, r.management_team, r.ward or "", "", "Chưa có tọa độ", "", "", ""])
+    _style_sheet(ws, [6, 18, 44, 40, 24, 24, 20, 12, 12, 46])
+    return _xlsx_response(wb, f"Ra_soat_toa_do_{datetime.now():%Y%m%d}.xlsx")
+
+
+# ------------------------------------------------------------------ tìm cơ sở theo tên để xem vị trí
+_facility_cache = {"at": None, "rows": []}
+
+
+def _strip(text):
+    import unicodedata
+    t = unicodedata.normalize("NFD", (text or "").lower().replace("đ", "d"))
+    return "".join(c for c in t if unicodedata.category(c) != "Mn")
+
+
+def _facility_index(db):
+    now = datetime.utcnow()
+    if _facility_cache["at"] is None or (now - _facility_cache["at"]).total_seconds() > 300:
+        rows = db.query(User.id, User.facility_code, User.full_name, User.management_team, User.ward, User.latitude, User.longitude) \
+            .filter(User.management_team.isnot(None), User.latitude.isnot(None), User.longitude.isnot(None)).all()
+        _facility_cache["rows"] = [(r, _strip(r.full_name)) for r in rows]
+        _facility_cache["at"] = now
+    return _facility_cache["rows"]
+
+
+@router.get("/facility-search")
+def facility_search(
+    q: str = Query(..., min_length=2, max_length=80),
+    limit: int = Query(15, ge=1, le=30),
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db),
+):
+    """Tìm cơ sở theo tên (không cần gõ dấu) hoặc mã cơ sở, trả về vị trí để mở trên bản đồ."""
+    require_role("admin", "superadmin")(current_user)
+    q = q.strip()
+    tokens = [t for t in _strip(q).split() if t]
+    hits = []
+    for r, name in _facility_index(db):
+        if q.isdigit():
+            if (r.facility_code or "").startswith(q):
+                hits.append((0, r))
+        elif all(t in name for t in tokens):
+            hits.append((0 if name.startswith(tokens[0]) else 1, r))
+        if len(hits) >= 400:
+            break
+    hits.sort(key=lambda h: (h[0], len(h[1].full_name or "")))
+    ids = [r.id for _, r in hits[:limit]]
+    latest = _latest_completed(db)
+    done = {uid: (risk, pct) for uid, risk, pct in db.query(latest.c.uid, latest.c.risk, latest.c.pct).filter(latest.c.uid.in_(ids)).all()} if ids else {}
+    return [
+        {
+            "code": r.facility_code, "name": r.full_name, "team": r.management_team, "ward": r.ward,
+            "lat": r.latitude, "lng": r.longitude,
+            "surveyed": r.id in done, "risk_level": done.get(r.id, (None, None))[0],
+            "risk_label": RISK_LABELS.get(done.get(r.id, (None, None))[0], ""),
+        }
+        for _, r in hits[:limit]
+    ]

@@ -27,7 +27,7 @@ from models import (
 from middleware.auth_middleware import hash_password
 
 # Import routers
-from routers import auth, survey, questions, assessments, admin, ai_analysis, export, aggregate, import_users, image_analysis, notifications, improvement, emergency, teams
+from routers import auth, survey, questions, assessments, admin, ai_analysis, export, aggregate, import_users, image_analysis, notifications, improvement, emergency, teams, geo, kho
 
 
 def seed_database():
@@ -276,6 +276,8 @@ app.include_router(survey.router)
 app.include_router(questions.router)
 app.include_router(assessments.router)
 app.include_router(teams.router)
+app.include_router(geo.router)
+app.include_router(kho.router)
 app.include_router(admin.router)
 app.include_router(ai_analysis.router)
 app.include_router(export.router)

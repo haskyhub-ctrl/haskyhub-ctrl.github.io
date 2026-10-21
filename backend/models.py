@@ -287,3 +287,23 @@ class FireReport(Base):
     status = Column(String(30), default="received")  # received, verified, dispatching, resolved, false_alarm
     created_at = Column(DateTime, default=datetime.utcnow)
 
+
+
+class KbQuestion(Base):
+    """Câu hỏi khó của người dân hỏi Trợ lý Chi, và đáp án chuẩn do cán bộ duyệt.
+
+    status: pending (chưa có đáp án), approved (đáp án đã duyệt, được ưu tiên trả lời), rejected (bỏ qua).
+    """
+    __tablename__ = "kb_questions"
+
+    id = Column(String(36), primary_key=True, default=generate_uuid)
+    question = Column(Text, nullable=False)
+    question_key = Column(String(500), index=True)          # khóa chuẩn hóa để gộp các câu hỏi giống nhau
+    answer = Column(Text, nullable=True)
+    status = Column(String(20), default="pending", index=True)
+    times_asked = Column(Integer, default=1)
+    source = Column(String(20), default="chat")             # chat (bot chưa đủ căn cứ) hoặc admin (cán bộ nhập)
+    last_asked_at = Column(DateTime, default=datetime.utcnow)
+    created_at = Column(DateTime, default=datetime.utcnow)
+    answered_at = Column(DateTime, nullable=True)
+    answered_by = Column(String(36), nullable=True)

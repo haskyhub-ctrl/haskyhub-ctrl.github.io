@@ -22,3 +22,4 @@ langchain-google-genai
 chromadb
 pypdf
 docx2txt
+shapely

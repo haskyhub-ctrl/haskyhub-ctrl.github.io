@@ -425,7 +425,23 @@ async def ai_chat(
 ):
     """AI chatbot for fire safety Q&A using RAG Architecture (hỗ trợ cả khách vãng lai và người đã đăng nhập)."""
     from utils.rag_search import ask_ai_chi
-    
+    from utils.chat_scope import is_in_scope, out_of_scope_response, with_disclaimer
+
+    # Đáp án chuẩn do cán bộ duyệt được ưu tiên cao nhất
+    try:
+        from utils.kb_qa import find_approved
+        hit = find_approved(db, data.message)
+        if hit:
+            return with_disclaimer({
+                "reply": hit.answer, "suggestions": [], "references": [], "source_type": "curated",
+            }, data.message)
+    except Exception as e:
+        print(f"[AI Chat] Lỗi tra đáp án chuẩn: {e}")
+
+    # Chỉ trả lời lĩnh vực PCCC và CNCH; ngoài lĩnh vực thì từ chối khéo (không gọi AI)
+    if not is_in_scope(data.message, data.history):
+        return out_of_scope_response()
+
     context = ""
     if data.assessment_id and current_user:
         if current_user.role in ("admin", "superadmin"):
@@ -451,10 +467,32 @@ Tỷ lệ nguy cơ: {adata['risk_percentage']}% ({adata['risk_level']}). Điểm
     try:
         import asyncio
         result = await asyncio.to_thread(ask_ai_chi, question=data.message, history_text=history_text, context=context)
-        return result
+        # Bước cuối: thẩm định hiệu lực, đối chiếu văn bản hướng dẫn, thay nội dung đã hết hiệu lực
+        unresolved = False
+        if isinstance(result, dict) and result.get("source_type") in ("notebooklm", "docs", "web", "general"):
+            from utils.answer_check import verify_answer
+            checked = await asyncio.to_thread(verify_answer, data.message, result)
+            result, unresolved = checked["result"], checked["unresolved"]
+            if checked["fixed"]:
+                print(f"[AI Chat] Đã sửa câu trả lời sau thẩm định hiệu lực: {data.message[:60]}")
+        if isinstance(result, dict):
+            result.pop("_doc_context", None)
+        # Bot chưa có căn cứ trong kho hoặc sau thẩm định vẫn chưa đủ căn cứ: ghi lại để cán bộ bổ sung đáp án chuẩn
+        if isinstance(result, dict) and (unresolved or result.get("source_type") in ("general", "web")):
+            _log_hard_question(db, data.message)
+        return with_disclaimer(result, data.message)
     except Exception as e:
         print(f"[AI Chat RAG] Error: {e}")
-        return _chat_fallback(data.message)
+        _log_hard_question(db, data.message)
+        return with_disclaimer(_chat_fallback(data.message), data.message)
+
+
+def _log_hard_question(db, message: str) -> None:
+    try:
+        from utils.kb_qa import log_unanswered
+        log_unanswered(db, message)
+    except Exception as e:
+        print(f"[AI Chat] Không ghi được câu hỏi khó: {e}")
 
 
 def _chat_fallback(message: str) -> dict:
