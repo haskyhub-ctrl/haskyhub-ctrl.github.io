@@ -1,0 +1,459 @@
+[Bảng II.7. Hướng dẫn nội dung kiểm tra hệ thống họng nước chữa cháy trong nhà]
+[Hiệu lực: 2025. Trạng thái: ĐANG DÙNG.]
+
+Bảng II.7: Hướng dẫn nội dung kiểm tra hệ thống họng nước chữa cháy trong nhà
+Kiểm tra việc trang bị đúng, đủ số lượng, chủng loại; duy trì hoạt động; thử nghiệm hệ thống, thiết bị được trang bị tại cơ sở
+TT	Nội dung kiểm tra	Quy định của Tiêu chuẩn, quy chuẩn	Căn cứ	Hành vi vi phạm theo Nghị định số 106/2025/NĐ-CP		1	Họng nước chữa cháy			1. Hành vi không duy trì hoạt động của thiết bị thuộc hệ thống chữa cháy đã được trang bị, lắp đặt (Đb K4 Đ21 NĐ106; phạt tiền từ 10.000.000 đồng đến 20.000.000 đồng; thẩm quyền xử phạt: Chủ tịch UBND tỉnh; Giám đốc Công an tỉnh; biện pháp khắc phục hậu quả: Buộc duy trì hệ thống chữa cháy)
+
+2. Hành vi không duy trì hoạt động của hệ thống chữa cháy đã được trang bị, lắp đặt (điểm b, khoản 6, Điều 21; Phạt tiền từ 40.000.000 đồng đến 50.000.000 đồng; hình thức xử phạt bổ sung: Đình chỉ hoạt động từ 01 tháng đến 03 tháng; Biện pháp khắc phục hậu quả: Buộc duy trì hệ thống chữa cháy; thẩm quyền xử phạt: Chủ tịch UBND cấp tỉnh; Cục trưởng C07).
+
+3. Hành vi trang bị, lắp đặt thiết bị thuộc hệ thống chữa cháy không bảo đảm theo quy định (Đb K8 Đ20 NĐ106; phạt tiền từ 30.000.000 đồng đến 40.000.000 đồng; thẩm quyền xử phạt: Chủ tịch UBND tỉnh; Cục trưởng C07; Biện pháp khắc phục hậu quả: Buộc trang bị, lắp đặt hệ thống chữa cháy)		1.1.	Đối tượng trang bị		Phụ lục B TCVN 3890:2023			-	Công trình dân dụng					+	Số tia nước phun chữa cháy	Số tia phun chữa cháy cho mỗi điểm cháy lấy là 02 tia đối với các công trình có yêu cầu số tia phun lớn hơn 02.	Điều 5.2.4  Sửa đổi 1:2023 QCVN 06:2022/BXD					Phần nhà nằm ở chiều cao PCCC trên 50 m phải lấy tương ứng là 4 tia, mỗi tia 2,5 L/s	Đ 5.2.2  Sửa đổi 1:2023 QCVN 06:2022/BXD			+	Lưu lượng nước chữa cháy	Nhà ở và công trình công cộng
+Số tia phun chữa cháy trên 1 tầng nhà
+Lưu lượng tối thiểu cho chữa cháy trong nhà, L/s, đối với một tia phun
+
+1. Nhà ở, nhà chung cư
+
+≤ 16 tầng, khi hành lang chung dài ≤ 10 m
+1
+2,5
+
+≤ 16 tầng, khi hành lang chung dài > 10 m
+2
+2,5
+
+> 16 và ≤ 25 tầng, khi hành lang chung dài ≤ 10 m
+2
+2,5
+
+> 16 và ≤ 25 tầng, khi hành lang chung dài > 10 m
+3
+2,5
+
+2. Nhà hành chính 1)
+
+≤ 10 tầng và khối tích ≤ 25 000 m3
+1
+2,5
+
+≤ 10 tầng và khối tích > 25 000 m3
+2
+2,5
+
+> 10 tầng và khối tích ≤ 25 000 m3
+2
+2,5
+
+> 10 tầng và khối tích > 25 000 m3
+3
+2,5
+
+3. Phòng câu lạc bộ có sân khấu, nhà hát, rạp chiếu phim, phòng có trang bị thiết bị nghe nhìn (sinh hoạt, hội thảo và tương tự)
+
+≤ 300 chỗ
+2
+2,5
+
+> 300 chỗ
+2
+5,0
+
+4. Ký túc xá và nhà công cộng (ngoại trừ mục 2) 2)
+
+≤ 10 tầng và khối tích ≤ 25 000 m3
+1
+2,5
+
+≤ 10 tầng và khối tích > 25 000 m3
+2
+2,5
+
+> 10 tầng và khối tích ≤ 25 000 m3
+2
+2,5
+
+> 10 tầng và khối tích > 25 000 m3
+3
+2,5
+
+5. Nhà hành chính - phụ trợ của công trình công
+nghiệp có khối tích
+
+≤ 25 000 m3
+1
+2,5
+
+> 25 000 m3
+2
+2,5
+
+1) Trụ sở cơ quan nhà nước, nhà làm việc của các doanh nghiệp, tổ chức chính trị, xã hội, bưu điện, cơ sở truyền thanh, truyền hình, viễn thông, nhà lắp đặt thiết bị thông tin, trung tâm lưu trữ, quản lý dữ liệu… và các công trình có công năng tương tự.
+2) Nhà công cộng và các công trình có công năng tương tự, như:
+– Nhà ở ký túc xá, nhà hỗn hợp, khách sạn, nhà ở riêng lẻ kết hợp công năng khác, nhà khách, nhà nghỉ, nhà trọ, cơ sở lưu trú khác được thành lập theo Luật Du lịch;
+– Cơ sở kinh doanh dịch vụ karaoke, vũ trường, quán bar, câu lạc bộ, thẩm mỹ viện, kinh doanh dịch vụ xoa bóp, công viên giải trí, vườn thú, thủy cung;
+– Cửa hàng điện máy, siêu thị, cửa hàng bách hoá; cửa hàng tiện ích, nhà hàng, cửa hàng ăn uống;
+– Phòng khám đa khoa, chuyên khoa; thẩm mỹ viện;
+– Bảo tàng, thư viện, nhà triển lãm, nhà trưng bày, nhà lưu trữ, nhà sách, nhà hội chợ;
+– Sân vận động, nhà thi đấu thể thao, cung thể thao trong nhà, trung tâm thể dục, thể thao, trường đua, trường bắn, cơ sở thể thao khác được thành lập theo Luật Thể dục, thể thao;
+– Cảng hàng không, đài kiểm soát không lưu, bến cảng biển, cảng cạn, cảng thủy nội địa, bến xe khách, trạm dừng nghỉ, nhà ga đường sắt, nhà chờ cáp treo vận chuyển người, công trình tàu điện ngầm, cơ sở đăng kiểm phương tiện giao thông cơ giới, cửa hàng kinh doanh, sửa chữa, bảo dưỡng ô tô, mô tô, xe gắn máy;
+– Nhà trẻ, trường mẫu giáo, mầm non, trường tiểu học, trung học cơ sở, trung học phổ thông, trường phổ thông có nhiều cấp học, trường cao đẳng, đại học, học viện, trường trung cấp chuyên nghiệp, trường dạy nghề; cơ sở giáo dục thường xuyên, cơ sở giáo dục khác được thành lập theo Luật Giáo dục;
+– Nhà điều dưỡng, phục hồi chức năng, chỉnh hình, nhà dưỡng lão.
+
+	Bảng 11 Đ 5.2.2  Sửa đổi 1:2023 QCVN 06:2022/BXD				Nhà cao trên 100m	Lưu lượng nước chữa cháy trong nhà cho từng khoang cháy phải đủ cho 4 tia phun chữa cháy, lưu lượng nước mỗi tia phun không nhỏ hơn 2,5 l/s.
+Trong các khoang cháy có các gian phòng công cộng, cho phép bố  trí các họng
+nước chữa cháy có lưu lượng không nhỏ hơn 2,5  l/s, với điều kiện phải có các ống đứng đảm bảo cung cấp cho các họng nước đạt lưu lượng 5 l/s.	Điều A.2.27.2, A.2.27.3 QCVN 06:2022/BXD				Gara ô tô	Số lượng lăng phun chữa cháy và lưu lượng nước tối thiểu cho một tia phun chữa cháy bên trong các gara ô-tô dạng kín phải đảm bảo như sau:
+- Khi thể tích khoang cháy từ 500 đến 5.000 m3: 2 lăng phun và 2,5 l/s cho một tia phun;
+- Khi thể tích khoang cháy lớn hơn 5.000 m3: 2 lăng phun và 5 l/s cho một tia phun.
+Cho phép không đặt đường ống cấp nước chữa cháy bên trong đối với các gara ô-tô một và hai tầng dạng ngăn có lối ra ngoài trời trực tiếp từ từng ngăn.	Điều 2.3.2.1 QCVN 13:2018/BXD			-	Nhà sản xuất và nhà kho F5					-	Số tia nước phun chữa cháy	Số tia phun chữa cháy cho mỗi điểm cháy lấy là 02 tia đối với các công trình có yêu cầu số tia phun lớn hơn 02.	Điều 5.2.4  Sửa đổi 1:2023 QCVN 06:2022/BXD					Nhà nhóm F5 hạng nguy hiểm cháy nổ A, B, C có chiều cao PCCC trên 50m lấy tương ứng là 4 tia, mỗi tia 5 L/s.	Đ 5.2.2  Sửa đổi 1:2023 QCVN 06:2022/BXD					Bảng 12 – Số tia phun chữa cháy và lưu lượng nước tối thiểu cho chữa cháy trong nhà đối với nhà sản xuất và nhà kho
+Bậc chịu lửa của nhà
+Hạng nguy hiểm cháy và cháy nổ của nhà
+Cấp nguy hiểm cháy của kết cấu
+Số tia phun chữa cháy và lưu lượng nước tối thiểu, L/s, đối với 1 tia phun, cho chữa cháy trong nhà đối với nhà sản xuất và nhà kho có chiều cao PCCC đến 50 m và theo khối tích,
+1 000 m3
+
+≤ 150
+> 150
+
+I, II
+A, B, C
+S0, S1
+2 × 2,5
+3 × 2,5
+
+D, E
+Không quy định
+1 × 2,5
+1 × 2,5
+
+III
+A, B, C
+S0
+2 × 2,5
+3 × 2,5
+
+D, E
+S0, S1
+1 × 2,5
+2 × 2,5
+
+IV
+A, B
+S0
+2 × 2,5
+3 × 2,5
+
+C
+S0, S1
+2 × 2,5
+2 × 5
+
+C
+S2, S3
+3 × 2,5
+4 × 2,5
+
+D, E
+S0, S1, S2, S3
+1 × 2,5
+2 × 2,5
+
+V
+C
+Không quy định
+2 × 2,5
+2 × 5
+
+D, E
+Không quy định
+1 × 2,5
+2 × 2,5
+
+Bảng 13 – Lưu lượng nước chữa cháy phụ thuộc theo chiều cao tia nước đặc và đường kính đầu lăng phun chữa cháy
+Chiều cao tia nước đặc, m
+Lưu lượng của lăng phun, L/s
+Áp suất, MPa, của họng nước chữa cháy với chiều dài cuộn vòi, m
+Lưu lượng của lăng phun, L/s
+Áp suất, MPa, của họng nước chữa cháy với chiều dài cuộn vòi, m
+Lưu lượng của lăng phun, L/s
+Áp suất, MPa, của họng nước chữa cháy với chiều dài cuộn vòi, m
+
+10
+15
+20
+
+10
+15
+20
+
+10
+15
+20
+
+Đường kính đầu lăng phun chữa cháy, mm
+
+13
+16
+19
+
+Họng nước chữa cháy DN 50 1)
+
+6
+–
+–
+–
+–
+2,6
+0,092
+0,096
+0,100
+3,4
+0,088
+0,096
+0,104
+
+8
+–
+–
+–
+–
+2,9
+0,120
+0,125
+0,130
+4,1
+0,129
+0,138
+0,148
+
+10
+–
+–
+–
+–
+3,3
+0,151
+0,157
+0,164
+4,6
+0,160
+0,173
+0,185
+
+12
+2,6
+0,202
+0,206
+0,210
+3,7
+0,192
+0,196
+0,210
+5,2
+0,206
+0,223
+0,240
+
+14
+2,8
+0,236
+0,241
+0,245
+4,2
+0,248
+0,255
+0,263
+–
+–
+–
+–
+
+16
+3,2
+0,316
+0,322
+0,328
+4,6
+0,293
+0,300
+0,318
+–
+–
+–
+–
+
+18
+3,6
+0,390
+0,398
+0,406
+5,1
+0,360
+0,380
+0,400
+–
+–
+–
+–
+
+Họng nước chữa cháy DN 65 1)
+
+6
+–
+–
+–
+–
+2,6
+0,088
+0,089
+0,090
+3,4
+0,078
+0,080
+0,083
+
+8
+–
+–
+–
+–
+2,9
+0,110
+0,112
+0,114
+4,1
+0,114
+0,117
+0,121
+
+10
+–
+–
+–
+–
+3,3
+0,140
+0,143
+0,146
+4,6
+0,143
+0,147
+0,151
+
+12
+2,6
+0,198
+0,199
+0,201
+3,7
+0,180
+0,183
+0,186
+5,2
+0,182
+0,190
+0,199
+
+14
+2,8
+0,23
+0,231
+0,233
+4,2
+0,230
+0,233
+0,235
+5,7
+0,218
+0,224
+0,230
+
+16
+3,2
+0,31
+0,313
+0,315
+4,6
+0,276
+0,280
+0,284
+6,3
+0,266
+0,273
+0,280
+
+18
+3,6
+0,38
+0,383
+0,385
+5,1
+0,338
+0,342
+0,346
+7,0
+0,329
+0,338
+0,348
+
+20
+4,0
+0,464
+0,467
+0,470
+5,6
+0,412
+0,424
+0,418
+7,5
+0,372
+0,385
+0,397
+
+1) DN – Viết tắt của Diameter Nominal – Đường kính trong danh nghĩa, đơn vị tính bằng milimét (mm).
+
+	Bảng 12, 13  Sửa đổi 1:2023 QCVN 06:2022/BXD			1.2	Lưu ý	- Khi sử dụng kết cấu thép không được bảo vệ chống cháy trong các nhà bậc chịu lửa III, IV (nhóm S2, S3), cũng như kết cấu gỗ tự nhiên hoặc gỗ ép (trong trường hợp này là gỗ đã qua xử lý bảo vệ chống cháy), phải tăng thêm 5 L/s.
+- Khi sử dụng vật liệu là chất cháy bao quanh cấu trúc nhà bậc chịu lửa IV (nhóm S2, S3), phải tăng thêm 5 L/s với nhà có khối tích đến 10 000 m3. Khi nhà có khối tích lớn hơn 10 000 m3 thì phải tăng thêm 5 L/s cho mỗi 100 000 m3 tăng thêm hoặc phần lẻ của 100 000 m3 tăng thêm.	Đ 5.2.3			2	Mạng đường ống cấp nước chữa cháy	Kiểm tra việc duy trì mạng đường ống, các van và việc duy trì áp suất trong đường ống				2.1	Ống đứng	- Nhà từ 6 tầng trở lên khi liên kết hệ thống nước sinh hoạt và chữa cháy thì các ống đứng phải được nối vòng ở trên. Khi đó để bảo đảm việc thay nước trong nhà phải nối vòng ống đứng với một hoặc một vài ống xả đứng có van khóa.
+-  Việc xác định vị trí và số lượng đường ống đứng và họng nước chữa cháy trong nhà phải bảo đảm quy định sau:
++ Cho phép lắp đặt họng kép trên các ống đứng trong nhà sản xuất và nhà công cộng khi số lượng tia nước tính toán không nhỏ hơn 3, còn trong nhà ở không nhỏ hơn 2.
++ Trong nhà ở với chiều dài hành lang đến 10 m khi số tia nước bằng 2 cho mỗi điểm thì cho phép phun 2 tia từ một ống đứng.
++ Trong nhà ở với chiều dài hành lang lớn hơn 10 m, cũng như nhà sản xuất và nhà công cộng có từ 2 tia nước tính toán trở lên cho mỗi điểm thì phải bố trí 2 tia phun từ 2 tủ chữa cháy cạnh nhau (2 họng nước khác nhau).
+CHÚ THÍCH 1: Phải lắp đặt họng nước chữa cháy trong các tầng kỹ thuật, tầng áp mái và tầng hầm kỹ thuật nếu trong đó có vật liệu và kết cấu làm từ vật liệu cháy được.
+CHÚ THÍCH 2: Số tia nước từ mỗi tủ không được lớn hơn 2.
+CHÚ THÍCH 3:  Cho phép tăng bán kính phục vụ của các họng nước chữa cháy bằng việc kết nối các vòi chữa cháy với tổng chiều dài đến 40 m. Khi đó các vòi phải treo ở dạng xếp trên giá đỡ và được kết nối sẵn với họng nước và lăng phun.
+- Khi trong nhà bố trí trên 12 họng nước chữa cháy hoặc có trang bị hệ thống chữa cháy tự động thì hệ thống cấp nước chữa cháy bên trong nhà, dù thiết kế riêng hay kết hợp cũng phải thiết kế ít nhất hai ống cấp nước và phải thực hiện nối thành mạng vòng.	Đ 5.2.10  Sửa đổi 1:2023 QCVN 06:2022/BXD
+Đ 5.2.11  Sửa đổi 1:2023 QCVN 06:2022/BXD
+
+Đ 5.2.18  Sửa đổi 1:2023 QCVN 06:2022/BXD			2.2	Van khóa	Những van để khóa nước từ các đường ống nhánh cụt cũng như những van khóa lớn từ đường ống thép khép kín phải được bố trí để bảo đảm mỗi đoạn ống chỉ khóa nhiều nhất là 5 họng nước chữa cháy trên cùng một tầng.	Đ 5.2.17			2.3	Duy trì áp suất nước trong đường ống	Hệ thống họng nước chữa cháy trong nhà của các nhà sản xuất, nhà kho có mức nguy hiểm cháy cao, nhà có chiều cao từ 25 m trở lên, chợ, trung tâm thương mại, siêu thị, khách sạn, vũ trường, karaoke, quán bar, hộp đêm, nhà ga, các nhà dịch vụ cảng biển, các nhà dịch vụ cảng cạn, các nhà dịch vụ cảng thuỷ nội địa, nhà hát, rạp chiếu phim phải thường xuyên có nước duy trì áp suất bảo đảm kích hoạt hệ thống tự động	Đ 5.4.1.2
+TCVN 3890:2023
+					-  Áp suất thủy tĩnh trong hệ thống nước sinh hoạt - chữa cháy đo tại các thiết bị vệ sinh - kỹ thuật đặt ở mức nước thấp nhất không được vượt quá 0,45 MPa.
+- Áp suất thủy tĩnh của hệ thống chữa cháy riêng biệt đo tại họng nước chữa cháy đặt ở mức nước thấp nhất không được vượt quá 0,60 MPa.
+- Khi tính toán, nếu áp suất trong hệ thống chữa cháy vượt quá 0,45 MPa thì phải lắp đặt mạng hệ thống chữa cháy riêng.
+CHÚ THÍCH: Khi áp suất giữa van và đầu nối của họng nước chữa cháy lớn hơn 0,45 MPa thì phải lắp đặt màng ngăn và thiết bị điều chỉnh áp lực để giảm áp lực dư.	Đ 5.2.6  Sửa đổi 1:2023 QCVN 06:2022/BXD 			3	Bố trí họng nước chữa cháy	- Kiểm tra việc duy trì chiều cao lắp đặt họng nước
+- Kiểm tra chủng loại lăng, vòi chữa cháy (thông số áp lực, chiều dài cuộn vòi, chủng loại lăng vòi, khớp nối);
+- Kiểm tra van khóa của họng.				3.1	Chiều cao lắp đặt họng	- Các họng nước chữa cháy được lắp đặt sao cho miệng họng nằm ở độ cao 1,20 m ± 0,15 m so với mặt sàn và đặt trong các tủ chữa cháy có lỗ thông gió, được dán niêm phong.
+- Đối với họng nước chữa cháy kép, cho phép lắp đặt 01 họng nằm trên 01 họng nằm dưới, khi đó họng nằm dưới phải lắp có chiều cao không nhỏ hơn 1,0 m tính từ mặt sàn.	Điều 5.2.12   Sửa đổi 1:2023 QCVN 06:2022/BXD			3.2	Vị trí bố trí họng nước	Họng nước chữa cháy bên trong nhà phải được lắp đặt tại các lối vào phía trong hành lang (ở nơi không có nguy cơ nước bị đóng băng) của các buồng thang (trừ các buồng thang không nhiễm khói), tại các sảnh, hành lang, lối đi và những chỗ dễ tiếp cận khác, khi đó việc bố trí phải đảm bảo không gây cản trở các hoạt động thoát nạn.	Điều 5.2.14  Sửa đổi 1:2023 QCVN 06:2022/BXD			3.3	Họng tiếp nước vào
+Kiểm tra việc bố trí, duy trì việc trang bị họng cấp nước vào hệ thống (họng 2 cửa, họng 4 cửa)	Đối với nhà cao từ 17 tầng trở lên, hệ thống họng nước chữa cháy trong nhà của mỗi vùng phải có họng chờ, có đầu nối với kích cỡ phù hợp để kết nối với phương tiện chữa cháy di động. Các họng này phải được lắp đặt van một chiều và niêm phong mở.	Điều 5.2.13  Sửa đổi 1:2023 QCVN 06:2022/BXD			3.4	Chiều cao tia nước đặc
+- Kiểm tra chiều cao tia nước đặc (lấy bằng 0,8 chiều cao tia nước phun theo phương thẳng đứng).
+Thử nghiệm bằng áp lực của hệ thống, số lượng lăng triển khai theo thiết kế lớn nhất và đo áp lực đầu lăng tại ví trí bất lợi nhất.	Áp suất tự do của họng nước chữa cháy phải bảo đảm cho chiều cao của tia nước đặc cần thiết để chữa cháy vào mọi thời điểm trong ngày đối với khu vực cao nhất và xa nhất. Chiều cao tối thiểu và bán kính hoạt động của tia nước đặc chữa cháy phải bằng chiều cao của khu vực, tính từ sàn đến điểm cao nhất của xà (trần), nhưng không nhỏ hơn các giá trị sau:
+-  Đối với nhà ở, nhà công cộng, nhà sản xuất và nhà phụ trợ của công trình công nghiệp có chiều cao đến 50 m không nhỏ hơn 6 m.
+-  Đối với nhà ở cao trên 50 m không nhỏ hơn 8 m.
+-  Đối với nhà công cộng, nhà sản xuất và  nhà  phụ trợ của công trình công nghiệp cao trên 50 m không nhỏ hơn 16 m.
+CHÚ THÍCH 1: Áp suất của họng nước chữa cháy phải được tính toán tổn thất của cuộn vòi chữa cháy dài 10, 15 và  20 m.
+CHÚ THÍCH 2: Để nhận tia nước đặc lưu lượng đến 4 l/s thì sử dụng họng nước chữa cháy DN 50, đối với lưu lượng lớn hơn phải sử dụng họng DN 65. Khi luận chứng kinh tế - kỹ  thuật cho phép thì được dùng họng nước chữa cháy DN 50 cho lưu lượng trên 4 l/s.	Điều 5.2.7  Sửa đổi 1:2023 QCVN 06:2022/BXD			4	Hệ thống họng chờ Kiểm tra việc bố trí, duy trì việc trang bị họng cấp nước vào hệ thống (họng 2 cửa, họng 4 cửa)	- Nhà nhóm F1.3 có chiều cao PCCC lớn hơn 15 m: Khoang đệm của thang máy chữa cháy hoặc của buồng thang bộ thoát nạn có bố trí họng chờ cấp nước DN 65 dành cho lực lượng chữa cháy chuyên nghiệp (của hệ thống ống khô).
+-  Đối với các tầng hầm, phải có đường cho xe chữa cháy nằm trong phạm vi 18 m tính từ lối vào trên mặt đất của tất cả các khoang đệm của thang máy chữa cháy hoặc của buồng thang bộ thoát nạn có bố trí họng chờ cấp nước DN 65 dành cho lực lượng chữa cháy chuyên nghiệp (của hệ thống ống khô).
+-  Mỗi khoang cháy của các nhà có chiều cao PCCC lớn hơn 28 m (lớn hơn 50 m đối với nhà nhóm F1.3), hoặc nhà có chiều sâu của sàn tầng hầm dưới cùng (tính đến cao độ của lối ra thoát nạn ra ngoài) lớn hơn 9 m: Sảnh thang máy chữa cháy là một khoang đệm có lắp đặt họng chờ cấp nước DN 65 dành cho lực lượng chữa cháy chuyên nghiệp;
+- Nhà F1.2, F4.3 và nhà hỗn hợp: Trong các khoang đệm buồng của thang bộ không nhiễm khói phải bố trí các họng chờ cấp nước D65 dành cho lực lượng chữa cháy chuyên nghiệp (của hệ thống ống khô). Ở tầng 1 các đường ống này phải có các ống nối để đấu nối với các bơm áp lực cao của các xe chữa cháy.	Đ 6.2.2.2  Sửa đổi 1:2023 QCVN 06:2022/BXD
+Đ 6.2.2.4  Sửa đổi 1:2023 QCVN 06:2022/BXD
+
+Đ 6.13  Sửa đổi 1:2023 QCVN 06:2022/BXD
+
+A.2.27.8  Sửa đổi 1:2023 QCVN 06:2022/BXD			5	Lượng nước dự trữ chữa cháy	Trong trường hợp lắp đặt hệ thống họng nước chữa cháy riêng biệt với các hệ thống chữa cháy tự động, thì thể tích của bể chứa nước dự trữ phải bảo đảm lượng nước dùng trong 01 giờ, cho một họng nước chữa cháy và các nhu cầu dùng nước khác.
+Khi lắp đặt hệ thống họng nước chữa cháy trên các hệ thống chữa cháy tự động thì thời gian làm việc của họng nước lấy bằng thời gian làm việc của hệ thống chữa cháy tự động.	Điều 5.2.9  Sửa đổi 1:2023 QCVN 06:2022/BXD
+			6	Kiểm tra, thử nghiệm	- Kiểm tra:
++ Kiểm tra bố trí tủ, hộp họng nước chữa cháy (số lượng, cao độ lắp đặt);
++ Kiểm tra chủng loại lăng, vòi chữa cháy (thông số áp lực, chiều dài cuộn vòi, chủng loại lăng vòi, khớp nối);
++ Kiểm tra van khóa của họng, van khóa trên đường ống;
++ Kiểm tra đường ống (đường kính ống, nối mạng vòng).
+- Thử nghiệm:
++ Thử nghiệm bằng áp lực của hệ thống, số lượng lăng triển khai theo thiết kế lớn nhất và đo áp lực đầu lăng tại ví trí bất lợi nhất (lưu ý áp lực tại họng nước trong nhà có kết hợp với hệ thống sprinkler không được vượt quá 0,4 Mpa).				Lưu ý: Nội dung hướng dẫn tại Bảng trên được áp dụng đối với các công trình được xây dựng mới, cải tạo về PCCC sau thời điểm các tiêu chuẩn, quy chuẩn nêu trên có hiệu lực thi hành; các cơ sở đang hoạt động không có cải tạo, thay đổi tính chất sử dụng áp dụng theo các tài liệu đã được C07 hướng dẫn phù hợp với thời điểm công trình được xây dựng hoặc cải tạo, thay đổi tính chất sử dụng.
+
+50

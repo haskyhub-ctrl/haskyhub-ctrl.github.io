@@ -1,0 +1,2931 @@
+[Tài liệu huấn luyện, bồi dưỡng nghiệp vụ PCCC và CNCH số 08: dành cho Người điều khiển phương tiện giao thông và đối tượng khác có nhu cầu]
+[Hiệu lực: 06/2025. Trạng thái: ĐANG DÙNG.]
+
+BỘ CÔNG AN
+TRƢỜNG ĐẠI HỌC PCCC       CỤC CẢNH SÁT PCCC&CNCH
+
+TÀI LIỆU HUẤN LUYỆN, BỒI DƢỠNG NGHIỆP VỤ
+PHÒNG CHÁY, CHỮA CHÁY VÀ CỨU NẠN, CỨU HỘ
+DÀNH CHO
+NGƢỜI ĐIỀU KHIỂN PHƢƠNG TIỆN GIAO
+THÔNG VÀ ĐỐI TƢỢNG KHÁC CÓ NHU CẦU
+
+(TÀI LIỆU 08)
+
+HÀ NỘI – 6/2025
+
+2
+
+MỤC LỤC
+DANH MỤC CÁC TỪ VIẾT TẮT ........................................................................ 4
+LỜI MỞ ĐẦU .................................................................................................................... 5
+CHƢƠNG 1. VỊ TRÍ, VAI TRÒ VÀ QUY ĐỊNH CỦA PHÁP LUẬT VỀ PHÒNG
+CHÁY, CHỮA CHÁY VÀ CỨU NẠN, CỨU HỘ.......................................................... 6
+1.1. Vị trí, vai trò của công tác phòng cháy, chữa cháy và cứu nạn, cứu hộ ............ 6
+1.1.1. Tác hại của cháy, nổ, tai nạn, sự cố và những yêu cầu trong công tác phòng
+cháy, chữa cháy, cứu nạn, cứu hộ ................................................................................ 6
+1.1.2. Sự chỉ đạo của Đảng, Nhà nước đối với công tác phòng cháy, chữa cháy và
+cứu nạn, cứu hộ .......................................................................................................... 10
+1.1.3. Nguyên tắc trong công tác phòng cháy, chữa cháy và cứu nạn, cứu hộ ................... 11
+1.2. Quy định của pháp luật về phòng cháy, chữa cháy và cứu nạn, cứu hộ ......... 12
+1.2.1. Trách nhiệm của cá nhân trong công tác phòng cháy, chữa cháy và cứu nạn,
+cứu hộ ......................................................................................................................... 12
+1.2.2. Trách nhiệm của chủ phương tiện giao thông trong công tác phòng cháy, chữa
+cháy và cứu nạn, cứu hộ............................................................................................. 14
+1.2.3. Trách nhiệm của người điều khiển phương tiện giao thông trong công tác
+phòng cháy, chữa cháy và cứu nạn, cứu hộ ............................................................... 15
+CHƢƠNG 2. KIẾN THỨC, KỸ NĂNG VỀ PHÒNG CHÁY ..................................... 17
+2.1. Các yếu tố, điều kiện gây cháy ............................................................................ 17
+2.1.1. Khái niệm về cháy ........................................................................................... 17
+2.1.2. Các yếu tố cần thiết cho sự cháy ...................................................................... 17
+2.1.3. Các điều kiện cần thiết cho sự cháy ................................................................. 19
+2.2. Nguyên nhân cháy, nguyên nhân vụ cháy .......................................................... 20
+2.2.1. Nguyên nhân cháy............................................................................................ 20
+2.2.2. Nguyên nhân vụ cháy ...................................................................................... 21
+2.3. Phƣơng pháp, biện pháp phòng cháy ................................................................. 23
+2.3.1. Phòng cháy trong sử dụng điện, nguồn lửa, nguồn nhiệt, thiết bị, dụng cụ sinh
+lửa, sinh nhiệt ............................................................................................................. 23
+2.3.2. Phòng cháy trong sản xuất, bảo quản, vận chuyển, sử dụng hàng hoá nguy
+hiểm về cháy, nổ ........................................................................................................ 27
+2.3.3. Quản lý, bảo quản, bảo dưỡng phương tiện, thiết bị phòng cháy, chữa cháy,
+cứu nạn, cứu hộ .......................................................................................................... 35
+2.3.4. Tính năng, phương pháp vận hành, sử dụng phương tiện, thiết bị phòng cháy
+và chữa cháy............................................................................................................... 40
+CHƢƠNG 3. KIẾN THỨC, KỸ NĂNG VỀ CHỮA CHÁY ....................................... 52
+3.1. Biện pháp chữa cháy cơ bản ................................................................................ 52
+3.1.1. Các phương pháp dập tắt đám cháy ................................................................. 52
+3.1.2. Các biện pháp phun chất chữa cháy ................................................................. 56
+3.2. Thực hành kỹ năng sử dụng thiết bị, phƣơng tiện chữa cháy .......................... 57
+3.2.1. Bình chữa cháy xách tay .................................................................................. 57
+3.2.2. Bình chữa cháy có bánh xe .............................................................................. 67
+3.2.3. Kỹ thuật sử dụng vòi, lăng chữa cháy.............................................................. 71
+3.3. Chỉ huy chữa cháy ................................................................................................ 77
+CHƢƠNG 4. KIẾN THỨC, KỸ NĂNG VỀ CỨU NẠN CỨU HỘ ............................ 79
+4.1. Kiến thức, kỹ năng về cứu nạn, cứu hộ .............................................................. 79
+
+3
+
+4.1.1. Các yếu tố nguy hiểm trong các đám cháy, sự cố, tai nạn ............................... 79
+4.1.2. Kỹ năng thoát nạn trong đám cháy ................................................................... 81
+4.2. Biện pháp cứu nạn cứu hộ cơ bản ....................................................................... 84
+4.2.1. Khái niệm biện pháp cứu nạn, cứu hộ .............................................................. 84
+4.2.2. Nhóm biện pháp cứu nạn cứu hộ ...................................................................... 85
+4.3. Kỹ năng cứu ngƣời bị nạn, sơ cấp cứu ngƣời bị nạn ......................................... 86
+4.3.1. Một số kỹ năng cứu người bị nạn ..................................................................... 86
+4.3.2. Một số kỹ năng sơ cấp cứu người bị nạn .......................................................... 91
+TÀI LIỆU THAM KHẢO ............................................................................................. 103
+
+4
+
+DANH MỤC CÁC TỪ VIẾT TẮT
+
+PCCC và CNCH : Phòng cháy, chữa cháy và cứu nạn, cứu hộ
+CC và CNCH : Chữa cháy và cứu nạn, cứu hộ
+PCCC : Phòng cháy và chữa cháy
+CNCH : Cứu nạn, cứu hộ
+UBND : Uỷ ban nhân dân
+
+5
+
+LỜI MỞ ĐẦU
+Hiện nay, đối với ph ương tiện giao thông có yêu cầu về bảo đảm an toàn về
+phòng cháy và chữa cháy, do tính chất đặc thù trong quá trình vận hành và l ưu
+thông phương tiện, người điều khiển ph ương tiện có trách nhiệm bảo đảm an toàn
+phòng cháy, chữa cháy trong quá trình hoạt động của phương tiện, bao gồm cả việc
+duy trì các điều kiện an toàn và thực hiện các biện pháp phòng ngừa cháy nổ và xử
+lý các tình huống tai nạn, sự cố xảy ra. Do đó để đối tượng này thực hiện tốt nhiệm
+vụ, Ban biên soạn xây dựng, ban hành tài liệu: “Huấn luyện, bồi d ưỡng nghiệp vụ
+phòng cháy, chữa cháy, cứu nạn, cứu hộ cho ng ười điều khiển ph ương tiện giao
+thông và đối t ượng khác có nhu cầu”. Tài liệu trang bị những kiến thức c ơ bản
+như: vị trí, vai trò, quy định của pháp luật về phòng cháy, chữa cháy, cứu nạn, cứu
+hộ; các kiến thức, kỹ năng về phòng cháy, chữa cháy, cứu nạn, cứu hộ cho ng ười
+điều khiển ph ương tiện giao thông c ơ giới. Theo đó, tài liệu biên soạn gồm 04
+Chương:
+Chương 1: Vị tr í, vai trò và quy định pháp luật về phòng cháy, chữa cháy và
+cứu nạn, cứu hộ;
+Chương 2: Kiến thức, kỹ năng về phòng cháy;
+Chương 3: Kiến thức, kỹ năng về chữa cháy;
+Chương 4: Kiến thức, kỹ năng về cứu nạn, cứu hộ.
+Tài liệu đ ược biên soạn dựa trên các quy đ ịnh của ph áp luật về phòng cháy,
+chữa cháy và cứu nạn, cứu hộ, có tham khảo, kế thừa các giáo trình, tài liệu có liên
+quan, tuy nhiên, do lần đầu biên soạn, chắc chắn không tránh khỏi thiếu sót, kính
+mong độc giả đóng góp ý kiến để tài liệu có chất lượng tốt hơn./.
+BAN BIÊN SOẠN
+
+6
+
+CHƢƠNG 1. VỊ TRÍ, V AI TRÒ VÀ QUY ĐỊNH CỦA PHÁP LUẬT VỀ
+PHÒNG CHÁY, CHỮA CHÁY VÀ CỨU NẠN, CỨU HỘ
+1.1. Vị trí, vai trò của công tác phòng cháy, chữa cháy và cứu nạn, cứu hộ
+1.1.1. Tác hại của cháy, nổ, tai nạn, sự cố và những yêu cầu trong công tác
+phòng cháy, chữa cháy, cứu nạn, cứu hộ
+- Tác hại của cháy, nổ, tai nạn, sự cố:
+Trong những năm gần đây, tình hình cháy, nổ, sự cố, tai nạn trên cả nước luôn
+có diễn biến phức tạp. Số vụ cháy, nổ, sự cố, tai nạn cũng như thiệt hại do chú ng
+gây ra có xu hướng gia tăng. Trung bình mỗi năm ở nước ta xảy ra hàng nghìn vụ
+cháy, nổ, tai nạn, sự cố gây ra những hậu quả, thiệt hại lớn về người, tài sản, ảnh
+hưởng đến môi trường và an ninh, trật tự xã hội:
++ Thiệt hại về tính mạng, sức khỏe và thể  chất của con người: Trong các vụ
+cháy, nổ, n ạn nhân có thể bị bỏng nặng, chấn thương do sập đổ công trình, hoặc
+ngạt khói. Việc hít phải khói độc còn dẫn đến tử vong nhanh chóng hoặc các bệnh
+hô hấp mãn tính. Ngoài ra, trải nghiệm là nạn nhân của sự cố ch áy, nổ có thể để lại
+những ảnh hưởng đến tinh thần nghiêm trọng. Về mặt tâm lý, con người có thể bị
+ám ảnh, lo âu, rối loạn giấc ngủ trong thời gian dài ảnh hưởng đến sức khỏe tinh
+thần và chất lượng cuộc sống.
++ Thiệt hại về tài sản: Trường hợp xảy ra chá y tại nhà ở hoặc nhà ở kết hợp
+sản xuất kinh doanh, nếu sự cố không được phát hiện và ngăn chặn kịp thời, đám
+cháy có thể hủy hoại toàn bộ tài sản. Nhiều trường hợp nạn nhân gặp khó khăn về
+kinh tế, thậm chí phá sản. Đối với các cơ sở sản xuất, kinh doanh,  ngoài những
+thiệt hại về tài sản, hàng hóa bị cháy, sau sự cố cháy, nổ, hoạt động sản xuất, kinh
+doanh tại khu vực bị ảnh hưởng thường bị gián đoạn. Doanh nghiệp phải tạm dừng
+hoạt động, người lao động không có việc làm, ảnh hưởng đến nguồn thu nhập. Với
+những lĩnh vực sản xuất, kinh doanh có quy mô lớn, thiệt hại gián tiếp có thể lớn
+hơn như việc ảnh hưởng đến chuỗi cung ứng hàng hóa và kinh tế của địa phương.
++ Tác động đến môi trường: Cháy, nổ sinh ra lượng lớn khói và khí độc. Các
+chất như CO, SO₂,… đư ợc giải phóng vào không khí gây ô nhiễm nghiêm trọng .
+Khói bụi từ đám cháy không chỉ ảnh hưởng khu vực xung quanh mà có thể lan
+
+7
+
+rộng, làm suy giảm chất lượng không khí. Một số vụ cháy có quy mô lớn có thể
+làm gia tăng hiệu ứng nhà kính, góp phần vào biến đổi khí h ậu và mưa axit. Quá
+trình chữa cháy, nước chữa cháy cùng hóa chất độc hại có thể chảy vào hệ thống
+sông hồ, nước ngầm, gây ô nhiễm nguồn nước. Tro bụi và hóa chất lắng đọng cũng
+làm nhiễm độc đất đai xung quanh. Sau các vụ cháy các nhà máy, khu cô ng
+nghiệp, việc xử lý nước thải và tẩy độc đất là thách thức lớn mà tốn nhiều thời
+gian. Những vụ cháy lớn (đặc biệt là cháy rừng) có thể hủy hoại hàng loạt sinh vật
+và phá hủy thảm thực vật. Nhiệt độ cao và khói độc làm mất cân bằng sinh thái,
+nhiều loài động thực vật mất môi trường sống. Mỗi năm, hàng ngàn hecta rừng bị
+thiêu rụi do hỏa hoạn gây suy giảm đa dạng sinh học, xói mòn đất, tăng nguy cơ lũ
+lụt và biến đổi vi khí hậu ở khu vực chịu ảnh hưởng.
++ Tác động xã hội và cơ sở hạ tầng: Khi có sự cố cháy , nổ, đặc biệt là tại các
+thành phố lớn, các tuyến giao thông bị phong tỏa phục vụ cho công tác triển khai
+chữa cháy; một số hành động khác như cắt điện, sử dụng nguồn nước huy động
+phục vụ cho chữa cháy.., có thể tác động đến cuộc sống của người dân. Ngoà i ra,
+sự cố cháy, nổ có thể gây ra những bất ổn xã hội và an ninh trật tự. Người dân vị
+mất nhà cửa phải sống trong điều kiện thiếu thốn, tạo áp lực cho công tác cứu trợ
+và an sinh xã hội.
+Có thể thấy, tình hình cháy, nổ phức tạp và những thiệt hại nghiêm trọng về
+người và tài sản đã và đang đặt ra yêu cầu cấp bách trong công tác phòng cháy,
+chữa cháy, cứu nạn, cứu hộ. Do đó, v iệc nâng cao nhận thức và thực hiện các biện
+pháp phòng ngừa là trách nhiệm của  mọi cơ quan, tổ chức, hộ gia đình và mỗi
+người dân nhằm xây dựng một cộng đồng an toàn và bền vững.
+- Những yêu cầu trong công tác PCCC, CNCH:
+Thực hiện chủ trương của Đảng về công tác phòng cháy, chữa cháy, Chỉ thị
+số 01/CT-TTg ngày 03/1/2023 của Thủ tướng Chính phủ về tăng cường công tác
+PCCC trong tình hình mới đã xác định một số yêu cầu, nhiệm vụ, giải pháp đối với
+công tác PCCC và CNCH như sau:
+Tập trung triển khai nghiêm túc, hiệu quả Chỉ thị số 47-CT/TW ngày 25 tháng
+6 năm 2015 của Ban Bí thư khóa XI về tăng cường sự lãnh đạo của Đảng đối với
+
+8
+
+công tác PCCC; Kết luận số 02-KL/TW ngày 18 tháng 5 năm 2021 của Ban Bí thư
+khóa XIII về tiếp tục triển khai thực hiện Chỉ thị số 47 -CT/TW; Nghị quyết số
+99/2019/QH14 ngày 27 tháng 11 năm 2019 của Quốc hội về tiếp tục hoàn thiện,
+nâng cao hiệu lực, hiệu quả thực hiện chính sách, pháp luật về PCCC và một số
+văn bản triển khai công tác phòng cháy, chữa cháy, cứu nạn, cứu hộ,
+Xác định rõ vị trí, vai trò, tầm quan trọng của công tác PCCC và CNCH, là
+nhiệm vụ quan trọng, cần thiết, không thể thiếu trong quá trình phát triển kinh tế,
+xã hội, coi đây là nhiệm vụ thường xuyên, cần thiết, hằng ngày. Các bộ, ngành, địa
+phương thực hiện nghiêm túc, đầy đủ trách nhiệm của mình trong quản lý nhà
+nước về PCCC theo quy định của pháp luật.
+Xử lý trách nhiệm người đứng đầu cấp ủy,  chính quyền địa phương nếu để
+các cơ sở có nguy cơ cháy, nổ cao hoạt động khi chưa đảm bảo điều kiện an toàn
+PCCC và để xảy ra các vụ cháy gây hậu quả nghiêm trọng do thiếu lãnh đạo, chỉ
+đạo, thanh tra, kiểm tra, giám sát hoặc thực hiện không đầy đủ trách  nhiệm trong
+phạm vi quản lý của mình đối với công tác PCCC và CNCH.
+Tập trung rà soát, sửa đổi, bổ sung hoàn thiện chính sách, pháp luật về công
+tác PCCC và CNCH đáp ứng kịp thời yêu cầu thực tiễn phát triển kinh tế, xã hội,
+đảm bảo đồng bộ, thống nhất trong hệ thống pháp luật. Tiếp tục hoàn thiện các tiêu
+chuẩn, quy chuẩn, quy trình về PCCC và CNCH phù hợp với điều kiện thực tiễn,
+tình hình phát triển kinh tế, xã hội của đất nước và năng lực quản lý, năng lực sản
+xuất của các tổ chức, cá nhân có liên quan.
+Chú trọng nghiên cứu, xây dựng chiến lược, kế hoạch, phương án PCCC và
+CNCH, nhất là tại các địa bàn, công trình trọng điểm quốc gia, khu đô thị, khu
+công nghiệp, khu thương mại có nguy cơ cháy, nổ cao, rừng phòng hộ, rừng đặc
+dụng. Xây dựng thực hiện đ ồng bộ qu y hoạch hạ tầng PCCC gắn với quy hoạch
+phát triển kinh tế, xã hội của ngành, lĩnh vực, địa phương, xây dựng mạng lưới
+giao thông, cấp nước, thông tin liên lạc đáp ứng yêu cầu phục vụ công tác chữa
+cháy, CNCH.
+Tiếp tục đổi mới về nội dung, hình thứ c công tá c tuyên truyền, xây dựng
+phong trào toàn dân PCCC và CNCH vừa có chiều rộng, vừa chuyên sâu, dễ hiểu,
+
+9
+
+dễ tiếp thu, bằng các giải pháp cụ thể tạo sự chuyển biến mạnh mẽ về nhận thức và
+hành động của các cấp, các ngành và nhân dân đối với công tác P CCC và CNCH.
+Tăng cường tuyên truyền, phổ biến, giáo dục kiến thức kỹ năng về PCCC và
+CNCH cho mọi tầng lớp nhân dân, nhất là đối với học sinh, sinh viên, đội ngũ lao
+động trẻ trong xã hội.
+Ứng dụng công nghệ thông tin phục vụ công tác tuyên truyền, phổ b iến, giáo
+dục pháp luật, kiến thức, kỹ năng về PCCC và CNCH. Xây dựng phong trào toàn
+dân PCCC và CNCH, nhân rộng các mô hình bảo đảm an toàn về PCCC và CNCH
+tại các khu dân cư, hộ gia đình, các địa bàn, cơ sở có nguy cơ cháy, nổ cao; kịp
+thời biểu dương, khen thưởng các tập thể, cá nhân có thành tích xuất sắc.
+Siết chặt kỷ luật, kỷ cương, nâng cao hiệu lực, hiệu quả quản lý nhà nước về
+PCCC và CNCH. Tất cả các hành vi vi phạm về PCCC và CNCH phải được xử lý
+nghiêm theo quy định và bắt buộc khắc phục đối với các cơ sở không đảm bảo điều
+kiện an toàn PCCC và CNCH. Công khai các cá nhân, tổ chức vi phạm quy định về
+PCCC trên phương tiện thông tin đại chúng, thường xuyên cảnh báo cộng đồng
+dân cư xung quanh và xử lý nghiêm theo quy định của pháp luật các cá nhâ n, tổ
+chức cố tình đưa dự án, công trình, cơ sở vào sử dụng nhưng không bảo đảm các
+điều kiện an toàn về PCCC và CNCH gây hậu quả nghiêm trọng. Việc thanh tra,
+kiểm tra, hướng dẫn các cơ sở trong diện quản lý phải thực hiện nghiêm ngặt, chặt
+chẽ, đúng quy định, không để xảy ra tiêu cực, tham nhũng, lợi ích cá nhân, lợi ích
+nhóm.
+Kiện toàn, củng cố về nhân lực, cơ sở vật chất cho các lực lượng dân phòng,
+lực lượng PCCC cơ sở, lực lượng PCCC chuyên ngành, bảo đảm hoạt động hiệu
+quả, thực chất. Xây dựng cơ chế phối hợp, hiệp đồng chặt chẽ giữa Công an, Quân
+đội và các lực lượng khác trong thực hiện nhiệm vụ chữa cháy và CNCH. Thường
+xuyên tổ chức tập huấn, diễn tập, thực tập các phương án, tình huống xử lý sự cố
+cháy, nổ và CNCH.
+Tăng cường nguồn lực đầu tư cho  công tác PCCC và CNCH, xây dựng, trang
+bị cơ sở vật chất, hậu cần cho lực lượng Cảnh sát PCCC và CNCH. Tập trung các
+nguồn lực để xây dựng và phát triển đồng bộ cơ sở hạ tầng, kỹ thuật về PCCC và
+
+10
+
+CNCH (giao thông, nguồn nước, thông tin liên lạc, hệ thống cảnh báo sự cố, tai
+nạn...). Nghiên cứu ứng dụng, chuyển giao công nghệ chữa cháy và CNCH hiện
+đại, phù hợp với tình hình, sự phát triển của đất nước. Khẩn trương nghiên cứu
+tăng cường ứng dụng công nghệ thông tin, chuyển đổi số trong hoạt động PCCC và
+CNCH. Huy độ ng mọi nguồn lực hợp pháp (trong đó có hợp tác công tư, xã hội
+hóa) để mua sắm trang thiết bị PCCC và CNCH.
+1.1.2. Sự chỉ đạo của Đảng, Nhà nước đối với công tác phòng cháy, chữa cháy
+và cứu nạn, cứu hộ
+Nhận thức được tác hại của cháy, nổ, sự cố, tại nạn đ ối với đời sống xã hội,
+thời gian qua Đảng và Nhà nước luôn quan tâm, chỉ đạo sát sao  đối với công tác
+PCCC và CNCH. Điều đó được thể hiện qua nhiều  Nghị quyết, Chỉ thị của Đảng;
+các văn bản pháp luật, chủ trương, chính sách và kế hoạch  của Nhà nước. Đảng và
+Nhà nước luôn xác định công tác này là một nhiệm vụ quan trọng trong công tác
+bảo vệ an ninh, trật tự và an toàn xã hội. Trong đó, một số văn bản trọng tâm như:
+Chỉ thị số 47-CT/TW, ngày 25/6/2015 của Ban Bí thư (khóa XI) về tăng cường sự
+lãnh đạo của Đ ảng đối với công tác PCCC; Kết luận số 02 -KL/TW, ngày
+18/5/2021 của Ban Bí thư (khóa XIII) về tiếp tục triển khai thực hiện Chỉ thị số 47-
+CT/TW; Nghị quyết số 99/2019/QH14, ngày 27/11/2019 của Quốc hội về tiếp tục
+hoàn thiện, nâng cao hiệu lực, hi ệu quả thực hiện chính sách, pháp luật về PCCC;
+Quyết định số 630/QĐ -TTg, ngày 11/5/2020 của Thủ tướng Chính phủ về ban
+hành Kế hoạch thực hiện Nghị quyết số 99/2019/QH14; Quyết định số 1492/QĐ -
+TTg, ngày 10/9/2021 của Thủ tướng Chính phủ về ban hành Kế hoạ ch triển khai
+thực hiện Kết luận số 02 -KL/TW; Chỉ thị số 01/CT -TTg, ngày 03/01/2023 của
+Chính phủ về tăng cường công tác PCCC trong tình hình mới; Chỉ thị số 19/CT -
+TTg, ngày 24/6/2024 của Thủ tướng Chính phủ về tăng cường công tác phòng
+cháy, chữa cháy đối với nhà ở nhiều tầng, nhiều căn hộ, nhà ở riêng lẻ kết hợp sản
+xuất, kinh doanh..
+Trên cơ sở văn bản chỉ đạo của Đảng, Nhà nước đã ban hành luật, nghị định,
+thông tư để quản lý và điều hành công tác PCCC, CNCH. Gần đây nhất, Quốc Hội
+đã thông qua Luật PCC C và CNCH  năm 2024, chính thức có hiệu lực từ ngày
+
+11
+
+01/7/2025, cùng với đó Nghị định 105/2025 ngày 15/5/2025 quy định chi tiết một
+số điều và biện pháp thi hành Luật Phòng cháy, chữa cháy và cứu nạn, cứu hộ;
+Nghị định số 106/2025/NĐ -CP ngày 15/5/2025 quy đị nh xử phạ t vi phạm hành
+chính trong lĩnh vực phòng cháy, chữa cháy và cứu nạn, cứu hộ; Thông tư số
+36/2025/TT-BCA ngày 15/5/2025 Quy định chi tiết một số điều của Luật Phòng
+cháy, chữa cháy và cứu nạn, cứu hộ và Nghị định 105/2025/NĐ -CP ngày
+15/5/2025 của Chính phủ quy định chi tiết một số điều và biện pháp thi hành Luật
+Phòng cháy, chữa cháy và cứu nạn, cứu hộ; Thông tư 37/2025/TT -BCA ngày
+15/5/2025 quy định về nhiệm vụ công tác phòng cháy, chữa cháy, cứu nạn, cứu hộ
+của lực lượng Công an nhân dân; Thông t ư số 38/2 025/TT-BCA ngày 15/5/2025
+quy định về thực hiện dân chủ trong công tác phòng cháy, chữa cháy, cứu nạn, cứu
+hộ của lực lượng Công an nhân dân. Bên cạnh đó, Nhà nước chỉ đạo hoàn thiện
+công tác tổ chức lực lượng chuyên trách, nòng cốt là lực lượng C ảnh sát PCCC và
+CNCH, nhằm thực hiện các nhiệm vụ phòng ngừa và ứng phó với cháy, nổ, tai
+nạn, sự cố; hướng dẫn, kiểm tra, tổ chức thực hiện các nhiệm vụ PCCC và CNCH.
+Nhà nước chủ động đầu tư trang thiết bị, cơ sở vật chất phục vụ công tác PCCC,
+CNCH, đồng thời tăng cường công tác đào tạo, huấn luyện cán bộ, chiến sĩ, nhằm
+nâng cao năng lực của lực lượng chức năng. Để đáp ứng yêu cầu thực tế, Nhà nước
+luôn chú trọng việc đổi mới công tác PCCC và CNCH, từ việc cải thiện các chính
+sách, pháp luật cho đến nân g cao hiệu quả hoạt động của các lực lượng tham gia.
+Các cơ quan chức năng, tổ chức có trách nhiệm đã thực hiện các biện pháp tăng
+cường kiểm tra, giám sát và xử lý nghiêm các hành vi vi phạm quy định về PCCC,
+CNCH, đặc biệt là đối với các cơ sở sản xuất, kinh doanh có nguy cơ cháy nổ cao.
+1.1.3. Nguyên tắc trong công tác phòng cháy, chữa cháy và cứu nạn, cứu hộ
+Điều 5 Luật PCCC và CNCH  quy định các nguyên tắc phòng cháy, chữa
+cháy, cứu nạn, cứu hộ, cụ thể như sau:
+- Tuân thủ Hiến pháp, pháp luật Việt Nam và điều ước quốc tế mà nước Cộng
+hòa xã hội chủ nghĩa Việt Nam là thành viên. Trường hợp giữa Việt Nam và nước
+ngoài chưa có điều ước quốc tế thì hoạt động phòng cháy, chữa cháy, cứu nạn, cứu
+hộ được thực hiện trên nguyên tắc có đi có lại hoặc yêu cầu đối ngoại nhưng không
+
+12
+
+trái pháp luật Việt Nam, phù hợp với pháp luật và tập quán quốc tế.
+- Huy động sức mạnh tổng hợp của toàn dân tham gia hoạt động phòng cháy,
+chữa cháy, cứu nạn, cứu hộ; phát huy vai trò nòng cốt của lực lượng phòng cháy,
+chữa cháy và cứu nạn, cứu hộ.
+- Chủ động phòng ngừa, lấy phòng ngừa là chính; kịp thời phát hiện sơ hở,
+thiếu sót về phòng cháy, chữa cháy và có biện pháp khắc phục; xác định phòng
+cháy, phòng ngừa tai nạn, sự cố là nhiệm vụ thường xuyên.
+- Chuẩn bị sẵn sàng lực lượng, phươ ng tiện, phương án và các điều kiện cần
+thiết để kịp thời chữa cháy, cứu nạn, cứu hộ.
+- Thống nhất chỉ huy, điều hành, phát huy vai trò của lực lượng, phương tiện,
+hậu cần tại chỗ khi xảy ra cháy, tai nạn, sự cố; ưu tiên cứu người, cứu tài sản; mọi
+nguồn nước, chất chữa cháy phải được ưu tiên sử dụng cho chữa cháy.
+- Ứng dụng khoa học và công nghệ hiện đại trong hoạt động phòng cháy,
+chữa cháy, cứu nạn, cứu hộ.
+- Mọi hành vi vi phạm pháp luật về phòng cháy, chữa cháy và cứu nạn, cứu
+hộ phải được phát hiện, ngăn chặn kịp thời và xử lý nghiêm minh theo quy định
+của pháp luật.
+- Bảo đảm tính nhân đạo, công bằng, bình đẳng giới trong hoạt động phòng
+cháy, chữa cháy, cứu nạn, cứu hộ.
+1.2. Quy định của pháp luật về phòng cháy, chữa cháy và cứu nạn, cứu hộ
+1.2.1. Trách nhiệm của cá nhân trong công tác phòng cháy, chữa cháy và cứu
+nạn, cứu hộ
+Tại khoản 1, khoản 2 Điều 8 Luật PCCC và CNCH  quy định: “1. Phòng
+cháy, chữa cháy, cứu nạn, cứu hộ là trách nhiệm của cơ quan, tổ chức, hộ gia đình,
+cá nhân hoạt động, sinh sốn g trên lã nh thổ của nước Cộng hòa xã hội chủ nghĩa
+Việt Nam. 2. Công dân từ đủ 18 tuổi trở lên, đủ sức khỏe có trách nhiệm tham gia
+vào Đội phòng cháy, chữa cháy và cứu nạn, cứu hộ cơ sở, Đội phòng cháy, chữa
+cháy và cứu nạn, cứu hộ chuyên ngành hoặc Đội dân phòng khi có yêu cầu.
+Trách nhiệm của cá nhân trong công tác PCCC và CNCH được quy định cụ
+thể tại khoản 7 Điều 8 Luật PCCC và CNCH, cụ thể bao gồm:
+
+13
+
+- Chấp hành quy định, nội quy, biện pháp, yêu cầu về phòng cháy, chữa cháy,
+cứu nạn, cứu hộ của cơ quan, tổ chức hoặc người có thẩm quyền theo quy định của
+pháp luật.
+- Tìm hiểu kiến thức về phòng cháy, chữa cháy, cứu nạn, cứu hộ và kỹ năng
+thoát nạn, sử dụng dụng cụ, phương tiện phòng cháy, chữa cháy, cứu nạn, cứu hộ
+thông dụng.
+- Bảo đảm an toàn trong sử d ụng nguồn lửa, nguồn nhiệt, thiết bị, dụng cụ
+sinh lửa, sinh nhiệt, chất dễ cháy, nổ.
+- Phát hiện, ngăn chặn nguy cơ trực tiếp gây cháy, nổ và các hành vi vi phạm
+quy định an toàn về phòng cháy, chữa cháy, cứu nạn, cứu hộ trong điều kiện, khả
+năng cho phép.
+- Tham gia chữa cháy, cứu nạn, cứu hộ khi được cơ quan, người có thẩm
+quyền huy động; chấp hành yêu cầu, quyết định của người chỉ huy chữa cháy,
+người chỉ huy cứu nạn, cứu hộ khi tham gia chữa cháy, cứu nạn, cứu hộ.
+Bên cạnh đó, tại khoản 8  Điều 8 Luật PCCC và CNCH còn quy định về trách
+nhiệm phòng cháy, chữa cháy, cứu nạn, cứu hộ đối với trường hợp thuê, mượn, ở
+nhờ nhà ở như sau:
+- Người cho thuê, cho mượn, cho ở nhờ nhà ở có trách nhiệm tuyên truyền,
+đôn đốc, nhắc nhở người thuê, mượn, ở nhờ thực hiện quy định của pháp luật về
+phòng cháy, chữa cháy và cứu nạn, cứu hộ;
+- Người thuê, mượn, ở nhờ nhà ở có trách nhiệm theo quy định tại khoản 6
+Điều 8 Luật PCCC và CNCH, trừ trường hợp có thỏa thuận khác với người cho
+thuê, mượn, ở nhờ nhà ở.
+Trường hợp thuê, mượn, ở nhờ nhà ở kết hợp sản xuất, kinh doanh thì người
+thuê, mượn, ở nhờ còn có trách nhiệm bảo đảm điều kiện an toàn về phòng cháy
+đối với nhà ở kết hợp sản xuất, kinh doanh theo quy định tại Điều 21 của Luật
+PCCC và CNCH.
+
+14
+
+1.2.2. Trách nhiệm của chủ phương tiện giao thông trong công tác phòng
+cháy, chữa cháy và cứu nạn, cứu hộ
+Trách nhiệm của chủ phương tiện giao thông trong công tác PCCC và CNCH
+được quy định tại Khoản 4, 5 Điều 8 Luật PCCC và CNCH. Khoản 3 Điều 12,
+Điểm e khoản 2 Điều 13 Nghị định số 105/2025/NĐ-CP quy định chi tiết một số
+điều và biện pháp thi hành Luật PCCC và CNCH.
+-Tổ chức tuyên truyền, phổ biến kiến thức, pháp luật về phòng cháy, chữa
+cháy và cứu nạn, cứu hộ; tổ chức huấn luyện, bồi dưỡng nghiệp vụ phòng cháy,
+chữa cháy, cứu nạn, cứu hộ cho các đối tượng thuộc phạm vi quản lý.
+- Ban hành nội quy phòng cháy, chữa cháy, cứu nạn, cứu hộ.
+- Tổ chức kiểm tra thường xuyên đối với phương tiện giao thông thuộc phạm
+vi quản lý. Nội dung kiểm tra là: Việc trang bị phương tiện, hệ thống phòng  cháy,
+chữa cháy, cứu nạn, cứu hộ, hệ thống điện phục vụ phòng cháy và chữa cháy,
+nguồn nước chữa cháy theo quy định; Việc duy trì hoạt động các phương tiện, hệ
+thống phòng cháy, chữa cháy, cứu nạn, cứu hộ, hệ thống điện phục vụ phòng cháy
+và chữa cháy; ng uồn nước chữa cháy; Việc duy trì hệ thống, thiết bị phát hiện sự
+cố rò rỉ chất khí, chất lỏng nguy hiểm về cháy, nổ; Việc duy trì giải pháp ngăn
+cháy, chống cháy lan; giải pháp bảo đảm an toàn phòng cháy cho hệ thống cung
+cấp năng lượng, nhiên liệu và động  cơ; Việc chấp hành nội quy phòng cháy, chữa
+cháy, cứu nạn, cứu hộ; Việc duy trì các biển cấm, biển báo, biển chỉ dẫn.
+- Trang bị, duy trì tính năng sử dụng của phương tiện phòng cháy, chữa cháy,
+cứu nạn, cứu hộ; tổ chức chữa cháy, cứu nạn, cứu hộ; khắc ph ục hậu quả do cháy,
+tai nạn, sự cố gây ra.
+- Xây dựng, tổ chức thực tập phương án chữa cháy, cứu nạn, cứu hộ theo quy
+định của pháp luật.
+- Khi sản xuất, lắp ráp, đóng mới, hoán cải phương tiện giao thông phải có
+giải pháp, thiết kế về phòng cháy và chữa cháy phù hợp với tính chất, đặc điểm của
+phương tiện giao thông và bảo đảm các yêu cầu sau đây:
++ Bảo đảm yêu cầu về giải pháp ngăn cháy, chống cháy lan; giải pháp bảo
+đảm an toàn phòng cháy cho hệ thống cung cấp năng lượng, nhiên liệu và động cơ;
+
+15
+
+hệ thống, thiết bị phát hiện sự cố rò rỉ chất khí, chất lỏng nguy hiểm về cháy, nổ;
+phương tiện, hệ thống phòng cháy và chữa cháy.
++ Tổ chức giám sát việc sản xuất, lắp ráp, đóng mới, hoán cải theo đúng thiết
+kế đã được thẩm định về phòng cháy và chữa cháy;
++ Thực hiện thẩm định thiết kế về phòng cháy và chữa cháy theo quy định;
++ Tổ chức nghiệm thu về phòng cháy và chữa cháy đối với phương tiện giao
+thông và chịu trách nhiệm trước pháp luật về kết quả nghiệm thu; phối hợp với cơ
+quan quản lý chuyên ngành thực hiện kiểm tra công tác nghiệm thu về phòng cháy
+và chữa cháy.
++ Xuất trình hồ sơ thiết kế đã được thẩm định, hồ sơ nghiệm thu về phòng
+cháy và chữa cháy của phương tiện giao thông khi có yêu cầu của cơ quan có thẩm
+quyền.
+- Khi được huy động tham gia chữa cháy có trách nhiệm bố trí ngay phương
+tiện để tham gia chữa cháy và cứu nạn, cứu hộ.
+1.2.3. Trách nhiệm của người điều khiển phương tiện giao thông trong công
+tác phòng cháy, chữa cháy và cứu nạn, cứu hộ
+1.2.3.1. Trách nhiệm của người điều khiển phương tiện gi ao thông cơ giới
+đường bộ vận tải hành khách, hàng hóa nguy hiểm về cháy, nổ trong công tác
+PCCC và CNCH
+Tại khoản 5 Điều 22 Luật PCCC và CNCH quy định: Người điều khiển
+phương tiện giao thông cơ giới đường bộ vận tải hành khách, hàng hóa nguy hiểm
+về cháy, nổ có trách nhiệm bảo đảm an toàn về phòng cháy và chữa cháy trong quá
+trình hoạt động của phương tiện giao thông cơ giới. Cụ thể: Thường xuyên kiểm
+tra việc bảo đảm duy trì các điều kiện an toàn về phòng cháy và chữa cháy cho
+phương tiện như: Biển cấm, biển báo, biển chỉ dẫn theo quy định; các giải pháp
+ngăn cháy, chống cháy lan trên phương tiện; kiểm tra an toàn phòng cháy cho hệ
+thống cung cấp năng lượng, nhiên liệu, động cơ; hệ thống, thiết bị phát hiện sự cố
+rò rỉ chất khí, chất lỏng nguy hiểm về chá y, nổ; duy trì các phương tiện, hệ thống
+phòng cháy và chữa cháy trên phương tiện.
+Bên cạnh đó, người điều khiển phương tiện giao thông cơ giới đường bộ vận
+
+16
+
+tải hành khách, hàng hóa nguy hiểm về cháy, nổ có trách nhiệm thường xuyên trao
+dồi các kiến thức, kỹ năng về phòng cháy, chữa cháy, cứu nạn, cứu hộ… theo quy
+định của pháp luật
+1.2.3.2. Trách nhiệm của người điều khiển phương tiện giao thông đường sắt,
+phương tiện thủy nội địa, tàu biển vận tải hành khách, hàng hóa nguy hiểm về
+cháy, nổ trong công tác PCCC và CNCH
+Tại khoản 5 Điều 22 Luật PCCC và CNCH quy định: Người điều khiển
+phương tiện giao thông đường sắt, phương tiện thủy nội địa, tàu biển vận tải hành
+khách, hàng hóa nguy hiểm về cháy, nổ có trách nhiệm bảo đảm an toàn về phòng
+cháy và chữa cháy trong quá trình hoạt động của phương tiện giao thông. Cụ thể:
+Cùng với chủ phương tiện, người điều khiển phương tiện cần thường xuyên kiểm
+tra việc bảo đảm các điều kiện an toàn về phòng cháy theo quy định của pháp luật
+về đường sắt, pháp luật về giao thôn g đường t hủy nội địa, pháp luật về hàng hải;
+kiểm tra việc duy trì bảo đảm an toàn về phòng cháy và chữa cháy trong quá trình
+hoạt động của phương tiện như: Biển cấm, biển báo, biển chỉ dẫn trên phương tiện
+theo quy định; kiểm tra các giải pháp ngăn cháy, chống cháy lan trên phương tiện;
+duy trì và kiểm tra an toàn phòng cháy cho hệ thống cung cấp năng lượng, nhiên
+liệu, động cơ; hệ thống, thiết bị phát hiện sự cố rò rỉ chất khí, chất lỏng nguy hiểm
+về cháy, nổ; duy trì các phương tiện, hệ thống phòng cháy và chữa c háy trên
+phương tiện.
+Bên cạnh đó, người điều khiển phương tiện giao thông đường sắt, phương tiện
+thủy nội địa, tàu biển vận tải hành khách, hàng hóa nguy hiểm về cháy, nổ có trách
+nhiệm thường xuyên củng cố, trao dồi các kiến thức, kỹ năng về phò ng cháy, chữa
+cháy, cứu nạn, cứu hộ… theo quy định của pháp luật.
+
+17
+
+CHƢƠNG 2. KIẾN THỨC, KỸ NĂNG VỀ PHÒNG CHÁY
+2.1. Các yếu tố, điều kiện gây cháy
+2.1.1. Khái niệm về cháy
+Theo khoa học về PCCC: Cháy là tổng hợp của quá trình biến đổi lý – hoá phức
+tạp, trong đó các chất cháy dưới tác động của nguồn nhiệt tham gia phản ứng với chất
+ôxy hoá để tạo ra các sản phẩm cháy, có kèm theo toả nhiệt và phát ra ánh sáng (hay
+Cháy là phản ứng hoá học giữa chất cháy và chất ôxy hoá có kèm theo toả nhiệt và
+phát ra ánh sáng).
+Theo Luật PCCC&CNCH: Cháy là phản ứng hóa học có tỏa nhiệt, phát ra ánh
+sáng hoặc khói, gây thiệt hại hoặc có khả năng gây thiệt hại về người, tài sản của
+cơ quan, tổ chức, cá nhân, ảnh hưởng đến kinh tế, môi trường, an ninh, trật tự.
+ Dấu hiệu đặc trưng của sự cháy:
++ Có phản ứng hoá học giữa chất cháy với chất ôxy hoá (chất O 2, Cl, KClO3,
+KMnO4... và các chất ôxy hoá khác);
++ Có toả nhiệt;
++ Có phát sáng.
+Sản phẩm của quá trình cháy có thể bao gồm: Khí CO , CO, SO 2, NO 2,  hơi
+H2O, tro bụi...
+Ví dụ những hiện tượng sau đây không phải là sự cháy:
++ Bóng đèn điện sáng là hiện tư ợng lý học, từ điện năng sinh ra quang năng
+và nhiệt năng. Như vậy, có toả nhiệt, có phát sáng như ng không có dấu hiệu phản
+ứng hoá học.
++ Vôi sống gặp nước có phản ứng hoá học, có toả nhiệt nhưng không phát sáng.
+2.1.2. Các yếu tố cần thiết cho sự cháy
+Để sự cháy xuất hiện và tồn tại cần phải có đủ 3 yếu tố: Chất cháy, chất oxy
+hoá và nguồn nhiệt.
+- Chất cháy: là những chất có khả năng phản ứng với chất ôxy hoá tạo ra các
+sản phẩm cháy. Bao gồm:
++ Chất cháy rắn: là những chất cháy tồn tại ở dạng rắn, như gỗ, cao su, bông,
+vải, lúa, gạo, giấy, nhựa v.v,... Đặc điểm của các chất cháy loại này là sự biến đổi
+
+18
+
+trạng thái khi bị nung phụ thuộc vào thành phần hoá học, cấu trúc ph ân tử của
+chúng.
++ Chất cháy lỏng: là những chất cháy tồn tại ở dạng lỏng, như: xăng, dầu, các
+axit hữu cơ, rượu,... Đặc điểm của những loại chất lỏng là ở bất cứ nhiệt độ nào
+chúng cũng có khả năng bay hơi, nhiệt độ càng cao thì khả năng bay hơi của chúng
+càng lớn. Hơi của chất cháy lỏng khi trộn với không khí sẽ tạo ra hỗn hợp có khả
+năng gây cháy, nổ. Sự cháy của các chất cháy lỏng thực chất là cháy hơi của
+chúng. Trong điều kiện cháy chúng có thể bị chảy loang ra làm đám cháy phát triển
+lớn, phức tạp.
++ Chất cháy khí: là những chất cháy tồn tại ở dạng khí, như: hyđro, mêtan,
+axêtylen, khí ga,... Đặc điểm của các chất cháy khí là có khả năng phân tán rất
+nhanh trong môi trường không khí nên khi bị rò rỉ ra ngoài nó sẽ tạo thành hỗn hợp
+cháy với oxy trong không khí. Những hỗn hợp này khi có nồng độ nằm trong phạm
+vi giới hạn nồng độ cháy nổ chỉ cần tiếp xúc với nguồn nhiệt gây cháy rất nhỏ như
+tia lửa điện, tia lửa ma sát,... cũng có thể gây ra cháy, nổ.
+- Nguồn nhiệt gây cháy: là nguồn cung cấp năng lượng  cho phản ứng cháy
+xảy ra. Các dạng nguồn nhiệt gây cháy bao gồm:
++ Ngọn lửa trần: Ngọn lửa của lò đốt, lò phản ứng nhiệt, bếp đun nấu, thắp
+hương, hút thuốc, ngọn lửa của các công việc sữa chữa cơ khí (hàn cắt kim loại);
++ Nguồn nhiệt do va đập, ma sát giữa các vật rắn;
++ Nguồn nhiệt hình thành do sự gia tăng nhiệt độ của khí khi bị nén;
++ Nguồn nhiệt hình thành do phản ứng hoá học sinh nhiệt;
++ Nguồn nhiệt hình thành do năng lượng điện: Chập mạch, quá tải, điện trở tiếp
+xúc, sự truyền nhiệt của các thiết bị đốt nóng hay các thiết bị tiêu thụ điện khác.
+- Chất ôxy hoá: là chất tham gia phản ứng hoá học với chất cháy để tạo nên sự
+cháy.
+Chất ôxy hoá trong phản ứng cháy có thể là ôxy nguyên chất, ôxy của không
+khí, ôxy do các hợp chất chứa ôxy bị phân huỷ ra,  hoặc những chất ôxy hoá khác
+có khả năng ôxy hoá chất cháy như: các chất thuộc nhóm halôzen, H 2SO4 đặc,
+HNO3 đặc, các muối nitrat,... Các chất ôxy hóa khác nhau khả năng ôxy hóa của
+
+19
+
+chúng khác nhau, tùy vào mức độ hoạt động hóa học của chúng với chất cháy . Đối
+với những chất ôxy hóa khi tương tác hóa học hoặc bị nung nóng, va đập mà giải
+phóng ra ôxy tự do thì chúng có khả năng ôxy hóa rất mạnh.
+Từ những yếu tố cần thiết cho sự cháy, nhận thấy rằng: nếu thiếu một trong
+ba yếu tố cần thiết của sự cháy thì sự cháy k hông bao giờ xảy ra. Vì vậy, muốn
+cháy không xảy ra hoặc dập tắt đám cháy chỉ cần loại trừ ít nhất một trong ba yếu
+tố cần thiết cho sự cháy nói trên.
+2.1.3. Các điều kiện cần thiết cho sự cháy
+Khi đã có đủ 3 yếu tố cần thiết cho sự cháy nói trên sự cháy chưa chắc đã xảy
+ra, ví dụ như có đủ chất cháy, chất ôxy hóa và nguồn nhiệt nhưng chúng được để
+cách xa nhau, không tiếp xúc với nhau: sự cháy không xảy ra. Để sự cháy xảy ra
+được đòi hỏi phải có đủ các điều kiện kèm theo, đó là:
+- Chất cháy, chất ôxy hoá, nguồn nhiệt (3 yếu tố cần thiết cho sự cháy) phải
+tiếp xúc trực tiếp với nhau . Vì: cháy là phản ứng hoá học giữa chất cháy và chất
+ôxy hoá, nếu không có sự tiếp xúc của 3 yếu tố trên thì sẽ không xảy ra phản ứng
+hoá học giữa chất cháy và chất ôxy hoá để dẫn đến phản ứng cháy được.
+- Thời thời gian tiếp xúc đó phải đủ lớn để phản ứng cháy xảy ra. Khi các yếu
+tố tiếp xúc với nhau, nhưng nếu thời gian không đủ lớn thì tốc độ phản ứng hóa
+học giữa chất cháy và chất ôxy hóa không đạt đến một giá trị làm xuấ hiện sự cháy.
+- Nồng độ của chất cháy và chất ôxy hoá phải ở trong phạm vi giới hạn nồng
+độ bắt cháy. Vì tốc độ của phản ứng hoá học phụ thuộc vào nồng độ của các chất
+tham gia phản ứng, nếu nồng độ của chất cháy hoặc chất ôxy hoá nằm ngoài phạm
+vi giới hạn nồng độ bắt cháy thì tốc độ của phản ứng hoá học không đủ lớn để tạo
+ra lượng nhiệt làm hỗn hợp bắt cháy, nó chỉ là phản ứng ôxy hoá đơn thuần. Đối
+với chất ôxy hoá là ôxy của không khí thì với đa số các chất cháy nồng độ đó của
+ôxy trong không khí phải lớn hơn 14%.
+- Nguồn nhiệt phải nung nóng được hỗn hợp chất cháy và chất ôxy hoá - hỗn
+hợp cháy - tối thiểu tới nhiệt độ tự bắt cháy của hỗn hợp. ở nhiệt độ tự bắt cháy
+hỗn hợp có tốc độ phản ứng đủ lớn để nhiệt lượng giải phóng ra tiếp tục nung nóng
+hỗn hợp c ho tới khi xuất hiện sự cháy. Như vậy, để đốt cháy được hỗn hợp cháy
+
+20
+
+yêu cầu nguồn nhiệt không những phải có đủ số lượng nhiệt cung cấp mà còn phải
+có nhiệt độ lớn hơn nhiệt độ tự bắt cháy của hỗn hợp. Đồng thời, thời gian tiếp xúc
+của nguồn nhiệt  với hỗn hợp cũng phải đủ lâu để nguồn nhiệt đốt nóng được hỗn
+hợp tối thiểu đến nhiệt độ tự bắt cháy của nó.
+Những yếu tố và điều kiện cần thiết cho sự cháy là cơ sở để đề ra những biện
+pháp chung cũng như các biện pháp cụ thể phục vụ công tác đảm bảo an  toàn về
+PCCC có hiệu quả.
+2.2. Nguyên nhân cháy, nguyên nhân vụ cháy
+2.2.1. Nguyên nhân cháy
+Nguyên nhân cháy là sự tác động lẫn nhau giữa các yếu tố và điều kiện của sự
+cháy làm cho phản ứng cháy xảy ra. Trong thực tế, các vụ cháy xảy ra thì nguyên
+nhân cháy chủ yếu do hai yếu tố: chất cháy, nguồn nhiệt và hai điều kiện: Tiếp xúc
+và thời gian tiếp xúc giữa chất cháy và nguồn nhiệt. Do vậy, nguyên nhân cháy có
+thể được phân loại như sau:
+Sự tác đ ộng lẫn nhau gi ữa các y ếu t ố và điều kiện của sự cháy diễn ra hai
+trường hợp:
+- Trường hợp thứ nhất: sự tác động xuất hiện đồng thời cùng một lúc từ tất cả
+các yếu tố và điều kiện của sự cháy làm cho ph ản ứng cháy diễn ra. S ự chủ động
+đồng thời tác động vào nhau gi ữa các yếu tố, điều kiện của sự cháy làm cho ph ản
+ứng cháy diễn ra, chính là nguyên nhân cháy
+- Trường hợp thứ hai: sự tác động xuất hiện từ một yếu tố, điều kiện nào đó
+vào các yếu tố, điều kiện còn lại của sự cháy làm cho ph ản ứng cháy diễn ra. Các
+yếu tố, điều kiện chủ động tác đ ộng làm cho ph ản ứng cháy diễn ra, chính là các
+nguyên nhân cháy.
+Sự chủ động cùng tác động vào nhau giữa các yếu tố và điều kiện hay sự chủ
+động của một  yếu tố, điều kiện này vào yếu tố, điều kiện kia của sự cháy, đều đòi
+hỏi phải có một thời gian nhất định, thì phản ứng cháy mới có thể diễn ra. Dựa vào
+sự tác động giữa các yếu tố và điều kiện của sự cháy, nguyên nhân cháy được phân
+loại như sau:
+- Nguyên nhân cháy do sự tác động của yếu tố chất cháy chủ động gây ra. Đó
+
+21
+
+là trường hợp sự tác động của chất cháy xu ất hiện tại môi trường mà ở đó đã có
+đầy đủ các yếu tố và điều kiện khác của sự cháy. Ví dụ: Một xe chở xăng, chạy qua
+đoạn đường đang s ửa chữa, do n ắp không kín g ặp đường sóc, xăng ch ảy ra ngoài
+rơi xu ống đư ờng tác đ ộng vào ngu ồn nhi ệt c ủa ng ọn l ửa đang đun nh ựa đư ờng
+bùng cháy.
+- Nguyên nhân cháy do s ự tác động của yếu tố nguồn nhiệt chủ động gây ra.
+Đó là trường hợp sự tác động của nguồn nhiệt xuất hiện trong môi trường mà ở đó
+đã có đ ầy đủ các yếu tố và điều kiện khác c ủa sự cháy. Ví d ụ: Trong kho hàng
+bách hoá xảy ra ngắn mạch giữa các dây d ẫn, làm ruột kim loại của dây dẫn nóng
+chảy, tạo các giọt kim loại có nhiệt độ cao rơi xuống hàng hoá, vật tư là chất cháy
+ở bên dưới gây cháy.
+- Nguyên nhân cháy do sự tác động của yếu tố chất oxy hoá chủ động gây ra.
+Đó là trường hợp sự tác động của chất oxy hóa xuất hiện trong môi trường mà ở đó
+đã có đầy đủ các yếu tố và điều kiện khác của sự cháy. Ví dụ: Hiện tượng tự cháy
+của than.
+- Nguyên nhân cháy do đi ều kiện tiếp xúc gi ữa các y ếu tố của sự cháy chủ
+động gây ra, mà ch ủ yếu là s ự tiếp xúc gi ữa ch ất cháy, ch ất ôxy hoá và ngu ồn
+nhiệt. Ví dụ: Khi bếp dầu đang cháy thì cạn dầu, người ta đổ thêm dầu vào bầu dầu
+trong khi ngọn lửa của bếp dầu vẫn đang cháy, hơi d ầu bốc lên gặp ngọn lửa bùng
+cháy gây cháy nhà.
+- Nguyên nhân cháy do điều kiện thời gian ti ếp xúc gi ữa các y ếu tố của sự
+cháy là chất cháy, chất ôxy hoá và ngu ồn nhiệt chủ động gây ra. Đó là trư ờng hợp
+thời gian tiếp xúc giữa chất cháy và nguồn nhiệt kéo dài đủ để cho phản ứng cháy
+diễn ra.
+2.2.2. Nguyên nhân vụ cháy
+- Nhóm nguyên nhân vụ cháy do tự nhiên, như: Nguyên nhân vụ cháy do tự
+cháy; Nguyên nhân vụ cháy do sét đánh vv...
+Đó là các vụ cháy xảy ra nằm ngoài khả năng giám sát, chống đỡ của con
+người và thiết bị máy móc bảo vệ đối với một số hiện tượng thiên nhiên.
+- Nhóm nguyên nhân vụ cháy do sự cố bất ngờ, như: Nguyên nhân vụ cháy do
+
+22
+
+sự cố điện; Nguyên nhân vụ cháy do sự cố thiết bị kỹ thuật vv...
+Đó là các vụ cháy xảy ra nằm ngoài khả năng giám sát, điều khiển của con
+người và thiết bị kĩ thuật bảo vệ đối với các s ự cố kĩ thuật. Sự cố kĩ thuật đã tạo ra
+sự tác động lẫn nhau giữa các yếu tố và điều kiện của sự cháy làm cho phản ứng
+cháy diễn ra và phát triển thành đám cháy gây thiệt hại tài sản, tính mạng, sức
+khoẻ con người, ảnh hưởng xấu đến an ninh trật tự xã hội.
+- Nhóm nguyên nhân vụ cháy do vô ý, như:  Nguyên nhân vụ cháy do sơ xuất
+sử dụng lửa; Nguyên nhân vụ cháy do sơ xuất sử dụng xăng, dầu, khí gas; Nguyên
+nhân vụ cháy do sơ xuất sử dụng điện...
+Hành vi vô ý của con người tạo ra sự tác động giữa các yếu tố v à điều ki ện
+của sự cháy làm xuất hiện cháy gây thiệt hại tài sản, tính mạng, sức khoẻ con
+người gây ảnh hưởng xấu đến an ninh trật tự xã hội . Việc làm phát sinh đám cháy
+nằm ngoài ý muốn của người vi phạm.
+Đó là các trường hợp người gây cháy không hiểu biế t về tính chất nguy hiểm
+cháy, nổ của các chất cháy, không biết được khả năng bắt cháy của chất cháy khi
+có nguồn nhiệt, hoặc do nhầm lẫn trong thao tác kĩ thuật, trong sử dụng các thiết
+bị... mà sự nhầm lẫn này là do không có sự hướng dẫn, không có nội qu y chỉ dẫn
+cụ thể. Cháy do sơ xuất bất cẩn có thể xảy ra cả ở trong sản xuất, nơi học tập sinh
+hoạt và ở trong sinh hoạt đời sống ở từng gia đình.
+- Nhóm nguyên nhân vụ cháy do vi phạm quy định về PCCC, quy trình kỹ
+thuật, như: Nguyên nhân vụ cháy do thắp h ương thờ cúng; Nguyên nhân vụ cháy
+do vi phạm quy trình kỹ thuật và quy định an toàn về PCCC khác...
+- Nhóm nguyên nhân vụ cháy do cố ý gây cháy, như:  Nguyên nhân vụ cháy
+do đốt để che giấu tội phạm khác; Nguyên nhân vụ cháy do đốt vì mục đích phá
+hoại; Nguyên nhân vụ cháy do đốt vì mâu thuẫn cá nhân; Nguyên nhân vụ cháy do
+đốt vì say rượu hoặc vì mục đích khác vv...
+- Nhóm nguyên nhân vụ cháy do các nguyên nhân khác có thể là:  Nguyên
+nhân vụ cháy do tai nạn giao thông; Nguyên nhân vụ cháy do trẻ em nghịch lửa;
+Nguyên nhân vụ cháy do đối tượng tâm thần gây cháy vv...
+
+23
+
+2.3. Phƣơng pháp, biện pháp phòng cháy
+2.3.1. Phòng cháy trong sử dụng điện, nguồn lửa, nguồn nhiệt, thiết bị,
+dụng cụ sinh lửa, sinh nhiệt
+2.3.1.1. Phòng cháy trong sử dụng điện
+a) Một số nguyên nhân gây cháy
+* Cháy do ngắn mạch
+Ngắn mạch là tr ạng thái s ự cố trong hệ thống điện xảy ra khi các pha ch ập
+nhau (đối với mạng trung tính cách ly) ho ặc là hi ện tượng các pha ch ập nhau và
+chạm đất (đối với mạng trung tính trực tiếp nối đất).
+Nói cách khác, ngắn mạch là hiện tượng mạch điện bị nối tắt qua một tổng trở
+rất nhỏ có thể coi như bằng không.
+- Nguyên nhân gây ngắn mạch:
+Nguyên nhân chung và chủ yếu phát sinh ngắn mạch là do lớp cách điện của
+các phần dẫn điện bị phá hủy.
+Dây dẫn và dây cáp bị  hỏng là do hậu quả của việc kéo căng quá mức cho
+phép, uốn cong quá mức ở các chỗ nối của chúng với động cơ hay thiết bị điều
+khiển... Khi chất cách điện bị hỏng trong ruột dây dẫn, dây cáp xuất hiện dòng điện
+rò, dòng điện này sau đó chuyển thành dòng điện ngắn mạch. Quá trình ngắn mạch
+sinh ra các tia lửa điện; các hạt kim loại nóng đỏ có thể bắn vào môi trường xung
+quanh phụ thuộc vào đặc tính hỏng hóc trong dây cáp.
+Do nhiều dạng thiết bị điện không phải loại chống bụi, chống ẩm, bụi công
+nghiệp (đặc biệt là bụi dẫn điện), trong môi trường hóa học mạnh sẽ lọt vào trong
+vỏ của chúng, bám trên bề mặt vật liệu và phần cách điện. Những phần phát nóng
+của thiết bị điện khi ngừng hoạt động sẽ bị làm lạnh cho nên trên chúng thường
+lắng đọng nước. Những nguyên nhân trên sẽ dẫn đến hỏng và làm ẩm quá mức
+chất cách điện và gây ra dòng điện rò, cung lửa ngắn mạch, phóng điện ngắn mạch
+trong các cuộn dây cách điện bị hỏng và các phần dẫn điện khác.
+Chất cách điện của thiết bị điện có thể bị hỏng do tác dụng của nhiệ t độ cao
+hay ngọn lửa trong thời gian cháy, do quá điện áp của sét đánh thẳng và sét cảm
+ứng, do chuyển điện áp cao từ thiết bị cao hơn 1000V sang thiết bị dưới 1000V.
+
+24
+
+Ngắn mạch có thể do các đường dây tải điện trần trên không bị chập dưới tác
+dụng của gió  hay do v ật kim loại văng lên đường đây. Do sai lầm của công nhân
+khi thao tác, sửa chữa thiết bị điện.
+Ví dụ: Trên các phương tiện giao thông cơ giới, chuột chui vào hệ thống điện,
+nơi có đường dây điện cấp nguồn, sau đó nó đã gặm nhấm lớp cách điện của d ây
+dẫn. Ban đầu, có thể nó chỉ tạo ra một vết xước nhỏ, nhưng theo thời gian, hoặc do
+sự rung động, va chạm khi xe hoạt động, lớp cách điện bị phá hủy hoàn toàn, gây
+ra ngắn mạch và có thể gây cháy.
+* Cháy do dòng điện quá tải
+Quá tải là trạng thái sự cố trong hệ thống điện, xảy ra khi trong các  dây đẫn,
+máy móc và thiết bị xuất hiện dòng điện làm việc lớn hơn dòng điện cho phép lâu
+dài theo tiêu chuẩn (hoặc nhà sản xuất cho).
+Tức là: Ilv > Icp - dây dẫn quá tải hay Ilv > Iđm - thiệt bị, máy móc quá tải.
+- Nguyên nhân quá tải:
++ Trong các động cơ điện sự quá tải xuất hiện khi tăng mômen trên trục, khi
+đứt một pha, giảm điện áp trong mạng cung cấp...
++ Thiết kế, lắp đặt hệ thống dây dẫn điện không đúng tiêu chuẩn, dây dẫn có
+tiết diện nhỏ hơn so với yêu cầu của thiết bị điện;
++ Lắp đặt nhiều thiết bị điện nhưng không cải tạo, thay thế hệ thống dây dẫn
+điện đúng tiêu chuẩn;
++ Cắm quá nhiều thiết bị điện cùng một lúc vào một ổ cắm;
++ Không lắp các thiết bị tự ngắt (áptômat, cầu chì...) hoặc lắp các thiết bị tự
+ngắt không đúng tiêu chuẩn;
++ Không kiểm tra, bảo dưỡng động cơ điện.
+Ví dụ: Vào mùa hè nắng nóng, nhiều xe tải cải tạo lắp đặt thêm điều hoà, hệ
+thống làm mát vào trên xe vượt quá khả năng chịu tải của hệ thống điện hiện tại,
+dẫn đến dây dẫn bị nóng lên nh anh chóng, nhiệt độ tích tụ trong một thời gian đủ
+đến nhiệt độ bắt cháy và gây ra cháy dây dẫn, cháy lan sang các vật dụng cháy
+được trên xe như đệm mút, cao su, nhựa....
+* Cháy do điện trở chuyển tiếp (đấu nối dây điện không đúng kỹ thuật)
+
+25
+
+- Nguyên nhân:
++ Khi dò ng điện chạy qua, điện trở tại điểm đấu nối tăng, phát sinh nhiệt
+làm điểm đầu nối nóng đỏ;
++ Do mối nối lỏng sẽ phóng tia lửa điện gây cháy các vật xung quanh.
+Ví dụ: Khi sửa chữa, tự nối dây điện của quạt bằng cách xoắn thủ công và
+quấn băng dính sơ sài. Mối nối này không chặt chẽ, dẫn đến tiếp xúc kém giữa các
+đầu dây. Khi dòng điện đi qua, tại điểm tiếp xúc kém này, điện trở chuyển tiếp tăng
+cao, biến một phần năng lượng điện thành nhiệt năng. Dù ban đầu lượng nhiệt nhỏ,
+nhưng theo thời gian sử  dụng, đặc biệt khi quạt chạy liên tục, nhiệt độ tích tụ dần,
+làm cho lớp băng dính điện bị cháy xém và suy giảm khả năng cách điện. Cuối
+cùng, nhiệt độ đạt đến mức cực hạn, gây bùng phát ngọn lửa, dẫn đến cháy lan.
+* Cháy do sự truyền nhiệt của thiết bị tiêu thụ điện
+Các thiết bị tiêu thụ điện sinh nhiệt như bóng điện, bàn là, bếp điện, lò sưởi
+điện... khi sử dụng toả ra lượng nhiệt rất lớn, nhiệt độ của các thiết bị trên đều lớn
+hơn nhiệt độ bốc cháy của nhiều loại chất cháy. Do đó khi sử dụng các thiết bị sinh
+nhiệt nếu để chất cháy liền kề sẽ bị cháy và cháy lan.
+Cháy do các thiết bị điện đốt nóng xảy ra do nhiều nguyên nhân có thể do cấu
+tạo của các bộ phận dụng cụ đốt nóng không hoàn thi ện, do mạng điện đặc biệt là
+do điều kiện vận hành của thiết bị điện đốt nóng ở những nơi không đáp ứng yêu
+cầu về an toàn cháy. Việc lắp ráp chọn vị trí đặc biệt khi đặt nó vi ph ạm quy định
+về an toàn cháy.
+Nguy hiểm cháy các d ụng cụ điện đốt nóng ph ụ thuộc vào m ức độ cấu trúc
+không hoàn ch ỉnh của nó, thi ếu đế cách nhiệt, thiếu ngắt t ự động khi quá nhi ệt,
+cách điện bị hỏng gây ngắn mạch dây dẫn. Ðộ tin cậy khi kẹp các điện cực và chỗ
+tiếp xúc, vỏ không tốt để chất lỏng chảy ra ngoài.
+Nguyên nhân gây cháy còn do v ận hành dụng cụ không chú ý để quên không
+theo dõi, không kịp thời sửa chữa khi hỏng, cứ để làm việc. Các thiết bị đốt nóng
+trong sinh ho ạt  thư ờng đặt trên b ậu cửa sổ khi tiếp xúc v ới vải, màn, rèm c ửa sẽ
+gây ra cháy.
+b) Một số biện pháp phòng cháy trong sử dụng điện
+
+26
+
+- Tính toán, thiết kế, thi công lắp đặt hệ thống điện bảo đảm tiêu chuẩn và các
+yêu cầu kỹ thuật.
+- Lựa chọn dây dẫn điện có tiết diện phù hợp với khả năng chịu tải của thiết bị
+tiêu thụ điện; lựa chọn dây dẫn có chất lượng cao khi đi ngầm trong tường; lựa
+chọn dây dẫn, thiết bị điện có nguồn gốc xuất xứ rõ ràng.
+- Các mối nối dây dẫn điện phải đảm bảo đúng kỹ thuật (nối so le và được
+quấn băng cách điện).
+- Không câu móc, đấu nối điện tùy tiện; không luồn dây điện qua mái lá, mái
+tôn; không cắm dây dẫn trực tiếp vào ổ cắm;
+- Thường xuyên kiểm tra, phát hiện, sửa chữa thay thế thiết bị điện và mạng
+điện hư hỏng.
+- Không sử dụng nhiều thiết bị điện có công suất lớn vào cùng một ổ cắm.
+- Không nên sạc điện thoại, máy tính, xe đạp điện, xe máy điện qua đêm.
+- Trước khi đi ngủ hoặc ra khỏi nhà tắt các thiết bị điện không cần thiết.
+- Không lắp đặt thêm các thiết bị tiêu thụ điện nếu không xác định rõ dây dẫn
+có chịu tải được hay không.
+- Không để các vật liệu dễ cháy phủ lên các mối nối trên dây dẫn điện hoặc
+phủ lên ổ cắm điện, cầu dao điện…;
+- Không phơi, sấy quần áo trực tiếp lên đèn, quạt sưởi; không; khi dùng thiết
+bị đốt nóng như bếp điện, ấm điện... phải có người trông coi;
+- Chọn thiết bị bảo vệ, cầu chì, bộ ngắt tự động phải đúng theo các thông s ố
+định mức của lưới điện.
+- Vận hành các dụng cụ đun nước bằng điện phải chấp hành một số biện pháp
+an toàn cháy và an toàn cho người phục vụ. Làm việc với các thiết bị đun nước chỉ
+cho phép nh ững người biết nguyên t ắc sử dụng chúng không cho phép v ận hành
+khi dụng cụ chưa tiếp đất.
+- Sửa chữa thiết bị đốt nóng, các điện cực bị gỉ, dây dẫn hỏng cách điện, lau
+chùi chỉ cho phép sau khi đã ngắt điện.
+2.3.1.2. Phòng cháy trong sử dụng nguồn lửa, nguồn nhiệt, thiết bị, dụng cụ
+sinh lửa, sinh nhiệt.
+
+27
+
+- Quản lý và sử dụng an toàn nguồn lửa (đun nấu, thắp hương thờ cúng, đốt
+vàng mã…), nguồn nhiệt, hệ thống điện và thiết bị điện.
+- Sắp xếp đồ vật, vật tư, hàng hóa gọn gàng, tránh gây cháy lan và cản trở lối
+thoát nạn; để chất cháy cách xa nơi đun nấu, nơi phát sinh nguồn lửa, nguồn nhiệt.
+- Không buôn bán, tàng trữ t rái phép hàng hóa, chất dễ cháy, nổ…. Trong
+trường hợp cần thiết: Sử dụng, dự trữ xăng dầu, khí đốt…phục vụ sinh hoạt hàng
+ngày thì chỉ nên dự trữ một số lượng đủ dùng, không quá nhiều và phải bảo quản ở
+khu vực riêng biệt, cách xa nguồn lửa, nguồn nhiệt v à tránh n hầm, lẫn trong quá
+trình sử dụng.
+- Lắp đặt các thiết bị cảnh báo rò rỉ gas (nếu dùng gas), thiết bị cảnh báo cháy
+sớm; trang bị các phương tiện chữa cháy ban đầu cho gia đình như bình chữa cháy,
+các phương tiện cứu nạn cứu hộ để có thể thoát nạn khi gặp c ác sự cố cháy, nổ
+như: đèn pin, búa, rìu, mặt nạ lọc độc, dây hạ chậm vv….
+- Mỗi nhà ở hộ gia đình cần có tối thiểu 02 lối thoát nạn và các phương án
+thoát nạn để mỗi thành viên trong gia đình khi có sự cố đều có thể thoát nạn an
+toàn.
+- Giáo dục, nhắc nhở trẻ em không chơi đùa, nghịch lửa, diêm…
+2.3.2. Phòng cháy trong sản xuất, bảo quản, vận chuyển, sử dụng hàng hoá
+nguy hiểm về cháy, nổ
+* Nhận thức chung về hàng hoá nguy hiểm về cháy, nổ
+Hàng hoá nguy hi ểm về cháy, nổ là những loại chất hoặc vật liệu mà do tính
+chất nội tại của chúng (ví d ụ: dễ cháy, dễ nổ, có khả năng tự bốc cháy, hoặc phản
+ứng khi ti ếp xúc v ới các ch ất khác như nư ớc, oxy trong không khí....) ho ặc cách
+thức chúng đư ợc quản lý và x ử lý (sản xuất, tàng tr ữ, vận chuyển, sử dụng, san
+chiết, nạp), tiềm ẩn nguy cơ cao gây ra hoặc làm lan truyền các sự cố cháy, nổ.
+Căn cứ Nghị định số 34/2024/NĐ-CP (ban hành ngày 02 tháng 5 năm 2024)
+quy định về danh mục hàng hóa nguy hiểm, vận chuyển hàng hóa nguy hiểm bằng
+phương tiện giao thông cơ g iới đường bộ và phân lo ại, dán nhãn, đóng gói hàng
+hóa nguy hiểm, hàng hóa nguy hiểm về cháy, nổ thường thuộc các nhóm chính sau
+(theo phân loại quốc tế về hàng hóa nguy hiểm, được Việt Nam áp dụng):
+
+28
+
+Chất nổ (Loại 1): Các chất rắn hoặc lỏng (hoặc hỗn hợp chất) có khả năng tự
+phản ứng hóa học để tạo ra khí ở nhiệt độ, áp su ất, tốc độ đủ gây hư hại cho môi
+trường xung quanh. Ví dụ: thuốc nổ, pháo hoa.
+Khí d ễ cháy (Lo ại 2.1): Các khí có kh ả năng cháy khi ti ếp xúc v ới ngu ồn
+nhiệt. Ví dụ: gas (LPG), axetylen.
+Chất lỏng dễ cháy (Loại 3): Các ch ất lỏng có đi ểm chớp cháy th ấp, dễ dàng
+bắt lửa khi tiếp xúc với nguồn nhiệt. Ví dụ: xăng, dầu hỏa, cồn, sơn.
+Chất rắn dễ cháy (Loại 4.1): Các chất rắn dễ bắt lửa hoặc gây ra cháy khi tiếp
+xúc với nguồn nhiệt, ma sát. Ví dụ: lưu huỳnh, phốt pho đỏ.
+Chất có khả năng tự bốc cháy (Loại 4.2): Các chất có khả năng tự nóng lên và
+bắt lửa trong điều kiện bình thường mà không cần nguồn nhiệt từ bên ngoài. Ví dụ:
+phốt pho trắng, bông tẩm dầu.
+Chất phát khí dễ cháy khi tiếp xúc với nước (Loại 4.3): Các chất khi tiếp xúc
+với nước sẽ phản ứng tạo ra khí dễ cháy. Ví dụ: natri, kali.
+Chất ôxy hóa (Lo ại 5.1): Các ch ất có kh ả năng gi ải phóng oxy, làm tăng
+cường độ cháy của các vật liệu khác. Ví dụ: Hydro peroxit, nitrat amoni.
+Peroxit hữu cơ (Loại 5.2): Các chất hữu cơ không ổn định, dễ phân hủy tạo ra
+nhiệt và có th ể gây nổ hoặc cháy. Ví d ụ: một số chất xúc tác trong công nghi ệp
+nhựa.
+Tóm lại, hàng hóa nguy hiểm về cháy, nổ là một nhóm lớn các vật chất có đặc
+tính vật lý và hóa học dễ gây cháy, nổ, đòi hỏi các biện pháp an toàn đặc biệt trong
+sản xuất, lưu tr ữ, vận chuyển và s ử dụng. Việc phân lo ại chi ti ết được quy đ ịnh
+trong các văn bản pháp luật về PCCC và vận chuyển hàng hóa nguy hiểm của Việt
+Nam.
+2.3.2.1. Phòng cháy đối với cơ sở xăng dầu, khí
+Người làm việc tại các cơ sở xăng dầu, khí phải được đào tạo nghiệp vụ
+phòng cháy và chữa cháy theo quy định hiên hành; phải biết sử dụng thành thạo
+các thiết bị phòng cháy chữa cháy tại vị trí làm việc.
+Người và phương tiện ra, vào cơ sở xăng dầu,  khí phải  chấp hành nghiêm
+chỉnh nội quy, quy định về an toàn phòng cháy chữa cháy và tuân thủ sự chỉ dẫn
+
+29
+
+của nhân viên bảo vệ.
+Tại cơ sở xăng dầu, khí phải có sổ đăng kí người và phương tiện ra vào; phải
+có biển cấm lửa tại những nơi nguy hiểm cháy, nổ theo quy định.
+Các cơ sở xăng dầu, khí phải có đầy đủ hồ sơ, tài liệu kỹ thuật sau: Hồ sơ cán
+bộ công nhân viên; Chức năng nhiệm vụ của tập thể, cá nhân làm việc tại công
+trình; Quyết định thành lập đội phòng cháy chữa cháy cơ sở và theo dõi hoạt động;
+Hồ sơ thẩm duyệt/thẩm định thiết kế, nghiệm thu về phòng cháy, chữa cháy; hồ sơ
+thiết kế và xây lắp công trình; sơ đồ vị trí lắp đặt các trang thiết bị và phương tiện
+phòng cháy chữa cháy; hồ sơ theo dõi tình hình cháy và sự nổ; nội quy, quy định
+và phương án  phòng cháy chữa cháy; quy định vận hành, bảo dưỡng và sữa chữa
+các trang thiết bị kỹ thuật; hồ sơ kiểm tra theo dõi an toàn phòng cháy chữa cháy;
+hồ sơ kiểm tra hệ thống thu lôi tiếp đất chống sét, chống tĩnh điện, hệ thống điện
+động lực và điện chiếu sáng.
+Các hồ sơ và tài liệu kỹ thuật nêu trên phải được các cơ quan, các cấp có thẩm
+quyền phê duyệt và phải được lưu giữ, bổ sung kịp thời, phải ánh chính xác sự thay
+đổi hiện trạng công trình.
+Cơ sở xăng dầu, khí phải có phương án phòng cháy chữa cháy; ph ương án
+phòng; chống lụt bão; phương án bảo vệ an ninh trật tự; phương án ứng cứu sự cố
+môi trường. Hàng năm các phương án phải được rà soát, bổ sung cho phù hợp với
+điều kiện thực tế và được tổ chức thực tập theo các tình huống khác nhau.
+Đơn vị quản lý cơ sở xăng dầu, khí có trách nhiệm:
+Xây dựng phương án phòng cháy chữa cháy cho từng hạng mục của công
+trình và toàn bộ công trình.
+Khi sữa chữa, hoặc xử lí sự cố phải xây dựng phương án phòng cháy chữa
+cháy riêng được cấp có thẩm quyền phê duyệt.
+Tổ chức kiểm tra định kì hoặc đột xuất công tác phòng cháy chữa cháy tại đơn
+vị mình.
+Phải phối hợp với cơ quan phòng cháy chữa cháy tổ chức kiểm tra toàn diện
+tất cả các hạng mục trong công trình ít nhất một lần trong năm.
+Phải thành lập đội phòng cháy, chữa cháy và cứu nạn, cứu hộ cơ sở theo quy
+
+30
+
+định đồng thời tổ chức huấn luyện cho các thành viên nắm vững nghiệp vụ về
+phòng cháy chữa cháy và sử dụng thành thạo thiết bị công nghệ phòng cháy chữa
+cháy được bố trí lắp đặt tại công trình.
+Có biển cấm sử dụng lử a trần, c ác thiết bị sinh nhiệt, sinh lửa, các thiết bị
+điện không bảo đảm yêu cầu về an toàn phòng cháy, phòng nổ và các nguồn nhiệt
+trong các khu vực có nồng độ nguy hiểm cháy, nguy hiểm nổ của các  cơ sở xăng
+dầu, khí. Trường hợp đặc biệt yêu cầu sử dụn g lửa trần phải có phương án phòng
+cháy chữa cháy riêng và được cơ quan phòng cháy chữa cháy chấp thuận.
+Ban hành quy định cấm sử dụng điện thoại di động, máy nhắn tin, các thiết bị
+thu phát sóng, máy ảnh, camera loại không có bộ phận phòng nổ tại các khu vực có
+nguy hiểm cháy, nổ trong các  cơ sở xăng dầu, khí.
+2.3.2.2. Phòng cháy cơ sở sản xuất, bảo quản và sử dụng hóa chất
+ Tại các cơ sở hóa chất cần niêm yết các nội quy, quy định an toàn về phòng
+cháy và chữa cháy, có biển cấm lửa, cấm hút thuốc, quy  định việc sử dụng điện,
+quy trình thao tác, bảng hướng dẫn cụ thể, các loại biển cấm tại các phân xưởng,
+kho chứa hóa chất....
+Nhà xưởng, kho chứa, khu vực có hoạt động liên quan đến hóa chất nguy
+hiểm phải có các loại tài liệu, bảng, biển báo bảo đảm các yêu cầu sau:
+Bảng nội quy về an toàn hóa chất đặt tại các cửa ra vào ở vị trí dễ thấy, dễ
+đọc;
+Sơ đồ thể hiện các vị trí lưu trữ, đường ống, băng chuyền vận chuyển hóa chất
+nguy hiểm, vị trí bố trí trang thiết bị bảo hộ cá nhân và thiết bị ứng phó sự cố h óa
+chất, vị trí để dụng cụ y tế, đường, lối thoát hiểm (thoát nạn), điểm tập trung khi sơ
+tán của nhà xưởng, kho chứa, khu vực tại cửa ra vào ở vị trí dễ thấy, dễ đọc;
+Các biển báo phù hợp với mức độ nguy hiểm của hóa chất đặt ở vị trí dễ thấy,
+dễ đọc tại từng khu vực lưu trữ, thao tác với hóa chất nguy hiểm. Các biển báo phải
+thể hiện các đặc tính nguy hiểm của hóa chất và có ít nhất các thông tin: hình đồ
+cảnh báo, từ cảnh báo, cảnh báo nguy cơ. Trường hợp hóa chất có nhiều đặc tính
+nguy hiểm khác nhau thì các biển báo nguy hiểm phải thể hiện đầy đủ các đặc tính
+nguy hiểm đó.
+
+31
+
+Các biển báo nguy hiểm phải được thiết kế bảo đảm dễ nhận biết các hình đồ
+cảnh báo từ khoảng cách 5 m.
+Hình đồ cảnh báo, từ cảnh báo, cảnh báo nguy cơ thực hiện theo quy định tại
+Thông tư 32/2017/TT-BCT quy định cụ thể và hướng dẫn thi hành một số điều của
+Luật hóa chất và Nghị định số 113/2017/NĐ -CP ngày 09/10/2017 của Chính phủ
+quy định chi tiết và hướng dẫn thi hành một số điều của Luật hóa chất hoặc các
+quy định hiện hành về phân loại, ghi nhãn hóa chất;
+Sơ đồ thoát hiểm phải được đặt tại các khu vực lưu trữ, thao tác với hóa chất
+nguy hiểm và có nguy cơ xảy ra sự cố cao bảo đảm người lao động có thể đọc
+được tại vị trí làm việc và trên đường thoát hiểm.
+Sơ đồ thoát hiểm thể hiện các thông tin: đường, lối thoát hiểm (thoát nạn) phù
+hợp, vị trí để các trang thiết bị bảo hộ cá nhân, thiết bị ứng phó sự cố, thiết bị y tế;
+Quy trình ứng phó sự cố hóa chất, danh mục hóa chất và phiếu an toàn hóa
+chất phải được để nơi dễ thấy và dễ tiếp c ận. Danh mục hóa chất phải thể hiện các
+thông tin về tên hóa chất, tên thương mại, phân loại, hình đồ cảnh báo, số lượng
+lưu trữ lớn nhất tại một thời điểm, khu vực lưu trữ.
+ Trên các bao bì, thùng đựng hóa chất cần có các biển cảnh báo các tính chất
+nguy hiểm của hóa chất (chất nổ, chất dễ cháy, chất ô xy hóa, chất ăn mòn, khí
+nén, nguy hiểm môi trường...).
+Bảo đảm nhiệt độ làm việc của các thiết bị chứa hóa chất luôn nằm trong giới
+hạn nhiệt độ cho phép.
+Thực hiện nghiêm túc chế độ kiểm tra các thiết chứa  hóa chất  lỏng dễ bắt
+cháy (các dung môi, nhiên liệu xăng, dầu diêzen, dầu F.O...), hệ thống mặt bích,
+van xả, van an toàn, hệ thống ống dẫn luôn bảo đảm trong trạng thái kín không để
+rò rỉ chất lỏng ra môi trường bên ngoài.
+Yêu cầu khi làm việc, tiếp xúc với hóa chất nguy hiểm cháy, nổ
+Những người làm việc tiếp xúc với các hóa chất nguy hiểm phải được huấn
+luyện an toàn hóa chất theo quy định của Nghị định 113/2017/NĐ -CP ngày
+09/10/2017 của Chính phủ quy định chi tiết và hướng dẫn thi hành một số điều của
+Luật hóa chất và các quy định hiện hành.
+
+32
+
+Cơ sở có hóa chất nguy hiểm có trách nhiệm tổ chức huấn luyện an toàn hóa
+chất, vệ sinh lao động cho cán bộ công nhân viên.
+Có biện pháp kiểm soát người ra, vào nhà xưởng, kho chứa có hóa chất nguy
+hiểm và cung cấp danh sách những người có mặt tại khu vực cho lực lượng cứu hộ,
+cứu nạn trong trường hợp xảy ra sự cố hóa chất.
+Cơ sở hóa chất nguy hiểm phải có trách nhiệm phổ biến, hướng dẫn nội quy
+an toàn, cung cấp phương tiện bảo hộ cá nhân phù hợp cho khách đến làm v iệc tại
+cơ sở.
+Cơ sở có hóa chất nguy hiểm phải trang bị đầy đủ cho người lao động phương
+tiện bảo hộ cá nhân phù hợp với mức độ nguy hại của từng hóa chất và tính chất
+công việc ở trình trạng hoạt động tốt;
+Thực hiện kiểm tra định kỳ tối thiểu 01 lần 01 tháng, bảo đảm các thiết bị bảo
+hộ cá nhân luôn đầy đủ và trong điều kiện sử dụng. Cơ sở có hóa chất nguy hiểm
+có trách nhiệm lưu giữ biên bản kiểm tra trong vòng 12 tháng và xuất trình cho cơ
+quan quản lý có thẩm quyền khi được yêu cầu.
+Cơ sở hóa chất nguy  hiểm phải đạt yêu cầu về giá trị giới hạn tiếp xúc cho
+phép 50 yếu tố hóa học tại nơi làm việc quy định tại QCVN 03:2019/BYT và các
+quy định hiện hành về an toàn vệ sinh lao động.
+2.3.2.3. Phòng cháy trong vận chuyển hàng hoá nguy hiểm về cháy, nổ
+a) Điều kiện pháp lý (trước khi vận chuyển)
+Trước khi phương tiện lăn bánh, đơn vị vận chuyển và chủ hàng phải đáp ứng
+đầy đủ các điều kiện pháp lý sau:
+Giấy phép vận chuyển hàng hóa nguy hiểm:
+- Đây là yêu cầu bắt buộc đối với hầu hết các loại hàng hóa trong dan h mục
+nguy hiểm cháy, nổ (xăng dầu, khí gas, hóa chất...).
+- Giấy phép này do cơ quan có thẩm quyền cấp (Bộ Công an, Bộ Khoa học và
+Công nghệ, Bộ Công Thương... tùy loại hàng) và phải còn hiệu lực. Giấy phép quy
+định rõ loại hàng, khối lượng, phương tiện và có thể cả  tuyến đường được phép
+hoạt động.
+Hợp đồng và Chứng từ Hợp lệ:
+
+33
+
+- Phải có hợp đồng vận chuyển rõ ràng giữa chủ hàng và đơn vị vận tải.
+- Trên phương tiện phải luôn có các chứng từ cần thiết: giấy đăng ký xe, giấy
+chứng nhận kiểm định an toàn kỹ th uật và bả o vệ môi trường, giấy phép vận
+chuyển, phiếu an toàn hóa chất (MSDS) của hàng hóa, và các giấy tờ liên quan
+khác.
+b) Yêu cầu đặc thù đối với phương tiện vận chuyển
+Phương tiện không chỉ là công cụ chuyên chở mà còn là một hệ thống PCCC
+di động, phải đáp ứng các tiêu chuẩn kỹ thuật khắt khe:
+Thiết kế và cấu tạo:  Phương tiện phải được thiết kế và cấu tạo phù hợp với
+loại hàng hóa nguy hiểm về cháy, nổ được vận chuyển. Ví dụ, xe bồn chở xăng dầu
+phải có cấu tạo chuyên dụng, chống rò rỉ, chống tĩnh điện.
+Trang bị PCCC bắt buộc trên xe:
+- Bình chữa cháy: Phải có ít nhất 02 bình chữa cháy phù hợp (thường là loại
+bột hoặc khí CO₂), còn hạn sử dụng và có tem kiểm định. Số lượng và chủng loại
+tùy thuộc vào loại và khối lượng hàng hóa.
+- Xích tiếp địa: Đối với x e bồn (xi -téc) vận chuyển chất lỏng dễ cháy (xăng,
+dầu, dung môi), bắt buộc phải có xích tiếp địa để triệt tiêu tĩnh điện khi xếp dỡ.
+- Dụng cụ ứng phó sự cố: Phải trang bị các dụng cụ cần thiết như xẻng, cát,
+phễu, xô và vật liệu thấm hút để xử lý rò rỉ, tràn đổ ở quy mô nhỏ.
+Hệ thống an toàn của xe:
+- Hệ thống điện: Phải được bao bọc, cách ly an toàn, chống phát sinh tia lửa.
+- Hệ thống ống xả: Phải được bọc cách nhiệt, có bộ phận ngăn tia lửa và đặt ở
+vị trí an toàn, cách xa khu vực chứa hàng.
+Biển báo và biểu trưng nguy hiểm:
+- Phương tiện phải được dán đầy đủ, rõ ràng các biển báo nguy hiểm ở cả hai
+bên hông, phía trước và phía sau.
+- Các biển báo bao gồm: biểu tượng nguy hiểm cháy nổ (hình ngọn lửa), mã
+nhận dạng nguy hiểm (mã UN), và các thông tin cảnh báo khác theo quy định của
+Việt Nam và tiêu chuẩn quốc tế.
+c) Quy trình vận hành an toàn (Trong suốt Hành trình)
+
+34
+
+Quy trình giao nhận, xếp dỡ:
+- Chỉ được tiến hành tại các địa điểm được phép, đủ điều kiện an toàn PCCC,
+cách xa nguồn lửa và khu dân cư.
+- Bắt buộc phải nối đất phương tiện trước và trong suốt quá trình bơm, rót các
+chất lỏng dễ cháy.
+- Trong quá trình xếp dỡ, phải tắt máy động cơ của xe (trừ trường hợp động
+cơ được dùng để bơm hàng).
+Lộ trình và thời gian vận chuyển:
+- Phải tuân thủ lộ trình và thời gian quy định trong giấy phép (nếu có).
+- Hạn chế di chuyển qua các khu vực đông dân cư, trung tâm thành phố, công
+trình quan trọng, hầm đường bộ hoặc vào giờ cao điểm.
+Dừng, đỗ xe:
+- Chỉ được dừng, đỗ tại các nơi quy định, trống trải, an toàn. Nghiêm cấm
+dừng đỗ gần nguồn nhiệt, khu vực dân cư.
+- Khi dừng đỗ, người điều khiển phải kiểm tra tình trạng an toàn của xe và
+hàng hóa.
+d) Yêu cầu đối với con người (lái xe và người áp tải)
+Con người là yếu tố quyết định đến sự an toàn của cả chuyến đi.
+Huấn luyện và giấy chứng nhận: Người điều khiển phương tiện, người áp tải
+hàng phải được huấn luyện và có chứng nhận huấn luyện nghiệp vụ PCCC và
+CNCH và giấy chứng nhận huấn luyện về an toàn hàng hóa nguy hiểm do cơ quan
+có thẩm quyền cấp và còn hiệu lực.
+Trách nhiệm:
+- Kiểm tra toàn bộ điều kiện an toàn của phương tiện và trang bị PCCC trước
+khi khởi hành.
+- Tuân thủ nghiêm ngặt các quy trình, lộ trình đã được phê duyệt.
+- Chủ động ứng phó ban đầu khi có sự cố: nhanh chóng báo động, gọi điện
+thoại đến số 114, sử dụng trang bị PC CC trên xe để xử lý đám cháy nếu có thể, tổ
+chức cảnh báo và cách ly khu vực nguy hiểm.
+
+35
+
+2.3.3. Qu ản lý, b ảo qu ản, b ảo dư ỡng phương ti ện, thi ết b ị phòng cháy,
+chữa cháy, cứu nạn, cứu hộ
+2.3.3.1. Khái ni ệm, phân loại phương tiện phòng cháy, ch ữa cháy, c ứu nạn,
+cứu hộ
+Phương tiện phòng cháy, chữa cháy, cứu nạn, cứu hộ là các sản phẩm kỹ thuật,
+hệ thống, thiết bị, máy móc, dụng cụ, hóa chất, công cụ hỗ trợ chuyên dùng cho việc
+phòng cháy, chữa cháy và cứu người, cứu tài sản.
+Phân loại phương ti ện phòng cháy, c hữa cháy, cứu nạn, cứu hộ theo Phụ lục
+IV Nghị định số 105/2025/NĐ-CP ngày 15/5/2025 của Chính phủ quy định chi tiết
+một số điều và biện pháp thi hành Luật Phòng cháy, chữa cháy và cứu nạn, cứu hộ.
+Phương tiện phòng cháy, chữa cháy, cứu nạn, cứu hộ bao gồm:
+a) Phương tiện chữa cháy, cứu nạn, cứu hộ cơ giới
+- Xe chữa cháy: xe chữa cháy có xitec; xe ch ữa cháy không có xitec; xe ch ữa
+cháy sân bay; xe chữa cháy rừng; xe chữa cháy hóa chất (bột, chất tạo bọt, khí); xe
+chữa cháy đường hầm; xe chữa cháy đường sắt; xe chữa cháy lưỡng cư;
+- Các loại xe chuyên dùng ph ục vụ chữa cháy, cứu nạn, cứu hộ: xe thang; xe
+nâng; xe trung tâm thông tin ch ỉ huy; xe khám nghi ệm hiện trường cháy; xe chi ếu
+sáng chữa cháy, cứu nạn, cứu hộ; xe trạm bơm; xe chở nước; xe chở phương tiện;
+xe chở hóa chất; xe cứu nạn, cứu hộ; xe hút khói; xe sửa chữa, bảo dưỡng kỹ thuật;
+xe xử lý hóa chất độc hại, sinh học và hạt nhân; xe cung cấp chất khí chữa cháy; xe
+chở và nạp bình khí thở chữa cháy, cứu nạn, cứu hộ;
+- Máy bay chữa cháy; trực thăng phục vụ chữa cháy, cứu nạn, cứu hộ; phương
+tiện bay không ngư ời lái ch ữa cháy, c ứu nạn, cứu hộ; tàu ch ữa cháy; xu ồng chữa
+cháy, cứu nạn, cứu hộ; ca nô ch ữa cháy, c ứu nạn, cứu hộ; robot ch ữa cháy, c ứu
+nạn, cứu hộ; mô tô chữa cháy;
+- Máy bơm chữa cháy các lo ại; bơm của hệ thống chuyên dùng trên xe ch ữa
+cháy;
+- Các loại phương tiện cơ giới khác phục vụ công tác chữa cháy, cứu nạn, cứu
+hộ: máy n ạp khí s ạch; thi ết b ị chữa cháy đeo vai có đ ộng cơ; thi ết b ị cưa, c ắt,
+khoan, đục, đập, tời, kéo, banh, kích, nâng (có sử dụng động cơ); thiết bị xử lý thực
+
+36
+
+bì (máy cắt thực bì, máy cắt cỏ); máy phát điện; quạt thổi khói; quạt hút khói; máy
+thổi gió.
+b) Phương ti ện ch ữa cháy thông d ụng: vòi, ống hút ch ữa cháy; lăng ch ữa
+cháy; đầu nối; ba chạc chữa cháy; hai chạc chữa cháy; ezectơ; trụ nước chữa cháy;
+cột lấy nước chữa cháy; thang chữa cháy; bình chữa cháy các loại.
+c) Chất chữa cháy các loại: hóa chất chữa cháy gốc nước; bột chữa cháy; khí
+chữa cháy; chất tạo bọt chữa cháy.
+d) Thiết bị báo cháy đ ộc lập; thiết bị thuộc hệ thống báo ch áy: tủ trung tâm
+báo cháy; đ ầu báo cháy các lo ại; thiết bị truyền tin báo cháy; mô - đun (module)
+các loại; chuông báo cháy; đèn báo cháy; nút ấn báo cháy.
+e) Thiết bị thuộc hệ thống loa thông báo và hướng dẫn thoát nạn: thiết bị điều
+khiển hệ thống âm thanh; mi-cờ-rô-phôn (microphone); thiết bị truyền tín hiệu; loa.
+f) Thiết bị thuộc hệ thống chữa cháy (bằng khí, sol -khí, nước, bột, bọt, chất
+chữa cháy g ốc nư ớc): t ủ điều khi ển ch ữa cháy; chuông, còi, đèn, b ảng hi ển th ị
+cảnh báo xả chất chữa cháy; van báo động; van tràn ng ập; van giám sát; van ch ọn
+vùng; công t ắc áp l ực; công t ắc dòng ch ảy; ống phi kim lo ại dùng trong h ệ thống
+cấp nước chữa cháy t ự động; ống mềm dùng cho đ ầu phun ch ữa cháy; h ọng tiếp
+nước chữa cháy (họng chờ); đầu phun chất chữa cháy các loại; chai, thi ết bị chứa
+khí, sol-khí, bột, bọt, chất chữa cháy gốc nước các loại.
+g) Đèn, phương tiện chiếu sáng sự cố, chỉ dẫn thoát nạn.
+h) Trang phục và thi ết bị bảo hộ cá nhân ph ục vụ công tác ch ữa cháy, c ứu
+nạn, cứu hộ: quần, áo, mũ, giày, ủng, găng ta y, thắt lưng, kính, kh ẩu trang ch ữa
+cháy; quần, áo, mũ, giày, ủng, găng tay, cách nhi ệt; ủng, găng tay cách đi ện; đèn,
+thiết bị chiếu sáng (lo ại cầm tay ho ặc gắn trên trang ph ục); mặt nạ lọc độc (gồm
+mặt trùm, bộ lọc, các thiết bị phụ trợ đi kèm); mặt nạ phòng độc cách ly (gồm bình
+khí, van điều áp, mặt trùm, dây đeo và khung đ ỡ, đồng hồ đo áp, van cấp khí, thiết
+bị cảnh báo, các thiết bị phụ trợ đi kèm); thiết bị định vị cầm tay.
+i) Phương tiện cứu người: dây cứu nạn, cứu hộ; đai cứu nạn, cứu hộ; đệm cứu
+người; thang cứu người; ống tụt cứu người; thiết bị dò tìm người.
+
+37
+
+k) Phương tiện, thiết bị phục vụ cứu n ạn, cứu hộ: trên cao; dưới nước; trong
+không gian hạn chế; sự cố hóa chất (qu ần, áo, mũ, giày, ủng, găng tay, thiết bị bảo
+vệ hô hấp, máy phân tích nồng độ hóa chất, các thi ết bị phụ trợ đi kèm); sự cố
+phóng xạ (quần, áo, mũ, giày, ủng, găng tay, thiết bị bảo vệ hô hấp, máy đo cường
+độ phóng xạ, các thiết bị phụ trợ đi kèm); thiết bị phục vụ sơ cứu người bị nạn.
+l) Phương ti ện, d ụng c ụ phá d ỡ thô sơ : kìm; cưa; búa; rìu; cu ốc; x ẻng; xà
+beng; dụng cụ phá dỡ đa năng.
+m) Phương tiện, thiết bị thông tin liên lạc phục vụ chữa cháy, cứu nạn cứu hộ:
+bộ đàm; thiết bị của hệ thống thông tin h ữu tuyến; thiết bị của hệ thống thông tin
+vô tuyến; các thiết bị giám sát phục vụ chữa cháy.
+2.3.3.2. Cơ s ở pháp lý và các văn b ản trong qu ản lý, b ảo quản, bảo dưỡng
+các phương tiện, thiết bị phòng cháy, chữa cháy, cứu nạn, cứu hộ
+- Luật phòng cháy, ch ữa cháy và c ứu n ạn, c ứu h ộ, Ngh ị định s ố
+105/2025/NĐ-CP ngày 15/5/2025 của Chính phủ, quy định chi tiết một số điều và
+biện pháp thi hành Lu ật Phòng cháy, ch ữa cháy và c ứu n ạn, cứu h ộ và văn b ản
+pháp luật quy định quản lý, bảo quản, bảo dưỡng phương tiện, thiết bị phòng cháy,
+chữa cháy, cứu nạn, cứu hộ;
+- Thông tư số 36/2025/TT-BCA ngày 15/5/2025 c ủa Bộ Công an Quy đ ịnh
+chi tiết một số điều của Luật Phòng cháy, ch ữa cháy và c ứu nạn, cứu hộ và Nghị
+định s ố 105/2025/NĐ-CP c ủa Chính ph ủ Quy đ ịnh chi ti ết một s ố điều và bi ện
+pháp thi hành Luật Phòng cháy, chữa cháy và cứu nạn, cứu hộ;
+- Quy chuẩn, tiêu chu ẩn Vi ệt Nam và các tài li ệu k ỹ thuật về quản lý, b ảo
+quản, bảo dưỡng phương tiện, thiết bị phòng cháy, chữa cháy, cứu nạn, cứu hộ.
+2.3.3.3. Trách nhiệm của cơ quan, tổ chức, cá nhân trong qu ản lý, bảo quản,
+bảo dưỡng các phương tiện, thiết bị phòng cháy, chữa cháy, cứu nạn, cứu hộ
+- Trách nhiệm của người điều khiển phương tiện giao thông và nh ững người
+có liên quan về phòng cháy, chữa cháy và cứu nạn, cứu hộ khác, chỉ quy định trong
+các văn bản hướng dẫn của cơ quan chủ quản, chính quyền địa phương, trên cơ sở
+các quy đ ịnh v ề trách nhi ệm ng ười đ ứng đ ầu c ơ quan, t ổ chức, c ơ sở và ng ười
+
+38
+
+được giao qu ản lý, b ảo quản, bảo dưỡng phương tiện phòng cháy, ch ữa cháy và
+cứu nạn, cứu hộ, quy định tại Điều 8 Thông tư số 36/2025/TT-BCA.
+Căn cứ vào các quy đ ịnh của pháp lu ật và th ực tế nhiệm vụ công việc, trách
+nhiệm của người được giao quản lý, bảo quản, bảo dưỡng phương tiện phòng cháy,
+chữa cháy và cứu nạn, cứu hộ bao gồm những nội dung sau:
+- Quản lý, b ảo quản, bảo dưỡng phương tiện phòng cháy, chữa cháy và c ứu
+nạn, cứu hộ theo đúng quy đ ịnh của nhà sản xuất và theo h ướng dẫn của cơ quan
+có thẩm quyền.
+- Thường xuyên ki ểm tra n ơi bảo quản, bảo dưỡng phương tiện phòng cháy,
+chữa cháy và c ứu nạn, cứu hộ thuộc phạm vi qu ản lý; phát h iện kịp thời phương
+tiện bị mất, hư hỏng hoặc nơi bảo quản, bảo dưỡng không bảo đảm an toàn để báo
+cáo cơ quan, tổ chức, cơ sở trực tiếp quản lý có biện pháp xử lý, khắc phục.
+- Thống kê, báo cáo người đứng đầu cơ quan, tổ chức, cơ sở trực tiếp quản lý
+về tình hình quản lý, bảo quản, bảo dưỡng phương tiện phòng cháy, ch ữa cháy và
+cứu nạn, cứu hộ. Đề xuất mua sắm, bổ sung, thay thế, sửa chữa... phương tiện, thiết
+bị chữa cháy và cứu nạn, cứu hộ cho phù hợp với tình hình, đặc điểm và điều kiện
+của đ ịa ph ương, cơ sở.2.3.3.4. N ội dung, phương pháp qu ản lý, b ảo qu ản, b ảo
+dưỡng phương tiện phòng cháy, chữa cháy, cứu nạn, cứu hộ
+a) Nội dung quản lý phương tiện phòng cháy, chữa cháy, cứu nạn, cứu hộ
+Người đi ều khi ển phương ti ện giao thông và nh ững ngư ời có liên quan  về
+phòng cháy, chữa cháy và cứu nạn, cứu hộ khác, thực hiện các nội dung cơ bản về
+quản lý phương ti ện phòng cháy, ch ữa cháy, c ứu n ạn, c ứu h ộ tại cơ s ở và t ại
+phương tiện được giao điều khiển, bao gồm:
+- Thực hi ện nghiêm túc các văn b ản quy ph ạm pháp lu ật v ề phương ti ện
+phòng cháy, ch ữa cháy, c ứu nạn, cứu hộ tại cơ s ở chủ quản và trên phương ti ện
+giao thông được giao;
+- Thực hiện kế hoạch, đề xuất… đầu tư mua s ắm trang bị phương tiện phòng
+cháy, chữa cháy, cứu nạn, cứu hộ phù hợp với môi trường và đặc thù công việc;
+- Sử dụng, vận hành, hu ấn luyện sử dụng các phương ti ện phòng cháy, ch ữa
+cháy, cứu nạn, cứu hộ mới, hiện đại được trang bị;
+
+39
+
+- Kiểm tra ho ạt động và các v ấn đề về phương tiện phòng cháy, ch ữa cháy,
+cứu nạn, cứu hộ;
+b) Nội dung b ảo quản, bảo dưỡng phương tiện phòng cháy, ch ữa cháy, c ứu
+nạn, cứu hộ
+Nội dung công việc bảo quản, bảo dưỡng phương tiện phòng cháy, chữa cháy
+và cứu nạn, cứu hộ của người điều khiển phương tiện giao thông và những người có
+liên quan về phòng cháy, chữa cháy và cứu nạn, cứu hộ khác, được quy định tại các
+phụ lục của thông tư số 36/2025/TT-BCA ngày 15/5/2025 của Bộ Công an, cụ thể
+như sau:
+- Phụ lục II: Bảo quản, bảo dưỡng phương tiện chữa cháy, cứu nạn, cứu hộ cơ
+giới.
+- Phụ lục III: Bảo quản, bảo dưỡng phương tiện chữa cháy thông dụng, phương
+tiện c ứu ng ười, ph ương ti ện, thi ết b ị phục v ụ cứu n ạn, c ứu h ộ, ch ất ch ữa cháy,
+phương tiện, thiết bị thông tin liên lạc phục vụ chữa cháy, cứu nạn, cứu hộ.
+- Phụ lục IV: Bảo quản, bảo dưỡng trang phục và thiết bị bảo hộ cá nhân phục
+vụ công tác chữa cháy, cứu nạn, cứu hộ.
+- Phụ lục V: Bảo quản, bảo dưỡng thiết bị báo cháy độc lập, thiết bị thuộc hệ
+thống báo cháy, thiết bị thuộc hệ thống loa thông báo và hướng dẫn thoát nạn, thiết
+bị thuộc hệ thống chữa cháy, đèn, phương tiện chiếu sáng sự cố, chỉ dẫn thoát nạn.
+Các loại dụng cụ, phương tiện này được trang bị tại các gia đình, thôn, t ổ dân
+phố, trên phương tiện được giao điều khiển và trong phạm vi quản lý.
+c) Phương pháp quản lý phương tiện phòng cháy, chữa cháy, cứu nạn, cứu hộ
+Do phương tiện phòng cháy, ch ữa cháy, c ứu nạn, cứu hộ là công cụ chuyên
+dùng mang tính đ ặc thù, ph ục vụ cho hoạt động của lực lượng phòng cháy, ch ữa
+cháy và c ứu nạn, cứu hộ nên người điều khiển phương ti ện giao thông và nh ững
+người có liên quan v ề phòng cháy, c hữa cháy và cứu nạn, cứu hộ khác, sử dụng
+phương pháp hành chính là cơ b ản, sử dụng quyền được pháp luật giao, trong các
+hoạt động về phương tiện phòng cháy, chữa cháy và cứu nạn, cứu hộ trong phạm vi
+cơ quan, tổ chức, bộ phận được giao thực hiện nhiệm vụ.
+
+40
+
+2.3.4. Tính năng, phương pháp v ận hành, s ử dụng phương ti ện, thi ết b ị
+phòng cháy và chữa cháy
+2.3.4.1. Tính năng, tác dụng phương tiện, thiết bị phòng cháy và chữa cháy
+Phương ti ện, thi ết b ị phòng cháy ch ữa cháy là nh ững phương ti ện cơ gi ới,
+thiết bị, máy móc, dụng cụ, hóa chất, công cụ hỗ trợ chuyên dùng cho vi ệc phòng
+cháy và chữa cháy, cứu người, cứu tài sản. Phương tiện, thiết bị phòng cháy chữa
+cháy có những tính năng cơ bản sau:
+* Phát hiện cháy sớm
+- Thiết bị cảm biến khói, nhiệt, khí gas: Giúp phát hiện dấu hiệu cháy ngay từ
+giai đoạn đầu.
+- Hệ thống báo cháy tự động: Phát tín hiệu cảnh báo (âm thanh, ánh sáng) đ ể
+mọi người kịp thời sơ tán và xử lý.
+* Dập tắt đám cháy
+ - Bình chữa cháy (bột, CO₂, khí sạch, foam...): Dập tắt đám cháy nhỏ nhanh
+chóng.
+ - Hệ thống chữa cháy tự động (sprinkler, khí, bọt...): Hoạt động tự động khi
+cháy xảy ra, phù hợp với nhà cao tầng, nhà kho, khu công nghiệp.
+ - Máy bơm chữa cháy: Cung c ấp và tăng áp l ực nước phục vụ dập lửa hiệu
+quả.
+ - Xe chữa cháy, tàu chữa cháy: Di động, mang theo chất chữa cháy, thiết bị,
+hệ thống chuyên dụng và lực lượng chữa cháy đến hiện trường.
+* Hỗ trợ thoát nạn và cứu hộ
+ - Đèn chiếu sáng sự cố, đèn Exit: Hư ớng dẫn người dân thoát hi ểm khi mất
+điện.
+ - Hệ thống chữa cháy ở chế độ phun sương giúp hỗ trợ tiếp cận đám cháy và
+cứu nạn, cứu hộ.
+ - Thang dây, ống trượt thoát hiểm, mặt nạ phòng độc: Hỗ trợ thoát khỏi khu
+vực cháy an toàn. (bỏ)
+ - Thiết bị cắt phá, c ứu nạn cứu hộ: Giúp ti ếp cận và gi ải cứu nạn nhân b ị
+mắc kẹt. (bỏ)
+
+41
+
+* Ngăn cháy lan
+ - Cửa chống cháy, vách ngăn cháy, v ật liệu chống cháy khác: Có kh ả năng
+chịu lửa trong th ời gian nh ất định (30, 60, 90, 120 phút...) đ ể khoanh vùng đám
+cháy.
+ - Vật liệu chống cháy lan (sơn ch ống cháy, keo chống cháy, chặn lửa xuyên
+sàn...): Bảo vệ cấu trúc công trình.
+* Giám sát và điều khiển
+ - Trung tâm báo cháy: Qu ản lý, đi ều khiển toàn b ộ hệ thống phát hi ện và
+chữa cháy.
+ - Tích hợp hệ thống PCCC với hệ thống an ninh, camera giám sát: Ph ối hợp
+phát hiện và xử lý kịp thời.
+ 2.3.4.2. Vận hành phương tiện, thiết bị phòng cháy và chữa cháy
+Mỗi loại phương ti ện đều có c ấu tạo, đặc tính k ỹ thuật là tính năng s ử dụng
+riêng, do đó quy trình v ận hành và s ử dụng cho từng loại phương tiện cũng có s ự
+khác nhau. Phương tiện kỹ thuật phòng cháy, ch ữa cháy có th ể vận hành, sử dụng
+như sau:
+a) Vận hành xe chữa cháy cơ bản để phun nước, bọt chữa cháy
+Vận hành xe chữa cháy cơ bản để phun nước
+*/ Kiểm tra độ kín của bơm:
+- Nổ máy để tốc độ động cơ ở chế độ không tải (kéo phanh tay, về số 0).
+- Đạp ly hợp, gài bơm (Đối với xe chữa cháy gài bơm tự động thì có thể thực
+hiện bước gài bơm ở trên bảng điều khiển phía sau buồng bơm).
+- Xuống xe ra phía sau buồng bơm, kiểm tra đóng kín tất cả các van khoá.
+- Tiến hành ki ểm tra đ ộ kín của bơm b ằng phương pháp ki ểm tra khô ho ặc
+kiểm tra ướt. Cụ thể:
++ Kiểm tra khô: Thực hiện quá trình hút chân không, t ừ từ tăng ga (để tốc độ
+động cơ khoảng 1000-1500 vòng/ phút), quan sát kim đồng hồ chân không kế, kim
+đồng hồ chân không phải dịch chuyển dần về phía âm đến khi kim đồng hồ không
+dịch chuyển nữa thì giảm ga, ngắt bơm, ngừng quá trình hút chân không. Quan sát
+đồng hồ, nếu kim đ ồng hồ không trả về không quá 1 vạch tương ứng với 0,1 bar
+
+42
+
+trong thời gian 2 phút ho ặc không trả về cùng lúc v ới việc tắt máy là đ ộ kín đảm
+bảo (thời gian hút không quá 30 giây).
++ Ki ểm tra ư ớt: Cho bơm ly tâm ho ạt đ ộng, mở van xả nước từ téc xuống
+bơm ly tâm và từ từ tăng ga, giữ áp suất từ 1 ÷ 3 at. Quan sát hệ thống bơm và ống
+hút, giỏ lọc, nếu thấy có rò chảy nước chứng tỏ vị trí đó bị hở. Ngoài ra có thể cho
+khí nén vào bơm ly tâm để kiểm tra độ kín.
+*/ Kỹ thuật lấy nước từ trụ nước chữa cháy
+- Lắp một đầu vòi vào h ọng nước lên téc nư ớc, đầu vòi còn l ại lắp vào tr ụ
+nước chữa cháy.
+- Mở van trụ nước chữa cháy.
+- Mở van đưa nước lên téc nước.
+- Theo dõi đồng hồ hoặc thước báo mức nước của téc nước để tránh tràn nước
+trên téc.
+- Sau khi đầy, đóng van đưa nước lên téc và van trụ nước chữa cháy.
+- Trước khi tháo vòi ra kh ỏi đường đưa nước lên téc nước thì phải mở van xả
+phía dưới họng hút (nếu có).
+*/ Kỹ thuật lấy nước từ téc để chữa cháy
+- Để động cơ chạy không tải, về số 0, kéo phanh tay, tiến hành gài bơm.
+- Mở van đưa nước từ trên téc xuống guồng bơm (lưu ý c ần mở van nước từ
+téc xuống nhanh chóng không đ ể bánh công tác c ủa bơm ly tâm ho ạt động không
+tải quá 30 giây).
+- Lúc này bơm ly tâm đã s ẵn sàng để sử dụng (giữ áp suất từ 1÷3 at và t ừ từ
+mở van họng đẩy, sau đó có thể tăng ga theo yêu cầu chiến đấu).
+*/ Kỹ thuật gây chân không m ồi nước, lấy nước từ nguồn bên ngoài đ ể chữa
+cháy.
+Sử dụng khi lấy nước từ nguồn bên ngoài (ví dụ như: từ sông, hồ, ao… ) bằng
+cách mồi nước gián tiếp (sử dụng bơm mồi).
+- Để động cơ ch ạy không t ải, về số không, kéo phanh tay, đ ạp ly h ợp và gài
+bơm (PTO) sau đó nhả ly hợp từ từ. Đối với xe gài bơm tự động thì bước gài bơm
+(PTO) được thực hiện sau khi kiểm tra độ kín.
+
+43
+
+- Lắp các đo ạn ống hút vào h ọng hút (tùy yêu c ầu mà l ắp số lượng cho phù
+hợp). Đưa đầu còn lại nhấn chìm xuống nước nhưng không đư ợc để chạm đáy để
+tránh bị sục bùn, s ử dụng giỏ lọc để tránh rác b ẩn và d ị vật (đá, s ỏi) đi v ào trong
+bơm trong quá trình hút nước.
+- Kiểm tra độ kín của bơm (Đóng kín các van khoá như van h ọng đẩy, van xả
+đáy guồng bơm …).
+- Kích hoạt bơm mồi (mở van liên kết, mở cần gây chân không) đ ể gây chân
+không mồi nước cho bơm ly tâm. Đ ối với xe có h ệ thống gây chân không tự động
+thì sau khi gài bơm, bơm m ồi sẽ tự động làm vi ệc lúc này c ần theo dõi s ự hoạt
+động của bơm mồi bằng các lắng nghe tiếng động và quan sát đồng hồ chân không
+kế.
+- Lắng nghe ti ếng bơm và quan sát đ ồng hồ áp suất hoặc khi th ấy nước ra ở
+phía cửa ra của bơm mồi là quá trình gây chân không mồi nước đã xong.
+- Khi áp lực nước lên ít nhất là 2 at (KG/cm 2, bar...) lúc này ta m ới đóng van
+liên kết và cho bơm mồi dừng làm việc (m ột số xe chữa cháy khi bơm ly tâm đi ền
+đầy nước thì  bơm mồi tự động ngừng làm việc).
+- Khi bơm mồi đã được ngừng làm việc, bơm ly tâm lúc này đã được điền đầy
+nước và sẵn sàng để sử dụng (giữ áp suất  từ 1 - 3 at(KG/cm2, bar...) và t ừ từ mở
+van họng đẩy, sau đó tăng ga tùy theo yêu cầu chiến đấu).
+*/ Kỹ thuật sử dụng lăng giá để chữa cháy
+- Thực hiện quy trình thao tác quy trình l ấy nước (có th ể lấy nước ở trên téc
+hoặc lấy nước từ nguồn).
+- Lên nóc xe và sử dụng tay cầm điều khiển lăng giá.
+- Điều chỉnh lăng giá xoay tới vị trí thích hợp.
+- Mở van nước đưa nước từ bơm ly tâm lên lăng giá và tăng ga theo yêu c ầu
+chiến đấu.
+*/ Kỹ thuật dừng phun hút
+Sử dụng sau t ất cả các quy trình phun hút ch ất chữa cháy b ằng bơm ly tâm.
+Đây là quy trình không th ể thiếu nhằm bảo đảm cho tuổi thọ của hệ thống bơm ly
+tâm.
+
+44
+
+- Sau khi dừng phun hút đưa động cơ về chạy ở chế độ không tải, ngắt bơm ly
+tâm.
+- Thu hồi lực lượng phương tiện.
+- Mở van xả đáy guồng bơm.
+- Mở tất cả các van họng đẩy.
+Sau khi x ả hết nước, đóng t ất cả các van khóa. Khi m ồi lại nước cho bơm,
+kiểm tra lại các van khóa xem đã đóng kín hay chưa.
+Vận hành xe chữa cháy cơ bản để phun bọt
+*/ Kỹ thuật phun bọt hoà không khí không sử dụng khí nén
+Khi lấy bọt hoà không khí không s ử dụng khí nén đ ể chữa cháy thì bơm ly
+tâm đang ở chế độ phun hút nư ớc chữa cháy( S ử dụng nước từ nguồn hoặc nước
+trên téc). Sau khi đã cho bơm ly tâm phun hút nư ớc thì ti ến hành thêm các bư ớc
+sau:
+- Mở van nước từ bơm ly tâm sang bơm phun tia hút chất tạo bọt
+- Chọn tỷ lệ bọt 3% hoặc 6% bằng cách điều khiển khóa định lượng.
+- Mở van bọt từ két bọt xuống, hoặc van lấy chất tạo bọt từ ngoài
+- Điều chỉnh áp suất phun phù hợp (6-8 at) tại buồng bơm
+- Hệ thống đã sẵn sàng sử dụng bọt
+Lưu ý: Trong quá trình triển khai ph ải sử dụng lăng phun b ọt (LPB), trong
+trường hợp lấy bọt từ ngoài cần triển khai tuy ô tiếp bọt và thùng chứa chất tạo bọt.
+*/ Kỹ thuật phun bọt kết hợp khí nén để chữa cháy.
+Khi lấy phun bọt kết hợp khí nén để chữa cháy thì bơm ly tâm  đang ở chế độ
+phun hút nước chữa cháy (Sử dụng nước từ nguồn hoặc nước trên téc). Sau khi đã
+cho bơm ly tâm phun hút nước thì tiến hành thêm các bước sau:
+- Kích hoạt hệ thống trộng bọt khí nén
+- Lựa chon loại chất tạo bọt và cách thức lấy chất tạo bọt (lấy chất tạo bọt từ
+két hoặc từ ngoài)
+- Điều chỉnh tỷ lệ % phun bọt phù hợp với loại bọt và chế độ phun bọt (0,1-
+1)%
+
+45
+
+- Kích ho ạt h ệ thống khí nén b ằng cách l ựa ch ọn ch ế độ phun bọt khí nén
+(phun ướt, phun ẩm, phun khô).
+- Điều chỉnh áp suất phun bọt (7-12 at) tại buồng bơm.
+- Hệ thống đã sẵn sàng sử dụng bọt kết hợp khí nén
+Lưu ý: S ử dụng các lăng chuyên d ụng, không s ử dụng các lăng phun b ọt
+(LPB) đ ể phun bọt khí nén, áp su ất đi ều ch ỉnh thông thư ờng phải l ớn hơn ho ặc
+bằng áp suất khí nén.
+*/ Kỹ thuật dừng sử dụng bọt để chữa cháy
+Sau khi phun bọt xong phải tiến hành phun nước để rửa sạch bọt còn đọng lại
+trong toàn bộ hệ thống bằng cách vẫn để bơm ly tâm làm vi ệc bình thường và tiến
+hành các bước sau:
+- Đóng các van lấy chất tạo bọt (từ két xuống hoặc từ ngoài vào)
+- Mở van súc r ửa hệ thống trộn bọt hoặc đưa tuy ô hút b ọt vào thùng ch ứa
+nước sạch và mở van khóa từ ngoài vào (vẫn mở van phun nước)
+- Điều chỉnh các khóa định lượng ở mức lớn nhất.
+- Để nước phun ra qua t ừng họng đẩy (bao gồm cả lăng giá nếu có s ử dụng)
+cho đến khi chỉ thấy nước sạch được phun ra(thông thường từ 10 – 30 phút).
+- Sau khi toàn b ộ hệ thống đã rửa sạch, đóng van r ửa và tất cả các van khóa,
+mở van xả đáy guồng bơm).
+- Tiếp tục tiến hành mở van xả đáy guồng bơm nếu thấy cần thiết.
+b) Vận hành máy bơm chữa cháy khiêng tay
+* Quy trình chuẩn bị
+- Đưa máy bơm đến gần nguồn nước, đặt nơi bằng phẳng, an toàn và thuận lợi
+cho quá trình phun hút.
+- Triển khai lực lượng phương tiện (ống hút, giỏ lọc, lăng, vòi, đội hình chữa
+cháy).
+- Kiểm tra tình trạng của máy bơm: nhiên li ệu, dầu bôi trơn động cơ, dầu bôi
+trơn bơm m ồi (nếu có), ắc quy. Ki ểm tra đ ộ kín của guồng bơm (b ằng cách v ặn
+chặt các van khóa, khớp nối họng hút).
+* Quy trình khi phun hút:
+
+46
+
+- Mở khóa xăng. Bật công tắc điện
+- Khởi động động cơ b ằng ắc quy (hoặc khởi động bằng dây gi ật tay). Gi ảm
+ga, cho động cơ làm việc ổn định.
+- Mồi nước cho máy bơm
+- Tăng ga, gi ữ áp suất ổn định trong kho ảng từ (0,1-0,3) Mpa. M ở van họng
+đẩy từ từ theo lệnh của chỉ huy và tăng ga theo yêu cầu chiến đấu.
+* Quy trình khi dừng phun hút:
+- Giảm hết ga, tắt khóa điện.
+- Đóng kín van khóa họng đẩy.
+- Xả nước guồng bơm, x ả nước làm mát, đóng khóa xăng. Thu h ồi phương
+tiện.
+* Những chú ý khi thực hiện quy trình:
+- Thao tác phải nhanh, gọn, chính xác đúng quy trình.
+- Mỗi lần đề nổ máy cách nhau tối thiểu 5 giây.
+- Không nổ máy lâu quá 2 phút n ếu không phun hút nư ớc vì không có nư ớc
+làm mát động cơ và có thể gây cháy phớt làm kín trục bơm.
+- Chiều cao hút của bơm ly tâm ≤ 9 m.
+- Phải đảm bảo giỏ lọc phải ngập sâu dư ới mặt nước ≥ 30 cm và không s ục
+bùn. Không để ống hút cong vồng lên tạo thành túi khí trong quá trình phun hút.
+- Không được đóng hay m ở van họng đẩy hoặc khóa đầu lăng phun đ ột ngột
+vì dễ gây lên hiện tượng va đập thủy lực, hiện tượng này sẽ làm áp suất của dòng
+chảy thay đ ổi mạnh gây hư h ại cho vòi ch ữa cháy và các b ộ phận của bơm ch ữa
+cháy.
+- Không cho bơm làm vi ệc khi đóng van phun nư ớc lâu vì nó làm tăng nhi ệt
+độ nước trong bơm ly tâm.
+- Chú ý các hi ện tượng và tiếng kêu lạ để kịp thời phát hiện và khắc phục sự
+cố trong quá trình phun hút. Theo dõi quá trình làm việc của động cơ, các hệ thống
+thông qua đồng hồ và đèn báo.
+- Sau khi hút nư ớc mặn, nước bẩn xong ph ải tiến hành r ửa sạch bơm b ằng
+cách cho bơm phun hút nước sạch khoảng 5 đến 10 phút.
+
+47
+
+- Sau khi bơm làm vi ệc xong phải xả hết nước trong guồng bơm và đóng t ất
+cả các van khóa lại.
+c) Vận hành trạm bơm nước chữa cháy
+* Chế độ vận hành tự động
+Trạng thái tr ực chiến đấu, đường nước chữa cháy luôn đư ợc duy trì m ột áp
+suất nhất định. Trong quá trình thường trực có thể do rò rỉ (van hở hoặc đường ống
+hở) làm áp suất giảm xuống một ngưỡng nhất định. Thông qua công tắc áp suất sẽ
+truyền tín hi ệu tới tủ điều khiển để kích hoạt bơm bù làm vi ệc bù l ại áp su ất trên
+đường nước chữa cháy. Khi áp suất trên đường nước chữa cháy đạt ngưỡng, công
+tắc áp suất truyền tín hiệu tới tủ điều khiển ngắt mạch điện điều khiển bơm bù, làm
+bơm bù dừng hoạt động.
+Trong trường hợp có sự cố cháy nổ xảy ra, làm giảm áp lớn trên đường nước
+chữa cháy thông qua công  tắc áp su ất truyền tín hi ệu tới tủ điều khiển kích ho ạt
+bơm chính làm vi ệc. Lúc này van báo đ ộng cũng làm vi ệc, phát ra chuông báo
+động t ại tr ạm bơm và g ửi tín hi ệu t ừ trạm bơm t ới trung tâm báo cháy. Trong
+trường h ợp bơm chính không làm vi ệc ho ặc n ếu áp suất trên đư ờng nư ớc ch ữa
+cháy ti ếp t ục t ụt xu ống ngư ỡng làm vi ệc c ủa bơm d ự phòng, bơm d ự phòng s ẽ
+được kích hoạt thông qua tín hiệu của công tác áp suất truyền tới tủ điều khiển.
+Khi đã ch ữa cháy xong thì các bơm ph ải được tắt thủ công bằng nút ấn ở tủ
+điều khiển bơm. Sau khi đã loại trừ được các nguyên nhân gây ra hiện tượng sụt áp
+(đóng van h ọng nư ớc vách tư ờng, l ắp các đ ầu phun b ị kích ho ạt,..), ngư ời đi ều
+khiển sẽ thực hiện thao tác bù áp cho h ệ thống và đưa h ệ thống về chế độ thường
+trực.
+ * Chế độ vận hành bằng tay
+Ngoài chế độ hoạt động ở chế độ tự động, các bơm đều có thể được kích hoạt
+bằng tay t ại tủ điều khiển để đề phòng trường hợp trong quá trình x ảy ra cháy n ổ
+mà chế độ tự động gặp sự cố hoặc trong quá trình kiểm tra, b ảo dưỡng hệ thống
+cần kích hoạt từng bơm làm việc riêng rẽ.
+* Những chú ý khi vận hành
+
+48
+
+- Định kỳ kiểm tra, bảo dưỡng hệ thống để hệ thống đảm bảo các yêu cầu kỹ
+thuật trong quá trình vận hành.
++ Phải xây d ựng một kế hoạch bảo dưỡng định kỳ tất cả các thiết bị của hệ
+thống bơm nước chữa cháy theo hướng dẫn của nhà sản xuất. Tuân thủ theo hướng
+dẫn nhà sản xuất không về công tác bảo dưỡng định kỳ hoặc thực hiện theo Phụ lục
+B ban hành kèm theo Quy chuẩn Việt Nam QCVN 02:2020/BCA.
++ Đơn vị quản lý vận hành công trình ph ải lập hồ sơ, phiếu theo dõi công tác
+kiểm tra b ảo dư ỡng, v ận hành đ ịnh k ỳ hệ thống bơm nư ớc ch ữa cháy theo quy
+định.
+- Khi hệ thống báo lỗi phải tiến hành xử lý ngay để đưa vào thường trực.
+- Thường xuyên đảm bảo có nhân viên kỹ thuật phụ trách hệ thống trực để xử
+lý lỗi hệ thống không tự động vận hành khi có sự cố cháy.
+d) Vận hành hệ thống báo cháy tự động
+* Nguyên lý làm việc của hệ thống báo cháy tự động
+Bình thường, hệ thống báo cháy ở chế độ thường trực. Ở chế độ này luôn có
+tín hiệu I 0 chạy trong mạch để kiểm  tra sự làm việc bình thường của các thiết bị
+trong hệ thống nhằm phát hiện ra các sự cố, hư hỏng nếu có.
+Khi xảy ra cháy ở các khu vực được bảo vệ, các yếu tố của môi trường cháy
+(nhiệt độ, nồng độ khói, ngọn lửa) thay đổi sẽ tác động lên các đầu báo cháy. Nếu
+các yếu tố này đạt một giá trị nhất định (ngưỡng làm việc của các đầu báo cháy) thì
+sau một khoảng thời gian nhất định (thời gian làm việc của đầu báo cháy) các đ ầu
+báo cháy s ẽ làm vi ệc t ạo ra tín hi ệu đi ện truy ền v ề trung tâm báo cháy qua h ệ
+thống dây và cáp tín hiệu. Tại trung tâm báo cháy sẽ diễn ra các hoạt động xử lý tín
+hiệu truyền về để tự động chuyển đổi chế độ hoạt động của hệ thống sang chế độ
+báo cháy. Ở chế độ này trung tâm báo cháy s ẽ phát ra tín hi ệu báo động, chỉ thị
+tương ứng như chuông, còi, đèn và các tín hiệu điều khiển thiết bị ngoại vi khác
+* Vận hành hệ thống báo cháy tự động
+ Quy trình vận hành đối với hệ thống báo cháy g ồm 04 phần chính như sau:
+đưa hệ thống vào chế độ trực, chế độ sự cố, chế độ báo cháy và hồi phục hệ thống.
+
+49
+
+Thao tác v ận hành chi ti ết đối với từng phần sẽ được trình bày chi ti ết như dư ới
+đây:
+* Đưa hệ thống vào chế độ trực
+- Cấp nguồn: AC, DC → Hệ thống sẽ trực ngay
+- Ở chế độ thường trực chỉ có duy nhất đèn báo ngu ồn xoay chi ều sáng (đèn
+AC POWER)
+* Chế độ sự cố
+- Tín hiệu chỉ thị sự cố:
++ Loa trong tủ trung tâm kêu ngắt quãng;
++ Đèn báo lỗi chung (Trouble) sáng;
++ Đèn báo lỗi tương ứng sáng nháy;
+* Chế độ báo cháy
+- Tín hiệu báo động, chỉ thị cháy:
++ Đèn báo cháy chung sáng, đèn báo vùng tương ứng có cháy sáng;
++ Loa tại trung tâm kêu liên tục;
++ Chuông báo cháy bên ngoài, chuông báo cháy khu vực kêu.
+* Hồi phục hệ thống
++ Thao tác: Nhấn RESET.
+e) Vận hành hệ thống chữa cháy tự động
+* Nguyên lý làm việc của hệ thống chữa cháy tự động
+Bình thường hệ thống chữa cháy tự động ở chế độ thường trực, trung tâm điều
+khiển hệ thống sẽ hiển thị và giám sát tr ạng thái làm vi ệc của các khối chức năng
+trong hệ thống.
+Khi có cháy xảy ra trong các khu vực bảo vệ, các yếu tố môi trường cháy thay
+đổi đạt đến ngưỡng làm vi ệc của các đầu báo cháy thì các đ ầu báo cháy làm vi ệc
+tạo ra tín hi ệu truyền về trung tâm đi ều khiển. Trung tâm đi ều khiển sẽ xử lý tín
+hiệu, chuyển đổi trạng thái báo đ ộng, chỉ thị khu vực xảy ra cháy đồng thời tạo ra
+các tín hi ệu điều khiển thiết bị ngoại vi. Các tín hi ệu điều khiển sẽ kích thích đ ể
+mở các van lựa chọn khu vực chữa cháy và khởi động các thiết bị vận chuyển đưa
+chất chữa cháy từ thiết bị chứa qua hệ thống đường ống, qua các van lựa chọn khu
+
+50
+
+vực chữa cháy đến thiết bị phun chất chữa cháy để phân bổ lượng chất chữa cháy
+theo yêu cầu vào khu vực bảo vệ.
+Hệ thống chữa cháy sau khi đã làm vi ệc sẽ không có khả năng tự hồi phục lại
+trạng thái ban đầu. Vì vậy sau khi chữa cháy, cần phải bổ sung đủ lượng chất chữa
+cháy cần thiết, đưa các van v ề trạng thái bình thường, phục hồi hệ thống về trạng
+thái thư ờng tr ực ban đ ầu đ ể sẵn sàng ch ữa cháy k ịp th ời khi có các tình hu ống
+cháy, nổ xảy ra trong tương lai.
+* Vận hành hệ thống chữa cháy tự động
+Bước 1: Kiểm tra trạng thái thường trực của các thiết bị trong hệ thống, chủ
+yếu là trạng thái của các van, khóa, công tắc, nút ấn, chuyển mạch điều khiển... cơ
+cấu dẫn động, kích hoạt và nguồn dự trữ chất chữa cháy.
+ Bước 2: Khởi tạo chế độ thường trực cho hệ thống bằng các thao tác để cấp
+điện cho các thiết bị hoạt động và thiết lập một số chức năng nếu cần thiết.
+ Bước 3: Kích hoạt cho hệ thống phun chất chữa cháy thông qua hệ cảm biến
+tự động hoặc cưỡng bức bằng nút ấn, hoặc cơ cấu khởi động bằng tay.
+ Bước 4: Tạm dừng trạng thái chữa cháy cho hệ thống bằng các thao tác lên
+nút ấn, công tắc chuyển mạch hoặc van kiểm tra để tạm dừng việc cấp tín hiệu điện
+cho các thiết bị cung cấp chất chữa cháy hoặc các thiết bị kích hoạt tự động của hệ
+thống.
+ Bước 5: Hồi phục trạng thái thường trực của hệ thống, tuần tự thực hiện lại
+bước 1 và bước 2.
+ Các lưu ý khi vận hành các hệ thống chữa cháy tự động nhằm hạn chế những
+lỗi sai sót kỹ thuật để hệ thống hoạt động ổn định, lâu dài và đúng chức năng đề ra.
+f) Vận hành hệ thống cấp nước chữa cháy
+- Nguyên lý làm việc và vận hành hệ thống họng nước chữa cháy trang b ị tại
+cơ sở: Hệ thống họng nước chữa cháy có th ể là hệ thống không duy trì áp (ho ạt
+động thủ công) hoặc là hệ thống được duy trì áp (hoạt động tự động và thủ công)
++ Đối với hệ thống họng nước chữa cháy không duy trì áp: thư ờng áp d ụng
+đối với các công trình có chi ều cao PCCC dư ới 25 m, công trình không có nguy
+hiểm lớn về cháy nổ, công trình không thu ộc diện trang bị hệ thống chữa cháy tự
+
+51
+
+động. Khi có cháy x ảy ra, l ực lượng đội phòng cháy ch ữa cháy cơ s ở hoặc người
+trong cơ sở tiến hành triển khai lăng vòi ch ữa cháy, di chuyển đến trạm bơm chữa
+cháy, thực hiện các thao tác trên t ủ điều khiển bơm chữa cháy đ ể khởi động bơm
+chữa cháy, thực hiện phun nước vào đám cháy để dập tắt đám cháy. Kết thúc chữa
+cháy, di chuy ển đến trạm bơm để thực hiện thao tác d ừng bơm, ng ắt nguồn điện
+hoặc tắt bơm diesel nếu có.
++ Đối với hệ thống họng nước chữa cháy trong nhà có duy trì áp bằng bơm bù
+áp hoặc kết hợp chung v ới hệ thống chữa cháy t ự động. Khi có cháy x ảy ra lực
+lượng đội phòng cháy chữa cháy cơ sở hoặc người trong cơ sở tiến hành triển khai
+lăng vòi ch ữa cháy, m ở van h ọng nư ớc ch ữa cháy phun nư ớc vào đám cháy đ ể
+chữa cháy. Các bơm ch ữa cháy t ại trạm bơm s ẽ tự động khởi động. Trường hợp
+bơm chữa cháy không tự động khởi động, cần thực hiện quy trình như trong trường
+hợp hệ thống họng nước chữa cháy v ận hành th ủ công. Di chuy ển đến trạm bơm
+chữa cháy, thực hiện các thao tác trên t ủ điều khiển bơm chữa cháy để khởi động
+bơm chữa cháy, thực hiện phun nước vào đám cháy để dập tắt đám cháy. Kết thúc
+chữa cháy, dù là hệ thống hoạt động thủ công hoặc tự động đều phải di chuyển đến
+trạm bơm đ ể thực hiện thao tác d ừng bơm, ng ắt nguồn điện hoặc tắt bơm diesel
+nếu có.
+
+52
+
+CHƢƠNG 3. KIẾN THỨC, KỸ NĂNG VỀ CHỮA CHÁY
+3.1. Biện pháp chữa cháy cơ bản
+3.1.1. Các phương pháp dập tắt đám cháy
+Căn cứ vào các tác dụng chính của chất chữa cháy tới quá trình làm ngừng  sự
+cháy, có thể phân thành 4 nhóm phương pháp cơ bản:
+a) Nhóm phương pháp làm lạnh
+- Bản chất của nhóm phương pháp làm lạnh là hạ nhiệt độ của vùng phản ứng
+cháy (đối với các đám cháy đồng thể) xuống thấp hơn nhiệt độ tắt dần, hoặc làm
+cho nhiệt độ của ch ất cháy (đối với các đám cháy dị thể) xuống thấp h ơn nhiệt độ
+bốc cháy của chúng.
++ Cháy đồng thể là cháy hỗn hợp chất cháy với chất ôxy hóa ở cùng một pha,
+giữa chúng không có bề mặt phân chia. Ví dụ: hỗn hợp của chất cháy khí với
+không khí là hỗn hợp đồng thể ở dạng khí...
++ Cháy dị thể là cháy hỗn hợp  chất cháy với chất ôxy hóa không ở cùng một
+pha giữa chúng có mặt phân chia. Ví dụ: hỗn hợp cháy chất rắn với không khí là
+hỗn hợp cháy dị thể....
+- Cơ chế dập tắt đám cháy của nhóm phương pháp làm lạnh:
++ Khi phun chất chữa cháy vào vùng cháy thì chất ch ữa cháy sẽ hấp thụ nhiệt
+của vùng cháy và của bề mặt chất cháy. Từ đó, làm giảm nhiệt độ của vùng cháy
+theo thể tích và nhiệt độ bề mặt chất cháy
++ Khi lượng chất chữa cháy vào vùng cháy lớn hơn lượng chất chữa cháy cần
+thiết để dập tắt đám cháy thì sự cháy sẽ tắt.
+- Dập tắt đám cháy bằng các phương pháp làm lạnh chủ yếu áp dụng để dập tắt
+các đám cháy chất rắn, ít khi sử dụng để dập tắt các đám cháy chất khí, chất lỏng, bởi
+vì rất khó để làm hạ nhiệt độ của vùng cháy xuống thấp hơn nhiệt độ tắt dần.
+- Tùy thuộc vào đám cháy mà áp dụng phương pháp làm lạnh bằng các cách sau:
++ Làm lạnh bề mặt chất cháy bằng tia nước đặc hoặc tia nước phân tán (được
+áp dụng chủ yếu đối với đám cháy chất rắn) . Khi nước được phun vào bề mặt chất
+cháy, chúng sẽ hấp thụ nhiệt từ  bề mặt chất cháy và làm cho sự bị phân hủy nhiệt
+của chất cháy giảm xuống, tốc độ tạo thành hỗn cháy giảm và sự cháy sẽ tắt dần.
+
+53
+
+- Làm lạnh vùng cháy bằng nước dạng sương mù.
+ Khi đi vào vùng cháy, các hạt nước sẽ hấp thụ nhiệt của vùng cháy (quá trình
+hóa hơi) và làm nhiệt độ của vùng cháy xuống nhỏ hơn nhiệt độ tắt dần của ngọn
+lửa. Sự cháy sẽ tắt dần
+- Làm lạnh chất cháy bằng cách xáo trộn chất cháy (được áp dụng chủ yếu
+khi dập tắt các đám cháy chất lỏn g trong bể chứa). Để triển khai biện pháp này,
+người ta sử dụng các phương tiện là máy bơm đẩy vào hệ thống đường ống công
+nghệ (chất lỏng lạnh, nước hoặc khí trơ) để làm xáo trộn lớp chất cháy trong thiết
+bị chứa. Khi đó nhiệt độ của lớp bề mặt chất lỏng đang cháy sẽ giảm xuống, tốc độ
+bay hơi tạo thành hỗn hợp cháy giảm, tốc độ cháy giảm dần dẫn đến sự cháy sẽ tắt
+dần.
+b) Nhóm phương pháp làm loãng
+- Bản chất của phương pháp làm giảm nồng độ là làm cho nồng độ các chất tham
+gia phản ứng cháy giảm xuống thấp hơn giới hạn nồng độ bốc cháy thấp của chúng.
+- Cơ chế của nhóm phương pháp làm giảm nồng độ:
+Khi phun chất chữa cháy vào đám cháy thì sẽ làm tăng nồng độ chất không
+cháy trong vùng cháy và làm cho nồng độ chất cháy, chất oxy hóa giảm xuống nhỏ
+hơn nồng độ giới hạn bốc cháy thấp.
+Để thực hiện chữa cháy  bằng phương pháp giảm nồng độ, chúng ta có thể
+triển khai bằng các biện pháp sau:
+- Sử dụng nước dạng sương mù để làm loãng nồng độ các chất tham gia phản
+ứng cháy (thường được áp dụng khi dập tắt đám cháy  trong thể tích kín như: hầm
+tầu, các gian máy kín ...). Để thực hiện được biện pháp này đòi hỏi phải có thiết bị
+phun nước dạng sương mù.
+- Giảm nồng độ các chất tham gia phản ứng cháy bằng các khí trơ (CO 2, N2,
+Ar2...). Đây là biện pháp được sử dụng rất  rộng rãi để dập hầu hết các đám cháy.
+Khí trơ đượ c nén trong các bình chứa có dung tích khác nhau và phun vào đám
+cháy qua các vòi được gắn trực tiếp trên bình chứa. Khi sử dụng khí trơ để dập tắt
+đám cháy có thể tích lớn thì khí sẽ được phun vào đám cháy  qua hệ thống chữa
+cháy cố định được thiết kế sẵn.
+
+54
+
+- Làm giảm nồng độ các chất tham gia phản ứng cháy bằng hơi nước (áp
+dụng đối với các đám cháy có nhiệt độ của ngọn lửa không vượt quá 1700 0C). Hơi
+nước tương tự như một chất khí không cháy, khi đi vào vùn g cháy nó có tác dụng
+làm loãng nồng độ các chất tham gia phản ứng cháy. Khi nồng độ của các chất này
+giảm xuống nhỏ hơn giới hạn nồng độ bốc cháy thì sự cháy sẽ tắt.
+- Làm giảm nồng độ các chất tham gia phản ứng cháy bằng hỗn hợp sản
+phẩm cháy hoàn toàn v à hơi nước. Biện pháp này được áp dụng khi dập tắt  đám
+cháy tại các giếng phun dầu khí. Dòng sản phẩm cháy hoàn toàn chính là dòng khí
+thải từ động cơ phản lực, còn dòng hơi nước sẽ được phun ra từ các lăng phun dưới
+áp lực cao.
+- Chữa cháy bằng phương phá p làm giảm các chất tham gia phản ứng cháy
+chỉ có kết quả khi ta phun vào vùng cháy nồng độ chất chữa cháy phù hợp.
+c) Nhóm phương pháp cách ly
+- Bản chất của nhóm phương pháp cách ly là ngăn cách sự tiếp xúc giữa các
+phần tử chất cháy và chất oxy hoá ở vùng phản ứng cháy.
+- Sự cháy chỉ xảy ra khi có đủ c ác điều kiện cần và điều kiện đủ. Một trong
+những điều kiện cần là có sự tiếp xúc trực tiếp giữa các phần tử chất cháy và chất
+oxy hoá. Vì vậy chúng ta có thể dập tắt đám cháy bằng các phương pháp cách ly
+không cho chất cháy hoặc chất oxy hoá vào trong vùng cháy.
+ - Cơ chế dập tắt đám cháy của nhóm phương pháp cách ly:
++ Khi thực hiện phương pháp cách ly, các chất chữa cháy được phun vào vùng
+cháy sẽ tạo ra một lớp màng phủ lên bề mặt chất cháy.Khi lớp màng đảm bảo cách ly
+hoàn toàn sự tiếp xúc giữa chất cháy và chất ôxy hóa thì sự cháy sẽ ngừng.
++ Hoặc khi di dời chất cháy ra khỏi vùng cháy, phá dỡ tạo khoảng cách ngăn
+chất cháy tiếp xúc với nguồn nhiệt.
+- Tùy thuộc vào đám cháy mà áp dụng phương pháp cách ly bằng các cách sau:
+- Cách ly bằng lớp bọt chữa c háy (được áp dụng chủ yếu khi dập tắt đám
+cháy chất lỏng trong bể chứa và đám cháy chất lỏng chảy loang trên mặt đất). Khi
+lớp bọt bao phủ trên toàn bộ bề mặt chất cháy sẽ có tác dụng cách ly không cho hơi
+khí cháy thoát lên và cách ly không cho không khí tiếp xúc với hơi chất cháy.
+
+55
+
+- Cách ly bằng lớp bột chữa cháy (được áp dụng chủ yếu khi dập tắt đám
+cháy chất rắn). Khi lớp bột phủ lên bề mặt chất cháy rắn, dưới tác động của nhiệt
+độ chúng sẽ chảy lỏng và tạo thành màng bao phủ bề mặt chất cháy. Làm hạn c hế
+khả năng khuyếch tán hơi, khí bị phân hủy vào vùng cháy.
+- Đóng tất cả các cửa, lỗ thông hơi của phòng xảy ra cháy , không cho sản
+phẩm cháy phân tán ra bên ngoài và không cho không khí tràn vào vùngcháy.
+- Cách ly bằng phá dỡ tạo khoảng cách. Để ngăn cản khả năng cháy lan của
+đám cháy, chúng ta có thể phá dỡ các cấu kiện xây dựng, công trình xây dựng để
+tạo khoảng cách ngăn cháy nhằm loại trừ khả năng lan truyền của ngọn lửa hoặc
+khả năng bức xạ nhiệt gây cháy lan.
+- Cách ly bằng các bộ phận ngăn cháy (c ác màn ngăn cháy bằng vật liệu khó
+cháy....). Đây là biện pháp sử dụng các bộ phận, cấu kiện có độ bền nhiệt cao để
+ngăn cản sự phát triển của đám cháy sang các khu vực lân cận. Thực tế hiện nay để
+ngăn chặn khả năng lan truyền của đám cháy người ta còn sử  dụng màng nước tạo
+ra từ hệ thống các đầu phun...
+d) Nhóm phương pháp kìm hãm hoá học
+- Bản chất nhóm phương pháp ức chế hóa học là phun các chất chữa cháy vào
+vùng phản ứng cháy, các chất này có tác dụng  làm gián đoạn phản ứng cháy dây
+chuyền.
+- Cơ chế của nhóm phương pháp kìm hãm hóa học như sau :
+Khi phun chất chữa cháy vào vùng cháy, chúng sẽ bị phân hủy tạo thành các
+gốc tự do, chúng sẽ bốc hơi và kết hợp với các gốc tự do của chất cháy hoặc chất
+oxy hóa tạo ra các chất không cháy và làm cho chất oxy  hóa và chất cháy không
+phản ứng được với nhau.
+- Các chất kìm hãm hóa học phản ứng cháy có tác dụng :
++  Kìm hãm về mặt hóa học các phản ứng cháy dây chuyền
++ Làm trung hòa các tâm hoạt hóa cao của phản ứn g cháy dây truyền, bởi vì
+phần lớn nhiệt lượng cun g cấp cho việc đốt nóng các chất kìm hãm và nhiệt phân
+chất cháy (đặc biệt là bột chữa cháy).
+
+56
+
++ Khi bị nhiệt phân, các chất kìm hãm hoá học sinh ra có chất không cháy, nó
+có tác dụng làm giảm nồng độ của các chất tham gia phản ứng cháy.
+- Trong thực tế chữ a cháy có thể sử dụng kết hợp các phương pháp trên để
+dập tắt ngọn lửa. Trong đó có một phương pháp đóng vai trò chủ đạo còn các
+phương pháp khác đóng vai trò bổ trợ.
+3.1.2. Các biện pháp phun chất chữa cháy
+Biện pháp là một danh từ chỉ cách thức xử lí côn g việc hoặc giải quyết vấn
+đề. Trong chữa cháy, các phương pháp dập cháy cơ bản được thực hiện bằng nhiều
+biện pháp phun chất chữa cháy khác nhau. Các biện pháp phun chất chữa cháy có
+thể áp dụng một cách l inh hoạt sao cho phù hợp với đặc điểm diễn biến củ a đám
+cháy. Cũng có thể trong suốt quá trình chữa cháy chỉ áp dụng một biện pháp phun
+chất chữa cháy duy nhất.
+a) Biện pháp phun chất chữa cháy theo mặt lửa
+- Phun chất chữa cháy theo mặt lửa là biện pháp t riển khai lực lượng, phương
+tiện từ một phía hoặc nhiều phía để dập tắt từng phần diện tích đám cháy, tiến tới
+dập tắt hoàn toàn diện tích đám cháy.
+- Trường hợp này chỉ huy chữa cháy bố trí lực lượng, phương tiện ở những
+phần ở chu vi đám cháy mà ở đó di ễn ra quá trình cháy lan. Có trường hợp chữa
+cháy theo mặt lửa trùng với chữa cháy theo chu vi.
+- Biện pháp phun này sử dụng ít lực lượng, phương tiện để tham gia chữa
+cháy. Tuy nhiên, thời gian chữa cháy kéo dài và gặp nhiều khó khăn trong quá
+trình chữa cháy.
+b) Biện pháp phun chất chữa cháy theo chu vi
+Phun chất chữa cháy theo chu vi là biện pháp triển khai lực lượng, phương
+tiện phân bố đều trên toàn bộ chu vi của đám cháy để tiến tới dập tắt hoàn toàn
+diện tích đám cháy.
+Phun chất chữa cháy theo chu vi  được áp dụng trong những trường hợp lực
+lượng chữa cháy không đủ khả năng phun chất chữa cháy trên toàn bộ diện tích
+đám cháy, mà tiến hành bố trí lực lượng phương tiện để phun chất chữa cháy trên
+toàn bộ chu vi của đám cháy để khống chế và ngăn chặn đám cháy có thể phát triển
+
+57
+
+theo tất cả các hướng và mứ c độ đe dọa của đám cháy tới các hướng đó là ngang
+nhau.
+c) Biện pháp phun chất chữa cháy theo diện tích
+- Phun chất chữa cháy theo diện tích là biện pháp triển khai lực lượng phương
+tiện phân bố đều để phun tia nước đặc bảo phủ cùng một lúc trên toàn bộ d iện tích
+đám cháy. Diện tích chữa cháy bằng với diện tích đám cháy.
+- Biện pháp phun chất chữa cháy theo diện tích được áp dụng khi lực lượng
+chữa cháy có đủ khả năng và điều kiện phun chất chữa cháy trên t oàn bộ diện tích
+đám cháy.
+- Nhược điểm của biện pháp này là phải sử dụng nhiều lực lượng phương tiện
+cùng một lúc để tham gia chữa cháy.
+d) Biện pháp phun chất chữa cháy theo thể tích
+Trong thực tế chữa cháy còn áp dụng phương pháp chữa cháy theo thể tíc h.
+Phương pháp chữa cháy theo thể tích rất hiệu qu ả đối với các đám cháy trong
+phòng kín hoặc đám cháy xảy ra ở các hầm cáp.
+Phương pháp này sử dụng khí trơ hoặc bọt hòa không khí để dập tắt đám cháy.
+3.2. Thực hành kỹ năng sử dụng thiết bị, phƣơng tiện chữa cháy
+3.2.1. Bình chữa cháy xách tay
+3.2.1.1. Bình bột chữa cháy
+Ở nước ta, hiện nay sử dụng nhiều bình chữa cháy dùng bột khô của nước
+ngoài, như các loại của Đức, Nhật, Anh, Mỹ, Singapo, hàn quốc... và phổ biến nhất
+là bình bột chữa cháy của Trung Quố c (MF, MFZ...), Việt Nam (Tomaken,
+Dragon).
+a. Cấu tạo
+Vỏ bình làm bằng thép hàn, hình trụ đứng, phía bên ngoài thường được sơn
+màu đỏ hoặc màu khác tùy theo các nước sản xuất, trên vỏ có dán nhãn mác ghi
+các thông số, đặc điểm, kỹ thuật của bình như tên b ình chữa cháy, ký hiệu bình,
+thành phần chất chữa cháy có bên trong bình, cách sử dụng, ứng dụng chữa cháy,
+cách bảo quản và tên địa chỉ của hãng sản xuất.
+
+58
+
+Phía trên thân bình là cụm van. Cụm van thường được làm bằng hợp kim
+đồng. Bên trong van một chiều đ ược nén bằng lò xo, để thắng được lực đẩy của lò
+xo ta phải thông qua tay đòn của tay xách - van bóp (hay van vặn). Cụm vạn này
+có thể tháo ra hoặc lắp vào trong khi nạp lại bột và khí sau khi sử dụng.
+Gắn với cụm van ở phía trong bình là ống xiphông bằng nhựa dùng để dẫn bột
+từ đáy bình ra ngoài.
+Ở cụm van, phía ngoài là vòi phun và loa phun. Vòi phun làm bằng cao su có
+thể cứng hay mềm, chiều dài tùy thuộc từng loại bình. Loa phun thường được làm
+bằng nhựa cứng
+Giữa tay xách và van bóp là chốt hãm có kẹp chì của nhà sản xuất để bảo vệ
+chất chữa cháy ở trong bình.
+
+Hình 3.1. Cụm van bình bột chữa cháy
+Trong bình có chứa bột và khí đẩy, khí đẩy dùng để đẩy chất chữa cháy ra
+ngoài. Khí đẩy thường là nito hoặc cacbonic
+Bột chứa bên trong bình có các thành p hần hóa học khác nhau tùy thuộc vào
+chủng loại của từng loại bình, ví dụ bột có thể được tạo thành từ NaHCO3 (bột BC)
+hoặc (NH4)3PO4 (bột ABC).
+Bình chữa cháy bằng bột bao gồm hai loại:
+- Loại bình có bình khí đẩy riêng. Bình khí đẩy có thể đặt ở trong (lo ại bình
+MF - Trung Quốc) hoặc ở ngoài bình bột (loại bình OPX - Nga)...
+
+59
+
+B×nh bét ch÷a ch¸y MF
+1. Vá b×nh
+2. èng xifong dÉn trong
+3. Côm van
+4. Tay x¸ch - Van bãp
+5. Vßi (èng xifong ngoµi)
+6. §ai èc vßi
+7. Loa phun
+8. B×nh khÝ ®Èy
+9. èng dÉn khÝ ®Èy
+CO2
+
+Hình 3.2. Loại bình bột chữa cháy có bình khí đẩy riêng
+Khí đẩy là CO2 được chứa trong bình thép đúc. Nếu bình khí đẩy đặt trong bình
+chứa bột (loại MF - Trung Quốc) thì cổ bình to và không có đồng hồ đo áp suất.
+- Loại bình khô ng có bình khí đẩy riêng mà nạp khí trực tiếp vào bình bột
+(loại bình MFZ, MFZL - Trung Quốc).
+
+60
+
+B×nh bét ch÷a ch¸y MFZ
+1. Vá b×nh
+2. èng xifong dÉn trong
+3. Côm van
+4. Tay x¸ch - Van bãp
+5. Vßi (èng xifong ngoµi)
+6. §ai èc vßi
+7. Loa phun
+8. §ång hå
+
+Hình 3.3. Loại bình bột chữa cháy có khí đẩy đƣợc nén trực tiếp vào bình
+Khí đẩy được sử dụng là N 2 nạp trong cùng bình bột. Đối với loại bình này,
+cổ bình nhỏ, trên cụm van có gắn áp kế để đo áp suất của khí bên trong bình.
+
+Hình 3.4. Đồng hồ đo áp suất
+
+61
+
+Áp kế được chia làm ba vạch màu cơ bản:
++ Khi áp suất chỉ ở giới hạn vạch màu đỏ: Áp suất khí đẩy trong bình hết,
+không đẩy bột ra bên ngoài được.
++ Khi á p suất chỉ ở giới hạn vạch màu xanh: Áp suất khí đẩy trong bình đạt
+tiêu chuẩn, đủ để đẩy bột ra bên ngoài.
++ Khi áp suất chỉ ở giới hạn vạch màu vàng: Áp suất khí đẩy trong bình vượt
+quá giới hạn mức quy định, bình có khả năng bị nổ.
+b) Thông số kỹ thuật của một số loại bình bột chữa cháy
+ Bình bột chữa cháy của Trung Quốc
+Đặc tính kỹ thuật
+Ký hiệu - Loại bình
+MF1
+MFZ1
+MFZL1
+MF2
+MFZ2
+MFZL2
+MF3
+MFZ3
+MFZL3
+MF4
+MFZ4
+MFZL4
+MF5
+MFZ5
+MFZL5
+MF8
+MFZ8
+MFZL8
+Khối lượng bột, kg 1 2 3 4 5 8
+Áp suất khí nén N2
+(MFZ,MFZL), kG/cm2 12 12 12 12 12 12
+Khối lượng khí đẩy
+(CO2) trong bình thép
+(MF), g
+25 + 5 45 + 5 65 + 5 80 + 5 100 + 5 170 + 5
+Tầm phun xa hiệu quả,
+m  2,5  2,5  2,5  4  4  5
+Thời gian phun, s 6 8 8 9 9 12
+- Một số ký hiệu thƣờng gặp ở bình bột chữa cháy
+A - Nhóm đám cháy các loại chất rắn (gỗ, vải, cao su...).
+B - Nhóm đám cháy chất lỏng (xăng, dầu...).
+C - Nhóm đám cháy chất khí (metan, axetilen...).
+D, M - Nhóm đám cháy kim loại.
+E,      - Nhóm đám cháy thiết bị điện có điện áp đến 50KV.
+9B 9A: diện tích dập cháy tương ứng nhóm đám cháy.
+c. Tác dụng và ứng dụng chữa cháy
+- Tác dụng chữa cháy chính: Kìm hãm hóa học phản ứng cháy
+Khi đưa bột vào vùng cháy nghĩa là đã dựng lên một tường chắn bằng bộ t
+nhân tạo. Như vậy các gốc tự do, các nguyên tử và phân tử hoạt động của phản ứng
+cháy sẽ truyền năng lượng vào tường đó. Năng lượng của các phần tử này sẽ giảm
+
+62
+
+đi đến mức không đủ để tiếp tục xảy ra phản ứng dây chuyền. Do đó phản ứng
+cháy dây chuyền sẽ bị bẻ gãy. Ngọn lửa được dập tắt.
+- Ứng dụng chữa cháy (phạm vi sử dụng)
+Bình chữa cháy là phương tiện chữa cháy ban đầu được trang bị tại chỗ, độ tin
+cậy cao, dùng để dập tắt các đám cháy mới phát sinh có diện tích nhỏ.
+Bình bột chữa cháy được ứng dụng rộ ng rãi dùng để dập tắt các đám cháy
+chất rắn; đám cháy chất lỏng (dầu mỏ và các sản phẩm dầu mỏ), đám cháy chất
+khí, đám cháy điện, các thiết bị điện có điện áp < 500V.
+Không nên sử dụng bình bột chữa cháy để dập tắt đám cháy các thiết bị, máy
+móc có độ chính xác cao (do tính ăn mòn của bột chữa cháy).
+d) Cách sử dụng, bảo quản và kiểm tra
+* Cách sử dụng
+Khi có cháy xảy ra, nhanh chóng đến vị trí đặt bình chữa cháy, xách bình đến
+đám cháy, trên đường xách bình phải lắc xóc bình cho bột trong bình tơi ra. Kh i
+đến gần đám cháy cách đám cháy khoảng 4 - 1,5m thì dừng lại giật chốt hãm kẹp
+chì, chọn đầu hướng gió, hướng loa phun vào gốc lửa và bóp van hay vặn van (đối
+với loại bình có bình khí đẩy đặt bên ngoài thì mở van bình khí đẩy), vừa phun vừa
+tiến lại gần. Khi lửa tắt hẳn mới ngừng phun.
+
+Hình 3.5. Cách sử dụng bình bột chữa cháy
+ * Nguyên lý hoạt động
+Sau khi giật chốt hãm kẹp chì và bóp van, van một chiều sẽ được mở ra. Dưới
+áp lực của khí đẩy trong bình cùng khả năng linh động của bột, bột sẽ được khí đẩy
+đẩy ra ngoài qua ống xiphông, qua cụm van, q ua vòi phun đến loa phun và phun
+vào đám cháy.
+
+63
+
+Hình 3.6. Nguyên lý hoạt động của bình bột chữa cháy
+ * Cách bảo quản
+- Để nơi dễ lấy, dễ thấy, không ảnh hưởng đến lối và đường thoát nạn.
+- Để bình đứ ng, ở nơi thoáng mát, không để bình ở những nơi có  nhiệt độ
+nằm ngoài giới hạn nhiệt độ ghi trên bình, hoặc đặt ở nơi có nhiệt độ cao toả ra từ
+các nguồn nhiệt hay các thiết bị sinh nhiệt, tránh ánh sáng mặt trời chiếu trực tiếp.
+Nếu để ngoài nhà phải có mái che.
+- Khi di chuyển bình tránh va đập mạnh.
+* Kiểm tra
+- Phải kiểm tra bình trước khi đưa vào sử dụng, trong quá trình sử dụng phải
+thường xuyên kiểm tra bình theo quy định của nhà sản xuất hoặc kiểm tra theo
+định kỳ ít nhất 1 tháng/ lần (theo quy định  tại mục 4.2.1. TCVN 7435 -2:2024)
+nhằm:
++ Kiểm tra bình chữa cháy có được đặt đúng quy định hay không.
++ Không bị che chắn, dễ nhìn thấy và nhãn mác hướng dẫn cách sử dụng quay
+ra bên ngoài.
+-  Nhìn áp kế để theo dõi áp lực khí đẩy trong bình. Cân và ghi t rọng lượng
+bình để đối chiếu với trọng lượng ban đầu. Nếu có hao hụt phải nạp lại.
+- Kiểm tra sự thông suốt của vòi phun, không để vòi phun bị gập, gãy, vỡ
+hoặc dị vật bên trong. Nếu phần nối giữa vòi phun và cụm van bị lỏng phải xiết
+chặt vào cụm van.
+
+64
+
+- Trước mỗi lần nạp khí mới và sau 5 năm sử dụng, vỏ bình phải được kiểm
+tra thủy lực. Sau khi đạt yêu cầu mới được phép sử dụng (tối thiểu là 3MPa) (Theo
+TCVN 7435-2:2004 - ISO 11602-2:2000 Phòng cháy, chữa cháy - Bình chữa cháy
+xách tay và xe đẩy chữa cháy).
+3.2.1.2. Bình khí chữa cháy
+a) Cấu tạo và nguyên lý làm việc
+* Cấu tạo
+Vỏ bình làm bằng thép đúc, hình trụ đứng, phía bên ngoài thường được sơn
+màu đỏ, màu nhũ trắng hoặc màu khác tùy theo các nước sản xuất, trên vỏ có dán
+nhãn mác ghi các thông số, đặc điểm, kỹ thuật của bình như tên bình chữa cháy, ký
+hiệu bình, thành phần chất chữa cháy có bên trong bình, cách sử dụng, ứng dụng
+chữa cháy, cách bảo quản và tên địa chỉ của hãng sản xuất.
+Phía trên thân bình là cụm van. Cụm van thường được làm bằng hợp ki m
+đồng. Cụm van có cấu tạo kiểu van vặn một chiều (bình của Nga, Ba Lan...) hay
+kiểu van lò xo nén một chiều thường đóng, có cò bóp phía trên - cò bóp cũng đồng
+thời là tay xách (bình của Trung Quốc, Nhật Bản...).
+Gắn với cụm van ở phía trong bình là ống x iphông bằng nhựa dùng để xả khí
+CO2 ra ngoài khi chữa cháy. Loại này không có đồng hồ áp kế.
+Ở trên cụm van có gắn van an toàn, van an toàn làm việc khi áp suất trong
+bình tăng quá mức quy định. Van sẽ xả khí ra ngoài đảm bảo an toàn.
+Loa phun làm bằng kim  loại, nhựa hoặc cao su; kích cỡ tùy thuộc từng lo ại
+bình và thường to hơn so với bình bột chữa cháy. Vòi phun thường được làm bằng
+nhựa cứng hoặc hợp kim nhôm. Gắn giữa vòi phun và loa phun là khớp nối tay
+cầm được làm bằng vật liệu cách nhiệt.
+Giữa tay xách và van bóp là chốt hãm có kẹp chì của nhà sản xuất để bảo vệ
+chất chữa cháy ở trong bình.
+
+65
+
+Hình 3.7. Cụm van bình chữa cháy CO2
+Chất chữa cháy trong bình là khí CO2 được nén ở dạng lỏng.
+
+Hình 3.8. Bình chữa cháy bằng khí CO2 và cấu tạo (loại 3kg)
+* Thông số kỹ thuật
+- Bình khí chữa cháy CO2 của Trung Quốc:
+Đặc tính kỹ thuật
+Loại bình - Ký hiệu
+MT-2 MT-3 CDE-3 MT-5 CDE-5  MT-7
+Trọng lượng toàn bình, kg 5,1 7,3 12,5 16
+Thời gian phun có hiệu quả, s 8 8 9 12
+Trọng lượng khí CO2, kg 2 3 5 7
+Tầm phun xa, m 1,5 1,5 2 2
+b) Tác dụng và ứng dụng chữa cháy
+* Tác dụng chữa cháy
+- Tác dụng chữa cháy chính của CO 2 là làm giảm nồng độ hơi khí cháy: Khi
+phun khí CO2 vào vùng cháy nó có tác dụng làm giảm nồng độ hơi khí cháy trong
+vùng cháy bên cạnh đó CO 2 còn làm giảm nồng độ oxy có trong một đơn vị thể
+
+66
+
+tích hỗn hợp xuống thấp hơn giá trị duy trì sự cháy. Do vậy, sự cháy không được
+duy trì.
+- Ngoài ra CO 2 còn có tác dụng làm lạnh: Do CO 2 trong bình ở thể lỏng, khi
+được phun vào đám cháy chúng sẽ chuyển sang trạng thái khí. Đây là quá trình thu
+nhiệt. Do vậy chúng sẽ làm giảm nhiệt độ của vùng cháy.
+*. Ứng dụng chữa cháy (phạm vi sử dụng)
+Bình chữa cháy là phương tiện chữa cháy ban đầu được trang bị tại chỗ, có độ
+tin cậy cao, dùng để dập tắt các đám cháy mới phát sinh có diện tích nhỏ.
+Bình khí chữa cháy đượ c ứng dụng rộng rãi dùng để dập tắt các đám cháy
+chất rắn; đám cháy chất lỏng, đám cháy chất khí, đám cháy điện, các thiết bị điện
+có điện áp < 1000V.
+Bình khí chữa cháy CO 2 dùng để dập tắt các đám cháy thi ết bị điện tử hay đồ
+vật quý vì chúng không lưu lạ i dấu vết trên chất cháy, do vậy không làm hư hỏng
+thêm đồ vật.
+Bình loại này thích hợp cho các đám cháy trong buồng, phòng, hầm, nơi kín
+khuất gió; không hiệu quả khi chữa những đám cháy ngoài trời hay nơi  thoáng gió
+vì CO2 khuếch tán nhanh trong không khí.
+Không dùng bình khí CO2 để dập tắt các đám cháy than hay kim loại nóng đỏ.
+Vì CO2 sẽ bị phân hủy tạo thành khí CO, là khí độc và rất dễ nổ.
+c) Cách sử dụng, bảo quản và kiểm tra
+* Cách sử dụng
+Khi có cháy xảy ra, nhanh chóng đến vị trí đặt bình chữa chá y, xách bình đến
+đám cháy. Khi đến gần đám cháy thì dừng lại giật kẹp chì, rút chốt, chọn đầu
+hướng gió, hướng loa phun vào gốc lửa (càng gần gốc lửa càng tốt) và bóp van hay
+vặn van (đối với loại bình có van vặn thì mở van) để khí tự phun ra. Khi lửa tắt hẳn
+mới ngừng phun.
+
+67
+
+Hình 3.9. Cách sử dụng bình khí CO2
+Sau khi giật chốt kẹp chì và bóp cụm tay xách van bóp hoặc vặn van, van một
+chiều sẽ được mở ra. Khí CO2 trong bình được nén trong bình với áp suất cao sẽ đi
+ra ngoài  qua ống xiphông, qua cụm van, qua vòi phun đến loa phun phun vào đám
+cháy. Khi ra ngoài CO2 ở dạng lỏng sẽ chuyển thành dạng khí.
+* Cách bảo quản
+- Để nơi dễ thấy, dễ lấy, không ảnh hưởng đến lối và đường thoát nạn.
+- Để bình đ ứng, ở nơi thoáng mát, Không để bình ở những nơi c ó nhiệt độ
+nằm ngoài giới hạn nhiệt độ ghi trên bình (nhiệt độ bảo quản = -10  55ºC), hoặc
+đặt ở nơi có nhiệt độ cao toả ra từ các nguồn nhiệt hay các thiết bị sinh nhiệt, tránh
+ánh sáng mặt trời chiếu trực tiếp. Nếu để ngoài nhà phải có mái che.
+- Khi di chuyển bình tránh va đập mạnh.
+* Kiểm tra
+- Phải kiểm tra bình trước khi đưa vào sử dụng, trong quá trình sử dụng phải
+thường xuyên kiểm tra bình theo quy định của nhà sản xuất hoặc kiểm tra theo
+định kỳ ít nhất 1 tháng/ lần (theo mục 4.2.1. TCVN 7435-2:2004) nhằm:
++ Kiểm tra bình chữa cháy có được đặt đúng quy định hay không.
++ Không bị che chắn, dễ nhìn thấy và nhãn mác hướng dẫn cách sử dụng quay
+ra bên ngoài.
+- Cân và ghi trọng lượng bình để đối chiếu với trọng lượng ban đầu, nếu trọng
+lượng bình khí CO2 giảm quá 1/4 trọng lượng ban đầu thì phải nạp bổ xung.
+- Kiểm tra sự thông suốt của vòi phun, không để vòi phun, loa phun bị gập,
+gãy hoặc vỡ. Nếu vòi phun bị lỏng phải xiết chặt vào cụm van.
+3.2.2. Bình chữa cháy có bánh xe
+a) Bình bột chữa cháy có bánh xe
+
+68
+
+Hiện nay, tại Việt Nam sử dụng phổ biến loại bình chữa cháy có bánh xe của
+Trung Quốc (MFT, MFZT, MFZLT...) và bình của Việt Nam như Tomaken.
+
+Hình 3.10. Bình bột chữa cháy loại xe đẩy
+Đây là loại bình chữa cháy dùng để chữa cháy các đám cháy có diện tích hàng
+chục m2.
+
+Hình 3.11. Cấu tạo của bình bột chữa cháy có bánh xe
+Do có trọng lượng lớn nên bình được gắn vào một giá đẩy gồm hai bánh xe có
+thể di chuyển dễ dàng. Bình bột chữa cháy có bánh xe có vòi phun dài hơn các loại
+bình bột xách tay và được nối với lăng phun (hình 11).
+- Thông số kỹ thuật của bình bột chữa cháy có bánh xe của Trung Quốc
+
+69
+
+Đặc tính kỹ thuật Ký hiệu - Loại bình
+MFZT 35 MF(Z)T 50 MF(Z)T 70
+Trọng lượng bột, kg
+35 + 0,5 50 + 0,7 70 + 1,0
+    - 0,9     - 1,3     - 1,8
+Thời gian phun, s 20 25 30
+Tầm phun xa có hiệu quả, m 8 9 9
+Trọng lượng khí nạp, kg 1,08 + 0,065 1,03 + 0,65 1,52 + 0,1
+Trọng lượng toàn bình, kg 88 105 42
+Cấp chữa cháy 45B 27A 65B 34A 90B 43A
+Nhiệt độ bảo quản, ºC -10  55 -10  55 -10  55
+Áp lực nén vào bình, MPa 1,57 1,57 1,57
+Vòi phun, mm 0,25 x 5000 0,25 x 5000 0,25 x 5000
+* Cách sử dụng: Để chữa cháy nhanh, hiệu quả nên có 2 người sử dụng
+Bước 1: Nhanh chóng di chuyển bình chữa cháy tới nơi xảy ra cháy để kiểm
+soát tình hình.
+Bước 2: Đối với bình bột chữa cháy có bánh xe, lắc xe vài lần để đảm bảo bột
+được phân phối đều.
+Bước 3: Một người kéo vòi dẫn bột trong phạm vi từ 5 – 8 mét để có hiệu quả
+tốt nhất, một người giật chốt hãm kẹp chì, kéo cần van phía trên đầu bình.
+Bước 4: Chọn nơi đầu hướng  gió để định hướng loa phun vào gốc lửa một
+cách hiệu quả nhất.
+Bước 5: Bóp và phun chất chữa cháy cho đến khi đám cháy được dập tắt hoàn
+toàn, đảm bảo an toàn cho mọi người và tài sản.
+b) Bình khí chữa cháy có bánh xe
+Hiện nay, ngoài việc sử dụng các bình  chữa cháy CO2 loại xách tay ở Việt
+Nam còn sử dụng loại bình chữa cháy CO2 có bánh xe, có khối lượng 24kg khí
+CO2.
+
+70
+
+Hình 3.12. Bình chữa cháy bằng khí CO2 loại có bánh xe
+- Thông số kỹ thuật của bình khí chữa cháy CO2 có bánh xe của Trung Quốc
+Bình CO2 Trọng lượng, kg Nhiệt độ bảo quản, ºC Thời gian phun, s Khoảng cách phun, m
+MTT24 24 -10  55 20 4
+
+Do có trọng lượng lớn nên bình được gắn vào một giá đẩy gồm hai bánh xe có
+thể di chuyển dễ dàng. Cụm van của bình có cấu tạo kiểu van vặn (hình 13).
+
+Hình 3.13. Cấu tạo của bình khí CO2 có bánh xe
+* Cách sử dụng: Để chữa cháy nhanh, hiệu quả nên có 2 người sử dụng
+
+71
+
+Bước 1: Nhanh chóng di chuyển bình chữa cháy tới nơi xảy ra cháy để kiểm
+soát tình hình.
+Bước 2: Đặt bình chữa cháy trong phạm vi phun từ 5 – 8 mét để có hiệu quả
+tốt nhất.
+Bước 4: Chọn nơi đầu hướng gió để định hướng loa phun vào gốc lửa một
+cách hiệu quả nhất.
+Bước 4: Một người vặn van để mở, điều chỉnh lượng khí phun vào đám cháy,
+một người hướng loa phun vào đám cháy. Có thể di chuyển bình  trong quá trình
+chữa cháy.
+3.2.3. Kỹ thuật sử dụng vòi, lăng chữa cháy
+a) Kỹ thuật xách, vác, rải, cuộn vòi chữa cháy
+* Xách vòi: Áp dụng đối với vòi B, đường kính vòi 50, 51 mm, hoặc vòi C.
+Có thể xách đồng thời hai cuộn hoặc xách một cuộn.
+Bãi tập, học cụ: Yêu cầu bãi tập bằng phẳng, dài 20m – 30m. Vòi được cuộn
+thành từng cuộn vòi đôi, đặt trên một vạch thẳng cách nhau 50cm, đầu nối đỉnh
+(điểm cao nhất) của cuộn vòi và quay về phía sau.
+- Động tác: Chiến sỹ bước chân không thuận lên một bước ngang với tâm của
+cuộn vòi, người cúi xuống, dùng tay thuận nắm lấy cuộn vòi sát ngay trước đầu nối
+vòi nhấc lên đồng thời rút chân về tư thế đứng nghiêm.
+
+Hình 3.14. Kỹ thuật xách vòi cuộn chữa cháy
+
+72
+
+- Đặt vòi: Chiến sỹ bước chân không thuận lên một bước, đặt vòi vào vị trí cũ,
+rút chân về tư thế đứng nghiêm.
+* Vác vòi: Áp dụng đối với vòi A có đường kính lớn 66, 77 mm
+Động tác: Chiến sỹ bước chân không thuận lên một bước ngang với tâm của
+cuộn vòi, người cúi xuốn g, dùng tay thuận nắm lấy cuộn vòi sát ngay đầu nố i,
+đồng thời tay không thuận đỡ phía dưới cuộn vòi, kết hợp hai tay nhấc xoay tay đặt
+lên vai phải theo đường ngắn nhất, đầu nối quay về phía trước và ở phía trên. Tay
+phải vẫn nắm sát đầu nối và giữ vòi, khoảng cách giữa vai và tay phải chiếm từ 1/3
+đến 1/2 chu vi của cuộn vòi về phía trước; buông tay không thuận rút chân về tư
+thế đứng nghiêm.
+
+Hình 3.15. Kỹ thuật vác vòi cuộn chữa cháy
+Động tác đặt vòi: chiến sỹ thực hiện bước chân không thuận lên một bước,
+dùng hai tay đặt vòi vào vị trí cũ, rút chân về tư thế đứng nghiêm.
+* Kỹ thuật rải vòi
+- Yêu cầu một bãi phẳng dài 20m -30m, vạch hai đoạn thẳng cách nhau 1m.
+Vòi được cuộn thành từng cuộn vòi đôi, đặt trên một vạch thẳng cắt ngang phía
+đầu tuyến rải vòi, đầu nối ở đỉnh (điểm cao nhất) của cuộn vòi. Đơn vị tập hợp
+thành hàng ngang trước tuyến tập. Vòi đặt lệch về phía bên phải tuyến.
+Động tác: Chiến sỹ bước chân không thuận lên một bước ngang với tâm của cuộn
+vòi, chân thuận xoay ngang, hai bàn chân vu ông góc với nhau, cúi xuống dùng tay
+thuận (úp) nắ m lấy cuộn vòi sát ngay trước đầu nối, đồng thời tay không thuận
+
+73
+
+(ngửa) đỡ phía dưới, kết hợp hai tay nhấc xoay lật cuộn vòi lên, lòng bàn tay
+không thuận ngửa hướng ra phía trước. Đồng thời dùng ngón tay c ái tách hai đầu
+nối ra. Sau đó vẫn cúi, lấy đà từ phía sau ra phía trước ra nhằm thẳng tuyến tập hất
+mạnh tay thuận rồi đứng thẳng lên. Khi vòi đã ra gần hết thì giật hơi nhẹ hai đầu
+nối về phía sau, tay nâng cao, người đứng để vòi ra thẳng, nhanh. Tách ha i đầu nối
+đặt nhẹ nhàng sang hai bên, rút chân về tư thế đứng nghiêm.
+
+Hình 3.16. Kỹ thuật rải vòi cuộn chữa cháy
+* Kỹ thuật thu hồi vòi cuộn
+- Cuộn vòi đôi (kép): Áp dụng đối với vòi dùng để triển khai đội hình vòi
+cuộn, khi cuộn cần hai chiến sỹ.
+Yêu cầu bãi tập bằng phẳng, dài 20m – 30m. Vòi đã  được rải ra và đặt trên
+tuyến tập.
+
+74
+
+Động tác: Hai chiến sỹ được gọi tên đi đều vào tuyến tập, chiến sỹ thứ nhất
+lấy hai đầu nối của cuộn vòi chồng khít lên nhau, đầu nối trên xếp ngắn hơn đầu
+nối dưới khoả ng 25 - 40cm (tuỳ theo vòi cũ hay mới). Chiến sỹ t hứ hai cầm chỗ
+vòi gấp (đầu còn lại) cùng chiến sỹ thứ nhất kéo căng và chỉnh cho hai nhánh vòi
+chồng lên nhau và không bị xoắn. Tiếp theo chiến sỹ thứ nhất chạy lên cúi đối diện
+cách 1-1,5m với chiến sỹ th ứ hai, chỉnh nhánh vòi trên cho chiến sỹ thứ hai c uộn,
+lùi dần cho đến hết. Chiến sỹ thứ hai cuộn theo kiểu cuốn chiếu cho đến hết, khi
+thấy nhánh vòi dưới nhô cao thì kéo về phía sau cho thẳng rồi cuộn tiếp đến hết.
+Nếu cần sửa thì chiến sỹ thứ nhất dùng tay nới lỏng vòi, chỉnh và xiết lại.
+b) Các tư thế cầm lăng chữa cháy cơ bản
+Có ba tư thế cầm lăng chữa cháy cơ bản: Đứng, quỳ và nằm. Tuỳ theo vị trí,
+tính chất của từng đám cháy và vị trí của chiến sỹ cầm lăng cần vận dụng linh hoạt
+ba tư thế kể trên. V í dụ: Trong đám cháy bình thường chiến sỹ có thể đ ứng cầm
+lăng; trong đám cháy có bom đạn, vật liệu nổ, chất độc phải quỳ hoặc nằm cầm
+lăng.
+Yêu cầu bãi tập bằng phẳng, dài 20m – 30m. Một cuộn vòi A hoặc B rải sẵn
+có lắp lăng để ở tuyến tập.
+- Tư thế đứng cầm lăng
+Trong điều kiện đám cháy bình thường, yêu cầu cần 1 hoặc 2 chiến sỹ.
++ Đối với lăng B
+Chiến sỹ đi vào tuyến tập, trước vạch đặt lăng một bước vừa phải bên trái
+lăng B, mặt quay về phía trước, đứng nghiêm. Chiến sỹ bước chân không thuận lên
+một bước ngang với đầu nối giữa lăng và vòi, gối hơi chù ng, bàn chân thuận xoay
+ngang tạo góc vuông với bàn chân trái. Tiếp theo chiến sỹ cúi xuống tay thuận cầm
+lấy lăng, lòng bàn tay không thuận ngửa cầm lấy phần trên đầu lăng, tay thuận nắm
+sát đầu nối giữa lăng và vòi, cánh tay không thuận khép, đường vòi n ằm dưới nách
+phải, trọng lượng cơ thể dồn về chân không thuận, chân thuận thẳng, mắt nhìn
+thẳng mục tiêu. Sau khi thực hạnh xong, đặt lăng, chiến sỹ đặt lăng xuống, rút chân
+về tư thế đứng nghiêm.
+
+75
+
+Hình 3.17. Tƣ thế đứng cầm lăng chữa cháy
++ Đối với lăng A, yêu cầu 02 chiến sỹ cầm lăng: ở tư thế đứng cầm lăng chiến
+sỹ thứ hai đứng đối diện với chiến sỹ thứ nhất nhưng lùi phía sau một bước, tay
+thuận ngửa, nắm phần lăng giữa hai tay của chiến sỹ thứ nhất, t ay không thuận đỡ
+phần vòi phía sau tay thuận chiến sỹ thứ nhất
+- Tư thế quỳ cầm lăng
+Áp dụng trong đám cháy ở những nơi có gió mạnh, trên cao, hoặc diện tích
+mặt bằng cầm lăng nhỏ, yêu cầu cần 1 hoặc 2 chiến sỹ.
+Chiến sỹ đang ở tư thế đứng cầm lăng, quỳ c hân thuận xuống, đầu gối chạm
+đất, trọng lượng cơ thể dồn vào gót, mũi chân thuận, chân không thuận gập lại
+thành một góc gần vuông, hai chân mở ra tạo thành một góc vuông, lòng bàn tay
+không thuận ngửa cầm lấy phần trên lăng, gối tay không thuận tỳ lên gố i chân
+không thuận, tay thuận nắm sát đầu nối giữa  lăng và vòi, cánh tay không thuận
+khép, đường vòi nằm dưới nách tay thuận, mắt nhìn thẳng mục tiêu.
+
+76
+
+Hình 3.18. Tƣ thế quỳ cầm lăng chữa cháy
+- Tư thế nằm cầm lăng:
+Áp dụng đối với lăng B, đường kính đầu  lăng 13, 16 mm, hoặc lăng C, trong
+đám cháy có kèm theo nổ như cháy kho đạn, hoặc ở những nơi có gió to, hoặc diện
+tích mặt bằng cầm lăng rất nhỏ, hoặc ở trên cao, yêu cầu cần 1 hoặc 2 chiến sỹ.
+
+Hình 3.19. Tƣ thế nằm cầm lăng chữa cháy
+Chiến sỹ đang ở tư thế đứng hoặc quỳ cầm lăng, đặt lăng xuống, hai  tay giữ
+
+77
+
+chặt vào lăng, dồn trọng lượng phần trên cơ thể lên hai tay, sau đó đưa chân không
+thuận về phía sau, tiếp theo là chân thuận. Hai chân mở bằng vai, má chân trong sát
+mặt đất. Tiếp theo, chống khuỷ u gối tay không thuận, lòng bàn tay không thuận
+ngửa nắm phần trên lăng, tay phải nắm sát đầu nối giữa lăng và vòi, cánh tay
+không thuận khép, đường vòi nằm dưới nách tay không thuận, chếch một góc 15 o,
+mắt nhìn thẳng mục tiêu.
+3.3. Chỉ huy chữa cháy
+“Chỉ huy chữa cháy” được hiểu là điều hành, điều khiển các hoạt động chữa
+cháy.
+Chỉ huy chữa cháy là việc ra các quyết định và đảm bảo thực hiện các quyết
+định đó trong quá trình chữa cháy một cách hợp lý.
+Theo quy định tại Điều 28 Luật PCCC&CNCH thì người có c hức vụ cao nhất
+của lực lượng Công an nhân dân đượ c phân công chỉ huy chữa cháy có mặt tại nơi
+xảy ra cháy là người chỉ huy chữa cháy. Trường hợp tại nơi xảy ra cháy, lực lượng
+Công an nhân dân chưa đến thì người chỉ huy chữa cháy được quy định như sau:
+- Cháy tại cơ sở thì người đứng đầu cơ sở là người chỉ huy chữa cháy; trường
+hợp người đứng đầu cơ sở vắng mặt thì Đội trưởng Đội phòng cháy, chữa cháy và
+cứu nạn, cứu hộ cơ sở hoặc Đội trưởng Đội phòng cháy, chữa cháy và cứu nạn,
+cứu hộ chuyên ngành hoặc người được ủy quyền là người chỉ huy chữa cháy;
+- Cháy phương tiện giao thông đang lưu thông thì người chỉ huy phương tiện,
+chủ phương tiện là người chỉ huy chữa cháy; trường hợp người chỉ huy phương
+tiện, chủ phương tiện vắng mặt thì người điều khiển phươn g tiện là người chỉ huy
+chữa cháy;
+- Cháy tại thôn, tổ dân phố không thuộc các trường hợp quy định tại điểm a và
+điểm b khoản này thì Trưởng thôn, Tổ trưởng tổ dân phố là người chỉ huy chữa
+cháy; trường hợp Trưởng thôn, Tổ trưởng tổ dân phố vắng mặt thì Độ i trưởng Đội
+dân phòng hoặc người được ủy quyền là người chỉ huy chữa cháy.
+Khi có mặt chỉ huy chữa cháy của lực lượng Công an nhân dân, người chỉ huy
+chữa cháy cơ sở phải báo cáo tình hình công tác chữa cháy và bàn gian quyền chỉ
+huy chữa cháy cho chỉ huy chữa cháy thuộc lực lượng Công an nhân dân đồng thời
+
+78
+
+phối hợp thực hiện các hoạt động chữa cháy theo các yêu cầu của người chỉ huy
+chữa cháy trong lực lượng Công an nhân dân.
+Người chỉ huy chữa cháy không phải lực lượng Công an nhân dân chịu trách
+nhiệm về quyết định của mình và có các quyền sau đây:
+- Sử dụng lực lượng, phương tiện thuộc phạm vi quản lý tham gia chữa cháy;
+- Đề nghị người có thẩm quyền huy động lực lượng, người, phương tiện, tài
+sản của cơ quan, tổ chức, hộ gia đình, cá nhân tham gia chữa  cháy theo quy định
+của pháp luật;
+- Quyết định việc di chuyển, phá dỡ chướng ngại vật, tài sản để cứu nạn, cứu
+hộ, ngăn chặn nguy cơ cháy lan theo quy định của pháp luật.
+
+79
+
+CHƢƠNG 4. KIẾN THỨC, KỸ NĂNG VỀ CỨU NẠN CỨU HỘ
+4.1. Kiến thức, kỹ năng về cứu nạn, cứu hộ
+4.1.1. Các yếu tố nguy hiểm trong các đám cháy, sự cố, tai nạn
+Khi cháy, sự cố, tai nạn xảy ra có rất nhiều yếu tố nguy hiểm có thể ảnh
+hưởng, đe dọa trực tiếp đến sức khỏe, tính mạng của người bị nạn mắc kẹt trong
+các đám cháy, các sự cố, tai nạn và các cán bộ, chiến sĩ, người t ham gia chữa cháy
+và cứu nạn, cứu hộ khi được điều động hay lực lượng tình nguyện viên hỗ trợ chữa
+cháy, cứu nạn, cứu hộ. Theo đó, các yếu tố nguy hiểm trong các đám cháy, sự cố,
+tai nạn bao gồm:
+- Nhiệt độ  cao: Trong đám cháy thì nhiệt độ cao không chỉ tạ o ra trong
+phòng hay tầng bị cháy mà các tầng trên cũng có nhiệt độ cao và đạt tới giá trị
+nguy hiểm đối với con người, đặc biệt là các buồng thang không có điều áp do
+ảnh hưởng của dòng khí đối lưu. Nếu nh iệt độ tác động lên bề mặt da đạt tới 42 -
+440C gây cho con người cảm giác đau, bỏng rát. Khi nhiệt độ môi trường đạt 69 -
+710C sẽ gây ra những nguy hiểm đối với sự sống của con người. Khi con người
+chịu tác động của nhiệt độ trên 100
+0 C sẽ bị ngất và chết sa u vài phút. Một nguy
+hiểm khác do nhiệt độ gây ra đó là làm bỏng ngoài da. Mặc dù y học hiện đại đã
+có những tiến bộ trong việc điều trị vết thương về bỏng nhưng khi bị bỏng độ II
+với diện tích bỏng chiếm 30% bề mặt cơ thể thì cơ hội sống còn rất ít. Nguy hiểm
+nhất là khi ngọn lửa tác động trực tiếp lên c on người. Nhiệt độ toả ra từ đám cháy
+tác động đến con người đe dọa trực tiếp đến tính mạng con người gây khó khăn
+trong việc thoát nạn và công tác cứu người bị nạn của lực lượng chữa cháy
+chuyên nghiệp.
+- Khói, khí độc và các hóa chất độc hại từ đám cháy,  sự cố, tai nạn:  Khi
+cháy xảy ra tạo ra các sản phẩm cháy, khói khí độc (khí CO, HCL, HCN…) bao
+trùm và chiếm không gian thể tích khu vực xảy ra ra cháy, có xu hướng lan ra khu
+vực xung quanh gây cản trở tầ m nhìn, che khuất lối đường thoát nạn. Trong điều
+kiện không có tầm nhìn như thế con người rất dễ hoảng loạn, mất phương hướng
+…do đó việc thoát nạn gặp rất nhiều khó khăn; chất cháy càng nhiều, đa dạng thì
+
+80
+
+nồng độ đậm đặc càng cao, có thể gây tử vong tron g thời gian ngắn nếu hít phải
+nhiều khói khí độc và sản phẩm cháy độc hại. Cụ thể, như khí Ôxít cácbon (CO) là
+một chất khí không mầu, không mùi nhưng rất độc hại với con người. CO nguy
+hiểm ở chỗ nó được hêmôglôbin trong máu hấp thụ tốt hơn 200 - 300 lần so với
+ôxy nó làm cho hồng cầu mất khả năng hấp th ụ ôxy dẫn đến hiện tượng đói ôxy
+xảy ra, tế bào bị tê liệt, mất khả năng suy nghĩ, con người rơi vào trạng thái bất
+tỉnh, không còn khả năng tránh những nơi nguy hiểm, bị suy hô hấp dẫn đến tử
+vong. Các kết quả nghiên cứu cho thấy nếu trong khói có chứa 0, 05% khí CO thì
+đã gây nguy hiểm đối với sự sống của con người. Nếu nồng độ khí cốc trong môi
+trường là 0,4% người ta sẽ phải chết khi phải hít thở trong thời gian 300 giây, nếu
+nồng độ là 8 - 10% thì khi hít phải người sẽ nhanh chóng mất cảm giác và chết. Do
+vậy những người bị nạn trong đám cháy rất có thể bị chết do phải hít thở trong môi
+trường không khí có khói đậm đặc.
+Hyđrô clorua (HCl) ảnh hưởng đến mắt đặc biệt là nó ảnh hưởng đến các túi
+niêm dịch của cơ thể người. Khi cơ thể bị nhiễm một lượng nhấ t định HCl sẽ gây
+lên hiện tượng tức ngực, suy hô hấp dẫn đến tử vong.
+Hyđrô xyanua (HCN) đây là một chất có tính độc hại rất cao thường tỏa ra
+trong đám cháy. Chất này có tác dụng ngăn chặn không cho ôxy thẩm thấu vào mô
+của tế bào trong cơ thể, làm giảm  hoạt động của tim gây khó thở và dẫn đến tử
+vong nhanh chóng cho người.
+Cácbon đyôxít (CO2) có thể gây chết người trong vài phút nếu nồng độ của nó
+đạt từ 8 - 10%, tuy nhiên nồng độ này rất ít gặp. Ở nồng  độ thấp khi hít thở vào nó
+sẽ gây ra hiện tượng t ăng tần số thở. Việc tăng tần số thở trong điều kiện cháy rất
+nguy hiểm vì sẽ làm cơ thể hấp thụ mạnh hơn các chất độc hại tồn tại trong đám
+cháy.
+Ngoài ra, tại hiện trường sự cố, có thể tồn tại các hóa chấ t độc hại có thể ảnh
+hưởng trực tiếp đến người bị nạn; cán bộ, chiến sĩ cứu hộ như ngộ độ khí, nhiễm
+hóa chất độc hại ở hiện trường qua da, qua tiếp xúc, qua hệ hô hấp
+-  Nguy cơ sập đổ cấu kiện:  Khi thời gian cháy ở trong các công trình kéo
+dài, dưới tác  động nhiệt độ cao, một số cấu kiện xây dựng có gi ới hạn chịu lửa
+
+81
+
+thấp sẽ giảm dần tính chịu lực dẫn đến biến dạng hoặc sụp đổ. Quá trình này còn
+diễn ra nhanh hơn khi đám cháy xảy ra trong các ngôi nhà nhiều tầng có sàn, trần,
+tường, phần mái... bằng gỗ hoặc bằng kim loại; các công trình nhà xưởng khung
+thép mái tôn. Đặc biệt nguy cơ sụp đổ còn đe doạ khủng khiếp hơn khi cháy và
+nổ hệ thống cung cấp khí gas tổng trong các khu chung cư  cao tầng. Người bị nạn
+trong trường hợp này đa số tử vong, thường đa c hấn thương, nguy cơ sống sót
+thấp.
+- Môi trường thiếu oxy, thiếu ánh sáng: Trong điều kiện thiếu oxy, thiếu ánh
+sáng sẽ ảnh hưởng lớn đến sức khỏe con người. Các biểu hiện gặp phải như khó
+thở, suy hô hấp, mệt mỏi, thị lực giảm, nhìn mờ… gây tâm lý hoảng l oạn cho
+người bị nạn, nếu không được cứu nạn kịp thời có thể nguy hiểm đến tính mạng.
+- Tai nạn, sự cố sập đổ nhà công trình, sạt lở đất đá: Người bị nạn có thể bị
+mắc kẹt, vùi lấp một phần hay hoàn toàn cơ thể tại hiện trường, nguy hiểm đến tính
+mạng. Công tác tìm kiếm, cứu hộ gặp rất nhiều khó khăn do k hối lượng bê tông,
+đất đá khối lượng lớn sập đổ, vùi lấp.... Nguy cơ sập đổ thứ cấp, nạn nhân đa chấn
+thương do rơi ngã.
+4.1.2. Kỹ năng thoát nạn trong đám cháy
+a) Nguyên tắc thoát nạn trong đám cháy
+- Phải đảm bảo an toàn tính mạng khi di chuyển thoát nạn trong đám cháy.
+- Phải thật sự bình tĩnh, suy xét tình hình, diễn biến đám cháy trước khi thực
+hiện di chuyển thoát nạn.
+- Luôn phải có hai phương án thoát nạn, trong đó lựa chọn lối thoát nạn gần
+nhất, nhanh nhất để di chuyển và thoát nạn đến khu vực an toàn.
+- Khi đã thoát nạn ra khu vực tập kết an toàn, người bị nạn cần thông báo cho
+lực lượng có liên quan để thuận lợi cho công tác điểm danh, nắm tìm hình số lượng
+người bị nạn đã thoát hay còn mắc kẹt trong đám cháy.
+b) Biện pháp thoát nạn trong đám cháy
+Đối với người điều khiển phương tiện giao thông và đối tượng khác có nhu
+cầu thực hiện các biện pháp thoát nạn như sau:
+
+82
+
+- Thật sự bình tĩnh, tránh hoảng loạn khi thoát nạn, hướng dẫn thoát nạn.
+Dừng xe, lập tức mở cửa khẩn cấp trên xe để người đi xe nhan h chóng di chuyển
+thoát nạn ra bên ngoài.
+
+Hình 4.1. Nhấn nút mở khóa cửa ô tô để nhanh chóng thoát nạn
+- Người bị nạn cần nhanh chóng di chuyển ra lối thoạt nạn mở khóa tại cửa
+chính, cửa phụ của xe để thoát nạn ra ngoài.
+
+Hình 4.2. Di chuyển ra lối cửa lên, xuống xe để thoát nạn
+- Nếu không thoát nạn được bằng cửa chính do tắc nghẽn hoặc tình huống
+nguy hiểm, thì người bị nạn cần thoát ra ngoài thông qua cửa sổ của xe (nếu có).
+
+Hình 4.3. Mở cửa sổ thoát hiểm trên xe ô tô (nếu có)
+
+83
+
+Trường hợp trên xe không có cửa sổ thì cần lập tức sử dụng búa phá kính
+chuyên dụng được bố trí trên xe hoặc sử dụng vật sắc nhọn để phá kính. Khi phá
+cần tác động nhanh, mạnh, đột ngột, dứt khoát vào điểm góc đối với kính  cường
+lực. Quá trình phá kính cần bảo vệ cơ thế, tránh mảnh kính sắc nhọn văng ra ngoài
+có thế gây nguy hiểm tới cơ thể.
+Sử dụng búa phá kính cửa của xe ô tô
+
+Hình 4.4. Sử dụng búa phá kính chuyên dụng trên xe
+để phá kính cửa xe ô tô
+Sử dụng điểm sắt nhọn của các vật dụng như dây thắt lưng, guốc cao, đồng hồ
+để phá cửa kính khi không có dụng cụ phá kính chuyên dụng
+
+Hình 4.5. Sử dụng đồ sắc nhọn xung quanh (nếu có) để phá phá kính
+- Trong trường hợp có nhiều khói, nó có thể ảnh hưởng tới quá trình thoát nạn
+và sức khỏe, tính mạng của mọi người. Do  đó, cần cúi thấp người hoặc bò sát mặt
+đất để di chyển. Sử dụng mặt nạ lọc độc nếu được trang bị hoặc khăn, vải ướt che
+miệng, mũi để bảo vệ khỏi khói, khí độc.
+
+84
+
+Hình 4.6. Sử dụng khăn ƣớt hoặc mặt nạ lọc độc nếu có để bảo vệ cơ
+quan hô hấp nhằm tránh hít khói, khí độc từ đám cháy
+- Khi ph ải băng qua l ửa ho ặc khu v ực có nhi ệt đ ộ cao c ần chùm qu ần áo,
+chăn, vải ướt lên ngư ời khi thoát n ạn. Nếu có bình ch ữa cháy, thì s ử dụng bình
+chữa cháy dập lửa tạo lối thoát nạn ra bên ngoài.
+
+Hình 4.7. Sử dụng vải trùm vị trí cơ thể di chuyển thấp ngƣời băng
+qua khu vực có lửa, khu vực nhiệt độ cao
+Làm gì khi quần áo của mình và người khác bị bắt lửa?
+- Nhanh chóng di chuy ển ra ngoài xe, sau đó hãy n ằm nhanh xu ống mặt đất
+và lăn cuộn tròn để lửa trên người nhanh tắt để dập cháy phần cơ thể bị cháy.
+- Nếu lửa bắt cháy trên qu ần áo ngư ời khác, nhanh chóng s ử dụng chăn, v ải
+lớn thấm ướt rồi quấn quanh vùng b ị cháy để dập tắt đám cháy. Ho ặc có th ể sử
+dụng bình bột chữa cháy nơi gần nhất để phun tắt đám cháy (tránh phu n trực tiếp
+và liên tục vào mặt).
+4.2. Biện pháp cứu nạn cứu hộ cơ bản
+4.2.1. Khái niệm biện pháp cứu nạn, cứu hộ
+Biện pháp cứu nạn, cứu hộ là các hành động cụ thể, mang tính kỹ thuật, chiến
+thuật hoặc tổ chức, được áp dụng trong từng tình huống cụ thể nhằm thực hiện hiệu
+
+85
+
+quả hoạt động cứu người và tài sản khỏi nguy hiểm trong các vụ cháy, tai nạn, sự
+cố.
+4.2.2. Nhóm biện pháp cứu nạn cứu hộ
+Ba nhóm biện pháp CNCH bao gồm: nhóm biện pháp tìm kiếm người bị nạ n,
+nhóm biện pháp cứu người bị nạn và nhóm biện ph áp đảm bảo an toàn. Các biện
+pháp này không tách rời nhau mà hỗ trợ, bổ sung lẫn nhau trong một quá trình cứu
+nạn, cứu hộ. Trong nhiều trường hợp, cả ba nhóm biện pháp được triển khai song
+song, đặc biệt là trong các tình huống phức tạp như cháy lớn, sập nhà, sạt lở đất...
+Các biện pháp cứu nạn cứu hộ cơ bản được dùng trong tình huống đơn giản,
+phổ biến. Biện pháp cứu nạn cứu hộ nâng cao/chuyên sâu được áp dụng trong các
+tình huống đặc biệt, nguy hiểm hoặc p hức tạp. Các biện pháp CNCH phải phù hợp
+với trình độ và khả năng của lực lượng tham gia cứu nạn, cứu hộ. Vì vậy, cần có
+những biện pháp đơn giản, dễ học, dễ thực hiện để người chưa qua đào tạo chuyên
+sâu vẫn có thể tham gia hỗ trợ an toàn.
+a) Nhóm biện pháp tìm kiếm người bị nạn cơ bản
+- Tìm kiếm người bị nạn trong đám cháy:
++ Trinh sát hiện trường bằng mắt thường, bản đồ cấu trúc công trình.
++ Gọi lớn, tạo tiếng động để phát hiện phản hồi từ người bị nạn.
++ Phân tổ tìm kiếm theo tầng, khu vực; kết hợp loa , đèn pin, mặt nạ phòng
+độc.
+- Biện pháp tìm kiếm người bị nạn khi xảy ra tai nạn, sự cố:
++ Quan sát hiện trường, thu thập thông tin từ người chứng kiến.
++ Tìm kiếm theo tuyến, phân khu vực rõ ràng.
++ Sử dụng dụng cụ đơn giản như dây, móc, xẻng, cuốc
+b) Nhóm biện pháp cứu người bị nạn cơ bản
+- Biện pháp cứu người bị nạn trong đám cháy:
++ Hướng dẫn người thoát ra theo lối an toàn, sử dụng mặt nạ phòng độc, khăn
+ướt.
++ Dùng cáng, dây, đai, thang để đưa người ra khỏi đám cháy.
++ Ưu tiên cứu người bị ngạt khói, người già, trẻ em, người bị thương
+
+86
+
+- Biện pháp cứu người cơ bản khi xảy ra tai nạn, sự cố:
++ Kêu gọi, huy động người xung quanh hỗ trợ, thông báo cho lực lượng
+chuyên trách.
++ Sử dụng thiết bị nổi hoặc vật thay thế (phao, can nhựa, cây dài, áo khoác...)
+để tiếp cận nạn nhân mà không xuống nước.
++ Mở đường tạm, gỡ vật cản tiếp cận người bị nạn.
++ Sử dụng các phương tiện thô sơ để đào bới, nâng, cắt phá vật cản, giải cứu
+người bị nạn.
++ Sơ cứu tại chỗ: cầm máu, nẹp xương, di chuyển an toàn.
+- Biện pháp đảm bảo an toàn cơ bản trong đám cháy:
++ Trang bị đầy đủ bảo hộ cá nhân: quần áo chống cháy, mũ, đèn pin, bộ đàm,
+dây an toàn.
++ Xác định lối thoát nạn trước khi tiếp cận vùng cháy.
++ Không di chuyển đơn lẻ, luôn làm việc theo nhóm có dây kết nối.
++ Rút khỏi hiện trường khi có dấu hiệu cấu kiện công trình mất ổn định.
+- Biện pháp đảm bảo an toàn cơ bản khi xảy ra tai nạn, sự cố:
++ Khoanh vùng khu vực xảy ra sự cố, cấm người dân tiếp cận.
++ Ngắt điện, khóa van ga, cô lập nguồn gây nguy hiểm.
+4.3. Kỹ năng cứu ngƣời bị nạn, sơ cấp cứu ngƣời bị nạn
+4.3.1. Một số kỹ năng cứu người bị nạn
+a) Trường hợp chỉ có một người cứu
+* Dìu (nạng) người bị nạn: Áp dụng cho người bị nạn còn tỉnh, hợp tác tốt  và
+có thể bước đi được nhưng khó khăn do bị tổn thương ở một bên chân như vết
+thương phần mềm, bong gân hoặc kể cả khi có gã y xương ở một bên chi trên hoặc
+chi dưới trong trường hợp cấp thiết.
+- Bước 1: Người cứu quỳ ngang hông người bị nạn, đỡ người bị nạn ngồi dậy,
+gối sau kê cao sau lưng họ, gối trước quỳ; cầm tay người bị nạn quàng qua cổ, vai
+mình và giữ chặt, tay còn lại luồn ra sau túm lấy thắt lưng hoặc eo.
+
+87
+
+- Bước 2: Giúp người bị nạn đứng dậy, đứng sang phía bị thương của người bị
+nạn, trừ trường hợp bị thương ở tay, nách thì đứng sang bên kia. Cố gắng giữ cho
+người bị nạn thẳng người trong lúc di chuyển.
+- Bước 3: Dìu người bị nạn di chuyển từng bước nhỏ và theo nhịp với sải chân
+của người bị nạn cho tới khi đến khu vực an toàn hoặc khu vực có lực lượng hỗ
+trợ. Trường hợp người bị nạn tự đứng được thì có thể dìu đi luôn.
+
+Hình 4.11. Biện pháp dìu (nạng) ngƣời bị nạn
+* Bế (ẵm) người bị nạn: Áp dụng cho người bị nạn nhẹ cân không đi lại được,
+không bị tổn thương cột sống, xương chậu... Trong một vài trường hợp như gãy
+xương ở chi trên, xương đòn, gãy xương cẳng chân khi cần thiết có thể áp dụng để
+di chuyển.
+- Bước 1: Để người bị nạn nằm ngửa, người cứu quỳ ngang hông, thực hiện
+động tác phần đầu giống như khi dìu người bị nạn.
+- Bước 2: Một tay luồn dưới khoeo chân của người bị nạn, tay còn lại giữ chặt
+thặt lưng hoặc eo người bị nạn; kéo, xốc người bị nạn ngồi lên đùi mình.
+- Bước 3: Khi đỡ chắc chắn người bị nạn thì giữ lưng thẳng đứng dậy và bế
+đi. Trường hợp người bị nạn là trẻ em nhẹ cân có thể bế và đứng dậy luô n (không
+cần kéo, xốc lên đùi) và di chuyển.
+
+88
+
+Hình 4.12. Biện pháp bế ngƣời bị nạn
+Khi đến nơi an toàn thì thực hiện theo quy trình ngược lại để đặt người bị nạn
+xuống.
+* Cõng người bị nạn:  Áp dụng cho ngư ời bị nạn nhẹ cân và không có khả
+năng di chuyển, không bị gãy xương ở các chị, xương chậu, cột sống; không bị
+choáng, không có chấn thương ở vùng ngực, bụng.
+- Nếu người bị nạn còn tỉnh táo, hợp tác tốt:
++ Bước 1: Người cứu ngồi giữa hai chân và xoay lưng  về phía người bị nạn;
+đưa hai tay người bị nạn qua vai mình và đưa về phía trước và giữ chặt.
++ Bước 2: Luồn hai tay người cứu dưới khoeo chân người bị nạn, giữ chặt và
+đứng dậy. Để giữ chặt và di chuyển thuận lợi thì người cứu nên dùng tay của mình
+để giữ chặt hai tay người bị nạn.
+
+Hình 4.13. Biện pháp cõng ngƣời bị nạn còn tỉnh
+* Biện pháp kéo người bị nạn: Áp dụng cho người bị nạn nặng cân, không đi
+lại được, thường để di chuyển với quãng đường  ngắn và khi thực sự khẩn cấp.
+
+89
+
+Hoặc trong những tr ường hợp cần đưa người bị nạn ra ngoài ở những khoảng
+không gian hẹp, thấp hay ở khu vực bị ảnh hưởng bởi khói.
+- Khi khoảng không gian phía trên rộng, người cứu đứng cao người để kéo:
++ Bước 1: Để người bị nạn nằm ngửa hai tay khoanh tr ước ngực, hai chân vắt
+lên nhau để giảm ma sát khi kéo; người cứu quỳ phía đầu người bị nạn, nâng đầu
+và vai họ dậy; đưa đùi vào đỡ dưới lưng người bị nạn.
++ Bước 2: Luồn hai tay dưới nách và đưa ra trước ngực người bị nạn; tay phải
+người cứu nắm cổ tay trái người bị nạn và ngược lại. Nếu một tay của người bị nạn
+bị thương thì có thể hai tay của người cứu nắm chặt vào tay còn lại ở vị trí cổ tay
+và nếp gấp khuỷu tay.
++ Bước 3: Giữ lưng thẳng và sau đó đứng dậy kéo người bị nạn đi giật lùi.
+
+Hình 4.14. Biện pháp kéo ở tƣ thế cao ngƣời
+- Khi khoảng không gian phía trên h p hoặc điều kiện phía trên phòng có
+nhiều khói, người cứu phải di chuyển ở tư thế thấp người để kéo:
++ Bước 1: Để người bị nạn nằm ngửa hai tay khoanh tr ước ngực, hai chân vắt
+lên nhau để gảm ma sát như cách trên; người cứu cởi một cúc áo ngực người bị nạn
+ra, cuộn cổ áo vào trong áo tạo thành vành xung quanh cổ.
+
+90
+
++ Bước 2:  p một tay và luồn vào túm chặt (dưới gáy) cổ áo người bị nạn, kéo
+ở tư thế xoay ngang và cúi thấp, sau đó từ từ kéo giật lùi người bị nạn ra ngoài.
+Đến nơi có khoảng không rộng thì lại thực hiện như cách kéo bình thường ở trên.
+Có thể đặt người bị nạn vào tấm bạt, chăn, ga hoặc dùng dây để buộc vào vị
+trí dưới nách người bị nạn từ phía sau lưng ra trước ngực sau đó vòng ngược lại để
+kéo người bị nạn ra ngoài.
+
+Hình 4.15. Biện pháp kéo ở tƣ thế thấp ngƣời
+b) Trường hợp có hai người cứu
+* Khiêng người bị nạn:  Áp dụng cho người bị nạn nặng cân và không đi lại
+được. Không áp dụng với những trường hợp bị chấn thương cột sống, có chấn
+thương hoặc gãy xương ở các chi, xương đòn, xương chậu...
+- Bước 1: Đặt người bị nạn ở t ư thế nằm ngửa; người cứu thứ nhất thực hiện
+động tác tương tự như  khi kéo người bị nạn, người cứu thứ hai ngồi ngang gối
+người bị nạn có thể luồn hai tay dưới gối hoặc cổ chân người bị nạn.
+- Bước 2: Hai người cứu thống nhất và cùng nhau đứng dậy, khiêng người bị
+nạn tới khu vực an toàn. Người cứu giữ phần chi dưới cũng có thể ngồi vào giữa
+hai chân người bị nạn để giữ phần khoeo chân hoặc cổ chân người bị nạn để di
+chuyển.
+
+91
+
+Hình 4.16. Biện pháp khiêng ngƣời bị nạn
+4.3.2. Một số kỹ năng sơ cấp cứu người bị nạn
+ a) Hồi sinh tim phổi
+ Hồi sinh tim phổi là kỹ thuật cấp cứu ngừng tuần hoàn (thường kèm theo
+cấp cứu suy hô hấp) bao gồm các biện pháp kiểm  soát đường thở, hỗ trợ hô hấp và
+ép tim ngoài lồng ngực để thiết lập lại hô hấp, tuần hoàn. Thời gian tốt nhất để cấp
+cứu ngừng tuần hoàn là càng nhanh càng tốt, 04 phút đầu tiên kể từ khi ngừng tuần
+hoàn được coi là thời gian vàng trong cấp cứu ngừng tuần hoàn.
+ - Cách xác định ngừng tuần hoàn: Trước ti ên cần kiểm tra ý thức, khả năng
+đáp ứng của người bị nạn bằng cách lay, gọi người bị nạn. Gọi và kết hợp vỗ vào
+vai với mức độ tăng dần. Nếu người bị nạn không có đáp ứng thì tiến hành kiểm
+tra tuần hoàn.
+ + Bắt mạch: Để đầu người bị nạn ngửa ra sau, ngườ i cứu ngồi cạnh một bên
+người bị nạn, dùng 2 hoặc 3 đầu ngón tay đặt vùng cổ dưới góc hàm để kiểm tra
+động mạch cảnh hoặc ở nếp lằn bẹn để kiểm tra động mạch bẹn. Thời gian bắt
+mạch không quá 10 giây.
+ + Nghe tim: Áp tai trực tiếp lên vùng tim với thời gian không quá 10 giây.
+ Nếu bắt mạch không thấy mạch đập hoặc không nghe tiếng tim thì người bị
+nạn đã ngừng tuần hoàn. Có thể kết hợp kiểm tra tuần hoàn và kiểm tra hô hấp
+(vừa tiến hành bắt mạch và áp tai, má lên vùng miệng, mũi người bị nạn).
+* Các bước thực hiện hồi sinh tim phổi:
+Nếu xác định người bị nạn ngừng tuần hoàn thì thực hiện sơ cấp cứu tại chỗ
+có sự kết hợp giữa ép tim ngoài lồng ngực và hô hấp nhân tạo. Quy trình được thực
+hiện theo trình tự C-A-B.
+
+92
+
+- Hỗ trợ tuần hoàn (C - Circulation):
+Vị trí ép: Đoạn ½ dưới xương ức hoặc giữa 2 núm vú (nam giới, trẻ em).
+
+Hình 4.17. Xác  định vị trí ép tim
+Tiến hành ép tim 30 lần, kỹ thuật ép được thực hiện như sau:
++ Đặt người bị nạn nằm ngửa trên mặt phẳng cứng.
++ Người cứu quỳ bên cạnh ngang ngực người bị nạn.
++ Đặt tay lên vị trí ép tim. Hai tay để thẳng, làm thành một góc 90 o so với
+lồng ngực.
++ Dùng lực toàn thân ấn thẳng góc xuống xương ức đảm bảo cho xương ức
+lún sâu về phía xương sống từ 5 -6 cm, liên tục và nhịp nhàng với nhịp độ từ 100 -
+120 lần/phút. Chú ý: Phải để lồng ngực giãn nở ra hoàn toàn trước khi tiếp tục ép.
+
+Hình 4.18. Tƣ thế ép tim
+- Khai thông đường thở (A - Airway): Sau khi tiến hành ép tim 30 lần, tiến
+hành khai thông đường thở cho ngư ời bị nạn:
++ Nới rộng quần áo người bị nạn; lấy sạ ch đờm dãi, dị vật (nếu có) ở trong
+miệng.
++ Thực hiện thao tác ấn trán/nâng cằm để cổ ưỡn tối đa. Ấn cằm để mở miệng
+tối đa.
+
+93
+
+Chú ý:  Khi nghi ngờ chấn thương đốt sống cổ thì chỉ nâng hàm dưới lên,
+tránh di chuyển đầu cổ nhiều.
+- Hỗ trợ hô hấp (B - Breathing): Sau mỗi 30 lần ép tim thì hô hấp nhân tạo 2
+lần (có thể thổi ngạt hoặc hô hấp nhân tạo bằng bóng bóp qua mặt nạ).
+Có thể thổi ngạt trực tiếp kiểu miệng - miệng cho người bị nạn, nhưng khuyến
+cáo nên sử dụng các dụng cụ bảo vệ cá nhân để tiến hành thổi ngạt như màng lọc
+thổi ngạt, mặt nạ thổi ngạt. Trong điều kiện tốt nhất, được trang bị bóng bóp và
+mặt nạ thì tiến hành hô hấp nhân tạo bằng bóng bóp qua mặt nạ.
+Cách tiến hành thổi ngạt kiểu miệng - miệng:
++ Người cứu quỳ ngang đầu người bị nạn, giữ người bị nạn nằm ngửa, ưỡn cổ
+tối đa; một tay người cứu đặt trên trán, ngón trỏ và ngón cái đặt hai bên cánh mũi
+người bị nạn; một tay đặt lên cằm giữ cho cổ ưỡn và mở miệng người bị nạn.
++ Phủ gạc miếng, khăn hoặc vải sạch (nếu có) lên miệng người bị nạn, tốt
+nhất nên sử dụng màng lọc thổi ngạt.
++ Người cứu hít vào một hơi thật sâu rồi ngậm chặt vào miệng người bị nạn,
+đồng thời bịt mũi người bị nạn (khi thổi), thổi hết hơi, kết hợp quan sát lồng ngực
+người bị nạn nếu phồng lên khi thổi và thổi xong lồng ngực lại xẹp xuống là thổi
+có hiệu quả.
++ Sau đó nhả miệng người bị nạn ra, hít sâu và thổi lại như trên. Tần số hô
+hấp nhân tạo là 10-12 lần/phút (5-6 giây/1 lần thổi).
+
+Hình 4.19. Hô hấp nhân tạo kiểu miệng – miệng
+Chú ý:
++ Nếu trường hợp người bị nạn chỉ bị ngừng hô hấp thì tiến hành sơ cấp cứu
+với hai bước cơ bản là khai thông đường thở và hỗ trợ hô hấp với các biện pháp
+
+94
+
+phù hợp. Lặp lại thao tác hô hấp nhân tạo kết hợp với kiểm tra tuần hoàn cho đến
+khi hô hấp của người bị nạn có trở lại.
++ Nếu có 2 chiến sỹ cứu thì người thứ nhất ép tim 30 lần, người thứ hai thực
+hiện khai thông đường thở và hô hấp nhân tạo 2 lần. Tiến hành lặp lại chu kỳ ép tim,
+hô hấp nhân tạo và kiểm tra lại hô hấp, tuần hoàn sau mỗi 2 phút thực hiện.
+b) Băng vết thương
+Vết thương là sự cắt đứt hay dập rách da và tổ chức dưới da dẫn đến chảy
+máu hoặc bầm dập với các mức độ khác nhau. Nguyên nhân chủ yếu do bị vật sắc
+nhọn tác động, bị vật nặng đè…
+Nguyên tắc băng bó vết thương: Băng kín vết thương và đủ chặt; không làm ô
+nhiễm vết thương; băng sớm để giảm mất máu và tránh nhiễm khuẩn vết thương từ
+môi trường, hiện trường bên ngoài.
+Dụng cụ cần thiết để băng bó vết thương: Băng cuộn, băng dính, gạc vô trùng
+hoặc vải sạch; nước muối sinh l ý Natriclorid 0,9% để rửa và sát khuẩn vết thương
+hoặc nước sạch (đóng chai); nên sử dụng găng tay y tế khi tiến hành băng bó vết
+thương.
+Một số kỹ thuật băng bó cơ bản bằng băng cuộn:
+- Băng xoáy ốc: Băng xoáy ốc áp dụng cho vết thương ở vị trí cơ thể có kích
+thước đều nhau như vết thương ở cánh tay, ngón tay, nửa thân trên, đùi.
+Băng xoáy ốc được thực hiện bằng cách:
++ Phủ gạc kín miệng vết thương.
++ Sau khi làm vòng khóa lăn tròn cuộn băng trên bộ phận cần băng.
++ Đường băng sau đè lên đường băng trước t ừ 1/2 đến 2/3 bề rộng cuộn băng
+tiếp tục thực hiện cho đến khi che kín toàn bộ vết thương.
++ Cố định đầu băng bằng cách sử dụng kim băng, móc sắt hoặc buộc nút.
+
+95
+
+Hình 4.20. Kiểu băng xoáy ốc
+- Băng chữ nhân: Băng chữ nhân được áp dụng cho các vị trí vết thương nằm
+trên phần cơ thể có kích thước không đều như cẳng tay, cẳng chân.
+Băng chữ nhân được thực hiện bằng cách:
++ Phủ gạc kín miệng vết thương.
++ Sau khi làm vòng khóa đưa cuộn băng chếch lên trên.
++ Đến vị trí gấp lại tiến hành lật cuộn băng kéo xuống và gấp lại, tiếp tục thực
+hiện đến khi các đường  băng che kín toàn bộ vết thương. Các phần lật và khoảng
+cách giữa các vòng băng đều nhau, không để các phần gập lại đè lên vết thương
+(hoặc chỗ xương gãy hở).
++ Cố định đầu băng bằng cách sử dụng kim băng, móc sắt hoặc buộc nút.
+
+Hình 4.21. Kiểu băng chữ nhân
+- Băng số 8: Băng số 8 được áp dụng để băng vết thương vị trí khớp - khuỷu
+như vết thương ở vai, bẹn, ngực, nách, đầu gối, gót chân, khuỷu tay.
+Băng số 8 được thực hiện bằng cách:
++ Phủ gạc kín miệng vết thương.
++ Sau khi làm vòng khóa đưa băng chếch lên hướng vị trí vết thương.
++ Trường hợp cần thiết tạo một vòng khóa phía trên vết thương để cố định
+tránh băng xô lệch, sau đó đi băng từ trên xuống vắt chéo với phần băng đi lên.
+
+96
+
++ Đường băng tiếp theo đi theo hình số 8, đường băng sau đè lên đường
+băng trước từ 1/2 đến 2/3 chiều rộng cuộn băng, phần giao nhau giữa các đường
+băng nằm trên vị trí vết thương, khoảng trống của số 8 (nếu có) nằm dưới vị trí
+cần băng, tiếp tục thực hiện cho đến khi các đường băng che kín toàn bộ vết
+thương.
++ Cố định đầu băng bằng cách sử dụng kim băng, móc sắt hoặc buộc nút.
+
+Hình 4.22. Kiểu băng số 8
+
+c) Cố định xương gãy
+Gãy xương là tình trạng tổn thương và mất sự toàn vẹn của xương, làm ảnh
+hưởng hoặc mất chức năng vận đ ộng các phần chi phối hợp của xương đó. Đây là
+một trong những chấn thương phổ biến nhất, đặc biệt trong tai nạn lao động, tai
+nạn giao thông hoặc các sự cố liên quan đến sập đổ nhà, công trình.
+Việc xử trí ban đầu gãy xương nhằm giảm đau, chống sốc và trá nh các biến
+chứng về sau như chảy máu, nhiễm trùng, can lệch hoặc xương không liền.
+Dấu hiệu chung nhận biết gãy xương là: Biến dạng trục chi (cong, hình dạng
+bất thường); cử động bất thường và/hoặc khi va chạm vào vết thương có cảm giác
+lạo xạo và/hoặc sờ  thấy đầu xương gãy trồi ngay dưới da; có chỗ rách  da và/hoặc
+lộ xương ra bên ngoài khi gãy hở; giảm hoặc mất vận động chi; chi sưng nề bầm
+tím…
+Nguyên tắc cố định gãy xương:
+- Lựa chọn nẹp cố định xương phải đủ dài để cố định được khớp trên và khớp
+dưới ổ gãy;
+- Không đặt nẹp trực tiếp sát vào da người b ị nạn, các chỗ mấu lồi của đầu
+xương phải lót bông rồi mới đặt nẹp;
+
+97
+
+- Khi cần bộc lộ vết thương thì cắt quần áo theo đường chỉ (nếu cần phải cởi
+quần áo thì cởi phía bên lành trước);
+- Nẹp phải được cố định vào chi bị thương thành một khối;
+- Trường hợp gãy xương kín:
++ Giữ ổn định xương theo tư thế cơ năng hay ở vị trí các cơ thoải mái nhất
+(đối với tay gấp khuỷu 900, đối với chân duỗi thẳng 1800);
++ Cố định nhẹ nhàng, cẩn thận, tránh làm tác động vào ổ gãy.
+- Trường hợp gãy xương hở:
++ Phải cố định theo tư thế gãy tuyệt đối không được nắn chỉnh, kết hợp xử trí
+vết thương phần mềm;
++ Tại vị trí đầu xương chồi ra phải tiến hành băng ép mép vết thương vào đầu
+xương để cầm máu sau đó mới tiến hành cố định.
+Dụng cụ dùng để cố định gãy xương:
+- Các loại nẹp gỗ, nẹp tre, nẹp kim loại… với các kích cỡ khác nhau: Nẹp chi
+trên dài 35 -45cm, rộng 5 -6cm, dày 0,5cm; nẹp chi dưới dài 80 -130cm, rộng 8 -
+10cm, dày 0,8cm.
+Nếu không có các loại nẹp trên có thể sử dụng giấy báo, bìa các tông… để
+làm nẹp. Trong một số trường hợp có thể sử dụng chính các bộ phận cơ thể làm
+nẹp như buộc chi gãy vào chi lành.
+- Bông: Dùng bông để lót đầu nẹp hoặc chỗ lồi của đầu xương, tốt nhất là
+dùng bông không thấm nước. Trường hợp không có bông kh ông thấm nước có thể
+dùng bông thấm nước, vải hoặc giấy mềm.
+- Băng: Dùng để cố định buộc nẹp, băng rộng bản dài ngắn tùy theo vị trí tồn
+thương. Băng phải đảm bảo chắc chắn để khi cố định không bị đứt. Nếu không có
+băng có thể dùng các dây vải để buộc.
+Cố định một số trường hợp gãy xương:
+(1) Gãy xương c ẳng tay: Gãy xương cẳng tay gặp ở cả người lớn và trẻ em,
+thường do ngã chống tay hoặc có vật khác đập vào. Xương cẳng tay có thể gãy kín,
+song cũng có trường hợp gãy hở. Có thể gãy một xương hoặc cả hai xương.
+ * Xử trí:
+
+98
+
+ - Nhanh chóng đưa người bị nạn ra  khỏi hiện trường tai nạn, sự cố đến nơi
+an toàn.
+ - Đặt người bị nạn nằm hay ngồi theo tư thế thuận lợi.
+ - Bộc lộ chi bị tổn thương, quan sát và đánh giá tình trạng chi.
+ - Đưa cẳng tay về vị trí vuông gó c với cánh tay, lòng bàn tay ngửa hơi
+hướng về phía thân người.
+- Người phụ đứng ở phía trước một tay đỡ khuỷu, một tay nắm lấy bàn tay
+người bị nạn để nâng đỡ cẳng bị gãy. Khi không có người phụ giúp thì người bị
+nạn có thể hỗ trợ tự nâng đỡ cẳng tay bị gãy nếu còn tỉnh táo.
+- Đặt nẹp:
++ Một nẹp ở mặt trước cẳng tay có chiều dài từ nếp khuỷu đến lòng bàn tay.
++ Một nẹp ở mặt sau cẳng tay có chiều dài từ mỏm khuỷu đến mu bàn tay.
++ Trường hợp thiếu nẹp ưu tiên đặt nẹp ở mặt sau cẳng tay.
+- Đệm bông vào các đầu nẹp.
+- Dùng băng cuộn để cố định 2 nẹp vào cẳng tay đảm bảo đủ chắc hoặc dùng dây
+bản rộng buộc ở 3 vị trí: Khớp khuỷu, phía trên và phía dưới khớp cổ tay.
+- Dùng một băng tam giác, dây hoặc băng cuộn đỡ cẳng tay gấp 90 o so với
+cánh tay và treo trước n gực, dùng khăn tam giác, dây hoặc băng cuộn thứ 2 buộc
+ép cánh tay vào thân mình.
+
+Hình 4.23. Cố định tạm thời gãy xƣơng cẳng tay sử dụng nẹp
+ (2) Cố định gãy xương cánh tay
+
+99
+
+ - Nhanh chóng đưa người bị nạn ra khỏi hiện trường tai nạn, sự cố đến nơi
+an toàn.
+ - Đặt người bị nạn nằm hay ngồi theo tư thế thuận lợi.
+ - Bộc lộ chi bị tổn thương, quan sát và đánh giá tình trạng chi.
+ - Đưa cẳng tay về vị trí vuông góc với cánh tay.
+- Người phụ đứng ở phía trước một tay đỡ khuỷu, một tay đỡ cánh tay sát
+hõm nách. Khi không có người phụ giúp thì người bị nạn có t hể hỗ trợ tự nâng đỡ
+cánh tay bị gãy nếu còn tỉnh táo.
+- Đặt nẹp:
++ Một nẹp ở bên trong chiều dài từ hố nách đến sát nếp gấp khuỷu.
++ Một nẹp ở bên ngoài có chiều dài từ mỏm vai đến qua khớp khuỷu.
++ Trường hợp thiếu 1 nẹp ưu tiên đặt nẹp phía ngoài.
+- Lót bông vào 2 đầu của nẹp sát với đầu xương.
+- Dùng băng cuộn hoặc dây vải buộc từ khuỷu lên vai để cố định nẹp.
+- Dùng một băng tam giác, dây hoặc băng cuộn đỡ cẳng tay gấp 90 o so với
+cánh tay và treo trước ngực, dùng khăn tam giác, dây hoặc băng cuộn thứ 2  buộc
+ép cánh tay vào thân mình.
+
+Hình 4.24. Cố định tạm thời gãy xƣơng cánh tay sử dụng nẹp
+(3) Cố định gãy xương cẳng chân: Cẳng chân có 2 xương là xương chày và
+xương mác. Có thể gãy một trong 2 xương h oặc cả hai xương. Có thể gãy kín hay
+gãy hở. Gãy xương cẳng chân thường do ngã, do tai nạn hoặc do vật nặng đè vào.
+ - Nhanh chóng đưa người bị nạn ra khỏi hiện trường tai nạn, sự cố đến nơi
+an toàn.
+
+100
+
+ - Đặt người bị nạn nằm, hai chân duỗi thẳng, mũi bàn chân hướng lên trên.
+ - Bộc lộ chi bị tổn thương, quan sát và đánh giá tình trạng chi.
+- Băng cầm máu cho người bị nạn nếu là gãy hở.
+- Luồn dây qua vị trí hốc tự nhiên của cơ thể và đặt sẵn tại các vị trí cần cố
+định: Trên ổ gãy, dưới ổ gãy và trên khớp gối.
+
+Hình 4.25. Cố định tạm thời gãy xƣơng cẳng chân sử dụng nẹp
+- Đặt nẹp: Luồn nẹp phía trong các vòng dây từ dưới lên trên.
++ Nẹp sau: Nâng đỡ phần trên và dưới ổ gãy (kheo chân và cổ chân) nhẹ
+nhàng nâng đều đưa nẹp vào dưới chân bị thương, nẹp dài từ g ót chân đến quá
+khớp gối.
++ Nẹp trong dài từ gót chân tới quá khớp gối.
++ Nẹp ngoài dài từ gót chân tới quá khớp gối.
+- Đệm bông hoặc vải mềm vào đầu nẹp và đầu các xương cả hai phía trong và
+ngoài của chi gãy.
+- Trường hợp có người phụ giúp, một người đỡ nẹp, một người siết dây (hoặc
+băng cố định); nếu không có người trợ giúp thì buộc tạm thời dây trên ổ gãy để giữ
+nẹp;
+- Dùng dây cố định ở các vị trí: Trên ổ gãy, dưới ổ gãy (cổ chân), trên khớp
+khối và một dây băng số 8 sát cổ chân để giữ bàn chân vuông góc với cẳng chân.
+- Buộc hai chân vào nhau để cố định 3 vị trí cổ chân, gối, sát bẹn.
+(4) Cố định gãy xương đùi: Xương đùi là xương dài nhất cơ thể và nằm trong
+khu có nhiều cơ, mạch máu, thần kinh lớn. Gãy xương đùi, đặc biệt là gãy hở là
+
+101
+
+một trong trường hợp tổn thương nặng, dễ dẫn đến các biến chứng ng uy hiểm như:
+Choáng hay nhiễm khuẩn nếu không được cấp cứu tốt.
+- Nhanh chóng đưa người bị nạn ra khỏi hiện trường tai nạn, sự cố đến nơi an
+toàn.
+- Đặt người bị nạn nằm trên nền phẳng, hai chân duỗi thẳng,  mũi bàn chân
+hướng lên trên.
+- Chống sốc cho người bị nạn.
+- Bộc lộ chi bị tổn thương, quan sát và đánh giá tình trạng chi.
+- Băng cầm máu cho người bị nạn nếu là gãy xương hở.
+- Luồn dây qua vị trí hốc tự nhiên của cơ thể và đặt sẵn tại các vị trí cần cố
+định: trên ổ gãy, dưới ổ gãy và dưới khớp gối, ng ang mào chậu, ngang ngực, 1/3
+dưới cẳng chân;
+- Đặt nẹp: Luồn nẹp phía trong các vòng dây từ dưới lên trên
++ Nẹp sau: Nâng đỡ phần trên và dưới ổ gãy (kheo chân và hông) nhẹ nhàng
+nâng đều đưa nẹp vào dưới chân bị thương, từ xương bả bai đến gót chân;
++ Nẹp ngoài dài từ hố nách xuống quá gót chân;
++ Nẹp trong dài từ bẹn xuống quá gót chân;
+- Trường hợp có người phụ giúp:
++ Người thứ nhất ngồi phía bàn chân người bị nạn. Một tay đỡ gót chân và
+kéo theo trục c ủa chi. Một tay nắm bàn chân người bị nạn hơi đẩy ngược về phía
+đúi sao cho bàn chân vuông góc với cẳng chân. Mắt luôn quan sát sắc mặt người bị
+nạn.
++ Người thứ hai ngồi phía bên chi lành, luồn hai tay nâng chi hoặc người
+người bị nạn khi cần luồn dây để cố định.
++ Người thứ ba tiến hành đặt nẹp.
+Nếu không có người trợ giúp thì buộc tạm thời dây trên ổ gãy để giữ nẹp;
+- Đệm bông hoặc vải mềm vào đầu nẹp và đầu các xương cả hai phía trong và
+ngoài của chi gãy.
+- Cố định chắc chắn nẹp ở các vị trí luồn dây.
+- Buộc 2 chân vào nhau để cố định ba vị trí cổ chân, gối, sát bẹn.
+
+102
+
+Hình 4.26. Cố định tạm thời gãy xƣơng đùi sử dụng nẹp
+
+103
+
+TÀI LIỆU THAM KHẢO
+
+1. Quốc h ội (2024), Luật Phòng cháy , chữa cháy  và c ứu n ạn, c ứu h ộ, số
+55/2025/QH15. Hà Nội.
+2. Chính ph ủ (2025), Nghị định s ố 105/2025/NĐ-CP ngày  15/5/2025 của
+Chính phủ quy định chi ti ết một số điều và bi ện pháp thi hành  Luật Phòng cháy,
+chữa cháy và cứu nạn, cứu hộ, Hà Nội.
+3. Chính ph ủ (2025), Nghị định s ố 106/2025/NĐ-CP ngày 15/5/2025 của
+Chính phủ quy định xử phạt vi phạm hành chính trong lĩnh v ực phòng cháy, chữa
+cháy và cứu nạn, cứu hộ, Hà Nội.
+4. Bộ Công an (2025), Thông tư s ố 36/2025/TT-BCA ngày 15/5/2025 của Bộ
+trưởng Bộ Công an quy định chi tiết một số điều và biện pháp thi hành Luật Phòng
+cháy, chữa cháy và c ứu nạn, cứu hộ và Nghị định số 105/2025/NĐ-CP ngày 15
+tháng 5 năm 2025 c ủa Chính ph ủ quy định chi ti ết một số điều và bi ện pháp thi
+hành Luật Phòng cháy, chữa cháy và cứu nạn, cứu hộ, Hà Nội.

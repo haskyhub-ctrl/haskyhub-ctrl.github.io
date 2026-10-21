@@ -1,0 +1,66 @@
+[Bảng III.1: hướng dẫn kiểm tra, đối chiếu hồ sơ cấp phép lưu thông phương tiện PCCC, CNCH]
+[Hiệu lực: 2025. Trạng thái: ĐANG DÙNG.]
+
+Bảng III.1: Hướng dẫn nội dung kiểm tra, đối chiếu hồ sơ cấp phép lưu thông phương tiện PCCC, CNCH
+
+Về hồ sơ:
+STT	Nội dung
+kiểm tra, đối chiếu	Theo hồ sơ đề nghị	Theo quy định	Kết
+luận		1	Thành phần hồ sơ	1. Văn bản đề nghị cấp giấy phép lưu thông phương tiện PCCC, CNCH;
+2. Kết quả thử nghiệm phương tiện PCCC và CNCH;
+3. Chứng nhận xuất xưởng/ xuất xứ;
+4. Tài liệu kỹ thuật (nếu có)	1. Văn bản đề nghị cấp giấy phép lưu thông phương tiện PCCC, CNCH;
+2. Kết quả thử nghiệm đúng với tiêu chuẩn công bố áp dụng, quy chuẩn kỹ thuật tương ứng hoặc Chứng nhận chất lượng, kết quả thử nghiệm đúng với tiêu chuẩn, quy chuẩn quy định tại khoản 2 Điều 44 Luật PCCC và CNCH do tổ chức thử nghiệm nước ngoài đã được chứng nhận phù hợp với tiêu chuẩn ISO/IEC 17025 thực hiện có chứng chỉ công nhận tổ chức thử nghiệm;
+3. Chứng nhận xuất xưởng/ xuất xứ;
+4. Tài liệu kỹ thuật (nếu có)	Đầy đủ/ Không đầy đủ		2	Đối tượng nộp hồ sơ đề nghị cấp phép lưu thông	Cơ quan, tổ chức, cá nhân trực tiếp sản xuất, lắp ráp trong nước/Nhập khẩu	Cơ quan, tổ chức, cá nhân trực tiếp sản xuất, lắp ráp trong nước/Nhập khẩu	Đảm bảo/ không đảm bảo		3	Phương tiện PCCC đề nghị cấp phép lưu thông	Ví dụ đề nghị cấp phép lưu thông:
+Máy bơm chữa cháy (ký mã hiệu, chủng loại, nơi sản xuất, năm sản xuất....)	- Phương tiện PCCC và CNCH theo danh mục quy định tại Phụ lục V kèm theo Nghị định số 105/2025/NĐ-CP;
+- Phương tiện chưa thực hiện lưu thông;
+- Phương tiện chưa được cấp Giấy phép lưu thông trước đó.	Đảm bảo/ không đảm bảo		4	Trình tự thời gian thực hiện việc đề nghị cấp giấy phép lưu thông (tính logic về thời gian thực hiện)	Thời gian sản xuất, lắp ráp/nhập khẩu
+Thời gian lấy mẫu
+Thời gian thử nghiệm
+Thời điểm tiếp nhận hồ sơ đề nghị cấp giấy phép lưu thông	- Tài liệu có đầy đủ thông tin về thời gian;
+- Trình tự thời gian thực hiện bảo đảm theo quy trình;
+- Thời gian thử nghiệm phù hợp quy định QCVN 03:2023/BCA (hoặc tiêu chuẩn, quy chuẩn của nước ngoài tương ứng);	Đảm bảo/ không đảm bảo		5	Thể thức, pháp lý của các tài liệu có trong hồ sơ	- Kiểm tra biểu mẫu:
+- Kiểm tra thể thức;
+- Kiểm tra chữ ký điện tử.	- Theo đúng biểu mẫu (ví dụ mẫu PC20);
+- Có thể thức phù hợp;
+- Được ký, xác thực điện tử đầy đủ;	Đảm bảo/ không đảm bảo		Về kết quả thử nghiệm
+Đối với phương tiện PCCC và CNCH sản xuất, lắp ráp trong nước
+
+STT	Nội dung
+kiểm tra, đối chiếu	Theo hồ sơ đề nghị	Theo kết quả kiểm tra, đối chiếu	Theo quy định	Kết
+luận		1	Số lượng lấy mẫu phương tiện phục vụ thử nghiệm theo yêu cầu của tiêu chuẩn, quy chuẩn	Ví dụ: Bình bột chữa cháy
+Số lượng mẫu tối thiểu cần lấy để thử nghiệm: 18	Ví dụ:
+Số lượng mẫu dùng để thử nghiệm/số lượng bị phá hủy: 18/6	Số lượng mẫu dùng để thử nghiệm/số lượng bị phá hủy phải bảo đảm theo quy định tại tiêu chuẩn, quy chuẩn kỹ thuật tương ứng (Ví du: TCVN 7026; QCVN 03:2023/BCA)	Đầy đủ/ Không đầy đủ		2	Nguồn gốc xuất xứ của phương tiện	Ví dụ:
+- Phương tiện có C/O linh kiện nhập khẩu Trung Quốc và Giấy chứng nhận xuất xưởng đối với phương tiện sản xuất, lắp ráp tại Việt Nam;
+- Hoặc trường hợp phương tiện có C/O nhập khẩu trực tiếp từ nước ngoài	Ví dụ:
+Kết quả thử nghiệm; Chứng nhận xuất xưởng; C/O	- Phù hợp giấy chứng nhận xuất xưởng/ xuất xứ; kết quả thử nghiệm;
+- Thể hiện thống nhất trên toàn bộ hồ sơ	Phù hợp/ không phù hợp		3	Mã ký hiệu và số sê-ri của phương tiện	Ví dụ:
+- Giấy chứng nhận xuất xưởng/ Xuất xứ: 001- 499
+- Văn bản đề nghị (PC20): 001- 499	Ví dụ:
+Kết quả thử nghiệm: 001- 499	- Phù hợp giấy chứng nhận xuất xưởng/ xuất xứ; kết quả thử nghiệm;
+- Thể hiện thống nhất trên toàn bộ hồ sơ	Phù hợp/ không phù hợp		+	Chỉ tiêu kỹ thuật 1	Xem tài liệu kỹ thuật (nếu có)	Xem kết quả thử nghiệm của tổ chức đánh giá sự phù hợp thực hiện hoạt động thử nghiệm chất lượng phương tiện PCCC, CNCH	Bảo đảm về mức yêu cầu và phương pháp thử nghiệm theo quy định tại QCVN 03:2023/BCA hoặc TCVN (trường hợp không quy định tại QCVN 03:2023/BCA)	Phù hợp/ không phù hợp		+	Chỉ tiêu kỹ thuật 2	Xem tài liệu kỹ thuật (nếu có)	Xem kết quả thử nghiệm của tổ chức đánh giá sự phù hợp thực hiện hoạt động thử nghiệm chất lượng phương tiện PCCC, CNCH		Phù hợp/ không phù hợp		+	Chỉ tiêu kỹ thuật 3	Xem tài liệu kỹ thuật (nếu có)	Xem kết quả thử nghiệm của tổ chức đánh giá sự phù hợp thực hiện hoạt động thử nghiệm chất lượng phương tiện PCCC, CNCH		Phù hợp/ không phù hợp		+	……………………	……………………	……………………	……………………	………………		Đối với phương tiện PCCC và CNCH nhập khẩu
+
+STT	Nội dung
+kiểm tra, đối chiếu	Theo hồ sơ đề nghị	Theo kết quả kiểm tra,
+đối chiếu	Theo quy định	Kết
+luận		1	Nguồn gốc xuất xứ của phương tiện	Ví dụ:
+- Phương tiện có C/O linh kiện nhập khẩu Trung Quốc và Giấy chứng nhận xuất xưởng đối với phương tiện sản xuất, lắp ráp tại Việt Nam;
+- Hoặc trường hợp phương tiện có C/O nhập khẩu trực tiếp từ nước ngoài	Ví dụ:
+Kết quả thử nghiệm; Chứng nhận xuất xưởng; C/O	- Phù hợp giấy chứng nhận xuất xưởng/ xuất xứ; kết quả thử nghiệm;
+- Thể hiện thống nhất trên toàn bộ hồ sơ	Phù hợp/ không phù hợp		2	Mã ký hiệu và số sê-ri của phương tiện	Ví dụ:
+- Giấy chứng nhận xuất xưởng/ Xuất xứ: 001- 499
+- Văn bản đề nghị (PC20): 001- 499	Ví dụ:
+Kết quả thử nghiệm: 001- 499	- Phù hợp giấy chứng nhận xuất xưởng/ xuất xứ; kết quả thử nghiệm;
+- Thể hiện thống nhất trên toàn bộ hồ sơ	Phù hợp/ không phù hợp		3	Kiểm tra chứng chỉ công nhận tổ chức thử nghiệm nước ngoài đã được chứng nhận phù hợp với tiêu chuẩn ISO/IEC 17025	Ví dụ:
+- Phòng thử nghiệm TL-157 của tổ chức Underwriters Laboratory Inc., (UL);
+-………………	Xem thời gian phát hành chứng nhận, thời hạn còn hiệu lực của chứng nhận;
+Kiểm tra phạm vi chứng nhận cho phòng thử nghiệm thực hiện thử nghiệm phương tiện PCCC, CNCH theo tiêu chuẩn nước ngoài tương ứng bảo đảm phù hợp với phương tiện PCCC, CCNH đang đề nghị cấp phép lưu thông (mẫu PC20)	Tổ chức thử nghiệm nước ngoài đã được chứng nhận phù hợp với tiêu chuẩn ISO/IEC 17025 có chứng chỉ công nhận tổ chức thử nghiệm	Đúng/ không đúng quy định		4	Kiểm tra chứng nhận chất lượng, kết quả thử nghiệm của tổ chức thử nghiệm nước ngoài	Ví dụ: Chứng nhận KFI số 201400084 ngày …..; Báo cáo thử nghiệm số … ngày ….;
+	Chứng nhận chất lượng, kết quả thử nghiệm các chỉ tiêu kỹ thuật (kiểm tra phương pháp thử, mức yêu cầu, kết quả thử)	Bảo đảm phải đúng với tiêu chuẩn quốc tế, tiêu chuẩn khu vực, tiêu chuẩn nước ngoài hoặc tiêu chuẩn, quy chuẩn kỹ thuật của Việt Nam	Đúng/ không đúng quy định		3. Kết luận:
+- Thành phần hồ sơ: Đầy đủ/ chưa đầy đủ (ghi rõ nội dung);
+- Tính pháp lý, hợp lệ của hồ sơ: Đảm bảo/ không đảm bảo (ghi rõ nội dung);
+- Nội dung kiểm tra, đối chiếu: Đầy đủ, đúng quy định/ Chưa đầy đủ, chưa đúng quy định (ghi rõ nội dung);
+- Kết quả kiểm tra, đối chiếu: Phù hợp/ không phù hợp (ghi rõ nội dung);
+Đề xuất: Đủ/ không đủ điều kiện cấp giấy phép lưu thông phương tiện PCCC, CNCH.
+
+5

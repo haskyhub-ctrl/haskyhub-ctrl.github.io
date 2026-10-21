@@ -1,0 +1,137 @@
+[Phụ lục V: hướng dẫn nội dung kiểm tra hệ thống điện phục vụ PCCC]
+[Hiệu lực: 2025. Trạng thái: ĐANG DÙNG.]
+
+1
+
+Phụ lục V: Hướng dẫn nội dung kiểm tra hệ thống điện phục vụ PCCC
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Căn cứ Nghị định 106/2025/NĐ-CP
+1 Nguồn
+điện cho
+PCCC
+Điện cấp cho các hệ thống sau phải duy trì hoạt động trong thời gian
+không ít hơn 3 h kể từ khi có cháy và phải được lấy từ 2 nguồn độc lập:
+- Thang máy chữa cháy.
+- Hệ thống bảo vệ chống cháy.
+- Báo cháy tự động và hướng dẫn thoát nạn.
+- Chữa cháy tự động và cấp nước chữa cháy.
+- Thiết bị phục vụ cứu hộ - cứu nạn
+Mục A.2.28.1
+QCVN 06
+1. Hành vi lắp đặt, sử
+dụng dây dẫn điện, thiết
+bị điện, thiết bị đóng
+ngắt, bảo vệ không bảo
+đảm an toàn phòng cháy
+(khoản 1, Điều 12; Phạt
+tiền từ 6.000.000 đồng
+đến 8.000.000 đồng);
+2. Hành vi không duy trì
+thiết bị điện phòng nổ đã
+được trang bị, lắp đặt
+(khoản 2, Điều 12; Phạt
+tiền từ 10.000.000 đồng
+đến 15.000.000 đồng);
+3. Hành vi không trang
+bị, lắp đặt, sử dụng thiết
+bị điện phòng nổ (khoản
+3, Điều 12; Phạt tiền từ
+20.000.000 đồng đến
+25.000.000 đồng);
+4. Không có giải pháp
+ngăn cháy đối với khu
+vực sạc điện cho xe
+động cơ điện tập trung
+trong nhà (điểm a,
+khoản 4, Điều 12; Phạt
+tiền từ 40.000.000 đồng
+đến 50.000.000 đồng;
+biện pháp khắc phục
+hậu quả: Buộc thực
+hiện giải pháp ngăn
+cháy);
+5. Không có hệ thống
+2 Cáp điện,
+dây dẫn
+- Các cáp điện từ trạm biến áp và từ nguồn cấp độc lập đến các thiết bị
+phân phối đầu vào ở mỗi khoang cháy phải được đặt trong các kênh (hộp)
+riêng biệt với khả năng chịu lửa theo quy định tại A.2.24, hoặc phải là các
+cáp có khả năng chịu lửa.
+- Ở các thiết bị phân phối đầu vào của mỗi khoang cháy phải có thiết bị
+ngắt bảo vệ và được xử lý bảo vệ chống cháy.
+- Ở các tủ phân phối của tầng và ở các bảng điện của các căn hộ đều phải
+có thiết bị ngắt bảo vệ. Cấu tạo kết cấu của các tủ này phải bảo đảm loại
+trừ được khả năng lan cháy ra ngoài phạm vi tủ
+Mục
+A.2.28.2,
+A.2.28.
+QCVN
+06:2022/BXD
+
+3 Nguồn
+điện cấp
+cho quạt
+tăng áp,
+hút khói
+Nguồn điện cấp cho thông gió sự cố, chống khói cần được xếp vào cấp 1
+(02 nguồn điện không phụ thuộc và có nguồn dự phòng tại chỗ)
+Điều 9.1
+TCVN 5687:
+2010
+4 Nguồn
+điện cấp
+cho thang
+máy chữa
+cháy
+Hệ thống điện cung cấp cho thang máy và chiếu sáng phải gồm có các
+nguồn điện cung cấp chính và Phụ (khẩn cấp, dự phòng, luân phiên)
+Điều 5.9
+TCVN 6396-
+72:2010
+5 Hệ thống Đối với gian phòng, khu vực có nguy cơ hình thành môi trường nguy Điều 5.1.7
+
+2
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Căn cứ Nghị định 106/2025/NĐ-CP
+điện trang
+bị tại gian
+phòng,
+khu vực
+có nguy
+cơ hình
+thành môi
+trường
+nguy
+hiểm
+cháy, nổ
+hiểm cháy, nổ:
+- Dụng cụ điện, thiết bị điện là loại an toàn cháy, nổ và có cấp phòng nổ
+tương ứng với môi trường hơi, khí dễ cháy nổ.
+- Dây cáp điện: Không được đặt trong cùng một đường rãnh ngầm hoặc nổi
+có ống dẫn hơi khí, chất lỏng dễ cháy, nổ.
+- Cầu dao, cầu chì, ổ cắm điện:
++ Đặt ở ngoài khu vực chứa các hóa chất dễ cháy, nổ.
++ Nhánh dây điện nào cũng đều phải có cầu chì hay thiết bị bảo vệ tương
+đương;
+- Thiết bị chiếu sáng:
++ Loại phòng nổ;
++ Phải ngăn ngừa sự xâm nhập của hơi khí, bụi dễ cháy, nổ vào thiết bị.
+TCVN 5507-
+2002
+điện phục vụ phòng
+cháy và chữa cháy (điểm
+b, khoản 4, Điều 12;
+Phạt tiền từ 40.000.000
+đồng đến 50.000.000
+đồng);
+6. Không duy trì nguồn
+điện phục vụ phòng
+cháy và chữa cháy (điểm
+c, khoản 4, Điều 12;
+Phạt tiền từ 40.000.000
+đồng đến 50.000.000
+đồng)
+
+Lưu ý: Nội dung hướng dẫn tại Bảng 4 được áp dụng đối với các công trình được xây dựng mới, cải tạo về PCCC sau thời điểm các tiêu chuẩn, quy
+chuẩn nêu trên có hiệu lực thi hành; các cơ sở đang hoạt động không có cải tạo, thay đổi tính chất sử dụng áp dụng theo các tài liệu đã được C07
+hướng dẫn phù hợp với thời điểm công trình được xây dựng hoặc cải tạo, thay đổi tính chất sử dụng.

@@ -46,6 +46,8 @@ def _doc_view(stored: str, meta: dict) -> dict:
         "chars": meta.get("chars", 0),
         "chunks": meta.get("chunks", 0),
         "needs_ocr": bool(meta.get("needs_ocr")),
+        "from_seed": bool(meta.get("from_seed")),
+        "group": meta.get("group") or "",
         "size": os.path.getsize(p) if os.path.isfile(p) else 0,
     }
 
@@ -156,6 +158,7 @@ def update_doc(doc_id: str, body: DocUpdate, current_user: User = Depends(get_cu
         v = getattr(body, f)
         if v is not None:
             meta[f] = v.strip()
+    meta["admin_edited"] = True     # bộ nạp sẵn không ghi đè các chỉnh sửa của quản trị viên
     local_rag.save_manifest(man)
     local_rag.reindex()
     return _doc_view(doc_id, meta)
@@ -169,6 +172,9 @@ def delete_doc(doc_id: str, current_user: User = Depends(get_current_user)):
         raise HTTPException(status_code=404, detail="Không tìm thấy tài liệu")
     man.pop(doc_id)
     local_rag.save_manifest(man)
+    if doc_id.startswith("seed_"):
+        from utils.kho_seed import mark_deleted
+        mark_deleted(doc_id)        # không để bộ nạp sẵn chép lại tài liệu đã xóa
     p = os.path.join(local_rag.KHO_DIR, os.path.basename(doc_id))
     if os.path.isfile(p):
         os.remove(p)

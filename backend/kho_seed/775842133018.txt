@@ -1,0 +1,2252 @@
+[TCVN 3890:2023 Phương tiện phòng cháy và chữa cháy cho nhà và công trình, trang bị và bố trí]
+[Hiệu lực: 2023. Trạng thái: ĐANG DÙNG.]
+
+TCVN 3890:2023
+Xuất bản lần 3
+PHÒNG CHÁY CHỮA CHÁY - PHƯƠNG TIỆN PHÒNG
+CHÁY VÀ CHỮA CHÁY CHO NHÀ VÀ CÔNG TRÌNH -
+TRANG BỊ, BỐ TRÍ
+Fire protection - Fire protection equipments for building and construction –
+Equipment, Installation
+HÀ NỘI - 2023
+TCVN         T I Ê U  C H U Ẩ N  Q U Ố C  G I A
+
+TCVN 3890
+Mục lục
+Lời nói đầu.............................................................................................................................................3
+1 Phạm vi áp dụng................................................................................................................................. 4
+2 Tài liệu viện dẫn.................................................................................................................................. 4
+3 Thuật ngữ và định nghĩa......................................................................................................................5
+4 Quy định chung................................................................................................................................... 9
+5 Quy định về trang bị, bố trí phương tiện, hệ thống phòng cháy và chữa cháy.......................................11
+Phụ lục A (Quy định) Quy định về trang bị hệ thống báo cháy tự động, thiết bị báo cháy cục bộ và hệ thống
+chữa cháy tự động............................................................................................................................... 17
+Phụ lục B (Quy định) Quy định về trang bị hệ thống họng nước chữa cháy trong nhà.............................34
+Phụ lục C (Quy định) Quy định về trang bị hệ thống cấp nước chữa cháy ngoài nhà.............................. 36
+Phụ lục D (Quy định) Quy định về trang bị phương tiện chữa cháy cơ giới............................................39
+Phụ lục E (Quy định) Quy định về trang bị dụng cụ phá dỡ thô sơ..........................................................41
+Phụ lục F (Quy định) Quy định về trang bị mặt nạ lọc độc và mặt nạ phòng độc cách ly..........................42
+Phụ lục G (Quy định) Quy định về phải trang bị hệ thống loa thông báo và hướng dẫn thoát nạn............ 43
+Phụ lục H (Quy định) Quy định về trang bị phương tiện, dụng cụ chữa cháy ban đầu............................. 44
+Thư mục tài liệu tham khảo...................................................................................................................45
+
+TCVN 3890:2023
+Lời nói đầu
+TCVN 3890:2023 thay thế cho TCVN 3890:2009
+TCVN 3890:2023 do Cục Cảnh sát phòng cháy, chữa cháy và cứu nạn,
+cứu hộ biên soạn, Bộ Công an đề nghị, Tổng cục Tiêu chuẩn Đo lường
+Chất lượng thẩm định, Bộ Khoa học và Công nghệ công bố.
+3
+
+TCVN 3890:2023
+TIÊU CHUẨN QUỐC GIA        TCVN 3890:2023
+Phòng cháy chữa cháy – Phương tiện phòng cháy và chữa cháy
+cho nhà và công trình – Trang bị, bố trí
+Fire protection - Fire protection equipments for building and construction - Equipment, Installation
+1 Phạm vi áp dụng
+1.1 Tiêu chuẩn này quy định về trang bị, bố trí phương tiện, hệ thống phòng cháy và chữa cháy cho
+nhà, công trình, đô thị, khu kinh tế, khu công nghiệp, cụm công nghiệp, khu chế xuất, khu công nghệ
+cao và các khu chức năng khác theo quy định [5], khi:
+- Xây dựng mới;
+- Cải tạo làm tăng quy mô hoặc chuyển đổi công năng sử dụng của gian phòng, nhà, công trình;
+- Cải tạo làm tăng quy mô của khu kinh tế, khu công nghiệp, cụm công nghiệp, khu chế xuất, khu công
+nghệ cao và các khu chức năng khác theo quy định [5].
+- Thay đổi hạng nguy hiểm cháy và cháy nổ của gian phòng, nhà, công trình theo hướng tăng tính chất
+nguy hiểm cháy.
+1.2 Đối với nhà và công trình ngoài việc tuân thủ tiêu chuẩn này còn phải tuân thủ quy chuẩn, tiêu
+chuẩn riêng của các loại hình công trình đó, trong trường hợp có quy định khác với quy định tại tiêu
+chuẩn này, phải áp dụng quy định có yêu cầu cao hơn.
+1.3 Đối với nhà và công trình chưa có quy định cụ thể thì nghiên cứu áp dụng tiêu chuẩn nước ngoài, tiêu
+chuẩn quốc tế về PCCC theo quy định của pháp luật hiện hành hoặc  thực hiện theo hướng dẫn của cơ
+quan quản lý chuyên ngành cấp Bộ về phòng cháy và chữa cháy.
+2 Tài liệu viện dẫn
+Các tài liệu viện dẫn dưới đây rất quan trọng khi áp dụng tiêu chuẩn này. Đối với các tài liệu có ghi
+năm công bố thì áp dụng phiên bản đã nêu. Đối với các tài liệu không ghi năm công bố thì áp dụng
+phiên bản mới nhất (bao gồm cả sửa đổi).
+TCVN 4530 Cửa hàng xăng dầu - Yêu cầu thiết kế.
+TCVN 4878 Phòng cháy chữa cháy - Phân loại cháy.
+4
+
+TCVN 3890:2023
+TCVN 4879 Phòng cháy - Dấu hiệu an toàn.
+TCVN 5307 Kho dầu mỏ và sản phẩm của dầu mỏ - Yêu cầu thiết kế.
+TCVN 5738 Phòng cháy chữa cháy - Hệ thống báo cháy tự động - Yêu cầu kỹ thuật.
+TCVN 5684 An toàn cháy các công trình dầu mỏ và sản phẩm dầu mỏ - Yêu cầu chung.
+TCVN 5760 Hệ thống chữa cháy - Yêu cầu chung về thiết kế, lắp đặt và sử dụng.
+TCVN 6100 Phòng cháy chữa cháy - Chất chữa cháy - Cabon Dioxít.
+TCVN 6101 Thiết bị chữa cháy - Hệ thống chữa cháy cacbon dioxit - Thiết kế và lắp đặt.
+TCVN 6223 Cửa hàng khí dầu mỏ hóa lỏng (LPG) – Yêu cầu chung về an toàn.
+TCVN 6305 (tất cả các phần) Phòng cháy chữa cháy – Hệ thống sprinkler tự động .
+TCVN 7026 Chữa cháy - Bình chữa cháy xách tay - Tính năng và cấu tạo.
+TCVN 7027 Chữa cháy - Bình chữa cháy có bánh xe - Tính năng và cấu tạo.
+TCVN 7161 (tất cả các phần) Hệ thống chữa cháy bằng khí - Tính chất vật lý và thiết kế hệ thống.
+TCVN 7336 Phòng cháy chữa cháy - Hệ thống chữa cháy tự động bằng nước, bọt - Yêu cầu thiết kế và
+lắp đặt.
+TCVN 7435 (tất cả các phần) Phòng cháy, chữa cháy - Bình chữa cháy xách tay và xe đẩy chữa cháy.
+TCVN 7568 (tất cả các phần) Hệ thống báo cháy.
+TCVN 9255 Tiêu chuẩn tính năng trong tòa nhà - định nghĩa, phương pháp tính các chỉ số diện tích và
+không gian.
+TCVN 12110 Phòng cháy chữa cháy - Bơm ly tâm loại khiêng tay dùng động cơ đốt trong - Yêu cầu kỹ
+thuật và phương pháp kiểm tra.
+TCVN 12314 (tất cả các phần) Chữa cháy - Bình chữa cháy tự động kích hoạt.
+TCVN 13316 (tất cả các phần) Phòng cháy chữa cháy – Xe ô tô chữa cháy.
+TCVN 13332 Phương tiện bảo vệ cơ quan hô hấp - Mặt nạ trùm toàn bộ khuôn mặt - Yêu cầu kỹ thuật
+và phương pháp thử.
+TCVN 13333 Hệ thống chữa cháy bằng sol - khí - Yêu cầu về thiết kế, lắp đặt, kiểm tra và bảo
+dưỡng.
+TCVN 13456 Phòng cháy chữa cháy - Phương tiện chiếu sáng sự cố và chỉ dẫn thoát nạn - Yêu cầu
+thiết kế, lắp đặt.
+3 Thuật ngữ và định nghĩa
+Tiêu chuẩn này áp dụng các thuật ngữ và định nghĩa nêu trong TCVN 4530 , TCVN 4879, TCVN 5307,
+TCVN 5684, TCVN 5738, TCVN 6100, 6101, TCVN 6223, TCVN 6305 (tất cả các phần), TCVN 7026,
+5
+
+TCVN 3890:2023
+TCVN 7027, TCVN 7161 (tất cả các phần) , TCVN 7336, TCVN 7435 (tất cả các phần), TCVN 7568-1,
+TCVN 12110, TCVN 12314-1, TCVN 13316 (tất cả các phần), TCVN 13332, TCVN 13333, TCVN 13456,
+và các thuật ngữ và định nghĩa sau:
+3.1
+Phương tiện phòng cháy và chữa cháy (Fire protection equipments)
+Phương tiện cơ giới, thiết bị, máy móc, dụng cụ, hóa chất, công cụ hỗ trợ chuyên dùng cho việc
+phòng cháy và chữa cháy, cứu người, cứu tài sản.
+3.2
+Hệ thống chữa cháy tự động (Automatic fire extinguishing system)
+Hệ thống chữa cháy được tự động kích hoạt xả chất chữa cháy khi các yếu tố của đám cháy vượt quá
+giá trị được thiết lập trong khu vực bảo vệ, có chức năng giám sát xả và dừng xả/dừng kích hoạt xả
+chất chữa cháy.
+CHÚ THÍCH:
+- Tín hiệu giám sát phải được truyền về tủ trung tâm báo cháy;
+- Chức năng dừng xả/dừng kích hoạt phải có khả năng thực hiện bằng tay.
+3.3
+Họng nước chữa cháy (Hose reel)
+Tổ hợp các thiết bị chuyên dùng gồm van khóa, vòi, lăng phun được lắp đặt, trang bị sẵn để triển khai
+đưa nước đến đám cháy.
+3.4
+Hệ thống cấp nước chữa cháy ngoài nhà (Outdoor fire fighting water supply system)
+Hệ thống các thiết bị chuyên dùng được lắp đặt ngoài nhà để cấp nước phục vụ cho công tác chữa
+cháy.
+3.5
+Thiết bị báo cháy cục bộ (Local fire alarms device)
+Thiết bị tự động phát hiện và cảnh báo cháy bằng âm thanh.
+Chú thích: Các thiết bị báo cháy cục bộ khi được lắp đặt trong cùng một nhà và công trình phải được
+liên kết với nhau, đảm bảo tất cả cùng phát tín hiệu báo cháy khi có một thiết bị được kích hoạt.
+3.6
+Phương tiện, dụng cụ chữa cháy ban đầu (Initial fire fighting facilities)
+Phương tiện, dụng cụ chữa cháy ban đầu gồm: Thùng, phuy chứa cát; xẻng; chăn.
+3.7
+6
+
+TCVN 3890:2023
+Mặt nạ lọc độc (Filter masks)
+Thiết bị bảo hộ cá nhân để bảo vệ cơ quan hô hấp của người sử dụng chống lại khói, khí độc trong một
+thời gian và ở giới hạn nồng độ ô xy trong không khí nhất định.
+3.8
+Mặt nạ phòng độc cách ly (Self Contained Breathing Apparatus)
+Thiết bị bảo hộ cá nhân  gồm mặt trùm toàn bộ khuôn mặt và bình khí thở để bảo vệ cơ quan hô hấp của
+người sử dụng chống lại sự xâm nhập không khí bên ngoài.
+3.9
+Công trình xây dựng (Constructions)
+Sản phẩm được tạo thành bởi sức lao động của con người, vật liệu xây dựng, thiết bị lắp đặt vào công
+trình, được liên kết định vị với đất, có thể bao gồm phần dưới mặt đất, phần trên mặt đất, phần dưới
+mặt nước và phần trên mặt nước, được xây dựng theo thiết kế.
+3.10
+Nhà (Building)
+Công trình xây dựng có chức năng chính là bảo vệ, che chắn cho người hoặc vật chứa bên trong,
+thông thường được bao che một phần hoặc toàn bộ và được xây dựng ở một vị trí cố định.
+3.11
+Nhà hỗn hợp (Multi-function building)
+Nhà dân dụng có nhiều công năng sử dụng khác nhau (ví dụ: một nhà được thiết kế sử dụng làm văn
+phòng, dịch vụ thương mại, hoạt động công cộng và có thể có các phòng ở).
+CHÚ THÍCH: Nhà hỗn hợp phải áp dụng các quy định về trang bị, bố trí phương tiện phòng cháy và
+chữa cháy đối với nhà hỗn hợp khi diện tích sàn xây dựng dùng cho mỗi công năng của nhà không
+vượt quá 70 % tổng diện tích sàn xây dựng của nhà (không bao gồm các diện tích sàn dùng cho hệ
+thống kỹ thuật, phòng cháy chữa cháy, gian lánh nạn và đỗ xe).
+3.12
+Nhà sản xuất (Production building)
+Nhà mà bên trong có các hoạt động sản xuất và bảo đảm các điều kiện cần thiết cho con người làm
+việc và vận hành các thiết bị công nghệ.
+3.13
+Kho lạnh (Cold storage)
+Một hoặc nhiều phòng được cách nhiệt và làm lạnh để bảo quản thực phẩm, hàng hóa ở nhiệt độ quy
+định.
+7
+
+TCVN 3890:2023
+3.14
+Gian phòng (Room)
+Không gian bên trong nhà có công năng nhất định và được giới hạn bởi các kết cấu xây dựng.
+3.15
+Chiều cao (Height for fire prevention and fighting)
+Chiều cao quy định trong tiêu chuẩn này được hiểu là c hiều cao PCCC của nhà, công trình (không tính
+tầng kỹ thuật trên cùng) được xác định như sau:
+- Bằng khoảng cách lớn nhất tính từ mặt đường cho xe chữa cháy tiếp cận đến mép dưới của lỗ cửa
+(cửa sổ) mở trên tường ngoài của tầng trên cùng;
+- Bằng một nửa tổng khoảng cách tính từ mặt đường cho xe chữa cháy tiếp cận đến mặt sàn và đến
+trần của tầng trên cùng – khi không có lỗ cửa (cửa sổ).
+CHÚ THÍCH 1: Khi mái nhà được khai thác sử dụng thì chiều cao PCCC của nhà được xác định bằng khoảng cách lớn nhất
+từ mặt đường cho xe chữa cháy tiếp cận đến mép trên tường bao của mái.
+CHÚ THÍCH 2: Khi xác định chiều cao PCCC thì mái nhà không được tính là có khai thác sử dụng nếu con người không có
+mặt thường xuyên trên mái.
+CHÚ THÍCH 3: Khi có ban công (lô gia) hoặc kết cấu bao che (lan can) cửa sổ thì chiều cao PCCC được tính bằng khoảng
+cách lớn nhất từ mặt đường cho xe chữa cháy tiếp cận đến mép trên của kết cấu bao che (lan can).
+3.16
+Mái có khai thác sử dụng (Occupied roof)
+Mái nhà có sự có mặt thường xuyên của con người (không ít hơn 2 giờ liên tục hoặc tổng thời gian
+không ít hơn 6 giờ trong vòng một ngày đêm).
+3.17
+Tầng kỹ thuật (Technical floors)
+Tầng hoặc một phần tầng bố trí các gian kỹ thuật hoặc các thiết bị kỹ thuật của tòa nhà. Tầng kỹ thuật
+có thể là tầng hầm, tầng bán hầm, tầng áp mái, tầng trên cùng hoặc tầng thuộc phần giữa của tòa nhà.
+3.18
+Tầng áp mái (Attic)
+Tầng nằm bên trong không gian của mái dốc mà toàn bộ hoặc một phần mặt đứng của nó được tạo
+bởi bề mặt mái nghiêng hoặc mái gấp, trong đó tường bao (nếu có) không cao quá mặt sàn 1,5 m.
+3.19
+Số tầng nhà (Number of floors)
+Số tầng của nhà trong tiêu chuẩn này bao gồm toàn bộ các tầng trên mặt đất (kể cả tầng kỹ thuật, tầng
+8
+
+TCVN 3890:2023
+tum) và tầng bán/nửa hầm, không bao gồm tầng áp mái.
+CHÚ THÍCH:
+Tầng tum không tính vào số tầng nhà của công trình khi chỉ có chức năng sử dụng để bao che lồng cầu thang bộ/giếng thang
+máy và che chắn các thiết bị kỹ thuật của công trình (nếu có), có diện tích mái tum không vượt quá 30 % diện tích sàn mái.
+Đối với nhà ở riêng lẻ, tầng lửng không tính vào số tầng của công trình khi diện tích sàn tầng lửng không vượt quá 65% diện tích sàn
+xây dựng của tầng ngay bên dưới.
+Đối với công trình nhà công nghiệp thì sàn giá đỡ và sàn lửng nằm ở cao độ bất kì không tính vào số tầng của công trình khi có diện
+tích không lớn hơn 40 % diện tích 1 tầng của công trình đó.
+Đối với các công trình nhà, kết cấu dạng nhà, công trình nhiều tầng có sàn (không bao gồm nhà ở riêng lẻ, nhà công
+nghiệp), tầng lửng không tính vào số tầng của công trình khi chỉ bố trí sử dụng làm khu kỹ thuật (ví dụ: sàn kỹ thuật đáy bể
+bơi, sàn đặt máy phát điện, hoặc các thiết bị công trình khác), có diện tích sàn xây dựng không vượt quá 10% diện tích sàn
+xây dựng của tầng ngay bên dưới và không vượt quá 300 m 2. Mỗi công trình chỉ được phép có một tầng lửng không tính
+vào số tầng của công trình.
+3.20
+Khối tích (Volume)
+Khối tích quy định trong tiêu chuẩn này được hiểu là khối tích của nhà, công trình/hạng mục công trình
+độc lập. Khối tích được tính theo quy định của TCVN 9255.
+3.21
+Diện tích (Area)
+Diện tích quy định trong tiêu chuẩn này được hiểu là tổng diện tích sàn của nhà, công trình/hạng mục
+công trình độc lập về kết cấu của công trình. Diện tích được tính theo quy định của TCVN 9255.
+CHÚ THÍCH: Trường hợp các nhà đã bảo đảm về khoảng cách an toàn phòng cháy chữa cháy, thoát nạn và ngăn cháy lan,
+được kết nối với nhau bởi các lối đi (hành lang cầu) thì cho phép tính diện tích và khối tích riêng biệt của từng nhà.
+4 Quy định chung
+4.1 Nhà, công trình, khoang cháy dựa trên tính nguy hiểm cháy theo công năng được phân thành các
+nhóm F1, F2, F3, F4, F5; nhà, công trình và gian phòng có công năng sản xuất và kho theo tính nguy
+hiểm cháy và cháy nổ được phân thành các hạng A, B, C, D, E theo quy định [17].
+4.2 Nhà, công trình, hạng mục/khu vực, gian phòng, buồng và thiết bị (sau đây gọi chung là nhà và công
+trình), đô thị, khu kinh tế, khu công nghiệp, cụm công nghiệp, khu chế xuất, khu công nghệ cao và các khu
+chức năng khác theo quy định [5], không phụ thuộc vào chủ sở hữu và đơn vị chủ quản theo pháp nhân
+phải trang bị các phương tiện, hệ thống phòng cháy và chữa cháy theo quy định của tiêu chuẩn này.
+4.3 Lựa chọn loại phương tiện, phương pháp chữa cháy, loại chất chữa cháy phải phù hợp với tính chất,
+mức độ nguy hiểm cháy của nhà, công trình, với từng loại đám cháy, với khả năng, hiệu quả của phương
+tiện chữa cháy và từng loại chất chữa cháy quy định tại 4.4 và trong các tiêu chuẩn kỹ thuật hiện hành có
+liên quan.
+9
+
+TCVN 3890:2023
+4.4 Hiệu quả chữa cháy của các chất chữa cháy quy định tại Bảng 1.
+Bảng 1 – Hiệu quả chữa cháy của các chất chữa cháy
+Chất chữa cháy
+Hiệu quả chữa cháy các loại đám cháy
+A B
+C
+D
+A1 A2 B1 B2 D1 D2 D3
+Nước ++ - - -
+Bọt, chất
+chữa
+cháy gốc
+nước
+Chất chữa cháy gốc nước ++ + - -
+Bọt có bội số nở cao + - ++ + - -
+Bọt có bội số nở thấp và trung
+bình
++ + ++ + - -
+Khí
+CO2 - + + -
+Nitơ, HFC-227ea, Inergen, Argon,
+FK 5-1-12…
++ + + -
+Bột
+Bột BC -
+++ ++
+-
+Bột ABC
++
+-
+Bột ABCD ++ -
+Aerosol (Sol khí) + + + -
+CHÚ THÍCH:
+Phân loại cháy theo quy định của TCVN 4878 và TCVN 5760.
+Dấu “++” Rất hiệu quả.
+Dấu “+” Chữa cháy thích hợp.
+Dấu “-“ Chữa cháy không thích hợp.
+Bột BC Bột dùng chữa các đám cháy có ký hiệu B, C.
+Bột ABC Bột dùng chữa các đám cháy có ký hiệu A, B, C.
+Bột ABCD  Bột dùng chữa các đám cháy có ký hiệu A, B, C và D
+- Chất chữa cháy khí chỉ trang bị cho khu vực đảm bảo thời gian duy trì nồng độ dập tắt theo quy định
+tại TCVN 7161-1, TCVN 6101, TCVN 13333. Chất chữa cháy CO 2 chỉ sử dụng tại các khu vực thường
+xuyên không có người.
+4.5 Khi cải tạo làm tăng quy mô hoặc chuyển đổi công năng sử dụng; hoặc  thay đổi hạng nguy hiểm
+cháy và cháy nổ của gian phòng,  nhà, công trình theo hướng tăng tính chất nguy hiểm cháy  của gian
+phòng, nhà, công trình thì phải áp dụng tiêu chuẩn này trong phạm vi thay đổi đó.
+4.6 Phải trang bị hệ thống chữa cháy tự động cho toàn bộ nhà nếu tổng diện tích các gian phòng trong
+nhà thuộc diện phải trang bị hệ thống chữa cháy tự động bằng hoặc lớn hơn 40% tổng diện tích sàn
+10
+
+TCVN 3890:2023
+của nhà đó.
+4.7 Đối với gian phòng trong nhà thuộc nhóm nguy hiểm cháy theo công năng F5 (không bao gồm các
+gian phòng F5 nằm trong nhà thuộc nhóm nguy hiểm cháy theo công năng khác) đã trang bị hệ thống
+chữa cháy tự động có kết nối liên động với trung tâm báo cháy thì cho phép không trang bị đầu báo
+cháy tự động (các thiết bị khác của hệ thống báo cháy tự động phải trang bị bảo đảm theo quy định).
+4.8 Việc trang bị phương tiện, hệ thống phòng cháy, chữa cháy cho nhà và công trình căn cứ trên cơ
+sở phân tích công năng sử dụng, tính chất nguy hiểm cháy và các yếu tố khác liên quan đến việc bảo
+vệ con người và tài sản. Đối với nhà và công trình không được quy định tại các Phụ lục A, B, C, D, E,
+F, G thì phải trang bị phương tiện, hệ thống phòng cháy, chữa cháy như với nhà và công trình có công
+năng tương tự.
+4.9 Hệ thống hoặc thiết bị báo cháy tự động trang bị cho nhà phải được kết nối với hệ thống quản lý cơ
+sở dữ liệu về phòng cháy, chữa cháy và truyền tin báo sự cố của cơ quan Cảnh sát phòng cháy chữa
+cháy theo quy định [9], [10].
+4.10 Khi xác định yêu cầu trang bị hệ thống chữa cháy tự động và/hoặc hệ thống báo cháy tự động
+trước tiên cần xác định yêu cầu trang bị cho toàn bộ nhà (Bảng A.1), sau đó cho từng hạng mục/khu
+vực (Bảng A.2) và gian phòng trong nhà (Bảng A.3), cũng như thiết bị nằm trong phạm vi của công
+trình (Bảng A.4).
+4.11 Đối với nhà không được phân chia hoặc được phân chia thành các gian phòng bởi các kết cấu xây
+dựng: tường, sàn có giới hạn chịu lửa thấp hơn REI 45, vách có giới hạn chịu lửa thấp hơn EI 45 thì trang
+bị hệ thống báo cháy tự động và/ hoặc hệ thống chữa cháy tự động tương ứng với gian phòng theo Bảng
+A.3.
+4.12 Trong nhà và công trình quy định tại Phụ lục A phải trang bị hệ thống chữa cháy tự động  và/hoặc
+hệ thống báo cháy tự động cho toàn bộ nhà và công trình, trừ các khu vực sau:
+- Các phòng sản xuất với quy trình ướt, hồ bơi, phòng tắm, phòng rửa, phòng vệ sinh;
+- Gian phòng hạng nguy hiểm cháy D;
+- Hành lang bên;
+- Thang bộ;
+- Khoang đệm ngăn cháy có tăng áp;
+- Khu vực không có nguy hiểm về cháy.
+4.13 Cho phép trong căn hộ của nhà nhóm F1.3 có chiều cao không quá 75 m chỉ bố trí đầu phun
+sprinkler của hệ thống chữa cháy tự động bằng nước tại cửa vào căn hộ (lắp tại vị trí bên trong căn
+hộ).
+4.14 Các phương tiện, hệ thống phòng cháy, chữa cháy quy định trong tiêu chuẩn này phải được kiểm
+tra, bảo dưỡng định kỳ theo quy định của pháp luật và các tiêu chuẩn kỹ thuật hiện hành liên quan
+11
+
+TCVN 3890:2023
+hoặc hướng dẫn của đơn vị sản xuất.
+4.15 Trong một số trường hợp riêng biệt, có thể xem xét thay thế một số yêu cầu của tiêu chuẩn này
+đối với công trình cụ thể khi có luận chứng kỹ thuật nêu rõ các giải pháp bổ sung, thay thế và cơ sở
+của những giải pháp này để bảo đảm an toàn cháy cho công trình. Luận chứng này phải được cơ quan
+quản lý chuyên ngành cấp Bộ về phòng cháy và chữa cháy chấp thuận.
+5 Quy định về trang bị, bố trí phương tiện, hệ thống phòng cháy và chữa cháy.
+5.1 Trang bị, bố trí bình chữa cháy.
+5.1.1 Trang bị, bố trí bình chữa cháy xách tay và bình chữa cháy có bánh xe.
+5.1.1.1 Tất cả các khu vực trong nhà và công trình kể cả những nơi đã được trang bị hệ thống chữa cháy
+phải trang bị bình chữa cháy xách tay hoặc bình chữa cháy có bánh xe.
+5.1.1.2 Lựa chọn, tính toán trang bị và bố trí bình chữa cháy thực hiện theo quy định tại điều 6 và điều 7
+TCVN 7435-1.
+5.1.1.3 Đối với khu vực có diện tích hẹp và dài hoặc khu vực có nhiều cấp sàn khác nhau, gần kề nhau thì
+việc trang bị bình chữa cháy vẫn phải đảm bảo khoảng cách di chuyển từ vị trí để bình chữa cháy đến điểm
+xa nhất cần bảo vệ của một bình không vượt quá quy định tại 5.1.1.2.
+5.1.1.4 Trên cùng một sàn hoặc tầng nhà, nếu mặt bằng được ngăn thành các khu vực khác nhau bởi tường,
+vách, rào hoặc các vật cản khác không có lối đi qua lại thì việc trang bị bình chữa cháy phải riêng biệt và đảm
+bảo theo quy định tại 5.1.1.2 và 5.1.1.3.
+5.1.1.5 Phải có số lượng bình chữa cháy dự trữ không ít hơn 10% tổng số bình theo tính toán để trang bị thay
+thế khi cần thiết (cho phép không quá 100 bình mỗi loại).
+5.1.1.6 Bình chữa cháy được bố trí theo thiết kế, ở vị trí dễ thấy, dễ lấy và nên có màu đỏ, trường hợp khó
+nhận biết có thể sử dụng các chỉ dẫn vị trí và theo các quy định tại Điều 5 TCVN 7435-1. Không được để bình
+chữa cháy tập trung một chỗ trừ trường hợp để trong kho dự trữ theo quy định tại 5.1.1.5.
+Bình chữa cháy phải luôn sẵn sàng để sử dụng ngay lập tức và được bố trí tại:
+a) Nơi mà những người theo đường thoát nạn sẽ dễ dàng nhìn thấy chúng;
+b) Phù hợp nhất, gần lối ra vào phòng, cầu thang, hành lang và lối đi;
+c) Ở các vị trí tương tự trên mỗi tầng, nơi các tầng có cấu trúc giống nhau.
+Không đặt các bình chữa cháy ở các khu vực, vị trí sau:
+a) Khi đám cháy tiềm ẩn có thể ngăn cản việc tiếp cận chúng;
+b) Gần các thiết bị sinh nhiệt mà có thể làm ảnh hưởng chất lượng, hiệu quả của bình chữa cháy;
+c) Ở những vị trí khuất sau cửa ra vào, trong tủ không quan sát được bình chữa cháy hoặc hốc sâu;
+d) Nơi chúng có thể gây cản trở lối thoát nạn;
+12
+
+TCVN 3890:2023
+e) Ở các vị trí trong phòng hoặc hành lang cách xa lối ra trừ trường hợp cần thiết đối với nguy hiểm
+cháy;
+f) Nơi chúng có thể bị hỏng do các hoạt động thường ngày.
+5.1.1.7 Bình chữa cháy xách tay và bình chữa cháy có bánh xe phải đảm bảo tính năng và cấu tạo được quy
+định tại TCVN 7026, TCVN 7027.
+5.1.2 Trang bị, bố trí bình bột chữa cháy tự động kích hoạt loại treo.
+5.1.2.1 Các bình bột chữa cháy tự động kích hoạt loại treo phải phù hợp với TCVN 12314-1.
+5.1.2.2 Căn cứ điều kiện thực tế của nhà và công trình, có thể lắp đặt ở mặt tường hoặc treo trên trần nhà,
+với chiều cao thích hợp sao cho đảm bảo diện tích bảo vệ hữu hiệu theo công bố của đơn vị sản xuất. Trong
+bất kỳ trường hợp nào phải đảm bảo khoảng cách từ bộ phận cảm biến nhiệt đến trần nhà là không quá 40
+cm.
+5.1.2.3 Bình bột chữa cháy tự động kích hoạt loại treo có thể được trang bị tại khu vực bếp của nhà hàng, các
+phòng nồi hơi, giặt là có diện tích không quá 100 m2. Nếu lắp đặt tại khu vực có diện tích trên 100 m2 thì nên
+phân chia thành các khu vực có diện tích đến 100 m2 bằng tường ngăn cháy (có giới hạn chịu lửa không thấp
+hơn REI 45) hoặc vách ngăn cháy (có giới hạn chịu lửa không thấp hơn EI 45).
+5.1.3 Trang bị, bố trí bình khí chữa cháy tự động kích hoạt.
+5.1.3.1 Bình khí chữa cháy tự động kích hoạt phải phù hợp với TCVN 12314-2.
+5.1.3.2 Cho phép trang bị bình khí chữa cháy tự động kích hoạt (có thiết kế bổ sung chức năng giám sát xả,
+tín hiệu xả phải được truyền về tủ trung tâm báo cháy) thay thế hệ thống chữa cháy tự động bằng khí tại các
+khu vực không thường xuyên có người với diện tích không quá 100 m2. Nếu lắp đặt tại khu vực có diện tích
+trên 100 m2 thì phải phân chia thành các khu vực có diện tích không quá 100 m2 bằng tường ngăn cháy (có
+giới hạn chịu lửa không thấp hơn REI 45) hoặc vách ngăn cháy (có giới hạn chịu lửa không thấp hơn EI 45).
+5.2 Trang bị, bố trí hệ thống báo cháy tự động, thiết bị báo cháy cục bộ.
+5.2.1 Danh mục nhà; hạng mục/khu vực; gian phòng và thiết bị phải trang bị hệ thống báo cháy tự động,
+thiết bị báo cháy cục bộ được quy định tại Phụ lục A.
+5.2.2 Việc lựa chọn, bố trí thiết bị báo cháy cục bộ được thực hiện theo quy định như đối với các thiết
+bị tương tự của hệ thống báo cháy tự động.
+5.2.3 Yêu cầu kỹ thuật đối với hệ thống báo cháy tự động được quy định tại TCVN 5738 và TCVN
+7568.
+5.3 Trang bị, bố trí hệ thống, thiết bị chữa cháy tự động.
+5.3.1 Danh mục nhà; hạng mục/khu vực; gian phòng và thiết bị phải trang bị, bố trí hệ thống, thiết bị chữa
+cháy tự động theo quy định tại Phụ lục A.
+CHÚ THÍCH: Thiết bị chữa cháy tự động kích hoạt bao gồm bình chữa cháy tự động kích hoạt – bình bột loại treo và bình
+chữa cháy tự động kích hoạt – bình khí chữa cháy.
+13
+
+TCVN 3890:2023
+5.3.2 Chất chữa cháy sử dụng trong hệ thống chữa cháy tự động có hiệu quả chữa cháy phù hợp với
+loại đám cháy của khu vực bảo vệ theo quy định tại Điều 4.3 và phù hợp với yêu cầu cần bảo vệ.
+5.3.3 Khi bố trí lắp đặt hệ thống chữa cháy tự động mà chất chữa cháy có nguy hiểm cho người phải
+tính toán thời gian thoát nạn, đảm bảo cho người cuối cùng thoát ra khỏi căn phòng hoặc vùng cần bảo
+vệ trước khi hệ thống tự động xả chất chữa cháy.  Những quy định khác về lựa chọn, bố trí hệ thống
+chữa cháy tự động được quy định tại TCVN 5760, TCVN 6101, TCVN 6305, TCVN 7161, TCVN 7336,
+TCVN 13333 và các TCVN khác có liên quan do Bộ quản lý chuyên ngành quy định.
+5.4 Trang bị, bố trí hệ thống họng nước chữa cháy trong nhà, hệ thống cấp nước chữa cháy
+ngoài nhà.
+5.4.1 Trang bị, bố trí hệ thống họng nước chữa cháy trong nhà.
+5.4.1.1 Nhà phải trang bị hệ thống họng nước chữa cháy trong nhà được quy định tại Phụ lục B.
+5.4.1.2 Hệ thống họng nước chữa cháy trong nhà của các nhà sản xuất, nhà kho có mức nguy hiểm cháy
+cao, nhà có chiều cao từ 25 m trở lên, chợ, trung tâm thương mại, siêu thị, khách sạn, vũ trường, karaoke,
+quán bar, hộp đêm, nhà ga, các nhà dịch vụ cảng biển, các nhà dịch vụ cảng cạn, các nhà dịch vụ cảng thuỷ
+nội địa, nhà hát, rạp chiếu phim phải thường xuyên có nước duy trì áp suất bảo đảm kích hoạt hệ thống tự
+động.
+5.4.1.3 Hệ thống họng nước chữa cháy trong nhà có thể bố trí độc lập hoặc kết hợp với hệ thống chữa cháy
+tự động bằng nước. Hệ thống họng nước chữa cháy trong nhà phải có họng chờ lắp đặt ở ngoài nhà để tiếp
+nước từ xe bơm hoặc máy bơm chữa cháy di động.
+5.4.1.4 Không trang bị hệ thống họng nước chữa cháy cho nhà, khu vực, gian phòng có sử dụng hoặc
+bảo quản các chất mà khi tiếp xúc với nước có thể sinh ra cháy, nổ hoặc ngọn lửa lan truyền rộng.
+5.4.2 Trang bị, bố trí hệ thống cấp nước chữa cháy ngoài nhà.
+5.4.2.1 Hệ thống cấp nước chữa cháy ngoài nhà phải được trang bị theo quy định tại Phụ lục C.
+5.4.2.2 Trường hợp nhà, công trình nằm trong phạm vi bán kính phục vụ đến mọi điểm của nhà xét
+theo phương ngang không lớn hơn 200 m tính theo đường di chuyển của vòi chữa cháy đi bên ngoài
+nhà từ trụ cấp nước chữa cháy hoặc bãi đỗ, bến lấy nước của ao, hồ, sông, bể nước công cộng, nếu:
+- Lưu lượng và trữ lượng nước chữa cháy bảo đảm theo quy định, thì cho phép không trang bị hệ
+thống cấp nước chữa cháy ngoài nhà.
+- Không bảo đảm lưu lượng và trữ lượng nước chữa cháy theo quy định thì phải trang bị hệ thống cấp
+nước chữa cháy ngoài nhà (khi tính toán lưu lượng của hệ thống cấp nước chữa cháy ngoài nhà, cho
+phép tính cộng lưu lượng của hạ tầng cấp nước chữa cháy ngoài nhà).
+5.4.2.3 Cho phép kết hợp hệ thống cấp nước chữa cháy ngoài nhà với hệ thống cấp nước sinh hoạt, sản
+xuất.
+5.5 Trang bị, bố trí phương tiện chữa cháy cơ giới.
+14
+
+TCVN 3890:2023
+5.5.1 Các kho, cảng hàng không, cảng biển, cơ sở trọng điểm về kinh tế, chính trị, văn hoá - xã hội,
+khu công nghiệp, khu chế xuất, khu công nghệ cao, cụm công nghiệp ngoài việc trang bị hệ thống chữa
+cháy, phải trang bị phương tiện chữa cháy cơ giới theo Tiêu chuẩn TCVN 13316 Phòng cháy chữa
+cháy – Xe ô tô chữa cháy các phần và các tiêu chuẩn quốc gia, các tiêu chuẩn quốc tế, tiêu chuẩn
+nước ngoài được phép áp dụng tại Việt Nam. Phương tiện chữa cháy cơ giới trang bị phải đáp ứng số
+lượng tối thiểu theo quy định tại Phụ lục D.
+5.5.2 Xe chữa cháy, tàu chữa cháy, máy bơm chữa cháy loại khiêng tay trang bị cho nhà, công trình
+đảm bảo các yêu cầu sau:
+a) Có đặc tính kỹ thuật và tính năng chữa cháy phù hợp với loại nhà, công trình cần bảo vệ;
+b) Có chất chữa cháy, phương tiện, dụng cụ trang bị kèm theo đúng quy định;
+c) Máy bơm chữa cháy loại khiêng tay phải đáp ứng yêu cầu kỹ thuật quy định tại TCVN 12110.
+5.6 Trang bị, bố trí phương tiện, dụng cụ phá dỡ thô sơ; mặt nạ lọc độc  và mặt nạ phòng độc
+cách ly.
+5.6.1 Trang bị, bố trí phương tiện, dụng cụ phá dỡ thô sơ.
+5.6.1.1 Nhà, công trình phải trang bị phương tiện, dụng cụ phá dỡ thô sơ được quy định tại Phụ lục E.
+5.6.1.2 Phương tiện, dụng cụ phá dỡ thô sơ trang bị cho nhà, công trình được bố trí tại khu vực
+thường trực về phòng cháy và chữa cháy.
+5.6.2 Trang bị, bố trí mặt nạ lọc độc và mặt nạ phòng độc cách ly.
+5.6.2.1 Nhà, công trình phải trang bị mặt nạ lọc độc và mặt nạ phòng độc cách ly được quy định tại Phụ
+lục F. Đối với các nhà, công trình khác: chung cư, bệnh viện, văn phòng, nhà hát, rạp chiếu phim...
+khuyến khích việc trang bị mặt nạ lọc độc.
+5.6.2.2 Mặt nạ lọc độc trang bị cho nhà, công trình được bố trí tại các tủ phương tiện trên hành lang
+thoát nạn từng tầng, mặt nạ phòng độc cách ly được bố trí tại phòng trực điều khiển chống cháy tại vị
+trí dễ thấy, dễ lấy và đảm bảo đúng hướng dẫn của đơn vị sản xuất.
+5.6.2.3 Mặt nạ lọc độc phải có các bộ lọc phù hợp với quy định tại các tiêu chuẩn, quy chuẩn hiện hành
+[19]. Mặt nạ phòng độc cách ly phải có mặt trùm toàn bộ khuôn mặt đáp ứng yêu cầu quy định tại
+TCVN 13332.
+5.7 Trang bị, bố trí phương tiện chiếu sáng sự cố và chỉ dẫn thoát nạn; hệ thống loa thông báo
+và hướng dẫn thoát nạn.
+5.7.1 Trang bị, bố trí phương tiện chiếu sáng sự cố và chỉ dẫn thoát nạn.
+5.7.1.1 Phương tiện chiếu sáng sự cố và chỉ dẫn thoát nạn được trang bị cho tất cả các nhà, công trình
+(trừ nhà ở riêng lẻ)
+5.7.1.2 Việc lựa chọn, bố trí phương tiện chiếu sáng sự cố và chỉ dẫn thoát nạn được quy định tại tiêu
+15
+
+TCVN 3890:2023
+chuẩn TCVN 13456.
+5.7.2 Trang bị, bố trí hệ thống loa thông báo và hướng dẫn thoát nạn
+5.7.2.1 Nhà, công trình phải trang bị hệ thống loa thông báo và hướng dẫn thoát nạn được quy định tại
+Phụ lục G.
+5.7.2.2 Hệ thống loa thông báo và hướng dẫn thoát nạn, bảo đảm mọi người trong nhà và công trình
+có thể nghe rõ thông báo, hướng dẫn khi có sự cố.
+5.7.2.3 Tín hiệu âm thanh của hệ thống loa thông báo và hướng dẫn thoát nạn phải đảm bảo mức âm
+thanh tổng thể (mức âm thanh của tiếng ồn thường xuyên cùng với âm thanh từ các tín hiệu cảnh báo
+tạo ra) không thấp hơn 75 dBA ở khoảng cách 3 m từ tín hiệu cảnh báo, nhưng không quá 120 dBA ở
+bất kỳ vị trí nào.
+5.7.2.4 Tín hiệu âm thanh của hệ thống loa thông báo và hướng dẫn thoát nạn phải tạo ra mức âm
+thanh cao hơn ít nhất 15 dBA so với mức âm thanh của tiếng ồn thường xuyên tại gian phòng. Việc đo
+mức âm thanh được thực hiện ở độ cao 1,5 m tính từ sàn nhà.
+5.7.2.5 Trong phòng ngủ, tín hiệu âm thanh của hệ thống loa thông báo và hướng dẫn thoát nạn phải
+có mức âm thanh cao hơn ít nhất 15 dBA so với mức âm thanh của tiếng ồn thường xuyên trong
+phòng, nhưng mức âm thanh tổng thể không nhỏ hơn 70 dBA và không quá 120 dBA. Việc đo mức âm
+thanh được thực hiện ở vị trí ngang với đầu của người đang ngủ.
+5.7.2.6 Thiết bị loa cảnh báo cháy và điều khiển thoát nạn gắn trên tường phải được bố trí sao cho
+phần trên của chúng cách mặt sàn ít nhất 2,3 m và cách trần tối thiểu phải là 0,15 m.
+5.7.2.7 Trong các phòng được bảo vệ, nơi có người ở trong các thiết bị chống ồn, cũng như trong các
+phòng có mức ồn trên 95 dBA, hệ thống loa thông báo và hướng dẫn thoát nạn phải kết hợp với cảnh
+báo bằng ánh sáng. Việc sử dụng thiết bị cảnh báo nhấp nháy bằng ánh sáng được cho phép.
+5.7.2.8 Thiết bị loa cảnh báo và chỉ dẫn thoát nạn bằng giọng nói phải phát ra âm thanh có tần số trong
+dải từ 200 Hz đến 5 000 Hz.
+5.7.2.9 Số lượng thiết bị loa cảnh báo và chỉ dẫn thoát nạn bằng giọng nói, cách bố trí và công suất
+của chúng phải đảm bảo mức âm thanh ở tất cả khu vực để ở phù hợp với các quy định của tiêu chuẩn
+này.
+5.8 Trang bị, bố trí phương tiện, dụng cụ chữa cháy ban đầu.
+5.8.1 Phương tiện, dụng cụ chữa cháy ban đầu trang bị cho nhà kho, cửa hàng, cơ sở sản xuất theo
+quy định tại Phụ lục H.
+5.8.2 Trang bị phương tiện, dụng cụ chữa cháy ban đầu cho kho dầu mỏ và sản phẩm dầu mỏ, cửa
+hàng xăng dầu, các công trình xăng dầu, cửa hàng kinh doanh khí đốt hóa lỏng (LPG) được quy định
+tại TCVN 5307, TCVN 4530, TCVN 5684, TCVN 6223 và các TCVN khác có liên quan do Bộ quản lý
+chuyên ngành quy định.
+16
+
+TCVN 3890:2023
+5.8.3 Đối với các cơ sở khác, việc trang bị phương tiện, dụng cụ chữa cháy ban đầu sẽ tùy thuộc vào
+điều kiện và yêu cầu của từng cơ sở.
+5.8.4 Phương tiện, dụng cụ chữa cháy ban đầu được bố trí ở từng khu vực phù hợp với yêu cầu sử
+dụng để chữa cháy; không cản trở lối thoát nạn, lối đi và các hoạt động khác; tránh nắng, mưa và sự
+phá hủy của môi trường. Mỗi dụng cụ đựng cát kèm theo ít nhất 2 xẻng xúc. Các dụng cụ đựng cát
+chữa cháy được che đậy, không để vật bẩn rơi vào.
+5.8.5 Các phương tiện, dụng cụ chữa cháy ban đầu cần được sơn đỏ để dễ nhận biết.
+17
+
+TCVN 3890:2023
+Phụ lục A
+(Quy định)
+Quy định về trang bị hệ thống báo cháy tự động, thiết bị báo cháy cục bộ và hệ
+thống chữa cháy tự động
+Bảng A.1 - Đối với nhà
+STT Loại nhà
+Hệ thống chữa cháy
+tự động (1)
+Hệ thống báo cháy tự động
+1. Nhà ở riêng lẻ
+Chiều cao từ 25 m trở
+lên
+Cao từ 7 tầng hoặc 25 m trở lên
+(Cho  phép  trang  bị  thiết  bị  báo
+cháy cục bộ)
+2.
+Nhà  ở  riêng  lẻ  kết  hợp
+sản xuất, kinh doanh hàng
+hóa, chất dễ cháy có phần
+sản xuất, kinh doanh hàng
+hóa  chất dễ cháy  không
+quá  30% diện  tích  của
+nhà (2)
+Chiều cao từ 25 m trở
+lên
+Cao từ  3 tầng trở lên hoặc khối
+tích từ 1 500 m3 trở lên
+(Cho  phép  trang  bị  thiết  bị  báo
+cháy  cục  bộ  khi  chiều  cao  thấp
+hơn 5 tầng và khối tích nhỏ hơn 2
+500 m3)
+3.  Nhà hỗn hợp
+Chiều cao từ 25 m trở
+lên  hoặc  diện  tích  từ
+5 000 m2 trở lên
+Cao từ 3 tầng trở lên hoặc khối
+tích từ 1 500 m3 trở lên
+(Cho  phép  trang  bị  thiết  bị  báo
+cháy  cục  bộ  khi  chiều  cao  thấp
+hơn 5 tầng và khối tích nhỏ hơn 1
+500 m3)
+4.
+Chung cư, nhà tập thể; ký
+túc xá
+Chiều cao từ 25 m trở
+lên  hoặc  diện  tích  từ
+10 000 m2 trở lên
+Cao từ 5 tầng trở lên hoặc khối tích
+từ 2 500 m3 trở lên
+(Cho phép trang bị thiết bị báo cháy
+cục bộ khi chiều cao thấp hơn  5
+tầng và khối tích nhỏ hơn 5 000 m3)
+5.
+Nhà  chuyên  kinh  doanh
+dịch vụ lưu trú (n hà trọ );
+khách  sạn,  nhà  nghỉ  và
+cơ sở lưu trú được thành
+lập  theo  quy  định  [1]
+(ngoại trừ bãi cắm trại du
+lịch)
+Chiều cao từ 25 m trở
+lên  hoặc  diện  tích  từ
+5 000 m2 trở lên
+Cao từ 3 tầng trở lên hoặc khối tích
+từ 2 500 m3 trở lên
+(Cho phép trang bị thiết bị báo cháy
+cục bộ khi chiều cao thấp hơn  5
+tầng và khối tích nhỏ hơn 5 000 m3)
+6. Nhà  dưỡng  lão,  nhà
+chăm  sóc  người  khuyết
+tật
+Không  phụ  thuộc  vào
+quy mô
+Không phụ thuộc vào quy mô
+(Cho  phép  trang  bị  thiết  bị  báo
+cháy  cục  bộ  khi  chiều  cao  thấp
+18
+
+TCVN 3890:2023
+
+hơn 3 tầng và khối tích nhỏ hơn 1
+
+000 m®)
+
+19
+
+TCVN 3890:2023
+Bảng A.1 – Tiếp theo
+STT Loại nhà
+Hệ  thống  chữa
+cháy tự động
+Hệ thống báo cháy tự động
+7.
+Nhà  trẻ,  mẫu  giáo,
+mầm non
+Cao  từ  4  tầng  trở  lên
+(không  tính  tầng  kỹ
+thuật trên cùng)
+ Có từ 100 cháu trở lên hoặc khối
+tích từ 1 000 m3 trở lên
+(Cho  phép  trang  bị  thiết  bị  báo
+cháy cục bộ khi chiều cao dưới 15
+m và khối tích dưới 1 500 m3)
+8.
+Trường  học  và  các
+cơ sở giáo dục theo
+quy  định  [2]  (ngoại
+trừ mục 6 bảng này)
+Chiều cao từ 25 m trở
+lên
+Cao từ  5 tầng trở lên hoặc khối
+tích từ 5 000 m3 trở lên
+(Cho  phép  trang  bị  thiết  bị  báo
+cháy cục bộ khi khối tích nhỏ hơn
+2 000 m3)
+9.
+Đài  kiểm soát không
+lưu,  nhà ga sân bay,
+nhà  ga  đường  sắt,
+nhà chờ cáp treo vận
+chuyển  người,  các
+nhà dịch vụ bến cảng
+biển, cảng cạn, cảng
+thủy  nội  địa,  bến  xe
+khách,  trạm  dừng
+nghỉ
+Chiều cao từ 25 m hoặc
+diện tích từ 10 000 m 2
+trở lên
+Không phụ thuộc vào quy mô.
+(Cho  phép  trang  bị  thiết  bị  báo
+cháy  cục  bộ  khi  chiều  cao  thấp
+hơn 3 tầng và khối tích nhỏ hơn 1
+500 m3)
+10.
+Bưu  điện,  cơ  sở
+truyền  thanh,  truyền
+hình, viễn thông ; cơ
+sở  kinh  doanh  dịch
+vụ dịch vụ
+Chiều cao từ 25 m hoặc
+diện tích từ 5 000 m2 trở
+lên
+Cao từ  3 tầng trở lên hoặc khối
+tích từ 1 500 m3
+11.
+Nhà  văn  hoá,  trung
+tâm tổ chức sự kiện
+Chiều cao từ 25 m hoặc
+diện tích từ 5 000 m2  trở
+lên
+Cao từ 3 tầng trở lên hoặc khối
+tích từ 1 500 m3
+20
+
+TCVN 3890:2023
+Bảng A.1 – Tiếp theo
+STT Loại nhà
+Hệ  thống  chữa
+cháy tự động
+Hệ thống báo cháy tự động
+12.
+Nhà lưu trữ sách; thư
+viện
+Chiều cao từ 25 m hoặc
+diện tích từ 5 000 m2 trở
+lên
+Không phụ thuộc vào quy mô
+(Cho phép trang bị thiết bị báo cháy
+cục bộ khi khối tích nhỏ hơn 1 500
+m3)
+13.
+Cửa  hàng  ăn  uống,
+thẩm  mỹ  viện,  kinh
+doanh  dịch  vụ  xoa
+bóp;  khối  nhà  của
+các  công  trình  vui
+chơi  giải  trí,  thủy
+cung
+Chiều cao từ 25 m hoặc
+diện tích từ 5 000 m2 trở
+lên
+Khối tích từ 1 000 m3 trở lên
+(Cho phép  trang  bị  thiết  bị  báo
+cháy  cục  bộ  khi  chiều  cao  thấp
+hơn 3 tầng và khối tích nhỏ hơn 1
+500 m3)
+14.
+Nhà thi đấu thể thao,
+cung thể thao
+Chiều cao từ 25 m trở
+lên
+Khối tích từ 1 500 m 3 trở lên hoặc
+có từ 200 chỗ trở lên
+(Cho phép trang bị thiết bị báo cháy
+cục bộ khi khối tích nhỏ hơn 5 000
+m3)
+15.
+Nhà  khám,  chữa
+bệnh,  lưu  trú  bệnh
+nhân  của bệnh  viện,
+trạm  y  tế ,  phòng
+khám,  nhà  điều
+dưỡng, phục hồi chức
+năng, chỉnh hình, cơ
+sở phòng chống dịch
+bệnh, trung tâm y tế,
+cơ sở y tế khác theo
+quy  định  của  pháp
+luật hiện hành [3]
+Chiều cao từ 25 m hoặc
+diện tích từ 2 000 m2 trở
+lên
+Cao từ 3 tầng trở lên hoặc khối
+tích từ 1.000 m3 trở lên
+16. Nhà hành chính 3) Chiều cao từ 25 m trở
+lên  hoặc  diện  tích  từ
+5 000 m2 trở lên
+Cao từ 5 tầng trở lên hoặc khối
+tích từ 1 500 m3 trở lên
+(Cho  phép  trang  bị  thiết  bị  báo
+21
+
+TCVN 3890:2023
+Bảng A.1 – Tiếp theo
+STT Loại nhà
+Hệ  thống  chữa
+cháy tự động
+Hệ thống báo cháy tự động
+cháy  cục  bộ  khi  chiều  cao  thấp
+hơn 5 tầng và khối tích nhỏ hơn 5
+000 m3)
+17.
+Cửa hàng điện máy, cửa hàng bách hóa, cửa hàng tiện ích và các cửa hàng kinh
+doanh hàng hóa chất dễ cháy 4)
+17.1.
+Có  bố  trí  tại  tầng
+hầm, tầng bán hầm
+Diện tích từ 200 m 2 trở
+lên
+Không phụ thuộc vào quy mô
+17.2. Bố trí tại trên mặt đất
+Chiều cao từ  25 m trở
+lên hoặc diện tích từ  3
+500 m2 trở lên
+Cao từ 3 tầng trở lên hoặc khối
+tích từ 1 000 m3 trở lên
+(Cho  phép  trang  bị  thiết  bị  báo
+cháy  cục  bộ  khi  chiều  cao  thấp
+hơn 5 tầng và khối tích nhỏ hơn 1
+500 m3)
+18.
+Nhà thương mại  5) (ngoại trừ các nhà trưng bày bán xe ô tô), nhà hát, rạp chiếu
+phim, rạp xiếc
+18.1.
+Có  bố  trí  tại  tầng
+hầm, tầng bán hầm
+Diện tích từ 200 m 2 trở
+lên
+Không phụ thuộc vào quy mô
+18.2. Bố trí tại trên mặt đất
+18.2.1. Một tầng, hai tầng
+Diện tích từ 3 500 m 2
+trở lên
+Không phụ thuộc vào quy mô
+18.2.2. Từ ba tầng trở lên
+Không  phụ  thuộc  vào
+quy mô
+Không phụ thuộc vào quy mô
+18.3.
+Nhà kinh doanh chất
+lỏng cháy và dễ cháy
+(ngoại  trừ  hàng  hóa
+được  được  chứa
+trong  các  can,  bình
+có  thể  tích  chứa
+không lớn hơn 20 lít)
+Không  phụ  thuộc  vào
+quy mô
+Không phụ thuộc vào quy mô
+22
+
+TCVN 3890:2023
+Bảng A.1 – Tiếp theo
+STT Loại nhà
+Hệ  thống  chữa
+cháy tự động
+Hệ thống báo cháy tự động
+19.
+Các nhà thuộc mục
+3, mục  10 đến mục
+18 của bảng này có
+bậc chịu lửa IV-V
+Diện tích từ 1 200 m 2
+trở lên
+Không phụ thuộc vào diện tích
+Cho  phép  trang  bị  thiết  bị  báo
+cháy  cục  bộ  khi  diện  tích  dưới
+300 m2)
+20. Nhà kinh doanh dịch vụ karaoke, vũ trường, quán bar, hộp đêm
+20.1.
+Có  bố  trí  tại  tầng
+hầm, tầng bán hầm
+Không  phụ  thuộc  vào
+quy mô
+Không phụ thuộc vào quy mô
+20.2. Bố trí tại trên mặt đất
+20.2.1. Một hoặc hai tầng
+Diện tích từ  500 m 2 trở
+lên
+Không phụ thuộc diện tích
+20.2.2. Từ ba tầng trở lên
+Không  phụ  thuộc  diện
+tích
+Không phụ thuộc diện tích
+21.
+Nhà  cho  mục  đích
+tôn giáo
+Chiều cao từ 25 m trở
+lên
+Cao từ 4 tầng trở lên
+22. Bảo tàng, nhà triển lãm
+22.1.
+Có  bố  trí  tại  tầng
+hầm, tầng bán hầm
+Diện tích từ 200 m 2 trở
+lên
+Không phụ thuộc vào quy mô
+22.2. Bố trí tại trên mặt đất
+22.2.1. Một tầng, hai tầng
+Diện tích từ 1 000 m 2
+trở lên
+Không phụ thuộc vào quy mô
+22.2.2. Từ ba tầng trở lên
+Không  phụ  thuộc  vào
+quy mô
+Không phụ thuộc vào quy mô
+23.
+Trạm,  đội  phòng
+cháy chữa cháy
+Chiều cao từ 25 m trở
+lên
+Cao từ 5 tầng trở lên hoặc khối
+tích từ 5 000 m3 trở lên
+24. Nhà lưu giữ (gara), trưng bày ô tô, xe máy 6)
+24.1. Dạng kín
+24.1.1. Đặt  tại  tầng  hầm,
+tầng  bán  hầm  hoặc
+trên  mặt  đất  từ  02
+Không  phụ  thuộc  vào
+diện tích
+Không phụ thuộc vào diện tích
+23
+
+TCVN 3890:2023
+Bảng A.1 – Tiếp theo
+STT Loại nhà
+Hệ  thống  chữa
+cháy tự động
+Hệ thống báo cháy tự động
+tầng trở lên
+24.1.2. Một tầng trên mặt đất
+24.1.2.1.
+Có bậc chịu lửa I, II,
+III có cấp nguy hiểm
+cháy kết cấu của nhà
+S0
+Diện tích từ  7 000 m 2
+trở lên
+Không phụ thuộc vào diện tích
+24.1.2.2.
+Có bậc chịu lửa I, II,
+III, có cấp nguy hiểm
+cháy kết cấu của nhà
+S1
+Diện tích từ  3 600  m2
+trở lên
+Không phụ thuộc vào diện tích
+24.1.2.3.
+Có bậc chịu lửa IV,
+có  cấp  nguy  hiểm
+cháy  kết  cấu  của
+nhà S0
+Diện tích từ  3 600  m2
+trở lên
+Không phụ thuộc vào diện tích
+24.1.2.4.
+Có bậc chịu lửa IV,
+có  cấp  nguy  hiểm
+cháy  kết  cấu  của
+nhà S1
+Diện tích từ  2 000  m2
+trở lên
+Không phụ thuộc vào diện tích
+24.1.2.5.
+Có bậc chịu lửa IV,
+có  cấp  nguy  hiểm
+cháy  kết  cấu  của
+nhà S2, S3
+Diện tích từ  1 000  m2
+trở lên
+Không phụ thuộc vào diện tích
+24.1.3. Gara ô tô cơ khí
+Không  phụ  thuộc  vào
+quy mô
+-
+24.2. Dạng hở 7)
+24.2.1.
+Có  khoảng  cách  từ
+điểm bất kỳ đến cạnh
+để hở không lớn hơn
+12 m
+-
+Diện tích từ  4 000 m 2 hoặc khối
+tích từ 15 000 m 3 hoặc cao trên 3
+tầng
+24.2.2. Có  khoảng  cách  từ
+điểm bất kỳ đến cạnh
+Diện tích từ  4 000 m 2
+hoặc  khối  tích  từ  15
+Không phụ thuộc vào diện tích
+24
+
+TCVN 3890:2023
+Bảng A.1 – Tiếp theo
+STT Loại nhà
+Hệ  thống  chữa
+cháy tự động
+Hệ thống báo cháy tự động
+để hở lớn hơn 12 m
+000 m3 hoặc cao trên 3
+tầng
+25.
+Trang trại chăn nuôi
+gia súc, gia cầm 8) - Diện tích từ 10 000 m2
+26.
+Nhà chế biến và lưu
+trữ nông sản dạng hạt
+8)
+Diện tích từ 1 000 m2 Diện tích từ 500 m2
+25
+
+TCVN 3890:2023
+Bảng A.1 – Kết thúc
+STT Loại nhà
+Hệ thống chữa cháy tự
+động
+Hệ thống báo cháy tự động
+27.
+Nhà kho hạng nguy
+hiểm  cháy  С  sắp
+xếp  hàng  trên  giá
+đỡ có chiều cao để
+hàng trên 5,5 m
+Không phụ thuộc vào quy mô Không phụ thuộc vào quy mô
+28.
+Nhà kho hạng nguy
+hiểm cháy B, С cao
+từ 2 tầng trở lên
+Không phụ thuộc vào quy mô Không phụ thuộc vào quy mô
+CHÚ THÍCH:
+1) Đối với nhà có từ 2 công năng trở lên không thuộc diện phải trang bị hệ thống chữa cháy tự động theo
+quy định tại Bảng A.1 nhưng phần công năng bất kỳ của nhà có quy mô thuộc diện phải trang bị hệ thống chữa
+cháy tự động theo Bảng A.1 thì phải trang bị hệ thống chữa cháy tự động cho phần nhà đó.
+Khi bố trí kinh doanh karaoke, vũ trường, quán bar, hộp đêm trong nhà công năng khác nhưng phần kinh
+doanh karaoke, vũ trường, quán bar, hộp đêm của nhà có quy mô thuộc diện phải trang bị hệ thống chữa cháy tự
+động theo Bảng A.1 hoặc kinh doanh karaoke, vũ trường, quán bar, hộp đêm được bố trí từ tầng 3 trở lên thì phải
+trang bị hệ thống chữa cháy tự động cho toàn bộ nhà.
+2) Cho phép chỉ trang bị hệ thống báo cháy tự động hoặc thiết bị báo cháy cục bộ tại khu vực sản xuất, kinh
+doanh, tuy nhiên tại mỗi tầng của nhà phải có thiết bị cảnh báo âm thanh kết nối liên động với hệ thống báo cháy
+tự động hoặc thiết bị báo cháy cục bộ.
+3) Nhà hành chính: trụ sở cơ quan nhà nước các cấp, nhà làm việc của doanh nghiệp, tổ chức chính trị, xã hội.
+4) Cửa hàng kinh doanh hàng hóa chất dễ cháy bao gồm cửa hàng kinh doanh nội thất, quần áo, chăn nệm,
+sách báo, vàng mã và các cửa hàng có tính chất tương tự.
+5) Nhà thương mại: chợ, siêu thị, trung tâm thương mại.
+Cho phép không lắp đặt hệ thống chữa cháy tự động tại  các khu vực lưu trữ và chế biến để bán thịt, cá, trái
+cây và rau quả (trong bao bì không cháy), xoong nồi, thiết bị, hàng hóa, vật liệu không cháy.
+6) Cho phép không bố trí chữa cháy tự động trong các gara để xe ngầm một tầng được xây dựng trên khu
+đất trống khi sức chứa không quá 25 chỗ;
+Trong các gara ô-tô 1 hoặc 2 tầng dạng ngăn (ngăn cách tối thiểu bằng vách ngăn cháy loại 1 có lối ra ngoài
+trời trực tiếp từ từng ngăn chứa, cho phép không trang bị hệ thống báo cháy và hệ thống chữa cháy tự động, với điều
+kiện mỗi ngăn không quá 2 xe.
+Cho phép không trang bị hệ thống báo cháy tự động, hệ thống chữa cháy tự động đối với nhà lưu  giữ, trưng
+bày xe máy cao không quá 02 tầng và diện tích không quá 1 000 m2.
+7) Nhà dạng hở: Nhà không có tường bao che ngoài. Nhà cũng được coi là hở nếu công trình có hai cạnh đối
+diện dài nhất được để hở. Cạnh được coi là được để hở nếu tổng diện tích phần để hở dọc theo cạnh này chiếm
+không ít hơn 50% diện tích mặt ngoài của nó ở trên từng tầng.
+8) Không yêu cầu trang bị hệ thống báo cháy tự động, hệ thống chữa cháy tự động đối với nhà dạng hở để
+26
+
+TCVN 3890:2023
+chăn nuôi gia súc, gia cầm và nhà chế biến và lưu trữ nông sản dạng hạt.
+Bảng A.2 - Đối với hạng mục/khu vực
+STT Hạng mục/khu vực
+Hệ  thống  chữa
+cháy tự động
+Hệ  thống  báo
+cháy tự động
+1.
+Hạng mục cáp  1) của nhà máy điện (không
+bao  gồm phần  cáp  đặt  ở  ngoài  nhà, công
+trình)
+Không phụ thuộc
+vào quy mô
+Không phụ thuộc
+vào quy mô
+2.
+Hạng mục cáp 1) của trạm biến áp (không bao gồm phần cáp đặt ở ngoài nhà, công
+trình)
+2.1. Có điện áp từ 500 kV trở lên
+Không phụ thuộc
+vào quy mô
+Không phụ thuộc
+vào quy mô
+2.2. Có điện áp dưới 500 kV. -
+Không phụ thuộc
+vào quy mô
+3.
+Hạng mục cáp 1) của trạm biến áp có điện áp 110-220kV (không bao gồm phần cáp
+đặt ở ngoài nhà, công trình) với máy biến áp có công suất:
+3.1. Từ 63 MVA trở lên
+Không phụ thuộc
+vào quy mô
+Không phụ thuộc
+vào quy mô
+3.2. Dưới 63 MVA -
+Không phụ thuộc
+vào quy mô
+4.
+Hầm cáp trong nhà sản xuất và nhà dân dụng trong đó đặt cáp hoặc dây dẫn có điện
+áp từ 220V trở lên:
+4.1. Khối tích hầm trên 100 m3 Từ 12 sợi trở lên Từ 5 sợi trở lên
+4.2. Khối tích hầm từ 10 m3 đến 100 m3 - Từ 5 sợi trở lên
+5.
+Băng tải kín vận chuyển nguyên vật liệu dễ
+cháy
+Chiều dài từ 25 m
+trở lên
+Chiều dài từ 25 m
+trở lên
+6.
+Khoảng không gian phía trên trần giả hoặc dưới sàn nâng của các khu vực 2) trong
+các gian phòng, nhà thuộc diện trang bị hệ thống chữa cháy tự động và/hoặc hệ
+thống báo cháy tự động) 3) có:
+6.1.
+Đường ống kỹ thuật được bọc bằng vật liệu
+có tính cháy Ch2-Ch4, không phụ thuộc khối
+lượng
+Không phụ thuộc
+vào  diện  tích  và
+thể tích
+Không phụ thuộc
+vào  diện  tích  và
+thể tích
+27
+
+TCVN 3890:2023
+
+28
+
+TCVN 3890:2023
+Bảng A.2 - (Kết thúc)
+STT Loại nhà
+Hệ thống chữa
+cháy tự động
+Hệ thống báo
+cháy tự động
+6.2.
+Máng cáp (bó cáp)  có điện áp từ 220V trở
+lên và tổng thể tích chất cháy thuộc nhóm
+Ch2 đến Ch4 từ 0,007 m 3/mét chiều dài trở
+lên
+Không phụ thuộc
+vào  diện  tích  và
+thể tích
+Không phụ thuộc
+vào  diện  tích  và
+thể tích
+6.3.
+Máng cáp (bó cáp)  có điện áp từ 220V trở
+lên và tổng thể tích chất cháy thuộc nhóm
+Ch2 đến Ch4 từ 0,0015 m 3 đến dưới 0,007
+m3/mét chiều dài
+-
+Không phụ thuộc
+vào  diện  tích  và
+thể tích
+CHÚ THÍCH:
+1) Hạng mục cáp trong tiêu chuẩn này bao gồm hầm, đường hầm, giếng, sàn nâng, máng kín, khoang
+dùng để đặt cáp (bao gồm cả kết hợp với các phương tiện liên lạc khác).
+2) Các khu vực áp dụng yêu cầu tại mục 6.1, 6.2 và 6.3 của bảng này, gồm:
+- Hành lang thoát nạn, hội trường, tiền sảnh;
+- Gian phòng có từ 50 người trở lên;
+- Gian phòng cấp nguy hiểm cháy theo công năng nhóm F1.1 và F4.1 và kinh doanh dịch vụ karaoke, vũ
+trường, quán bar, hộp đêm.
+Cho phép chỉ bố trí đầu phun chữa cháy, đầu báo cháy tại các vị trí các đường ống kỹ thuật và/hoặc đường
+máng cáp tại không gian phía trên trần treo.
+3) Hạng mục cáp đặt tại không gian phía trên trần treo và dưới sàn nâng không phải trang bị hệ thống
+báo cháy tự động, chữa cháy tự động (ngoại trừ mục 1 đến mục 3 của bảng này), cụ thể:
+- Cáp được luồn trong ống hoặc được bọc bằng vật liệu không cháy hoặc có tính cháy Ch1;
+- Cáp đơn (dây dẫn) để cấp nguồn cho các hệ thống chiếu sáng và hệ thống cáp thông tin.
+29
+
+TCVN 3890:2023
+Bảng A.3- Đối với gian phòng
+STT Đối tượng bảo vệ
+Hệ thống chữa
+cháy tự động
+Hệ thống báo
+cháy tự động
+1. Gian phòng kho
+1.1. Thuộc hạng nguy hiểm cháy nổ A và B
+Diện  tích  từ  300
+m2 trở lên
+Không  phụ  thuộc
+vào diện tích
+1.2.
+Lưu trữ cao su, hạt nhựa; diêm, kim loại
+kiềm, sản  phẩm pháo  hoa; len, lông  thú;
+chất cháy khác với khối lượng riêng nhỏ
+(dưới 3 kg/m3)
+Không  phụ  thuộc
+vào diện tích
+Không  phụ  thuộc
+vào diện tích
+1.3.
+Chứa  hàng  hóa  không  cháy  nhưng  bảo
+quản trong bao bì cháy được (có tải trọng
+cháy riêng từ 1 MJ/m2 đến 180 MJ/m2)
+-
+Diện tích từ 300 m2
+trở lên
+1.4.
+Thuộc hạng nguy hiểm cháy C (không bao gồm các gian phòng nêu tại mục 1.2 và
+mục 1.3 bảng này) khi được đặt trong các tầng
+1.4.1. Trong tầng hầm, tầng bán hầm
+Không  phụ  thuộc
+vào diện tích
+Không  phụ  thuộc
+vào diện tích
+1.4.2. Tầng trên mặt đất
+Diện  tích  từ  300
+m2 trở lên
+Diện tích từ 300 m2
+trở lên
+1.5. Kho lạnh -
+Diện tích từ 300 m2
+trở lên
+2. Gian phòng sản xuất
+2.1. Thuộc hạng nguy hiểm cháy nổ A và B
+Diện  tích  từ  300
+m2 trở lên
+Không  phụ  thuộc
+vào diện tích
+2.2.
+Thuộc hạng nguy hiểm cháy C (trừ các phòng nằm trong các nhà và cơ sở chế biến và
+lưu trữ nông sản dạng hạt) khi được đặt tại các tầng:
+2.2.1. Tầng hầm, tầng bán hầm
+Không  phụ  thuộc
+vào diện tích
+Không  phụ  thuộc
+vào diện tích
+2.2.2. Tầng trên mặt đất
+Diện tích từ 1 000
+m2 trở lên
+Diện tích từ 300 m2
+trở lên
+2.3.
+Phòng  sản  xuất  sản  phẩm  chất  lỏng  dễ
+cháy: dung môi, sơn, keo dán, ma tít, dung
+dịch ngâm tẩm, cao su tổng hợp; phòng sản
+xuất huyền phù từ bột nhôm, keo cao su;
+phòng  sơn,  tổng  hợp  cao  su  nhân  tạo,
+phòng  máy  nén  có  sử  dụng  tuabin  khí,
+phòng gia nhiệt dầu mỏ và dầu diezel
+Không  phụ  thuộc
+vào diện tích
+Không  phụ  thuộc
+vào diện tích
+30
+
+TCVN 3890:2023
+Bảng A.3 – Tiếp theo
+STT Đối tượng bảo vệ
+Hệ  thống  chữa
+cháy tự động
+Hệ  thống  báo
+cháy tự động
+3. Gian phòng thông tin liên lạc
+3.1.
+Phòng  thông  gió,  phòng  máy  biến  áp,
+phòng thiết bị phân tách của các công trình
+đài phát sóng có công suất phát 150 kW trở
+lên, các  trạm thu sóng với số lượng máy
+thu từ 20 máy, các trạm thông tin vệ tinh cố
+định có công suất  phát lớn hơn 1 kW, các
+đài truyền hình chuyển tiếp có  công suất
+phát 25-50 kW, các nút mạng, tổng đài điện
+thoại liên tỉnh và thành phố, trạm  điện báo,
+điểm khuếch đại thiết bị đầu cuối và trung
+tâm liên lạc khu vực
+-
+Không  phụ  thuộc
+vào diện tích
+3.2.
+Xưởng kỹ thuật của các trạm khuếch đại
+đầu cuối, trạm chuyển tiếp vô tuyến trung
+gian, trung  tâm  truyền  và  nhận  sóng  mà
+không  có  giám  sát  hoặc người trực vào
+buổi tối
+Không  phụ  thuộc
+vào diện tích
+Không  phụ  thuộc
+vào diện tích
+3.3.
+Cơ sở/công trình trạm gốc của hệ  thống
+thông tin vô tuyến di động và trạm chuyển
+tiếp của hệ thống thông tin vô tuyến di động
+không có giám sát
+Diện tích từ 24 m 2
+trở lên
+Không  phụ  thuộc
+vào diện tích
+3.4.
+Phòng tổng đài số, trung tâm kiểm soát điện
+thoại; trung tâm máy tính, điện báo của bưu
+điện tỉnh, thành phố trong nhà có khối tích:
+3.4.1. 40 000 m3 trở lên
+Diện tích từ 24 m2
+trở lên
+Không  phụ  thuộc
+vào diện tích
+3.4.2. Dưới 40 000 m3 - Không  phụ  thuộc
+vào diện tích
+3.5. Phòng tổng đài điện thoại, trong đó thiết bị
+chuyển mạch là loại điện tử hoặc bán điện
+tử được  lắp  đặt  cùng  với  một  máy  tính
+được sử dụng như một tổ hợp điều khiển,
+thiết bị đầu vào, đầu ra; Phòng chứa thiết bị
+chuyển mạch điện tử, nút, trung tâm truyền
+31
+
+TCVN 3890:2023
+Bảng A.3 – Tiếp theo
+STT Đối tượng bảo vệ
+Hệ  thống  chữa
+cháy tự động
+Hệ  thống  báo
+cháy tự động
+thông tài liệu với công suất:
+3.5.1. 10 000 số, kênh hoặc điểm kết nối trở lên
+Không  phụ  thuộc
+vào diện tích
+Không  phụ  thuộc
+vào diện tích
+3.5.2. Dưới 10 000 số, kênh hoặc điểm kết nối -
+Không  phụ  thuộc
+vào diện tích
+3.6.
+Phòng chuyên dụng (dành riêng) cho thiết
+bị chia, kết nối có sử dụng máy vi tính để
+điều khiển các tổng đài điện thoại tự động
+với công suất trạm:
+3.6.1. 10 000 kênh liên tỉnh, thành phố trở lên
+Diện tích từ 24 m 2
+trở lên
+Không  phụ  thuộc
+vào diện tích
+3.6.2. Dưới 10 000 kênh liên tỉnh, thành phố -
+Không  phụ  thuộc
+vào diện tích
+3.7.
+Phòng để xử lý, phân loại, lưu trữ và chuyển
+phát bưu kiện, thư từ, điện tín, điện báo, báo
+chí
+Diện  tích  từ  500
+m2 trở lên
+Không  phụ  thuộc
+vào diện tích
+4. Gian phòng, buồng giao thông vận tải
+4.1.
+Các phòng, buồng sản xuất, sửa chữa, gia
+công tàu hoả, tàu điện , tàu thủy  (máy điện,
+thiết bị, sửa chữa và gia công toa tàu, bánh,
+động cơ…)
+Diện tích từ 1 000
+m2 trở lên
+Diện tích từ 300 m2
+trở lên
+4.2.
+Phòng  và  công  trình  thành  phần  của  hệ
+thống tàu điện ngầm (trừ lối đi và sảnh chờ
+hành  khách,  đường  hầm  tàu  điện,  trạm
+bơm nước, thiết bị sưởi, buồng thông gió)
+Không  phụ  thuộc
+vào diện tích
+Không  phụ  thuộc
+vào diện tích
+4.3. Phòng sửa chữa, bảo dưỡng, lưu giữ ô tô
+4.3.1. Gian phòng sửa chữa, bảo dưỡng ô tô
+Diện  tích  từ  700
+m2 trở lên
+Diện tích từ 300 m2
+trở lên
+4.3.2. Phòng lưu giữ ô tô trong nhà có công năng khác (trừ trong nhà ở), đặt tại:
+4.3.2.1. Tầng nổi
+Từ  3  xe  ô  tô  trở
+lên
+Không  phụ  thuộc
+vào diện tích
+32
+
+TCVN 3890:2023
+Bảng A.3 – Tiếp theo
+STT Đối tượng bảo vệ
+Hệ  thống  chữa
+cháy tự động
+Hệ  thống  báo
+cháy tự động
+4.3.2.2.
+Tầng hầm, tầng bán hầm (kể cả dưới gầm
+cầu)
+Không  phụ  thuộc
+vào diện tích
+Không  phụ  thuộc
+vào diện tích
+4.4.
+Phòng tháo lắp động cơ máy bay, thiết bị
+bay, sác si và bánh xe máy bay, trực thăng;
+phòng  sản xuất, sửa  chữa  động cơ  máy
+bay
+Không  phụ  thuộc
+vào diện tích
+Không  phụ  thuộc
+vào diện tích
+5. Gian phòng công năng công cộng
+5.1. Phòng lưu trữ thư viện với số lượng các loại tài liệu, sách:
+5.1.1. Từ 250 000 đơn vị trở lên
+Không  phụ  thuộc
+vào diện tích
+Không  phụ  thuộc
+vào diện tích
+5.1.2. Dưới 250 000 đơn vị -
+Diện tích từ 300 m2
+trở lên
+5.2. Phòng trưng bày, triển lãm 3)
+Diện tích từ
+1 000 m2 trở lên
+Diện tích từ 500 m2
+trở lên
+5.3.
+Phòng bảo quản và trưng bày tác phẩm, vật
+phẩm giá trị của viện bảo tàng 3)
+Không  phụ  thuộc
+vào diện tích
+Không  phụ  thuộc
+vào diện tích
+5.4.
+Trong các nhà phục vụ mục đích văn hóa và giải trí (nhà hát, câu lạc bộ, phòng hòa nhạc,
+chiếu phim và hòa nhạc, tổ chức sự kiện, nhà văn hóa, rạp xiếc, trường quay,…) có sân
+khấu và khán phòng:
+5.4.1. Với sức chứa từ 700 chỗ ngồi trở lên 4) Không  phụ  thuộc
+vào diện tích
+Không  phụ  thuộc
+vào diện tích
+5.4.2.
+Với sức chứa từ 400 chỗ trở lên và diện
+tích sân khấu từ 100 m2 trở lên 4)
+Không  phụ  thuộc
+vào diện tích
+Không  phụ  thuộc
+vào diện tích
+5.4.3. Nhà kho để đồ trang trí, đồ dùng và đạo cụ
+Diện  tích  từ  100
+m2 trở lên
+Diện tích từ 100 m2
+trở lên
+5.5. Trường quay
+Diện tích từ
+1 000 m2 trở lên
+Diện tích từ 300 m2
+trở lên
+5.6.
+Phòng lưu trữ tiền  trong ngân hàng, kho
+bạc
+Khối  tích  từ  100
+m3 trở lên
+Không  phụ  thuộc
+vào diện tích
+5.7.
+Phòng bảo quản hành lý xách tay, kho chứa vật liệu cháy được ở nhà ga (kể cả sân
+bay) bố trí ở các tầng:
+33
+
+TCVN 3890:2023
+Bảng A.3 – Tiếp theo
+STT Đối tượng bảo vệ
+Hệ  thống  chữa
+cháy tự động
+Hệ  thống  báo
+cháy tự động
+5.7.1. Trong tầng hầm, tầng bán hầm
+Không  phụ  thuộc
+vào diện tích
+Không  phụ  thuộc
+vào diện tích
+5.7.2. Tầng trên mặt đất
+Diện  tích  từ  300
+m2 trở lên
+Diện tích từ 300 m2
+trở lên
+5.8. Buồng, phòng bảo quản vật liệu cháy được bố trí ở:
+5.8.1.
+Dưới khán đài công trình thể thao có mái
+che
+Diện  tích  từ  100
+m2 trở lên
+Diện tích từ 100 m2
+trở lên
+5.8.2.
+Trong công trình thể thao có mái che với
+sức chứa từ 800 chỗ trở lên
+Diện  tích  từ  100
+m2 trở lên
+Diện tích từ 100 m2
+trở lên
+5.8.3.
+Dưới khán đài công trình thể thao ngoài trời
+có sức chứa trên 3 000 chỗ
+Diện  tích  từ  100
+m2 trở lên
+Diện tích từ 100 m2
+trở lên
+5.9. Phòng máy chủ chuyên dụng
+Diện tích từ 24 m 2
+trở lên
+Diện tích từ 24 m 2
+trở lên
+5.10. Gian phòng thương mại trong toà nhà công năng khác, bố trí ở:
+5.10.1. Trong tầng hầm, tầng bán hầm
+Diện  tích  từ  200
+m2 trở lên
+Không  phụ  thuộc
+vào diện tích
+5.10.2. Tầng trên mặt đất
+Diện  tích  từ  500
+m2 trở lên
+Diện tích từ 500 m2
+trở lên
+5.11.
+Gian phòng kinh doanh chất lỏng cháy và dễ
+cháy (ngoại trừ hàng hóa được được chứa
+trong các can, bình có thể tích chứa không
+lớn hơn 20 lít)
+Không  phụ  thuộc
+vào quy mô
+Không  phụ  thuộc
+vào quy mô
+CHÚ THÍCH:
+1) Cho phép không lắp đặt hệ thống chữa cháy tự động cho toàn bộ gian phòng, khi trong gian phòng này
+được lắp đặt hệ thống báo cháy tự động và tất cả các thiết bị điện, điện tử (bao gồm cả thiết bị của hệ thống kiểm
+soát quy trình tự động) được bảo vệ bởi các thiết bị chữa cháy tự động theo tiêu chuẩn quốc gia và các tiêu chuẩn
+quốc tế, tiêu chuẩn nước ngoài được phép áp dụng tại Việt Nam.
+2) Để bảo vệ các gian phòng này, hệ thống chữa cháy tự động không gây hư hỏng hoặc trục trặc cho thiết bị
+trong trường hợp kích hoạt sai.
+3) Yêu cầu này không áp dụng cho các gian phòng tạm thời được sử dụng cho triển lãm, trưng bày.
+Khi đặt ô tô trong các phòng trưng bày và thương mại, các gian phòng này phải được trang bị hệ thống chữa
+cháy tự động theo quy định tại mục 5.3 và mục 5.11 của bảng này.
+4) Khi diện tích sân khấu từ 100 m 2 trở lên thì phải có giải pháp ngăn cháy giữa khu vực sân khấu và khu
+vực khán giả (bằng màn nước ngăn cháy drencher hoặc màn ngăn cháy có giới hạn chịu lửa tối thiểu EI 60).
+Diện tích của gian phòng quy định trong Bảng này được hiểu là diện tích của một phần tòa nhà được bao
+quanh bởi các bộ phận ngăn cháy với giới hạn chịu lửa: tường, sàn, vách ngăn – không thấp hơn EI 45. Trường hợp
+các gian phòng được ngăn cách bằng các kết cấu có giới hạn chịu lửa thấp hơn EI 45 thì diện tích của gian phòng là
+34
+
+TCVN 3890:2023
+Bảng A.3 – Tiếp theo
+STT Đối tượng bảo vệ
+Hệ  thống  chữa
+cháy tự động
+Hệ  thống  báo
+cháy tự động
+tổng diện tích các gian phòng này, đồng thời xem xét đến phần công năng của phòng có yêu cầu trang bị cao nhất
+theo quy định của Phụ lục này.
+Ghi chú: Các gian phòng sản xuất và các gian phòng kho, kể cả các phòng thí nghiệm và nhà xưởng có diện tích
+trên 50 m2 trong các nhà thuộc nhóm F1, F2, F3 và F4 thì áp dụng quy định của tiêu chuẩn này như đối với gian phòng F5.
+35
+
+TCVN 3890:2023
+Bảng A.4. Đối với thiết bị
+STT Đối tượng bảo vệ
+Hệ  thống  chữa  cháy  tự
+động
+Hệ  thống  báo  cháy
+tự động
+1.
+Buồng sơn sử dụng chất lỏng
+dễ cháy hoặc chất lỏng cháy
+Không  phụ  thuộc  vào  loại
+thiết bị
+Không phụ thuộc vào
+loại thiết bị
+2. Buồng sấy
+Không  phụ  thuộc  vào  loại
+thiết bị
+Không phụ thuộc vào
+loại thiết bị
+3.
+Tháp  thu  hồi  chất  thải  cháy
+được 1)
+Không  phụ  thuộc  vào  loại
+thiết bị
+Không phụ thuộc vào
+loại thiết bị
+4. Máy biến áp làm mát bằng dầu với điện áp:
+4.1. Điện áp 500 kV trở lên Không phụ thuộc công suất
+Không phụ thuộc
+công suất
+4.2. Điện áp 220 kV
+Công suất từ 200 MVA trở
+lên
+Không phụ thuộc
+công suất
+4.3.
+Điện áp 110 kV, lắp đặt trong
+các nhà máy điện
+Công  suất từ  63  MVA  trở
+lên
+Công suất từ 63 MVA
+trở lên
+4.4.
+Điện áp 110 kV được đặt trong
+gian phòng của trạm biến áp
+Công  suất từ  63  MVA  trở
+lên
+Không phụ thuộc
+công suất
+5.
+Máy  biến  áp  đặt  trong  gian
+phòng của nhà có công năng
+khác  (không  bao  gồm mục  4
+của bảng này)
+Công suất từ 63 MVA trở
+lên hoặc điện áp từ 110 KV
+trở lên
+Không phụ thuộc
+công suất
+6.
+Các  trạm  điện  thử  nghiệm
+dùng  máy  phát  điện  diezel,
+xăng thiết kế trên xe ô tô hoặc
+rơ móoc
+Không phụ thuộc vào diện
+tích
+-
+7.
+Thùng, téc chứa chất lỏng dễ
+cháy đặt nổi
+có dung tích chứa từ 3 m 3
+trở lên
+-
+CHÚ THÍCH:
+1)  Cho phép sử dụng thiết bị chữa cháy tự động thay thế hệ thống chữa cháy tự động.
+36
+
+TCVN 3890:2023
+CHÚ THÍCH:
+Dấu “-“ trong các bảng tại Phụ lục A được hiểu là không bắt buộc phải trang bị hệ thống báo cháy tự động/chữa cháy tự
+động (Ngoại trừ các gian phòng, khu vực/hạng mục nằm trong nhà thuộc diện trang bị hệ thống báo cháy tự động/chữa cháy
+tự động theo Bảng A.1)
+37
+
+TCVN 3890:2023
+Phụ lục B
+(Quy định)
+Quy định về trang bị hệ thống họng nước chữa cháy trong nhà
+Bảng B.1 - Quy định về trang bị hệ thống họng nước chữa cháy trong nhà
+STT Loại nhà, công trình Quy mô
+1. Nhà ở và công trình công cộng
+1.1. Nhà ở riêng lẻ Cao từ 7 tầng trở lên
+1.2.
+Nhà chung cư, nhà tập thể, n hà ở ký túc xá, khách sạn, nhà
+khách, nhà nghỉ, nhà trọ và cơ sở lưu trú được thành lập theo
+quy định [1] (ngoại trừ bãi cắm trại du lịch); nhà hỗn hợp 1)
+Cao  từ  5  tầng  trở  lên  hoặc
+khối tích từ 5 000 m3 trở lên
+1.3.
+Trụ sở cơ quan nhà nước các cấp, nhà làm việc của các
+doanh nghiệp, tổ chức chính trị, xã hội, bưu điện, cơ sở truyền
+thanh, truyền hình, viễn thông, nhà lắp đặt thiết bị thông tin,
+trung tâm lưu trữ, quản lý dữ liệu
+Cao  từ  6  tầng  trở  lên  hoặc
+khối tích từ 5 000 m3 trở lên
+1.4. Nhà hát, rạp chiếu phim, rạp xiếc, hội trường
+Từ 300 chỗ ngồi trở lên hoặc
+khối tích từ 10 000 m3 trở lên
+1.5.
+- Công viên giải trí, vườn thú, thủy cung.
+- Bảo tàng, nhà triển lãm, nhà trưng bày, nhà lưu trữ, nhà hội
+chợ, nhà văn hóa, nhà cho mục đích tôn giáo.
+- Sân vận động, nhà thi đấu thể thao, cung thể thao trong nhà,
+trung tâm thể dục, thể thao, trường đua, trường bắn, cơ sở
+thể thao khác được thành lập theo quy định của pháp luật hiện
+hành [6], [8].
+- Cơ sở đăng kiểm phương tiện giao thông cơ giới, cửa hàng
+kinh doanh, sửa chữa, bảo dưỡng ô tô, mô tô, xe gắn máy.
+Cao  từ  6  tầng  trở  lên  hoặc
+khối tích từ 5 000 m3 trở lên
+1.6.
+Nhà kinh doanh dịch vụ karaoke, vũ trường, quán bar,  hộp
+đêm
+1.7. Có bố trí tại tầng hầm, tầng bán hầm Không phụ thuộc vào quy mô
+1.8. Bố trí tại trên mặt đất
+1.8.1. Một hoặc hai tầng Diện tích từ 300 m2 trở lên
+1.8.2. Từ ba tầng trở lên Không phụ thuộc diện tích
+1.9.
+Trung tâm tổ chức sự kiện, chợ,  siêu thị , trung tâm thương
+mại
+Không phụ thuộc quy mô
+38
+
+TCVN 3890:2023
+Bảng B.1 – Kết thúc
+STT Loại nhà, công trình Quy mô
+1.10. Nhà chăm sóc người khuyết tật Không phụ thuộc quy mô
+1.11.
+Đài kiểm soát không lưu, nhà ga sân bay, nhà ga đường sắt;
+nhà chờ cáp treo vận chuyển người; các nhà dịch vụ bến cảng
+biển, các nhà dịch vụ cảng cạn, các nhà dịch vụ cảng thủy nội
+địa, bến xe khách, trạm dừng nghỉ
+Cao từ 6 tầng trở lên hoặc khối
+tích từ 5 000 m3 trở lên
+1.12.
+Trường học và các cơ sở giáo dục khác (ngoại trừ nhà trẻ);
+nhà khám, chữa bệnh, lưu trú bệnh nhân của bệnh viện, trạm y
+tế, phòng khám, nhà điều dưỡng, phục hồi chức năng, chỉnh
+hình, cơ sở phòng chống dịch bệnh, trung tâm y tế, cơ sở y tế
+khác theo quy định của pháp luật hiện hành [3]
+Cao từ 3 tầng trở lên hoặc khối
+tích từ 2 000 m3 trở lên
+1.13. Nhà trẻ, trường mẫu giáo, mầm non
+Từ 100 cháu trở lên hoặc khối
+tích 3 000 m3 trở lên  hoặc cao
+từ 03 tầng trở lên
+1.14.
+Nhà văn hoá, nhà sách, thư viện, thẩm mỹ viện, kinh doanh
+dịch vụ xoa bóp, cửa hàng điện máy, cửa hàng bách hóa, cửa
+hàng tiện ích và các cửa hàng kinh doanh hàng hóa chất dễ
+cháy
+Khối tích từ 5 000 m3 trở lên
+1.15. Nhà hàng, cửa hàng ăn uống
+Cao từ 5 tầng trở lên hoặc khối
+tích từ 5 000 m3 trở lên
+2. Nhà sản xuất, nhà kho
+Diện tích từ 500  m2 hoặc  khối
+tích từ 2 500 m3 trở lên
+3. Nhà lưu giữ (gara), trưng bày, bảo dưỡng ô tô, xe máy
+3.1. Dạng kín Khối tích từ 500 m3 trở lên
+3.2. Dạng hở (ngoại trừ gara cơ khí) Khối tích từ 3 000 m3 trở lên
+CHÚ THÍCH
+1) Đối với nhà hỗn hợp không thuộc diện phải trang bị hệ thống họng nước chữa cháy trong nhà nhưng phần công
+năng bất kỳ của nhà có quy mô thuộc diện phải trang bị hệ thống họng nước chữa cháy trong nhà theo Bảng B.1 thì phải
+trang bị hệ thống họng nước chữa cháy trong nhà cho phần nhà đó. Đối với nhà hỗn hợp có phần công năng kinh doanh
+dịch vụ karaoke, vũ trường, quán bar, hộp đêm từ tầng 3 trở lên thì phải trang bị hệ thống họng nước chữa cháy trong nhà.
+39
+
+TCVN 3890:2023
+Phụ lục C
+(Quy định)
+Quy định về trang bị hệ thống cấp nước chữa cháy ngoài nhà
+Bảng C.1 - Quy định về trang bị hệ thống cấp nước chữa cháy ngoài nhà
+TT Loại nhà, công trình Quy mô
+1.
+Đô  thị,  khu  kinh  tế,  khu  công  nghiệp,  cụm  công
+nghiệp, khu chế xuất, khu công nghệ cao và các khu
+chức năng khác theo  quy định của pháp luật hiện
+hành thuộc thẩm quyền phê duyệt của cấp huyện trở
+lên [5]
+Không phụ thuộc quy mô
+2. Nhà dưỡng lão, nhà chăm sóc người khuyết tật Không phụ thuộc quy mô
+3.
+Trụ sở cơ quan nhà nước các cấp, nhà làm việc của
+doanh nghiệp, tổ chức chính trị, xã hội, nhà văn hóa ,
+nhà cho mục đích tôn giáo.
+Cao từ 6 tầng trở lên hoặc khối tích
+từ 5 000 m3 trở lên
+4.
+Nhà chung cư, nhà tập thể, nhà ở ký túc xá, nhà hỗn
+hợp
+Cao từ 6 tầng trở lên hoặc khối tích
+từ 5 000 m3 trở lên
+5. Nhà trẻ, trường mẫu giáo, mầm non
+Từ 100 cháu trở lên hoặc khối tích
+3 000 m3 trở lên
+6.
+Trường học và các cơ sở giáo dục khác (ngoại trừ nhà
+trẻ)
+Cao từ 3 tầng trở lên hoặc khối tích
+từ 5 000 m3 trở lên
+7.
+Nhà khám, chữa bệnh, lưu trú bệnh nhân của bệnh
+viện, trạm y tế , phòng khám, nhà điều dưỡng, phục
+hồi chức năng, chỉnh hình, cơ sở phòng chống dịch
+bệnh, trung tâm y tế, cơ sở y tế khác theo quy định
+của pháp luật hiện hành [3]
+Cao từ 3 tầng trở lên hoặc khối tích
+từ 3 000 m3 trở lên
+8. Nhà hát, rạp chiếu phim, rạp xiếc Không phụ thuộc quy mô
+9. Trung tâm hội nghị, tổ chức sự kiện Không phụ thuộc quy mô
+10. Thẩm mỹ viện, kinh doanh dịch vụ xoa bóp Khối tích từ 1 500 m3 trở lên
+11. Câu lạc bộ, công viên giải trí, vườn thú, thủy cung
+Cao từ 6 tầng trở lên hoặc diện tích
+từ 10 000 m2 trở lên
+12.
+Nhà kinh doanh dịch vụ  karaoke, vũ trường, quán
+bar, hộp đêm
+Cao từ 3 tầng trở lên hoặc khối tích
+từ 1 500 m3 trở lên hoặc bố trí trong
+tầng hầm, tầng bán hầm
+13. Chợ, trung tâm thương mại, siêu thị Không phụ thuộc vào quy mô
+40
+
+TCVN 3890:2023
+
+41
+
+TCVN 3890:2023
+Bảng C.1 – Tiếp theo
+TT Loại nhà, công trình Quy mô
+Cửa hàng điện máy, cửa hàng bách hóa, cửa hàng tiện ích , cửa hàng
+tiện ích và các cửa hàng kinh doanh hàng hóa chất dễ cháy
+Khối tích từ 5 000
+m3 trở lên
+Nhà hàng, cửa hàng ăn uống
+Cao  từ 5  tầng trở
+lên  hoặc  khối  tích
+từ 5 000 m3 trở lên
+Khách sạn, nhà khách, nhà nghỉ, nhà trọ, cơ sở lưu trú khác được thành
+lập theo quy định của pháp luật hiện hành [1]
+Cao từ 6 tầng trở
+lên hoặc khối tích
+từ 5 000 m3 trở lên
+Bảo tàng, thư viện, triển lãm, nhà trưng bày, nhà lưu trữ, nhà sách, nhà
+hội chợ
+Khối tích từ 5 000
+m3 trở lên
+Bưu điện, cơ sở truyền thanh, truyền hình, viễn thông, nhà lắp đặt thiết
+bị thông tin, trung tâm lưu trữ, quản lý dữ liệu
+Cao  từ 6  tầng trở
+lên  hoặc  khối  tích
+từ 5 000 m3 trở lên
+Sân vận động
+Cao  từ 6  tầng trở
+lên  hoặc  khối  tích
+từ 5 000 m3 trở lên
+Nhà thi đấu thể thao, cung thể thao trong nhà, trung tâm thể dục, thể
+thao, trường đua, trường bắn, cơ sở thể thao khác được thành lập theo
+theo quy định của pháp luật hiện hành [6], [8]
+Cao  từ 6  tầng trở
+lên  hoặc  khối  tích
+từ 5 000 m3 trở lên
+Cảng hàng không; đài kiểm soát không lưu; bến cảng biển; cảng cạn;
+cảng thủy nội địa;
+Không  phụ  thuộc
+quy mô
+Nhà chờ bến xe ô tô, nhà ga đường sắt, nhà chờ cáp treo vận chuyển
+người, trạm dừng nghỉ
+Cao  từ 6  tầng trở
+lên  hoặc  khối  tích
+từ 5 000 m3 trở lên
+Các hạng mục thành phần của Công trình tàu điện ngầm; cơ sở đăng
+kiểm phương tiện giao thông cơ giới,  cửa hàng kinh doanh, sửa chữa,
+bảo dưỡng ô tô, mô tô, xe máy
+Cao  từ 6  tầng trở
+lên  hoặc  khối  tích
+từ 5 000 m3 trở lên
+Nhà lưu giữ (gara), trưng bày, bảo dưỡng ô tô, xe máy
+Khối tích từ 3 000
+m3 trở lên
+42
+
+TCVN 3890:2023
+Bảng C.1 – Kết thúc
+T
+T
+Loại nhà, công trình Quy mô
+25.
+Cơ sở hạt nhân; cơ sở sản xuất, kinh doanh, bảo
+quản, vật liệu nổ công nghiệp và tiền chất thuốc nổ;
+kho vật liệu nổ công nghiệp, tiền  chất thuốc nổ;
+cảng xuất, nhập vật liệu nổ công nghiệp, tiền chất
+thuốc nổ; kho vũ khí, công cụ hỗ trợ; cơ sở khai
+thác, chế biến, sản xuất, vận chuyển, kinh doanh,
+bảo quản dầu mỏ và sản phẩm dầu mỏ, khí đốt trên
+đất liền; kho dầu mỏ và sản phẩm dầu mỏ, kho khí
+đốt; cảng xuất, nhập dầu mỏ và sản phẩm dầu mỏ,
+khí đốt; cửa hàng kinh doanh xăng dầu;
+Không phụ thuộc quy mô
+26.
+Cơ sở khai thác, chế biến, sản xuất, vận chuyển,
+kinh doanh, bảo quản dầu mỏ và sản phẩm dầu mỏ,
+khí đốt trên đất liền; kho dầu mỏ và sản phẩm dầu
+mỏ, kho khí đốt; cảng xuất, nhập dầu mỏ và sản
+phẩm dầu mỏ, khí đốt; cửa hàng kinh doanh xăng
+dầu; cửa hàng kinh doanh chất lỏng dễ cháy; cơ sở
+kinh doanh khí đốt
+Không phụ thuộc quy mô
+27.
+Cơ sở công nghiệp, n hà sản xuất, nhà kho và các
+công trình có công năng tương tự
+27.1. Hạng nguy hiểm cháy, nổ A, B, C
+Diện  tích  từ  300 m2 hoặc
+khối tích từ  1  500  m3 hoặc
+cao từ 2 tầng trở lên
+27.2. Hạng nguy hiểm cháy, nổ D, E
+Diện tích từ 500  m2 hoặc khối tích
+từ 2 500 m3 
+28. Trạm biến áp Điện áp từ 110 kV trở lên
+29. Nhà máy điện Không phụ thuộc quy mô
+30.
+Hầm có hoạt động sản xuất, bảo quản, sử dụng
+chất cháy, nổ
+Khối tích từ 1 000 m3 trở lên
+31.
+Nhà kho hàng hóa, vật tư cháy được hoặc có bao bì
+cháy được
+Khối tích từ 3 000 m3 trở lên
+43
+
+TCVN 3890:2023
+Phụ lục D
+(Quy định)
+Quy định về trang bị phương tiện chữa cháy cơ giới
+Bảng D.1 - Quy định về trang bị phương tiện chữa cháy cơ giới
+TT Đối tượng Quy mô
+Xe chữa
+cháy,
+chiếc
+Tàu chữa
+cháy, chiếc
+Máy bơm
+chữa cháy
+loại khiêng
+tay, chiếc
+1 Kho
+1.1 Kho dự trữ cấp Quốc gia 1
+1.2 Kho dự trữ cấp Bộ, ngành 1
+1.3
+Kho  dầu  mỏ  và  các  sản
+phẩm dầu mỏ
+Tổng dung tích trên
+100 000 m3
+2
+1.4
+Kho  dầu  mỏ  và  các  sản
+phẩm dầu mỏ
+Tổng dung tích từ
+50 000 đến 100 000 m3
+1
+1.5
+Kho  dầu  mỏ  và  các  sản
+phẩm dầu mỏ
+Tổng dung tích nhỏ hơn
+50 000 m3
+1
+2 Cảng hàng không, cảng biển
+2.1 Cảng hàng không Quốc tế 3
+2.2 Cảng hàng không Nội địa 2
+2.3 Cảng biển Loại đặc biệt, loại I 2 1
+2.4 Cảng biển Loại II 1 1
+2.5 Cảng biển Loại III 1
+3 Cơ sở sản xuất
+3.1 Nhà máy nhiệt điện1) Công suất từ 200 MW trở
+lên
+1
+3.2 Nhà máy thuỷ điện1) Công suất từ 300 MW trở
+lên
+1
+3.3
+Nhà máy nhiệt điện, thủy
+điện
+Có  công  suất  nhỏ  hơn
+công suất trên
+1
+3.4 Nhà máy điện hạt nhân
+Không  phụ  thuộc  vào
+công suất
+2
+3.6 Nhà máy giấy
+Công  suất  trên  35  000
+tấn/năm
+1
+3.7 Nhà máy dệt
+Công suất trên 20 triệu
+mét vuông/năm
+1
+44
+
+TCVN 3890:2023
+Bảng D.1 – (Kết thúc)
+Số
+TT
+Đối tượng Quy mô
+Xe chữa
+cháy,
+chiếc
+Tàu chữa
+cháy,
+chiếc
+Máy bơm
+chữa cháy
+loại khiêng
+tay, chiếc
+3.8 Nhà máy xi măng
+Công  suất  trên  1  triệu
+tấn/năm
+1
+3.9 Nhà máy phân đạm
+Công  suất  từ  180  000
+tấn/năm trở lên
+1
+3.1
+0
+Nhà máy thép
+Công  suất  từ  300  000
+tấn  phôi  thép/năm  trở
+lên
+1
+3.1
+1
+Nhà máy giấy, dệt, xi măng,
+phân đạm, thép
+Có  công  suất  nhỏ  hơn
+công suất trên
+1
+3.1
+2
+Nhà máy lọc dầu, lọc  hóa
+dầu, hóa dầu
+Không  phụ  thuộc  vào
+công suất
+2
+3.1
+3
+Cơ sở chế biến khí đốt
+Công suất từ 15 triệu m 3
+khí /ngày đêm trở lên
+1
+3.1
+4
+Cơ  sở  khai  thác  khoáng
+sản
+Công  suất  từ  300  000
+tấn/năm trở lên
+1
+3.1
+5
+Cơ  sở  chế  biến  khí  đốt,
+khai thác khoáng sản
+Có  công  suất  nhỏ  hơn
+công suất trên
+1
+4 Khu công nghiệp, khu chế xuất, khu công nghệ cao, cụm công nghiệp
+4.1
+Khu công nghiệp, khu chế
+xuất, khu công nghệ cao
+Tổng diện tích trên 300
+ha
+3
+4.2
+Khu công nghiệp, khu chế
+xuất, khu công nghệ cao
+Tổng  diện  tích  từ  trên
+150 đến 300 ha
+2
+4.3
+Khu công nghiệp, khu chế
+xuất, khu công nghệ  cao,
+cụm công nghiệp
+Tổng diện tích từ 50 ha
+đến 150 ha
+1
+4.4
+Khu công nghiệp, khu chế
+xuất, khu công nghệ  cao,
+cụm công nghiệp
+Tổng diện tích nhỏ hơn
+50 ha
+1
+CHÚ THÍCH: 1) : Nhà máy nhiệt điện có công suất từ 200 MW trở lên và nhà máy thủy điện có công
+suất từ 300 MW trở lên trong cùng một khuôn viên (hoặc liền kề nhau) và cùng một đơn vị quản lý,
+vận hành chỉ cần trang bị 01 xe chữa cháy.
+45
+
+TCVN 3890:2023
+Phụ lục E
+(Quy định)
+Quy định về trang bị dụng cụ phá dỡ thô sơ
+Bảng E.1 - Quy định về trang bị dụng cụ phá dỡ thô sơ
+STT Đối tượng Quy mô Số lượng
+1. Nhà sản xuất
+Không phụ
+thuộc quy mô
+1 bộ dụng cụ phá dỡ thô sơ gồm:
++ Rìu cứu nạn (trọng lượng 2 kg,
+cán dài 90 cm, chất liệu thép
+cacbon cường độ cao);
++ Xà beng (một đầu nhọn, một
+đầu dẹt, dài 100 cm);
++ Búa tạ (thép cacbon cường độ
+cao, nặng 5kg, cán dài 50 cm);
++ Kìm cộng lực (dài 60 cm, tải cắt
+60 kg);
+2. Nhà kho
+3.
+Nhà ở tập thể, khách sạn,
+chung cư, cửa hàng ăn uống
+4.
+Các cơ quan hành chính,
+trường học, bệnh viện
+5.
+Nhà ga, các loại công trình
+công cộng khác
+6.
+Nhà  hát, rạp  chiếu phim, hội
+trường, kinh  doanh  dịch  vụ
+karaoke, vũ trường, quán bar,
+hộp đêm
+7.
+Chợ, trung tâm thương mại
+kiên cố và bán kiên cố
+46
+
+TCVN 3890:2023
+Phụ lục F
+(Quy định)
+Quy định về trang bị mặt nạ lọc độc và mặt nạ phòng độc cách ly
+Bảng F.1 - Quy định về trang bị mặt nạ lọc độc và mặt nạ phòng độc cách ly
+STT Đối tượng Quy mô Số lượng, chiếc
+1.
+Khách  sạn,  nhà  khách,  nhà
+nghỉ; nhà trọ, và cơ sở lưu trú
+khác theo quy định [1] (ngoại
+trừ bãi cắm trại du lịch) cao từ
+3 tầng trở lên
+Không phụ thuộc quy mô
+Trang bị mặt nạ lọc độc tại tất cả
+các  tầng  nhà  với  định  mức  1
+chiếc/1 người (bao gồm cả khách
+lưu trú và nhân viên phục vụ có
+mặt thường xuyên)
+2.
+Cơ  sở  kinh  doanh  dịch  vụ
+karaoke, vũ trường, quán bar,
+hộp đêm
+Không phụ thuộc quy mô
+Trang bị mặt nạ lọc độc tại tất cả
+các  tầng  nhà. Số  lượng  mặt  nạ
+trên một tầng được tính toán theo
+số người có mặt đồng thời trong
+một phòng có diện tích lớn nhất
+của  tầng  đó  với  định  mức  01
+người/ chiếc
+3. Cơ sở hạt nhân. Không phụ thuộc quy mô Trang bị tối thiểu 03 bộ mặt nạ
+phòng độc cách ly
+4. Cảng hàng không, cảng biển. Không phụ thuộc quy mô
+5. Cơ sở khai thác và chế biếndầu mỏ, khí đốt. Không phụ thuộc quy mô
+6. Cơ sở khai thác than. Không phụ thuộc quy mô
+7. Cơ sở sản xuất, kho vũ khí,vật liệu nổ Không phụ thuộc quy mô
+8. Kho dự trữ cấp quốc gia; khodầu mỏ, sản phẩm dầu mỏ Tổng dung tích 15 000 m3 trở lên
+9. Nhà máy thủy điện Công suất 300 MW trở lên
+10. nhà máy nhiệt điện Công suất 200 MW trở lên
+11. Cơ sở sản xuất giấy Công suất 35 000         tấn/ năm trở lên
+12. Cơ sở dệt Công suất 25 triệu m2/nămtrở lên
+13. Cơ sở sản xuất phân đạm Công suất 180 000 tấn/năm trở lên
+14.
+Khu  công  nghiệp,  khu  chế
+xuất, khu công nghệ cao, cụm
+công nghiệp
+Diện tích từ 50 ha trở lên
+15. Nhà cao tầng Cao từ 75 m trở lên hoặc
+có 2 tầng hầm trở lên
+47
+
+TCVN 3890:2023
+16. Rạp hát, rạp chiếu phim Không phụ thuộc quy mô
+48
+
+TCVN 3890:2023
+Phụ lục G
+(Quy định)
+Quy định về trang bị hệ thống loa thông báo và hướng dẫn thoát nạn
+Bảng G.1 - Quy định về trang bị hệ thống loa thông báo và hướng dẫn thoát nạn
+STT Đối tượng Quy mô
+1. Nhà và công trình công cộng
+Cao trên 10 tầng hoặc có từ 2 tầng
+hầm trở lên
+2.
+Công trình công cộng tập trung đông người:
+Nhà hát, rạp chiếu phim, kinh doanh dịch vụ
+karaoke, vũ trường, quán bar, hộp đêm, bệnh
+viện, viện dưỡng lão và các công trình có
+công năng tương tự.
+Từ 50 người trên 1 tầng trở lên
+3.
+Gara ô tô, xe máy dạng kín (bao gồm cả gara
+độc lập và trong nhà có chức năng khác)
+Diện tích từ 18 000 m2 trở lên
+4. Nhà sản xuất, kho
+Diện tích từ 18 000 m2 trở lên và
+có từ 50 người trên 1 tầng trở lên
+49
+
+TCVN 3890:2023
+Phụ lục H
+(Quy định)
+Quy định về trang bị phương tiện, dụng cụ chữa cháy ban đầu
+Bảng G.1 - Quy định về trang bị phương tiện, dụng cụ chữa cháy ban đầu
+STT Tên hạng mục công trình Thùng cát, m3 Xẻng, chiếc Chăn sợi 1x2(m),
+chiếc
+1.
+Kho,  cửa  hàng  chứa  hàng  hoá  là
+chất  lỏng  có  nhiệt  độ  bắt  cháy  >
+45oC
+ 1 m3 trên mỗi
+350 m2 sàn
+ 2 chiếc trên
+mỗi 350 m2
+sàn
+ 1 chiếc trên mỗi
+350 m2 sàn
+2.
+Phân xưởng sản xuất, chế biến có
+sử dụng thiết bị cơ khí, lò sấy, máy
+hàn
+1 chiếc trên mỗi
+200 m2 sàn
+50
+
+TCVN 3890:2023
+Thư mục tài liệu tham khảo
+[1]. Luật Du lịch.
+[2]. Luật Giáo dục.
+[3]. Luật Khám bệnh, chữa bệnh.
+[4]. Luật Phòng cháy và chữa cháy
+[5]. Luật Quy hoạch
+[6]. Luật Thể dục, thể thao;
+[7]. Luật sửa đổi, bổ sung một số điều của Luật phòng cháy và chữa cháy
+[8]. Luật sửa đổi, bổ sung một số điều của Luật Thể dục, thể thao.
+[9]. Nghị định số 136/2020/NĐ-CP ngày 24/11/2020 Quy định chi tiết một số điều và biện pháp thi hành
+Luật Phòng cháy và chữa cháy và Luật sửa đổi, bổ sung một số điều của Luật Phòng cháy và chữa
+cháy.
+[10]. Thông tư số 149/2020/TT-BCA ngày 31/12/2020 Quy định chi tiết một số điều và biện pháp thi
+hành Luật Phòng cháy và chữa cháy và Luật sửa đổi, bổ sung một số điều của Luật Phòng cháy và
+chữa cháy và Nghị định 136/2020/NĐ-CP ngày 24 tháng 11 năm 2020 của Chính phủ quy định chi tiết
+một số điều và biện pháp thi hành Luật Phòng cháy và chữa cháy và Luật sửa đổi, bổ sung một số điều
+của Luật Phòng cháy và chữa cháy.
+[11]. Thông tư số 17/2022/TT-BCA ngày 05/02/2022 Quy định về quản lý, bảo quản, bảo dưỡng
+phương tiện phòng cháy chữa cháy và cứu nạn, cứu hộ.
+[12]. Thông tư số 147/2020/TT-BCA ngày 31/12/2020 Quy định biện pháp bảo đảm an toàn phòng
+cháy, chữa cháy và cứu nạn, cứu hộ đối với cơ sở kinh doanh dịch vụ karaoke, dịch vụ vũ trường.
+[13].  Thông tư số 150/TT-BCA ngày 31/12/2020 Quy định về trang bị phương tiện phòng cháy, chữa
+cháy và cứu nạn, cứu hộ cho lực lượng dân phòng, lực lượng phòng cháy và chữa cháy cơ sở, lực
+lượng phòng cháy và chữa cháy chuyên ngành.
+[14]. Văn bản hợp nhất số 20/VBHN – BCT ngày 09/5/2014 hợp nhất Thông tư liên tịch của Bộ Thương
+mại – Bộ Công an số 15/2001/TTLT-BTM-BCA ngày 10/5/2001 quy định việc trang bị và quản lý các
+phương tiện chữa cháy trong các kho dầu mỏ và sản phẩm dầu mỏ.
+[15]. Thông tư 04/2014/TT-BLĐTBXH ngày 12/02/0214 Hướng dẫn thực hiện chế độ trang bị phương
+51
+
+TCVN 3890:2023
+tiện bảo vệ cá nhân.
+[16]. QCVN 01:2020/BCT Quy chuẩn kỹ thuật quốc gia về yêu cầu thiết kế cửa hàng xăng dầu.
+[17]. QCVN 06:2022/BXD. Quy chuẩn kỹ thuật quốc gia về an toàn cháy cho nhà và công trình.
+[18]. QCVN 01:2019/BCT. Quy chuẩn kỹ thuật Quốc gia về an toàn trong sản xuất, thử nghiệm, nghiệm
+thu, bảo quản, vận chuyển, sử dụng, tiêu hủy vật liệu nổ công nghiệp và bảo quản tiền chất thuốc nổ.
+[19]. QCVN 10:2012/BLĐTBXH Quy chuẩn kỹ thuật quốc gia về an toàn lao động đối với bộ lọc dùng
+trong mặt nạ và bán mặt nạ phòng độc.
+[20]. QCVN 13:2018/BXD Quy chuẩn kỹ thuật quốc gia về Gara ô-tô;
+[21]. TCXDVN 33:2006 Cấp nước mạng lưới bên ngoài và công trình - Tiêu chuẩn thiết kế.
+[22]. TCN 48:1996 Phòng cháy chữa cháy doanh nghiệp thương mại và dịch vụ - Những quy định
+chung.
+[23]. TCN 58:1997 Phòng cháy chữa cháy chợ và trung tâm thương mại - Yêu cầu an toàn trong khai
+thác.
+[24]. TCVN 9310-3:2012 Phòng cháy chữa cháy – Từ vựng – Phần 3: Phát hiện cháy và báo cháy;
+[25]. TCVN 9310-4:2012 Phòng cháy chữa cháy – Từ vựng – Phần 43: Thiết bị chữa cháy;
+[26]. TCVN 3254:1989. An toàn cháy - Yêu cầu chung.
+[27]. TCVN 3991:2012 Tiêu chuẩn phòng cháy trong thiết kế xây dựng - Thuật ngữ - Định nghĩa.
+[28]. TCVN 4245:1996 Soát xét lần 1. Yêu cầu kỹ thuật an toàn trong sản xuất, sử dụng oxy, axetylen.
+[29]. TCVN 4317:1986 Nhà kho - Nguyên tắc cơ bản để thiết kế.
+[30]. TCVN 4879:1989 Nhóm T - Phòng cháy - Dấu hiệu an toàn.
+[31]. TCVN 5040:1990 Nhóm T - Thiết bị phòng cháy và chữa cháy - Ký hiệu hình vẽ dùng trên sơ đồ.
+[32]. TCVN 5065:1996 Khách sạn - Tiêu chuẩn thiết kế.
+[33]. TCVN 5279:1990 An toàn cháy nổ - Bụi cháy - Yêu cầu chung.
+[34]. TCVN 13249:2020 (ISO 13943:2017) An toàn cháy – Từ vựng.
+[35]. TCVN 12823-4:2020 Giàn di động trên biển - Phần 4: An toàn và phòng chống cháy
+52
+
+TCVN 3890:2023
+[36]. TCVN 6160:1996 Phòng cháy chữa cháy nhà cao tầng - Yêu cầu thiết kế.
+[37]. TCVN 6161:1996 Phòng cháy chữa cháy chợ và trung tâm thương mại - Yêu cầu thiết kế.
+[38]. TCVN 6174:1997 Soát xét lần 2. Vật liệu nổ công nghiệp - Yêu cầu an toàn về sản xuất, thử nổ và
+nghiệm thu.
+[39]. TCVN 6304:1997 Chai chứa khí đốt hóa lỏng - Yêu cầu an toàn trong bảo quản, xếp dỡ và vận
+chuyển.
+[40]. TCVN 6379:1998 Thiết bị chữa cháy - Trụ nước chữa cháy – Yêu cầu kỹ thuật.
+[41]. Quy chuẩn tối thiểu về lắp đặt thiết bị và kiểm tra, thử nghiệm lắp đặt và thiết bị chữa cháy. Hồng
+Kông. Tháng 3.1994 (Codes of Practice for minimum fire service installations and equipment and
+inspection and testing of installations and equipment. March 1994.
+[42]. СП  486.1311500.2020  Перечень  зданий,  сооружений,  помещений  и  оборудования,
+подлежащих  защите  автоматическими  установками  пожаротушения  и  системами  пожарной
+сигнализации Tiêu chuẩn an toàn phòng cháy chữa cháy. Danh mục nhà, công trình, gian phòng và
+thiết bị phải trang bị hệ thống báo cháy, chữa cháy tự động của Bộ Tình trạng khẩn cấp - Liên Bang
+Nga ( The list of buildings, structures, premises and equipment, subject to protection by automatic
+extinguishing and fire alarm systems).
+[43]. СП  8.13130.2020  Требования  пожарной  безопасности.  Наружное  противопожарное
+водоснабжение.  (The  fire  protection  systems.  Outdoor  fire-fighting  water  supply.  Fire  safety
+requirements). Yêu cầu về an toàn cháy. Cấp nước chữa cháy ngoài nhà của Bộ Tình trạng khẩn cấp -
+Liên Bang Nga.
+[44]. СП  10.13130.2020  Системы  противопожарной  защиты.  Внутренний  противопожарный
+водопровод.  (Fire  protection  system.  Installation  of  standpipe  and  hose  systems.  Designing  and
+regulations rules). Hệ thống bảo vệ chống cháy. Đường ống chữa cháy bằng nước trong nhà của Bộ
+Tình trạng khẩn cấp - Liên Bang Nga.
+[45]. Tiêu chuẩn KOFEIS 0106 (Hàn Quốc).
+53

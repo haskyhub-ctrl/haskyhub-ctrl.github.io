@@ -1,0 +1,233 @@
+[Bảng II.10. Hướng dẫn nội dung kiểm tra Trạm bơm chữa cháy]
+[Hiệu lực: 2025. Trạng thái: ĐANG DÙNG.]
+
+Bảng II.10: Hướng dẫn nội dung kiểm tra trạm bơm cấp nước chữa cháy
+Kiểm tra việc trang bị đúng, đủ số lượng, chủng loại; duy trì hoạt động; thử nghiệm hệ thống, thiết bị được trang bị tại cơ sở
+TT	Nội dung kiểm tra	Quy định của Tiêu chuẩn, quy chuẩn	Căn cứ	Hành vi vi phạm theo Nghị định số 106/2025/NĐ-CP		1	Trạm bơm chữa cháy đối với cơ sở áp dụng theo QCVN 02:2020/BCA	Đối tượng phải có trạm bơm chữa cháy theo 02:2020/BCA
+- Các nhà cao trên 10 tầng
+- Các nhà công cộng tập trung đông người, gara, nhà sản xuất, kho có diện tích trên 18.000 m2
+- Đối với công trình có quy mô thấp hơn không bắt buộc áp dụng Quy chuẩn này
+Lưu ý: Diện tích 18.000 m2 được hiểu là diện tổng diện tích sàn của 01 công trình độc lập. Trường hợp có nhiều hạng mục công trình thì hạng mục có diện tích đến 18.000 m2 không bắt buộc thiết kế trạm bơm cấp nước chữa cháy theo quy chuẩn này	Đ 1.1 QCVN 02:2020/BCA	1. Hành vi không trang bị phương tiện chữa cháy, cứu nạn, cứu hộ cơ giới (Đc K9 Đ20 NĐ106; phạt tiền từ 40.000.000 đồng đến 50.000.000 đồng; thẩm quyền xử phạt: Chủ tịch UBND tỉnh;  Cục trưởng C07)
+
+2. Hành vi không đưa phương tiện chữa cháy, cứu nạn, cứu hộ cơ giới vào trực chữa cháy, cứu nạn, cứu hộ (K5 Đ21 NĐ106; phạt tiền từ 20.000.000 đồng đến 25.000.000 đồng; thẩm quyền xử phạt: Chủ tịch UBND tỉnh; Giám đốc Công an tỉnh, Cục trưởng C07)		1.1	Nhà/phòng đặt trạm bơm 				-	Vị trí lắp đặt 						Ngoài nhà	Trạm bơm nước chữa cháy phải được đặt trong nhà, cách nhà và công trình khác tối thiểu 16 m (không quy định khoảng cách khi nhà đặt trạm bơm nước chữa cháy có bậc chịu lửa I và II hoặc giữa trạm bơm và công trình có tường ngăn cháy)` 	Đ 2.1.1 QCVN 02:2020/BCA				Đặt trong nhà	- Ngăn cách với các phòng khác bằng tường ngăn cháy không thấp hơn REI150, sàn ngăn cháy không thấp hơn REI60, cửa ngăn cháy không thấp hơn EI70
+- Đặt ở tầng 1 hoặc tầng hầm 1.
+- Cho phép đặt tại các tầng nổi khác của nhà khi phòng đặt bơm có cửa ra phải thông với khoang đệm thang thoát nạn qua hành lang được bảo vệ bằng kết cấu ngăn cháy loại 1	Đ 2.1.2 QCVN 02:2020/BCA				Bố trí chung với bơm sinh hoạt	Được phép đặt chung với máy bơm cấp nước sinh hoạt trong cùng một phòng hoặc nhà	Đ 2.1.3 QCVN 02:2020/BCA			-	Khoảng cách giữa các thiết bị						Khoảng cách giữa các móng 	Từ cạnh bên của móng đặt máy bơm và động cơ điện đến tường nhà: Tối thiểu 70 mm	Đ 2.1.4 QCVN 02:2020/BCA				Từ cạnh bệ máy bơm phía ống hút đến mặt tường nhà đối diện 	Tối thiểu 1 m	Đ 2.1.4 QCVN 02:2020/BCA				Từ cạnh bệ máy bơm phía động cơ điện đến mặt tường nhà 	Không nhỏ hơn khoảng cách cần thiết để rút rôto của động cơ điện ra mà không cần tháo động cơ điện khỏi bệ máy	Đ 2.1.4 QCVN 02:2020/BCA				Lối đi trong trạm bơm	- Máy bơm có đường kính ống đẩy từ 100 mm cho phép đặt dọc tường và vách nhà mà không cần có lối đi giữa máy bơm và tường, nhưng khoảng cách từ tường đến móng đặt máy bơm không nhỏ hơn 200 mm.
+- Cho phép đặt hai máy bơm trên cùng một móng mà không cần bố trí lối đi giữa chúng, nhưng xung quanh móng phải có một lối đi riêng không nhỏ hơn 0,7 m	Đ 2.1.4 QCVN 02:2020/BCA				Chiều cao thông thủy trạm bơm	- Trạm bơm có thiết bị nâng: khoảng cách thông thủy từ đáy vật được nâng đến đỉnh của các thiết bị đặt ở dưới không được nhỏ hơn 0,5 m.
+- Trạm bơm không có thiết bị nâng: tối thiểu 2,2 m	Đ 2.1.5 QCVN 02:2020/BCA			-	Lưu ý đối với bơm động cơ diesel					+	Khoảng cách từ tường nhà tới két nước đối với động cơ diesel làm mát bằng quạt gió	- Không được nhỏ hơn 3 lần chiều cao của két nước động cơ diesel khi không có cửa đưa gió trực tiếp ra ngoài trạm bơm
+- Khoảng cách này có thể lấy tối thiểu bằng 2 m	Đ 2.1.4 QCVN 02:2020/BCA				Chiều cao của đáy bể chứa dầu cho động cơ diesel 	- Phải cao hơn miệng vào bơm cao áp của động cơ diesel.
+- Trong trường hợp chưa có kích thước của nhà sản xuất kích thước này có thể được lấy bằng 1,2 m	Đ 2.1.4 QCVN 02:2020/BCA				Khoảng cách giữa tủ điều khiển và bồn nhiên liệu 	- Phải có vách ngăn
+- Tối thiểu 2 m khi không có vách ngăn	Đ 2.1.4 QCVN 02:2020/BCA			-	Bố trí họng nước chữa cháy trong phòng bơm hoặc nhà bơm 	- Kích thước (6x9) m hoặc lớn hơn phải bố trí họng nước chữa cháy trong nhà với lưu lượng 2,5 l/s.
+- Trường hợp có động cơ diesel và bồn chứa nhiên liệu diesel phải thiết kế hệ thống chữa cháy tự động	Đ 2.1.6 QCVN 02:2020/BCA			-	Bố trí đèn chiếu sáng sự cố và đèn chỉ dẫn thoát nạn trong phòng bơm, nhà bơm	- Phải trang bị
+- Có nguồn điện dự phòng đảm bảo thời gian hoạt động tối thiểu 3 giờ
+- Nguồn điện dự phòng không được lấy từ nguồn ắc quy khởi động bơm	Đ 2.1.7 QCVN 02:2020/BCA	1. Hành vi trang bị, lắp đặt đèn, phương tiện chiếu sáng sự cố, chỉ dẫn thoát nạn không bảo đảm theo quy định (K3 Đ20 NĐ106; phạt tiền từ 5.000.000 đồng đến 7.000.000 đồng; thẩm quyền xử phạt: Chủ tịch UBND tỉnh;  Trưởng phòng PC07, Trưởng phòng nghiệp vụ C07; Biện pháp khắc phục hậu quả: Buộc trang bị, lắp đặt đèn, phương tiện chiếu sáng sự cố, chỉ dẫn thoát nạn)
+
+2. Hành vi không trang bị, lắp đặt đèn, phương tiện chiếu sáng sự cố, chỉ dẫn thoát nạn (K5 Đ20 NĐ106; phạt tiền từ 10.000.000 đồng đến 15.000.000 đồng; thẩm quyền xử phạt: Chủ tịch UBND tỉnh; Giám đốc Công an tỉnh)
+
+3. Hành vi không có hệ thống điện phục vụ phòng cháy và chữa cháy (Đb K4 Đ12 NĐ106; phạt tiền từ 40.000.000 đồng đến 50.000.000 đồng; thẩm quyền xử phạt: Chủ tịch UBND tỉnh; Cục trưởng C07)
+
+4.  Hành vi không duy trì nguồn điện phục vụ phòng cháy và chữa cháy (Đc K4 Đ12 NĐ106; phạt tiền từ 40.000.000 đồng đến 50.000.000 đồng; thẩm quyền xử phạt: Chủ tịch UBND tỉnh; Cục trưởng C07)		-	Thoát nước sàn cho phòng bơm	Phải có hệ thống thoát nước dưới sàn nhà để tránh ngập nước 	Đ 2.1.8 QCVN 02:2020/BCA			-	Bố trí hệ thống thông gió cho phòng bơm	Phải lắp đặt hệ thống thông gió cưỡng bức hoặc thông gió tự nhiên	Đ 2.1.9 QCVN 02:2020/BCA	1. Hành vi không duy trì thông gió tự nhiên hoặc không duy trì hệ thống thông gió thoát khói đã được trang bị, lắp đặt (Đa K2 Đ23 NĐ106; phạt tiền từ 20.000.000 đồng đến 25.000.000 đồng; thẩm quyền xử phạt: Chủ tịch UBND tỉnh; Giám đốc Công an tỉnh; Biện pháp khắc phục hậu quả: Buộc duy trì giải pháp thông gió)
+
+2.  Hành vi không có giải pháp thông gió tự nhiên hoặc không có giải pháp thông gió thoát khói (Đa K4 Đ23 NĐ106; phạt tiền từ 40.000.000 đồng đến 50.000.000 đồng; thẩm quyền xử phạt: Chủ tịch UBND tỉnh; Cục trưởng C07)		-	Nối đất	- Động cơ máy bơm, bồn chứa nhiên liệu và tủ điều khiển các máy bơm nước chữa cháy phải được nối đất an toàn.
+- Dây nối đất phải bằng đồng sợi hoặc đồng lá.
+- Tiết diện dây nối đất:
++ Động cơ máy bơm không nhỏ hơn 25 mm2
++ Bồn chứa nhiên liệu không nhỏ hơn 10 mm2
++ Tủ điều khiển không nhỏ hơn 5 mm2	Đ 2.1.10 QCVN 02:2020/BCA	1. Hành vi không duy trì hệ thống tiếp địa, chống sét đã được lắp đặt (Đb K2 Đ13 NĐ106; phạt tiền từ 10.000.000 đồng đến 15.000.000 đồng; thẩm quyền xử phạt: Chủ tịch UBND tỉnh; Giám đốc Công an tỉnh).
+
+2. Hành vi không lắp đặt hệ thống tiếp địa, chống sét cho nhà, công trình (K2 Đ13 NĐ106; phạt tiền từ 20.000.000 đồng đến 25.000.000 đồng; thẩm quyền xử phạt: Chủ tịch UBND tỉnh; Giám đốc Công an tỉnh).		-	Bể nước chữa cháy	- Khi bể nước chữa cháy dùng chung với bể nước phục vụ sinh hoạt trong tòa nhà thì đường ống hút của hệ thống nước sinh hoạt phải được kết nối trên mức nước yêu cầu cho nhu cầu phòng cháy.
+- Mỗi bể nước phải có van tự động làm đầy và van thủ công làm đầy riêng biệt	Đ 2.1.11 QCVN 02:2020/BCA			1.2	Quy định bơm chữa cháy				-	Bố trí bơm nối tiếp	- Không được phép có hơn ba bơm nước chữa cháy trong mạng bơm nối tiếp
+- Không được lắp đặt van giảm áp suất hoặc van điều tiết áp suất nào giữa các bơm nước chữa cháy được bố trí nối tiếp	Đ 2.2.6.1 QCVN 02:2020/BCA			-	Số ống hút trạm bơm	- Trạm bơm có 02 máy bơm trở lên thì phải có ít nhất 02 đường ống hút.
+- Ống hút nước phải có van, trên đường ống cấp phải lắp đồng hồ áp lực để thử nghiệm và kiểm tra, đồng thời có van xả 65 mm.
+- Không quy định số lượng ống hút khi trạm bơm sử dụng bơm tua bin trục đứng	Đ 2.2.4 QCVN 02:2020/BCA			-	Số lượng bơm dự phòng	- Có công suất tương đương với công suất của máy bơm chính.
+- Khi số lượng máy bơm vận hành theo tính toán từ 1 đến 3 thì phải có ít nhất 1 máy bơm dự phòng.
+- Khi số lượng máy bơm vận hành từ 4 máy trở lên thì phải có ít nhất 02 máy bơm dự phòng.	Đ 2.2.8 QCVN 02:2020/BCA			-	Cột áp
+Kiểm tra cột áp lớn nhất bằng phương pháp khóa van trên đường ống cấp, khởi động bơm bằng nút ấn và kiểm tra áp lực trong đường ống qua đồng hồ áp lực lắp trên đường ống	Xác định cột áp cần thiết của bơm chữa cháy theo công thức sau:
+Hcột áp bơm ≥ Hc/thiết = Hct + Hdd + Hcb + Hlp + Htb
+- Hct : Độ cao hình học giữa vị trí lắp đặt họng nước cao và xa nhất của mạng so với vị trí đặt máy bơm cấp nước chữa cháy.
+- Hdd: Tổn thất áp lực trên dọc tuyến ống (tính cho điểm bất lợi nhất): Hdd = ∑hi (hi là tổn thất áp lực trên từng đoạn ống). hi = Ai x Qi2 x Li
+- Hcb: Tổn thất cục bộ, có giá trị bằng 10% tổn thất dọc tuyến ống.
+- Hlp: Cột áp yêu cầu đầu lăng phun hoặc đầu phun sprinkler hoặc đầu phun hở
+- Htb: Chiều cao từ giỏ lọc đến guồng bơm.
+Ghi chú:
+- Hệ số sức cản A xác định theo Bảng 15 TCVN 4513-1988
+- Hệ số K xác định theo Bảng 16 TCVN 4513-1988
+- Áp lực của cột nước chữa cháy đầu lăng xác định theo Bảng 17, Bảng 18 TCVN 4513-1988; Áp lực nước chữa cháy của đầu phun Sprinkler xác định theo Điều 10.5 TCVN 7336 - 2003; áp lực đầu phun tạo màn nước chữa cháy căn cứ vào thông số kỹ thuật của thiết bị, trong đó tiêu chuẩn NFPA thường quy định 30 m.c.n
+- Cột áp của máy bơm nước chữa cháy ứng với lưu lượng thiết kế không được nhỏ hơn cột áp thiết kế.
+- Cột áp của máy bơm nước chữa cháy ứng với lưu lượng bằng không (shutoff pressure) phải trong phạm vi từ 101% đến 140% cột áp thiết kế.
+- Cột áp của máy bơm ứng với 150% lưu lượng thiết kế không được nhỏ hơn 65% cột áp thiết kế.	TCVN 2622:1995
+
+Đ 2.2.2 QCVN 02:2020/BCA
+			-	Lưu lượng
+Kiểm tra bằng cách mở đường hồi nước về bể, kiểm tra thông số trên đồng hồ đo lưu lượng	Xác định lưu lượng nước chữa cháy cần thiết theo quy định của từng hệ thống. Lưu lượng máy bơm cần thiết được xác định bằng tổng lưu lượng của hệ thống chữa cháy trong và ngoài nhà tại khu vực có thể phát sinh đám cháy lớn nhất.
+QBơm phải lớn hơn hoặc bằng lưu lượng cần thiết nêu trên
+
+- Lưu lượng lớn nhất của máy bơm nước chữa cháy không được nhỏ hơn 150% lưu lượng thiết kế.
+Lưu ý: Trường hợp công trình đã có tính toán lưu lượng cấp nước chữa cháy ngoài nhà của cả khu thì từng công trình không cần tính vào lưu lượng bơm
+- lưu ý trường hợp một nhà có nhiều trạm bơm	TCVN 2622:1995;
+Bảng 14
+TCVN 7336:2003
+Bảng 2
+
+Đ 2.2.2 QCVN 02:2020/BCA			1.3	Bơm bù áp			-	Lưu lượng	Lưu lượng của máy bơm bù áp được xác định theo tính toán, nhưng không nhỏ hơn 1% lưu lượng của máy bơm chữa cháy.	Đ 2.3.1 QCVN 02:2020/BCA			-	Cột áp	Áp lực đầu đẩy của máy bơm bù áp phải có khả năng duy trì áp lực thường trực trong hệ thống lớn hơn áp lực chữa cháy thiết kế từ 0,3 bar đến 0,8 bar	Đ 2.3.2 QCVN 02:2020/BCA			-	Bố trí van một chiều 	Đầu đẩy của máy bơm phải được bố trí van một chiều	Đ 2.3.3 QCVN 02:2020/BCA			-	Lắp đặt van cuối đường ống cấp nước	Điểm cuối của đường ống cấp nước chữa cháy nên bố trí van cách ly và điểm lắp đồng hồ áp lực để việc thử nghiệm, hiệu chỉnh áp lực khởi động máy bơm được dễ dàng	Đ 2.3.8 QCVN 02:2020/BCA			1.4	Động cơ điện			-	Nguồn điện	- Phải có ít nhất 2 nguồn điện, một nguồn điện chính và một nguồn điện dự phòng.
+- Cho phép máy bơm nước chữa cháy chính chỉ đấu nối với 1 nguồn điện nếu có máy bơm dự phòng là máy bơm động cơ diesel	Đ 2.4.1.6.1 QCVN 02:2020/BCA	1.  Hành vi không có hệ thống điện phục vụ phòng cháy và chữa cháy (Đb K4 Đ12 NĐ106; phạt tiền từ 40.000.000 đồng đến 50.000.000 đồng; thẩm quyền xử phạt: Chủ tịch UBND tỉnh; Cục trưởng C07)
+
+2.  Hành vi không duy trì nguồn điện phục vụ phòng cháy và chữa cháy (Đc K4 Đ12 NĐ106; phạt tiền từ 40.000.000 đồng đến 50.000.000 đồng; thẩm quyền xử phạt: Chủ tịch UBND tỉnh; Cục trưởng C07)		-	Thiết bị an toàn	Chỉ cho phép lắp đặt một thiết bị ngắt kết nối và một thiết bị bảo vệ quá dòng kết hợp ở đầu cấp nguồn cho bộ điều khiển máy bơm nước chữa cháy	Đ 2.4.1.6.4 QCVN 02:2020/BCA			-	Thiết bị bảo vệ dây điện	Đi dây từ bộ điều khiển tới mô tơ máy bơm trong ống kim loại cứng, ống kim loại trung bình, ống kim loại điện, ống kim loại dẻo không thấm ướt, hoặc ống phi kim loại dẻo không thấm ướt, cáp loại có vỏ bọc chống nước	Đ 2.4.1.6.6 QCVN 02:2020/BCA			1.5	Động cơ Diesel	Kiểm tra hoạt động tự động của bơm diesel khi ngắt bơm điện chính				-	Hộp điều khiển và đo lường	Trên động cơ diesel phải được trang bị hộp điều khiển và đo lường bao gồm các chi tiết sau:
+- Đồng hồ hiển thị tốc độ vòng quay của trục động cơ với đơn vị đo là vòng/phút. Đồng hồ tốc độ động cơ là kiểu cộng dồn hoặc đếm thời gian theo giờ để xác định tổng thời gian hoạt động của động cơ.
+- Đồng hồ đo áp lực dầu bôi trơn của động cơ.
+- Đồng hồ đo nhiệt độ nước của động cơ, ở mọi chế độ làm việc.
+- Công tắc khởi động và dừng máy bơm tại chỗ bằng tay.
+- Cổng kết nối với tủ điều khiển máy bơm nước chữa cháy động cơ diesel. Ký hiệu số đầu dây trên hộp điều khiển động cơ và tủ điều khiển máy bơm phải giống nhau.
+- Cổng kết nối với các thiết bị cảm biến tốc độ vòng quay, áp suất dầu bôi trơn, nhiệt độ nước làm mát động cơ.
+- Sơ đồ của mạch đo lường và điều khiển.	Đ 2.4.2.6 QCVN 02:2020/BCA			-	Thiết bị bảo vệ dây điện	- Dây tín hiệu, ống bao dây và chi tiết kẹp phải làm bằng vật liệu không cháy	Đ 2.4.2.7 QCVN 02:2020/BCA			-	Miệng xả khói	- Mỗi động cơ bơm phải có một ống khí thải độc lập, có đường kính không nhỏ hơn đầu xả khí thải động cơ. Ống dẫn khí thải phải được bọc bằng vật liệu cách nhiệt cao hoặc được bảo vệ theo cách khác để tránh các tổn hại cho người.
+- Khí thải từ động cơ phải được dẫn tới vị trí an toàn bên ngoài phòng bơm và không được tác động đến con người hoặc gây nguy hiểm cho tòa nhà. Đầu cuối hệ thống khí thải không được hướng trực tiếp tới vật liệu hay cấu trúc dễ cháy, hoặc vào khu vực có chứa khí, hơi, bụi dễ cháy, nổ	Đ 2.4.2.19 QCVN 02:2020/BCA			-	Thùng chứa dầu cho động cơ	- Phải có dung tích không nhỏ hơn 110% giá trị tối thiểu xác định theo công suất lớn nhất yêu cầu trên trục máy bơm là 5 lít/kW
+- Phải được trang bị van thở, ống nạp dầu và nắp đậy, van xả kiệt, thiết bị báo mức dầu. Khi sử dụng van điện từ để điều khiển cấp dầu cho động cơ, van điện từ phải có cơ cấu mở bằng tay để sử dụng khi van điện từ bị hỏng	Đ 2.4.2.17 QCVN 02:2020/BCA			1.6	Tủ điều khiển							- Mỗi máy bơm phải được điều khiển và kiểm soát từ một tủ điều khiển riêng biệt có chức năng khởi động máy bơm tự động và bằng tay.
+- Có thể bố trí chung thiết bị điều khiển bơm nước chữa cháy động cơ điện và bơm bù áp chung một tủ điều khiển, nhưng không được bố trí thiết bị đều khiển bơm nước chữa cháy chính và bơm nước chữa cháy dự phòng chung một tủ điều khiển. Khi bố trí chung thiết bị điều khiển của máy bơm nước chữa cháy động cơ điện và bơm bù áp trên một vỏ tủ điều khiển, các khởi động từ của máy bơm phải riêng biệt và được bố trí trên không gian tách biệt trong phạm vi của tủ	Đ 2.5.1.1 QCVN 02:2020/BCA					Phải được bố trí gần máy bơm ở vị trí dễ thao tác và cách mặt sàn không được nhỏ hơn 0,3 m	Đ 2.5.3 QCVN 02:2020/BCA			1.7	Phụ kiện của trạm bơm				-	Ống đẩy	Phải lắp đặt van điều khiển hoặc van một chiều chống chảy ngược dòng tại ống đẩy nước của các bơm nước chữa cháy. Van cổng hoặc van bướm phải được lắp đặt trên đường ống đẩy ngay sau van điều khiển hoặc van một chiều. Khi bơm được lắp theo chuỗi, không được lắp đặt van bướm giữa các bơm	Đ 2.6.1.3 QCVN 02:2020/BCA			-	Ống hút						Lắp đặt	Không được phép có các đoạn khuỷu và chữ T có mặt phẳng đường tâm song song với trục bơm chia ngang trên đường ống hút	Đ 2.6.2.5 QCVN 02:2020/BCA				Giỏ lọc 	Giỏ lọc ống hút phải làm bằng đồng thau, đồng, Monel, thép không gỉ, hoặc vật liệu kim loại chống ăn mòn tương đương khác với mắt lưới tối đa 0,50 in (12,7 mm)	Đ 2.6.2.6 QCVN 02:2020/BCA			-	Thiết bị giám sát	Các van hút, van an toàn, van trên đường hồi lưu và van cách ly trên thiết bị hoặc bộ phận chống chảy ngược phải được lắp đặt thiết bị giám sát trạng thái mở. Van điều khiển đặt trong ống dẫn đến đầu van vòi phải được lắp đặt thiết bị giám sát trạng thái đóng	Đ 2.6.2.7 QCVN 02:2020/BCA			-	Đồng hồ áp lực						Đầu đẩy	- Mỗi bơm phải lắp đồng hồ áp lực riêng biệt ngay mặt bích bơm hoặc gần cạnh bơm trên đường ống đầu đẩy nhưng phải được lắp trước van một chiều của bơm đó và được khống chế bởi 1 van bi.
+- Đường kính tối thiểu của bề mặt đồng hồ là 89 mm, áp lực lớn nhất in trên bề mặt đồng hồ phải lớn hơn hoặc bằng 2 lần áp lực làm việc của bơm nhưng không được nhỏ hơn 200 psi (13.8 bar)	Đ 2.6.3.1 QCVN 02:2020/BCA				Đầu hút	- Được lắp ngay mặt bích bơm hoặc gần cạnh bơm trên đường ống hút và được khống chế bởi 1 van bi.
+- Đường kính tối thiểu của bề mặt đồng hồ là 89 mm, áp lực lớn nhất in trên bề mặt đồng hồ phải lớn hơn hoặc bằng 2 lần áp lực đầu hút của bơm nhưng không được nhỏ hơn 100 psi (6.9 bar)	Đ 2.6.3.2 QCVN 02:2020/BCA			-	Van bảo vệ vỏ bơm	- Phải được lắp đặt cho tất cả bơm điện, mỗi bơm được lắp 01 van bảo vệ vỏ và độc lập với van an toàn của hệ thống
+- Được lắp đặt ngay trên vỏ bơm ở đầu đẩy hoặc trên đường ống đầu đẩy cạnh bơm và phải trước van một chiều của bơm đó.
+- Phải có kích cỡ danh định là 19 mm đối với các bơm có lưu lượng cần thiết không vượt quá 9.462 l/phút và có kích cỡ danh định 25 mm đối với các bơm có lưu lượng cần thiết từ 11.355 l/phút đến 18.925 l/phút	Đ 2.6.4 QCVN 02:2020/BCA			-	Van an toàn cho bơm						Yêu cầu thiết kế	Phải được lắp đặt cho các bơm nước chữa cháy động cơ diesel và khi tổng áp suất dừng bơm cộng với áp suất hút tĩnh tối đa, vượt quá áp suất của hệ thống	Đ 2.6.5.1 QCVN 02:2020/BCA				Vị trí	Phải được đặt giữa bơm và van một chiều đầu đẩy bơm	Đ 2.6.5.3 QCVN 02:2020/BCA			-	Thiết bị kiểm tra lưu lượng	Phải lắp đặt đường ống thiết bị kiểm tra lưu lượng hoặc van vòi cố định để kiểm tra bơm hoạt động ở các điều kiện theo thiết kế. Các thiết bị đo đạc hoặc van vòi cố định phải có công suất lưu lượng nước không thấp hơn 175% lưu lượng thiết kế của máy bơm	Đ 2.6.6.1 QCVN 02:2020/BCA			-	Van xả khí tự động	Phải được gắn tại trí cao nhất trên vỏ bơm để loại bỏ hết khí	Đ 2.6.7 QCVN 02:2020/BCA			2	Trạm bơm nước chữa cháy đối với cơ sở không áp dụng theo QCVN 02:2020/BCA	Lưu ý: Các công trình không thuộc đối tượng của QCVN 02:2020/BCA				2.1	Vị trí lắp đặt 					-	Ngoài nhà	Đặt ngoài nhà thì trạm bơm phải có bậc chịu lửa III	Đ 7.3 TCVN 4513:1988			-	Đặt trong nhà	- Cho phép đặt riêng máy bơm cấp nước sinh hoạt và nước chữa cháy trong 01 trạm hay kết nối với các ngôi nhà khác, nhưng phải được ngăn cách bằng tường không cháy và có lối ra ngoài trực tiếp
+- Không cho phép đặt trực tiếp dưới các căn hộ, phòng nhà trẻ, trường học phổ thông, phòng điều trị của bệnh viện, phòng hành chính, giảng đường đại học
+
+- Trường hợp máy bơm đặt trong nhà sản xuất thì phải có thiết kế hàng rào ngăn che	Đ 7.3 TCVN 4513:1988
+Đ 7.4 TCVN 4513:1988
+Đ 7.5 TCVN 4513:1988			-	Bố trí chung với bơm sinh hoạt	Cho phép	Đ 7.3 TCVN 4513:1988			2.2	Khoảng cách giữa các thiết bị					-	Từ cạnh bên của móng đặt máy bơm và động cơ điện đến tường nhà và khoảng cách giữa các móng 	70 mm	Đ 7.19 TCVN 4513:1988			-	Từ cạnh bệ máy bơm phía ống hút đến mặt tường nhà đối diện 	1.000 mm	Đ 7.19 TCVN 4513:1988			-	Từ cạnh bệ máy bơm phía động cơ điện đến mặt tường nhà 	Không nhỏ hơn khoảng cách cần thiết để rút roto của động cơ điện ra mà không cần tháo động cơ điện ra khỏi bệ máy	Đ 7.19 TCVN 4513:1988			-	Lối đi trong trạm bơm	Máy bơm có đường kính ống đẩy từ 100 mm cho phép đặt dọc tường và vách nhà mà không cần lối đi giữa máy bơm và tường nhưng không nhỏ hơn 200 mm tính từ móng nhà đến bệ
+Cho phép đặt 02 máy bơm trên cùng 01 móng mà không cần lối đi lại giữa chúng nhưng xung quanh phải có lối đi riêng rộng tối thiểu 700 mm	Đ 7.19 TCVN 4513:1988			-	Chiều cao thông thủy trạm bơm	- Trạm bơm có thiết bị nâng: khoảng cách thông thủy từ đáy vật được nâng đến đỉnh thiết bị đặt ở dưới không nhỏ hơn 500 mm
+- Trạm bơm không có thiết bị nâng: chiều cao thông thủy tối thiểu 2,2 m	Đ 7.20 TCVN 4513:1988			2.3	Bơm chữa cháy					-	Số ống hút trạm bơm	Khi có 02 máy bơm trở lên hút nước từ bể thì số lượng ống hút ít nhất là 02
+Cho phép có 01 ống hút khi không có bơm dự phòng	Đ 7.14 TCVN 4513:1988			-	Số lượng bơm dự phòng	Máy bơm cấp nước chữa cháy dù thiết kế riêng biệt hay kết hợp với hệ thống nước sinh hoạt, sản xuất đều phải có máy bơm dự phòng, có thông số về lưu lượng, áp lực cấp nước không nhỏ hơn máy bơm chính. Số lượng máy bơm dự phòng được quy định như sau:
+Khi tính toán cần từ một đến ba máy bơm chữa cháy chính thì phải có ít nhất một máy bơm dự phòng;
+Khi tính toán cần bốn máy bơm chữa cháy chính trở lên thì phải có ít nhất hai máy bơm dự phòng;	5.3.1 Sửa đổi 1:2023 QCVN 06:2022/BXD			-	Cột áp	Xác định cột áp cần thiết của bơm chữa cháy theo công thức sau:
+Hcột áp bơm ≥ Hc/thiết = Hct + Hdd + Hcb + Hlp + Htb
+- Hct : Độ cao hình học giữa vị trí lắp đặt họng nước cao và xa nhất của mạng so với vị trí đặt máy bơm cấp nước chữa cháy.
+- Hdd: Tổn thất áp lực trên dọc tuyến ống (tính cho điểm bất lợi nhất): Hdd = ∑hi (hi là tổn thất áp lực trên từng đoạn ống). hi = Ai x Qi2 x Li
+- Hcb: Tổn thất cục bộ, có giá trị bằng 10% tổn thất dọc tuyến ống.
+- Hlp: Cột áp yêu cầu đầu lăng phun hoặc đầu phun sprinkler hoặc đầu phun hở
+- Htb: Chiều cao từ giỏ lọc đến guồng bơm.
+Ghi chú:
+- Hệ số sức cản A xác định theo Bảng 15 TCVN 4513-1988
+- Hệ số K xác định theo Bảng 16 TCVN 4513-1988
+- Áp lực của cột nước chữa cháy đầu lăng xác định theo Bảng 17, Bảng 18 TCVN 4513-1988; Áp lực nước chữa cháy của đầu phun Sprinkler xác định theo Điều 10.5 TCVN 7336 - 2003; áp lực đầu phun tạo màn nước chữa cháy căn cứ vào thông số kỹ thuật của thiết bị, trong đó tiêu chuẩn NFPA thường quy định 30 m.c.n	TCVN 4513-1988			-	Lưu lượng	Xác định lưu lượng nước chữa cháy cần thiết theo quy định của từng hệ thống. Lưu lượng máy bơm cần thiết được xác định bằng tổng lưu lượng của hệ thống chữa cháy trong và ngoài nhà tại khu vực có thể phát sinh đám cháy lớn nhất.
+QBơm phải lớn hơn hoặc bằng lưu lượng cần thiết nêu trên
+Lưu ý: Trường hợp công trình đã có tính toán lưu lượng cấp nước chữa cháy ngoài nhà của cả khu thì từng công trình không cần tính vào lưu lượng bơm	TCVN 2622:1995;
+5.2.1 Sửa đổi 1:2023 QCVN 06:2022/BXD			-	Ví trí đặt bơm 	Trục máy bơm cần đặt thấp hơn mực nước thấp nhất của nguồn nước, trường hợp đặt cao hơn thì phải có bộ phận mồi nước
+Đặt trên bệ móng cao hơn mặt nền tối thiểu 0,2 m	Đ 7.13 TCVN 4513:1988
+Đ 7.18 TCVN 4513:1988			-	Chế độ điều khiển	Máy bơm cấp nước chữa cháy có thể điều khiển tại chỗ bằng tay hoặc điều khiển tự động từ xa và phải bảo đảm cho máy bơm được kích hoạt vận hành trong thời gian không chậm quá 3 phút kể từ khi có tín hiệu báo cháy. Khi lưu lượng cấp nước cho chữa cháy ngoài nhà yêu cầu từ 25 L/s trở lên thì phải có cơ cấu điều khiển máy bơm chữa cháy tự động từ xa.
+	5.3.2 Sửa đổi 1:2023 QCVN 06:2022/BXD 			2.4	Theo dõi mực nước chữa cháy	Phải đặt thiết bị báo mực nước có tín hiệu báo về phòng nhân viên chữa cháy hay phòng máy bơm	Đ 8.9 TCVN 4513:1988			2.5	Nguồn điện	Các máy bơm chữa cháy phải được kết nối với hai nguồn điện riêng biệt từ nguồn điện lưới, nguồn điện từ máy phát điện hoặc sử dụng máy bơm động cơ đốt trong. Cho phép không trang bị máy bơm dự phòng hoặc nguồn điện dự phòng khi cấp nước cho nhà sản xuất, nhà kho có bậc chịu lửa I, II với hạng nguy hiểm cháy, nổ hạng D, E và lưu lượng cấp nước chữa cháy ngoài nhà yêu cầu nhỏ hơn    20 L/s.
+	5.3.1 Sửa đổi 1:2023 QCVN 06:2022/BXD			3	Trạm bơm cấp cho hệ thống chữa cháy tự động (có thể kết hợp họng trong nhà)		TCVN 7336-2021			3.1	Vị trí lắp đặt trạm bơm	- Trường hợp thuộc QCVN 02: Kiểm tra theo mục 1.2
+- Trường hợp không thuộc QCVN 02: Kiểm tra theo mục 2.1						Ngoài ra đáp ứng các yêu cầu sau:
+- Đặt trong các nhà độc lập hoặc ngoài nhà hoặc trong một phòng riêng biệt ở tầng 1 hoặc tầng hầm trên cùng. Cho phép đặt trạm bơm nước chữa cháy tại các tầng nổi khác của nhà khi phòng đặt bơm có cửa ra thông với buồng đệm thang thoát nạn của nhà qua hành lang được bảo vệ bằng kết cấu ngăn cháy loại 1.
+- Khu vực của trạm bơm phải được ngăn cách với các khu vực khác bằng tường và trần ngăn cháy có giới hạn chịu lửa REI 45.
+- Nhiệt độ không khí trong phòng của trạm bơm phải từ 5 °C đến 40 °C.
+- Phải được trang bị điện thoại kết nối với phòng trực điều khiển chống cháy.
+- Ở lối vào trạm bơm phải có đèn ghi chữ “trạm bơm chữa cháy”, kết nối với đèn chiếu sáng sự cố.
+- Khi bố trí mặt bằng trạm bơm, chiều rộng của các lối đi tối thiểu như sau:
++ Giữa các bộ điều khiển và giữa bộ điều khiển với tường: 0,5 m;
++ Giữa các máy bơm hoặc động cơ điện: 0,7 m;
++ Giữa máy bơm hoặc động cơ điện và tường: 1 m, chiều rộng của lối đi từ phía bên của động cơ điện phải đủ để tháo dỡ rôto;
++ Giữa các máy nén khí: 1,5 m, giữa máy nén khí với tường: 1 m;
++ Giữa các bộ phận nhô ra cố định của thiết bị: 0,7 m.
+CHÚ THÍCH: Đối với bơm có đường kính họng đẩy đến DN 100, cho phép:
++ Lắp đặt bơm gần tường hoặc trên giá đỡ;
++ Lắp đặt hai bơm trên cùng một móng với khoảng cách tối thiểu 0,2 m nhưng phải có các lối đi xung quanh móng với chiều rộng tối thiểu 0,7 m
+- Trong các trạm bơm đặt ngầm và bán ngầm, cần có các biện pháp chống ngập cho các thiết bị trong trường hợp sự cố với máy bơm lớn nhất, cũng như trên các van hoặc đường ống bằng các biện pháp sau:
++ Đặt động cơ điện của bơm cao hơn ít nhất 0,5 m so với sàn;
++ Thoát nước trong trường hợp sự cố vào cống hoặc mặt đất;
++ Thoát nước từ hố thu bằng máy bơm chuyên dụng.
+- Để thoát nước, sàn của phòng bơm phải được dốc về hố thu. Trên móng của bơm phải thiết kế các rãnh và ống để thoát nước; trường hợp không thể thoát nước ra khỏi hố, cần bố trí máy bơm thoát nước.
+- Cho phép không lắp đặt thiết bị chống rung cho máy bơm chữa cháy.
+- Bơm và cụm bơm phải được lắp đặt trên nền móng bảo đảm tải trọng không nhỏ hơn 4 lần trọng lượng của bơm và cụm bơm.
+Đ 5.8.5
+
+Đ 5.8.6
+
+Đ 5.8.7
+Đ 5.8.8
+Đ 5.8.9
+
+Đ 5.8.10
+
+Đ 5.8.16
+
+Đ 5.8.17
+
+Đ 5.8.19
+Đ 5.8.20			3.2	Máy bơm	- Có thể sử dụng một hoặc một số máy bơm chính.
+- Phải có ít nhất một máy bơm dự phòng, tương ứng với lưu lượng tối đa và áp lực cần thiết của máy bơm chính. Máy bơm dự phòng sẽ tự động bật khi có sự cố ngắt khẩn cấp hoặc hỏng hóc của bất kỳ bơm chính nào.	Đ 5.8.2			-	Máy bơm sử dụng động cơ điện	- Phải được nối đất, bảo vệ quá tải và quá nhiệt.
+- Chỉ bảo vệ quá tải và quá nhiệt cho máy bơm chữa cháy chính.
+	Đ 5.8.3			-	Máy bơm dùng động cơ đốt trong	- Cho phép sử dụng bơm dùng động cơ đốt trong làm bơm dự phòng
+- Cho phép bố trí bồn nhiên liệu (xăng - 250 I, dầu diesel - 500 I) cách biệt với phòng bơm bằng các bộ phận ngăn cháy có giới hạn chịu lửa không nhỏ hơn El 120.	Đ 5.8.4
+Đ 5.8.18			-	Đường hút của máy bơm	- Trạm bơm phải có ít nhất 2 đường hút, không phụ thuộc vào số lượng bơm.
+- Mỗi đường hút phải được thiết kế để bảo đảm lưu lượng nước tính toán.
+- Đường ống hút phải dốc dần lên phía máy bơm với độ dốc ít nhất 0,05 %. Tại vị trí thay đổi đường kính ống phải sử dụng côn thu lệch tâm.	Đ 5.8.21
+
+Đ 5.8.23  			-	Họng chờ kết nối	- Để kết nối hệ thống chữa cháy với phương tiện chữa cháy di động, trong trạm bơm phải bố trí đường ống có đường kính danh định từ DN 80 trở lên với họng tiếp ở bên ngoài có chiều cao (1,35 ± 0,15) m với khớp nối DN 65. Đường ống phải bảo đảm lưu lượng tính toán cao nhất của hệ thống chữa cháy.
+- Bên ngoài trạm bơm phải bố trí ít nhất hai khớp nối để kết nối với xe chữa cháy.
+	Đ 5.8.11
+
+Đ 5.8.12
+			-	Đường ống, van khóa trong trạm bơm	- Phải bố trí các van trên tất cả các đường ống hút và đường ống đẩy để bảo đảm khả năng thay thế hoặc sửa chữa bất kỳ máy bơm nào, van một chiều và van khóa chính, cũng như kiểm tra các đặc tính của máy bơm.
+- Trên đường ống đẩy của mỗi bơm cần có van một chiều, van cổng và đồng hồ đo áp suất; trên đường hút phải có van cổng và đồng hồ đo áp suất. Khi bơm hoạt động mà không có áp suất dương tại đường ống hút thì không cần lắp đặt van cổng.
+- Khi có các đai giữ ống, chúng phải được đặt giữa van cổng và van một chiều.
+- Van khóa (van cổng hoặc van bướm) lắp đặt trên đường ống cấp chất chữa cháy vào bồn chứa phải đặt trong khuôn viên của trạm bơm. Cho phép đặt van này tại vị trí thiết bị đo được mực nước của bồn, bể.
+- Trong các trạm bơm, cần đo áp suất trong đường ống đẩy của từng bơm, mức độ ngập (khi tại phòng bơm bị ngập nước đến cao độ của các động cơ điện).	Đ 5.8.22
+
+Đ 5.8.24
+
+Đ 5.8.25
+Đ 5.8.26
+
+Đ 5.8.29			-	Nút ấn điều khiển, bộ điều khiển	- Hệ thống chữa cháy tự động, ngoại trừ Sprinkler, phải được trang bị cơ cấu kích hoạt bằng tay:
++ Từ xa - từ các thiết bị đặt tại lối vào của khu vực bảo vệ và từ phòng trực điều khiển chống cháy nếu cần thiết;
++ Cục bộ - từ các thiết bị được lắp đặt tại bộ điều khiển hoặc trong trạm bơm nước chữa cháy.
+- Bộ điều khiển phải được đặt trong khuôn viên của trạm bơm hoặc phòng trực điều khiển chống cháy hoặc trong khu vực được bảo vệ, có nhiệt độ không khí từ 5°C trở lên và đảm bảo tiếp cận dễ dàng để bảo dưỡng hệ thống.	Đ 5.1.7
+
+Đ 5.6.1			-	Khởi động bơm	- Khi khởi động bơm chữa cháy, tất cả các máy bơm mục đích khác được cấp nguồn trong cùng một đường dây với bơm chữa cháy và không nằm trong hệ thống chữa cháy tự động phải tự động ngắt.
+-  Tín hiệu khởi động tự động hoặc từ xa chỉ được gửi đến để kích hoạt máy bơm chữa cháy sau khi tự động kiểm tra áp lực nước trong hệ thống; khi áp suất hệ thống bảo đảm, việc khởi động máy bơm chữa cháy sẽ tự động bị hủy cho đến khi áp suất giảm xuống giá trị cài đặt để kích hoạt bơm.
+- Khi khởi động máy bơm chữa cháy tự động và từ xa, tín hiệu cảnh báo bằng ánh sáng và âm thanh về trạng thái hoạt động của bơm phải được chuyển đến phòng trực điều khiển chống cháy hoặc đến vị trí khác có người trực suốt ngày đêm.	Đ 5.8.13
+
+Đ 5.8.27
+
+Đ 5.8.28			-	Sơn màu	Bơm chữa cháy và bộ điều khiển phải được sơn màu đỏ.
+	Đ 5.8.31			-	Theo dõi lượng nước, chất chữa cháy	- Thiết bị theo dõi lượng chất chữa cháy trong bồn bể phải được đặt trong khuôn viên của trạm bơm.
+- Khi tự động bổ sung nước cho bồn bể, cho phép chỉ sử dụng thiết bị đo tự động với tín hiệu chuyển đến phòng trực điều khiển chống cháy và trạm bơm.
+	Đ 5.8.30			4	Bể nước dự trữ cho chữa cháy
+Kiểm tra việc duy trì mực nước trong bể
+	Tính toán cho đám cháy lớn nhất khi các hệ thống hoạt động đồng thời:
+- Đối với cấp nước chữa cháy ngoài nhà:
+Thời gian chữa cháy phải lấy là 3 giờ, ngoại trừ những quy định riêng nêu dưới đây:
+- Đối với nhà bậc chịu lửa I, II với kết cấu và lớp cách nhiệt làm từ vật liệu không cháy có các khu vực thuộc hạng nguy hiểm cháy nổ D và E lấy là 2 giờ;
+- Đối với công trình nhà trẻ, trường mẫu giáo, mầm non, nhà thuộc nhóm nguy hiểm cháy theo công năng F4.1, F4.3 ở khu vực nông thôn, có bậc chịu lửa I, II với kết cấu và lớp cách nhiệt làm từ vật liệu không cháy cao không quá 3 tầng, diện tích xây dựng đến 500 m2 lấy là 1 giờ;
+- Đối với công trình nhà trẻ, trường mẫu giáo, mầm non, nhà thuộc nhóm nguy hiểm cháy theo công năng F4.1, F4.3 ở khu vực nông thôn, có bậc chịu lửa I, II với kết cấu và lớp cách nhiệt làm từ vật liệu không cháy cao không quá 3 tầng, diện tích xây dựng đến 500 m2 thì cho phép sử dụng hệ thống họng nước chữa cháy bên trong để thay thế cho hệ thống cấp nước chữa cháy ngoài nhà;
+- Đối với kho dạng hở chứa vật liệu từ gỗ - không nhỏ hơn 5 giờ.
+- Đối với các nhà có yêu cầu về lưu lượng cho cấp nước chữa cháy ngoài nhà quy định tại các bảng 8, 9, 10 đến 15 L/s (cho nhà nhóm F1, F2, F3, F4) và đến 20 L/s (cho nhà nhóm F5) thì thời gian chữa cháy của chúng lấy là 1 giờ
+- Đối với họng nước chữa cháy: Trong trường hợp lắp đặt hệ thống họng nước chữa cháy riêng biệt với các hệ thống chữa cháy tự động, thì thể tích của bể chứa nước dự trữ phải bảo đảm lượng nước dùng trong 1 giờ, cho một họng nước chữa cháy và các nhu cầu dùng nước khác.
+Khi lắp đặt hệ thống họng nước chữa cháy trên các hệ thống chữa cháy tự động thì thời gian làm việc của họng nước lấy bằng thời gian làm việc của hệ thống chữa cháy tự động.	Đ 5.1.3.3, 5.2.9 Sửa đổi 1:2023 QCVN 06:2022/BXD
+
+			-	Nguồn nước cấp bổ sung	Khi xác định thể tích nước chữa cháy trong các bồn, bể thì cho phép tính cả việc nạp thêm vào bồn, bể trong thời gian chữa cháy nếu nó có hệ thống cấp nước bảo đảm quy định tại 5.1.2.7.
+	Đ 5.1.5.4 Sửa đổi 1:2023 QCVN 06:2022/BXD			5	Kiểm tra, thử nghiệm đối với trạm bơm theo QCVN 02	Kiểm tra:
++ Kiểm tra khoảng cách từ trạm bơm tới công trình đối với trường hợp đặt ngoài nhà;
++ Kiểm tra hành lang ngăn cháy nối giữa trạm bơm với khoang đệm của thang thoát nạn trường hợp trạm bơm đặt tại các tầng nổi của công trình (trừ tầng 1).
++ Kiểm tra bộ phận ngăn cháy của trạm bơm (tường, vách, cửa ngăn cháy theo số tem và giấy chứng nhận kiểm định, kết quả thử nghiệm…);
++ Đo khoảng cách giữa các móng đặt bơm; khoảng cách từ cạnh bệ máy bơm phía ống hút đến mặt tường nhà đối diện; chiều rộng lối đi trong trạm bơm;
++ Đối với bơm động cơ điện: đo khoảng cách từ cạnh bên của móng đặt máy bơm và động cơ đến tường nhà;
++ Đối với bơm động cơ diesel: đo khoảng cách từ tường nhà tới két nước đối với động cơ diesel làm mát bằng quạt gió; đo chiều cao của đáy bể chứa dầu cho động cơ diesel; đo khoảng cách giữa tủ điều khiển và bồn nhiên liệu;
++ Bố trí họng nước (trạm bơm kích thước 6x9 m trở lên) và hệ thống chữa cháy tự động (trạm bơm có động cơ và bồn chứa nhiên liệu diesel);
++ Việc bố trí đèn chiếu sáng sự cố và niêm yết quy trình hướng dẫn vận hành hệ thống bên trong trạm bơm; Kiểm tra bố trí thoát sàn và thông gió cho trạm bơm;
++ Số lượng, chủng loại, mã ký hiệu, thông số lưu lượng, cột áp được thể hiện trên nhãn mác và đường đặc tính của bơm chính, bơm dự phòng và bơm bù áp;
++ Lắp đặt đường ống hút (số lượng, kích thước, kết nối đường ống); Kiểm tra lắp đặt đường ống đẩy (số lượng, kích thước, đấu nối mạng vòng);
++ Lắp đặt van an toàn, van bảo vệ vỏ bơm, van xả khí tự động;
++ Việc niêm yết chỉ thị trạng thái đóng/mở thường trực của các van tại trạm bơm.
+- Thử nghiệm:
++ Thử hoạt động của từng máy bơm bằng nút ấn tại tủ điều khiển bơm;
++ Thử hoạt động theo thứ tự cài đặt của các bơm bằng cách giảm áp suất duy trì trên đường ống cấp nước chữa cháy. Trong đó lưu ý:
+* Bơm nước chữa cháy phải được khởi động ít nhất một lần từ nguồn điện chính, nguồn điện dự phòng và chạy tối thiểu là 5 phút;
+* Đóng các van trên đường ống cấp, để các bơm hoạt động ở chế độ không tải và theo dõi áp lực ở đồng hồ đo áp có vượt quá 140% cột áp thiết kế hay không;
+* Theo dõi lưu lượng của hệ thống qua thiết bị kiểm tra lưu lượng được lắp đặt tại trạm bơm.
+* Kiểm tra nguồn điện cấp cho bơm chữa cháy (nếu dùng bơm dự phòng là bơm điện thì phải đảm bảo tối thiểu 02 nguồn điện).
+* Ngoài ra có thể tham khảo các nội dung thử nghiệm trạm bơm nước chữa cháy tại mục 3 của QCVN 02:2020/BCA.
++ Khối tích chứa nước thực tế qua việc quan sát đường ống chỉ thị bên ngoài đối với bể nước nổi; Khối tích chứa nước thực tế phục vụ chữa cháy theo hoàn công đối với bể nước ngầm;
++ Tín hiệu báo mực nước tại phòng trực điều khiển chống cháy.
++ Giải pháp phục hồi nước chữa cháy
+Khôi phục trạng thái hoạt động của Trạm bơm sau thử nghiệm
+Chú ý:  Đối với trạm bơm lắp đặt tại công trình không thuộc đối tượng áp dụng của QCVN 02:2020/BCA: Kiểm tra theo hồ sơ thiết kế được duyệt, các bước thử nghiệm có thể tham khảo nội dung nêu trên.				Lưu ý: Nội dung hướng dẫn tại Bảng trên được áp dụng đối với các công trình được xây dựng mới, cải tạo về PCCC sau thời điểm các tiêu chuẩn, quy chuẩn nêu trên có hiệu lực thi hành; các cơ sở đang hoạt động không có cải tạo, thay đổi tính chất sử dụng áp dụng theo các tài liệu đã được C07 hướng dẫn phù hợp với thời điểm công trình được xây dựng hoặc cải tạo, thay đổi tính chất sử dụng.
+
+50

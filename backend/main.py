@@ -225,6 +225,18 @@ async def lifespan(app: FastAPI):
     except Exception as e:
         print(f"Notice seeding specific expansion: {e}")
     
+    # Nạp sẵn kho tài liệu pháp lý cho Trợ lý Chi, rồi dựng chỉ mục tra cứu ở luồng nền để lần hỏi đầu không bị chậm
+    try:
+        from utils.kho_seed import sync_seed
+        info = sync_seed()
+        if info["added"] or info["updated"]:
+            print(f"[kho] Nạp sẵn tài liệu: thêm {info['added']}, cập nhật {info['updated']} / {info['total']}")
+        import threading
+        from utils import local_rag
+        threading.Thread(target=local_rag.reindex, daemon=True).start()
+    except Exception as e:
+        print(f"Notice kho seed: {e}")
+
     # Khởi chạy dịch vụ cron tự động sao lưu CSDL định kỳ
     backup_task = asyncio.create_task(auto_backup_task())
     

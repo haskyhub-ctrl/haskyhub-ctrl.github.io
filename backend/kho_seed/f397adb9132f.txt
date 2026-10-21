@@ -1,0 +1,4371 @@
+[Phụ lục III: hướng dẫn nội dung kiểm tra hệ thống chữa cháy, trang bị phương tiện chữa cháy ban đầu, dụng cụ phá dỡ]
+[Hiệu lực: 2025. Trạng thái: ĐANG DÙNG.]
+
+1
+
+Phụ lục III: Hướng dẫn nội dung kiểm tra hệ thống chữa cháy, trang bị phương tiện chữa cháy ban đầu, dụng cụ phá dỡ…
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+I Trạm bơm cấp nước
+chữa cháy
+
+1 Trạm bơm chữa cháy
+đối với cơ sở áp dụng
+theo QCVN 02.
+- Các nhà cao trên 10 tầng
+- Các nhà công cộng tập trung đông người, gara, nhà
+sản xuất, kho có diện tích trên 18.000 m2
+- Đối với công trình có quy mô thấp hơn không bắt
+buộc áp dụng Quy chuẩn này
+Lưu ý: Diện tích 18.000 m2 được hiểu là diện tổng
+diện tích sàn của 01 công trình độc lập. Trường hợp
+có nhiều hạng mục công trình thì hạng mục có diện
+tích đến 18.000 m2 không bắt buộc thiết kế trạm bơm
+cấp nước chữa cháy theo quy chuẩn này
+Đ 1.1 QCVN
+02:2020/BCA
+1. Không trang bị phương tiện chữa cháy, cứu
+nạn, cứu hộ cơ giới (Đc K9 Đ20 NĐ106;
+phạt tiền từ 40.000.000 đồng đến
+50.000.000 đồng)
+
+2. Không đưa phương tiện chữa cháy, cứu
+nạn, cứu hộ cơ giới vào trực chữa cháy, cứu
+nạn, cứu hộ (K5 Đ21 NĐ106; phạt tiền từ
+20.000.000 đồng đến 25.000.000 đồng)
+
+3. Bảo quản, bảo dưỡng phương tiện chữa
+cháy, cứu nạn, cứu hộ cơ giới không bảo đảm
+nội dung theo quy định (Đd K1 Đ22 NĐ106;
+phạt tiền từ 3.000.000 đồng đến 5.000.000
+đồng)
+
+4. Không bảo quản, bảo dưỡng phương tiện
+chữa cháy, cứu nạn, cứu hộ cơ giới (K2 Đ22
+NĐ106; phạt tiền từ 5.000.000 đồng đến
+10.000.000 đồng)
+1.1 Nhà/phòng đặt trạm
+bơm
+
+- Vị trí lắp đặt
+ Ngoài nhà Trạm bơm nước chữa cháy phải được đặt trong nhà, Đ 2.1.1 QCVN
+
+2
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+cách nhà và công trình khác tối thiểu 16 m (không
+quy định khoảng cách khi nhà đặt trạm bơm nước
+chữa cháy có bậc chịu lửa I và II hoặc giữa trạm bơm
+và công trình có tường ngăn cháy)
+02:2020/BCA
+ Đặt trong nhà - Ngăn cách với các phòng khác bằng tường ngăn
+cháy không thấp hơn REI150, sàn ngăn cháy không
+thấp hơn REI60, cửa ngăn cháy không thấp hơn EI70
+- Đặt ở tầng 1 hoặc tầng hầm 1.
+- Cho phép đặt tại các tầng nổi khác của nhà khi
+phòng đặt bơm có cửa ra phải thông với khoang đệm
+thang thoát nạn qua hành lang được bảo vệ bằng kết
+cấu ngăn cháy loại 1
+Đ 2.1.2 QCVN
+02:2020/BCA
+
+ Bố trí chung với bơm
+sinh hoạt
+Được phép đặt chung với máy bơm cấp nước sinh
+hoạt trong cùng một phòng hoặc nhà
+Đ 2.1.3 QCVN
+02:2020/BCA
+
+- Khoảng cách giữa các
+thiết bị
+
+ Khoảng cách giữa các
+móng
+Từ cạnh bên của móng đặt máy bơm và động cơ điện
+đến tường nhà: Tối thiểu 70 mm
+Đ 2.1.4 QCVN
+02:2020/BCA
+
+ Từ cạnh bệ máy bơm
+phía ống hút đến mặt
+tường nhà đối diện
+Tối thiểu 1 m Đ 2.1.4 QCVN
+02:2020/BCA
+
+ Từ cạnh bệ máy bơm
+phía động cơ điện đến
+mặt tường nhà
+Không nhỏ hơn khoảng cách cần thiết để rút rôto của
+động cơ điện ra mà không cần tháo động cơ điện khỏi
+bệ máy
+Đ 2.1.4 QCVN
+02:2020/BCA
+
+ Lối đi trong trạm bơm - Máy bơm có đường kính ống đẩy từ 100 mm cho
+phép đặt dọc tường và vách nhà mà không cần có lối
+đi giữa máy bơm và tường, nhưng khoảng cách từ
+tường đến móng đặt máy bơm không nhỏ hơn 200
+mm.
+- Cho phép đặt hai máy bơm trên cùng một móng mà
+Đ 2.1.4 QCVN
+02:2020/BCA
+
+3
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+không cần bố trí lối đi giữa chúng, nhưng xung
+quanh móng phải có một lối đi riêng không nhỏ hơn
+0,7 m
+ Chiều cao thông thủy
+trạm bơm
+- Trạm bơm có thiết bị nâng: khoảng cách thông thủy
+từ đáy vật được nâng đến đỉnh của các thiết bị đặt ở
+dưới không được nhỏ hơn 0,5 m.
+- Trạm bơm không có thiết bị nâng: tối thiểu 2,2 m
+Đ 2.1.5 QCVN
+02:2020/BCA
+
+- Lưu ý đối với bơm
+động cơ diesel
+
++ Khoảng cách từ tường
+nhà tới két nước đối
+với động cơ diesel
+làm mát bằng quạt gió
+- Không được nhỏ hơn 3 lần chiều cao của két nước
+động cơ diesel khi không có cửa đưa gió trực tiếp ra
+ngoài trạm bơm
+- Khoảng cách này có thể lấy tối thiểu bằng 2 m
+Đ 2.1.4 QCVN
+02:2020/BCA
+
+ Chiều cao của đáy bể
+chứa dầu cho động cơ
+diesel
+- Phải cao hơn miệng vào bơm cao áp của động cơ
+diesel.
+- Trong trường hợp chưa có kích thước của nhà sản
+xuất kích thước này có thể được lấy bằng 1,2 m
+Đ 2.1.4 QCVN
+02:2020/BCA
+
+ Khoảng cách giữa tủ
+điều khiển và bồn
+nhiên liệu
+- Phải có vách ngăn
+- Tối thiểu 2 m khi không có vách ngăn
+Đ 2.1.4 QCVN
+02:2020/BCA
+
+- Bố trí họng nước chữa
+cháy trong phòng
+bơm hoặc nhà bơm
+- Kích thước (6x9) m hoặc lớn hơn phải bố trí họng
+nước chữa cháy trong nhà với lưu lượng 2,5 l/s.
+- Trường hợp có động cơ diesel và bồn chứa nhiên
+liệu diesel phải thiết kế hệ thống chữa cháy tự động
+Đ 2.1.6 QCVN
+02:2020/BCA
+
+- Bố trí đèn chiếu sáng
+sự cố và đèn chỉ dẫn
+thoát nạn trong phòng
+bơm, nhà bơm
+- Phải trang bị
+- Có nguồn điện dự phòng đảm bảo thời gian hoạt
+động tối thiểu 3 giờ
+- Nguồn điện dự phòng không được lấy từ nguồn ắc
+quy khởi động bơm
+Đ 2.1.7 QCVN
+02:2020/BCA
+1. Trang bị, lắp đặt đèn, phương tiện chiếu
+sáng sự cố, chỉ dẫn thoát nạn không bảo đảm
+theo quy định (K3 Đ20 NĐ106; phạt tiền từ
+5.000.000 đồng đến 7.000.000 đồng; Biện
+pháp khắc phục hậu quả: Buộc trang bị,
+lắp đặt đèn, phương tiện chiếu sáng sự cố,
+
+4
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+chỉ dẫn thoát nạn)
+
+2. Không trang bị, lắp đặt đèn, phương tiện
+chiếu sáng sự cố, chỉ dẫn thoát nạn (K5 Đ20
+NĐ106; phạt tiền từ 10.000.000 đồng đến
+15.000.000 đồng)
+
+3. Không có hệ thống điện phục vụ phòng
+cháy và chữa cháy (Đb K4 Đ12 NĐ106; phạt
+tiền từ 40.000.000 đồng đến 50.000.000
+đồng)
+
+4.  Không duy trì nguồn điện phục vụ phòng
+cháy và chữa cháy (Đc K4 Đ12 NĐ106; phạt
+tiền từ 40.000.000 đồng đến 50.000.000
+đồng)
+- Thoát nước sàn cho
+phòng bơm
+Phải có hệ thống thoát nước dưới sàn nhà để tránh
+ngập nước
+Đ 2.1.8 QCVN
+02:2020/BCA
+
+- Bố trí hệ thống thông
+gió cho phòng bơm
+Phải lắp đặt hệ thống thông gió cưỡng bức hoặc
+thông gió tự nhiên
+Đ 2.1.9 QCVN
+02:2020/BCA
+1. Không duy trì thông gió tự nhiên hoặc
+không duy trì hệ thống thông gió thoát khói
+đã được trang bị, lắp đặt (Đa K2 Đ23 NĐ106;
+phạt tiền từ 20.000.000 đồng đến
+25.000.000 đồng; Biện pháp khắc phục hậu
+quả: Buộc duy trì giải pháp thông gió)
+
+2. Không có giải pháp thông gió tự nhiên
+hoặc không có giải pháp thông gió thoát khói
+(Đa K4 Đ23 NĐ106; phạt tiền từ 40.000.000
+đồng đến 50.000.000 đồng)
+- Nối đất - Động cơ máy bơm, bồn chứa nhiên liệu và tủ điều
+khiển các máy bơm nước chữa cháy phải được nối
+Đ 2.1.10
+QCVN
+1. Không duy trì hệ thống tiếp địa, chống sét
+đã được lắp đặt (Đb K2 Đ13 NĐ106; phạt
+
+5
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+đất an toàn.
+- Dây nối đất phải bằng đồng sợi hoặc đồng lá.
+- Tiết diện dây nối đất:
++ Động cơ máy bơm không nhỏ hơn 25 mm2
++ Bồn chứa nhiên liệu không nhỏ hơn 10 mm2
++ Tủ điều khiển không nhỏ hơn 5 mm2
+02:2020/BCA tiền từ 10.000.000 đồng đến 15.000.000
+đồng).
+
+2. Không lắp đặt hệ thống tiếp địa, chống sét
+cho nhà, công trình (K2 Đ13 NĐ106; phạt
+tiền từ 20.000.000 đồng đến 25.000.000
+đồng).
+- Bể nước chữa cháy - Khi bể nước chữa cháy dùng chung với bể nước
+phục vụ sinh hoạt trong tòa nhà thì đường ống hút
+của hệ thống nước sinh hoạt phải được kết nối trên
+mức nước yêu cầu cho nhu cầu phòng cháy.
+- Mỗi bể nước phải có van tự động làm đầy và van
+thủ công làm đầy riêng biệt
+Đ 2.1.11
+QCVN
+02:2020/BCA
+
+1.2 Quy định bơm chữa
+cháy
+
+- Bố trí bơm nối tiếp - Không được phép có hơn ba bơm nước chữa cháy
+trong mạng bơm nối tiếp
+- Không được lắp đặt van giảm áp suất hoặc van điều
+tiết áp suất nào giữa các bơm nước chữa cháy được
+bố trí nối tiếp
+Đ 2.2.6.1
+QCVN
+02:2020/BCA
+
+- Số ống hút trạm bơm - Trạm bơm có 02 máy bơm trở lên thì phải có ít nhất
+02 đường ống hút.
+- Ống hút nước phải có van, trên đường ống cấp phải
+lắp đồng hồ áp lực để thử nghiệm và kiểm tra, đồng
+thời có van xả 65 mm.
+- Không quy định số lượng ống hút khi trạm bơm sử
+dụng bơm tua bin trục đứng
+Đ 2.2.4 QCVN
+02:2020/BCA
+
+- Số lượng bơm dự
+phòng
+- Có công suất tương đương với công suất của máy
+bơm chính.
+- Khi số lượng máy bơm vận hành theo tính toán từ 1
+Đ 2.2.8 QCVN
+02:2020/BCA
+
+6
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+đến 3 thì phải có ít nhất 1 máy bơm dự phòng.
+- Khi số lượng máy bơm vận hành từ 4 máy trở lên
+thì phải có ít nhất 02 máy bơm dự phòng.
+- Cột áp
+Kiểm tra cột áp lớn
+nhất bằng phương
+pháp khóa van trên
+đường ống cấp, khởi
+động bơm bằng nút ấn
+và kiểm tra áp lực
+trong đường ống qua
+đồng hồ áp lực lắp
+trên đường ống
+Xác định cột áp cần thiết của bơm chữa cháy theo
+công thức sau:
+Hcột áp bơm ≥ Hc/thiết = Hct + Hdd + Hcb + Hlp +
+Htb
+- Hct : Độ cao hình học giữa vị trí lắp đặt họng nước
+cao và xa nhất của mạng so với vị trí đặt máy bơm
+cấp nước chữa cháy.
+- Hdd: Tổn thất áp lực trên dọc tuyến ống (tính cho
+điểm bất lợi nhất): Hdd = ∑hi (hi là tổn thất áp lực
+trên từng đoạn ống). hi = Ai x Qi2 x Li
+- Hcb: Tổn thất cục bộ, có giá trị bằng 10% tổn thất
+dọc tuyến ống.
+- Hlp: Cột áp yêu cầu đầu lăng phun hoặc đầu phun
+sprinkler hoặc đầu phun hở
+- Htb: Chiều cao từ giỏ lọc đến guồng bơm.
+Ghi chú:
+- Hệ số sức cản A xác định theo Bảng 15 TCVN
+4513-1988
+- Hệ số K xác định theo Bảng 16 TCVN 4513-1988
+- Áp lực của cột nước chữa cháy đầu lăng xác định
+theo Bảng 17, Bảng 18 TCVN 4513-1988; Áp lực
+nước chữa cháy của đầu phun Sprinkler xác định theo
+Điều 10.5 TCVN 7336 - 2003; áp lực đầu phun tạo
+màn nước chữa cháy căn cứ vào thông số kỹ thuật
+của thiết bị, trong đó tiêu chuẩn NFPA thường quy
+định 30 m.c.n
+- Cột áp của máy bơm nước chữa cháy ứng với lưu
+lượng thiết kế không được nhỏ hơn cột áp thiết kế.
+TCVN
+2622:1995
+
+Đ 2.2.2 QCVN
+02:2020/BCA
+
+7
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+- Cột áp của máy bơm nước chữa cháy ứng với lưu
+lượng bằng không (shutoff pressure) phải trong phạm
+vi từ 101% đến 140% cột áp thiết kế.
+- Cột áp của máy bơm ứng với 150% lưu lượng thiết
+kế không được nhỏ hơn 65% cột áp thiết kế.
+- Lưu lượng
+Kiểm tra bằng cách
+mở đường hồi nước
+về bể, kiểm tra thông
+số trên đồng hồ đo lưu
+lượng
+Xác định lưu lượng nước chữa cháy cần thiết theo
+quy định của từng hệ thống. Lưu lượng máy bơm cần
+thiết được xác định bằng tổng lưu lượng của hệ thống
+chữa cháy trong và ngoài nhà tại khu vực có thể phát
+sinh đám cháy lớn nhất.
+QBơm phải lớn hơn hoặc bằng lưu lượng cần thiết
+nêu trên
+
+- Lưu lượng lớn nhất của máy bơm nước chữa cháy
+không được nhỏ hơn 150% lưu lượng thiết kế.
+Lưu ý: Trường hợp công trình đã có tính toán lưu
+lượng cấp nước chữa cháy ngoài nhà của cả khu thì
+từng công trình không cần tính vào lưu lượng bơm
+- lưu ý trường hợp một nhà có nhiều trạm bơm
+TCVN
+2622:1995;
+Bảng 14
+TCVN
+7336:2003
+Bảng 2
+
+Đ 2.2.2 QCVN
+02:2020/BCA
+
+1.3 Bơm bù áp
+- Lưu lượng Lưu lượng của máy bơm bù áp được xác định theo
+tính toán, nhưng không nhỏ hơn 1% lưu lượng của
+máy bơm chữa cháy.
+Đ 2.3.1 QCVN
+02:2020/BCA
+
+- Cột áp Áp lực đầu đẩy của máy bơm bù áp phải có khả năng
+duy trì áp lực thường trực trong hệ thống lớn hơn áp
+lực chữa cháy thiết kế từ 0,3 bar đến 0,8 bar
+Đ 2.3.2 QCVN
+02:2020/BCA
+
+- Bố trí van một chiều  Đầu đẩy của máy bơm phải được bố trí van một
+chiều
+Đ 2.3.3 QCVN
+02:2020/BCA
+
+- Lắp đặt van cu ối
+đường ống cấp nước
+Điểm cuối của đường ống cấp nước chữa cháy nên
+bố trí van cách ly và điểm lắp đồng hồ áp lực để việc
+Đ 2.3.8 QCVN
+02:2020/BCA
+
+8
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+thử nghiệm, hiệu chỉnh áp lực khởi động máy bơm
+được dễ dàng
+1.4 Động cơ điện
+- Nguồn điện - Phải có ít nhất 2 nguồn điện, một nguồn điện chính
+và một nguồn điện dự phòng.
+- Cho phép máy bơm nước chữa cháy chính chỉ đấu
+nối với 1 nguồn điện nếu có máy bơm dự phòng là
+máy bơm động cơ diesel
+Đ 2.4.1.6.1
+QCVN
+02:2020/BCA
+1. Không có hệ thống điện phục vụ phòng
+cháy và chữa cháy (Đb K4 Đ12 NĐ106; phạt
+tiền từ 40.000.000 đồng đến 50.000.000
+đồng)
+
+2. Không duy trì nguồn điện phục vụ phòng
+cháy và chữa cháy (Đc K4 Đ12 NĐ106; phạt
+tiền từ 40.000.000 đồng đến 50.000.000
+đồng)
+- Thiết bị an toàn Chỉ cho phép lắp đặt một thiết bị ngắt kết nối và một
+thiết bị bảo vệ quá dòng kết hợp ở đầu cấp nguồn cho
+bộ điều khiển máy bơm nước chữa cháy
+Đ 2.4.1.6.4
+QCVN
+02:2020/BCA
+
+- Thiết bị bảo vệ dây
+điện
+Đi dây từ bộ điều khiển tới mô tơ máy bơm trong ống
+kim loại cứng, ống kim loại trung bình, ống kim loại
+điện, ống kim loại dẻo không thấm ướt, hoặc ống phi
+kim loại dẻo không thấm ướt, cáp loại có vỏ bọc
+chống nước
+Đ 2.4.1.6.6
+QCVN
+02:2020/BCA
+
+1.5 Động cơ Diesel Kiểm tra hoạt động tự động của bơm diesel khi ngắt
+bơm điện chính
+
+- Hộp điều khiển và đo
+lường
+Trên động cơ diesel phải được trang bị hộp điều
+khiển và đo lường bao gồm các chi tiết sau:
+- Đồng hồ hiển thị tốc độ vòng quay của trục động cơ
+với đơn vị đo là vòng/phút. Đồng hồ tốc độ động cơ
+là kiểu cộng dồn hoặc đếm thời gian theo giờ để xác
+định tổng thời gian hoạt động của động cơ.
+- Đồng hồ đo áp lực dầu bôi trơn của động cơ.
+- Đồng hồ đo nhiệt độ nước của động cơ, ở mọi chế
+Đ 2.4.2.6
+QCVN
+02:2020/BCA
+
+9
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+độ làm việc.
+- Công tắc khởi động và dừng máy bơm tại chỗ bằng
+tay.
+- Cổng kết nối với tủ điều khiển máy bơm nước chữa
+cháy động cơ diesel. Ký hiệu số đầu dây trên hộp
+điều khiển động cơ và tủ điều khiển máy bơm phải
+giống nhau.
+- Cổng kết nối với các thiết bị cảm biến tốc độ vòng
+quay, áp suất dầu bôi trơn, nhiệt độ nước làm mát
+động cơ.
+- Sơ đồ của mạch đo lường và điều khiển.
+- Thiết bị bảo vệ dây
+điện
+- Dây tín hiệu, ống bao dây và chi tiết kẹp phải làm
+bằng vật liệu không cháy
+Đ 2.4.2.7
+QCVN
+02:2020/BCA
+
+- Miệng xả khói - Mỗi động cơ bơm phải có một ống khí thải độc lập,
+có đường kính không nhỏ hơn đầu xả khí thải động
+cơ. Ống dẫn khí thải phải được bọc bằng vật liệu
+cách nhiệt cao hoặc được bảo vệ theo cách khác để
+tránh các tổn hại cho người.
+- Khí thải từ động cơ phải được dẫn tới vị trí an toàn
+bên ngoài phòng bơm và không được tác động đến
+con người hoặc gây nguy hiểm cho tòa nhà. Đầu cuối
+hệ thống khí thải không được hướng trực tiếp tới vật
+liệu hay cấu trúc dễ cháy, hoặc vào khu vực có chứa
+khí, hơi, bụi dễ cháy, nổ
+Đ 2.4.2.19
+QCVN
+02:2020/BCA
+
+- Thùng chứa dầu cho
+động cơ
+- Phải có dung tích không nhỏ hơn 110% giá trị tối
+thiểu xác định theo công suất lớn nhất yêu cầu trên
+trục máy bơm là 5 lít/kW
+- Phải được trang bị van thở, ống nạp dầu và nắp đậy,
+van xả kiệt, thiết bị báo mức dầu. Khi sử dụng van
+điện từ để điều khiển cấp dầu cho động cơ, van điện
+Đ 2.4.2.17
+QCVN
+02:2020/BCA
+
+10
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+từ phải có cơ cấu mở bằng tay để sử dụng khi van
+điện từ bị hỏng
+1.6 Tủ điều khiển
+  - Mỗi máy bơm phải được điều khiển và kiểm soát từ
+một tủ điều khiển riêng biệt có chức năng khởi động
+máy bơm tự động và bằng tay.
+- Có thể bố trí chung thiết bị điều khiển bơm nước
+chữa cháy động cơ điện và bơm bù áp chung một tủ
+điều khiển, nhưng không được bố trí thiết bị đều
+khiển bơm nước chữa cháy chính và bơm nước chữa
+cháy dự phòng chung một tủ điều khiển. Khi bố trí
+chung thiết bị điều khiển của máy bơm nước chữa
+cháy động cơ điện và bơm bù áp trên một vỏ tủ điều
+khiển, các khởi động từ của máy bơm phải riêng biệt
+và được bố trí trên không gian tách biệt trong phạm
+vi của tủ
+Đ 2.5.1.1
+QCVN
+02:2020/BCA
+
+  Phải được bố trí gần máy bơm ở vị trí dễ thao tác và
+cách mặt sàn không được nhỏ hơn 0,3 m
+Đ 2.5.3 QCVN
+02:2020/BCA
+
+1.7 Phụ kiện của trạm
+bơm
+
+-  Ống đẩy Phải lắp đặt van điều khiển hoặc van một chiều
+chống chảy ngược dòng tại ống đẩy nước của các
+bơm nước chữa cháy. Van cổng hoặc van bướm phải
+được lắp đặt trên đường ống đẩy ngay sau van điều
+khiển hoặc van một chiều. Khi bơm được lắp theo
+chuỗi, không được lắp đặt van bướm giữa các bơm
+Đ 2.6.1.3
+QCVN
+02:2020/BCA
+
+- Ống hút
+ Lắp đặt Không được phép có các đoạn khuỷu và chữ T có
+mặt phẳng đường tâm song song với trục bơm chia
+ngang trên đường ống hút
+Đ 2.6.2.5
+QCVN
+02:2020/BCA
+
+11
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+ Giỏ lọc  Giỏ lọc ống hút phải làm bằng đồng thau, đồng,
+Monel, thép không gỉ, hoặc vật liệu kim loại chống
+ăn mòn tương đương khác với mắt lưới tối đa 0,50 in
+(12,7 mm)
+Đ 2.6.2.6
+QCVN
+02:2020/BCA
+
+- Thiết bị giám sát Các van hút, van an toàn, van trên đường hồi lưu và
+van cách ly trên thiết bị hoặc bộ phận chống chảy
+ngược phải được lắp đặt thiết bị giám sát trạng thái
+mở. Van điều khiển đặt trong ống dẫn đến đầu van
+vòi phải được lắp đặt thiết bị giám sát trạng thái đóng
+Đ 2.6.2.7
+QCVN
+02:2020/BCA
+
+- Đồng hồ áp lực
+ Đầu đẩy - Mỗi bơm phải lắp đồng hồ áp lực riêng biệt ngay
+mặt bích bơm hoặc gần cạnh bơm trên đường ống
+đầu đẩy nhưng phải được lắp trước van một chiều
+của bơm đó và được khống chế bởi 1 van bi.
+- Đường kính tối thiểu của bề mặt đồng hồ là 89 mm,
+áp lực lớn nhất in trên bề mặt đồng hồ phải lớn hơn
+hoặc bằng 2 lần áp lực làm việc của bơm nhưng
+không được nhỏ hơn 200 psi (13.8 bar)
+Đ 2.6.3.1
+QCVN
+02:2020/BCA
+
+ Đầu hút - Được lắp ngay mặt bích bơm hoặc gần cạnh bơm
+trên đường ống hút và được khống chế bởi 1 van bi.
+- Đường kính tối thiểu của bề mặt đồng hồ là 89 mm,
+áp lực lớn nhất in trên bề mặt đồng hồ phải lớn hơn
+hoặc bằng 2 lần áp lực đầu hút của bơm nhưng không
+được nhỏ hơn 100 psi (6.9 bar)
+Đ 2.6.3.2
+QCVN
+02:2020/BCA
+
+- Van bảo vệ vỏ bơm - Phải được lắp đặt cho tất cả bơm điện, mỗi bơm
+được lắp 01 van bảo vệ vỏ và độc lập với van an toàn
+của hệ thống
+- Được lắp đặt ngay trên vỏ bơm ở đầu đẩy hoặc trên
+đường ống đầu đẩy cạnh bơm và phải trước van một
+chiều của bơm đó.
+- Phải có kích cỡ danh định là 19 mm đối với các
+Đ 2.6.4 QCVN
+02:2020/BCA
+
+12
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+bơm có lưu lượng cần thiết không vượt quá 9.462
+l/phút và có kích cỡ danh định 25 mm đối với các
+bơm có lưu lượng cần thiết từ 11.355 l/phút đến
+18.925 l/phút
+-  Van an toàn cho bơm
+ Yêu cầu thiết kế Phải được lắp đặt cho các bơm nước chữa cháy động
+cơ diesel và khi tổng áp suất dừng bơm cộng với áp
+suất hút tĩnh tối đa, vượt quá áp suất của hệ thống
+Đ 2.6.5.1
+QCVN
+02:2020/BCA
+
+ Vị trí Phải được đặt giữa bơm và van một chiều đầu đẩy
+bơm
+Đ 2.6.5.3
+QCVN
+02:2020/BCA
+
+- Thiết bị kiểm tra lưu
+lượng
+Phải lắp đặt đường ống thiết bị kiểm tra lưu lượng
+hoặc van vòi cố định để kiểm tra bơm hoạt động ở
+các điều kiện theo thiết kế. Các thiết bị đo đạc hoặc
+van vòi cố định phải có công suất lưu lượng nước
+không thấp hơn 175% lưu lượng thiết kế của máy
+bơm
+Đ 2.6.6.1
+QCVN
+02:2020/BCA
+
+- Van xả khí tự động Phải được gắn tại trí cao nhất trên vỏ bơm để loại bỏ
+hết khí
+Đ 2.6.7 QCVN
+02:2020/BCA
+
+2 Trạm bơm nư ớc
+chữa cháy đối với cơ
+sở không áp dụng
+theo QCVN 02
+Lưu ý: Các công trình không thuộc đối tượng của
+QCVN 02:2020/BCA
+
+2.1 Vị trí lắp đặt
+- Ngoài nhà Đặt ngoài nhà thì trạm bơm phải có bậc chịu lửa III Đ 7.3 TCVN
+4513:1988
+
+- Đặt trong nhà - Cho phép đặt riêng máy bơm cấp nước sinh hoạt và
+nước chữa cháy trong 01 trạm hay kết nối với các
+ngôi nhà khác, nhưng phải được ngăn cách bằng
+tường không cháy và có lối ra ngoài trực tiếp
+Đ 7.3 TCVN
+4513:1988
+Đ 7.4 TCVN
+4513:1988
+
+13
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+- Không cho phép đặt trực tiếp dưới các căn hộ,
+phòng nhà trẻ, trường học phổ thông, phòng điều trị
+của bệnh viện, phòng hành chính, giảng đường đại
+học
+
+- Trường hợp máy bơm đặt trong nhà sản xuất thì
+phải có thiết kế hàng rào ngăn che
+Đ 7.5 TCVN
+4513:1988
+- Bố trí chung với bơm
+sinh hoạt
+Cho phép Đ 7.3 TCVN
+4513:1988
+
+2.2 Khoảng cách giữa các
+thiết bị
+
+- Từ cạnh bên c ủa
+móng đặt máy bơm và
+động cơ điện đến
+tường nhà và khoảng
+cách giữa các móng
+70 mm Đ 7.19 TCVN
+4513:1988
+
+- Từ cạnh bệ máy bơm
+phía ống hút đến mặt
+tường nhà đối diện
+1.000 mm Đ 7.19 TCVN
+4513:1988
+
+- Từ cạnh bệ máy bơm
+phía động cơ điện đến
+mặt tường nhà
+Không nhỏ hơn khoảng cách cần thiết để rút roto của
+động cơ điện ra mà không cần tháo động cơ điện ra
+khỏi bệ máy
+Đ 7.19 TCVN
+4513:1988
+
+- Lối đi trong trạm bơm Máy bơm có đường kính ống đẩy từ 100 mm cho
+phép đặt dọc tường và vách nhà mà không cần lối đi
+giữa máy bơm và tường nhưng không nhỏ hơn 200
+mm tính từ móng nhà đến bệ
+Cho phép đặt 02 máy bơm trên cùng 01 móng mà
+không cần lối đi lại giữa chúng nhưng xung quanh
+phải có lối đi riêng rộng tối thiểu 700 mm
+Đ 7.19 TCVN
+4513:1988
+
+- Chiều cao thông thủy - Trạm bơm có thiết bị nâng: khoảng cách thông thủy Đ 7.20 TCVN
+
+14
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+trạm bơm từ đáy vật được nâng đến đỉnh thiết bị đặt ở dưới
+không nhỏ hơn 500 mm
+- Trạm bơm không có thiết bị nâng: chiều cao thông
+thủy tối thiểu 2,2 m
+4513:1988
+2.3 Bơm chữa cháy
+- Số ống hút trạm bơm Khi có 02 máy bơm trở lên hút nước từ bể thì số
+lượng ống hút ít nhất là 02
+Cho phép có 01 ống hút khi không có bơm dự phòng
+Đ 7.14 TCVN
+4513:1988
+
+- Số lượng bơm dự
+phòng
+Máy bơm cấp nước chữa cháy dù thiết kế riêng biệt
+hay kết hợp với hệ thống nước sinh hoạt, sản xuất
+đều phải có máy bơm dự phòng, có thông số về lưu
+lượng, áp lực cấp nước không nhỏ hơn máy bơm
+chính. Số lượng máy bơm dự phòng được quy định
+như sau:
+Khi tính toán cần từ một đến ba máy bơm chữa cháy
+chính thì phải có ít nhất một máy bơm dự phòng;
+Khi tính toán cần bốn máy bơm chữa cháy chính trở
+lên thì phải có ít nhất hai máy bơm dự phòng;
+5.3.1 Sửa đổi
+1:2023 QCVN
+06:2022/BXD
+
+- Cột áp Xác định cột áp cần thiết của bơm chữa cháy theo
+công thức sau:
+Hcột áp bơm ≥ Hc/thiết = Hct + Hdd + Hcb + Hlp +
+Htb
+- Hct : Độ cao hình học giữa vị trí lắp đặt họng nước
+cao và xa nhất của mạng so với vị trí đặt máy bơm
+cấp nước chữa cháy.
+- Hdd: Tổn thất áp lực trên dọc tuyến ống (tính cho
+điểm bất lợi nhất): Hdd = ∑hi (hi là tổn thất áp lực
+trên từng đoạn ống). hi = Ai x Qi2 x Li
+- Hcb: Tổn thất cục bộ, có giá trị bằng 10% tổn thất
+dọc tuyến ống.
+TCVN 4513-
+1988
+
+15
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+- Hlp: Cột áp yêu cầu đầu lăng phun hoặc đầu phun
+sprinkler hoặc đầu phun hở
+- Htb: Chiều cao từ giỏ lọc đến guồng bơm.
+Ghi chú:
+- Hệ số sức cản A xác định theo Bảng 15 TCVN
+4513-1988
+- Hệ số K xác định theo Bảng 16 TCVN 4513-1988
+- Áp lực của cột nước chữa cháy đầu lăng xác định
+theo Bảng 17, Bảng 18 TCVN 4513-1988; Áp lực
+nước chữa cháy của đầu phun Sprinkler xác định theo
+Điều 10.5 TCVN 7336 - 2003; áp lực đầu phun tạo
+màn nước chữa cháy căn cứ vào thông số kỹ thuật
+của thiết bị, trong đó tiêu chuẩn NFPA thường quy
+định 30 m.c.n
+- Lưu lượng Xác định lưu lượng nước chữa cháy cần thiết theo
+quy định của từng hệ thống. Lưu lượng máy bơm cần
+thiết được xác định bằng tổng lưu lượng của hệ thống
+chữa cháy trong và ngoài nhà tại khu vực có thể phát
+sinh đám cháy lớn nhất.
+QBơm phải lớn hơn hoặc bằng lưu lượng cần thiết
+nêu trên
+Lưu ý: Trường hợp công trình đã có tính toán lưu
+lượng cấp nước chữa cháy ngoài nhà của cả khu thì
+từng công trình không cần tính vào lưu lượng bơm
+TCVN
+2622:1995;
+5.2.1 Sửa đổi
+1:2023 QCVN
+06:2022/BXD
+
+- Ví trí đặt bơm  Trục máy bơm cần đặt thấp hơn mực nước thấp nhất
+của nguồn nước, trường hợp đặt cao hơn thì phải có
+bộ phận mồi nước
+Đặt trên bệ móng cao hơn mặt nền tối thiểu 0,2 m
+Đ 7.13 TCVN
+4513:1988
+Đ 7.18 TCVN
+4513:1988
+
+- Chế độ điều khiển Máy bơm cấp nước chữa cháy có thể điều khiển tại
+chỗ bằng tay hoặc điều khiển tự động từ xa và phải
+bảo đảm cho máy bơm được kích hoạt vận hành
+5.3.2 Sửa đổi
+1:2023 QCVN
+06:2022/BXD
+
+16
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+trong thời gian không chậm quá 3 phút kể từ khi có
+tín hiệu báo cháy. Khi lưu lượng cấp nước cho chữa
+cháy ngoài nhà yêu cầu từ 25 L/s trở lên thì phải có
+cơ cấu điều khiển máy bơm chữa cháy tự động từ xa.
+
+2.4 Theo dõi mực nước
+chữa cháy
+Phải đặt thiết bị báo mực nước có tín hiệu báo về
+phòng nhân viên chữa cháy hay phòng máy bơm
+Đ 8.9 TCVN
+4513:1988
+
+2.5 Nguồn điện Các máy bơm chữa cháy phải được kết nối với hai
+nguồn điện riêng biệt từ nguồn điện lưới, nguồn điện
+từ máy phát điện hoặc sử dụng máy bơm động cơ đốt
+trong. Cho phép không trang bị máy bơm dự phòng
+hoặc nguồn điện dự phòng khi cấp nước cho nhà sản
+xuất, nhà kho có bậc chịu lửa I, II với hạng nguy
+hiểm cháy, nổ hạng D, E và lưu lượng cấp nước chữa
+cháy ngoài nhà yêu cầu nhỏ hơn    20 L/s.
+
+5.3.1 Sửa đổi
+1:2023 QCVN
+06:2022/BXD
+
+3 Trạm bơm cấp cho
+hệ thống chữa cháy
+tự động (có thể kết
+hợp họng trong nhà)
+ TCVN 7336-
+2021
+
+3.1 Vị trí lắp đặt trạm
+bơm
+- Trường hợp thuộc QCVN 02: Kiểm tra theo mục
+1.2
+- Trường hợp không thuộc QCVN 02: Kiểm tra theo
+mục 2.1
+
+  Ngoài ra đáp ứng các yêu cầu sau:
+- Đặt trong các nhà độc lập hoặc ngoài nhà hoặc
+trong một phòng riêng biệt ở tầng 1 hoặc tầng hầm
+trên cùng. Cho phép đặt trạm bơm nước chữa cháy
+tại các tầng nổi khác của nhà khi phòng đặt bơm có
+cửa ra thông với buồng đệm thang thoát nạn của nhà
+qua hành lang được bảo vệ bằng kết cấu ngăn cháy
+
+Đ 5.8.5
+
+Đ 5.8.6
+
+17
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+loại 1.
+- Khu vực của trạm bơm phải được ngăn cách với các
+khu vực khác bằng tường và trần ngăn cháy có giới
+hạn chịu lửa REI 45.
+- Nhiệt độ không khí trong phòng của trạm bơm phải
+từ 5 °C đến 40 °C.
+- Phải được trang bị điện thoại kết nối với phòng trực
+điều khiển chống cháy.
+- Ở lối vào trạm bơm phải có đèn ghi chữ “trạm bơm
+chữa cháy”, kết nối với đèn chiếu sáng sự cố.
+- Khi bố trí mặt bằng trạm bơm, chiều rộng của các
+lối đi tối thiểu như sau:
++ Giữa các bộ điều khiển và giữa bộ điều khiển với
+tường: 0,5 m;
++ Giữa các máy bơm hoặc động cơ điện: 0,7 m;
++ Giữa máy bơm hoặc động cơ điện và tường: 1 m,
+chiều rộng của lối đi từ phía bên của động cơ điện
+phải đủ để tháo dỡ rôto;
++ Giữa các máy nén khí: 1,5 m, giữa máy nén khí với
+tường: 1 m;
++ Giữa các bộ phận nhô ra cố định của thiết bị: 0,7
+m.
+CHÚ THÍCH: Đối với bơm có đường kính họng đẩy
+đến DN 100, cho phép:
++ Lắp đặt bơm gần tường hoặc trên giá đỡ;
++ Lắp đặt hai bơm trên cùng một móng với khoảng
+cách tối thiểu 0,2 m nhưng phải có các lối đi xung
+quanh móng với chiều rộng tối thiểu 0,7 m
+- Trong các trạm bơm đặt ngầm và bán ngầm, cần có
+các biện pháp chống ngập cho các thiết bị trong
+trường hợp sự cố với máy bơm lớn nhất, cũng như
+
+Đ 5.8.7
+Đ 5.8.8
+Đ 5.8.9
+
+Đ 5.8.10
+
+Đ 5.8.16
+
+Đ 5.8.17
+
+Đ 5.8.19
+Đ 5.8.20
+
+18
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+trên các van hoặc đường ống bằng các biện pháp sau:
++ Đặt động cơ điện của bơm cao hơn ít nhất 0,5 m so
+với sàn;
++ Thoát nước trong trường hợp sự cố vào cống hoặc
+mặt đất;
++ Thoát nước từ hố thu bằng máy bơm chuyên dụng.
+- Để thoát nước, sàn của phòng bơm phải được dốc
+về hố thu. Trên móng của bơm phải thiết kế các rãnh
+và ống để thoát nước; trường hợp không thể thoát
+nước ra khỏi hố, cần bố trí máy bơm thoát nước.
+- Cho phép không lắp đặt thiết bị chống rung cho
+máy bơm chữa cháy.
+- Bơm và cụm bơm phải được lắp đặt trên nền móng
+bảo đảm tải trọng không nhỏ hơn 4 lần trọng lượng
+của bơm và cụm bơm.
+3.2 Máy bơm - Có thể sử dụng một hoặc một số máy bơm chính.
+- Phải có ít nhất một máy bơm dự phòng, tương ứng
+với lưu lượng tối đa và áp lực cần thiết của máy bơm
+chính. Máy bơm dự phòng sẽ tự động bật khi có sự
+cố ngắt khẩn cấp hoặc hỏng hóc của bất kỳ bơm
+chính nào.
+Đ 5.8.2
+- Máy bơm sử dụng
+động cơ điện
+- Phải được nối đất, bảo vệ quá tải và quá nhiệt.
+- Chỉ bảo vệ quá tải và quá nhiệt cho máy bơm chữa
+cháy chính.
+
+Đ 5.8.3
+- Máy bơm dùng động
+cơ đốt trong
+- Cho phép sử dụng bơm dùng động cơ đốt trong làm
+bơm dự phòng
+- Cho phép bố trí bồn nhiên liệu (xăng - 250 I, dầu
+diesel - 500 I) cách biệt với phòng bơm bằng các bộ
+phận ngăn cháy có giới hạn chịu lửa không nhỏ hơn
+Đ 5.8.4
+Đ 5.8.18
+
+19
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+El 120.
+- Đường hút của máy
+bơm
+- Trạm bơm phải có ít nhất 2 đường hút, không phụ
+thuộc vào số lượng bơm.
+- Mỗi đường hút phải được thiết kế để bảo đảm lưu
+lượng nước tính toán.
+- Đường ống hút phải dốc dần lên phía máy bơm với
+độ dốc ít nhất 0,05 %. Tại vị trí thay đổi đường kính
+ống phải sử dụng côn thu lệch tâm.
+Đ 5.8.21
+
+Đ 5.8.23
+
+- Họng chờ kết nối - Để kết nối hệ thống chữa cháy với phương tiện
+chữa cháy di động, trong trạm bơm phải bố trí đường
+ống có đường kính danh định từ DN 80 trở lên với
+họng tiếp ở bên ngoài có chiều cao (1,35 ± 0,15) m
+với khớp nối DN 65. Đường ống phải bảo đảm lưu
+lượng tính toán cao nhất của hệ thống chữa cháy.
+- Bên ngoài trạm bơm phải bố trí ít nhất hai khớp nối
+để kết nối với xe chữa cháy.
+
+Đ 5.8.11
+
+Đ 5.8.12
+
+- Đường ống, van khóa
+trong trạm bơm
+- Phải bố trí các van trên tất cả các đường ống hút và
+đường ống đẩy để bảo đảm khả năng thay thế hoặc
+sửa chữa bất kỳ máy bơm nào, van một chiều và van
+khóa chính, cũng như kiểm tra các đặc tính của máy
+bơm.
+- Trên đường ống đẩy của mỗi bơm cần có van một
+chiều, van cổng và đồng hồ đo áp suất; trên đường
+hút phải có van cổng và đồng hồ đo áp suất. Khi bơm
+hoạt động mà không có áp suất dương tại đường ống
+hút thì không cần lắp đặt van cổng.
+- Khi có các đai giữ ống, chúng phải được đặt giữa
+van cổng và van một chiều.
+- Van khóa (van cổng hoặc van bướm) lắp đặt trên
+đường ống cấp chất chữa cháy vào bồn chứa phải đặt
+Đ 5.8.22
+
+Đ 5.8.24
+
+Đ 5.8.25
+Đ 5.8.26
+
+Đ 5.8.29
+
+20
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+trong khuôn viên của trạm bơm. Cho phép đặt van
+này tại vị trí thiết bị đo được mực nước của bồn, bể.
+- Trong các trạm bơm, cần đo áp suất trong đường
+ống đẩy của từng bơm, mức độ ngập (khi tại phòng
+bơm bị ngập nước đến cao độ của các động cơ điện).
+- Nút ấn điều khiển, bộ
+điều khiển
+- Hệ thống chữa cháy tự động, ngoại trừ Sprinkler,
+phải được trang bị cơ cấu kích hoạt bằng tay:
++ Từ xa - từ các thiết bị đặt tại lối vào của khu vực
+bảo vệ và từ phòng trực điều khiển chống cháy nếu
+cần thiết;
++ Cục bộ - từ các thiết bị được lắp đặt tại bộ điều
+khiển hoặc trong trạm bơm nước chữa cháy.
+- Bộ điều khiển phải được đặt trong khuôn viên của
+trạm bơm hoặc phòng trực điều khiển chống cháy
+hoặc trong khu vực được bảo vệ, có nhiệt độ không
+khí từ 5°C trở lên và đảm bảo tiếp cận dễ dàng để
+bảo dưỡng hệ thống.
+Đ 5.1.7
+
+Đ 5.6.1
+
+- Khởi động bơm - Khi khởi động bơm chữa cháy, tất cả các máy bơm
+mục đích khác được cấp nguồn trong cùng một
+đường dây với bơm chữa cháy và không nằm trong
+hệ thống chữa cháy tự động phải tự động ngắt.
+-  Tín hiệu khởi động tự động hoặc từ xa chỉ được gửi
+đến để kích hoạt máy bơm chữa cháy sau khi tự động
+kiểm tra áp lực nước trong hệ thống; khi áp suất hệ
+thống bảo đảm, việc khởi động máy bơm chữa cháy
+sẽ tự động bị hủy cho đến khi áp suất giảm xuống giá
+trị cài đặt để kích hoạt bơm.
+- Khi khởi động máy bơm chữa cháy tự động và từ
+xa, tín hiệu cảnh báo bằng ánh sáng và âm thanh về
+trạng thái hoạt động của bơm phải được chuyển đến
+phòng trực điều khiển chống cháy hoặc đến vị trí
+Đ 5.8.13
+
+Đ 5.8.27
+
+Đ 5.8.28
+
+21
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+khác có người trực suốt ngày đêm.
+- Sơn màu Bơm chữa cháy và bộ điều khiển phải được sơn màu
+đỏ.
+
+Đ 5.8.31
+- Theo dõi lượng nước,
+chất chữa cháy
+- Thiết bị theo dõi lượng chất chữa cháy trong bồn bể
+phải được đặt trong khuôn viên của trạm bơm.
+- Khi tự động bổ sung nước cho bồn bể, cho phép chỉ
+sử dụng thiết bị đo tự động với tín hiệu chuyển đến
+phòng trực điều khiển chống cháy và trạm bơm.
+
+Đ 5.8.30
+4 Bể nước dự trữ cho
+chữa cháy
+Kiểm tra việc duy trì
+mực nước trong bể
+
+Tính toán cho đám cháy lớn nhất khi các hệ thống
+hoạt động đồng thời:
+- Đối với cấp nước chữa cháy ngoài nhà:
+• Thời gian chữa cháy phải lấy là 3 giờ,
+ngoại trừ những quy định riêng nêu dưới
+đây:
+• Đối với nhà bậc chịu lửa I, II với kết cấu
+và lớp cách nhiệt làm từ vật liệu không
+cháy có các khu vực thuộc hạng nguy
+hiểm cháy nổ D và E lấy là 2 giờ;
+• Đối với công trình nhà trẻ, trường mẫu
+giáo, mầm non, nhà thuộc nhóm nguy
+hiểm cháy theo công năng F4.1, F4.3 ở
+khu vực nông thôn, có bậc chịu lửa I, II
+với kết cấu và lớp cách nhiệt làm từ vật
+liệu không cháy cao không quá 3 t ầng,
+diện tích xây dựng đến 500 m2 lấy là 1
+giờ;
+• Đối với công trình nhà trẻ, trường mẫu
+giáo, mầm non, nhà thuộc nhóm nguy
+hiểm cháy theo công năng F4.1, F4.3 ở
+Đ 5.1.3.3,
+5.2.9 Sử đổi
+1:2023 QCVN
+06:2022/BXD
+
+22
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+khu vực nông thôn, có bậc chịu lửa I, II
+với kết cấu và lớp cách nhiệt làm từ vật
+liệu không cháy cao không quá 3 t ầng,
+diện tích xây dựng đến 500 m2 thì cho
+phép sử dụng hệ thống họng nước chữa
+cháy bên trong để thay thế cho hệ thống
+cấp nước chữa cháy ngoài nhà;
+• Đối với kho dạng hở chứa vật liệu từ gỗ -
+không nhỏ hơn 5 giờ.
+• Đối với các nhà có yêu cầu về lưu lượng
+cho cấp nước chữa cháy ngoài nhà quy
+định tại các bảng 8, 9, 10 đến 15 L/s (cho
+nhà nhóm F1, F2, F3, F4) và đến 20 L/s
+(cho nhà nhóm F5) thì th ời gian chữa
+cháy của chúng lấy là 1 giờ
+- Đối với họng nước chữa cháy: Trong trường hợp
+lắp đặt hệ thống họng nước chữa cháy riêng biệt với
+các hệ thống chữa cháy tự động, thì thể tích của bể
+chứa nước dự trữ phải bảo đảm lượng nước dùng
+trong 1 giờ, cho một họng nước chữa cháy và các nhu
+cầu dùng nước khác.
+Khi lắp đặt hệ thống họng nước chữa cháy trên các
+hệ thống chữa cháy tự động thì thời gian làm việc của
+họng nước lấy bằng thời gian làm việc của hệ thống
+chữa cháy tự động.
+- Nguồn nước cấp bổ
+sung
+Khi xác định thể tích nước chữa cháy trong các bồn,
+bể thì cho phép tính cả việc nạp thêm vào bồn, bể
+trong thời gian chữa cháy nếu nó có hệ thống cấp
+nước bảo đảm quy định tại 5.1.2.7.
+
+Đ 5.1.5.4 Sửa
+đổi 1:2023
+QCVN
+06:2022/BXD
+
+II Hệ thống cấp nước
+cho họng nước
+ Sửa đổi
+1:2023 QCVN
+1. Trang bị, lắp đặt thiết bị thuộc hệ thống
+chữa cháy không bảo đảm theo quy định (Đb
+
+23
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+chữa cháy trong
+nhà
+06:2022/BXD K8 Đ20 NĐ106; phạt tiền từ 30.000.000
+đồng đến 40.000.000 đồng; biện pháp khắc
+phục hậu quả: Buộc trang bị, lắp đặt hệ
+thống chữa cháy).
+
+2. Không trang bị, lắp đặt hệ thống chữa cháy
+(Đb K9 Đ20 NĐ106; phạt tiền từ
+40.000.000 đồng đến 50.000.000 đồng; hình
+thức xử phạt bổ sung: Đình chỉ hoạt động
+từ 03 tháng đến 06 tháng).
+
+3. Không duy trì hoạt động của thiết bị thuộc
+hệ thống chữa cháy đã được trang bị, lắp đặt
+(Đb K4 Đ21 NĐ106; phạt tiền từ
+10.000.000 đồng đến 20.000.000 đồng; biện
+pháp khắc phục hậu quả: Buộc duy trì hệ
+thống chữa cháy).
+
+4. Bảo quản, bảo dưỡng hệ thống chữa cháy
+không bảo đảm nội dung theo quy định (Đc
+K1 Đ22 NĐ106; phạt tiền từ 3.000.000
+đồng đến 5.000.000 đồng).
+
+5. Không bảo dưỡng hệ thống chữa cháy (Đb
+K3 Đ22 NĐ106; phạt tiền từ 10.000.000
+đồng đến 20.000.000 đồng)
+
+6. Bảo quản, bảo dưỡng hệ thống chữa cháy
+không bảo đảm nội dung theo quy định (Đc
+K1 Đ22 NĐ106; phạt tiền từ 3.000.000
+đồng đến 5.000.000 đồng)
+
+24
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+1 Mạng đường ống
+cấp nước chữa cháy
+Kiểm tra việc duy trì mạng đường ống, các van và
+việc duy trì áp suất trong đường ống
+
+1.1 Ống đứng - Nhà từ 6 tầng trở lên khi liên kết hệ thống nước
+sinh hoạt và chữa cháy thì các ống đứng phải được
+nối vòng ở trên. Khi đó để bảo đảm việc thay nước
+trong nhà phải nối vòng ống đứng với một hoặc một
+vài ống xả đứng có van khóa.
+-  Việc xác định vị trí và số lượng đường ống đứng và
+họng nước chữa cháy trong nhà phải bảo đảm quy
+định sau:
++ Cho phép lắp đặt họng kép trên các ống đứng trong
+nhà sản xuất và nhà công cộng khi số lượng tia nước
+tính toán không nhỏ hơn 3, còn trong nhà ở không
+nhỏ hơn 2.
++ Trong nhà ở với chiều dài hành lang đến 10 m khi
+số tia nước bằng 2 cho mỗi điểm thì cho phép phun 2
+tia từ một ống đứng.
++ Trong nhà ở với chiều dài hành lang lớn hơn 10 m,
+cũng như nhà sản xuất và nhà công cộng có từ 2 tia
+nước tính toán trở lên cho mỗi điểm thì phải bố trí 2
+tia phun từ 2 tủ chữa cháy cạnh nhau (2 họng nước
+khác nhau).
+CHÚ THÍCH 1: Phải lắp đặt họng nước chữa cháy
+trong các tầng kỹ thuật, tầng áp mái và tầng hầm kỹ
+thuật nếu trong đó có vật liệu và kết cấu làm từ vật
+liệu cháy được.
+CHÚ THÍCH 2: Số tia nước từ mỗi tủ không được
+lớn hơn 2.
+CHÚ THÍCH 3:  Cho phép tăng bán kính phục vụ
+của các họng nước chữa cháy bằng việc kết nối các
+vòi chữa cháy với tổng chiều dài đến 40 m. Khi đó
+các vòi phải treo ở dạng xếp trên giá đỡ và được kết
+Đ 5.2.10
+
+Đ 5.2.11
+
+Đ 5.2.18
+
+25
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+nối sẵn với họng nước và lăng phun.
+- Khi trong nhà bố trí trên 12 họng nước chữa cháy
+hoặc có trang bị hệ thống chữa cháy tự động thì hệ
+thống cấp nước chữa cháy bên trong nhà, dù thiết kế
+riêng hay kết hợp cũng phải thiết kế ít nhất hai ống
+cấp nước và phải thực hiện nối thành mạng vòng.
+1.2 Van khóa Những van để khóa nước từ các đường ống nhánh cụt
+cũng như những van khóa lớn từ đường ống thép
+khép kín phải được bố trí để bảo đảm mỗi đoạn ống
+chỉ khóa nhiều nhất là 5 họng nước chữa cháy trên
+cùng một tầng.
+Đ 5.2.17
+1.3 Duy trì áp suất nước
+trong đường ống
+Hệ thống họng nước chữa cháy trong nhà của các nhà
+sản xuất, nhà kho có mức nguy hiểm cháy cao, nhà
+có chiều cao từ 25 m trở lên, chợ, trung tâm thương
+mại, siêu thị, khách sạn, vũ trường, karaoke, quán
+bar, hộp đêm, nhà ga, các nhà dịch vụ cảng biển, các
+nhà dịch vụ cảng cạn, các nhà dịch vụ cảng thuỷ nội
+địa, nhà hát, rạp chiếu phim phải thường xuyên có
+nước duy trì áp suất bảo đảm kích hoạt hệ thống tự
+động
+Đ 5.4.1.2
+TCVN
+3890:2023
+
+  -  Áp suất thủy tĩnh trong hệ thống nước sinh hoạt -
+chữa cháy đo tại các thiết bị vệ sinh - kỹ thuật đặt ở
+mức nước thấp nhất không được vượt quá 0,45 MPa.
+- Áp suất thủy tĩnh của hệ thống chữa cháy riêng biệt
+đo tại họng nước chữa cháy đặt ở mức nước thấp
+nhất không được vượt quá 0,60 MPa.
+- Khi tính toán, nếu áp suất trong hệ thống chữa cháy
+vượt quá 0,45 MPa thì phải lắp đặt mạng hệ thống
+chữa cháy riêng.
+CHÚ THÍCH: Khi áp suất giữa van và đầu nối của
+họng nước chữa cháy lớn hơn 0,45 MPa thì phải lắp
+Đ 5.2.6
+
+26
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+đặt màng ngăn và thiết bị điều chỉnh áp lực để giảm
+áp lực dư.
+2 Bố trí họng nước
+chữa cháy
+  1.  Trang bị, lắp đặt thiết bị thuộc hệ thống
+chữa cháy không bảo đảm theo quy định (Đb
+K8 Đ20 NĐ106; phạt tiền từ 30.000.000
+đồng đến 40.000.000 đồng; biện pháp khắc
+phục hậu quả: Buộc trang bị, lắp đặt hệ
+thống chữa cháy)
+
+2.  Không duy trì hoạt động của thiết bị thuộc
+hệ thống chữa cháy đã được trang bị, lắp đặt
+(Đb K4 Đ21 NĐ106; ph ạt tiền từ
+10.000.000 đồng đến 20.000.000 đồng; biện
+pháp khắc phục hậu quả: Buộc duy trì hệ
+thống chữa cháy)
+
+3. Bảo quản, bảo dưỡng hệ thống chữa cháy
+không bảo đảm nội dung theo quy định (Đc
+K1 Đ22 NĐ106; phạt tiền từ 3.000.000
+đồng đến 5.000.000 đồng)
+2.1. Đối tượng trang bị  Phụ lục B
+TCVN
+3890:2023
+
+- Công trình dân dụng
++ Số tia nước phun chữa
+cháy
+Số tia phun chữa cháy cho mỗi điểm cháy lấy là 02
+tia đối với các công trình có yêu cầu số tia phun lớn
+hơn 02.
+Điều 5.2.4
+  Phần nhà nằm ở chiều cao PCCC trên 50 m phải lấy
+tương ứng là 4 tia, mỗi tia 2,5 L/s
+Đ 5.2.2
++ Lưu lượng nước chữa Nhà ở và công trình công cộng Số tia phun Lưu lượng Bảng 11 Đ
+
+27
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+cháy chữa cháy trên
+1 tầng nhà
+tối thiểu cho
+chữa cháy
+trong nhà,
+L/s, đối với
+một tia phun
+1. Nhà ở, nhà chung cư
+≤ 16 tầng, khi hành lang chung dài ≤ 10 m 1 2,5
+≤ 16 tầng, khi hành lang chung dài > 10 m 2 2,5
+> 16 và ≤ 25 tầng, khi hành lang chung dài ≤ 10 m 2 2,5
+> 16 và ≤ 25 tầng, khi hành lang chung dài > 10 m 3 2,5
+2. Nhà hành chính 1)
+≤ 10 tầng và khối tích ≤ 25 000 m3  1 2,5
+≤ 10 tầng và khối tích > 25 000 m3  2 2,5
+> 10 tầng và khối tích ≤ 25 000 m3  2 2,5
+> 10 tầng và khối tích > 25 000 m3  3 2,5
+3. Phòng câu lạc bộ có sân khấu, nhà hát, rạp chiếu phim, phòng có trang bị thiết
+bị nghe nhìn (sinh hoạt, hội thảo và tương tự)
+≤ 300 chỗ 2 2,5
+> 300 chỗ 2 5,0
+4. Ký túc xá và nhà công cộng (ngoại trừ mục 2) 2)
+≤ 10 tầng và khối tích ≤ 25 000 m3 1 2,5
+≤ 10 tầng và khối tích > 25 000 m3 2 2,5
+> 10 tầng và khối tích ≤ 25 000 m3  2 2,5
+> 10 tầng và khối tích > 25 000 m3  3 2,5
+5. Nhà hành chính - phụ trợ của công trình công nghiệp có khối tích
+≤ 25 000 m3  1 2,5
+5.2.2
+
+28
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+> 25 000 m3  2 2,5
+1) Trụ sở cơ quan nhà nước, nhà làm việc của các doanh nghiệp, tổ chức chính trị, xã
+hội, bưu điện, cơ sở truyền thanh, truyền hình, viễn thông, nhà lắp đặt thiết bị thông tin,
+trung tâm lưu trữ, quản lý dữ liệu… và các công trình có công năng tương tự.
+2) Nhà công cộng và các công trình có công năng tương tự, như:
+– Nhà ở ký túc xá, nhà hỗn hợp, khách sạn, nhà ở riêng lẻ kết hợp công năng khác, nhà
+khách, nhà nghỉ, nhà trọ, cơ sở lưu trú khác được thành lập theo Luật Du lịch;
+– Cơ sở kinh doanh dịch vụ karaoke, vũ trường, quán bar, câu lạc bộ, thẩm mỹ viện,
+kinh doanh dịch vụ xoa bóp, công viên giải trí, vườn thú, thủy cung;
+– Cửa hàng điện máy, siêu thị, cửa hàng bách hoá; cửa hàng tiện ích, nhà hàng, cửa
+hàng ăn uống;
+– Phòng khám đa khoa, chuyên khoa; thẩm mỹ viện;
+– Bảo tàng, thư viện, nhà triển lãm, nhà trưng bày, nhà lưu trữ, nhà sách, nhà hội chợ;
+– Sân vận động, nhà thi đấu thể thao, cung thể thao trong nhà, trung tâm thể dục, thể
+thao, trường đua, trường bắn, cơ sở thể thao khác được thành lập theo Luật Thể dục, thể
+thao;
+– Cảng hàng không, đài kiểm soát không lưu, bến cảng biển, cảng cạn, cảng thủy nội
+địa, bến xe khách, trạm dừng nghỉ, nhà ga đường sắt, nhà chờ cáp treo vận chuyển
+người, công trình tàu điện ngầm, cơ sở đăng kiểm phương tiện giao thông cơ giới, cửa
+hàng kinh doanh, sửa chữa, bảo dưỡng ô tô, mô tô, xe gắn máy;
+– Nhà trẻ, trường mẫu giáo, mầm non, trường tiểu học, trung học cơ sở, trung học phổ
+thông, trường phổ thông có nhiều cấp học, trường cao đẳng, đại học, học viện, trường
+trung cấp chuyên nghiệp, trường dạy nghề; cơ sở giáo dục thường xuyên, cơ sở giáo
+dục khác được thành lập theo Luật Giáo dục;
+– Nhà điều dưỡng, phục hồi chức năng, chỉnh hình, nhà dưỡng lão.
+
+ Nhà cao trên 100m Lưu lượng nước chữa cháy trong nhà cho t ừng
+khoang cháy phải đủ cho 4 tia phun chữa cháy, lưu
+lượng nước mỗi tia phun không nhỏ hơn 2,5 l/s.
+Trong các khoang cháy có các gian phòng công cộng,
+cho phép bố  trí các họng
+Điều A.2.27.2,
+A.2.27.3
+QCVN
+06:2022/BXD
+
+29
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+nước chữa cháy có lưu lượng không nhỏ hơn 2,5  l/s,
+với điều kiện phải có các ống đứng đảm bảo cung cấp
+cho các họng nước đạt lưu lượng 5 l/s.
+ Gara ô tô Số lượng lăng phun chữa cháy và lưu lượng nước tối
+thiểu cho một tia phun chữa cháy bên trong các gara
+ô-tô dạng kín phải đảm bảo như sau:
+- Khi thể tích khoang cháy từ 500 đến 5.000 m3: 2
+lăng phun và 2,5 l/s cho một tia phun;
+- Khi thể tích khoang cháy lớn hơn 5.000 m3: 2 lăng
+phun và 5 l/s cho một tia phun.
+Cho phép không đặt đường ống cấp nước chữa cháy
+bên trong đối với các gara ô-tô một và hai tầng dạng
+ngăn có lối ra ngoài trời trực tiếp từ từng ngăn.
+Điều 2.3.2.1
+QCVN
+13:2018/BXD
+
+- Nhà sản xuất và nhà
+kho F5
+
+- Số tia nước phun chữa
+cháy
+Số tia phun chữa cháy cho mỗi điểm cháy lấy là 02
+tia đối với các công trình có yêu cầu số tia phun lớn
+hơn 02.
+Điều 5.2.4
+  Nhà nhóm F5 hạng nguy hiểm cháy nổ A, B, C có
+chiều cao PCCC trên 50m lấy tương ứng là 4 tia, mỗi
+tia 5 L/s.
+Đ 5.2.2
+  Bảng 12 – Số tia phun chữa cháy và lưu lượng nước
+tối thi ểu
+cho chữa cháy trong nhà đối với nhà sản xuất và nhà
+kho
+Bậc chịu lửa
+của nhà
+Hạng nguy
+hiểm cháy và
+cháy nổ của
+nhà
+Cấp nguy hiểm
+cháy của kết
+cấu
+Số tia phun chữa cháy và lưu lượng nước tối
+thiểu, L/s, đối với 1 tia phun, cho chữa cháy
+trong nhà đối với nhà sản xuất và nhà kho có
+chiều cao PCCC đến 50 m và theo khối tích,
+1 000 m3
+Bảng 12, 13
+
+30
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+≤ 150 > 150
+I, II A, B, C S0, S1 2 × 2,5 3 × 2,5
+D, E Không quy định 1 × 2,5 1 × 2,5
+III A, B, C S0 2 × 2,5 3 × 2,5
+D, E S0, S1 1 × 2,5 2 × 2,5
+IV A, B S0 2 × 2,5 3 × 2,5
+C S0, S1 2 × 2,5 2 × 5
+C S2, S3 3 × 2,5 4 × 2,5
+D, E S0, S1, S2, S3 1 × 2,5 2 × 2,5
+V C Không quy định 2 × 2,5 2 × 5
+D, E Không quy định 1 × 2,5 2 × 2,5
+Bảng 13 – Lưu lượng nước chữa cháy phụ thuộc theo
+chiều cao tia nư ớc đ ặc
+và đường kính đầu lăng phun chữa cháy
+Chiều
+cao
+tia
+nước
+đặc,
+m
+Lưu
+lượng
+của
+lăng
+phun,
+L/s
+Áp suất, MPa, của
+họng nước chữa
+cháy với chiều dài
+cuộn vòi, m
+Lưu
+lượng
+của
+lăng
+phun,
+L/s
+Áp suất, MPa, của
+họng nước chữa
+cháy với chiều dài
+cuộn vòi, m
+10 15 20 10
+
+Đường kính đầu lăng phun chữa cháy, mm
+13 16
+Họng nước chữa cháy DN 50 1)
+6 – – – – 2,6 0,092
+8 – – – – 2,9 0,120
+10 – – – – 3,3 0,151
+
+31
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+12 2,6 0,202 0,206 0,210 3,7 0,192 0,196 0,210 5,2 0,206 0,223 0,240
+14 2,8 0,236 0,241 0,245 4,2 0,248 0,255 0,263 – – – –
+16 3,2 0,316 0,322 0,328 4,6 0,293 0,300 0,318 – – – –
+18 3,6 0,390 0,398 0,406 5,1 0,360 0,380 0,400 – – – –
+Họng nước chữa cháy DN 65 1)
+6 – – – – 2,6 0,088 0,089 0,090 3,4 0,078 0,080 0,083
+8 – – – – 2,9 0,110 0,112 0,114 4,1 0,114 0,117 0,121
+10 – – – – 3,3 0,140 0,143 0,146 4,6 0,143 0,147 0,151
+12 2,6 0,198 0,199 0,201 3,7 0,180 0,183 0,186 5,2 0,182 0,190 0,199
+14 2,8 0,23 0,231 0,233 4,2 0,230 0,233 0,235 5,7 0,218 0,224 0,230
+16 3,2 0,31 0,313 0,315 4,6 0,276 0,280 0,284 6,3 0,266 0,273 0,280
+18 3,6 0,38 0,383 0,385 5,1 0,338 0,342 0,346 7,0 0,329 0,338 0,348
+20 4,0 0,464 0,467 0,470 5,6 0,412 0,424 0,418 7,5 0,372 0,385 0,397
+1) DN – Viết tắt của Diameter Nominal – Đường kính trong danh nghĩa, đơn vị tính bằng milimét
+(mm).
+
+  - Khi sử dụng kết cấu thép không được bảo vệ chống
+cháy trong các nhà bậc chịu lửa III, IV (nhóm S2,
+S3), cũng như kết cấu gỗ tự nhiên hoặc gỗ ép (trong
+trường hợp này là gỗ đã qua xử lý bảo vệ chống
+cháy), phải tăng thêm 5 L/s.
+- Khi sử dụng vật liệu là chất cháy bao quanh cấu
+trúc nhà bậc chịu lửa IV (nhóm S2, S3), phải tăng
+thêm 5 L/s với nhà có khối tích đến 10 000 m3. Khi
+nhà có khối tích lớn hơn 10 000 m3 thì phải tăng
+thêm 5 L/s cho mỗi 100 000 m3 tăng thêm hoặc phần
+lẻ của 100 000 m3 tăng thêm.
+Đ 5.2.3
+3 Họng nước chữa - Kiểm tra việc duy trì chiều cao lắp đặt họng nước  1.  Trang bị, lắp đặt thiết bị thuộc hệ thống
+
+32
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+cháy - Kiểm tra chủng loại lăng, vòi chữa cháy (thông số
+áp lực, chiều dài cuộn vòi, chủng loại lăng vòi, khớp
+nối);
+- Kiểm tra van khóa của họng.
+chữa cháy không bảo đảm theo quy định (Đb
+K8 Đ20 NĐ106; phạt tiền từ 30.000.000
+đồng đến 40.000.000 đồng; biện pháp khắc
+phục hậu quả: Buộc trang bị, lắp đặt hệ
+thống chữa cháy)
+
+2.  Không duy trì hoạt động của thiết bị thuộc
+hệ thống chữa cháy đã được trang bị, lắp đặt
+(Đb K4 Đ21 NĐ106; ph ạt tiền từ
+10.000.000 đồng đến 20.000.000 đồng; biện
+pháp khắc phục hậu quả: Buộc duy trì hệ
+thống chữa cháy)
+
+3. Bảo quản, bảo dưỡng hệ thống chữa cháy
+không bảo đảm nội dung theo quy định (Đc
+K1 Đ22 NĐ106; phạt tiền từ 3.000.000
+đồng đến 5.000.000 đồng)
+3.1 Chiều cao lắp đặt
+họng
+- Các họng nước chữa cháy được lắp đặt sao cho
+miệng họng nằm ở độ cao 1,20 m ± 0,15 m so với
+mặt sàn và đặt trong các tủ chữa cháy có lỗ thông
+gió, được dán niêm phong.
+- Đối với họng nước chữa cháy kép, cho phép lắp đặt
+01 họng nằm trên 01 họng nằm dưới, khi đó họng
+nằm dưới phải lắp có chiều cao không nhỏ hơn 1,0 m
+tính từ mặt sàn.
+Điều 5.2.12
+3.2 Vị trí bố trí họng
+nước
+Họng nước chữa cháy bên trong nhà phải được lắp
+đặt tại các lối vào phía trong hành lang (ở nơi không
+có nguy cơ nước bị đóng băng) của các buồng thang
+(trừ các buồng thang không nhiễm khói), tại các
+sảnh, hành lang, lối đi và những chỗ dễ tiếp cận khác,
+khi đó việc bố trí phải đảm bảo không gây cản trở các
+hoạt động thoát nạn.
+Điều 5.2.14
+
+33
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+3.3 Họng tiếp nước vào
+Kiểm tra việc bố trí,
+duy trì việc trang bị
+họng cấp nước vào hệ
+thống (họng 2 cửa,
+họng 4 cửa)
+Đối với nhà cao từ 17 tầng trở lên, hệ thống họng
+nước chữa cháy trong nhà của mỗi vùng phải có họng
+chờ, có đầu nối với kích cỡ phù hợp để kết nối với
+phương tiện chữa cháy di động. Các họng này phải
+được lắp đặt van một chiều và niêm phong mở.
+Điều 5.2.13
+3.4 Chiều cao tia nước
+đặc
+- Kiểm tra chiều cao
+tia nước đặc (lấy
+bằng 0,8 chiều cao
+tia nước phun theo
+phương thẳng đứng).
+Thử nghiệm bằng áp
+lực của hệ thống, số
+lượng lăng triển khai
+theo thiết kế lớn nhất
+và đo áp lực đầu lăng
+tại ví trí bất lợi nhất.
+Áp suất tự do của họng nước chữa cháy phải bảo đảm
+cho chiều cao của tia nước đặc cần thiết để chữa cháy
+vào mọi thời điểm trong ngày đối với khu vực cao
+nhất và xa nhất. Chiều cao tối thiểu và bán kính hoạt
+động của tia nước đặc chữa cháy phải bằng chiều cao
+của khu vực, tính từ sàn đến điểm cao nhất của xà
+(trần), nhưng không nhỏ hơn các giá trị sau:
+-  Đối với nhà ở, nhà công cộng, nhà sản xuất và nhà
+phụ trợ của công trình công nghiệp có chiều cao đến
+50 m không nhỏ hơn 6 m.
+-  Đối với nhà ở cao trên 50 m không nhỏ hơn 8 m.
+-  Đối với nhà công cộng, nhà sản xuất và  nhà  phụ
+trợ của công trình công nghiệp cao trên 50 m không
+nhỏ hơn 16 m.
+CHÚ THÍCH 1: Áp suất của họng nước chữa cháy
+phải được tính toán tổn thất của cuộn vòi chữa cháy
+dài 10, 15 và  20 m.
+CHÚ THÍCH 2: Để nhận tia nước đặc lưu lượng đến
+4 l/s thì sử dụng họng nước chữa cháy DN 50, đối với
+lưu lượng lớn hơn phải sử dụng họng DN 65. Khi
+luận chứng kinh tế - kỹ  thuật cho phép thì được dùng
+họng nước chữa cháy DN 50 cho lưu lượng trên 4 l/s.
+Điều 5.2.7
+4 Hệ thống họng chờ
+Kiểm tra việc bố trí,
+duy trì việc trang bị
+- Nhà nhóm F1.3 có chiều cao PCCC lớn hơn 15 m:
+Khoang đệm của thang máy chữa cháy hoặc của
+buồng thang bộ thoát nạn có bố trí họng chờ cấp
+Đ 6.2.2.2
+
+1.  Trang bị, lắp đặt thiết bị thuộc hệ thống
+chữa cháy không bảo đảm theo quy định (Đb
+K8 Đ20 NĐ106; phạt tiền từ 30.000.000
+
+34
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+họng cấp nước vào
+hệ thống (họng 2
+cửa, họng 4 cửa)
+nước DN 65 dành cho lực lượng chữa cháy chuyên
+nghiệp (của hệ thống ống khô).
+-  Đối với các tầng hầm, phải có đường cho xe chữa
+cháy nằm trong phạm vi 18 m tính từ lối vào trên mặt
+đất của tất cả các khoang đệm của thang máy chữa
+cháy hoặc của buồng thang bộ thoát nạn có bố trí
+họng chờ cấp nước DN 65 dành cho lực lượng chữa
+cháy chuyên nghiệp (của hệ thống ống khô).
+-  Mỗi khoang cháy của các nhà có chiều cao PCCC
+lớn hơn 28 m (lớn hơn 50 m đối với nhà nhóm F1.3),
+hoặc nhà có chiều sâu của sàn tầng hầm dưới cùng
+(tính đến cao độ của lối ra thoát nạn ra ngoài) lớn
+hơn 9 m: Sảnh thang máy chữa cháy là một khoang
+đệm có lắp đặt họng chờ cấp nước DN 65 dành cho
+lực lượng chữa cháy chuyên nghiệp;
+- Nhà F1.2, F4.3 và nhà hỗn hợp: Trong các khoang
+đệm buồng của thang bộ không nhiễm khói phải bố
+trí các họng chờ cấp nước D65 dành cho lực lượng
+chữa cháy chuyên nghiệp (của hệ thống ống khô). Ở
+tầng 1 các đường ống này phải có các ống nối để đấu
+nối với các bơm áp lực cao của các xe chữa cháy.
+Đ 6.2.2.4
+
+Đ 6.13
+
+A.2.27.8
+đồng đến 40.000.000 đồng; biện pháp khắc
+phục hậu quả: Buộc trang bị, lắp đặt hệ
+thống chữa cháy)
+
+2.  Không duy trì hoạt động của thiết bị thuộc
+hệ thống chữa cháy đã được trang bị, lắp đặt
+(Đb K4 Đ21 NĐ106; ph ạt tiền từ
+10.000.000 đồng đến 20.000.000 đồng; biện
+pháp khắc phục hậu quả: Buộc duy trì hệ
+thống chữa cháy)
+
+3. Bảo quản, bảo dưỡng hệ thống chữa cháy
+không bảo đảm nội dung theo quy định (Đc
+K1 Đ22 NĐ106; phạt tiền từ 3.000.000
+đồng đến 5.000.000 đồng)
+5 Lượng nước dự trữ
+chữa cháy
+Trong trường hợp lắp đặt hệ thống họng nước chữa
+cháy riêng biệt với các hệ thống chữa cháy tự động,
+thì thể tích của bể chứa nước dự trữ phải bảo đảm
+lượng nước dùng trong 01 giờ, cho một họng nước
+chữa cháy và các nhu cầu dùng nước khác.
+Khi lắp đặt hệ thống họng nước chữa cháy trên các
+hệ thống chữa cháy tự động thì thời gian làm việc của
+họng nước lấy bằng thời gian làm việc của hệ thống
+chữa cháy tự động.
+Điều 5.2.9
+
+III Hệ thống chữa cháy
+tự động Sprinkler
+  1. Không trang bị, lắp đặt hệ thống chữa cháy
+(Đb K9 Đ20 NĐ106; ph ạt tiền từ
+
+35
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+40.000.000 đồng đến 50.000.000 đồng; hình
+thức xử phạt bổ sung: Đình chỉ hoạt động
+từ 03 tháng đến 06 tháng)
+
+2.  Không duy trì hoạt động của hệ thống chữa
+cháy đã được trang bị, lắp đặt (Đb K6 Đ21
+NĐ106; phạt tiền từ 40.000.000 đồng đến
+50.000.000 đồng; hình thức xử phạt bổ
+sung: Đình chỉ hoạt động từ 01 tháng đến
+03 tháng)
+
+3.  Không bảo dưỡng hệ thống chữa cháy (Đb
+K3 Đ22 NĐ106; phạt tiền từ 10.000.000
+đồng đến 20.000.000 đồng)
+1 Yêu cầu trang bị hệ
+thống
+Theo quy định tại Phụ lục A  TCVN 3890:2023. Phụ lục A
+TCVN
+3890:2023
+
+2 Khu vực bảo vệ
+2.1 Sự phù hợp của hệ
+thống chữa cháy và
+đối tượng cần bảo vệ
+Loại hệ thống chữa cháy tự động, phương pháp chữa
+cháy, loại chất chữa cháy phải tính đến nguy cơ cháy
+và tính chất lý hóa của các chất cháy và đặc điểm của
+đối tượng cần bảo vệ.
+Không thiết kế cho:
+- Nhà và công trình được thiết kế theo các quy định
+đặc biệt;
+- Thiết bị công nghệ nằm bên ngoài nhà;
+- Nhà kho có giá đỡ di động.
+Không thiết kế cho đám cháy kim loại cũng như các
+chất và vật liệu có hoạt tính hóa học mạnh, bao gồm:
+- Các chất phản ứng với chất chữa cháy gây nổ (hợp
+
+Điều 1.1
+TCVN
+7336:2021
+Điều 1.2
+TCVN
+7336:2021
+Điều 1.3
+
+36
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+chất nhôm, kim loại kiềm,…);
+- Các chất phân hủy khi tương tác với chất chữa cháy
+và giải phóng các khí dễ cháy (hợp chất lithium,
+azide chì, hydrua nhôm, kẽm, magiê);
+- Các chất tương tác với chất chữa cháy có tác dụng
+tỏa nhiệt mạnh (axit sulfuric, titan clorua,...);
+- Các chất tự cháy khi tiếp xúc với nước (natri
+hydrosulfite,...).
+TCVN
+7336:2021
+2.2 Xác định các thông số
+cơ bản của hệ thống
+
+- Nhóm nguy cơ phát
+sinh cháy :
+Kiểm tra duy trì nhóm
+nguy cơ phát sinh
+cháy
+Phụ lục A (Quy định) Phụ lục A
+TCVN
+7336:2021
+
+- Cường độ phun tối
+thiểu:
+Kiểm tra duy trì dựa
+vào việc duy trì máy
+bơm cấp nước chữa
+cháy
+Bảng 1
+Bảng 2 đối với nhóm nguy cơ phát sinh cháy 5, 6, 7
+Bảng 3 đối với phòng có chiều cao từ 10 m đến 20 m
+Đối với hệ thống chữa cháy sử dụng nước pha thêm
+chất phụ gia (bảo đảm theo thông số kỹ thuật, yêu
+cầu của nhà sản xuất) để tăng khả năng thẩm thấu
+trên nguyên lý pha chất tạo bọt, cường độ phun và
+lưu lượng cho phép giảm 1,5 lần so với nước.
+Điều 5.1.3
+TCVN
+7336:2021
+
+- Lưu lượng:
+Kiểm tra duy trì dựa
+vào việc duy trì máy
+bơm cấp nước chữa
+cháy
+Tính toán theo Phụ lục B (Tham khảo).
+Không nhỏ hơn với lưu lượng tối thiểu tại Bảng 1, 2,
+3
+Nếu khu vực được bảo vệ thực tế (Stt) nhỏ hơn diện
+tích tính toán tổi thiểu (S) được quy định trong Bảng
+1, thì lưu lượng thực tế có thể giảm theo hệ số K =
+Stt / S
+Điều 5.1.3,
+Phụ lục B
+TCVN
+7336:2021
+
+37
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+- Thời gian phun t ối
+thiểu
+Bảng 1 (Kiểm tra duy trì dựa vào lượng nước dự trữ
+cho chữa cháy)
+Điều 5.1.3
+TCVN
+7336:2021
+
+- Áp suất tối đa tại đầu
+phun:
+Không lớp hơn1 Mpa, trừ khi có quy định khác đối
+với đối tượng được bảo vệ cụ thể hoặc nhóm đối
+tượng tương tự bởi các tài liệu kỹ thuật
+Khi kết hợp với hệ thống họng nước chữa cháy trong
+nhà thì áp suất tại họng nước không được vượt quá
+0,4 MPa; trường hợp áp suất tại họng nước chữa cháy
+lớn hơn thì phải có giải pháp giảm áp bảo đảm theo
+yêu cầu.
+( Kiểm tra duy trì dựa vào việc duy trì máy bơm cấp
+nước chữa cháy)
+Điều 5.1.4,
+5.2.23 TCVN
+7336:2021
+
+- Cột áp Tính toán theo Phụ lục B. Ngoài ra có thể tham khảo
+các phương pháp tính toán thủy lực khác nhưng các
+thông số tính toán phải đảm bảo quy định tại Bảng 1,
+2, 3
+( Kiểm tra duy trì dựa vào việc duy trì máy bơm cấp
+nước chữa cháy)
+Phụ lục B
+TCVN
+7336:2021
+
+2.3 Yêu cầu với đầu phun
+Kiểm tra việc duy trì
+các yêu cầu:
+
+- Thông số kỹ thuật đầu
+phun
+Trong một gian phòng phải lắp đặt đầu phun có cùng
+nhiệt độ tác động (đối với đầu phun Sprinkler), cùng
+thông số kỹ thuật. Cho phép bố trí trong cùng một
+phòng các đầu phun của hệ thống Drencher dạng màn
+nước với thông số đầu phun khác thông số của đầu
+phun Sprinkler, tất cả các đầu phun Drencher phải có
+thông số kỹ thuật giống nhau.
+Điều 5.1.9
+TCVN
+7336:2021
+
+- Khoảng cách đ ến
+điểm trên cùng chất
+Khoảng cách giữa đầu phun với điểm trên cùng của
+chất cháy, thiết bị công nghệ hoặc kết cấu của nhà
+Điều 5.1.11
+TCVN
+
+38
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+cháy phải tính đến ngưỡng áp suất làm việc và hình dạng
+của dòng tia phun.
+7336:2021
+- Khoảng cách đến trần Khoảng cách từ tâm của phần tử nhạy cảm với nhiệt
+của đầu phun đến mặt phẳng trần (mái) phải nằm
+trong khoảng 0,08 m đến 0,30 m; trong trường hợp
+đặc biệt, do thiết kế trần (ví dụ có các phần nhô ra)
+được phép tăng khoảng cách này lên 0,40 m.
+Khoảng cách từ tâm của phần tử nhạy cảm với nhiệt
+của đầu phun ngang đến trần phải từ 0,07 m đến 0,15
+m.
+Điều 5.2.12,
+5.2.13 TCVN
+7336:2021
+
+- Khoảng cách đ ến
+tường
+Khoảng cách giữa đầu phun với tường (vách ngăn)
+có tính nguy hiểm cháy cấp K0, K1 không được vượt
+quá một nửa khoảng cách giữa các đầu phun được
+quy định trong Bảng 1 hoặc theo tài liệu kỹ thuật của
+nhà sản xuất.
+Khoảng cách giữa đầu phun với tường (vách ngăn)
+có tính nguy hiểm cháy cấp K2, K3 và các loại khác
+không được vượt quá 1,2 m hoặc theo tài liệu kỹ
+thuật của nhà sản xuất.
+Trong các tòa nhà có mái chéo đơn và đôi có độ dốc
+lớn hơn 1/3, khoảng cách theo phương ngang từ đầu
+phun đến tường và từ đầu phun đến mép mái phải
+đảm bảo:
+- Không quá 1,5 m - mái có tính nguy hiểm cháy cấp
+K0;
+- Không quá 0,8 m - trong các trường hợp còn lại.
+Điều 5.2.16,
+5.2.22 TCVN
+7336:2021
+
+- Khoảng cách giữa 02
+đầu phun
+Khoảng cách giữa các đầu phun không được nhỏ hơn
+1,5 m (theo phương ngang).
+Điều 5.2.22
+TCVN
+7336:2021
+
+- Bố trí theo khoang
+dầm
+Trong các tòa nhà có kết cấu trần (mái) thuộc tính
+nguy hiểm cháy cấp K0 và K1 có các phần nhô ra với
+Điều 5.2.11
+TCVN
+
+39
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+chiều cao hơn 0,3 m và trong các cấp nguy hiểm cháy
+còn lại với chiều cao hơn 0,2 m, phải bố trí đầu phun
+giữa các khoang tạo bởi các phần nhô ra (dầm, vì kèo
+và các cấu trúc xây dựng khác).
+7336:2021
+2.4 Yêu cầu với đường
+ống
+
+- Vật liệu làm ống Đường ống của hệ thống chữa cháy tự động có thể
+bằng kim loại, nhựa hoặc kim loại – nhựa phù hợp
+với yêu cầu quy định hiện hành.
+Điều 5.5.1
+TCVN
+7336:2021
+
+- Phân chia đường ống
+chính
+Các đường ống cấp mạng vòng (trong nhà và ngoài
+nhà) phải chia thành các phần để sửa chữa bằng các
+van khóa; số lượng bộ điều khiển trong một phần
+không quá ba; khi tính toán thủy lực của đường ống
+không cần tính đến việc ngắt các phần sửa chữa của
+mạng vòng; đường kính của đường ống mạng vòng
+không được nhỏ hơn đường kính của ống cấp cho các
+bộ điều khiển.
+Điều 5.5.3
+TCVN
+7336:2021
+
+- Bố trí van xả khí và
+đồng hồ áp suất trên
+đường ống
+Phải lắp đặt:
+- Van xả khí ở điểm trên cùng của mạng đường ống
+chữa cháy bằng nước để giải phóng không khí trong
+đường ống;
+- Van với đồng hồ đo áp suất để kiểm soát áp suất
+trước đầu phun chủ đạo.
+Điều 5.5.8
+TCVN
+7336:2021
+
+- Bố trí van khóa Không được phép lắp đặt các van khóa trên đường
+ống chính và phân phối, trừ các trường hợp được quy
+định trong tiêu chuẩn này
+Cho phép bố trí trước công tắc dòng chảy
+Các van khóa được lắp đặt trên đường ống cấp vào
+máy bơm chữa cháy, trên đường ống cung cấp và
+đường ống chính phải có khả năng giám sát trực quan
+và tự động về trạng thái đóng-mở của chúng.
+Điều 5.1.14,
+5.1.15, 5.5.9
+TCVN
+7336:2021
+
+40
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+2.5 Yêu cầu với bộ điều
+khiển
+
+- Vị trí bộ điều khiển Bộ điều khiển phải được đặt trong khuôn viên của
+trạm bơm hoặc phòng trực điều khiển chống cháy
+hoặc trong khu vực được bảo vệ, có nhiệt độ không
+khí từ 5°C trở lên và đảm bảo tiếp cận dễ dàng để
+bảo dưỡng hệ thống.
+Bộ điều khiển đặt trong khu vực được bảo vệ phải
+được ngăn cách bằng các tường, vách ngăn, trần nhà
+có giới hạn chịu lửa không nhỏ hơn EI 45 và các cửa
+ngăn cháy có giới hạn chịu lửa không nhỏ hơn ЕI 30.
+Cho phép đặt các bộ điều khiển của từng khu vực
+riêng biệt trong các tủ bảo vệ mà chỉ nhân viên bảo
+dưỡng hệ thống có quyền tiếp cận, cho phép đặt tủ
+bảo vệ trong hoặc gần khu vực được bảo vệ mà
+không cần ngăn cháy khi đảm bảo khoảng cách từ
+các tủ này đến khu vực có chất cháy không nhỏ hơn 2
+m.
+Các bộ điều khiển đặt bên ngoài khu vực bảo vệ phải
+được ngăn cách bằng kính hoặc lưới bảo vệ.
+Điều 5.6.1,
+5.6.2, 5.6.3
+TCVN
+7336:2021
+
+2.6 Yêu cầu với nguồn
+cấp nước
+
+- Thiết bị cấp nước tự
+động
+Trong hệ thống Sprinkler hoặc hệ thống Sprinkler-
+Drencher, phải sử dụng một trong các loại thiết bị
+cấp nước tự động sau:
+- Một hoặc nhiều bình tích áp có tổng dung tích
+không nhỏ hơn 1 m3, trong đó chứa nước (0,5 ± 0,1)
+m3 và khí nén;
+- Bơm bù được trang bị bình tích áp có dung tích ít
+nhất 40 lít;
+- Đường ống cấp nước cho các mục đích khác nhau
+Điều 5.7.4,
+5.7.7, 5.7.8
+TCVN
+7336:2021
+
+41
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+với áp lực bảo đảm hoạt động cho các bộ điều khiển.
+Thiết bị cấp nước tự động (bình tích áp có dung tích
+tối thiểu 1 m3) phải được trang bị đồng hồ đo áp suất,
+công tắc áp lực, đồng hồ đo mực nước trực quan và
+từ xa, van an toàn.
+Thiết bị cấp nước tự động (bơm bù áp) phải được
+trang bị đồng hồ đo áp suất và công tắc áp lực (hoặc
+đồng hồ đo áp suất tín hiệu điện).
+- Thiết bị cấp nước phụ
+trợ
+Thiết bị cấp nước phụ trợ được sử dụng trong các
+trường hợp khi thời gian khởi động của bơm chữa
+cháy ở chế độ tự động hoặc bằng tay là hơn 30 s
+Thiết bị cấp nước phụ trợ phải được trang bị hai đồng
+hồ đo áp suất, đồng hồ đo mực nước trực quan và từ
+xa, van an toàn.
+Điều 5.7.5,
+5.7.9 TCVN
+7336:2021
+
+- Bể nước Cho phép tính lượng nước của các bể nước phụ vào
+lượng nước tính toán cho hệ thống chữa cháy, trong
+trường hợp này phải có thiết bị để ngăn nước tại các
+bể này sử dụng cho mục đích khác.
+Cho phép tính lượng nước của các bể nước phụ vào
+lượng nước tính toán cho hệ thống chữa cháy, trong
+trường hợp này phải có thiết bị để ngăn nước tại các
+bể này sử dụng cho mục đích khác.
+Cho phép tính lượng nước của các bể nước phụ vào
+lượng nước tính toán cho hệ thống chữa cháy, trong
+trường hợp này phải có thiết bị để ngăn nước tại các
+bể này sử dụng cho mục đích khác.
+Các hồ chứa và bể nước chữa cháy cần có ký hiệu,
+chỉ dẫn vị trí
+Điều 5.7.11,
+5.7.12, 5.7.13,
+5.7.14 TCVN
+7336:2021
+
+2.8 Yêu cầu với trạm bơm
+Lưu ý: trường hợp công trình thuộc phạm vi áp dụng của QCVN
+02:2020/BCA thì phải tham khảo thêm bảng đối chiếu trạm bơm để đối chiếu
+
+42
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+cho trạm bơm.Kiểm tra việc duy trì:
+- Số lượng bơm Căn cứ vào lưu lượng cần thiết có thể sử dụng một
+hoặc một số máy bơm chính. Với bất kỳ số lượng
+máy bơm hoạt động, phải có ít nhất một máy bơm dự
+phòng, tương ứng với lưu lượng tối đa và áp lực cần
+thiết của máy bơm chính. Máy bơm dự phòng sẽ tự
+động bật khi có sự cố ngắt khẩn cấp hoặc hỏng hóc
+của bất kỳ bơm chính nào.
+Điều 5.8.2
+TCVN
+7336:2021
+
+- Vị trí trạm bơm Các trạm bơm được đặt trong các nhà độc lập hoặc
+ngoài nhà hoặc trong một phòng riêng biệt ở tầng 1
+hoặc tầng hầm trên cùng. Cho phép đặt trạm bơm
+nước chữa cháy tại các tầng nổi khác của nhà khi
+phòng đặt bơm có cửa ra thông với buồng đệm thang
+thoát nạn của nhà qua hành lang được bảo vệ bằng
+kết cấu ngăn cháy loại 1.
+Khu vực của trạm bơm phải được ngăn cách với các
+khu vực khác bằng tường và trần ngăn cháy có giới
+hạn chịu lửa REI 45.
+Điều 5.8.5,
+5.8.6 TCVN
+7336:2021
+
+- Trang bị cho trạm
+bơm
+Trạm bơm phải được trang bị điện thoại kết nối với
+phòng trực điều khiển chống cháy
+Ở lối vào trạm bơm phải có đèn ghi chữ "trạm bơm
+chữa cháy", kết nối với đèn chiếu sáng sự cố
+Điều 5.8.8,
+5.8.9 TCVN
+7336:2021
+
+- Bố trí mặt bằng trạm
+bơm
+Khi bố trí mặt bằng trạm bơm, chiều rộng của các lối
+đi tối thiểu như sau:
+Giữa các bộ điều khiển và giữa bộ điều khiển với
+tường: 0,5 m;
+Giữa các máy bơm hoặc động cơ điện: 0,7 m;
+Giữa máy bơm hoặc động cơ điện và tường: 1 m,
+chiều rộng của lối đi từ phía bên của động cơ điện
+phải đủ để tháo dỡ rôto;
+Giữa các máy nén khí: 1,5 m, giữa máy nén khí với
+Điều 5.8.10
+TCVN
+7336:2021
+
+43
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+tường: 1 m;
+Giữa các bộ phận nhô ra cố định của thiết bị: 0,7 m.
+CHÚ THÍCH: Đối với bơm có đường kính họng đẩy
+đến DN 100, cho phép:
+- Lắp đặt bơm gần tường hoặc trên giá đỡ;
+- Lắp đặt hai bơm trên cùng một móng với khoảng
+cách tối thiểu 0,2 m nhưng phải có các lối đi xung
+quanh móng với chiều rộng tối thiểu 0,7 m
+- Bố trí họng tiếp Để kết nối hệ thống chữa cháy với phương tiện chữa
+cháy di động, trong trạm bơm phải bố trí đường ống
+có đường kính danh định từ DN 80 trở lên với họng
+tiếp ở bên ngoài có chiều cao (1,35 ± 0,15) m với
+khớp nối DN 65. Đường ống phải bảo đảm lưu lượng
+tính toán cao nhất của hệ thống chữa cháy.
+Bên ngoài trạm bơm phải bố trí ít nhất hai khớp nối
+để kết nối với xe chữa cháy.
+Điều 5.8.11,
+5.8.12 TCVN
+7336:2021
+
+- Bồn nhiên liệu cho
+bơm động cơ đốt
+trong
+Trong các trạm bơm có động cơ đốt trong, cho phép
+bố trí bồn nhiên liệu (xăng - 250 l, dầu diesel - 500 l)
+cách biệt với phòng bơm bằng các bộ phận ngăn cháy
+có giới hạn chịu lửa không nhỏ hơn EI 120.
+Điều 5.8.18
+TCVN
+7336:2021
+
+- Đường hút Trạm bơm phải có ít nhất 2 đường hút, không phụ
+thuộc vào số lượng bơm. Mỗi đường hút phải được
+thiết kế để bảo đảm lưu lượng nước tính toán
+Phải bố trí các van trên tất cả các đường ống hút và
+đường ống đẩy để bảo đảm khả năng thay thế hoặc
+sửa chữa bất kỳ máy bơm nào, van một chiều và van
+khóa chính, cũng như kiểm tra các đặc tính của máy
+bơm
+Đường ống hút phải dốc dần lên phía máy bơm với
+độ dốc ít nhất 0,05 %. Tại vị trí thay đổi đường kính
+ống phải sử dụng côn thu lệch tâm
+Điều 5.8.21,
+5.8.22, 5.8.23
+TCVN
+7336:2021
+
+44
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+- Bố trí van Trên đường ống đẩy của mỗi bơm cần có van một
+chiều, van cổng và đồng hồ đo áp suất; trên đường
+hút phải có van cổng và đồng hồ đo áp suất. Khi bơm
+hoạt động mà không có áp suất dương tại đường ống
+hút thì không cần lắp đặt van cổng.
+Van khóa (van cổng hoặc van bướm) lắp đặt trên
+đường ống cấp chất chữa cháy vào bồn chứa phải đặt
+trong khuôn viên của trạm bơm. Cho phép đặt van
+này tại vị trí thiết bị đo được mực nước của bồn, bể.
+Điều 5.8.24,
+5.8.26 TCVN
+7336:2021
+
+2.9 Yêu cầu riêng hệ
+thống Sprinkler Kiểm
+tra việc duy trì:
+
+- Cụm bảo vệ Một cụm bảo vệ của hệ thống không được sử dụng
+quá 800 đầu phun. Khi sử dụng công tắc dòng chảy
+cho từng vùng của khu vực bảo vệ hoặc đầu phun có
+giám sát trạng thái, số lượng đầu phun trên một cụm
+bảo vệ có thể tăng lên 1200 đầu phun.
+Điều 5.2.3
+TCVN
+7336:2021
+
+- Đường cấp cho cụm
+bảo vệ
+Cụm thiết bị của hệ thống chữa cháy Sprinkler phải
+có 02 đường cấp. Đối với các hệ thống có từ 02 cụm
+trở lên, cho phép sử dụng đường cấp thứ 2 có van
+khóa từ cụm bên cạnh. Trong trường hợp này, phải
+bố trí van bằng tay phía trước van báo động và lắp
+đặt van ngăn cách giữa các van báo động, đường ống
+chính phải được nối vòng.
+Điều 5.2.24
+TCVN
+7336:2021
+
+3 Yêu cầu riêng hệ
+thống Drencher
+  1. Không trang bị, lắp đặt hệ thống chữa cháy
+(Đb K9 Đ20 NĐ106; ph ạt tiền từ
+40.000.000 đồng đến 50.000.000 đồng; hình
+thức xử phạt bổ sung: Đình chỉ hoạt động
+từ 03 tháng đến 06 tháng)
+
+2.  Không duy trì hoạt động của hệ thống chữa
+
+45
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+cháy đã được trang bị, lắp đặt (Đb K6 Đ21
+NĐ106; phạt tiền từ 40.000.000 đồng đến
+50.000.000 đồng; hình thức xử phạt bổ
+sung: Đình chỉ hoạt động từ 01 tháng đến
+03 tháng)
+
+3.  Không bảo dưỡng hệ thống chữa cháy (Đb
+K3 Đ22 NĐ106; phạt tiền từ 10.000.000
+đồng đến 20.000.000 đồng)
+3.1 Phương thức kích
+hoạt: Ki ểm tra
+phương thức kích
+hoạt hệ thống màn
+nước: cưỡng bức bằng
+tay và chế độ tự động
+từ hệ thống báo cháy
+Việc kích hoạt tự động hệ thống Drencher phải được
+thực hiện bằng tín hiệu từ một hoặc kết hợp các loại
+thiết bị sau:
+- Đầu báo cháy của hệ thống báo cháy;
+- Hệ thống Sprinkler;
+- Hệ thống dây dẫn động có khóa nóng chảy;
+- Cảm biến của thiết bị công nghệ.
+Điều 5.3.1.1
+TCVN
+7336:2021
+
+3.2 Bố trí màn nước
+Kiểm tra việc duy trì
+bố trí màn nước
+Nếu chiều rộng của cửa, lối đi và các lỗ mở của dây
+chuyền công nghệ được bảo vệ đến 5 m, đường ống
+phân phối của màn nước là 01 dải. Khoảng cách giữa
+các đầu phun của màn nước dọc theo đường ống
+phân phối trên 01 dải được xác định theo tính toán
+bảo đảm lưu lượng là 1 l/s cho 1 m chiều dài màn
+nước trên toàn bộ chiều rộng bảo vệ.
+Nếu chiều rộng của cửa, lối đi và các lỗ mở của dây
+chuyền công nghệ được bảo vệ trên 5 m và sử dụng
+màn nước thay bộ phân ngăn cháy, đường ống phân
+phối của màn nước là 02 dải với lưu lượng tối thiểu
+cho mỗi dải là 0,5 l/s cho 1 m chiều dài, khoảng cách
+giữa 02 dải từ 0,4 đến 0,6 m; đầu phun trên 02 dải
+được lắp đặt so le. Đầu phun nằm gần tường phải
+cách tường không quá 0,5 m.
+Điều 5.3.2.4,
+5.3.2.5,
+5.3.2.6, 5.2.3.7
+TCVN
+7336:2021
+
+46
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+Nếu màn nước được thiết kế để tăng giới hạn chịu
+lửa của tường (bộ phận ngăn cháy), thì sử dụng 02
+dải bố trí tại 02 phía của tường và cách tường không
+quá 0,5 m; lưu lượng của mỗi dải không nhỏ hơn 0,5
+l/s cho 1 m chiều dài. Hệ thống thiết kế bảo đảm dải
+nằm ở phía phát sinh cháy được kích hoạt.
+Trong phạm vi 2 m ở cả hai phía đối với màn nước
+01 dải và 2 m ở hai bên đối diện của mỗi dải đối với
+màn nước 02 dải không được bố trí chất cháy.
+IV Hệ thống chữa cháy
+cho các máy biến
+áp, gian phòng cáp
+  1. Không trang bị, lắp đặt hệ thống chữa cháy
+(Đb K9 Đ20 NĐ106; ph ạt tiền từ
+40.000.000 đồng đến 50.000.000 đồng; hình
+thức xử phạt bổ sung: Đình chỉ hoạt động
+từ 03 tháng đến 06 tháng)
+
+2.  Không duy trì hoạt động của hệ thống chữa
+cháy đã được trang bị, lắp đặt (Đb K6 Đ21
+NĐ106; phạt tiền từ 40.000.000 đồng đến
+50.000.000 đồng; hình thức xử phạt bổ
+sung: Đình chỉ hoạt động từ 01 tháng đến
+03 tháng)
+
+3.  Không bảo dưỡng hệ thống chữa cháy (Đb
+K3 Đ22 NĐ106; phạt tiền từ 10.000.000
+đồng đến 20.000.000 đồng)
+1 Yêu cầu trang bị hệ
+thống chữa cháy
+- Máy biến áp làm mát bằng dầu với điện áp:
++ Điện áp 500 KV: Bất kỳ công suất nào;
++ Điện áp từ 220 đến 330 KV: Công suất 200 MVA
+trở lên;
++ Điện áp 110 KV lắp đặt trong nhà máy thuỷ điện:
+Công suất mỗi máy là 63 MVA trở lên
+Phụ lục C
+TCVN 3890
+
+47
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
++ Máy cắt dầu trong thiết bị phân phối kín: Có khối
+lượng dầu từ 60 kg trở lên
+- Phòng, buồng động lực:
++ Phòng máy biến áp và máy bù từ 500 KV trở lên:
+Không phụ thuộc vào diện tích;
++ Phòng máy biến áp điện áp 220 – 230 KV với công
+suất mỗi máy từ 200 MVA trở lên: Không phụ thuộc
+vào diện tích;
++ Phòng máy biến áp và máy cắt trong thùng kín:
+    * Có công suất từ 63 MVA trở lên: Không phụ
+thuộc vào diện tích;
+    * Có điện áp từ 110 KV trở lên: Không phụ thuộc
+vào diện tích.
+  - Công trình cáp (hầm, máng, đường hầm, giếng, sàn
+2 lớp, giàn, khoang… sử dụng để đi cáp điện lực
+hoặc cáp thông tin) của nhà máy điện: Không phụ
+thuộc vào diện tích;
+- Công trình cáp khác có điện áp từ 500 KV trở lên:
+Không phụ thuộc vào diện tích;
+- Công trình cáp điện áp 110 KV đấu nối với máy
+biến áp có công suất từ 63 KVA trở lên: Không phụ
+thuộc vào diện tích.
+
+2 Yêu cầu đối với hệ
+thống
+
+- Bố trí đầu phun chữa
+cháy
+≤ 500 đầu phun/vùng chữa cháy; bố trí bảo đảm bao
+phủ toàn bộ thiết bị, khu vực.
+Đ 5.3.1.6
+TCVN 7336.
+
+- Hệ thống đường ống Bố trí mạch vòng Đ 8.1
+TCVN 7336.
+
+- Van điều khiển - Mỗi thiết bị, khu vực phải được bố trí 01 van điều
+khiển
+Đ 8.1
+
+48
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+- Khởi động bằng hệ thống báo cháy và mở bằng tay
+tại nơi lắp đặt
+Đ 5.3.1.6
+TCVN 7336.
+- Hệ thống báo cháy
+điều khiển hoạt động
+của hệ thống chữa
+cháy
+- Nếu hệ thống báo cháy dùng để kích hoạt hệ thống
+chữa cháy tự động thì mỗi điểm cháy trong khu vực
+bảo vệ phải được kiểm soát bằng 02 tín hiệu báo cháy
+khác nhau (02 kênh hoặc 02 địa chỉ khác nhau).
+- Máy biến áp thường dùng dây báo cháy hoặc đầu
+báo cháy nhiệt chống nổ;
+- Phòng cáp thường dùng dây báo cháy hoặc đầu báo
+cháy khói hoặc đầu báo cháy nhiệt
+Đ 4.3
+TCVN 5738
+
+- Cường độ phun - Máy biến áp: 10,2 lít/phút/m2
+- Hầm cáp, mương cáp 0,3 l/s.m2
+- Tính toán lưu lượng nước chữa cháy:
++ Máy biến áp theo diện tích xung quanh nhân với
+cường độ phun;
++ Hầm cáp, mương cáp theo diện tích mặt bằng nhân
+với cường độ phun.
+Đ 4-5.4.2
+NFPA 15.
+Bảng 2
+TCVN 7336.
+
+- Trụ nước chữa cháy Lưu lượng ≥10 l/s Đ 4.5.4.2.3
+NFPA15
+
+V Hệ thống chữa cháy
+theo phương pháp
+tự chảy
+- Duy trì lượng nước trong bể chứa cấp cho hệ thống
+(thường bố trí tại tầng mái, hoặc đài nước của khu
+dân cư, khu công nghiệp...);
+- Duy trì tình trạng hoạt động của các van khóa trên
+đường ống của hệ thống cấp nước chữa cháy (trên
+đường ống chính, ống nhánh);
+- Thử nghiệm hoạt động của hệ thống chữa cháy tại
+khu vực gần bể chứa nhất (bất lợi nhất về áp suất
+nước chữa cháy); khu vực xa nhất (thấp nhất) có áp
+suất nước lớn nhất.
+
+Yêu cầu 1. Không trang bị, lắp đặt hệ thống chữa cháy
+(Đb K9 Đ20 NĐ106; ph ạt tiền từ
+40.000.000 đồng đến 50.000.000 đồng; hình
+thức xử phạt bổ sung: Đình chỉ hoạt động
+từ 03 tháng đến 06 tháng)
+
+49
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+VI Hệ thống chữa cháy
+bằng bọt, nước cho
+khu vực kho dầu
+mỏ và sản phẩm
+dầu mỏ
+  1. Không trang bị, lắp đặt hệ thống chữa cháy
+(Đb K9 Đ20 NĐ106; ph ạt tiền từ
+40.000.000 đồng đến 50.000.000 đồng; Hình
+thức xử phạt bổ sung: Đình chỉ hoạt động
+từ 03 tháng đến 06 tháng)
+
+2.  Không duy trì hoạt động của hệ thống chữa
+cháy đã được trang bị, lắp đặt (Đb K6 Đ21
+NĐ106; phạt tiền từ 40.000.000 đồng đến
+50.000.000 đồng; Hình thức xử phạt bổ
+sung: Đình chỉ hoạt động từ 01 tháng đến
+03 tháng)
+
+3.  Không bảo dưỡng hệ thống chữa cháy (Đb
+K3 Đ22 NĐ106; phạt tiền từ 10.000.000
+đồng đến 20.000.000 đồng)
+1 Trang bị hệ thống
+chữa cháy bằng bọt
+
+- Quy định trang bị hệ
+thống chữa cháy cố
+định
+- Các bể nổi có đường kính bằng hoặc lớn hơn 18 m;
+- Các bể nổi có dung tích bằng hoặc lớn hơn 2 000
+m3;
+- Các bể nổi có chiều cao bằng hoặc lớn hơn 15 m.
+Chú thích - Khi khu bể chứa được phép bố trí ba dãy
+bể phải thoả mãn điều 5.2.8 của tiêu chuẩn này.
+Điều 5.9.5.1
+TCVN
+5307:2009
+
+- Quy định trang bị hệ
+thống chữa cháy bán
+cố định
+- Các bể nổi có đường kính nhỏ hơn 18 m;
+- Các bể nổi có dung tích từ 400 m3 đến dưới 2 000
+m3;
+- Các bể nổi có chiều cao từ 6m đến dưới 15 m;
+- Các bể ngầm có dung tích bằng hoặc lớn hơn 1 000
+m3.
+Điều 5.9.5.2
+TCVN
+5307:2009
+
+50
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+Đối với kho chứa dầu mazut, bố trí một đến hai dãy
+(không phụ thuộc vào dung tích và kích thước bể
+chứa) có thể trang bị hệ thống chữa cháy bán cố định
+khi có sự chấp thuận của cơ quan quản lý về phòng
+cháy chữa cháy.
+- Các thiết bị sau phải lắp cố định:
++ Đối với bể nổi : Lăng tạo bọt, ống dẫn dung dịch
+chất tạo bọt, ống tưới mát thành bể lắp cố định vào
+thành bể và kéo dài tối thiểu tới họng chờ đặt ngoài
+đê bao ngăn cháy;
++ Đối với bể ngầm : máy bơm, cụm van bể chứa
+dung dịch chất tạo bọt (thiết bị chứa chất tạo bọt)
+thiết bị trộn bọt, đường ống dẫn dung dịch chất tạo
+bọt, đường ống dẫn nước đến họng chờ.
+
+Điều 5.9.6
+TCVN
+5307:2009
+- Cường độ, thời gian
+phun chất tạo bọt bể
+mái cố định
+Bọt bội số nở trung bình:
+Loại DM&SPDM Cường độ phun dung
+dịch chất tạo bọt (I),
+l/s.m2
+Đối với DM&SPDM có nhiệt độ chớp
+cháy nhỏ hơn và bằng 37,8 oC
+0,08
+Đối với DM&SPDM có nhiệt độ chớp
+cháy lớn hơn 37,8 oC
+0,05
+Bọt bội số nở thấp
+Loại DM&SPDM Cường độ phun dung
+dịch chất tạo bọt (I),
+l/s.m2
+DM&SPDM có nhiệt độ chớp cháy
+nhỏ hơn và bằng 37,8 oC
+0,068
+DM&SPDM có nhiệt độ chớp cháy
+lớn hơn 37,8 oC đến 93,3 oC
+0,068
+Bảng 9
+TCVN
+5307:2009
+
+Bảng 10
+TCVN
+
+51
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+Dầu thô 0,068 55
+Chú thích - Lăng tạo bọt áp dụng trong điều khoản này là loại lăng lắp tại thành
+bể có tấm chắn để hướng bọt hoặc lăng lắp trên mái nổi.
+
+5307:2009
+- Xác định số lăng phun
+bọt bể mái cố định
+Đường kính bể, m Số lượng lăng phun tối
+thiểu, cái (n)
+Đến 24 1
+Lớn hơn 24 đến 36 2
+Lớn hơn 36 đến 42 3
+Lớn hơn 42 đến 48 4
+Lớn hơn 48 đến 54 5
+Lớn hơn 54 đến 60 6
+
+Bảng 10
+TCVN
+5307:2009
+
+- Cường độ thời gian
+phun, đối với bể  Đối
+với bể mái nổi, khi
+mái chế tạo theo dạng
+đĩa kép bằng kim loại
+hoặc dạng đĩa đơn
+gắn trên phao kim
+loại; bể có phao bên
+trong
+Đối với bọt độ nở thấp :
+- Cường độ phun dung dịch chất tạo bọt: 0,2 l/s.m2
+- Thời gian phun bọt tối thiểu: 20 phút
+- Khoảng cách giữa các lăng phun bố trí theo chu vi
+bể phụ thuộc vào độ cao của gờ chắn bọt.
+- Diện tích mặt thoáng phun bọt lấy bằng diện tích
+vành khuyên giữa thành bể và gờ chắn bọt.
+Đối với bọt độ nở trung bình :
+- Cường độ phun dung dịch chất tạo bọt : 0,25 l/s.m2
+- Thời gian phun bọt tối thiểu : 10 phút
+- Khoảng cách giữa các lăng phun bọt theo chu vi bể
+phụ thuộc vào độ cao của gờ chắn bọt.
+- Diện tích mặt thoáng phun bọt lấy bằng diện tích
+vành khuyên giữa thành bể và gờ chắn bọt.
+Chú thích :
+1) Cách đưa bọt vào bể mái nổi và bể mái nổi bên
+Điều 5.9.11
+TCVN
+5307:2009
+
+52
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+trong xem phụ lục D.
+2) Dạng mái nổi đĩa kép, đĩa đơn và gờ chắn bọt xem
+phụ lục E. Các mái nổi khác với hai dạng mái nổi nêu
+trên không thuộc điều khoản này.
+- Dự trữ chất tạo bọt Hệ số dự trữ chất tạo bọt (K) để chữa cháy cho khu
+vực bể chứa DM&SPDM được quy định như sau:
+- Đối với chất tạo bọt có độ nở trung bình K = 3
+- Đối với chất tạo bọt có độ nở thấp K = 2.
+Điều 5.9.15
+TCVN
+5307:2009
+
+- Tính toán dung dịch
+dung dịch bọt cho hệ
+thống chữa cháy cố
+định, số lăng phun bọt
+- Tính toán Lưu lượng dung dịch chất tạo bọt cần
+thiết để chữa cháy bể cháy:
+Qct = Sc.Jct (l/s)
+Trong đó :
+Sc là diện tích bề mặt bể cháy (m2).
+Jct là cường độ phun dung dịch chất tạo bọt,
+(1/s.m2).
+- Tính toán số lượng lăng phun bọt cần thiết (so sánh
+với số lượng lăng tối thiểu tại bảng 10).
+
+Trong đó :
+Qct là lưu lượng dung dịch chất tạo bọt cần thiết để
+chứa bể cháy, tính bằng l/s;
+qL là lưu lượng phun dung dịch chất tạo bọt của lăng,
+tính bằng l/s
+Chú thích - Trường hợp chữa cháy vùng đệm kín để
+mái nổi hoặc bể có phao bên trong, lựa chọn qL cần
+phải tính đến khoảng cách bố trí lăng phun để bọt
+không bị tràn qua gờ chắn bọt.
+Phụ lục B
+TCVN
+5307:2009
+
+2 Hệ thống trụ phun
+bọt bổ trợ ngoài đê
+
+- Yêu cầu trang bị Ngoài thiết bị phun bọt lắp cố định ở bể chứa phải bố Điều 5.9.14
+
+53
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+trí trụ cấp dung dịch chất tạo bọt bổ trợ phía ngoài đê
+ngăn cháy để dập tắt đám cháy trong khu đê do sản
+phẩm bị tràn từ bể chứa. Lưu lượng dung dịch chất
+tạo bọt cho mỗi trụ ít nhất là 189 l/phút
+TCVN
+5307:2009
+- Số lượng Đường kính bể lớn nhất, m Số lượng trụ bổ trợ,
+cái
+Nhỏ hơn 19,5 1
+Từ 19,5 đến 36 2
+Lớn hơn 36 3
+
+Bảng 12
+TCVN
+5307:2009
+
+- Thời gian phun Đường kính bể lớn
+nhất, m
+Thời gian hoạt động tối
+thiểu, phút
+Nhỏ hơn 10,5 10
+Từ 10,5 đến 28,5 20
+Lớn hơn 28,5 30
+
+Bảng 13
+TCVN
+5307:2009
+
+- Tính toán lượng dung
+dịch bọt chữa cháy
+cho hệ thống phun bọt
+bổ trợ
+Lượng dung dịch chất tạo bọt cho hệ thống phun bọt
+bổ trợ được tính toán như sau:
+Wdd = . NLTB.qL.t
+Trong đó: NL là số lượng lăng phun bọt
+                 QL là lưu lượng của lăng phun bọt bôt trợ
+≥189 l/ph
+                  T là thời gian phun
+
+- Tính toán lượng dung
+dịch chất tạo bọt cần
+thiết để chữa cháy bể
+cháy
+Lượng dung dịch chất tạo bọt dự trữ cần thiết, Wdd,
+tính bằng lít, được xác định theo công thức :
+Wdd = K. NLTB.qL.t + Wd + WBT (B.3)
+Trong đó :
+- NLTB là số lượng lăng tạo bọt, tính bằng chiếc;
+- qL là lưu lượng phun dung dịch chất tạo bọt của
+lăng, tính bằng l/s;
+Phụ lục B
+TCVN
+5307:2009
+
+54
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+- t là thời gian phun dung dịch, tính bằng giây - Lấy
+theo điều 5.9.10 (hoặc 5.9.11)
+- WBT là lượng dung dịch chất tạo bọt chữa cháy
+trong khu vực đê bao ngăn cháy xác định theo điều
+5.9.14, tính bằng lít;
+- K là hệ số dự trữ (lấy theo điều 5.9.15);
+- Wd là lượng dung dịch chất tạo bọt ứ đọng trong
+đường ống, tính bằng lít. Trong trường hợp sử dụng
+hệ thống chữa cháy cố định, Wd được tính như sau:
+Wd = (0,785 ∑i=1n d2i.li). 1000
+Trong đó :
+di là đường kính của từng loại ống dẫn, tính bằng
+mét;
+li là độ dài của từng loại ống dẫn, tính bằng mét.
+Nếu lượng dung dịch chất tạo bọt ứ đọng trong
+đường ống tính được nhỏ hơn hoặc bằng 5% lượng
+dung dịch chất tạo bọt cần thiết để chữa cháy thì
+không cộng thêm vào. Nếu lượng dung dịch chất tạo
+bọt ứ đọng trong đường ống tính được lớn hơn hoặc
+bằng 5% lượng dung dịch chất tạo cần thiết để chữa
+cháy thì phải cộng thêm vào.
+-  Tính toán lượng chất
+tạo bọt
+Lượng chất tạo bọt cần thiết dự trữ trong kho để chữa
+cháy WCTB, tính bằng lít, được xác định theo công
+thức :
+
+Trong đó :
+Wdd là lượng dung dịch chất tạo bọt dự trữ cần thiết,
+tính bằng lít;
+CB là nồng độ chất tạo bọt trong dung dịch để chữa
+cháy, tính bằng phần trăm.
+
+55
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+- Tính toán lượng nước
+cần thiết
+Lượng nước cần thiết để pha chất tạo bọt thành dung
+dịch WN, tính bằng lít, được xác định theo công thức
+:
+
+Trong đó :
+Wdd là lượng dung dịch chất tạo bọt dự trữ cần thiết,
+tính bằng lít;
+CN là nồng độ nước trong dung dịch chất tạo bọt,
+tính bằng phần trăm.
+
+3 Hệ thống làm mát
+- Số lượng bể cần làm
+mát (bể cháy và bể lân
+cận)
+chu vi bể bị cháy và một nửa chu vi các bể lân cận
+nằm trong khoảng cách bằng hoặc nhỏ hơn 2 lần
+đường kính của bể bị cháy
+Điều 5.9.16
+TCVN
+5307:2009
+
+- Tính toán lưu lượng
+nước làm mát cho bể
+nổi
+Lưu lượng nước cần thiết để tưới mát bể bị cháy và
+tưới mát các bể lân cận, QTM, tính bằng l/s, được
+xác định theo công thức :
+QTM = Pc.J1 + 0,5 J2 ∑i=1n Pi (B.6)
+Trong đó :
+PC là chu vi bể bị cháy, tính bằng mét;
+Pi là chu vi bể lân cận bể bị cháy trong phạm vi
+khoảng cách nhỏ hơn hoặc bằng 2 lần đường kính bể
+bị cháy, tính bằng mét;
+J1 là cường độ phun nước tưới mát bể bị cháy, tính
+bằng 0,5 l/s.m;
+J2 là cường độ phun nước tưới mát bể lân cận, tính
+bằng 0,2 l/s.m.
+Điều 5.9.16.1,
+Phụ lục B
+TCVN
+5307:2009
+
+- Tính toán lượng nước
+làm mát cho bể ngầm
+Lưu lượng nước tưới mát làm giảm nhiệt độ môi
+trường xung quanh, làm mát bề mặt phía trên bể ngăn
+lân cận và làm mát người làm nhiệm vụ chữa cháy
+được tính như sau;
+Điều 5.9.16.2,
+Phụ lục B
+TCVN
+5307:2009
+
+56
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+- 10 lít/giây đối với bể có dung tích từ 100 m3 đến 1
+000 m3;
+- 20 lít/giây đối với bể có dung tích từ 1 001 m3 đến
+5 000 m3
+- 30 lít/giây đối với bể có dung tích từ 5 001 m3 đến
+30 000 m3
+- 50 lít/giây đối với bể có dung tích từ 30 001 m3 đến
+50 000 m3
+-  Tính toán lượng nước
+làm mát
+Thời gian để xác định lượng nước tưới mát bể bị
+cháy và bể lân cận phải lấy ít nhất là 3 giờ và tính
+cho một đám cháy lớn nhất.
+Tính toán: WTM = QTM.T
+Điều 5.9.16.3,
+Phụ lục B
+TCVN
+5307:2009
+
+4 Trạm bơm   1. Không trang bị phương tiện chữa cháy, cứu
+nạn, cứu hộ cơ giới (Đc K9 Đ20 NĐ106;
+phạt tiền từ 40.000.000 đồng đến
+50.000.000 đồng)
+
+2. Không đưa phương tiện chữa cháy, cứu
+nạn, cứu hộ cơ giới vào trực chữa cháy, cứu
+nạn, cứu hộ (K5 Đ21 NĐ106; phạt tiền từ
+20.000.000 đồng đến 25.000.000 đồng)
+
+3. Không bảo quản, bảo dưỡng phương tiện
+chữa cháy, cứu nạn, cứu hộ cơ giới (K2 Đ22
+NĐ106; phạt tiền từ 5.000.000 đồng đến
+10.000.000 đồng)
+- Các giải pháp kỹ thuât
+của trạm bơm
+Tuân thủ theo QCVN 02 QCVN
+02:2020/BCA
+
+- Máy bơm bọt (nếu hệ
+thống sử dụng trộn
+Đối với hệ thống chữa cháy cố định bằng bọt có sử
+dụng thiết bị định lượng bằng máy bơm độc lập với
+Điều 5.9.20
+TCVN
+
+57
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+bọt bằng bơm bọt) máy bơm nước thì cần phải bố trí máy bơm bọt dự
+phòng có tính năng tương đương với máy bơm bọt
+chính.
+5307:2009
+5 Nguôn nước chữa
+cháy
+
+- Khối tích bể Tính toán: W = WTM+WN Tính toán
+- Nguồn nước Nguồn nước chữa cháy cho kho trong mọi thời điểm
+có thể lấy từ sông, hồ, ao và từ nguồn nước sạch công
+cộng
+Điều 5.9.21
+TCVN
+5307:2009
+
+- Thời gian phục hồi
+nước chữa cháy, tưới
+mát và lượng chất tạo
+bọt
+Thời gian bổ sung đủ lượng nước dự trữ chậm nhất là
+48 giờ, trường hợp ở những nơi hiếm nước cho phép
+kéo dài hơn nhưng không quá 96 giờ. Thời gian bổ
+sung đủ lượng chất tạo bọt dự trữ chậm nhất là 48
+giờ.
+Điều 5.9.17
+TCVN
+5307:2009
+
+5 Bố trí đường ống,
+thiết bị
+
+- Làm mát thành bể Khi thành bể có vành tăng cường bố trí phía ngoài
+phải làm máng hướng dòng nước làm mát phủ toàn
+bộ diện tích thành bể.
+Điều 5.9.18
+TCVN
+5307:2009
+
+- Bố trí mạng đường
+ống
+Đường ống dẫn nước tưới mát và đường ống dẫn
+dung dịch chất tạo bọt chữa cháy phải thiết kế riêng
+biệt theo mạng vòng cho khu bể chứa và nhánh cụt
+đến nhà kho bảo quản sản phẩm chứa trong phuy,
+trạm bơm sản xuất, khu vực xuất nhập đường bộ,
+xuất nhập đường sắt và cầu cảng. Các van thao tác bố
+trí phía ngoài đê ngăn cháy đảm bảo an toàn thuận
+tiện thao tác khi có sự cố cháy ở khu bể.
+Đường ống tưới mát chạy vòng lắp cố định đỉnh
+thành bể và các van thao tác phải bố trí đảm bảo yêu
+cầu quy định trong điều 5.9.16 cho mọi trường hợp
+Điều 5.9.19
+TCVN
+5307:2009
+
+Điều 10.8
+TCVN 2622
+
+58
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+khi có cháy ở khu bể.
+Tuyến ống chính có đường kính tối thiểu 100mm
+- Vị trí Các trụ lấy
+nước, trụ lấy dung
+dịch chất tạo bọt
+bố trí không đặt cách xa mép đường quá 2,5 m và bố
+trí ở khu vực thuận tiện cho các phương tiện di động
+phối hợp chữa cháy
+Điều 5.9.19
+TCVN
+5307:2009
+
+- Bến lấy nước Khoảng cách từ vị trí lấy nước đến bể chứa gần nhất
+theo quy định:
+- Khi dùng ô tô chữa cháy yêu cầu lớn hơn 40m và
+nhỏ hơn 200m;
+- Khi dùng máy bơm di động chữa cháy yêu cầu lớn
+hơn 40m và nhỏ hơn 150m.
+Điều 5.9.21
+TCVN
+5307:2009
+
+- Áp suất làm việc của
+hệ thống
+Áp suất yêu cầu đối với hệ thống phun bọt và tưới
+mát cho bể trụ đứng:
+- Đối với thiết bị tạo bọt xác định theo yêu cầu của
+kiểu thiết bị được lắp đặt ;
+- Đối với hệ thống tưới mát bể chứa lắp cố định yêu
+cầu trước vòi phun ở điểm xa nhất không nhỏ hơn 0,6
+kg/cm2;
+Chú thích - Hệ thống đường ống dẫn dung dịch chất
+tạo bot, đường ống dẫn nước tưới mát thử thuỷ lực
+bằng 1,25 lần áp suất làm việc.
+Điều 5.9.22
+TCVN
+5307:2009
+
+- Van trên đường ống - Khi lắp van lưới gà (clape) thì phải bố trí tại hố thu
+nước ở bên trong đê và bộ phận điều khiển van bố trí
+phía ngoài đê hoặc trên mặt đê ngăn cháy;
+- Khi lắp van chặn thì phải bố trí phía ngoài đê ngăn
+cháy
+Điều 5.9.26
+TCVN
+5307:2009
+
+VII Hệ thống cấp nước
+chữa cháy ngoài nhà
+  1. Không trang bị, lắp đặt hệ thống chữa cháy
+(Đb K9 Đ20 NĐ106; ph ạt tiền từ
+40.000.000 đồng đến 50.000.000 đồng; Hình
+thức xử phạt bổ sung: Đình chỉ hoạt động
+
+59
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+từ 03 tháng đến 06 tháng)
+
+2.  Không duy trì hoạt động của hệ thống chữa
+cháy đã được trang bị, lắp đặt (Đb K6 Đ21
+NĐ106; phạt tiền từ 40.000.000 đồng đến
+50.000.000 đồng; Hình thức xử phạt bổ
+sung: Đình chỉ hoạt động từ 01 tháng đến
+03 tháng)
+
+3.  Không bảo dưỡng hệ thống chữa cháy (Đb
+K3 Đ22 NĐ106; phạt tiền từ 10.000.000
+đồng đến 20.000.000 đồng)
+1 Trang bị, duy trì
+trang bị hệ thống
+Việc trang bị cấp nước chữa cháy ngoài nhà phải
+được thực hiện khi đầu tư xây dựng hạ tầng kỹ thuật
+của các khu dân cư, đô thị, khu công nghiệp, khu chế
+xuất, khu công nghệ cao, cụm công nghiệp và các
+khu có đặc điểm tương tự.
+Đối với các nhà khi nằm trong phạm vi phục vụ của
+các nguồn cấp nước chữa cháy ngoài nhà (bồn, bể,
+trụ nước chữa cháy ngoài nhà, hồ nước chữa cháy tự
+nhiên và nhân tạo và các nguồn nước tương tự khác)
+thì không yêu cầu bắt buộc phải trang bị cấp nước
+chữa cháy ngoài nhà.
+CHÚ THÍCH: Việc trang bị cấp nước chữa cháy
+ngoài nhà có thể tham khảo TCVN 3890:2023
+Điều 5.1.1.1
+Sửa đổi 1:2023
+QCVN
+06:2023
+
+2 Việc duy trì chữa
+cháy phù hợp với
+tính toán số đám
+cháy tính toán
+
+5.1.3.1 Số đám cháy tính toán đồng thời cho một cơ
+sở công nghiệp hoặc nông nghiệp phải được lấy theo
+diện tích của cơ sở đó, cụ thể như sau:
+- Nếu diện tích đến 150 ha lấy là 1 đám cháy;
+- Nếu diện tích trên 150 ha lấy là 2 đám cháy.
+Số đám cháy tính toán đồng thời tại một khu vực kho
+Điều 5.1.3.1,
+5.1.3.2 QCVN
+06:2022/BXD
+
+60
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+dạng hở hoặc kín chứa vật liệu từ gỗ, lấy như sau:
+diện tích kho đến 50 ha lấy là 1 đám cháy; diện tích
+trên 50 ha lấy là 2 đám cháy.
+CHÚ THÍCH: Diện tích của cơ sở để tính toán cho hệ
+thống cấp nước chữa cháy ngoài nhà là diện tích khu
+đất của cơ sở (không bao gồm khu đất rừng, khu đất
+công viên cây xanh, khu đất trồng cây nông nghiệp
+hay các khu đất tương tự mà trên đó không có công
+trình xây dựng).
+
+5.1.3.2 Khi kết hợp đường ống chữa cháy của khu
+dân cư và cơ sở công nghiệp nằm ngoài khu dân cư
+thì số đám cháy tính toán đồng thời tính như sau:
+- Khi diện tích của cơ sở công nghiệp đến 150 ha và
+dân số của khu dân cư đến 10 000 người, lấy là 1
+đám cháy (lấy lưu lượng nước theo bên lớn hơn);
+tương tự với số dân từ 10 000 đến 25 000 người lấy
+là 2 đám cháy (1 đám cháy cho cơ sở công nghiệp và
+1 đám cháy cho khu dân cư);
+- Khi diện tích của cơ sở công nghiệp trên 150 ha và
+số dân đến 25 000 người, lấy là 2 đám cháy (2 đám
+cháy tính cho khu vực cơ sở công nghiệp hoặc 2 đám
+cháy tính cho khu dân cư, lấy theo lưu lượng nước
+yêu cầu của bên lớn hơn);
+- Khi số dân trong khu dân cư lớn hơn 25 000 người,
+lấy là 2 đám cháy, trong đó lưu lượng nước của 1
+đám cháy được xác định bằng tổng của lưu lượng yêu
+cầu lớn hơn (tính cho cơ sở công nghiệp hoặc khu
+dân cư) và 50 % lưu lượng yêu cầu nhỏ hơn (tính cho
+cơ sở công nghiệp hoặc khu dân cư).
+ Lưu ý:
+- Lưu lượng nước cho chữa cháy ngoài nhà cho nhà được ngăn chia bằng
+
+61
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+tường ngăn cháy thì lấy theo phần của nhà, nơi yêu cầu lưu lượng lớn nhất.
+- Lưu lượng nước cho chữa cháy ngoài nhà cho nhà được ngăn cách bằng
+vách ngăn cháy
+được xác định theo khối tích chung của nhà và theo hạng cao nhất của hạng
+nguy hiểm cháy và cháy nổ.
+2.1. Việc cấp nước theo
+tính toán Khu dân cư
+Bảng 7 – Lưu lượng nước từ mạng đường ống cho
+chữa cháy ngoài nhà
+trong các khu dân cư
+Dân số,
+x 1 000 người
+Số đám
+cháy
+đồng
+thời
+Lưu lượng nước cho chữa cháy ngoài nhà
+cho 1 đám cháy, L/s
+Xây dựng nhà không
+quá 2 tầng không phụ
+thuộc bậc chịu lửa
+Xây dựng nhà từ 3
+tầng trở lên không phụ
+thuộc bậc chịu lửa
+(1) (2) (3) (4)
+≤ 1 1 5 10
+> 1 và ≤ 5 1 10 10
+> 5 và ≤ 10 1 10 15
+> 10 và ≤ 25 2 10 15
+> 25 và ≤ 50 2 20 25
+> 50 và ≤ 100 2 25 35
+> 100 và ≤ 200 3 40 40
+> 200 và ≤ 300 3 55
+> 300 và ≤ 400 3 70
+> 400 và ≤ 500 3 80
+> 500 và ≤ 600 3 85
+> 600 và ≤ 700 3 90
+Điều 5.1.2.1,
+Bảng 7, 8 Sửa
+đổi 1:2023
+QCVN
+06:2022/BXD
+
+62
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+> 700 và ≤ 800 3 95
+> 800 và ≤ 1
+000
+3 100
+> 1 000 5 110
+CHÚ THÍCH 1: Lưu lượng nước cho chữa cháy ngoài nhà trong khu dân
+cư phải không nhỏ hơn lưu lượng nước chữa cháy cho nhà theo Bảng 8.
+CHÚ THÍCH 2: Khi thực hiện cấp nước theo vùng, lưu lượng nước cho
+chữa cháy ngoài nhà và số đám cháy đồng thời theo từng vùng được lấy
+phụ thuộc vào số dân sống trong vùng.
+CHÚ THÍCH 3: Đối với hệ thống các cụm đường ống nhóm (chung) số
+đám cháy đồng thời lấy phụ thuộc vào tổng số dân trong các cụm có kết nối
+với hệ thống đường ống. Lưu lượng nước để hồi phục lượng nước chữa
+cháy theo cụm đường ống nhóm được xác định bằng tổng lượng nước cho
+khu dân cư (tương ứng với số đám cháy đồng thời) tối đa để chữa cháy tuân
+theo quy định tại 5.1.3.3 và 5.1.3.4.
+CHÚ THÍCH 4: Số đám cháy tính toán đồng thời trong khu dân cư phải
+bao gồm cả các đám cháy của nhà sản xuất và nhà kho trong khu dân cư đó.
+Khi đó lưu lượng nước tính toán bao gồm cả lưu lượng nước để chữa cháy
+tương ứng cho các nhà đó, nhưng không nhỏ hơn giá trị trong Bảng 7.
+
+2.2 Việc cấp nước theo
+tính toán Nhà thuộc
+nhóm F1, F2, F3, F4
+Bảng 8 – Lưu lượng nước cho chữa cháy ngoài
+nhà của nhà thuộc nhóm nguy hiểm cháy theo
+công năng F1, F2, F3, F4
+Loại nhà Lưu lượng nước cho chữa cháy ngoài nhà
+không phụ thuộc bậc chịu lửa tính cho 1
+đám cháy, L/s, theo khối tích nhà, 1 000 m3
+≤ 1 > 1 và ≤
+5
+> 5 và ≤
+25
+> 25 và
+≤ 50
+> 50
+(1) (2) (3) (4) (5) (6)
+1. Nhà nhóm
+F1.3, F1.4 có
+
+Điều 5.1.2.2,
+Bảng 8 QCVN
+06:2022/BXD
+
+63
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+một hoặc nhiều
+đơn nguyên với
+số tầng:
+≤ 3 10 1) 10 1) 15 15 20
+> 3 và ≤ 12 10 15 15 20 20
+> 12 và ≤ 16 – 20 20 25 25
+> 16 – 20 25 25 30
+2. Nhà nhóm
+F1.1, F1.2, F2,
+F3 và F4 với số
+tầng:
+
+≤ 3 10 1) 10 1) 15 20 25
+> 3 và ≤ 12 10 15 20 25 30
+> 12 và ≤ 16 – 20 25 30 35
+> 16  – 25 30 30 35
+1) Đối với nhà thuộc khu vực làng, xã (nông thôn) lấy lưu lượng
+nước cho 1 đám cháy là 5 L/s.
+CHÚ THÍCH 1: Nếu hiệu suất của mạng đường ống ngoài nhà
+không đủ để truyền lưu lượng nước tính toán cho chữa cháy hoặc
+khi liên kết ống vào với mạng đường ống cụt thì cần phải xem xét
+lắp đặt bồn, bể, với thể tích phải bảo đảm lưu lượng nước cho
+chữa cháy ngoài nhà trong 3 giờ.
+CHÚ THÍCH 2: Trong khu dân cư không có đường ống nước
+chữa cháy thì phải có bồn, bể nước bảo đảm chữa cháy trong 3
+giờ.
+
+2.3 Về lưu lượng cấp
+nước theo tính toán
+Công trình công
+nghiệp
+Lưu lượng nước cho chữa cháy ngoài nhà cho nhà có
+nhóm nguy hiểm cháy theo công năng F5, tính cho 1
+đám cháy, lấy theo nhà có yêu cầu giá trị lớn nhất
+như Bảng 9 và Bảng 10.
+Điều 5.1.2.3,
+Bảng 9, 10 Sửa
+đổi 1:2023
+QCVN
+
+64
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+ CHÚ THÍCH 1: Khi tính toán lưu lượng nước chữa
+cháy cho 2 đám cháy thì lấy giá trị bằng cho 2 nhà có
+yêu cầu lưu lượng lớn nhất.
+CHÚ THÍCH 2: Lưu lượng nước cho chữa cháy
+ngoài nhà cho các nhà phụ trợ nằm độc lập lấy theo
+Bảng 8 giống như cho nhà có nhóm nguy hiểm cháy
+theo công năng F2, F3, F4, còn nếu nằm trong các
+nhà sản xuất thì tính theo khối tích chung của nhà sản
+xuất và lấy theo Bảng 9.
+CHÚ THÍCH 3: Lưu lượng nước cho chữa cháy
+ngoài nhà cho nhà phục vụ nông nghiệp và phát triển
+nông thôn có bậc chịu lửa I, II với khối tích không
+lớn hơn 5 000 m3 hạng nguy hiểm cháy và cháy nổ
+D, E lấy bằng 5 L/s.
+CHÚ THÍCH 4: Lưu lượng nước cho chữa cháy
+ngoài nhà cho trạm truyền thanh, truyền hình không
+phụ thuộc khối tích của trạm và số lượng người sống
+trong khu vực đặt các trạm này, phải lấy không nhỏ
+hơn 15 L/s, ngay cả khi Bảng 9 và Bảng 10 quy định
+lưu lượng thấp hơn giá trị này.
+CHÚ THÍCH 5: Lưu lượng nước cho chữa cháy
+ngoài nhà cho nhà có khối tích lớn hơn trong Bảng 9
+và Bảng 10 phải tuân theo các yêu cầu đặc biệt.
+CHÚ THÍCH 6: Đối với nhà có bậc chịu lửa II làm
+bằng kết cấu gỗ thì lưu lượng nước cho chữa cháy
+ngoài nhà lấy lớn hơn 5 L/s so với Bảng 9 và Bảng
+10.
+CHÚ THÍCH 7: Lưu lượng nước cho chữa cháy
+ngoài nhà cho nhà và khu vực kho lạnh bảo quản
+thực phẩm thì lấy giống nhà có hạng nguy hiểm cháy
+C.
+CHÚ THÍCH 8: Lưu lượng nước cho chữa cháy
+06:2022/BXD
+
+65
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+ngoài nhà cho cơ sở lưu trữ công-ten-nơ có hàng hóa
+phụ thuộc vào số lượng công-ten-nơ, được lấy như
+sau:
+− Từ 30 đến 50 công-ten-nơ: lấy 15 L/s;
+− Từ 51 đến 100 công-ten-nơ: lấy 20 L/s;
+− Từ 101 đến 300 công-ten-nơ: lấy 25 L/s;
+− Từ 301 đến 1 000 công-ten-nơ: lấy 40 L/s;
+− Từ 1 001 đến 1 500 công-ten-nơ: lấy 60 L/s;
+− Từ 1 501 đến 2 000 công-ten-nơ: lấy 80 L/s;
+− Nhiều hơn 2 000 công-ten-nơ: lấy 100 L/s;
+Bảng 9 – Lưu lượng nước cho chữa cháy ngoài
+nhà
+cho nhà nhóm F5
+Cấp
+ngu
+y
+hiể
+m
+cháy
+kết
+cấu
+của
+nhà
+Hạng
+nguy
+hiểm
+cháy
+và
+cháy
+nổ
+của
+nhà
+Lưu lượng nước cho chữa cháy ngoài nhà
+đối với nhà có lỗ mở trên mái không phụ
+thuộc vào chiều rộng của nhà, cũng như
+nhà không có lỗ mở trên mái có chiều rộng
+không lớn hơn 60 m, tính cho 1 đám cháy,
+L/s, theo khối tích nhà, 1 000 m3
+≤
+3
+> 3
+và
+≤ 5
+> 5
+và
+≤ 20
+>
+20
+và
+≤
+50
+> 50
+và
+≤
+200
+>
+20
+0
+và
+≤
+40
+0
+>
+400
+và
+≤
+600
+(2) (3) (4
+)
+(5) (6) (7) (8) (9) (10)
+S0,
+S1
+D, E 10 10 10 10 15 20 25
+
+66
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+I và
+II
+S0,
+S1
+A, B,
+C
+10 10 15 20 30 35 40 50
+III S0,
+S1
+D, E 10 10 15 25 35 40 45 -
+III S0  A, B,
+C
+10 15 20 30 45 60 75 -
+IV S0,
+S1
+D, E 10 15 20 30 40 50 60 -
+IV S0,
+S1
+A, B,
+C
+15 20 25 40 60 80 100 -
+IV S2,
+S3
+E 10 15 20 30 45 - - -
+IV S2,
+S3
+A, B,
+C
+15 20 25 40 65 - - -
+V - E 10 15 20 30 55 - - -
+V - C 15 20 25 40 70 - - -
+Bảng 10 – Lưu lượng nước cho chữa cháy ngoài
+nhà
+cho nhà nhóm F5 không có lỗ mở trên mái có
+chiều rộng trên 60 m
+Bậc
+chị
+u
+lửa
+của
+nhà
+Cấp
+nguy
+hiểm
+cháy
+kết
+cấu
+của
+nhà
+Hạng
+nguy
+hiểm
+cháy
+và
+cháy
+nổ
+của
+nhà
+Lưu lượng nước chữa cháy ngoài nhà đối với nhà
+không có lỗ mở trên mái có chiều rộng từ 60 m trở lên,
+tính cho 1 đám cháy, L/s, theo khối tích nhà, 1 000 m3
+≤
+50
+>
+50
+và
+≤
+10
+> 100
+và
+≤ 200
+> 200
+và
+≤ 300
+> 300
+và
+≤ 400
+> 400
+và
+≤ 500
+
+67
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+0
+I và
+II
+S0,
+S1
+A, B,
+C
+20 30 40 50 60 70 80 90 100
+I và
+II
+S0 D, E 10 15 20 25 30 35 40 45 50
+III S0,
+S1
+A, B,
+C
+40 50 60 60 70 80 90 100 110
+III S0,
+S1
+D, E 20 35 40 40 45 45 50 50 60
+IV S0,
+S1
+A, B,
+C
+50 60 65 70 80 90 – – –
+IV S0,
+S1
+D, E 35 45 55 60 65 70 75 80 90
+IV S2,
+S3
+E 40 50 60 – – – – – –
+CHÚ THÍCH: Lỗ mở trên mái là các lỗ mở để thông gió hoặc lấy sáng đặt trên
+kết cấu mái của nhà (nóc gió (cửa trời); lỗ thường xuyên mở; lỗ mở khi có
+cháy; ô kính; tấm lợp lấy sáng, hoặc các lỗ mở tương tự) có diện tích không
+nhỏ hơn 2,5 % diện tích xây dựng của nhà đó.
+
+2.4 Về lưu lượng cấp
+nước theo tính toán
+Gara ô-tô
+Lượng nước tiêu thụ tính toán cho việc chữa cháy
+bên ngoài của các tòa nhà dùng làm gara ô-tô trên
+mặt đất dạng kín và dạng hở lấy theo Bảng 7.
+Lượng nước tiêu thụ tính toán cho việc chữa cháy
+bên ngoài của các dạng gara ô-tô khác lấy như sau:
+- Gara ô-tô ngầm 2 tầng trở lên: 20 l/s.
+- Các gara ô-tô dạng ngăn có lối ra ngoài trời trực
+tiếp từ từng ngăn với số lượng các ngăn từ 50 đến
+200: 5 l/s, lớn hơn 200: 10 l/s.
+- Gara ô-tô cơ khí: 10 l/s.
+Điều 2.3.2.5
+QCVN
+13:2018/BXD
+
+68
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+- Bãi đỗ xe hở với số lượng xe đến 200: 5 l/s, lớn hơn
+200: 10 l/s.
+Bảng 7. Lưu lượng nước cho chữa cháy ngoài nhà
+đối với gara ô-tô trên mặt đất dạng kín hoặc hở
+Bậc chịu
+lửa của
+nhà
+Cấp nguy
+hiểm cháy kết
+cấu của nhà
+Lượng nước tiêu thụ cho việc chữa
+cháy bên ngoài gara ô-tô cho một đám
+cháy, l/s, với khối tích của nhà
+(khoang cháy), nghìn m3
+Tới
+5
+Cao
+hơn
+5 đến
+20
+Cao
+hơn
+20 đến
+50
+Cao hơn
+50
+I, II, III S0, S1 10 15 20 30
+IV S0, S1 10 15 20 -
+  S2, S3 20 25 - -
+V Không quy định 20 - - -
+
+2.5 Về lưu lượng cấp
+nước theo tính toán
+Trường hợp cấp nước
+cho nhiều mục đích
+sử dụng
+Lưu lượng nước chữa cháy phải được bảo đảm ngay
+cả khi lưu lượng cho các nhu cầu khác là lớn nhất, cụ
+thể phải tính đến:
+- Nước sinh hoạt;
+- Hộ kinh doanh cá thể;
+- Cơ sở sản xuất công nghiệp và nông nghiệp, nơi mà
+yêu cầu chất lượng nước uống hoặc mục đích kinh tế
+không phù hợp để làm đường ống riêng;
+- Trạm xử lý nước, mạng đường ống và kênh dẫn và
+tương tự;
+- Trong trường hợp điều kiện công nghệ cho phép, có
+thể sử dụng một phần nước sản xuất để chữa cháy,
+Điều 5.1.2.6
+QCVN
+06:2022/BXD
+
+69
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+khi đó cần kết nối trụ nước trên mạng đường ống sản
+xuất với trụ nước trên mạng đường ống chữa cháy
+bảo đảm lưu lượng nước chữa cháy cần thiết.
+2.6 Về nguồn nước cấp
+chữa cháy
+
+- Việc duy trì lư ợng
+nước cho thời gian
+chữa cháy
+Thời gian chữa cháy phải lấy là 3 giờ, ngoại trừ
+những quy định riêng nêu dưới đây:
+- Đối với nhà bậc chịu lửa I, II với kết cấu và lớp
+cách nhiệt làm từ vật liệu không cháy có các khu vực
+thuộc hạng nguy hiểm cháy nổ D và E lấy là 2 giờ;
+- Đối với công trình nhà trẻ, trường mẫu giáo, mầm
+non, nhà thuộc nhóm nguy hiểm cháy theo công năng
+F4.1, F4.3 ở khu vực nông thôn, có bậc chịu lửa I, II
+với kết cấu và lớp cách nhiệt làm từ vật liệu không
+cháy cao không quá 3 tầng, diện tích xây dựng đến
+500 m2 lấy là 1 giờ;
+- Đối với công trình nhà trẻ, trường mẫu giáo, mầm
+non, nhà thuộc nhóm nguy hiểm cháy theo công năng
+F4.1, F4.3 ở khu vực nông thôn, có bậc chịu lửa I, II
+với kết cấu và lớp cách nhiệt làm từ vật liệu không
+cháy cao không quá 3 tầng, diện tích xây dựng đến
+500 m2 thì cho phép sử dụng hệ thống họng nước
+chữa cháy bên trong để thay thế cho hệ thống cấp
+nước chữa cháy ngoài nhà;
+- Đối với kho dạng hở chứa vật liệu từ gỗ - không
+nhỏ hơn 5 giờ.
+Điều 5.1.3.3
+QCVN
+06:2022/BXD
+
+- Về phục hồi nước
+chữa cháy (theo thông
+số cấp nước đầu vào)
+Thời gian lớn nhất để phục hồi nước dự trữ chữa
+cháy không lớn hơn:
+24 giờ - đối với khu dân cư trên 5 000 người hoặc cơ
+sở công nghiệp có các nhà thuộc hạng nguy hiểm
+cháy nổ A, B, C;
+Điều 5.1.3.4
+Sửa đổi 1:2023
+QCVN
+06:2022/BXD
+
+70
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+36 giờ - đối với cơ sở công nghiệp có các nhà thuộc
+hạng nguy hiểm cháy nổ D và E;
+72 giờ - đối với các khu dân cư đến 5 000 người hoặc
+cơ sở nông nghiệp.
+CHÚ THÍCH 1: Đối với cơ sở công nghiệp có yêu
+cầu về lưu lượng nước cho chữa cháy ngoài nhà đến
+20 L/s thì cho phép tăng thời gian phục hồi nước
+chữa cháy lên đến:
+ 48 giờ - đối với các nhà thuộc hạng nguy hiểm cháy
+D và E;
+ 36 giờ - đối với các nhà thuộc hạng nguy hiểm cháy
+C.
+CHÚ THÍCH 2: Khi không thể bảo đảm phục hồi
+lượng nước dự trữ cho chữa cháy theo thời gian quy
+định thì cần cung cấp thêm lượng nước bổ sung dự
+trữ cho chữa cháy ΔW, tính theo công thức:
+
+trong đó:
+ΔW là lượng nước dự trữ bổ sung, tính bằng mét khối
+(m3);
+ W là lượng nước dự trữ cho chữa cháy, tính
+bằng mét khối (m3);
+K là tỷ số giữa thời gian phục hồi lượng nước chữa
+cháy theo thực tế và thời gian phục hồi lượng nước
+chữa cháy theo yêu cầu quy định tại 5.1.3.4.”
+2.7 Đối với mạng đường
+ống
+
+- Mạng đường ống nối
+vòng
+Mạng đường ống dẫn nước chữa cháy phải là mạch
+vòng. Cho phép làm các đường ống cụt khi: cấp nước
+cho chữa cháy hoặc sinh hoạt - chữa cháy khi chiều
+dài đường ống không lớn hơn 200 m mà không phụ
+Điều 5.1.4.2
+Sửa đổi 1:2023
+QCVN
+06:2022/BXD
+
+( )1WKW
+K
+D -=
+
+71
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+thuộc vào lưu lượng nước chữa cháy yêu cầu.
+Không cho phép nối vòng mạng đường ống ngoài
+nhà bằng mạng đường ống bên trong nhà và công
+trình.
+Ở các khu dân cư đến 5 000 người và yêu cầu về lưu
+lượng nước cho chữa cháy ngoài nhà đến 10 L/s hoặc
+số họng nước chữa cháy trong nhà cho mỗi nhà đến
+12 họng thì cho phép dùng mạng cụt chiều dài trên
+200 m nếu có xây dựng bồn bể, tháp nước áp lực
+hoặc bể điều tiết dành cho mạng cụt, trong đó có
+chứa toàn bộ lượng nước cho chữa cháy.
+- Về bố trí, duy trì các
+van
+
++ Van chuyển đổi cho
+02 đường cấp
+Khi lắp đặt từ 2 đường ống cấp trở lên phải lắp đặt
+van chuyển đổi giữa chúng khi đó trong trường hợp
+ngắt 1 đường cấp hoặc 1 phần của nó thì việc chữa
+cháy vẫn bảo đảm 100 %.
+Điều 5.1.4.1
+QCVN
+06:2022/BXD
+
++ Van ngăn chia Đường ống phải được phân chia thành các đoạn bằng
+các van khóa bảo đảm để khi sửa chữa sẽ không ngắt
+nhiều hơn 05 trụ cấp nước chữa cháy
+Điều 5.1.4.3
+QCVN
+06:2022/BXD
+
++ Yêu cầu kỹ thuật với
+van
+Các van trên các đường ống với mọi đường kính khi
+điều khiển từ xa hoặc tự động phải là loại van điều
+khiển bằng điện.
+Cho phép sử dụng van khí nén, thủy lực hoặc điện từ.
+Khi không điều khiển từ xa hoặc tự động thì van
+khóa đường kính đến 400 mm có thể là loại khóa
+bằng tay, với đường kính lớn hơn 400 mm là khóa
+điện hoặc thủy lực; trong các trường hợp luận chứng
+riêng cho phép lắp van đường kính trên 400 mm khóa
+bằng tay.
+Trong mọi trường hợp đều phải cho phép mở và đóng
+Điều 5.1.4.4
+QCVN
+06:2022/BXD
+
+72
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+được bằng tay.
+- Về đường kính ống
+tối thiểu cho phép
+Đường kính của đường ống cấp và mạng sau đường
+ống cấp phải được tính toán trên cơ sở sau:
+- Theo yếu tố kỹ thuật, kinh tế;
+- Các điều kiện làm việc khi ngắt sự cố từng đoạn
+riêng.
+Đường kính ống dẫn nước chữa cháy ngoài nhà cho
+khu dân cư và cơ sở sản xuất không được nhỏ hơn
+100 mm, đối với khu vực nông thôn – không được
+nhỏ hơn 75 mm.
+Điều 5.1.4.5
+QCVN
+06:2020/BXD
+
+- Về áp lực cấp nước
+đối với trường hợp áp
+suất thấp và áp suất
+cao. Đối với áp suất
+cao thì đo chiều cao
+tia nước đặc (lấy bằng
+0,8 chiều cao phun
+nước theo phương
+thẳng đứng).
+Hệ thống đường ống nước chữa cháy thường có áp
+suất thấp, khi duy trì áp suất cao thì phải tính toán
+bảo đảm áp suất làm việc của hệ thống đường ống.
+Đối với đường ống áp suất cao, các máy bơm chữa
+cháy phải bảo đảm hoạt động không trễ hơn 5 phút
+sau khi có tín hiệu báo cháy.
+
+Áp suất tự do tối thiểu trong đường ống nước chữa
+cháy áp suất thấp đo ở vị trí cao độ bằng với mặt đất)
+khi chữa cháy phải không nhỏ hơn 10 m cột nước.
+Áp suất tự do tối thiểu trong mạng đường ống chữa
+cháy áp suất cao phải bảo đảm độ cao tia nước đặc
+không nhỏ hơn 10 m khi lưu lượng yêu cầu chữa
+cháy tối đa và lăng chữa cháy ở điểm cao nhất của
+tòa nhà. Áp suất tự do trong mạng đường ống kết hợp
+sinh hoạt hoặc sản xuất không nhỏ hơn 10 m cột
+nước và không lớn hơn 60 m cột nước.
+Điều 5.1.1.3,
+5.1.1.4 Sửa đổi
+1:2023 QCVN
+06:2022/BXD
+
+2.8 Kiểm tra việc bố trí
+trụ cấp nước chữa
+cháy theo các yêu cầu
+bên dưới
+
+73
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+- Khoảng cách bố trí
+đến đường và tường
+nhà
+Các trụ cấp nước chữa cháy phải được bố trí ở
+khoảng cách không lớn hơn 2,5 m đến mép đường,
+nhưng không gần hơn 1 m đến tường ngôi nhà; cho
+phép bố trí trụ nước (trụ ngầm) nằm ở đường giao
+thông.
+Điều 5.1.4.6
+QCVN
+06:2022/BXD
+
+- Bán kính phục vụ Các trụ cấp nước chữa cháy phải được bố trí trên
+mạng đường ống sao cho tối thiểu 02 trụ khi lưu
+lượng yêu cầu từ 15 L/s trở lên, tối thiểu 01 trụ khi
+lưu lượng yêu cầu thấp hơn 15 L/s phục vụ đến mọi
+điểm của nhà xét theo phương ngang và bán kính
+phục vụ của mỗi trụ nước không lớn 400 m tính theo
+đường di chuyển của vòi chữa cháy đi bên ngoài nhà.
+CHÚ THÍCH:  Trên mạng đường ống cho các điểm
+dân cư đến 500 người cho phép thay thế các trụ cấp
+nước chữa cháy loại 3 cửa bằng đoạn đường ống
+đứng DN 80 mm có lắp họng nước.
+Điều 5.1.4.7
+Sửa đổi 1:2023
+QCVN
+06:2022/BXD
+
+- Trụ kết nối hệ thống
+chữa cháy trong nhà
+Các công trình thuộc diện trang bị hệ thống họng
+nước chữa cháy cũng như h ệ thống chữa cháy
+sprinkler tự động phải có đường ống kết nối từ trạm
+bơm cấp nước chữa cháy của công trình đến tối thiểu
+01 trụ cấp nước chữa cháy loại 03 cửa hoặc loại 02
+cửa DN65 đặt ở vị trí mặt bên ngoài tường công trình
+về phía có đường giao thông.
+Điều 5.1.4.8
+QCVN
+06:2022/BXD
+
+- Lắp đặt trụ nước chữa
+cháy
+Khi lắp trụ nổi trên vỉa hè, họng lớn của trụ phải
+quay ra phía lòng đường, khoảng cách từ mặt đất đến
+đỉnh trụ nước là 700mm
+Điều A4, Phụ
+lục A TCVN
+6379-1998
+
+- Loại trụ Phù hợp theo TCVN 6379:1998 TCVN
+6379:1998
+
+3 Kiểm tra các yêu cầu
+khi bố trí cấp nước
+ngoài nhà từ bồn bể,
+
+74
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+ao, hồ...
+3.1 Yêu cầu đối với hồ ao
+cho xe chữa cháy
+Các hồ ao để cho xe chữa cháy hút nước phải có lối
+tiếp cận và có bãi lấy nước với bề mặt bảo đảm tải
+trọng dành cho xe chữa cháy.
+
+Điều 5.1.5.4
+Sửa đổi 1:2023
+QCVN
+06:2022/BXD
+
+  Khi không thể hút nước chữa cháy trực tiếp từ bồn,
+bể hoặc hồ bằng xe máy bơm hoặc máy bơm di động,
+thì phải cung cấp các hố thu với thể tích không nhỏ
+hơn 3 m3. Đường kính ống kết nối bồn, bể hoặc hồ
+với các hố  thu lấy theo các điều kiện tính toán lưu
+lượng nước cho chữa cháy ngoài nhà, nhưng không
+nhỏ hơn 200 mm. Trên đoạn ống kết nối phải có hộp
+van để khóa sự lưu thông nước, việc đóng mở van
+phải thực hiện được từ bên ngoài hộp. Đầu đoạn ống
+kết nối ở phía hồ nhân tạo phải có lưới chắn.
+Điều 5.1.5.10
+Sửa đổi 1:2023
+QCVN
+06:2022/BXD
+
+3.2 Bán kính bảo vệ Bồn, bể, trụ nước chữa cháy ngoài nhà, hồ nước chữa
+cháy tự nhiên và nhân tạo phải đặt tại vị trí bảo đảm
+bán kính phục vụ:
+- Khi có máy bơm của xe chữa cháy - là 400 m;
+- Khi có máy bơm di động - đến 300 m trong phạm vi
+hoạt động kỹ thuật của máy bơm;
+- Để tăng bán kính phục vụ, cho phép lắp đặt các
+đường ống cụt có chiều dài không quá 200 m từ bồn,
+bể và hồ nhân tạo đến các bể trung gian (hố thu
+nước) bảo đảm theo quy định tại 5.1.5.8.”
+Điều 5.1.5.9
+Sửa đổi 1:2023
+QCVN
+06:2022/BXD
+
+3.3 Lượng nước chữa
+cháy
+Thể tích nước chữa cháy trong bồn, bể phải được tính
+toán để bảo đảm:
+- Thực hiện việc cấp nước chữa cháy từ trụ nước
+ngoài nhà và các hệ thống chữa cháy khác;
+- Cung cấp cho các thiết bị chữa cháy chuyên dụng
+(sprinkler, drencher và tương tự) không có bể riêng;
+Điều 5.1.2.6
+QCVN
+06:2022/BXD
+
+75
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+- Lượng nước tối đa cho sinh hoạt và sản xuất trong
+suốt quá trình chữa cháy.
+  Lượng nước chữa cháy của bồn, bể và hồ nước nhân
+tạo xác định trên cơ sở tính toán lượng nước tiêu thụ
+và thời gian chữa cháy theo quy định tại 5.1.2.2,
+5.1.2.3, 5.1.2.4, 5.1.2.5, 5.1.2.6 và 5.1.3.3.
+CHÚ THÍCH 1:  Tính toán thể tích nước chữa cháy
+của hồ nhân tạo hở phải tính đến khả năng bốc hơi và
+đóng băng của nước. Mực nước tối thiểu không được
+nhỏ hơn 0,5 m.
+CHÚ THÍCH 2:  Phải bảo đảm lối vào cho xe chữa
+cháy tiếp cận bể, hồ và những điểm lấy nước tương
+tự.
+Điều 5.1.5.8
+QCVN
+06:2022/BXD
+
+3.4 Số bồn bể Tổng số bồn, bể cho chữa cháy trong một mạng ống
+phải không nhỏ hơn 2 (không áp dụng đối với bồn,
+bể dành cho cấp nước ngoài nhà của công trình độc
+lập).
+Giữa các bồn, bể trong mạng ống, mực nước thấp
+nhất và cao nhất của nước chữa cháy phải tương ứng
+như nhau.
+Khi ngắt một bồn, bể thì lượng nước trữ để chữa
+cháy trong các bồn, bể còn lại phải không nhỏ hơn 50
+% của lượng nước yêu cầu cho chữa cháy.
+Điều 5.1.5.6
+Sửa đổi 1:2023
+QCVN
+06:2022/BXD
+
+IV Hệ thống chữa cháy bằng khí  1. Không trang bị, lắp đặt hệ thống chữa cháy
+(Đb K9 Đ20 NĐ106; ph ạt tiền từ
+40.000.000 đồng đến 50.000.000 đồng; Hình
+thức xử phạt bổ sung: Đình chỉ hoạt động
+từ 03 tháng đến 06 tháng)
+
+2.  Không duy trì hoạt động của hệ thống chữa
+cháy đã được trang bị, lắp đặt (Đb K6 Đ21
+
+76
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+NĐ106; phạt tiền từ 40.000.000 đồng đến
+50.000.000 đồng; Hình thức xử phạt bổ
+sung: Đình chỉ hoạt động từ 01 tháng đến
+03 tháng)
+
+3.  Không bảo dưỡng hệ thống chữa cháy (Đb
+K3 Đ22 NĐ106; phạt tiền từ 10.000.000
+đồng đến 20.000.000 đồng)
+1 Hệ thống chữa cháy tự động bằng khí theo TCVN 7161
+1.1 Yêu cầu chung: Kiểm tra việc duy trì
+- Vị trí đặt bình khí Các bình chứa phải được đặt càng gần với khu vực
+được bảo vệ càng tốt, nên ưu tiên đặt ngoài khu vực
+bảo vệ. Các bình chứa chỉ có thể được bố trí bên
+trong khu vực được bảo vệ nếu có thể giảm tới mức
+thấp nhất các nguy hiểm do cháy nổ gây ra
+Đ 6.2.3.3
+TCVN
+7161-1:2022
+
+ Đường ống Phải được chế tạo bằng vật liệu không cháy
+Không được sử dụng ống gang và ống phi kim loại
+trừ khi được chấp thuận đạt thử nghiệm áp suất làm
+việc
+
+Các ống mềm (bao gồm cả các đầu nối) phải được
+làm bằng vật liệu đã được chấp nhận và phải thích
+hợp để làm việc ở áp suất cho trước của khí chữa
+cháy và ở các nhiệt độ lớn nhất và nhỏ nhất
+Đ 6.3.2.1
+TCVN
+7161-1:2022
+Đ 6.3.2.2
+TCVN
+7161-1:2022
+Đ 6.3.2.3
+TCVN
+7161-1:2022
+
+- Van xả áp Trong các hệ thống mà chỗ lắp van có các đoạn ống
+đóng kín thì các đoạn ống đó phải được trang bị như
+sau:
+a) bộ phận báo về việc có khí chữa cháy bị giữ ở
+trong ống;
+b) phương tiện để thông khí an toàn bằng tay;
+Đ
+6.3.1.3 TCVN
+7161-1:2022
+1. Trang bị, lắp đặt thiết bị thuộc hệ thống
+chữa cháy không bảo đảm theo quy định (Đb
+K8 Đ20 NĐ106; phạt tiền từ 30.000.000
+đồng đến 40.000.000 đồng; Hình thức xử
+phạt bổ sung:  Biện pháp khắc phục hậu
+quả: Buộc trang bị, lắp đặt hệ thống chữa
+
+77
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+c) van tự động xả khí để giảm áp cháy)
+2. Không duy trì hoạt động của thiết bị thuộc
+hệ thống chữa cháy đã được trang bị, lắp đặt
+(Đb K4 Đ21 NĐ106; phạt tiền từ
+10.000.000 đồng đến 20.000.000 đồng; Hình
+thức xử phạt bổ sung:  Biện pháp khắc
+phục hậu quả: Buộc duy trì hệ thống chữa
+cháy)
+1.2 Thử nghiệm vận hành
+- Tự động: Ngắt hoạt
+động của van kích
+hoạt, sau đó th ử
+nghiệm hoạt động của
+hệ thống bằng phương
+pháp kích hoạt 2 kênh
+của hệ thống báo cháy
+trong khu vực bảo vệ.
+Lặp lại thử nghiệm
+trong thời gian trễ thì
+nhấn nút trì hoãn để
+kiểm tra chức năng trì
+hoãn hệ thống
+Các hệ thống tự động phải được điều khiển bởi sự
+phát hiện cháy tự động và kích hoạt các cơ cấu thích
+hợp cho hệ thống chữa cháy, sự cố cháy và cũng phải
+được trang bị các cơ cấu vận hành bằng tay. Khi sử
+dụng hai hoặc nhiều bộ phát hiện, như là các đầu báo
+khói hoặc lửa thì hệ thống chỉ nên vận hành sau khi
+đã nhận được các tín hiệu từ hai bộ phát hiện
+Đ 6.4.3.1
+TCVN
+7161-1:2022
+
+- Bằng tay: Ngắt hoạt
+động của van kích
+hoạt, sử dụng nút nhất
+kích hoạt bằng tay để
+thử nghiệm kích hoạt
+hệ thống
+Phải có phương án vận hành bằng tay đối với hệ
+thống chữa cháy bằng một bộ điều khiển đặt ở bên
+ngoài khu vực được bảo vệ hoặc liền kề với lối ra
+chính từ khu vực này. Ngoài cơ cấu vận hành tự
+động, hệ thống chữa cháy phải có các trang bị sau:
+a) Một hoặc nhiều cơ cấu vận hành bằng tay đặt cách
+xa các bình chứa;
+b) Một cơ cấu điều khiển bằng tay để điều khiển trực
+tiếp bằng cơ khí đối với hệ thống hoặc một thiết bị
+Đ 6.4.3.2
+TCVN
+7161-1:2022
+
+78
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+điều khiển bằng tay dùng điện, trong đó thiết bị giám
+sát tình trạng nguồn cung cấp điện và báo tín hiệu khi
+nguồn điện không đảm bảo.
+Vận hành bằng tay phải làm cho các van kích hoạt tự
+động thích hợp hoạt động đồng thời để xả và phân
+phối khí chữa cháy.
+- An toàn và cảnh báo:
+Thử nghiệm hệ thống
+và kiểm tra việc duy
+trì cài đặt thời gian trễ
+cho hệ thống
+a) Cơ cấu làm trễ thời gian:
+- Đối với khu vực mà thời gian trễ không làm tăng
+nguy hiểm đáng kể đến con người và tài sản thì các
+hệ thống chữa cháy phải được trang bị tín hiệu báo
+động trước khi phun với độ trễ thời gian đủ để cho
+phép sơ tán người;
+- Cơ cấu làm trễ thời gian chỉ được sử dụng để sơ tán
+người hoặc để chuẩn bị cho việc phun khí chữa cháy.
+d) Cửa mở ra ngoài có cơ cấu tự đóng có thể mở từ
+bên trong;
+e) Các tín hiệu báo động liên tục bằng ánh sáng và
+âm thanh bên trong khu vực bảo vệ tại các cửa ra vào
+và các tín hiệu báo động liên tục bằng ánh sáng bên
+ngoài khu vực được bảo vệ, phải hoạt động cho tới
+khi khu vực được bảo vệ đã an toàn;
+f) Các tín hiệu cảnh báo và hướng dẫn thích hợp
+Đ 5.3 TCVN
+7161-1:2022
+
+- Giám sát và đi ều
+khiển các hệ thống
+khác
+Trường hợp hệ thống báo cháy tự động dùng để điều
+khiển hệ thống chữa cháy tự động thì mỗi điểm trong
+khu vực bảo vệ phải được kiểm soát bằng 2 đầu báo
+cháy tự động thuộc 2 kênh hoặc 2 địa chỉ khác nhau.
+Đ 6.3 TCVN
+5738:2021
+
+- Thời gian xả khí Khí hóa lỏng: không quá 10 giây
+Khí không hóa lỏng (khí nén): Đối với khí trơ, thời
+gian phun chữa cháy là thời gian để đạt tới 95 %
+nồng độ thiết kế ở 20 0C không quá 60 s đối với đám
+cháy loại B, không quá 120 s đối với đám cháy loại
+Đ 7.9.1.1
+TCVN
+7161-1:2022
+
+79
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+A.
+- Thời gian duy trì Thời gian duy trì không được nhỏ hơn 10 phút Đ 7.8.2 TCVN
+7161-1:2022
+
+- Yêu cầu điều khiển
+thiết bị ngoại vi
+Các hệ thống thông gió cưỡng bức phải dừng hoặc
+ngắt tự động nếu hoạt động của chúng ảnh hưởng xấu
+đến hiệu suất của hệ thống chữa cháy hoặc làm cho
+đám cháy lan rộng. Các hệ thống thông gió cần thiết
+để đảm bảo sự an toàn cho phép không phải dừng lại
+khi hệ thống chữa cháy hoạt động, khi đó phải tính
+thêm lượng khí chữa cháy để duy trì nồng độ thiết kế
+đối với khoảng thời gian bảo vệ qui định.
+Đ 7.4.3 TCVN
+7161-1:2022
+
+1.3 Cung cấp khí chữa
+cháy
+
+- Yêu cầu chung
+ Dự trữ
+Lưu ý: Trường hợp sử
+dụng 01 cụm bình khí
+chữa cháy cho từ 02
+khu vực trở lên (sử
+dụng van chọn vùng)
+thì yêu cầu dự trữ
+100%
+Khi có yêu cầu, lượng dự trữ phải là bội số của lượng
+cung cấp chính theo qui định của cơ quan có thẩm
+quyền (yêu cầu dự trữ 100% khi sử dụng cụm bình
+cho nhiều khu vực bảo vệ)
+Đ 6.2.1.2
+TCVN 7161-
+1:2022
+
+- Yêu cầu riêng
+ Lượng khí HFC -
+227ea
+
+- m: Khối lượng khí HFC-227ea (kg);
+- V: Thể tích của khu vực nguy hiểm (m3); nghĩa là
+thể tích được rào lại trừ đi các cấu trúc hoặc công
+trình cố định không thấm khí chữa cháy
+- S: Thể tích riêng (m3/kg), S = k1 + k2T;
++ k1 = 0,1269
+Đ 4.2 TCVN
+7161-9:2009
+
+80
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
++ k2 = 0,000513
++ T: Nhiệt độ thiết kế trong khu vực nguy hiểm.
+- c: Nồng độ %, lấy theo bảng 4
+ Lượng khí FK-5-1-12
+- m/V  là yêu cầu về khối lượng của khí chữa cháy
+trên một đơn vị thể tích (kg/m3), nghĩa là khối lượng
+khí cần thiết m tính bằng kilôgam cho một mét khối
+thể tích được bảo vệ V để tạo ra nồng độ yêu cầu ở
+nhiệt độ quy định;
+- V là thể tích của khu vực nguy hiểm (m3); nghĩa là
+thể tích được bao che trừ đi thể tích các cấu kiện cố
+định không thấm khí chữa cháy;
+- S là thể tích riêng (m3/kg); thể tích riêng của hơi
+quá nhiệt FK-5-1-12 ở áp suất 1,013 bar có thể xác
+định gần đúng theo công thức S = k1 + k2T; trong
+đó: k1 = 0,0664; k2 = 0,000274;
+- c là nồng độ (%), nghĩa là nồng độ theo thể tích của
+FK-5-1-12 trong không khí ở nhiệt độ xác định và áp
+suất tuyệt đối 1,013 bar.
+Đ 4.2 TCVN
+7161-6:2021
+
+ Lượng khí IG-100
+- Q: Thể tích khí IG-100 (m3);
+- V: Thể tích nguy hiểm thực (m3); nghĩa là thể tích
+được rào lại trừ đi các cấu trúc hoặc công trình cố
+định không thấm khí chữa cháy
+- Sr: Thể tích riêng chuẩn, Sr = 0,8583 (m3/kg)
+- S: Thể tích riêng (m3/kg), S = k1 + k2T;
++ k1 = 0,79968
++ k2 = 0,00293
++ T: Nhiệt độ thiết kế trong khu vực nguy hiểm.
+- c: Nồng độ %, lấy theo bảng 4
+Đ 4.2 TCVN
+7161-13:2002
+
+81
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+2 Hệ thống chữa cháy tự động bằng khí Cacbon dioxit
+2.1 Khu vực lắp đặt
+- Lựa chọn chất chữa
+cháy (xem xét sự phù
+hợp)
+Thiết kế chữa cháy tự động cho các gian phòng
+không phụ thuộc vào diện tích
+Thiết bị chữa cháy tự động là thiết bị chữa cháy cố
+định có thể tự động phun chất chữa cháy, được lắp
+đặt trong phạm vi hiệu quả (khối lượng thiết kế,
+chiều cao lắp đặt tối đa, thể tích tối đa) đã thông qua
+kiểm định mẫu sản phẩm hoặc chứng nhận tính năng.
+Thiết bị chữa cháy tự động bằng khí là thiết bị chữa
+cháy phát hiện nhiệt, khói hoặc lửa và giải phóng
+chất chữa cháy dựa dạng khí.
+Bảng 1 TCVN
+3890:2009
+Bảng 1 TCVN
+5760:1993
+
+- Yêu cầu về khu vực
+chữa cháy
+
+Chất chữa
+cháy
+Hiệu quả chữa cháy các loại
+đám cháy
+A B
+C
+D
+A
+1
+A
+2
+B
+1
+B
+2
+D
+1
+D
+2
+D
+3
+Nitơ, FM200 + + + -
+Chú thích:
+Dấu “+”  Chữa cháy thích hợp.
+Dấu “-“  Chữa cháy không thích hợp.
+A1: Cháy các chất rắn với quá trình cháy âm ỉ (Ví dụ
+: gỗ, giấy, cỏ khô, rơm rạ, than, sản phẩm dệt)
+A2: Cháy các chất rắn nhưng không có quá trình
+cháy âm ỉ. (Ví dụ : Chất dẻo)
+B1: Cháy chất lỏng không tan trong nước (Ví dụ :
+xăng ete, nhiên liệu dầu mỏ); cháy chất rắn hóa lỏng
+(ví dụ : paraphin)
+Mục 7 TCVN
+6101:1996
+
+82
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+B2: Cháy các chất lỏng hòa tan trong nước (ví dụ :
+rượu, Metanol, glyxêrin)
+C: Cháy các chất khí (ví dụ : Metan, hyđro, Propan...)
+D1: Cháy các chất kim loại nhẹ (Ví dụ: nhôm, manhê
+và hợp kim của chúng)
+D2: Cháy kim loại kiềm và các kim loại đồng dạng
+khác (ví dụ: natri, kali)
+D3: Cháy các hợp chất có chứa kim loại (Ví dụ: các
+hợp chất hữu cơ kim loại, hydrua kim loại)
+2.2 Vị trí đặt bình khí  Đ 20 TCVN
+6101:1996
+
+- Van chọn vùng - Cấu kiện bao che bảo vệ phải có đủ độ bền và tấm
+liền để chặn lại dòng phun chất chữa cháy. Phải có lỗ
+thủng để ngăn ngừa sự tăng hoặc giảm áp quá mức
+trong cấu kiện bao che.
+- Để tránh sự tổn hao chất chữa cháy qua các khoảng
+hở khu vực liền kề với vùng nguy hiểm cháy hoặc
+khu vực làm việc, các lỗ mở phải được bịt kín cố
+định hoặc được lắp đặt các cấu kiện bao che đóng mở
+tự động. Khi không thực hiện được việc hạn chế chất
+chữa cháy, vùng bảo vệ phải được mở rộng để bao
+gồm cả vùng lân cận nối với vùng có nguy hiểm cháy
+hoặc vùng làm việc.
+- Việc xây dựng các không gian bao kín phải được
+bảo vệ bằng các hệ thống chữa cháy thể tích cacbon
+dioxit phải thực hiện sao cho cacbon dioxit không thể
+thoát ngay được. Các tường và cửa ra vào phải có
+khả năng chịu được tác động của lửa trong một thời
+gian đủ để cho phép sự xả cacbon dioxit được duy trì
+ở nồng độ thiết kế trong thời gian duy trì.
+Đ 22 TCVN
+6101:1996
+
+- Van an toàn Các bình chứa phải được đặt càng gần với khu vực Đ 23.8 TCVN
+
+83
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+được bảo vệ càng tốt, nên ưu tiên đặt ngoài khu vực
+bảo vệ. Các bình chứa chỉ có thể được bố trí bên
+trong khu vực được bảo vệ nếu có thể giảm tới mức
+thấp nhất các nguy hiểm do cháy nổ gây ra
+6101:1996
+2.3 Đường ống  Đ 23.1 TCVN
+6101:1996
+Đ 23.5 TCVN
+6101:1996
+Đ 23.6 TCVN
+6101:1996
+
+- Đầu phun khí Các hệ thống tự động phải được điều khiển bởi sự
+phát hiện cháy tự động và kích hoạt các cơ cấu thích
+hợp cho hệ thống chữa cháy, sự cố cháy và cũng phải
+được trang bị các cơ cấu vận hành bằng tay.
+Khi sử dụng hai hoặc nhiều bộ phát hiện, như là các
+đầu báo khói hoặc lửa thì hệ thống chỉ nên vận hành
+sau khi đã nhận được các tín hiệu từ hai bộ phát hiện.
+Nếu hệ thống báo cháy tự động dùng để điều khiển
+hệ thống chữa cháy tự động thì mỗi điểm trong khu
+vực bảo vệ phải được kiểm soát bằng 2 đầu báo cháy
+tự động thuộc 2 kênh khác nhau.
+Đ 24 TCVN
+6101:1996
+
+- Vận hành Phải có phương án vận hành bằng tay đối với hệ
+thống chữa cháy bằng một bộ điều khiển đặt ở bên
+ngoài khu vực được bảo vệ hoặc liền kề với lối ra
+chính từ khu vực này
+
++ Tự động Trong các khu vực được bảo vệ bằng các hệ thống
+phun khí chữa cháy toàn bộ và có thể có người phải
+được trang bị như sau:
+a) Cơ cấu làm trễ thời gian:
+- Đối với các ứng dụng trong đó sự làm trễ đối với
+quá trình phun không làm tăng lên đáng kể mối hiểm
+Đ 25.2 TCVN
+6101:1996
+
+Đ 6.3 TCVN
+5738:2001
+
+84
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+họa cháy cho người hoặc tài sản thì các hệ thống
+chữa cháy phải được trang bị tín hiệu báo động trước
+khi xả với độ trễ thời gian đủ để cho phép sơ tán
+người;
+- Cơ cấu làm trễ thời gian chỉ được sử dụng để sơ tán
+người hoặc để tạo khu vực cho việc phun khí chữa
+cháy.
+b) Công tắc tự động/bằng tay và cơ cấu khóa ngắt;
+c) Đường thoát hiểm, phải được giữ thông thoáng
+trong mọi lúc, đèn chiếu sáng khẩn cấp và chỉ dẫn
+thoát nạn cần đầy đủ để giảm tới mức nhỏ nhất quãng
+đường phải đi;
+d) Cửa ra vào tự động mở ra phía ngoài, có thể mở
+được từ bên trong ngay cả khi được khóa từ bên
+ngoài;
+e) Các tín hiệu báo động liên tục bằng ánh sáng và
+âm thanh tại các cửa vào và ra được chỉ định bên
+trong khu vực được bảo vệ và các tín hiệu báo động
+liên tục bằng ánh sáng bên ngoài khu vực được bảo
+vệ, phải hoạt động cho tới khi khu vực được bảo vệ
+đã an toàn;
+f) Các tín hiệu cảnh báo và hướng dẫn thích hợp;
+g) Các tín hiệu cảnh báo trước khi phun khí chữa
+cháy phải hoạt động tức thời từ lúc bắt đầu của thời
+gian trễ. Các tín hiệu này phải có đặc điểm khác so
+với tất cả các tín hiệu báo động khác;
+h) Các phương tiện thông gió tự nhiên hoặc cưỡng
+bức ở các khu vực này sau khi phun khí chữa cháy.
+Sự thông gió cưỡng bức thường rất cần thiết. Phải
+chú ý làm khuếch tán hoàn toàn các khí nguy hiểm và
+không để chúng lây lan sang các vị trí khác vì phần
+lớn các khí chữa cháy đều nặng hơn không khí;
+
+85
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+i) Các hướng dẫn và các bài tập huấn luyện cho tất cả
+những người ở trong hoặc ở lân cận các khu vực
+được bảo vệ, bao gồm cả việc duy trì hoặc tổ chức
+nhân lực để đưa vào khu vực bảo vệ để bảo đảm
+những người này hoạt động đúng khi hệ thống chữa
+cháy hoạt động.
++ Bằng tay - Khí hóa lỏng: không quá 10 giây
+
+- Khí không hóa lỏng: không quá 60 giây
+Đ 25.3 TCVN
+6101:1996
+
+- An toàn và cảnh báo  Thời gian duy trì không được nhỏ hơn 10 phút Đ 5 TCVN
+6101:1996
+Đ 6 TCVN
+6101:1996
+
+- Thời gian xả khí
+- m: Khối lượng khí HFC-227ea (kg);
+- V: Thể tích của khu vực nguy hiểm (m3); nghĩa là
+thể tích được rào lại trừ đi các cấu trúc hoặc công
+trình cố định không thấm khí chữa cháy
+- S: Thể tích riêng (m3/kg), S = k1 + k2T;
++ k1 = 0,1269
++ k2 = 0,000513
++ T: Nhiệt độ thiết kế trong khu vực nguy hiểm.
+- c: Nồng độ %, lấy theo bảng 4
+Bảng 2 TCVN
+6101:1996
+
+- Thời gian duy trì Quy định đối với chữa cháy theo thể tích: Phụ thuộc
+loại chất cháy
+Bảng 1 TCVN
+6101:1996
+
+- Lượng khí Cacbon
+dioxit
+1. Đối với chữa cháy theo thể tích
+m = KB x (0,2A + 0,7V)
+- m: Khối lượng khí Cacbon dioxit (kg);
+- KB: Hệ số đối với vật liệu được bảo vệ, lớn hơn
+Đ 15 TCVN
+6101-1996
+
+86
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Tiêu chuẩn, quy chuẩn Nghị định 106/2025/NĐ-CP
+hoặc bằng 1 (xem 15.3 và bảng 1).
+- A = AV + 30 AOV;
++ AV: Tổng diện tích của tất cả các mặt sàn và trần
+(bao gồm cả các chỗ hở AOV) của không gian bao
+kín phải bảo vệ (m2).
++ AOV: Tổng diện tích của tất cả các chỗ hở được
+giả thiết là mở khi xảy ra cháy (m2).
+- V = VV + VZ - VG
++ VV: Thể tích của không gian bao kín được bảo vệ
+(m3).
++ VZ: Thể tích bổ sung do thất thoát trong thời gian
+duy trì bởi các hệ thống thông gió (Xem bảng 1)
+không thể đóng lại được (m3) (Xem 15.5);
++ VG: Thể tích của thành phần kết cấu phải trừ đi
+(m3) (xem 15.1);
+- Số 0,2 là phần Cacbon dioxit có thể thất thoát
+(kg/m2);
+- Số 0,7 là lượng tối thiểu Cacbon dioxit dùng làm cơ
+sở cho công thức (kg/m3).
+2. Đối với chữa cháy cục bộ: Phụ lục D
+
+Phụ lục D
+TCVN
+6101-1996
+- Lượng khí dự trữ của
+hệ thống
+100% Đ 18 TCVN
+6101-1996

@@ -1,0 +1,176 @@
+[Bảng II.11. Hướng dẫn kiểm tra hệ thống chữa cháy bằng khí]
+[Hiệu lực: 2025. Trạng thái: ĐANG DÙNG.]
+
+Bảng II.11: Hướng dẫn nội dung kiểm tra hệ thống chữa cháy bằng khí
+Kiểm tra việc trang bị đúng, đủ số lượng, chủng loại; duy trì hoạt động; thử nghiệm hệ thống, thiết bị được trang bị tại cơ sở
+TT	Nội dung kiểm tra	Quy định của Tiêu chuẩn, quy chuẩn	Căn cứ	Hành vi vi phạm theo Nghị định số 106/2025/NĐ-CP		1	Hệ thống chữa cháy tự động bằng khí theo TCVN 7161		1. Hành vi không duy trì hoạt động của thiết bị thuộc hệ thống chữa cháy đã được trang bị, lắp đặt (Đb K4 Đ21 NĐ106; phạt tiền từ 10.000.000 đồng đến 20.000.000 đồng; thẩm quyền xử phạt: Chủ tịch UBND tỉnh; Giám đốc Công an tỉnh; biện pháp khắc phục hậu quả: Buộc duy trì hệ thống chữa cháy)
+
+2. Hành vi không duy trì hoạt động của hệ thống chữa cháy đã được trang bị, lắp đặt (điểm b, khoản 6, Điều 21; Phạt tiền từ 40.000.000 đồng đến 50.000.000 đồng; hình thức xử phạt bổ sung: Đình chỉ hoạt động từ 01 tháng đến 03 tháng; Biện pháp khắc phục hậu quả: Buộc duy trì hệ thống chữa cháy; thẩm quyền xử phạt: Chủ tịch UBND cấp tỉnh; Cục trưởng C07).
+
+3. Hành vi trang bị, lắp đặt thiết bị thuộc hệ thống chữa cháy không bảo đảm theo quy định (Đb K8 Đ20 NĐ106; phạt tiền từ 30.000.000 đồng đến 40.000.000 đồng; thẩm quyền xử phạt: Chủ tịch UBND tỉnh; Cục trưởng C07; Biện pháp khắc phục hậu quả: Buộc trang bị, lắp đặt hệ thống chữa cháy)		1.1	Yêu cầu chung				-	Vị trí đặt bình khí	Các bình chứa phải được đặt càng gần với khu vực được bảo vệ càng tốt, nên ưu tiên đặt ngoài khu vực bảo vệ. Các bình chứa chỉ có thể được bố trí bên trong khu vực được bảo vệ nếu có thể giảm tới mức thấp nhất các nguy hiểm do cháy nổ gây ra	Đ 6.2.3.3 TCVN
+7161-1:2022				Đường ống	Phải được chế tạo bằng vật liệu không cháy
+Không được sử dụng ống gang và ống phi kim loại trừ khi được chấp thuận đạt thử nghiệm áp suất làm việc
+
+Các ống mềm (bao gồm cả các đầu nối) phải được làm bằng vật liệu đã được chấp nhận và phải thích hợp để làm việc ở áp suất cho trước của khí chữa cháy và ở các nhiệt độ lớn nhất và nhỏ nhất	Đ 6.3.2.1 TCVN
+7161-1:2022
+Đ 6.3.2.2 TCVN
+7161-1:2022
+Đ 6.3.2.3 TCVN
+7161-1:2022			-	Van xả áp	Trong các hệ thống mà chỗ lắp van có các đoạn ống đóng kín thì các đoạn ống đó phải được trang bị như sau:
+a) bộ phận báo về việc có khí chữa cháy bị giữ ở trong ống;
+b) phương tiện để thông khí an toàn bằng tay;
+c) van tự động xả khí để giảm áp	Đ 6.3.1.3 TCVN
+7161-1:2022			1.2	Thử nghiệm vận hành					-	Tự động: Ngắt hoạt động của van kích hoạt, sau đó thử nghiệm hoạt động của hệ thống bằng phương pháp kích hoạt 2 kênh của hệ thống báo cháy trong khu vực bảo vệ.
+Lặp lại thử nghiệm trong thời gian trễ thì nhấn nút trì hoãn để kiểm tra chức năng trì hoãn hệ thống	Các hệ thống tự động phải được điều khiển bởi sự phát hiện cháy tự động và kích hoạt các cơ cấu thích hợp cho hệ thống chữa cháy, sự cố cháy và cũng phải được trang bị các cơ cấu vận hành bằng tay. Khi sử dụng hai hoặc nhiều bộ phát hiện, như là các đầu báo khói hoặc lửa thì hệ thống chỉ nên vận hành sau khi đã nhận được các tín hiệu từ hai bộ phát hiện	Đ 6.4.3.1 TCVN
+7161-1:2022			-	Bằng tay: Ngắt hoạt động của van kích hoạt, sử dụng nút nhất kích hoạt bằng tay để thử nghiệm kích hoạt hệ thống	Phải có phương án vận hành bằng tay đối với hệ thống chữa cháy bằng một bộ điều khiển đặt ở bên ngoài khu vực được bảo vệ hoặc liền kề với lối ra chính từ khu vực này. Ngoài cơ cấu vận hành tự động, hệ thống chữa cháy phải có các trang bị sau:
+a) Một hoặc nhiều cơ cấu vận hành bằng tay đặt cách xa các bình chứa;
+b) Một cơ cấu điều khiển bằng tay để điều khiển trực tiếp bằng cơ khí đối với hệ thống hoặc một thiết bị điều khiển bằng tay dùng điện, trong đó thiết bị giám sát tình trạng nguồn cung cấp điện và báo tín hiệu khi nguồn điện không đảm bảo.
+Vận hành bằng tay phải làm cho các van kích hoạt tự động thích hợp hoạt động đồng thời để xả và phân phối khí chữa cháy.	Đ 6.4.3.2 TCVN
+7161-1:2022			-	An toàn và cảnh báo:
+Thử nghiệm hệ thống và kiểm tra việc duy trì cài đặt thời gian trễ cho hệ thống	a) Cơ cấu làm trễ thời gian:
+- Đối với khu vực mà thời gian trễ không làm tăng nguy hiểm đáng kể đến con người và tài sản thì các hệ thống chữa cháy phải được trang bị tín hiệu báo động trước khi phun với độ trễ thời gian đủ để cho phép sơ tán người;
+- Cơ cấu làm trễ thời gian chỉ được sử dụng để sơ tán người hoặc để chuẩn bị cho việc phun khí chữa cháy.
+d) Cửa mở ra ngoài có cơ cấu tự đóng có thể mở từ bên trong;
+e) Các tín hiệu báo động liên tục bằng ánh sáng và âm thanh bên trong khu vực bảo vệ tại các cửa ra vào và các tín hiệu báo động liên tục bằng ánh sáng bên ngoài khu vực được bảo vệ, phải hoạt động cho tới khi khu vực được bảo vệ đã an toàn;
+f) Các tín hiệu cảnh báo và hướng dẫn thích hợp	Đ 5.3 TCVN
+7161-1:2022			-	Giám sát và điều khiển các hệ thống khác	Trường hợp hệ thống báo cháy tự động dùng để điều khiển hệ thống chữa cháy tự động thì mỗi điểm trong khu vực bảo vệ phải được kiểm soát bằng 2 đầu báo cháy tự động thuộc 2 kênh hoặc 2 địa chỉ khác nhau. 	Đ 6.3 TCVN 5738:2021			-	Thời gian xả khí	Khí hóa lỏng: không quá 10 giây
+Khí không hóa lỏng (khí nén): Đối với khí trơ, thời gian phun chữa cháy là thời gian để đạt tới 95 % nồng độ thiết kế ở 20 0C không quá 60 s đối với đám cháy loại B, không quá 120 s đối với đám cháy loại A. 	Đ 7.9.1.1 TCVN
+7161-1:2022			-	Thời gian duy trì	Thời gian duy trì không được nhỏ hơn 10 phút	Đ 7.8.2 TCVN
+7161-1:2022			-	Yêu cầu điều khiển thiết bị ngoại vi	Các hệ thống thông gió cưỡng bức phải dừng hoặc ngắt tự động nếu hoạt động của chúng ảnh hưởng xấu đến hiệu suất của hệ thống chữa cháy hoặc làm cho đám cháy lan rộng. Các hệ thống thông gió cần thiết để đảm bảo sự an toàn cho phép không phải dừng lại khi hệ thống chữa cháy hoạt động, khi đó phải tính thêm lượng khí chữa cháy để duy trì nồng độ thiết kế đối với khoảng thời gian bảo vệ qui định. 	Đ 7.4.3 TCVN 7161-1:2022			1.3	Cung cấp khí chữa cháy				-	Yêu cầu chung						Dự trữ
+Lưu ý: Trường hợp sử dụng 01 cụm bình khí chữa cháy cho từ 02 khu vực trở lên (sử dụng van chọn vùng) thì yêu cầu dự trữ 100%	Khi có yêu cầu, lượng dự trữ phải là bội số của lượng cung cấp chính theo qui định của cơ quan có thẩm quyền (yêu cầu dự trữ 100% khi sử dụng cụm bình cho nhiều khu vực bảo vệ)	Đ 6.2.1.2 TCVN 7161-1:2022			-	Yêu cầu riêng						Lượng khí HFC-227ea
+- m: Khối lượng khí HFC-227ea (kg);
+- V: Thể tích của khu vực nguy hiểm (m3); nghĩa là thể tích được rào lại trừ đi các cấu trúc hoặc công trình cố định không thấm khí chữa cháy
+- S: Thể tích riêng (m3/kg), S = k1 + k2T;
++ k1 = 0,1269
++ k2 = 0,000513
++ T: Nhiệt độ thiết kế trong khu vực nguy hiểm.
+- c: Nồng độ %, lấy theo bảng 4	Đ 4.2 TCVN
+7161-9:2009 				Lượng khí FK-5-1-12
+- m/V  là yêu cầu về khối lượng của khí chữa cháy trên một đơn vị thể tích (kg/m3), nghĩa là khối lượng khí cần thiết m tính bằng kilôgam cho một mét khối thể tích được bảo vệ V để tạo ra nồng độ yêu cầu ở nhiệt độ quy định;
+- V là thể tích của khu vực nguy hiểm (m3); nghĩa là thể tích được bao che trừ đi thể tích các cấu kiện cố định không thấm khí chữa cháy;
+- S là thể tích riêng (m3/kg); thể tích riêng của hơi quá nhiệt FK-5-1-12 ở áp suất 1,013 bar có thể xác định gần đúng theo công thức S = k1 + k2T; trong đó: k1 = 0,0664; k2 = 0,000274;
+- c là nồng độ (%), nghĩa là nồng độ theo thể tích của FK-5-1-12 trong không khí ở nhiệt độ xác định và áp suất tuyệt đối 1,013 bar.	Đ 4.2 TCVN 7161-6:2021				Lượng khí IG-100
+- Q: Thể tích khí IG-100 (m3);
+- V: Thể tích nguy hiểm thực (m3); nghĩa là thể tích được rào lại trừ đi các cấu trúc hoặc công trình cố định không thấm khí chữa cháy
+- Sr: Thể tích riêng chuẩn, Sr = 0,8583 (m3/kg)
+- S: Thể tích riêng (m3/kg), S = k1 + k2T;
++ k1 = 0,79968
++ k2 = 0,00293
++ T: Nhiệt độ thiết kế trong khu vực nguy hiểm.
+- c: Nồng độ %, lấy theo bảng 4	Đ 4.2 TCVN
+7161-13:2002			2	Hệ thống chữa cháy tự động bằng khí Cacbon dioxit 		1. Hành vi không duy trì hoạt động của thiết bị thuộc hệ thống chữa cháy đã được trang bị, lắp đặt (Đb K4 Đ21 NĐ106; phạt tiền từ 10.000.000 đồng đến 20.000.000 đồng; thẩm quyền xử phạt: Chủ tịch UBND tỉnh; Giám đốc Công an tỉnh; biện pháp khắc phục hậu quả: Buộc duy trì hệ thống chữa cháy)
+
+2. Hành vi không duy trì hoạt động của hệ thống chữa cháy đã được trang bị, lắp đặt (điểm b, khoản 6, Điều 21; Phạt tiền từ 40.000.000 đồng đến 50.000.000 đồng; hình thức xử phạt bổ sung: Đình chỉ hoạt động từ 01 tháng đến 03 tháng; Biện pháp khắc phục hậu quả: Buộc duy trì hệ thống chữa cháy; thẩm quyền xử phạt: Chủ tịch UBND cấp tỉnh; Cục trưởng C07).
+
+3. Hành vi trang bị, lắp đặt thiết bị thuộc hệ thống chữa cháy không bảo đảm theo quy định (Đb K8 Đ20 NĐ106; phạt tiền từ 30.000.000 đồng đến 40.000.000 đồng; thẩm quyền xử phạt: Chủ tịch UBND tỉnh; Cục trưởng C07; Biện pháp khắc phục hậu quả: Buộc trang bị, lắp đặt hệ thống chữa cháy)		2.1	Khu vực lắp đặt				-	Lựa chọn chất chữa cháy (xem xét sự phù hợp) 	Thiết kế chữa cháy tự động cho các gian phòng không phụ thuộc vào diện tích
+Thiết bị chữa cháy tự động là thiết bị chữa cháy cố định có thể tự động phun chất chữa cháy, được lắp đặt trong phạm vi hiệu quả (khối lượng thiết kế, chiều cao lắp đặt tối đa, thể tích tối đa) đã thông qua kiểm định mẫu sản phẩm hoặc chứng nhận tính năng. Thiết bị chữa cháy tự động bằng khí là thiết bị chữa cháy phát hiện nhiệt, khói hoặc lửa và giải phóng chất chữa cháy dựa dạng khí.	Bảng 1 TCVN 3890:2009
+Bảng 1 TCVN 5760:1993			-	Yêu cầu về khu vực chữa cháy
+Chất chữa cháy
+Hiệu quả chữa cháy các loại đám cháy
+
+A
+B
+C
+D
+
+A1
+A2
+B1
+B2
+
+D1
+D2
+D3
+
+Nitơ, FM200
++
++
++
+-
+
+Chú thích:
+Dấu “+”  Chữa cháy thích hợp.
+Dấu “-“  Chữa cháy không thích hợp.
+A1: Cháy các chất rắn với quá trình cháy âm ỉ (Ví dụ : gỗ, giấy, cỏ khô, rơm rạ, than, sản phẩm dệt)
+A2: Cháy các chất rắn nhưng không có quá trình cháy âm ỉ. (Ví dụ : Chất dẻo)
+B1: Cháy chất lỏng không tan trong nước (Ví dụ : xăng ete, nhiên liệu dầu mỏ); cháy chất rắn hóa lỏng (ví dụ : paraphin)
+B2: Cháy các chất lỏng hòa tan trong nước (ví dụ : rượu, Metanol, glyxêrin)
+C: Cháy các chất khí (ví dụ : Metan, hyđro, Propan...)
+D1: Cháy các chất kim loại nhẹ (Ví dụ: nhôm, manhê và hợp kim của chúng)
+D2: Cháy kim loại kiềm và các kim loại đồng dạng khác (ví dụ: natri, kali)
+D3: Cháy các hợp chất có chứa kim loại (Ví dụ: các hợp chất hữu cơ kim loại, hydrua kim loại)	Mục 7 TCVN 6101:1996			2.2	Vị trí đặt bình khí		Đ 20 TCVN 6101:1996			-	Van chọn vùng	- Cấu kiện bao che bảo vệ phải có đủ độ bền và tấm liền để chặn lại dòng phun chất chữa cháy. Phải có lỗ thủng để ngăn ngừa sự tăng hoặc giảm áp quá mức trong cấu kiện bao che.
+- Để tránh sự tổn hao chất chữa cháy qua các khoảng hở khu vực liền kề với vùng nguy hiểm cháy hoặc khu vực làm việc, các lỗ mở phải được bịt kín cố định hoặc được lắp đặt các cấu kiện bao che đóng mở tự động. Khi không thực hiện được việc hạn chế chất chữa cháy, vùng bảo vệ phải được mở rộng để bao gồm cả vùng lân cận nối với vùng có nguy hiểm cháy hoặc vùng làm việc.
+- Việc xây dựng các không gian bao kín phải được bảo vệ bằng các hệ thống chữa cháy thể tích cacbon dioxit phải thực hiện sao cho cacbon dioxit không thể thoát ngay được. Các tường và cửa ra vào phải có khả năng chịu được tác động của lửa trong một thời gian đủ để cho phép sự xả cacbon dioxit được duy trì ở nồng độ thiết kế trong thời gian duy trì.	Đ 22 TCVN 6101:1996			-	Van an toàn	Các bình chứa phải được đặt càng gần với khu vực được bảo vệ càng tốt, nên ưu tiên đặt ngoài khu vực bảo vệ. Các bình chứa chỉ có thể được bố trí bên trong khu vực được bảo vệ nếu có thể giảm tới mức thấp nhất các nguy hiểm do cháy nổ gây ra	Đ 23.8 TCVN 6101:1996			2.3	Đường ống		Đ 23.1 TCVN 6101:1996
+Đ 23.5 TCVN 6101:1996
+Đ 23.6 TCVN 6101:1996			-	Đầu phun khí	Các hệ thống tự động phải được điều khiển bởi sự phát hiện cháy tự động và kích hoạt các cơ cấu thích hợp cho hệ thống chữa cháy, sự cố cháy và cũng phải được trang bị các cơ cấu vận hành bằng tay.
+Khi sử dụng hai hoặc nhiều bộ phát hiện, như là các đầu báo khói hoặc lửa thì hệ thống chỉ nên vận hành sau khi đã nhận được các tín hiệu từ hai bộ phát hiện.
+Nếu hệ thống báo cháy tự động dùng để điều khiển hệ thống chữa cháy tự động thì mỗi điểm trong khu vực bảo vệ phải được kiểm soát bằng 2 đầu báo cháy tự động thuộc 2 kênh khác nhau.	Đ 24 TCVN 6101:1996			-	Vận hành	Phải có phương án vận hành bằng tay đối với hệ thống chữa cháy bằng một bộ điều khiển đặt ở bên ngoài khu vực được bảo vệ hoặc liền kề với lối ra chính từ khu vực này				+	Tự động	Trong các khu vực được bảo vệ bằng các hệ thống phun khí chữa cháy toàn bộ và có thể có người phải được trang bị như sau:
+a) Cơ cấu làm trễ thời gian:
+- Đối với các ứng dụng trong đó sự làm trễ đối với quá trình phun không làm tăng lên đáng kể mối hiểm họa cháy cho người hoặc tài sản thì các hệ thống chữa cháy phải được trang bị tín hiệu báo động trước khi xả với độ trễ thời gian đủ để cho phép sơ tán người;
+- Cơ cấu làm trễ thời gian chỉ được sử dụng để sơ tán người hoặc để tạo khu vực cho việc phun khí chữa cháy.
+b) Công tắc tự động/bằng tay và cơ cấu khóa ngắt;
+c) Đường thoát hiểm, phải được giữ thông thoáng trong mọi lúc, đèn chiếu sáng khẩn cấp và chỉ dẫn thoát nạn cần đầy đủ để giảm tới mức nhỏ nhất quãng đường phải đi;
+d) Cửa ra vào tự động mở ra phía ngoài, có thể mở được từ bên trong ngay cả khi được khóa từ bên ngoài;
+e) Các tín hiệu báo động liên tục bằng ánh sáng và âm thanh tại các cửa vào và ra được chỉ định bên trong khu vực được bảo vệ và các tín hiệu báo động liên tục bằng ánh sáng bên ngoài khu vực được bảo vệ, phải hoạt động cho tới khi khu vực được bảo vệ đã an toàn;
+f) Các tín hiệu cảnh báo và hướng dẫn thích hợp;
+g) Các tín hiệu cảnh báo trước khi phun khí chữa cháy phải hoạt động tức thời từ lúc bắt đầu của thời gian trễ. Các tín hiệu này phải có đặc điểm khác so với tất cả các tín hiệu báo động khác;
+h) Các phương tiện thông gió tự nhiên hoặc cưỡng bức ở các khu vực này sau khi phun khí chữa cháy. Sự thông gió cưỡng bức thường rất cần thiết. Phải chú ý làm khuếch tán hoàn toàn các khí nguy hiểm và không để chúng lây lan sang các vị trí khác vì phần lớn các khí chữa cháy đều nặng hơn không khí;
+i) Các hướng dẫn và các bài tập huấn luyện cho tất cả những người ở trong hoặc ở lân cận các khu vực được bảo vệ, bao gồm cả việc duy trì hoặc tổ chức nhân lực để đưa vào khu vực bảo vệ để bảo đảm những người này hoạt động đúng khi hệ thống chữa cháy hoạt động.	Đ 25.2 TCVN 6101:1996
+
+Đ 6.3 TCVN
+5738:2001			+	Bằng tay	- Khí hóa lỏng: không quá 10 giây
+
+- Khí không hóa lỏng: không quá 60 giây	Đ 25.3 TCVN 6101:1996			-	An toàn và cảnh báo 	Thời gian duy trì không được nhỏ hơn 10 phút	Đ 5 TCVN 6101:1996
+Đ 6 TCVN 6101:1996			-	Thời gian xả khí
+- m: Khối lượng khí HFC-227ea (kg);
+- V: Thể tích của khu vực nguy hiểm (m3); nghĩa là thể tích được rào lại trừ đi các cấu trúc hoặc công trình cố định không thấm khí chữa cháy
+- S: Thể tích riêng (m3/kg), S = k1 + k2T;
++ k1 = 0,1269
++ k2 = 0,000513
++ T: Nhiệt độ thiết kế trong khu vực nguy hiểm.
+- c: Nồng độ %, lấy theo bảng 4	Bảng 2 TCVN 6101:1996			-	Thời gian duy trì	Quy định đối với chữa cháy theo thể tích: Phụ thuộc loại chất cháy	Bảng 1 TCVN 6101:1996			-	Lượng khí Cacbon dioxit	1. Đối với chữa cháy theo thể tích
+m = KB x (0,2A + 0,7V)
+- m: Khối lượng khí Cacbon dioxit (kg);
+- KB: Hệ số đối với vật liệu được bảo vệ, lớn hơn hoặc bằng 1 (xem 15.3 và bảng 1).
+- A = AV + 30 AOV;
++ AV: Tổng diện tích của tất cả các mặt sàn và trần (bao gồm cả các chỗ hở AOV) của không gian bao kín phải bảo vệ (m2).
++ AOV: Tổng diện tích của tất cả các chỗ hở được giả thiết là mở khi xảy ra cháy (m2).
+- V = VV + VZ - VG
++ VV: Thể tích của không gian bao kín được bảo vệ (m3).
++ VZ: Thể tích bổ sung do thất thoát trong thời gian duy trì bởi các hệ thống thông gió (Xem bảng 1) không thể đóng lại được (m3) (Xem 15.5);
++ VG: Thể tích của thành phần kết cấu phải trừ đi (m3) (xem 15.1);
+- Số 0,2 là phần Cacbon dioxit có thể thất thoát (kg/m2);
+- Số 0,7 là lượng tối thiểu Cacbon dioxit dùng làm cơ sở cho công thức (kg/m3).
+2. Đối với chữa cháy cục bộ: Phụ lục D	Đ 15 TCVN
+6101-1996
+
+Phụ lục D
+TCVN
+6101-1996			-	Lượng khí dự trữ của hệ thống	100%	Đ 18 TCVN
+6101-1996			3	Kiểm tra, thử nghiệm	Kiểm tra
++ Vị trí lắp đặt so với thiết kế được duyệt;
++ Giải pháp bảo vệ trước các tác động từ bên ngoài (có nằm trong phòng riêng hay không, có lưới bảo vệ hay không, có gần các nguồn phát sinh nhiệt hay không…);
++ Số lượng, chủng loại bình khí để đối chiếu với hồ sơ thiết kế, hồ sơ kiểm định và thông số kỹ thuật của nhà sản xuất;
++ Áp suất nạp Nitơ (dựa trên đồng hồ) để tính toán khối tích khí nén trong bình; khối lượng (kg hoặc lb) và áp suất khí HFC-227ea (FM200) nén trong bình; khối lượng khí CO2 hóa lỏng trong bình;
++ Kiểm tra việc lắp đặt logic đối với dàn chai khí sử dụng chung cho nhiều khu vực bảo vệ (lượng bình khí cho mỗi cụm, van chọn vùng và logic đường đi của đường khí mồi).
++ Đường ống của hệ thống áp lực cao phải là các loại ống thép đúc và phải có biên bản thử áp, catalogue của đường ống;
++ Kiểm tra van an toàn trên đường ống góp;
++ Việc lắp đặt đường ống và các đầu phun theo thiết kế được duyệt (đảm bảo sự bố trí cân bằng của các đầu phun theo quy định: đường đi từ bình chứa khí đến các đầu phun không lệch nhau quá 10%);
++ Số lượng đầu phun và chủng loại đầu phun theo thiết kế (loại 360o, 180o…), các đầu phun có bị cản trở bởi các cấu kiện dầm, cột, tường, tủ điện… hay không;
++ Kiểm tra hệ thống báo cháy phải đảm bảo mỗi điểm được bảo vệ bởi 02 đầu báo cháy thuộc 02 kênh khác nhau.
++ Kiểm tra trực quan kết cấu của khu vực bảo vệ đảm bảo áp lực làm việc khi khí chữa cháy được phun (có các kết cấu dễ bung như tôn, gỗ ép… hay không);
++ Kiểm tra độ kín của khu vực bảo vệ (các ô cửa, louver, khe cửa, đường ống kỹ thuật…) có được chèn bịt không, có được trang bị damper tự động đóng khi có sự cố hay không. Cần lưu ý một số damper tự động đóng bằng áp lực không khí thì chiều đóng của các lá chắn trên damper phải theo chiều khí từ trong khu vực bảo vệ ra ngoài;
++ Chuông đèn cảnh báo phải được lắp đặt cả bên trong và bên ngoài khu vực bảo vệ, đảm bảo không bị che khuất;
++ Bộ điều khiển (gồm nút ấn xả cưỡng bức, nút ấn trì hoãn, tủ hiện thị) được lắp đặt ở cửa ra vào khu vực bảo vệ, ở độ cao 1,2-1,5m.
+- Thử nghiệm:
++ Tháo van kích hoạt tại bình pilot;
++ Hoạt động của đầu báo cháy thứ 1: Tín hiệu truyền về tủ điều khiển và tủ báo cháy chung của công trình, sau đó chuông, đèn tại khu vực bảo vệ hoạt động;
++ Hoạt động của đầu báo cháy thứ 2 (kênh thứ 2): Kiểm tra xem đã đưa tín hiệu về tủ điều khiển hệ thống chữa cháy tự động; Kiểm tra phản ứng của hệ thống sau tín hiệu của đầu báo thứ hai (thời gian trễ trên tủ hiển thị); trong thời gian tủ hiện thị chạy thời gian trễ, ấn và giữ nút trì hoãn, kiểm tra tác động của nút trì hoãn có can thiệp được thời gian trễ của hệ thống hay không, sau đó thả tay và tiếp tục quan sát;
++ Trong thời gian đếm ngược tại tủ hiện thị, kiểm tra hoạt động của các damper để đóng kín các louver, thời gian để đóng kín hoàn toàn trước khi xả khí. Các quạt thông gió và hệ thống điều hòa không khí không tuần hoàn phải được ngắt tự động;
++ Hết thời gian trễ, kiểm tra chốt của van kích hoạt đã bật ra hay chưa và van kích hoạt đó có đúng cụm bình của khu vực bảo vệ đang thử hay không;
++ Reset hệ thống và thử nghiệm lại hoạt động bằng nút xả cưỡng bức;
++ Kiểm tra lịch sử tín hiệu có truyền về tủ trung tâm tại phòng trực hay không.
+Chú ý: Tủ điều khiển xả khí tại từng khu vực phải có chức năng gửi tín hiệu về tủ điều khiển trung tâm của tòa nhà.
+Lưu ý: Nội dung hướng dẫn tại Bảng trên được áp dụng đối với các công trình được xây dựng mới, cải tạo về PCCC sau thời điểm các tiêu chuẩn, quy chuẩn nêu trên có hiệu lực thi hành; các cơ sở đang hoạt động không có cải tạo, thay đổi tính chất sử dụng áp dụng theo các tài liệu đã được C07 hướng dẫn phù hợp với thời điểm công trình được xây dựng hoặc cải tạo, thay đổi tính chất sử dụng.
+
+50

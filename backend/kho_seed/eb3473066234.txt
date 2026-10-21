@@ -1,0 +1,649 @@
+[Bảng đối chiếu thẩm định thiết kế PCCC A23. Bảng đối chiếu hầm đường bộ]
+[Hiệu lực: 2025. Trạng thái: ĐANG DÙNG.]
+
+A22: BĐC hầm đường bộ
+
+		2
+
+…….. (1) ………
+……..(2)………
+
+BẢNG ĐỐI CHIẾU
+
+THẨM ĐỊNH THIẾT KẾ VỀ PHÒNG CHÁY VÀ CHỮA CHÁY
+
+	1. Tên công trình: Hầm đường bộ
+
+	2. Địa điểm xây dựng:
+
+	3. Chủ đầu tư:
+
+	4. Cơ quan thiết kế:
+
+	5. Cán bộ thẩm định:
+
+	6. Danh mục các Quy chuẩn, tiêu chuẩn, quy định áp dụng để đối chiếu thẩm định
+
+		- QCVN 06:2022/BXD: Quy chuẩn kỹ thuật quốc gia về an toàn cháy cho nhà và công trình;
+
+		- Sửa đổi 1 QCVN 06:2022/BXD: Quy chuẩn kỹ thuật quốc gia về an toàn cháy cho nhà và công trình;
+
+		- TCVN 3890:2023: Phòng cháy chữa cháy - Phương tiện PCCC cho nhà và công trình - Trang bị, bố trí.
+
+		- TCVN 13878:2023 Phòng cháy chữa cháy – Hầm đường bộ Yêu cầu thiết kế.
+
+		- TCVN 7568-14:2025: Hệ thống báo cháy - Phần 14: Thiết kế, lắp đặt, vận hành và bảo dưỡng các hệ thống báo cháy trong nhà và xung quanh tòa nhà.
+
+- TCVN 7336:2021: Phòng cháy chữa cháy - Hệ thống chữa cháy tự động bằng nước, bọt – Yêu cầu thiết kế.
+
+- TCVN 13456:2022 Phòng cháy chữa cháy – Phương tiện chiếu sáng sự cố và chỉ dẫn thoát nạn – Yêu cầu thiết kế, lắp đặt.
+
+- TCVN 13333:2021: Hệ thống chữa cháy bằng Sol-khí – Yêu cầu về thiết kế, lắp đặt, kiểm tra và bảo dưỡng.
+
+- TCVN 7161-5:2021 ISO 14520-5:2019: Hệ thống chữa cháy bằng khí - Tính chất vật lý và thiết kế  hệ thống - Phần 5: Khí chữa cháy FK-5-1-12.
+
+- TCVN 6101:1996 ISO 6183:1990: Thiết bị chữa cháy - Hệ thống chữa cháy Cacbon dioxit - thiết kế và lắp đặt.
+
+- TCVN 7161-1:2009 (ISO 14520-1:2006): Hệ thống chữa cháy bằng khí - Tính chất vật lý và thiết kế hệ thống – Phần 1: Yêu cầu chung.
+
+- TCVN 7161-9:2009  (ISO 14520-9:2006):  Hệ thống chữa cháy bằng khí - Tính chất vật lý và thiết kế hệ thống - Phần 9: Khí chữa cháy HFC-227ea.
+
+- TCVN 7161-13:2009  (ISO 14520-13:2005):  Hệ thống chữa cháy bằng khí - Tính chất vật lý và thiết kế hệ thống – Phần 13: Khí chữa cháy IG-100.
+
+- TCVN 2622:1995: Phòng cháy chống cháy cho nhà và công trình.
+
+- TCVN 4513:1988: Cấp nước bên trong – Yêu cầu thiết kế.
+
+- TCVN 5687:2024: Thông gió, điều hòa không khí – Tiêu chuẩn thiết kế.
+
+- TCVN 7568-14:2005: Hệ thống báo cháy - Phần 14: Thiết kế, lắp đặt, vận hành và bảo dưỡng các hệ thống báo cháy trong nhà và xung quanh tòa nhà.
+
+- TCVN 5740:2023: Phương tiện phòng cháy chữa cháy - Vòi đẩy chữa cháy - Vòi đẩy bằng sợi tổng hợp tráng cao su.
+
+- TCVN 6379:2024: Thiết bị chữa cháy - Trụ nước chữa cháy - Yêu cầu kỹ thuật.
+
+- TCVN 7435-1:2004 - ISO 11602-1:2000: Phòng cháy, chữa cháy - bình chữa cháy xách tay và xe đẩy chữa cháy - phần 1: lựa chọn và bố trí.
+
+		7. Quy mô, sự phù hợp của các tiêu chuẩn, quy chuẩn áp dụng để thiết kế và danh mục bản vẽ
+
+		7.1. Quy mô của công trình: Mô tả quy mô của công trình để xem xét
+
+		7.2. Danh mục bản vẽ: Thống kê chi tiết danh mục bản vẽ thiết kế Chủ đầu tư gửi kèm.
+
+		- Thuyết minh: … quyển;
+
+		- Bản vẽ báo cháy: ……………………
+
+		- Bản vẽ chữa cháy, trang bị phương tiện chữa cháy ban đầu: ……………………
+
+		- Bản vẽ đèn chiếu sáng sự cố, đèn chỉ dẫn thoát nạn: ……………………
+
+		- Bản vẽ hệ thống điện: ……………………
+
+		- Bản vẽ trang bị phương tiện chữa cháy cơ giới, dụng cụ phá dỡ thô sơ và dụng cụ chữa cháy thông thường: ……………………
+
+		Kết luận: Đã bảo đảm đầy đủ để đối chiếu hay chưa. Trường hợp còn thiếu cần kiến nghị bổ sung bản vẽ thiết kế.
+
+8. Nội dung kiểm tra đối chiếu theo tiêu chuẩn quy định:
+
+TT
+
+Nội dung đối chiếu
+
+Nội dung thiết kế
+
+Nội dung quy định của quy chuẩn, tiêu chuẩn kỹ thuật
+
+Khoản, Điều
+
+Kết luận
+
+1
+
+Xác định chiều cao an toàn PCCC, số tầng, nhóm nhà, hạng nguy hiểm cháy nổ, cấp nguy hiểm cháy các hạng mục công trình để áp dụng các quy định về PCCC
+
+-
+
+Đối tượng thuộc diện thẩm định, phân cấp thẩm định
+
+- Nêu các thông tin chính của công trình để xác định đối tượng thuộc diện thẩm định (khối tích, số cháu)
+
+- Nêu các thông tin cần thiết của dự án, công trình… hoặc phương tiện giao thông cơ giới để xác định phân cấp thẩm định
+
+- Đối tượng thuộc diện thẩm định Phụ lục III Nghị định số 105/2025/NĐ-CP
+
+- Thẩm quyền theo điều 9
+
+Phụ lục III,
+
+Nghị định số 105/2025/NĐ-CP
+
+Điều 9 Thông tư 36/2025/TT-BCA
+
+2
+
+Hệ thống báo cháy
+
+2.1
+
+Đối tượng trang bị
+
+Hầm có chiều dài từ 500 m trở lên
+
+Đường ô tô, các gian phòng kỹ thuật (phòng đặt máy biến áp, máy phát điện, phân phối điện; phòng đặt máy bơm chữa cháy, phòng thông gió, kho vật tư, hàng hóa...) mương cáp, hầm cáp trong hầm)
+
+Đ 5.1 TCVN 13878:2023
+
+Đ 5.2 TCVN 13878:2023
+
+Hệ thống báo cháy trong hầm phải được phân vùng để liên động với hệ thống thông gió sự cố, hệ thống chữa cháy khi hầm được trang bị các hệ thống này
+
+Đ 5.3.2  TCVN 13878:2023
+
+Đầu báo cháy tự động trong đường ô tô phải bảo đảm hoạt động được ở các điều kiện môi trường sau:
+
+- Tốc độ không khí lớn nhất trong hầm theo tính toán;
+
+- Hạn chế tầm nhìn do khói muội và sự mài mòn lốp xe với bề mặt đường;
+
+- Môi trường tập trung và gia tăng của khí cacbon oxit, cacrbon dioxide, hydrocacbon và Nitrogen Oxides;
+
+- Độ nóng động cơ và khí thải xe.
+
+Đ 5.3.3 TCVN 13878:2023
+
+2.2
+
+Các yêu cầu kỹ thuật
+
+Thực hiện theo đối chiếu mẫu B1 (đối với hệ thống báo cháy loại thường); B2 (đối với hệ thống báo cháy loại địa chỉ) gửi kèm
+
+3
+
+Hệ thống chữa cháy
+
+3.3.1
+
+Hệ thống cấp nước chữa cháy ngoài nhà
+
+TCVN
+
+13878:2023
+
+Yêu cầu trang bị
+
+Hầm có chiều dài từ 500 m trở lên
+
+Đ 7.1
+
+Yêu cầu hệ thống
+
+thường xuyên có nước duy trì áp suất bảo đảm kích hoạt hệ thống tự động.
+
+Đ 7.1
+
+Trụ nước
+
+được đặt phía trước 02 cửa hầm
+
+Đ 7.3.1
+
+Lưu lượng
+
+Không nhỏ hơn 10 l/s
+
+Đ 7.3.2
+
+Áp suất tự do
+
+Không nhr hơn 10m
+
+Đ 7.3.2
+
+Thời gian chữa cháy
+
+60 phút,
+
+hầm có chiều dài từ 1 500 m trở lên thời gian chữa cháy phải lấy là 120 phút.
+
+Đ 7.3.3
+
+-
+
+Mạng lưới đường ống
+
+TCVN
+
+13878:2023
+
+Dạng mạch
+
+Mạch vòng
+
+Đ 7.5.1
+
+Van khóa
+
+Bảo đảm để khi sửa chữa sẽ không ngắt nhiều hơn 05 họng nước chữa cháy; bảo đảm điều kiện khi ngắt sự cố từng đoạn riêng.
+
+Đ 7.5.2
+
+Đường kính ống
+
+đáp ứng yêu cầu TCVN 4513
+
+Đ 7.5.3
+
+-
+
+Nguồn nước
+
+TCVN 13878:2023
+
+Tính toán lượng nước bảo đảm thời gian chữa cháy tối thiểu
+
+- Họng nước chữa cháy trong hầm: Thời gian chữa cháy phải lấy tối thiểu là 60 min
+
+- Cấp nước chữa cháy ngoài hầm: Thời gian chữa cháy phải lấy là 60 min, hầm có chiều dài từ 1 500 m trở lên thời gian chữa cháy phải lấy là 120 min
+
+Đ 7.6.1
+
+Trạm bơm
+
+- Máy bơm cấp nước chữa cháy phải có máy bơm dự phòng, có công suất tương đương với máy bơm chính. Khi tính toán cần từ một đến ba máy bơm chữa cháy chính thì phải có ít nhất một máy bơm dự phòng. Khi tính toán cần bốn máy bơm chữa cháy chính trở lên thì phải có ít nhất hai máy bơm dự phòng;
+
+- Máy bơm chữa cháy phải được kết nối ưu tiên với hai nguồn điện độc lập từ nguồn điện lưới, nguồn điện từ máy phát điện hoặc sử dụng máy bơm động cơ đốt trong;
+
+- Máy bơm cấp nước chữa cháy phải được điều khiển tự động và điều khiển bằng tay tại chỗ hoặc điều khiển từ xa; phải bảo đảm cho máy bơm được kích hoạt vận hành trong thời gian không chậm quá 3 min từ khi có tín hiệu báo cháy;
+
+- Trạm bơm chữa cháy phải được đặt trong nhà ở bên ngoài hầm, trường hợp đặt trong hầm phải ngăn cách với khu vực xung quanh tường ngăn cháy có giới hạn chịu lửa không thấp hơn REl 120, cửa ngăn cháy có giới hạn chịu lửa không thấp hơn El 60, có cửa ra trực tiếp bên ngoài hầm hoặc thông với đường thoát nạn của hầm.
+
+Đ 7.6.3
+
+3.3.2
+
+Hệ thống chữa cháy bằng nước bên trong hầm
+
+TCVN 13878:2023
+
+Yêu càu trang bị
+
+Hầm có chiều dài từ 500 m trở lên
+
+Đ 7.1
+
+Yêu cầu hệ thống
+
+	- thường xuyên có nước duy trì áp suất bảo đảm kích hoạt hệ thống tự động.
+
+- có thể thiết kế độc lập hoặc kết hợp với hệ thống cấp nước chữa cháy ngoài hầm, hệ thống chữa cháy tự động bằng nước nếu được trang bị
+
+Đ 7.1
+
+Đ 7.2.4
+
+Lưu lượng
+
+Số tia phun nước và lưu lượng nước cho chữa cháy trong hầm phải lấy tương ứng tối thiểu là 01 tia phun chữa cháy cho 01 điểm cháy, mỗi tia 5 L/s.
+
+Đ 7.2.1
+
+Áp suất tự do
+
+Áp suất tự do của họng nước chữa cháy phải bảo đảm cho chiều cao của tia nước đặc cần thiết để chữa cháy vào mọi thời điểm trong ngày đối với khu vực cao nhất và xa nhất. Chiều cao tối thiểu và bán kính hoạt động của tia nước đặc chữa cháy phải không nhỏ hơn 6 m.
+
+CHÚ THÍCH: Áp suất của họng nước chữa cháy phải được tính toán với tổn thất của cuộn vòi chữa cháy:
+
+- 0,338 MPa tương ứng với cuộn vòi có chiều dài 10 m;
+
+- 0,342 MPa tương ứng với cuộn vòi có chiều dài 15 m;
+
+- 0,346 MPa tương ứng với cuộn vòi có chiều dài 20 m.
+
+Đ 7.2.2
+
+Họng nước
+
+Họng nước phải đặt ở vị trí dễ thấy, thuận tiện để sử dụng và phải bảo đảm không gây cản trở các hoạt động thoát nạn và bảo đảm các yêu cầu sau:
+
+- Họng nước chữa cháy được lắp đặt sao cho miệng họng nằm ở độ cao (1,20 ± 0,15) m so với mặt đường;
+
+- Họng nước phải được đặt trong các tủ chữa cháy, có van khóa, lăng phun nước và cuộn vòi đẩy chữa cháy, đáp ứng yêu cầu chữa cháy.
+
+Đ 7.2.3
+
+Thời gian chữa cháy
+
+Tối thiểu 60 phút
+
+Đ 7.2.5
+
+Họng chờ
+
+phải có họng chờ lắp đặt ở ngoài cửa hầm để tiếp nước từ xe chữa cháy hoặc máy bơm chữa cháy di động.
+
+- Họng chờ phải lắp đặt tại 02 cửa hầm;
+
+- Họng chờ phải là loại 2, 3 hoặc 4 cửa.
+
+Đ 7.2.6
+
+3.3.4
+
+Trạm bơm cấp nước chữa cháy và bể nước chữa cháy
+
+-
+
+Các yêu cầu kỹ thuật
+
+Thực hiện theo bảng đối chiếu số B3
+
+3.4
+
+Hệ thống chữa cháy bằng khí
+
+Thực hiện theo bảng đối chiếu số B8-B11
+
+-
+
+Yêu cầu về khu vực chữa cháy
+
+- Cấu kiện bao che bảo vệ phải có đủ độ bền và tấm liền để chặn lại dòng phun chất chữa cháy. Phải có lỗ thủng để ngăn ngừa sự tăng hoặc giảm áp quá mức trong cấu kiện bao che.
+
+- Để tránh sự tổn hao chất chữa cháy qua các khoảng hở khu vực liền kề với vùng nguy hiểm cháy hoặc khu vực làm việc, các lỗ mở phải được bịt kín cố định hoặc được lắp đặt các cấu kiện bao che đóng mở tự động. Khi không thực hiện được việc hạn chế chất chữa cháy, vùng bảo vệ phải được mở rộng để bao gồm cả vùng lân cận nối với vùng có nguy hiểm cháy hoặc vùng làm việc.
+
+- Việc xây dựng các không gian bao kín phải được bảo vệ bằng các hệ thống chữa cháy thể tích cacbon dioxit phải thực hiện sao cho cacbon dioxit không thể thoát ngay được. Các tường và cửa ra vào phải có khả năng chịu được tác động của lửa trong một thời gian đủ để cho phép sự xả cacbon dioxit được duy trì ở nồng độ thiết kế trong thời gian duy trì.
+
+Điều 7.4.1 và Điều 7.4.2 TCVN 7161-1:2009
+
+Mục 7 TCVN 6101:1996
+
+Cho phép trang bị bình khí chữa cháy tự động kích hoạt (có thiết kế bổ sung chức năng giám sát xả, tín hiệu xả phải được truyền về tủ trung tâm báo cháy) thay thế hệ thống chữa cháy tự động bằng khí tại các khu vực không thường xuyên có người với diện tích không quá 100 m2. Nếu lắp đặt tại khu vực có diện tích trên 100 m2 thì phải phân chia thành các khu vực có diện tích không quá 100 m2 bằng tường ngăn cháy (có giới hạn chịu lửa không thấp hơn REI 45) hoặc vách ngăn cháy (có giới hạn chịu lửa không thấp hơn EI 45).
+
+Điều 5.13.2 TCVN 3890:2023
+
+5.5
+
+Hệ thống chữa cháy bằng bọt
+
+-
+
+Các yêu cầu kỹ thuật
+
+Thực hiện theo bảng đối chiếu số B6-B7
+
+6
+
+Hệ thống đèn chiếu sáng sự cố và chỉ dẫn thoát nạn
+
+-
+
+Đối tượng trang bị
+
+Hệ thống đèn chiếu sáng sự cố và chỉ dẫn thoát nạn, biển chỉ dẫn thoát nạn được trang bị trên lối ra thoát nạn, đường thoát nạn, buồng thang bộ thoát nạn, gian phòng có người làm việc của hầm.
+
+Đ 9.1 TCVN 13878:2023
+
+-
+
+Yêu cầu lắp đặt
+
+Biển chỉ dẫn thoát nạn được trang bị trên đường thoát nạn dọc theo hầm ô tô và phải bảo đảm các yêu cầu sau:
+
+- Lắp đặt trong vùng giữa 02 lối ra thoát nạn với khoảng cách đến lối ra thoát nạn gần nhất không không lớn hơn 25 m.
+
+- Khoảng cách lắp đặt giữa 02 biển chỉ dẫn thoát nạn không lớn hơn 50 m.
+
+- Biển chỉ dẫn là loại hộp được chiếu sáng bằng đèn bên trong, nguồn điện cấp cho đèn từ nguồn khẩn cấp; có mũi tên chỉ 02 hướng thoát nạn và thể hiện khoảng cách từ vị trí đặt biển đến 02 tối thoát nạn gần nhất.
+
+Đ 9.3 TCVN 13878:2023
+
+-
+
+Các yêu cầu kỹ thuật
+
+Thực hiện theo bảng đối chiếu số B13
+
+7
+
+Bình chữa cháy
+
+7.1
+
+Trang bị, bố trí bình chữa cháy xách tay và bình chữa cháy có bánh xe
+
+-
+
+Yêu cầu trang bị
+
+- Tất cả các khu vực trong nhà và công trình kể cả những nơi đã được trang bị hệ thống chữa cháy phải trang bị bình chữa cháy xách tay hoặc bình chữa cháy có bánh xe.
+
+Điều 5.1.1.1
+
+TCVN 3890:2023
+
+-
+
+Lựa chọn, tính toán trang bị
+
+- Lựa chọn, tính toán trang bị và bố trí bình chữa cháy thực hiện theo quy định tại Điều 6 và Điều 7 TCVN 7435-1.
+
+Việc lựa chọn bình chữa cháy đối với từng trường hợp nhất định phải được xác định theo tính chất và mức độ của đám cháy, kết cấu và vị trí, nơi có người, các mối nguy hiểm phải đối phó, điều kiện nhiệt độ phòng và các yếu tố khác. Số lượng, công suất, việc bố trí và giới hạn sử dụng của các bình chữa cháy được quy định đáp ứng các yêu cầu của điều 7.
+
+Loại nguy hiểm
+
+Công suất bình chữa cháy nhỏ nhất
+
+Khoảng cách di chuyển lớn nhất tới bình chữa cháy, m
+
+Diện tích bảo vệ lớn nhất của 1 bình chữa cháy, m2
+
+Thấp
+
+2-A
+
+20
+
+300
+
+Trung bình
+
+3-A*
+
+20
+
+150
+
+Cao
+
+4-A*
+
+15
+
+100
+
+* Hai bình chữa cháy kiểu nước công suất 2-A được bố trí liền kề có thể được sử dụng để thực hiện các yêu cầu đối với bình chữa cháy công suất 3-A hoặc 4-A.
+
+Loại nguy hiểm
+
+Công suất chữa cháy lớn nhất
+
+Khoảng cách di chuyển lớn nhất tới bình chữa cháy, m
+
+Diện tích bảo vệ lớn nhất của 1 bình chữa cháy, m2
+
+Thấp
+
+55 B
+
+15
+
+300
+
+Trung bình
+
+144 B
+
+15
+
+150
+
+Cao
+
+233 B
+
+15
+
+100
+
+Điều 5.1.1.2
+
+TCVN 3890:2023
+
+Điều 6.1 TCVN 7435-1
+
+Điều 7 TCVN 7435-1
+
+Bảng 1 TCVN 7435-1
+
+Bảng 2 TCVN 7435-1
+
+-
+
+Lượng dự trữ
+
+Phải có số lượng bình chữa cháy dự trữ không ít hơn 10% tổng số bình theo tính toán để trang bị thay thế khi cần thiết (cho phép không quá 100 bình mỗi loại).
+
+Điều 5.1.1.5 TCVN 3890:2023
+
+7.2
+
+Trang bị, bố trí bình bột chữa cháy tự động kích hoạt loại treo
+
+Các bình bột chữa cháy tự động kích hoạt loại treo phải phù hợp với TCVN 12314-1.
+
+Căn cứ điều kiện thực tế của nhà và công trình, có thể lắp đặt ở mặt tường hoặc treo trên trần nhà, với chiều cao thích hợp sao cho đảm bảo diện tích bảo vệ hữu hiệu theo công bố của đơn vị sản xuất. Trong bất kỳ trường hợp nào phải đảm bảo khoảng cách từ bộ phận cảm biến nhiệt đến trần nhà là không quá 40 cm.
+
+Bình bột chữa cháy tự động kích hoạt loại treo có thể được trang bị tại khu vực bếp của nhà hàng, các phòng nồi hơi, giặt là có diện tích không quá 100 m2. Nếu lắp đặt tại khu vực có diện tích trên 100 m2 thì nên phân chia thành các khu vực có diện tích đến 100 m2 bằng tường ngăn cháy (có giới hạn chịu lửa không thấp hơn REI 45) hoặc vách ngăn cháy (có giới hạn chịu lửa không thấp hơn EI 45).
+
+Điều 5.1.2.1 TCVN 3890:2023
+
+Điều 5.1.2.2 TCVN 3890:2023
+
+Điều 5.1.2.3 TCVN 3890:2023
+
+7.3
+
+Các yêu cầu kỹ thuật
+
+Thực hiện theo bảng đối chiếu số B12
+
+8
+
+Dụng cụ phá dỡ thô sơ, mặt nạ phòng độc cách ly
+
+-
+
+Yêu cầu trang bị
+
+- Hầm có chiều dài từ 500 m trở lên phải trang bị ít nhất 01 bộ dụng cụ phá dỡ, được bố trí tại khu vực thường trực về phòng cháy, chữa cháy của lực lượng chữa cháy cơ sở. Dụng cụ phá dỡ gồm:
+
++ Rìu cứu nạn (trọng lượng 2 kg, cán dài 90 cm, chất liệu thép cacbon cường độ cao).
+
++ Xà beng (một đầu nhọn, một đầu dẹt, dài 100 cm).
+
++ Búa tạ (thép cacbon cường độ cao, nặng 5 kg, cán dài 50 cm).
+
++ Kìm cộng lực (dài 60 cm, tải cắt 60 kG).
+
+- Hầm có chiều dài từ 1 000 m trở lên phải trang bị không ít hơn 03 bộ mặt nạ phòng độc cách ly, được bố trí tại khu vực thường trực của lực lượng chữa cháy cơ sở
+
+Đ10 TCVN 13878:2023
+
+9
+
+Hệ thống điện phục vụ PCCC
+
+-
+
+Các yêu cầu kỹ thuật
+
+Thực hiện theo bảng đối chiếu số B14
+
+Số nguồn cấp
+
+- 02 nguồn điện độc lập và phải bảo đảm duy trì sự làm việc của các thiết bị đó trong thời gian không thấp hơn 60 min kể từ khi có cháy: Hệ thống loa truyền thanh và điều khiển thoát nạn; Hệ thống báo cháy tự động; Hệ thống chữa cháy; Hệ thống đèn chiếu sáng sự cố và chỉ dẫn thoát nạn, biển chỉ dẫn thoát nạn; Hệ thống điện thoại khẩn cấp; Hệ thống thông gió sự cố; Hệ thống kỹ thuật khác có liên quan phục vụ xử lý tai nạn, sự cố, chữa cháy, cứu nạn, cứu hộ.
+
+- Hầm có chiều dài từ 1 500 m trở lên phải có 03 nguồn điện ưu tiên độc lập
+
+Đ 13.1
+
+TCVN 13878:2023
+
+Đ13.2 TCVN 13878:2023
+
+Cáp điện
+
+Cáp điện từ tủ phân phối của hầm đến các công trình phụ trợ phải được đi trong các kênh dẫn hoặc trong các cấu kiện xây dựng làm từ vật liệu không cháy.
+
+Cáp điện từ thiết bị phân phối đầu vào đến các hệ thống bảo vệ chống cháy phải là loại cáp chống cháy
+
+Đ 13.3
+
+TCVN 13878:2023
+
+Ổ cắm
+
+Ổ cắm điện khẩn cấp được bố trí trong tất cả các tủ chữa cháy của hầm đường bộ nhằm cung cấp điện cho các thiết bị phục vụ công tác cứu nạn, cứu hộ. Ổ cắm điện này phải có khả năng chống nước.
+
+Đ 13.4 TCVN
+
+13878:2023
+
+10
+
+Loa truyền thanh và điều khiển thoát nạn
+
+Yêu cầu trang bị
+
+Hầm có chiều dài từ 500 m
+
+Đ 6.1
+
+TCVN 13878:2023
+
+- Người tại bất kỳ vị: trí nào trong hầm có thể nghe rõ thông báo, hướng dẫn khi có sự cố;
+
+- Tín hiệu âm thanh phải đảm bảo mức âm thanh tổng thể (mức âm thanh của tiếng ồn thường xuyên cùng với âm thanh từ các tín hiệu cảnh báo tạo ra) không thấp hơn 75 dB ở khoảng cách 3 m từ tín hiệu cảnh báo, nhưng không quá 120 dB ở bất kỳ vị trí nào; phải cao hơn ít nhất 15 dB so với mức âm thanh của tiếng ồn thường xuyên tại hầm;
+
+- Thiết bị loa truyền thanh và điều khiển thoát nạn phải được gắn trên tường và phải được bố trí cách mặt sàn ít nhất 2,3 m;
+
+- Trong các gian phòng có người được bảo vệ chống ồn, cũng như trong các gian phòng có mức ồn trên 95 dB, hệ thống loa truyền thanh và điều khiển thoát nạn phải kết hợp với cảnh báo bằng ánh sáng. Cho phép sử dụng thiết bị cảnh báo nhấp nháy bằng ánh sáng;
+
+- Thiết bị loa cảnh báo và chỉ dẫn thoát nạn bằng giọng nói phải phát ra âm thanh có tần số trong dải từ 200 Hz đến 5000 Hz;
+
+- Cáp tín hiệu của hệ thống loa truyền thanh và điều khiển thoát nạn phải là loại cáp chống cháy có thời gian chịu lửa không nhỏ hơn 30 min. Cho phép sử dụng loại cáp thường nhưng phải có biện pháp bảo vệ khỏi sự tác động của nhiệt ít nhất trong thời gian 30 min.
+
+Đ 6.2
+
+TCVN 13878:2023
+
+11
+
+Hệ thống điện thoại khẩn cấp
+
+Hầm cố chiều dài từ 500 m trở lên phải trang bị hệ thống điện thoại khẩn cấp
+
+Đ 11.1 TCVN 13878:2023
+
+Phía ngoài cửa hầm, bên trong đường ô tô, cửa lối thông ngang của 02 hầm liền kề, phòng trực điều khiển phòng cháy, chữa cháy và cứu nạn, cứu hộ
+
+- Điện thoại khẩn cấp trong đường ô tô được bố trí gần hoặc bên trong các tủ chữa cháy có khoảng cách giữa 02 điện thoại khẩn cấp không lớn hơn 150 m
+
+- Các điện thoại khẩn cấp được kết nối và ghép kênh đặt tại trung tâm điều khiển, điện thoại đặt trong hầm được kết nối bằng cáp điện thoại chống cháy, từ đây tín hiệu sẽ được các bộ phận ghép kênh truyền về trung tâm điều khiển bằng đường truyền cáp quang
+
+Đ 11.2 TCVN 13878:2023
+
+..........(3)....................													..........(4)..............
+
+Ghi chú: (1) Tên cơ quan chủ quản trực tiếp;(2) Tên đơn vị thực hiện thẩm định; (3) Họ tên và chữ ký của cán bộ thực hiện; (4) Ghi quyền hạn, chức vụ của người lãnh đạo, chỉ huy đơn vị thẩm định, nếu người ký văn bản là cấp phó của người đứng đầu cơ quan thì ghi chữ viết tắt “KT.” vào trước chức vụ của người đứng đầu, bên dưới ghi chức vụ của người ký văn bản;

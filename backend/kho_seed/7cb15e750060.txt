@@ -1,0 +1,143 @@
+[Bảng II.8. Hướng dẫn kiểm tra hệ thống chữa cháy Sprinkler, drencher]
+[Hiệu lực: 2025. Trạng thái: ĐANG DÙNG.]
+
+Bảng II.8: Hướng dẫn nội dung kiểm tra hệ thống chữa cháy tự động Sprinkler, Drencher
+Kiểm tra việc trang bị đúng, đủ số lượng, chủng loại; duy trì hoạt động; thử nghiệm hệ thống, thiết bị được trang bị tại cơ sở
+TT	Nội dung kiểm tra	Quy định của Tiêu chuẩn, quy chuẩn	Căn cứ	Hành vi vi phạm theo Nghị định số 106/2025/NĐ-CP		I	Hệ thống chữa cháy tự động Sprinkler 		TCVN 7336:2021	1. Hành vi không duy trì hoạt động của thiết bị thuộc hệ thống chữa cháy đã được trang bị, lắp đặt (Đb K4 Đ21 NĐ106; phạt tiền từ 10.000.000 đồng đến 20.000.000 đồng; thẩm quyền xử phạt: Chủ tịch UBND tỉnh; Giám đốc Công an tỉnh; biện pháp khắc phục hậu quả: Buộc duy trì hệ thống chữa cháy)
+
+2. Hành vi không duy trì hoạt động của hệ thống chữa cháy đã được trang bị, lắp đặt (điểm b, khoản 6, Điều 21; Phạt tiền từ 40.000.000 đồng đến 50.000.000 đồng; hình thức xử phạt bổ sung: Đình chỉ hoạt động từ 01 tháng đến 03 tháng; Biện pháp khắc phục hậu quả: Buộc duy trì hệ thống chữa cháy; thẩm quyền xử phạt: Chủ tịch UBND cấp tỉnh; Cục trưởng C07).
+
+3. Hành vi trang bị, lắp đặt thiết bị thuộc hệ thống chữa cháy không bảo đảm theo quy định (Đb K8 Đ20 NĐ106; phạt tiền từ 30.000.000 đồng đến 40.000.000 đồng; thẩm quyền xử phạt: Chủ tịch UBND tỉnh; Cục trưởng C07; Biện pháp khắc phục hậu quả: Buộc trang bị, lắp đặt hệ thống chữa cháy)		1	Yêu cầu trang bị hệ thống	Theo quy định tại Phụ lục A  TCVN 3890:2023.	Phụ lục A
+TCVN 3890:2023			2	Khu vực bảo vệ	 					2.1	Sự phù hợp của hệ thống chữa cháy và đối tượng cần bảo vệ	Loại hệ thống chữa cháy tự động, phương pháp chữa cháy, loại chất chữa cháy phải tính đến nguy cơ cháy và tính chất lý hóa của các chất cháy và đặc điểm của đối tượng cần bảo vệ.
+Không thiết kế cho:
+- Nhà và công trình được thiết kế theo các quy định đặc biệt;
+- Thiết bị công nghệ nằm bên ngoài nhà;
+- Nhà kho có giá đỡ di động.
+Không thiết kế cho đám cháy kim loại cũng như các chất và vật liệu có hoạt tính hóa học mạnh, bao gồm:
+- Các chất phản ứng với chất chữa cháy gây nổ (hợp chất nhôm, kim loại kiềm,…);
+- Các chất phân hủy khi tương tác với chất chữa cháy và giải phóng các khí dễ cháy (hợp chất lithium, azide chì, hydrua nhôm, kẽm, magiê);
+- Các chất tương tác với chất chữa cháy có tác dụng tỏa nhiệt mạnh (axit sulfuric, titan clorua,...);
+- Các chất tự cháy khi tiếp xúc với nước (natri hydrosulfite,...).
+
+Điều 1.1 TCVN 7336:2021
+Điều 1.2 TCVN 7336:2021
+Điều 1.3 TCVN 7336:2021			2.2	Xác định các thông số cơ bản của hệ thống				-	Nhóm nguy cơ phát sinh cháy :
+Kiểm tra duy trì nhóm nguy cơ phát sinh cháy	Phụ lục A (Quy định)	Phụ lục A TCVN 7336:2021			-	Cường độ phun tối thiểu:
+Kiểm tra duy trì dựa vào việc duy trì máy bơm cấp nước chữa cháy	Bảng 1
+Bảng 2 đối với nhóm nguy cơ phát sinh cháy 5, 6, 7
+Bảng 3 đối với phòng có chiều cao từ 10 m đến 20 m
+Đối với hệ thống chữa cháy sử dụng nước pha thêm chất phụ gia (bảo đảm theo thông số kỹ thuật, yêu cầu của nhà sản xuất) để tăng khả năng thẩm thấu trên nguyên lý pha chất tạo bọt, cường độ phun và lưu lượng cho phép giảm 1,5 lần so với nước.	Điều 5.1.3 TCVN 7336:2021			-	Lưu lượng:
+Kiểm tra duy trì dựa vào việc duy trì máy bơm cấp nước chữa cháy	Tính toán theo Phụ lục B (Tham khảo).
+Không nhỏ hơn với lưu lượng tối thiểu tại Bảng 1, 2, 3
+Nếu khu vực được bảo vệ thực tế (Stt) nhỏ hơn diện tích tính toán tổi thiểu (S) được quy định trong Bảng 1, thì lưu lượng thực tế có thể giảm theo hệ số K = Stt / S	Điều 5.1.3, Phụ lục B TCVN 7336:2021			-	Thời gian phun tối thiểu	Bảng 1 (Kiểm tra duy trì dựa vào lượng nước dự trữ cho chữa cháy)	Điều 5.1.3 TCVN 7336:2021			-	Áp suất tối đa tại đầu phun: 	Không lớn hơn 1 Mpa, trừ khi có quy định khác đối với đối tượng được bảo vệ cụ thể hoặc nhóm đối tượng tương tự bởi các tài liệu kỹ thuật
+Khi kết hợp với hệ thống họng nước chữa cháy trong nhà thì áp suất tại họng nước không được vượt quá 0,4 MPa; trường hợp áp suất tại họng nước chữa cháy lớn hơn thì phải có giải pháp giảm áp bảo đảm theo yêu cầu.
+( Kiểm tra duy trì dựa vào việc duy trì máy bơm cấp nước chữa cháy)	Điều 5.1.4, 5.2.23 TCVN 7336:2021			-	Cột áp	Tính toán theo Phụ lục B. Ngoài ra có thể tham khảo các phương pháp tính toán thủy lực khác nhưng các thông số tính toán phải đảm bảo quy định tại Bảng 1, 2, 3
+( Kiểm tra duy trì dựa vào việc duy trì máy bơm cấp nước chữa cháy)	Phụ lục B TCVN 7336:2021			2.3	Yêu cầu với đầu phun Kiểm tra việc duy trì các yêu cầu:				-	Thông số kỹ thuật đầu phun	Trong một gian phòng phải lắp đặt đầu phun có cùng nhiệt độ tác động (đối với đầu phun Sprinkler), cùng thông số kỹ thuật. Cho phép bố trí trong cùng một phòng các đầu phun của hệ thống Drencher dạng màn nước với thông số đầu phun khác thông số của đầu phun Sprinkler, tất cả các đầu phun Drencher phải có thông số kỹ thuật giống nhau.	Điều 5.1.9 TCVN 7336:2021			-	Khoảng cách đến điểm trên cùng chất cháy	Khoảng cách giữa đầu phun với điểm trên cùng của chất cháy, thiết bị công nghệ hoặc kết cấu của nhà phải tính đến ngưỡng áp suất làm việc và hình dạng của dòng tia phun.	Điều 5.1.11 TCVN 7336:2021			-	Khoảng cách đến trần	Khoảng cách từ tâm của phần tử nhạy cảm với nhiệt của đầu phun đến mặt phẳng trần (mái) phải nằm trong khoảng 0,08 m đến 0,30 m; trong trường hợp đặc biệt, do thiết kế trần (ví dụ có các phần nhô ra) được phép tăng khoảng cách này lên 0,40 m.
+Khoảng cách từ tâm của phần tử nhạy cảm với nhiệt của đầu phun ngang đến trần phải từ 0,07 m đến 0,15 m.	Điều 5.2.12, 5.2.13 TCVN 7336:2021			-	Khoảng cách đến tường	Khoảng cách giữa đầu phun với tường (vách ngăn) có tính nguy hiểm cháy cấp K0, K1 không được vượt quá một nửa khoảng cách giữa các đầu phun được quy định trong Bảng 1 hoặc theo tài liệu kỹ thuật của nhà sản xuất.
+Khoảng cách giữa đầu phun với tường (vách ngăn) có tính nguy hiểm cháy cấp K2, K3 và các loại khác không được vượt quá 1,2 m hoặc theo tài liệu kỹ thuật của nhà sản xuất.
+Trong các tòa nhà có mái chéo đơn và đôi có độ dốc lớn hơn 1/3, khoảng cách theo phương ngang từ đầu phun đến tường và từ đầu phun đến mép mái phải đảm bảo:
+- Không quá 1,5 m - mái có tính nguy hiểm cháy cấp K0;
+- Không quá 0,8 m - trong các trường hợp còn lại.	Điều 5.2.16, 5.2.22 TCVN 7336:2021			-	Khoảng cách giữa 02 đầu phun	Khoảng cách giữa các đầu phun không được nhỏ hơn 1,5 m (theo phương ngang).	Điều 5.2.22 TCVN 7336:2021			-	Bố trí theo khoang dầm	Trong các tòa nhà có kết cấu trần (mái) thuộc tính nguy hiểm cháy cấp K0 và K1 có các phần nhô ra với chiều cao hơn 0,3 m và trong các cấp nguy hiểm cháy còn lại với chiều cao hơn 0,2 m, phải bố trí đầu phun giữa các khoang tạo bởi các phần nhô ra (dầm, vì kèo và các cấu trúc xây dựng khác).	Điều 5.2.11 TCVN 7336:2021			2.4	Yêu cầu với đường ống 				-	Vật liệu làm ống	Đường ống của hệ thống chữa cháy tự động có thể bằng kim loại, nhựa hoặc kim loại – nhựa phù hợp với yêu cầu quy định hiện hành.	Điều 5.5.1 TCVN 7336:2021			-	Phân chia đường ống chính	Các đường ống cấp mạng vòng (trong nhà và ngoài nhà) phải chia thành các phần để sửa chữa bằng các van khóa; số lượng bộ điều khiển trong một phần không quá ba; khi tính toán thủy lực của đường ống không cần tính đến việc ngắt các phần sửa chữa của mạng vòng; đường kính của đường ống mạng vòng không được nhỏ hơn đường kính của ống cấp cho các bộ điều khiển.	Điều 5.5.3 TCVN 7336:2021			-	Bố trí van xả khí và đồng hồ áp suất trên đường ống	Phải lắp đặt:
+- Van xả khí ở điểm trên cùng của mạng đường ống chữa cháy bằng nước để giải phóng không khí trong đường ống;
+- Van với đồng hồ đo áp suất để kiểm soát áp suất trước đầu phun chủ đạo.	Điều 5.5.8 TCVN 7336:2021			-	Bố trí van khóa	Không được phép lắp đặt các van khóa trên đường ống chính và phân phối, trừ các trường hợp được quy định trong tiêu chuẩn này
+Cho phép bố trí trước công tắc dòng chảy
+Các van khóa được lắp đặt trên đường ống cấp vào máy bơm chữa cháy, trên đường ống cung cấp và đường ống chính phải có khả năng giám sát trực quan và tự động về trạng thái đóng-mở của chúng.	Điều 5.1.14, 5.1.15, 5.5.9 TCVN 7336:2021			2.5	Yêu cầu với bộ điều khiển				-	Vị trí bộ điều khiển	Bộ điều khiển phải được đặt trong khuôn viên của trạm bơm hoặc phòng trực điều khiển chống cháy hoặc trong khu vực được bảo vệ, có nhiệt độ không khí từ 5°C trở lên và đảm bảo tiếp cận dễ dàng để bảo dưỡng hệ thống.
+Bộ điều khiển đặt trong khu vực được bảo vệ phải được ngăn cách bằng các tường, vách ngăn, trần nhà có giới hạn chịu lửa không nhỏ hơn EI 45 và các cửa ngăn cháy có giới hạn chịu lửa không nhỏ hơn ЕI 30. Cho phép đặt các bộ điều khiển của từng khu vực riêng biệt trong các tủ bảo vệ mà chỉ nhân viên bảo dưỡng hệ thống có quyền tiếp cận, cho phép đặt tủ bảo vệ trong hoặc gần khu vực được bảo vệ mà không cần ngăn cháy khi đảm bảo khoảng cách từ các tủ này đến khu vực có chất cháy không nhỏ hơn 2 m.
+Các bộ điều khiển đặt bên ngoài khu vực bảo vệ phải được ngăn cách bằng kính hoặc lưới bảo vệ.	Điều 5.6.1, 5.6.2, 5.6.3 TCVN 7336:2021			2.6	Yêu cầu với nguồn cấp nước				-	Thiết bị cấp nước tự động	Trong hệ thống Sprinkler hoặc hệ thống Sprinkler-Drencher, phải sử dụng một trong các loại thiết bị cấp nước tự động sau:
+- Một hoặc nhiều bình tích áp có tổng dung tích không nhỏ hơn 1 m3, trong đó chứa nước (0,5 ± 0,1) m3 và khí nén;
+- Bơm bù được trang bị bình tích áp có dung tích ít nhất 40 lít;
+- Đường ống cấp nước cho các mục đích khác nhau với áp lực bảo đảm hoạt động cho các bộ điều khiển.
+Thiết bị cấp nước tự động (bình tích áp có dung tích tối thiểu 1 m3) phải được trang bị đồng hồ đo áp suất, công tắc áp lực, đồng hồ đo mực nước trực quan và từ xa, van an toàn.
+Thiết bị cấp nước tự động (bơm bù áp) phải được trang bị đồng hồ đo áp suất và công tắc áp lực (hoặc đồng hồ đo áp suất tín hiệu điện).	Điều 5.7.4, 5.7.7, 5.7.8 TCVN 7336:2021			-	Thiết bị cấp nước phụ trợ	Thiết bị cấp nước phụ trợ được sử dụng trong các trường hợp khi thời gian khởi động của bơm chữa cháy ở chế độ tự động hoặc bằng tay là hơn 30 s
+Thiết bị cấp nước phụ trợ phải được trang bị hai đồng hồ đo áp suất, đồng hồ đo mực nước trực quan và từ xa, van an toàn.	Điều 5.7.5, 5.7.9 TCVN 7336:2021			-	Bể nước	Cho phép tính lượng nước của các bể nước phụ vào lượng nước tính toán cho hệ thống chữa cháy, trong trường hợp này phải có thiết bị để ngăn nước tại các bể này sử dụng cho mục đích khác.
+Cho phép tính lượng nước của các bể nước phụ vào lượng nước tính toán cho hệ thống chữa cháy, trong trường hợp này phải có thiết bị để ngăn nước tại các bể này sử dụng cho mục đích khác.
+Cho phép tính lượng nước của các bể nước phụ vào lượng nước tính toán cho hệ thống chữa cháy, trong trường hợp này phải có thiết bị để ngăn nước tại các bể này sử dụng cho mục đích khác.
+Các hồ chứa và bể nước chữa cháy cần có ký hiệu, chỉ dẫn vị trí	Điều 5.7.11, 5.7.12, 5.7.13, 5.7.14 TCVN 7336:2021			2.8	Yêu cầu với trạm bơm
+Lưu ý: trường hợp công trình thuộc phạm vi áp dụng của QCVN 02:2020/BCA thì phải tham khảo thêm bảng đối chiếu trạm bơm để đối chiếu cho trạm bơm.Kiểm tra việc duy trì:				-	Số lượng bơm	Căn cứ vào lưu lượng cần thiết có thể sử dụng một hoặc một số máy bơm chính. Với bất kỳ số lượng máy bơm hoạt động, phải có ít nhất một máy bơm dự phòng, tương ứng với lưu lượng tối đa và áp lực cần thiết của máy bơm chính. Máy bơm dự phòng sẽ tự động bật khi có sự cố ngắt khẩn cấp hoặc hỏng hóc của bất kỳ bơm chính nào.	Điều 5.8.2 TCVN 7336:2021			-	Vị trí trạm bơm	Các trạm bơm được đặt trong các nhà độc lập hoặc ngoài nhà hoặc trong một phòng riêng biệt ở tầng 1 hoặc tầng hầm trên cùng. Cho phép đặt trạm bơm nước chữa cháy tại các tầng nổi khác của nhà khi phòng đặt bơm có cửa ra thông với buồng đệm thang thoát nạn của nhà qua hành lang được bảo vệ bằng kết cấu ngăn cháy loại 1.
+Khu vực của trạm bơm phải được ngăn cách với các khu vực khác bằng tường và trần ngăn cháy có giới hạn chịu lửa REI 45.	Điều 5.8.5, 5.8.6 TCVN 7336:2021			-	Trang bị cho trạm bơm	Trạm bơm phải được trang bị điện thoại kết nối với phòng trực điều khiển chống cháy
+Ở lối vào trạm bơm phải có đèn ghi chữ "trạm bơm chữa cháy", kết nối với đèn chiếu sáng sự cố	Điều 5.8.8, 5.8.9 TCVN 7336:2021			-	Bố trí mặt bằng trạm bơm	Khi bố trí mặt bằng trạm bơm, chiều rộng của các lối đi tối thiểu như sau:
+Giữa các bộ điều khiển và giữa bộ điều khiển với tường: 0,5 m;
+Giữa các máy bơm hoặc động cơ điện: 0,7 m;
+Giữa máy bơm hoặc động cơ điện và tường: 1 m, chiều rộng của lối đi từ phía bên của động cơ điện phải đủ để tháo dỡ rôto;
+Giữa các máy nén khí: 1,5 m, giữa máy nén khí với tường: 1 m;
+Giữa các bộ phận nhô ra cố định của thiết bị: 0,7 m.
+CHÚ THÍCH: Đối với bơm có đường kính họng đẩy đến DN 100, cho phép:
+- Lắp đặt bơm gần tường hoặc trên giá đỡ;
+- Lắp đặt hai bơm trên cùng một móng với khoảng cách tối thiểu 0,2 m nhưng phải có các lối đi xung quanh móng với chiều rộng tối thiểu 0,7 m	Điều 5.8.10 TCVN 7336:2021			-	Bố trí họng tiếp	Để kết nối hệ thống chữa cháy với phương tiện chữa cháy di động, trong trạm bơm phải bố trí đường ống có đường kính danh định từ DN 80 trở lên với họng tiếp ở bên ngoài có chiều cao (1,35 ± 0,15) m với khớp nối DN 65. Đường ống phải bảo đảm lưu lượng tính toán cao nhất của hệ thống chữa cháy.
+Bên ngoài trạm bơm phải bố trí ít nhất hai khớp nối để kết nối với xe chữa cháy.	Điều 5.8.11, 5.8.12 TCVN 7336:2021			-	Bồn nhiên liệu cho bơm động cơ đốt trong	Trong các trạm bơm có động cơ đốt trong, cho phép bố trí bồn nhiên liệu (xăng - 250 l, dầu diesel - 500 l) cách biệt với phòng bơm bằng các bộ phận ngăn cháy có giới hạn chịu lửa không nhỏ hơn EI 120.	Điều 5.8.18 TCVN 7336:2021			-	Đường hút	Trạm bơm phải có ít nhất 2 đường hút, không phụ thuộc vào số lượng bơm. Mỗi đường hút phải được thiết kế để bảo đảm lưu lượng nước tính toán
+Phải bố trí các van trên tất cả các đường ống hút và đường ống đẩy để bảo đảm khả năng thay thế hoặc sửa chữa bất kỳ máy bơm nào, van một chiều và van khóa chính, cũng như kiểm tra các đặc tính của máy bơm
+Đường ống hút phải dốc dần lên phía máy bơm với độ dốc ít nhất 0,05 %. Tại vị trí thay đổi đường kính ống phải sử dụng côn thu lệch tâm	Điều 5.8.21, 5.8.22, 5.8.23 TCVN 7336:2021			-	Bố trí van	Trên đường ống đẩy của mỗi bơm cần có van một chiều, van cổng và đồng hồ đo áp suất; trên đường hút phải có van cổng và đồng hồ đo áp suất. Khi bơm hoạt động mà không có áp suất dương tại đường ống hút thì không cần lắp đặt van cổng.
+Van khóa (van cổng hoặc van bướm) lắp đặt trên đường ống cấp chất chữa cháy vào bồn chứa phải đặt trong khuôn viên của trạm bơm. Cho phép đặt van này tại vị trí thiết bị đo được mực nước của bồn, bể.	Điều 5.8.24, 5.8.26 TCVN 7336:2021			2.9	Yêu cầu riêng hệ thống Sprinkler 				-	Cụm bảo vệ	Một cụm bảo vệ của hệ thống không được sử dụng quá 800 đầu phun. Khi sử dụng công tắc dòng chảy cho từng vùng của khu vực bảo vệ hoặc đầu phun có giám sát trạng thái, số lượng đầu phun trên một cụm bảo vệ có thể tăng lên 1200 đầu phun.	Điều 5.2.3 TCVN 7336:2021			-	Đường cấp cho cụm bảo vệ	Cụm thiết bị của hệ thống chữa cháy Sprinkler phải có 02 đường cấp. Đối với các hệ thống có từ 02 cụm trở lên, cho phép sử dụng đường cấp thứ 2 có van khóa từ cụm bên cạnh. Trong trường hợp này, phải bố trí van bằng tay phía trước van báo động và lắp đặt van ngăn cách giữa các van báo động, đường ống chính phải được nối vòng.	Điều 5.2.24 TCVN 7336:2021			3	Yêu cầu riêng hệ thống Drencher		1. Hành vi không duy trì hoạt động của thiết bị thuộc hệ thống chữa cháy đã được trang bị, lắp đặt (Đb K4 Đ21 NĐ106; phạt tiền từ 10.000.000 đồng đến 20.000.000 đồng; thẩm quyền xử phạt: Chủ tịch UBND tỉnh; Giám đốc Công an tỉnh; biện pháp khắc phục hậu quả: Buộc duy trì hệ thống chữa cháy)
+
+2. Hành vi không duy trì hoạt động của hệ thống chữa cháy đã được trang bị, lắp đặt (điểm b, khoản 6, Điều 21; Phạt tiền từ 40.000.000 đồng đến 50.000.000 đồng; hình thức xử phạt bổ sung: Đình chỉ hoạt động từ 01 tháng đến 03 tháng; Biện pháp khắc phục hậu quả: Buộc duy trì hệ thống chữa cháy; thẩm quyền xử phạt: Chủ tịch UBND cấp tỉnh; Cục trưởng C07).
+
+3. Hành vi trang bị, lắp đặt thiết bị thuộc hệ thống chữa cháy không bảo đảm theo quy định (Đb K8 Đ20 NĐ106; phạt tiền từ 30.000.000 đồng đến 40.000.000 đồng; thẩm quyền xử phạt: Chủ tịch UBND tỉnh; Cục trưởng C07; Biện pháp khắc phục hậu quả: Buộc trang bị, lắp đặt hệ thống chữa cháy)		3.1	Phương thức kích hoạt: Kiểm tra phương thức kích hoạt hệ thống màn nước: cưỡng bức bằng tay và chế độ tự động từ hệ thống báo cháy	Việc kích hoạt tự động hệ thống Drencher phải được thực hiện bằng tín hiệu từ một hoặc kết hợp các loại thiết bị sau:
+- Đầu báo cháy của hệ thống báo cháy;
+- Hệ thống Sprinkler;
+- Hệ thống dây dẫn động có khóa nóng chảy;
+- Cảm biến của thiết bị công nghệ.		Điều 5.3.1.1 TCVN 7336:2021			3.2	Bố trí màn nước
+Kiểm tra việc duy trì bố trí màn nước	Nếu chiều rộng của cửa, lối đi và các lỗ mở của dây chuyền công nghệ được bảo vệ đến 5 m, đường ống phân phối của màn nước là 01 dải. Khoảng cách giữa các đầu phun của màn nước dọc theo đường ống phân phối trên 01 dải được xác định theo tính toán bảo đảm lưu lượng là 1 l/s cho 1 m chiều dài màn nước trên toàn bộ chiều rộng bảo vệ.
+Nếu chiều rộng của cửa, lối đi và các lỗ mở của dây chuyền công nghệ được bảo vệ trên 5 m và sử dụng màn nước thay bộ phân ngăn cháy, đường ống phân phối của màn nước là 02 dải với lưu lượng tối thiểu cho mỗi dải là 0,5 l/s cho 1 m chiều dài, khoảng cách giữa 02 dải từ 0,4 đến 0,6 m; đầu phun trên 02 dải được lắp đặt so le. Đầu phun nằm gần tường phải cách tường không quá 0,5 m.
+Nếu màn nước được thiết kế để tăng giới hạn chịu lửa của tường (bộ phận ngăn cháy), thì sử dụng 02 dải bố trí tại 02 phía của tường và cách tường không quá 0,5 m; lưu lượng của mỗi dải không nhỏ hơn 0,5 l/s cho 1 m chiều dài. Hệ thống thiết kế bảo đảm dải nằm ở phía phát sinh cháy được kích hoạt.
+Trong phạm vi 2 m ở cả hai phía đối với màn nước 01 dải và 2 m ở hai bên đối diện của mỗi dải đối với màn nước 02 dải không được bố trí chất cháy.	Điều 5.3.2.4, 5.3.2.5, 5.3.2.6, 5.2.3.7 TCVN 7336:2021			4	Kiểm tra, thử nghiệm	- Kiểm tra:
++ Số lượng, vị trí lắp đặt đầu phun (khoảng cách giữa các đầu phun, khoảng cách đầu phun đến trần, cao độ lắp đặt, bố trí đầu phun dưới ống gió, đường kỹ thuật);
++ Kiểm tra chủng loại đầu phun (hệ số K, đường kính vòi phun, loại quay lên/quay xuống/quay ngang/âm trần, nhiệt độ kích hoạt).
++ Vị trí lắp đặt, bố trí van khóa trên đường ống (van chặn trên đường ống của hệ thống sprinkler phải được giám sát trạng thái đóng/mở);
++ Vị trí lắp đặt, bố trí Alarm valve (các bộ phận trên van: van một chiều, công tắc dòng chảy, chuông nước, bình làm trễ….); Vị trí lắp đặt, bố trí van giảm áp.
++ Vị trí lắp đặt, bố trí đồng hồ đo áp, van khóa tại đầu phun chủ đạo.
++ Bố trí đường ống cấp, đường ống chính trục đứng, đường ống phân phối tại tầng/khu vực và các đường ống nhánh (đường kính ống, bố trí mạng vòng, 02 đường cấp, bố trí van khóa), màu sắc, ký hiệu chỉ thị hướng dòng chảy...
+- Thử nghiệm:
++ Khóa ngẫu nhiên một số van chặn tầng/khu vực và kiểm tra tín hiệu giám sát tại tủ trung tâm báo cháy;
++ Kích hoạt hệ thống và kiểm tra hoạt động của Alarm valve (chuông nước hoạt động, công tác dòng chảy kích hoạt tín hiệu báo cháy);
++ Đo áp lực nước tại vị trí sau van giảm áp.
++ Có thể kích hoạt đầu phun để kiểm tra hình dạng tia phun, đo lưu lượng trên đường ống (số lượng đầu phun kích hoạt dựa trên thông số tính toán của hệ thống tại vị trí bất lợi nhất)
+- Đưa hệ thống về chế độ thường trực				II	Hệ thống chữa cháy cho các máy biến áp, gian phòng cáp		1. Hành vi không duy trì hoạt động của thiết bị thuộc hệ thống chữa cháy đã được trang bị, lắp đặt (Đb K4 Đ21 NĐ106; phạt tiền từ 10.000.000 đồng đến 20.000.000 đồng; thẩm quyền xử phạt: Chủ tịch UBND tỉnh; Giám đốc Công an tỉnh; biện pháp khắc phục hậu quả: Buộc duy trì hệ thống chữa cháy)
+
+2. Hành vi không duy trì hoạt động của hệ thống chữa cháy đã được trang bị, lắp đặt (điểm b, khoản 6, Điều 21; Phạt tiền từ 40.000.000 đồng đến 50.000.000 đồng; hình thức xử phạt bổ sung: Đình chỉ hoạt động từ 01 tháng đến 03 tháng; Biện pháp khắc phục hậu quả: Buộc duy trì hệ thống chữa cháy; thẩm quyền xử phạt: Chủ tịch UBND cấp tỉnh; Cục trưởng C07).
+
+3. Hành vi trang bị, lắp đặt thiết bị thuộc hệ thống chữa cháy không bảo đảm theo quy định (Đb K8 Đ20 NĐ106; phạt tiền từ 30.000.000 đồng đến 40.000.000 đồng; thẩm quyền xử phạt: Chủ tịch UBND tỉnh; Cục trưởng C07; Biện pháp khắc phục hậu quả: Buộc trang bị, lắp đặt hệ thống chữa cháy)		1	Yêu cầu trang bị hệ thống chữa cháy	- Máy biến áp làm mát bằng dầu với điện áp:
++ Điện áp 500 KV: Bất kỳ công suất nào;
++ Điện áp từ 220 đến 330 KV: Công suất 200 MVA trở lên;
++ Điện áp 110 KV lắp đặt trong nhà máy thuỷ điện: Công suất mỗi máy là 63 MVA trở lên
++ Máy cắt dầu trong thiết bị phân phối kín: Có khối lượng dầu từ 60 kg trở lên
+- Phòng, buồng động lực:
++ Phòng máy biến áp và máy bù từ 500 KV trở lên: Không phụ thuộc vào diện tích;
++ Phòng máy biến áp điện áp 220 – 230 KV với công suất mỗi máy từ 200 MVA trở lên: Không phụ thuộc vào diện tích;
++ Phòng máy biến áp và máy cắt trong thùng kín:
+    * Có công suất từ 63 MVA trở lên: Không phụ thuộc vào diện tích;
+    * Có điện áp từ 110 KV trở lên: Không phụ thuộc vào diện tích.	Phụ lục C
+TCVN 3890					- Công trình cáp (hầm, máng, đường hầm, giếng, sàn 2 lớp, giàn, khoang… sử dụng để đi cáp điện lực hoặc cáp thông tin) của nhà máy điện: Không phụ thuộc vào diện tích;
+- Công trình cáp khác có điện áp từ 500 KV trở lên: Không phụ thuộc vào diện tích;
+- Công trình cáp điện áp 110 KV đấu nối với máy biến áp có công suất từ 63 KVA trở lên: Không phụ thuộc vào diện tích.				2	Yêu cầu đối với hệ thống				-	Bố trí đầu phun chữa cháy	≤ 500 đầu phun/vùng chữa cháy; bố trí bảo đảm bao phủ toàn bộ thiết bị, khu vực.	Đ 5.3.1.6
+TCVN 7336.			-	Hệ thống đường ống	Bố trí mạch vòng	Đ 8.1
+TCVN 7336.			-	Van điều khiển	- Mỗi thiết bị, khu vực phải được bố trí 01 van điều khiển
+- Khởi động bằng hệ thống báo cháy và mở bằng tay tại nơi lắp đặt	Đ 8.1
+Đ 5.3.1.6
+TCVN 7336.			-	Hệ thống báo cháy điều khiển hoạt động của hệ thống chữa cháy	- Nếu hệ thống báo cháy dùng để kích hoạt hệ thống chữa cháy tự động thì mỗi điểm cháy trong khu vực bảo vệ phải được kiểm soát bằng 02 tín hiệu báo cháy khác nhau (02 kênh hoặc 02 địa chỉ khác nhau).
+- Máy biến áp thường dùng dây báo cháy hoặc đầu báo cháy nhiệt chống nổ;
+- Phòng cáp thường dùng dây báo cháy hoặc đầu báo cháy khói hoặc đầu báo cháy nhiệt	Đ 4.3
+TCVN 5738			-	Cường độ phun	- Máy biến áp: 10,2 lít/phút/m2
+- Hầm cáp, mương cáp 0,3 l/s.m2
+- Tính toán lưu lượng nước chữa cháy:
++ Máy biến áp theo diện tích xung quanh nhân với cường độ phun;
++ Hầm cáp, mương cáp theo diện tích mặt bằng nhân với cường độ phun.	Đ 4-5.4.2
+NFPA 15.
+Bảng 2
+TCVN 7336.			-	Trụ nước chữa cháy	Lưu lượng ≥10 l/s	Đ 4.5.4.2.3
+NFPA15			3	Kiểm tra, thử nghiệm	- Kiểm tra
++ Số lượng, vị trí lắp đặt đầu phun (khoảng cách giữa các đầu phun, khoảng cách đầu phun đến trần, cao độ lắp đặt);
++ Chủng loại đầu phun (hệ số K, đường kính vòi phun, loại đầu phun).
++ Vị trí lắp đặt, bố trí van khóa trên đường ống (phải có chức năng gửi tín hiệu giám sát đến hệ thống báo cháy tự động);
++ Vị trí lắp đặt, bố trí Deluge valve;
++ Lắp đặt nút điều khiển ở vị trí dễ thao tác.
++ Bố trí đường ống cấp, đường ống tạo màn nước
+- Thử nghiệm:
++ Kích hoạt hệ thống để kiểm tra hình dạng tia phun, đo lưu lượng trên đường ống (tại vị trí chiều dài màn nước lớn nhất).
++ Kích hoạt Deluge valve bằng chế độ tự động, bằng tay (02 tín hiệu báo cháy, đường ống Spinkler kích hoạt, van xả bằng tay);
++ Đo lưu lượng trên đường ống khi hệ thống hoạt động.
+- Đưa hệ thống về chế độ thường trực				III	Hệ thống chữa cháy theo phương pháp tự chảy	Yêu cầu				Kiểm tra, thử nghiệm	- Kiểm tra:
++ Duy trì lượng nước trong bể chứa cấp cho hệ thống (thường bố trí tại tầng mái, hoặc đài nước của khu dân cư, khu công nghiệp...);
+- Duy trì tình trạng hoạt động của các van khóa trên đường ống của hệ thống cấp nước chữa cháy (trên đường ống chính, ống nhánh);
+- Thử nghiệm hoạt động của hệ thống chữa cháy tại khu vực gần bể chứa nhất (bất lợi nhất về áp suất nước chữa cháy); khu vực xa nhất (thấp nhất) có áp suất nước lớn nhất.				Lưu ý: Nội dung hướng dẫn tại Bảng trên được áp dụng đối với các công trình được xây dựng mới, cải tạo về PCCC sau thời điểm các tiêu chuẩn, quy chuẩn nêu trên có hiệu lực thi hành; các cơ sở đang hoạt động không có cải tạo, thay đổi tính chất sử dụng áp dụng theo các tài liệu đã được C07 hướng dẫn phù hợp với thời điểm công trình được xây dựng hoặc cải tạo, thay đổi tính chất sử dụng.
+
+50

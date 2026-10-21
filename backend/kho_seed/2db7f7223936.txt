@@ -1,0 +1,1154 @@
+[Phụ lục II: hướng dẫn nội dung kiểm tra hệ thống báo cháy]
+[Hiệu lực: 2025. Trạng thái: ĐANG DÙNG.]
+
+1
+
+Phụ lục II: Hướng dẫn nội dung kiểm tra hệ thống báo cháy
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Căn cứ Nghị định 106/2025/NĐ-CP
+I Hệ thống báo cháy tự động
+1 Việc trang bị, duy trì hệ thống báo cháy trang bị đối với nhà, công trình
+1.1 Danh mục
+nhà; hạng
+mục/khu
+vực; gian
+phòng và
+thiết bị phải
+trang bị hệ
+thống báo
+cháy t ự
+động, thiết
+bị báo cháy
+độc lập
+Phụ lục A TCVN 3890:2023 Điều 5.2.1 Phụ
+lục A TCVN
+3890:2023
+
+1. Trang bị, lắp đặt thiết
+bị thuộc hệ thống báo
+cháy không đảm bảo
+theo quy định (Đa K8
+Đ20 NĐ106; phạt tiền
+từ 30.000.000 đồng
+đến 40.000.000 đồng).
+
+2. Không trang bị, lắp
+đặt hệ thống báo cháy
+(Đa K9 Đ20 NĐ106;
+phạt tiền từ 40.000.000
+đồng đến 50.000.000
+đồng).
+1.2 Đối với nhà
+50-150m
+Việc trang bị hệ thống báo cháy thực hiện theo các quy định bổ sung
+sau đây:
+- Phải được trang bị hệ thống báo cháy tự động theo địa chỉ;
+- Phải được bố trí các chuông báo cháy tự động ở tất cả các khu vực,
+bao gồm: các căn hộ, các phòng văn phòng, các hành lang, sảnh thang
+máy, phòng chờ sảnh chung, các phòng kỹ thuật thường xuyên có
+người làm việc và tương tự, trừ các gian phòng có điều ki ện môi
+trường sử dụng bình thường luôn ẩm ướt.
+A.2.26.1
+QCVN
+06:2022
+1.3 Đối với nhà
+chung cư
+F1.3 cao từ
+75 đ ến
+150m
+Việc trang bị hệ thống báo cháy thực hiện theo các quy định bổ sung
+sau đây:
+- Hệ thống báo cháy tự động phải báo rõ địa chỉ của từng căn hộ. Trong
+các phòng của căn hộ và các hành lang tầng, kể cả sảnh thang máy
+phải lắp đặt đầu báo khói. Trong mỗi căn hộ phải trang bị hệ thống loa
+A.3.1.16
+QCVN
+06:2022
+
+2
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Căn cứ Nghị định 106/2025/NĐ-CP
+truyền thanh để hướng dẫn thoát nạn, bảo đảm mọi người trong căn hộ
+có thể nghe rõ thông báo, hướng dẫn khí có sự cố;
+- Cần trang bị hệ thống báo cháy trong các kênh, giếng kỹ thuật điện,
+thông tin liên lạc và giếng kỹ thuật khác có nguy hiểm cháy.
+1.4 Yêu c ầu
+riêng đối
+với h ệ
+thống báo
+cháy
+thường
+Diện tích bảo vệ của 01 kênh báo cháy và số đầu báo cháy:
+- Một kênh của hệ thống báo cháy được giới hạn trong một vùng phát
+hiện cháy trong nhà, công trình;
+- Một vùng phát hiện cháy không lớn hơn 2000 m2 đối với diện tích
+sàn liên tục; một vùng phát hiện cháy không quá 2000 m2 đối với diện
+tích sàn không liên tục và phải bảo đảm điều kiện các lối vào của khu
+vực sàn liền kề có khoảng cách không lớn hơn 10 m và nhìn thấy nhau.
+Trong đó kích thước lớn nhất của vùng phát hiện cháy không vượt quá
+100 m và được giới hạn trong một tầng nhà;
+- Các vùng không có lối vào từ bên trong nhà phải được bố trí thành
+các vùng phát hiện cháy độc lập với vùng phát hiện cháy có lối vào từ
+bên trong nhà;
+- Cho phép dùng chung vùng phát hiện cháy đối với khu vực có tầng
+lửng, khi tầng lửng này có thể tiếp cận được từ sàn chung;
+- Đối với không gian bị che kín có diện tích không quá 500 m2 cho
+phép kết nối vào vùng đám cháy trên cùng một sàn nếu tổng các đầu
+báo cháy không quá 40.
+
+Điều 5.7.2
+TCVN 7568 –
+14:2025
+2 Đầu báo
+cháy
+  1. Tự ý di chuyển, che
+khuất phương ti ện
+phòng cháy, chữa cháy,
+cứu nạn, cứu hộ đã được
+trang bị, lắp đặt (K1
+Đ21 NĐ106; phạt tiền
+2.1. Các khu
+vực không
+yêu c ầu
+trang bị đầu
+báo cháy
+Trong nhà và công trình quy định tại Phụ lục A phải trang bị hệ thống
+chữa cháy tự động và/hoặc hệ thống báo cháy tự động cho toàn bộ nhà
+và công trình, trừ các khu vực sau:
+- Các phòng sản xuất với quy trình ướt, hồ bơi, phòng tắm, phòng rửa,
+phòng vệ sinh;
+Điều 4.12
+TCVN
+3890:2023
+
+3
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Căn cứ Nghị định 106/2025/NĐ-CP
+- Gian phòng hạng nguy hiểm cháy D;
+- Hành lang bên;
+- Thang bộ;
+- Khoang đệm ngăn cháy có tăng áp;
+- Khu vực không có nguy hiểm về cháy.
+từ 1.000.000 đồng đến
+3.000.000 đồng).
+
+2. Không duy trì hoạt
+động của thiết bị báo
+cháy độc lập đã được
+trang bị, lắp đặt (Đa K3
+Đ21 NĐ106; phạt tiền
+từ 5.000.000 đồng đến
+10.000.000 đồng).
+
+3. Không duy trì hoạt
+động của thiết bị thuộc
+hệ thống báo cháy đã
+được trang bị, lắp đặt
+(Đa K4 Đ21 NĐ106;
+phạt tiền từ 10.000.000
+đồng đến 20.000.000
+đồng).
+
+5. Không duy trì hoạt
+động của hệ thống báo
+cháy đã được trang bị,
+lắp đặt (Đa K6 Đ21
+NĐ106; phạt tiền từ
+40.000.000 đồng đến
+50.000.000 đồng).
+
+2.2 Vị trí lắp
+đặt các đầu
+báo cháy
+- Khi lắp đặt đầu báo cháy phải bảo đảm các yêu cầu sau:
++ Các khu vực phòng ngủ phải lắp đặt đầu báo cháy khói quang điện
+hoặc khói quang học hoặc đầu báo cháy CO;
++ Các khu vực như hành lang, đường, lối đi, lối ra thoát nạn hoặc các
+khu vực tương tự khác phải lắp đặt đầu báo cháy khói quang điện hoặc
+khói tia chiếu;
++ Khi một khu vực được chia thành nhiều phần bởi tường, vách ngăn
+hoặc các giá kệ hàng cách trần (hoặc mặt dưới của dầm ngang) không
+quá 0,3 m thì mỗi khu vực này được coi như phòng riêng biệt và phải
+được trang bị đầu báo cháy đảm bảo theo quy định;
++ Duy trì khoảng trống xung quanh đầu báo cháy có bán kính tối thiểu
+là 0,1 m và độ sâu 0,6 m;
++ Đèn chỉ thị của đầu báo cháy phải quan sát được từ các lối đi.
+Chú thích: Đối với các khu vực có thiết bị điện chiếu sáng hoặc các
+thiết bị khác lắp đặt trên trần, nếu không thể đảm bảo độ sâu 0,6 m,
+cần ưu tiên đảm bảo bán kính tối thiểu 0,1 m xung quanh đầu báo cháy.
+- Các đầu báo cháy được trang bị theo tính chất các cơ sở:
+STT Tính chất cơ sở được trang bị Thiết bị báo cháy
+A Cơ sở sản xuất
+I Cơ sở sản xuất và bảo quản, lưu trữ
+1 Gỗ và sản phẩm gỗ, hàng dệt, nhựa quần áo may sẵn, giày da, hàng lông thú, thuốc lá, giấy, nhiệt, khói, lửa
+Điều 5.8.2.1.1
+TCVN 7568 –
+14:2025
+
+4
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Căn cứ Nghị định 106/2025/NĐ-CP
+xenluloit, bông. Nhựa tổng hợp, sợi tổng hợp,
+vật liệu pôlime, cao su, sản phẩm cao su, cao
+su nhân tạo, phim ảnh và phim X quang dễ
+cháy.
+2 Vecni, sơn, dung môi, chất lỏng cháy, hóa chất, dầu bôi trơn, sản phẩm có còn. khói, lửa
+3 Kim loại kiềm, bột kim loại. lửa
+4 Bột ngũ cốc, thức ăn tổng hợp và thực phẩm khác, vật liệu toả bụi. nhiệt, lửa
+II Cơ sở sản xuất:
+ Giấy, các tông, giấy dán tường, thức ăn gia súc và gia cầm. nhiệt, khói hoặc lửa
+III Cơ sở bảo quản, lưu trữ:
+1 Vật liệu không cháy đựng trong bao bì bằng vật liệu cháy được, chất rắn cháy được. nhiệt hoặc khói
+2 Khu vực có thiết bị máy tính, thiết bị radio, tổng đài. khói
+B Công trình chuyên dùng:
+1 Phòng đặt dây cáp, phòng máy biến thể, thiết bị phân phối và bảng điện. nhiệt hoặc khói
+2
+Phòng để thiết bị và ống dẫn chất lỏng dễ cháy,
+chất dầu mỡ, phòng thử động cơ đốt trong,
+phòng thử máy nhiên liệu, phòng nạp khí cháy.
+nhiệt hoặc lửa
+3 Xưởng bảo dưỡng, sửa chữa ôtô, gara để xe. nhiệt, khói hoặc lửa
+C Nhà và công trình công cộng:
+6. Không bảo quản, bảo
+dưỡng phương tiện chữa
+cháy thông dụng hoặc
+thiết bị báo cháy độc lập
+(Đa K1 Đ22 NĐ106;
+phạt tiền từ 3.000.000
+đồng đến 5.000.000
+đồng).
+
+7. Không bảo quản, bảo
+dưỡng hệ thống báo
+cháy không bảo đảm nội
+dung theo quy định (Đb
+K1 Đ22 NĐ106; phạt
+tiền từ 3.000.000 đồng
+đến 5.000.000 đồng).
+
+8. Không bảo dưỡng hệ
+thống báo cháy (Đa K3
+Đ22 NĐ106; phạt tiền
+từ 10.000.000 đồng
+đến 20.000.000 đồng).
+
+5
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Căn cứ Nghị định 106/2025/NĐ-CP
+1
+Phòng biểu diễn, phòng tập, giảng đường,
+phòng đọc và hội thảo, phòng diễn viên, phòng
+hoá trang, phòng để quần áo, nơi sửa chữa,
+phòng đợi, phòng nghỉ, hành lang, phòng đệm,
+phòng bảo quản sách, phòng lưu trữ, không
+gian phía trên trần treo.
+khói
+2
+Khu vực hoạt động Nghệ thuật, tủ quần áo,
+xưởng phục chế, phòng chiếu phim và ánh
+sáng, phòng dụng cụ, phòng tối.
+nhiệt, khói hoặc
+lửa
+3
+Phòng ở, phòng bệnh nhân, kho hàng hóa, nhà
+ăn công cộng, bếp. Phòng hành chính quản trị,
+văn phòng, phòng máy, phòng điều khiển.
+nhiệt, khói
+4
+Phòng bệnh, cơ sở thương mại, ăn uống công
+cộng, dịch vụ, phòng, khách sạn lưu trú và ký
+túc xá.
+nhiệt, khói
+5 Phòng trưng bày, phòng lưu trữ hiện vật của viện bảo tàng, triển lãm. nhiệt, khói hoặc lửa
+D Nhà và công trình có khối tích lớn:
+1
+Khoảng thông tầng, sảnh sản xuất, nhà kho,
+trung tâm logistic, cơ sở mua sắm, nhà ga hành
+khách, sân vận động và nhà thi đấu thể thao,
+rạp xiếc, v.v.
+khói
+2
+Phòng máy tính, radio, phòng máy chủ, tổng
+đài, Trung tâm dữ liệu, trung tâm chăm sóc
+khách hàng.
+khói
+
+6
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Căn cứ Nghị định 106/2025/NĐ-CP
+2.2 Việc lắp đặt
+đầu báo
+cháy
+
+- Lắp đặt đầu
+báo cháy
+trong các hệ
+thống xử lý
+không khí
+Đầu báo cháy lắp đặt trong các hệ thống xử lý không khí ở các vị trí
+sau:
+- Công trình có sử dụng hệ thống cấp không khí tuần hoàn phục vụ
+cho nhiều hơn một khu vực kín và khu vực kín đó không được trang
+bị đầu báo cháy khói thì phải lắp đặt các đầu báo cháy khói liền kề với
+cửa vào của đường ống hút hoặc sử dụng các đầu báo cháy khói cho
+đường ống lấy mẫu không khí chung;
+- Các quạt hút không khí đặt bên trong dùng cho nhiều hơn một tầng
+nhà đặt cần lắp đặt đầu báo cháy ở vị trí gần quạt để phát hiện khói ở
+lối vào quạt hút;
+- Các đường ống hút - các đường ống được sử dụng để hút mùi khu
+vực bếp, các hơi dễ cháy, vật liệu dạng xơ và các vật liệu tương tự
+khác phải lắp đặt tối thiểu một đầu báo cháy ở điểm xa nhất của đường
+ống xả.
+Chú thích 1: Có thể lắp đặt riêng từng miệng hút hoặc chung tại ống
+góp đối với đường ống hút nhiều gian phòng.
+Điều 5.8.2.3.2
+TCVN 7568 –
+14:2025
+
+- Lắp đặt đầu
+báo cháy
+trong không
+gian bị che
+kín
+- Các đầu báo cháy phải được lắp đặt ở các khu vực bị che kín và phải
+có lối vào để bảo dưỡng các đầu báo cháy có kích thước không được
+nhỏ hơn 0,450 m x 0,350 m.
+- Phải lắp đặt đầu báo cháy trên trần của khu vực bị che kín và khoảng
+cách đầu báo cháy tới các thiết bị điện theo phương ngang ≤ 1,5 m
+trong trường hợp khu vực bị che kín chứa hệ thống điện chiếu sáng
+hoặc thiết bị điện dùng để cấp nguồn được đặt hoàn toàn vào bên trong
+khu vực bị che kín và được kết nối với nguồn điện vượt quá điện áp
+Điều 5.8.2.4.1
+TCVN 7568 –
+14:2025
+Điều 5.8.2.4.2
+TCVN 7568 –
+14:2025
+
+7
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Căn cứ Nghị định 106/2025/NĐ-CP
+cực thấp. Trong trường hợp bề mặt lắp đặt đầu báo cháy là dạng mặt
+nghiêng (dốc) thì đầu báo cháy lắp đặt ở vị trí có chiều cao lớn hơn.
+- Đối với thiết bị điện chiếu sáng có công suất danh định ≤ 100 W,
+thiết bị cung cấp năng lượng dạng có thể tháo rời có công suất danh
+định < 100 W hoặc các thiết bị khác có công suất danh định < 500 W
+không phải trang bị hệ thống báo cháy (thiết bị điện không đặt trong
+các khu vực kín).
+Chú thích 1: Đường dây điện, máng cáp của thiết bị chiếu sáng là vật
+liệu không cháy thì không được xem là thiết bị điện.
+Chú thích 2: Đầu báo cháy được sử dụng để bảo vệ thiết bị điện không
+yêu cầu phải bảo vệ không gian bị che kín.
+- Lắp đặt đầu
+báo cháy tại
+bề mặt
+trung gian
+nằm ngang
+- Phải lắp đặt đầu báo cháy ở dưới của các bề mặt trung gian nằm
+ngang như các đường ống, sàn thao tác, giá kệ có chiều rộng > 3,5 m
+và bề mặt bên dưới của bề mặt trung gian cách sàn > 0,8 m.
+- Khi khoảng cách từ mặt bên dưới của các bề mặt trung gian đến trần
+< 0,8 m thì mặt bên dưới của bề mặt trung gian có thể được xem là
+trần và không yêu cầu phải lắp đầu báo cháy phía trên bề mặt trung
+gian.
+- Nếu ống gió hay kết cấu cách tường hoặc ống gió hoặc kết cấu > 0,8
+m thì đầu báo phải lắp ở vị trí trên trần nhà (thuận lợi cho việc lắp đặt,
+bảo trì bảo dưỡng).
+Điều 5.8.2.6
+TCVN 7568 –
+14:2025
+- Lắp đặt đầu
+báo cháy
+đối với trần
+dạng hở
+- Khi sử dụng đầu báo cháy lửa thì chúng phải được lắp đặt phía trên
+và phía dưới trần dạng lưới hở.
+- Đối với các đầu báo cháy khác (trừ đầu báo cháy lửa) cho phép không
+lắp đặt đầu báo cháy phía dưới các trần hở tuần hoàn khi tổng diện tích
+lỗ hở lớn hơn hai phần ba diện tích trần của khu vực bảo vệ, khi đã có
+đầu báo cháy được lắp đặt phía trên trần hở.
+Điều 5.8.2.7
+TCVN 7568 –
+14:2025
+
+8
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Căn cứ Nghị định 106/2025/NĐ-CP
+- Nếu phần bất kỳ của trần không có lỗ hở nhô xuống và có kích thước
+tối thiểu > 3,5 m thì phải áp dụng Điều 5.8.2.6.
+- Lắp đặt đầu
+báo cháy tại
+khu vực khó
+tiếp c ận
+cháy
+- Khi đầu báo cháy được lắp đặt trong các khu vực khó tiếp cận khi có
+cháy thì mỗi khu vực phải được phân chia thành các vùng phát hiện
+cháy riêng biệt và có đèn chỉ thị từ xa được lắp đặt bên ngoài các khu
+vực.
+Chú thích: Các ví dụ khu vực khó tiếp cận bao gồm các khu vực được
+khóa: cửa hàng, mái vòm, hầm kiên cố, phòng kỹ thuật thang máy,
+phòng lạnh, tủ và các phòng tủ điện.
+Điều 5.8.2.8
+TCVN 7568 –
+14:2025
+- Lắp đặt đầu
+báo cháy cho
+phần nhà sở
+hữu riêng
+Khi phần nhà sở hữu riêng (căn hộ, shophouse …) được sử dụng để
+ngủ bao gồm khu vực phòng chính và một phòng tắm (không được sử
+dụng cho các mục đích khác, ví dụ giặt ủi) cho phép lắp đặt một đầu
+báo cháy khói hoặc một đầu báo cháy hỗn hợp trong phòng chính với
+điều kiện là tổng diện tích của toàn bộ khu vực < 50 m2.
+Điều 5.8.2.9.2
+TCVN 7568 –
+14:2025
+- Lắp đặt đầu
+báo cháy
+trong gian
+phòng di
+động s ử
+dụng làm
+kho hoặc
+văn phòng
+làm việc
+Bất kỳ gian phòng kín có thể tích bên trong lớn hơn 10 m3 được chế
+tạo có thể di chuyển được, sử dụng làm kho hoặc văn phòng làm việc
+và được đặt trong phạm vi của nhà, công trình phải được bảo vệ như
+một phần của nhà, công trình.
+Điều 5.8.2.10
+TCVN 7568 –
+14:2025
+- Lắp đặt đầu
+báo cháy
+đối với tủ
+- Tủ có thể tích > 3 m3 phải được lắp đặt các đầu báo cháy. Các tủ
+được chia nhỏ bởi các vách ngăn hoặc giá tạo thành các khu vực có
+thể tích < 3 m3 không yêu cầu phải lắp đặt đầu báo cháy.
+Điều 5.8.2.5
+TCVN 7568 –
+14:2025
+
+9
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Căn cứ Nghị định 106/2025/NĐ-CP
+- Tủ với thể tích trên 1 m3 chứa thiết bị điện hoặc điện tử có điện áp
+lớn hơn điện áp cực thấp phải lắp đặt đầu báo cháy (không yêu cầu lắp
+đèn chỉ thị của đầu báo cháy có thể quan sát từ lối đi).
+2.3 Lắp đặt đầu
+báo cháy
+khói kiểu
+điểm
+
+- Khoảng cách
+từ bộ phận
+cảm biến của
+đầu báo cháy
+khói tới trần
+- Đối với khu vực có chiều cao trần < 4 m, khoảng cách từ bộ phận
+cảm biến đến trần từ 0,025 m đến 0,3 m.
+- Đối với khu vực có chiều cao trần từ 4 m đến 15 m, khoảng cách từ
+bộ phận cảm biến đến trần ≤	0,6 m.
+Điều 5.9.1.1.1
+TCVN 7568 –
+14:2025
+-  Khoảng cách
+giữa các đầu
+báo cháy
+khói trên trần
+phẳng
+- Khoảng cách từ điểm bất kỳ trên trần phẳng đến đầu báo cháy gần
+nhất ≤ 7,2 m.
+- Khoảng cách giữa các đầu báo cháy ≤10,2 m.
+Điều 5.9.1.1.2
+TCVN 7568 –
+14:2025
+- Khoảng cách
+giữa các đầu
+báo cháy
+khói lắp đặt
+trên bề mặt
+dốc
+- Các đầu báo cháy phải được lắp đặt cách đỉnh mái một khoảng từ 0,5
+m đến 1,5 m và khoảng cách theo chiều dọc giữa các đầu báo cháy ≤
+	10,2 m.
+- Các hàng đầu báo cháy bên dưới có khoảng cách với các hàng đầu
+báo cháy liền kề, tường hoặc vách ngăn ngoài theo chiều ngang ≤ 10,2 m.
+- Khoảng cách giữa các đầu báo cháy trong các hàng bên dưới có thể
+≤ 20,4 m khi các đầu báo cháy trên các hàng liền kề được bố trí sole/
+xen kẽ nhau.
+- Phải lắp đặt đầu báo cháy gần đỉnh của mái dốc, mái hoặc một bề
+mặt phẳng để tránh vùng không khí chết.
+Điều 5.9.1.1.3
+TCVN 7568 –
+14:2025
+
+Điều 5.9.1.4
+
+10
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Căn cứ Nghị định 106/2025/NĐ-CP
+- Khoảng cách
+đầu báo cháy
+khói đến
+tường, vách
+ngăn lỗ mở
+cấp không
+khí
+-  Khoảng cách từ hàng của đầu báo cháy gần nhất tới tường hoặc vách
+ngăn ≤	5,1 m và ≥ 0,5 m.
+-  Khoảng cách từ đầu báo cháy đến mép ngoài gần nhất của cửa cấp
+không khí không khí ≥ 0,4 m.
+-  Khoảng cách từ đầu báo cháy đến phía ngoài chu vi của cánh quạt
+≥	0,4 m.
+Điều 5.9.1.1.4
+TCVN 7568 –
+14:2025
+- Khoảng cách
+giữa các đầu
+báo cháy
+khói và đầu
+báo cháy
+khói đến
+tường hoặc
+vách ngăn
+khi trong khu
+vực có dòng
+không khí
+thay đổi
+Đối với khu vực có dòng không khí thay đổi mức cao thì khi lắp đặt
+các đầu báo cháy cần đảm bảo yêu cầu sau:
+Bội số trao đổi
+khí trên giờ
+Khoảng cách giữa các
+đầu báo cháy, m
+Khoảng cách từ đầu
+báo cháy đến tường
+hoặc vách ngăn, m
+Từ 15 đến dưới
+20
+7,2 3,6
+Từ 25 đến dưới
+30
+6,0 3,0
+Từ 35 đến dưới
+60
+4,8 2,4
+Từ 60 trở lên 3,6 1,8
+
+Điều 5.9.1.1.5
+TCVN 7568 –
+14:2025
+- Lắp đặt đầu
+báo cháy
+khói trên các
+mặt phẳng
+có các dầm
+Khi các bề mặt bằng phẳng được ngăn bởi kết cấu, cấu kiện làm giảm
+đối lưu của khói, các đầu báo cháy phải được lắp đặt bảo đảm khoảng
+cách giữa các đầu báo cháy phải đảm bảo phù hợp với Điều 5.9.1.1.2,
+5.9.1.1.4 và các điều kiện sau:
+- Đối với các khu vực có độ sâu dầm d ≤ 0,3 m, các đầu báo cháy lắp
+đặt đảm bảo điều kiện Điều 5.9.1.1.2 và 5.9.1.1.4;
+- Đối với các khu vực có chiều cao h < 2 m và độ sâu của dầm nhà d
+> 0,3 m, các đầu báo cháy lắp đặt đảm bảo điều kiện Điều 5.9.1.1.2 và
+5.9.1.1.4;
+Điều 5.9.1.1.6
+TCVN 7568 –
+14:2025
+
+11
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Căn cứ Nghị định 106/2025/NĐ-CP
+- Đối với các khu vực có chiều cao trần 2 m ≤ h ≤ 4 m, độ sâu của dầm
+nhà d ≥ 0,3 m và khu vực giữa các dầm nhà có diện tích < 4 m2, các
+đầu báo cháy phải được lắp trên mặt dưới của các dầm nhà;
+- Đối với các khu vực như đã nêu trong Điều 5.9.1.1.6 c, khi diện tích
+của khu vực giữa các dầm nhà ≥ 4 m2, phải lắp đặt ít nhất là một đầu
+báo cháy trong mỗi khu vực giữa các dầm nhà;
+- Đối với các khu vực có chiều cao trần h ≥ 4 m, độ sâu của dầm nhà
+d ≥ 0,3 m và diện tích của khu vực giữa các dầm nhà < 9 m2, các đầu
+báo cháy phải được lắp đặt trên mặt dưới của các dầm nhà;
+- Đối với các khu vực có chiều cao trần h ≥ 4 m, độ sâu của dầm nhà
+d ≥ 0,3 m và diện tích của khu vực giữa các dầm nhà ≥ 9 m2, các đầu
+báo cháy phải được lắp đặt trong các khu vực giữa các dầm nhà.
+- Khoảng cách
+giữa các đầu
+báo cháy
+khói kiểu
+điểm trong
+không gian
+bị che kín
+Khi các đầu báo cháy khói lắp đặt trong không gian bị che kín được
+yêu cầu phù hợp với Điều 5.8.2.4 thì khoảng cách và vị trí phải phù
+hợp với Điều 5.9.1.1.2 đến 5.9.1.1.6, tùy thuộc vào các điều kiện sau:
+- Đối với trần phẳng có chiều cao tính tới mặt trên của trần > 2 m, các
+đầu báo cháy phải được lắp phù hợp với quy định Điều 5.9.1.1.2 và
+5.9.1.1.4;
+- Đối với trần phẳng có chiều cao tính tới mặt trên của trần < 2 m và
+có các cấu kiện bên dưới như dầm, đường ống có độ sâu ≤	0,3 m tính
+từ mặt trên của trần phẳng thì khoảng cách giữa các đầu báo cháy ≤
+15 m và khoảng cách từ tường hoặc vách ngăn đến đầu báo cháy gần
+nhất ≤	10,2 m. Khi các cấu kiện bên dưới có độ sâu >	0,3 m thì khoảng
+cách giữa đầu báo cháy lắp đặt theo 5.9.1.1.6 b;
+- Với các nhà mái đỉnh, đầu báo cháy thấp nhất phải được lắp đặt ở vị
+trí ≤ 10,2 m được đo theo phương nằm ngang về phía đỉnh (mái) tính
+từ vị trí chiều cao giữa các bề mặt phía trên và phía dưới của không
+gian là 0,8 m.
+Điều 5.9.1.1.7
+TCVN 7568 –
+14:2025
+
+12
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Căn cứ Nghị định 106/2025/NĐ-CP
+2.4 Lắp đặt đầu
+báo cháy
+khói kiểu hút
+- Diện tích bảo vệ của một đầu báo cháy khói kiểu hút không lớn hơn
+một vùng phát hiện cháy.
+- Đầu báo cháy khói kiểu hút làm việc phụ thuộc vào độ nhạy của đầu
+báo và được chia thành ba loại:
++ Loại A - siêu nhạy (độ che mờ do khói < 0,8 %/m);
++ Loại B - độ nhạy cao (độ che mờ do khói từ 0,8 đến dưới 2,0 %/m);
++ Loại C - độ nhạy tiêu chuẩn (độ che mờ do khói từ 2,0 đến 4,5 %/m).
+- Thời gian lấy mẫu không khí từ lỗ hút xa nhất đến đầu báo cháy
+không được vượt quá:
++ 60 s đối với loại A;
++ 90 s đối với loại B;
++ 120 s đối với loại C.
+- Vị trí các lỗ lấy mẫu phải phù hợp với các yêu cầu sau:
+Độ nhạy của đầu báo cháy khói
+kiểu hút
+Chiều cao tối đa
+khu vực bảo vệ
+(m)
+Bán kính bảo vệ
+của 1 lỗ hút (m)
+Loại A, siêu nhạy 30 6,5
+Loại B, độ nhạy cao 18 6,5
+Loại C, độ nhạy tiêu chuẩn 12 6,5
+- Cho phép sử dụng đầu báo cháy khói kiểu hút để bảo vệ trong các
+phòng có chiều cao ≤ 40 m; Trong trường hợp này, các lỗ lấy mẫu
+phải được bố trí theo hai lớp bảo vệ:
++ Lớp bảo vệ thứ nhất: Lỗ lấy mẫu không thấp hơn loại B ở độ cao
+không quá 30 m (dưới các tầng giá đỡ);
++ Lớp bảo vệ thứ hai: Lỗ lấy mẫu loại A ở độ cao không quá 40 m
+(dưới trần nhà).
+Điều 5.9.1.2
+TCVN 7568 –
+14:2025
+
+13
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Căn cứ Nghị định 106/2025/NĐ-CP
+2.5 Lắp đặt đầu
+báo cháy
+khói tia
+chiếu
+- Đầu báo cháy khói tia chiếu được lắp đặt cho khu vực có chiều cao
+trần ≤	40 m. Khoảng cách lắp đặt đầu báo nằm trong khoảng từ 0,025
+m đến 0,6 m bên dưới trần hoặc mái.
+- Nếu đặc điểm kiến trúc kết cấu mà không thể lắp đặt đầu báo cháy
+đảm bảo từ 0,025 m đến 0,6 m bên dưới trần hoặc mái thì đầu báo cháy
+có thể được lắp đặt khoảng cách > 0,6 m tính từ trần nhưng cần đảm
+bảo khoảng cách giữa các tia chiếu được giảm xuống còn 25 % chiều
+cao lắp đặt.
+- Khoảng cách giữa các tia chiếu ≤ 14,4 m. Khoảng cách tia chiếu đến
+tường, vách ngăn ≤ 7,2 m.
+- Trường hợp khói không đối lưu lên tới trần hoặc mái, yêu cầu lắp đặt
+bổ sung đầu báo cháy tia chiếu ở khu vực chiều cao trung gian. Khoảng
+cách giữa các đầu báo cháy được lắp ở các chiều cao trung gian giảm
+còn 25 % chiều cao lắp đặt.
+Điều 5.9.1.3
+TCVN 7568 –
+14:2025
+2.6 Lắp đặt đầu
+báo cháy
+nhiệt kiểu
+điểm
+
+- Khoảng cách
+từ đầu báo
+cháy nhiệt
+đến trần hoặc
+mái
+- Đầu báo cháy được lắp đặt đảm bảo khoảng cách từ bộ phận cảm
+biến đến trần hoặc mái từ 0,015 m đến 0,1 m.
+- Trường hợp cấu trúc của mái nhà làm ảnh hưởng đến khả năng đối
+lưu của nhiệt từ đám cháy tới đầu báo, thì các đầu báo cháy này được
+lắp đặt trên cấu trúc này và đảm bảo khoảng cách bộ phận cảm biến
+đến mái ≤	0,35 m.
+Điều 5.9.2.1.1
+TCVN 7568 –
+14:2025
+
+14
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Căn cứ Nghị định 106/2025/NĐ-CP
+- Khoảng cách
+giữa các đầu
+báo cháy
+nhiệt trên bề
+mặt tr ần
+phẳng
+Đối với các bề mặt bằng phẳng, khoảng cách từ bất cứ điểm nào trên
+bề mặt bằng phẳng đến đầu báo cháy gần nhất cũng ≤ 5,1 m và khoảng
+cách giữa các đầu báo cháy ≤	7,2 m.
+Điều 5.9.2.1.2
+TCVN 7568 –
+14:2025
+- Khoảng cách
+giữa các đầu
+báo cháy
+nhiệt trên bề
+mặt dốc
+- Các đầu báo cháy phải được lắp đặt cách đỉnh (mái) trong khoảng
+cách từ 0,5 m đến 1,5 m và khoảng cách theo chiều dọc giữa các đầu
+báo cháy ≤ 7,2 m. Các hàng thấp hơn của các đầu báo cháy cách các
+hàng liền kề, tường bên ngoài hoặc vách ngăn theo phương ngang ≤
+	7,2 m. Khoảng cách giữa các đầu báo cháy nhiệt trong các hàng thấp
+hơn ≤ 14,4 m với điều kiện các đầu báo cháy trên các hàng liền kề
+được bố trí sole/ xen kẽ nhau.
+- Khi trần có kết cấu dầm hoặc xà có chiều sâu < 0,3 m, có thể lắp đặt
+đầu báo cháy trên mặt bên dưới của kết cấu này.
+- Phải lắp đặt đầu báo cháy gần đỉnh của mái dốc, mái hoặc một bề
+mặt phẳng để tránh vùng không khí chết.
+Điều 5.9.2.1.3
+TCVN 7568 –
+14:2025
+
+Điều 5.9.2.3
+- Khoảng cách
+giữa đầu báo
+cháy nhiệt
+đến tường,
+vách ngăn và
+lỗ mở không
+khí
+- Khoảng cách từ hàng đầu báo cháy gần nhất tới tường hoặc vách
+ngăn nằm trong khoảng từ 0,3 m đến 3,6 m.
+- Khoảng cách từ đầu báo cháy đến lỗ mở cấp không khí ≥ 0,6 m.
+Điều 5.9.2.1.4
+TCVN 7568 –
+14:2025
+- Khoảng cách
+giữa các đầu
+báo cháy
+nhiệt khi có
+Khi trần được phân chia bởi các kết cấu như dầm, xà hoặc đường ống
+có độ sâu theo phương thẳng đứng lớn hơn 0,3 m thì khoảng cách giữa
+các đầu báo cháy được giảm đi 30 %.
+Điều 5.9.2.1.5
+TCVN 7568 –
+14:2025
+
+15
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Căn cứ Nghị định 106/2025/NĐ-CP
+các kết cấu
+dầm, xà hoặc
+đường ống
+- Khoảng cách
+giữa các đầu
+báo cháy
+nhiệt trong
+không gian
+bị che kín
+Đối với các đầu báo cháy lắp đặt trong không gian bị che kín khi lắp
+đặt có yêu cầu tuỳ thuộc vào các điều kiện sau:
+- Chiều cao trần > 2 m hoặc có các cấu kiện nhô ra có độ sâu > 0,3 m
+tính từ trần thì:
++ Khoảng cách từ bất cứ điểm nào trên bề mặt bằng phẳng đến đầu
+báo cháy gần nhất ≤ 5,1 m và khoảng cách giữa các đầu báo cháy ≤
+	7,2 m;
++ Khoảng cách từ hàng đầu báo cháy gần nhất tới tường hoặc vách
+ngăn nằm trong khoảng từ 0,3 m đến 3,6 m;
++ Khoảng cách từ đầu báo cháy đến lỗ mở cấp không khí ≥ 0,6 m.
+- Chiều cao trần < 2 m và có các cấu kiện nhô ra ≤ 0,3 m tính từ trần
+thì khoảng cách giữa các đầu báo cháy ≤ 10,4 m và khoảng cách từ
+đầu báo cháy bất kỳ đến tường, vách ngăn ≤	5,1 m.
+- Với nhà mái đỉnh, đầu báo cháy ở vị trí thấp nhất được lắp đặt ở vị
+trí ≤	7,2 m được tính từ độ cao 0,8 m (khoảng cách bề mặt trên và bề
+mặt dưới) hướng về phía đỉnh mái.
+Điều 5.9.2.1.6
+TCVN 7568 –
+14:2025
+2.7 Lắp đặt đầu
+báo cháy
+nhiệt kiểu
+dây
+Lắp đặt các đầu báo cháy nhiệt kiểu dây phải tuân theo các yêu cầu tại
+Điều 5.9.2.1.2 đến 5.9.2.1.5 và các yêu cầu sau:
+- Diện tích bảo vệ lớn nhất của đầu báo cháy nhiệt kiểu dây phải phù
+hợp với giới hạn vùng phát hiện cháy;
+- Các đầu báo cháy kiểu dây phải được bố trí trên khắp diện tích vùng
+phát hiện cháy sao cho khoảng cách giữa hai tuyến dây liền kề ≤	7,2
+m và khoảng cách tới tường hoặc vách ngăn bất kỳ ≤ 3,6 m;
+Điều 5.9.2.2
+TCVN 7568 –
+14:2025
+
+16
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Căn cứ Nghị định 106/2025/NĐ-CP
+- Đầu báo cháy nhiệt kiểu dây phải được lắp đặt trong từng đỉnh của
+khoang mái kể cả trường hợp khoảng cách giữa các đỉnh này có thể
+cách nhau nhỏ hơn 7,2 m;
+- Đầu báo cháy nhiệt kiểu dây cấu thành từ nhiều bộ phận khác nhau,
+khi xác định khoảng cách mỗi bộ phận này được coi là một đầu báo
+cháy nhiệt kiểu điểm.
+2.8 Lắp đặt đầu
+báo lửa
+- Lắp đặt đầu báo lửa tại những nơi:
++ Khi xảy ra cháy ở giai đoạn ban đầu của đám cháy có xuất hiện ngọn
+lửa hoặc bề mặt quá nhiệt (thường là trên 600 °C);
++ Khi xuất hiện ngọn lửa ở các phòng có chiều cao vượt quá giới hạn
+cho việc sử dụng đầu báo khói hoặc nhiệt;
++ Khi tốc độ phát triển đám cháy nhanh, thời điểm phát hiện cháy bởi
+các loại đầu báo cháy khác không bảo đảm yêu cầu bảo vệ người và
+tài sản.
+- Các đầu báo cháy lửa phải được lắp đặt sao cho tầm nhìn của đầu
+báo cháy không bị hạn chế bởi các bộ phận cấu trúc của tòa nhà hoặc
+các vật thể khác.
+- Các đầu báo cháy lửa [xem TCVN 7568-10 (ISO 7240-10)] phải
+được đặt cách nhau để bảo đảm cho các khu vực nguy hiểm được bảo
+vệ có các chỗ bị che khuất hoặc không phát hiện được là nhỏ nhất. Khi
+có nhiều khu vực không được bảo vệ do các đồ vật như máy bay, thiết
+bị hoặc các giá bảo quản thì phải lắp đặt các đầu báo cháy bổ sung để
+bao phủ các khu vực này.
+Điều 4.1.5.2
+
+Điều 5.9.3
+TCVN 7568 –
+14:2025
+2.9 Lắp đặt đầu
+báo cháy hỗn
+hợp (đa cảm
+biến)
+- Khi lắp đặt các đầu báo cháy hỗn hợp [ví dụ, TCVN 7568-8 (ISO
+7240-8) TCVN 7568-15 (ISO 7240-15) và ISO 7240-27] mà chỉ có
+cảm biến nhiệt hoạt động thì các đầu báo cháy lắp đặt đảm bảo theo
+yêu cầu đối với đầu báo nhiệt.
+Điều 5.9.4
+TCVN 7568 –
+14:2025
+
+17
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Căn cứ Nghị định 106/2025/NĐ-CP
+- Đối với các đầu báo cháy thay đổi được thông số kỹ thuật (ngưỡng
+tác động, thời gian tác động) thì các giá trị này đảm bảo trong giới hạn
+cho phép.
+2.10 Lắp đặt đầu
+báo cháy để
+điều khiển hệ
+thống chữa
+cháy
+Trường hợp hệ thống báo cháy dùng để điều khiển kích hoạt hệ thống
+chữa cháy thì mỗi điểm trong khu vực bảo vệ phải được kiểm soát
+bằng 2 đầu báo cháy tự động thuộc 2 kênh hoặc 2 địa chỉ khác nhau.
+Điều 5.13.2
+TCVN 7568 –
+14:2025
+3 Hộp nút ấn báo cháy
+- Phải lắp đặt hộp nút ấn báo cháy ở vị trí có thể nhìn thấy rõ và tiếp
+cận được dễ dàng đối với các loại công trình sau:
+STT Các vị trí Nơi lắp đặt
+1 Công trình công nghiệp, cơ
+sở vật chất và cơ sở (nhà
+xưởng, kho, v.v.)
+Dọc các tuyến đường thoát
+nạn, trong các hành lang, tại
+lối ra từ nhà xưởng, nhà kho
+1.1 Một tầng
+1.2 Nhiều tầng Giống như trên và cầu thang
+của mỗi tầng
+2 Các công trình cáp (đường
+hầm, sàn, vv)
+Ở lối vào đường hầm, xuống
+sàn, tại lối thoát hiểm khẩn
+cấp từ đường hầm, tại ngã ba
+của đường hầm
+3 Tòa nhà hành chính và công
+cộng
+Trong các hành lang, sảnh,
+tại khu vực cầu thang, ở lối
+thoát hiểm của tòa nhà.
+- Khoảng cách giữa các hộp nút ấn báo cháy ≤ 45 m.
+- Hộp nút ấn báo cháy phải được lắp đặt ở chiều cao (1,4 ± 0,2) m tính
+từ mặt đường đi lại và có một không gian trống dạng nửa hình cầu bán
+kính 0,6 m xung quanh mặt trước của hộp nút ấn báo cháy.
+Điều 5.10
+TCVN 7568 –
+14:2025
+
+18
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Căn cứ Nghị định 106/2025/NĐ-CP
+Chú thích: Khi quãng đường di chuyển vượt quá 45 m cần lắp đặt một
+hộp nút ấn báo cháy bổ sung và không cần áp dụng yêu cầu về vị trí
+lắp đặt đối với các loại công trình.
+-
+Thử nghiệm
+kiểm tra nút
+ấn báo cháy
+Nhấn nút ấn bằng tay để kiểm tra tín hiệu báo cháy của nút ấn và tủ
+trung tâm và kết nối liên động đến các hệ thống khác.
+
+4 Thiết bị báo cháy
+4.1
+Thiết bị báo
+cháy bằng
+âm thanh
+- Các thiết bị báo cháy bằng âm thanh phải bảo đảm các yêu cầu sau:
++ Tín hiệu báo động phải phân bố đồng thời trong khoang cháy / nhà
+và công trình;
++  Các tín hiệu báo động, nghe thấy rõ ở tất cả các địa điểm trong
+khoang cháy / nhà và công trình;
++  Mức cường độ âm trong thời gian 60 s ở tất cả các vị trí phải bảo
+đảm lớn hơn mức áp suất âm thanh của môi trường xung quanh ít nhất
+10 dBA và không lớn hơn 105 dBA;
++ Tín hiệu báo động bằng âm thanh đối với các khu vực ngủ phải lớn
+hơn mức áp suất âm thanh của môi trường xung quanh ít nhất 15 dBA
+(với điều kiện các cửa ra vào đều đóng) và không nhỏ hơn 75 dBA.
+Điều 5.11.2
+TCVN 7568 –
+14:2025
+4.2
+Thiết bị báo
+cháy bằng
+ánh sáng
+- Vị trí lắp đặt thiết bị cảnh báo bằng ánh sáng:
++ Được lắp đặt trên hành lang, lối ra thoát nạn;
++ Nơi người khiếm thính thường ở;
++ Nơi có tiếng ồn xung quanh vượt quá 95 dBA;
++ Khu vực yêu cầu hạn chế về âm thanh (ví dụ khu vực phòng mổ
+trong bệnh viện).
+- Thiết bị cảnh báo bằng ánh sáng được lắp đặt cho nhà và công trình
+bảo đảm các yêu cầu sau:
+Điều 5.11.3
+TCVN 7568 –
+14:2025
+
+19
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Căn cứ Nghị định 106/2025/NĐ-CP
++ Phải lắp đặt trên trần hoặc tường với số lượng thích hợp sao cho có
+thể nhìn thấy ở tất cả các vị trí trong khu vực quy định tại Điều
+5.11.3.1.1;
++ Khoảng cách từ trân tường tới đèn ≥ 2,0 m và khoảng cách giữa các
+thiết bị ≤ 45m;
++ Tín hiệu cảnh báo bằng ánh sáng phải là loại chớp nháy và cần bảo
+đảm tính đồng bộ khi lóe sáng;
++ Sự cố của thiết bị cảnh báo bằng ánh sáng trong khu vực bất kỳ
+không làm ảnh hưởng đến hoạt động của các thiết bị cảnh báo bằng
+ánh sáng trong khu vực khác.
+4.3
+Thiết bị chỉ
+thị bên ngoài
+nhà và công
+trình
+- Khi đèn chỉ thị của đầu báo cháy không nhìn thấy được ở khu vực
+thường xuyên có người, phải sử dụng các thiết bị chỉ thị từ xa để hiển
+thị trạng thái báo cháy ngoại trừ quy định tại Điều 5.8.2.4.3 e.
+- Các thiết bị chỉ thị từ xa dùng cho các phòng, các tủ hoặc các khu
+vực tương tự phải được lắp đặt liền kề với cửa ra vào để xác định được
+vị trí đầu báo cháy.
+- Các thiết bị chỉ thị từ xa cho không gian kín phải được lắp đặt ở khu
+vực có thể tiếp cận được.
+- Cho phép sử dụng một đèn chỉ thị từ xa để chỉ thị cho nhiều đầu báo
+hoặc nhiều miệng hút của cùng một đầu báo cháy khói kiểu hút khi
+các thiết bị này lắp đặt chung cho cùng một phòng, một căn hộ.
+- Không yêu cầu lắp đặt đèn chỉ thị từ xa khi:
++ Vị trí của đầu báo cháy hiển thị tại tủ trung tâm báo cháy;
++ Không gian bị che kín có thể tiếp cận được và có chiều cao > 2 m
+hoặc ở bên dưới vật liệu làm sàn tháo ra được (như vật liệu làm sàn
+máy tính).
+Điều 5.8.2.4.3
+
+20
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Căn cứ Nghị định 106/2025/NĐ-CP
+- Đối với đầu báo cháy không dây (đầu báo cháy vô tuyến và đầu báo
+cháy độc lập) ngoài đèn chỉ thị khi tác động phải có tín hiệu báo về
+tình trạng của nguồn cấp.
+- Thiết bị chỉ thị được đặt bên ngoài gian phòng được nhìn thấy rõ ràng
+từ các lối đi chính, gần các cửa ra vào. Khi được lắp đặt trên tường,
+chiều cao tối đa ≤	2,4 m tính từ mặt đường đi lại.
+- Từ “FIRE” phải được tích hợp hoặc đặt cạnh đèn chỉ thị đảm bảo
+chiều cao bằng chữ không nhỏ hơn 0,025 m trên nền tương phản, chữ
+viết phải đứng thẳng và đọc được một cách rõ ràng.
+- Thiết bị chỉ thị phải được kết nối với tín hiệu ra giám sát của tủ trung
+tâm báo cháy.
+Điều 5.11.3.2
+TCVN 7568 –
+14:2025
+4.4
+Thử nghiệm
+kiểm tra thiết
+bị báo cháy
+Kiểm tra tín hiệu bằng âm thanh, ánh sáng khi hệ thống có tín hiệu báo
+cháy: đèn chớp hoặc sáng liên tục; cường độ âm thanh của chuông báo
+cháy.
+
+5
+Tủ trung
+tâm báo
+cháy
+
+5.1 Yêu c ầu
+chung
+- Phải có chức năng tự động kiểm tra tín hiệu từ các đầu báo cháy,
+kênh báo cháy và các thiết bị báo cháy khác truyền về để loại trừ các
+tín hiệu báo cháy giả và có khả năng giám sát tình trạng hoạt động các
+thiết bị trong hệ thống.
+-  Tín hiệu âm thanh, ánh sáng khi báo cháy và báo sự cố phải khác
+nhau.
+-  Việc lắp các đầu báo cháy tự động với trung tâm báo cháy phải chú
+ý đến sự phù hợp của hệ thống (điện áp cấp cho đầu báo cháy, dạng
+tín hiệu báo cháy, phương pháp phát hiện sự cố, bộ phận kiểm tra
+đường dây).
+Điều. 5.12.1
+
+Điều. 5.12.9
+
+Điều. 5.12.10
+TCVN 7568 –
+14:2025
+
+21
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Căn cứ Nghị định 106/2025/NĐ-CP
+5.2 Khu vực đặt
+tủ báo cháy
+- Đặt ở những nơi thường xuyên có người trực suốt ngày đêm. Trong
+trường hợp không có người trực suốt ngày đêm, trung tâm báo cháy
+phải có chức năng truyền các tín hiệu báo cháy và báo sự cố đến nơi
+trực cháy hay nơi có người thường trực suốt ngày đêm và phải có biện
+pháp phòng ngừa người không có nhiệm vụ tiếp xúc với trung tâm báo
+cháy.
+- Nơi đặt các trung tâm báo cháy phải có điện thoại liên lạc trực tiếp
+với đơn vị cảnh sát phòng cháy, chữa cháy và cứu nạn, cứu hộ hay nơi
+nhận tin báo cháy.
+Điều. 5.12.2
+
+5.3 Vị trí lắp
+đặt
+- Lắp đặt trên tường, vách ngăn, trên bàn tại những nơi không nguy
+hiểm về cháy, nổ và có không gian trống trước tủ trung tâm tối thiểu
+1,5 m.
+- Nếu lắp trên các cấu kiện xây dựng bằng vật liệu cháy thì tủ trung
+tâm báo cháy phải được bảo vệ bằng lá kim loại dầy ≥ 1 mm hoặc bằng
+các vật liệu không cháy khác có độ dầy ≥ 10 mm. Trong trường hợp
+này tấm bảo vệ phải có kích thước sao cho mỗi cạnh của tấm bảo vệ
+vượt ra ngoài cạnh của trung tâm ≥ 100 mm về mọi phía.
+-  Khoảng cách giữa các trung tâm báo cháy và trần nhà bằng vật liệu
+cháy được ≥ 1,0 m.
+-  Lắp cạnh nhau, khoảng cách giữa các trung tâm báo cháy ≥ 50 mm.
+- Lắp trên tường, cột nhà hoặc giá máy, khoảng cách từ phần điều
+khiển của trung tâm báo cháy đến mặt sàn từ 0,75 đến 1,85 m.
+Điều. 5.12.3
+
+Điều. 5.12.4
+
+Điều. 5.12.5
+
+Điều. 5.12.6
+Điều. 5.12.7
+TCVN 7568 –
+14:2025
+
+22
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Căn cứ Nghị định 106/2025/NĐ-CP
+5.4 Thử nghiệm,
+kiểm tra việc
+lắp đặt hoạt
+động của hệ
+thống
+(1) Kiểm tra việc bảo dưỡng hệ thống theo quy định;
+(2) Kiểm tra khả năng hiển thị khu vực hoặc địa chỉ báo cháy;
+(3) Nguồn điện cấp cho tủ (AC và DC);
+(4) Kiểm tra tình trạng hoạt động của tủ (lỗi hay không lỗi);
+(5) Kiểm tra khả năng giám sát của tủ đối với đầu báo cháy và các
+thiết bị ngoại vi (tháo đầu báo; khóa van chặn; nút ấn báo cháy;  van
+chặn lửa có động cơ; công tắc dòng chảy; alarm valve...).
+
+6 Hệ thống
+cáp và dây
+tín hiệu
+-  Phải có biện pháp bảo vệ cáp và dây tín hiệu để chống chập hoặc
+đứt dây (luồn trong ống kim loại hoặc ống bảo vệ khác), chống chuột
+cắn, côn trùng hoặc các nguyên nhân cơ học khác làm hư hỏng cáp và
+dây tín hiệu. Các lỗ xuyên trần, tường sau khi thi công xong phải được
+chèn bịt hoặc xử lý thích hợp để không làm giảm các chỉ tiêu kỹ thuật
+về cháy theo yêu cầu của kết cấu.
+- Trường hợp trong công trình có nguồn phát nhiễu hoặc đối với hệ
+thống báo cháy địa chỉ thì bắt buộc phải sử dụng cáp và dây tín hiệu
+chống nhiễu. Nếu cáp và dây tín hiệu không chống nhiễu thì nhất thiết
+phải luồn trong ống hoặc hộp kim loại có tiếp đất.
+Điều 5.14.2
+
+Điều 5.14.9
+TCVN 7568 -
+14:2025
+6.1 Phương
+pháp kiểm
+tra hệ thống
+cáp và dây
+tín hiệu
+
+Kiểm tra xem có việc thay thế, bổ sung các loại cáp tín hiệu trong quá
+trình bảo dưỡng, sửa chữa hay không?
+
+7 Cấp nguồn - Trung tâm của hệ thống báo cháy phải có hai nguồn điện độc lập:
+Một nguồn 220 V xoay chiều và một nguồn là ắc quy dự phòng.
+- Dung lượng của ắc quy dự phòng phải bảo đảm ít nhất 24 h cho thiết
+bị hoạt động ở chế độ thường trực và 30 min khi có cháy.
+Điều 5.13
+TCVN 7568 –
+14:2025
+
+1. Không có hệ thống
+điện phục vụ phòng
+cháy và chữa cháy (Đb
+K4 Đ12 NĐ106; phạt
+
+23
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Căn cứ Nghị định 106/2025/NĐ-CP
+- Khi sử dụng ắc quy làm nguồn điện, ắc quy phải được nạp điện tự
+động (Phụ lục C TCVN 7568-14:2025 đưa ra ví dụ tính toán nạp điện
+tự động).
+- Các trung tâm báo cháy phải được tiếp đất bảo vệ. Việc tiếp đất bảo
+vệ phải thỏa mãn yêu cầu của quy phạm nối đất thiết bị điện hiện hành.
+- Điện cấp cho các hệ thống thiết bị kỹ thuật nêu dưới đây phải bảo
+đảm duy trì sự làm việc của các thiết bị đó trong thời gian không ít
+hơn 3 giờ kể từ khi có cháy và phải được lấy từ 2 nguồn cấp độc lập:
++ Thang máy chữa cháy;
++ Các thiết bị của hệ thống bảo vệ chống cháy;
++ Hệ thống báo cháy tự động và hướng dẫn thoát nạn;
++ Các thiết bị của hệ thống chữa cháy tự động và cấp nước chữa cháy;
++ Các thiết bị bảo vệ chống cháy cho hệ thống thiết bị kỹ thuật;
++ Các trang thiết bị phục vụ cứu hộ - cứu nạn.
+
+A2.28.1
+QCVN
+06:2022/BXD
+tiền từ 40.000.000
+đồng đến 50.000.000
+đồng).
+
+2. Không duy trì nguồn
+điện phục vụ phòng
+cháy và chữa cháy (Đc
+K4 Đ12 NĐ106; phạt
+tiền từ 40.000.000
+đồng đến 50.000.000
+đồng).
+- Thử nghiệm Ngắt nguồn điện chính thử nghiệm hệ thống báo cháy đảm bảo duy trì
+hoạt động khi hệ thống không có nguồn chính
+Lưu ý: Nội dung hướng dẫn tại Bảng trên được áp dụng đối với các công trình được xây dựng mới, cải tạo về PCCC sau thời điểm các tiêu chuẩn,
+quy chuẩn nêu trên có hiệu lực thi hành; các cơ sở đang hoạt động không có cải tạo, thay đổi tính chất sử dụng áp dụng theo các tài liệu đã được
+C07 hướng dẫn phù hợp với thời điểm công trình được xây dựng hoặc cải tạo, thay đổi tính chất sử dụng.

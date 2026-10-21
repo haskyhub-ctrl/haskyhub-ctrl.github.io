@@ -1,0 +1,1202 @@
+[Phụ lục I: hướng dẫn công tác thẩm định thiết kế, kiểm tra nghiệm thu về PCCC của cơ quan Công an]
+[Hiệu lực: 2025. Trạng thái: ĐANG DÙNG.]
+
+2
+
+PHỤ LỤC I
+
+Hướng dẫn về công tác thẩm định thiết kế, kiểm tra công tác nghiệm thu về PCCC của cơ quan Công an
+
+I. Xác định đối tượng, thẩm quyền thẩm định thiết kế, kiểm tra công tác nghiệm thu về PCCC
+
+	1. Đối với dự án, công trình được đầu tư xây dựng mới:
+
+Việc xác định đối tượng thuộc diện phải thẩm định thiết kế, kiểm tra công tác nghiệm thu về PCCC theo quy định tại Phụ lục III Nghị định số 105/2025/NĐ-CP ngày 15 tháng 5 năm 2025 của Chính phủ (sau đây viết gọn là ghị định số 105/2025/NĐ-CP) được xác định căn cứ vào công năng, số tầng, tổng diện tích sàn, khối tích, chiều dài công trình... Trong đó:
+
+1.1. Số tầng nhà được tính bao gồm toàn bộ các tầng trên mặt đất (kể cả tầng kỹ thuật, tầng lửng, tầng tum) và tầng nửa hầm. Tầng tum và tầng lửng không tính vào số tầng cao khi diện tích mái tum không vượt quá 30 % diện tích sàn mái, có chức năng sử dụng làm tum thang, kỹ thuật; tầng lửng chỉ bố trí sử dụng làm khu kỹ thuật (ví dụ: sàn kỹ thuật đáy bể bơi, sàn đặt máy phát điện, hoặc các thiết bị công trình khác), có diện tích sàn xây dựng không vượt quá 10 % diện tích sàn xây dựng của tầng ngay bên dưới (không vượt quá 300 m2 đối với nhà chung cư, nhà chung cư hỗn hợp).
+
+1.2. Tổng diện tích sàn của nhà là tổng diện tích tất cả các tầng cộng lại được che phủ theo quy định tại Điều 5.1.2 TCVN 9255:2012 “Tiêu chuẩn tính năng trong tòa nhà - Định nghĩa, phương pháp tính các chỉ số diện tích và không gian”.
+
+1.3. Khối tích của nhà theo quy định tại điểm d mục 9, mục 10 Phụ lục III Nghị định số 105/2025/NĐ-CP được tính toán dựa trên các kích thước diện tích từng tầng và chiều cao (tham khảo QCVN 06:2022/BXD Quy chuẩn kỹ thuật quốc gia về an toàn cháy cho nhà và công trình và TCVN 9255:2012)
+
+- Kích thước mặt bằng lấy theo khoảng cách giữa các bề mặt hoàn hiện phía trong của tường bao, hoặc ở tất cả các mặt không có tường bao thì tính đến một mặt phẳng thẳng đứng kéo đến cạnh ngoài trên cùng của sàn.
+
+- Chiều cao lấy theo khoảng cách từ bề mặt trên của sàn phía dưới đến mặt bề mặt dưới của sàn phía trên hoặc mái.
+
+1.4. Chiều dài hầm đường ô tô, hầm đường sắt được xác định là đường kín dành cho xe cơ giới, phương tiện lưu thông được giới hạn ở các cửa hầm.
+
+Chiều dài hầm tàu điện ngầm được xác định là tổng chiều dài các đoạn tuyến đi ngầm bao gồm đoạn giữa các ga và phần hầm của nhà ga.
+
+Lưu ý: Đối với dự án đầu tư xây dựng công trình có nhiều công trình, hạng mục công trình:
+
+* Việc xác định công trình thuộc đối tượng thẩm định thiết kế, kiểm tra công tác nghiệm thu về PCCC được áp dụng cho từng công trình, hạng mục công trình theo công năng và quy mô của công trình, hạng mục công trình (dự án đầu tư xây dựng công trình có công trình thuộc diện thẩm định thiết kế về PCCC thì các công trình, hạng mục công trình khác có yêu cầu về PCCC quy định tại khoản 1 Điều 16 Luật Phòng cháy, chữa cháy và cứu nạn, cứu hộ thuộc dự án phải thẩm định thiết kế về PCCC).
+
+* Khi xét đối tượng thẩm định theo tên dự án không thuộc Phụ lục III Nghị định số 105/2025/NĐ-CP, nhưng trong dự án có công trình, hạng mục công trình mà quy mô, tính chất sử dụng thuộc đối tượng thẩm định thì phải thực hiện thẩm định cho các công trình, hạng mục công trình có yêu cầu về PCCC trong dự án đó. Ví dụ: Công trình tôn giáo (đền, chùa...) hoặc sân gôn không được quy định trong Phụ lục III Nghị định số 105/2025/NĐ-CP nhưng trong khuôn viên xây dựng có các hạng mục như: nhà hàng, khách sạn... thì căn cứ quy mô của nhà hàng, khách sạn đó để xác định đối tượng thẩm định.
+
+2. Đối với công trình điều chỉnh thiết kế hoặc trong quá trình sử dụng mà thay đổi công năng hoặc cải tạo làm thay đổi điều kiện an toàn về PCCC theo quy định tại khoản 3 Điều 9 Nghị định số 105/2025/NĐ-CP chỉ thẩm định thiết kế, kiểm tra công tác nghiệm thu về PCCC khi:
+
+2.1. Thay đổi nguyên lý báo cháy của hệ thống báo cháy hoặc thay đổi nguyên lý chữa cháy, chất chữa cháy của hệ thống chữa cháy; thay đổi thông số kỹ thuật của máy bơm chữa cháy;
+
++ Thay đổi nguyên lý của hệ thống báo cháy: thay đổi nguyên lý từ báo cháy nhiệt sang báo cháy khói hoặc lửa và ngược lại.
+
++ Thay đổi nguyên lý chữa cháy, chất chữa cháy của hệ thống chữa cháy: thay đổi từ chữa cháy theo diện tích sang thể tích, chữa cháy cục bộ theo điểm sang chữa cháy theo diện tích và ngược lại, thay đổi chất chữa cháy nước sang khí, bọt, bột và ngược lại, thay đổi các loại chất chữa cháy khí khác nhau (Nitơ, Cacbon điôxit (CO2), Novec 1230 (FK-5-1-12), HFC-227ea (FM200), IG-55, IG-541, Sol-khí).
+
++ Thay đổi thông số kỹ thuật của bơm chữa cháy: thay đổi lưu lượng, cột áp của máy bơm chữa cháy.
+
+2.2. Thay thế, trang bị bổ sung hệ thống báo cháy hoặc hệ thống chữa cháy:
+
++ Thay thế hệ thống báo cháy loại địa chỉ sang báo cháy thường hoặc ngược lại, thay thế hệ thống chữa cháy bằng nước sang hệ thống chữa cháy bằng bọt, bột, khí hoặc ngược lại. Trường hợp chỉ thay thế một số thiết bị của hệ thống như đầu phun, đầu báo cháy,... chỉ là hoạt động bảo dưỡng, sửa chữa thông thường không được coi là thay thế hệ thống.
+
++ Trang bị bổ sung hệ thống trong trường hợp công trình chưa trang bị hệ thống này hoặc lắp mới hệ thống khác hoàn toàn độc lập, tách biệt với hệ thống cũ; lắp đặt bổ sung hệ thống cho các hạng mục, khu vực mở rộng.
+
+Ví dụ: công trình chưa có hệ thống chữa cháy tự động Sprinkler, nay lắp đặt bổ sung; công trình có 03 nhà A, B, C trong đó nhà A, B đã lắp đặt báo cháy tự động, nay lắp bổ sung nhà nhà C; công trình nhà kho có bổ sung đầu phun chữa cháy tự động cho các giá kệ hàng; công trình đã lắp đặt hệ thống chữa cháy bằng khí cho phòng máy phát điện, máy biến áp, nay lắp bổ sung cho phòng server,...
+
+Lưu ý:
+
+- Các trường hợp điều chỉnh thiết kế, cải tạo không thuộc diện phải thẩm định thiết kế về PCCC của cơ quan Công an, chủ đầu tư vẫn phải lập hồ sơ thiết kế điều chỉnh và tổ chức thẩm định thiết kế điều chỉnh trước khi tiếp tục thi công.
+
+- Việc xác định đối tượng thuộc diện phải thẩm định thiết kế, kiểm tra công tác nghiệm thu về PCCC của công trình thay đổi công năng hoặc cải tạo tương tự hướng dẫn tại mục 1.
+
+3. Thẩm quyền thẩm định thiết kế về PCCC được xác định căn cứ vào quy mô, cấp công trình, chiều cao nhà theo quy định tại Điều 9 Thông tư 36/2025/TT-BCA
+
+3.1. Xác định chiều cao nhà trên 150 m căn cứ theo chiều cao an toàn PCCC quy định tại Điều 1.4.9 của QCVN 06:2022/BXD.
+
+3.2. Tiêu chí phân cấp công trình được xác định theo quy định tại Thông tư số 06/2021/TT-BXD và Thông tư số 02/2025/TT-BXD sửa đổi Thông tư số 06/2021/TT-BXD.
+
+3.3. Công trình có quy mô lớn, kỹ thuật phức tạp xác định theo quy định tại Phụ lục VIII Nghị định số 06/2021/NĐ-CP của Chính phủ.
+
+3.4. Công trình sử dụng công nghệ, thiết bị, hệ thống PCCC mà Việt Nam chưa có tiêu chuẩn, quy chuẩn kỹ thuật. Ví dụ: Lắp đặt hệ thống chữa cháy tự động loại súng phun chưa có TCVN.
+
+Lưu ý:
+
+- Trường hợp dự án đầu tư xây dựng được phân chia thành các dự án thành phần theo nguyên tắc dự án thành phần có thể vận hành, khai thác độc lập mà trong quyết định chủ trương đầu tư hoặc văn bản chấp thuận chủ trương đầu tư có nội dung dự kiến phân chia dự án thành phần thì thẩm quyền thẩm định thiết kế, kiểm tra công tác nghiệm thu về PCCC xác định theo thẩm quyền thẩm định cho từng dự án thành phần;
+
+- Trường hợp dự án có công trình đã được thẩm duyệt về PCCC, chưa được chấp thuận kết quả nghiệm thu về PCCC (vẫn thuộc Phụ lục III Nghị định 105/2025/NĐ-CP), nay bổ sung thiết kế hạng mục công trình, công trình có yêu cầu về PCCC theo quy định tại khoản 1 điều 16 Luật thì các hạng mục công trình, công trình này thuộc diện thẩm định thiết kế về PCCC theo quy định tại Nghị định số 105/2025/NĐ-CP. Đối tượng, nội dung, thẩm quyền thẩm định theo quy định của Nghị định số 105/2025/NĐ-CP và Thông tư số 36/2025/TT-BCA ngày 15/5/2025 của Bộ Công an.
+
+4. Áp dụng tiêu chuẩn, quy chuẩn về PCCC liên quan đến công tác thẩm định thiết kế về PCCC
+
+4.1. Nguyên tắc áp dụng
+
+Căn cứ theo Điều 23, Điều 38 Luật tiêu chuẩn và quy chuẩn kỹ thuật, việc áp dụng tiêu chuẩn, quy chuẩn thực hiện theo nguyên tắc sau: Các quy định của Quy chuẩn kỹ thuật quốc gia được áp dụng bắt buộc khi thiết kế, thẩm định thiết kế về PCCC. Các tiêu chuẩn kỹ thuật được áp dụng trên nguyên tắc tự nguyện, trường hợp toàn bộ hoặc một phần tiêu chuẩn cụ thể trở thành bắt buộc áp dụng khi được viện dẫn trong văn bản quy phạm pháp luật hay quy chuẩn kỹ thuật. Khi áp dụng để đối chiếu thẩm định thiết kế về PCCC phải tuân thủ theo các quy định của quy chuẩn kỹ thuật về PCCC hiện hành, trong đó tiêu chuẩn phải phù hợp với quy chuẩn kỹ thuật quốc gia về PCCC và bảo đảm tính đồng bộ, tính khả thi của hệ thống tiêu chuẩn được áp dụng. Một số vấn đề cần lưu ý khi áp dụng văn bản quy phạm pháp luật, quy chuẩn, tiêu chuẩn PCCC như sau:
+
+- Khi áp dụng quy định của tiêu chuẩn và quy chuẩn kỹ thuật trong trường hợp điều ước quốc tế mà Việt Nam là thành viên có quy định khác với Luật tiêu chuẩn và quy chuẩn kỹ thuật thì áp dụng quy định của điều ước quốc tế đó.
+
+- Khi áp dụng các quy chuẩn kỹ thuật phải thực hiện theo đúng phạm vi áp dụng và đối tượng điều chỉnh của mỗi quy chuẩn. Trường hợp quy chuẩn chỉ nêu các yêu cầu chung mà thiếu các quy định cụ thể thì áp dụng các quy định trong các tiêu chuẩn về PCCC. Trường hợp giữa quy chuẩn kỹ thuật và tiêu chuẩn PCCC có cùng nội dung quy định nhưng khác nhau về mức độ an toàn thì áp dụng theo nguyên tắc không được thấp hơn quy định của quy chuẩn kỹ thuật.
+
+4.2. Việc áp dụng tiêu chuẩn nước ngoài, tiêu chuẩn quốc tế về PCCC tại Việt Nam thực hiện theo quy định của Luật tiêu chuẩn và quy chuẩn kỹ thuật.
+
+4.3. Danh mục một số quy chuẩn, tiêu chuẩn hiện hành liên quan đến thiết kế phương tiện, hệ thống PCCC và hệ thống điện phục vụ PCCC (tham khảo)
+
+STT
+
+Tên quy chuẩn, tiêu chuẩn quốc gia
+
+QCVN 06:2022/BXD Quy chuẩn kỹ thuật quốc gia về An toàn cháy cho nhà và công trình; Sửa đổi 1:2023/BXD QCVN 06:2022/BXD
+
+QCVN 04:2021/BXD Quy chuẩn kỹ thuật quốc gia về Nhà chung cư
+
+QCVN 08:2018/BXD Quy chuẩn kỹ thuật quốc gia về Công trình tàu điện ngầm
+
+QCVN 13:2018/BXD Quy chuẩn kỹ thuật quốc gia về gara ô-tô
+
+QCVN 12:2014/BXD Quy chuẩn kỹ thuật quốc gia về hệ thống điện của nhà ở và nhà công cộng.
+
+QCVN 05:2020/BCT Quy chuẩn kỹ thuật quốc gia về an toàn trong sản xuất, kinh doanh, sử dụng, bảo quản và vận chuyển hóa chất nguy hiểm
+
+QCVN 01:2020/BCT Quy chuẩn kỹ thuật quốc gia về yêu cầu thiết kế cửa hàng xăng dầu
+
+QCVN 02:2020/BCT Quy chuẩn kỹ thuật quốc gia về an toàn bồn chứa khí dầu mỏ hóa lỏng
+
+QCVN 02:2019/BCT Quy chuẩn kỹ thuật quốc gia về an toàn trạm nạp khí dầu mỏ hóa lỏng
+
+QCVN 01:2019/BCT Quy chuẩn kỹ thuật quốc gia về an toàn trong bảo quản, vận chuyển, sử dụng và tiêu hủy vật liệu nổ công nghiệp
+
+QCVN 10:2012/BCT Về an toàn trạm cấp khí dầu mỏ hóa lỏng
+
+QCVN 05:2015/BCT Quy chuẩn kỹ thuật quốc gia về Amôni nitrat dùng để sản xuất thuốc nổ nhũ tương
+
+QCVN 01:2008/BGTVT Quy chuẩn kỹ thuật quốc gia về Phân cấp và đóng phương tiện thủy nội địa vỏ thép chở xô hóa chất nguy hiểm.
+
+QCVN 51:2012/BGTVT Quy phạm phân cấp và đóng phương tiện thủy nội địa vỏ xi măng lưới thép.
+
+QCVN 21:2015/BGTVT Quy chuẩn kỹ thuật quốc gia về quy phạm phân cấp và đóng tàu biển vỏ thép.
+
+Sửa đổi 1: 2016 QCVN 21:2015/BGTVT
+
+Sửa đổi 2: 2017 QCVN 21:2015/BGTVT
+
+QCVN 72:2013/BGTVT Quy chuẩn kỹ thuật quốc gia về quy phạm phân cấp và đóng phương tiện thủy nội địa.
+
+Sửa đổi 1:2015 QCVN 72:2013/BGTVT
+
+QCVN 01:2019/BCA Quy chuẩn kỹ thuật quốc gia về hệ thống phòng cháy và chữa cháy cho kho chứa, cảng xuất, nhập và trạm phân phối khí đốt
+
+QCVN 02:2020/BCA Quy chuẩn kỹ thuật quốc gia về trạm bơm nước chữa cháy
+
+TCVN 3890:2023 Phòng cháy chữa cháy - Phương tiện phòng cháy và chữa cháy cho nhà và công trình – Trang bị, bố trí.
+
+TCVN 7568-14:2025 Hệ thống báo cháy - phần 14: thiết kế, lắp đặt, vận hành và bảo dưỡng các hệ thống báo cháy trong nhà và xung quanh tòa nhà
+
+TCVN 5760:1993 Hệ thống chữa cháy - Yêu cầu chung về thiết kế, lắp đặt và sử dụng.
+
+TCVN 7336:2021 Phòng cháy chữa cháy - Hệ thống chữa cháy tự động bằng nước, bọt - Yêu cầu thiết kế và lắp đặt.
+
+TCVN 6101:1996 ISO 6183:1990 Thiết bị chữa cháy - Hệ thống chữa cháy Cacbon dioxit - thiết kế và lắp đặt.
+
+TCVN 7161-1:2022 (ISO 14520-1:2006)  Hệ thống chữa cháy bằng khí - Tính chất vật lý và thiết kế hệ thống - Phần 1: Yêu cầu chung.
+
+TCVN 7161-5:2021  (ISO 14520-9:2019)  Hệ thống chữa cháy bằng khí - Tính chất vật lý và thiết kế hệ thống - Phần 5: Khí chữa cháy FK-5-1-12
+
+TCVN 7161-9:2024  (ISO 14520-9:2019)  Hệ thống chữa cháy bằng khí - Tính chất vật lý và thiết kế hệ thống - Phần 9: Khí chữa cháy HFC-227ea
+
+TCVN 7161-13:2024  (ISO 14520-13:2015)  Hệ thống chữa cháy bằng khí - Tính chất vật lý và thiết kế hệ thống - Phần 13: Khí chữa cháy IG-100
+
+TCVN 7161-14:2024  (ISO 14520-14:2015)  Hệ thống chữa cháy bằng khí - Tính chất vật lý và thiết kế hệ thống - Phần 14: Khí chữa cháy IG-55
+
+TCVN 7161-15:2024  (ISO 14520-15:2015)  Hệ thống chữa cháy bằng khí - Tính chất vật lý và thiết kế hệ thống - Phần 15: Khí chữa cháy IG-541
+
+TCVN 13333:2021 Hệ thống chữa cháy bằng Sol-khí - Yêu cầu thiết kế, lắp đặt, kiểm tra và bảo dưỡng
+
+TCVN 5740:2023 Phương tiện phòng cháy chữa cháy – Vòi đẩy chữa cháy
+
+TCVN 6379:2024 Thiết bị chữa cháy - Trụ nước chữa cháy
+
+TCVN 7435-1:2004 - ISO 11602-1:2000 Phòng cháy, chữa cháy - bình chữa cháy xách tay và xe đẩy chữa cháy Phần 1: lựa chọn và bố trí
+
+TCVN 13456:2022 Phòng cháy chữa cháy - Phương tiện chiếu sáng sự cố và chỉ dẫn thoát nạn - Yêu cầu thiết kế, lắp đặt
+
+TCVN 6161:1996 Phòng cháy, chữa cháy Chợ và Trung tâm thương mại - Yêu cầu về thiết kế
+
+TCVN 5684:2003 An toàn cháy các công trình dầu mỏ và sản phẩm dầu mỏ - yêu cầu chung. Soát xét lần 1
+
+TCVN 5307:2009 Kho dầu mỏ và sản phẩm dầu mỏ - Yêu cầu thiết kế
+
+TCVN 12984:2020 (EN ISO 16903:2015) Khí thiên nhiên hóa lỏng (LNG) - Các yêu cầu kỹ thuật và phương pháp thử đối với LNG thương mại
+
+TCVN 8611:2023  Khí thiên nhiên hóa lỏng (LNG) – Công trình và thiết bị – Thiết kế công trình trên bờ
+
+TCVN 8612:2023  Khí thiên nhiên hóa lỏng (LNG) – Công trình và thiết bị – Thiết kế và thử nghiệm cần xuất nhập LNG cho hệ thống kho cảng trên bờ
+
+TCVN 8616:2023  Khí thiên nhiên hóa lỏng (LNG) – Yêu cầu trong sản xuất tồn chứa và xử lý
+
+TCVN-AN 017:2012 Tiêu chuẩn quốc gia về kho vũ khí, vật liệu nổ, công cụ hỗ trợ trong Công an nhân dân - Yêu cầu chung
+
+TCVN 5334-2007 Thiết bị điện kho dầu mỏ và sản phẩm dầu mỏ - Yêu cầu an toàn trong thiết kế, lắp đặt và sử dụng
+
+II. Một số nội dung lưu ý khi thực hiện thẩm định thiết kế về PCCC
+
+1. Hướng dẫn chung
+
+- Đối với dự án đầu tư xây dựng công trình, công trình, phương tiện giao thông đã được cơ quan Công an cấp giấy chứng nhận thẩm duyệt thiết kế về PCCC nhưng chưa được chấp thuận kết quả nghiệm thu về PCCC thì tiếp tục thực hiện thẩm duyệt điều chỉnh thiết kế về PCCC (nếu có), tổ chức kiểm tra kết quả nghiệm thu về PCCC theo quy định tại khoản 3 Điều 46 Nghị định số 105/2025/NĐ-CP và các văn bản hướng dẫn của C07 (số 2075/C07-P4 ngày 09/8/2022 hướng dẫn công tác thẩm duyệt thiết kế, nghiệm thu về PCCC; số 2155/C07-P4 hướng dẫn một số nội dung công tác thẩm duyệt thiết kế, nghiệm thu theo quy định của Nghị định số 50/2024/NĐ-CP; số 3248/C07-P4 ngày 02/10/2024 bổ sung, điều chỉnh nội dung hướng dẫn tại Công văn số 2155/C07-P4 ngày 04/7/2024 của C07).
+
+- Việc thẩm định thiết kế về PCCC đối với hồ sơ thiết kế xây dựng triển khai sau thiết kế cơ sở (thiết kế kỹ thuật hoặc thiết kế bản vẽ thi công) thực hiện theo quy định tại Điều 9 Nghị định số 105/2025/NĐ-CP và Điều 26 Thông tư 37/2025/TT-BCA, khi đối chiếu thẩm định tham khảo theo các bảng đối chiếu mẫu (từ A1 đến A26; B1 đến B14), trong đó tập trung đối chiếu các giải pháp, hệ thống PCCC, cụ thể:
+
+1.1. Hệ thống báo cháy tự động
+
+- Đầu báo cháy
+
++ Việc lựa chọn đầu báo cháy phải phù hợp với tính chất sử dụng và mức độ nguy hiểm cháy của các gian phòng, khu vực tham khảo tại Phụ lục A TCVN 7568-14:2025. Đồng thời cần lưu ý: lựa chọn loại đầu báo cháy khói có độ nhạy phù hợp đối với từng loại khói khác nhau; khu vực phòng ngủ phải lắp đặt đầu báo cháy khói quang điện hoặc khói quang học hoặc đầu báo cháy CO; khu vực như hành lang, đường, lối đi, lối ra thoát nạn hoặc các khu vực tương tự khác phải lắp đặt đầu báo cháy khói quang điện hoặc khói tia chiếu; sử dụng đầu báo cháy lửa tại những nơi khi xảy ra cháy ở giai đoạn đầu có xuất hiện ngọn lửa hoặc bề mặt quá nhiệt; sử dụng đầu báo cháy nhiệt tại những nơi khi xảy ra cháy ở giai đoạn đầu chủ yếu phát sinh nhiệt và khi sử dụng các đầu báo khác có thể xảy ra hiện tượng báo cháy giả.
+
++ Khi một khu vực được chia thành nhiều phần bởi tường, vách ngăn hoặc các giá kệ hàng cách trần (hoặc mặt dưới của dầm ngang) không quá 0,3 m thì mỗi khu vực này được coi như phòng riêng biệt và phải được trang bị đầu báo cháy đảm bảo theo quy định;
+
++ Các đầu báo cháy bảo vệ trong không gian bị che kín có tổng diện tích không vượt quá 500 m2 cho phép kết nối vào vùng phát hiện cháy trên cùng một sàn với điều kiện là tổng số các đầu báo cháy không vượt quá 40. Đối với khu vực bị che kín chứa hệ thống điện chiếu sáng hoặc thiết bị điện dùng để cấp nguồn được đặt hoàn toàn vào bên trong khu vực bị che kín và được kết nối với nguồn điện có điện áp xoay chiều lớn hơn 50V hoặc điện áp một chiều vượt quá 120 V thì phải lắp đặt đầu báo cháy trên trần của không gian bị che kín đảm bảo khoảng cách tối đa theo phương ngang từ thiết bị điện đến đầu báo cháy không quá 1,5 m.
+
++ Đối với trần dạng lưới hở cần lưu ý khi sử dụng đầu báo cháy lửa thì chúng phải được lắp đặt phía trên và phía dưới trần dạng lưới hở. Cho phép không lắp đặt đầu báo cháy phía dưới các trần hở tuần hoàn khi tổng diện tích lỗ hở lớn hơn hai phần ba diện tích trần của khu vực bảo vệ, khi đã có đầu báo cháy được lắp đặt phía trên trần hở.
+
++ Đối với các bề mặt trung gian nằm ngang như các đường ống, sàn thao tác, giá kệ có chiều rộng lớn hơn 3,5 m và bề mặt bên dưới của bề mặt trung gian cách sàn lớn hơn 0,8 m phải lắp đặt đầu báo cháy bên dưới. Khi khoảng cách từ mặt bên dưới của các bề mặt trung gian đến trần nhỏ hơn 0,8 m thì mặt bên dưới của bề mặt trung gian có thể được xem là trần và không yêu cầu phải lắp đầu báo cháy phía trên bề mặt trung gian. Nếu ống gió hay kết cấu cách tường hoặc ống gió hoặc kết cấu lớn hơn 0,8 m thì đầu báo phải lắp ở vị trí trên trần nhà (thuận lợi cho việc lắp đặt, bảo trì bảo dưỡng).
+
++ Khu vực lắp đặt nhiều loại đầu báo cháy khác nhau (khói, nhiệt) phải đảm bảo mỗi khu vực đó được kiểm soát bởi ít nhất 01 đầu báo cháy. Khoảng cách giữa các đầu báo cháy và từ đầu báo cháy đến tường phụ thuộc vào tính chất nguy hiểm cháy, nổ của khu vực và đặc tính kỹ thuật của đầu báo cháy (Ví dụ khoảng cách giữa đầu báo cháy khói, nhiệt bố trí hỗn hợp được xác định bằng ½ tổng khoảng cách cho phép của 02 loại đầu báo cháy nêu trên; khoảng cách từ đầu báo cháy đến tường xác định theo loại đầu báo cháy đó).
+
++ Khoảng cách giữa các đầu báo cháy, khoảng cách từ đầu báo cháy đến tường, vách ngăn lỗ mở không khí; khoảng cách từ đầu báo cháy đến trần; chiều cao tối đa của gian phòng sử dụng đầu báo cháy khói kiểu hút đến 40 m khi chia thành 2 lớp bảo vệ; khoảng cách từ đầu báo cháy khói đến mép ngoài gần nhất của cửa cấp không khí không nhỏ hơn 0,4 m; khoảng cách đầu báo cháy nhiệt kiểu điểm đến lỗ mở cấp không khí không nhỏ hơn 0,6 m...
+
++ Phải lắp đặt đầu báo cháy gần đỉnh của mái dốc, mái hoặc một bề mặt phẳng để tránh vùng không khí chết với các trường hợp khác nhau: bề mặt dốc như nhau; bề mặt dốc khác nhau; bề mặt dạng răng cưa; trần hoặc mái có cửa chớp với cấu trúc dạng ống đứng có cửa chớp; trần, mái hoặc bề mặt có cửa mái; dầm nóc có thông gió; đỉnh hẹp; lỗ thông của dầm góc hẹp; lỗ thông của dầm góc rộng (Hình 6, Hình 9 TCVN 7568-14:2025).
+
+- Nút ấn, chuông, đèn báo cháy:
+
++ Yêu cầu đối với nút ấn báo cháy theo Điều 5.10, trong đó xem xét về vị trí lắp đặt tham khảo tại Phụ lục B TCVN 7568-14:2025; xem xét về chiều cao lắp đặt, khoảng cách giữa các nút ấn theo quy định tại Điều 5.10.3, Điều 5.10.4 TCVN 7568-14:2025. Lưu ý khoảng cách giữa các nút ấn không quá 45 m.
+
++ Các thiết bị báo cháy bằng âm thanh phải đảm bảo các yêu cầu sau: Tín hiệu báo động phải phân bố đồng thời trong khoang cháy/nhà và công trình. Các tín hiệu báo động, nghe thấy rõ ở tất cả các địa điểm trong khoang cháy/nhà và công trình. Mức cường độ âm thanh được tính toán trung bình trong khoảng thời gian 60 s, mức cường độ âm ở tất cả các vị trí đảm bảo lớn hơn độ ồn của môi trường xung quanh ít nhất là 10 dBA, mức cường độ âm thanh không nhỏ hơn 65 dBA và không lớn hơn 105 dBA. Tín hiệu báo động bằng âm thanh đối với các khu vực ngủ phải lớn hơn độ ồn của môi trường xung quanh ít nhất 15 dBA (với điều kiện các cửa ra vào đều đóng) và không nhỏ hơn 75 dBA.
+
++ Vị trí lắp đặt thiết bị cảnh báo bằng ánh sáng: Được lắp đặt trên hành lang, lối ra thoát nạn; nơi người khiếm thính thường ở; nơi có tiếng ồn xung quanh vượt quá 95 dBA; khu vực yêu cầu hạn chế về âm thanh (ví dụ khu vực phòng mổ trong bệnh viện).
+
+- Bộ phận liên kết:
+
++ Dây tín hiệu báo cháy của hệ thống báo cháy tự động địa chỉ phải là loại chống nhiễu;
+
++ Cáp tín hiệu điều khiển thiết bị ngoại vi và dây tín hiệu nối từ các đầu báo cháy trong hệ thống báo cháy dùng để kích hoạt hệ thống chữa cháy tự động là loại chịu nhiệt cao (cáp, dây tín hiệu chống cháy có thời gian chịu lửa 30 phút). Cho phép sử dụng cáp tín hiệu điều khiển thiết bị ngoại vi là loại cáp thường nhưng phải có biện pháp bảo vệ khỏi sự tác động của nhiệt ít nhất trong thời gian 30 phút.
+
++ Đối với hệ thống báo cháy địa chỉ phần dây tín hiệu dùng kết nối thiết bị địa chỉ phải là dây chống nhiễu, chống cháy (cho phép chỉ sử dụng dây chống nhiễu khi thiết bị và trung tâm báo cháy được kết nối dưới dạng mạch vòng).
+
+- Đối với hệ thống báo cháy dùng để điều khiển hệ thống chữa cháy tự động phải bảo đảm:
+
++ Mỗi điểm trong khu vực chữa cháy phải được bảo vệ bởi 02 đầu báo cháy thuộc 02 kênh khác nhau hoặc 02 địa chỉ khác nhau;
+
++ Dây tín hiệu phải là loại chịu nhiệt cao có giới hạn chịu lửa 30 phút hoặc cáp thường, nhưng phải có biện pháp bảo vệ khỏi sự tác động của nhiệt trong thời gian 30 phút.
+
+1.2. Trạm bơm nước chữa cháy
+
+- Số lượng, chủng loại bơm chữa cháy:
+
+	+ Máy bơm dự phòng phải có thông số về lưu lượng, áp lực cấp nước không nhỏ hơn máy bơm chính của máy bơm chính. Số lượng bơm dự phòng được quy định như sau: Khi số lượng máy bơm vận hành theo tính toán từ một đến ba thì phải có ít nhất một máy bơm dự phòng; khi số lượng máy bơm vận hành theo tính toán từ bốn máy trở lên thì phải có ít nhất 02 máy bơm dự phòng. Các máy bơm chữa cháy phải được kết nối với hai nguồn điện riêng biệt từ nguồn điện lưới, nguồn điện từ máy phát điện hoặc sử dụng máy bơm động cơ đốt trong. Cho phép không trang bị máy bơm dự phòng hoặc nguồn điện dự phòng khi cấp nước cho nhà sản xuất, nhà kho có bậc chịu lửa I, II với hạng nguy hiểm cháy, nổ hạng D, E và lưu lượng cấp nước chữa cháy ngoài nhà yêu cầu nhỏ hơn 20 L/s.
+
++ Mỗi trạm bơm nước chữa cháy có 02 máy bơm trở lên thì phải có ít nhất 02 đường ống hút. Mỗi đường ống phải bảo đảm hút được một lượng nước chữa cháy cần thiết lớn nhất, khi một trong hai ống đó bị hỏng hoặc phải bảo trì, sửa chữa thì các máy bơm vẫn hút được nước từ ống hút còn lại. Trường hợp số lượng bơm chính từ 02 bơm trở lên thì mỗi bơm phải có 01 đường ống hút, các đường ống hút phải kết nối với nhau bằng van thường đóng.
+
++ Bơm chữa cháy chính có thể là bơm điện hoặc bơm động cơ đốt trong. Trường hợp máy bơm chữa cháy chính và máy bơm dự phòng cùng là bơm điện thì phải được đấu nối với hai nguồn điện riêng biệt, hoặc nguồn điện dự bị trạm phát điện. Trường hợp máy bơm dự phòng là bơm động cơ đốt trong thì máy bơm chữa cháy chính (bơm điện) chỉ cần đấu nối với 01 nguồn điện.
+
+- Vị trí trạm bơm chữa cháy:
+
++ Trạm bơm chữa cháy đặt trong nhà, công trình phải đặt ở tầng 1 hoặc tầng hầm 1. Cho phép đặt trạm bơm nước chữa cháy tại các tầng nổi khác của nhà khi phòng đặt bơm có cửa ra phải thông buồng đệm thang thoát nạn của tòa nhà qua hành lang được bảo vệ bằng kết cấu ngăn cháy loại 1. Trạm bơm chữa cháy có thể bố trí chung với bơm nước sinh hoạt, sản xuất trong cùng một gian phòng hoặc nhà.
+
++ Trạm bơm đặt độc lập với nhà, công trình thì phải có bậc chịu lửa III.
+
+- Khoảng cách giữa các thiết bị trong trạm bơm phải bảo đảm theo quy định của TCVN 4513:1988, TCVN 7336:2021 và QCVN 02:2020/BCA.
+
+- Trạm bơm phải có hệ thống thoát nước dưới sàn nhà để tránh ngập nước;
+
+- Đối với trạm bơm cấp nước cho hệ thống chữa cháy tự động bằng nước, bọt có động cơ đốt trong, cho phép bố trí bồn nhiên liệu (xăng - 250 l, dầu diesel - 500 l) cách biệt với phòng bơm bằng các bộ phận ngăn cháy có giới hạn chịu lửa không nhỏ hơn EI 120 theo quy định tại Điều 5.8.18 của TCVN 7336:2021;
+
+		- Đối với bơm ly tâm, khi bể nước dạng nửa chìm nửa nổi phải có giải pháp mồi nước cho bơm.
+
+- Không áp dụng QCVN 02:2020/BCA để thiết kế trạm bơm chỉ phục vụ cấp nước chữa cháy ngoài nhà.
+
+	- Đối với trạm bơm thiết kế theo QCVN 02:2020/BCA, mỗi máy bơm phải được điều khiển và kiểm soát từ một tủ điều khiển riêng biệt. Có thể bố trí chung thiết bị điều khiển bơm nước chữa cháy động cơ điện và bơm bù áp chung một tủ điều khiển, nhưng không được bố trí thiết bị điều khiển bơm nước chữa cháy chính và bơm nước chữa cháy dự phòng chung một tủ điều khiển.
+
+1.3. Hệ thống cấp nước chữa cháy ngoài nhà
+
+	1.3.1 Xác định lưu lượng và số đám cháy tính toán đồng thời
+
+		- Đối với các khu nhà ở, khu đô thị (KĐT) tính toán số lượng đám cháy đồng thời theo quy mô dân số đã được chấp thuận tại văn bản chấp thuận chủ trương đầu tư của UBND các tỉnh, thành phố cho công trình hoặc các văn bản khác có liên quan và xác định lưu lượng nước cho chữa cháy ngoài nhà theo quy định tại Bảng 7 của QCVN 06:2022/BXD và Sửa đổi 1:2023 QCVN 06:2022/BXD.
+
+		- Đối với khu công nghiệp (KCN) và các khu chức năng khác (khu kinh tế, cụm công nghiệp, khu chế xuất, khu công nghệ cao, khu du lịch, khu nghiên cứu, đào tạo, khu thể dục thể thao) tính toán số lượng đám cháy đồng thời theo diện tích của công trình, cơ sở lớn nhất và xác định lưu lượng nước cho chữa cháy ngoài nhà lấy theo lưu lượng của công trình bên trong khu cần lưu lượng lớn nhất cụ thể:
+
+		+ Các công trình công nghiệp lấy theo Bảng 9 và Bảng 10 của QCVN 06:2022/BXD và Sửa đổi 1:2023 QCVN 06:2022/BXD, các loại hình công trình khác lấy theo Bảng 8 của QCVN 06:2022/BXD và Sửa đổi 1:2023 QCVN 06:2022/BXD (đối với các nhà được ngăn chia bằng tường ngăn cháy thì lưu lượng nước cho chữa cháy ngoài nhà lấy theo phần nhà, nơi có yêu cầu lưu lượng lớn nhất). Khi trong một khu chức năng có cả 2 loại hình công trình nêu trên thì lưu lượng của khu lấy theo lưu lượng của công trình lớn nhất.
+
+		+ Khi kết hợp đường ống chữa cháy của khu dân cư và cơ sở công nghiệp nằm ngoài khu dân cư thì số đám cháy tính toán đồng thời theo quy định tại Điều 5.1.3.2 của QCVN 06:2022/BXD và Sửa đổi 1:2023 QCVN 06:2022/BXD.
+
+		1.3.2 Nguồn cấp nước chữa cháy ngoài nhà
+
+		- Trường hợp trang bị trạm bơm riêng cho hệ thống cấp nước chữa cháy ngoài nhà cho phép đấu nối với hệ thống cấp nước sinh hoạt, sản xuất... Khi đó lưu lượng nước cho chữa cháy phải đảm bảo ngay cả khi các nhu cầu khác là lớn nhất.
+
+		- Cho phép nguồn cấp nước là các bồn, bể, hồ nước tự nhiên hoặc nhân tạo thay thế các trụ cấp nước chữa cháy ngoài nhà, khi đó phải bảo đảm có lối tiếp cận và có bãi lấy nước cho xe bảo đảm theo quy định tại Điều 5.1.5.4 và bán kính phục vụ theo Điều 5.1.5.9 của QCVN 06:2022/BXD và Sửa đổi 1:2023 QCVN 06:2022/BXD.
+
+		- Đối với các nhà có yêu cầu về lưu lượng cho cấp nước chữa cháy ngoài nhà quy định tại các bảng 8, 9, 10 đến 15 L/s (cho nhà nhóm F1, F2, F3, F4) và đến 20 L/s (cho nhà nhóm F5) thì thời gian chữa cháy của chúng lấy là 1 giờ theo Điều 5.1.3.3 của QCVN 06:2022/BXD và Sửa đổi 1:2023 QCVN 06:2022/BXD.
+
+1.4. Hệ thống họng nước chữa cháy trong nhà
+
+- Bố trí họng nước chữa cháy (họng đơn, họng kép) trong nhà phải bảo đảm theo quy định tại Điều 5.2.11 QCVN 06:2022/BXD và Sửa đổi 1:2023 QCVN 06:2022/BXD, trong đó lưu ý không cho phép bố trí họng kép đối với nhà sản xuất, nhà công cộng có số tia nước tính toán nhỏ hơn 3 và nhà ở có số tia nước tính toán nhỏ hơn 2.
+
+- Cho phép tăng bán kính phục vụ của các họng nước chữa cháy bằng việc kết nối các vòi chữa cháy với tổng chiều dài đến 40 m. Khi đó các vòi phải treo ở dạng xếp trên giá đỡ và được kết nối sẵn với họng nước và lăng phun.
+
+- Hệ thống họng nước chữa cháy trong nhà sản xuất, kho có nguy hiểm cháy cao, nhà có chiều cao từ 25 m trở lên, chợ, trung tâm thương mại, khách sạn, vũ trưởng, nhà ga, cảng biển, nhà hát, rạp chiếu phim phải thường xuyên có nước được duy trì ở áp suất đảm bảo yêu cầu chữa cháy. Đối với các công trình khác không yêu cầu duy trì áp suất trong đường ống bảo đảm yêu cầu chữa cháy thì phải có bộ phận điều khiển máy bơm chữa cháy từ xa bố trí ngay ở họng nước chữa cháy.
+
+- Trường hợp hệ thống họng nước chữa cháy trong nhà không kết hợp với hệ thống chữa cháy tự động bằng nước, bọt thì áp suất giữa van và đầu nối của họng nước chữa cháy lớn hơn 0,45 MPa thì phải lắp đặt màng ngăn và thiết bị điều chỉnh áp lực để giảm áp lực dư.
+
+- Trường hợp hệ thống kết hợp họng nước chữa cháy trong nhà và hệ thống chữa cháy tự động bằng nước, bọt thì áp suất tại họng nước không được vượt quá 0,4 MPa theo quy định tại TCVN 7336:2021.
+
+- Hệ thống họng nước chữa cháy trong nhà phải có họng chờ lắp đặt ở ngoài nhà để tiếp nước từ xe bơm hoặc máy bơm chữa cháy di động.
+
+1.5. Hệ thống chữa cháy tự động bằng nước, bọt
+
+- Hệ thống chữa cháy tự động bằng nước, bọt quy định tại TCVN 7336:2021 chỉ áp dụng cho các khu vực bảo vệ, các gian phòng trong nhà, không được áp dụng cho các khu vực hoặc thiết bị nằm ngoài trời như các bồn dầu đặt ngoài trời, máy biến áp đặt ngoài trời,… Đối với các thiết bị ngoài nhà cần áp dụng các tiêu chuẩn riêng cho từng loại đối tượng, trường hợp chưa có tiêu chuẩn Việt Nam quy định thì cần áp dụng tiêu chuẩn quốc tế, tiêu chuẩn nước ngoài để thiết kế hệ thống chữa  cháy tự động cho các đối tượng này bảo đảm theo quy định.
+
+- Hệ thống chữa cháy tự động bằng nước, bọt Spinkler, Sprinkler-Drencher (sử dụng đầu phun kín) chỉ áp dụng đối với khu vực có chiều cao đến 20 m, trường hợp gian phòng, nhà có chiều cao trên 20 m thì phải thiết kế, bố trí hệ thống khác phù hợp.
+
+- Lưu lượng cần thiết của hệ thống được lấy bằng giá trị lớn nhất giữa lưu lượng tối thiểu quy định tại Bảng 1, 2, 3 và lưu lượng được tính toán theo Phụ lục B TCVN 7336:2021.
+
+- Đối với việc tính toán lưu lượng, cột áp của hệ thống chữa cháy tự động bằng nước, bọt sử dụng các thông số trong Bảng 1, 2, 3 và công thức tại Phụ lục B TCVN 7336:2021. Không sử dụng lưu lượng tối thiểu để tính toán và chọn lại thông số đầu phun và đường ống.
+
+- Đối với các khu vực bảo vệ có chiều cao trên 10 m cần lưu ý yêu cầu cao hơn về cường độ phun và lưu lượng theo quy định tại Chú thích 3 Bảng 2 và Bảng 3 TCVN 7336:2021.
+
+- Các yêu cầu về lưu lượng tối thiểu, diện tích tính toán tối thiểu chỉ áp dụng đối với hệ thống Sprinkler và hệ thống Sprinkler-Drencher, không áp dụng với hệ thống Drencher; hệ thống Drencher chỉ yêu cầu thông số về cường độ phun theo nhóm nguy cơ phát sinh cháy.
+
+- Chất tạo bọt được sử dụng cho các hệ thống Sprinkler, Drencher là loại có bội số nở thấp và trung bình, đối với chất tạo bọt bội số nở cao được quy định riêng tại Mục 6 TCVN 7336:2021. Các loại hệ thống này có nguyên lý khác nhau và có yêu cầu riêng phù hợp với đặc tính chữa cháy của các loại bọt có bội số nở khác nhau nên phải bảo đảm sử dụng loại bọt có bội số nở phù hợp đối với từng loại hệ thống và phù hợp với đối tượng bảo vệ. Trong đó, hệ thống chữa cháy tự động bằng bọt bội số nở cao thường được sử dụng để chữa cháy cho các đám cháy chất lỏng, cháy ngầm, âm ỉ chất rắn, ví dụ: hangar (nhà sửa chữa, bảo dưỡng máy bay); hố thu sự cố chất lỏng, khí hóa lỏng dễ cháy,...
+
+- Việc chữa cháy cho các thiết bị điện được quy định tại Điều 5.1.6 TCVN 7336:2021, trong đó, nếu khu vực bảo vệ có thiết bị không được cách điện (dây dẫn trần, các thiết bị điện không có vỏ bảo vệ,…) thì phải có phương án liên động, bảo đảm ngắt điện trước khi hệ thống hoạt động và phun nước, bọt vào đám cháy.
+
+- Thời gian đáp ứng của hệ thống đối với hệ thống Sprinkler đường ống khô, hệ thống Sprinkler-Drencher (có khí nén) được quy định tại Điều 5.2.4, 5.2.6 TCVN 7336:2021, được tính là thời gian kể từ khi vỡ đầu phun đến khi nước chữa cháy được phun ra từ đầu phun (tức là thời gian để khí nén trong đường ống được xả hết qua đầu phun bị tác động).
+
+- Bộ điều khiển là một tổ hợp các thiết bị kỹ thuật được đặt tại vị trí xác định và thực hiện các chức năng nhất định trong hệ thống, các dạng thông thường của bộ điều khiển là van báo động (alarm valve), van tràn ngập (deluge valve), van tác động trước (pre-action valve),… Bộ điều khiển phải được đặt ở trọng trạm bơm chữa cháy hoặc trong khu vực bảo vệ bảo đảm theo quy định tại Điều 5.6.2 TCVN 7336:2021.
+
+- Được phép sử dụng đường ống phi kim loại theo quy định tại Điều 5.5.1 TCVN 7336:2021, các đường ống phi kim phải đáp ứng các yêu cầu của tiêu chuẩn riêng cho từng loại ống và phải được kiểm định theo quy định. Các thông số về sức cản đơn vị, đặc tính thủy lực của đường ống phi kim để tính toán hệ thống được lấy theo thông số kỹ thuật của nhà sản xuất.
+
+- Hệ thống chữa cháy tự động bằng nước, bọt (Sprinkler, Drencher, Sprinkler-Drencher) chỉ áp dụng đối với khu vực có chiều cao giá hàng hóa đến 5,5 m, trường hợp công trình có giá hàng hóa cao trên 5,5 m thì phải trang bị hệ thống chữa cháy tự động khác hoặc áp dụng tiêu chuẩn quốc tế, tiêu chuẩn nước ngoài để thiết kế.
+
+- Một số lưu ý đối với thiết kế, lắp đặt hệ thống chữa cháy tự động tại các kho, giá kệ cao tầng:
+
+* Tiêu chuẩn SP 241.1311500.2015
+
+- Tấm chắn: Sử dụng các tấm chắn bằng vật liệu thép hoặc từ xi măng. Trong đó, tấm chắn bằng vật liệu thép cần có độ dày tối thiểu 0,6mm; tấm chắn bằng vật liệu từ xi măng có độ dày tối thiểu 10mm.
+
+- Chủng loại đầu phun:
+
++ Đối với đầu phun được lắp trong giá kệ, cần đảm bảo đầu phun được sử dụng là loại đầu phun dùng trong giá kệ, đảm dải áp lực làm việc từ 0,1 đến 1,0 Mpa, với diện tích bảo vệ dự kiến với một đầu phun là 3 m2 (khi có đủ tài liệu kỹ thuật chứng minh, diện tích bảo vệ của 1 đầu phun cho phép tới 5,3 m2); Cường độ phun tại áp suất 0,1 Mpa đối với đầu phun có đường kính lỗ phun D12mm (K=0,47 l/(s.mcn0,5) tối thiểu 0,3 l/(s.m2), D15mm (K=0,8 l/(s.mcn0,5) tối thiểu 0,4 l/(s.m2); Độ cao lắp đặt đầu phun cách bề mặt chữa cháy 0,05 m và áp suất từ 0,1 đến 0,2 MPa.
+
++ Đối với hệ thống chữa cháy tự động một tầng đầu phun (đầu phun lắp trên mái): Hệ số lưu lượng (K của đầu phun) sử dụng trong hệ thống chữa cháy tự động một tầng đầu phun tối thiểu là 1,26 l/(s.mcn0,5). Với đầu phun có hệ số K bằng 1,26 l/(s.mcn0,5) phải đảm bảo cường độ phun 0,27 l/(s.m2) tại áp lực 0,1 Mpa và 0,46 l/(s.m2) tại áp lực 0,3 Mpa, tại độ cao 2,5 m trong diện tích vòng tròn 9,6 m2 (đường kính vòng tròn 3,5 m).
+
++ Lưu lượng:
+
+Lưu lượng của phần đầu phun trong giá kệ phụ thuộc vào loại hàng hóa lưu trữ, khoảng cách giữa các tấm chắn cũng như loại tấm pallet được sử dụng. Tổng lưu lượng nước cần thiết để chữa cháy trong khu vực lưu trữ hàng hóa bằng giá đỡ cao tầng Q được tính theo công thức
+
+Q = QS + QD + QTN,
+
+trong đó:
+
+QS là lưu lượng của hệ thống chữa cháy tự động một tầng đầu phun hoặc hệ thống chữa cháy tự động nhiều tầng đầu phun:
+
+QD – lưu lượng của màn nước;
+
+QTN - lưu lượng của họng nước chữa cháy trong nhà.
+
+- Chiều cao lắp đặt: Các tầng giá kệ có chiều cao cách nhau không quá 4,5m; chiều cao gian phòng không hạn chế. Tuy nhiên, cho phép sử dụng các đầu phun lắp đặt ở dưới mái để bảo vệ hàng hóa lưu trữ trên giá đỡ ở tầng trên cùng (trừ các giá đỡ chịu lực) phía trên các tấm chắn cao tới 1 m (trừ các sản phẩm cao su). Đồng thời, cường độ phun tối thiểu phải là 0,16 l/(s.m2) và khoảng cách từ đỉnh hàng hóa lưu trữ đến mái không vượt quá 10 m. Ngoài trường hợp trên thì cần bổ sung tấm chắn và thiết kế hệ thống sprinkler đối với phần hàng hóa trên cùng.
+
+- Chiều cao hàng hoá: Không quá 25 m, trong trường hợp chỉ bố trí 1 tầng đầu phun trên mái thì cần lưu ý chiều cao xếp hàng trên giá cao tầng từ 5,5 m đến 12,5 m và chiều cao phòng từ 6,4 m đến 14,0 m.
+
+* Tiêu chuẩn NFPA13.
+
+- Tấm chắn: Việc sử dụng tấm chắn hay không sử dụng tấm chắn khi thiết kế theo tiêu chuẩn NFPA 13 sẽ phụ thuộc vào phương án thiết kế được lựa chọn cụ thể. Đối với phương án sử dụng tấm chắn cần đảm bảo tấm chắn là loại đặc, được làm từ thép tấm có độ dày tối thiểu 0,78 mm hoặc ván ép hoặc ván gỗ dán có độ dày tối thiểu 10 mm.
+
+- Chủng loại đầu phun: Chủng loại đầu phun được sử dụng trong giá kệ là loại CMDA, CMSA hay ESFR sẽ phụ thuộc vào phương án thiết kế. Cần lưu ý lựa chọn đúng chủng loại đầu phun theo phương án thiết kế lựa chọn.
+
+- Lưu lượng:  Lưu lượng của đầu phun trong giá kệ phụ thuộc và phương án thiết kế, trong từng phương án sẽ quy định lưu lượng tối thiểu của mỗi vòi phun cần đạt và số lượng + vị trí vòi phun cần được tính toán để làm việc đồng thời khi có cháy. Lưu lượng của hệ thống thì cần xác định phương án lựa chọn là hệ thống chữa cháy kết hợp hay độc lập giữa hệ thống sprinkler trong giá kệ, hệ thống sprinkler mái, hệ thống chữa cháy trong nhà và hệ thống chữa cháy ngoài nhà.
+
+- Chiều cao lắp đặt: Chiều cao lắp đặt giữa các tấm chắn phụ thuộc vào phương án thiết kế được lựa chọn;
+
+- Chiều cao hàng hoá: Chiều cao xếp hàng phụ thuộc vào loại hàng hóa và phương án thiết kế được lựa chọn tương ứng.
+
+1.5. Hệ thống chữa cháy bằng khí, Sol-khí
+
+1.5.1 Đối với hệ thống chữa cháy bằng khí IG-100 (Nitơ), HFC-227ea (FM200), FK-5-1-12 (Novec-1230), IG-55, IG-541… (các khí chữa cháy nêu tại Bảng 1 TCVN 7161-1:2022)
+
+- Khi xem xét lượng khí chữa cháy cho một khu vực, cần bảo đảm lượng khí chữa cháy không vượt quá nồng độ tối đa cho phép tránh nguy hiểm đến con người bên trong khu vực bảo vệ; hệ thống chuông, đèn cảnh báo cần được trang bị bên ngoài và bên trong khu vực bảo vệ;
+
+- Đường ống dẫn khí chữa cháy phải được chế tạo bằng vật liệu không cháy. Không được sử dụng ống gang và ống phi kim loại. Các ống mềm (bao gồm cả các đầu nối) phải được làm bằng vật liệu đã được chấp nhận và phải thích hợp để làm việc ở áp suất cho trước của khí chữa cháy; đường ống dẫn khí chữa cháy và các mối nối, mối ghép phải bảo đảm chịu được áp lực làm việc, đặc biệt đối với các loại khí chữa cháy không hóa lỏng (Nitơ); trên đường ống góp phải được lắp đặt van an toàn áp suất;
+
+- Các hệ thống thông gió cưỡng bức phải dừng lại hoặc tự động ngắt, cũng như các louver thông gió phải được đóng kín khi chúng ảnh hưởng đến tính năng làm việc của hệ thống hoặc làm cho đám cháy lan rộng;
+
+- Lượng khí chữa cháy trong hệ thống tối thiểu phải đủ cho một khu vực được bảo vệ lớn nhất hoặc một nhóm các khu vực được bảo vệ đồng thời. Khi có yêu cầu, lượng dự trữ phải là bội số của lượng cung cấp chính theo quy định của cơ quan có thẩm quyền. Các bình khí dự trữ phải được kết nối với hệ thống thông qua van chặn thường đóng.
+
+1.5.1.1. Hệ thống chữa cháy bằng khí hóa lỏng:
+
+- Khi tính toán lượng khí hóa lỏng để chữa cháy (HFC-227ea, FK-5-1-12) phải xác định khối lượng của khí chữa cháy trên một đơn vị thể tích (kg/m3), nghĩa là khối lượng khí cần thiết tính bằng kilôgam cho một mét khối thể tích được bảo vệ để tạo ra nồng độ yêu cầu tại nhiệt độ quy định.
+
+- Việc phun khí chữa cháy hóa lỏng phải được hoàn thành càng nhanh càng tốt để dập tắt đám cháy và hạn chế sự tạo thành các sản phẩm phân hủy. Không để xảy ra trường hợp mà thời gian phun quy định để đạt tới 95 % nồng độ thiết kế vượt quá 10 s ở 20 °C.
+
+1.5.1.2. Hệ thống chữa cháy bằng khí nén:
+
+- Khi tính toán lượng khí nén để chữa cháy (IG-100) phải xác định thể tích (m3) của khí chữa cháy được yêu cầu ở nhiệt độ chuẩn 20°C và áp suất 1,013 bar trên thể tích được bảo vệ để tạo ra nồng độ đã cho ở nhiệt độ quy định.
+
+- Đối với khí trơ, thời gian phun chữa cháy là thời gian để đạt tới 95 % nồng độ thiết kế ở 20 °C không quá 60 s đối với đám cháy loại B, không quá 120 s đối với đám cháy loại A.
+
+1.5.2 Hệ thống chữa cháy bằng khí Cacbon dioxit (CO2)
+
+- Hệ thống ống dẫn phải làm bằng các vật liệu không cháy, bảo đảm tính toàn vẹn, không bị biến dạng và hư hỏng khi chịu ứng suất. Không cho phép sử dụng gang và ống phi kim loại làm hệ thống ống dẫn khí chữa cháy. Đường ống dẫn khí chữa cháy và các mối nối, mối ghép phải bảo đảm chịu được áp lực làm việc (áp suất làm việc đối với hệ thống áp suất cao thường trong khoảng 100 - 150 bar).
+
+- Thời gian xả khí trong hệ thống chữa cháy thể tích không vượt quá 60 giây; thời gian xả khí (dạng lỏng) sử dụng cacbon dioxit áp suất cao trong hệ thống chữa cháy chữa cháy cục bộ không vượt quá 30 giây; thời gian xả khí sử dụng cabon dioxit áp suất thấp trong hệ thống chữa cháy cục bộ từ 30 giây đến 60 giây.
+
+- Thời gian duy trì xả khí phụ thuộc vào loại chất cháy và phải phù hợp theo quy định tại Điều 15.8 và Bảng 1 TCVN 6101:1996.
+
+- Yêu cầu an toàn đối với người phải bảo đảm theo quy định tại Điều 5 TCVN 6101:1996, trong đó lưu ý phải có những biện pháp để di tản nhanh người bị kẹt ở trong khu vực bảo vệ ra ngoài trước khi xả khí và hạn chế người vào khu vực bảo vệ sau khi đã xả khí, trừ trường hợp vào cứu người theo quy định.
+
+- Khu vực chứa bình khí chữa cháy Cacbon dioxit phải là khu vực được bảo vệ và không cho phép người không có phận sự vào bên trong.
+
+- Hệ thống chữa cháy bằng khí Cacbon dioxit phải có lượng khí dự trữ chữa cháy 100%, các bình khí dự trữ phải được kết nối với hệ thống thông qua van chặn thường đóng.
+
+1.5.3 Hệ thống chữa cháy bằng Sol-khí
+
+- Chất chữa cháy và các thiết bị của hệ thống chữa cháy bằng Sol-khí phải bảo đảm chất lượng, yêu cầu kỹ thuật theo tiêu chuẩn UL 2775 Tiêu chuẩn cho thiết bị của hệ thống chữa cháy cố định bằng Sol-khí dạng cô đặc (Standard for fixed condensed aerosol extinguishing system units) hoặc tiêu chuẩn tương đương (Điều 4.2.1.2 TCVN 13333:2021). Chất chữa cháy và các thiết bị của hệ thống chữa cháy bằng Sol-khí phải được kiểm định phương tiện về PCCC để đảm bảo yêu cầu nêu trên;
+
+- Bình phun Sol-khí phải phun trong phạm vi nhiệt độ và khoảng cách an toàn tối thiểu đến người và các vật liệu dễ cháy theo hướng dẫn đã được thử nghiệm của nhà sản xuất. Khoảng cách an toàn tối thiểu giữa vỏ bọc bình phun Sol-khí và con người phải là khoảng cách từ vỏ bọc bình phun Sol-khí đến nơi có nhiệt độ không vượt quá 75°C (167°F) trong và sau khi phun. Khoảng cách an toàn tối thiểu giữa vỏ bọc bình phun Sol-khí và các vật liệu dễ cháy phải là khoảng cách từ vỏ bọc bình phun Sol-khí đến nơi có nhiệt độ không vượt quá 200°C (392°F) trong và sau khi phun;
+
+- Nồng độ thiết kế được lấy từ nồng độ dập tắt nhân với hệ số an toàn 1,3. Trong đó nồng độ dập tắt được nêu trong hướng dẫn của nhà sản xuất nên trong hồ sơ thẩm định thiết kế về PCCC, chủ đầu tư và đơn vị thiết kế phải thể hiện được thông số này (tham khảo thông số hệ thống tại Phụ lục A TCVN 13333:2021);
+
+- Bình phun Sol-khí ngoài cơ chế kích hoạt tự động từ hệ thống báo cháy, còn phải có thiết bị kích hoạt phun bằng tay (cần gạt, nút nhấn...) và nút nhấn tạm dừng (Điều 6.2.3.7, 6.2.5.4 TCVN 13333:2021); trung tâm điều khiển và các công tác, nút nhấn được lắp đặt theo quy định tại Điều 8.1 TCVN 13333:2021;
+
+- Hệ thống chữa cháy bằng Sol-khí sau khi lắp đặt phải có báo động và thời gian trễ trước khi phun, đủ để con người thoát nạn ra ngoài quy định tại Điều 6.2.5.7 TCVN 13333:2021.
+
+1.6. Phương tiện chiếu sáng sự cố và chỉ dẫn thoát nạn
+
+- Đèn chiếu sáng sự cố và biển báo an toàn có nguồn điện dự phòng phải đảm bảo thời gian hoạt động ổn định liên tục tối thiểu là 120 phút khi có sự cố cháy, nổ.
+
+- Biển báo an toàn phải được nhìn thấy rõ ràng các chữ “LỐI RA” hoặc chữ “EXIT”, ký hiệu hình học khác thích hợp. Trong đó lưu ý: màu sắc của biển báo an toàn có màu nền là màu xanh lá cây; màu chữ và ký hiệu hình học là màu trắng.
+
+- Về thiết kế, lắp đặt phương tiện chiếu sáng sự cố
+
++ Đèn chiếu sáng sự cố phải được lắp đặt cho các khu vực của nhà và công trình theo quy định tại điều 5.1.1 của TCVN 13456:2022, trong đó lưu ý có thể không cần bố trí đèn chiếu sáng sự cố trong các trường hợp sau: Sân vườn, khu vực sân thượng không có mái che hoặc toà nhà cao 01 tầng có diện tích sàn không quá 200 m2 và diện tích lỗ hở trên tường ngoài nhà đạt tối thiểu 80%.
+
++ Các tủ trung tâm báo cháy, nút ấn báo cháy và các phương tiện chữa cháy (không bao gồm đầu phun chữa cháy) phải luôn được chiếu sáng đầy đủ để có thể dễ dàng xác định vị trí và nếu không nằm trên đường thoát nạn hoặc không nằm trong một phạm vi khoảng trống thì phải được chiếu sáng tối thiểu 5 lux tại mặt sàn.
+
++ TCVN 13456:2022 làm rõ độ rọi của đèn chiếu sáng sự cố tại các vị trí khác nhau như chiếu sáng sự cố đường thoát nạn; chiếu sáng sự cố gian phòng. Yêu cầu về độ rọi, nguy cơ gây chói lóa được quy định tại Điều 5.1.2 đến điều 5.1.5 (xem hình 1, 2).
+
+Hình 1 – Độ rọi của chiếu sáng sự cố đường thoát nạn
+
+Hình 2 - Chiếu sáng sự cố gian phòng (chống hoảng loạn)
+
+- Về thiết kế, lắp đặt biển báo an toàn, sơ đồ chỉ dẫn thoát nạn
+
++ Biển báo chỉ dẫn lối ra thoát nạn, biển báo chỉ hướng thoát nạn, biển báo an toàn tầm thấp phải được lắp đặt cho các khu vực của nhà và công trình theo quy định tại Điều 5.2.1, 5.2.2, 5.2.3 của TCVN 13456:2022. Lưu ý phải bố trí biển báo an toàn tầm thấp ở các tầng nhà có bố trí phòng nghỉ của khách sạn cao từ 07 tầng hoặc tổng khối tích 5.000 m3 trở lên có hành lang thoát nạn lớn hơn 10 m (xem hình 3).
+
+Hình 3 – Biển báo an toàn tầm thấp
+
++ Khoảng cách giữa các biển báo an toàn được xác định phụ thuộc vào chiều cao biển báo và khoảng cách nhìn theo quy định tại Điều 5.2.7 của TCVN 13456:2022, tuy nhiên khoảng cách giữa các biển báo không được vượt quá 25 m.
+
++ Biển báo an toàn (không bao gồm biển báo an toàn tầm thấp) phải lắp đặt ở độ cao từ 2 m đến 2,7 m so với mặt sàn, hoặc ngay trên cửa nếu cửa có chiều cao lớn hơn 2,7 m. Các khu vực không được bảo vệ chống khói khiến khói tích tụ có thể che khuất thì biển báo an toàn nên được gắn thấp hơn trần nhà tối thiểu 0,5 m để tránh bị ngập khói và không được lắp đặt biển báo an toàn được chiếu sáng từ bên ngoài. Cách xác định chiều cao lắp đặt của biển báo an toàn được tính từ mặt sàn đến mép dưới của biển báo.
+
++ Tại các tầng có diện tích lớn hơn 1.000 m2 hoặc có từ hai lối ra thoát nạn trở lên phải có sơ đồ chỉ dẫn thoát nạn và trong các phòng nghỉ của của khách sạn và các cơ sở lưu trú, cho thuê phòng ở phải có sơ đồ chỉ dẫn thoát nạn. Thiết kế, lắp đặt sơ đồ chỉ dẫn thoát nạn phải đảm bảo theo điều 5.2.9 của TCVN 13456:2022.
+
+1.7. Hệ thống điện phục vụ phòng cháy và chữa cháy
+
+- Cần xem xét hệ thống điện gồm: thiết bị bảo vệ và nguồn điện cấp cho hệ thống phòng cháy và chữa cháy, hệ thống hút khói, hệ thống cung cấp không khí bảo vệ chống khói, thang máy chữa cháy, màn ngăn cháy, rèm ngăn cháy, cửa ngăn cháy;
+
+- Thể hiện sơ đồ cấp điện từ nguồn ưu tiên và nguồn dự phòng bảo đảm công suất hoạt động của các hệ thống trong trường hợp xảy ra cháy.
+
+- Mạch điện ưu tiên phải độc lập với các mạch điện khác;
+
+-  Cáp của mạch điện ưu tiên phải sử dụng cáp chống cháy. Không được lắp đặt các mạch điện của nguồn điện ưu tiên đi trong khoang thang máy hoặc các loại ống thông hơi, thông khói, trừ các cáp dùng cho thang máy chữa cháy.
+
+- Đối với nhà thuộc nhóm nguy hiểm cháy theo công năng F1.2, F4.3 và nhà hỗn hợp có chiều cao từ 50 m đến 150 m thì nguồn điện ưu tiên cho hệ thống PCCC phải đảm bảo duy trì làm việc của thiết bị trong thời gian không ít hơn 3 h kể từ khi có cháy và phải được lấy từ 02 nguồn cấp độc lập.
+
+- Cần có giải pháp khi mất điện lưới, nguồn dự phòng phải được tự động cấp cho các hệ thống PCCC và hệ thống kỹ thuật khác liên quan về PCCC.
+
+1.8. Trang bị phương tiện chữa cháy cơ giới
+
+- Việc trang bị phương tiện chữa cháy cơ giới phải bảo đảm theo quy định tại bảng D.1 của TCVN 3890:2023, Bảng 3, 4, 5 QCVN 01:2019/BCA và các quy chuẩn, tiêu chuẩn thay thế.
+
+- Xe chữa cháy, tàu chữa cháy, máy bơm chữa cháy di động trang bị cho nhà và công trình phải đảm bảo các yêu cầu kỹ thuật như có đặc tính kỹ thuật và tính năng chữa cháy phù hợp với loại nhà và các công trình cần bảo vệ, có chất chữa cháy, phương tiện, dụng cụ trang bị kèm theo đúng quy định và bảo đảm theo quy định của TCVN 13316-1:2021, TCVN 12110:2018.
+
+2. Danh mục các bảng đối chiếu thẩm định thiết kế về PCCC
+
+STT
+
+Ký hiệu
+
+Tên bảng đối chiếu
+
+1
+
+A1
+
+Hạ tầng kỹ thuật
+
+2
+
+A2
+
+Nhà chung cư, tập thể
+
+3
+
+A3
+
+Nhà hỗn hợp
+
+4
+
+A4
+
+Nhà văn phòng
+
+5
+
+A5
+
+Nhà khách sạn
+
+6
+
+A6
+
+Trường mầm non
+
+7
+
+A7
+
+Trường tiểu học, THCS, THPT
+
+8
+
+A8
+
+Bệnh viện
+
+9
+
+A9
+
+Chợ, TTTM
+
+10
+
+A10
+
+Công trình thể thao
+
+11
+
+A11
+
+Rạp chiếu phim
+
+12
+
+A12
+
+Karaoke, vũ trường
+
+13
+
+A13
+
+Gara
+
+14
+
+A14
+
+Nhà sản xuất
+
+15
+
+A15
+
+Nhà kho
+
+16
+
+A16
+
+Cửa hàng xăng dầu
+
+17
+
+A17
+
+Trạm chiết khí hóa lỏng
+
+18
+
+A18
+
+Kho xăng dầu
+
+19
+
+A19
+
+Kho chứa LPG
+
+20
+
+A20
+
+Kho chứa LNG
+
+21
+
+A21
+
+Nhà sản xuất, kho chứa vật liệu nổ công nghiệp
+
+22
+
+A22
+
+Trạm biến áp
+
+23
+
+A23
+
+Hầm đường bộ
+
+24
+
+A24
+
+Phương tiện tàu biển
+
+25
+
+A25
+
+Phương tiện tàu thủy nội địa vận chuyển hàng hóa nguy hiểm về cháy, nổ
+
+26
+
+A26
+
+Phương tiện tàu thủy nội địa chở khách
+
+27
+
+B1
+
+Hệ thống báo cháy tự động loại thường
+
+28
+
+B2
+
+Hệ thống báo cháy tự động loại địa chỉ
+
+29
+
+B3
+
+Trạm bơm nước chữa cháy
+
+30
+
+B4
+
+Cấp nước chữa cháy ngoài nhà
+
+31
+
+B5
+
+Hệ thống họng nước chữa cháy trong nhà
+
+32
+
+B6
+
+Hệ thống chữa cháy tự động bằng nước, bọt
+
+33
+
+B7
+
+Hệ thống chữa cháy bằng bọt cố định
+
+34
+
+B8
+
+Hệ thống chữa cháy bằng khí hóa lỏng
+
+35
+
+B9
+
+Hệ thống chữa cháy bằng khí nén
+
+36
+
+B10
+
+Hệ thống chữa cháy tự động bằng khí CO2
+
+37
+
+B11
+
+Hệ thống chữa cháy bằng Sol-khí
+
+38
+
+B12
+
+Trang bị phương tiện, dụng cụ phá dỡ thô sơ; mặt nạ lọc độc và mặt nạ phòng độc cách ly; bình chữa cháy xách tay
+
+39
+
+B13
+
+Phương tiện chiếu sáng sự cố và chỉ dẫn thoát nạn và hệ thống loa thông báo và hướng dẫn thoát nạn
+
+40
+
+B14
+
+Hệ thống điện phục vụ phòng cháy và chữa cháy
+
+III. Một số nội dung, lưu ý khi thực hiện kiểm tra công tác nghiệm thu về PCCC
+
+1. Hướng dẫn chung
+
+Việc kiểm tra công tác nghiệm thu về phòng cháy và chữa cháy thực hiện theo quy định tại Điều 10 Nghị định số 105/2025/NĐ-CP, Điều 27 Thông tư 37/2025/TT-BCA, trong đó lưu ý một số nội dung sau, cụ thể:
+
+- Về thời gian tổ chức kiểm tra công tác nghiệm thu về phòng cháy và chữa cháy:
+
++ Trong thời hạn 05 ngày làm việc kể từ ngày nhận đủ hồ sơ hợp lệ (được tính từ thời gian đồng ý tiếp nhận hồ sơ) phải tổ chức kiểm tra công tác nghiệm thu và lập biên bản kiểm tra theo Mẫu số PC16 Nghị định số 105/2025/NĐ-CP (lưu ý không phân biệt thời gian thực hiện theo nhóm dự án A, B, C). Trong đó, cán bộ tiếp nhận hồ sơ phải rà soát đầy đủ thành phần trước khi tiếp nhận theo quy định tại điểm a, b và điểm c khoản 1 Điều 10 Nghị định số 105/2025/NĐ-CP.
+
++ Đối với các dự án đầu tư xây dựng công trình, công trình đã được cơ quan Công an cấp Giấy chứng nhận thẩm duyệt thiết kế về phòng cháy và chữa cháy mà chưa được chấp thuận kết quả nghiệm thu về phòng cháy và chữa cháy thì thời hạn xử lý hồ sơ kiểm tra kết quả nghiệm thu thực hiện theo quy định tại khoản 3 Điều 10 Nghị định số 105/2025/NĐ-CP.
+
+- Thành phần tham gia đoàn kiểm tra công tác nghiệm thu về phòng cháy và chữa cháy cần có sự tham gia của đơn vị quản lý địa bàn để nắm bắt được quy mô, tính chất, giải pháp đảm bảo an toàn PCCC của công trình.
+
+- Căn cứ quy định tại khoản 2 Điều 18 Luật PCCC và CNCH 2024, chủ đầu tư quyết định việc nghiệm thu về phòng cháy và chữa cháy từng phần công trình, từng hạng mục công trình trong trường hợp phần công trình, hạng mục công trình đó đủ điều kiện vận hành độc lập, bảo đảm điều kiện an toàn về phòng cháy và chữa cháy. Cơ quan Cảnh sát PCCC và CNCH cần căn cứ vào tính chất của hạng mục công trình để xem xét nghiệm thu trên nguyên tắc hạng mục công trình nghiệm thu phải bảo đảm đầy đủ các yêu cầu về PCCC theo nội dung đã được thẩm định thiết kế và có thể hoạt động độc lập, không bị ảnh hưởng bởi các hạng mục công trình đang tiếp tục thi công, đảm bảo trên cơ sở phù hợp với quy định về nghiệm thu hạng mục công trình.
+
+- Trong quá trình kiểm tra công tác nghiệm thu về phòng cháy và chữa cháy mà phát hiện có thay đổi so với bản vẽ nhưng không thuộc diện thẩm định điều chỉnh của Cơ quan Công an thì yêu cầu chủ đầu tư xuất trình hồ sơ thiết kế, văn bản tự thẩm định để xem xét đối chiếu, kiểm tra.
+
+2. Nội dung kiểm tra công tác nghiệm thu về phòng cháy, chữa cháy
+
+2.1. Kiểm tra hồ sơ nghiệm thu
+
+a) Văn bản thẩm định thiết kế về phòng cháy và chữa cháy kèm theo hồ sơ đã được đóng dấu thẩm định của cơ quan Công an; hồ sơ thiết kế điều chỉnh đã được phê duyệt của chủ đầu tư, chủ sở hữu công trình (nếu có); văn bản nghiệm thu về phòng cháy và chữa cháy của chủ đầu tư, chủ sở hữu công trình;
+
+b) Giấy chứng nhận kiểm định phương tiện phòng cháy và chữa cháy (nếu có);
+
+c) Biên bản nghiệm thu từng phần và nghiệm thu tổng thể hệ thống phòng cháy và chữa cháy, hệ thống điện phục vụ phòng cháy và chữa cháy;
+
+d) Bản vẽ hoàn công hệ thống phòng cháy và chữa cháy, hệ thống điện phục vụ phòng cháy và chữa cháy;
+
+đ) Tài liệu, quy trình hướng dẫn vận hành, bảo dưỡng các thiết bị, hệ thống phòng cháy và chữa cháy và các hệ thống liên quan đến phòng cháy và chữa cháy của công trình, phương tiện giao thông.
+
+Lưu ý:
+
+Trường hợp trong quá trình thi công, chủ đầu tư có điều chỉnh thiết kế mà nội dung điều chỉnh không thuộc diện thẩm định thiết kế về PCCC của cơ quan Công an thì cần xem xét, đối chiếu nội dung của văn bản tự thẩm định, hồ sơ thiết kế điều chỉnh được phê duyệt của chủ đầu tư, chủ sở hữu công trình với hiện trạng của công trình.
+
+2.2. Kiểm tra thực tế thi công
+
+2.2.1 Hệ thống báo cháy tự động
+
+2.2.1.1 Thiết bị, phương pháp kiểm tra
+
+- Thiết bị kiểm tra: Thước đo chiều dài, thiết bị thử đầu báo cháy (khói, nhiệt...);
+
+- Phương pháp kiểm tra: Đối chiếu thực tế thi công với hồ sơ thẩm định về vị trí, khoảng cách lắp đặt, thông số kỹ thuật và tác động trực tiếp hoặc sử dụng thiết bị thử nghiệm.
+
+2.2.1.2 Nội dung kiểm tra
+
+2.2.1.2.1 Tủ trung tâm báo cháy
+
+- Trực quan: Vị trí lắp đặt (chiều cao; kết cấu của vị trí lắp đặt tủ); Chủng loại tủ theo hồ sơ thiết kế và GCNKĐ phương tiện PCCC (nếu có) (số loop; số địa chỉ/loop; hãng tủ); Khả năng hiển thị khu vực hoặc địa chỉ báo cháy; Tại vị trí tủ phải có hướng dẫn vận hành bằng tiếng Việt; Cách thức đấu nối của tủ theo hồ sơ thiết kế và hướng dẫn của tủ; Nguồn điện cấp cho tủ (AC và DC);
+
+- Thử nghiệm: Kiểm tra tình trạng hoạt động của tủ (lỗi hay không lỗi); Kiểm tra khả năng giám sát của tủ đối với đầu báo cháy và các thiết bị ngoại vi (tháo đầu báo; khóa van chặn; nút ấn báo cháy; đầu báo cháy; van ngăn cháy có động cơ; công tắc dòng chảy; alarm valve...).
+
+2.2.1.2.2 Kiểm tra cáp tín hiệu (chống cháy; chống nhiễu (nếu có); tiết diện dây) bằng trực quan và kiểm tra hồ sơ nghiệm thu; kiểm tra cách đấu nối các đầu dây của thiết bị báo cháy;
+
+2.2.1.2.3 Kiểm tra đầu báo cháy (vị trí; số lượng; khả năng hoạt động)
+
+- Trực quan
+
++ Kiểm tra vị trí, số lượng và chủng loại đầu báo cháy (trên trần; dưới trần giả; trong các khoang dầm; Kiểm tra chỉ thị của đầu báo cháy; số lượng vùng báo động, vùng phát hiện cháy; đèn chỉ thị báo cháy;
+
++ Kiểm tra khoảng cách của đầu báo cháy tới miệng của hệ thống cấp gió; Sử dụng thước đo khoảng cách giữa các đầu báo cháy; khoảng cách đầu báo cháy tới tường; khoảng cách đầu báo cháy tia chiếu tới trần nhà.
+
+- Thử nghiệm: Sử dụng thiết bị thử tương ứng để kích hoạt khả năng hoạt động của đầu báo cháy.
+
+2.2.1.2.4 Kiểm tra nút ấn, chuông đèn
+
+- Trực quan: Kiểm tra vị trí lắp đặt và số lượng (khoảng cách từ nút ấn báo cháy tới sàn từ 1,2 đến 1,4 m, khoảng cách từ cửa gian phòng đến nút ấn gần nhất).
+
+- Thử nghiệm:
+
++ Nhấn nút ấn bằng tay để kiểm tra tín hiệu báo cháy của nút ấn và tủ trung tâm và kết nối liên động đến các hệ thống khác;
+
++ Kiểm tra tín hiệu bằng âm thanh, ánh sáng khi hệ thống có tín hiệu báo cháy: đèn chớp hoặc sáng liên tục; cường độ âm thanh của chuông báo cháy;
+
+2.2.1.2.5 Kiểm tra khả năng giám sát của hệ thống báo cháy đối với các thiết bị ngoại vi (giám sát van chặn của hệ thống sprinkler, công tắc dòng chảy, hệ thống thang máy thường, thang máy chữa cháy, hệ thống drencher (nếu có), hệ thống chữa cháy khí, hệ thống hút khói, tăng áp, thang máy, van ngắt của hệ thống LPG, giám sát mức nước trong bể (nếu có)...).
+
+Lưu ý: Đối với hệ thống báo cháy dùng để kích hoạt hệ thống chữa cháy tự động thì tham khảo nội dung tại hệ thống chữa cháy tự động bằng khí và bằng bọt.
+
+2.2.2 Phương tiện chiếu sáng sự cố và chỉ dẫn thoát nạn
+
+2.2.2.1 Thiết bị, phương pháp kiểm tra
+
+- Thiết bị kiểm tra: Thước đo chiều dài; thiết bị đo cường độ sáng.....
+
+- Phương pháp kiểm tra: Đối chiếu thực tế thi công với hồ sơ thẩm định về vị trí, khoảng cách lắp đặt, thông số kỹ thuật và tác động trực tiếp hoặc sử dụng thiết bị thử nghiệm.
+
+2.2.2.2 Nội dung kiểm tra
+
+- Kiểm tra việc bố trí đèn, vị trí lắp đặt, thông số, tem kiểm định;
+
+- Sử dụng thiết bị đo cường độ ánh sáng để đo cường độ ánh sáng;
+
+- Sử dụng thước đo để kiểm tra chiều cao lắp đặt biển báo;
+
+- Kiểm tra đấu nối nguồn điện cấp cho đèn chiếu sáng sự cố (không đấu nối nguồn điện cấp cho đèn chiếu sáng sự cố vào nguồn điện ưu tiên).
+
+2.2.3 Kiểm tra trạm bơm nước chữa cháy
+
+2.2.3.1 Thiết bị, phương pháp kiểm tra
+
+- Thiết bị kiểm tra: Thước đo chiều dài; máy đo lưu lượng…
+
+- Phương pháp kiểm tra: Đối chiếu thực tế thi công với bản vẽ thẩm định và giấy chứng nhận kiểm định về vị trí, khoảng cách lắp đặt, thông số kỹ thuật và tác động trực tiếp.
+
+2.2.3.2 Nội dung kiểm tra
+
+2.2.3.2.1 Đường tiếp cận trạm bơm: Kiểm tra bằng trực quan đường tiếp cận dễ dàng hay bị cản trở bởi cấu kiện xây dựng hoặc đường ống, hệ thống kỹ thuật khác.
+
+2.2.3.2.2 Kiểm tra trạm bơm
+
+2.2.3.2.2.1 Đối với trạm bơm lắp đặt tại công trình thuộc đối tượng áp dụng của QCVN 02:2020/BCA
+
+a) Trực quan
+
+- Kiểm tra vị trí đặt trạm bơm:
+
++ Kiểm tra khoảng cách từ trạm bơm tới công trình đối với trường hợp đặt ngoài nhà;
+
++ Kiểm tra hành lang ngăn cháy nối giữa trạm bơm với khoang đệm của thang thoát nạn trường hợp trạm bơm đặt tại các tầng nổi của công trình (trừ tầng 1).
+
+- Kiểm tra bộ phận ngăn cháy của trạm bơm (tường, vách, cửa ngăn cháy theo số tem và giấy chứng nhận kiểm định);
+
+- Kiểm tra bên trong trạm bơm:
+
++ Đo khoảng cách giữa các móng đặt bơm; khoảng cách từ cạnh bệ máy bơm phía ống hút đến mặt tường nhà đối diện; chiều rộng lối đi trong trạm bơm;
+
++ Đối với bơm động cơ điện: đo khoảng cách từ cạnh bên của móng đặt máy bơm và động cơ đến tường nhà;
+
++ Đối với bơm động cơ diesel: đo khoảng cách từ tường nhà tới két nước đối với động cơ diesel làm mát bằng quạt gió; đo chiều cao của đáy bể chứa dầu cho động cơ diesel; đo khoảng cách giữa tủ điều khiển và bồn nhiên liệu;
+
++ Kiểm tra bố trí họng nước (trạm bơm kích thước 6x9 m trở lên) và hệ thống chữa cháy tự (trạm bơm có động cơ và bồn chứa nhiên liệu diesel);
+
++ Kiểm tra việc bố trí đèn chiếu sáng sự cố và niêm yết quy trình hướng dẫn vận hành hệ thống bên trong trạm bơm; Kiểm tra bố trí thoát sàn và thông gió cho trạm bơm;
+
++ Kiểm tra số lượng, chủng loại, mã ký hiệu, thông số lưu lượng, cột áp được thể hiện trên nhãn mác và đường đặc tính của bơm chính, bơm dự phòng và bơm bù áp;
+
++ Kiểm tra lắp đặt đường ống hút (số lượng, kích thước, kết nối đường ống); Kiểm tra lắp đặt đường ống đẩy (số lượng, kích thước, đấu nối mạng vòng);
+
+	+ Kiểm tra lắp đặt van an toàn, van bảo vệ vỏ bơm, van xả khí tự động;
+
++ Kiểm tra việc niêm yết chỉ thị trạng thái đóng/mở thường trực của các van tại trạm bơm.
+
+b) Thử nghiệm
+
+- Thử hoạt động của từng máy bơm bằng nút ấn tại tủ điều khiển bơm;
+
+- Thử hoạt động theo thứ tự cài đặt của các bơm bằng cách giảm áp suất duy trì trên đường ống cấp nước chữa cháy.
+
+- Thử hoạt động của từng máy bơm bằng nút ấn tại tủ điều khiển bơm;
+
+- Thử hoạt động theo thứ tự cài đặt của các bơm bằng cách giảm áp suất duy trì trên đường ống cấp nước chữa cháy. Trong đó lưu ý:
+
++ Bơm nước chữa cháy phải được khởi động ít nhất một lần từ nguồn điện chính, nguồn điện dự phòng và chạy tối thiểu là 5 phút;
+
++ Đóng các van trên đường ống cấp, để các bơm hoạt động ở chế độ không tải và theo dõi áp lực ở đồng hồ đo áp có vượt quá 140% cột áp thiết kế hay không;
+
++ Theo dõi lưu lượng của hệ thống qua thiết bị kiểm tra lưu lượng được lắp đặt tại trạm bơm.
+
++ Kiểm tra nguồn điện cấp cho bơm chữa cháy (nếu dùng bơm dự phòng là bơm điện thì phải đảm bảo tối thiểu 02 nguồn điện).
+
++ Ngoài ra có thể tham khảo các nội dung thử nghiệm trạm bơm nước chữa cháy tại mục 3 của QCVN 02:2020/BCA.
+
+2.3.2.2.2 Đối với trạm bơm lắp đặt tại công trình không thuộc đối tượng áp dụng của QCVN 02:2020/BCA: Kiểm tra theo hồ sơ thiết kế được duyệt, các bước thử nghiệm có thể tham khảo nội dung nêu trên.
+
+2.2.4 Kiểm tra bể nước: Kiểm tra bằng trực quan
+
+- Kiểm tra vị trí, số lượng bể nổi/ngầm;
+
+- Kiểm tra khối tích: Khối tích chứa nước thực tế qua việc quan sát đường ống chỉ thị bên ngoài đối với bể nước nổi; Khối tích chứa nước thực tế phục vụ chữa cháy theo hoàn công đối với bể nước ngầm; Kiểm tra tín hiệu báo mực nước tại phòng trực điều khiển chống cháy.
+
+	- Kiểm tra giải pháp phục hồi nước chữa cháy.
+
+2.2.5 Kiểm tra hệ thống chữa cháy bằng nước
+
+2.2.5.1 Thiết bị, phương pháp kiểm tra
+
+- Thiết bị kiểm tra: Thước đo chiều dài; thiết bị đo lưu lượng, thiết bị đo áp suất đầu lăng,…
+
+- Phương pháp kiểm tra: Đối chiếu thực tế thi công với bản vẽ thẩm định và giấy chứng nhận kiểm định về vị trí, khoảng cách lắp đặt, thông số kỹ thuật và tác động trực tiếp hoặc sử dụng thiết bị thử nghiệm.
+
+2.2.5.2 Nội dung kiểm tra
+
+2.2.5.2.1 Hệ thống cấp nước chữa cháy ngoài nhà
+
+- Trực quan:
+
++ Số lượng, vị trí lắp đặt (số lượng trụ, khoảng cách giữa các trụ, khoảng cách đến mép đường, khả năng tiếp cận từ xe/máy bơm chữa cháy)
+
++ Chủng loại trụ theo hồ sơ thiết kế (cao độ lắp đặt, loại đầu nối)
+
++ Van khóa trên trụ, van chặn trên mạng đường ống;
+
++ Trường hợp lấy nước từ ao hồ, kiểm tra vị trí, tải trọng bến lấy nước;
+
+- Thử nghiệm: Kiểm tra hoạt động trụ bằng áp lực nước đô thị hoặc áp lực từ bơm chữa cháy, đo kiểm tra áp suất/lưu lượng.
+
+2.2.5.2.2 Hệ thống họng khô/họng tiếp nước
+
++ Số lượng, vị trí lắp đặt (họng khô bố trí tại các khoang đệm; họng tiếp nước vào hệ thống, tiếp nước vào đường ống khô bố trí bên ngoài tại vị trí thuận lợi cho xe/máy bơm chữa cháy), chú thích đánh dấu giữa họng tiếp nước vào công trình và họng lấy nước ra;
+
++ Chủng loại (cao độ lắp đặt, loại đầu nối);
+
++ Van khóa, van một chiều tại họng tiếp.
+
+2.2.5.2.3 Hệ thống họng nước chữa cháy trong nhà
+
+- Trực quan:
+
++ Kiểm tra bố trí tủ, hộp họng nước chữa cháy (số lượng, cao độ lắp đặt);
+
++ Kiểm tra chủng loại lăng, vòi chữa cháy (thông số áp lực, chiều dài cuộn vòi, chủng loại lăng vòi, khớp nối);
+
++ Kiểm tra van khóa của họng, van khóa trên đường ống;
+
++ Kiểm tra đường ống (đường kính ống, nối mạng vòng).
+
+- Thử nghiệm:
+
++ Thử nghiệm bằng áp lực của hệ thống, số lượng lăng triển khai theo thiết kế lớn nhất và đo áp lực đầu lăng tại ví trí bất lợi nhất (lưu ý áp lực tại họng nước trong nhà có kết hợp với hệ thống sprinkler không được vượt quá 0,4 Mpa).
+
+2.2.5.2.4 Hệ thống chữa cháy Spinkler
+
+a. Đầu phun
+
+- Trực quan
+
++ Kiểm tra số lượng, vị trí lắp đặt đầu phun (khoảng cách giữa các đầu phun, khoảng cách đầu phun đến trần, cao độ lắp đặt, bố trí đầu phun dưới ống gió, đường kỹ thuật);
+
++ Kiểm tra chủng loại đầu phun (hệ số K, đường kính vòi phun, loại quay lên/quay xuống/quay ngang/âm trần, nhiệt độ kích hoạt).
+
+- Thử nghiệm: Kích hoạt đầu phun để kiểm tra hình dạng tia phun, đo lưu lượng trên đường ống (số lượng đầu phun kích hoạt dựa trên thông số tính toán của hệ thống tại vị trí bất lợi nhất).
+
+b. Các van trên đường ống
+
+- Trực quan:
+
++ Vị trí lắp đặt, bố trí van khóa trên đường ống (van chặn trên đường ống của hệ thống sprinkler phải được giám sát trạng thái đóng/mở);
+
++ Vị trí lắp đặt, bố trí Alarm valve (các bộ phận trên van: van một chiều, công tắc dòng chảy, chuông nước, bình làm trễ….); Vị trí lắp đặt, bố trí van giảm áp.
+
++ Vị trí lắp đặt, bố trí đồng hồ đo áp, van khóa tại đầu phun chủ đạo.
+
+- Thử nghiệm:
+
++ Khóa ngẫu nhiên một số van chặn tầng/khu vực và kiểm tra tín hiệu giám sát tại tủ trung tâm báo cháy;
+
++ Kích hoạt hệ thống và kiểm tra hoạt động của Alarm valve (chuông nước hoạt động, công tác dòng chảy kích hoạt tín hiệu báo cháy);
+
++ Đo áp lực nước tại vị trí sau van giảm áp.
+
+c. Đường ống
+
+- Trực quan: Kiểm tra bố trí đường ống cấp, đường ống chính trục đứng, đường ống phân phối tại tầng/khu vực và các đường ống nhánh (đường kính ống, bố trí mạng vòng, 02 đường cấp, bố trí van khóa), màu sắc, ký hiệu chỉ thị hướng dòng chảy...
+
+- Thử nghiệm: Căn cứ biên bản thử nghiệm và hồ sơ hoàn công của chủ đầu tư và đơn vị thi công, kiểm tra thực tế.
+
+2.2.5.2.5 Hệ thống màn nước Drencher/spray (nếu có). Lưu ý chỉ bố trí màn nước Drencher tại các vị trí được quy định của quy chuẩn, tiêu chuẩn có liên quan.
+
+a. Đầu phun
+
+- Trực quan:
+
++ Kiểm tra số lượng, vị trí lắp đặt đầu phun (khoảng cách giữa các đầu phun, khoảng cách đầu phun đến trần, cao độ lắp đặt);
+
++ Kiểm tra chủng loại đầu phun (hệ số K, đường kính vòi phun, loại đầu phun).
+
+- Thử nghiệm: Kích hoạt hệ thống để kiểm tra hình dạng tia phun, đo lưu lượng trên đường ống (tại vị trí chiều dài màn nước lớn nhất).
+
+b. Các van trên đường ống
+
+- Trực quan:
+
++ Vị trí lắp đặt, bố trí van khóa trên đường ống (phải có chức năng gửi tín hiệu giám sát đến hệ thống báo cháy tự động);
+
++ Vị trí lắp đặt, bố trí Deluge valve;
+
++ Lắp đặt nút điều khiển ở vị trí dễ thao tác.
+
+- Thử nghiệm:
+
++ Thử nghiệm kích hoạt Deluge valve bằng chế độ tự động, bằng tay (02 tín hiệu báo cháy, đường ống Spinkler kích hoạt, van xả bằng tay);
+
++ Đo lưu lượng trên đường ống khi hệ thống hoạt động.
+
+c. Đường ống
+
+- Trực quan: Kiểm tra bố trí đường ống cấp, đường ống tạo màn nước (02 dải);
+
+- Thử nghiệm: Căn cứ biên bản thử nghiệm và hồ sơ hoàn công của chủ đầu tư và đơn vị thi công.
+
+2.2.6 Kiểm tra hệ thống chữa cháy tự động bằng bọt
+
+2.2.6.1 Thiết bị, phương pháp kiểm tra
+
+- Thiết bị kiểm tra: Thiết bị thử nghiệm hệ thống báo cháy, Thiết bị đo nồng độ chất tạo bọt.
+
+- Phương pháp kiểm tra
+
++ Đối chiếu thực tế thi công về loại chất tạo bọt, loại đầu phun tạo bọt với giấy chứng nhận kiểm định PCCC;
+
++ Kiểm tra về vị trí lắp đặt hệ thống chữa cháy tự động bằng bọt, vị trí đặt bồn chứa chất tạo bọt, lượng chất tạo bọt so với hồ sơ thẩm định về PCCC;
+
++ Thử thực tế hoạt động của hệ thống (ở chế độ tự động và bằng tay) kết hợp với các thiết bị đo.
+
+2.2.6.2 Nội dung kiểm tra
+
+2.2.6.2.1 Kiểm tra thi công và lắp đặt
+
+a. Bồn/téc chứa chất tạo bọt: Vị trí lắp đặt, lượng chất tạo bọt so với hồ sơ thiết kế được duyệt và bản vẽ hoàn công.
+
+b. Thiết bị trộn và định lượng chất tạo bọt: Vị trí lắp đặt, thông số (tỷ lệ trộn bọt) phù hợp với loại bọt theo thiết kế.
+
+c. Tủ điều khiển (đối với hệ thống chữa cháy tự động bằng bọt độc lập)
+
+- Chủng loại tủ điều khiển;
+
+- Vị trí lắp đặt.
+
+d. Kiểm tra phương pháp kích hoạt hệ thống tự động và bằng tay
+
+- Trường hợp kích hoạt bằng báo cháy: Hệ thống báo cháy tự động điều khiển hệ thống chữa cháy bằng bọt phải đảm bảo mỗi điểm được bảo vệ bởi 02 đầu báo cháy thuộc 02 kênh khác nhau;
+
+- Trường hợp kích hoạt bằng hệ thống sprinkler: Kiểm tra bố trí, lắp đầu phun (tương tự như hệ thống sprinkler) và kết nối tới van tràn ngập. Lưu ý: Không cần xem xét hệ số K, đường kính ống của đầu phun và số lượng đầu phun trên ống nhánh;
+
+- Kích hoạt bằng tay: Kích hoạt bằng van điện hoặc van xả tại vị trí lắp đặt van tràn ngập.
+
+đ. Van khóa, van tràn ngập (deluge valve), đường ống và đầu phun bọt
+
+- Kiểm tra về đường ống dẫn hỗn hợp chất tạo bọt và nước chữa cháy (đường kính ống, chiều dài tuyến ống);
+
+- Kiểm tra về vị trí lắp đặt van cổng, van tràn ngập nối từ đường ống hệ thống cấp nước chữa cháy vào hệ thống chữa cháy tự động bằng bọt (lưu ý van cổng là van thường mở, van này phải có tín hiệu giám sát kết nối về tủ báo cháy cháy trung tâm);
+
+- Kiểm tra về chủng loại đầu phun tạo bọt, số lượng đầu phun, khoảng cách giữa các đầu phun;
+
+2.2.6.2.2 Thử nghiệm hoạt động:
+
+- Đưa van cổng trước van điện từ/van tràn ngập về trạng thái đóng để kiểm tra việc giám sát van tại phòng trực điều khiển trung tâm, sau đó đưa vào cổng về trạng thái thường mở;
+
+- Thử kích hoạt tự động:
+
++ Thử nghiệm hoạt động của đầu báo cháy thứ 1: Tín hiệu truyền về tủ điều khiển và tủ báo cháy chung của công trình, sau đó chuông, đèn tại khu vực bảo vệ hoạt động;
+
++ Thử nghiệm hoạt động của đầu báo cháy thứ 2 (kênh thứ 2): Kiểm tra xem đã đưa tín hiệu về tủ điều khiển hệ thống chữa cháy tự động bằng bọt hay chưa. Sau thời gian trễ van điện từ/van tràn ngập kích hoạt để điều khiển xả bọt;
+
++ Nhấn nút ấn khẩn tại khu vực lắp đặt hệ thống chữa cháy tự động bằng thì tủ điều khiển mở van điện từ để hệ thống hoạt động;
+
++ Thử đầu phun sprinkler hoạt động để kích hoạt van tràn ngập và hệ thống phun bọt (đối với trường hợp kích hoạt bằng đầu phun sprinkler);
+
+- Sau khi thử nghiệm hệ thống ở chế độ tự động, tiến hành thử nghiệm bằng tay tại vị trí van điện từ/van tràn ngập hoặc điều khiển từ xa tại vị trí phòng trực điều khiển trung tâm (nếu có);
+
+- Sau khi kết thúc kiểm tra reset, khóa van điện từ đưa hệ thống trở lại trạng thái thường trực.
+
+2.2.7 Kiểm tra hệ thống chữa cháy bằng khí (FM-200, Nitơ, CO2…)
+
+2.2.7.1 Thiết bị, phương pháp kiểm tra
+
+- Thiết bị kiểm tra: Thiết bị thử nghiệm hệ thống báo cháy, thước đo chiều dài…
+
+- Phương pháp kiểm tra:
+
++ Đối chiếu thực tế thi công với giấy chứng nhận kiểm định và hồ sơ thẩm định về vị trí, khoảng cách lắp đặt, thông số kỹ thuật của bình khí;
+
++ Kiểm tra điều kiện điều khiển logic của hệ thống tác động đến van kích hoạt đầu bình khí, van chọn vùng (không xả khí);
+
++ Tác động trực tiếp hoặc sử dụng các thiết bị thử nghiệm.
+
+2.2.7.2 Nội dung kiểm tra
+
+2.2.7.2.1 Kiểm tra thi công, lắp đặt
+
+a. Trạm đặt bình chứa khí
+
+- Vị trí lắp đặt so với thiết kế được duyệt;
+
+- Giải pháp bảo vệ trước các tác động từ bên ngoài (có nằm trong phòng riêng hay không, có lưới bảo vệ hay không, có gần các nguồn phát sinh nhiệt hay không…);
+
+- Số lượng, chủng loại bình khí để đối chiếu với hồ sơ thiết kế, hồ sơ kiểm định và thông số kỹ thuật của nhà sản xuất;
+
+- Áp suất nạp Nitơ (dựa trên đồng hồ) để tính toán khối tích khí nén trong bình; khối lượng (kg hoặc lb) và áp suất khí HFC-227ea (FM200) nén trong bình; khối lượng khí CO2 hóa lỏng trong bình;
+
+- Kiểm tra việc lắp đặt logic đối với dàn chai khí sử dụng chung cho nhiều khu vực bảo vệ (lượng bình khí cho mỗi cụm, van chọn vùng và logic đường đi của đường khí mồi).
+
+b. Đường ống, đầu phun và các thiết bị của hệ thống
+
+- Đường ống của hệ thống áp lực cao phải là các loại ống thép đúc và phải có biên bản thử áp, catalogue của đường ống;
+
+- Kiểm tra van an toàn trên đường ống góp;
+
+- Kiểm tra việc lắp đặt đường ống và các đầu phun theo thiết kế được duyệt (đảm bảo sự bố trí cân bằng của các đầu phun theo quy định: đường đi từ bình chứa khí đến các đầu phun không lệch nhau quá 10%);
+
+- Kiểm tra số lượng đầu phun và chủng loại đầu phun theo thiết kế (loại 360o, 180o…), các đầu phun có bị cản trở bởi các cấu kiện dầm, cột, tường, tủ điện… hay không;
+
+- Kiểm tra hệ thống báo cháy phải đảm bảo mỗi điểm được bảo vệ bởi 02 đầu báo cháy thuộc 02 kênh khác nhau.
+
+c. Khu vực bảo vệ
+
+- Kiểm tra trực quan kết cấu của khu vực bảo vệ đảm bảo áp lực làm việc khi khí chữa cháy được phun (có các kết cấu dễ bung như tôn, gỗ ép… hay không);
+
+- Kiểm tra độ kín của khu vực bảo vệ (các ô cửa, louver, khe cửa, đường ống kỹ thuật…) có được chèn bịt không, có được trang bị damper tự động đóng khi có sự cố hay không. Cần lưu ý một số damper tự động đóng bằng áp lực không khí thì chiều đóng của các lá chắn trên damper phải theo chiều khí từ trong khu vực bảo vệ ra ngoài;
+
+- Chuông đèn cảnh báo phải được lắp đặt cả bên trong và bên ngoài khu vực bảo vệ, đảm bảo không bị che khuất;
+
+- Bộ điều khiển (gồm nút ấn xả cưỡng bức, nút ấn trì hoãn, tủ hiện thị) được lắp đặt ở cửa ra vào khu vực bảo vệ, ở độ cao 1,2-1,5m.
+
+2.2.7.2.2 Thử nghiệm hoạt động:
+
+- Tháo van kích hoạt tại bình pilot;
+
+- Thử nghiệm hoạt động của đầu báo cháy thứ 1: Tín hiệu truyền về tủ điều khiển và tủ báo cháy chung của công trình, sau đó chuông, đèn tại khu vực bảo vệ hoạt động;
+
+- Thử nghiệm hoạt động của đầu báo cháy thứ 2 (kênh thứ 2): Kiểm tra xem đã đưa tín hiệu về tủ điều khiển hệ thống chữa cháy tự động; Kiểm tra phản ứng của hệ thống sau tín hiệu của đầu báo thứ hai (thời gian trễ trên tủ hiển thị); trong thời gian tủ hiện thị chạy thời gian trễ, ấn và giữ nút trì hoãn, kiểm tra tác động của nút trì hoãn có can thiệp được thời gian trễ của hệ thống hay không, sau đó thả tay và tiếp tục quan sát;
+
+- Trong thời gian đếm ngược tại tủ hiện thị, kiểm tra hoạt động của các damper để đóng kín các louver, thời gian để đóng kín hoàn toàn trước khi xả khí. Các quạt thông gió và hệ thống điều hòa không khí không tuần hoàn phải được ngắt tự động;
+
+- Hết thời gian trễ, kiểm tra chốt của van kích hoạt đã bật ra hay chưa và van kích hoạt đó có đúng cụm bình của khu vực bảo vệ đang thử hay không;
+
+- Reset hệ thống và thử nghiệm lại hoạt động bằng nút xả cưỡng bức;
+
+- Cuối buổi kiểm tra, kiểm tra lịch sử tín hiệu có truyền về tủ trung tâm tại phòng trực hay không.
+
+Lưu ý: Tủ điều khiển xả khí tại từng khu vực phải có chức năng gửi tín hiệu về tủ điều khiển trung tâm của tòa nhà.
+
+2.2.8 Trang bị phương tiện, dụng cụ phá dỡ thô sơ; mặt nạ lọc độc và mặt nạ phòng độc cách ly; bình chữa cháy xách tay
+
+2.2.8.1 Thiết bị, phương pháp kiểm tra: Đối chiếu thực tế thi công với giấy chứng nhận kiểm định và hồ sơ thẩm định về vị trí, khoảng cách lắp đặt, thông số kỹ thuật của bình.
+
+2.2.8.2 Nội dung kiểm tra
+
+- Kiểm tra giấy chứng nhận kiểm định phương tiện PCCC đối với lô bình chữa cháy xách tay;
+
+- Kiểm tra việc bố trí các bình chữa cháy, vị trí lắp đặt, thông số, tem kiểm định của bình, tình trạng của bình chữa cháy;
+
+- Kiểm tra việc trang bị theo quy định tại điều phụ lục D, E, F và H của TCVN 3890:2023.
+
+2.2.9 Hệ thống điện phục vụ phòng cháy và chữa cháy
+
+2.2.9.1 Thiết bị, phương pháp kiểm tra
+
+- Thiết bị kiểm tra: Thước kẹp đo tiết diện, ampe kìm, đồng hồ vạn năng…
+
+- Phương pháp kiểm tra
+
++ Trực quan: Đối chiếu thực tế thi công hồ sơ thiết kế đã được thẩm định (số lượng nguồn điện ưu tiên, công suất máy phát điện, máy biến áp, vị trí lắp đặt máy phát điện, máy biến áp,...);
+
++ Thử nghiệm: Thử nghiệm chế độ bằng tay và chế độ liên động với hệ thống báo cháy tự động của hệ thống điện ưu tiên cấp cho hệ thống PCCC.
+
+2.2.9.2 Nội dung kiểm tra
+
+- Trực quan:
+
++ Kiểm tra số lượng nguồn điện ưu tiên cấp cho hệ thống PCCC, vị trí lắp đặt các nguồn điện theo hồ sơ thiết kế đã được thẩm định: Nguồn điện chính là 01 nguồn điện lưới và nguồn điện dự phòng là nguồn điện từ máy phát điện dự phòng hoặc UPS hoặc ắc quy dự phòng;
+
++ Kiểm tra công suất của nguồn điện chính, công suất của nguồn điện dự phòng đảm bảo đủ công suất cấp cho các phụ tải PCCC;
+
++ Kiểm tra cáp điện cấp cho hệ thống PCCC (chống cháy, lộ riêng) bằng trực quan và kiểm tra hồ sơ nghiệm thu;
+
++ Đối với nguồn điện dự phòng từ máy phát điện tiến hành kiểm tra bình dầu cấp cho máy phát (nếu máy bơm cấp nước chữa cháy cấp cho hệ thống cấp nước ngoài nhà yêu cầu lượng dầu phải đủ cấp điện cho máy bơm trong thời gian 03 giờ và các phụ tải PCCC khác trong thời gian 1 giờ);
+
+- Thử nghiệm liên động của hệ thống báo cháy điều khiển nguồn điện ưu tiên cho PCCC
+
+2.2.10 Lập và thông qua biên bản kiểm tra
+
+- Sau khi tập hợp nội dung, đánh giá kết quả kiểm tra của các thành viên, cán bộ thụ lý hồ sơ tiến hành lập biên bản;
+
+	- Trong quá trình kiểm tra, trường hợp phát hiện vi phạm quy định về PCCC, thì căn cứ quy định của pháp luật đoàn kiểm tra phải thực hiện việc xử lý vi phạm hành chính theo quy định và thu thập các thông tin, tài liệu liên quan đến hành vi vi phạm;
+
+- Trưởng Đoàn thông qua và thống nhất nội dung biên bản kiểm tra (BBKT) với chủ đầu tư, nhà thầu thi công và các bên có liên quan. Trong đó việc đóng dấu vào biên bản kiểm tra công tác nghiệm thu thực hiện đối với chủ đầu tư, chủ cơ sở, chủ phương tiện là cơ quan, tổ chức. Các đơn vị khác tham gia thực hiện ký, ghi rõ họ tên.
+
+3. Xử lý kết quả kiểm tra nghiệm thu
+
+Trong thời hạn 05 ngày làm việc kể từ ngày thông qua biên bản kiểm tra, căn cứ kết quả ghi nhận tại biên bản kiểm tra công tác nghiệm thu, cán bộ thụ lý hồ sơ có trách nhiệm đề xuất các văn bản để thông báo kết quả kiểm tra cho chủ đầu tư theo quy định tại điểm b khoản 3 Điều 10 Nghị định số 105/2025/NĐ-CP.
+
+3.1 Trường hợp kết quả nghiệm thu của chủ đầu tư phù hợp với hồ sơ đã được thẩm định, bảo đảm theo quy định thì cán bộ thụ lý hồ sơ dự thảo các văn bản và báo cáo lãnh đạo, chỉ huy trực tiếp trình người có thẩm quyền duyệt, ký văn bản chấp thuận kết quả nghiệm thu về phòng cháy và chữa cháy, hồ sơ trình bao gồm:
+
+- Báo cáo, đề xuất cấp văn bản chấp thuận kết quả nghiệm thu về phòng cháy và chữa cháy;
+
+- Biên bản kiểm tra công tác nghiệm thu về phòng cháy và chữa cháy và các tài liệu khác kèm theo;
+
+- Dự thảo văn bản chấp thuận kết quả nghiệm thu về phòng cháy và chữa cháy.
+
+3.2 Trường hợp kết quả nghiệm thu của chủ đầu tư chưa bảo đảm theo quy định, cán bộ thụ lý hồ sơ dự thảo các văn bản báo cáo lãnh đạo, chỉ huy trực tiếp quản lý trình người có thẩm quyền duyệt, ký văn bản thông báo kết quả kiểm tra, hồ sơ trình bao gồm:
+
+- Báo cáo kết quả nghiệm thu về phòng cháy và chữa cháy;
+
+- Biên bản kiểm tra công tác nghiệm thu về phòng cháy và chữa cháy và các tài liệu khác kèm theo;
+
+- Dự thảo văn bản thông báo kết quả chưa đủ điều kiện cấp văn bản nghiệm thu về phòng cháy và chữa cháy.

@@ -117,13 +117,13 @@ def count_chunks(text: str) -> int:
 
 
 def _sources() -> list:
-    """Danh sách nguồn đang được dùng: (đường dẫn, kích thước, thời gian sửa, tầng, nhãn hiển thị)."""
+    """Danh sách nguồn đang được dùng: (đường dẫn, kích thước, thời gian sửa, tầng, nhãn hiển thị, hệ số ưu tiên)."""
     out = []
     if os.path.isdir(DOCS_DIR):
         for fn in sorted(os.listdir(DOCS_DIR)):
             if fn.lower().endswith(_EXTS) and not fn.startswith(("~$", ".")):
                 p = os.path.join(DOCS_DIR, fn)
-                out.append((p, os.path.getsize(p), int(os.path.getmtime(p)), DEFAULT_TIER, fn))
+                out.append((p, os.path.getsize(p), int(os.path.getmtime(p)), DEFAULT_TIER, fn, 1.0))
     for fn, meta in sorted(load_manifest().items()):
         p = os.path.join(KHO_DIR, fn)
         if meta.get("status") != "active" or not os.path.isfile(p):
@@ -132,7 +132,11 @@ def _sources() -> list:
         label = meta.get("title") or meta.get("original_name") or fn
         if meta.get("effective_date"):
             label += f", hiệu lực từ {meta['effective_date']}"
-        out.append((p, os.path.getsize(p), int(os.path.getmtime(p)), tier, label))
+        try:
+            weight = float(meta.get("weight", 1.0))
+        except (TypeError, ValueError):
+            weight = 1.0
+        out.append((p, os.path.getsize(p), int(os.path.getmtime(p)), tier, label, max(0.3, min(2.0, weight))))
     return out
 
 
@@ -141,18 +145,19 @@ def _signature() -> tuple:
 
 
 def _build(sig: tuple) -> dict:
-    docs, tiers = [], []
-    for path, _size, _mt, tier, label in sig:
+    docs, tiers, weights = [], [], []
+    for path, _size, _mt, tier, label, weight in sig:
         text = read_text(path)
         for c in _chunks(text):
             docs.append((label, c))
             tiers.append(tier)
+            weights.append(weight)
     tfs = [Counter(_tokens(c)) for _, c in docs]
     df = Counter()
     for tf in tfs:
         df.update(tf.keys())
     lens = [sum(tf.values()) for tf in tfs]
-    return {"sig": sig, "docs": docs, "tiers": tiers, "tfs": tfs, "df": dict(df), "lens": lens,
+    return {"sig": sig, "docs": docs, "tiers": tiers, "weights": weights, "tfs": tfs, "df": dict(df), "lens": lens,
             "avgdl": (sum(lens) / len(lens)) if lens else 1.0}
 
 
@@ -165,7 +170,7 @@ def _get_index() -> dict:
         try:
             with open(CACHE_PATH, "rb") as f:
                 cached = pickle.load(f)
-            if cached.get("sig") == sig and "tiers" in cached:
+            if cached.get("sig") == sig and "weights" in cached:
                 _index = cached
                 return _index
         except Exception:
@@ -216,7 +221,7 @@ def search(question: str, k: int = 4) -> list:
             text_l = idx["docs"][i][1].lower()
             s += 1.5 * sum(1 for d in doc_numbers if d in text_l)
         if s > 0:
-            s *= TIER_WEIGHT.get(idx["tiers"][i], 1.0)      # văn bản pháp luật hiện hành được ưu tiên hơn tài liệu tham khảo
+            s *= TIER_WEIGHT.get(idx["tiers"][i], 1.0) * idx["weights"][i]   # văn bản hiện hành, mới nhất được ưu tiên hơn tài liệu cũ
             scores.append((s, i))
     scores.sort(reverse=True)
     if not scores:

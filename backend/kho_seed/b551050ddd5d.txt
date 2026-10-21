@@ -1,0 +1,60 @@
+[Phụ lục III: hướng dẫn quy định cấp giấy phép lưu thông phương tiện PCCC, CNCH]
+[Hiệu lực: 2025. Trạng thái: ĐANG DÙNG.]
+
+PHỤ LỤC III
+
+TÀI LIỆU HƯỚNG DẪN
+
+	Thực hiện cấp Giấy phép lưu thông phương tiện PCCC, CNCH
+
+I. Hướng dẫn thực hiện công tác cấp Giấy phép lưu thông phương tiện PCCC, CNCH
+
+1. Việc tiếp nhận, giải quyết thủ tục hành chính cấp Giấy phép lưu thông phương tiện PCCC, CNCH thực hiện theo quy trình nội bộ, quy trình điện tử thực hiện thủ tục hành chính trong lĩnh vực PCCC và CNCH thuộc thẩm quyền giải quyết của Bộ Công an trên môi trường điện tử. Trong quá trình tiếp nhận, giải quyết thủ tục cấp Giấy phép lưu thông phương tiện PCCC, CNCH, C07 hướng dẫn PC07 Công an các tỉnh, thành phố trực thuộc trung ương thực hiện một số nội dung sau:
+
+a) Tiếp nhận hồ sơ trên môi trường điện tử
+
+Căn cứ quy trình giải quyết TTHC, Bộ phận Một cửa (BPMC) có trách nhiệm kiểm tra thành phần hồ sơ và tính hợp lệ của hồ sơ. Thành phần hồ sơ được quy định tại Nghị định 105/2025/NĐ-CP ngày 15/5/2025 của Chính phủ và được hướng dẫn tại phần II của tài liệu (nêu trên).
+
+Về tính hợp lệ của hồ sơ bao gồm các nội dung:
+
+- Đối tượng nộp hồ sơ đề nghị cấp phép lưu thông phương tiện PCCC, CNCH phù hợp quy định (là cơ quan, tổ chức, cá nhân trực tiếp sản xuất, lắp ráp trong nước hoặc nhập khẩu phương tiện PCCC, CNCH);
+
+- Loại phương tiện PCCC, CNCH đề nghị cấp phép lưu thông phù hợp quy định (là phương tiện thuộc danh mục quy định tại Phụ lục V Nghị định số 105/2025/NĐ-CP);
+
+- Thể thức, pháp lý của các tài liệu có trong hồ sơ: các văn bản, tài liệu phải theo đúng biểu mẫu (nếu có, ví dụ mẫu PC20) có thể thức phù hợp và được ký, xác thực điện tử đầy đủ theo quy định tại Nghị định 30/2020/NĐ-CP ngày 05/3/2020 của Chính phủ về công tác văn thư.
+
+Đối với hồ sơ đề nghị cấp phép lưu thông phương tiện PCCC, CNCH theo kết quả thử nghiệm của các cơ quan, tổ chức nước ngoài: cần kiểm tra, đối chiếu với năng lực thử nghiệm của đơn vị thử nghiệm theo chứng nhận ISO 17025 được cấp.
+
+Thời hạn giải quyết của BPMC được quy định cụ thể tại quy trình giải quyết TTHC, cụ thể: Thời gian kiểm tra hồ sơ: 08 giờ làm việc kể từ thời điểm tổ chức, doanh nghiệp nộp hồ sơ; thời gian lập phiếu tiếp nhận, chuyển cấp có thẩm quyền phân công: 04 giờ làm việc kể từ thời điểm tiếp nhận hồ sơ.
+
+b) Xử lý hồ sơ
+
+Cán bộ, chiến sĩ được giao trách nhiệm giải quyết hồ sơ phải thực hiện các công việc theo quy định tại Điều 30 Thông tư 37/2025/TT-BCA và quy trình giải quyết TTHC về PCCC, chịu trách nhiệm về nội dung đã giải quyết, cụ thể: kiểm tra, đối chiếu nội dung kết quả thử nghiệm phương tiện PCCC, CNCH và các tài liệu có trong hồ sơ với các quy định của tiêu chuẩn, quy chuẩn kỹ thuật tương ứng.
+
+Khi xem xét kết quả thử nghiệm của các cơ quan, tổ chức nước ngoài: kiểm tra lại về thành phần, tính hợp lệ của hồ sơ; trình tự thời gian thực hiện cấp phép phù hợp quy định; chứng nhận chất lượng, kết quả thử nghiệm phải phù hợp với các chỉ tiêu kỹ thuật của phương tiện PCCC, CNCH theo quy định tại tiêu chuẩn, quy chuẩn được sử dụng, là kết quả còn hiệu lực (đối với kết quả thử nghiệm lần đầu, kết quả đánh giá định kỳ của mẫu phương tiện PCCC).
+
+Để hạn chế các tồn tại, thiếu sót, không thống nhất trong quá trình giải quyết hồ sơ, C07 hướng dẫn nội dung kiểm tra, đối chiếu khi xem xét hồ sơ đề nghị cấp phép lưu thông phương tiện PCCC, CNCH để Công an các tỉnh, thành phố trực thuộc trung ương tham khảo (chi tiết tại Bảng III.1 kèm theo).
+
+2.  Báo cáo thống kê, nhập số liệu trên hệ thống quản lý
+
+Hiện tại, khi chưa hoàn thiện Hệ thống Cơ sở dữ liệu về PCCC và CNCH thì việc thống kê, báo cáo kết quả công tác cấp phép lưu thông phương tiện PCCC, CNCH thực hiện theo biểu mẫu (chi tiết tại Bảng III.2, Bảng III.3 kèm theo).
+
+II. Một số lưu ý khi thực hiện cấp phép lưu thông phương tiện PCCC, CNCH
+
+1. Phương tiện PCCC, CNCH (thuộc danh mục tại Phụ lục V của Nghị định 105/2025/NĐ-CP) sản xuất, lắp ráp, nhập khẩu phải được cấp phép lưu thông trước khi lưu thông ra thị trường (lần đầu). Các lô phương tiện PCCC, CNCH sản xuất, lắp ráp, nhập khẩu (lần kế tiếp) được tự do lưu thông ra thị trường mà không phải làm thủ tục đề nghị cấp giấy phép lưu thông (cấp giấy phép lưu thông cho mẫu phương tiện PCCC, CNCH).
+
+Theo quy định này, tổ chức, cá nhân không phải làm thủ tục đề nghị cấp giấy phép lưu thông nếu phương tiện PCCC, CNCH có cùng tên gọi, công dụng, nhãn hiệu, kiểu loại, đặc tính kỹ thuật do cùng một đơn vị sản xuất, lắp ráp hoặc do cùng tổ chức, cá nhân nhập khẩu đúng với mẫu đã được cấp giấy phép lưu thông trước đó.
+
+ 	2. Các Phương tiện PCCC, CNCH không thuộc Danh mục Phụ lục V của Nghị định 105/2025/NĐ-CP thì không cần phải được cấp giấy phép lưu thông theo quy định tại Điều 23, Nghị định số 105/2025/NĐ-CP. Tuy nhiên, các phương tiện này vẫn phải tuân thủ đầy đủ các quy định hiện hành của pháp luật về quản lý chất lượng sản phẩm, hàng hóa, ghi nhãn hàng hóa và các quy định có liên quan khác.
+
+3. Đối với doanh nghiệp nhập khẩu phương tiện PCCC, CNCH, được phép sử dụng kết quả thử nghiệm, chứng nhận chất lượng hợp lệ của tổ chức thử nghiệm, đánh giá nước ngoài để cung cấp trong quá trình nộp hồ sơ cấp phép mà không phải thử nghiệm lại. Kết quả thử nghiệm hợp lệ là:
+
+- Chứng nhận chất lượng, kết quả thử nghiệm đúng với tiêu chuẩn quốc tế, tiêu chuẩn khu vực, tiêu chuẩn nước ngoài hoặc tiêu chuẩn, quy chuẩn kỹ thuật của Việt Nam;
+
+- Do tổ chức thử nghiệm nước ngoài đã được chứng nhận phù hợp với tiêu chuẩn ISO/IEC 17025 thực hiện có chứng chỉ công nhận tổ chức thử nghiệm.
+
+Trường hợp không có kết quả thử nghiệm của tổ chức thử nghiệm nước ngoài thì được sử dụng kết quả thử nghiệm do tổ chức đánh giá sự phù hợp của Việt Nam thực hiện theo quy định của pháp luật về chất lượng sản phẩm, hàng hóa và pháp luật về tiêu chuẩn, quy chuẩn kỹ thuật
+
+4. Cơ quan, tổ chức, cá nhân sản xuất, lắp ráp, nhập khẩu phương tiện PCCC, CNCH theo mẫu đã được cấp phép lưu thông trước đó, trước khi đưa phương tiện lưu thông ra thị trường có trách nhiệm khai báo các thông tin theo quy định trên hệ thống Cơ sở dữ liệu của cơ quan quản lý chuyên ngành (hoặc bằng văn bản gửi cơ quan quản lý chuyên ngành đã cấp giấy phép lưu thông cho phương tiện, vật liệu, cấu kiện ngăn cháy, chống cháy để cập nhật và theo dõi) và phải chịu trách nhiệm về tính chính xác của thông tin khai báo.
+
+5. Trong thời gian chuyển tiếp (01/7/2025 đến hết ngày 30/6/2026), tại khoản 1 Điều 46 của Nghị định 105/2025/NĐ-CP của Chính phủ đã quy định việc cấp Giấy chứng nhận kiểm định phương tiện PCCC, quản lý, sử dụng tem kiểm định phương tiện PCCC được tiếp tục thực hiện đến hết ngày 30 tháng 6 năm 2026. Như vậy, kể 01/7/2025 đến hết ngày 30/6/2026 các cơ quan tổ chức, doanh nghiệp trực tiếp sản xuất, lắp ráp hoặc nhập khẩu phương tiện PCCC, CNCH có 02 lựa chọn (1) là đề nghị cấp giấy phép lưu thông cho phương tiện PCCC, CNCH hoặc (2) đề nghị cấp Giấy chứng nhận kiểm định phương tiện PCCC./.

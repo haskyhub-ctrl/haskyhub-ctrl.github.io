@@ -1,0 +1,119 @@
+[Phụ lục IV: hướng dẫn kiểm tra hệ thống, thiết bị chiếu sáng sự cố và chỉ dẫn thoát nạn]
+[Hiệu lực: 2025. Trạng thái: ĐANG DÙNG.]
+
+1
+
+Phụ lục IV: Hướng dẫn nội dung kiểm tra hệ thống, thiết bị chiếu sáng sự cố và chỉ dẫn thoát nạn
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Căn cứ Nghị định 106/2025/NĐ-CP
+1 Việc duy
+trì trang
+bị, lắp
+đặt đèn
+chiếu
+sáng sự
+cố và đèn
+chỉ dẫn
+thoát nạn
+Phương tiện chiếu sáng sự cố và chỉ dẫn thoát nạn được trang bị cho tất cả
+các nhà, công trình (trừ nhà ở riêng lẻ)
+Điều 5.7.1.1
+TCVN
+3890:2023
+1. Hành vi trang bị,
+lắp đặt đèn, phương
+tiện chiếu sáng sự cố,
+chỉ dẫn thoát nạn
+không bảo đảm theo
+quy định (khoản 3,
+Điều 20; Phạt tiền từ
+5.000.000 đồng đến
+7.000.000 đồng; biện
+pháp khắc phục hậu
+quả: Buộc trang bị,
+lắp đặt đèn, phương
+tiện chiếu sáng sự
+cố, chỉ dẫn thoát
+nạn);
+
+2. Hành vi không
+trang bị, lắp đặt đèn,
+phương tiện chiếu
+sáng sự cố, chỉ dẫn
+thoát nạn (khoản 5,
+Điều 20; Phạt tiền từ
+10.000.000 đồng đến
+15.000.000 đồng);
+
+3. Không duy trì hoạt
+động c ủa đèn,
+phương tiện chiếu
+sáng sự cố, chỉ dẫn
+thoát nạn đã được
+trang bị, lắp đặt (điểm
+a, khoản 3, Điều 21;
+Phạt ti ền t ừ
+5.000.000 đồng đến
+10.000.000 đ ồng;
+biện pháp khắc phục
+2 Yêu cầu
+đối với vị
+trí lắp
+đặt
+ Đèn chiếu sáng sự cố phải được lắp đặt cho các khu vực của nhà và công
+trình tại các vị trí sau:
+- Cầu thang bộ thoát nạn;
+- Đường thoát nạn và vị trí chuyển hướng thoát nạn, nút giao của hành lang;
+- Vị trí trên đường thoát nạn có thay đổi về cao độ;
+- Cửa, lối ra thoát nạn;
+- Gara để xe;
+- Trong gian phòng có người làm việc và khoảng cách từ điểm xa nhất của
+gian phòng đến lối ra thoát nạn gần nhất lớn hơn 13 m. Trường hợp các gian
+phòng này có bố trí đường thoát nạn thì có thể chỉ lắp đặt đèn chiếu sáng sự
+cố tại đường thoát nạn đó;
+- Trong phòng đặt trạm biến áp, phòng máy phát điện, phòng kỹ thuật thang
+máy, gian lánh nạn;
+- Trong phòng trực điều khiển chống cháy, phòng bơm chữa cháy và tại các
+vị trí trang bị phương tiện phòng cháy và chữa cháy khác.
+Có thể không cần bố trí trong các trường hợp sau:
+- Sân vườn, khu vực sân thượng không có mái che;
+- Toà nhà cao 01 tầng có diện tích sàn không quá 200 m2 và diện tích
+lỗ hở trên tường ngoài nhà đạt tối thiểu 80%.
+5.1.1
+TCVN
+13456:2022
+
+2
+
+TT Nội dung kiểm tra Quy định của Tiêu chuẩn, Quy chuẩn Căn cứ Nghị định 106/2025/NĐ-CP
+ hậu quả: Buộc duy trì đèn, phương tiện
+chiếu sáng sự cố, chỉ
+dẫn thoát nạn).
+3 Yêu cầu
+hiển thị
+Biển báo an toàn phải được nhìn thấy rõ ràng các chữ “LỐI RA” hoặc chữ
+“EXIT”, ký hiệu hình học khác thích hợp. Màu sắc của biển báo an toàn:
+màu nền là màu xanh lá cây; màu chữ và ký hiệu hình học là màu trắng.
+4.6
+TCVN
+13456:2022
+4 Nguồn
+điện dự
+phòng
+Đèn chiếu sáng sự cố và biển báo an toàn có nguồn điện dự phòng phải đảm
+bảo thời gian hoạt động ổn định liên tục tối thiểu là 120 min khi có sự cố
+cháy, nổ.
+4.5
+TCVN
+13456:2022
+5 Kiểm tra
+duy trì
+hoạt
+động
+- Kiểm tra số lượng, vị trí lắp đặt theo hồ sơ thiết kế đã được duyệt
+- Kiểm tra hoạt động: Ngắt nguồn điện chính đảm bảo nguồn điện dự phòng
+cấp và đèn vẫn hoạt động trong thời gian 02 h
+
+Lưu ý: Nội dung hướng dẫn tại Bảng 3 được áp dụng đối với các công trình được xây dựng mới, cải tạo về PCCC sau thời điểm các tiêu chuẩn,
+quy chuẩn nêu trên có hiệu lực thi hành; các cơ sở đang hoạt động không có cải tạo, thay đổi tính chất sử dụng áp dụng theo các tài liệu đã được
+C07 hướng dẫn phù hợp với thời điểm công trình được xây dựng hoặc cải tạo, thay đổi tính chất sử dụng.

@@ -1,0 +1,219 @@
+[Bảng II.9. Hướng dẫn kiểm tra hệ thống chữa cháy bằng bọt, nước]
+[Hiệu lực: 2025. Trạng thái: ĐANG DÙNG.]
+
+Bảng II.9: Hướng dẫn nội dung kiểm tra hệ thống chữa cháy bằng bọt, nước
+Kiểm tra việc trang bị đúng, đủ số lượng, chủng loại; duy trì hoạt động; thử nghiệm hệ thống, thiết bị được trang bị tại cơ sở
+TT	Nội dung kiểm tra	Quy định của Tiêu chuẩn, quy chuẩn	Căn cứ	Hành vi vi phạm theo Nghị định số 106/2025/NĐ-CP		1	Trang bị hệ thống chữa cháy bằng bọt	TCVN 5307:2009	1. Hành vi không duy trì hoạt động của thiết bị thuộc hệ thống chữa cháy đã được trang bị, lắp đặt (Đb K4 Đ21 NĐ106; phạt tiền từ 10.000.000 đồng đến 20.000.000 đồng; thẩm quyền xử phạt: Chủ tịch UBND tỉnh; Giám đốc Công an tỉnh; biện pháp khắc phục hậu quả: Buộc duy trì hệ thống chữa cháy)
+
+2. Hành vi không duy trì hoạt động của hệ thống chữa cháy đã được trang bị, lắp đặt (điểm b, khoản 6, Điều 21; Phạt tiền từ 40.000.000 đồng đến 50.000.000 đồng; hình thức xử phạt bổ sung: Đình chỉ hoạt động từ 01 tháng đến 03 tháng; Biện pháp khắc phục hậu quả: Buộc duy trì hệ thống chữa cháy; thẩm quyền xử phạt: Chủ tịch UBND cấp tỉnh; Cục trưởng).
+
+3. Hành vi trang bị, lắp đặt thiết bị thuộc hệ thống chữa cháy không bảo đảm theo quy định (Đb K8 Đ20 NĐ106; phạt tiền từ 30.000.000 đồng đến 40.000.000 đồng; thẩm quyền xử phạt: Chủ tịch UBND tỉnh; Cục trưởng C07; Biện pháp khắc phục hậu quả: Buộc trang bị, lắp đặt hệ thống chữa cháy)		-	Quy định trang bị hệ thống chữa cháy cố định	- Các bể nổi có đường kính bằng hoặc lớn hơn 18 m;
+- Các bể nổi có dung tích bằng hoặc lớn hơn 2 000 m3;
+- Các bể nổi có chiều cao bằng hoặc lớn hơn 15 m.
+Chú thích - Khi khu bể chứa được phép bố trí ba dãy bể phải thoả mãn điều 5.2.8 của tiêu chuẩn này.	Điều 5.9.5.1
+TCVN 5307:2009
+		-	Quy định trang bị hệ thống chữa cháy bán cố định	- Các bể nổi có đường kính nhỏ hơn 18 m;
+- Các bể nổi có dung tích từ 400 m3 đến dưới 2 000 m3;
+- Các bể nổi có chiều cao từ 6m đến dưới 15 m;
+- Các bể ngầm có dung tích bằng hoặc lớn hơn 1 000 m3.
+Đối với kho chứa dầu mazut, bố trí một đến hai dãy (không phụ thuộc vào dung tích và kích thước bể chứa) có thể trang bị hệ thống chữa cháy bán cố định khi có sự chấp thuận của cơ quan quản lý về phòng cháy chữa cháy.
+- Các thiết bị sau phải lắp cố định:
++ Đối với bể nổi : Lăng tạo bọt, ống dẫn dung dịch chất tạo bọt, ống tưới mát thành bể lắp cố định vào thành bể và kéo dài tối thiểu tới họng chờ đặt ngoài đê bao ngăn cháy;
++ Đối với bể ngầm : máy bơm, cụm van bể chứa dung dịch chất tạo bọt (thiết bị chứa chất tạo bọt) thiết bị trộn bọt, đường ống dẫn dung dịch chất tạo bọt, đường ống dẫn nước đến họng chờ.	Điều 5.9.5.2
+TCVN 5307:2009
+
+Điều 5.9.6
+TCVN 5307:2009			-	Cường độ, thời gian phun chất tạo bọt bể mái cố định	Bọt bội số nở trung bình:
+Loại DM&SPDM
+Cường độ phun dung dịch chất tạo bọt (I), l/s.m2
+Thời gian phun (T), phút
+
+Đối với DM&SPDM có nhiệt độ chớp cháy nhỏ hơn và bằng 37,8 oC
+0,08
+10
+
+Đối với DM&SPDM có nhiệt độ chớp cháy lớn hơn 37,8 oC
+0,05
+10
+
+Bọt bội số nở thấp
+Loại DM&SPDM
+Cường độ phun dung dịch chất tạo bọt (I), l/s.m2
+Thời gian phun tối thiểu (T), phút
+
+DM&SPDM có nhiệt độ chớp cháy nhỏ hơn và bằng 37,8 oC
+0,068
+55
+
+DM&SPDM có nhiệt độ chớp cháy lớn hơn 37,8 oC đến 93,3 oC
+0,068
+30
+
+Dầu thô
+0,068
+55
+
+Chú thích - Lăng tạo bọt áp dụng trong điều khoản này là loại
+ lăng lắp tại thành bể có tấm chắn để hướng bọt hoặc lăng
+ lắp trên mái nổi.
+
+	Bảng 9
+TCVN 5307:2009
+
+Bảng 10
+TCVN 5307:2009			-	Xác định số lăng phun bọt bể mái cố định	Đường kính bể, m
+Số lượng lăng phun tối thiểu, cái (n)
+
+Đến 24
+1
+
+Lớn hơn 24 đến 36
+2
+
+Lớn hơn 36 đến 42
+3
+
+Lớn hơn 42 đến 48
+4
+
+Lớn hơn 48 đến 54
+5
+
+Lớn hơn 54 đến 60
+6
+
+	Bảng 10
+TCVN 5307:2009			-	Cường độ thời gian phun, đối với bể  Đối với bể mái nổi, khi mái chế tạo theo dạng đĩa kép bằng kim loại hoặc dạng đĩa đơn gắn trên phao kim loại; bể có phao bên trong	Đối với bọt độ nở thấp:
+- Cường độ phun dung dịch chất tạo bọt: 0,2 l/s.m2
+- Thời gian phun bọt tối thiểu: 20 phút
+- Khoảng cách giữa các lăng phun bố trí theo chu vi bể phụ thuộc vào độ cao của gờ chắn bọt.
+- Diện tích mặt thoáng phun bọt lấy bằng diện tích vành khuyên giữa thành bể và gờ chắn bọt.
+Đối với bọt độ nở trung bình :
+- Cường độ phun dung dịch chất tạo bọt : 0,25 l/s.m2
+- Thời gian phun bọt tối thiểu : 10 phút
+- Khoảng cách giữa các lăng phun bọt theo chu vi bể phụ thuộc vào độ cao của gờ chắn bọt.
+- Diện tích mặt thoáng phun bọt lấy bằng diện tích vành khuyên giữa thành bể và gờ chắn bọt.
+Chú thích :
+1) Cách đưa bọt vào bể mái nổi và bể mái nổi bên trong xem phụ lục D.
+2) Dạng mái nổi đĩa kép, đĩa đơn và gờ chắn bọt xem phụ lục E. Các mái nổi khác với hai dạng mái nổi nêu trên không thuộc điều khoản này.	Điều 5.9.11
+TCVN  5307:2009			-	Dự trữ chất tạo bọt	Hệ số dự trữ chất tạo bọt (K) để chữa cháy cho khu vực bể chứa DM&SPDM được quy định như sau:
+- Đối với chất tạo bọt có độ nở trung bình K = 3
+- Đối với chất tạo bọt có độ nở thấp K = 2.	Điều 5.9.15
+TCVN 5307:2009			-	Tính toán dung dịch dung dịch bọt cho hệ thống chữa cháy cố định, số lăng phun bọt	- Tính toán Lưu lượng dung dịch chất tạo bọt cần thiết để chữa cháy bể cháy:
+Qct = Sc.Jct (l/s)
+Trong đó :
+Sc là diện tích bề mặt bể cháy (m2).
+Jct là cường độ phun dung dịch chất tạo bọt, (1/s.m2).
+- Tính toán số lượng lăng phun bọt cần thiết (so sánh với số lượng lăng tối thiểu tại bảng 10).
+Trong đó :
+Qct là lưu lượng dung dịch chất tạo bọt cần thiết để chứa bể cháy, tính bằng l/s;
+qL là lưu lượng phun dung dịch chất tạo bọt của lăng, tính bằng l/s
+Chú thích - Trường hợp chữa cháy vùng đệm kín để mái nổi hoặc bể có phao bên trong, lựa chọn qL cần phải tính đến khoảng cách bố trí lăng phun để bọt không bị tràn qua gờ chắn bọt.	Phụ lục B
+TCVN 5307:2009			2	Hệ thống trụ phun bọt bổ trợ ngoài đê					-	Yêu cầu trang bị	Ngoài thiết bị phun bọt lắp cố định ở bể chứa phải bố trí trụ cấp dung dịch chất tạo bọt bổ trợ phía ngoài đê ngăn cháy để dập tắt đám cháy trong khu đê do sản phẩm bị tràn từ bể chứa. Lưu lượng dung dịch chất tạo bọt cho mỗi trụ ít nhất là 189 l/phút	Điều 5.9.14
+TCVN 5307:2009			-	Số lượng	Đường kính bể lớn nhất, m
+Số lượng trụ bổ trợ, cái
+
+Nhỏ hơn 19,5
+1
+
+Từ 19,5 đến 36
+2
+
+Lớn hơn 36
+3
+
+	Bảng 12
+TCVN 5307:2009			-	Thời gian phun	Đường kính bể lớn nhất, m
+Thời gian hoạt động tối thiểu, phút
+
+Nhỏ hơn 10,5
+10
+
+Từ 10,5 đến 28,5
+20
+
+Lớn hơn 28,5
+30
+
+	Bảng 13
+TCVN 5307:2009			-	Tính toán lượng dung dịch bọt chữa cháy cho hệ thống phun bọt bổ trợ	Lượng dung dịch chất tạo bọt cho hệ thống phun bọt bổ trợ được tính toán như sau:
+Wdd = . NLTB.qL.t
+Trong đó: NL là số lượng lăng phun bọt
+                 QL là lưu lượng của lăng phun bọt bôt trợ ≥189 l/ph
+                  T là thời gian phun				-	Tính toán lượng dung dịch chất tạo bọt cần thiết để chữa cháy bể cháy	Lượng dung dịch chất tạo bọt dự trữ cần thiết, Wdd, tính bằng lít, được xác định theo công thức :
+Wdd = K. NLTB.qL.t + Wd + WBT	(B.3)
+Trong đó :
+- NLTB là số lượng lăng tạo bọt, tính bằng chiếc;
+- qL là lưu lượng phun dung dịch chất tạo bọt của lăng, tính bằng l/s;
+- t là thời gian phun dung dịch, tính bằng giây - Lấy theo điều 5.9.10 (hoặc 5.9.11)
+- WBT là lượng dung dịch chất tạo bọt chữa cháy trong khu vực đê bao ngăn cháy xác định theo điều 5.9.14, tính bằng lít;
+- K là hệ số dự trữ (lấy theo điều 5.9.15);
+- Wd là lượng dung dịch chất tạo bọt ứ đọng trong đường ống, tính bằng lít. Trong trường hợp sử dụng hệ thống chữa cháy cố định, Wd được tính như sau:
+Wd = (0,785 ∑i=1n d2i.li). 1000
+Trong đó :
+di là đường kính của từng loại ống dẫn, tính bằng mét;
+li là độ dài của từng loại ống dẫn, tính bằng mét.
+Nếu lượng dung dịch chất tạo bọt ứ đọng trong đường ống tính được nhỏ hơn hoặc bằng 5% lượng dung dịch chất tạo bọt cần thiết để chữa cháy thì không cộng thêm vào. Nếu lượng dung dịch chất tạo bọt ứ đọng trong đường ống tính được lớn hơn hoặc bằng 5% lượng dung dịch chất tạo cần thiết để chữa cháy thì phải cộng thêm vào.	Phụ lục B
+TCVN 5307:2009			-	Tính toán lượng chất tạo bọt	Lượng chất tạo bọt cần thiết dự trữ trong kho để chữa cháy WCTB, tính bằng lít, được xác định theo công thức :
+Trong đó :
+Wdd là lượng dung dịch chất tạo bọt dự trữ cần thiết, tính bằng lít;
+CB là nồng độ chất tạo bọt trong dung dịch để chữa cháy, tính bằng phần trăm.				-	Tính toán lượng nước cần thiết	Lượng nước cần thiết để pha chất tạo bọt thành dung dịch WN, tính bằng lít, được xác định theo công thức:
+Trong đó :
+Wdd là lượng dung dịch chất tạo bọt dự trữ cần thiết, tính bằng lít;
+CN là nồng độ nước trong dung dịch chất tạo bọt, tính bằng phần trăm.				3	Hệ thống làm mát					-	Số lượng bể cần làm mát (bể cháy và bể lân cận)	chu vi bể bị cháy và một nửa chu vi các bể lân cận nằm trong khoảng cách bằng hoặc nhỏ hơn 2 lần đường kính của bể bị cháy	Điều 5.9.16
+TCVN 5307:2009			-	Tính toán lưu lượng nước làm mát cho bể nổi	Lưu lượng nước cần thiết để tưới mát bể bị cháy và tưới mát các bể lân cận, QTM, tính bằng l/s, được xác định theo công thức :
+QTM = Pc.J1 + 0,5 J2 ∑i=1n Pi	(B.6)
+Trong đó :
+PC là chu vi bể bị cháy, tính bằng mét;
+Pi là chu vi bể lân cận bể bị cháy trong phạm vi khoảng cách nhỏ hơn hoặc bằng 2 lần đường kính bể bị cháy, tính bằng mét;
+J1 là cường độ phun nước tưới mát bể bị cháy, tính bằng 0,5 l/s.m;
+J2 là cường độ phun nước tưới mát bể lân cận, tính bằng 0,2 l/s.m. 	Điều 5.9.16.1, Phụ lục B
+TCVN 5307:2009			-	Tính toán lượng nước làm mát cho bể ngầm	Lưu lượng nước tưới mát làm giảm nhiệt độ môi trường xung quanh, làm mát bề mặt phía trên bể ngăn lân cận và làm mát người làm nhiệm vụ chữa cháy được tính như sau;
+- 10 lít/giây đối với bể có dung tích từ 100 m3 đến 1 000 m3;
+- 20 lít/giây đối với bể có dung tích từ 1 001 m3 đến 5 000 m3
+- 30 lít/giây đối với bể có dung tích từ 5 001 m3 đến 30 000 m3
+- 50 lít/giây đối với bể có dung tích từ 30 001 m3 đến 50 000 m3	Điều 5.9.16.2, Phụ lục B
+TCVN 5307:2009			-	Tính toán lượng nước làm mát	Thời gian để xác định lượng nước tưới mát bể bị cháy và bể lân cận phải lấy ít nhất là 3 giờ và tính cho một đám cháy lớn nhất.
+Tính toán: WTM = QTM.T	Điều 5.9.16.3, Phụ lục B
+TCVN 5307:2009			4	Trạm bơm					-	Các giải pháp kỹ thuât của trạm bơm 	Tuân thủ theo QCVN 02:2020/BCA	QCVN 02:2020/BCA			-	Máy bơm bọt (nếu hệ thống sử dụng trộn bọt bằng bơm bọt)	Đối với hệ thống chữa cháy cố định bằng bọt có sử dụng thiết bị định lượng bằng máy bơm độc lập với máy bơm nước thì cần phải bố trí máy bơm bọt dự phòng có tính năng tương đương với máy bơm bọt chính.	Điều 5.9.20
+TCVN 5307:2009	1. Không trang bị phương tiện chữa cháy, cứu nạn, cứu hộ cơ giới (Đc K9 Đ20 NĐ106; phạt tiền từ 40.000.000 đồng đến 50.000.000 đồng; thẩm quyền xử phạt: Chủ tịch UBND tỉnh;  Cục trưởng C07)
+
+2. Không đưa phương tiện chữa cháy, cứu nạn, cứu hộ cơ giới vào trực chữa cháy, cứu nạn, cứu hộ (K5 Đ21 NĐ106; phạt tiền từ 20.000.000 đồng đến 25.000.000 đồng; thẩm quyền xử phạt: Chủ tịch UBND tỉnh; Giám đốc)		5	Nguồn nước chữa cháy					-	Khối tích bể	Tính toán: W = WTM+WN	Tính toán 			-	Nguồn nước	Nguồn nước chữa cháy cho kho trong mọi thời điểm có thể lấy từ sông, hồ, ao và từ nguồn nước sạch công cộng 	Điều 5.9.21
+TCVN 5307:2009			-	Thời gian phục hồi nước chữa cháy, tưới mát và lượng chất tạo bọt	Thời gian bổ sung đủ lượng nước dự trữ chậm nhất là 48 giờ, trường hợp ở những nơi hiếm nước cho phép kéo dài hơn nhưng không quá 96 giờ. Thời gian bổ sung đủ lượng chất tạo bọt dự trữ chậm nhất là 48 giờ.	Điều 5.9.17
+TCVN 5307:2009			5	Bố trí đường ống, thiết bị					-	Làm mát thành bể	Khi thành bể có vành tăng cường bố trí phía ngoài phải làm máng hướng dòng nước làm mát phủ toàn bộ diện tích thành bể.	Điều 5.9.18
+TCVN 5307:2009			-	Bố trí mạng đường ống	Đường ống dẫn nước tưới mát và đường ống dẫn dung dịch chất tạo bọt chữa cháy phải thiết kế riêng biệt theo mạng vòng cho khu bể chứa và nhánh cụt đến nhà kho bảo quản sản phẩm chứa trong phuy, trạm bơm sản xuất, khu vực xuất nhập đường bộ, xuất nhập đường sắt và cầu cảng. Các van thao tác bố trí phía ngoài đê ngăn cháy đảm bảo an toàn thuận tiện thao tác khi có sự cố cháy ở khu bể.
+Đường ống tưới mát chạy vòng lắp cố định đỉnh thành bể và các van thao tác phải bố trí đảm bảo yêu cầu quy định trong điều 5.9.16 cho mọi trường hợp khi có cháy ở khu bể.
+Tuyến ống chính có đường kính tối thiểu 100mm	Điều 5.9.19
+TCVN 5307:2009
+
+Điều 10.8 TCVN 2622			-	Vị trí Các trụ lấy nước, trụ lấy dung dịch chất tạo bọt	bố trí không đặt cách xa mép đường quá 2,5 m và bố trí ở khu vực thuận tiện cho các phương tiện di động phối hợp chữa cháy	Điều 5.9.19
+TCVN 5307:2009			-	Bến lấy nước	Khoảng cách từ vị trí lấy nước đến bể chứa gần nhất theo quy định:
+- Khi dùng ô tô chữa cháy yêu cầu lớn hơn 40m và nhỏ hơn 200m;
+- Khi dùng máy bơm di động chữa cháy yêu cầu lớn hơn 40m và nhỏ hơn 150m.	Điều 5.9.21
+TCVN 5307:2009			-	Áp suất làm việc của hệ thống	Áp suất yêu cầu đối với hệ thống phun bọt và tưới mát cho bể trụ đứng:
+- Đối với thiết bị tạo bọt xác định theo yêu cầu của kiểu thiết bị được lắp đặt ;
+- Đối với hệ thống tưới mát bể chứa lắp cố định yêu cầu trước vòi phun ở điểm xa nhất không nhỏ hơn 0,6 kg/cm2;
+Chú thích - Hệ thống đường ống dẫn dung dịch chất tạo bot, đường ống dẫn nước tưới mát thử thuỷ lực bằng 1,25 lần áp suất làm việc.	Điều 5.9.22
+TCVN 5307:2009			-	Van trên đường ống	- Khi lắp van lưới gà (clape) thì phải bố trí tại hố thu nước ở bên trong đê và bộ phận điều khiển van bố trí phía ngoài đê hoặc trên mặt đê ngăn cháy;
+- Khi lắp van chặn thì phải bố trí phía ngoài đê ngăn cháy	Điều 5.9.26
+TCVN 5307:2009			6	Kiểm tra, thử nghiệm	Kiểm tra:
++ Bồn/téc chứa chất tạo bọt: Vị trí lắp đặt, lượng chất tạo bọt so với hồ sơ thiết kế được duyệt và bản vẽ hoàn công.
++ Thiết bị trộn và định lượng chất tạo bọt: Vị trí lắp đặt, thông số (tỷ lệ trộn bọt) phù hợp với loại bọt theo thiết kế.
++ Tủ điều khiển (đối với hệ thống chữa cháy tự động bằng bọt độc lập), chủng loại, vị trí lắp đặt.
++ Kiểm tra về đường ống dẫn hỗn hợp chất tạo bọt và nước chữa cháy (đường kính ống, chiều dài tuyến ống);
++ Kiểm tra về vị trí lắp đặt van cổng, van tràn ngập nối từ đường ống hệ thống cấp nước chữa cháy vào hệ thống chữa cháy tự động bằng bọt (lưu ý van cổng là van thường mở, van này phải có tín hiệu giám sát kết nối về tủ báo cháy cháy trung tâm);
++ Kiểm tra về chủng loại đầu phun tạo bọt, số lượng đầu phun, khoảng cách giữa các đầu phun;
+- Thử nghiệm:
++ Trường hợp kích hoạt bằng báo cháy: Hệ thống báo cháy tự động điều khiển hệ thống chữa cháy bằng bọt phải đảm bảo mỗi điểm được bảo vệ bởi 02 đầu báo cháy thuộc 02 kênh khác nhau;
++ Trường hợp kích hoạt bằng hệ thống sprinkler: Kiểm tra bố trí, lắp đầu phun (tương tự như hệ thống sprinkler) và kết nối tới van tràn ngập. Lưu ý: Không cần xem xét hệ số K, đường kính ống của đầu phun và số lượng đầu phun trên ống nhánh;
++ Kích hoạt bằng tay: Kích hoạt bằng van điện hoặc van xả tại vị trí lắp đặt van tràn ngập.
++ Đưa van cổng trước van điện từ/van tràn ngập về trạng thái đóng để kiểm tra việc giám sát van tại phòng trực điều khiển trung tâm, sau đó đưa vào cổng về trạng thái thường mở;
++ Thử kích hoạt tự động:
+*Thử nghiệm hoạt động của đầu báo cháy thứ 1: Tín hiệu truyền về tủ điều khiển và tủ báo cháy chung của công trình, sau đó chuông, đèn tại khu vực bảo vệ hoạt động;
+* Thử nghiệm hoạt động của đầu báo cháy thứ 2 (kênh thứ 2): Kiểm tra xem đã đưa tín hiệu về tủ điều khiển hệ thống chữa cháy tự động bằng bọt hay chưa. Sau thời gian trễ van điện từ/van tràn ngập kích hoạt để điều khiển xả bọt;
+* Nhấn nút ấn khẩn tại khu vực lắp đặt hệ thống chữa cháy tự động bằng thì tủ điều khiển mở van điện từ để hệ thống hoạt động;
+* Thử đầu phun sprinkler hoạt động để kích hoạt van tràn ngập và hệ thống phun bọt (đối với trường hợp kích hoạt bằng đầu phun sprinkler);
++ Sau khi thử nghiệm hệ thống ở chế độ tự động, tiến hành thử nghiệm bằng tay tại vị trí van điện từ/van tràn ngập hoặc điều khiển từ xa tại vị trí phòng trực điều khiển trung tâm (nếu có);
++ Sau khi kết thúc kiểm tra reset, khóa van điện từ đưa hệ thống trở lại trạng thái thường trực.				Lưu ý: Nội dung hướng dẫn tại Bảng trên được áp dụng đối với các công trình được xây dựng mới, cải tạo về PCCC sau thời điểm các tiêu chuẩn, quy chuẩn nêu trên có hiệu lực thi hành; các cơ sở đang hoạt động không có cải tạo, thay đổi tính chất sử dụng áp dụng theo các tài liệu đã được C07 hướng dẫn phù hợp với thời điểm công trình được xây dựng hoặc cải tạo, thay đổi tính chất sử dụng.
+
+50
