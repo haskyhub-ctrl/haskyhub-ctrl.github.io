@@ -1,0 +1,40 @@
+name: Biên soạn wiki tri thức và tìm văn bản mới (trên server)
+
+# Chạy tay: tab Actions -> chọn workflow này -> Run workflow.
+# Việc làm: biên soạn các trang wiki (luôn ở dạng NHÁP, chưa dùng để trả lời) và/hoặc chạy một lượt tìm văn bản mới.
+# Kết quả xem ở trang Kho tài liệu AI (mục Wiki tri thức, Văn bản mới).
+
+on:
+  workflow_dispatch:
+    inputs:
+      do_wiki:
+        description: "Biên soạn các chủ đề wiki còn thiếu"
+        type: boolean
+        default: true
+      do_watch:
+        description: "Chạy một lượt tìm văn bản mới về PCCC, CNCH"
+        type: boolean
+        default: true
+
+jobs:
+  run:
+    name: Chạy trên server
+    runs-on: ubuntu-latest
+    steps:
+      - name: Chạy qua SSH
+        uses: appleboy/ssh-action@v1.0.3
+        env:
+          DO_WIKI: ${{ inputs.do_wiki }}
+          DO_WATCH: ${{ inputs.do_watch }}
+        with:
+          host: ${{ secrets.ORACLE_HOST }}
+          username: ${{ secrets.ORACLE_USER }}
+          key: ${{ secrets.ORACLE_SSH_KEY }}
+          envs: DO_WIKI,DO_WATCH
+          command_timeout: 45m
+          script: |
+            exec 2>&1
+            cd /home/ubuntu/fras/backend
+            source venv/bin/activate
+            if [ "$DO_WATCH" = "true" ]; then python run_wiki.py --watch; fi
+            if [ "$DO_WIKI" = "true" ]; then python run_wiki.py; fi

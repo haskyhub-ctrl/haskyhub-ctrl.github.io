@@ -16,7 +16,7 @@ from sqlalchemy.orm import Session
 from database import get_db
 from middleware.auth_middleware import get_current_user
 from middleware.rbac import require_role
-from models import KbQuestion, User
+from models import KbQuestion, LawCandidate, User
 from utils import local_rag
 from utils.kb_qa import question_key
 
@@ -284,3 +284,175 @@ def delete_question(qid: str, current_user: User = Depends(get_current_user), db
     db.delete(row)
     db.commit()
     return {"deleted": True}
+
+
+# ------------------------------------------------------------------ văn bản mới theo dõi hằng tuần
+def _lc_view(r: LawCandidate) -> dict:
+    return {
+        "id": r.id, "url": r.url, "title": r.title, "snippet": r.snippet or "", "source": r.source or "", "published": r.published or "",
+        "found_at": r.found_at.isoformat() if r.found_at else None, "status": r.status, "kind": r.kind or "",
+        "summary": r.summary or "", "hint": r.hint or "", "kho_doc_id": r.kho_doc_id,
+    }
+
+
+@router.get("/watch")
+def watch_list(status: str = Query("new", pattern="^(new|ingested|ignored|all)$"), current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
+    _admin(current_user)
+    from utils import law_watch
+    qry = db.query(LawCandidate)
+    if status == "all":
+        qry = qry.filter(LawCandidate.relevant.is_(True))
+    else:
+        qry = qry.filter(LawCandidate.status == status)
+        if status == "new":
+            qry = qry.filter(LawCandidate.relevant.is_(True))
+    rows = qry.order_by(LawCandidate.found_at.desc()).limit(200).all()
+    counts = {s: db.query(LawCandidate).filter(LawCandidate.status == s, LawCandidate.relevant.is_(True)).count() for s in ("new", "ingested", "ignored")}
+    return {"items": [_lc_view(r) for r in rows], "counts": counts, "last_run": law_watch.last_run()}
+
+
+_watch_running = {"on": False}
+
+
+@router.post("/watch/run")
+def watch_run(current_user: User = Depends(get_current_user)):
+    """Chạy ngay một lượt tìm văn bản mới (chạy nền, vài phút)."""
+    _admin(current_user)
+    import threading
+    if _watch_running["on"]:
+        return {"started": False, "message": "Đang chạy, vui lòng chờ."}
+    from database import SessionLocal
+    from utils import law_watch
+
+    def job():
+        _watch_running["on"] = True
+        db = SessionLocal()
+        try:
+            law_watch.run(db)
+        except Exception as e:
+            print(f"[law_watch] Lỗi chạy tay: {e}")
+        finally:
+            db.close()
+            _watch_running["on"] = False
+
+    threading.Thread(target=job, daemon=True).start()
+    return {"started": True, "message": "Đã bắt đầu tìm văn bản mới, vài phút nữa bấm làm mới để xem kết quả."}
+
+
+@router.get("/watch/status")
+def watch_status(current_user: User = Depends(get_current_user)):
+    _admin(current_user)
+    from utils import law_watch
+    return {"running": _watch_running["on"], "last_run": law_watch.last_run()}
+
+
+@router.post("/watch/{cid}/ignore")
+def watch_ignore(cid: str, current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
+    _admin(current_user)
+    r = db.get(LawCandidate, cid)
+    if not r:
+        raise HTTPException(status_code=404, detail="Không tìm thấy mục")
+    r.status, r.reviewed_at = "ignored", datetime.utcnow()
+    db.commit()
+    return _lc_view(r)
+
+
+@router.post("/watch/{cid}/ingest")
+def watch_ingest(cid: str, current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
+    """Tải nội dung về kho ở dạng nháp (chưa dùng để trả lời, cán bộ rà soát rồi bật ở mục Tài liệu)."""
+    _admin(current_user)
+    r = db.get(LawCandidate, cid)
+    if not r:
+        raise HTTPException(status_code=404, detail="Không tìm thấy mục")
+    from utils import law_watch
+    try:
+        res = law_watch.ingest_url(r.url, r.title)
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=f"Không nạp được: {e}")
+    r.status, r.kho_doc_id, r.reviewed_at = "ingested", res["id"], datetime.utcnow()
+    db.commit()
+    return {"item": _lc_view(r), "chars": res["chars"]}
+
+
+# ------------------------------------------------------------------ xem, sửa nội dung tài liệu
+class DocText(BaseModel):
+    text: str
+
+
+def _doc_path(doc_id: str) -> str:
+    return os.path.join(local_rag.KHO_DIR, os.path.basename(doc_id))
+
+
+@router.get("/docs/{doc_id}/text")
+def doc_text(doc_id: str, current_user: User = Depends(get_current_user)):
+    _admin(current_user)
+    man = local_rag.load_manifest()
+    if doc_id not in man or not os.path.isfile(_doc_path(doc_id)):
+        raise HTTPException(status_code=404, detail="Không tìm thấy nội dung tài liệu")
+    with open(_doc_path(doc_id), "r", encoding="utf-8", errors="replace") as f:
+        text = f.read()
+    return {"id": doc_id, "title": man[doc_id].get("title"), "status": man[doc_id].get("status"), "text": text[:400000], "truncated": len(text) > 400000}
+
+
+@router.put("/docs/{doc_id}/text")
+def doc_text_save(doc_id: str, body: DocText, current_user: User = Depends(get_current_user)):
+    """Sửa nội dung tài liệu dạng văn bản (trang wiki, tài liệu từ bộ nạp sẵn hoặc từ web)."""
+    _admin(current_user)
+    man = local_rag.load_manifest()
+    meta = man.get(doc_id)
+    if not meta or not doc_id.endswith(".txt"):
+        raise HTTPException(status_code=400, detail="Chỉ sửa được tài liệu dạng văn bản (.txt)")
+    text = body.text.strip()
+    if len(text) < 50:
+        raise HTTPException(status_code=400, detail="Nội dung quá ngắn")
+    with open(_doc_path(doc_id), "w", encoding="utf-8") as f:
+        f.write(text)
+    meta["chars"] = len(text)
+    meta["chunks"] = local_rag.count_chunks(text)
+    meta["admin_edited"] = True
+    local_rag.save_manifest(man)
+    local_rag.reindex()
+    return _doc_view(doc_id, meta)
+
+
+# ------------------------------------------------------------------ wiki tri thức
+_wiki_job = {"running": False, "done": 0, "total": 0, "current": "", "errors": []}
+
+
+@router.get("/wiki")
+def wiki_list(current_user: User = Depends(get_current_user)):
+    _admin(current_user)
+    from utils import wiki
+    return {"topics": wiki.status(), "job": dict(_wiki_job)}
+
+
+class WikiGen(BaseModel):
+    slugs: Optional[list] = None      # bỏ trống: biên soạn các chủ đề chưa có trang
+
+
+@router.post("/wiki/generate")
+def wiki_generate(body: WikiGen, current_user: User = Depends(get_current_user)):
+    """Biên soạn trang wiki bằng AI (chạy nền, mỗi trang khoảng nửa phút). Trang mới ở dạng nháp."""
+    _admin(current_user)
+    import threading
+    from utils import wiki
+    if _wiki_job["running"]:
+        return {"started": False, "message": "Đang biên soạn, vui lòng chờ."}
+    slugs = body.slugs or [t["slug"] for t in wiki.status() if t["state"] == "none"]
+    slugs = [s for s in slugs if s in wiki.TOPIC_BY_SLUG]
+    if not slugs:
+        return {"started": False, "message": "Không có chủ đề nào cần biên soạn."}
+
+    def job():
+        _wiki_job.update({"running": True, "done": 0, "total": len(slugs), "current": "", "errors": []})
+        for sl in slugs:
+            _wiki_job["current"] = wiki.TOPIC_BY_SLUG[sl][1]
+            try:
+                wiki.generate(sl)
+            except Exception as e:
+                _wiki_job["errors"].append(f"{wiki.TOPIC_BY_SLUG[sl][1]}: {str(e)[:120]}")
+            _wiki_job["done"] += 1
+        _wiki_job.update({"running": False, "current": ""})
+
+    threading.Thread(target=job, daemon=True).start()
+    return {"started": True, "message": f"Đã bắt đầu biên soạn {len(slugs)} trang, mỗi trang khoảng nửa phút."}

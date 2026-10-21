@@ -247,9 +247,12 @@ async def lifespan(app: FastAPI):
 
     # Khởi chạy dịch vụ cron tự động sao lưu CSDL định kỳ
     backup_task = asyncio.create_task(auto_backup_task())
+    from utils.law_watch import weekly_loop
+    watch_task = asyncio.create_task(weekly_loop())
     
     yield
     # Shutdown
+    watch_task.cancel()
     backup_task.cancel()
     try:
         await backup_task

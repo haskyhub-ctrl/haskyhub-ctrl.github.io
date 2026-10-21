@@ -307,3 +307,23 @@ class KbQuestion(Base):
     created_at = Column(DateTime, default=datetime.utcnow)
     answered_at = Column(DateTime, nullable=True)
     answered_by = Column(String(36), nullable=True)
+
+
+class LawCandidate(Base):
+    """Văn bản, bài viết mới về PCCC tìm được trên mạng, chờ cán bộ rà soát trước khi đưa vào kho."""
+    __tablename__ = "law_candidates"
+
+    id = Column(String(36), primary_key=True, default=generate_uuid)
+    url = Column(String(900), nullable=False, unique=True, index=True)
+    title = Column(String(500), nullable=False)
+    snippet = Column(Text, nullable=True)
+    source = Column(String(120), nullable=True)
+    published = Column(String(30), nullable=True)
+    found_at = Column(DateTime, default=datetime.utcnow, index=True)
+    status = Column(String(20), default="new", index=True)       # new, ingested, ignored
+    relevant = Column(Boolean, nullable=True)
+    kind = Column(String(60), nullable=True)
+    summary = Column(Text, nullable=True)
+    hint = Column(String(300), nullable=True)
+    reviewed_at = Column(DateTime, nullable=True)
+    kho_doc_id = Column(String(120), nullable=True)

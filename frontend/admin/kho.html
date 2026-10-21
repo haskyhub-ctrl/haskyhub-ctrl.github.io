@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/css/main.css?v=20261014_gov2">
     <link rel="stylesheet" href="/css/admin.css?v=20261014_gov2">
     <link rel="stylesheet" href="/css/admin-teams.css?v=20261022_t4">
-    <link rel="stylesheet" href="/css/admin-kho.css?v=20261023_k1">
+    <link rel="stylesheet" href="/css/admin-kho.css?v=20261023_k2">
 </head>
 
 <body>
@@ -57,6 +57,8 @@
             <div class="tm-tabs">
                 <button class="tm-tab active" id="kt-docs" onclick="KHO.tab('docs')">Tài liệu</button>
                 <button class="tm-tab" id="kt-qs" onclick="KHO.tab('qs')">Câu hỏi khó <span id="kho-pending" class="kho-count">0</span></button>
+                <button class="tm-tab" id="kt-wiki" onclick="KHO.tab('wiki')">Wiki tri thức</button>
+                <button class="tm-tab" id="kt-watch" onclick="KHO.tab('watch')">Văn bản mới <span id="kho-newcount" class="kho-count">0</span></button>
                 <button class="tm-tab" id="kt-test" onclick="KHO.tab('test')">Thử tra cứu</button>
             </div>
 
@@ -111,6 +113,48 @@
                 <div id="kq-list"></div>
             </div>
 
+            <!-- Wiki tri thức -->
+            <div id="kp-wiki" style="display:none;">
+                <div class="kho-box">
+                    <h3>Wiki tri thức PCCC</h3>
+                    <p class="kho-intro" style="margin:0 0 8px;">Mỗi chủ đề là một <strong>trang tổng hợp</strong> do AI biên soạn từ kho tài liệu, có trích dẫn Điều, giúp Trợ lý Chi trả lời nhanh và đúng hơn so với tìm trong văn bản thô.
+                        Trang mới ở dạng <strong>nháp</strong>: bạn bấm <strong>Xem, sửa</strong> để rà soát, rồi <strong>Bật</strong> thì Trợ lý mới dùng. Nên biên soạn lại khi có văn bản mới.</p>
+                    <div class="kho-form">
+                        <button class="btn btn-primary btn-sm" onclick="KHO.genWiki()">✨ Biên soạn các chủ đề còn thiếu</button>
+                        <button class="btn btn-secondary btn-sm" onclick="KHO.loadWiki()">🔄 Làm mới</button>
+                        <span id="kwi-job" class="kho-msg"></span>
+                    </div>
+                </div>
+                <div class="table-wrapper">
+                    <table>
+                        <thead><tr><th>Chủ đề</th><th>Trạng thái</th><th class="tm-num">Ký tự</th><th></th></tr></thead>
+                        <tbody id="kwi-body"><tr><td colspan="4" class="tm-empty"><div class="loading-spinner"></div></td></tr></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Văn bản mới tìm được hằng tuần -->
+            <div id="kp-watch" style="display:none;">
+                <div class="kho-box">
+                    <h3>Theo dõi văn bản mới về PCCC và CNCH</h3>
+                    <p class="kho-intro" style="margin:0 0 8px;">Hệ thống tự tìm trên mạng vào <strong>sáng thứ Hai hằng tuần</strong>, lọc bằng AI và đưa vào danh sách này.
+                        Bấm <strong>Nạp vào kho (nháp)</strong> để tải nội dung về; tài liệu nháp chưa được dùng để trả lời cho đến khi bạn rà soát và bật ở mục <strong>Tài liệu</strong>.</p>
+                    <div class="kho-form">
+                        <label>Hiển thị
+                            <select id="kw-status" onchange="KHO.loadWatch()">
+                                <option value="new">Chờ rà soát</option>
+                                <option value="ingested">Đã nạp vào kho (nháp)</option>
+                                <option value="ignored">Đã bỏ qua</option>
+                            </select>
+                        </label>
+                        <button class="btn btn-primary btn-sm" onclick="KHO.runWatch()">🔎 Tìm ngay</button>
+                        <button class="btn btn-secondary btn-sm" onclick="KHO.loadWatch()">🔄 Làm mới</button>
+                        <span id="kw-last" class="kho-msg"></span>
+                    </div>
+                </div>
+                <div id="kw-list"></div>
+            </div>
+
             <!-- Thử tra cứu -->
             <div id="kp-test" style="display:none;">
                 <div class="kho-box">
@@ -125,9 +169,22 @@
         </main>
     </div>
 
+    <div id="kd-modal" class="kd-modal" style="display:none;">
+        <div class="kd-modal-box">
+            <div class="kd-modal-head"><strong id="kd-modal-title"></strong><button class="kd-del" onclick="KHO.closeDoc()">Đóng ✕</button></div>
+            <p class="kho-intro" style="margin:0 0 6px;font-size:0.8rem;">Ký hiệu trình bày: <code>&gt;&gt;</code> kết luận, <code>##</code> tiêu đề mục, <code>!!</code> lưu ý, <code>**đậm**</code>, <code>{{căn cứ}}</code>.</p>
+            <textarea id="kd-modal-text" rows="22"></textarea>
+            <div class="kq-actions">
+                <button class="btn btn-secondary btn-sm" onclick="KHO.saveDoc(false)">Lưu</button>
+                <button class="btn btn-primary btn-sm" onclick="KHO.saveDoc(true)">✔ Lưu và bật dùng</button>
+                <span id="kd-modal-msg" class="kho-msg"></span>
+            </div>
+        </div>
+    </div>
+
     <script src="/js/api.js?v=20261021_t1"></script>
     <script src="/js/admin.js"></script>
-    <script src="/js/admin-kho.js?v=20261023_k1"></script>
+    <script src="/js/admin-kho.js?v=20261023_k3"></script>
     <script>onReady(() => { setupNavbar(); KHO.init(); });</script>
 </body>
 </html>

@@ -28,6 +28,11 @@
 .kt-hit { margin: 0 0 10px; padding: 10px 14px; background: #fff; border: 1px solid #D8DCE6; border-left: 6px solid #1A3A6B; font-size: 0.88rem; line-height: 1.5; }
 .kt-hit b { color: #0F2347; }
 .kt-hit small { display: block; color: #64748b; margin-bottom: 4px; }
+.kd-modal { position: fixed; inset: 0; background: rgba(15,35,71,.65); z-index: 2000; display: flex; align-items: center; justify-content: center; padding: 14px; }
+.kd-modal-box { background: #fff; width: 100%; max-width: 900px; max-height: 94vh; overflow: auto; padding: 14px 16px; border-top: 5px solid #C0202A; }
+.kd-modal-head { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 8px; color: #0F2347; }
+.kd-modal-box textarea { width: 100%; font-family: Consolas, monospace; font-size: 0.82rem; line-height: 1.5; padding: 8px; border: 1.5px solid #94A3B8; box-sizing: border-box; margin-bottom: 8px; }
+.kd-link { background: none; border: none; color: #1A3A6B; font-weight: 700; cursor: pointer; padding: 0 6px; }
 @media (max-width: 640px) {
     .kho-form input[type="text"], .kho-form select, .kho-form input[type="file"] { min-width: 0; width: 100%; }
     .kho-form label { width: 100%; }
