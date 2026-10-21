@@ -1,0 +1,45 @@
+name: Nạp lại toàn bộ tài khoản cơ sở (XÓA tài khoản và bài khảo sát cũ)
+
+# Chạy tay: tab Actions -> chọn workflow này -> Run workflow -> gõ đúng chữ XOA-VA-NAP-LAI.
+# Việc làm: sao lưu CSDL, xóa mọi tài khoản không phải quản trị (cơ sở, người dân) cùng toàn bộ bài khảo sát,
+# rồi nạp lại từ file danh_sach_co_so_latest.csv trong kho mã. Giữ lại tài khoản admin và superadmin.
+# Nếu sao lưu lỗi thì dừng, không xóa gì.
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirm:
+        description: "Gõ đúng chữ XOA-VA-NAP-LAI để xác nhận"
+        required: true
+        type: string
+
+jobs:
+  reimport:
+    name: Xóa và nạp lại tài khoản cơ sở
+    runs-on: ubuntu-latest
+    steps:
+      - name: Kiểm tra chữ xác nhận
+        run: |
+          if [ "${{ inputs.confirm }}" != "XOA-VA-NAP-LAI" ]; then
+            echo "Chữ xác nhận không đúng, dừng lại."; exit 1
+          fi
+
+      - name: Nạp lại qua SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.ORACLE_HOST }}
+          username: ${{ secrets.ORACLE_USER }}
+          key: ${{ secrets.ORACLE_SSH_KEY }}
+          command_timeout: 30m
+          script: |
+            exec 2>&1
+            set -e
+            cd /home/ubuntu/fras
+            git fetch origin main && git reset --hard origin/main
+            cd backend
+            source venv/bin/activate
+            sudo systemctl stop fras.service
+            python reimport_facilities.py --csv ../danh_sach_co_so_latest.csv --wipe --yes || { echo "LỖI khi nạp lại"; sudo systemctl start fras.service; exit 1; }
+            sudo systemctl start fras.service
+            sleep 5
+            sudo systemctl is-active --quiet fras.service && echo "Dịch vụ đang chạy" || { echo "LỖI: dịch vụ không chạy"; exit 1; }

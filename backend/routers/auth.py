@@ -18,53 +18,28 @@ router = APIRouter(prefix="/api/auth", tags=["Authentication"])
 
 
 def find_facility_in_csv(code: str):
-    """Search for facility details in danh_sach_co_so_latest.csv if available."""
-    candidates = [
-        os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "danh_sach_co_so_latest.csv"),
-        os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "danh_sach_co_so_latest.csv"),
-        os.path.join(os.getcwd(), "danh_sach_co_so_latest.csv"),
-        os.path.join(os.getcwd(), "..", "danh_sach_co_so_latest.csv"),
-    ]
-    csv_path = None
-    for p in candidates:
-        if os.path.exists(p):
-            csv_path = p
-            break
-
-    if not csv_path:
+    """Tra cứu cơ sở trong danh_sach_co_so_latest.csv (đã nạp sẵn vào bộ nhớ, đọc tọa độ kiểu Việt Nam)."""
+    from utils.facility_import import find_in_csv
+    rec = find_in_csv(code)
+    if not rec:
         return None
-
-    try:
-        with open(csv_path, "r", encoding="utf-8", errors="replace") as f:
-            reader = csv.reader(f)
-            for row in reader:
-                if len(row) > 1 and row[1].strip() == code:
-                    lat = None
-                    lng = None
-                    try:
-                        if len(row) > 3 and row[3].strip() and float(row[3].strip()) > 0:
-                            lat = float(row[3].strip())
-                    except ValueError:
-                        pass
-                    try:
-                        if len(row) > 4 and row[4].strip() and float(row[4].strip()) > 0:
-                            lng = float(row[4].strip())
-                    except ValueError:
-                        pass
-
-                    return {
-                        "organization": row[0].strip() if len(row) > 0 else "Cơ sở diện quản lý PCCC",
-                        "code": code,
-                        "name": row[2].strip() if len(row) > 2 else f"Cơ sở {code}",
-                        "lat": lat,
-                        "lng": lng,
-                        "province": row[5].strip() if len(row) > 5 and row[5].strip() else "Tỉnh Bắc Ninh",
-                        "ward": row[6].strip() if len(row) > 6 else "",
-                        "raw_type": row[7].strip() if len(row) > 7 else "",
-                    }
-    except Exception:
-        pass
-    return None
+    return {
+        "organization": rec["team"],
+        "team": rec["team"],
+        "code": code,
+        "name": rec["name"],
+        "lat": rec["lat"],
+        "lng": rec["lng"],
+        "province": rec["province"],
+        "ward": rec["ward"],
+        "raw_type": rec["type_label"],
+        "facility_types": rec["facility_types"],
+        "type_label": rec["type_label"],
+        "land_area": rec["land_area"],
+        "built_area": rec["built_area"],
+        "workers_office": rec["workers_office"],
+        "workers_after": rec["workers_after"],
+    }
 
 
 DEFAULT_FACILITY_PASSWORD = "Pc07@123"
@@ -88,7 +63,13 @@ def lookup_and_create_facility_user(code: str, db: Session):
         province=info["province"] or "Tỉnh Bắc Ninh",
         latitude=info["lat"],
         longitude=info["lng"],
-        facility_types="Chưa có loại hình",
+        facility_types=info.get("facility_types") or "Chưa có loại hình",
+        management_team=info.get("team"),
+        facility_type_label=info.get("type_label") or None,
+        land_area=info.get("land_area"),
+        built_area=info.get("built_area"),
+        workers_office=info.get("workers_office"),
+        workers_after=info.get("workers_after"),
         is_active=True,
         is_locked=False,
         created_at=now,

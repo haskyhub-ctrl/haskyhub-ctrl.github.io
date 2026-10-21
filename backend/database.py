@@ -63,6 +63,12 @@ def migrate_db():
             "latitude": "FLOAT",
             "longitude": "FLOAT",
             "facility_types": "VARCHAR(500)",
+            "management_team": "VARCHAR(300)",
+            "facility_type_label": "VARCHAR(300)",
+            "land_area": "FLOAT",
+            "built_area": "FLOAT",
+            "workers_office": "INTEGER",
+            "workers_after": "INTEGER",
         },
         "assessments": {
             "latitude": "FLOAT",
@@ -87,6 +93,19 @@ def migrate_db():
                     except Exception as e:
                         print(f"[migrate] WARN: Could not add {table_name}.{col_name}: {e}")
                         conn.rollback()
+
+        # Chỉ mục phục vụ bảng theo dõi theo đội, lọc xã phường (44.000+ cơ sở)
+        for ddl in (
+            "CREATE INDEX IF NOT EXISTS ix_users_management_team ON users (management_team)",
+            "CREATE INDEX IF NOT EXISTS ix_users_ward ON users (ward)",
+            "CREATE INDEX IF NOT EXISTS ix_assessments_user_status ON assessments (user_id, status)",
+        ):
+            try:
+                conn.execute(text(ddl))
+                conn.commit()
+            except Exception as e:
+                print(f"[migrate] WARN index: {e}")
+                conn.rollback()
 
         if not is_sqlite and "users" in tables:
             try:

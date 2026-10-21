@@ -27,6 +27,12 @@ class User(Base):
     latitude = Column(Float, nullable=True)
     longitude = Column(Float, nullable=True)
     facility_types = Column(String(500), nullable=True)  # comma-separated
+    management_team = Column(String(300), nullable=True, index=True)   # đội quản lý (từ danh sách cơ sở)
+    facility_type_label = Column(String(300), nullable=True)           # loại hình gốc trong danh sách
+    land_area = Column(Float, nullable=True)                           # tổng diện tích khu đất (m2)
+    built_area = Column(Float, nullable=True)                          # tổng diện tích xây dựng (m2)
+    workers_office = Column(Integer, nullable=True)                    # người làm việc trong giờ hành chính
+    workers_after = Column(Integer, nullable=True)                     # người làm việc ngoài giờ hành chính
     role = Column(String(20), default="user")  # user, admin, superadmin
     is_active = Column(Boolean, default=True)
     is_locked = Column(Boolean, default=False)
