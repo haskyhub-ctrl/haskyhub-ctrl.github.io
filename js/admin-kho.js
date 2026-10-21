@@ -17,9 +17,11 @@
             if (!u || (u.role !== 'admin' && u.role !== 'superadmin')) { window.location.href = '/dashboard.html'; return; }
             this.loadDocs();
             this.loadQs();
+            this.loadWatch();
+            this.loadWiki();
         },
         tab(name) {
-            ['docs', 'qs', 'test'].forEach(t => {
+            ['docs', 'qs', 'wiki', 'watch', 'test'].forEach(t => {
                 document.getElementById('kt-' + t).classList.toggle('active', t === name);
                 document.getElementById('kp-' + t).style.display = t === name ? '' : 'none';
             });
@@ -41,7 +43,7 @@
                         <td>${esc(x.effective_date)}</td>
                         <td class="tm-num">${num(x.chunks)}</td>
                         <td>${esc(x.note)}${x.needs_ocr ? ' <b style="color:#B91C1C;">Bản quét, chưa đọc được chữ</b>' : ''}</td>
-                        <td><button class="kd-del" onclick="KHO.removeDoc('${x.id}')">Xóa</button></td>
+                        <td>${x.id.endsWith('.txt') ? `<button class="kd-link" onclick="KHO.openDoc('${x.id}')">Xem, sửa</button>` : ''}<button class="kd-del" onclick="KHO.removeDoc('${x.id}')">Xóa</button></td>
                     </tr>`).join('') : '<tr><td colspan="7" class="tm-empty">Chưa có tài liệu nào được tải lên.</td></tr>';
                 document.getElementById('kd-builtin').textContent = d.builtin.length
                     ? `Ngoài ra Trợ lý còn dùng ${d.builtin.length} tài liệu có sẵn trong hệ thống (tầng 2): ${d.builtin.join(', ')}`
@@ -149,6 +151,106 @@
             const j = await res.json().catch(() => ({}));
             if (!res.ok) throw new Error(j.detail || ('Lỗi mã ' + res.status));
             return j;
+        },
+
+        // ------------------------------------------------------------ xem, sửa nội dung một tài liệu
+        _openId: null,
+        async openDoc(id) {
+            try {
+                const d = await api.get('/admin/kho/docs/' + id + '/text');
+                this._openId = id;
+                document.getElementById('kd-modal-title').textContent = d.title || id;
+                document.getElementById('kd-modal-text').value = d.text;
+                msg(document.getElementById('kd-modal-msg'), d.truncated ? 'Nội dung dài, chỉ hiển thị phần đầu, không nên sửa tài liệu này.' : '', 'warn');
+                document.getElementById('kd-modal').style.display = 'flex';
+            } catch (e) { alert(e.message || e); }
+        },
+        closeDoc() { document.getElementById('kd-modal').style.display = 'none'; this._openId = null; },
+        async saveDoc(activate) {
+            const out = document.getElementById('kd-modal-msg');
+            try {
+                await this.rawJson('PUT', `/admin/kho/docs/${this._openId}/text`, { text: document.getElementById('kd-modal-text').value });
+                if (activate) await this.rawPatch(this._openId, { status: 'active' });
+                msg(out, activate ? 'Đã lưu và bật dùng.' : 'Đã lưu.', 'ok');
+                this.loadDocs();
+                this.loadWiki();
+            } catch (e) { msg(out, e.message || String(e), 'err'); }
+        },
+
+        // ------------------------------------------------------------ wiki tri thức
+        _wikiTimer: null,
+        async loadWiki() {
+            const body = document.getElementById('kwi-body');
+            try {
+                const d = await api.get('/admin/kho/wiki');
+                const label = { none: ['Chưa có', 'off'], draft: ['Nháp, chờ rà soát', 'off'], active: ['Đang dùng', 'on'] };
+                body.innerHTML = d.topics.map(t => `
+                    <tr>
+                        <td><strong>${esc(t.title)}</strong></td>
+                        <td><span class="kd-status ${label[t.state][1]}">${label[t.state][0]}</span></td>
+                        <td class="tm-num">${t.chars ? num(t.chars) : ''}</td>
+                        <td>
+                            ${t.doc_id ? `<button class="kd-link" onclick="KHO.openDoc('${t.doc_id}')">Xem, sửa</button>
+                                <button class="kd-link" onclick="KHO.toggle('${t.doc_id}', '${t.state === 'active' ? 'active' : 'inactive'}').then(() => KHO.loadWiki())">${t.state === 'active' ? 'Tắt' : 'Bật'}</button>` : ''}
+                            <button class="kd-link" onclick="KHO.genWiki(['${t.slug}'])">${t.doc_id ? 'Biên soạn lại' : 'Biên soạn'}</button>
+                        </td>
+                    </tr>`).join('');
+                const j = d.job || {};
+                const jm = document.getElementById('kwi-job');
+                if (j.running) {
+                    jm.textContent = `Đang biên soạn ${j.done}/${j.total}: ${j.current}...`;
+                    clearTimeout(this._wikiTimer);
+                    this._wikiTimer = setTimeout(() => this.loadWiki(), 8000);
+                } else {
+                    jm.textContent = (j.errors && j.errors.length) ? 'Có lỗi: ' + j.errors.slice(0, 2).join(' | ') : '';
+                }
+            } catch (e) { body.innerHTML = `<tr><td colspan="4" class="tm-empty">Không tải được: ${esc(e.message || e)}</td></tr>`; }
+        },
+        async genWiki(slugs) {
+            try {
+                const r = await this.rawJson('POST', '/admin/kho/wiki/generate', slugs ? { slugs } : {});
+                document.getElementById('kwi-job').textContent = r.message;
+                setTimeout(() => this.loadWiki(), 4000);
+            } catch (e) { alert(e.message || e); }
+        },
+
+        // ------------------------------------------------------------ văn bản mới theo dõi hằng tuần
+        async loadWatch() {
+            const st = document.getElementById('kw-status').value;
+            const box = document.getElementById('kw-list');
+            try {
+                const d = await api.get('/admin/kho/watch?status=' + st);
+                document.getElementById('kho-newcount').textContent = d.counts.new;
+                const lr = d.last_run || {};
+                document.getElementById('kw-last').textContent = lr.last_run ? `Lần tìm gần nhất: ${fmtDT(lr.last_run)} (tìm thấy ${lr.found || 0}, mới ${lr.new || 0}, liên quan ${lr.relevant || 0})` : 'Chưa chạy lần nào. Bấm Tìm ngay hoặc chờ sáng thứ Hai.';
+                box.innerHTML = d.items.length ? d.items.map(r => `
+                    <div class="kq-card ${r.status === 'new' ? '' : (r.status === 'ingested' ? 'approved' : 'rejected')}">
+                        <div class="kq-q"><a href="${esc(r.url)}" target="_blank" rel="noopener" class="tm-link">${esc(r.title)}</a></div>
+                        <div class="kq-meta">${esc(r.kind || 'Chưa phân loại')} · ${esc(r.source)}${r.published ? ' · ' + esc(r.published) : ''} · tìm thấy ${fmtDT(r.found_at)}</div>
+                        ${r.summary ? `<p style="margin:0 0 6px;font-size:0.9rem;">${esc(r.summary)}</p>` : ''}
+                        ${r.hint ? `<p style="margin:0 0 8px;font-size:0.82rem;color:#B45309;">Gợi ý: ${esc(r.hint)}</p>` : ''}
+                        <div class="kq-actions">
+                            ${r.status === 'new' ? `<button class="btn btn-primary btn-sm" onclick="KHO.watchAct('${r.id}','ingest',this)">📥 Nạp vào kho (nháp)</button>
+                            <button class="btn btn-secondary btn-sm" onclick="KHO.watchAct('${r.id}','ignore',this)">Bỏ qua</button>` : ''}
+                            ${r.status === 'ingested' ? '<span class="kho-msg ok">Đã nạp thành nháp. Vào mục Tài liệu để rà soát và bật.</span>' : ''}
+                        </div>
+                    </div>`).join('') : '<p class="tm-empty">Không có mục nào.</p>';
+            } catch (e) { box.innerHTML = `<p class="tm-empty">Không tải được: ${esc(e.message || e)}</p>`; }
+        },
+        async runWatch() {
+            try {
+                const r = await this.rawJson('POST', '/admin/kho/watch/run');
+                document.getElementById('kw-last').textContent = r.message;
+                setTimeout(() => this.loadWatch(), 60000);
+            } catch (e) { alert(e.message || e); }
+        },
+        async watchAct(id, act, btn) {
+            if (btn) { btn.disabled = true; btn.textContent = 'Đang xử lý...'; }
+            try {
+                await this.rawJson('POST', `/admin/kho/watch/${id}/${act}`);
+                if (act === 'ingest') this.loadDocs();
+            } catch (e) { alert(e.message || e); }
+            this.loadWatch();
         },
 
         // ------------------------------------------------------------ thử tra cứu
