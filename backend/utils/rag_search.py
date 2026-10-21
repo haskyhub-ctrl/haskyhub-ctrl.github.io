@@ -237,7 +237,7 @@ def _call_gemini_sync(prompt: str, temperature: float = 0.15, max_tokens: int = 
     raise ValueError(f"Gemini API tất cả model đều lỗi. Lỗi cuối: {last_error}")
 
 
-def _call_9router(prompt: str, temperature: float = 0.15, max_tokens: int = 2048, is_json: bool = False) -> str:
+def _call_9router(prompt: str, temperature: float = 0.15, max_tokens: int = 2048, is_json: bool = False, fast: bool = False, timeout: float = 45.0) -> str:
     """
     Gọi 9Router OpenAI-compatible endpoint qua tài khoản Google Pro (moonshinemylove@gmail.com).
     """
@@ -254,6 +254,9 @@ def _call_9router(prompt: str, temperature: float = 0.15, max_tokens: int = 2048
         "ag/gemini-3.8-flash",
         "ag/gemini-3.5-flash-high",
     ]
+    if fast:
+        # Việc phụ (mở rộng câu hỏi, thẩm định): ưu tiên mô hình nhanh, không dùng bản "high" suy nghĩ lâu
+        fallback_models = ["ag/gemini-3.8-flash", "ag/gemini-3.5-flash-high"] + fallback_models
     models_to_try = []
     for m in fallback_models:
         if m not in models_to_try:
@@ -279,7 +282,7 @@ def _call_9router(prompt: str, temperature: float = 0.15, max_tokens: int = 2048
             payload["response_format"] = {"type": "json_object"}
 
         try:
-            with httpx.Client(timeout=45.0) as client:
+            with httpx.Client(timeout=timeout) as client:
                 resp = client.post(router_url, json=payload, headers=headers)
 
             if resp.status_code == 200:
@@ -307,7 +310,7 @@ def _call_9router(prompt: str, temperature: float = 0.15, max_tokens: int = 2048
     raise ValueError(f"9Router tất cả model đều lỗi. Lỗi cuối: {last_error}")
 
 
-def _call_llm(prompt: str, temperature: float = 0.15, max_tokens: int = 2048, is_json: bool = False) -> str:
+def _call_llm(prompt: str, temperature: float = 0.15, max_tokens: int = 2048, is_json: bool = False, fast: bool = False, timeout: float = 45.0) -> str:
     """
     Hàm gọi LLM hợp nhất:
     1. Ưu tiên 9Router (Google Pro account: moonshinemylove@gmail.com).
@@ -318,7 +321,7 @@ def _call_llm(prompt: str, temperature: float = 0.15, max_tokens: int = 2048, is
 
     if use_9router and router_key:
         try:
-            return _call_9router(prompt, temperature=temperature, max_tokens=max_tokens, is_json=is_json)
+            return _call_9router(prompt, temperature=temperature, max_tokens=max_tokens, is_json=is_json, fast=fast, timeout=timeout)
         except Exception as e:
             _safe_print(f"[LLM Router] 9Router không phản hồi ({e}), tự động chuyển sang Gemini REST API...")
 
@@ -501,6 +504,41 @@ def search_internet(query: str, max_results: int = 3) -> list[dict]:
 #  2. CHROMADB: Vector similarity search
 # ════════════════════════════════════════════════════════════════
 
+def _expand_queries(question: str, history_text: str = "") -> list:
+    """Nhờ AI viết lại câu hỏi thành vài truy vấn tìm kiếm bằng thuật ngữ pháp lý chính xác (giải quyết cả đại từ theo lịch sử)."""
+    prompt = f"""Bạn là chuyên viên tra cứu văn bản pháp luật PCCC. Hãy viết lại câu hỏi của người dân thành tối đa 3 truy vấn tìm kiếm ngắn gọn (5 đến 12 từ), dùng đúng thuật ngữ trong văn bản pháp luật (tên thủ tục, đối tượng, số hiệu nghị định, thông tư nếu biết), mỗi truy vấn nhìn từ một góc khác nhau. Nếu câu hỏi dùng đại từ hay hỏi nối tiếp, hãy thay bằng nội dung cụ thể dựa vào lịch sử.
+
+LỊCH SỬ HỘI THOẠI: {history_text or '(không có)'}
+CÂU HỎI: {question}
+
+Trả về DUY NHẤT JSON: {{"queries": ["truy vấn 1", "truy vấn 2", "truy vấn 3"]}}"""
+    try:
+        raw = _call_llm(prompt, temperature=0.1, max_tokens=300, is_json=True, fast=True, timeout=14.0)
+        data = _extract_json_block(raw) or {}
+        qs = [q.strip() for q in (data.get("queries") or []) if isinstance(q, str) and q.strip()]
+        return qs[:3]
+    except Exception as e:
+        _safe_print(f"[expand_queries] {e}")
+        return []
+
+
+def search_kho(question: str, history_text: str = "") -> str:
+    """Tra cứu kho tài liệu: câu hỏi gốc cộng các cách diễn đạt do AI mở rộng, gộp kết quả, lấy tối đa 6 đoạn."""
+    from utils import local_rag
+    try:
+        first = local_rag.search_multi([question], k=6)
+        raw_top = local_rag.search(question, k=1)
+        weak = (not raw_top) or raw_top[0][2] < 22 or bool(history_text.strip())
+        queries = [question] + (_expand_queries(question, history_text) if weak else [])
+        hits = local_rag.search_multi(queries, k=6) if len(queries) > 1 else first
+        if hits:
+            _safe_print(f"[RAG cục bộ] {len(queries)} truy vấn, {len(hits)} đoạn")
+            return local_rag.format_hits(hits)
+    except Exception as e:
+        _safe_print(f"[search_kho] {e}")
+    return search_chromadb(question)
+
+
 def search_chromadb(question: str) -> str:
     """Tra cứu kho tài liệu nội bộ (RAG). Trả về context string hoặc ''.
 
@@ -550,20 +588,9 @@ def search_chromadb(question: str) -> str:
 # ════════════════════════════════════════════════════════════════
 
 def _clean_chat_formatting(text: str) -> str:
-    """Loại bỏ các ký tự markdown thừa (###, **, ---) để câu trả lời sạch đẹp, không bị rối."""
-    if not text:
-        return ""
-    # Xóa ký tự tiêu đề markdown ###, ####, ##, # ở đầu dòng
-    text = re.sub(r'^[ \t]*#{1,6}\s*', '', text, flags=re.MULTILINE)
-    # Xóa toàn bộ dấu sao bôi đậm **
-    text = text.replace('**', '')
-    # Xóa dấu in nghiêng * đơn lẻ nếu bao quanh từ
-    text = re.sub(r'(?<!\*)\*([^*]+)\*(?!\*)', r'\1', text)
-    # Xóa các dòng kẻ phân cách --- hoặc ===
-    text = re.sub(r'^[ \t]*[-=_]{3,}[ \t]*$', '', text, flags=re.MULTILINE)
-    # Chuẩn hóa khoảng trống nhiều dòng liên tiếp
-    text = re.sub(r'\n{3,}', '\n\n', text)
-    return text.strip()
+    """Chuẩn hóa câu trả lời: giữ các ký hiệu trình bày (>>, ##, !!, **, bảng, {{căn cứ}}), bỏ ký tự thừa, thống nhất xưng hô Chi."""
+    from utils.chat_format import clean_reply
+    return clean_reply(text)
 
 
 # ════════════════════════════════════════════════════════════════
@@ -633,7 +660,7 @@ def ask_ai_chi(question: str, history_text: str = "", context: str = "") -> dict
         # ── Bước 2: ChromaDB (Kho văn bản nội bộ) ───────────────────
         chroma_context = ""
         if not notebook_context:
-            chroma_context = search_chromadb(question)
+            chroma_context = search_kho(question, history_text)
             if chroma_context:
                 source_type = "docs"
 
@@ -722,7 +749,7 @@ CÂU HỎI CỦA NGƯỜI DÙNG: {question}
 
 ═══ CÁC QUY TẮC BẮT BUỘC KHI TRẢ LỜI CỦA CHI (TUÂN THỦ 100%) ═══
 0. CHUẨN MỰC HÀNH VĂN NGƯỜI THẬT (0% AI HUMAN WRITING):
-   - Tuyệt đối CẤM sử dụng dấu gạch ngang dài (em dash ":"). Luôn dùng dấu phẩy, dấu chấm, dấu hai chấm hoặc ngoặc đơn.
+   - Tuyệt đối CẤM sử dụng dấu gạch ngang dài (em dash). Luôn dùng dấu phẩy, dấu chấm, dấu hai chấm hoặc ngoặc đơn.
    - CẤM sáo ngữ robot: "Trong bối cảnh...", "Không thể phủ nhận rằng...", "Đóng vai trò vô cùng quan trọng...", "Mang lại lợi ích đáng kể...", "Tối ưu hóa", "Đột phá".
    - CẤM các câu mở đầu hoặc kết bài xã giao kiểu chatbot ("Hy vọng câu trả lời này hữu ích với bạn", "Nếu bạn cần thêm thông tin..."). Đi thẳng vào nội dung chuyên môn.
    - Trộn câu ngắn dài tự nhiên, hành văn dứt khoát, chuẩn xác của chuyên gia luật PCCC.
@@ -743,22 +770,33 @@ CÂU HỎI CỦA NGƯỜI DÙNG: {question}
    - KHÔNG liệt kê các luật cũ, nghị định cũ xa xưa (Luật 2001, Luật 2013, Nghị định 136/2020, Nghị định 50/2024...).
    - Quy định cũ chỉ được đưa ra văn bản gần nhất (nếu thật sự cần thiết để người hỏi không nhầm lẫn) và PHẢI ĐẶT TRONG DẤU NGOẶC ĐƠN THẬT NGẮN GỌN (ví dụ: "(thay thế quy định cũ tại Nghị định 105/2025/NĐ-CP trước đây)").
 
-3. TUYỆT ĐỐI KHÔNG DÙNG CÁC KÝ TỰ RỐI MẮT (CHỐNG LẠM DỤNG MARKDOWN):
-   - CẤM dùng các tiêu đề cấp bậc markdown: không dùng ###, ####, ##, #.
-   - CẤM dùng dấu sao kép ** để bôi đậm chữ tràn lan trong câu. Trình bày hoàn toàn bằng văn bản thuần, các tiêu đề đoạn chỉ cần viết hoa hoặc in thường rõ ràng.
-   - CẤM dùng các đường kẻ ngang --- hoặc ===.
-   - Trình bày mạch lạc, sạch sẽ, ngắt các ý bằng một dòng trống. Dùng gạch đầu dòng (- ) hoặc đánh số (1., 2.) đơn giản, dễ đọc.
-   - Nếu có thông tin tra cứu từ Internet: ghi tên cơ quan/nguồn tin và kèm đường dẫn trong ngoặc đơn gọn gàng.
+3. CÁCH TRÌNH BÀY (bộ hiển thị của hệ thống sẽ tô màu, kẻ khung theo các ký hiệu dưới đây, hãy dùng đúng):
+   - Dòng bắt đầu bằng ">> " là KẾT LUẬN: 1 đến 2 câu trả lời thẳng vào câu hỏi, luôn đặt ở dòng đầu tiên.
+   - Dòng bắt đầu bằng "## " là TIÊU ĐỀ MỤC (ví dụ: ## Việc cần làm, ## Điều kiện áp dụng, ## Lưu ý). Chỉ dùng 2 đến 4 mục, tên mục ngắn.
+   - Dòng bắt đầu bằng "!! " là LƯU Ý QUAN TRỌNG hoặc CẢNH BÁO (rủi ro, hạn chót, điều dễ nhầm). Tối đa 2 dòng.
+   - Các bước làm tuần tự: đánh số "1. ", "2. ", mỗi bước một dòng, bắt đầu bằng động từ.
+   - Ý liệt kê ngang hàng: gạch đầu dòng "- ".
+   - Từ khóa quan trọng (số liệu, thời hạn, tên thủ tục): bao bằng **hai dấu sao**. Chỉ bôi đậm những cụm thật cần chú ý, không bôi tràn lan.
+   - So sánh nhiều phương án hoặc nhiều loại hình: dùng bảng với dòng tiêu đề, ví dụ "| Loại hình | Yêu cầu |" rồi "|---|---|" rồi các dòng "| ... | ... |".
+   - Căn cứ pháp lý: viết trong hai dấu ngoặc nhọn kép, ví dụ {{{{Điều 5 Nghị định 105/2025/NĐ-CP}}}}, đặt ngay sau ý được căn cứ. CHỈ trích điều, khoản, văn bản có thật trong phần tài liệu ở trên; không bịa số điều.
+   - Không dùng đường kẻ ngang (---) ngoài bảng, không dùng dấu gạch ngang dài, không dùng ### hay # ngoài tiêu đề "## ".
+   - Câu hỏi đơn giản: trả lời gọn trong khoảng 80 đến 150 từ. Câu hỏi về thủ tục, quy trình: đủ bước nhưng không quá 350 từ.
+   - Nếu có thông tin tra cứu từ Internet: ghi tên cơ quan hoặc nguồn tin kèm đường dẫn trong ngoặc đơn.
 
-4. PHONG CÁCH:
-   - Xưng là "Tôi". Không tự đặt tên riêng cho mình.
-   - Ân cần, rành mạch, đúng tác phong chuyên môn pháp lý PCCC.
+3b. KHI THIẾU THÔNG TIN: nếu đáp án phụ thuộc loại hình, quy mô, diện tích, số tầng, số người mà người hỏi chưa nói, hãy trả lời trước cho trường hợp phổ biến, rồi cuối bài thêm một dòng "!! Để Chi tư vấn chính xác hơn, bạn cho Chi biết: ..." (tối đa 2 ý cần hỏi lại).
+
+3c. KIỂM TRA TRƯỚC KHI TRẢ LỜI: mọi con số, thời hạn, điều khoản phải có trong tài liệu ở trên hoặc trong phần CƠ SỞ PHÁP LÝ 2026. Chỗ nào không có căn cứ thì nói rõ "chưa có căn cứ trong tài liệu của Chi" và mời liên hệ cán bộ Cảnh sát PCCC và CNCH, không tự suy đoán.
+
+4. PHONG CÁCH VÀ XƯNG HÔ:
+   - Trợ lý tên là Chi. LUÔN xưng là "Chi" và gọi người hỏi là "bạn". TUYỆT ĐỐI không xưng "tôi", không gọi "anh/chị", "quý khách".
+   - Giọng ân cần, mềm mỏng, rành mạch của người cán bộ hướng dẫn. Không quy lỗi, không dạy đời, không dùng từ xử phạt hù dọa.
+   - Không mở đầu kiểu xã giao ("Chào bạn", "Cảm ơn bạn đã hỏi"), đi thẳng vào kết luận.
 
 TRẢ VỀ JSON THUẦN (không dùng ```json):
 {{
-    "reply": "câu trả lời sạch sẽ, không có ###, không có **, tập trung quy định mới 2026",
+    "reply": "câu trả lời theo đúng cách trình bày ở mục 3, xưng Chi, tập trung quy định mới 2026",
     "source_type": "{source_type}",
-    "suggestions": ["gợi ý câu hỏi liên quan 1", "gợi ý 2", "gợi ý 3"],
+    "suggestions": ["gợi ý câu hỏi tiếp theo 1", "gợi ý 2", "gợi ý 3"],
     "references": ["văn bản pháp lý hiện hành hoặc link nguồn internet"]
 }}"""
 

@@ -107,7 +107,7 @@
                 box.innerHTML = d.items.length ? d.items.map(r => `
                     <div class="kq-card ${r.status}" id="kq-${r.id}">
                         <div class="kq-q">${esc(r.question)}</div>
-                        <div class="kq-meta">Đã được hỏi ${num(r.times_asked)} lần · gần nhất ${fmtDT(r.last_asked_at)} · ${r.source === 'admin' ? 'cán bộ nhập' : 'bot chưa đủ căn cứ'}${r.status === 'approved' ? ' · đã duyệt' : ''}</div>
+                        <div class="kq-meta">Đã được hỏi ${num(r.times_asked)} lần · gần nhất ${fmtDT(r.last_asked_at)} · ${r.source === 'admin' ? 'cán bộ nhập' : (r.source === 'feedback' ? 'người dùng báo chưa hài lòng' : 'bot chưa đủ căn cứ')}${r.status === 'approved' ? ' · đã duyệt' : ''}</div>
                         <textarea rows="4" id="kqa-${r.id}" placeholder="Đáp án chuẩn (theo văn bản hiện hành, ghi rõ căn cứ)...">${esc(r.answer)}</textarea>
                         <div class="kq-actions">
                             <button class="btn btn-primary btn-sm" onclick="KHO.saveQ('${r.id}', 'approved')">✔ Lưu và duyệt</button>

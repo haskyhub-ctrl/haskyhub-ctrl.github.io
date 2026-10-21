@@ -31,7 +31,7 @@ def find_approved(db: Session, message: str):
     return best if best is not None and best_score >= MATCH_THRESHOLD else None
 
 
-def log_unanswered(db: Session, message: str) -> None:
+def log_unanswered(db: Session, message: str, source: str = "chat") -> None:
     """Ghi câu hỏi mà bot chưa có căn cứ trong kho (gộp các câu giống nhau, tăng số lần hỏi)."""
     key = question_key(message)
     if len(key.split()) < MIN_TOKENS:
@@ -42,5 +42,5 @@ def log_unanswered(db: Session, message: str) -> None:
         row.times_asked = (row.times_asked or 0) + 1
         row.last_asked_at = now
     else:
-        db.add(KbQuestion(question=message.strip()[:1500], question_key=key, status="pending", source="chat", last_asked_at=now))
+        db.add(KbQuestion(question=message.strip()[:1500], question_key=key, status="pending", source=source, last_asked_at=now))
     db.commit()

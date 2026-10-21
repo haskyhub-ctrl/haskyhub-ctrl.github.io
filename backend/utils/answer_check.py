@@ -15,8 +15,8 @@ import os
 import re
 
 SAFE_REPLY = (
-    "Chi chưa đủ căn cứ hiện hành để trả lời chắc chắn câu hỏi này, vì quy định liên quan có thể vừa được sửa đổi hoặc bãi bỏ. "
-    "Bạn vui lòng liên hệ cán bộ Cảnh sát PCCC và CNCH đang quản lý cơ sở hoặc địa bàn của bạn để được hướng dẫn đúng quy định mới nhất."
+    ">> Chi chưa đủ căn cứ hiện hành để trả lời chắc chắn câu hỏi này, vì quy định liên quan có thể vừa được sửa đổi hoặc bãi bỏ." + chr(10) * 2 +
+    "!! Bạn vui lòng liên hệ cán bộ Cảnh sát PCCC và CNCH đang quản lý cơ sở hoặc địa bàn của bạn để được hướng dẫn đúng quy định mới nhất."
 )
 
 # Dấu hiệu nội dung đã hết hiệu lực hoặc thủ tục đã bãi bỏ
@@ -72,7 +72,7 @@ CÁCH THẨM ĐỊNH, thực hiện theo thứ tự:
 4. Mục hết hiệu lực hoặc bị bãi bỏ: bỏ khỏi câu trả lời, nói rõ thủ tục đã bãi bỏ (nếu có trong quy định mới nhất), không mô tả lại quy trình cũ. Nếu cần biết văn bản thay thế mà chưa có trong tài liệu ở trên, đặt need_newer_search = true và nêu search_query ngắn gọn bằng tiếng Việt.
 5. Mục KHÔNG CHẮC: không khẳng định, nói rõ chưa đủ căn cứ và mời liên hệ cán bộ Cảnh sát PCCC và CNCH.
 
-QUY TẮC VIẾT LẠI: giọng cán bộ hướng dẫn, mềm mỏng, không quy lỗi; không dùng dấu gạch ngang dài; không dùng markdown (#, **, ---); không bịa số hiệu văn bản, thời hạn, mức phạt; chỉ dùng những gì có căn cứ ở trên.
+QUY TẮC VIẾT LẠI: giữ nguyên cách trình bày của bản nháp (dòng ">> " là kết luận, "## " là tiêu đề mục, "!! " là lưu ý, số thứ tự cho các bước, **nhấn mạnh**, bảng, và căn cứ trong hai ngoặc nhọn kép); trợ lý tên là Chi, luôn xưng "Chi" và gọi người hỏi là "bạn", không xưng "tôi"; giọng cán bộ hướng dẫn, mềm mỏng, không quy lỗi; không dùng dấu gạch ngang dài; không bịa số hiệu văn bản, điều khoản, thời hạn, mức phạt; chỉ dùng những gì có căn cứ ở trên.
 
 Trả về DUY NHẤT một object JSON hợp lệ:
 {{
@@ -100,11 +100,11 @@ NỘI DUNG HẾT HIỆU LỰC CẦN BỎ:
 THÔNG TIN TRA CỨU VĂN BẢN MỚI:
 {web_ctx}
 
-Quy tắc: chỉ dùng thông tin có trong phần tra cứu và những gì chắc chắn trong bản nháp; nếu phần tra cứu chưa đủ để nêu văn bản thay thế, nói rõ chưa đủ căn cứ và mời liên hệ cán bộ Cảnh sát PCCC và CNCH. Giọng mềm mỏng, không markdown, không gạch ngang dài, không bịa số hiệu văn bản.
+Quy tắc: chỉ dùng thông tin có trong phần tra cứu và những gì chắc chắn trong bản nháp; nếu phần tra cứu chưa đủ để nêu văn bản thay thế, nói rõ chưa đủ căn cứ và mời liên hệ cán bộ Cảnh sát PCCC và CNCH. Giữ cách trình bày của bản nháp (>>, ##, !!, **, bảng, căn cứ trong ngoặc nhọn kép), xưng "Chi" và gọi người hỏi là "bạn", giọng mềm mỏng, không gạch ngang dài, không bịa số hiệu văn bản.
 Trả về DUY NHẤT JSON: {{"reply": "câu trả lời đã viết lại", "sufficient": true | false}}"""
 
 
-def verify_answer(question: str, result: dict) -> dict:
+def verify_answer(question: str, result: dict, budget: float = 28.0) -> dict:
     """Thẩm định và sửa câu trả lời. Trả (result, đã_sửa, cần_ghi_câu_hỏi_khó) trong dict kết quả: các khóa 'verified', 'fixed'."""
     from utils.rag_search import _call_llm, _extract_json_block, _clean_chat_formatting, search_internet
 
@@ -116,7 +116,7 @@ def verify_answer(question: str, result: dict) -> dict:
     hits = stale_hits(reply)
     verdict = None
     try:
-        raw = _call_llm(_verify_prompt(question, reply, doc_context, hits), temperature=0.1, max_tokens=2500, is_json=True)
+        raw = _call_llm(_verify_prompt(question, reply, doc_context, hits), temperature=0.1, max_tokens=2500, is_json=True, fast=True, timeout=float(budget))
         verdict = _extract_json_block(raw)
     except Exception as e:
         print(f"[answer_check] Lỗi thẩm định: {e}")
@@ -139,7 +139,7 @@ def verify_answer(question: str, result: dict) -> dict:
             web = search_internet(str(verdict["search_query"])[:150], max_results=3)
             web_ctx = "\n\n".join(f"{w.get('title', '')}: {w.get('snippet', '')} ({w.get('url', '')})" for w in web)
             if web_ctx.strip():
-                raw2 = _call_llm(_rewrite_prompt(question, corrected or reply, outdated, web_ctx), temperature=0.1, max_tokens=2000, is_json=True)
+                raw2 = _call_llm(_rewrite_prompt(question, corrected or reply, outdated, web_ctx), temperature=0.1, max_tokens=2000, is_json=True, fast=True, timeout=25.0)
                 v2 = _extract_json_block(raw2) or {}
                 if v2.get("reply") and v2.get("sufficient"):
                     corrected = v2["reply"].strip()

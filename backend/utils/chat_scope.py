@@ -8,7 +8,7 @@ import re
 import unicodedata
 
 OUT_OF_SCOPE_REPLY = (
-    "Xin lỗi bạn, câu hỏi này nằm ngoài lĩnh vực mà Trợ lý Chi phụ trách. "
+    ">> Xin lỗi bạn, câu hỏi này nằm ngoài lĩnh vực mà Chi phụ trách." + chr(10) * 2 +
     "Chi chỉ hỗ trợ các nội dung về phòng cháy, chữa cháy và cứu nạn, cứu hộ: quy định và thủ tục, "
     "an toàn điện, lối thoát nạn, bình chữa cháy, cách xử lý khi có cháy, và cách dùng Hệ thống FRAS-AI. "
     "Bạn có thể hỏi Chi về những nội dung này nhé."
@@ -43,7 +43,7 @@ _TOPIC = re.compile(
     r"co so thuoc dien|dien quan ly|nguy co (chay|cao|thap|trung binh)|muc nguy co|rui ro chay|"
     r"luat 55|55/2024|nghi dinh 105|nghi dinh 347|quy chuan|qcvn|tcvn|347/2026|66\.18|105/2025|"
     r"doi chua chay|thu tuc (hanh chinh )?(pccc|chua chay)|"
-    r"tam dinh chi|dinh chi hoat dong|phuc hoi hoat dong|giay chung nhan|co so du lieu pccc|khai bao (co so|thong tin)|dieu kien an toan|phuong tien (pccc|chua chay)|"
+    r"(nghi dinh|thong tu|nghi quyet|luat|quyet dinh) (so )?\d{1,3}([/.]\d+)+|\d{1,3}/(20\d{2}|\d{2})/(nd|tt|nq|qh)|tam dinh chi|dinh chi hoat dong|phuc hoi hoat dong|giay chung nhan|co so du lieu pccc|khai bao (co so|thong tin)|dieu kien an toan|phuong tien (pccc|chua chay)|"
     r"khao sat|danh gia (nguy co|an toan|co so)|ket qua (khao sat|danh gia)|"
     r"ma co so|ma theo doi|quen mat khau|dang nhap (fras|he thong|co so)|tai khoan (fras|co so)|"
     r"khac phuc (ton tai|nguy co)|ton tai (nguy co|an toan)|fras|tro ly chi|"
@@ -97,6 +97,9 @@ DISCLAIMER = (
 )
 
 
+DISCLAIMER_MARK = "~~ "      # ký hiệu để giao diện hiển thị câu chốt bằng chữ nhỏ, nghiêng, màu xám
+
+
 def with_disclaimer(result: dict, message: str = "") -> dict:
     """Thêm câu chốt tham khảo vào cuối câu trả lời chuyên môn (bỏ qua lời chào, lời cảm ơn, câu từ chối ngoài lĩnh vực)."""
     if not isinstance(result, dict) or result.get("source_type") == "scope":
@@ -108,5 +111,5 @@ def with_disclaimer(result: dict, message: str = "") -> dict:
         return result
     if "mang tính tham khảo" in reply:
         return result
-    result["reply"] = f"{reply.rstrip()}{chr(10) * 2}{DISCLAIMER}"
+    result["reply"] = f"{reply.rstrip()}{chr(10) * 2}{DISCLAIMER_MARK}{DISCLAIMER}"
     return result

@@ -442,6 +442,19 @@ async def ai_chat(
     if not is_in_scope(data.message, data.history):
         return out_of_scope_response()
 
+    # Câu hỏi chung đã có câu trả lời gần đây: trả ngay, không gọi AI lại
+    cacheable = not data.assessment_id and not data.history
+    if cacheable:
+        try:
+            from utils import answer_cache
+            cached = answer_cache.get(data.message)
+            if cached:
+                return cached
+        except Exception as e:
+            print(f"[AI Chat] Lỗi bộ nhớ đệm: {e}")
+
+    import time as _time
+    t_start = _time.time()
     context = ""
     if data.assessment_id and current_user:
         if current_user.role in ("admin", "superadmin"):
@@ -469,9 +482,11 @@ Tỷ lệ nguy cơ: {adata['risk_percentage']}% ({adata['risk_level']}). Điểm
         result = await asyncio.to_thread(ask_ai_chi, question=data.message, history_text=history_text, context=context)
         # Bước cuối: thẩm định hiệu lực, đối chiếu văn bản hướng dẫn, thay nội dung đã hết hiệu lực
         unresolved = False
-        if isinstance(result, dict) and result.get("source_type") in ("notebooklm", "docs", "web", "general"):
+        elapsed = _time.time() - t_start
+        if isinstance(result, dict) and result.get("source_type") in ("notebooklm", "docs", "web", "general") and elapsed < 55:
             from utils.answer_check import verify_answer
-            checked = await asyncio.to_thread(verify_answer, data.message, result)
+            # Còn trong hạn mức 90 giây của cổng truy cập: thẩm định tối đa phần thời gian còn lại
+            checked = await asyncio.to_thread(verify_answer, data.message, result, max(12.0, min(30.0, 80 - elapsed)))
             result, unresolved = checked["result"], checked["unresolved"]
             if checked["fixed"]:
                 print(f"[AI Chat] Đã sửa câu trả lời sau thẩm định hiệu lực: {data.message[:60]}")
@@ -480,11 +495,46 @@ Tỷ lệ nguy cơ: {adata['risk_percentage']}% ({adata['risk_level']}). Điểm
         # Bot chưa có căn cứ trong kho hoặc sau thẩm định vẫn chưa đủ căn cứ: ghi lại để cán bộ bổ sung đáp án chuẩn
         if isinstance(result, dict) and (unresolved or result.get("source_type") in ("general", "web")):
             _log_hard_question(db, data.message)
-        return with_disclaimer(result, data.message)
+        final = with_disclaimer(_finish_reply(result), data.message)
+        if cacheable and not unresolved and isinstance(final, dict) and final.get("source_type") in ("notebooklm", "docs", "web", "general"):
+            try:
+                from utils import answer_cache
+                answer_cache.put(data.message, final)
+            except Exception as e:
+                print(f"[AI Chat] Không lưu được bộ nhớ đệm: {e}")
+        return final
     except Exception as e:
         print(f"[AI Chat RAG] Error: {e}")
         _log_hard_question(db, data.message)
-        return with_disclaimer(_chat_fallback(data.message), data.message)
+        return with_disclaimer(_finish_reply(_chat_fallback(data.message)), data.message)
+
+
+class ChatFeedback(BaseModel):
+    message: str
+    reply: Optional[str] = None
+    helpful: bool
+
+
+@router.post("/chat/feedback")
+def chat_feedback(data: ChatFeedback, db: Session = Depends(get_db)):
+    """Người dùng đánh giá câu trả lời. Đánh giá "chưa giúp được" đưa câu hỏi vào hàng chờ để cán bộ bổ sung đáp án chuẩn."""
+    if not data.helpful and data.message and len(data.message) <= 1500:
+        try:
+            from utils import answer_cache
+            answer_cache.drop(data.message)      # câu trả lời bị đánh giá chưa tốt thì không giữ trong bộ nhớ đệm
+            from utils.kb_qa import log_unanswered
+            log_unanswered(db, data.message, source="feedback")
+        except Exception as e:
+            print(f"[AI Chat] Không ghi được phản hồi: {e}")
+    return {"ok": True}
+
+
+def _finish_reply(result):
+    """Chuẩn hóa lần cuối: xưng Chi, gọi bạn, giữ ký hiệu trình bày."""
+    if isinstance(result, dict) and isinstance(result.get("reply"), str):
+        from utils.chat_format import clean_reply
+        result["reply"] = clean_reply(result["reply"])
+    return result
 
 
 def _log_hard_question(db, message: str) -> None:

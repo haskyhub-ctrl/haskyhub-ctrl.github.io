@@ -93,6 +93,39 @@ def _chunks(text: str) -> list:
     return [c for c in out if len(c) > 40]
 
 
+_ARTICLE_RE = re.compile(r"^(Điều\s+\d+[a-z]?\.[^\n]{0,160})$", re.M)
+INDEX_VERSION = 3
+
+
+def legal_chunks(text: str):
+    """Văn bản có nhiều "Điều N." thì chia theo từng Điều: mỗi khối bắt đầu bằng tiêu đề Điều để trích dẫn đúng điều khoản.
+    Trả list (nhãn điều, nội dung) hoặc None nếu không phải văn bản dạng điều khoản."""
+    heads = list(_ARTICLE_RE.finditer(text))
+    if len(heads) < 8:
+        return None
+    out = []
+    for i, m in enumerate(heads):
+        end = heads[i + 1].start() if i + 1 < len(heads) else len(text)
+        body = text[m.start():end].strip()
+        title = re.sub(r"\s+", " ", m.group(1)).strip()
+        label = title[:90]
+        if len(body) <= CHUNK_CHARS * 2.4:
+            if len(body) > 40:
+                out.append((label, body))
+            continue
+        # Điều dài: chia theo đoạn, mỗi phần giữ tiêu đề Điều ở đầu
+        part, first = "", True
+        for para in re.split(r"\n+", body):
+            if len(part) + len(para) > CHUNK_CHARS * 1.6 and part:
+                out.append((label, part))
+                part, first = f"{title} (tiếp)\n{para}", False
+            else:
+                part = (part + "\n" + para) if part else para
+        if part and len(part) > 40:
+            out.append((label, part))
+    return out
+
+
 # ------------------------------------------------------------------ manifest của kho tải lên
 def load_manifest() -> dict:
     """{tên tệp lưu: {title, tier, status, effective_date, note, original_name, uploaded_at, chars, chunks}}"""
@@ -148,16 +181,23 @@ def _build(sig: tuple) -> dict:
     docs, tiers, weights = [], [], []
     for path, _size, _mt, tier, label, weight in sig:
         text = read_text(path)
-        for c in _chunks(text):
-            docs.append((label, c))
-            tiers.append(tier)
-            weights.append(weight)
+        legal = legal_chunks(text)
+        if legal is not None:
+            for art, c in legal:
+                docs.append((f"{label}, {art}", c))
+                tiers.append(tier)
+                weights.append(weight)
+        else:
+            for c in _chunks(text):
+                docs.append((label, c))
+                tiers.append(tier)
+                weights.append(weight)
     tfs = [Counter(_tokens(c)) for _, c in docs]
     df = Counter()
     for tf in tfs:
         df.update(tf.keys())
     lens = [sum(tf.values()) for tf in tfs]
-    return {"sig": sig, "docs": docs, "tiers": tiers, "weights": weights, "tfs": tfs, "df": dict(df), "lens": lens,
+    return {"ver": INDEX_VERSION, "sig": sig, "docs": docs, "tiers": tiers, "weights": weights, "tfs": tfs, "df": dict(df), "lens": lens,
             "avgdl": (sum(lens) / len(lens)) if lens else 1.0}
 
 
@@ -170,7 +210,7 @@ def _get_index() -> dict:
         try:
             with open(CACHE_PATH, "rb") as f:
                 cached = pickle.load(f)
-            if cached.get("sig") == sig and "weights" in cached:
+            if cached.get("sig") == sig and cached.get("ver") == INDEX_VERSION:
                 _index = cached
                 return _index
         except Exception:
@@ -238,6 +278,26 @@ def search(question: str, k: int = 4) -> list:
         seen.add(key)
         out.append((src, text, round(s, 2), idx["tiers"][i]))
     return out
+
+
+def search_multi(queries: list, k: int = 6, per_query: int = 10) -> list:
+    """Tìm với nhiều cách diễn đạt của cùng một câu hỏi rồi gộp kết quả (xếp hạng hợp nhất RRF).
+    queries[0] là câu hỏi gốc (trọng số cao nhất). Trả [(nhãn tài liệu, nội dung, điểm, tầng)]."""
+    fused, meta = {}, {}
+    for qi, q in enumerate(queries[:4]):
+        if not q or not q.strip():
+            continue
+        w = 1.0 if qi == 0 else 0.8
+        for rank, (src, text, score, tier) in enumerate(search(q, k=per_query)):
+            key = (src, text[:80])
+            fused[key] = fused.get(key, 0.0) + w / (60 + rank)
+            meta[key] = (src, text, score, tier)
+    ranked = sorted(fused.items(), key=lambda kv: -kv[1])[:k]
+    return [(meta[key][0], meta[key][1], round(sc * 1000, 2), meta[key][3]) for key, sc in ranked]
+
+
+def format_hits(hits: list) -> str:
+    return "\n\n".join(f"[{TIER_LABEL.get(tier, 'Tài liệu nội bộ')}: {src}]:\n{text}" for src, text, _, tier in hits)
 
 
 def search_context(question: str, k: int = 4) -> str:
