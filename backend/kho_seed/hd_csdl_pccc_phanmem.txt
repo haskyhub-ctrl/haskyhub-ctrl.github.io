@@ -1,0 +1,455 @@
+[Hướng dẫn sử dụng phần mềm khai báo của Hệ thống cơ sở dữ liệu về PCCC, CNCH (đăng nhập, lập phiếu cơ sở, sửa, xóa, gửi phiếu)]
+[Hiệu lực: 07/2025. Trạng thái: ĐANG DÙNG.]
+[Địa chỉ đăng nhập: https://thuthapdulieu.csdlcbcs.vn/auth/login]
+
+CỤC AN NINH MẠNG VÀ PCTP SỬ DỤNG CÔNG NGHỆ CAO 
+TỔNG CÔNG TY CÔNG NGHỆ - VIỄN THÔNG TOÀN CẦU 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+HƯỚNG DẪN SỬ DỤNG  
+PHẦN MỀM KHAI BÁO CỦA HỆ THỐNG CƠ SỞ 
+DỮ LIỆU VỀ PCCC, CNCH 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+TP. Hà Nội, 07/2025
+
+2 
+MỤC LỤC 
+ 
+I. Đăng nhập .................................................................................................................... 3 
+II. Màn hình Trang chủ ................................................................................................... 4 
+1. Tìm kiếm ...................................................................................................................... 5 
+2. Thêm mới phiếu cơ sở ................................................................................................ 6 
+3. Xem phiếu thu thập thông tin  ................................................................................ 19 
+4. Chỉnh sửa phiếu thu thập thông tin cơ sở  ............................................................. 20 
+5. Xóa phiếu thu thập thông tin cơ sở ......................................................................... 21 
+6. Quy trình gửi phiếu cơ sở ........................................................................................ 22
+
+I. Đăng nhập 
+Người dùng đăng nhập vào hệ thống theo hình minh họa dưới đây 
++ B1: Người dùng vào đường dẫn https://thuthapdulieu.csdlcbcs.vn/auth/login 
++ B2: Tại màn hình đăng nhập, người dùng nhập số điện thoại và mật khẩu được 
+cung cấp bởi cán bộ quản lý của Đội PCCC. 
++ B3: Nhấn nút Đăng nhập, đăng nhập thành công vào hệ thống  
+ 
+ 
+ 
+ 
+  
+
+4 
+II. Màn hình Trang chủ 
+ 
+Màn hình hiển thị danh sách thông tin các phiếu cơ sở có các trạng thái sau: 
+- Đang lập phiếu: Trạng thái phiếu đã lưu thành công nhưng chưa gửi đến PC07 
+- Hoàn Thành: Trạng thái phiếu đã được trình đến Trung tâm chỉ huy của PC07 
+  
+
+5 
+1. Tìm kiếm 
+Người dùng thực hiện tìm kiếm theo các bước dưới đây 
++ B1: Nhập thông tin tìm kiếm gồm: thời gian (từ ngày – đến ngày), tên cơ sở, người 
+đại diện, trạng thái 
++ B2: Nhấn nút Tìm kiếm 
+ 
+*Lưu ý: Danh sách ban đầu khi hiển thị sẽ theo mốc thời gian từ mới đến cũ.
+
+6 
+2. Thêm mới phiếu cơ sở 
+Người dùng thực hiện tạo mới phiếu cơ sở theo các bước và mô tả các trường thông tin 
+như dưới đây 
+ 
++ B1: Tại giao diện trang chủ chọn vào nút “Thêm mới” 
++ B2: Nhập đủ thông tin theo các mô tả sau ở trang “Thông tin chung về cơ sở” 
+
+7 
+1. Tại trường thông tin số 1 sẽ có các thông tin sau: 
++ Tên cơ sở: Nhập tên cơ sở đang lập phiếu 
++ Email: Nhập thông tin email của chủ cơ sở để nhận các thông tin khi phiếu được 
+duyệt hoặc từ chối 
++ Website: Trang website mà cơ sở dùng để kinh doanh (nếu có) 
++ Số điện thoại: Số điện thoại để liên lạc của chủ sở sở (trường thông tin này sẽ 
+được đồng bộ với thông tin CBCS nhập khi tạo tài khoản cơ sở) 
+2. Tại trường thông tin số 2 (địa chỉ) sẽ có các thông tin sau: 
++ Kinh độ và vĩ độ: tọa độ của cơ sở trên bản đồ (trường thông tin này sẽ được đồng 
+bộ với thông tin CBCS nhập khi tạo tài khoản cơ sở) hoặc người dùng có thể chọn 
+vào nút “Chọn địa điểm”  để mở ra bản đồ số và chọn trên 
+đó vị trí của cơ sở của mình. 
++ Tỉnh/Thành phố, Xã/phường, Tên đường, số: Người dùng nhập địa chỉ chi tiết của 
+cơ sở 
+3. Lĩnh vực, loại hình cơ sở: Trường thông tin sẽ đưa ra danh sách các lĩnh vực đang 
+có đến hiện tại để người dùng chọn vào đại diện cho lĩnh vực mà cơ sở đang kinh 
+doanh 
+4. Tại trường thông tin số 4 sẽ có các thông tin sau: 
++ Năm đưa vào hoạt động: Nhập thông tin năm mà cơ sở bắt đầu hoạt động 
++ Mã số thuế doanh nghiệp: Nhập thông tin mã số thuế của doanh nghiệp (10-13 số)
+
+8 
++ Mã số thuế cá nhân: Nhập thông tin mã số thuế của cá nhân (10-13 số) 
++   Tình trạng hoạt động: Hoạt động, ngừng hoạt động, tạm ngừng 
+5. Tên cơ quan/tổ chức/cá nhân trực tiếp quản lý cơ sở: Người dùng nhập thông tin 
+cơ quan quản lý trực tiếp cơ sở (nếu có) 
+ 
+6. Tại trường thông tin số 6 sẽ có các thông tin sau: 
++ Họ, tên người đứng đầu cơ sở/người đại diện pháp luật: Nhập họ và tên của chủ cơ 
+sở 
++ Mã số CCCD: Nhập số CCCD của chủ cơ sở 
++ Số điện thoại: Nhập lại số điện thoại của chủ cơ sở 
+7. Tên cơ quan/tổ chức cấp trên: Nhập thông tin cơ quan cấp trên (nếu có), thường là 
+các trường hợp công ty sẽ có nhiều chi nhánh cơ sở 
+8. Thuộc thành phần kinh tế: Người dùng có thể chọn theo các lựa chọn sau: 
++ Nhà nước 
++ Tập thể 
++ Tư nhân 
++ Có vốn đầu tư nước ngoài (người dùng có thể chọn quốc gia đầu tư) 
++ Khác 
+9. Hình thức đầu tư: Người dùng có thể chọn theo các lựa chọn sau: 
++ Nước ngoài 
++ Trong nước 
++ Liên doanh với nước ngoài
+
+9 
+10. Thuộc danh mục cơ sở có nguy hiểm cháy, nổ: Người dùng xác định cơ sở có 
+thuộc danh mục cơ sở cháy nổ hay không, nếu có chọn vào nút “Có” sẽ hiện chọn 
+“Nhóm 1” hoặc “Nhóm 2”. Nếu không thì không cần chọn gì cả 
+11. Thuộc danh mục dự án, công trình thuộc diện phải thẩm duyệt, thẩm định về thiết 
+kế về phòng cháy và chữa cháy.  
+ 
+*Lưu ý: Thông tin ở trường 11 sẽ phục vụ cho trường “Thông tin về pháp lý về phòng 
+cháy và chữa cháy (nếu có)” ở tab “Thông tin về PCCC, CNCH” 
+ 
++ B3: Nhập đủ các thông tin trên người dùng tiếp tục chọn vào nút “Lưu” 
++ B4: Sau khi lưu thông tin ở trang “Thông tin chung về cơ sở” thành công người 
+dùng tiếp tục nhập đủ thông tin theo các mô tả sau ở trang “Thông tin về PCCC, 
+CNCH”  
+ 
+1. Thông tin về pháp lý về phòng cháy và chữa cháy: Người dùng bổ sung các thông 
+tin văn bản về pháp lý PC&CC (nếu có) theo các trường thông tin sau: 
++ Tên văn bản: Hiển thị sẵn 2 lựa chọn “Văn bản thẩm duyệt, thẩm định thiết kế về 
+PCCC” và “Văn bản chấp thuận kết quả nghiệm thu về PCCC” cho người dùng 
+chọn 
++ Số văn bản: Mã số văn bản do cơ quan quản lý cung cấp trên văn bản 
++ Ngày ban hành: Nhập ngày văn bản được ban hành
+
+10 
++ Cơ quan ban hành: Nhập tên cơ quan ban hành văn bản 
++ Chọn file: Cho phép người dùng đẩy văn bản từ thiết bị lên phần mềm 
++ Thao tác: Cho phép người dùng lưu, xóa, sửa thông tin đã nhập 
+2. Quy mô tính chất, đặc điểm nguy hiểm cháy nổ của cơ sở (Quy mô) 
++ Tổng diện tích khu đất (m2): Nhập tổng diện tích cơ sở được sử dụng 
++ Tổng diện tích đất xây dựng (m2): Nhập tổng diện tích cơ sở được xây dựng 
++ Tổng số người làm việc trong giờ hành chính: Nhập số người làm trong giờ hành 
+chính 
++ Tổng số người làm việc ngoài giờ hành chính: Nhập số người làm ngoài giờ hành 
+chính 
++ Quy mô: Tùy loại hình lĩnh vực sẽ hiển thị quy mô nhập khác nhau.  
+Ví dụ: Đối với loại hình cơ sở là “Trường tiểu học” thì quy mô sẽ hiện lên là 
+“Nhập số học sinh” 
+3. Quy mô tính chất, đặc điểm nguy hiểm cháy nổ của cơ sở (Các khối nhà trong cơ 
+sở) nhập theo các trường thông tin sau: 
++ Tên khối nhà: Nhập tên khối nhà xây dựng trong cơ sở 
++ Diện tích xây dựng (m2): Nhập diện tích xây dựng của khối nhà 
++ Số tầng: Nhập số tầng của khối nhà 
++ Bậc chịu lửa: Đã để sẵn các bậc chịu lửa từ bậc 1 đến bậc 5 để lựa chọn 
++ Công năng sử dụng: Nhập công năng sử dụng của khối nhà 
++ Số lối thoát: Nhập số lối thoát có của khối nhà (1,2,3,…) 
++ Thao tác: Cho phép người dùng lưu, xóa, sửa thông tin đã nhập 
+4. Quy mô tính chất, đặc điểm nguy hiểm cháy nổ của cơ sở (Các khu vực ngoài nhà) 
+nhập theo các trường thông tin sau: 
++ Tên khu vực: Người dùng nhập tên khu vực 
++ Loại hình: Dây chuyền công nghệ, chứa nguyên liệu, nhiên liệu, vật tư, hàng hóa, 
+phế liệu, dễ cháy nổ 
++ Diện tích sử dụng: Nhập diện tích sử dụng của vật liệu dễ gây cháy nổ 
++ Thao tác: Cho phép người dùng lưu, xóa, sửa thông tin đã nhập 
+5. Giao thông phục vụ chữa cháy, cứu nạn, cứu hộ nhập theo các trường thông tin 
+sau: 
++ Khu vực/vị trí: Nhập thông tin khu vực có thể phục vụ cho chữa cháy và CNCH
+
+11 
++ Chiều rộng đường giao thông (m): Nhập chiều rộng khu vực 
++ Chiều cao đường giao thông (m): Nhập chiều cao khu vực 
++ Vị trí bãi đỗ xe bên trong: Nhập thông tin vị trí bãi đỗ xe bên trong 
++ Vị trị bãi đỗ xe bên ngoài: Nhập thông tin vị trí bãi đỗ xe bên ngoài 
++ Thao tác: Cho phép người dùng lưu, xóa, sửa thông tin đã nhập 
+6. Nguồn nước phục vụ chữa cháy (Bồn, bể chứa nước) nếu có sẽ nhập các thông tin 
+sau: 
++ Loại: Chọn “Bể nước, bồn nước” 
++ Vị trí: Chọn vị trí kinh độ, vĩ độ của bể nước trên bản đồ. 
++ Vị trí lấy nước của các phương tiện chữa cháy: Nhập vị trí 
++ Các phương tiện chữa cháy có khả năng lấy nước: Các lựa chọn “Xe chữa cháy”, 
+“Máy bơm” 
++ Khối tích: Nhập thông tin khối tích của bồn, bể nước 
++ Thao tác: Cho phép người dùng lưu, xóa, sửa thông tin đã nhập 
+ 
+7. Nguồn nước phục vụ chữa cháy (Ao, hồ, sông, suối, …) nếu có sẽ nhập các thông 
+tin sau: 
++ Tên ao, hồ: Nhập thông tin ao, hồ trong cơ sở hoặc gần cơ sở có thể phục vụ chữa 
+cháy. 
++ Vị trí: Chọn vị trí kinh độ, vĩ độ của bể nước trên bản đồ. 
++ Vị trí lấy nước của các phương tiện chữa cháy: Nhập vị trí các phương tiện chữa 
+cháy có thể tiếp cận để lấy nước
+
+12 
++ Các phương tiện chữa cháy có khả năng lấy nước: Các lựa chọn “Xe chữa cháy”, 
+“Máy bơm” 
++ Thao tác: Cho phép người dùng lưu, xóa, sửa thông tin đã nhập 
+8. Nguồn nước phục vụ chữa cháy (Hệ thống cấp nước chữa cháy) nếu có sẽ nhập 
+các thông tin sau: 
++ Tên hệ thống cấp nước chữa cháy: Nhập thông tin hệ thống trong cơ sở hoặc gần 
+cơ sở có thể phục vụ chữa cháy và CNCH 
++ Vị trí: Chọn vị trí kinh độ, vĩ độ của bể nước trên bản đồ. 
++ Vị trí lấy nước của các phương tiện chữa cháy: Nhập vị trí các phương tiện chữa 
+cháy có thể tiếp cận để lấy nước. 
++ Các phương tiện chữa cháy có khả năng lấy nước: Các lựa chọn “Xe chữa cháy”, 
+“Máy bơm” 
++ Thao tác: Cho phép người dùng lưu, xóa, sửa thông tin đã nhập 
+9. Phương tiện chữa cháy, cứu nạn, cứu hộ: nếu có sẽ nhập các thông tin sau: 
++ Loại phương tiện chữa cháy, cứu nạn, cứu hộ: Người dùng sẽ chọn các lựa chọn 
+có sẵn về hệ thống và phương tiện mà cơ sở được trang bị 
++ Đơn vị tính: Nhập đơn vị tính phương tiện (cái, chiếc,...) 
++ Số lượng: Nhập số lượng phương tiện 
++ Vị trí bố trí: Nhập thông tin vị trí để phương tiện hoặc lắp đặt hệ thống 
++ Tình trạng hoạt động: Chọn tình trạng cho phương tiện “Đảm bảo” hoặc “Không 
+đảm bảo” 
++ Chu kỳ bảo trì, bảo dưỡng: Nhập số nguyên dương 
++ Thời gian bảo trì, bảo dưỡng: Nhập thông tin bảo dưỡng gần nhất của phương tiện 
++ Ghi chú: Nhập thông tin ghi chú về phương tiện nếu có 
++ Thao tác: Cho phép người dùng lưu, xóa, sửa thông tin đã nhập 
+10. Hệ thống phòng cháy, chữa cháy: nếu có sẽ nhập các thông tin sau: 
++ Hệ thống phòng cháy, chữa cháy: Người dùng sẽ nhập tên hệ thống mà cơ sở có 
+thể có 
++ Đơn vị tính: Nhập đơn vị tính phương tiện (cái, chiếc, ...) 
++ Số lượng: Nhập số lượng hệ thống 
++ Vị trí bố trí: Nhập thông tin vị trí lắp đặt hệ thống
+
+13 
++ Tình trạng hoạt động: Chọn tình trạng cho hệ thống “Đảm bảo” hoặc “Không đảm 
+bảo” 
++ Chu kỳ bảo trì, bảo dưỡng: Nhập số nguyên dương 
++ Thời gian bảo trì, bảo dưỡng: Nhập thông tin bảo dưỡng gần nhất của hệ thống 
++ Ghi chú: Nhập thông tin ghi chú về hệ thống nếu có 
++ Thao tác: Cho phép người dùng lưu, xóa, sửa thông tin đã nhập 
+11. Phương tiện chữa cháy cơ giới: nếu có sẽ nhập các thông tin sau: 
++ Loại phương tiện: Người dùng sẽ chọn các lựa chọn có sẵn về hệ thống và phương 
+tiện mà cơ sở có thể có 
++ Đơn vị tính: Nhập đơn vị tính phương tiện (cái, chiếc, ...) 
++ Số lượng: Nhập số lượng phương tiện 
++ Vị trí bố trí: Nhập thông tin vị trí để phương tiện hoặc lắp đặt hệ thống 
++ Tình trạng hoạt động: Chọn tình trạng cho phương tiện “Đảm bảo” hoặc “Không 
+đảm bảo” 
++ Chu kỳ bảo trì, bảo dưỡng: Nhập số nguyên dương  
++ Thời gian bảo trì, bảo dưỡng: Nhập thông tin bảo dưỡng gần nhất của phương tiện 
++ Ghi chú: Nhập thông tin ghi chú về phương tiện nếu có 
++ Thao tác: Cho phép người dùng lưu, xóa, sửa thông tin đã nhập 
+12. Tổ chức lực lượng tại chỗ sẽ có 3 lựa chọn sau: 
++ Với  lựa chọn “Cơ sở phải thành lập Đội PC&CC cơ sở” người dùng sẽ nhập 
+thông tin “Tổng số đội viên”, “Họ tên Đội/Tổ trưởng PCCC”, “Số điện thoại”, 
+nhập danh sách các phương tiện của Đội (Chủng loại phương tiện, Tên phương 
+tiện, Số lượng, Tình trạng phương tiện) 
++ Với  lựa chọn “Cơ sở phải thành lập Đội PCCC chuyên ngành” người dùng sẽ 
+nhập thông tin “Tổng số đội viên”, “Họ tên Đội/Tổ trưởng PCCC”, “Số điện 
+thoại”, chọn “Hoạt động theo chế độ kiêm nhiệm” hay “Hoạt động theo chế độ 
+chuyên trách”, nhập danh sách các phương tiện của Đội (Chủng loại phương tiện, 
+Tên phương tiện, Số lượng, Tình trạng phương tiện) 
++ Với lựa chọn “Cơ sở không phải thành lập Đội PCCC cơ sở/chuyên ngành” 
+người dùng sẽ phải nhập thông tin “Tổng số người được phân công nhiệm vụ 
+phòng cháy, chữa cháy và cứu nạn, cứu hộ”
+
+14 
++ B5: Chọn vào nút “Lưu” để lưu lại thông tin đã nhập hoặc nút “Trở về” để quay 
+lại điều chỉnh thông tin ở tab “Thông tin chung về cơ sở” 
++ B6: Nhập các thông tin các trường ở tab “Công tác PCCC, CNCH” như sau: 
+ 
+1. Công tác tuyên truyền huấn luyện và bồi dưỡng nghiệp vụ PCCC và CNCH 
++ Ngày tuyên truyền: Nhập thời gian thực hiện công tác tuyên truyền 
++ Số lượng đối tượng tham gia: 
+• Tổng số người: Nhập tổng số người 
+• Cán bộ quản lý lãnh đạo: Nhập số lượng cán bộ lãnh đạo lực lượng 
+• Người lao động: Nhập số lượng người lao động ở cơ sở 
+• Đối tượng khác: Nhập số lượng người thuộc đối tượng khác 
++   Hình thức tuyên truyền: Nhập hình thức tuyên truyền (trực tiếp, xem clip, phát 
+thanh, phát tờ rơi,…) 
++ Thao tác: Cho phép người dùng lưu, xóa, sửa thông tin đã nhập 
+2. Công tác huấn luyện và bồi dưỡng nghiệp vụ PCCC và CNCH 
++ Ngày huấn luyện, bồi dưỡng: Nhập thời gian thực hiện huấn luyện, bồi dưỡng 
++ Hình thức: Chọn hình thức huấn luyện là “Bồi dưỡng” hoặc “Huấn luyện” 
++ Số lượng đối tượng tham gia: 
+. Tổng số người phải huấn luyện, bồi dưỡng: Nhập tổng số lượng phải tham 
+gia huấn luyện, bồi dưỡng theo quy định.
+
+15 
+. Tổng số người đã được huấn luyện, bồi dưỡng: Hệ thống sẽ tính tổng số 
+người thuộc các đối tượng tham gia 
+. Người đứng đầu cơ sở: Nhập số lượng người đứng đầu cơ sở tham gia 
+. Thành viên đội PCCC cơ sở, chuyên ngành: Nhập số lượng thành viên đội 
+PCCC cơ sở, chuyên ngành tham gia 
+. Người được phân công thực hiện nhiệm vụ phòng cháy, chữa cháy, cứu 
+nạn, cứu hộ tại cơ sở: Nhập số lượng người được phân công PCCC và 
+CNCH tham gia 
+. Người làm việc trong môi trường nguy hiểm cháy, nổ hoặc thường xuyên 
+tiếp xúc với chất, hàng hóa nguy hiểm về cháy, nổ: Nhập số lượng người 
+làm trong môi trường dễ cháy nổ tham gia 
+. Người được phân công thực hiện kiểm tra về phòng cháy, chữa cháy tại cơ 
+sở: Nhập số lượng người thực hiên kiểm tra về PCCC tham gia 
+. Người điều khiển phương tiện, người làm việc trên phương tiện giao 
+thông quy định tại khoản 10 Điều 2 của Luật PCCC và CNCH: Nhập số 
+lượng người thực hiện điều khiển phương tiện PCCC tham gia 
+. Người đã đăng ký tham gia hoạt động phòng cháy, chữa cháy, cứu nạn, 
+cứu hộ tình nguyện: Nhập số lượng người đã đăng ký tham gia PCCC và 
+CNCH tình nguyện tham gia 
+. Đối tượng khác: Nhập số lượng đối tượng khác tham gia 
++ Văn bản thông báo kết quả huấn luyện/bồi dưỡng: Chọn văn bản để tải file lên hệ 
+thống 
++ Ghi chú: Nhập ghi chú 
++ Thao tác: Cho phép người dùng lưu, xóa, sửa thông tin đã nhập 
+3. Công tác kiểm tra về PCCC và CNCH của cơ quan quản lý chuyên ngành 
++ Ngày kiểm tra: Nhập thời điểm thực hiện công tác kiểm tra 
++ Hình thức kiểm tra: Nhập thông tin hình thức kiểm tra “định kỳ” hay “đột xuất” 
++ Số vi phạm PCCC: Nhập số vi phạm sau kiểm tra (0,1,2,3,4,…)
+
+16 
++ Biên bản vi phạm hành chính trong lĩnh vực PCCC, CNCH: Nhập tên biên bản vi 
+phạm 
++ Quyết định xử phạt vi phạm hành chính: Nhập Số và thời gian ban hành quyết 
+định xử phạt VPHC 
++ Số tiền phạt: Nhập số tiền cơ sở bị phạt VPHC 
++ Quyết định đình chỉ hoạt động: Nhập nội dung quyết định đình chỉ hoạt động của 
+cơ sở  
++ Văn bản kiến nghị: Nhập văn bản kiến nghị 
++ Biên bản kiểm tra: Người dùng có thể tải lên phần mềm file biên bản kiểm tra từ 
+thiết bị cá nhân 
++ Ghi chú: Nhập các thông tin liên quan đến công tác kiểm tra (nếu có) 
++ Thao tác: Cho phép người dùng lưu, xóa, sửa thông tin đã nhập 
+4. Công tác kiểm tra về PCCC và CNCH của người đứng đầu cơ sở 
++ Ngày kiểm tra: Chọn thời điểm thực hiện công tác kiểm tra của chủ cơ sở 
++ Người kiểm tra: Nhập họ và tên người thực hiện kiểm tra (người đứng đầu cơ sở 
+hoặc người được phân công thực hiện kiểm tra về PCCC tại cơ sở) 
++ Số tồn tại vi phạm PCCC & CNCH: Nhập số vi phạm còn tồn tại sau khi kiểm tra 
++ Số tồn tại vi phạm đã khắc phục: Nhập số vi phạm tồn tại đã được khắc phục 
++ Biên bản tự kiểm tra về PCCC: Cho phép người dùng tải lên phần mềm biên bản 
+từ thiết bị 
++ Ghi chú: Nhập thêm các thông tin về công tác kiểm tra (nếu có) 
++ Thao tác: Cho phép người dùng lưu, xóa, sửa thông tin đã nhập 
+5. Xây dựng phương án chữa cháy, CNCH 
++ Ngày phê duyệt: Chọn ngày phê duyệt phương án ghi trong phương án 
++ Ngày cập nhật, bổ sung, chỉnh lý: Nhập ngày cập nhật, bổ sung, chỉnh lý phương 
+án 
++ Nội dung cập nhật, bổ sung, chỉnh lý: Nhập nội dung cập nhật, bổ sung, chỉnh lý 
+trong phương án
+
+17 
++ Chọn File: Cho phép người dùng chọn từ thiết bị tệp (file) phương án tải lên hệ 
+thống 
++ Thao tác: Cho phép người dùng lưu, xóa, sửa thông tin đã nhập 
+6. Thực tập phương án chữa cháy, phương án CNCH 
++ Ngày thực tập: Chọn ngày thực tập phương án 
++ Tình huống thực tập: Nhập tên tình huống thực tập trong phương án 
++ Số người tham gia: Nhập số lượng người của cơ sở tham gia thực tập 
++ Phương tiện tham gia (số lượng): Nhập số lượng phương tiện của cơ sở tham gia 
+thực tập 
++ Đánh giá kết quả: Nhập đánh giá kết quả sau khi thực tập 
++ Ghi chú: Nhập thêm các thông tin về thực tập (nếu có) 
++ Thao tác: Cho phép người dùng lưu, xóa, sửa thông tin đã nhập 
+ 
+7. Thực hiện bảo hiểm cháy, nổ bắt buộc 
++ Ngày mua bảo hiểm: Chọn ngày mua bảo hiểm ghi trên giấy chứng nhận mua bảo 
+hiểm cháy, nổ bắt buộc 
++ Số giấy chứng nhận bảo hiểm: Nhập số giấy chứng nhận ghi trên giấy chứng nhận 
+mua bảo hiểm cháy, nổ bắt buộc 
++ Ngày hết hạn bảo hiểm: Chọn ngày bảo hiểm hết hạn ghi trên giấy chứng nhận 
+mua bảo hiểm cháy, nổ bắt buộc 
++ Thao tác: Cho phép người dùng lưu, xóa, sửa thông tin đã nhập 
+8. Báo cáo kết quả thực hiện công tác PCCC và CNCH của cơ sở
+
+18 
++ Ngày báo cáo: Chọn ngày báo cáo kết quả 
++ Chọn file: Cho phép người dùng tải lên phần mềm tệp báo cáo từ thiêt bị 
++ Thao tác: Cho phép người dùng lưu, xóa, sửa thông tin đã nhập 
+9. Tình hình cháy, nổ, sự cố, tai nạn 
++ Thời gian xảy ra cháy/ nổ/ tai nạn/ sự cố: Chọn ngày xảy ra cháy/ nổ/ tai nạn/ sự 
+cố 
++ Hạng mục/ khu vực xảy ra cháy/ nổ/ tai nạn/ sự cố: Nhập thông tin hạng mục xảy 
+ra cháy/ nổ/ tai nạn/ sự cố 
++ Phương tiện (Loại/số lượng): Nhập số lượng và loại phương tiện của cơ sở tham 
+gia xử lý cháy, nổ, tai nạn, sự cố 
++ Lực lượng xử lý: Nhập số người của cơ sở tham gia xử lý cháy, nổ, tai nạn, sự cố 
++ Thiệt hại: 
+. Nguyên nhân: Người dùng sẽ chọn các nguyên nhân theo các lựa chọn có 
+sẵn 
+. Số người bị thương: Nhập số người bị thương trong vụ cháy, nổ, tai nạn, 
+sự cố 
+. Số người tử vong: Nhập số người tử vong trong vụ cháy, nổ, tai nạn, sự cố 
+. Tài sản thiệt hại: Nhập số tiền bị thiệt hại (đồng) 
+. Diện tích cháy (m2): Nhập diện tích cháy (m2) 
++ Công tác xử lý sau vụ cháy: 
+. Cấp xử lý: Nhập tên cấp đã xử lý vi phạm hành chính 
+. Số tiền: Nhập số tiền bị xử phạt 
+. Hình thức xử lý: Chọn hình thức xử lý cơ sở như “Xử phạt”, “Không xử 
+phạt” 
+10.  Các thông tin khác có liên quan đến hoạt động phòng cháy, chữa cháy, cứu nạn, 
+cứu hộ của cơ sở 
++ Nhập các thông tin liên quan nếu có 
++ B7: Chọn nút “Lưu” để lưu phiếu. 
+*Lưu ý: Tab “Công tác PCCC, CNCH” sẽ có thêm các nút phục vụ cho các chức 
+năng riêng 
+- Nút “Đóng”: Đóng form tạo phiếu và không lưu thông đã nhập
+
+19 
+- Nút “Lưu”: Đóng form tạo phiếu nhưng ở trạng thái “Đang duyệt phiếu” và không 
+gửi tới PC07 
+3. Xem phiếu thu thập thông tin 
+ 
++ B1: Tại các phiếu cơ sở có trạng thái “Đang lập phiếu” chọn vào nút “Xem” 
++ B2: Hiển thị phiếu cùng với các thông tin đã lưu trước đó
+
+20 
+4. Chỉnh sửa phiếu thu thập thông tin cơ sở 
+ 
++ B1: Tại các phiếu cơ sở có trạng thái “Đang lập phiếu” chọn vào nút “Chỉnh 
+sửa” 
++ B2: Hiển thị phiếu cùng với các thông tin đã lưu trước đó 
++ B3: Thực hiện tiếp các bước hoàn thành như ở “Thêm mới phiếu cơ sở” 
+ 
+*Lưu ý: Chức năng này hiển thị ở các phiếu có trạng thái là “Đang lập phiếu” 
+ 
+ 
+
+21 
+5. Xóa phiếu thu thập thông tin cơ sở  
+ 
++ B1: Tại các phiếu cơ sở có trạng thái “Đang lập phiếu” chọn vào nút “Xóa” 
++ B2: Nhấn nút “Xác nhận” để xóa phiếu cơ sở khỏi hệ thống 
+ 
+*Lưu ý: Chức năng này hiển thị ở các phiếu có trạng thái là “Chờ duyệt”, “Đã duyệt”.
+
+22 
+6. Quy trình gửi phiếu cơ sở 
++ B1: Chủ cơ sở đăng nhập thành công vào trang phiếu cơ sở, sau đó giao diện 
+“Thêm mới” phiếu sẽ tự động được hiển thị 
++ B2: Nhập đủ thông tin các trường đánh dấu (*) ở tab “Thông tin chung về cơ sở” 
+ + B3: Chọn vào nút “Lưu” để lưu lại thông tin đã nhập  
+ 
++ B4: Nhập đủ thông tin các trường đánh dấu (*) ở tab “Thông tin về PCCC, 
+CNCH” 
++ B5: Chọn vào nút “Lưu” để lưu lại thông tin đã nhập hoặc tab “Thông tin chung 
+về cơ sở” để quay lại.
+
+23 
++ B6: Nhập đủ thông tin các trường đánh dấu (*) ở tab “Công tác PCCC, CNCH” 
++ B7: Chọn nút “Lưu” để lưu phiếu  
+ 
++ B8: Chọn vào nút “Gửi phiếu” để phiếu đến Trung tâm chỉ huy của Phòng PC07 
++ B9: Chọn vào nút “Đồng ý” để xác nhận gửi phiếu lần cuối

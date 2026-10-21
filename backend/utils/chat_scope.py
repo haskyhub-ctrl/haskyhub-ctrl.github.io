@@ -43,7 +43,7 @@ _TOPIC = re.compile(
     r"co so thuoc dien|dien quan ly|nguy co (chay|cao|thap|trung binh)|muc nguy co|rui ro chay|"
     r"luat 55|55/2024|nghi dinh 105|nghi dinh 347|quy chuan|qcvn|tcvn|347/2026|66\.18|105/2025|"
     r"doi chua chay|thu tuc (hanh chinh )?(pccc|chua chay)|"
-    r"(nghi dinh|thong tu|nghi quyet|luat|quyet dinh) (so )?\d{1,3}([/.]\d+)+|\d{1,3}/(20\d{2}|\d{2})/(nd|tt|nq|qh)|tam dinh chi|dinh chi hoat dong|phuc hoi hoat dong|giay chung nhan|co so du lieu pccc|khai bao (co so|thong tin)|dieu kien an toan|phuong tien (pccc|chua chay)|"
+    r"(nghi dinh|thong tu|nghi quyet|luat|quyet dinh) (so )?\d{1,3}([/.]\d+)+|\d{1,3}/(20\d{2}|\d{2})/(nd|tt|nq|qh)|co so du lieu|csdl|phan mem khai bao|phieu co so|truyen tin bao chay|thiet bi truyen tin|thuthapdulieu|khai bao (du lieu|thong tin)|cap nhat (du lieu|thong tin|co so)|tai khoan|dang nhap|dang ky tai khoan|quen mat khau|doi mat khau|tam dinh chi|dinh chi hoat dong|phuc hoi hoat dong|giay chung nhan|co so du lieu pccc|khai bao (co so|thong tin)|dieu kien an toan|phuong tien (pccc|chua chay)|"
     r"khao sat|danh gia (nguy co|an toan|co so)|ket qua (khao sat|danh gia)|"
     r"ma co so|ma theo doi|quen mat khau|dang nhap (fras|he thong|co so)|tai khoan (fras|co so)|"
     r"khac phuc (ton tai|nguy co)|ton tai (nguy co|an toan)|fras|tro ly chi|"
@@ -80,6 +80,26 @@ def is_in_scope(message: str, history=None) -> bool:
         if _on_topic(past.lower(), _norm(past)):
             return True
     return False
+
+
+_CLASSIFY_PROMPT = """Phân loại câu hỏi của người dân. Câu hỏi có thuộc phạm vi hỗ trợ của Trợ lý PCCC Công an thành phố Bắc Ninh không?
+Phạm vi gồm: phòng cháy, chữa cháy, cứu nạn cứu hộ, an toàn cháy nổ, quy định và thủ tục liên quan; việc sử dụng các hệ thống của lực lượng PCCC (Cơ sở dữ liệu về PCCC và CNCH, phần mềm khai báo, thiết bị truyền tin báo cháy, Hệ thống FRAS-AI, ứng dụng Báo cháy 114), kể cả lỗi tài khoản, đăng nhập, cập nhật dữ liệu trên các hệ thống đó; kiểm tra, huấn luyện, xử phạt vi phạm trong lĩnh vực PCCC.
+Ngoài phạm vi: mọi chủ đề khác (giá cả, giải trí, y tế, giao thông, thời tiết, lập trình, tài chính...).
+
+Câu hỏi: {question}
+Trả về DUY NHẤT JSON: {{"in_scope": true hoặc false}}"""
+
+
+def classify_with_ai(message: str):
+    """Hỏi AI nhanh khi từ khóa không khớp. Trả True, False, hoặc None nếu AI không phản hồi (khi đó cho qua, để tránh từ chối nhầm)."""
+    try:
+        from utils.rag_search import _call_llm, _extract_json_block
+        raw = _call_llm(_CLASSIFY_PROMPT.format(question=message[:600]), temperature=0.0, max_tokens=40, is_json=True, fast=True, timeout=10.0)
+        data = _extract_json_block(raw) or {}
+        v = data.get("in_scope")
+        return bool(v) if isinstance(v, bool) else None
+    except Exception:
+        return None
 
 
 def out_of_scope_response() -> dict:

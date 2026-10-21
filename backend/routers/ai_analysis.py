@@ -440,7 +440,12 @@ async def ai_chat(
 
     # Chỉ trả lời lĩnh vực PCCC và CNCH; ngoài lĩnh vực thì từ chối khéo (không gọi AI)
     if not is_in_scope(data.message, data.history):
-        return out_of_scope_response()
+        # Từ khóa không khớp: hỏi AI nhanh một lần, chỉ từ chối khi AI khẳng định câu hỏi ngoài phạm vi
+        import asyncio as _aio
+        from utils.chat_scope import classify_with_ai
+        verdict = await _aio.to_thread(classify_with_ai, data.message)
+        if verdict is False:
+            return out_of_scope_response()
 
     # Câu hỏi chung đã có câu trả lời gần đây: trả ngay, không gọi AI lại
     cacheable = not data.assessment_id and not data.history

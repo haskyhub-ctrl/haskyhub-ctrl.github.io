@@ -231,6 +231,14 @@ async def lifespan(app: FastAPI):
         info = sync_seed()
         if info["added"] or info["updated"]:
             print(f"[kho] Nạp sẵn tài liệu: thêm {info['added']}, cập nhật {info['updated']} / {info['total']}")
+        from utils.kho_seed import sync_faq
+        _db = SessionLocal()
+        try:
+            n_faq = sync_faq(_db)
+            if n_faq:
+                print(f"[kho] Nạp câu hỏi thường gặp: {n_faq}")
+        finally:
+            _db.close()
         import threading
         from utils import local_rag
         threading.Thread(target=local_rag.reindex, daemon=True).start()

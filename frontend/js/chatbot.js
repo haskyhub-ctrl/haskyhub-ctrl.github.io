@@ -184,12 +184,12 @@
 
         /* ===== Câu trả lời có cấu trúc ===== */
         .fras-msg.ai .fras-bubble { max-width: 92%; }
-        .fras-rich { font-size: 0.86rem; line-height: 1.6; color: #1e293b; word-break: break-word; }
+        .fras-rich { font-size: 0.78rem; line-height: 1.55; color: #1e293b; word-break: break-word; }
         .fras-rich p { margin: 0 0 8px; }
         .fras-rich strong { color: #0F2347; font-weight: 800; }
         .fras-rich mark { background: #FFF1B8; color: inherit; padding: 0 2px; }
         .fras-answer { background: #EEF4FC; border-left: 4px solid #1A3A6B; padding: 9px 12px; margin: 0 0 10px; font-weight: 600; color: #0F2347; }
-        .fras-h { margin: 12px 0 6px; padding-bottom: 3px; border-bottom: 2px solid #C0202A; color: #C0202A; font-weight: 800; font-size: 0.8rem; letter-spacing: .4px; text-transform: uppercase; }
+        .fras-h { margin: 10px 0 5px; padding-bottom: 3px; border-bottom: 2px solid #C0202A; color: #C0202A; font-weight: 800; font-size: 0.74rem; letter-spacing: .4px; text-transform: uppercase; }
         .fras-warn { background: #FFF7E6; border-left: 4px solid #C9962C; padding: 8px 12px; margin: 8px 0; color: #7a4b00; font-weight: 600; }
         .fras-steps { list-style: none; counter-reset: step; margin: 4px 0 8px; padding: 0; }
         .fras-steps li { counter-increment: step; position: relative; padding: 5px 0 5px 34px; margin: 0 0 4px; }
@@ -197,8 +197,8 @@
         .fras-rich ul { margin: 4px 0 8px; padding-left: 20px; }
         .fras-rich ul li { margin: 0 0 3px; }
         .fras-rich ul li::marker { color: #C0202A; }
-        .fras-cite { display: inline-block; font-size: 0.72rem; font-weight: 600; color: #1A3A6B; background: #E8EEF8; border: 1px solid #C5D3EA; padding: 0 6px; margin: 0 1px; white-space: normal; }
-        .fras-table { width: 100%; border-collapse: collapse; margin: 6px 0 10px; font-size: 0.8rem; }
+        .fras-cite { display: inline-block; font-size: 0.68rem; font-weight: 600; color: #1A3A6B; background: #E8EEF8; border: 1px solid #C5D3EA; padding: 0 6px; margin: 0 1px; white-space: normal; }
+        .fras-table { width: 100%; border-collapse: collapse; margin: 6px 0 10px; font-size: 0.74rem; }
         .fras-table th { background: #1A3A6B; color: #fff; padding: 5px 8px; text-align: left; font-weight: 700; }
         .fras-table td { padding: 5px 8px; border: 1px solid #D8DCE6; vertical-align: top; }
         .fras-table tr:nth-child(even) td { background: #F6F8FC; }

@@ -72,3 +72,28 @@ def sync_seed() -> dict:
     if added or updated:
         local_rag.save_manifest(man)
     return {"added": added, "updated": updated, "total": len(seed)}
+
+
+FAQ_PATH = os.path.join(SEED_DIR, "faq.json")
+
+
+def sync_faq(db) -> int:
+    """Nạp các câu hỏi thường gặp có đáp án chuẩn (kho_seed/faq.json) vào ngân hàng câu hỏi. Câu nào đã có thì giữ nguyên."""
+    try:
+        with open(FAQ_PATH, "r", encoding="utf-8") as f:
+            items = json.load(f)
+    except Exception:
+        return 0
+    from models import KbQuestion
+    from utils.kb_qa import question_key
+    added = 0
+    for it in items:
+        key = question_key(it["question"])
+        if not key or db.query(KbQuestion).filter(KbQuestion.question_key == key).first():
+            continue
+        db.add(KbQuestion(question=it["question"], question_key=key, answer=it["answer"], status="approved", source="seed",
+                          times_asked=0, answered_at=datetime.utcnow()))
+        added += 1
+    if added:
+        db.commit()
+    return added

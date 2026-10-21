@@ -1065,5 +1065,16 @@
   "source": "20vezl5t.ujh-Tài liệu hướng dẫn 10.6/Tài liệu hướng dẫn 10.6 ok/Phụ lục II. Hướng dẫn kiểm tra về PCCC/2. Bảng II.9. Hướng dẫn kiểm tra hệ thống chữa cháy bằng bọt, nước.doc",
   "seed_rev": 1,
   "weight": 1.0
+ },
+ "hd_csdl_pccc_phanmem": {
+  "title": "Hướng dẫn sử dụng phần mềm khai báo của Hệ thống cơ sở dữ liệu về PCCC, CNCH (đăng nhập, lập phiếu cơ sở, sửa, xóa, gửi phiếu)",
+  "tier": 2,
+  "status": "active",
+  "effective_date": "07/2025",
+  "note": "Tài liệu của Cục An ninh mạng và PCTP sử dụng công nghệ cao, đăng công khai trên cổng thông tin Công an tỉnh Ninh Bình. Giải đáp cách đăng nhập, khai báo, sửa, gửi phiếu cơ sở.",
+  "group": "Hướng dẫn sử dụng hệ thống cơ sở dữ liệu PCCC",
+  "source": "https://congan.ninhbinh.gov.vn (Hướng dẫn sử dụng phần mềm khai báo cơ sở dữ liệu PCCC và CNCH)",
+  "seed_rev": 1,
+  "weight": 1.5
  }
 }
