@@ -33,15 +33,34 @@ def enabled() -> bool:
     return os.getenv("CHAT_VERIFY", "true").lower() in ("true", "1", "yes")
 
 
+_NUM_RE = re.compile(r"(\d[\d.,]*)\s*(m³|m3|m²|m2|mét|km|tầng|người|năm|ngày|tháng|giờ|phút|%|đồng|triệu|kg|lít|bình|phòng|căn hộ|lần)", re.I)
+
+
+def ungrounded_numbers(reply: str, ground: str) -> list:
+    """Số liệu (kèm đơn vị) có trong câu trả lời nhưng không tìm thấy trong tài liệu căn cứ: dấu hiệu AI tự suy đoán ngưỡng, thời hạn, mức phạt."""
+    g = re.sub(r"[\s.,]", "", (ground or "").lower())
+    out = []
+    for m in _NUM_RE.finditer(reply or ""):
+        digits = re.sub(r"[.,]", "", m.group(1))
+        if not digits or len(digits) == 1 and digits in "0123456789" and m.group(2).lower() in ("lần", "bình", "người", "phòng"):
+            continue
+        if digits not in g:
+            token = f"{m.group(1)} {m.group(2)}"
+            if token not in out:
+                out.append(token)
+    return out[:8]
+
+
 def stale_hits(text: str) -> list:
     return sorted({m.group(0).strip() for m in _STALE_RE.finditer(text or "")})[:8]
 
 
-def _verify_prompt(question: str, reply: str, doc_context: str, hits: list) -> str:
+def _verify_prompt(question: str, reply: str, doc_context: str, hits: list, ungrounded: list = None) -> str:
     from utils.rag_search import CORE_LEGAL_PRINCIPLES_2026, OBSOLETE_TRANSITION_GUIDE, CURRENT_LEGAL_REFS
     obsolete = "\n".join(f"- {x}" for x in OBSOLETE_TRANSITION_GUIDE)
     current = "\n".join(f"- {x}" for x in CURRENT_LEGAL_REFS)
     flagged = "\n".join(f"- {h}" for h in hits) or "(không có)"
+    ung = "\n".join(f"- {u}" for u in (ungrounded or [])) or "(không có)"
     return f"""Bạn là chuyên viên thẩm định pháp luật PCCC của Công an thành phố Bắc Ninh. Nhiệm vụ: kiểm tra lần cuối một câu trả lời của Trợ lý ảo trước khi gửi cho người dân, nhất là xem nội dung có còn hiệu lực không.
 
 CÂU HỎI CỦA NGƯỜI DÂN:
@@ -52,6 +71,9 @@ CÂU TRẢ LỜI NHÁP CẦN THẨM ĐỊNH:
 
 CÁC DẤU HIỆU HẾT HIỆU LỰC MÁY ĐÃ PHÁT HIỆN TRONG CÂU TRẢ LỜI (cần xem xét kỹ):
 {flagged}
+
+SỐ LIỆU CHƯA TÌM THẤY TRONG TÀI LIỆU CĂN CỨ (ngưỡng, thời hạn, mức phạt có thể do AI tự suy đoán): với mỗi số liệu, chỉ giữ lại nếu thật sự có trong tài liệu hoặc quy định mới nhất bên dưới; nếu không có thì bỏ số liệu đó, thay bằng cách nói chung và mời người hỏi đối chiếu văn bản hoặc liên hệ cán bộ Cảnh sát PCCC và CNCH. Tuyệt đối không giữ con số không có căn cứ.
+{ung}
 
 QUY ĐỊNH MỚI NHẤT (NĂM 2026, ƯU TIÊN TUYỆT ĐỐI):
 {CORE_LEGAL_PRINCIPLES_2026}
@@ -114,9 +136,14 @@ def verify_answer(question: str, result: dict, budget: float = 28.0) -> dict:
         return {"result": result, "fixed": False, "unresolved": False}
 
     hits = stale_hits(reply)
+    try:
+        from utils.rag_search import CORE_LEGAL_PRINCIPLES_2026
+        ungrounded = ungrounded_numbers(reply, doc_context + "\n" + CORE_LEGAL_PRINCIPLES_2026)
+    except Exception:
+        ungrounded = []
     verdict = None
     try:
-        raw = _call_llm(_verify_prompt(question, reply, doc_context, hits), temperature=0.1, max_tokens=2500, is_json=True, fast=True, timeout=float(budget))
+        raw = _call_llm(_verify_prompt(question, reply, doc_context, hits, ungrounded), temperature=0.1, max_tokens=2500, is_json=True, fast=True, timeout=float(budget))
         verdict = _extract_json_block(raw)
     except Exception as e:
         print(f"[answer_check] Lỗi thẩm định: {e}")
