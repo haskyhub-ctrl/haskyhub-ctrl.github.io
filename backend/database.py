@@ -107,6 +107,17 @@ def migrate_db():
                 print(f"[migrate] WARN index: {e}")
                 conn.rollback()
 
+        if "users" in tables:
+            try:
+                from utils.facility_import import merge_team_aliases
+                n = merge_team_aliases(conn)
+                conn.commit()
+                if n:
+                    print(f"[migrate] Gộp tên đội trùng: {n} tài khoản")
+            except Exception as e:
+                print(f"[migrate] WARN gộp tên đội: {e}")
+                conn.rollback()
+
         if not is_sqlite and "users" in tables:
             try:
                 conn.execute(text("ALTER TABLE users ALTER COLUMN full_name TYPE TEXT"))

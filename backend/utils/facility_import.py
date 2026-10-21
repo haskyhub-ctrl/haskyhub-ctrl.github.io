@@ -207,6 +207,24 @@ def row_to_record(row):
     }
 
 
+# Tên đội ghi khác nhau trong bảng tính nhưng là một đơn vị: gộp về một tên (cả khi nạp CSV lẫn sửa CSDL đang chạy)
+TEAM_ALIASES = {
+    "Tổ CC và CNCH KV Lục Nam": "Đội CC và CNCH khu vực Lục Nam",
+    "Đội Chữa cháy và CNCH khu vực Lục Ngạn": "ĐỘI CHỮA CHÁY VÀ CNCH KHU VỰC LỤC NGẠN",
+    "UBND phường Chũ": "UBND Phường Chũ",
+}
+
+
+def merge_team_aliases(conn):
+    """Gộp tên đội trùng trong CSDL (dùng được nhiều lần, lần sau không còn gì để sửa)."""
+    from sqlalchemy import text
+    total = 0
+    for old, new in TEAM_ALIASES.items():
+        r = conn.execute(text("UPDATE users SET management_team=:n, organization=:n WHERE management_team=:o"), {"n": new, "o": old})
+        total += r.rowcount or 0
+    return total
+
+
 _WARD_RE = re.compile(r"^(xã|phường|thị trấn)\s+(.+)$", re.I)
 
 
@@ -263,6 +281,8 @@ def load_records(path=None):
                 stats["duplicate_code"] += 1
             by_code[rec["code"]] = rec
     records = list(by_code.values())
+    for r in records:
+        r["team"] = TEAM_ALIASES.get(r["team"], r["team"])
     stats["ward_fixed"] = normalize_wards(records)
     return records, stats
 

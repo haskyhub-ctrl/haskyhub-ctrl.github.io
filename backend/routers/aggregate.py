@@ -214,10 +214,18 @@ def generate_aggregate_analysis(
             })
     high_risk_facilities.sort(key=lambda x: x["risk_percentage"])
 
-    # ===== 7. Map Points (Heatmap + Dots) =====
+    # ===== 7. Map Points (Heatmap + Dots + thống kê theo xã phường) =====
+    from sqlalchemy import func
+    uids = list({a.user_id for a in assessments if a.user_id})
+    ward_of = {}
+    for i in range(0, len(uids), 900):
+        for uid, w in db.query(User.id, User.ward).filter(User.id.in_(uids[i:i + 900])).all():
+            ward_of[uid] = (w or "").strip()
     map_points = []
+    wards = {}
     for a in assessments:
         if a.latitude and a.longitude:
+            ward = ward_of.get(a.user_id, "")
             map_points.append({
                 "lat": a.latitude,
                 "lng": a.longitude,
@@ -225,8 +233,31 @@ def generate_aggregate_analysis(
                 "risk_percentage": a.risk_percentage,
                 "facility_name": a.facility_name,
                 "facility_type": a.facility_type or "unknown",
+                "ward": ward,
                 "is_demo": getattr(a, "is_demo", False),
             })
+            if ward:
+                w = wards.setdefault(ward, {"ward": ward, "surveyed": 0, "sum_risk": 0.0, "high": 0, "lat": 0.0, "lng": 0.0})
+                w["surveyed"] += 1
+                w["sum_risk"] += a.risk_percentage or 0
+                w["high"] += 1 if a.risk_level in ("high", "critical") else 0
+                w["lat"] += a.latitude
+                w["lng"] += a.longitude
+    totals = dict(
+        db.query(User.ward, func.count(User.id)).filter(User.management_team.isnot(None)).group_by(User.ward).all()
+    )
+    ward_stats = []
+    for w in wards.values():
+        n = w["surveyed"]
+        total_fac = int(totals.get(w["ward"], 0)) or n
+        ward_stats.append({
+            "ward": w["ward"], "surveyed": n, "total_facilities": total_fac,
+            "coverage": round(n * 100.0 / total_fac, 1),
+            "avg_risk": round(w["sum_risk"] / n, 1),
+            "high": w["high"], "high_rate": round(w["high"] * 100.0 / n, 1),
+            "lat": round(w["lat"] / n, 6), "lng": round(w["lng"] / n, 6),
+        })
+    ward_stats.sort(key=lambda x: -x["high_rate"])
 
     # ===== 8. Generate Rule-Based Recommendations =====
     recommendations = _generate_aggregate_recommendations(
@@ -258,6 +289,7 @@ def generate_aggregate_analysis(
         "recommendations": recommendations,
         "ai_analysis": ai_analysis,
         "map_points": map_points,
+        "ward_stats": ward_stats,
     }
 
 

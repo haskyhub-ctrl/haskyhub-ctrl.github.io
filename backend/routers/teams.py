@@ -59,6 +59,7 @@ def _latest_completed(db: Session):
             Assessment.risk_level.label("risk"),
             Assessment.risk_percentage.label("pct"),
             Assessment.completed_at.label("done_at"),
+            case((Assessment.mitigation_data.like('%"resolved": true%'), 1), else_=0).label("mit"),
             func.row_number().over(partition_by=Assessment.user_id, order_by=Assessment.completed_at.desc()).label("rn"),
             func.count(Assessment.id).over(partition_by=Assessment.user_id).label("n"),
         )
@@ -70,6 +71,11 @@ def _latest_completed(db: Session):
 
 def _iso(dt):
     return dt.isoformat() if dt else None
+
+
+def _mit_expr(latest):
+    """Số cơ sở đã cập nhật tiến độ khắc phục (có ít nhất một hạng mục tích đã khắc phục)."""
+    return func.coalesce(func.sum(latest.c.mit), 0)
 
 
 def _high_expr(latest):
@@ -86,6 +92,7 @@ def _overview_data(db, ward, q, group, team, sort):
             func.count(latest.c.uid).label("participated"),
             func.max(latest.c.done_at).label("last_at"),
             _high_expr(latest).label("high"),
+            _mit_expr(latest).label("mit"),
         )
         .outerjoin(latest, latest.c.uid == User.id)
         .filter(User.management_team.isnot(None))
@@ -105,6 +112,7 @@ def _overview_data(db, ward, q, group, team, sort):
             "remaining": total - part,
             "percent": round(part * 100.0 / total, 1) if total else 0.0,
             "high_risk": int(r.high or 0),
+            "mitigated": int(r.mit or 0),
             "last_survey_at": _iso(r.last_at),
             "group": _group_of(r.team),
             "group_label": GROUP_LABELS[_group_of(r.team)],
@@ -117,6 +125,7 @@ def _overview_data(db, ward, q, group, team, sort):
             User.ward.label("ward"),
             func.count(User.id).label("total"),
             func.count(latest.c.uid).label("participated"),
+            _mit_expr(latest).label("mit"),
         )
         .outerjoin(latest, latest.c.uid == User.id)
         .filter(User.management_team.isnot(None))
@@ -124,6 +133,7 @@ def _overview_data(db, ward, q, group, team, sort):
     wq = _apply_team_filters(wq, group, team, q)
     wards = [
         {"ward": w.ward or "(chưa có)", "value": w.ward or "", "total": int(w.total), "participated": int(w.participated),
+         "mitigated": int(w.mit or 0),
          "percent": round(int(w.participated) * 100.0 / int(w.total), 1) if w.total else 0.0}
         for w in wq.group_by(User.ward).all()
     ]
@@ -149,6 +159,7 @@ def _overview_data(db, ward, q, group, team, sort):
             "remaining": total - part,
             "percent": round(part * 100.0 / total, 1) if total else 0.0,
             "high_risk": sum(t["high_risk"] for t in teams),
+            "mitigated": sum(t["mitigated"] for t in teams),
             "last_24h": int(last_24h),
             "teams": len(teams),
         },
@@ -210,28 +221,70 @@ def overview_export(
     wb = Workbook()
     ws = wb.active
     ws.title = "Theo đội"
-    ws.append(["STT", "Đội quản lý", "Nhóm", "Tổng cơ sở", "Đã khảo sát", "Chưa khảo sát", "Tỷ lệ tham gia (%)", "Nguy cơ cao, rất cao", "Khảo sát gần nhất"])
+    ws.append(["STT", "Đội quản lý", "Nhóm", "Tổng cơ sở", "Đã khảo sát", "Chưa khảo sát", "Tỷ lệ tham gia (%)", "Nguy cơ cao, rất cao", "Đã cập nhật khắc phục", "Khảo sát gần nhất"])
     for i, t in enumerate(d["teams"], 1):
-        ws.append([i, t["team"], t["group_label"], t["total"], t["participated"], t["remaining"], t["percent"], t["high_risk"],
+        ws.append([i, t["team"], t["group_label"], t["total"], t["participated"], t["remaining"], t["percent"], t["high_risk"], t["mitigated"],
                    (datetime.fromisoformat(t["last_survey_at"]).strftime("%d/%m/%Y %H:%M") if t["last_survey_at"] else "")])
     tt = d["totals"]
-    ws.append(["", "TỔNG", "", tt["facilities"], tt["participated"], tt["remaining"], tt["percent"], tt["high_risk"], ""])
+    ws.append(["", "TỔNG", "", tt["facilities"], tt["participated"], tt["remaining"], tt["percent"], tt["high_risk"], tt["mitigated"], ""])
     for c in ws[ws.max_row]:
         c.font = Font(bold=True)
-    _style_sheet(ws, [6, 52, 20, 12, 12, 14, 16, 16, 20])
+    _style_sheet(ws, [6, 52, 20, 12, 12, 14, 16, 16, 18, 20])
     ws2 = wb.create_sheet("Theo xã phường")
-    ws2.append(["STT", "Xã phường", "Tổng cơ sở", "Đã khảo sát", "Tỷ lệ tham gia (%)"])
+    ws2.append(["STT", "Xã phường", "Tổng cơ sở", "Đã khảo sát", "Đã cập nhật khắc phục", "Tỷ lệ tham gia (%)"])
     for i, w in enumerate(d["wards"], 1):
-        ws2.append([i, w["ward"], w["total"], w["participated"], w["percent"]])
-    _style_sheet(ws2, [6, 34, 12, 12, 16])
+        ws2.append([i, w["ward"], w["total"], w["participated"], w["mitigated"], w["percent"]])
+    _style_sheet(ws2, [6, 34, 12, 12, 18, 16])
     return _xlsx_response(wb, f"Theo_doi_khao_sat_{datetime.now():%Y%m%d_%H%M}.xlsx")
+
+
+@router.get("/map-wards")
+def map_wards(
+    group: Optional[str] = Query(None, pattern="^(pc07|commune)$"),
+    team: Optional[str] = None,
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db),
+):
+    """Thống kê theo xã phường để vẽ bản đồ quản lý: tổng cơ sở, đã khảo sát, nguy cơ trung bình, nguy cơ cao, tâm tọa độ."""
+    require_role("admin", "superadmin")(current_user)
+    latest = _latest_completed(db)
+    qry = (
+        db.query(
+            User.ward,
+            func.count(User.id),
+            func.count(latest.c.uid),
+            func.avg(latest.c.pct),
+            _high_expr(latest),
+            _mit_expr(latest),
+            func.avg(User.latitude),
+            func.avg(User.longitude),
+        )
+        .outerjoin(latest, latest.c.uid == User.id)
+        .filter(User.management_team.isnot(None))
+    )
+    qry = _apply_team_filters(qry, group, team, None).group_by(User.ward)
+    out = []
+    for ward, total, surveyed, avg_pct, high, mit, lat, lng in qry.all():
+        if lat is None or lng is None or not ward:
+            continue
+        total, surveyed = int(total), int(surveyed)
+        out.append({
+            "ward": ward, "total": total, "surveyed": surveyed,
+            "coverage": round(surveyed * 100.0 / total, 1) if total else 0.0,
+            "avg_risk": round(float(avg_pct), 1) if avg_pct is not None else None,
+            "high": int(high or 0),
+            "high_rate": round(int(high or 0) * 100.0 / surveyed, 1) if surveyed else None,
+            "mitigated": int(mit or 0),
+            "lat": round(float(lat), 6), "lng": round(float(lng), 6),
+        })
+    return {"generated_at": datetime.utcnow().isoformat() + "Z", "wards": out}
 
 
 def _detail_query(db, latest, team, ward, status, q):
     qry = (
         db.query(
             User.id, User.facility_code, User.full_name, User.ward, User.facility_type_label, User.facility_types,
-            latest.c.aid, latest.c.risk, latest.c.pct, latest.c.done_at, latest.c.n,
+            latest.c.aid, latest.c.risk, latest.c.pct, latest.c.done_at, latest.c.n, latest.c.mit,
         )
         .outerjoin(latest, latest.c.uid == User.id)
         .filter(User.management_team == team)
@@ -242,6 +295,8 @@ def _detail_query(db, latest, team, ward, status, q):
         qry = qry.filter(latest.c.uid.isnot(None))
     elif status == "todo":
         qry = qry.filter(latest.c.uid.is_(None))
+    elif status == "mitigated":
+        qry = qry.filter(latest.c.mit == 1)
     if q:
         like = f"%{q.strip()}%"
         qry = qry.filter(User.full_name.ilike(like) | User.facility_code.like(like))
@@ -252,7 +307,7 @@ def _detail_query(db, latest, team, ward, status, q):
 def team_detail(
     team: str = Query(..., description="Tên đội quản lý"),
     ward: Optional[str] = None,
-    status: str = Query("all", pattern="^(all|done|todo)$"),
+    status: str = Query("all", pattern="^(all|done|todo|mitigated)$"),
     q: Optional[str] = None,
     page: int = Query(1, ge=1),
     page_size: int = Query(50, ge=10, le=200),
@@ -273,13 +328,13 @@ def team_detail(
 
     # Tổng hợp của đội (áp bộ lọc xã phường) và thống kê từng xã phường để chọn lọc
     summary_q = (
-        db.query(func.count(User.id), func.count(latest.c.uid))
+        db.query(func.count(User.id), func.count(latest.c.uid), _mit_expr(latest))
         .outerjoin(latest, latest.c.uid == User.id)
         .filter(User.management_team == team)
     )
     if ward:
         summary_q = summary_q.filter(User.ward == ward)
-    s_total, s_part = summary_q.one()
+    s_total, s_part, s_mit = summary_q.one()
     wards = [
         {"ward": w or "(chưa có)", "value": w or "", "total": int(t), "participated": int(p)}
         for w, t, p in (
@@ -296,6 +351,7 @@ def team_detail(
         "team": team,
         "summary": {
             "total": int(s_total), "participated": int(s_part), "remaining": int(s_total) - int(s_part),
+            "mitigated": int(s_mit or 0),
             "percent": round(int(s_part) * 100.0 / int(s_total), 1) if s_total else 0.0,
         },
         "wards": wards,
@@ -316,6 +372,7 @@ def team_detail(
                 "risk_percentage": r.pct,
                 "completed_at": _iso(r.done_at),
                 "surveys": int(r.n) if r.n else 0,
+                "mitigated": bool(r.mit),
             }
             for r in rows
         ],
@@ -326,7 +383,7 @@ def team_detail(
 def team_export(
     team: str = Query(...),
     ward: Optional[str] = None,
-    status: str = Query("done", pattern="^(all|done|todo)$"),
+    status: str = Query("done", pattern="^(all|done|todo|mitigated)$"),
     current_user: User = Depends(get_current_user),
     db: Session = Depends(get_db),
 ):
@@ -337,14 +394,14 @@ def team_export(
     wb = Workbook()
     ws = wb.active
     ws.title = "Danh sách cơ sở"
-    ws.append(["STT", "Mã cơ sở", "Tên cơ sở", "Xã phường", "Loại hình", "Trạng thái", "Mức nguy cơ", "Tỷ lệ nguy cơ (%)", "Thời điểm khảo sát", "Số bài"])
+    ws.append(["STT", "Mã cơ sở", "Tên cơ sở", "Xã phường", "Loại hình", "Trạng thái", "Mức nguy cơ", "Tỷ lệ nguy cơ (%)", "Thời điểm khảo sát", "Số bài", "Đã cập nhật khắc phục"])
     for i, r in enumerate(rows, 1):
         ws.append([
             i, str(r.facility_code or ""), r.full_name, r.ward or "", r.facility_type_label or "",
             "Đã khảo sát" if r.aid else "Chưa khảo sát",
             RISK_LABELS.get(r.risk, ""), r.pct if r.pct is not None else "",
-            r.done_at.strftime("%d/%m/%Y %H:%M") if r.done_at else "", int(r.n) if r.n else 0,
+            r.done_at.strftime("%d/%m/%Y %H:%M") if r.done_at else "", int(r.n) if r.n else 0, "Có" if r.mit else "",
         ])
-    _style_sheet(ws, [6, 18, 48, 26, 40, 16, 14, 16, 20, 8])
+    _style_sheet(ws, [6, 18, 48, 26, 40, 16, 14, 16, 20, 8, 18])
     safe = "".join(ch if ch.isalnum() or ch in " _-" else "_" for ch in team).strip().replace(" ", "_")
     return _xlsx_response(wb, f"DS_{safe}_{datetime.now():%Y%m%d}.xlsx")
