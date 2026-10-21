@@ -804,7 +804,10 @@ TRẢ VỀ JSON THUẦN (không dùng ```json):
         router_model = os.getenv("ROUTER_MODEL", "ag/gemini-3.8-flash-high")
         current_model = router_model if use_router and router_key else os.getenv("GEMINI_MODEL", "gemini-3.5-flash")
         _safe_print(f"[ask_ai_chi] Gọi LLM (ưu tiên {current_model})...")
-        content = _call_llm(template, temperature=0.15, max_tokens=2048, is_json=True)
+        # Mô hình nhanh cho câu trả lời chính (bản "high" suy nghĩ lâu, mất 40 đến 60 giây); bước thẩm định hiệu lực phía sau sẽ bắt lỗi.
+        # Đặt CHAT_MAIN_MODEL_HIGH=true nếu muốn dùng lại mô hình chậm hơn nhưng suy luận sâu hơn.
+        fast_main = os.getenv("CHAT_MAIN_MODEL_HIGH", "false").lower() not in ("true", "1", "yes")
+        content = _call_llm(template, temperature=0.15, max_tokens=2600, is_json=True, fast=fast_main, timeout=50.0)
         _safe_print(f"[ask_ai_chi] OK Got {len(content)} chars")
 
         # ── Parse JSON từ phản hồi ───────────────────────────────────
