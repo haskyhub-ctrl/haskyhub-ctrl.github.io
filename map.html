@@ -369,18 +369,28 @@
                 <!-- View mode toggle -->
                 <div class="view-toggle" id="view-toggle">
                     <span class="view-toggle-label">Hiển thị</span>
-                    <button class="view-toggle-btn active" id="btn-mode-marker" onclick="setViewMode('marker')">
+                    <button class="view-toggle-btn active" id="btn-mode-wards" onclick="setViewMode('wards')">
+                        🏘 Theo xã phường
+                    </button>
+                    <button class="view-toggle-btn" id="btn-mode-marker" onclick="setViewMode('marker')">
                         📍 Điểm
                     </button>
                     <button class="view-toggle-btn" id="btn-mode-heatmap" onclick="setViewMode('heatmap')">
                         🔥 Heatmap
                     </button>
                 </div>
+                <!-- Chọn chỉ số tô màu theo xã phường -->
+                <select id="ward-metric" onchange="renderWards()" style="display:none;padding:5px 8px;border:1px solid var(--border-color,#334155);background:var(--bg-card,#1e293b);color:var(--text-primary,#f1f5f9);font-size:0.8rem;">
+                    <option value="high_rate">Tô màu: tỷ lệ cơ sở nguy cơ cao</option>
+                    <option value="avg_risk">Tô màu: nguy cơ trung bình</option>
+                    <option value="coverage">Tô màu: độ phủ khảo sát</option>
+                </select>
+                <div class="heatmap-legend" id="ward-legend" style="flex-wrap:wrap;"></div>
                 <!-- Heatmap legend (shown only in heatmap mode) -->
                 <div class="heatmap-legend" id="heatmap-legend">
-                    <span>Thấp</span>
-                    <div class="heatmap-gradient-bar"></div>
-                    <span>Rất cao</span>
+                    <span style="display:inline-flex;align-items:center;gap:4px;"><span style="width:12px;height:12px;background:#f97316;display:inline-block;"></span>Nguy cơ cao</span>
+                    <span style="display:inline-flex;align-items:center;gap:4px;"><span style="width:12px;height:12px;background:#ef4444;display:inline-block;"></span>Nguy cơ rất cao</span>
+                    <span style="opacity:.8;">Càng đậm càng tập trung nhiều cơ sở</span>
                 </div>
                 <div class="map-stats" id="map-stats"></div>
             </div>
@@ -400,7 +410,9 @@
         let allMarkers = [];
         let allData = [];
         let activeFilter = '';
-        let viewMode = 'marker'; // 'marker' | 'heatmap'
+        let viewMode = 'wards'; // 'wards' | 'marker' | 'heatmap'
+        let wardLayer = null;
+        let wardData = [];
 
         const riskColors = {
             low: '#22c55e',
@@ -586,8 +598,9 @@
                 }
             });
             map.addLayer(markerClusterGroup);
+            map.on('zoomend', drawHeat);
 
-            loadMapData();
+            setViewMode('wards');
             hideMapLoading();
             } catch (err) {
                 console.error('[Map] Lỗi khởi tạo bản đồ:', err);
@@ -620,6 +633,7 @@
                 } else {
                     url = '/assessments/map-data' + (activeFilter ? `?risk_level=${activeFilter}` : '');
                 }
+                if (viewMode === 'wards') { await loadWards(); return; }
                 allData = await api.get(url);
 
                 // Hide "unassessed" filter for non-admin (no imported facilities)
@@ -645,73 +659,147 @@
          * ───────────────────────────── */
         function setViewMode(mode) {
             viewMode = mode;
-
-            // Update toggle button states
-            document.getElementById('btn-mode-marker').classList.toggle('active', mode === 'marker');
-            document.getElementById('btn-mode-heatmap').classList.toggle('active', mode === 'heatmap');
-
-            // Show/hide heatmap legend
+            ['wards', 'marker', 'heatmap'].forEach(m => {
+                const el = document.getElementById('btn-mode-' + m);
+                if (el) el.classList.toggle('active', mode === m);
+            });
             document.getElementById('heatmap-legend').classList.toggle('visible', mode === 'heatmap');
-
-            // Show/hide risk filters (not useful in heatmap mode)
+            document.getElementById('ward-metric').style.display = mode === 'wards' ? '' : 'none';
+            document.getElementById('ward-legend').classList.toggle('visible', mode === 'wards');
             const filtersEl = document.getElementById('map-filters');
-            if (filtersEl) filtersEl.style.opacity = mode === 'heatmap' ? '0.4' : '1';
+            if (filtersEl) filtersEl.style.opacity = mode === 'marker' ? '1' : '0.4';
 
-            // Clear both layers then re-render
             markerClusterGroup.clearLayers();
             allMarkers = [];
             if (heatLayer) { map.removeLayer(heatLayer); heatLayer = null; }
+            if (wardLayer) { map.removeLayer(wardLayer); wardLayer = null; }
 
-            if (mode === 'heatmap') {
+            if (mode === 'wards') {
+                loadWards();
+            } else if (!allData.length) {
+                loadMapData();
+            } else if (mode === 'heatmap') {
                 renderHeatmap(allData);
             } else {
-                // Need to know isAdmin for popups
                 const user = api.getUser();
-                const isAdmin = user && (user.role === 'admin' || user.role === 'superadmin');
-                renderMarkers(allData, isAdmin);
+                renderMarkers(allData, user && (user.role === 'admin' || user.role === 'superadmin'));
             }
+        }
+
+        /* ─────────────────────────────
+         *  Bản đồ theo xã phường (phục vụ quản lý: so sánh các địa bàn với nhau)
+         * ───────────────────────────── */
+        const WARD_RISK_COLORS = ['#22c55e', '#a3e635', '#eab308', '#f97316', '#ef4444'];
+        const WARD_COVER_COLORS = ['#dbeafe', '#93c5fd', '#60a5fa', '#2563eb', '#1e3a8a'];
+        const WARD_MIN_SURVEYED = 3;   // ít hơn thì chưa đủ dữ liệu để so sánh
+
+        async function loadWards() {
+            try {
+                const res = await api.get('/admin/teams/map-wards');
+                wardData = res.wards || [];
+                renderWards(true);
+            } catch (err) {
+                console.error(err);
+                showToast('Không thể tải dữ liệu theo xã phường: ' + err.message, 'error');
+            }
+        }
+
+        function renderWards(fit) {
+            if (viewMode !== 'wards' || !map) return;
+            if (wardLayer) { map.removeLayer(wardLayer); wardLayer = null; }
+            const metric = document.getElementById('ward-metric').value;
+            const val = w => metric === 'coverage' ? w.coverage : (metric === 'avg_risk' ? w.avg_risk : w.high_rate);
+            const eligible = wardData.filter(w => w.surveyed >= WARD_MIN_SURVEYED && val(w) != null);
+
+            // Chia 5 nhóm theo thứ hạng để các địa bàn phân biệt được với nhau (không để cả tỉnh cùng một màu)
+            const sorted = eligible.map(val).sort((x, y) => x - y);
+            const cuts = [1, 2, 3, 4].map(i => sorted[Math.min(sorted.length - 1, Math.floor(sorted.length * i / 5))]);
+            const palette = metric === 'coverage' ? WARD_COVER_COLORS : WARD_RISK_COLORS;
+            const classOf = v => { let c = 0; cuts.forEach(t => { if (v >= t) c++; }); return c; };
+
+            const group = L.layerGroup();
+            const bounds = [];
+            wardData.forEach(w => {
+                const ok = w.surveyed >= WARD_MIN_SURVEYED && val(w) != null;
+                const color = ok ? palette[classOf(val(w))] : '#94a3b8';
+                const radius = Math.max(7, Math.min(26, 5 + Math.sqrt(w.total) / 2.2));
+                const m = L.circleMarker([w.lat, w.lng], { radius, fillColor: color, color: '#fff', weight: 1.5, fillOpacity: ok ? 0.82 : 0.45 });
+                const rate = w.high_rate == null ? 'chưa có' : w.high_rate + '%';
+                const avg = w.avg_risk == null ? 'chưa có' : w.avg_risk + '%';
+                m.bindPopup('<b>' + w.ward + '</b><br>Tổng cơ sở: <b>' + w.total.toLocaleString('vi-VN') + '</b><br>' +
+                    'Đã khảo sát: <b>' + w.surveyed.toLocaleString('vi-VN') + '</b> (độ phủ ' + w.coverage + '%)<br>' +
+                    'Nguy cơ trung bình: <b>' + avg + '</b><br>Cơ sở nguy cơ cao, rất cao: <b>' + w.high + '</b> (' + rate + ')<br>' +
+                    'Đã cập nhật khắc phục: <b>' + w.mitigated + '</b><br>' +
+                    (ok ? '' : '<i>Mới có ' + w.surveyed + ' cơ sở khảo sát, chưa đủ để so sánh.</i><br>') +
+                    '<a href="/admin/teams.html?ward=' + encodeURIComponent(w.ward) + '" style="color:#38bdf8;">Xem các đội ở xã phường này →</a>');
+                m.bindTooltip(w.ward, { direction: 'top' });
+                group.addLayer(m);
+                bounds.push([w.lat, w.lng]);
+            });
+            wardLayer = group.addTo(map);
+            if (fit && bounds.length) map.fitBounds(bounds, { padding: [40, 40] });
+
+            // Chú giải: khoảng giá trị thực của từng nhóm
+            const edges = [sorted[0], ...cuts, sorted[sorted.length - 1]];
+            const names = ['Thấp nhất', '', '', '', 'Cao nhất'];
+            let lg = eligible.length ? '' : '<span>Chưa đủ dữ liệu để so sánh (cần từ ' + WARD_MIN_SURVEYED + ' cơ sở khảo sát mỗi xã phường)</span>';
+            if (eligible.length) {
+                palette.forEach((c, i) => {
+                    lg += '<span style="display:inline-flex;align-items:center;gap:4px;margin-right:8px;"><span style="width:12px;height:12px;background:' + c + ';display:inline-block;"></span>' +
+                        edges[i].toFixed(1) + '% - ' + edges[i + 1].toFixed(1) + '%' + (names[i] ? ' (' + names[i] + ')' : '') + '</span>';
+                });
+                lg += '<span style="display:inline-flex;align-items:center;gap:4px;"><span style="width:12px;height:12px;background:#94a3b8;display:inline-block;"></span>Chưa đủ dữ liệu</span>';
+            }
+            document.getElementById('ward-legend').innerHTML = lg + '<span style="margin-left:8px;opacity:.8;">Cỡ vòng tròn: tổng số cơ sở của xã phường</span>';
+
+            const tot = wardData.reduce((a, w) => a + w.total, 0), sv = wardData.reduce((a, w) => a + w.surveyed, 0);
+            document.getElementById('map-stats').innerHTML =
+                '<span>🏘 <strong>' + wardData.length + '</strong> xã phường</span><span>🏭 <strong>' + tot.toLocaleString('vi-VN') +
+                '</strong> cơ sở</span><span>✅ <strong>' + sv.toLocaleString('vi-VN') + '</strong> đã khảo sát</span>';
         }
 
         /* ─────────────────────────────
          *  Heatmap Renderer
          * ───────────────────────────── */
         function renderHeatmap(data) {
-            // Remove old heat layer if any
             if (heatLayer) { map.removeLayer(heatLayer); heatLayer = null; }
-            // Also clear markers
             markerClusterGroup.clearLayers();
             allMarkers = [];
-
             if (!data || data.length === 0) return;
 
-            // Build heatmap points: [lat, lng, intensity 0-1]
-            const riskWeight = { low: 0.25, medium: 0.5, high: 0.75, critical: 1.0, unassessed: 0.1 };
-            const points = data
-                .filter(d => d.latitude && d.longitude)
-                .map(d => {
-                    // Combine discrete risk level weight with continuous percentage
-                    const base = riskWeight[d.risk_level] || 0.2;
-                    const pct  = (d.risk_percentage || 0) / 100;
-                    const intensity = Math.min(1, base * 0.4 + pct * 0.6);
-                    return [d.latitude, d.longitude, intensity];
+            // Heatmap chỉ thể hiện cơ sở nguy cơ CAO (màu cam) và RẤT CAO (màu đỏ); các mức khác không vẽ
+            const pick = lvl => data.filter(d => d.latitude && d.longitude && d.risk_level === lvl).map(d => [d.latitude, d.longitude, 1]);
+            window._heatHigh = pick('high');
+            window._heatCritical = pick('critical');
+            drawHeat();
+        }
+
+        // Mỗi mức một lớp một màu: độ đậm thể hiện mức tập trung, màu thể hiện mức nguy cơ
+        function drawHeat() {
+            if (viewMode !== 'heatmap' || !window._heatHigh) return;
+            if (heatLayer) { map.removeLayer(heatLayer); heatLayer = null; }
+            const z = map.getZoom();
+            const radius = Math.max(5, Math.min(13, 3 + z * 0.75));
+            const cell = radius * 1.5;
+            const layerFor = (pts, rgb) => {
+                const cells = {};
+                pts.forEach(p => {
+                    const pt = map.project([p[0], p[1]], z);
+                    const k = Math.floor(pt.x / cell) + ':' + Math.floor(pt.y / cell);
+                    cells[k] = (cells[k] || 0) + 1;
                 });
-
-            if (points.length === 0) return;
-
-            heatLayer = L.heatLayer(points, {
-                radius: 28,
-                blur: 20,
-                maxZoom: 13,
-                max: 1.0,
-                gradient: {
-                    0.0:  '#22c55e',  // xanh lá: thấp
-                    0.35: '#eab308',  // vàng: trung bình
-                    0.65: '#f97316',  // cam: cao
-                    1.0:  '#ef4444'   // đỏ: rất cao
-                }
-            });
-
-            heatLayer.addTo(map);
+                const vals = Object.values(cells).sort((a, b) => a - b);
+                const p90 = vals[Math.floor(vals.length * 0.9)] || 1;
+                return L.heatLayer(pts, {
+                    radius, blur: Math.round(radius * 0.7), maxZoom: 17, minOpacity: 0.35,
+                    max: Math.max(1, p90),
+                    gradient: { 0.0: 'rgba(' + rgb + ',0)', 0.3: 'rgba(' + rgb + ',0.6)', 1.0: 'rgba(' + rgb + ',0.95)' }
+                });
+            };
+            heatLayer = L.layerGroup([
+                layerFor(window._heatHigh, '249,115,22'),
+                layerFor(window._heatCritical, '239,68,68'),
+            ]).addTo(map);
         }
 
         function renderMarkers(data, isAdmin = false) {

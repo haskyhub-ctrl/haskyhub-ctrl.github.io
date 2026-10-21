@@ -7,7 +7,7 @@
     <title>Theo dõi theo đội - FRAS Admin</title>
     <link rel="stylesheet" href="/css/main.css?v=20261014_gov2">
     <link rel="stylesheet" href="/css/admin.css?v=20261014_gov2">
-    <link rel="stylesheet" href="/css/admin-teams.css?v=20261022_t2">
+    <link rel="stylesheet" href="/css/admin-teams.css?v=20261022_t3">
 </head>
 
 <body>
@@ -93,16 +93,16 @@
                     <thead><tr>
                         <th style="width:44px;">STT</th><th>Đội quản lý</th><th>Nhóm</th><th class="tm-num">Tổng cơ sở</th>
                         <th class="tm-num">Đã khảo sát</th><th class="tm-num">Chưa khảo sát</th><th style="min-width:170px;">Tỷ lệ tham gia</th>
-                        <th class="tm-num">Nguy cơ cao</th><th>Khảo sát gần nhất</th><th></th>
+                        <th class="tm-num">Nguy cơ cao</th><th class="tm-num">Đã cập nhật khắc phục</th><th>Khảo sát gần nhất</th><th></th>
                     </tr></thead>
-                    <tbody id="tm-teams"><tr><td colspan="10" class="tm-empty"><div class="loading-spinner"></div></td></tr></tbody>
+                    <tbody id="tm-teams"><tr><td colspan="11" class="tm-empty"><div class="loading-spinner"></div></td></tr></tbody>
                 </table>
             </div>
             <div class="table-wrapper" id="tm-wrap-wards" style="display:none;">
                 <table>
                     <thead><tr>
                         <th style="width:44px;">STT</th><th>Xã phường</th><th class="tm-num">Tổng cơ sở</th>
-                        <th class="tm-num">Đã khảo sát</th><th style="min-width:170px;">Tỷ lệ tham gia</th><th></th>
+                        <th class="tm-num">Đã khảo sát</th><th class="tm-num">Đã cập nhật khắc phục</th><th style="min-width:170px;">Tỷ lệ tham gia</th><th></th>
                     </tr></thead>
                     <tbody id="tm-wards"></tbody>
                 </table>
@@ -112,7 +112,7 @@
 
     <script src="/js/api.js?v=20261021_t1"></script>
     <script src="/js/admin.js"></script>
-    <script src="/js/admin-teams.js?v=20261022_t2"></script>
+    <script src="/js/admin-teams.js?v=20261022_t3"></script>
     <script>onReady(() => { setupNavbar(); TM.init(); });</script>
 </body>
 </html>

@@ -117,6 +117,7 @@
                 kpi('Chưa khảo sát', num(t.remaining), 'cần đôn đốc', 'red') +
                 kpi('Tỷ lệ tham gia', t.percent.toFixed(1) + '%', '', 'gold') +
                 kpi('Nguy cơ cao, rất cao', num(t.high_risk), 'theo bài khảo sát gần nhất', 'red') +
+                kpi('Đã cập nhật khắc phục', num(t.mitigated), 'cơ sở đã tích khắc phục ít nhất 1 hạng mục', 'green') +
                 kpi('Khảo sát trong 24 giờ qua', num(t.last_24h), 'cơ sở', '');
             const ward = document.getElementById('tm-ward').value;
             const wq = ward ? '&ward=' + encodeURIComponent(ward) : '';
@@ -130,13 +131,14 @@
                     <td class="tm-num">${num(x.remaining)}</td>
                     <td>${bar(x.percent)}</td>
                     <td class="tm-num">${num(x.high_risk)}</td>
+                    <td class="tm-num">${num(x.mitigated)}</td>
                     <td>${x.last_survey_at ? fmtDT(x.last_survey_at) : '<span style="color:#94a3b8;">Chưa có</span>'}</td>
                     <td><a class="tm-link" href="/admin/team.html?team=${encodeURIComponent(x.team)}${wq}">Xem danh sách →</a></td>
-                </tr>`).join('') : '<tr><td colspan="10" class="tm-empty">Không có đội nào khớp bộ lọc.</td></tr>';
+                </tr>`).join('') : '<tr><td colspan="11" class="tm-empty">Không có đội nào khớp bộ lọc.</td></tr>';
             document.getElementById('tm-wards').innerHTML = d.wards.map((w, i) => `
                 <tr class="tm-row-click" onclick="TM.pickWard('${esc(w.value).replace(/'/g, '&#39;')}')">
                     <td>${i + 1}</td><td><strong>${esc(w.ward)}</strong></td>
-                    <td class="tm-num">${num(w.total)}</td><td class="tm-num"><strong>${num(w.participated)}</strong></td>
+                    <td class="tm-num">${num(w.total)}</td><td class="tm-num"><strong>${num(w.participated)}</strong></td><td class="tm-num">${num(w.mitigated)}</td>
                     <td>${bar(w.percent)}</td><td><span class="tm-link">Xem các đội →</span></td>
                 </tr>`).join('');
         },
@@ -198,6 +200,7 @@
                 kpi('Tổng số cơ sở của đội', num(s.total), document.getElementById('td-ward').value ? 'trong xã phường đang lọc' : '') +
                 kpi('Đã khảo sát', num(s.participated), '', 'green') +
                 kpi('Chưa khảo sát', num(s.remaining), '', 'red') +
+                kpi('Đã cập nhật khắc phục', num(s.mitigated), '', 'green') +
                 kpi('Tỷ lệ tham gia', s.percent.toFixed(1) + '%', '', 'gold');
             const start = (d.page - 1) * d.page_size;
             document.getElementById('td-body').innerHTML = d.items.length ? d.items.map((x, i) => `
@@ -207,7 +210,7 @@
                     <td><strong>${esc(x.name)}</strong></td>
                     <td>${esc(x.ward)}</td>
                     <td>${esc(x.type_label)}</td>
-                    <td><span class="tm-badge ${x.participated ? 'done' : 'todo'}">${x.participated ? 'Đã khảo sát' : 'Chưa khảo sát'}</span>${x.surveys > 1 ? ` <small>(${x.surveys} bài)</small>` : ''}</td>
+                    <td><span class="tm-badge ${x.participated ? 'done' : 'todo'}">${x.participated ? 'Đã khảo sát' : 'Chưa khảo sát'}</span>${x.surveys > 1 ? ` <small>(${x.surveys} bài)</small>` : ''}${x.mitigated ? ' <span class="tm-badge done">Đã cập nhật khắc phục</span>' : ''}</td>
                     <td>${x.participated ? `<span class="tm-badge r-${esc(x.risk_level)}">${esc(x.risk_label)}${x.risk_percentage != null ? ' ' + Number(x.risk_percentage).toFixed(1) + '%' : ''}</span>` : ''}</td>
                     <td>${x.completed_at ? fmtDT(x.completed_at) : ''}</td>
                     <td>${x.assessment_id ? `<a class="tm-link" href="/result.html?id=${esc(x.assessment_id)}" target="_blank">Xem kết quả</a>` : ''}</td>
