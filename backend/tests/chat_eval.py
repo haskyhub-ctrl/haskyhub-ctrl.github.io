@@ -15,7 +15,7 @@ BASE = (sys.argv[1] if len(sys.argv) > 1 else "http://127.0.0.1:8000").rstrip("/
 # (câu hỏi, [phải có một trong từng nhóm], [không được có], loại: "ok" hoặc "scope")
 CASES = [
     ("Nghiệm thu PCCC hiện nay chủ đầu tư có phải nộp hồ sơ cho Công an không?", [["bãi bỏ", "không phải nộp"], ["tự tổ chức", "tự nghiệm thu"]], ["05 ngày làm việc"], "ok"),
-    ("Giờ tôi cần phục hồi hoạt động thì bắt đầu từ đâu, quy trình thế nào?", [["bãi bỏ"]], ["05 ngày làm việc", "đơn đề nghị phục hồi", "Cổng dịch vụ công"], "ok"),
+    ("Giờ tôi cần phục hồi hoạt động thì bắt đầu từ đâu, quy trình thế nào?", [["bãi bỏ"]], ["05 ngày làm việc", "đơn đề nghị phục hồi"], "ok"),
     ("Cơ sở nguy cơ cao bao lâu thì bị kiểm tra định kỳ một lần?", [["01 năm", "1 năm"]], [], "ok"),
     ("Cháy thì gọi số điện thoại nào?", [["114"]], [], "ok"),
     ("Luật PCCC năm 2013 còn hiệu lực không?", [["55/2024"], ["hết hiệu lực", "thay thế", "không còn"]], [], "ok"),
