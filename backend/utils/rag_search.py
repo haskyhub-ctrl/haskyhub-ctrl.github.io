@@ -62,6 +62,33 @@ QUY ĐỊNH PHÁP LUẬT PCCC MỚI NHẤT (NĂM 2026) - ƯU TIÊN ÁP DỤNG TU
    - Chỉ nêu những gì có căn cứ trong tài liệu hiện hành. Nếu chưa có hướng dẫn chi tiết về cách thực hiện sau khi bãi bỏ, nói thẳng điều đó và mời người hỏi liên hệ cán bộ Cảnh sát PCCC và CNCH đã ra quyết định hoặc đang quản lý cơ sở để được hướng dẫn. Không tự bịa quy trình thay thế.
    - Lời khuyên chung vẫn đúng: khắc phục triệt để các vi phạm, tồn tại, giữ lại bằng chứng khắc phục (ảnh, biên bản, hóa đơn).
 
+1c. VỀ CHỨNG NHẬN HUẤN LUYỆN PCCC (ĐÃ BÃI BỎ):
+   - Chứng nhận huấn luyện nghiệp vụ PCCC và CNCH (thẻ/giấy chứng nhận cấp sau mỗi khóa học) ĐÃ BỊ BÃI BỎ theo Luật PCCC và CNCH số 55/2024/QH15 và Nghị định 105/2025/NĐ-CP. KHÔNG CÒN cấp chứng nhận riêng theo từng khóa và KHÔNG CÒN quy định về thời hạn giá trị của chứng nhận.
+   - Cơ chế thay thế hiện hành: Huấn luyện nghiệp vụ phòng cháy, chữa cháy, cứu nạn, cứu hộ được thực hiện định kỳ 05 năm một lần; bồi dưỡng nghiệp vụ phòng cháy, chữa cháy, cứu nạn, cứu hộ được thực hiện định kỳ hằng năm theo Nghị định 105/2025/NĐ-CP.
+   - KHI NGƯỜI DÙNG HỎI VỀ THỜI HẠN CỦA CHỨNG NHẬN HUẤN LUYỆN: BẮT BUỘC trả lời rõ ràng: Chứng nhận huấn luyện nghiệp vụ PCCC và CNCH đã được bãi bỏ, không còn cấp chứng nhận hay quy định thời hạn của chứng nhận; thay vào đó, việc huấn luyện nghiệp vụ PCCC và CNCH được thực hiện định kỳ 05 năm một lần, bồi dưỡng nghiệp vụ thực hiện định kỳ hằng năm theo Nghị định 105/2025/NĐ-CP.
+   - TUYỆT ĐỐI KHÔNG nói "chứng nhận có thời hạn 05 năm" kiểu cũ (khoản 4 Điều 46 Nghị định 105 cũ trước đây) vì điều đó sai bản chất pháp lý hiện hành.
+
+1d. VỀ THỜI GIAN HUẤN LUYỆN NGHIỆP VỤ PCCC (BẮT BUỘC LIỆT KÊ ĐẦY ĐỦ 6 NHÓM ĐỐI TƯỢNG):
+   - Căn cứ: Điều 29 Nghị định số 105/2025/NĐ-CP (được sửa đổi, bổ sung bởi Điều 22 Nghị định số 347/2026/NĐ-CP):
+   - KHI HỎI VỀ THỜI GIAN/THỜI LƯỢNG HUẤN LUYỆN PCCC: BẮT BUỘC LIỆT KÊ ĐẦY ĐỦ TẤT CẢ 6 NHÓM ĐỐI TƯỢNG (trình bày dạng bảng hoặc danh sách từng nhóm rõ ràng), TUYỆT ĐỐI KHÔNG ĐƯỢC chỉ chọn 1 nhóm "cá nhân thực hiện nhiều nhiệm vụ" mà bỏ sót các nhóm khác:
+     1. Người đứng đầu cơ sở, cơ quan, tổ chức:
+        + Huấn luyện lần đầu: Từ 16 giờ đến 24 giờ.
+        + Bồi dưỡng định kỳ hằng năm: Từ 08 giờ đến 12 giờ.
+     2. Thành viên Đội PCCC và CNCH cơ sở, Đội PCCC và CNCH chuyên ngành:
+        + Huấn luyện lần đầu: Từ 32 giờ đến 48 giờ.
+        + Bồi dưỡng định kỳ hằng năm: Từ 16 giờ đến 24 giờ.
+     3. Người làm việc trong môi trường có nguy hiểm về cháy, nổ hoặc thường xuyên tiếp xúc với chất, hàng hóa nguy hiểm về cháy, nổ:
+        + Huấn luyện lần đầu: Từ 16 giờ đến 24 giờ.
+        + Bồi dưỡng định kỳ hằng năm: Từ 08 giờ đến 12 giờ.
+     4. Trưởng thôn, Tổ trưởng tổ dân phố, Đội trưởng, Đội phó và thành viên Đội dân phòng:
+        + Huấn luyện lần đầu: Từ 16 giờ đến 24 giờ.
+        + Bồi dưỡng định kỳ hằng năm: Từ 08 giờ đến 12 giờ.
+     5. Người điều khiển phương tiện giao thông cơ giới đường bộ vận chuyển chất, hàng nguy hiểm về cháy, nổ:
+        + Huấn luyện lần đầu: Từ 16 giờ đến 24 giờ.
+        + Bồi dưỡng định kỳ hằng năm: Từ 08 giờ đến 12 giờ.
+     6. Cá nhân thực hiện nhiều nhiệm vụ thuộc các đối tượng trên:
+        + Huấn luyện lần đầu: Từ 24 giờ đến 32 giờ.
+        + Bồi dưỡng định kỳ hằng năm: Từ 08 giờ đến 12 giờ.
 2. CÁC VĂN BẢN HIỆN HÀNH CHÍNH:
    - Nghị định số 347/2026/NĐ-CP ngày 08/9/2026 của Chính phủ (hiệu lực 15/9/2026, sửa đổi NĐ 105/2025/NĐ-CP, bãi bỏ văn bản chấp thuận nghiệm thu PCCC)
    - Nghị quyết số 66.18/2026/NQ-CP ngày 18/5/2026 của Chính phủ (hiệu lực 01/07/2026, bãi bỏ thủ tục kiểm tra nghiệm thu PCCC)
@@ -638,100 +665,75 @@ QUY TẮC BẮT BUỘC:
 #  4. MAIN FUNCTION: ask_ai_chi
 # ════════════════════════════════════════════════════════════════
 
+
+
 def ask_ai_chi(question: str, history_text: str = "", context: str = "") -> dict:
     """
-    Trợ lý Chi: RAG Pipeline:
-    Priority: NotebookLM CLI (Đa sổ 1, 2...) → ChromaDB → Tra cứu Internet thời gian thực → Gemini general
-
-    Gọi 9Router (hoặc Gemini REST API dự phòng).
-    Gemini 3.8 tập trung vào quy định mới nhất 2026, phản hồi sạch sẽ, không rối mắt.
+    Trợ lý Chi: RAG Pipeline 2 lớp (tối ưu tốc độ < 20s):
+    Lớp 1: Kho tài liệu nội bộ BM25 (local_rag) → ưu tiên cao nhất
+    Lớp 2: Tra cứu Internet thời gian thực (khi kho không có hoặc hỏi về văn bản mới)
+    Gọi LLM 1 lần duy nhất (không thẩm định lần 2 riêng biệt).
     """
     try:
         source_type = "general"
-        api_key = os.getenv("GEMINI_API_KEY") or GEMINI_API_KEY
         use_router = os.getenv("USE_9ROUTER", "true").lower() in ("true", "1", "yes")
         router_key = os.getenv("ROUTER_API_KEY", "")
 
-        # ── Bước 1: NotebookLM (Hỗ trợ nhiều sổ cùng lúc) ───────────
-        notebook_context = ""
-        nb_ids = _get_notebook_ids()
-        if nb_ids:
-            notebook_context = search_notebooklm_api(question)
-            if notebook_context and len(notebook_context) > 30 and "authenticate" not in notebook_context.lower():
-                source_type = "notebooklm"
-            else:
-                notebook_context = ""
+        # ── Lớp 1: Kho tài liệu nội bộ BM25 ─────────────────────────
+        docs_context = ""
+        docs_context = search_kho(question, history_text)
+        if docs_context:
+            source_type = "docs"
 
-        # ── Bước 2: ChromaDB (Kho văn bản nội bộ) ───────────────────
-        chroma_context = ""
-        if not notebook_context:
-            chroma_context = search_kho(question, history_text)
-            if chroma_context:
-                source_type = "docs"
-
-        # ── Bước 3: Tra cứu Internet thời gian thực ──
-        # Kích hoạt khi:
-        # a) Cả NotebookLM và ChromaDB đều không có kết quả, HOẶC
-        # b) Câu hỏi hỏi về văn bản/thủ tục mới (NĐ 347, NQ 66.18, nghiệm thu, bãi bỏ...) mà dữ liệu gốc chưa cập nhật
+        # ── Lớp 2: Tra cứu Internet ──────────────────────────────────
+        # Kích hoạt khi: kho không có kết quả, HOẶC câu hỏi về văn bản/thủ tục mới
         internet_context = ""
         internet_refs = []
         need_web_search = False
 
-        if not notebook_context and not chroma_context:
+        if not docs_context:
             need_web_search = True
         else:
-            combined_context = f"{notebook_context}\n{chroma_context}".lower()
-            # Trích xuất các số hiệu văn bản (ví dụ: '347', '66.18', '2026')
+            combined = docs_context.lower()
             doc_codes = re.findall(r'\b(?:\d{2,3}(?:[/\.]\d+)?)\b', question)
             for code in doc_codes:
-                if code not in ("2024", "2025") and code.lower() not in combined_context:
+                if code not in ("2024", "2025", "2026") and code.lower() not in combined:
                     need_web_search = True
                     break
-            # Nếu câu hỏi về nghiệm thu hoặc bãi bỏ thủ tục mà dữ liệu nội bộ chưa có thông tin 66.18 / 347
             reform_keywords = ["66.18", "347", "nghiệm thu", "bãi bỏ", "cải cách", "nộp ở đâu"]
-            if any(kw in question.lower() for kw in reform_keywords) and "66.18" not in combined_context:
+            if any(kw in question.lower() for kw in reform_keywords) and "66.18" not in combined:
                 need_web_search = True
 
         if need_web_search:
-            _safe_print(f"[ask_ai_chi] Đang tra cứu Internet thời gian thực cho: '{question[:40]}'")
+            _safe_print(f"[ask_ai_chi] Tra Internet cho: '{question[:40]}'")
             web_results = search_internet(question, max_results=3)
             if web_results:
-                if not notebook_context and not chroma_context:
+                if not docs_context:
                     source_type = "web"
                 web_blocks = []
                 for item in web_results:
-                    web_blocks.append(f"• Tiêu đề: {item['title']}\n  Đường dẫn: {item['url']}\n  Nội dung trích lược: {item['snippet']}")
+                    web_blocks.append(f"• Tiêu đề: {item['title']}\n  Đường dẫn: {item['url']}\n  Nội dung: {item['snippet']}")
                     internet_refs.append(f"{item['title']} ({item['url']})")
                 internet_context = "\n\n".join(web_blocks)
 
-        # ── Bước 4: Gemini Grounded nếu ngay cả Internet cũng không ra ──
-        grounded_context = ""
-        if not notebook_context and not chroma_context and not internet_context:
-            grounded_context = search_notebooklm_gemini_grounded(question)
-            source_type = "general"
-
-        # ── Tổng hợp context ────────────────────────────────────────
+        # ── Tổng hợp context ─────────────────────────────────────────
         doc_sections = []
-        if notebook_context:
-            doc_sections.append(f"=== NGUỒN NOTEBOOKLM (ƯU TIÊN HÀNG ĐẦU) ===\n{notebook_context}")
-        if chroma_context:
-            doc_sections.append(f"=== NGUỒN TÀI LIỆU NỘI BỘ (CHROMADB) ===\n{chroma_context}")
+        if docs_context:
+            doc_sections.append(f"=== TÀI LIỆU NỘI BỘ (ưu tiên cao nhất) ===\n{docs_context}")
         if internet_context:
-            doc_sections.append(f"=== NGUỒN TRA CỨU TỪ INTERNET (TRÍCH DẪN RÕ RÀNG NGUỒN VÀ LINK) ===\n{internet_context}")
-        if grounded_context:
-            doc_sections.append(f"=== PHÂN TÍCH PHÁP LÝ NỀN ===\n{grounded_context}")
+            doc_sections.append(f"=== TRA CỨU INTERNET (trích dẫn rõ nguồn và link) ===\n{internet_context}")
 
         doc_context = "\n\n".join(doc_sections) if doc_sections else (
             "(Không tìm thấy văn bản liên quan trực tiếp. Trả lời dựa trên kiến thức pháp luật PCCC 2024-2026.)"
         )
 
-        # Thủ tục phục hồi hoạt động đã bị bãi bỏ (NQ 66.18/2026): không để các đoạn tài liệu cũ về quy trình này lọt vào câu trả lời
+        # Lọc tài liệu cũ về phục hồi hoạt động (đã bãi bỏ theo NQ 66.18/2026)
         if re.search(r"phục hồi|phuc hoi", question, re.I):
             kept = [p for p in re.split(r"\n{2,}|\n(?=\s*[-•]|\d+[.)]\s)", doc_context)
                     if not re.search(r"phục hồi hoạt động|136/2020|50/2024", p, re.I)]
             doc_context = "\n\n".join(kept)
 
-        # ── Build prompt cho Gemini ──────────────────────────────────
+        # ── Build prompt ─────────────────────────────────────────────
         legal_refs_str = "\n".join(f"  - {r}" for r in CURRENT_LEGAL_REFS)
 
         template = f"""Bạn là Trợ lý ảo hỗ trợ giải đáp pháp luật và thủ tục hành chính (TTHC) về PCCC, chuyên gia tư vấn pháp luật PCCC và an toàn cháy nổ tại Việt Nam (Công an thành phố Bắc Ninh).
@@ -769,11 +771,13 @@ CÂU HỎI CỦA NGƯỜI DÙNG: {question}
      + Chủ đầu tư tự tổ chức nghiệm thu cùng các nhà thầu (tư vấn thiết kế, thi công, tư vấn giám sát) theo đúng hồ sơ thiết kế đã thẩm duyệt.
      + Chủ đầu tư lập hồ sơ nghiệm thu, tự chịu trách nhiệm pháp lý và thực hiện khai báo thông tin trên Hệ thống cơ sở dữ liệu về PCCC trước khi đưa công trình vào vận hành.
      + Cơ quan Công an chuyển sang kiểm tra định kỳ (hậu kiểm: 1 năm/lần với cơ sở rủi ro cao, 2 năm/lần với cơ sở còn lại).
+   - ĐẶC BIỆT VỀ CHỨNG NHẬN HUẤN LUYỆN PCCC: Chứng nhận huấn luyện nghiệp vụ PCCC và CNCH (thẻ chứng nhận, giấy chứng nhận cấp sau mỗi khóa) ĐÃ BÃI BỎ theo Luật PCCC và CNCH số 55/2024/QH15 và Nghị định 105/2025/NĐ-CP. Không còn cấp giấy chứng nhận riêng theo từng khóa hay quy định thời hạn của chứng nhận. Khi người hỏi hỏi về thời hạn giá trị chứng nhận huấn luyện PCCC, PHẢI khẳng định ngay: Chứng nhận huấn luyện đã bãi bỏ; thay vào đó: "Huấn luyện nghiệp vụ phòng cháy, chữa cháy, cứu nạn, cứu hộ được thực hiện định kỳ 05 năm một lần; bồi dưỡng nghiệp vụ phòng cháy, chữa cháy, cứu nạn, cứu hộ được thực hiện định kỳ hằng năm theo Nghị định 105/2025/NĐ-CP".
+   - ĐẶC BIỆT VỀ THỜI GIAN HUẤN LUYỆN PCCC: Khi người hỏi hỏi về thời gian huấn luyện PCCC là bao lâu, BẮT BUỘC liệt kê ĐẦY ĐỦ cả 6 nhóm đối tượng (Người đứng đầu cơ sở: 16-24h/8-12h; Đội PCCC cơ sở/chuyên ngành: 32-48h/16-24h; Người làm việc môi trường nguy hiểm: 16-24h/8-12h; Đội dân phòng, trưởng thôn: 16-24h/8-12h; Lái xe vận chuyển chất, hàng nguy hiểm: 16-24h/8-12h; Cá nhân làm nhiều nhiệm vụ: 24-32h/8-12h). TUYỆT ĐỐI KHÔNG được chỉ trả lời mỗi một nhóm "cá nhân làm nhiều nhiệm vụ" mà bỏ sót các nhóm còn lại.
 
 2. TUYỆT ĐỐI KHÔNG ĐƯA QUY ĐỊNH CŨ LAN MAN:
    - KHÔNG lập riêng mục "Đối chiếu quy định cũ - mới".
    - KHÔNG liệt kê các luật cũ, nghị định cũ xa xưa (Luật 2001, Luật 2013, Nghị định 136/2020, Nghị định 50/2024...).
-   - Quy định cũ chỉ được đưa ra văn bản gần nhất (nếu thật sự cần thiết để người hỏi không nhầm lẫn) và PHẢI ĐẶT TRONG DẤU NGOẶC ĐƠN THẬT NGẮN GỌN (ví dụ: "(thay thế quy định cũ tại Nghị định 105/2025/NĐ-CP trước đây)").
+   - Quy định cũ chỉ được đưa ra văn bản gần nhất (nếu thật sự cần thiết để người hỏi không nhầm lẫn) và PHẢI ĐẶT TRONG DẤU NGOẶC ĐƠN THẬT NGẮN GỌN.
 
 3. CÁCH TRÌNH BÀY (bộ hiển thị của hệ thống sẽ tô màu, kẻ khung theo các ký hiệu dưới đây, hãy dùng đúng):
    - Dòng bắt đầu bằng ">> " là KẾT LUẬN: 1 đến 2 câu trả lời thẳng vào câu hỏi, luôn đặt ở dòng đầu tiên.
@@ -785,36 +789,37 @@ CÂU HỎI CỦA NGƯỜI DÙNG: {question}
    - So sánh nhiều phương án hoặc nhiều loại hình: dùng bảng với dòng tiêu đề, ví dụ "| Loại hình | Yêu cầu |" rồi "|---|---|" rồi các dòng "| ... | ... |".
    - Căn cứ pháp lý: viết trong hai dấu ngoặc nhọn kép, ví dụ {{{{Điều 5 Nghị định 105/2025/NĐ-CP}}}}, đặt ngay sau ý được căn cứ. CHỈ trích điều, khoản, văn bản có thật trong phần tài liệu ở trên; không bịa số điều.
    - Không dùng đường kẻ ngang (---) ngoài bảng, không dùng dấu gạch ngang dài, không dùng ### hay # ngoài tiêu đề "## ".
-   - Câu hỏi đơn giản: trả lời gọn trong khoảng 80 đến 150 từ. Câu hỏi về thủ tục, quy trình: đủ bước nhưng không quá 350 từ.
-   - Nếu có thông tin tra cứu từ Internet: ghi tên cơ quan hoặc nguồn tin kèm đường dẫn trong ngoặc đơn.
+   - Câu hỏi đơn giản: trả lời gọn trong khoảng 80 đến 150 từ. Câu hỏi về thủ tục, quy trình: đủ bước nhưng không quá 500 từ.
 
-3a. DIỄN GIẢI TỪNG BƯỚC (BẮT BUỘC): mỗi bước trong danh sách đánh số phải viết thành 2 đến 4 câu hoặc có các ý nhỏ, nêu rõ: AI làm (chủ đầu tư, nhà thầu, cơ quan nào), LÀM GÌ cụ thể, cần HỒ SƠ hoặc GIẤY TỜ gì, THỜI HẠN nếu tài liệu có nêu, và căn cứ. Không viết bước chỉ một dòng ngắn. Với câu hỏi về quy trình, thủ tục, trình tự: trả lời đủ chuỗi từ bước đầu đến khi hoàn tất, không bỏ bước điều kiện đầu vào (ví dụ thẩm định thiết kế trước khi nghiệm thu), và có mục "Trường hợp chưa làm bước trước thì xử lý thế nào". Cho phép dài tới khoảng 500 từ với câu hỏi quy trình.
+3a. DIỄN GIẢI ĐẦY ĐỦ NỘI DUNG, KHÔNG CẮT BỎ:
+   - Liệt kê ĐẦY ĐỦ tất cả các đối tượng, nhóm đối tượng, trường hợp có trong tài liệu.
+   - Với câu hỏi về huấn luyện PCCC: liệt kê ĐẦY ĐỦ từng nhóm đối tượng và thời lượng tương ứng (không được bỏ nhóm nào).
+   - Mỗi bước trong danh sách đánh số phải viết thành 2 đến 4 câu hoặc có các ý nhỏ, nêu rõ: AI làm, LÀM GÌ cụ thể, THỜI HẠN nếu có, và căn cứ.
+   - TUYỆT ĐỐI KHÔNG rút gọn hoặc bỏ bớt đối tượng, thời lượng, bước nào có trong tài liệu.
 
-3b. KHI THIẾU THÔNG TIN: nếu đáp án phụ thuộc loại hình, quy mô, diện tích, số tầng, số người mà người hỏi chưa nói, hãy trả lời trước cho trường hợp phổ biến, rồi cuối bài thêm một dòng "!! Để Chi tư vấn chính xác hơn, bạn cho Chi biết: ..." (tối đa 2 ý cần hỏi lại).
+3b. KHI THIẾU THÔNG TIN: nếu đáp án phụ thuộc loại hình, quy mô mà người hỏi chưa nói, hãy trả lời trước cho trường hợp phổ biến, rồi cuối bài thêm một dòng "!! Để Chi tư vấn chính xác hơn, bạn cho Chi biết: ..." (tối đa 2 ý cần hỏi lại).
 
-3c. KIỂM TRA TRƯỚC KHI TRẢ LỜI: mọi con số, thời hạn, điều khoản phải có trong tài liệu ở trên hoặc trong phần CƠ SỞ PHÁP LÝ 2026. Chỗ nào không có căn cứ thì nói rõ "chưa có căn cứ trong tài liệu của Chi" và mời liên hệ cán bộ Cảnh sát PCCC và CNCH, không tự suy đoán.
+3c. TỰ KIỂM TRA TRƯỚC KHI TRẢ LỜI: mọi con số, thời hạn, điều khoản phải có trong tài liệu ở trên hoặc trong phần CƠ SỞ PHÁP LÝ 2026. Nếu không chắc, nói rõ chưa có căn cứ trong tài liệu và mời liên hệ cán bộ Cảnh sát PCCC và CNCH.
 
 4. PHONG CÁCH VÀ XƯNG HÔ:
    - Trợ lý tên là Chi. LUÔN xưng là "Chi" và gọi người hỏi là "bạn". TUYỆT ĐỐI không xưng "tôi", không gọi "anh/chị", "quý khách".
-   - Giọng ân cần, mềm mỏng, rành mạch của người cán bộ hướng dẫn. Không quy lỗi, không dạy đời, không dùng từ xử phạt hù dọa.
+   - Giọng ân cần, mềm mỏng, rành mạch của người cán bộ hướng dẫn. Không quy lỗi, không dạy đời.
    - Không mở đầu kiểu xã giao ("Chào bạn", "Cảm ơn bạn đã hỏi"), đi thẳng vào kết luận.
 
 TRẢ VỀ JSON THUẦN (không dùng ```json):
-{{
-    "reply": "câu trả lời theo đúng cách trình bày ở mục 3, xưng Chi, tập trung quy định mới 2026",
+{{{{
+    "reply": "câu trả lời theo đúng cách trình bày ở mục 3, xưng Chi, tập trung quy định mới 2026, ĐẦY ĐỦ nội dung không cắt bỏ",
     "source_type": "{source_type}",
     "suggestions": ["gợi ý câu hỏi tiếp theo 1", "gợi ý 2", "gợi ý 3"],
     "references": ["văn bản pháp lý hiện hành hoặc link nguồn internet"]
-}}"""
+}}}}"""
 
         # ── Gọi LLM (9Router Google Pro hoặc Gemini REST API) ───────
         router_model = os.getenv("ROUTER_MODEL", "ag/gemini-3.8-flash-high")
         current_model = router_model if use_router and router_key else os.getenv("GEMINI_MODEL", "gemini-3.5-flash")
         _safe_print(f"[ask_ai_chi] Gọi LLM (ưu tiên {current_model})...")
-        # Mô hình nhanh cho câu trả lời chính (bản "high" suy nghĩ lâu, mất 40 đến 60 giây); bước thẩm định hiệu lực phía sau sẽ bắt lỗi.
-        # Đặt CHAT_MAIN_MODEL_HIGH=true nếu muốn dùng lại mô hình chậm hơn nhưng suy luận sâu hơn.
-        fast_main = os.getenv("CHAT_MAIN_MODEL_HIGH", "false").lower() not in ("true", "1", "yes")
-        content = _call_llm(template, temperature=0.15, max_tokens=2600, is_json=True, fast=fast_main, timeout=50.0)
+        # Dùng mô hình nhanh (không phải bản "high" suy nghĩ chậm) để đảm bảo < 20s
+        content = _call_llm(template, temperature=0.15, max_tokens=3000, is_json=True, fast=True, timeout=18.0)
         _safe_print(f"[ask_ai_chi] OK Got {len(content)} chars")
 
         # ── Parse JSON từ phản hồi ───────────────────────────────────
@@ -826,15 +831,14 @@ TRẢ VỀ JSON THUẦN (không dùng ```json):
                 result["suggestions"] = []
             if not isinstance(result.get("references"), list):
                 result["references"] = list(CURRENT_LEGAL_REFS[:3])
-            # Bổ sung link internet vào danh mục tài liệu tham khảo nếu có
             if internet_refs:
                 for ref in internet_refs:
                     if ref not in result["references"]:
                         result["references"].append(ref)
-            result["_doc_context"] = doc_context   # dùng cho bước thẩm định hiệu lực, được bỏ trước khi gửi
+            result["_doc_context"] = doc_context
             return result
 
-        # Fallback nếu kết quả text không parse được dạng JSON hoàn chỉnh
+        # Fallback nếu JSON parse lỗi
         fallback_refs = list(CURRENT_LEGAL_REFS[:3])
         if internet_refs:
             fallback_refs.extend(internet_refs)
@@ -856,25 +860,14 @@ TRẢ VỀ JSON THUẦN (không dùng ```json):
         err_msg = str(e)
         _safe_print(f"[ask_ai_chi] ERROR: {err_msg}")
 
-        # Nếu có dữ liệu NotebookLM hợp lệ thì trả về
-        if 'notebook_context' in locals() and notebook_context and len(notebook_context) > 30 and "authenticate" not in notebook_context.lower():
+        if 'docs_context' in locals() and docs_context and len(docs_context) > 30:
             return {
-                "reply": _clean_chat_formatting(f"{notebook_context}\n\n(Lưu ý: Hệ thống đang trích xuất câu trả lời trực tiếp từ NotebookLM)"),
-                "source_type": "notebooklm_direct",
-                "suggestions": [],
-                "references": list(CURRENT_LEGAL_REFS[:2])
-            }
-
-        # Nếu có ChromaDB context thì phản hồi từ dữ liệu pháp lý nội bộ
-        if 'chroma_context' in locals() and chroma_context and len(chroma_context) > 30:
-            return {
-                "reply": _clean_chat_formatting(f"Dựa trên cơ sở dữ liệu pháp luật PCCC đã đối soát:\n\n{chroma_context[:1200]}\n\n(Lưu ý: Hệ thống đang phản hồi từ kho văn bản quy chuẩn nội bộ)"),
+                "reply": _clean_chat_formatting(f"Dựa trên cơ sở dữ liệu pháp luật PCCC đã đối soát:\n\n{docs_context[:1200]}\n\n(Lưu ý: Hệ thống đang phản hồi từ kho văn bản quy chuẩn nội bộ)"),
                 "source_type": "docs",
                 "suggestions": ["Quy định về nghiệm thu PCCC?", "Khai báo cơ sở dữ liệu PCCC?", "Luật PCCC 55/2024 có gì mới?"],
                 "references": list(CURRENT_LEGAL_REFS[:2])
             }
 
-        # Fallback về bộ kịch bản kiến thức PCCC tiêu chuẩn
         try:
             from routers.ai_analysis import _chat_fallback
             fb = _chat_fallback(question)

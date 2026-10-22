@@ -30,7 +30,8 @@ _STALE_RE = re.compile("|".join(_STALE_PATTERNS), re.IGNORECASE)
 
 
 def enabled() -> bool:
-    return os.getenv("CHAT_VERIFY", "true").lower() in ("true", "1", "yes")
+    # Mac dinh tat de tranh goi LLM lan 2, giam do tre va tranh cat cau tra loi
+    return os.getenv("CHAT_VERIFY", "false").lower() in ("true", "1", "yes")
 
 
 _NUM_RE = re.compile(r"(\d[\d.,]*)\s*(m³|m3|m²|m2|mét|km|tầng|người|năm|ngày|tháng|giờ|phút|%|đồng|triệu|kg|lít|bình|phòng|căn hộ|lần)", re.I)

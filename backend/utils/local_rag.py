@@ -59,13 +59,19 @@ def read_text(path: str) -> str:
             with open(path, "r", encoding="utf-8", errors="replace") as f:
                 return f.read()
         if low.endswith(".docx"):
-            import docx2txt
-            return docx2txt.process(path) or ""
+            try:
+                import docx2txt
+                return docx2txt.process(path) or ""
+            except ImportError:
+                return ""
         if low.endswith(".pdf"):
-            from pypdf import PdfReader
-            return "\n".join((p.extract_text() or "") for p in PdfReader(path).pages)
+            try:
+                from pypdf import PdfReader
+                return "\n".join((p.extract_text() or "") for p in PdfReader(path).pages)
+            except ImportError:
+                return ""
     except Exception as e:
-        print(f"[local_rag] Không đọc được {os.path.basename(path)}: {e}")
+        pass
     return ""
 
 
