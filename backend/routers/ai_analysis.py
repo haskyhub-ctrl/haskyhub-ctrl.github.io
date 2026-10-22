@@ -447,13 +447,19 @@ async def ai_chat(
     from utils.chat_scope import is_in_scope, out_of_scope_response, with_disclaimer
 
     # Đáp án chuẩn do cán bộ duyệt được ưu tiên cao nhất
+    user_email_str = getattr(current_user, "email", "Khách vãng lai") if current_user else "Khách vãng lai"
+    import time as _time
+    t_start = _time.time()
+
     try:
         from utils.kb_qa import find_approved
         hit = find_approved(db, data.message)
         if hit:
-            return with_disclaimer({
+            res = with_disclaimer({
                 "reply": hit.answer, "suggestions": [], "references": [], "source_type": "curated",
             }, data.message)
+            _log_chat_history(data.message, hit.answer, source_type="curated", user_email=user_email_str, elapsed_seconds=_time.time() - t_start)
+            return res
     except Exception as e:
         print(f"[AI Chat] Lỗi tra đáp án chuẩn: {e}")
 
@@ -464,7 +470,9 @@ async def ai_chat(
         from utils.chat_scope import classify_with_ai
         verdict = await _aio.to_thread(classify_with_ai, data.message)
         if verdict is False:
-            return out_of_scope_response()
+            resp = out_of_scope_response()
+            _log_chat_history(data.message, resp.get("reply", ""), source_type="out_of_scope", user_email=user_email_str, elapsed_seconds=_time.time() - t_start)
+            return resp
 
     # Câu hỏi chung đã có câu trả lời gần đây: trả ngay, không gọi AI lại
     cacheable = not data.assessment_id and not data.history
@@ -473,12 +481,11 @@ async def ai_chat(
             from utils import answer_cache
             cached = answer_cache.get(data.message)
             if cached:
+                _log_chat_history(data.message, cached.get("reply", ""), source_type=cached.get("source_type", "cache"), user_email=user_email_str, elapsed_seconds=_time.time() - t_start)
                 return cached
         except Exception as e:
             print(f"[AI Chat] Lỗi bộ nhớ đệm: {e}")
 
-    import time as _time
-    t_start = _time.time()
     context = ""
     if data.assessment_id and current_user:
         if current_user.role in ("admin", "superadmin"):
@@ -520,6 +527,7 @@ Tỷ lệ nguy cơ: {adata['risk_percentage']}% ({adata['risk_level']}). Điểm
         if isinstance(result, dict) and (unresolved or result.get("source_type") in ("general", "web")):
             _log_hard_question(db, data.message)
         final = with_disclaimer(_finish_reply(result), data.message)
+        _log_chat_history(data.message, final.get("reply", "") if isinstance(final, dict) else str(final), source_type=final.get("source_type", "docs") if isinstance(final, dict) else "docs", user_email=user_email_str, elapsed_seconds=_time.time() - t_start)
         if cacheable and not unresolved and isinstance(final, dict) and final.get("source_type") in ("notebooklm", "docs", "web", "general"):
             try:
                 from utils import answer_cache
@@ -530,7 +538,9 @@ Tỷ lệ nguy cơ: {adata['risk_percentage']}% ({adata['risk_level']}). Điểm
     except Exception as e:
         print(f"[AI Chat RAG] Error: {e}")
         _log_hard_question(db, data.message)
-        return with_disclaimer(_finish_reply(_chat_fallback(data.message)), data.message)
+        fb_res = with_disclaimer(_finish_reply(_chat_fallback(data.message)), data.message)
+        _log_chat_history(data.message, fb_res.get("reply", "") if isinstance(fb_res, dict) else str(fb_res), source_type="fallback", user_email=user_email_str, elapsed_seconds=_time.time() - t_start)
+        return fb_res
 
 
 class ChatFeedback(BaseModel):
@@ -553,6 +563,33 @@ def chat_feedback(data: ChatFeedback, db: Session = Depends(get_db)):
     return {"ok": True}
 
 
+@router.get("/chat/history-logs")
+def get_chat_history_logs(
+    limit: int = 100,
+    current_user: Optional[User] = Depends(get_optional_user)
+):
+    """Lấy danh sách các câu hỏi và câu trả lời AI để cán bộ theo dõi, rút kinh nghiệm."""
+    from pathlib import Path
+    import json
+    log_file = Path(__file__).resolve().parent.parent / "data" / "chat_history.jsonl"
+    if not log_file.exists():
+        return []
+    lines = []
+    try:
+        with open(log_file, "r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if line:
+                    try:
+                        lines.append(json.loads(line))
+                    except Exception:
+                        pass
+        return list(reversed(lines[-limit:]))
+    except Exception as e:
+        print(f"[Chat History] Lỗi đọc log: {e}")
+        return []
+
+
 def _finish_reply(result):
     """Chuẩn hóa lần cuối: xưng Tôi/Trợ lý ảo, gọi bạn, giữ ký hiệu trình bày."""
     if isinstance(result, dict) and isinstance(result.get("reply"), str):
@@ -567,6 +604,31 @@ def _log_hard_question(db, message: str) -> None:
         log_unanswered(db, message)
     except Exception as e:
         print(f"[AI Chat] Không ghi được câu hỏi khó: {e}")
+
+
+def _log_chat_history(question: str, reply: str, source_type: str = "docs", user_email: str = "Khách vãng lai", elapsed_seconds: float = 0.0) -> None:
+    """Ghi lại toàn bộ lịch sử hỏi - đáp của AI vào file JSONL để cán bộ theo dõi và rút kinh nghiệm."""
+    try:
+        from pathlib import Path
+        import json
+        from datetime import datetime
+        log_dir = Path(__file__).resolve().parent.parent / "data"
+        log_dir.mkdir(parents=True, exist_ok=True)
+        log_file = log_dir / "chat_history.jsonl"
+        now_vn = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        entry = {
+            "time": now_vn,
+            "user": user_email or "Khách vãng lai",
+            "question": (question or "").strip()[:2000],
+            "reply": (reply or "").strip(),
+            "source_type": source_type or "docs",
+            "elapsed_seconds": round(elapsed_seconds, 2),
+            "model": os.getenv("ROUTER_MODEL", "ag/gemini-3.8-flash-high")
+        }
+        with open(log_file, "a", encoding="utf-8") as f:
+            f.write(json.dumps(entry, ensure_ascii=False) + "\n")
+    except Exception as e:
+        print(f"[AI Chat] Lỗi ghi nhật ký hỏi đáp: {e}")
 
 
 def _chat_fallback(message: str) -> dict:

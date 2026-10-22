@@ -21,10 +21,13 @@
             this.loadWiki();
         },
         tab(name) {
-            ['docs', 'qs', 'wiki', 'watch', 'test'].forEach(t => {
-                document.getElementById('kt-' + t).classList.toggle('active', t === name);
-                document.getElementById('kp-' + t).style.display = t === name ? '' : 'none';
+            ['docs', 'qs', 'logs', 'wiki', 'watch', 'test'].forEach(t => {
+                const elT = document.getElementById('kt-' + t);
+                const elP = document.getElementById('kp-' + t);
+                if (elT) elT.classList.toggle('active', t === name);
+                if (elP) elP.style.display = t === name ? '' : 'none';
             });
+            if (name === 'logs') this.loadLogs();
         },
 
         // ------------------------------------------------------------ tài liệu
@@ -254,6 +257,42 @@
         },
 
         // ------------------------------------------------------------ thử tra cứu
+
+        // ------------------------------------------------------------ nhat ky hoi dap
+        async loadLogs() {
+            const body = document.getElementById('kl-body');
+            try {
+                const logs = await api.get('/ai/chat/history-logs?limit=100');
+                if (!logs || !logs.length) {
+                    body.innerHTML = '<tr><td colspan="7" class="tm-empty">Chưa có lượt hỏi đáp nào được ghi nhận.</td></tr>';
+                    return;
+                }
+                body.innerHTML = logs.map(x => `
+                    <tr>
+                        <td style="font-size:0.75rem; color:#64748b; white-space:nowrap;">${esc(x.time)}</td>
+                        <td style="font-size:0.75rem;">${esc(x.user)}</td>
+                        <td style="font-weight:600; color:#0F2347;">${esc(x.question)}</td>
+                        <td style="font-size:0.78rem; line-height:1.45; max-height:120px; overflow-y:auto; display:block;">${esc(x.reply ? x.reply.slice(0, 300) + (x.reply.length > 300 ? '...' : '') : '(Không có nội dung)')}</td>
+                        <td><span class="fras-source-badge ${esc(x.source_type)}" style="font-size:0.7rem;">${esc(x.source_type)}</span></td>
+                        <td class="tm-num" style="font-size:0.75rem;">${x.elapsed_seconds ? x.elapsed_seconds + 's' : '-'}</td>
+                        <td>
+                            <button class="btn btn-secondary btn-sm" style="font-size:0.7rem; padding:3px 6px;" onclick="KHO.promoteToApproved('${encodeURIComponent(x.question)}', '${encodeURIComponent(x.reply)}')">Ghim chuẩn</button>
+                        </td>
+                    </tr>
+                `).join('');
+            } catch (e) {
+                body.innerHTML = '<tr><td colspan="7" class="tm-empty">Lỗi tải nhật ký: ' + esc(e.message || e) + '</td></tr>';
+            }
+        },
+        promoteToApproved(encQ, encA) {
+            const q = decodeURIComponent(encQ);
+            const a = decodeURIComponent(encA);
+            this.tab('qs');
+            document.getElementById('kq-new-q').value = q;
+            document.getElementById('kq-new-a').value = a;
+            document.getElementById('kq-new-q').scrollIntoView({ behavior: 'smooth' });
+        },
+
         async test() {
             const q = document.getElementById('kt-q').value.trim();
             const box = document.getElementById('kt-result');

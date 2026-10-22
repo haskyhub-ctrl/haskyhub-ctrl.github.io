@@ -57,6 +57,7 @@
             <div class="tm-tabs">
                 <button class="tm-tab active" id="kt-docs" onclick="KHO.tab('docs')">Tài liệu</button>
                 <button class="tm-tab" id="kt-qs" onclick="KHO.tab('qs')">Câu hỏi khó <span id="kho-pending" class="kho-count">0</span></button>
+                <button class="tm-tab" id="kt-logs" onclick="KHO.tab('logs')">Nhật ký hỏi - đáp</button>
                 <button class="tm-tab" id="kt-wiki" onclick="KHO.tab('wiki')">Wiki tri thức</button>
                 <button class="tm-tab" id="kt-watch" onclick="KHO.tab('watch')">Văn bản mới <span id="kho-newcount" class="kho-count">0</span></button>
                 <button class="tm-tab" id="kt-test" onclick="KHO.tab('test')">Thử tra cứu</button>
@@ -111,6 +112,37 @@
                     <button class="btn btn-primary btn-sm" onclick="KHO.addQ()">＋ Thêm và duyệt</button>
                 </div>
                 <div id="kq-list"></div>
+            </div>
+
+            <!-- Nhật ký hỏi - đáp -->
+            <div id="kp-logs" style="display:none;">
+                <div class="kho-box">
+                    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
+                        <div>
+                            <h3 style="margin:0 0 4px;">Nhật ký câu hỏi & câu trả lời của Trợ lý ảo</h3>
+                            <p class="kho-intro" style="margin:0;">Theo dõi toàn bộ các câu hỏi người dùng đặt ra và câu trả lời thực tế của AI để kịp thời rút kinh nghiệm, điều chỉnh tài liệu hoặc ghim đáp án chuẩn.</p>
+                        </div>
+                        <button class="btn btn-secondary btn-sm" onclick="KHO.loadLogs()">🔄 Làm mới</button>
+                    </div>
+                </div>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width:130px;">Thời gian</th>
+                                <th style="width:120px;">Người hỏi</th>
+                                <th style="width:25%;">Câu hỏi</th>
+                                <th>Câu trả lời của AI</th>
+                                <th style="width:80px;">Nguồn</th>
+                                <th style="width:65px;" class="tm-num">Độ trễ</th>
+                                <th style="width:110px;">Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody id="kl-body">
+                            <tr><td colspan="7" class="tm-empty"><div class="loading-spinner"></div></td></tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
 
             <!-- Wiki tri thức -->

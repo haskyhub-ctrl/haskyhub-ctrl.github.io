@@ -279,12 +279,13 @@ def _call_9router(prompt: str, temperature: float = 0.15, max_tokens: int = 2048
     if not router_key:
         raise ValueError("ROUTER_API_KEY chưa được cấu hình")
 
-    primary_model = os.getenv("ROUTER_MODEL", "ag/gemini-3.8-flash-low")
+    primary_model = os.getenv("ROUTER_MODEL", "ag/gemini-3.8-flash-high")
     fallback_models = [
         primary_model,
-        "ag/gemini-3.8-flash-low",
+        "ag/gemini-3.8-flash-high",
         "ag/gemini-3.8-flash",
         "ag/gemini-3.8-flash-medium",
+        "ag/gemini-3.8-flash-low",
     ]
     if fast:
         fallback_models = ["ag/gemini-3.8-flash-low", "ag/gemini-3.8-flash"] + fallback_models
@@ -837,8 +838,8 @@ TRẢ VỀ JSON THUẦN (không dùng ```json):
         router_model = os.getenv("ROUTER_MODEL", "ag/gemini-3.8-flash-high")
         current_model = router_model if use_router and router_key else os.getenv("GEMINI_MODEL", "gemini-3.5-flash")
         _safe_print(f"[ask_ai_chi] Gọi LLM (ưu tiên {current_model})...")
-        # Dùng mô hình nhanh (không phải bản "high" suy nghĩ chậm) để đảm bảo < 20s
-        content = _call_llm(template, temperature=0.15, max_tokens=3000, is_json=True, fast=True, timeout=30.0)
+        # Sử dụng mô hình cấu hình theo ROUTER_MODEL (ag/gemini-3.8-flash-high)
+        content = _call_llm(template, temperature=0.15, max_tokens=3000, is_json=True, fast=False, timeout=45.0)
         _safe_print(f"[ask_ai_chi] OK Got {len(content)} chars")
 
         # ── Parse JSON từ phản hồi ───────────────────────────────────
