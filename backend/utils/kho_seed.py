@@ -98,22 +98,24 @@ FAQ_PATH = os.path.join(SEED_DIR, "faq.json")
 
 
 def sync_faq(db) -> int:
-    """Nạp các câu hỏi thường gặp có đáp án chuẩn (kho_seed/faq.json) vào ngân hàng câu hỏi. Câu nào đã có thì giữ nguyên."""
-    try:
-        with open(FAQ_PATH, "r", encoding="utf-8") as f:
-            items = json.load(f)
-    except Exception:
-        return 0
+    """Đồng bộ ngân hàng câu trả lời sẵn với kho_seed/faq_bank_2026.json (nguồn chuẩn, đã rà soát).
+    Câu có trong tệp thì cập nhật đáp án; câu cũ nạp từ trước (nguồn seed, faq_bank_2026) không còn trong tệp thì xóa.
+    Câu do cán bộ duyệt tay hoặc từ hàng chờ (nguồn khác) không bị đụng tới."""
     from models import KbQuestion
     from utils.kb_qa import question_key
-    added = 0
-    for it in items:
-        key = question_key(it["question"])
-        if not key or db.query(KbQuestion).filter(KbQuestion.question_key == key).first():
-            continue
-        db.add(KbQuestion(question=it["question"], question_key=key, answer=it["answer"], status="approved", source="seed",
-                          times_asked=0, answered_at=datetime.utcnow()))
-        added += 1
-    if added:
+    from utils.faq_auditor import seed_200_faqs
+    stats = seed_200_faqs(db, force_update=True)
+    bank_path = os.path.join(SEED_DIR, "faq_bank_2026.json")
+    try:
+        with open(bank_path, "r", encoding="utf-8") as f:
+            keys = {question_key(it["question"]) for it in json.load(f) if it.get("question")}
+    except Exception:
+        return stats.get("added", 0)
+    removed = 0
+    for row in db.query(KbQuestion).filter(KbQuestion.source.in_(["seed", "faq_bank_2026"])).all():
+        if row.question_key not in keys:
+            db.delete(row)
+            removed += 1
+    if removed:
         db.commit()
-    return added
+    return stats.get("added", 0) + stats.get("updated", 0) + removed
