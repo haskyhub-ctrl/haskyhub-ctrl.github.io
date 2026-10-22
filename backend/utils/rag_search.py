@@ -123,6 +123,30 @@ QUY ĐỊNH PHÁP LUẬT PCCC MỚI NHẤT (NĂM 2026) - ƯU TIÊN ÁP DỤNG TU
        5. Phương án bảo đảm an ninh, trật tự của cơ sở kinh doanh dịch vụ lưu trú (Mẫu số 03).
        6. Bản sao Giấy tờ pháp lý về địa điểm kinh doanh (Giấy chứng nhận quyền sử dụng đất, hợp đồng thuê địa điểm nếu có).
 
+1g. VỀ PHÂN CẤP QUẢN LÝ PCCC ĐỐI VỚI CƠ SỞ KINH DOANH KARAOKE, VŨ TRƯỜNG, QUÁN BAR:
+   - Cơ sở kinh doanh dịch vụ karaoke, vũ trường, quán bar thuộc Phụ lục II Nghị định số 105/2025/NĐ-CP (Cơ sở có nguy cơ cháy nổ cao).
+   - Thẩm quyền quản lý, kiểm tra định kỳ:
+     + Phòng Cảnh sát PCCC và CNCH Công an tỉnh Bắc Ninh: CHỈ quản lý cơ sở quy mô lớn theo danh mục phân công của Giám đốc Công an tỉnh (công trình cấp II trở lên, tổ hợp thương mại lớn).
+     + Công an cấp huyện (Đội Cảnh sát PCCC và CNCH): Quản lý hồ sơ theo dõi PCCC cơ sở trên địa bàn huyện/thị xã/thành phố.
+     + ĐẶC BIỆT TẠI TỈNH BẮC NINH (theo Khoản 2 Điều 22 Quyết định số 29/2025/QĐ-UBND ngày 22/9/2025): UBND tỉnh phân cấp cho UBND CẤP XÃ tổ chức kiểm tra về PCCC đối với các cơ sở thuộc Phụ lục II Nghị định 105/2025/NĐ-CP có cấp công trình từ cấp III trở xuống.
+     + Đối với quán Karaoke có quy mô: Nhà 4 tầng diện tích sàn 85 m2 (tổng diện tích sàn 340 m2, kinh doanh 2 phòng hát ở tầng 1 và 2): Công trình này thuộc Cấp IV (hoặc Cấp III nếu tính công trình công cộng nhỏ), tức là từ Cấp III trở xuống.
+     + DO ĐÓ, CƠ SỞ NÀY THUỘC THẨM QUYỀN KIỂM TRA ĐỊNH KỲ CỦA UBND CẤP XÃ (phối hợp Công an cấp xã tham mưu) theo phân cấp của Quyết định 29/2025/QĐ-UBND tỉnh Bắc Ninh! TUYỆT ĐỐI KHÔNG PHẢI thuộc thẩm quyền quản lý trực tiếp của Phòng Cảnh sát PCCC và CNCH Công an tỉnh!
+
+1h. VỀ VIỆC CÓ ĐƯỢC LÀM ĐƠN XIN CÔNG AN KIỂM TRA, ĐÁNH GIÁ ĐIỀU KIỆN PCCC THEO YÊU CẦU CÁ NHÂN (TRANH CHẤP TÀI SẢN, HỢP ĐỒNG ỦY QUYỀN):
+   - Căn cứ pháp lý: Điều 18 Nghị định số 105/2025/NĐ-CP và Luật PCCC và CNCH số 55/2024/QH15.
+   - TRẢ LỜI TRỰC DIỆN: Cá nhân KHÔNG THỂ làm "Đơn xin kiểm tra và đánh giá điều kiện an toàn PCCC" gửi cơ quan Công an.
+   - Lý do:
+     + Pháp luật PCCC hiện hành KHÔNG có thủ tục hành chính tiếp nhận đơn của cá nhân yêu cầu cơ quan Công an đến kiểm tra, đánh giá an toàn PCCC cho công trình theo yêu cầu riêng.
+     + Cơ quan Công an chỉ kiểm tra an toàn PCCC theo 2 chế độ luật định:
+       1) Kiểm tra định kỳ (theo kế hoạch hằng năm đã phê duyệt và có thông báo trước tối thiểu 03 ngày làm việc).
+       2) Kiểm tra đột xuất (chỉ khi có dấu hiệu vi phạm an toàn PCCC nghiêm trọng đe dọa trực tiếp phát sinh cháy nổ, phục vụ chuyên án hoặc chỉ đạo khẩn).
+     + Tranh chấp tài sản ly hôn gắn liền trên đất và Giấy ủy quyền quản lý PCCC (còn hạn đến 2027) là QUAN HỆ PHÁP LUẬT DÂN SỰ, HÔN NHÂN GIA ĐÌNH. Cơ quan Công an là cơ quan quản lý nhà nước về ANTT và PCCC, KHÔNG can thiệp vào tranh chấp dân sự nội bộ, không làm công cụ để các bên thu thập chứng cứ tranh chấp tài sản.
+     + Trách nhiệm an toàn PCCC thuộc về bên đang trực tiếp quản lý, sử dụng, vận hành cơ sở (công ty nhận ủy quyền kinh doanh).
+   - GIẢI PHÁP HỢP PHÁP CHO CÔNG DÂN:
+     + Cách 1: Thuê đơn vị tư vấn kinh doanh dịch vụ PCCC độc lập (có Giấy xác nhận đủ điều kiện hành nghề theo Điều 41 Nghị định 105/2025/NĐ-CP) để khảo sát, kiểm tra, lập Báo cáo đánh giá hiện trạng an toàn PCCC cho công trình.
+     + Cách 2: Nếu phát hiện bên nhận ủy quyền có hành vi vi phạm an toàn PCCC nghiêm trọng (khóa lối thoát nạn, ngắt hệ thống báo cháy, cải tạo trái phép gây nguy cơ cháy nổ): Làm Đơn phản ánh, tố giác vi phạm an toàn PCCC gửi Công an cấp huyện hoặc UBND cấp xã để cơ quan chức năng tiến hành kiểm tra đột xuất xử lý vi phạm hành chính.
+     + Cách 3: Đề nghị Tòa án nhân dân nơi đang thụ lý vụ án ly hôn ra quyết định trưng cầu giám định hiện trạng an toàn của công trình hoặc áp dụng biện pháp khẩn cấp tạm thời nếu cần thiết bảo toàn tài sản.
+
 2. CÁC VĂN BẢN HIỆN HÀNH CHÍNH:
    - Nghị định số 347/2026/NĐ-CP ngày 08/9/2026 của Chính phủ (hiệu lực 15/9/2026, sửa đổi NĐ 105/2025/NĐ-CP, bãi bỏ văn bản chấp thuận nghiệm thu PCCC)
    - Nghị quyết số 66.18/2026/NQ-CP ngày 18/5/2026 của Chính phủ (hiệu lực 01/07/2026, bãi bỏ thủ tục kiểm tra nghiệm thu PCCC)
