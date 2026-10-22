@@ -249,9 +249,12 @@ async def lifespan(app: FastAPI):
     backup_task = asyncio.create_task(auto_backup_task())
     from utils.law_watch import weekly_loop
     watch_task = asyncio.create_task(weekly_loop())
+    from utils.faq_auditor import weekly_faq_audit_loop
+    faq_audit_task = asyncio.create_task(weekly_faq_audit_loop(interval_hours=168.0))
     
     yield
     # Shutdown
+    faq_audit_task.cancel()
     watch_task.cancel()
     backup_task.cancel()
     try:

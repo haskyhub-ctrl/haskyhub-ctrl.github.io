@@ -590,6 +590,27 @@ def get_chat_history_logs(
         return []
 
 
+@router.get("/faq/audit")
+def get_faq_audit(current_user: Optional[User] = Depends(get_optional_user)):
+    """Lấy báo cáo rà soát hiệu lực định kỳ của Ngân hàng 200 câu hỏi chuẩn."""
+    from utils.faq_auditor import get_latest_audit_report
+    return get_latest_audit_report()
+
+
+@router.post("/faq/run-audit")
+def run_faq_audit(db: Session = Depends(get_db), current_user: Optional[User] = Depends(get_optional_user)):
+    """Chạy rà soát hiệu lực văn bản ngay lập tức cho toàn bộ câu hỏi chuẩn."""
+    from utils.faq_auditor import audit_faq_bank
+    return audit_faq_bank(db)
+
+
+@router.post("/faq/seed-200")
+def sync_faq_200(db: Session = Depends(get_db), current_user: Optional[User] = Depends(get_optional_user)):
+    """Nạp hoặc đồng bộ hóa lại 200 câu hỏi chuẩn PCCC 2026."""
+    from utils.faq_auditor import seed_200_faqs
+    return seed_200_faqs(db, force_update=True)
+
+
 def _finish_reply(result):
     """Chuẩn hóa lần cuối: xưng Tôi/Trợ lý ảo, gọi bạn, giữ ký hiệu trình bày."""
     if isinstance(result, dict) and isinstance(result.get("reply"), str):

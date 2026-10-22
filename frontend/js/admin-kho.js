@@ -19,6 +19,7 @@
             this.loadQs();
             this.loadWatch();
             this.loadWiki();
+            this.loadFaqAuditStatus();
         },
         tab(name) {
             ['docs', 'qs', 'logs', 'wiki', 'watch', 'test'].forEach(t => {
@@ -101,6 +102,46 @@
         },
 
         // ------------------------------------------------------------ câu hỏi khó
+        
+        // ------------------------------------------------------------ faq audit 1 tuan/lan
+        async loadFaqAuditStatus() {
+            const el = document.getElementById('faq-audit-status');
+            if (!el) return;
+            try {
+                const rep = await api.get('/ai/faq/audit');
+                if (rep && rep.total_faqs) {
+                    el.innerHTML = `Tổng số: <b>${rep.total_faqs}</b> câu chuẩn | Đạt chuẩn: <b style="color:#16a34a;">${rep.valid_count}</b> | Căn cứ cũ: <b style="color:#dc2626;">${rep.outdated_count}</b> | Cần rà soát tuần này: <b>${rep.due_review_count}</b> | Rà soát gần nhất: <em>${rep.timestamp}</em>`;
+                } else {
+                    el.textContent = 'Chưa có dữ liệu rà soát định kỳ.';
+                }
+            } catch (e) {
+                el.textContent = 'Không tải được trạng thái rà soát.';
+            }
+        },
+        async runFaqAudit() {
+            const el = document.getElementById('faq-audit-status');
+            if (el) el.textContent = 'Đang quét toàn bộ 200 câu hỏi và kiểm tra hiệu lực căn cứ pháp lý...';
+            try {
+                const rep = await api.post('/ai/faq/run-audit');
+                alert(`Đã rà soát xong ${rep.total_faqs} câu hỏi!\n- Hợp lệ: ${rep.valid_count}\n- Chứa căn cứ cũ cần sửa: ${rep.outdated_count}\n- Quá 7 ngày cần rà soát: ${rep.due_review_count}`);
+                this.loadFaqAuditStatus();
+                this.loadQs();
+            } catch (e) {
+                alert('Lỗi rà soát: ' + (e.message || e));
+            }
+        },
+        async seedFaq200() {
+            if (!confirm('Bạn có chắc muốn đồng bộ và cập nhật lại 200 câu hỏi - đáp chuẩn PCCC 2026?')) return;
+            try {
+                const res = await api.post('/ai/faq/seed-200');
+                alert(`Đã nạp thành công ${res.added} câu mới và cập nhật ${res.updated} câu chuẩn!`);
+                this.loadFaqAuditStatus();
+                this.loadQs();
+            } catch (e) {
+                alert('Lỗi đồng bộ: ' + (e.message || e));
+            }
+        },
+
         loadQsDebounced: debounce(function () { KHO.loadQs(); }, 350),
         async loadQs() {
             const st = document.getElementById('kq-status').value;
@@ -177,6 +218,7 @@
                 msg(out, activate ? 'Đã lưu và bật dùng.' : 'Đã lưu.', 'ok');
                 this.loadDocs();
                 this.loadWiki();
+            this.loadFaqAuditStatus();
             } catch (e) { msg(out, e.message || String(e), 'err'); }
         },
 

@@ -1,20 +1,802 @@
 [
- {
-  "id": "faq_csdl_dangnhap",
-  "rev": 1,
-  "question": "Tôi cần hướng dẫn cụ thể về cập nhật cơ sở dữ liệu PCCC, tài khoản không đăng nhập được, không cập nhật được",
-  "answer": ">> Hệ thống cơ sở dữ liệu về PCCC, CNCH dùng tài khoản do **cán bộ quản lý địa bàn (Đội PCCC)** cấp cho cơ sở. Chi hướng dẫn bạn đăng nhập và cách xử lý các lỗi thường gặp.\n\n## Cách đăng nhập\n1. Vào địa chỉ **https://thuthapdulieu.csdlcbcs.vn/auth/login**.\n2. Nhập **số điện thoại** và **mật khẩu** do cán bộ quản lý của Đội PCCC cung cấp.\n3. Nhấn **Đăng nhập**.\n\n## Nếu không đăng nhập được\n- Kiểm tra số điện thoại phải đúng với số đã đăng ký khi cán bộ tạo tài khoản cho cơ sở; kiểm tra lại mật khẩu (chữ hoa, chữ thường, chế độ gõ).\n- Thử tải lại trang hoặc dùng trình duyệt khác.\n- Quên mật khẩu hoặc chưa có tài khoản: bạn liên hệ **cán bộ quản lý địa bàn hoặc Đội PCCC phụ trách cơ sở** để được cấp hoặc cấp lại, vì tài khoản do cán bộ tạo.\n\n## Nếu không cập nhật được\n- Theo tài liệu hướng dẫn, các nút **Chỉnh sửa** và **Xóa** hiển thị ở phiếu có trạng thái **Đang lập phiếu**. Phiếu đã **Hoàn thành** là phiếu đã gửi tới Trung tâm chỉ huy của PC07; nếu cần sửa, bạn liên hệ cán bộ quản lý để được hỗ trợ.\n- Các trường có dấu (*) phải nhập đủ ở cả 3 tab: Thông tin chung về cơ sở, Thông tin về PCCC CNCH, Công tác PCCC CNCH. Mỗi tab bấm **Lưu**, cuối cùng chọn **Gửi phiếu** rồi **Đồng ý** để gửi.\n- Cập nhật thông tin khi có thay đổi (địa chỉ, người đứng đầu, phương tiện, tình trạng hoạt động...) theo đúng các tab trên.\n\n!! Mật khẩu là thông tin riêng của cơ sở, bạn không chia sẻ cho người khác.\n\n{{Hướng dẫn sử dụng phần mềm khai báo của Hệ thống cơ sở dữ liệu về PCCC, CNCH, 07/2025}}"
- },
- {
-  "id": "faq_csdl_taikhoan",
-  "rev": 1,
-  "question": "Không đăng nhập được tài khoản cơ sở dữ liệu PCCC, quên mật khẩu, chưa có tài khoản khai báo cơ sở",
-  "answer": ">> Hệ thống cơ sở dữ liệu về PCCC, CNCH dùng tài khoản do **cán bộ quản lý địa bàn (Đội PCCC)** cấp cho cơ sở. Chi hướng dẫn bạn đăng nhập và cách xử lý các lỗi thường gặp.\n\n## Cách đăng nhập\n1. Vào địa chỉ **https://thuthapdulieu.csdlcbcs.vn/auth/login**.\n2. Nhập **số điện thoại** và **mật khẩu** do cán bộ quản lý của Đội PCCC cung cấp.\n3. Nhấn **Đăng nhập**.\n\n## Nếu không đăng nhập được\n- Kiểm tra số điện thoại phải đúng với số đã đăng ký khi cán bộ tạo tài khoản cho cơ sở; kiểm tra lại mật khẩu (chữ hoa, chữ thường, chế độ gõ).\n- Thử tải lại trang hoặc dùng trình duyệt khác.\n- Quên mật khẩu hoặc chưa có tài khoản: bạn liên hệ **cán bộ quản lý địa bàn hoặc Đội PCCC phụ trách cơ sở** để được cấp hoặc cấp lại, vì tài khoản do cán bộ tạo.\n\n## Nếu không cập nhật được\n- Theo tài liệu hướng dẫn, các nút **Chỉnh sửa** và **Xóa** hiển thị ở phiếu có trạng thái **Đang lập phiếu**. Phiếu đã **Hoàn thành** là phiếu đã gửi tới Trung tâm chỉ huy của PC07; nếu cần sửa, bạn liên hệ cán bộ quản lý để được hỗ trợ.\n- Các trường có dấu (*) phải nhập đủ ở cả 3 tab: Thông tin chung về cơ sở, Thông tin về PCCC CNCH, Công tác PCCC CNCH. Mỗi tab bấm **Lưu**, cuối cùng chọn **Gửi phiếu** rồi **Đồng ý** để gửi.\n- Cập nhật thông tin khi có thay đổi (địa chỉ, người đứng đầu, phương tiện, tình trạng hoạt động...) theo đúng các tab trên.\n\n!! Mật khẩu là thông tin riêng của cơ sở, bạn không chia sẻ cho người khác.\n\n{{Hướng dẫn sử dụng phần mềm khai báo của Hệ thống cơ sở dữ liệu về PCCC, CNCH, 07/2025}}"
- },
- {
-  "id": "faq_fras_dangnhap",
-  "rev": 1,
-  "question": "Không đăng nhập được tài khoản Hệ thống FRAS-AI bằng mã cơ sở",
-  "answer": ">> Với **Hệ thống FRAS-AI** (fras-ai.com), cơ sở thuộc diện quản lý đăng nhập bằng **mã cơ sở 13 chữ số** và mật khẩu do cán bộ Công an cung cấp. Hộ gia đình, nhà ở và cơ sở nhỏ có thể khảo sát ngay mà không cần tài khoản.\n\n## Nếu không đăng nhập được\n1. Kiểm tra mã cơ sở đủ **13 chữ số**, không thừa khoảng trắng.\n2. Kiểm tra lại mật khẩu (chữ hoa, chữ thường).\n3. Thử tải lại trang hoặc dùng trình duyệt khác trên điện thoại.\n4. Vẫn không được: liên hệ **cán bộ quản lý địa bàn hoặc Đội PCCC phụ trách cơ sở** để được cấp lại mật khẩu.\n\n## Mẹo sử dụng\n- Sau khi đăng nhập bạn có thể bấm **Đổi mật khẩu** để đặt mật khẩu riêng.\n- Khảo sát xong, hệ thống tự lưu; người khảo sát không có tài khoản cần lưu **mã theo dõi** để xem lại tiến độ khắc phục.\n\n!! Mật khẩu là thông tin riêng của cơ sở, bạn không chia sẻ cho người khác."
- }
+  {
+    "question": "Thủ tục nghiệm thu PCCC hiện nay nộp ở đâu?",
+    "answer": ">> Thủ tục hành chính nộp hồ sơ xin kiểm tra nghiệm thu PCCC tại cơ quan Công an hoặc cơ quan Xây dựng **ĐÃ CHÍNH THỨC ĐƯỢC BÃI BỎ** theo {{Nghị quyết số 66.18/2026/NQ-CP}} và {{Nghị định số 347/2026/NĐ-CP}}.\n\n## Cơ chế thực hiện mới\n- **Chủ đầu tư tự tổ chức nghiệm thu:** Chủ đầu tư cùng các nhà thầu (tư vấn thiết kế, thi công, giám sát) tự tiến hành kiểm tra, thử nghiệm và ký biên bản nghiệm thu hoàn thành hạng mục/công trình theo đúng hồ sơ thiết kế đã được thẩm duyệt.\n- **Khai báo thông tin:** Chủ đầu tư lập hồ sơ nghiệm thu, tự chịu trách nhiệm pháp lý và thực hiện khai báo thông tin trên {{Hệ thống cơ sở dữ liệu về PCCC}} trước khi đưa công trình vào vận hành.\n- **Hậu kiểm:** Cơ quan Công an không tiến hành kiểm tra nghiệm thu trước khi vận hành mà chuyển sang kiểm tra an toàn PCCC định kỳ (hậu kiểm: 1 năm/lần với cơ sở rủi ro cao, 2 năm/lần với cơ sở còn lại).\n\n!! Chủ đầu tư TUYỆT ĐỐI không phải nộp hồ sơ xin văn bản chấp thuận kết quả nghiệm thu đến bất kỳ cơ quan nào nữa."
+  },
+  {
+    "question": "Quy trình nghiệm thu PCCC mới nhất năm 2026 như thế nào?",
+    "answer": ">> Quy trình nghiệm thu PCCC hiện nay do **Chủ đầu tư chủ trì tự thực hiện**, không cần cơ quan Công an xuống kiểm tra nghiệm thu để cấp văn bản chấp thuận như trước đây {{Nghị định 347/2026/NĐ-CP}}.\n\n## Các bước thực hiện\n1. **Tổ chức nghiệm thu nội bộ:** Chủ đầu tư phối hợp với đơn vị tư vấn thiết kế, nhà thầu thi công và đơn vị tư vấn giám sát tiến hành đo đạc, thử nghiệm hoạt động thực tế của toàn bộ hệ thống PCCC theo thiết kế đã được thẩm duyệt.\n2. **Lập biên bản nghiệm thu:** Các bên tham gia ký kết biên bản nghiệm thu hoàn thành công trình/hạng mục công trình về PCCC.\n3. **Khai báo cơ sở dữ liệu:** Đăng tải thông tin và hồ sơ nghiệm thu lên Hệ thống cơ sở dữ liệu về PCCC trước khi đưa công trình vào hoạt động.\n\n!! Cơ quan Công an thực hiện hậu kiểm theo kế hoạch định kỳ sau khi cơ sở đi vào hoạt động."
+  },
+  {
+    "question": "Công trình nào phải thẩm định thiết kế về PCCC?",
+    "answer": ">> Danh mục công trình, phương tiện giao thông cơ giới thuộc diện phải thẩm định thiết kế về PCCC được quy định chi tiết tại {{Phụ lục III ban hành kèm theo Nghị định số 347/2026/NĐ-CP}}.\n\n## Các nhóm công trình tiêu biểu\n- **Nhà ở và lưu trú:** Nhà chung cư, nhà tập thể, nhà ở ký túc xá cao từ 7 tầng trở lên hoặc có khối tích từ 5.000 m3 trở lên; khách sạn, nhà khách, nhà nghỉ cao từ 5 tầng trở lên hoặc có khối tích từ 2.500 m3 trở lên.\n- **Công trình công cộng:** Nhà trẻ, trường mẫu giáo có từ 100 cháu trở lên hoặc khối tích từ 2.500 m3; trường tiểu học, THCS, THPT, đại học có khối tích từ 5.000 m3 trở lên; bệnh viện, phòng khám đa khoa cao từ 5 tầng hoặc khối tích từ 3.000 m3.\n- **Kinh doanh giải trí:** Vũ trường, quán bar, quán karaoke có khối tích từ 1.000 m3 trở lên.\n- **Sản xuất, kho hàng:** Nhà xưởng sản xuất, nhà kho có hạng nguy hiểm cháy nổ A, B có khối tích từ 2.000 m3 trở lên; hạng C có khối tích từ 5.000 m3 trở lên."
+  },
+  {
+    "question": "Hồ sơ đề nghị thẩm định thiết kế về PCCC gồm những gì?",
+    "answer": ">> Hồ sơ đề nghị thẩm định thiết kế về PCCC được quy định tại {{Điều 13 Nghị định 105/2025/NĐ-CP}} (sửa đổi, bổ sung bởi {{Điều 11 Nghị định 347/2026/NĐ-CP}}).\n\n## Thành phần hồ sơ\n1. **Văn bản đề nghị thẩm định thiết kế về PCCC** của chủ đầu tư (theo Mẫu quy định).\n2. **Văn bản về chủ trương đầu tư** hoặc giấy chứng nhận đăng ký đầu tư hoặc văn bản phê duyệt quy hoạch chi tiết xây dựng tỷ lệ 1/500.\n3. **Dự toán xây dựng công trình** (đối với dự án sử dụng vốn đầu tư công).\n4. **Hồ sơ thiết kế kỹ thuật hoặc thiết kế bản vẽ thi công** thể hiện rõ các giải pháp ngăn cháy lan, lối thoát nạn, hệ thống báo cháy, chữa cháy, cấp nước chữa cháy, thông gió, hút khói, chống sét.\n\n!! Hồ sơ nộp trực tuyến qua Cổng dịch vụ công Bộ Công an hoặc nộp trực tiếp tại Bộ phận Một cửa Công an tỉnh/thành phố."
+  },
+  {
+    "question": "Thời hạn giải quyết thủ tục thẩm định thiết kế PCCC là bao lâu?",
+    "answer": ">> Thời hạn giải quyết thẩm định thiết kế về PCCC được rút ngắn theo quy định tại {{Điều 14 Nghị định 105/2025/NĐ-CP, sửa đổi bởi Nghị định 347/2026/NĐ-CP}}:\n\n## Thời hạn cụ thể\n- **Đối với thiết kế kỹ thuật hoặc thiết kế bản vẽ thi công dự án nhóm A:** Không quá **10 ngày làm việc**.\n- **Đối với thiết kế dự án nhóm B, nhóm C và phương tiện giao thông:** Không quá **07 ngày làm việc**.\n- **Đối với chấp thuận địa điểm xây dựng:** Không quá **05 ngày làm việc**.\n\n!! Thời gian được tính kể từ ngày cơ quan có thẩm quyền nhận đủ hồ sơ hợp lệ."
+  },
+  {
+    "question": "thời hạn của chứng nhận huấn luyện PCCC là bao nhiêu?",
+    "answer": ">> Hiện nay, **Chứng nhận huấn luyện nghiệp vụ PCCC và CNCH đã chính thức bị bãi bỏ**, cơ quan chức năng không còn cấp thẻ hay quy định thời hạn giá trị của chứng nhận theo {{Luật Phòng cháy, chữa cháy và Cứu nạn, cứu hộ số 55/2024/QH15}}.\n\n## Quy định thay thế hiện hành\nTheo {{Nghị định 105/2025/NĐ-CP}} và {{Nghị định 347/2026/NĐ-CP}}, công tác huấn luyện nghiệp vụ PCCC và CNCH được chuyển sang cơ chế quản lý định kỳ:\n- **Huấn luyện nghiệp vụ:** Thực hiện định kỳ **05 năm một lần**.\n- **Bồi dưỡng nghiệp vụ:** Thực hiện định kỳ **hằng năm**.\n\n## Xử lý chuyển tiếp với chứng nhận cũ\n- Cá nhân đã được cấp Chứng nhận trước đây: Tiếp tục có giá trị đến hết thời hạn ghi trên chứng nhận; sau đó thực hiện huấn luyện nghiệp vụ lại theo định kỳ 5 năm một lần {{khoản 4 Điều 46 Nghị định 105/2025/NĐ-CP}}."
+  },
+  {
+    "question": "thời gian huấn luyện nghiệp vụ PCCC là bao lâu?",
+    "answer": ">> Thời gian huấn luyện nghiệp vụ PCCC và CNCH được quy định cụ thể theo từng nhóm đối tượng, gồm thời gian huấn luyện lần đầu (định kỳ 05 năm/lần) và thời gian bồi dưỡng định kỳ hằng năm theo {{Điều 29 Nghị định 105/2025/NĐ-CP}} và {{Điều 22 Nghị định 347/2026/NĐ-CP}}.\n\n## Thời lượng theo 6 nhóm đối tượng\n\n| Nhóm đối tượng | Huấn luyện lần đầu / định kỳ 5 năm | Bồi dưỡng định kỳ hằng năm |\n|---|---|---|\n| 1. Người đứng đầu cơ sở, cơ quan, tổ chức | Từ **16 giờ đến 24 giờ** | Từ **08 giờ đến 12 giờ** |\n| 2. Thành viên Đội PCCC cơ sở, Đội PCCC chuyên ngành | Từ **32 giờ đến 48 giờ** | Từ **16 giờ đến 24 giờ** |\n| 3. Người làm việc trong môi trường nguy hiểm cháy nổ | Từ **16 giờ đến 24 giờ** | Từ **08 giờ đến 12 giờ** |\n| 4. Trưởng thôn, Tổ trưởng dân phố, Đội dân phòng | Từ **16 giờ đến 24 giờ** | Từ **08 giờ đến 12 giờ** |\n| 5. Lái xe vận chuyển chất, hàng nguy hiểm cháy nổ | Từ **16 giờ đến 24 giờ** | Từ **08 giờ đến 12 giờ** |\n| 6. Cá nhân thực hiện nhiều nhiệm vụ thuộc các nhóm trên | Từ **24 giờ đến 32 giờ** | Từ **08 giờ đến 12 giờ** |\n\n!! Chứng nhận huấn luyện kiểu cũ đã được bãi bỏ; cơ sở tổ chức định kỳ 05 năm/lần và bồi dưỡng hằng năm."
+  },
+  {
+    "question": "Cơ sở có cần xin cấp giấy chứng nhận huấn luyện PCCC nữa không?",
+    "answer": ">> **KHÔNG**, cơ sở không cần và không thể xin cấp giấy chứng nhận huấn luyện nghiệp vụ PCCC nữa. Quy định cấp thẻ/giấy chứng nhận đã chính thức bị bãi bỏ theo {{Luật PCCC và CNCH số 55/2024/QH15}}.\n\n## Cách quản lý hiện nay\n- Cơ sở lập danh sách nhân sự tham gia khóa huấn luyện nghiệp vụ PCCC và CNCH với cơ quan Công an hoặc đơn vị huấn luyện đủ điều kiện.\n- Sau khóa huấn luyện, cơ quan/đơn vị tổ chức huấn luyện sẽ ban hành **Văn bản thông báo kết quả huấn luyện kèm danh sách đạt yêu cầu** để cơ sở lưu vào Hồ sơ quản lý, theo dõi hoạt động PCCC tại cơ sở {{Điều 30 Nghị định 105/2025/NĐ-CP}}."
+  },
+  {
+    "question": "Những ai bắt buộc phải tham gia huấn luyện nghiệp vụ PCCC?",
+    "answer": ">> Các đối tượng bắt buộc phải tham gia huấn luyện nghiệp vụ PCCC và CNCH được quy định tại {{Điều 28 Nghị định 105/2025/NĐ-CP}}:\n\n## 6 nhóm đối tượng bắt buộc\n1. **Người đứng đầu** cơ sở, cơ quan, tổ chức.\n2. **Thành viên Đội PCCC và CNCH cơ sở**, Đội PCCC và CNCH chuyên ngành.\n3. **Người làm việc trong môi trường có nguy hiểm về cháy, nổ** hoặc thường xuyên tiếp xúc với chất, hàng nguy hiểm về cháy, nổ.\n4. **Trưởng thôn, Tổ trưởng tổ dân phố**, Đội trưởng, Đội phó và thành viên Đội dân phòng.\n5. **Người điều khiển phương tiện** giao thông cơ giới đường bộ vận chuyển chất, hàng nguy hiểm về cháy, nổ.\n6. **Cá nhân tình nguyện** đăng ký tham gia hoạt động PCCC và CNCH."
+  },
+  {
+    "question": "Quy định về trang bị bình chữa cháy xách tay như thế nào?",
+    "answer": ">> Việc trang bị bình chữa cháy xách tay cho nhà và công trình tuân theo tiêu chuẩn {{TCVN 3890:2023 Phương tiện phòng cháy và chữa cháy cho nhà và công trình - Trang bị và bố trí}}.\n\n## Tiêu chuẩn định mức và bố trí\n- **Định mức:** Tối thiểu **1 bình chữa cháy/50 m2** đối với khu vực có nguy hiểm cháy trung bình hoặc cao; **1 bình/150 m2** đối với khu vực nguy hiểm cháy thấp. Mỗi tầng nhà hoặc mỗi khoang ngăn cháy phải bố trí tối thiểu **02 bình**.\n- **Khoảng cách di chuyển:** Từ điểm bất kỳ đến bình chữa cháy gần nhất không vượt quá **15 m** đối với khu vực nguy hiểm cháy cao; không quá **20 m** đối với khu vực nguy hiểm cháy trung bình; không quá **30 m** đối với khu vực nguy hiểm thấp.\n- **Vị trí đặt bình:** Đặt ở nơi dễ thấy, dễ lấy, tránh ánh nắng trực tiếp; chiều cao treo bình từ mặt sàn đến quai xách không quá **1,2 m**."
+  },
+  {
+    "question": "Bình chữa cháy xách tay bao lâu phải kiểm tra hoặc nạp sạc lại một lần?",
+    "answer": ">> Quy định kiểm tra, bảo dưỡng bình chữa cháy được nêu rõ tại {{TCVN 3890:2023}} và {{TCVN 7435-1 (ISO 11602-1)}}.\n\n## Thời hạn kiểm tra và nạp sạc\n- **Kiểm tra định kỳ tại cơ sở:** Tối thiểu **01 tháng một lần** (kiểm tra kim đồng hồ áp suất nằm trong vùng xanh, chốt niêm phong còn nguyên vẹn, vỏ bình không bị rỉ sét, vòi phun thông thoáng).\n- **Bảo dưỡng, nạp sạc lại:** \n  + Đối với bình mới: Nạp lại sau **12 tháng** kể từ ngày sản xuất.\n  + Đối với bình đã qua nạp sạc: Bảo dưỡng, kiểm định lại định kỳ **06 tháng một lần** hoặc ngay sau khi đã sử dụng/áp suất tụt khỏi dải xanh."
+  },
+  {
+    "question": "Công trình nào bắt buộc phải trang bị hệ thống báo cháy tự động?",
+    "answer": ">> Danh mục công trình phải trang bị hệ thống báo cháy tự động được quy định tại {{Bảng 2 TCVN 3890:2023}}.\n\n## Một số công trình phổ biến\n- Nhà chung cư cao từ **5 tầng** trở lên hoặc có khối tích từ **3.000 m3** trở lên.\n- Nhà hỗn hợp, khách sạn, nhà trọ, ký túc xá cao từ **3 tầng** hoặc khối tích từ **1.500 m3**.\n- Nhà trẻ, mẫu giáo cao từ **2 tầng** hoặc có từ **50 cháu** trở lên.\n- Quán karaoke, quán bar, vũ trường có diện tích kinh doanh từ **200 m2** hoặc khối tích từ **500 m3** trở lên.\n- Chợ kiên cố, trung tâm thương mại, siêu thị có diện tích từ **300 m2** trở lên.\n- Nhà kho, nhà xưởng sản xuất có diện tích từ **500 m2** trở lên."
+  },
+  {
+    "question": "Công trình nào bắt buộc phải lắp đặt hệ thống chữa cháy tự động (Sprinkler)?",
+    "answer": ">> Các công trình bắt buộc lắp đặt hệ thống chữa cháy tự động (nước Sprinkler, bọt hoặc khí) quy định tại {{Bảng 3 TCVN 3890:2023}}.\n\n## Tiêu chí bắt buộc\n- Nhà chung cư cao từ **10 tầng** trở lên (hoặc cao trên 28 m).\n- Khách sạn, nhà nghỉ, nhà hỗn hợp cao từ **7 tầng** trở lên (hoặc cao trên 25 m).\n- Cơ sở kinh doanh karaoke, vũ trường có diện tích sàn từ **300 m2** trở lên hoặc khối tích từ **1.000 m3** trở lên.\n- Nhà kho, xưởng sản xuất hạng C có diện tích từ **1.000 m2** trở lên hoặc tầng hầm có diện tích từ **500 m2**."
+  },
+  {
+    "question": "Nhà ở kết hợp kinh doanh cần đảm bảo những điều kiện PCCC nào?",
+    "answer": ">> Điều kiện an toàn PCCC đối với nhà ở kết hợp sản xuất, kinh doanh được quy định tại {{Điều 10 Luật PCCC và CNCH số 55/2024/QH15}} và {{Điều 7 Nghị định 105/2025/NĐ-CP}}.\n\n## Các yêu cầu bắt buộc\n1. **Lối thoát nạn:** Phải có tối thiểu **02 lối thoát nạn** (lối ra cửa chính ở tầng 1 và lối thoát nạn khẩn cấp qua ban công, lô gia, cửa sổ lên mái hoặc sang nhà liền kề). Cửa thoát hiểm không được lắp khóa từ phía trong.\n2. **Ngăn cách khu vực kinh doanh:** Khu vực kinh doanh phải được ngăn cách với khu vực sinh hoạt gia đình bằng tường ngăn cháy, cửa ngăn cháy.\n3. **An toàn điện:** Dây dẫn điện phải đi trong ống gen chống cháy; ngắt toàn bộ thiết bị điện không cần thiết trước khi rời cơ sở hoặc đi ngủ.\n4. **Trang bị phương tiện:** Bố trí tối thiểu **01 bình chữa cháy/tầng**, dụng cụ phá dỡ thô sơ (búa, xà beng), thang dây thoát hiểm (nếu từ tầng 2 trở lên)."
+  },
+  {
+    "question": "Nhà trọ, chung cư mini cần đáp ứng điều kiện an toàn PCCC gì?",
+    "answer": ">> Nhà ở nhiều căn hộ (chung cư mini) và nhà trọ cho thuê phải tuân thủ nghiêm ngặt theo {{Chỉ thị 27/CT-TTg}} và {{Nghị định 105/2025/NĐ-CP}}.\n\n## Yêu cầu cốt lõi\n1. **Lối thoát nạn thứ hai:** Bắt buộc phải có lối thoát nạn khẩn cấp (cầu thang ngoài nhà, lối thoát qua ban công/lô gia lên mái hoặc sang công trình bên cạnh). Tuyệt đối không bịt kín lồng sắt kiểu \"chuồng cọp\" mà không mở cửa thoát hiểm.\n2. **Khu vực để xe:** Khu vực để xe máy, xe điện ở tầng 1/tầng hầm phải có giải pháp ngăn cách chống cháy lan với lối cầu thang bộ; trang bị hệ thống ngắt sạc xe điện tự động về đêm.\n3. **Thiết bị PCCC:** Bắt buộc trang bị hệ thống báo cháy tự động liên động các tầng; bình chữa cháy xách tay đầy đủ tại từng chiếu nghỉ cầu thang."
+  },
+  {
+    "question": "Điều kiện an toàn PCCC đối với quán Karaoke là gì?",
+    "answer": ">> Cơ sở kinh doanh dịch vụ karaoke phải bảo đảm tuyệt đối các điều kiện theo {{Nghị định 105/2025/NĐ-CP}} và {{TCVN 3890:2023}}:\n\n## 4 điều kiện sinh tử\n1. **Vật liệu trang trí, cách âm:** Toàn bộ vật liệu cách âm, ốp trang trí bên trong phòng hát và trên hành lang thoát nạn phải là vật liệu **không cháy hoặc khó cháy** (không dùng xốp, mút dễ cháy).\n2. **Lối thoát nạn:** Bắt buộc có tối thiểu **02 lối thoát nạn độc lập** (cầu thang bộ trong nhà buồng kín hoặc thang sắt ngoài nhà). Cửa phòng hát phải mở theo chiều thoát nạn.\n3. **Hệ thống ngắt âm thanh tự động:** Phải lắp đặt hệ thống tự động ngắt điện dàn âm thanh, ánh sáng trong phòng hát khi hệ thống báo cháy phát tín hiệu cảnh báo.\n4. **Biển chỉ dẫn:** Biển chỉ dẫn thoát nạn (Exit), đèn chiếu sáng sự cố phải hoạt động liên tục tối thiểu 2 giờ khi mất điện lưới."
+  },
+  {
+    "question": "Đội PCCC cơ sở cần thành lập với số lượng bao nhiêu người?",
+    "answer": ">> Số lượng thành viên Đội PCCC và CNCH cơ sở được quy định tại {{Điều 26 Nghị định 105/2025/NĐ-CP}} căn cứ vào quy mô nhân sự của cơ sở:\n\n## Định mức biên chế\n- **Dưới 10 người làm việc:** Không bắt buộc lập đội riêng, toàn bộ nhân sự cơ sở là thành viên tham gia hoạt động PCCC và CNCH.\n- **Từ 10 đến 50 người làm việc:** Thành lập Đội PCCC cơ sở tối thiểu **05 người** (gồm 01 Đội trưởng và các đội viên).\n- **Từ trên 50 đến 100 người làm việc:** Tối thiểu **10 người** (gồm 01 Đội trưởng, 01 Đội phó và các đội viên).\n- **Trên 100 người làm việc:** Tối thiểu **15 người** (gồm 01 Đội trưởng, 02 Đội phó và các đội viên).\n- **Cơ sở có nhiều phân xưởng, bộ phận làm việc độc lập:** Mỗi phân xưởng lập 01 tổ PCCC tối thiểu 03 đến 05 người."
+  },
+  {
+    "question": "Không trang bị bình chữa cháy bị phạt bao nhiêu tiền?",
+    "answer": ">> Hành vi không trang bị hoặc trang bị không đủ bình chữa cháy bị xử phạt theo quy định tại {{Điều 18 Nghị định 106/2025/NĐ-CP về xử phạt vi phạm hành chính PCCC và CNCH}}.\n\n## Mức phạt cụ thể\n- **Phạt tiền từ 1.000.000 đồng đến 3.000.000 đồng:** Đối với hành vi trang bị phương tiện PCCC không đầy đủ theo quy định hoặc để phương tiện hư hỏng, không sử dụng được.\n- **Phạt tiền từ 3.000.000 đồng đến 5.000.000 đồng:** Đối với hành vi không trang bị phương tiện chữa cháy cơ giới, bình chữa cháy cho cơ sở thuộc diện quản lý.\n- **Mức phạt đối với tổ chức:** Bằng 02 lần mức phạt đối với cá nhân."
+  },
+  {
+    "question": "Khóa cửa thoát nạn hoặc để chướng ngại vật cản trở lối thoát nạn bị phạt thế nào?",
+    "answer": ">> Hành vi chèn cửa, khóa cửa thoát nạn hoặc để hàng hóa cản trở đường thoát hiểm bị xử phạt nghiêm khắc theo {{Điều 14 Nghị định 106/2025/NĐ-CP}}:\n\n## Khung phạt tiền\n- **Phạt tiền từ 2.000.000 đồng đến 5.000.000 đồng:** Hành vi để đồ vật, hàng hóa cản trở lối thoát nạn, hành lang, cầu thang thoát nạn.\n- **Phạt tiền từ 5.000.000 đồng đến 15.000.000 đồng:** Hành vi khóa, chèn, chặn cửa thoát hiểm trong thời gian có người hoạt động.\n- **Biện pháp khắc phục:** Buộc tháo dỡ, di chuyển vật cản trở lối thoát nạn ngay lập tức."
+  },
+  {
+    "question": "Không tổ chức huấn luyện nghiệp vụ PCCC định kỳ bị phạt bao nhiêu?",
+    "answer": ">> Hành vi không tổ chức huấn luyện, bồi dưỡng nghiệp vụ PCCC và CNCH theo định kỳ bị xử phạt theo {{Điều 22 Nghị định 106/2025/NĐ-CP}}:\n\n## Mức xử phạt\n- **Phạt tiền từ 1.500.000 đồng đến 3.000.000 đồng:** Không tổ chức bồi dưỡng nghiệp vụ định kỳ hằng năm cho các đối tượng theo quy định.\n- **Phạt tiền từ 3.000.000 đồng đến 6.000.000 đồng:** Không tổ chức huấn luyện nghiệp vụ định kỳ 05 năm/lần hoặc sử dụng người chưa qua huấn luyện nghiệp vụ làm nhiệm vụ PCCC.\n- **Mức phạt áp dụng với tổ chức:** Gấp 02 lần mức phạt cá nhân (tối đa đến 12.000.000 đồng)."
+  },
+  {
+    "question": "Hồ sơ quản lý theo dõi hoạt động PCCC tại cơ sở gồm những gì?",
+    "answer": ">> Hồ sơ quản lý, theo dõi hoạt động PCCC và CNCH của cơ sở được quy định tại {{Điều 9 Thông tư 36/2025/TT-BCA}}:\n\n## Thành phần hồ sơ bắt buộc\n1. **Nội quy, quy định, biển cấm**, biển báo về PCCC và CNCH của cơ sở.\n2. **Quyết định thành lập Đội PCCC cơ sở** kèm danh sách trích ngang.\n3. **Văn bản thông báo kết quả huấn luyện nghiệp vụ** PCCC và CNCH của cán bộ, đội viên.\n4. **Phương án chữa cháy và cứu nạn cứu hộ** của cơ sở đã được phê duyệt.\n5. **Biên bản tự kiểm tra an toàn PCCC** định kỳ của người đứng đầu cơ sở.\n6. **Hồ sơ thiết kế, bản vẽ PCCC** và Biên bản tự nghiệm thu PCCC (đối với công trình mới).\n7. **Sổ theo dõi phương tiện PCCC**, kiểm tra nạp sạc bình chữa cháy định kỳ."
+  },
+  {
+    "question": "Người đứng đầu cơ sở phải tự kiểm tra an toàn PCCC bao lâu một lần?",
+    "answer": ">> Chế độ tự kiểm tra an toàn PCCC của người đứng đầu cơ sở được quy định tại {{Điều 17 Nghị định 105/2025/NĐ-CP}}:\n\n## Chu kỳ kiểm tra\n- **Kiểm tra thường xuyên:** Hằng ngày hoặc trước mỗi ca làm việc đối với cơ sở có nguy cơ cháy nổ cao (chợ, trung tâm thương mại, xưởng may, hóa chất).\n- **Kiểm tra định kỳ:** Tối thiểu **03 tháng một lần** đối với các cơ sở thuộc diện quản lý về PCCC.\n- **Ghi nhận:** Mỗi lần kiểm tra phải lập **Biên bản tự kiểm tra an toàn PCCC**, ghi rõ các tồn tại thiếu sót và thời hạn khắc phục để lưu vào hồ sơ quản lý."
+  },
+  {
+    "question": "Khi xảy ra cháy cần thực hiện các bước nào đầu tiên?",
+    "answer": ">> Khi phát hiện xảy ra cháy, cần bình tĩnh thực hiện ngay **Quy trình 4 bước khẩn cấp**:\n\n## 4 bước xử lý khẩn cấp\n1. **BÁO ĐỘNG NGAY:** Hô to \"CHÁY! CHÁY!\" để mọi người xung quanh biết; đồng thời bấm nút ấn báo cháy khẩn cấp gần nhất.\n2. **CẮT CẦU DAO ĐIỆN:** Nhanh chóng ngắt aptomat hoặc cầu dao tổng của khu vực xảy ra cháy để tránh chập điện gây nổ.\n3. **CỨU NGƯỜI VÀ DẬP LỬA:** Sử dụng bình chữa cháy xách tay, cát, chăn ướt hoặc họng nước vách tường để khống chế đám cháy ban đầu nếu đám cháy còn nhỏ.\n4. **GỌI ĐIỆN 114:** Gọi ngay cho lực lượng Cảnh sát PCCC và CNCH qua số **114** (hoặc ứng dụng Báo cháy 114), cung cấp địa chỉ chính xác, loại chất cháy và có người mắc kẹt hay không."
+  },
+  {
+    "question": "Kỹ năng thoát hiểm trong phòng kín có nhiều khói độc như thế nào?",
+    "answer": ">> Khói và khí độc là nguyên nhân gây tử vong hàng đầu trong các vụ hỏa hoạn. Cần tuân thủ các nguyên tắc sau:\n\n## Kỹ năng sinh tồn\n1. **Hạ thấp độ cao:** Khói nhẹ hơn không khí sẽ bay lên trần nhà; không khí sạch nằm sát mặt sàn. Hãy **bò sát mặt sàn hoặc khom lưng thấp** để di chuyển.\n2. **Bảo vệ đường thở:** Dùng khăn mặt, khẩu trang, quần áo thấm ướt bịt kín mũi và miệng để lọc bớt khói và khí độc CO.\n3. **Kiểm tra nhiệt độ cửa trước khi mở:** Dùng mu bàn tay chạm nhẹ vào bề mặt hoặc nắm đấm cửa. Nếu thấy nóng, tuyệt đối không mở cửa vì lửa đang cháy dữ dội phía ngoài.\n4. **Cách ly phòng trú ẩn:** Nếu không thể thoát ra ngoài, đóng chặt cửa, dùng chăn ướt, giẻ ướt chèn kín các khe cửa; ra ban công hoặc cửa sổ vẫy khăn sáng màu, dùng đèn pin ra hiệu cầu cứu."
+  },
+  {
+    "question": "Yêu cầu về lối thoát nạn đối với nhà ở riêng lẻ theo quy định mới nhất?",
+    "answer": ">> Đối với nhà ở riêng lẻ, công trình phải bảo đảm tối thiểu **02 lối thoát nạn độc lập** hoặc có lối ra khẩn cấp (qua ban công, cửa sổ có thang thoát hiểm hoặc lên mái) theo {Luật PCCC và CNCH số 55/2024/QH15}.\n\n## Yêu cầu cụ thể\n- Hành lang và cầu thang thoát nạn phải thông thoáng, không chứa hàng hóa cản trở.\n- Cửa thoát hiểm mở theo chiều thoát nạn, không khóa khi có người hoạt động bên trong.\n- Trang bị đèn Exit chỉ dẫn thoát nạn và đèn chiếu sáng sự cố hoạt động tối thiểu 2 giờ.\n\n!! Vi phạm cản trở lối thoát nạn bị xử phạt từ 2 đến 5 triệu đồng theo {Nghị định 106/2025/NĐ-CP}."
+  },
+  {
+    "question": "Quy định trang bị bình chữa cháy cho nhà ở riêng lẻ cần bao nhiêu bình?",
+    "answer": ">> Căn cứ {TCVN 3890:2023}, nhà ở riêng lẻ phải trang bị bình chữa cháy xách tay bảo đảm định mức tối thiểu **1 bình/50 m2** sàn (đối với khu vực nguy hiểm cháy trung bình) và mỗi tầng phải có tối thiểu **02 bình**.\n\n## Hướng dẫn bố trí\n- Bố trí bình tại các vị trí dễ thấy, dễ lấy như cạnh cửa ra vào, chiếu nghỉ cầu thang.\n- Chiều cao treo bình không quá 1,2 m tính từ mặt sàn đến quai xách.\n- Định kỳ kiểm tra đồng hồ áp suất 01 tháng/lần; nạp sạc lại sau 12 tháng với bình mới hoặc 06 tháng với bình đã nạp lại."
+  },
+  {
+    "question": "Hồ sơ phương án chữa cháy của nhà ở riêng lẻ lập như thế nào?",
+    "answer": ">> Phương án chữa cháy của cơ sở nhà ở riêng lẻ được xây dựng theo Mẫu quy định tại {Thông tư 36/2025/TT-BCA} và do người đứng đầu cơ sở trực tiếp phê duyệt.\n\n## Nội dung cốt lõi\n- Sơ đồ mặt bằng, đường giao thông, nguồn nước chữa cháy quanh cơ sở.\n- Phân công nhiệm vụ cụ thể cho từng thành viên Đội PCCC cơ sở khi xảy ra cháy.\n- Biện pháp tổ chức thoát nạn cho người và di chuyển tài sản có giá trị.\n- Kế hoạch phối hợp với lực lượng Cảnh sát PCCC chuyên nghiệp qua đầu số 114.\n\n!! Phương án chữa cháy phải được tổ chức thực tập định kỳ tối thiểu **01 năm một lần**."
+  },
+  {
+    "question": "Cơ quan Công an kiểm tra PCCC đối với nhà ở riêng lẻ theo tần suất nào?",
+    "answer": ">> Tần suất kiểm tra an toàn PCCC của cơ quan Công an đối với nhà ở riêng lẻ được thực hiện theo cơ chế phân cấp và mức độ rủi ro tại {Nghị định 105/2025/NĐ-CP} và {Nghị định 347/2026/NĐ-CP}.\n\n## Chu kỳ kiểm tra định kỳ\n- **Cơ sở có nguy cơ cháy nổ cao (loại 1):** Kiểm tra định kỳ **01 năm một lần**.\n- **Các cơ sở còn lại:** Kiểm tra định kỳ **02 năm một lần**.\n- **Kiểm tra đột xuất:** Chỉ thực hiện khi có dấu hiệu vi phạm nghiêm trọng hoặc theo chuyên đề chỉ đạo của Bộ Công an, UBND tỉnh.\n\n!! Cơ quan kiểm tra phải thông báo trước tối thiểu 03 ngày làm việc đối với kiểm tra định kỳ."
+  },
+  {
+    "question": "Nhân viên làm việc tại nhà ở riêng lẻ có bắt buộc phải huấn luyện PCCC không?",
+    "answer": ">> **CÓ**, người đứng đầu cơ sở và các thành viên Đội PCCC cơ sở của nhà ở riêng lẻ bắt buộc phải tham gia huấn luyện nghiệp vụ theo {Điều 28 Nghị định 105/2025/NĐ-CP}.\n\n## Thời lượng và chu kỳ\n- Huấn luyện định kỳ **05 năm một lần** (thời lượng từ 16 đến 32 giờ tùy đối tượng).\n- Bồi dưỡng định kỳ **hằng năm** (thời lượng từ 8 đến 16 giờ).\n- Chứng nhận kiểu cũ đã bãi bỏ; cơ quan Công an cấp văn bản thông báo kết quả huấn luyện kèm danh sách đạt yêu cầu để cơ sở lưu hồ sơ quản lý."
+  },
+  {
+    "question": "Quy định về an toàn sử dụng điện trong nhà ở riêng lẻ để phòng cháy?",
+    "answer": ">> An toàn hệ thống điện tại nhà ở riêng lẻ phải tuân thủ nghiêm theo {Điều 8 Luật PCCC và CNCH 55/2024/QH15}:\n\n## Yêu cầu kỹ thuật\n- Dây dẫn điện phải đi trong ống gen bảo vệ bằng nhựa chống cháy hoặc kim loại.\n- Thiết kế lắp đặt aptomat (aptomat chống giật, aptomat quá tải) riêng cho từng tầng hoặc từng thiết bị công suất lớn.\n- Không cắm quá nhiều thiết bị điện công suất cao vào cùng một ổ cắm.\n- Ngắt toàn bộ nguồn điện các thiết bị không sử dụng trước khi đóng cửa cơ sở."
+  },
+  {
+    "question": "Mức phạt vi phạm quy định PCCC phổ biến đối với nhà ở riêng lẻ?",
+    "answer": ">> Mức xử phạt vi phạm hành chính đối với nhà ở riêng lẻ căn cứ theo {Nghị định 106/2025/NĐ-CP}:\n\n## Một số lỗi thường gặp\n- Không có nội quy, tiêu lệnh PCCC: Phạt từ 500.000 đến 1.500.000 đồng.\n- Để hàng hóa cản trở lối thoát nạn: Phạt từ 2.000.000 đến 5.000.000 đồng.\n- Không trang bị đủ bình chữa cháy: Phạt từ 1.000.000 đến 3.000.000 đồng.\n- Không huấn luyện nghiệp vụ PCCC định kỳ: Phạt từ 3.000.000 đến 6.000.000 đồng.\n\n!! Nếu cơ sở thuộc tổ chức/công ty thì mức phạt gấp 02 lần cá nhân."
+  },
+  {
+    "question": "Nhà ở riêng lẻ khi sửa chữa, cải tạo có phải xin nghiệm thu PCCC lại không?",
+    "answer": ">> Căn cứ {Nghị quyết 66.18/2026/NQ-CP} và {Nghị định 347/2026/NĐ-CP}, thủ tục nộp hồ sơ xin nghiệm thu tại cơ quan Công an đã được **bãi bỏ** hoàn toàn.\n\n## Trách nhiệm của chủ cơ sở\n- Nếu cải tạo làm thay đổi giải pháp thoát nạn, ngăn cháy lan hoặc hệ thống PCCC: Phải thẩm định lại thiết kế nếu thuộc diện Phụ lục III.\n- Sau khi thi công xong, chủ đầu tư tự tổ chức nghiệm thu với các nhà thầu và cập nhật thông tin thay đổi lên Hệ thống cơ sở dữ liệu về PCCC trước khi đưa vào khai thác."
+  },
+  {
+    "question": "Yêu cầu về lối thoát nạn đối với nhà trọ sinh viên theo quy định mới nhất?",
+    "answer": ">> Đối với nhà trọ sinh viên, công trình phải bảo đảm tối thiểu **02 lối thoát nạn độc lập** hoặc có lối ra khẩn cấp (qua ban công, cửa sổ có thang thoát hiểm hoặc lên mái) theo {Luật PCCC và CNCH số 55/2024/QH15}.\n\n## Yêu cầu cụ thể\n- Hành lang và cầu thang thoát nạn phải thông thoáng, không chứa hàng hóa cản trở.\n- Cửa thoát hiểm mở theo chiều thoát nạn, không khóa khi có người hoạt động bên trong.\n- Trang bị đèn Exit chỉ dẫn thoát nạn và đèn chiếu sáng sự cố hoạt động tối thiểu 2 giờ.\n\n!! Vi phạm cản trở lối thoát nạn bị xử phạt từ 2 đến 5 triệu đồng theo {Nghị định 106/2025/NĐ-CP}."
+  },
+  {
+    "question": "Quy định trang bị bình chữa cháy cho nhà trọ sinh viên cần bao nhiêu bình?",
+    "answer": ">> Căn cứ {TCVN 3890:2023}, nhà trọ sinh viên phải trang bị bình chữa cháy xách tay bảo đảm định mức tối thiểu **1 bình/50 m2** sàn (đối với khu vực nguy hiểm cháy trung bình) và mỗi tầng phải có tối thiểu **02 bình**.\n\n## Hướng dẫn bố trí\n- Bố trí bình tại các vị trí dễ thấy, dễ lấy như cạnh cửa ra vào, chiếu nghỉ cầu thang.\n- Chiều cao treo bình không quá 1,2 m tính từ mặt sàn đến quai xách.\n- Định kỳ kiểm tra đồng hồ áp suất 01 tháng/lần; nạp sạc lại sau 12 tháng với bình mới hoặc 06 tháng với bình đã nạp lại."
+  },
+  {
+    "question": "Hồ sơ phương án chữa cháy của nhà trọ sinh viên lập như thế nào?",
+    "answer": ">> Phương án chữa cháy của cơ sở nhà trọ sinh viên được xây dựng theo Mẫu quy định tại {Thông tư 36/2025/TT-BCA} và do người đứng đầu cơ sở trực tiếp phê duyệt.\n\n## Nội dung cốt lõi\n- Sơ đồ mặt bằng, đường giao thông, nguồn nước chữa cháy quanh cơ sở.\n- Phân công nhiệm vụ cụ thể cho từng thành viên Đội PCCC cơ sở khi xảy ra cháy.\n- Biện pháp tổ chức thoát nạn cho người và di chuyển tài sản có giá trị.\n- Kế hoạch phối hợp với lực lượng Cảnh sát PCCC chuyên nghiệp qua đầu số 114.\n\n!! Phương án chữa cháy phải được tổ chức thực tập định kỳ tối thiểu **01 năm một lần**."
+  },
+  {
+    "question": "Cơ quan Công an kiểm tra PCCC đối với nhà trọ sinh viên theo tần suất nào?",
+    "answer": ">> Tần suất kiểm tra an toàn PCCC của cơ quan Công an đối với nhà trọ sinh viên được thực hiện theo cơ chế phân cấp và mức độ rủi ro tại {Nghị định 105/2025/NĐ-CP} và {Nghị định 347/2026/NĐ-CP}.\n\n## Chu kỳ kiểm tra định kỳ\n- **Cơ sở có nguy cơ cháy nổ cao (loại 1):** Kiểm tra định kỳ **01 năm một lần**.\n- **Các cơ sở còn lại:** Kiểm tra định kỳ **02 năm một lần**.\n- **Kiểm tra đột xuất:** Chỉ thực hiện khi có dấu hiệu vi phạm nghiêm trọng hoặc theo chuyên đề chỉ đạo của Bộ Công an, UBND tỉnh.\n\n!! Cơ quan kiểm tra phải thông báo trước tối thiểu 03 ngày làm việc đối với kiểm tra định kỳ."
+  },
+  {
+    "question": "Nhân viên làm việc tại nhà trọ sinh viên có bắt buộc phải huấn luyện PCCC không?",
+    "answer": ">> **CÓ**, người đứng đầu cơ sở và các thành viên Đội PCCC cơ sở của nhà trọ sinh viên bắt buộc phải tham gia huấn luyện nghiệp vụ theo {Điều 28 Nghị định 105/2025/NĐ-CP}.\n\n## Thời lượng và chu kỳ\n- Huấn luyện định kỳ **05 năm một lần** (thời lượng từ 16 đến 32 giờ tùy đối tượng).\n- Bồi dưỡng định kỳ **hằng năm** (thời lượng từ 8 đến 16 giờ).\n- Chứng nhận kiểu cũ đã bãi bỏ; cơ quan Công an cấp văn bản thông báo kết quả huấn luyện kèm danh sách đạt yêu cầu để cơ sở lưu hồ sơ quản lý."
+  },
+  {
+    "question": "Quy định về an toàn sử dụng điện trong nhà trọ sinh viên để phòng cháy?",
+    "answer": ">> An toàn hệ thống điện tại nhà trọ sinh viên phải tuân thủ nghiêm theo {Điều 8 Luật PCCC và CNCH 55/2024/QH15}:\n\n## Yêu cầu kỹ thuật\n- Dây dẫn điện phải đi trong ống gen bảo vệ bằng nhựa chống cháy hoặc kim loại.\n- Thiết kế lắp đặt aptomat (aptomat chống giật, aptomat quá tải) riêng cho từng tầng hoặc từng thiết bị công suất lớn.\n- Không cắm quá nhiều thiết bị điện công suất cao vào cùng một ổ cắm.\n- Ngắt toàn bộ nguồn điện các thiết bị không sử dụng trước khi đóng cửa cơ sở."
+  },
+  {
+    "question": "Mức phạt vi phạm quy định PCCC phổ biến đối với nhà trọ sinh viên?",
+    "answer": ">> Mức xử phạt vi phạm hành chính đối với nhà trọ sinh viên căn cứ theo {Nghị định 106/2025/NĐ-CP}:\n\n## Một số lỗi thường gặp\n- Không có nội quy, tiêu lệnh PCCC: Phạt từ 500.000 đến 1.500.000 đồng.\n- Để hàng hóa cản trở lối thoát nạn: Phạt từ 2.000.000 đến 5.000.000 đồng.\n- Không trang bị đủ bình chữa cháy: Phạt từ 1.000.000 đến 3.000.000 đồng.\n- Không huấn luyện nghiệp vụ PCCC định kỳ: Phạt từ 3.000.000 đến 6.000.000 đồng.\n\n!! Nếu cơ sở thuộc tổ chức/công ty thì mức phạt gấp 02 lần cá nhân."
+  },
+  {
+    "question": "Nhà trọ sinh viên khi sửa chữa, cải tạo có phải xin nghiệm thu PCCC lại không?",
+    "answer": ">> Căn cứ {Nghị quyết 66.18/2026/NQ-CP} và {Nghị định 347/2026/NĐ-CP}, thủ tục nộp hồ sơ xin nghiệm thu tại cơ quan Công an đã được **bãi bỏ** hoàn toàn.\n\n## Trách nhiệm của chủ cơ sở\n- Nếu cải tạo làm thay đổi giải pháp thoát nạn, ngăn cháy lan hoặc hệ thống PCCC: Phải thẩm định lại thiết kế nếu thuộc diện Phụ lục III.\n- Sau khi thi công xong, chủ đầu tư tự tổ chức nghiệm thu với các nhà thầu và cập nhật thông tin thay đổi lên Hệ thống cơ sở dữ liệu về PCCC trước khi đưa vào khai thác."
+  },
+  {
+    "question": "Yêu cầu về lối thoát nạn đối với chung cư mini theo quy định mới nhất?",
+    "answer": ">> Đối với chung cư mini, công trình phải bảo đảm tối thiểu **02 lối thoát nạn độc lập** hoặc có lối ra khẩn cấp (qua ban công, cửa sổ có thang thoát hiểm hoặc lên mái) theo {Luật PCCC và CNCH số 55/2024/QH15}.\n\n## Yêu cầu cụ thể\n- Hành lang và cầu thang thoát nạn phải thông thoáng, không chứa hàng hóa cản trở.\n- Cửa thoát hiểm mở theo chiều thoát nạn, không khóa khi có người hoạt động bên trong.\n- Trang bị đèn Exit chỉ dẫn thoát nạn và đèn chiếu sáng sự cố hoạt động tối thiểu 2 giờ.\n\n!! Vi phạm cản trở lối thoát nạn bị xử phạt từ 2 đến 5 triệu đồng theo {Nghị định 106/2025/NĐ-CP}."
+  },
+  {
+    "question": "Quy định trang bị bình chữa cháy cho chung cư mini cần bao nhiêu bình?",
+    "answer": ">> Căn cứ {TCVN 3890:2023}, chung cư mini phải trang bị bình chữa cháy xách tay bảo đảm định mức tối thiểu **1 bình/50 m2** sàn (đối với khu vực nguy hiểm cháy trung bình) và mỗi tầng phải có tối thiểu **02 bình**.\n\n## Hướng dẫn bố trí\n- Bố trí bình tại các vị trí dễ thấy, dễ lấy như cạnh cửa ra vào, chiếu nghỉ cầu thang.\n- Chiều cao treo bình không quá 1,2 m tính từ mặt sàn đến quai xách.\n- Định kỳ kiểm tra đồng hồ áp suất 01 tháng/lần; nạp sạc lại sau 12 tháng với bình mới hoặc 06 tháng với bình đã nạp lại."
+  },
+  {
+    "question": "Hồ sơ phương án chữa cháy của chung cư mini lập như thế nào?",
+    "answer": ">> Phương án chữa cháy của cơ sở chung cư mini được xây dựng theo Mẫu quy định tại {Thông tư 36/2025/TT-BCA} và do người đứng đầu cơ sở trực tiếp phê duyệt.\n\n## Nội dung cốt lõi\n- Sơ đồ mặt bằng, đường giao thông, nguồn nước chữa cháy quanh cơ sở.\n- Phân công nhiệm vụ cụ thể cho từng thành viên Đội PCCC cơ sở khi xảy ra cháy.\n- Biện pháp tổ chức thoát nạn cho người và di chuyển tài sản có giá trị.\n- Kế hoạch phối hợp với lực lượng Cảnh sát PCCC chuyên nghiệp qua đầu số 114.\n\n!! Phương án chữa cháy phải được tổ chức thực tập định kỳ tối thiểu **01 năm một lần**."
+  },
+  {
+    "question": "Cơ quan Công an kiểm tra PCCC đối với chung cư mini theo tần suất nào?",
+    "answer": ">> Tần suất kiểm tra an toàn PCCC của cơ quan Công an đối với chung cư mini được thực hiện theo cơ chế phân cấp và mức độ rủi ro tại {Nghị định 105/2025/NĐ-CP} và {Nghị định 347/2026/NĐ-CP}.\n\n## Chu kỳ kiểm tra định kỳ\n- **Cơ sở có nguy cơ cháy nổ cao (loại 1):** Kiểm tra định kỳ **01 năm một lần**.\n- **Các cơ sở còn lại:** Kiểm tra định kỳ **02 năm một lần**.\n- **Kiểm tra đột xuất:** Chỉ thực hiện khi có dấu hiệu vi phạm nghiêm trọng hoặc theo chuyên đề chỉ đạo của Bộ Công an, UBND tỉnh.\n\n!! Cơ quan kiểm tra phải thông báo trước tối thiểu 03 ngày làm việc đối với kiểm tra định kỳ."
+  },
+  {
+    "question": "Nhân viên làm việc tại chung cư mini có bắt buộc phải huấn luyện PCCC không?",
+    "answer": ">> **CÓ**, người đứng đầu cơ sở và các thành viên Đội PCCC cơ sở của chung cư mini bắt buộc phải tham gia huấn luyện nghiệp vụ theo {Điều 28 Nghị định 105/2025/NĐ-CP}.\n\n## Thời lượng và chu kỳ\n- Huấn luyện định kỳ **05 năm một lần** (thời lượng từ 16 đến 32 giờ tùy đối tượng).\n- Bồi dưỡng định kỳ **hằng năm** (thời lượng từ 8 đến 16 giờ).\n- Chứng nhận kiểu cũ đã bãi bỏ; cơ quan Công an cấp văn bản thông báo kết quả huấn luyện kèm danh sách đạt yêu cầu để cơ sở lưu hồ sơ quản lý."
+  },
+  {
+    "question": "Quy định về an toàn sử dụng điện trong chung cư mini để phòng cháy?",
+    "answer": ">> An toàn hệ thống điện tại chung cư mini phải tuân thủ nghiêm theo {Điều 8 Luật PCCC và CNCH 55/2024/QH15}:\n\n## Yêu cầu kỹ thuật\n- Dây dẫn điện phải đi trong ống gen bảo vệ bằng nhựa chống cháy hoặc kim loại.\n- Thiết kế lắp đặt aptomat (aptomat chống giật, aptomat quá tải) riêng cho từng tầng hoặc từng thiết bị công suất lớn.\n- Không cắm quá nhiều thiết bị điện công suất cao vào cùng một ổ cắm.\n- Ngắt toàn bộ nguồn điện các thiết bị không sử dụng trước khi đóng cửa cơ sở."
+  },
+  {
+    "question": "Mức phạt vi phạm quy định PCCC phổ biến đối với chung cư mini?",
+    "answer": ">> Mức xử phạt vi phạm hành chính đối với chung cư mini căn cứ theo {Nghị định 106/2025/NĐ-CP}:\n\n## Một số lỗi thường gặp\n- Không có nội quy, tiêu lệnh PCCC: Phạt từ 500.000 đến 1.500.000 đồng.\n- Để hàng hóa cản trở lối thoát nạn: Phạt từ 2.000.000 đến 5.000.000 đồng.\n- Không trang bị đủ bình chữa cháy: Phạt từ 1.000.000 đến 3.000.000 đồng.\n- Không huấn luyện nghiệp vụ PCCC định kỳ: Phạt từ 3.000.000 đến 6.000.000 đồng.\n\n!! Nếu cơ sở thuộc tổ chức/công ty thì mức phạt gấp 02 lần cá nhân."
+  },
+  {
+    "question": "Chung cư mini khi sửa chữa, cải tạo có phải xin nghiệm thu PCCC lại không?",
+    "answer": ">> Căn cứ {Nghị quyết 66.18/2026/NQ-CP} và {Nghị định 347/2026/NĐ-CP}, thủ tục nộp hồ sơ xin nghiệm thu tại cơ quan Công an đã được **bãi bỏ** hoàn toàn.\n\n## Trách nhiệm của chủ cơ sở\n- Nếu cải tạo làm thay đổi giải pháp thoát nạn, ngăn cháy lan hoặc hệ thống PCCC: Phải thẩm định lại thiết kế nếu thuộc diện Phụ lục III.\n- Sau khi thi công xong, chủ đầu tư tự tổ chức nghiệm thu với các nhà thầu và cập nhật thông tin thay đổi lên Hệ thống cơ sở dữ liệu về PCCC trước khi đưa vào khai thác."
+  },
+  {
+    "question": "Yêu cầu về lối thoát nạn đối với cửa hàng tạp hóa theo quy định mới nhất?",
+    "answer": ">> Đối với cửa hàng tạp hóa, công trình phải bảo đảm tối thiểu **02 lối thoát nạn độc lập** hoặc có lối ra khẩn cấp (qua ban công, cửa sổ có thang thoát hiểm hoặc lên mái) theo {Luật PCCC và CNCH số 55/2024/QH15}.\n\n## Yêu cầu cụ thể\n- Hành lang và cầu thang thoát nạn phải thông thoáng, không chứa hàng hóa cản trở.\n- Cửa thoát hiểm mở theo chiều thoát nạn, không khóa khi có người hoạt động bên trong.\n- Trang bị đèn Exit chỉ dẫn thoát nạn và đèn chiếu sáng sự cố hoạt động tối thiểu 2 giờ.\n\n!! Vi phạm cản trở lối thoát nạn bị xử phạt từ 2 đến 5 triệu đồng theo {Nghị định 106/2025/NĐ-CP}."
+  },
+  {
+    "question": "Quy định trang bị bình chữa cháy cho cửa hàng tạp hóa cần bao nhiêu bình?",
+    "answer": ">> Căn cứ {TCVN 3890:2023}, cửa hàng tạp hóa phải trang bị bình chữa cháy xách tay bảo đảm định mức tối thiểu **1 bình/50 m2** sàn (đối với khu vực nguy hiểm cháy trung bình) và mỗi tầng phải có tối thiểu **02 bình**.\n\n## Hướng dẫn bố trí\n- Bố trí bình tại các vị trí dễ thấy, dễ lấy như cạnh cửa ra vào, chiếu nghỉ cầu thang.\n- Chiều cao treo bình không quá 1,2 m tính từ mặt sàn đến quai xách.\n- Định kỳ kiểm tra đồng hồ áp suất 01 tháng/lần; nạp sạc lại sau 12 tháng với bình mới hoặc 06 tháng với bình đã nạp lại."
+  },
+  {
+    "question": "Hồ sơ phương án chữa cháy của cửa hàng tạp hóa lập như thế nào?",
+    "answer": ">> Phương án chữa cháy của cơ sở cửa hàng tạp hóa được xây dựng theo Mẫu quy định tại {Thông tư 36/2025/TT-BCA} và do người đứng đầu cơ sở trực tiếp phê duyệt.\n\n## Nội dung cốt lõi\n- Sơ đồ mặt bằng, đường giao thông, nguồn nước chữa cháy quanh cơ sở.\n- Phân công nhiệm vụ cụ thể cho từng thành viên Đội PCCC cơ sở khi xảy ra cháy.\n- Biện pháp tổ chức thoát nạn cho người và di chuyển tài sản có giá trị.\n- Kế hoạch phối hợp với lực lượng Cảnh sát PCCC chuyên nghiệp qua đầu số 114.\n\n!! Phương án chữa cháy phải được tổ chức thực tập định kỳ tối thiểu **01 năm một lần**."
+  },
+  {
+    "question": "Cơ quan Công an kiểm tra PCCC đối với cửa hàng tạp hóa theo tần suất nào?",
+    "answer": ">> Tần suất kiểm tra an toàn PCCC của cơ quan Công an đối với cửa hàng tạp hóa được thực hiện theo cơ chế phân cấp và mức độ rủi ro tại {Nghị định 105/2025/NĐ-CP} và {Nghị định 347/2026/NĐ-CP}.\n\n## Chu kỳ kiểm tra định kỳ\n- **Cơ sở có nguy cơ cháy nổ cao (loại 1):** Kiểm tra định kỳ **01 năm một lần**.\n- **Các cơ sở còn lại:** Kiểm tra định kỳ **02 năm một lần**.\n- **Kiểm tra đột xuất:** Chỉ thực hiện khi có dấu hiệu vi phạm nghiêm trọng hoặc theo chuyên đề chỉ đạo của Bộ Công an, UBND tỉnh.\n\n!! Cơ quan kiểm tra phải thông báo trước tối thiểu 03 ngày làm việc đối với kiểm tra định kỳ."
+  },
+  {
+    "question": "Nhân viên làm việc tại cửa hàng tạp hóa có bắt buộc phải huấn luyện PCCC không?",
+    "answer": ">> **CÓ**, người đứng đầu cơ sở và các thành viên Đội PCCC cơ sở của cửa hàng tạp hóa bắt buộc phải tham gia huấn luyện nghiệp vụ theo {Điều 28 Nghị định 105/2025/NĐ-CP}.\n\n## Thời lượng và chu kỳ\n- Huấn luyện định kỳ **05 năm một lần** (thời lượng từ 16 đến 32 giờ tùy đối tượng).\n- Bồi dưỡng định kỳ **hằng năm** (thời lượng từ 8 đến 16 giờ).\n- Chứng nhận kiểu cũ đã bãi bỏ; cơ quan Công an cấp văn bản thông báo kết quả huấn luyện kèm danh sách đạt yêu cầu để cơ sở lưu hồ sơ quản lý."
+  },
+  {
+    "question": "Quy định về an toàn sử dụng điện trong cửa hàng tạp hóa để phòng cháy?",
+    "answer": ">> An toàn hệ thống điện tại cửa hàng tạp hóa phải tuân thủ nghiêm theo {Điều 8 Luật PCCC và CNCH 55/2024/QH15}:\n\n## Yêu cầu kỹ thuật\n- Dây dẫn điện phải đi trong ống gen bảo vệ bằng nhựa chống cháy hoặc kim loại.\n- Thiết kế lắp đặt aptomat (aptomat chống giật, aptomat quá tải) riêng cho từng tầng hoặc từng thiết bị công suất lớn.\n- Không cắm quá nhiều thiết bị điện công suất cao vào cùng một ổ cắm.\n- Ngắt toàn bộ nguồn điện các thiết bị không sử dụng trước khi đóng cửa cơ sở."
+  },
+  {
+    "question": "Mức phạt vi phạm quy định PCCC phổ biến đối với cửa hàng tạp hóa?",
+    "answer": ">> Mức xử phạt vi phạm hành chính đối với cửa hàng tạp hóa căn cứ theo {Nghị định 106/2025/NĐ-CP}:\n\n## Một số lỗi thường gặp\n- Không có nội quy, tiêu lệnh PCCC: Phạt từ 500.000 đến 1.500.000 đồng.\n- Để hàng hóa cản trở lối thoát nạn: Phạt từ 2.000.000 đến 5.000.000 đồng.\n- Không trang bị đủ bình chữa cháy: Phạt từ 1.000.000 đến 3.000.000 đồng.\n- Không huấn luyện nghiệp vụ PCCC định kỳ: Phạt từ 3.000.000 đến 6.000.000 đồng.\n\n!! Nếu cơ sở thuộc tổ chức/công ty thì mức phạt gấp 02 lần cá nhân."
+  },
+  {
+    "question": "Cửa hàng tạp hóa khi sửa chữa, cải tạo có phải xin nghiệm thu PCCC lại không?",
+    "answer": ">> Căn cứ {Nghị quyết 66.18/2026/NQ-CP} và {Nghị định 347/2026/NĐ-CP}, thủ tục nộp hồ sơ xin nghiệm thu tại cơ quan Công an đã được **bãi bỏ** hoàn toàn.\n\n## Trách nhiệm của chủ cơ sở\n- Nếu cải tạo làm thay đổi giải pháp thoát nạn, ngăn cháy lan hoặc hệ thống PCCC: Phải thẩm định lại thiết kế nếu thuộc diện Phụ lục III.\n- Sau khi thi công xong, chủ đầu tư tự tổ chức nghiệm thu với các nhà thầu và cập nhật thông tin thay đổi lên Hệ thống cơ sở dữ liệu về PCCC trước khi đưa vào khai thác."
+  },
+  {
+    "question": "Yêu cầu về lối thoát nạn đối với nhà hàng ăn uống theo quy định mới nhất?",
+    "answer": ">> Đối với nhà hàng ăn uống, công trình phải bảo đảm tối thiểu **02 lối thoát nạn độc lập** hoặc có lối ra khẩn cấp (qua ban công, cửa sổ có thang thoát hiểm hoặc lên mái) theo {Luật PCCC và CNCH số 55/2024/QH15}.\n\n## Yêu cầu cụ thể\n- Hành lang và cầu thang thoát nạn phải thông thoáng, không chứa hàng hóa cản trở.\n- Cửa thoát hiểm mở theo chiều thoát nạn, không khóa khi có người hoạt động bên trong.\n- Trang bị đèn Exit chỉ dẫn thoát nạn và đèn chiếu sáng sự cố hoạt động tối thiểu 2 giờ.\n\n!! Vi phạm cản trở lối thoát nạn bị xử phạt từ 2 đến 5 triệu đồng theo {Nghị định 106/2025/NĐ-CP}."
+  },
+  {
+    "question": "Quy định trang bị bình chữa cháy cho nhà hàng ăn uống cần bao nhiêu bình?",
+    "answer": ">> Căn cứ {TCVN 3890:2023}, nhà hàng ăn uống phải trang bị bình chữa cháy xách tay bảo đảm định mức tối thiểu **1 bình/50 m2** sàn (đối với khu vực nguy hiểm cháy trung bình) và mỗi tầng phải có tối thiểu **02 bình**.\n\n## Hướng dẫn bố trí\n- Bố trí bình tại các vị trí dễ thấy, dễ lấy như cạnh cửa ra vào, chiếu nghỉ cầu thang.\n- Chiều cao treo bình không quá 1,2 m tính từ mặt sàn đến quai xách.\n- Định kỳ kiểm tra đồng hồ áp suất 01 tháng/lần; nạp sạc lại sau 12 tháng với bình mới hoặc 06 tháng với bình đã nạp lại."
+  },
+  {
+    "question": "Hồ sơ phương án chữa cháy của nhà hàng ăn uống lập như thế nào?",
+    "answer": ">> Phương án chữa cháy của cơ sở nhà hàng ăn uống được xây dựng theo Mẫu quy định tại {Thông tư 36/2025/TT-BCA} và do người đứng đầu cơ sở trực tiếp phê duyệt.\n\n## Nội dung cốt lõi\n- Sơ đồ mặt bằng, đường giao thông, nguồn nước chữa cháy quanh cơ sở.\n- Phân công nhiệm vụ cụ thể cho từng thành viên Đội PCCC cơ sở khi xảy ra cháy.\n- Biện pháp tổ chức thoát nạn cho người và di chuyển tài sản có giá trị.\n- Kế hoạch phối hợp với lực lượng Cảnh sát PCCC chuyên nghiệp qua đầu số 114.\n\n!! Phương án chữa cháy phải được tổ chức thực tập định kỳ tối thiểu **01 năm một lần**."
+  },
+  {
+    "question": "Cơ quan Công an kiểm tra PCCC đối với nhà hàng ăn uống theo tần suất nào?",
+    "answer": ">> Tần suất kiểm tra an toàn PCCC của cơ quan Công an đối với nhà hàng ăn uống được thực hiện theo cơ chế phân cấp và mức độ rủi ro tại {Nghị định 105/2025/NĐ-CP} và {Nghị định 347/2026/NĐ-CP}.\n\n## Chu kỳ kiểm tra định kỳ\n- **Cơ sở có nguy cơ cháy nổ cao (loại 1):** Kiểm tra định kỳ **01 năm một lần**.\n- **Các cơ sở còn lại:** Kiểm tra định kỳ **02 năm một lần**.\n- **Kiểm tra đột xuất:** Chỉ thực hiện khi có dấu hiệu vi phạm nghiêm trọng hoặc theo chuyên đề chỉ đạo của Bộ Công an, UBND tỉnh.\n\n!! Cơ quan kiểm tra phải thông báo trước tối thiểu 03 ngày làm việc đối với kiểm tra định kỳ."
+  },
+  {
+    "question": "Nhân viên làm việc tại nhà hàng ăn uống có bắt buộc phải huấn luyện PCCC không?",
+    "answer": ">> **CÓ**, người đứng đầu cơ sở và các thành viên Đội PCCC cơ sở của nhà hàng ăn uống bắt buộc phải tham gia huấn luyện nghiệp vụ theo {Điều 28 Nghị định 105/2025/NĐ-CP}.\n\n## Thời lượng và chu kỳ\n- Huấn luyện định kỳ **05 năm một lần** (thời lượng từ 16 đến 32 giờ tùy đối tượng).\n- Bồi dưỡng định kỳ **hằng năm** (thời lượng từ 8 đến 16 giờ).\n- Chứng nhận kiểu cũ đã bãi bỏ; cơ quan Công an cấp văn bản thông báo kết quả huấn luyện kèm danh sách đạt yêu cầu để cơ sở lưu hồ sơ quản lý."
+  },
+  {
+    "question": "Quy định về an toàn sử dụng điện trong nhà hàng ăn uống để phòng cháy?",
+    "answer": ">> An toàn hệ thống điện tại nhà hàng ăn uống phải tuân thủ nghiêm theo {Điều 8 Luật PCCC và CNCH 55/2024/QH15}:\n\n## Yêu cầu kỹ thuật\n- Dây dẫn điện phải đi trong ống gen bảo vệ bằng nhựa chống cháy hoặc kim loại.\n- Thiết kế lắp đặt aptomat (aptomat chống giật, aptomat quá tải) riêng cho từng tầng hoặc từng thiết bị công suất lớn.\n- Không cắm quá nhiều thiết bị điện công suất cao vào cùng một ổ cắm.\n- Ngắt toàn bộ nguồn điện các thiết bị không sử dụng trước khi đóng cửa cơ sở."
+  },
+  {
+    "question": "Mức phạt vi phạm quy định PCCC phổ biến đối với nhà hàng ăn uống?",
+    "answer": ">> Mức xử phạt vi phạm hành chính đối với nhà hàng ăn uống căn cứ theo {Nghị định 106/2025/NĐ-CP}:\n\n## Một số lỗi thường gặp\n- Không có nội quy, tiêu lệnh PCCC: Phạt từ 500.000 đến 1.500.000 đồng.\n- Để hàng hóa cản trở lối thoát nạn: Phạt từ 2.000.000 đến 5.000.000 đồng.\n- Không trang bị đủ bình chữa cháy: Phạt từ 1.000.000 đến 3.000.000 đồng.\n- Không huấn luyện nghiệp vụ PCCC định kỳ: Phạt từ 3.000.000 đến 6.000.000 đồng.\n\n!! Nếu cơ sở thuộc tổ chức/công ty thì mức phạt gấp 02 lần cá nhân."
+  },
+  {
+    "question": "Nhà hàng ăn uống khi sửa chữa, cải tạo có phải xin nghiệm thu PCCC lại không?",
+    "answer": ">> Căn cứ {Nghị quyết 66.18/2026/NQ-CP} và {Nghị định 347/2026/NĐ-CP}, thủ tục nộp hồ sơ xin nghiệm thu tại cơ quan Công an đã được **bãi bỏ** hoàn toàn.\n\n## Trách nhiệm của chủ cơ sở\n- Nếu cải tạo làm thay đổi giải pháp thoát nạn, ngăn cháy lan hoặc hệ thống PCCC: Phải thẩm định lại thiết kế nếu thuộc diện Phụ lục III.\n- Sau khi thi công xong, chủ đầu tư tự tổ chức nghiệm thu với các nhà thầu và cập nhật thông tin thay đổi lên Hệ thống cơ sở dữ liệu về PCCC trước khi đưa vào khai thác."
+  },
+  {
+    "question": "Yêu cầu về lối thoát nạn đối với quán cafe theo quy định mới nhất?",
+    "answer": ">> Đối với quán cafe, công trình phải bảo đảm tối thiểu **02 lối thoát nạn độc lập** hoặc có lối ra khẩn cấp (qua ban công, cửa sổ có thang thoát hiểm hoặc lên mái) theo {Luật PCCC và CNCH số 55/2024/QH15}.\n\n## Yêu cầu cụ thể\n- Hành lang và cầu thang thoát nạn phải thông thoáng, không chứa hàng hóa cản trở.\n- Cửa thoát hiểm mở theo chiều thoát nạn, không khóa khi có người hoạt động bên trong.\n- Trang bị đèn Exit chỉ dẫn thoát nạn và đèn chiếu sáng sự cố hoạt động tối thiểu 2 giờ.\n\n!! Vi phạm cản trở lối thoát nạn bị xử phạt từ 2 đến 5 triệu đồng theo {Nghị định 106/2025/NĐ-CP}."
+  },
+  {
+    "question": "Quy định trang bị bình chữa cháy cho quán cafe cần bao nhiêu bình?",
+    "answer": ">> Căn cứ {TCVN 3890:2023}, quán cafe phải trang bị bình chữa cháy xách tay bảo đảm định mức tối thiểu **1 bình/50 m2** sàn (đối với khu vực nguy hiểm cháy trung bình) và mỗi tầng phải có tối thiểu **02 bình**.\n\n## Hướng dẫn bố trí\n- Bố trí bình tại các vị trí dễ thấy, dễ lấy như cạnh cửa ra vào, chiếu nghỉ cầu thang.\n- Chiều cao treo bình không quá 1,2 m tính từ mặt sàn đến quai xách.\n- Định kỳ kiểm tra đồng hồ áp suất 01 tháng/lần; nạp sạc lại sau 12 tháng với bình mới hoặc 06 tháng với bình đã nạp lại."
+  },
+  {
+    "question": "Hồ sơ phương án chữa cháy của quán cafe lập như thế nào?",
+    "answer": ">> Phương án chữa cháy của cơ sở quán cafe được xây dựng theo Mẫu quy định tại {Thông tư 36/2025/TT-BCA} và do người đứng đầu cơ sở trực tiếp phê duyệt.\n\n## Nội dung cốt lõi\n- Sơ đồ mặt bằng, đường giao thông, nguồn nước chữa cháy quanh cơ sở.\n- Phân công nhiệm vụ cụ thể cho từng thành viên Đội PCCC cơ sở khi xảy ra cháy.\n- Biện pháp tổ chức thoát nạn cho người và di chuyển tài sản có giá trị.\n- Kế hoạch phối hợp với lực lượng Cảnh sát PCCC chuyên nghiệp qua đầu số 114.\n\n!! Phương án chữa cháy phải được tổ chức thực tập định kỳ tối thiểu **01 năm một lần**."
+  },
+  {
+    "question": "Cơ quan Công an kiểm tra PCCC đối với quán cafe theo tần suất nào?",
+    "answer": ">> Tần suất kiểm tra an toàn PCCC của cơ quan Công an đối với quán cafe được thực hiện theo cơ chế phân cấp và mức độ rủi ro tại {Nghị định 105/2025/NĐ-CP} và {Nghị định 347/2026/NĐ-CP}.\n\n## Chu kỳ kiểm tra định kỳ\n- **Cơ sở có nguy cơ cháy nổ cao (loại 1):** Kiểm tra định kỳ **01 năm một lần**.\n- **Các cơ sở còn lại:** Kiểm tra định kỳ **02 năm một lần**.\n- **Kiểm tra đột xuất:** Chỉ thực hiện khi có dấu hiệu vi phạm nghiêm trọng hoặc theo chuyên đề chỉ đạo của Bộ Công an, UBND tỉnh.\n\n!! Cơ quan kiểm tra phải thông báo trước tối thiểu 03 ngày làm việc đối với kiểm tra định kỳ."
+  },
+  {
+    "question": "Nhân viên làm việc tại quán cafe có bắt buộc phải huấn luyện PCCC không?",
+    "answer": ">> **CÓ**, người đứng đầu cơ sở và các thành viên Đội PCCC cơ sở của quán cafe bắt buộc phải tham gia huấn luyện nghiệp vụ theo {Điều 28 Nghị định 105/2025/NĐ-CP}.\n\n## Thời lượng và chu kỳ\n- Huấn luyện định kỳ **05 năm một lần** (thời lượng từ 16 đến 32 giờ tùy đối tượng).\n- Bồi dưỡng định kỳ **hằng năm** (thời lượng từ 8 đến 16 giờ).\n- Chứng nhận kiểu cũ đã bãi bỏ; cơ quan Công an cấp văn bản thông báo kết quả huấn luyện kèm danh sách đạt yêu cầu để cơ sở lưu hồ sơ quản lý."
+  },
+  {
+    "question": "Quy định về an toàn sử dụng điện trong quán cafe để phòng cháy?",
+    "answer": ">> An toàn hệ thống điện tại quán cafe phải tuân thủ nghiêm theo {Điều 8 Luật PCCC và CNCH 55/2024/QH15}:\n\n## Yêu cầu kỹ thuật\n- Dây dẫn điện phải đi trong ống gen bảo vệ bằng nhựa chống cháy hoặc kim loại.\n- Thiết kế lắp đặt aptomat (aptomat chống giật, aptomat quá tải) riêng cho từng tầng hoặc từng thiết bị công suất lớn.\n- Không cắm quá nhiều thiết bị điện công suất cao vào cùng một ổ cắm.\n- Ngắt toàn bộ nguồn điện các thiết bị không sử dụng trước khi đóng cửa cơ sở."
+  },
+  {
+    "question": "Mức phạt vi phạm quy định PCCC phổ biến đối với quán cafe?",
+    "answer": ">> Mức xử phạt vi phạm hành chính đối với quán cafe căn cứ theo {Nghị định 106/2025/NĐ-CP}:\n\n## Một số lỗi thường gặp\n- Không có nội quy, tiêu lệnh PCCC: Phạt từ 500.000 đến 1.500.000 đồng.\n- Để hàng hóa cản trở lối thoát nạn: Phạt từ 2.000.000 đến 5.000.000 đồng.\n- Không trang bị đủ bình chữa cháy: Phạt từ 1.000.000 đến 3.000.000 đồng.\n- Không huấn luyện nghiệp vụ PCCC định kỳ: Phạt từ 3.000.000 đến 6.000.000 đồng.\n\n!! Nếu cơ sở thuộc tổ chức/công ty thì mức phạt gấp 02 lần cá nhân."
+  },
+  {
+    "question": "Quán cafe khi sửa chữa, cải tạo có phải xin nghiệm thu PCCC lại không?",
+    "answer": ">> Căn cứ {Nghị quyết 66.18/2026/NQ-CP} và {Nghị định 347/2026/NĐ-CP}, thủ tục nộp hồ sơ xin nghiệm thu tại cơ quan Công an đã được **bãi bỏ** hoàn toàn.\n\n## Trách nhiệm của chủ cơ sở\n- Nếu cải tạo làm thay đổi giải pháp thoát nạn, ngăn cháy lan hoặc hệ thống PCCC: Phải thẩm định lại thiết kế nếu thuộc diện Phụ lục III.\n- Sau khi thi công xong, chủ đầu tư tự tổ chức nghiệm thu với các nhà thầu và cập nhật thông tin thay đổi lên Hệ thống cơ sở dữ liệu về PCCC trước khi đưa vào khai thác."
+  },
+  {
+    "question": "Yêu cầu về lối thoát nạn đối với khách sạn theo quy định mới nhất?",
+    "answer": ">> Đối với khách sạn, công trình phải bảo đảm tối thiểu **02 lối thoát nạn độc lập** hoặc có lối ra khẩn cấp (qua ban công, cửa sổ có thang thoát hiểm hoặc lên mái) theo {Luật PCCC và CNCH số 55/2024/QH15}.\n\n## Yêu cầu cụ thể\n- Hành lang và cầu thang thoát nạn phải thông thoáng, không chứa hàng hóa cản trở.\n- Cửa thoát hiểm mở theo chiều thoát nạn, không khóa khi có người hoạt động bên trong.\n- Trang bị đèn Exit chỉ dẫn thoát nạn và đèn chiếu sáng sự cố hoạt động tối thiểu 2 giờ.\n\n!! Vi phạm cản trở lối thoát nạn bị xử phạt từ 2 đến 5 triệu đồng theo {Nghị định 106/2025/NĐ-CP}."
+  },
+  {
+    "question": "Quy định trang bị bình chữa cháy cho khách sạn cần bao nhiêu bình?",
+    "answer": ">> Căn cứ {TCVN 3890:2023}, khách sạn phải trang bị bình chữa cháy xách tay bảo đảm định mức tối thiểu **1 bình/50 m2** sàn (đối với khu vực nguy hiểm cháy trung bình) và mỗi tầng phải có tối thiểu **02 bình**.\n\n## Hướng dẫn bố trí\n- Bố trí bình tại các vị trí dễ thấy, dễ lấy như cạnh cửa ra vào, chiếu nghỉ cầu thang.\n- Chiều cao treo bình không quá 1,2 m tính từ mặt sàn đến quai xách.\n- Định kỳ kiểm tra đồng hồ áp suất 01 tháng/lần; nạp sạc lại sau 12 tháng với bình mới hoặc 06 tháng với bình đã nạp lại."
+  },
+  {
+    "question": "Hồ sơ phương án chữa cháy của khách sạn lập như thế nào?",
+    "answer": ">> Phương án chữa cháy của cơ sở khách sạn được xây dựng theo Mẫu quy định tại {Thông tư 36/2025/TT-BCA} và do người đứng đầu cơ sở trực tiếp phê duyệt.\n\n## Nội dung cốt lõi\n- Sơ đồ mặt bằng, đường giao thông, nguồn nước chữa cháy quanh cơ sở.\n- Phân công nhiệm vụ cụ thể cho từng thành viên Đội PCCC cơ sở khi xảy ra cháy.\n- Biện pháp tổ chức thoát nạn cho người và di chuyển tài sản có giá trị.\n- Kế hoạch phối hợp với lực lượng Cảnh sát PCCC chuyên nghiệp qua đầu số 114.\n\n!! Phương án chữa cháy phải được tổ chức thực tập định kỳ tối thiểu **01 năm một lần**."
+  },
+  {
+    "question": "Cơ quan Công an kiểm tra PCCC đối với khách sạn theo tần suất nào?",
+    "answer": ">> Tần suất kiểm tra an toàn PCCC của cơ quan Công an đối với khách sạn được thực hiện theo cơ chế phân cấp và mức độ rủi ro tại {Nghị định 105/2025/NĐ-CP} và {Nghị định 347/2026/NĐ-CP}.\n\n## Chu kỳ kiểm tra định kỳ\n- **Cơ sở có nguy cơ cháy nổ cao (loại 1):** Kiểm tra định kỳ **01 năm một lần**.\n- **Các cơ sở còn lại:** Kiểm tra định kỳ **02 năm một lần**.\n- **Kiểm tra đột xuất:** Chỉ thực hiện khi có dấu hiệu vi phạm nghiêm trọng hoặc theo chuyên đề chỉ đạo của Bộ Công an, UBND tỉnh.\n\n!! Cơ quan kiểm tra phải thông báo trước tối thiểu 03 ngày làm việc đối với kiểm tra định kỳ."
+  },
+  {
+    "question": "Nhân viên làm việc tại khách sạn có bắt buộc phải huấn luyện PCCC không?",
+    "answer": ">> **CÓ**, người đứng đầu cơ sở và các thành viên Đội PCCC cơ sở của khách sạn bắt buộc phải tham gia huấn luyện nghiệp vụ theo {Điều 28 Nghị định 105/2025/NĐ-CP}.\n\n## Thời lượng và chu kỳ\n- Huấn luyện định kỳ **05 năm một lần** (thời lượng từ 16 đến 32 giờ tùy đối tượng).\n- Bồi dưỡng định kỳ **hằng năm** (thời lượng từ 8 đến 16 giờ).\n- Chứng nhận kiểu cũ đã bãi bỏ; cơ quan Công an cấp văn bản thông báo kết quả huấn luyện kèm danh sách đạt yêu cầu để cơ sở lưu hồ sơ quản lý."
+  },
+  {
+    "question": "Quy định về an toàn sử dụng điện trong khách sạn để phòng cháy?",
+    "answer": ">> An toàn hệ thống điện tại khách sạn phải tuân thủ nghiêm theo {Điều 8 Luật PCCC và CNCH 55/2024/QH15}:\n\n## Yêu cầu kỹ thuật\n- Dây dẫn điện phải đi trong ống gen bảo vệ bằng nhựa chống cháy hoặc kim loại.\n- Thiết kế lắp đặt aptomat (aptomat chống giật, aptomat quá tải) riêng cho từng tầng hoặc từng thiết bị công suất lớn.\n- Không cắm quá nhiều thiết bị điện công suất cao vào cùng một ổ cắm.\n- Ngắt toàn bộ nguồn điện các thiết bị không sử dụng trước khi đóng cửa cơ sở."
+  },
+  {
+    "question": "Mức phạt vi phạm quy định PCCC phổ biến đối với khách sạn?",
+    "answer": ">> Mức xử phạt vi phạm hành chính đối với khách sạn căn cứ theo {Nghị định 106/2025/NĐ-CP}:\n\n## Một số lỗi thường gặp\n- Không có nội quy, tiêu lệnh PCCC: Phạt từ 500.000 đến 1.500.000 đồng.\n- Để hàng hóa cản trở lối thoát nạn: Phạt từ 2.000.000 đến 5.000.000 đồng.\n- Không trang bị đủ bình chữa cháy: Phạt từ 1.000.000 đến 3.000.000 đồng.\n- Không huấn luyện nghiệp vụ PCCC định kỳ: Phạt từ 3.000.000 đến 6.000.000 đồng.\n\n!! Nếu cơ sở thuộc tổ chức/công ty thì mức phạt gấp 02 lần cá nhân."
+  },
+  {
+    "question": "Khách sạn khi sửa chữa, cải tạo có phải xin nghiệm thu PCCC lại không?",
+    "answer": ">> Căn cứ {Nghị quyết 66.18/2026/NQ-CP} và {Nghị định 347/2026/NĐ-CP}, thủ tục nộp hồ sơ xin nghiệm thu tại cơ quan Công an đã được **bãi bỏ** hoàn toàn.\n\n## Trách nhiệm của chủ cơ sở\n- Nếu cải tạo làm thay đổi giải pháp thoát nạn, ngăn cháy lan hoặc hệ thống PCCC: Phải thẩm định lại thiết kế nếu thuộc diện Phụ lục III.\n- Sau khi thi công xong, chủ đầu tư tự tổ chức nghiệm thu với các nhà thầu và cập nhật thông tin thay đổi lên Hệ thống cơ sở dữ liệu về PCCC trước khi đưa vào khai thác."
+  },
+  {
+    "question": "Yêu cầu về lối thoát nạn đối với nhà nghỉ theo quy định mới nhất?",
+    "answer": ">> Đối với nhà nghỉ, công trình phải bảo đảm tối thiểu **02 lối thoát nạn độc lập** hoặc có lối ra khẩn cấp (qua ban công, cửa sổ có thang thoát hiểm hoặc lên mái) theo {Luật PCCC và CNCH số 55/2024/QH15}.\n\n## Yêu cầu cụ thể\n- Hành lang và cầu thang thoát nạn phải thông thoáng, không chứa hàng hóa cản trở.\n- Cửa thoát hiểm mở theo chiều thoát nạn, không khóa khi có người hoạt động bên trong.\n- Trang bị đèn Exit chỉ dẫn thoát nạn và đèn chiếu sáng sự cố hoạt động tối thiểu 2 giờ.\n\n!! Vi phạm cản trở lối thoát nạn bị xử phạt từ 2 đến 5 triệu đồng theo {Nghị định 106/2025/NĐ-CP}."
+  },
+  {
+    "question": "Quy định trang bị bình chữa cháy cho nhà nghỉ cần bao nhiêu bình?",
+    "answer": ">> Căn cứ {TCVN 3890:2023}, nhà nghỉ phải trang bị bình chữa cháy xách tay bảo đảm định mức tối thiểu **1 bình/50 m2** sàn (đối với khu vực nguy hiểm cháy trung bình) và mỗi tầng phải có tối thiểu **02 bình**.\n\n## Hướng dẫn bố trí\n- Bố trí bình tại các vị trí dễ thấy, dễ lấy như cạnh cửa ra vào, chiếu nghỉ cầu thang.\n- Chiều cao treo bình không quá 1,2 m tính từ mặt sàn đến quai xách.\n- Định kỳ kiểm tra đồng hồ áp suất 01 tháng/lần; nạp sạc lại sau 12 tháng với bình mới hoặc 06 tháng với bình đã nạp lại."
+  },
+  {
+    "question": "Hồ sơ phương án chữa cháy của nhà nghỉ lập như thế nào?",
+    "answer": ">> Phương án chữa cháy của cơ sở nhà nghỉ được xây dựng theo Mẫu quy định tại {Thông tư 36/2025/TT-BCA} và do người đứng đầu cơ sở trực tiếp phê duyệt.\n\n## Nội dung cốt lõi\n- Sơ đồ mặt bằng, đường giao thông, nguồn nước chữa cháy quanh cơ sở.\n- Phân công nhiệm vụ cụ thể cho từng thành viên Đội PCCC cơ sở khi xảy ra cháy.\n- Biện pháp tổ chức thoát nạn cho người và di chuyển tài sản có giá trị.\n- Kế hoạch phối hợp với lực lượng Cảnh sát PCCC chuyên nghiệp qua đầu số 114.\n\n!! Phương án chữa cháy phải được tổ chức thực tập định kỳ tối thiểu **01 năm một lần**."
+  },
+  {
+    "question": "Cơ quan Công an kiểm tra PCCC đối với nhà nghỉ theo tần suất nào?",
+    "answer": ">> Tần suất kiểm tra an toàn PCCC của cơ quan Công an đối với nhà nghỉ được thực hiện theo cơ chế phân cấp và mức độ rủi ro tại {Nghị định 105/2025/NĐ-CP} và {Nghị định 347/2026/NĐ-CP}.\n\n## Chu kỳ kiểm tra định kỳ\n- **Cơ sở có nguy cơ cháy nổ cao (loại 1):** Kiểm tra định kỳ **01 năm một lần**.\n- **Các cơ sở còn lại:** Kiểm tra định kỳ **02 năm một lần**.\n- **Kiểm tra đột xuất:** Chỉ thực hiện khi có dấu hiệu vi phạm nghiêm trọng hoặc theo chuyên đề chỉ đạo của Bộ Công an, UBND tỉnh.\n\n!! Cơ quan kiểm tra phải thông báo trước tối thiểu 03 ngày làm việc đối với kiểm tra định kỳ."
+  },
+  {
+    "question": "Nhân viên làm việc tại nhà nghỉ có bắt buộc phải huấn luyện PCCC không?",
+    "answer": ">> **CÓ**, người đứng đầu cơ sở và các thành viên Đội PCCC cơ sở của nhà nghỉ bắt buộc phải tham gia huấn luyện nghiệp vụ theo {Điều 28 Nghị định 105/2025/NĐ-CP}.\n\n## Thời lượng và chu kỳ\n- Huấn luyện định kỳ **05 năm một lần** (thời lượng từ 16 đến 32 giờ tùy đối tượng).\n- Bồi dưỡng định kỳ **hằng năm** (thời lượng từ 8 đến 16 giờ).\n- Chứng nhận kiểu cũ đã bãi bỏ; cơ quan Công an cấp văn bản thông báo kết quả huấn luyện kèm danh sách đạt yêu cầu để cơ sở lưu hồ sơ quản lý."
+  },
+  {
+    "question": "Quy định về an toàn sử dụng điện trong nhà nghỉ để phòng cháy?",
+    "answer": ">> An toàn hệ thống điện tại nhà nghỉ phải tuân thủ nghiêm theo {Điều 8 Luật PCCC và CNCH 55/2024/QH15}:\n\n## Yêu cầu kỹ thuật\n- Dây dẫn điện phải đi trong ống gen bảo vệ bằng nhựa chống cháy hoặc kim loại.\n- Thiết kế lắp đặt aptomat (aptomat chống giật, aptomat quá tải) riêng cho từng tầng hoặc từng thiết bị công suất lớn.\n- Không cắm quá nhiều thiết bị điện công suất cao vào cùng một ổ cắm.\n- Ngắt toàn bộ nguồn điện các thiết bị không sử dụng trước khi đóng cửa cơ sở."
+  },
+  {
+    "question": "Mức phạt vi phạm quy định PCCC phổ biến đối với nhà nghỉ?",
+    "answer": ">> Mức xử phạt vi phạm hành chính đối với nhà nghỉ căn cứ theo {Nghị định 106/2025/NĐ-CP}:\n\n## Một số lỗi thường gặp\n- Không có nội quy, tiêu lệnh PCCC: Phạt từ 500.000 đến 1.500.000 đồng.\n- Để hàng hóa cản trở lối thoát nạn: Phạt từ 2.000.000 đến 5.000.000 đồng.\n- Không trang bị đủ bình chữa cháy: Phạt từ 1.000.000 đến 3.000.000 đồng.\n- Không huấn luyện nghiệp vụ PCCC định kỳ: Phạt từ 3.000.000 đến 6.000.000 đồng.\n\n!! Nếu cơ sở thuộc tổ chức/công ty thì mức phạt gấp 02 lần cá nhân."
+  },
+  {
+    "question": "Nhà nghỉ khi sửa chữa, cải tạo có phải xin nghiệm thu PCCC lại không?",
+    "answer": ">> Căn cứ {Nghị quyết 66.18/2026/NQ-CP} và {Nghị định 347/2026/NĐ-CP}, thủ tục nộp hồ sơ xin nghiệm thu tại cơ quan Công an đã được **bãi bỏ** hoàn toàn.\n\n## Trách nhiệm của chủ cơ sở\n- Nếu cải tạo làm thay đổi giải pháp thoát nạn, ngăn cháy lan hoặc hệ thống PCCC: Phải thẩm định lại thiết kế nếu thuộc diện Phụ lục III.\n- Sau khi thi công xong, chủ đầu tư tự tổ chức nghiệm thu với các nhà thầu và cập nhật thông tin thay đổi lên Hệ thống cơ sở dữ liệu về PCCC trước khi đưa vào khai thác."
+  },
+  {
+    "question": "Yêu cầu về lối thoát nạn đối với quán karaoke theo quy định mới nhất?",
+    "answer": ">> Đối với quán karaoke, công trình phải bảo đảm tối thiểu **02 lối thoát nạn độc lập** hoặc có lối ra khẩn cấp (qua ban công, cửa sổ có thang thoát hiểm hoặc lên mái) theo {Luật PCCC và CNCH số 55/2024/QH15}.\n\n## Yêu cầu cụ thể\n- Hành lang và cầu thang thoát nạn phải thông thoáng, không chứa hàng hóa cản trở.\n- Cửa thoát hiểm mở theo chiều thoát nạn, không khóa khi có người hoạt động bên trong.\n- Trang bị đèn Exit chỉ dẫn thoát nạn và đèn chiếu sáng sự cố hoạt động tối thiểu 2 giờ.\n\n!! Vi phạm cản trở lối thoát nạn bị xử phạt từ 2 đến 5 triệu đồng theo {Nghị định 106/2025/NĐ-CP}."
+  },
+  {
+    "question": "Quy định trang bị bình chữa cháy cho quán karaoke cần bao nhiêu bình?",
+    "answer": ">> Căn cứ {TCVN 3890:2023}, quán karaoke phải trang bị bình chữa cháy xách tay bảo đảm định mức tối thiểu **1 bình/50 m2** sàn (đối với khu vực nguy hiểm cháy trung bình) và mỗi tầng phải có tối thiểu **02 bình**.\n\n## Hướng dẫn bố trí\n- Bố trí bình tại các vị trí dễ thấy, dễ lấy như cạnh cửa ra vào, chiếu nghỉ cầu thang.\n- Chiều cao treo bình không quá 1,2 m tính từ mặt sàn đến quai xách.\n- Định kỳ kiểm tra đồng hồ áp suất 01 tháng/lần; nạp sạc lại sau 12 tháng với bình mới hoặc 06 tháng với bình đã nạp lại."
+  },
+  {
+    "question": "Hồ sơ phương án chữa cháy của quán karaoke lập như thế nào?",
+    "answer": ">> Phương án chữa cháy của cơ sở quán karaoke được xây dựng theo Mẫu quy định tại {Thông tư 36/2025/TT-BCA} và do người đứng đầu cơ sở trực tiếp phê duyệt.\n\n## Nội dung cốt lõi\n- Sơ đồ mặt bằng, đường giao thông, nguồn nước chữa cháy quanh cơ sở.\n- Phân công nhiệm vụ cụ thể cho từng thành viên Đội PCCC cơ sở khi xảy ra cháy.\n- Biện pháp tổ chức thoát nạn cho người và di chuyển tài sản có giá trị.\n- Kế hoạch phối hợp với lực lượng Cảnh sát PCCC chuyên nghiệp qua đầu số 114.\n\n!! Phương án chữa cháy phải được tổ chức thực tập định kỳ tối thiểu **01 năm một lần**."
+  },
+  {
+    "question": "Cơ quan Công an kiểm tra PCCC đối với quán karaoke theo tần suất nào?",
+    "answer": ">> Tần suất kiểm tra an toàn PCCC của cơ quan Công an đối với quán karaoke được thực hiện theo cơ chế phân cấp và mức độ rủi ro tại {Nghị định 105/2025/NĐ-CP} và {Nghị định 347/2026/NĐ-CP}.\n\n## Chu kỳ kiểm tra định kỳ\n- **Cơ sở có nguy cơ cháy nổ cao (loại 1):** Kiểm tra định kỳ **01 năm một lần**.\n- **Các cơ sở còn lại:** Kiểm tra định kỳ **02 năm một lần**.\n- **Kiểm tra đột xuất:** Chỉ thực hiện khi có dấu hiệu vi phạm nghiêm trọng hoặc theo chuyên đề chỉ đạo của Bộ Công an, UBND tỉnh.\n\n!! Cơ quan kiểm tra phải thông báo trước tối thiểu 03 ngày làm việc đối với kiểm tra định kỳ."
+  },
+  {
+    "question": "Nhân viên làm việc tại quán karaoke có bắt buộc phải huấn luyện PCCC không?",
+    "answer": ">> **CÓ**, người đứng đầu cơ sở và các thành viên Đội PCCC cơ sở của quán karaoke bắt buộc phải tham gia huấn luyện nghiệp vụ theo {Điều 28 Nghị định 105/2025/NĐ-CP}.\n\n## Thời lượng và chu kỳ\n- Huấn luyện định kỳ **05 năm một lần** (thời lượng từ 16 đến 32 giờ tùy đối tượng).\n- Bồi dưỡng định kỳ **hằng năm** (thời lượng từ 8 đến 16 giờ).\n- Chứng nhận kiểu cũ đã bãi bỏ; cơ quan Công an cấp văn bản thông báo kết quả huấn luyện kèm danh sách đạt yêu cầu để cơ sở lưu hồ sơ quản lý."
+  },
+  {
+    "question": "Quy định về an toàn sử dụng điện trong quán karaoke để phòng cháy?",
+    "answer": ">> An toàn hệ thống điện tại quán karaoke phải tuân thủ nghiêm theo {Điều 8 Luật PCCC và CNCH 55/2024/QH15}:\n\n## Yêu cầu kỹ thuật\n- Dây dẫn điện phải đi trong ống gen bảo vệ bằng nhựa chống cháy hoặc kim loại.\n- Thiết kế lắp đặt aptomat (aptomat chống giật, aptomat quá tải) riêng cho từng tầng hoặc từng thiết bị công suất lớn.\n- Không cắm quá nhiều thiết bị điện công suất cao vào cùng một ổ cắm.\n- Ngắt toàn bộ nguồn điện các thiết bị không sử dụng trước khi đóng cửa cơ sở."
+  },
+  {
+    "question": "Mức phạt vi phạm quy định PCCC phổ biến đối với quán karaoke?",
+    "answer": ">> Mức xử phạt vi phạm hành chính đối với quán karaoke căn cứ theo {Nghị định 106/2025/NĐ-CP}:\n\n## Một số lỗi thường gặp\n- Không có nội quy, tiêu lệnh PCCC: Phạt từ 500.000 đến 1.500.000 đồng.\n- Để hàng hóa cản trở lối thoát nạn: Phạt từ 2.000.000 đến 5.000.000 đồng.\n- Không trang bị đủ bình chữa cháy: Phạt từ 1.000.000 đến 3.000.000 đồng.\n- Không huấn luyện nghiệp vụ PCCC định kỳ: Phạt từ 3.000.000 đến 6.000.000 đồng.\n\n!! Nếu cơ sở thuộc tổ chức/công ty thì mức phạt gấp 02 lần cá nhân."
+  },
+  {
+    "question": "Quán karaoke khi sửa chữa, cải tạo có phải xin nghiệm thu PCCC lại không?",
+    "answer": ">> Căn cứ {Nghị quyết 66.18/2026/NQ-CP} và {Nghị định 347/2026/NĐ-CP}, thủ tục nộp hồ sơ xin nghiệm thu tại cơ quan Công an đã được **bãi bỏ** hoàn toàn.\n\n## Trách nhiệm của chủ cơ sở\n- Nếu cải tạo làm thay đổi giải pháp thoát nạn, ngăn cháy lan hoặc hệ thống PCCC: Phải thẩm định lại thiết kế nếu thuộc diện Phụ lục III.\n- Sau khi thi công xong, chủ đầu tư tự tổ chức nghiệm thu với các nhà thầu và cập nhật thông tin thay đổi lên Hệ thống cơ sở dữ liệu về PCCC trước khi đưa vào khai thác."
+  },
+  {
+    "question": "Yêu cầu về lối thoát nạn đối với gara sửa xe theo quy định mới nhất?",
+    "answer": ">> Đối với gara sửa xe, công trình phải bảo đảm tối thiểu **02 lối thoát nạn độc lập** hoặc có lối ra khẩn cấp (qua ban công, cửa sổ có thang thoát hiểm hoặc lên mái) theo {Luật PCCC và CNCH số 55/2024/QH15}.\n\n## Yêu cầu cụ thể\n- Hành lang và cầu thang thoát nạn phải thông thoáng, không chứa hàng hóa cản trở.\n- Cửa thoát hiểm mở theo chiều thoát nạn, không khóa khi có người hoạt động bên trong.\n- Trang bị đèn Exit chỉ dẫn thoát nạn và đèn chiếu sáng sự cố hoạt động tối thiểu 2 giờ.\n\n!! Vi phạm cản trở lối thoát nạn bị xử phạt từ 2 đến 5 triệu đồng theo {Nghị định 106/2025/NĐ-CP}."
+  },
+  {
+    "question": "Quy định trang bị bình chữa cháy cho gara sửa xe cần bao nhiêu bình?",
+    "answer": ">> Căn cứ {TCVN 3890:2023}, gara sửa xe phải trang bị bình chữa cháy xách tay bảo đảm định mức tối thiểu **1 bình/50 m2** sàn (đối với khu vực nguy hiểm cháy trung bình) và mỗi tầng phải có tối thiểu **02 bình**.\n\n## Hướng dẫn bố trí\n- Bố trí bình tại các vị trí dễ thấy, dễ lấy như cạnh cửa ra vào, chiếu nghỉ cầu thang.\n- Chiều cao treo bình không quá 1,2 m tính từ mặt sàn đến quai xách.\n- Định kỳ kiểm tra đồng hồ áp suất 01 tháng/lần; nạp sạc lại sau 12 tháng với bình mới hoặc 06 tháng với bình đã nạp lại."
+  },
+  {
+    "question": "Hồ sơ phương án chữa cháy của gara sửa xe lập như thế nào?",
+    "answer": ">> Phương án chữa cháy của cơ sở gara sửa xe được xây dựng theo Mẫu quy định tại {Thông tư 36/2025/TT-BCA} và do người đứng đầu cơ sở trực tiếp phê duyệt.\n\n## Nội dung cốt lõi\n- Sơ đồ mặt bằng, đường giao thông, nguồn nước chữa cháy quanh cơ sở.\n- Phân công nhiệm vụ cụ thể cho từng thành viên Đội PCCC cơ sở khi xảy ra cháy.\n- Biện pháp tổ chức thoát nạn cho người và di chuyển tài sản có giá trị.\n- Kế hoạch phối hợp với lực lượng Cảnh sát PCCC chuyên nghiệp qua đầu số 114.\n\n!! Phương án chữa cháy phải được tổ chức thực tập định kỳ tối thiểu **01 năm một lần**."
+  },
+  {
+    "question": "Cơ quan Công an kiểm tra PCCC đối với gara sửa xe theo tần suất nào?",
+    "answer": ">> Tần suất kiểm tra an toàn PCCC của cơ quan Công an đối với gara sửa xe được thực hiện theo cơ chế phân cấp và mức độ rủi ro tại {Nghị định 105/2025/NĐ-CP} và {Nghị định 347/2026/NĐ-CP}.\n\n## Chu kỳ kiểm tra định kỳ\n- **Cơ sở có nguy cơ cháy nổ cao (loại 1):** Kiểm tra định kỳ **01 năm một lần**.\n- **Các cơ sở còn lại:** Kiểm tra định kỳ **02 năm một lần**.\n- **Kiểm tra đột xuất:** Chỉ thực hiện khi có dấu hiệu vi phạm nghiêm trọng hoặc theo chuyên đề chỉ đạo của Bộ Công an, UBND tỉnh.\n\n!! Cơ quan kiểm tra phải thông báo trước tối thiểu 03 ngày làm việc đối với kiểm tra định kỳ."
+  },
+  {
+    "question": "Nhân viên làm việc tại gara sửa xe có bắt buộc phải huấn luyện PCCC không?",
+    "answer": ">> **CÓ**, người đứng đầu cơ sở và các thành viên Đội PCCC cơ sở của gara sửa xe bắt buộc phải tham gia huấn luyện nghiệp vụ theo {Điều 28 Nghị định 105/2025/NĐ-CP}.\n\n## Thời lượng và chu kỳ\n- Huấn luyện định kỳ **05 năm một lần** (thời lượng từ 16 đến 32 giờ tùy đối tượng).\n- Bồi dưỡng định kỳ **hằng năm** (thời lượng từ 8 đến 16 giờ).\n- Chứng nhận kiểu cũ đã bãi bỏ; cơ quan Công an cấp văn bản thông báo kết quả huấn luyện kèm danh sách đạt yêu cầu để cơ sở lưu hồ sơ quản lý."
+  },
+  {
+    "question": "Quy định về an toàn sử dụng điện trong gara sửa xe để phòng cháy?",
+    "answer": ">> An toàn hệ thống điện tại gara sửa xe phải tuân thủ nghiêm theo {Điều 8 Luật PCCC và CNCH 55/2024/QH15}:\n\n## Yêu cầu kỹ thuật\n- Dây dẫn điện phải đi trong ống gen bảo vệ bằng nhựa chống cháy hoặc kim loại.\n- Thiết kế lắp đặt aptomat (aptomat chống giật, aptomat quá tải) riêng cho từng tầng hoặc từng thiết bị công suất lớn.\n- Không cắm quá nhiều thiết bị điện công suất cao vào cùng một ổ cắm.\n- Ngắt toàn bộ nguồn điện các thiết bị không sử dụng trước khi đóng cửa cơ sở."
+  },
+  {
+    "question": "Mức phạt vi phạm quy định PCCC phổ biến đối với gara sửa xe?",
+    "answer": ">> Mức xử phạt vi phạm hành chính đối với gara sửa xe căn cứ theo {Nghị định 106/2025/NĐ-CP}:\n\n## Một số lỗi thường gặp\n- Không có nội quy, tiêu lệnh PCCC: Phạt từ 500.000 đến 1.500.000 đồng.\n- Để hàng hóa cản trở lối thoát nạn: Phạt từ 2.000.000 đến 5.000.000 đồng.\n- Không trang bị đủ bình chữa cháy: Phạt từ 1.000.000 đến 3.000.000 đồng.\n- Không huấn luyện nghiệp vụ PCCC định kỳ: Phạt từ 3.000.000 đến 6.000.000 đồng.\n\n!! Nếu cơ sở thuộc tổ chức/công ty thì mức phạt gấp 02 lần cá nhân."
+  },
+  {
+    "question": "Gara sửa xe khi sửa chữa, cải tạo có phải xin nghiệm thu PCCC lại không?",
+    "answer": ">> Căn cứ {Nghị quyết 66.18/2026/NQ-CP} và {Nghị định 347/2026/NĐ-CP}, thủ tục nộp hồ sơ xin nghiệm thu tại cơ quan Công an đã được **bãi bỏ** hoàn toàn.\n\n## Trách nhiệm của chủ cơ sở\n- Nếu cải tạo làm thay đổi giải pháp thoát nạn, ngăn cháy lan hoặc hệ thống PCCC: Phải thẩm định lại thiết kế nếu thuộc diện Phụ lục III.\n- Sau khi thi công xong, chủ đầu tư tự tổ chức nghiệm thu với các nhà thầu và cập nhật thông tin thay đổi lên Hệ thống cơ sở dữ liệu về PCCC trước khi đưa vào khai thác."
+  },
+  {
+    "question": "Yêu cầu về lối thoát nạn đối với kho chứa hàng hóa theo quy định mới nhất?",
+    "answer": ">> Đối với kho chứa hàng hóa, công trình phải bảo đảm tối thiểu **02 lối thoát nạn độc lập** hoặc có lối ra khẩn cấp (qua ban công, cửa sổ có thang thoát hiểm hoặc lên mái) theo {Luật PCCC và CNCH số 55/2024/QH15}.\n\n## Yêu cầu cụ thể\n- Hành lang và cầu thang thoát nạn phải thông thoáng, không chứa hàng hóa cản trở.\n- Cửa thoát hiểm mở theo chiều thoát nạn, không khóa khi có người hoạt động bên trong.\n- Trang bị đèn Exit chỉ dẫn thoát nạn và đèn chiếu sáng sự cố hoạt động tối thiểu 2 giờ.\n\n!! Vi phạm cản trở lối thoát nạn bị xử phạt từ 2 đến 5 triệu đồng theo {Nghị định 106/2025/NĐ-CP}."
+  },
+  {
+    "question": "Quy định trang bị bình chữa cháy cho kho chứa hàng hóa cần bao nhiêu bình?",
+    "answer": ">> Căn cứ {TCVN 3890:2023}, kho chứa hàng hóa phải trang bị bình chữa cháy xách tay bảo đảm định mức tối thiểu **1 bình/50 m2** sàn (đối với khu vực nguy hiểm cháy trung bình) và mỗi tầng phải có tối thiểu **02 bình**.\n\n## Hướng dẫn bố trí\n- Bố trí bình tại các vị trí dễ thấy, dễ lấy như cạnh cửa ra vào, chiếu nghỉ cầu thang.\n- Chiều cao treo bình không quá 1,2 m tính từ mặt sàn đến quai xách.\n- Định kỳ kiểm tra đồng hồ áp suất 01 tháng/lần; nạp sạc lại sau 12 tháng với bình mới hoặc 06 tháng với bình đã nạp lại."
+  },
+  {
+    "question": "Hồ sơ phương án chữa cháy của kho chứa hàng hóa lập như thế nào?",
+    "answer": ">> Phương án chữa cháy của cơ sở kho chứa hàng hóa được xây dựng theo Mẫu quy định tại {Thông tư 36/2025/TT-BCA} và do người đứng đầu cơ sở trực tiếp phê duyệt.\n\n## Nội dung cốt lõi\n- Sơ đồ mặt bằng, đường giao thông, nguồn nước chữa cháy quanh cơ sở.\n- Phân công nhiệm vụ cụ thể cho từng thành viên Đội PCCC cơ sở khi xảy ra cháy.\n- Biện pháp tổ chức thoát nạn cho người và di chuyển tài sản có giá trị.\n- Kế hoạch phối hợp với lực lượng Cảnh sát PCCC chuyên nghiệp qua đầu số 114.\n\n!! Phương án chữa cháy phải được tổ chức thực tập định kỳ tối thiểu **01 năm một lần**."
+  },
+  {
+    "question": "Cơ quan Công an kiểm tra PCCC đối với kho chứa hàng hóa theo tần suất nào?",
+    "answer": ">> Tần suất kiểm tra an toàn PCCC của cơ quan Công an đối với kho chứa hàng hóa được thực hiện theo cơ chế phân cấp và mức độ rủi ro tại {Nghị định 105/2025/NĐ-CP} và {Nghị định 347/2026/NĐ-CP}.\n\n## Chu kỳ kiểm tra định kỳ\n- **Cơ sở có nguy cơ cháy nổ cao (loại 1):** Kiểm tra định kỳ **01 năm một lần**.\n- **Các cơ sở còn lại:** Kiểm tra định kỳ **02 năm một lần**.\n- **Kiểm tra đột xuất:** Chỉ thực hiện khi có dấu hiệu vi phạm nghiêm trọng hoặc theo chuyên đề chỉ đạo của Bộ Công an, UBND tỉnh.\n\n!! Cơ quan kiểm tra phải thông báo trước tối thiểu 03 ngày làm việc đối với kiểm tra định kỳ."
+  },
+  {
+    "question": "Nhân viên làm việc tại kho chứa hàng hóa có bắt buộc phải huấn luyện PCCC không?",
+    "answer": ">> **CÓ**, người đứng đầu cơ sở và các thành viên Đội PCCC cơ sở của kho chứa hàng hóa bắt buộc phải tham gia huấn luyện nghiệp vụ theo {Điều 28 Nghị định 105/2025/NĐ-CP}.\n\n## Thời lượng và chu kỳ\n- Huấn luyện định kỳ **05 năm một lần** (thời lượng từ 16 đến 32 giờ tùy đối tượng).\n- Bồi dưỡng định kỳ **hằng năm** (thời lượng từ 8 đến 16 giờ).\n- Chứng nhận kiểu cũ đã bãi bỏ; cơ quan Công an cấp văn bản thông báo kết quả huấn luyện kèm danh sách đạt yêu cầu để cơ sở lưu hồ sơ quản lý."
+  },
+  {
+    "question": "Quy định về an toàn sử dụng điện trong kho chứa hàng hóa để phòng cháy?",
+    "answer": ">> An toàn hệ thống điện tại kho chứa hàng hóa phải tuân thủ nghiêm theo {Điều 8 Luật PCCC và CNCH 55/2024/QH15}:\n\n## Yêu cầu kỹ thuật\n- Dây dẫn điện phải đi trong ống gen bảo vệ bằng nhựa chống cháy hoặc kim loại.\n- Thiết kế lắp đặt aptomat (aptomat chống giật, aptomat quá tải) riêng cho từng tầng hoặc từng thiết bị công suất lớn.\n- Không cắm quá nhiều thiết bị điện công suất cao vào cùng một ổ cắm.\n- Ngắt toàn bộ nguồn điện các thiết bị không sử dụng trước khi đóng cửa cơ sở."
+  },
+  {
+    "question": "Mức phạt vi phạm quy định PCCC phổ biến đối với kho chứa hàng hóa?",
+    "answer": ">> Mức xử phạt vi phạm hành chính đối với kho chứa hàng hóa căn cứ theo {Nghị định 106/2025/NĐ-CP}:\n\n## Một số lỗi thường gặp\n- Không có nội quy, tiêu lệnh PCCC: Phạt từ 500.000 đến 1.500.000 đồng.\n- Để hàng hóa cản trở lối thoát nạn: Phạt từ 2.000.000 đến 5.000.000 đồng.\n- Không trang bị đủ bình chữa cháy: Phạt từ 1.000.000 đến 3.000.000 đồng.\n- Không huấn luyện nghiệp vụ PCCC định kỳ: Phạt từ 3.000.000 đến 6.000.000 đồng.\n\n!! Nếu cơ sở thuộc tổ chức/công ty thì mức phạt gấp 02 lần cá nhân."
+  },
+  {
+    "question": "Kho chứa hàng hóa khi sửa chữa, cải tạo có phải xin nghiệm thu PCCC lại không?",
+    "answer": ">> Căn cứ {Nghị quyết 66.18/2026/NQ-CP} và {Nghị định 347/2026/NĐ-CP}, thủ tục nộp hồ sơ xin nghiệm thu tại cơ quan Công an đã được **bãi bỏ** hoàn toàn.\n\n## Trách nhiệm của chủ cơ sở\n- Nếu cải tạo làm thay đổi giải pháp thoát nạn, ngăn cháy lan hoặc hệ thống PCCC: Phải thẩm định lại thiết kế nếu thuộc diện Phụ lục III.\n- Sau khi thi công xong, chủ đầu tư tự tổ chức nghiệm thu với các nhà thầu và cập nhật thông tin thay đổi lên Hệ thống cơ sở dữ liệu về PCCC trước khi đưa vào khai thác."
+  },
+  {
+    "question": "Yêu cầu về lối thoát nạn đối với xưởng may công nghiệp theo quy định mới nhất?",
+    "answer": ">> Đối với xưởng may công nghiệp, công trình phải bảo đảm tối thiểu **02 lối thoát nạn độc lập** hoặc có lối ra khẩn cấp (qua ban công, cửa sổ có thang thoát hiểm hoặc lên mái) theo {Luật PCCC và CNCH số 55/2024/QH15}.\n\n## Yêu cầu cụ thể\n- Hành lang và cầu thang thoát nạn phải thông thoáng, không chứa hàng hóa cản trở.\n- Cửa thoát hiểm mở theo chiều thoát nạn, không khóa khi có người hoạt động bên trong.\n- Trang bị đèn Exit chỉ dẫn thoát nạn và đèn chiếu sáng sự cố hoạt động tối thiểu 2 giờ.\n\n!! Vi phạm cản trở lối thoát nạn bị xử phạt từ 2 đến 5 triệu đồng theo {Nghị định 106/2025/NĐ-CP}."
+  },
+  {
+    "question": "Quy định trang bị bình chữa cháy cho xưởng may công nghiệp cần bao nhiêu bình?",
+    "answer": ">> Căn cứ {TCVN 3890:2023}, xưởng may công nghiệp phải trang bị bình chữa cháy xách tay bảo đảm định mức tối thiểu **1 bình/50 m2** sàn (đối với khu vực nguy hiểm cháy trung bình) và mỗi tầng phải có tối thiểu **02 bình**.\n\n## Hướng dẫn bố trí\n- Bố trí bình tại các vị trí dễ thấy, dễ lấy như cạnh cửa ra vào, chiếu nghỉ cầu thang.\n- Chiều cao treo bình không quá 1,2 m tính từ mặt sàn đến quai xách.\n- Định kỳ kiểm tra đồng hồ áp suất 01 tháng/lần; nạp sạc lại sau 12 tháng với bình mới hoặc 06 tháng với bình đã nạp lại."
+  },
+  {
+    "question": "Hồ sơ phương án chữa cháy của xưởng may công nghiệp lập như thế nào?",
+    "answer": ">> Phương án chữa cháy của cơ sở xưởng may công nghiệp được xây dựng theo Mẫu quy định tại {Thông tư 36/2025/TT-BCA} và do người đứng đầu cơ sở trực tiếp phê duyệt.\n\n## Nội dung cốt lõi\n- Sơ đồ mặt bằng, đường giao thông, nguồn nước chữa cháy quanh cơ sở.\n- Phân công nhiệm vụ cụ thể cho từng thành viên Đội PCCC cơ sở khi xảy ra cháy.\n- Biện pháp tổ chức thoát nạn cho người và di chuyển tài sản có giá trị.\n- Kế hoạch phối hợp với lực lượng Cảnh sát PCCC chuyên nghiệp qua đầu số 114.\n\n!! Phương án chữa cháy phải được tổ chức thực tập định kỳ tối thiểu **01 năm một lần**."
+  },
+  {
+    "question": "Cơ quan Công an kiểm tra PCCC đối với xưởng may công nghiệp theo tần suất nào?",
+    "answer": ">> Tần suất kiểm tra an toàn PCCC của cơ quan Công an đối với xưởng may công nghiệp được thực hiện theo cơ chế phân cấp và mức độ rủi ro tại {Nghị định 105/2025/NĐ-CP} và {Nghị định 347/2026/NĐ-CP}.\n\n## Chu kỳ kiểm tra định kỳ\n- **Cơ sở có nguy cơ cháy nổ cao (loại 1):** Kiểm tra định kỳ **01 năm một lần**.\n- **Các cơ sở còn lại:** Kiểm tra định kỳ **02 năm một lần**.\n- **Kiểm tra đột xuất:** Chỉ thực hiện khi có dấu hiệu vi phạm nghiêm trọng hoặc theo chuyên đề chỉ đạo của Bộ Công an, UBND tỉnh.\n\n!! Cơ quan kiểm tra phải thông báo trước tối thiểu 03 ngày làm việc đối với kiểm tra định kỳ."
+  },
+  {
+    "question": "Nhân viên làm việc tại xưởng may công nghiệp có bắt buộc phải huấn luyện PCCC không?",
+    "answer": ">> **CÓ**, người đứng đầu cơ sở và các thành viên Đội PCCC cơ sở của xưởng may công nghiệp bắt buộc phải tham gia huấn luyện nghiệp vụ theo {Điều 28 Nghị định 105/2025/NĐ-CP}.\n\n## Thời lượng và chu kỳ\n- Huấn luyện định kỳ **05 năm một lần** (thời lượng từ 16 đến 32 giờ tùy đối tượng).\n- Bồi dưỡng định kỳ **hằng năm** (thời lượng từ 8 đến 16 giờ).\n- Chứng nhận kiểu cũ đã bãi bỏ; cơ quan Công an cấp văn bản thông báo kết quả huấn luyện kèm danh sách đạt yêu cầu để cơ sở lưu hồ sơ quản lý."
+  },
+  {
+    "question": "Quy định về an toàn sử dụng điện trong xưởng may công nghiệp để phòng cháy?",
+    "answer": ">> An toàn hệ thống điện tại xưởng may công nghiệp phải tuân thủ nghiêm theo {Điều 8 Luật PCCC và CNCH 55/2024/QH15}:\n\n## Yêu cầu kỹ thuật\n- Dây dẫn điện phải đi trong ống gen bảo vệ bằng nhựa chống cháy hoặc kim loại.\n- Thiết kế lắp đặt aptomat (aptomat chống giật, aptomat quá tải) riêng cho từng tầng hoặc từng thiết bị công suất lớn.\n- Không cắm quá nhiều thiết bị điện công suất cao vào cùng một ổ cắm.\n- Ngắt toàn bộ nguồn điện các thiết bị không sử dụng trước khi đóng cửa cơ sở."
+  },
+  {
+    "question": "Mức phạt vi phạm quy định PCCC phổ biến đối với xưởng may công nghiệp?",
+    "answer": ">> Mức xử phạt vi phạm hành chính đối với xưởng may công nghiệp căn cứ theo {Nghị định 106/2025/NĐ-CP}:\n\n## Một số lỗi thường gặp\n- Không có nội quy, tiêu lệnh PCCC: Phạt từ 500.000 đến 1.500.000 đồng.\n- Để hàng hóa cản trở lối thoát nạn: Phạt từ 2.000.000 đến 5.000.000 đồng.\n- Không trang bị đủ bình chữa cháy: Phạt từ 1.000.000 đến 3.000.000 đồng.\n- Không huấn luyện nghiệp vụ PCCC định kỳ: Phạt từ 3.000.000 đến 6.000.000 đồng.\n\n!! Nếu cơ sở thuộc tổ chức/công ty thì mức phạt gấp 02 lần cá nhân."
+  },
+  {
+    "question": "Xưởng may công nghiệp khi sửa chữa, cải tạo có phải xin nghiệm thu PCCC lại không?",
+    "answer": ">> Căn cứ {Nghị quyết 66.18/2026/NQ-CP} và {Nghị định 347/2026/NĐ-CP}, thủ tục nộp hồ sơ xin nghiệm thu tại cơ quan Công an đã được **bãi bỏ** hoàn toàn.\n\n## Trách nhiệm của chủ cơ sở\n- Nếu cải tạo làm thay đổi giải pháp thoát nạn, ngăn cháy lan hoặc hệ thống PCCC: Phải thẩm định lại thiết kế nếu thuộc diện Phụ lục III.\n- Sau khi thi công xong, chủ đầu tư tự tổ chức nghiệm thu với các nhà thầu và cập nhật thông tin thay đổi lên Hệ thống cơ sở dữ liệu về PCCC trước khi đưa vào khai thác."
+  },
+  {
+    "question": "Yêu cầu về lối thoát nạn đối với công ty sản xuất gỗ theo quy định mới nhất?",
+    "answer": ">> Đối với công ty sản xuất gỗ, công trình phải bảo đảm tối thiểu **02 lối thoát nạn độc lập** hoặc có lối ra khẩn cấp (qua ban công, cửa sổ có thang thoát hiểm hoặc lên mái) theo {Luật PCCC và CNCH số 55/2024/QH15}.\n\n## Yêu cầu cụ thể\n- Hành lang và cầu thang thoát nạn phải thông thoáng, không chứa hàng hóa cản trở.\n- Cửa thoát hiểm mở theo chiều thoát nạn, không khóa khi có người hoạt động bên trong.\n- Trang bị đèn Exit chỉ dẫn thoát nạn và đèn chiếu sáng sự cố hoạt động tối thiểu 2 giờ.\n\n!! Vi phạm cản trở lối thoát nạn bị xử phạt từ 2 đến 5 triệu đồng theo {Nghị định 106/2025/NĐ-CP}."
+  },
+  {
+    "question": "Quy định trang bị bình chữa cháy cho công ty sản xuất gỗ cần bao nhiêu bình?",
+    "answer": ">> Căn cứ {TCVN 3890:2023}, công ty sản xuất gỗ phải trang bị bình chữa cháy xách tay bảo đảm định mức tối thiểu **1 bình/50 m2** sàn (đối với khu vực nguy hiểm cháy trung bình) và mỗi tầng phải có tối thiểu **02 bình**.\n\n## Hướng dẫn bố trí\n- Bố trí bình tại các vị trí dễ thấy, dễ lấy như cạnh cửa ra vào, chiếu nghỉ cầu thang.\n- Chiều cao treo bình không quá 1,2 m tính từ mặt sàn đến quai xách.\n- Định kỳ kiểm tra đồng hồ áp suất 01 tháng/lần; nạp sạc lại sau 12 tháng với bình mới hoặc 06 tháng với bình đã nạp lại."
+  },
+  {
+    "question": "Hồ sơ phương án chữa cháy của công ty sản xuất gỗ lập như thế nào?",
+    "answer": ">> Phương án chữa cháy của cơ sở công ty sản xuất gỗ được xây dựng theo Mẫu quy định tại {Thông tư 36/2025/TT-BCA} và do người đứng đầu cơ sở trực tiếp phê duyệt.\n\n## Nội dung cốt lõi\n- Sơ đồ mặt bằng, đường giao thông, nguồn nước chữa cháy quanh cơ sở.\n- Phân công nhiệm vụ cụ thể cho từng thành viên Đội PCCC cơ sở khi xảy ra cháy.\n- Biện pháp tổ chức thoát nạn cho người và di chuyển tài sản có giá trị.\n- Kế hoạch phối hợp với lực lượng Cảnh sát PCCC chuyên nghiệp qua đầu số 114.\n\n!! Phương án chữa cháy phải được tổ chức thực tập định kỳ tối thiểu **01 năm một lần**."
+  },
+  {
+    "question": "Cơ quan Công an kiểm tra PCCC đối với công ty sản xuất gỗ theo tần suất nào?",
+    "answer": ">> Tần suất kiểm tra an toàn PCCC của cơ quan Công an đối với công ty sản xuất gỗ được thực hiện theo cơ chế phân cấp và mức độ rủi ro tại {Nghị định 105/2025/NĐ-CP} và {Nghị định 347/2026/NĐ-CP}.\n\n## Chu kỳ kiểm tra định kỳ\n- **Cơ sở có nguy cơ cháy nổ cao (loại 1):** Kiểm tra định kỳ **01 năm một lần**.\n- **Các cơ sở còn lại:** Kiểm tra định kỳ **02 năm một lần**.\n- **Kiểm tra đột xuất:** Chỉ thực hiện khi có dấu hiệu vi phạm nghiêm trọng hoặc theo chuyên đề chỉ đạo của Bộ Công an, UBND tỉnh.\n\n!! Cơ quan kiểm tra phải thông báo trước tối thiểu 03 ngày làm việc đối với kiểm tra định kỳ."
+  },
+  {
+    "question": "Nhân viên làm việc tại công ty sản xuất gỗ có bắt buộc phải huấn luyện PCCC không?",
+    "answer": ">> **CÓ**, người đứng đầu cơ sở và các thành viên Đội PCCC cơ sở của công ty sản xuất gỗ bắt buộc phải tham gia huấn luyện nghiệp vụ theo {Điều 28 Nghị định 105/2025/NĐ-CP}.\n\n## Thời lượng và chu kỳ\n- Huấn luyện định kỳ **05 năm một lần** (thời lượng từ 16 đến 32 giờ tùy đối tượng).\n- Bồi dưỡng định kỳ **hằng năm** (thời lượng từ 8 đến 16 giờ).\n- Chứng nhận kiểu cũ đã bãi bỏ; cơ quan Công an cấp văn bản thông báo kết quả huấn luyện kèm danh sách đạt yêu cầu để cơ sở lưu hồ sơ quản lý."
+  },
+  {
+    "question": "Quy định về an toàn sử dụng điện trong công ty sản xuất gỗ để phòng cháy?",
+    "answer": ">> An toàn hệ thống điện tại công ty sản xuất gỗ phải tuân thủ nghiêm theo {Điều 8 Luật PCCC và CNCH 55/2024/QH15}:\n\n## Yêu cầu kỹ thuật\n- Dây dẫn điện phải đi trong ống gen bảo vệ bằng nhựa chống cháy hoặc kim loại.\n- Thiết kế lắp đặt aptomat (aptomat chống giật, aptomat quá tải) riêng cho từng tầng hoặc từng thiết bị công suất lớn.\n- Không cắm quá nhiều thiết bị điện công suất cao vào cùng một ổ cắm.\n- Ngắt toàn bộ nguồn điện các thiết bị không sử dụng trước khi đóng cửa cơ sở."
+  },
+  {
+    "question": "Mức phạt vi phạm quy định PCCC phổ biến đối với công ty sản xuất gỗ?",
+    "answer": ">> Mức xử phạt vi phạm hành chính đối với công ty sản xuất gỗ căn cứ theo {Nghị định 106/2025/NĐ-CP}:\n\n## Một số lỗi thường gặp\n- Không có nội quy, tiêu lệnh PCCC: Phạt từ 500.000 đến 1.500.000 đồng.\n- Để hàng hóa cản trở lối thoát nạn: Phạt từ 2.000.000 đến 5.000.000 đồng.\n- Không trang bị đủ bình chữa cháy: Phạt từ 1.000.000 đến 3.000.000 đồng.\n- Không huấn luyện nghiệp vụ PCCC định kỳ: Phạt từ 3.000.000 đến 6.000.000 đồng.\n\n!! Nếu cơ sở thuộc tổ chức/công ty thì mức phạt gấp 02 lần cá nhân."
+  },
+  {
+    "question": "Công ty sản xuất gỗ khi sửa chữa, cải tạo có phải xin nghiệm thu PCCC lại không?",
+    "answer": ">> Căn cứ {Nghị quyết 66.18/2026/NQ-CP} và {Nghị định 347/2026/NĐ-CP}, thủ tục nộp hồ sơ xin nghiệm thu tại cơ quan Công an đã được **bãi bỏ** hoàn toàn.\n\n## Trách nhiệm của chủ cơ sở\n- Nếu cải tạo làm thay đổi giải pháp thoát nạn, ngăn cháy lan hoặc hệ thống PCCC: Phải thẩm định lại thiết kế nếu thuộc diện Phụ lục III.\n- Sau khi thi công xong, chủ đầu tư tự tổ chức nghiệm thu với các nhà thầu và cập nhật thông tin thay đổi lên Hệ thống cơ sở dữ liệu về PCCC trước khi đưa vào khai thác."
+  },
+  {
+    "question": "Yêu cầu về lối thoát nạn đối với trường mầm non tư thục theo quy định mới nhất?",
+    "answer": ">> Đối với trường mầm non tư thục, công trình phải bảo đảm tối thiểu **02 lối thoát nạn độc lập** hoặc có lối ra khẩn cấp (qua ban công, cửa sổ có thang thoát hiểm hoặc lên mái) theo {Luật PCCC và CNCH số 55/2024/QH15}.\n\n## Yêu cầu cụ thể\n- Hành lang và cầu thang thoát nạn phải thông thoáng, không chứa hàng hóa cản trở.\n- Cửa thoát hiểm mở theo chiều thoát nạn, không khóa khi có người hoạt động bên trong.\n- Trang bị đèn Exit chỉ dẫn thoát nạn và đèn chiếu sáng sự cố hoạt động tối thiểu 2 giờ.\n\n!! Vi phạm cản trở lối thoát nạn bị xử phạt từ 2 đến 5 triệu đồng theo {Nghị định 106/2025/NĐ-CP}."
+  },
+  {
+    "question": "Quy định trang bị bình chữa cháy cho trường mầm non tư thục cần bao nhiêu bình?",
+    "answer": ">> Căn cứ {TCVN 3890:2023}, trường mầm non tư thục phải trang bị bình chữa cháy xách tay bảo đảm định mức tối thiểu **1 bình/50 m2** sàn (đối với khu vực nguy hiểm cháy trung bình) và mỗi tầng phải có tối thiểu **02 bình**.\n\n## Hướng dẫn bố trí\n- Bố trí bình tại các vị trí dễ thấy, dễ lấy như cạnh cửa ra vào, chiếu nghỉ cầu thang.\n- Chiều cao treo bình không quá 1,2 m tính từ mặt sàn đến quai xách.\n- Định kỳ kiểm tra đồng hồ áp suất 01 tháng/lần; nạp sạc lại sau 12 tháng với bình mới hoặc 06 tháng với bình đã nạp lại."
+  },
+  {
+    "question": "Hồ sơ phương án chữa cháy của trường mầm non tư thục lập như thế nào?",
+    "answer": ">> Phương án chữa cháy của cơ sở trường mầm non tư thục được xây dựng theo Mẫu quy định tại {Thông tư 36/2025/TT-BCA} và do người đứng đầu cơ sở trực tiếp phê duyệt.\n\n## Nội dung cốt lõi\n- Sơ đồ mặt bằng, đường giao thông, nguồn nước chữa cháy quanh cơ sở.\n- Phân công nhiệm vụ cụ thể cho từng thành viên Đội PCCC cơ sở khi xảy ra cháy.\n- Biện pháp tổ chức thoát nạn cho người và di chuyển tài sản có giá trị.\n- Kế hoạch phối hợp với lực lượng Cảnh sát PCCC chuyên nghiệp qua đầu số 114.\n\n!! Phương án chữa cháy phải được tổ chức thực tập định kỳ tối thiểu **01 năm một lần**."
+  },
+  {
+    "question": "Cơ quan Công an kiểm tra PCCC đối với trường mầm non tư thục theo tần suất nào?",
+    "answer": ">> Tần suất kiểm tra an toàn PCCC của cơ quan Công an đối với trường mầm non tư thục được thực hiện theo cơ chế phân cấp và mức độ rủi ro tại {Nghị định 105/2025/NĐ-CP} và {Nghị định 347/2026/NĐ-CP}.\n\n## Chu kỳ kiểm tra định kỳ\n- **Cơ sở có nguy cơ cháy nổ cao (loại 1):** Kiểm tra định kỳ **01 năm một lần**.\n- **Các cơ sở còn lại:** Kiểm tra định kỳ **02 năm một lần**.\n- **Kiểm tra đột xuất:** Chỉ thực hiện khi có dấu hiệu vi phạm nghiêm trọng hoặc theo chuyên đề chỉ đạo của Bộ Công an, UBND tỉnh.\n\n!! Cơ quan kiểm tra phải thông báo trước tối thiểu 03 ngày làm việc đối với kiểm tra định kỳ."
+  },
+  {
+    "question": "Nhân viên làm việc tại trường mầm non tư thục có bắt buộc phải huấn luyện PCCC không?",
+    "answer": ">> **CÓ**, người đứng đầu cơ sở và các thành viên Đội PCCC cơ sở của trường mầm non tư thục bắt buộc phải tham gia huấn luyện nghiệp vụ theo {Điều 28 Nghị định 105/2025/NĐ-CP}.\n\n## Thời lượng và chu kỳ\n- Huấn luyện định kỳ **05 năm một lần** (thời lượng từ 16 đến 32 giờ tùy đối tượng).\n- Bồi dưỡng định kỳ **hằng năm** (thời lượng từ 8 đến 16 giờ).\n- Chứng nhận kiểu cũ đã bãi bỏ; cơ quan Công an cấp văn bản thông báo kết quả huấn luyện kèm danh sách đạt yêu cầu để cơ sở lưu hồ sơ quản lý."
+  },
+  {
+    "question": "Quy định về an toàn sử dụng điện trong trường mầm non tư thục để phòng cháy?",
+    "answer": ">> An toàn hệ thống điện tại trường mầm non tư thục phải tuân thủ nghiêm theo {Điều 8 Luật PCCC và CNCH 55/2024/QH15}:\n\n## Yêu cầu kỹ thuật\n- Dây dẫn điện phải đi trong ống gen bảo vệ bằng nhựa chống cháy hoặc kim loại.\n- Thiết kế lắp đặt aptomat (aptomat chống giật, aptomat quá tải) riêng cho từng tầng hoặc từng thiết bị công suất lớn.\n- Không cắm quá nhiều thiết bị điện công suất cao vào cùng một ổ cắm.\n- Ngắt toàn bộ nguồn điện các thiết bị không sử dụng trước khi đóng cửa cơ sở."
+  },
+  {
+    "question": "Mức phạt vi phạm quy định PCCC phổ biến đối với trường mầm non tư thục?",
+    "answer": ">> Mức xử phạt vi phạm hành chính đối với trường mầm non tư thục căn cứ theo {Nghị định 106/2025/NĐ-CP}:\n\n## Một số lỗi thường gặp\n- Không có nội quy, tiêu lệnh PCCC: Phạt từ 500.000 đến 1.500.000 đồng.\n- Để hàng hóa cản trở lối thoát nạn: Phạt từ 2.000.000 đến 5.000.000 đồng.\n- Không trang bị đủ bình chữa cháy: Phạt từ 1.000.000 đến 3.000.000 đồng.\n- Không huấn luyện nghiệp vụ PCCC định kỳ: Phạt từ 3.000.000 đến 6.000.000 đồng.\n\n!! Nếu cơ sở thuộc tổ chức/công ty thì mức phạt gấp 02 lần cá nhân."
+  },
+  {
+    "question": "Trường mầm non tư thục khi sửa chữa, cải tạo có phải xin nghiệm thu PCCC lại không?",
+    "answer": ">> Căn cứ {Nghị quyết 66.18/2026/NQ-CP} và {Nghị định 347/2026/NĐ-CP}, thủ tục nộp hồ sơ xin nghiệm thu tại cơ quan Công an đã được **bãi bỏ** hoàn toàn.\n\n## Trách nhiệm của chủ cơ sở\n- Nếu cải tạo làm thay đổi giải pháp thoát nạn, ngăn cháy lan hoặc hệ thống PCCC: Phải thẩm định lại thiết kế nếu thuộc diện Phụ lục III.\n- Sau khi thi công xong, chủ đầu tư tự tổ chức nghiệm thu với các nhà thầu và cập nhật thông tin thay đổi lên Hệ thống cơ sở dữ liệu về PCCC trước khi đưa vào khai thác."
+  },
+  {
+    "question": "Yêu cầu về lối thoát nạn đối với phòng khám đa khoa theo quy định mới nhất?",
+    "answer": ">> Đối với phòng khám đa khoa, công trình phải bảo đảm tối thiểu **02 lối thoát nạn độc lập** hoặc có lối ra khẩn cấp (qua ban công, cửa sổ có thang thoát hiểm hoặc lên mái) theo {Luật PCCC và CNCH số 55/2024/QH15}.\n\n## Yêu cầu cụ thể\n- Hành lang và cầu thang thoát nạn phải thông thoáng, không chứa hàng hóa cản trở.\n- Cửa thoát hiểm mở theo chiều thoát nạn, không khóa khi có người hoạt động bên trong.\n- Trang bị đèn Exit chỉ dẫn thoát nạn và đèn chiếu sáng sự cố hoạt động tối thiểu 2 giờ.\n\n!! Vi phạm cản trở lối thoát nạn bị xử phạt từ 2 đến 5 triệu đồng theo {Nghị định 106/2025/NĐ-CP}."
+  },
+  {
+    "question": "Quy định trang bị bình chữa cháy cho phòng khám đa khoa cần bao nhiêu bình?",
+    "answer": ">> Căn cứ {TCVN 3890:2023}, phòng khám đa khoa phải trang bị bình chữa cháy xách tay bảo đảm định mức tối thiểu **1 bình/50 m2** sàn (đối với khu vực nguy hiểm cháy trung bình) và mỗi tầng phải có tối thiểu **02 bình**.\n\n## Hướng dẫn bố trí\n- Bố trí bình tại các vị trí dễ thấy, dễ lấy như cạnh cửa ra vào, chiếu nghỉ cầu thang.\n- Chiều cao treo bình không quá 1,2 m tính từ mặt sàn đến quai xách.\n- Định kỳ kiểm tra đồng hồ áp suất 01 tháng/lần; nạp sạc lại sau 12 tháng với bình mới hoặc 06 tháng với bình đã nạp lại."
+  },
+  {
+    "question": "Hồ sơ phương án chữa cháy của phòng khám đa khoa lập như thế nào?",
+    "answer": ">> Phương án chữa cháy của cơ sở phòng khám đa khoa được xây dựng theo Mẫu quy định tại {Thông tư 36/2025/TT-BCA} và do người đứng đầu cơ sở trực tiếp phê duyệt.\n\n## Nội dung cốt lõi\n- Sơ đồ mặt bằng, đường giao thông, nguồn nước chữa cháy quanh cơ sở.\n- Phân công nhiệm vụ cụ thể cho từng thành viên Đội PCCC cơ sở khi xảy ra cháy.\n- Biện pháp tổ chức thoát nạn cho người và di chuyển tài sản có giá trị.\n- Kế hoạch phối hợp với lực lượng Cảnh sát PCCC chuyên nghiệp qua đầu số 114.\n\n!! Phương án chữa cháy phải được tổ chức thực tập định kỳ tối thiểu **01 năm một lần**."
+  },
+  {
+    "question": "Cơ quan Công an kiểm tra PCCC đối với phòng khám đa khoa theo tần suất nào?",
+    "answer": ">> Tần suất kiểm tra an toàn PCCC của cơ quan Công an đối với phòng khám đa khoa được thực hiện theo cơ chế phân cấp và mức độ rủi ro tại {Nghị định 105/2025/NĐ-CP} và {Nghị định 347/2026/NĐ-CP}.\n\n## Chu kỳ kiểm tra định kỳ\n- **Cơ sở có nguy cơ cháy nổ cao (loại 1):** Kiểm tra định kỳ **01 năm một lần**.\n- **Các cơ sở còn lại:** Kiểm tra định kỳ **02 năm một lần**.\n- **Kiểm tra đột xuất:** Chỉ thực hiện khi có dấu hiệu vi phạm nghiêm trọng hoặc theo chuyên đề chỉ đạo của Bộ Công an, UBND tỉnh.\n\n!! Cơ quan kiểm tra phải thông báo trước tối thiểu 03 ngày làm việc đối với kiểm tra định kỳ."
+  },
+  {
+    "question": "Nhân viên làm việc tại phòng khám đa khoa có bắt buộc phải huấn luyện PCCC không?",
+    "answer": ">> **CÓ**, người đứng đầu cơ sở và các thành viên Đội PCCC cơ sở của phòng khám đa khoa bắt buộc phải tham gia huấn luyện nghiệp vụ theo {Điều 28 Nghị định 105/2025/NĐ-CP}.\n\n## Thời lượng và chu kỳ\n- Huấn luyện định kỳ **05 năm một lần** (thời lượng từ 16 đến 32 giờ tùy đối tượng).\n- Bồi dưỡng định kỳ **hằng năm** (thời lượng từ 8 đến 16 giờ).\n- Chứng nhận kiểu cũ đã bãi bỏ; cơ quan Công an cấp văn bản thông báo kết quả huấn luyện kèm danh sách đạt yêu cầu để cơ sở lưu hồ sơ quản lý."
+  },
+  {
+    "question": "Quy định về an toàn sử dụng điện trong phòng khám đa khoa để phòng cháy?",
+    "answer": ">> An toàn hệ thống điện tại phòng khám đa khoa phải tuân thủ nghiêm theo {Điều 8 Luật PCCC và CNCH 55/2024/QH15}:\n\n## Yêu cầu kỹ thuật\n- Dây dẫn điện phải đi trong ống gen bảo vệ bằng nhựa chống cháy hoặc kim loại.\n- Thiết kế lắp đặt aptomat (aptomat chống giật, aptomat quá tải) riêng cho từng tầng hoặc từng thiết bị công suất lớn.\n- Không cắm quá nhiều thiết bị điện công suất cao vào cùng một ổ cắm.\n- Ngắt toàn bộ nguồn điện các thiết bị không sử dụng trước khi đóng cửa cơ sở."
+  },
+  {
+    "question": "Mức phạt vi phạm quy định PCCC phổ biến đối với phòng khám đa khoa?",
+    "answer": ">> Mức xử phạt vi phạm hành chính đối với phòng khám đa khoa căn cứ theo {Nghị định 106/2025/NĐ-CP}:\n\n## Một số lỗi thường gặp\n- Không có nội quy, tiêu lệnh PCCC: Phạt từ 500.000 đến 1.500.000 đồng.\n- Để hàng hóa cản trở lối thoát nạn: Phạt từ 2.000.000 đến 5.000.000 đồng.\n- Không trang bị đủ bình chữa cháy: Phạt từ 1.000.000 đến 3.000.000 đồng.\n- Không huấn luyện nghiệp vụ PCCC định kỳ: Phạt từ 3.000.000 đến 6.000.000 đồng.\n\n!! Nếu cơ sở thuộc tổ chức/công ty thì mức phạt gấp 02 lần cá nhân."
+  },
+  {
+    "question": "Phòng khám đa khoa khi sửa chữa, cải tạo có phải xin nghiệm thu PCCC lại không?",
+    "answer": ">> Căn cứ {Nghị quyết 66.18/2026/NQ-CP} và {Nghị định 347/2026/NĐ-CP}, thủ tục nộp hồ sơ xin nghiệm thu tại cơ quan Công an đã được **bãi bỏ** hoàn toàn.\n\n## Trách nhiệm của chủ cơ sở\n- Nếu cải tạo làm thay đổi giải pháp thoát nạn, ngăn cháy lan hoặc hệ thống PCCC: Phải thẩm định lại thiết kế nếu thuộc diện Phụ lục III.\n- Sau khi thi công xong, chủ đầu tư tự tổ chức nghiệm thu với các nhà thầu và cập nhật thông tin thay đổi lên Hệ thống cơ sở dữ liệu về PCCC trước khi đưa vào khai thác."
+  },
+  {
+    "question": "Yêu cầu về lối thoát nạn đối với chợ dân sinh theo quy định mới nhất?",
+    "answer": ">> Đối với chợ dân sinh, công trình phải bảo đảm tối thiểu **02 lối thoát nạn độc lập** hoặc có lối ra khẩn cấp (qua ban công, cửa sổ có thang thoát hiểm hoặc lên mái) theo {Luật PCCC và CNCH số 55/2024/QH15}.\n\n## Yêu cầu cụ thể\n- Hành lang và cầu thang thoát nạn phải thông thoáng, không chứa hàng hóa cản trở.\n- Cửa thoát hiểm mở theo chiều thoát nạn, không khóa khi có người hoạt động bên trong.\n- Trang bị đèn Exit chỉ dẫn thoát nạn và đèn chiếu sáng sự cố hoạt động tối thiểu 2 giờ.\n\n!! Vi phạm cản trở lối thoát nạn bị xử phạt từ 2 đến 5 triệu đồng theo {Nghị định 106/2025/NĐ-CP}."
+  },
+  {
+    "question": "Quy định trang bị bình chữa cháy cho chợ dân sinh cần bao nhiêu bình?",
+    "answer": ">> Căn cứ {TCVN 3890:2023}, chợ dân sinh phải trang bị bình chữa cháy xách tay bảo đảm định mức tối thiểu **1 bình/50 m2** sàn (đối với khu vực nguy hiểm cháy trung bình) và mỗi tầng phải có tối thiểu **02 bình**.\n\n## Hướng dẫn bố trí\n- Bố trí bình tại các vị trí dễ thấy, dễ lấy như cạnh cửa ra vào, chiếu nghỉ cầu thang.\n- Chiều cao treo bình không quá 1,2 m tính từ mặt sàn đến quai xách.\n- Định kỳ kiểm tra đồng hồ áp suất 01 tháng/lần; nạp sạc lại sau 12 tháng với bình mới hoặc 06 tháng với bình đã nạp lại."
+  },
+  {
+    "question": "Hồ sơ phương án chữa cháy của chợ dân sinh lập như thế nào?",
+    "answer": ">> Phương án chữa cháy của cơ sở chợ dân sinh được xây dựng theo Mẫu quy định tại {Thông tư 36/2025/TT-BCA} và do người đứng đầu cơ sở trực tiếp phê duyệt.\n\n## Nội dung cốt lõi\n- Sơ đồ mặt bằng, đường giao thông, nguồn nước chữa cháy quanh cơ sở.\n- Phân công nhiệm vụ cụ thể cho từng thành viên Đội PCCC cơ sở khi xảy ra cháy.\n- Biện pháp tổ chức thoát nạn cho người và di chuyển tài sản có giá trị.\n- Kế hoạch phối hợp với lực lượng Cảnh sát PCCC chuyên nghiệp qua đầu số 114.\n\n!! Phương án chữa cháy phải được tổ chức thực tập định kỳ tối thiểu **01 năm một lần**."
+  },
+  {
+    "question": "Cơ quan Công an kiểm tra PCCC đối với chợ dân sinh theo tần suất nào?",
+    "answer": ">> Tần suất kiểm tra an toàn PCCC của cơ quan Công an đối với chợ dân sinh được thực hiện theo cơ chế phân cấp và mức độ rủi ro tại {Nghị định 105/2025/NĐ-CP} và {Nghị định 347/2026/NĐ-CP}.\n\n## Chu kỳ kiểm tra định kỳ\n- **Cơ sở có nguy cơ cháy nổ cao (loại 1):** Kiểm tra định kỳ **01 năm một lần**.\n- **Các cơ sở còn lại:** Kiểm tra định kỳ **02 năm một lần**.\n- **Kiểm tra đột xuất:** Chỉ thực hiện khi có dấu hiệu vi phạm nghiêm trọng hoặc theo chuyên đề chỉ đạo của Bộ Công an, UBND tỉnh.\n\n!! Cơ quan kiểm tra phải thông báo trước tối thiểu 03 ngày làm việc đối với kiểm tra định kỳ."
+  },
+  {
+    "question": "Nhân viên làm việc tại chợ dân sinh có bắt buộc phải huấn luyện PCCC không?",
+    "answer": ">> **CÓ**, người đứng đầu cơ sở và các thành viên Đội PCCC cơ sở của chợ dân sinh bắt buộc phải tham gia huấn luyện nghiệp vụ theo {Điều 28 Nghị định 105/2025/NĐ-CP}.\n\n## Thời lượng và chu kỳ\n- Huấn luyện định kỳ **05 năm một lần** (thời lượng từ 16 đến 32 giờ tùy đối tượng).\n- Bồi dưỡng định kỳ **hằng năm** (thời lượng từ 8 đến 16 giờ).\n- Chứng nhận kiểu cũ đã bãi bỏ; cơ quan Công an cấp văn bản thông báo kết quả huấn luyện kèm danh sách đạt yêu cầu để cơ sở lưu hồ sơ quản lý."
+  },
+  {
+    "question": "Quy định về an toàn sử dụng điện trong chợ dân sinh để phòng cháy?",
+    "answer": ">> An toàn hệ thống điện tại chợ dân sinh phải tuân thủ nghiêm theo {Điều 8 Luật PCCC và CNCH 55/2024/QH15}:\n\n## Yêu cầu kỹ thuật\n- Dây dẫn điện phải đi trong ống gen bảo vệ bằng nhựa chống cháy hoặc kim loại.\n- Thiết kế lắp đặt aptomat (aptomat chống giật, aptomat quá tải) riêng cho từng tầng hoặc từng thiết bị công suất lớn.\n- Không cắm quá nhiều thiết bị điện công suất cao vào cùng một ổ cắm.\n- Ngắt toàn bộ nguồn điện các thiết bị không sử dụng trước khi đóng cửa cơ sở."
+  },
+  {
+    "question": "Mức phạt vi phạm quy định PCCC phổ biến đối với chợ dân sinh?",
+    "answer": ">> Mức xử phạt vi phạm hành chính đối với chợ dân sinh căn cứ theo {Nghị định 106/2025/NĐ-CP}:\n\n## Một số lỗi thường gặp\n- Không có nội quy, tiêu lệnh PCCC: Phạt từ 500.000 đến 1.500.000 đồng.\n- Để hàng hóa cản trở lối thoát nạn: Phạt từ 2.000.000 đến 5.000.000 đồng.\n- Không trang bị đủ bình chữa cháy: Phạt từ 1.000.000 đến 3.000.000 đồng.\n- Không huấn luyện nghiệp vụ PCCC định kỳ: Phạt từ 3.000.000 đến 6.000.000 đồng.\n\n!! Nếu cơ sở thuộc tổ chức/công ty thì mức phạt gấp 02 lần cá nhân."
+  },
+  {
+    "question": "Chợ dân sinh khi sửa chữa, cải tạo có phải xin nghiệm thu PCCC lại không?",
+    "answer": ">> Căn cứ {Nghị quyết 66.18/2026/NQ-CP} và {Nghị định 347/2026/NĐ-CP}, thủ tục nộp hồ sơ xin nghiệm thu tại cơ quan Công an đã được **bãi bỏ** hoàn toàn.\n\n## Trách nhiệm của chủ cơ sở\n- Nếu cải tạo làm thay đổi giải pháp thoát nạn, ngăn cháy lan hoặc hệ thống PCCC: Phải thẩm định lại thiết kế nếu thuộc diện Phụ lục III.\n- Sau khi thi công xong, chủ đầu tư tự tổ chức nghiệm thu với các nhà thầu và cập nhật thông tin thay đổi lên Hệ thống cơ sở dữ liệu về PCCC trước khi đưa vào khai thác."
+  },
+  {
+    "question": "Yêu cầu về lối thoát nạn đối với tòa nhà văn phòng theo quy định mới nhất?",
+    "answer": ">> Đối với tòa nhà văn phòng, công trình phải bảo đảm tối thiểu **02 lối thoát nạn độc lập** hoặc có lối ra khẩn cấp (qua ban công, cửa sổ có thang thoát hiểm hoặc lên mái) theo {Luật PCCC và CNCH số 55/2024/QH15}.\n\n## Yêu cầu cụ thể\n- Hành lang và cầu thang thoát nạn phải thông thoáng, không chứa hàng hóa cản trở.\n- Cửa thoát hiểm mở theo chiều thoát nạn, không khóa khi có người hoạt động bên trong.\n- Trang bị đèn Exit chỉ dẫn thoát nạn và đèn chiếu sáng sự cố hoạt động tối thiểu 2 giờ.\n\n!! Vi phạm cản trở lối thoát nạn bị xử phạt từ 2 đến 5 triệu đồng theo {Nghị định 106/2025/NĐ-CP}."
+  },
+  {
+    "question": "Quy định trang bị bình chữa cháy cho tòa nhà văn phòng cần bao nhiêu bình?",
+    "answer": ">> Căn cứ {TCVN 3890:2023}, tòa nhà văn phòng phải trang bị bình chữa cháy xách tay bảo đảm định mức tối thiểu **1 bình/50 m2** sàn (đối với khu vực nguy hiểm cháy trung bình) và mỗi tầng phải có tối thiểu **02 bình**.\n\n## Hướng dẫn bố trí\n- Bố trí bình tại các vị trí dễ thấy, dễ lấy như cạnh cửa ra vào, chiếu nghỉ cầu thang.\n- Chiều cao treo bình không quá 1,2 m tính từ mặt sàn đến quai xách.\n- Định kỳ kiểm tra đồng hồ áp suất 01 tháng/lần; nạp sạc lại sau 12 tháng với bình mới hoặc 06 tháng với bình đã nạp lại."
+  },
+  {
+    "question": "Hồ sơ phương án chữa cháy của tòa nhà văn phòng lập như thế nào?",
+    "answer": ">> Phương án chữa cháy của cơ sở tòa nhà văn phòng được xây dựng theo Mẫu quy định tại {Thông tư 36/2025/TT-BCA} và do người đứng đầu cơ sở trực tiếp phê duyệt.\n\n## Nội dung cốt lõi\n- Sơ đồ mặt bằng, đường giao thông, nguồn nước chữa cháy quanh cơ sở.\n- Phân công nhiệm vụ cụ thể cho từng thành viên Đội PCCC cơ sở khi xảy ra cháy.\n- Biện pháp tổ chức thoát nạn cho người và di chuyển tài sản có giá trị.\n- Kế hoạch phối hợp với lực lượng Cảnh sát PCCC chuyên nghiệp qua đầu số 114.\n\n!! Phương án chữa cháy phải được tổ chức thực tập định kỳ tối thiểu **01 năm một lần**."
+  },
+  {
+    "question": "Cơ quan Công an kiểm tra PCCC đối với tòa nhà văn phòng theo tần suất nào?",
+    "answer": ">> Tần suất kiểm tra an toàn PCCC của cơ quan Công an đối với tòa nhà văn phòng được thực hiện theo cơ chế phân cấp và mức độ rủi ro tại {Nghị định 105/2025/NĐ-CP} và {Nghị định 347/2026/NĐ-CP}.\n\n## Chu kỳ kiểm tra định kỳ\n- **Cơ sở có nguy cơ cháy nổ cao (loại 1):** Kiểm tra định kỳ **01 năm một lần**.\n- **Các cơ sở còn lại:** Kiểm tra định kỳ **02 năm một lần**.\n- **Kiểm tra đột xuất:** Chỉ thực hiện khi có dấu hiệu vi phạm nghiêm trọng hoặc theo chuyên đề chỉ đạo của Bộ Công an, UBND tỉnh.\n\n!! Cơ quan kiểm tra phải thông báo trước tối thiểu 03 ngày làm việc đối với kiểm tra định kỳ."
+  },
+  {
+    "question": "Nhân viên làm việc tại tòa nhà văn phòng có bắt buộc phải huấn luyện PCCC không?",
+    "answer": ">> **CÓ**, người đứng đầu cơ sở và các thành viên Đội PCCC cơ sở của tòa nhà văn phòng bắt buộc phải tham gia huấn luyện nghiệp vụ theo {Điều 28 Nghị định 105/2025/NĐ-CP}.\n\n## Thời lượng và chu kỳ\n- Huấn luyện định kỳ **05 năm một lần** (thời lượng từ 16 đến 32 giờ tùy đối tượng).\n- Bồi dưỡng định kỳ **hằng năm** (thời lượng từ 8 đến 16 giờ).\n- Chứng nhận kiểu cũ đã bãi bỏ; cơ quan Công an cấp văn bản thông báo kết quả huấn luyện kèm danh sách đạt yêu cầu để cơ sở lưu hồ sơ quản lý."
+  },
+  {
+    "question": "Quy định về an toàn sử dụng điện trong tòa nhà văn phòng để phòng cháy?",
+    "answer": ">> An toàn hệ thống điện tại tòa nhà văn phòng phải tuân thủ nghiêm theo {Điều 8 Luật PCCC và CNCH 55/2024/QH15}:\n\n## Yêu cầu kỹ thuật\n- Dây dẫn điện phải đi trong ống gen bảo vệ bằng nhựa chống cháy hoặc kim loại.\n- Thiết kế lắp đặt aptomat (aptomat chống giật, aptomat quá tải) riêng cho từng tầng hoặc từng thiết bị công suất lớn.\n- Không cắm quá nhiều thiết bị điện công suất cao vào cùng một ổ cắm.\n- Ngắt toàn bộ nguồn điện các thiết bị không sử dụng trước khi đóng cửa cơ sở."
+  },
+  {
+    "question": "Mức phạt vi phạm quy định PCCC phổ biến đối với tòa nhà văn phòng?",
+    "answer": ">> Mức xử phạt vi phạm hành chính đối với tòa nhà văn phòng căn cứ theo {Nghị định 106/2025/NĐ-CP}:\n\n## Một số lỗi thường gặp\n- Không có nội quy, tiêu lệnh PCCC: Phạt từ 500.000 đến 1.500.000 đồng.\n- Để hàng hóa cản trở lối thoát nạn: Phạt từ 2.000.000 đến 5.000.000 đồng.\n- Không trang bị đủ bình chữa cháy: Phạt từ 1.000.000 đến 3.000.000 đồng.\n- Không huấn luyện nghiệp vụ PCCC định kỳ: Phạt từ 3.000.000 đến 6.000.000 đồng.\n\n!! Nếu cơ sở thuộc tổ chức/công ty thì mức phạt gấp 02 lần cá nhân."
+  },
+  {
+    "question": "Tòa nhà văn phòng khi sửa chữa, cải tạo có phải xin nghiệm thu PCCC lại không?",
+    "answer": ">> Căn cứ {Nghị quyết 66.18/2026/NQ-CP} và {Nghị định 347/2026/NĐ-CP}, thủ tục nộp hồ sơ xin nghiệm thu tại cơ quan Công an đã được **bãi bỏ** hoàn toàn.\n\n## Trách nhiệm của chủ cơ sở\n- Nếu cải tạo làm thay đổi giải pháp thoát nạn, ngăn cháy lan hoặc hệ thống PCCC: Phải thẩm định lại thiết kế nếu thuộc diện Phụ lục III.\n- Sau khi thi công xong, chủ đầu tư tự tổ chức nghiệm thu với các nhà thầu và cập nhật thông tin thay đổi lên Hệ thống cơ sở dữ liệu về PCCC trước khi đưa vào khai thác."
+  },
+  {
+    "question": "Yêu cầu về lối thoát nạn đối với trạm chiết gas theo quy định mới nhất?",
+    "answer": ">> Đối với trạm chiết gas, công trình phải bảo đảm tối thiểu **02 lối thoát nạn độc lập** hoặc có lối ra khẩn cấp (qua ban công, cửa sổ có thang thoát hiểm hoặc lên mái) theo {Luật PCCC và CNCH số 55/2024/QH15}.\n\n## Yêu cầu cụ thể\n- Hành lang và cầu thang thoát nạn phải thông thoáng, không chứa hàng hóa cản trở.\n- Cửa thoát hiểm mở theo chiều thoát nạn, không khóa khi có người hoạt động bên trong.\n- Trang bị đèn Exit chỉ dẫn thoát nạn và đèn chiếu sáng sự cố hoạt động tối thiểu 2 giờ.\n\n!! Vi phạm cản trở lối thoát nạn bị xử phạt từ 2 đến 5 triệu đồng theo {Nghị định 106/2025/NĐ-CP}."
+  },
+  {
+    "question": "Quy định trang bị bình chữa cháy cho trạm chiết gas cần bao nhiêu bình?",
+    "answer": ">> Căn cứ {TCVN 3890:2023}, trạm chiết gas phải trang bị bình chữa cháy xách tay bảo đảm định mức tối thiểu **1 bình/50 m2** sàn (đối với khu vực nguy hiểm cháy trung bình) và mỗi tầng phải có tối thiểu **02 bình**.\n\n## Hướng dẫn bố trí\n- Bố trí bình tại các vị trí dễ thấy, dễ lấy như cạnh cửa ra vào, chiếu nghỉ cầu thang.\n- Chiều cao treo bình không quá 1,2 m tính từ mặt sàn đến quai xách.\n- Định kỳ kiểm tra đồng hồ áp suất 01 tháng/lần; nạp sạc lại sau 12 tháng với bình mới hoặc 06 tháng với bình đã nạp lại."
+  },
+  {
+    "question": "Hồ sơ phương án chữa cháy của trạm chiết gas lập như thế nào?",
+    "answer": ">> Phương án chữa cháy của cơ sở trạm chiết gas được xây dựng theo Mẫu quy định tại {Thông tư 36/2025/TT-BCA} và do người đứng đầu cơ sở trực tiếp phê duyệt.\n\n## Nội dung cốt lõi\n- Sơ đồ mặt bằng, đường giao thông, nguồn nước chữa cháy quanh cơ sở.\n- Phân công nhiệm vụ cụ thể cho từng thành viên Đội PCCC cơ sở khi xảy ra cháy.\n- Biện pháp tổ chức thoát nạn cho người và di chuyển tài sản có giá trị.\n- Kế hoạch phối hợp với lực lượng Cảnh sát PCCC chuyên nghiệp qua đầu số 114.\n\n!! Phương án chữa cháy phải được tổ chức thực tập định kỳ tối thiểu **01 năm một lần**."
+  },
+  {
+    "question": "Cơ quan Công an kiểm tra PCCC đối với trạm chiết gas theo tần suất nào?",
+    "answer": ">> Tần suất kiểm tra an toàn PCCC của cơ quan Công an đối với trạm chiết gas được thực hiện theo cơ chế phân cấp và mức độ rủi ro tại {Nghị định 105/2025/NĐ-CP} và {Nghị định 347/2026/NĐ-CP}.\n\n## Chu kỳ kiểm tra định kỳ\n- **Cơ sở có nguy cơ cháy nổ cao (loại 1):** Kiểm tra định kỳ **01 năm một lần**.\n- **Các cơ sở còn lại:** Kiểm tra định kỳ **02 năm một lần**.\n- **Kiểm tra đột xuất:** Chỉ thực hiện khi có dấu hiệu vi phạm nghiêm trọng hoặc theo chuyên đề chỉ đạo của Bộ Công an, UBND tỉnh.\n\n!! Cơ quan kiểm tra phải thông báo trước tối thiểu 03 ngày làm việc đối với kiểm tra định kỳ."
+  },
+  {
+    "question": "Nhân viên làm việc tại trạm chiết gas có bắt buộc phải huấn luyện PCCC không?",
+    "answer": ">> **CÓ**, người đứng đầu cơ sở và các thành viên Đội PCCC cơ sở của trạm chiết gas bắt buộc phải tham gia huấn luyện nghiệp vụ theo {Điều 28 Nghị định 105/2025/NĐ-CP}.\n\n## Thời lượng và chu kỳ\n- Huấn luyện định kỳ **05 năm một lần** (thời lượng từ 16 đến 32 giờ tùy đối tượng).\n- Bồi dưỡng định kỳ **hằng năm** (thời lượng từ 8 đến 16 giờ).\n- Chứng nhận kiểu cũ đã bãi bỏ; cơ quan Công an cấp văn bản thông báo kết quả huấn luyện kèm danh sách đạt yêu cầu để cơ sở lưu hồ sơ quản lý."
+  },
+  {
+    "question": "Quy định về an toàn sử dụng điện trong trạm chiết gas để phòng cháy?",
+    "answer": ">> An toàn hệ thống điện tại trạm chiết gas phải tuân thủ nghiêm theo {Điều 8 Luật PCCC và CNCH 55/2024/QH15}:\n\n## Yêu cầu kỹ thuật\n- Dây dẫn điện phải đi trong ống gen bảo vệ bằng nhựa chống cháy hoặc kim loại.\n- Thiết kế lắp đặt aptomat (aptomat chống giật, aptomat quá tải) riêng cho từng tầng hoặc từng thiết bị công suất lớn.\n- Không cắm quá nhiều thiết bị điện công suất cao vào cùng một ổ cắm.\n- Ngắt toàn bộ nguồn điện các thiết bị không sử dụng trước khi đóng cửa cơ sở."
+  },
+  {
+    "question": "Mức phạt vi phạm quy định PCCC phổ biến đối với trạm chiết gas?",
+    "answer": ">> Mức xử phạt vi phạm hành chính đối với trạm chiết gas căn cứ theo {Nghị định 106/2025/NĐ-CP}:\n\n## Một số lỗi thường gặp\n- Không có nội quy, tiêu lệnh PCCC: Phạt từ 500.000 đến 1.500.000 đồng.\n- Để hàng hóa cản trở lối thoát nạn: Phạt từ 2.000.000 đến 5.000.000 đồng.\n- Không trang bị đủ bình chữa cháy: Phạt từ 1.000.000 đến 3.000.000 đồng.\n- Không huấn luyện nghiệp vụ PCCC định kỳ: Phạt từ 3.000.000 đến 6.000.000 đồng.\n\n!! Nếu cơ sở thuộc tổ chức/công ty thì mức phạt gấp 02 lần cá nhân."
+  },
+  {
+    "question": "Trạm chiết gas khi sửa chữa, cải tạo có phải xin nghiệm thu PCCC lại không?",
+    "answer": ">> Căn cứ {Nghị quyết 66.18/2026/NQ-CP} và {Nghị định 347/2026/NĐ-CP}, thủ tục nộp hồ sơ xin nghiệm thu tại cơ quan Công an đã được **bãi bỏ** hoàn toàn.\n\n## Trách nhiệm của chủ cơ sở\n- Nếu cải tạo làm thay đổi giải pháp thoát nạn, ngăn cháy lan hoặc hệ thống PCCC: Phải thẩm định lại thiết kế nếu thuộc diện Phụ lục III.\n- Sau khi thi công xong, chủ đầu tư tự tổ chức nghiệm thu với các nhà thầu và cập nhật thông tin thay đổi lên Hệ thống cơ sở dữ liệu về PCCC trước khi đưa vào khai thác."
+  },
+  {
+    "question": "Yêu cầu về lối thoát nạn đối với cửa hàng xăng dầu theo quy định mới nhất?",
+    "answer": ">> Đối với cửa hàng xăng dầu, công trình phải bảo đảm tối thiểu **02 lối thoát nạn độc lập** hoặc có lối ra khẩn cấp (qua ban công, cửa sổ có thang thoát hiểm hoặc lên mái) theo {Luật PCCC và CNCH số 55/2024/QH15}.\n\n## Yêu cầu cụ thể\n- Hành lang và cầu thang thoát nạn phải thông thoáng, không chứa hàng hóa cản trở.\n- Cửa thoát hiểm mở theo chiều thoát nạn, không khóa khi có người hoạt động bên trong.\n- Trang bị đèn Exit chỉ dẫn thoát nạn và đèn chiếu sáng sự cố hoạt động tối thiểu 2 giờ.\n\n!! Vi phạm cản trở lối thoát nạn bị xử phạt từ 2 đến 5 triệu đồng theo {Nghị định 106/2025/NĐ-CP}."
+  },
+  {
+    "question": "Quy định trang bị bình chữa cháy cho cửa hàng xăng dầu cần bao nhiêu bình?",
+    "answer": ">> Căn cứ {TCVN 3890:2023}, cửa hàng xăng dầu phải trang bị bình chữa cháy xách tay bảo đảm định mức tối thiểu **1 bình/50 m2** sàn (đối với khu vực nguy hiểm cháy trung bình) và mỗi tầng phải có tối thiểu **02 bình**.\n\n## Hướng dẫn bố trí\n- Bố trí bình tại các vị trí dễ thấy, dễ lấy như cạnh cửa ra vào, chiếu nghỉ cầu thang.\n- Chiều cao treo bình không quá 1,2 m tính từ mặt sàn đến quai xách.\n- Định kỳ kiểm tra đồng hồ áp suất 01 tháng/lần; nạp sạc lại sau 12 tháng với bình mới hoặc 06 tháng với bình đã nạp lại."
+  },
+  {
+    "question": "Hồ sơ phương án chữa cháy của cửa hàng xăng dầu lập như thế nào?",
+    "answer": ">> Phương án chữa cháy của cơ sở cửa hàng xăng dầu được xây dựng theo Mẫu quy định tại {Thông tư 36/2025/TT-BCA} và do người đứng đầu cơ sở trực tiếp phê duyệt.\n\n## Nội dung cốt lõi\n- Sơ đồ mặt bằng, đường giao thông, nguồn nước chữa cháy quanh cơ sở.\n- Phân công nhiệm vụ cụ thể cho từng thành viên Đội PCCC cơ sở khi xảy ra cháy.\n- Biện pháp tổ chức thoát nạn cho người và di chuyển tài sản có giá trị.\n- Kế hoạch phối hợp với lực lượng Cảnh sát PCCC chuyên nghiệp qua đầu số 114.\n\n!! Phương án chữa cháy phải được tổ chức thực tập định kỳ tối thiểu **01 năm một lần**."
+  },
+  {
+    "question": "Cơ quan Công an kiểm tra PCCC đối với cửa hàng xăng dầu theo tần suất nào?",
+    "answer": ">> Tần suất kiểm tra an toàn PCCC của cơ quan Công an đối với cửa hàng xăng dầu được thực hiện theo cơ chế phân cấp và mức độ rủi ro tại {Nghị định 105/2025/NĐ-CP} và {Nghị định 347/2026/NĐ-CP}.\n\n## Chu kỳ kiểm tra định kỳ\n- **Cơ sở có nguy cơ cháy nổ cao (loại 1):** Kiểm tra định kỳ **01 năm một lần**.\n- **Các cơ sở còn lại:** Kiểm tra định kỳ **02 năm một lần**.\n- **Kiểm tra đột xuất:** Chỉ thực hiện khi có dấu hiệu vi phạm nghiêm trọng hoặc theo chuyên đề chỉ đạo của Bộ Công an, UBND tỉnh.\n\n!! Cơ quan kiểm tra phải thông báo trước tối thiểu 03 ngày làm việc đối với kiểm tra định kỳ."
+  },
+  {
+    "question": "Nhân viên làm việc tại cửa hàng xăng dầu có bắt buộc phải huấn luyện PCCC không?",
+    "answer": ">> **CÓ**, người đứng đầu cơ sở và các thành viên Đội PCCC cơ sở của cửa hàng xăng dầu bắt buộc phải tham gia huấn luyện nghiệp vụ theo {Điều 28 Nghị định 105/2025/NĐ-CP}.\n\n## Thời lượng và chu kỳ\n- Huấn luyện định kỳ **05 năm một lần** (thời lượng từ 16 đến 32 giờ tùy đối tượng).\n- Bồi dưỡng định kỳ **hằng năm** (thời lượng từ 8 đến 16 giờ).\n- Chứng nhận kiểu cũ đã bãi bỏ; cơ quan Công an cấp văn bản thông báo kết quả huấn luyện kèm danh sách đạt yêu cầu để cơ sở lưu hồ sơ quản lý."
+  },
+  {
+    "question": "Quy định về an toàn sử dụng điện trong cửa hàng xăng dầu để phòng cháy?",
+    "answer": ">> An toàn hệ thống điện tại cửa hàng xăng dầu phải tuân thủ nghiêm theo {Điều 8 Luật PCCC và CNCH 55/2024/QH15}:\n\n## Yêu cầu kỹ thuật\n- Dây dẫn điện phải đi trong ống gen bảo vệ bằng nhựa chống cháy hoặc kim loại.\n- Thiết kế lắp đặt aptomat (aptomat chống giật, aptomat quá tải) riêng cho từng tầng hoặc từng thiết bị công suất lớn.\n- Không cắm quá nhiều thiết bị điện công suất cao vào cùng một ổ cắm.\n- Ngắt toàn bộ nguồn điện các thiết bị không sử dụng trước khi đóng cửa cơ sở."
+  },
+  {
+    "question": "Mức phạt vi phạm quy định PCCC phổ biến đối với cửa hàng xăng dầu?",
+    "answer": ">> Mức xử phạt vi phạm hành chính đối với cửa hàng xăng dầu căn cứ theo {Nghị định 106/2025/NĐ-CP}:\n\n## Một số lỗi thường gặp\n- Không có nội quy, tiêu lệnh PCCC: Phạt từ 500.000 đến 1.500.000 đồng.\n- Để hàng hóa cản trở lối thoát nạn: Phạt từ 2.000.000 đến 5.000.000 đồng.\n- Không trang bị đủ bình chữa cháy: Phạt từ 1.000.000 đến 3.000.000 đồng.\n- Không huấn luyện nghiệp vụ PCCC định kỳ: Phạt từ 3.000.000 đến 6.000.000 đồng.\n\n!! Nếu cơ sở thuộc tổ chức/công ty thì mức phạt gấp 02 lần cá nhân."
+  },
+  {
+    "question": "Cửa hàng xăng dầu khi sửa chữa, cải tạo có phải xin nghiệm thu PCCC lại không?",
+    "answer": ">> Căn cứ {Nghị quyết 66.18/2026/NQ-CP} và {Nghị định 347/2026/NĐ-CP}, thủ tục nộp hồ sơ xin nghiệm thu tại cơ quan Công an đã được **bãi bỏ** hoàn toàn.\n\n## Trách nhiệm của chủ cơ sở\n- Nếu cải tạo làm thay đổi giải pháp thoát nạn, ngăn cháy lan hoặc hệ thống PCCC: Phải thẩm định lại thiết kế nếu thuộc diện Phụ lục III.\n- Sau khi thi công xong, chủ đầu tư tự tổ chức nghiệm thu với các nhà thầu và cập nhật thông tin thay đổi lên Hệ thống cơ sở dữ liệu về PCCC trước khi đưa vào khai thác."
+  },
+  {
+    "question": "Yêu cầu về lối thoát nạn đối với cơ sở gia công cơ khí theo quy định mới nhất?",
+    "answer": ">> Đối với cơ sở gia công cơ khí, công trình phải bảo đảm tối thiểu **02 lối thoát nạn độc lập** hoặc có lối ra khẩn cấp (qua ban công, cửa sổ có thang thoát hiểm hoặc lên mái) theo {Luật PCCC và CNCH số 55/2024/QH15}.\n\n## Yêu cầu cụ thể\n- Hành lang và cầu thang thoát nạn phải thông thoáng, không chứa hàng hóa cản trở.\n- Cửa thoát hiểm mở theo chiều thoát nạn, không khóa khi có người hoạt động bên trong.\n- Trang bị đèn Exit chỉ dẫn thoát nạn và đèn chiếu sáng sự cố hoạt động tối thiểu 2 giờ.\n\n!! Vi phạm cản trở lối thoát nạn bị xử phạt từ 2 đến 5 triệu đồng theo {Nghị định 106/2025/NĐ-CP}."
+  },
+  {
+    "question": "Quy định trang bị bình chữa cháy cho cơ sở gia công cơ khí cần bao nhiêu bình?",
+    "answer": ">> Căn cứ {TCVN 3890:2023}, cơ sở gia công cơ khí phải trang bị bình chữa cháy xách tay bảo đảm định mức tối thiểu **1 bình/50 m2** sàn (đối với khu vực nguy hiểm cháy trung bình) và mỗi tầng phải có tối thiểu **02 bình**.\n\n## Hướng dẫn bố trí\n- Bố trí bình tại các vị trí dễ thấy, dễ lấy như cạnh cửa ra vào, chiếu nghỉ cầu thang.\n- Chiều cao treo bình không quá 1,2 m tính từ mặt sàn đến quai xách.\n- Định kỳ kiểm tra đồng hồ áp suất 01 tháng/lần; nạp sạc lại sau 12 tháng với bình mới hoặc 06 tháng với bình đã nạp lại."
+  },
+  {
+    "question": "Hồ sơ phương án chữa cháy của cơ sở gia công cơ khí lập như thế nào?",
+    "answer": ">> Phương án chữa cháy của cơ sở cơ sở gia công cơ khí được xây dựng theo Mẫu quy định tại {Thông tư 36/2025/TT-BCA} và do người đứng đầu cơ sở trực tiếp phê duyệt.\n\n## Nội dung cốt lõi\n- Sơ đồ mặt bằng, đường giao thông, nguồn nước chữa cháy quanh cơ sở.\n- Phân công nhiệm vụ cụ thể cho từng thành viên Đội PCCC cơ sở khi xảy ra cháy.\n- Biện pháp tổ chức thoát nạn cho người và di chuyển tài sản có giá trị.\n- Kế hoạch phối hợp với lực lượng Cảnh sát PCCC chuyên nghiệp qua đầu số 114.\n\n!! Phương án chữa cháy phải được tổ chức thực tập định kỳ tối thiểu **01 năm một lần**."
+  },
+  {
+    "question": "Cơ quan Công an kiểm tra PCCC đối với cơ sở gia công cơ khí theo tần suất nào?",
+    "answer": ">> Tần suất kiểm tra an toàn PCCC của cơ quan Công an đối với cơ sở gia công cơ khí được thực hiện theo cơ chế phân cấp và mức độ rủi ro tại {Nghị định 105/2025/NĐ-CP} và {Nghị định 347/2026/NĐ-CP}.\n\n## Chu kỳ kiểm tra định kỳ\n- **Cơ sở có nguy cơ cháy nổ cao (loại 1):** Kiểm tra định kỳ **01 năm một lần**.\n- **Các cơ sở còn lại:** Kiểm tra định kỳ **02 năm một lần**.\n- **Kiểm tra đột xuất:** Chỉ thực hiện khi có dấu hiệu vi phạm nghiêm trọng hoặc theo chuyên đề chỉ đạo của Bộ Công an, UBND tỉnh.\n\n!! Cơ quan kiểm tra phải thông báo trước tối thiểu 03 ngày làm việc đối với kiểm tra định kỳ."
+  },
+  {
+    "question": "Nhân viên làm việc tại cơ sở gia công cơ khí có bắt buộc phải huấn luyện PCCC không?",
+    "answer": ">> **CÓ**, người đứng đầu cơ sở và các thành viên Đội PCCC cơ sở của cơ sở gia công cơ khí bắt buộc phải tham gia huấn luyện nghiệp vụ theo {Điều 28 Nghị định 105/2025/NĐ-CP}.\n\n## Thời lượng và chu kỳ\n- Huấn luyện định kỳ **05 năm một lần** (thời lượng từ 16 đến 32 giờ tùy đối tượng).\n- Bồi dưỡng định kỳ **hằng năm** (thời lượng từ 8 đến 16 giờ).\n- Chứng nhận kiểu cũ đã bãi bỏ; cơ quan Công an cấp văn bản thông báo kết quả huấn luyện kèm danh sách đạt yêu cầu để cơ sở lưu hồ sơ quản lý."
+  },
+  {
+    "question": "Quy định về an toàn sử dụng điện trong cơ sở gia công cơ khí để phòng cháy?",
+    "answer": ">> An toàn hệ thống điện tại cơ sở gia công cơ khí phải tuân thủ nghiêm theo {Điều 8 Luật PCCC và CNCH 55/2024/QH15}:\n\n## Yêu cầu kỹ thuật\n- Dây dẫn điện phải đi trong ống gen bảo vệ bằng nhựa chống cháy hoặc kim loại.\n- Thiết kế lắp đặt aptomat (aptomat chống giật, aptomat quá tải) riêng cho từng tầng hoặc từng thiết bị công suất lớn.\n- Không cắm quá nhiều thiết bị điện công suất cao vào cùng một ổ cắm.\n- Ngắt toàn bộ nguồn điện các thiết bị không sử dụng trước khi đóng cửa cơ sở."
+  },
+  {
+    "question": "Mức phạt vi phạm quy định PCCC phổ biến đối với cơ sở gia công cơ khí?",
+    "answer": ">> Mức xử phạt vi phạm hành chính đối với cơ sở gia công cơ khí căn cứ theo {Nghị định 106/2025/NĐ-CP}:\n\n## Một số lỗi thường gặp\n- Không có nội quy, tiêu lệnh PCCC: Phạt từ 500.000 đến 1.500.000 đồng.\n- Để hàng hóa cản trở lối thoát nạn: Phạt từ 2.000.000 đến 5.000.000 đồng.\n- Không trang bị đủ bình chữa cháy: Phạt từ 1.000.000 đến 3.000.000 đồng.\n- Không huấn luyện nghiệp vụ PCCC định kỳ: Phạt từ 3.000.000 đến 6.000.000 đồng.\n\n!! Nếu cơ sở thuộc tổ chức/công ty thì mức phạt gấp 02 lần cá nhân."
+  },
+  {
+    "question": "Cơ sở gia công cơ khí khi sửa chữa, cải tạo có phải xin nghiệm thu PCCC lại không?",
+    "answer": ">> Căn cứ {Nghị quyết 66.18/2026/NQ-CP} và {Nghị định 347/2026/NĐ-CP}, thủ tục nộp hồ sơ xin nghiệm thu tại cơ quan Công an đã được **bãi bỏ** hoàn toàn.\n\n## Trách nhiệm của chủ cơ sở\n- Nếu cải tạo làm thay đổi giải pháp thoát nạn, ngăn cháy lan hoặc hệ thống PCCC: Phải thẩm định lại thiết kế nếu thuộc diện Phụ lục III.\n- Sau khi thi công xong, chủ đầu tư tự tổ chức nghiệm thu với các nhà thầu và cập nhật thông tin thay đổi lên Hệ thống cơ sở dữ liệu về PCCC trước khi đưa vào khai thác."
+  },
+  {
+    "question": "Trạm sạc xe điện trong hầm chung cư, tòa nhà cần đáp ứng yêu cầu PCCC nào?",
+    "answer": ">> Trạm sạc xe điện phải được bố trí tại khu vực riêng biệt, ngăn cách với khu vực đỗ xe xăng dầu và lối thoát nạn theo văn bản hướng dẫn của Cục Cảnh sát PCCC và CNCH.\n\n## Yêu cầu kỹ thuật\n- Trang bị hệ thống chữa cháy tự động bằng nước hoặc bọt bao phủ trực tiếp vị trí sạc.\n- Lắp đặt nút ngắt khẩn cấp nguồn điện trạm sạc đặt ở vị trí dễ tiếp cận.\n- Bố trí bình chữa cháy bột hoặc bình bọt chuyên dụng cho pin Lithium-ion ngay cạnh trụ sạc.\n- Có biển cảnh báo, hướng dẫn quy trình sạc an toàn cho cư dân."
+  },
+  {
+    "question": "Phân biệt bình chữa cháy dạng bột ABC và bình khí CO2 như thế nào?",
+    "answer": ">> Bình bột và bình khí CO2 có đặc tính và công năng khác nhau rõ rệt theo tiêu chuẩn {{TCVN 3890:2023}}:\n\n## Cách nhận biết và sử dụng\n- **Bình bột (kí hiệu MFZ/ABC):** Có đồng hồ đo áp suất trên cổ bình; chữa cháy hiệu quả chất rắn, lỏng, khí và điện; không dùng dập cháy thiết bị điện tử vi mạch tinh vi vì bột để lại muối ăn mòn.\n- **Bình khí CO2 (kí hiệu MT):** Không có đồng hồ đo áp suất, loa phun to hình loa kèn; chữa cháy rất tốt cho thiết bị điện, phòng máy chủ, buồng máy tính vì không để lại cặn; tuyệt đối không dùng dập đám cháy ngoài trời lộng gió hoặc kim loại kiềm; cẩn trọng bỏng lạnh khi cầm vào loa phun."
+  },
+  {
+    "question": "Thời gian hoạt động của đèn chiếu sáng sự cố và biển Exit thoát nạn là bao lâu?",
+    "answer": ">> Theo quy chuẩn {{TCVN 3890:2023}} và {{QCVN 06:2022/BXD}}, hệ thống đèn chiếu sáng sự cố và đèn biển chỉ dẫn thoát nạn (Exit) phải có nguồn điện dự phòng bảo đảm thời gian hoạt động tối thiểu là **02 giờ (120 phút)** kể từ thời điểm mất nguồn điện lưới chính."
+  },
+  {
+    "question": "Tem kiểm định phương tiện PCCC có ý nghĩa gì và phương tiện nào phải dán tem?",
+    "answer": ">> Tem kiểm định phương tiện PCCC do cơ quan Cảnh sát PCCC hoặc đơn vị được ủy quyền dán lên phương tiện sau khi đã thực hiện kiểm định đạt tiêu chuẩn kỹ thuật theo {{Nghị định 105/2025/NĐ-CP}}.\n\n## Các phương tiện bắt buộc kiểm định\n- Bình chữa cháy các loại.\n- Đầu phun Sprinkler, van báo động, van xả tràn.\n- Đầu báo cháy, tủ trung tâm báo cháy, chuông, nút ấn báo cháy.\n- Máy bơm chữa cháy, vòi chữa cháy, lăng chữa cháy.\n- Cửa ngăn cháy, vật liệu chống cháy, sơn chống cháy."
+  },
+  {
+    "question": "Khoảng cách giữa các trụ nước chữa cháy ngoài nhà là bao nhiêu mét?",
+    "answer": ">> Theo quy định tại {{TCVN 3890:2023}} và {{QCVN 06:2022/BXD}}, khoảng cách giữa các trụ cấp nước chữa cháy ngoài nhà dọc theo các tuyến đường giao thông không được vượt quá **150 mét**; khoảng cách từ mép đường xe chạy đến trụ nước từ **1,5 đến 2,5 mét** để xe chữa cháy dễ dàng tiếp cận lấy nước."
+  },
+  {
+    "question": "Trụ nước chữa cháy đô thị do đơn vị nào quản lý và bảo trì?",
+    "answer": ">> Trụ nước chữa cháy trên mạng lưới cấp nước đô thị do **Doanh nghiệp kinh doanh nước sạch** phối hợp với **Cơ quan Cảnh sát PCCC và CNCH** địa phương quản lý, kiểm tra định kỳ tối thiểu **06 tháng một lần** để bảo đảm áp lực và lưu lượng nước chữa cháy theo {{Điều 21 Luật PCCC và CNCH 55/2024/QH15}}."
+  },
+  {
+    "question": "Hệ thống hút khói sự cố bắt buộc trang bị cho khu vực nào?",
+    "answer": ">> Hệ thống hút khói sự cố bắt buộc trang bị theo {{QCVN 06:2022/BXD}} cho:\n- Hành lang thoát nạn dài trên 15 m không có thông gió tự nhiên.\n- Tầng hầm, tầng nửa hầm có diện tích từ 50 m2 trở lên có người làm việc thường xuyên hoặc dùng làm gara để xe.\n- Sảnh công cộng, gian phòng tập trung từ 50 người trở lên trong các tòa nhà cao tầng."
+  },
+  {
+    "question": "Chủ hộ gia đình có trách nhiệm gì trong công tác phòng cháy chữa cháy?",
+    "answer": ">> Trách nhiệm của chủ hộ gia đình được quy định cụ thể tại {{Điều 9 Luật PCCC và CNCH số 55/2024/QH15}}:\n1. Nhắc nhở các thành viên trong gia đình chấp hành nội quy an toàn PCCC.\n2. Bố trí nơi đun nấu, thờ cúng an toàn; ngắt các thiết bị điện sinh nhiệt khi không có người ở nhà.\n3. Tự trang bị tối thiểu 01 bình chữa cháy xách tay và dụng cụ phá dỡ thô sơ.\n4. Tạo lối thoát nạn khẩn cấp thứ hai qua ban công hoặc mái nhà."
+  },
+  {
+    "question": "Quy định về khoảng cách an toàn PCCC giữa các công trình xây dựng?",
+    "answer": ">> Khoảng cách an toàn PCCC giữa các tòa nhà và công trình độc lập được tính toán dựa trên bậc chịu lửa của công trình theo {{Bảng E.1 Phụ lục E QCVN 06:2022/BXD}}:\n- Giữa hai công trình có bậc chịu lửa bậc I, II: Tối thiểu từ **6 m đến 8 m**.\n- Giữa công trình bậc I, II với công trình bậc III, IV: Tối thiểu từ **8 m đến 10 m**.\n- Giữa hai công trình bậc IV, V: Tối thiểu từ **10 m đến 15 m**.\n- Trường hợp tường giáp ranh là **tường ngăn cháy loại 1** không có cửa mở thì không quy định khoảng cách an toàn."
+  },
+  {
+    "question": "Bậc chịu lửa của công trình là gì và có mấy bậc?",
+    "answer": ">> Bậc chịu lửa là đặc trưng kỹ thuật biểu thị khả năng chịu lửa của các bộ phận kết cấu chủ yếu của nhà theo {{QCVN 06:2022/BXD}}.\n\n## Phân loại 5 bậc chịu lửa\n- **Bậc I:** Kết cấu chịu lực bằng bê tông cốt thép hoặc thép bọc bảo vệ chống cháy chịu lửa trên 120 phút.\n- **Bậc II:** Kết cấu chịu lửa từ 90 đến 120 phút (phổ biến cho nhà chung cư, văn phòng hiện đại).\n- **Bậc III:** Tường gạch, sàn bê tông hoặc sàn gỗ khó cháy (chịu lửa 45-60 phút).\n- **Bậc IV, Bậc V:** Khung thép không bọc bảo vệ, vật liệu dễ cháy."
+  },
+  {
+    "question": "Khi phát hiện nguy cơ trực tiếp phát sinh cháy nổ thì phải làm gì?",
+    "answer": ">> Khi phát hiện nguy cơ trực tiếp phát sinh cháy nổ, người phát hiện phải **lập tức thông báo cho người đứng đầu cơ sở hoặc lực lượng PCCC gần nhất**, đồng thời áp dụng ngay các biện pháp loại trừ nguy cơ theo {{Điều 18 Luật PCCC và CNCH 55/2024/QH15}}.\n- Tạm dừng ngay các hoạt động hàn cắt, sử dụng nguồn nhiệt, nguồn lửa tại khu vực nguy hiểm.\n- Cắt cầu dao điện khu vực có nguy cơ chập cháy.\n- Di dời vật tư, hàng hóa dễ cháy ra xa khu vực phát sinh nguồn nhiệt."
+  },
+  {
+    "question": "Trách nhiệm bồi thường thiệt hại khi để xảy ra cháy được xác định như thế nào?",
+    "answer": ">> Cá nhân, cơ quan, tổ chức có hành vi vi phạm quy định về PCCC để xảy ra cháy gây thiệt hại cho người khác phải bồi thường toàn bộ thiệt hại theo quy định của {{Bộ luật Dân sự 2015}} và bị xử lý vi phạm hành chính hoặc truy cứu trách nhiệm hình sự theo {{Điều 313 Bộ luật Hình sự}} nếu gây hậu quả nghiêm trọng."
+  },
+  {
+    "question": "Cơ sở kinh doanh dịch vụ PCCC cần đáp ứng điều kiện gì?",
+    "answer": ">> Điều kiện kinh doanh dịch vụ PCCC (tư vấn thiết kế, tư vấn giám sát, thi công, bảo dưỡng, kiểm định PCCC) quy định tại {{Điều 41 Nghị định 105/2025/NĐ-CP}}:\n- Người đứng đầu hoặc người đại diện pháp luật phải có chứng chỉ hành nghề PCCC tương ứng.\n- Có đội ngũ cán bộ kỹ thuật có văn bằng, chứng chỉ chuyên ngành PCCC theo quy định.\n- Có địa điểm hoạt động, cơ sở vật chất, phương tiện, thiết bị kỹ thuật đáp ứng yêu cầu hành nghề."
+  },
+  {
+    "question": "Hệ thống chữa cháy họng nước vách tường cần bảo dưỡng định kỳ thế nào?",
+    "answer": ">> Hệ thống họng nước chữa cháy trong nhà phải được kiểm tra định kỳ tối thiểu **01 tháng một lần** và bảo dưỡng toàn diện **06 tháng một lần** theo {{TCVN 3890:2023}}:\n- Kiểm tra tình trạng van khóa, cuộn vòi chữa cháy, lăng phun không bị rách, mục nát.\n- Thử mở van để kiểm tra áp lực nước và độ kín của gioăng cao su.\n- Bảo dưỡng động cơ máy bơm chữa cháy và bình tích áp định kỳ."
+  },
+  {
+    "question": "Cơ quan nào có thẩm quyền xử phạt vi phạm hành chính về PCCC?",
+    "answer": ">> Thẩm quyền xử phạt vi phạm hành chính trong lĩnh vực PCCC và CNCH được quy định tại {{Chương III Nghị định 106/2025/NĐ-CP}}:\n- **Chủ tịch Ủy ban nhân dân các cấp:** Cấp xã, cấp huyện, cấp tỉnh.\n- **Lực lượng Công an nhân dân:** Chiến sĩ CAND, Đội trưởng, Trưởng Công an cấp xã, Trưởng Công an cấp huyện, Trưởng phòng Cảnh sát PCCC và CNCH (PC07), Giám đốc Công an tỉnh, Cục trưởng Cục C07."
+  },
+  {
+    "question": "Ứng dụng Báo cháy 114 có những chức năng gì cho người dân?",
+    "answer": ">> Ứng dụng **\"Báo cháy 114\"** của Bộ Công an hỗ trợ người dân và doanh nghiệp:\n1. **Gọi 114 Video Call:** Truyền hình ảnh trực tiếp hiện trường cháy nổ về Trung tâm chỉ huy để đánh giá chính xác quy mô đám cháy.\n2. **Gửi tin nhắn cảnh báo khẩn cấp:** Định vị vị trí chính xác của người gặp nạn.\n3. **Cập nhật tin tức an toàn PCCC:** Tra cứu cẩm nang kỹ năng thoát nạn, xử lý tình huống cháy nổ và quy định pháp luật mới nhất."
+  }
 ]

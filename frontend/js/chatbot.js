@@ -183,35 +183,131 @@
         }
 
         /* ===== Câu trả lời có cấu trúc ===== */
-        .fras-msg.ai .fras-bubble { max-width: 92%; }
-        .fras-rich { font-size: 0.73rem; line-height: 1.52; color: #1e293b; word-break: break-word; }
-        .fras-rich p { margin: 0 0 8px; }
-        .fras-rich strong { color: #0F2347; font-weight: 800; }
+        .fras-msg.ai .fras-bubble { max-width: 95%; font-size: 0.81rem; line-height: 1.6; }
+        .fras-rich { font-size: 0.81rem; line-height: 1.6; color: #1e293b; word-break: break-word; }
+        .fras-rich p { margin: 0 0 10px; font-size: 0.81rem; line-height: 1.6; }
+        .fras-rich strong { color: #0F2347; font-weight: 700; }
         .fras-rich mark { background: #FFF1B8; color: inherit; padding: 0 2px; }
-        .fras-answer { background: #EEF4FC; border-left: 4px solid #1A3A6B; padding: 9px 12px; margin: 0 0 10px; font-weight: 600; color: #0F2347; }
-        .fras-h { margin: 10px 0 5px; padding-bottom: 3px; border-bottom: 2px solid #C0202A; color: #C0202A; font-weight: 800; font-size: 0.70rem; letter-spacing: .4px; text-transform: uppercase; }
-        .fras-warn { background: #FFF7E6; border-left: 4px solid #C9962C; padding: 8px 12px; margin: 8px 0; color: #7a4b00; font-weight: 600; }
-        .fras-steps { list-style: none; counter-reset: step; margin: 4px 0 8px; padding: 0; }
-        .fras-steps li { counter-increment: step; position: relative; padding: 5px 0 5px 34px; margin: 0 0 4px; }
-        .fras-steps li::before { content: counter(step); position: absolute; left: 0; top: 4px; width: 24px; height: 24px; background: #1A3A6B; color: #fff; font-weight: 800; font-size: 0.78rem; text-align: center; line-height: 24px; }
-        .fras-rich ul { margin: 4px 0 8px; padding-left: 20px; }
-        .fras-rich ul li { margin: 0 0 3px; }
+        
+        .fras-answer {
+            background: #f0f4fa;
+            border: 1px solid #d5e0f2;
+            border-left: 4px solid #1A3A6B;
+            padding: 10px 14px;
+            margin: 0 0 12px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: #0f2347;
+            line-height: 1.6;
+        }
+        
+        .fras-h {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 14px 0 8px;
+            padding: 6px 12px;
+            background: #f8fafc;
+            border-left: 3px solid #C0202A;
+            border-bottom: 1px solid #e2e8f0;
+            color: #991b1b;
+            font-weight: 700;
+            font-size: 0.77rem;
+            letter-spacing: .4px;
+            text-transform: uppercase;
+        }
+        .fras-h-bar { display: none; }
+        
+        .fras-warn {
+            background: #fffbeb;
+            border: 1px solid #fde68a;
+            border-left: 4px solid #d97706;
+            padding: 9px 12px;
+            margin: 10px 0;
+            color: #92400e;
+            font-size: 0.79rem;
+            line-height: 1.55;
+            font-weight: 500;
+        }
+        
+        .fras-steps { list-style: none; counter-reset: step; margin: 6px 0 10px; padding: 0; }
+        .fras-steps li { counter-increment: step; position: relative; padding: 5px 0 5px 34px; margin: 0 0 4px; font-size: 0.81rem; line-height: 1.55; }
+        .fras-steps li::before { content: counter(step); position: absolute; left: 0; top: 4px; width: 22px; height: 22px; background: #1A3A6B; color: #fff; font-weight: 700; font-size: 0.75rem; text-align: center; line-height: 22px; }
+        
+        .fras-rich ul { margin: 6px 0 10px; padding-left: 18px; font-size: 0.81rem; line-height: 1.6; }
+        .fras-rich ul li { margin: 0 0 5px; }
         .fras-rich ul li::marker { color: #C0202A; }
-        .fras-cite { display: inline-block; font-size: 0.68rem; font-weight: 600; color: #1A3A6B; background: #E8EEF8; border: 1px solid #C5D3EA; padding: 0 6px; margin: 0 1px; white-space: normal; }
-        .fras-table { width: 100%; border-collapse: collapse; margin: 6px 0 10px; font-size: 0.70rem; }
-        .fras-table th { background: #1A3A6B; color: #fff; padding: 5px 8px; text-align: left; font-weight: 700; }
-        .fras-table td { padding: 5px 8px; border: 1px solid #D8DCE6; vertical-align: top; }
-        .fras-table tr:nth-child(even) td { background: #F6F8FC; }
-        .fras-foot { margin-top: 8px; font-size: 0.72rem; font-style: italic; color: #64748b; }
-        .fras-feedback { display: flex; gap: 6px; align-items: center; margin-top: 8px; font-size: 0.72rem; color: #64748b; }
+        
+        .fras-cite {
+            display: inline-block;
+            font-size: 0.72rem;
+            font-weight: 500;
+            color: #1e40af;
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            padding: 1px 6px;
+            margin: 0 2px;
+            line-height: 1.45;
+            vertical-align: baseline;
+        }
+        
+        /* Bảng hiển thị thông tin chuẩn mực, gọn gàng */
+        .fras-table {
+            width: 100% !important;
+            border-collapse: collapse !important;
+            margin: 10px 0 14px !important;
+            font-size: 0.78rem !important;
+            border: 1px solid #cbd5e1 !important;
+            background: #ffffff !important;
+        }
+        .fras-table thead th,
+        .fras-table th {
+            background: #1A3A6B !important;
+            color: #ffffff !important;
+            padding: 8px 10px !important;
+            text-align: left !important;
+            font-weight: 700 !important;
+            font-size: 0.74rem !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.3px !important;
+            border: 1px solid #1A3A6B !important;
+            border-bottom: 2px solid #0F2347 !important;
+        }
+        .fras-table th strong {
+            color: #ffffff !important;
+            font-weight: 700 !important;
+        }
+        .fras-table tbody td,
+        .fras-table td {
+            padding: 8px 10px !important;
+            border: 1px solid #e2e8f0 !important;
+            vertical-align: middle !important;
+            font-size: 0.78rem !important;
+            color: #334155 !important;
+            line-height: 1.45 !important;
+            background: #ffffff !important;
+        }
+        .fras-table tr:nth-child(even) td {
+            background: #f8fafc !important;
+        }
+        .fras-table tr:hover td {
+            background: #f1f5f9 !important;
+        }
+        .fras-table td strong {
+            color: #1e3a8a !important;
+            font-weight: 600 !important;
+        }
+        
+        .fras-foot { margin-top: 8px; font-size: 0.74rem; font-style: italic; color: #64748b; }
+        .fras-feedback { display: flex; gap: 6px; align-items: center; margin-top: 8px; font-size: 0.74rem; color: #64748b; }
         .fras-feedback button { background: #fff; border: 1px solid #cbd5e1; padding: 2px 8px; cursor: pointer; font-size: 0.75rem; }
         .fras-feedback button:hover { border-color: #C0202A; }
-        .fras-status-text { margin-left: 8px; font-size: 0.75rem; color: #64748b; }
-
+        .fras-status-text { margin-left: 8px; font-size: 0.76rem; color: #64748b; }
+        
         /* Source badge */
         .fras-source-badge {
-            display: inline-block; font-size: 0.68rem; font-weight: 600;
-            padding: 1px 6px; border-radius: 4px; margin-top: 6px;
+            display: inline-block; font-size: 0.70rem; font-weight: 600;
+            padding: 2px 8px; border-radius: 4px; margin-top: 8px;
         }
         .fras-source-badge.docs { background: #dbeafe; color: #1d4ed8; }
         .fras-source-badge.general { background: #fef3c7; color: #92400e; }

@@ -94,6 +94,18 @@
 
             <!-- Câu hỏi khó -->
             <div id="kp-qs" style="display:none;">
+                <div class="kho-box" style="margin-bottom:12px; background:#f8fafc; border-left:4px solid #16a34a;">
+                    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
+                        <div>
+                            <strong style="color:#166534; font-size:0.82rem;">🟢 Ngân hàng 200 câu hỏi chuẩn (FAQ) & Rà soát hiệu lực 1 tuần/lần</strong>
+                            <div id="faq-audit-status" style="font-size:0.75rem; color:#475569; margin-top:3px;">Đang tải trạng thái rà soát...</div>
+                        </div>
+                        <div style="display:flex; gap:6px;">
+                            <button class="btn btn-secondary btn-sm" onclick="KHO.runFaqAudit()">🔍 Rà soát hiệu lực ngay</button>
+                            <button class="btn btn-primary btn-sm" onclick="KHO.seedFaq200()">📥 Đồng bộ 200 câu chuẩn</button>
+                        </div>
+                    </div>
+                </div>
                 <div class="tm-filters">
                     <label>Trạng thái
                         <select id="kq-status" onchange="KHO.loadQs()">

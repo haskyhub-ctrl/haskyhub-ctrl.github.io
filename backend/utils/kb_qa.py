@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session
 from models import KbQuestion
 from utils.local_rag import _tokens
 
-MATCH_THRESHOLD = 0.6      # độ giống tối thiểu (Jaccard theo từ) để dùng đáp án đã duyệt
+MATCH_THRESHOLD = 0.52      # độ giống tối thiểu kết hợp Jaccard và Overlap
 MIN_TOKENS = 3
 
 
@@ -25,7 +25,13 @@ def find_approved(db: Session, message: str):
         t = set((row.question_key or "").split())
         if not t:
             continue
-        score = len(q & t) / len(q | t)
+        inter = len(q & t)
+        if not inter:
+            continue
+        # Kết hợp Jaccard và Overlap coefficient để câu hỏi ngắn khớp chuẩn với câu dài
+        jaccard = inter / len(q | t)
+        overlap = inter / min(len(q), len(t))
+        score = 0.4 * jaccard + 0.6 * overlap
         if score > best_score:
             best, best_score = row, score
     return best if best is not None and best_score >= MATCH_THRESHOLD else None
