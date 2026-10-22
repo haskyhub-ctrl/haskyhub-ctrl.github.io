@@ -279,16 +279,15 @@ def _call_9router(prompt: str, temperature: float = 0.15, max_tokens: int = 2048
     if not router_key:
         raise ValueError("ROUTER_API_KEY chưa được cấu hình")
 
-    primary_model = os.getenv("ROUTER_MODEL", "ag/gemini-3.8-flash-high")
+    primary_model = os.getenv("ROUTER_MODEL", "ag/gemini-3.8-flash-low")
     fallback_models = [
         primary_model,
-        "ag/gemini-pro-agent",
+        "ag/gemini-3.8-flash-low",
         "ag/gemini-3.8-flash",
-        "ag/gemini-3.5-flash-high",
+        "ag/gemini-3.8-flash-medium",
     ]
     if fast:
-        # Việc phụ (mở rộng câu hỏi, thẩm định): ưu tiên mô hình nhanh, không dùng bản "high" suy nghĩ lâu
-        fallback_models = ["ag/gemini-3.8-flash", "ag/gemini-3.5-flash-high"] + fallback_models
+        fallback_models = ["ag/gemini-3.8-flash-low", "ag/gemini-3.8-flash"] + fallback_models
     models_to_try = []
     for m in fallback_models:
         if m not in models_to_try:
@@ -318,6 +317,26 @@ def _call_9router(prompt: str, temperature: float = 0.15, max_tokens: int = 2048
                 resp = client.post(router_url, json=payload, headers=headers)
 
             if resp.status_code == 200:
+                raw_text = resp.text
+                if raw_text.startswith("data:") or "text/event-stream" in resp.headers.get("content-type", ""):
+                    collected = []
+                    for line in raw_text.split("\n"):
+                        line = line.strip()
+                        if line.startswith("data:"):
+                            part = line[5:].strip()
+                            if part == "[DONE]":
+                                break
+                            try:
+                                c = json.loads(part)
+                                delta = c.get("choices", [{}])[0].get("delta", {})
+                                if "content" in delta and delta["content"]:
+                                    collected.append(delta["content"])
+                            except Exception:
+                                pass
+                    full = "".join(collected).strip()
+                    if full:
+                        _safe_print(f"[9Router] OK Thành công với model '{model_name}' (Google Pro SSE)")
+                        return full
                 data = resp.json()
                 text = data["choices"][0]["message"]["content"]
                 _safe_print(f"[9Router] OK Thành công với model '{model_name}' (Google Pro)")
@@ -819,7 +838,7 @@ TRẢ VỀ JSON THUẦN (không dùng ```json):
         current_model = router_model if use_router and router_key else os.getenv("GEMINI_MODEL", "gemini-3.5-flash")
         _safe_print(f"[ask_ai_chi] Gọi LLM (ưu tiên {current_model})...")
         # Dùng mô hình nhanh (không phải bản "high" suy nghĩ chậm) để đảm bảo < 20s
-        content = _call_llm(template, temperature=0.15, max_tokens=3000, is_json=True, fast=True, timeout=18.0)
+        content = _call_llm(template, temperature=0.15, max_tokens=3000, is_json=True, fast=True, timeout=30.0)
         _safe_print(f"[ask_ai_chi] OK Got {len(content)} chars")
 
         # ── Parse JSON từ phản hồi ───────────────────────────────────
@@ -860,13 +879,8 @@ TRẢ VỀ JSON THUẦN (không dùng ```json):
         err_msg = str(e)
         _safe_print(f"[ask_ai_chi] ERROR: {err_msg}")
 
-        if 'docs_context' in locals() and docs_context and len(docs_context) > 30:
-            return {
-                "reply": _clean_chat_formatting(f"Dựa trên cơ sở dữ liệu pháp luật PCCC đã đối soát:\n\n{docs_context[:1200]}\n\n(Lưu ý: Hệ thống đang phản hồi từ kho văn bản quy chuẩn nội bộ)"),
-                "source_type": "docs",
-                "suggestions": ["Quy định về nghiệm thu PCCC?", "Khai báo cơ sở dữ liệu PCCC?", "Luật PCCC 55/2024 có gì mới?"],
-                "references": list(CURRENT_LEGAL_REFS[:2])
-            }
+        # Khong dump tho context khi LLM loi de tranh vo format va vo loi font
+        pass
 
         try:
             from routers.ai_analysis import _chat_fallback

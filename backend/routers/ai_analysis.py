@@ -76,8 +76,27 @@ async def call_gemini(prompt: str, temperature: float = 0.3, system_prompt: str 
             async with httpx.AsyncClient(timeout=httpx.Timeout(timeout, connect=10.0)) as client:
                 resp = await client.post(f"{NINEROUTER_BASE_URL}/chat/completions", headers=headers, json=payload)
                 if resp.status_code == 200:
-                    data = resp.json()
-                    full_text = data.get("choices", [{}])[0].get("message", {}).get("content", "")
+                    raw_text = resp.text
+                    full_text = ""
+                    if raw_text.startswith("data:") or "text/event-stream" in resp.headers.get("content-type", ""):
+                        parts = []
+                        for line in raw_text.split("\n"):
+                            line = line.strip()
+                            if line.startswith("data:"):
+                                sub = line[5:].strip()
+                                if sub == "[DONE]":
+                                    break
+                                try:
+                                    c = json.loads(sub)
+                                    delta = c.get("choices", [{}])[0].get("delta", {})
+                                    if "content" in delta and delta["content"]:
+                                        parts.append(delta["content"])
+                                except Exception:
+                                    pass
+                        full_text = "".join(parts).strip()
+                    else:
+                        data = resp.json()
+                        full_text = data.get("choices", [{}])[0].get("message", {}).get("content", "")
                     if full_text:
                         clean = full_text.strip()
                         if "```json" in clean:
