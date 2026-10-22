@@ -166,7 +166,7 @@
 
         .fras-bubble {
             max-width: 82%; padding: 10px 13px;
-            border-radius: 14px; font-size: 0.84rem; line-height: 1.65;
+            border-radius: 14px; font-size: 0.78rem; line-height: 1.6;
         }
         .fras-msg.user .fras-bubble {
             background: #1A3A6B; color: #ffffff;
@@ -183,35 +183,151 @@
         }
 
         /* ===== Câu trả lời có cấu trúc ===== */
-        .fras-msg.ai .fras-bubble { max-width: 92%; }
-        .fras-rich { font-size: 0.78rem; line-height: 1.55; color: #1e293b; word-break: break-word; }
-        .fras-rich p { margin: 0 0 8px; }
-        .fras-rich strong { color: #0F2347; font-weight: 800; }
+        .fras-msg.ai .fras-bubble { max-width: 95%; font-size: 0.81rem; line-height: 1.6; }
+        .fras-rich { font-size: 0.81rem; line-height: 1.6; color: #1e293b; word-break: break-word; }
+        .fras-rich p { margin: 0 0 10px; font-size: 0.81rem; line-height: 1.6; }
+        .fras-rich strong { color: #0F2347; font-weight: 700; }
         .fras-rich mark { background: #FFF1B8; color: inherit; padding: 0 2px; }
-        .fras-answer { background: #EEF4FC; border-left: 4px solid #1A3A6B; padding: 9px 12px; margin: 0 0 10px; font-weight: 600; color: #0F2347; }
-        .fras-h { margin: 10px 0 5px; padding-bottom: 3px; border-bottom: 2px solid #C0202A; color: #C0202A; font-weight: 800; font-size: 0.74rem; letter-spacing: .4px; text-transform: uppercase; }
-        .fras-warn { background: #FFF7E6; border-left: 4px solid #C9962C; padding: 8px 12px; margin: 8px 0; color: #7a4b00; font-weight: 600; }
-        .fras-steps { list-style: none; counter-reset: step; margin: 4px 0 8px; padding: 0; }
-        .fras-steps li { counter-increment: step; position: relative; padding: 5px 0 5px 34px; margin: 0 0 4px; }
-        .fras-steps li::before { content: counter(step); position: absolute; left: 0; top: 4px; width: 24px; height: 24px; background: #1A3A6B; color: #fff; font-weight: 800; font-size: 0.78rem; text-align: center; line-height: 24px; }
-        .fras-rich ul { margin: 4px 0 8px; padding-left: 20px; }
-        .fras-rich ul li { margin: 0 0 3px; }
+        
+        .fras-answer {
+            background: #f0f4fa;
+            border: 1px solid #d5e0f2;
+            border-left: 4px solid #1A3A6B;
+            padding: 10px 14px;
+            margin: 0 0 12px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: #0f2347;
+            line-height: 1.6;
+        }
+        
+        .fras-h {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 14px 0 8px;
+            padding: 6px 10px;
+            background: #f1f5f9;
+            border-left: 3px solid #C0202A;
+            border-bottom: 1px solid #e2e8f0;
+            color: #0f2347;
+            font-weight: 700;
+            font-size: 0.80rem;
+            letter-spacing: .3px;
+            text-transform: uppercase;
+        }
+        .fras-h-num {
+            background: #C0202A;
+            color: #ffffff;
+            font-size: 0.72rem;
+            font-weight: 800;
+            min-width: 20px;
+            height: 20px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 2px;
+            flex-shrink: 0;
+            padding: 0 4px;
+        }
+        .fras-h-title {
+            flex: 1;
+        }
+        
+        .fras-warn {
+            background: #fffbeb;
+            border: 1px solid #fde68a;
+            border-left: 4px solid #d97706;
+            padding: 9px 12px;
+            margin: 10px 0;
+            color: #92400e;
+            font-size: 0.79rem;
+            line-height: 1.55;
+            font-weight: 500;
+        }
+        
+        .fras-steps { list-style: none; counter-reset: step; margin: 6px 0 10px; padding: 0; }
+        .fras-steps li { counter-increment: step; position: relative; padding: 5px 0 5px 34px; margin: 0 0 4px; font-size: 0.81rem; line-height: 1.55; }
+        .fras-steps li::before { content: attr(data-n); position: absolute; left: 0; top: 4px; min-width: 30px; height: 22px; padding: 0 4px; box-sizing: border-box; background: #1A3A6B; color: #fff; font-weight: 700; font-size: 0.72rem; text-align: center; line-height: 22px; }
+        .fras-steps li { padding-left: 42px !important; font-weight: 600; color: #0f2347; }
+        .fras-alpha { list-style: none; margin: 2px 0 8px; padding: 0; }
+        .fras-alpha li { position: relative; padding: 2px 0 2px 26px; margin: 0 0 3px; }
+        .fras-alpha li::before { content: attr(data-n); position: absolute; left: 4px; top: 2px; font-weight: 700; color: #C0202A; }
+        
+        .fras-rich ul { margin: 6px 0 10px; padding-left: 18px; font-size: 0.81rem; line-height: 1.6; }
+        .fras-rich ul li { margin: 0 0 5px; }
         .fras-rich ul li::marker { color: #C0202A; }
-        .fras-cite { display: inline-block; font-size: 0.68rem; font-weight: 600; color: #1A3A6B; background: #E8EEF8; border: 1px solid #C5D3EA; padding: 0 6px; margin: 0 1px; white-space: normal; }
-        .fras-table { width: 100%; border-collapse: collapse; margin: 6px 0 10px; font-size: 0.74rem; }
-        .fras-table th { background: #1A3A6B; color: #fff; padding: 5px 8px; text-align: left; font-weight: 700; }
-        .fras-table td { padding: 5px 8px; border: 1px solid #D8DCE6; vertical-align: top; }
-        .fras-table tr:nth-child(even) td { background: #F6F8FC; }
-        .fras-foot { margin-top: 8px; font-size: 0.72rem; font-style: italic; color: #64748b; }
-        .fras-feedback { display: flex; gap: 6px; align-items: center; margin-top: 8px; font-size: 0.72rem; color: #64748b; }
+        
+        .fras-cite {
+            display: inline-block;
+            font-size: 0.72rem;
+            font-weight: 500;
+            color: #1e40af;
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            padding: 1px 6px;
+            margin: 0 2px;
+            line-height: 1.45;
+            vertical-align: baseline;
+        }
+        
+        /* Bảng hiển thị thông tin chuẩn mực, gọn gàng */
+        .fras-table {
+            width: 100% !important;
+            border-collapse: collapse !important;
+            margin: 10px 0 14px !important;
+            font-size: 0.78rem !important;
+            border: 1px solid #cbd5e1 !important;
+            background: #ffffff !important;
+        }
+        .fras-table thead th,
+        .fras-table th {
+            background: #1A3A6B !important;
+            color: #ffffff !important;
+            padding: 8px 10px !important;
+            text-align: left !important;
+            font-weight: 700 !important;
+            font-size: 0.74rem !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.3px !important;
+            border: 1px solid #1A3A6B !important;
+            border-bottom: 2px solid #0F2347 !important;
+        }
+        .fras-table th strong {
+            color: #ffffff !important;
+            font-weight: 700 !important;
+        }
+        .fras-table tbody td,
+        .fras-table td {
+            padding: 8px 10px !important;
+            border: 1px solid #e2e8f0 !important;
+            vertical-align: middle !important;
+            font-size: 0.78rem !important;
+            color: #334155 !important;
+            line-height: 1.45 !important;
+            background: #ffffff !important;
+        }
+        .fras-table tr:nth-child(even) td {
+            background: #f8fafc !important;
+        }
+        .fras-table tr:hover td {
+            background: #f1f5f9 !important;
+        }
+        .fras-table td strong {
+            color: #1e3a8a !important;
+            font-weight: 600 !important;
+        }
+        
+        .fras-foot { margin-top: 8px; font-size: 0.74rem; font-style: italic; color: #64748b; }
+        .fras-feedback { display: flex; gap: 6px; align-items: center; margin-top: 8px; font-size: 0.74rem; color: #64748b; }
         .fras-feedback button { background: #fff; border: 1px solid #cbd5e1; padding: 2px 8px; cursor: pointer; font-size: 0.75rem; }
         .fras-feedback button:hover { border-color: #C0202A; }
-        .fras-status-text { margin-left: 8px; font-size: 0.75rem; color: #64748b; }
-
+        .fras-status-text { margin-left: 8px; font-size: 0.76rem; color: #64748b; }
+        
         /* Source badge */
         .fras-source-badge {
-            display: inline-block; font-size: 0.68rem; font-weight: 600;
-            padding: 1px 6px; border-radius: 4px; margin-top: 6px;
+            display: inline-block; font-size: 0.70rem; font-weight: 600;
+            padding: 2px 8px; border-radius: 4px; margin-top: 8px;
         }
         .fras-source-badge.docs { background: #dbeafe; color: #1d4ed8; }
         .fras-source-badge.general { background: #fef3c7; color: #92400e; }
@@ -260,15 +376,15 @@
         }
         .fras-input-area input {
             flex: 1; background: #f1f5f9; border: 1px solid #e2e8f0;
-            border-radius: 22px; padding: 9px 14px; color: #1e293b;
-            font-size: 0.84rem; outline: none; transition: border-color .15s;
+            border-radius: 22px; padding: 8px 14px; color: #1e293b;
+            font-size: 0.80rem; outline: none; transition: border-color .15s;
         }
         .fras-input-area input::placeholder { color: #94a3b8; }
         .fras-input-area input:focus { border-color: #C0202A; background: #fff; }
         .fras-input-area button {
             background: #C0202A; border: none; color: #fff;
-            border-radius: 22px; padding: 9px 18px;
-            cursor: pointer; font-size: 0.84rem; font-weight: 600;
+            border-radius: 22px; padding: 8px 16px;
+            cursor: pointer; font-size: 0.80rem; font-weight: 600;
             transition: background .15s; white-space: nowrap; flex-shrink: 0;
         }
         .fras-input-area button:hover { background: #8B0000; }
@@ -404,8 +520,8 @@
         _appendWelcome() {
             const msgs = document.getElementById('fras-messages');
             this._addBubble('ai',
-                '>> Chào bạn, Chi là trợ lý ảo hỗ trợ giải đáp pháp luật và thủ tục hành chính về Phòng cháy chữa cháy và Cứu nạn cứu hộ của Công an TP Bắc Ninh.\n\n' +
-                '## Chi có thể giúp bạn\n' +
+                '>> Chào bạn, tôi là Trợ lý ảo hỗ trợ giải đáp pháp luật và thủ tục hành chính về Phòng cháy chữa cháy và Cứu nạn cứu hộ của Công an thành phố Bắc Ninh.\n\n' +
+                '## Tôi có thể giúp bạn\n' +
                 '• Quy định pháp luật: Luật PCCC và CNCH số 55/2024/QH15, các Nghị định, Thông tư hướng dẫn\n' +
                 '• Thủ tục hành chính: thẩm duyệt thiết kế, nghiệm thu, kiểm tra, cấp giấy chứng nhận, thời hạn giải quyết\n' +
                 '• Điều kiện an toàn PCCC theo từng loại hình cơ sở: nhà ở, chung cư, cơ sở kinh doanh, sản xuất, kho, trường học, bệnh viện...\n' +
@@ -443,11 +559,11 @@
                         <div class="fras-typing-dot"></div>
                         <div class="fras-typing-dot"></div>
                         <div class="fras-typing-dot"></div>
-                        <span class="fras-status-text" id="${typingId}-t">Chi đang tra cứu văn bản...</span>
+                        <span class="fras-status-text" id="${typingId}-t">Hệ thống đang tra cứu văn bản...</span>
                     </div>
                 </div>`;
             msgs.scrollTop = msgs.scrollHeight;
-            const stages = [[5000, 'Chi đang đối chiếu các quy định...'], [12000, 'Chi đang kiểm tra hiệu lực của căn cứ...'], [22000, 'Sắp xong rồi, Chi đang hoàn thiện câu trả lời...']];
+            const stages = [[5000, 'Hệ thống đang đối chiếu các quy định...'], [12000, 'Đang kiểm tra hiệu lực văn bản...'], [22000, 'Đang hoàn thiện câu trả lời...']];
             const timers = stages.map(([ms, txt]) => setTimeout(() => { const el = document.getElementById(typingId + '-t'); if (el) el.textContent = txt; }, ms));
 
             this.history.push({ role: 'user', content: msg });
@@ -566,13 +682,25 @@
             const lines = String(raw).replace(/\r/g, '').split('\n');
             const out = [];
             let list = null;                       // 'ol' hoặc 'ul' đang mở
-            const closeList = () => { if (list) { out.push(`</${list}>`); list = null; } };
+            let sec = '', sub = 0;                 // số mục lớn hiện tại và bộ đếm mục con (3.1, 3.2...)
+            const closeList = () => { if (list) { out.push(list === 'ol' ? '</ol>' : '</ul>'); list = null; } };
             for (let i = 0; i < lines.length; i++) {
                 const line = lines[i];
                 if (!line.trim()) { closeList(); continue; }
                 let m;
                 if ((m = line.match(/^\s*>>\s+(.*)$/))) { closeList(); out.push(`<div class="fras-answer">${inline(m[1])}</div>`); continue; }
-                if ((m = line.match(/^\s*##\s+(.*)$/))) { closeList(); out.push(`<div class="fras-h">${inline(m[1])}</div>`); continue; }
+                if ((m = line.match(/^\s*##\s+(.*)$/))) {
+                    closeList();
+                    const rawHead = m[1].trim();
+                    const numMatch = rawHead.match(/^(\d+)[\.\:\-]\s*(.*)$/);
+                    sec = numMatch ? numMatch[1] : ''; sub = 0;
+                    if (numMatch) {
+                        out.push(`<div class="fras-h"><span class="fras-h-num">${numMatch[1]}</span><span class="fras-h-title">${inline(numMatch[2])}</span></div>`);
+                    } else {
+                        out.push(`<div class="fras-h"><span class="fras-h-title">${inline(rawHead)}</span></div>`);
+                    }
+                    continue;
+                }
                 if ((m = line.match(/^\s*!!\s+(.*)$/))) { closeList(); out.push(`<div class="fras-warn">⚠ ${inline(m[1])}</div>`); continue; }
                 if ((m = line.match(/^\s*~~\s+(.*)$/))) { closeList(); out.push(`<div class="fras-foot">${inline(m[1])}</div>`); continue; }
                 if (/^\s*\|/.test(line) && i + 1 < lines.length && /^\s*\|?[\s:|-]+\|[\s:|-]*$/.test(lines[i + 1]) && /-/.test(lines[i + 1])) {
@@ -589,7 +717,15 @@
                 }
                 if ((m = line.match(/^\s*(\d+)[.)]\s+(.*)$/))) {
                     if (list !== 'ol') { closeList(); out.push('<ol class="fras-steps">'); list = 'ol'; }
-                    out.push(`<li>${inline(m[2])}</li>`);
+                    sub++;
+                    const label = sec ? `${sec}.${sub}` : String(sub);
+                    const body = m[2].replace(/^(\*\*)?Bước\s*\d+\s*[:.\-–]\s*/i, '$1');
+                    out.push(`<li data-n="${label}">${inline(body)}</li>`);
+                    continue;
+                }
+                if ((m = line.match(/^\s*([a-zđ])[.)]\s+(.*)$/))) {
+                    if (list !== 'al') { closeList(); out.push('<ul class="fras-alpha">'); list = 'al'; }
+                    out.push(`<li data-n="${m[1]})">${inline(m[2])}</li>`);
                     continue;
                 }
                 if ((m = line.match(/^\s*[-*•]\s+(.*)$/))) {
@@ -615,7 +751,7 @@
             box.innerHTML = 'Câu trả lời này có giúp được bạn không? <button data-v="1">👍 Có</button> <button data-v="0">👎 Chưa</button>';
             box.querySelectorAll('button').forEach(b => b.addEventListener('click', async () => {
                 const helpful = b.dataset.v === '1';
-                box.textContent = helpful ? 'Cảm ơn bạn đã phản hồi.' : 'Cảm ơn bạn. Chi đã ghi lại để cán bộ bổ sung câu trả lời chuẩn.';
+                box.textContent = helpful ? 'Cảm ơn bạn đã phản hồi.' : 'Cảm ơn bạn. Hệ thống đã ghi nhận để cán bộ kiểm tra, bổ sung.';
                 try {
                     const baseUrl = localStorage.getItem('fras_api_url') || window.location.origin;
                     await fetch(`${baseUrl}/api/ai/chat/feedback`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ message: question, reply: reply.slice(0, 1500), helpful }) });
