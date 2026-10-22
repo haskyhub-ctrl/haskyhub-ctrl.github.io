@@ -9,6 +9,11 @@ import os
 import sys
 import time
 
+# Máy chủ thường chạy với bảng mã ASCII: ép in tiếng Việt bằng UTF-8, nếu không lệnh in sẽ báo lỗi và dừng giữa chừng
+for _stream in (sys.stdout, sys.stderr):
+    if hasattr(_stream, "reconfigure"):
+        _stream.reconfigure(encoding="utf-8")
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 from dotenv import load_dotenv
