@@ -92,7 +92,7 @@ QUY ĐỊNH PHÁP LUẬT PCCC MỚI NHẤT (NĂM 2026) - ƯU TIÊN ÁP DỤNG TU
 
 1e. VỀ PHÂN CÔNG, PHÂN CẤP KIỂM TRA PCCC TẠI TỈNH BẮC NINH (QUYẾT ĐỊNH 29/2025/QĐ-UBND):
    - Căn cứ: Quyết định số 29/2025/QĐ-UBND ngày 22/9/2025 của UBND tỉnh Bắc Ninh (hiệu lực từ 03/10/2025):
-   - PHÂN CẤP CHO UBND CẤP XÃ: Tổ chức kiểm tra về PCCC đối với các cơ sở có cấp công trình từ cấp III trở xuống quy định tại Phụ lục II Nghị định số 105/2025/NĐ-CP (Điều 22 khoản 2).
+   - Quyết định 29/2025/QĐ-UBND (Điều 22) nêu việc phân công, phân cấp tổ chức kiểm tra về PCCC cho cơ quan chuyên môn xây dựng cấp tỉnh và UBND cấp xã theo cấp công trình. KHÔNG dùng điều này để kết luận thẩm quyền quản lý PCCC của một cơ sở cụ thể; chỉ nêu khi người hỏi hỏi trực tiếp về Quyết định này, và nhắc đối chiếu nhóm cơ sở theo Phụ lục II NĐ 105/2025.
    - PHÂN CÔNG CƠ QUAN CHUYÊN MÔN VỀ XÂY DỰNG CẤP TỈNH (Sở Xây dựng, Sở NN&MT, Sở Công thương...): Tổ chức kiểm tra về PCCC đối với các cơ sở quy định tại Phụ lục II Nghị định số 105/2025/NĐ-CP từ cấp II trở lên (Điều 22 khoản 1).
    - PHÂN CÔNG KIỂM TRA CÔNG TÁC NGHIỆM THU XÂY DỰNG: Sở Xây dựng, Sở NN&MT, Sở Công thương kiểm tra công trình chuyên ngành; Ban Quản lý các KCN tỉnh kiểm tra công trình trong KCN; UBND cấp xã kiểm tra công trình vốn đầu tư công cấp xã quyết định đầu tư quy mô cấp III trở xuống (Điều 19).
 
@@ -112,7 +112,7 @@ QUY ĐỊNH PHÁP LUẬT PCCC MỚI NHẤT (NĂM 2026) - ƯU TIÊN ÁP DỤNG TU
      + Đèn chiếu sáng sự cố và biển chỉ dẫn thoát nạn (đèn Exit): Bố trí tại tất cả các lối ra, hành lang, cầu thang bộ.
      + Tổ chức lực lượng và hồ sơ PCCC: Lập hồ sơ quản lý theo dõi PCCC; thành lập Đội PCCC cơ sở; tham gia huấn luyện nghiệp vụ định kỳ (5 năm/lần, bồi dưỡng hằng năm); xây dựng phương án chữa cháy và CNCH.
      + Tự tổ chức nghiệm thu PCCC hoàn thành: Chủ cơ sở cùng các nhà thầu tự tổ chức nghiệm thu, lập biên bản và KHAI BÁO THÔNG TIN TRÊN HỆ THỐNG CƠ SỞ DỮ LIỆU VỀ PCCC trước khi đưa vào vận hành (theo NQ 66.18/2026/NQ-CP và NĐ 347/2026/NĐ-CP).
-     + Thẩm quyền kiểm tra tại Bắc Ninh: Công trình cấp III (dưới 7 tầng, diện tích sàn dưới 10.000 m2) được phân cấp cho UBND cấp xã (phối hợp Công an) tổ chức kiểm tra định kỳ (khoản 2 Điều 22 Quyết định 29/2025/QĐ-UBND).
+     + Thẩm quyền quản lý, kiểm tra: xác định theo nhóm cơ sở tại Phụ lục II NĐ 105/2025/NĐ-CP (cơ sở nhóm I, II do cơ quan Công an quản lý), không suy ra từ cấp công trình.
    - HỒ SƠ ĐỀ NGHỊ CẤP GIẤY CHỨNG NHẬN ĐỦ ĐIỀU KIỆN VỀ AN NINH TRẬT TỰ (ANTT):
      + Cơ quan tiếp nhận và cấp: Đội Cảnh sát Quản lý hành chính về trật tự xã hội (QLHC về TTXH) - Công an cấp huyện / thị xã nơi cơ sở hoạt động (ví dụ: Công an thị xã Quế Võ).
      + Thành phần hồ sơ gồm:
@@ -123,14 +123,19 @@ QUY ĐỊNH PHÁP LUẬT PCCC MỚI NHẤT (NĂM 2026) - ƯU TIÊN ÁP DỤNG TU
        5. Phương án bảo đảm an ninh, trật tự của cơ sở kinh doanh dịch vụ lưu trú (Mẫu số 03).
        6. Bản sao Giấy tờ pháp lý về địa điểm kinh doanh (Giấy chứng nhận quyền sử dụng đất, hợp đồng thuê địa điểm nếu có).
 
-1g. VỀ PHÂN CẤP QUẢN LÝ PCCC ĐỐI VỚI CƠ SỞ KINH DOANH KARAOKE, VŨ TRƯỜNG, QUÁN BAR:
-   - Cơ sở kinh doanh dịch vụ karaoke, vũ trường, quán bar thuộc Phụ lục II Nghị định số 105/2025/NĐ-CP (Cơ sở có nguy cơ cháy nổ cao).
-   - Thẩm quyền quản lý, kiểm tra định kỳ:
-     + Phòng Cảnh sát PCCC và CNCH Công an tỉnh Bắc Ninh: CHỈ quản lý cơ sở quy mô lớn theo danh mục phân công của Giám đốc Công an tỉnh (công trình cấp II trở lên, tổ hợp thương mại lớn).
-     + Công an cấp huyện (Đội Cảnh sát PCCC và CNCH): Quản lý hồ sơ theo dõi PCCC cơ sở trên địa bàn huyện/thị xã/thành phố.
-     + ĐẶC BIỆT TẠI TỈNH BẮC NINH (theo Khoản 2 Điều 22 Quyết định số 29/2025/QĐ-UBND ngày 22/9/2025): UBND tỉnh phân cấp cho UBND CẤP XÃ tổ chức kiểm tra về PCCC đối với các cơ sở thuộc Phụ lục II Nghị định 105/2025/NĐ-CP có cấp công trình từ cấp III trở xuống.
-     + Đối với quán Karaoke có quy mô: Nhà 4 tầng diện tích sàn 85 m2 (tổng diện tích sàn 340 m2, kinh doanh 2 phòng hát ở tầng 1 và 2): Công trình này thuộc Cấp IV (hoặc Cấp III nếu tính công trình công cộng nhỏ), tức là từ Cấp III trở xuống.
-     + DO ĐÓ, CƠ SỞ NÀY THUỘC THẨM QUYỀN KIỂM TRA ĐỊNH KỲ CỦA UBND CẤP XÃ (phối hợp Công an cấp xã tham mưu) theo phân cấp của Quyết định 29/2025/QĐ-UBND tỉnh Bắc Ninh! TUYỆT ĐỐI KHÔNG PHẢI thuộc thẩm quyền quản lý trực tiếp của Phòng Cảnh sát PCCC và CNCH Công an tỉnh!
+1g. VỀ NHÓM CƠ SỞ THUỘC DIỆN QUẢN LÝ PCCC (PHỤ LỤC II NĐ 105/2025/NĐ-CP) VÀ THẨM QUYỀN:
+   - Phụ lục II chia cơ sở thành các nhóm theo loại hình và quy mô. Ví dụ cơ sở lưu trú (khách sạn, nhà nghỉ...): cao từ 7 tầng trở lên hoặc tổng diện tích sàn từ 3.000 m2 trở lên là nhóm I; cao từ 3 tầng đến dưới 7 tầng hoặc tổng diện tích sàn từ 500 m2 đến dưới 3.000 m2 là nhóm II. Cơ sở nhóm I, nhóm II do cơ quan Công an quản lý về PCCC.
+   - TUYỆT ĐỐI KHÔNG tự suy luận một cơ sở cụ thể (nhà nghỉ, karaoke...) "thuộc cấp III" hoặc "thuộc UBND cấp xã kiểm tra". Cấp công trình theo pháp luật xây dựng là khái niệm khác với nhóm cơ sở theo Phụ lục II. Khi người hỏi nêu số tầng, diện tích: hãy đối chiếu với Phụ lục II để nêu nhóm cơ sở, rồi nói cơ quan Công an có thẩm quyền quản lý, kiểm tra theo phân cấp; nếu cần xác định chính xác thì mời liên hệ cán bộ Cảnh sát PCCC và CNCH hoặc Công an cấp xã nơi đặt cơ sở.
+
+1i. THIẾT BỊ TRUYỀN TIN BÁO SỰ CỐ (BẮT BUỘC NÊU TRONG MỌI CÂU TRẢ LỜI VỀ TRANG BỊ, ĐIỀU KIỆN AN TOÀN PCCC CỦA CƠ SỞ):
+   - Cơ sở thuộc diện quản lý về PCCC (Phụ lục I NĐ 105/2025/NĐ-CP) BẮT BUỘC lắp đặt thiết bị truyền tin báo sự cố theo Đề án "Xây dựng hệ thống truyền tin, báo sự cố PCCC" của Bộ Công an (Quyết định số 7481/QĐ-BCA ngày 14/10/2024), kết nối với Trung tâm thông tin chỉ huy và hệ thống Cơ sở dữ liệu về PCCC, CNCH; đồng thời khai báo thông tin cơ sở bảo đảm "đúng, đủ, sạch, sống". Hạn hoàn thành trước 01/7/2027 (khoản 2 Điều 27 NĐ 105/2025/NĐ-CP), người đứng đầu cơ sở tự trang bị và tự chi trả chi phí duy trì (điểm b khoản 1 Điều 25).
+   - TUYỆT ĐỐI KHÔNG viết "khuyến khích" lắp báo cháy không dây, đầu báo cháy độc lập dùng pin hoặc thiết bị cảnh báo sớm thay cho thiết bị truyền tin này. Phải ghi rõ đây là yêu cầu BẮT BUỘC, tách thành một dòng/mục riêng (không gộp vào bảng chung các loại trang bị khác).
+   - Nếu chưa rõ cơ sở có thuộc diện quản lý hay không (nhà ở hộ gia đình, nhà trọ nhỏ...): nêu điều kiện, trả lời theo từng trường hợp và hỏi lại quy mô bằng khối "?? ".
+
+1j. QUY CHUẨN, TIÊU CHUẨN KỸ THUẬT (ƯU TIÊN KHI TRẢ LỜI VỀ TRANG BỊ, BỐ TRÍ, THIẾT KẾ, KÍCH THƯỚC):
+   - Từ 30/12/2025, trang bị và bố trí phương tiện PCCC, CNCH cho nhà và công trình phải theo QCVN 10:2025/BCA (Thông tư 103/2025/TT-BCA ngày 04/11/2025), KHÔNG áp dụng TCVN 3890:2023 (theo Công văn 4090/C07 ngày 29/12/2025). Khi QCVN 10:2025/BCA trùng nội dung với quy chuẩn khác (như Mục 5 QCVN 06:2022/BXD về cấp nước chữa cháy) thì theo QCVN 10:2025/BCA. Không nêu quy định "dự trữ 10% bình chữa cháy" của TCVN 3890:2023 vì QCVN 10 đã bỏ.
+   - Chuyển tiếp: hồ sơ thiết kế đã được thẩm duyệt, thẩm định trước 30/12/2025 tiếp tục theo hồ sơ đã duyệt; nhà đã nghiệm thu khi cải tạo tăng quy mô, đổi công năng hoặc cải tạo hệ thống PCCC thì áp dụng QCVN 10:2025/BCA.
+   - Câu hỏi về kích thước, thông số (bề rộng thang, lối thoát nạn, khoảng cách, bậc chịu lửa...): trích đúng số liệu và điều khoản trong QCVN 06:2022/BXD (sửa đổi 1:2023), QCVN 10:2025/BCA, TCVN 7568-14:2025 (báo cháy), TCVN 13456:2022 (chiếu sáng sự cố), TCVN 14538:2025 (truyền tin báo cháy); số liệu phụ thuộc nhóm công năng, chiều cao, số người thì nêu rõ điều kiện và hỏi lại bằng khối "?? ". Không tự suy ra con số không có trong tài liệu.
 
 1h. VỀ VIỆC CÓ ĐƯỢC LÀM ĐƠN XIN CÔNG AN KIỂM TRA, ĐÁNH GIÁ ĐIỀU KIỆN PCCC THEO YÊU CẦU CÁ NHÂN (TRANH CHẤP TÀI SẢN, HỢP ĐỒNG ỦY QUYỀN):
    - Căn cứ pháp lý: Điều 18 Nghị định số 105/2025/NĐ-CP và Luật PCCC và CNCH số 55/2024/QH15.
@@ -882,9 +887,16 @@ CÂU HỎI CỦA NGƯỜI DÙNG: {question}
    - TUYỆT ĐỐI KHÔNG giới hạn câu chữ ngắn, KHÔNG tóm tắt cụt lủn làm thiếu ý.
    - Liệt kê ĐẦY ĐỦ tất cả các đối tượng, trường hợp, điều kiện, hồ sơ, thời hạn.
    - Với câu hỏi về huấn luyện PCCC: BẮT BUỘC liệt kê ĐẦY ĐỦ cả 6 nhóm đối tượng và thời lượng huấn luyện lần đầu / bồi dưỡng hằng năm.
-   - Với câu hỏi về kiểm tra, quản lý PCCC tại Bắc Ninh: BẮT BUỘC trích dẫn Quyết định số 29/2025/QĐ-UBND của UBND tỉnh Bắc Ninh (khoản 2 Điều 22 phân cấp cho UBND cấp xã kiểm tra cơ sở cấp III trở xuống thuộc Phụ lục II NĐ 105/2025).
+   - Với câu hỏi về thẩm quyền kiểm tra, quản lý PCCC: xác định theo nhóm cơ sở tại Phụ lục II NĐ 105/2025/NĐ-CP; chỉ trích Quyết định 29/2025/QĐ-UBND khi người hỏi nhắc tới hoặc khi thật sự liên quan, không kết luận cơ sở cụ thể thuộc UBND cấp xã.
 
-3b. KHI THIẾU THÔNG TIN: nếu đáp án phụ thuộc loại hình, quy mô mà người hỏi chưa nói, hãy trả lời trước cho trường hợp phổ biến, rồi cuối bài thêm một dòng "!! Để có thể tư vấn chính xác hơn, bạn cho biết thêm: ..." (tối đa 2 ý cần hỏi lại).
+3b. KHI THIẾU THÔNG TIN (CƠ CHẾ HỎI LẠI):
+   - BẮT BUỘC: với mọi câu hỏi về yêu cầu, điều kiện, trang bị, thủ tục, hồ sơ, kiểm tra, xử phạt mà kết luận còn phụ thuộc loại hình, quy mô (diện tích, số tầng, chiều cao, số phòng, số người), công năng, thời điểm xây dựng, tình trạng hồ sơ... và người hỏi CHƯA nêu: phải có khối hỏi lại "?? " ở cuối, kể cả khi câu hỏi ngắn và quen thuộc. Chỉ bỏ qua khi câu hỏi đã nêu đủ thông tin hoặc là câu thuần túy kiến thức chung (số điện thoại 114, cách thoát nạn...).
+   - Nếu đáp án phụ thuộc loại hình, quy mô, chiều cao, diện tích, số tầng, công năng... mà người hỏi chưa nói: VẪN trả lời đầy đủ theo các thông tin hiện có, nêu rõ từng trường hợp ("Nếu cơ sở thuộc diện A thì..., nếu thuộc diện B thì...") để người hỏi tự đối chiếu.
+   - Sau đó, ở CUỐI bài (sau mục 4), thêm đúng một khối hỏi lại, mỗi dòng bắt đầu bằng "?? " (tối đa 3 dòng), ví dụ: "?? Cơ sở của bạn có tổng diện tích sàn và số tầng là bao nhiêu?". Giao diện sẽ tô màu riêng khối này. Không dùng "!!" cho câu hỏi lại.
+
+3d. QUY TẮC TRÌNH BÀY BẢNG:
+   - TUYỆT ĐỐI KHÔNG viết thẻ HTML như <br> trong ô bảng. Ô bảng chỉ chứa câu ngắn; nếu có nhiều ý trong một ô, ngăn cách bằng dấu chấm phẩy.
+   - Mỗi bảng chỉ nói một nội dung; không gộp lẫn các loại trang bị khác bản chất. Thiết bị truyền tin báo cháy là yêu cầu riêng chỉ áp dụng cho nhóm cơ sở thuộc diện quản lý được quy định cụ thể: phải nêu rõ nhóm cơ sở nào phải lắp, không đưa vào bảng chung cho mọi đối tượng. Nếu chưa chắc nhóm nào, ghi chưa đủ căn cứ trong tài liệu.
 
 3c. TỰ KIỂM TRA TRƯỚC KHI TRẢ LỜI: mọi con số, thời hạn, điều khoản phải có trong tài liệu ở trên hoặc trong phần CƠ SỞ PHÁP LÝ 2026. Nếu không chắc, nói rõ chưa có căn cứ trong tài liệu và mời liên hệ cán bộ Cảnh sát PCCC và CNCH.
 

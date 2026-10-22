@@ -1,9 +1,9 @@
-[Bảng đối chiếu thẩm định thiết kế PCCC A24 . Bảng đối chiếu Phương tiện tàu biển]
-[Hiệu lực: 2025. Trạng thái: ĐANG DÙNG.]
-
-A24: BĐC tàu biển vỏ thép
+[Bảng đối chiếu thẩm định thiết kế PCCC A24. Bảng đối chiếu Phương tiện tàu biển]
+[Hiệu lực: 2026 (bản cập nhật). Trạng thái: ĐANG DÙNG. Nguồn: Bảng đối chiếu cập nhật kỳ thi cán bộ thẩm định PCCC.]
 
 2
+
+A24: BĐC tàu biển vỏ thép
 
 ……..(1)………
 ……..(2)………
@@ -14,49 +14,53 @@ THẨM ĐỊNH THIẾT KẾ VỀ PHÒNG CHÁY VÀ CHỮA CHÁY
 
 	1. Tên phương tiện: Tàu biển vỏ thép
 
-	2. Chủ phương tiện:………….., địa chỉ tại:……………
+	2. Địa điểm neo đậu:
 
-	3. Cơ quan thiết kế:
+	3. Chủ phương tiện:
 
-	4. Cán bộ thẩm định:
+	4. Địa chỉ của chủ phương tiện:
 
-	5. Danh mục các Quy chuẩn, tiêu chuẩn, quy định áp dụng để đối chiếu thẩm định
+	5. Đơn vị thiết kế:
 
-		6. Quy mô, sự phù hợp của các tiêu chuẩn, quy chuẩn áp dụng để thiết kế và danh mục bản vẽ
+	6. Cán bộ thẩm định:
 
-		6.1. Quy mô của phương tiện:
+	7. Danh mục các Quy chuẩn, tiêu chuẩn, quy định áp dụng để đối chiếu thẩm định
 
-		Công năng…; Vật liệu thân tàu:...; Chiều dài (Lmax/L):…(m); Chiều rộng (Bmax/L):…(m); Chiều cao mạn (D):…(m); Chiều chìm thiết kế (d):..(m); Ký hiệu máy chính:…; Số lượng:…(chiếc); Công suất:…(kW); Tổng dung tích (GT):…; Trọng tải toàn phần (DW):…(tấn); Số thuyền viên:…(người); Cấp tàu:…; Vùng hoạt động:…
+	- QCVN 21:2025/BGTVT: Quy chuẩn kỹ thuật quốc gia về phân cấp và đóng tàu biển vỏ thép;
 
-		6.2. Danh mục bản vẽ: Thống kê chi tiết danh mục bản vẽ thiết kế Chủ phương tiện gửi kèm.
+	Lưu ý:
 
-		- Thuyết minh: … quyển;
+	+ Chỉ liệt kê các tiêu chuẩn, quy chuẩn được áp dụng để thiết kế về PCCC cho công trình.
 
-		- Bản vẽ báo cháy: ……………………
+	+ Liệt kê bổ sung các tiêu chuẩn, quy chuẩn được áp dụng để thiết kế về PCCC cho công trình (nếu có).
 
-		- Bản vẽ chữa cháy, trang bị phương tiện chữa cháy ban đầu: ……………………
+		8. Quy mô, sự phù hợp của các tiêu chuẩn, quy chuẩn áp dụng để thiết kế và danh mục bản vẽ
+
+		8.1. Quy mô của phương tiện: ............................................
+
+		8.2. Sự phù hợp của các tiêu chuẩn, quy chuẩn áp dụng để thiết kế: Thống kê chi tiết danh mục tiêu chuẩn, quy chuẩn lựa chọn áp dụng để thiết kế.
+
+		8.3. Danh mục bản vẽ: Thống kê danh mục bản vẽ thiết kế Chủ đầu tư gửi kèm.
+
+		- Bản vẽ phương tiện, hệ thống phòng cháy chữa cháy: ……………………
+
+		- Bản vẽ nguồn điện phục vụ PCCC (nếu có) ..............................
 
 		Kết luận: Đã bảo đảm đầy đủ để đối chiếu hay chưa. Trường hợp còn thiếu cần kiến nghị bổ sung bản vẽ thiết kế.
 
-7. Nội dung kiểm tra đối chiếu theo tiêu chuẩn quy định:
+		9. Nội dung kiểm tra đối chiếu theo tiêu chuẩn quy định:
 
 	*Chú thích: (+) - Đạt; KN - Kiến nghị.
 
 TT
 
-Nội dung
+Nội dung đối chiếu
 
-đối chiếu
+Nội dung thiết kế
 
-Nội dung
+Nội dung quy định của tiêu chuẩn, quy chuẩn kỹ thuật
 
-Thiết kế
-
-Nội dung quy định của tiêu chuẩn,
-
-quy chuẩn kỹ thuật
-
-Khoản, điều, tiêu chuẩn, quy chuẩn
+Khoản, Điều
 
 Kết luận
 
@@ -64,17 +68,21 @@ Kết luận
 
 Đối tượng thẩm định
 
-Phương tiện đường thủy nội địa:
+- Đối tượng thuộc diện thẩm định Phụ lục III Nghị định số 105/2025/NĐ-CP, trong đó lưu ý: Phương tiện giao thông được sản xuất, lắp ráp, đóng mới, hoán cải để vận tải hành khách, xăng, dầu, chất lỏng dễ cháy, khí cháy, vật liệu nổ, hóa chất có nguy hiểm về cháy, nổ thuộc các trường hợp sau:
 
-a) Phương tiện có sức chở người từ 50 người trở lên;
++ Phương tiện đường thủy nội địa:Phương tiện có sức chở người từ 50 người trở lên; Phương tiện từ 500 GT trở lên; Phương tiện có động cơ tổng công suất máy chính từ 300 sức ngựa trở lên.
 
-b) Phương tiện từ 500 GT trở lên;
++ Tàu biển Việt Nam không hoạt động tuyến quốc tế từ 500 GT trở lên
 
-c) Phương tiện có động cơ tổng công suất máy chính từ 300 sức ngựa trở lên.
+(GT: tổng dung tích của phương tiện theo pháp luật về hàng hải).
+
+- Thẩm quyền theo điều 9 Thông tư 36/2025/TT-BCA
 
 Phụ lục III Nghị định số 105/2025/NĐ-CP
 
 Ngày 15 tháng 5 năm 2025 của Chính phủ
+
+Điều 9 Thông tư 36/2025/TT-BCA
 
 +
 
@@ -84,31 +92,113 @@ Hệ thống báo cháy
 
 2.1
 
-Yêu cầu thiết kế
+Bảo vệ buồng máy
 
-	1) Phương pháp IC
+-
 
-Một hệ thống phát hiện cháy và báo cháy cố định phải được lắp đặt và bố trí sao cho có thể phát hiện được khói trong tất cả các hành lang, cầu thang và các lối thoát trong khu vực các buồng sinh hoạt.
+Yêu cầu lắp đặt
 
-	(2) Phương pháp IIC
+1. Phải trang bị hệ thống phát hiện cháy và báo cháy cố định trong:
 
-Một hệ thống phun nước tự động, hệ thống phát hiện cháy và báo cháy có loại được Đăng kiểm duyệt và tuân theo các yêu cầu tương ứng ở Chương 28 phải được lắp đặt và bố trí sao cho có thể bảo vệ các buồng sinh hoạt, bếp và các buồng phục vụ khác, trừ các buồng không có nguy cơ cháy cao như các khoang trống, các buồng vệ sinh v.v... Ngoài ra phải lắp đặt và bố trí một hệ thống phát hiện cháy và báo cháy cố định sao cho có thể phát hiện được khói trong tất cả các hành lang, cầu thang và các lối thoát trong khu vực các buồng sinh hoạt.
+(1) Các buồng máy không có người trực theo chu kỳ;
 
-	(3) Phương pháp IIIC
+(2) Các buồng máy có lắp đặt thiết bị và hệ thống điều khiển tự động và từ xa được duyệt
 
-Một hệ thống phát hiện cháy và báo cháy cố định phải được lắp đặt và bố trí sao cho có thể phát hiện cháy trong tất cả các buồng sinh hoạt và buồng phục vụ, trừ các buồng không có nguy cơ cháy cao như các khoang trống, buồng vệ sinh v.v. Ngoài ra, một hệ thống phát hiện cháy và báo cháy cố định phải được lắp đặt và bố trí sao cho có thể phát hiện khói trong tất cả các hành lang, cầu thang và các lối thoát thân trong khu vực các buồng sinh hoạt.
+để thay thế cho việc trực canh liên tục trong buồng máy;
 
-Các điểm báo cháy bằng tay Các điểm báo cháy bằng tay phải được lắp đặt trong toàn bộ khu vực sinh hoạt, khu vực phục vụ và các trạm điều khiển. Tại mỗi cửa thoát phải trang bị một điểm báo cháy bằng tay. Các điểm báo cháy bằng tay phải dễ dàng tiếp cận trong các hành lang của mỗi boong sao cho không có phần nào của hành lang cách điểm báo cháy bằng tay quá 20 m.
+(3) Các buồng máy có máy chính và các máy kèm theo kể cả nguồn của nguồn cấp điện chính được trang bị các mức độ điều khiển tự động và từ xa ở các mức độ khác nhau và được trực canh giám sát liên tục từ buồng điều khiển, và;
 
-Trung tâm báo cháy phải được đặt trong buồng lái, tại trung tâm báo cháy phải có còi báo cháy và đèn báo chỉ rõ khu vực xảy ra cháy.
+(4) Các buồng khép kín chứa thiết bị đốt chất thải.
 
-7.4, 7.5, 7.6.1
+2. Để bảo vệ các buồng máy được định nghĩa ở -1(1) trên, phải trang bị các phương tiện
+
+sau:
+
+(1) Phải trang bị các nút báo cháy bằng tay ở:
+
+(a) Tối thiểu hai vị trí gần các lối vào của các hành lang có cửa ra vào dẫn đến các
+
+khoang có lắp đặt máy chính, nồi hơi, tổ máy phát điện v.v...;
+
+(b) Buồng lái hoặc trạm điều khiển và giám sát tập trung trên buồng lái như định
+
+nghĩa ở 1.1.2-1(11) của Quy chuẩn kỹ thuật quốc gia về hệ thống điều khiển tự
+
+động và từ xa; và
+
+(c) Các trạm điều khiển tập trung cho máy chính như định nghĩa ở 1.1.2-1(10) của
+
+Quy chuẩn kỹ thuật quốc gia về hệ thống điều khiển tự động và từ xa, kể cả các
+
+trạm điều khiển đặt trong buồng máy có lắp máy chính.
+
+(2) Nếu có lắp đặt công tắc chuyển đổi để ngắt tạm thời một mạch riêng của các hệ thống
+
+phát hiện cháy, phải có phương tiện chỉ báo rõ ràng trạng thái tạm thời đó và để tự
+
+động hồi phục lại mạch điện sau  một khoảng thời gian đặt trước.
+
+(3) Nếu các cảm biến phát hiện cháy có phương tiện để điều chỉnh độ nhạy của chúng,
+
+phải có thiết bị để có khả năng cố định và nhận biết được giá trị đặt.
+
+Điều 7.4.1
 
 Chương 7
 
 Phần 5
 
-QCVN 21:2015/BGTVT
+QCVN 21:2025/BGTVT
+
+-
+
+Yêu cầu thiết kế
+
+Hệ thống phát hiện cháy và báo cháy cố định theo yêu cầu ở 7.4.1 phải được thiết kế và các cảm biến phát hiện cháy phải được bố trí sao cho có thể phát hiện nhanh chóng sự tạo thành ban đầu của đám cháy trong bất cứ vị trí trong khoang đó và trong mọi điều kiện hoạt động bình thường của các máy cũng như sự biến đổi của hệ thống thông gió như yêu cầu về dải nhiệt độ môi trường. Không được phép sử dụng các hệ thống phát hiện cháy chỉ có các cảm biến phát hiện nhiệt, trừ trường hợp trong các khoang có chiều cao hạn chế và tại vị trí việc sử dụng cảm biến kiểu nhiệt là đặc biệt thích hợp. Hệ thống phát hiện cháy phải kích hoạt thiết bị báo động bằng ánh sáng và âm thanh, các tín hiệu báo động bằng ánh sáng và âm thanh này phải khác biệt với các tín hiệu báo động của các hệ thống khác không phải là báo cháy và phải báo động ở đủ các vị trí cần thiết để đảm bảo rằng các tín hiệu báo động được nghe thấy và quan sát thấy trên buồng lái và bởi một sĩ quan máy có trách nhiệm. Nếu buồng lái không có người trực, tín hiệu báo động phải phát ra ở một vị trí có thuyền viên có trách nhiệm đang trực.
+
+Điều 7.4.1
+
+Chương 7
+
+Phần 5
+
+QCVN 21:2025/BGTVT
+
+2.2
+
+Bảo vệ các buồng sinh hoạt, buồng phục vụ và trạm điều khiển
+
+-
+
+Yêu cầu thiết kế
+
+	Khu vực sinh hoạt, buồng phục vụ và trạm điều khiển của tàu phải được bảo vệ bởi hệ thống phát hiện và báo cháy cố định và/hoặc bởi hệ thống phun nước tự động, hệ thống phát hiện cháy và báo cháy như sau đây, tuỳ thuộc vào phương pháp bảo vệ được sử dụng phù hợp với 9.2.2. Nếu Đăng kiểm thấy cần thiết, có thể yêu cầu bổ sung các cảm biến phát hiện khói trong các kênh thông gió.
+
+	(1) Phương pháp IC
+
+	Một hệ thống phát hiện cháy và báo cháy cố định phải được lắp đặt và bố trí sao cho có thể phát hiện được khói trong tất cả các hành lang, cầu thang và các lối thoát trong khu vực các buồng sinh hoạt
+
+	(2) Phương pháp IIC
+
+	 Một hệ thống phun nước tự động, hệ thống phát hiện cháy và báo cháy có loại được Đăng kiểm duyệt và tuân theo các yêu cầu tương ứng ở Chương 28 phải được lắp đặt và bố trí sao cho có thể bảo vệ các buồng sinh hoạt, bếp và các buồng phục vụ khác, trừ các buồng không có nguy cơ cháy cao như các khoang trống, các buồng vệ sinh, v.v... Ngoài ra phải lắp đặt và bố trí một hệ thống phát hiện cháy và báo cháy cố định sao cho có thể phát hiện được khói trong tất cả các hành lang, cầu thang và các lối thoát trong khu vực các buồng sinh hoạt.
+
+	(3) Phương pháp IIIC
+
+	 Một hệ thống phát hiện cháy và báo cháy cố định phải được lắp đặt và bố trí sao cho có thể phát hiện cháy trong tất cả các buồng sinh hoạt và buồng phục vụ, trừ các buồng không có nguy cơ cháy cao như các khoang trống, buồng vệ sinh v.v. Ngoài ra, một hệ thống phát hiện cháy và báo cháy cố định phải được lắp đặt và bố trí sao cho có thể phát hiện khói trong tất cả các hành lang, cầu thang và các lối thoát thân trong khu vực các buồng sinh hoạt.
+
+Điều 7.5.1
+
+Chương 7
+
+Phần 5
+
+QCVN 21:2025/BGTVT
+
+-
+
+Nút ấn  bằng tay
+
+	Các nút báo cháy bằng tay phù hợp với Chương 29 phải được lắp đặt trong toàn bộ khu vực sinh hoạt, khu vực phục vụ và các trạm điều khiển. Tại mỗi cửa thoát phải trang bị một nút báo cháy bằng tay. Các nút báo cháy bằng tay phải dễ dàng tiếp cận trong các hành lang của mỗi boong sao cho không có phần nào của hành lang cách nút báo cháy bằng tay quá 20 m.
 
 Điều 7.5.2
 
@@ -116,27 +206,89 @@ Chương 7
 
 Phần 5
 
-QCVN 21:2015/BGTVT
+QCVN 21:2025/BGTVT
 
-Điều 2.4.4
+2.3
 
-Chương 15
+Bảo vệ khu vực hàng
+
+	Phải trang bị một hệ thống phát hiện cháy và báo cháy cố định hoặc một hệ thống phát hiện khói bằng tách mẫu trong các khoang hàng mà thể không tiếp cận thường xuyên  được, trừ những khoang hàng tuân theo các quy định ở 10.7.1-2
+
+Điều 7.6
+
+Chương 7
 
 Phần 5
 
-QCVN 21:2015/BGTVT
+QCVN 21:2025/BGTVT
 
-+
+2.4
 
-2.2
+Hệ thống phát hiện và báo cháy cố định
 
-Lắp đặt đầu báo
+-
 
-2(1) Các cảm biến nên nằm cao hơn đầu người phải cách xa các vách một khoảng ít nhất 0,5 m ngoại trừ trong hành lang, các kho và cầu thang
+Yêu cầu chung
 
-Đầu báo nhiệt: diện tích bảo vệ 37m2, khoảng cách giữa 02 đầu 9m, khoảng cách đến vách 4,5m
+	Mọi hệ thống phát hiện và báo cháy cố định có các nút báo động bằng tay đều phải có khả năng hoạt động tức thời trong mọi thời điểm (việc này không yêu cầu phải có bảng điều khiển dự phòng). Mặc dù vậy, các buồng đặc biệt có thể được tách ra, ví dụ, xưởng máy trong quá trình thực hiện các công việc nhiệt độ cao (hàn, cắt) và các khoang ro-ro trong quá trình nhận và trả hàng. Phương tiện để ngắt cảm biến phải được thiết kế để tự động khôi phục lại hệ thống về trạng thái giám sát thông thường sau một khoảng thời gian định trước phù hợp với hoạt động liên quan. Buồng phải có người làm việc hoặc được bố trí tuần tra kiểm soát cháy khi các cảm biến theo yêu cầu bị ngắt ra. Các cảm biến trong các không gian khác phải vẫn được duy trì ở trạng thái hoạt động
 
-Đầu báo khói: diện tích bảo vệ 74m2, khoảng cách giữa 02 đầu 11m, khoảng cách đến vách 5,5m
+Điều 29.2.1
+
+Chương29
+
+Phần 5
+
+QCVN 21:2025/BGTVT
+
+-
+
+Các thiết bị
+
+	1. Các cảm biến
+
+	 Các cảm biến phải tuân theo các điều sau đây:
+
+	(1)  Các cảm biến phải hoạt động bằng nhiệt, khói hoặc các sản phẩm cháy khác, ngọn lửa hoặc sự kết hợp của các yếu tố này. Các cảm biến hoạt động bằng những yếu tố khác biểu thị sự bắt đầu của đám cháy có thể được Đăng kiểm xem xét, thống nhất nếu độ nhạy của chúng không kém so với các cảm biến khác nói trên.
+
+	(2)  Các cảm biến khói được yêu cầu lắp ở tất cả các hành lang, cầu thang và lối thoát trong khu vực buồng sinh hoạt phải được chứng nhận là có khả năng hoạt động trước khi mật độ khói che phủ vượt qua 12,5% trên mét, nhưng chưa hoạt động cho đến khi mật độ khói che phủ vượt quá 2% trên mét, khi thử phù hợp với các tiêu chuẩn EN 54: 2001 và IEC 60092-504. Có thể sử dụng các tiêu chuẩn thử khác được nếu được Đăng kiểm xem xét, thống nhất. Các cảm biến khói đặt trong các buồng khác phải làm việc trong giới hạn  độ nhạy được Đăng kiểm xem xét, thống nhất nhằm tránh hiện tượng kém nhạy hoặc quá nhạy của cảm biến.
+
+	(3)  Cảm biến nhiệt độ phải được chứng nhận là có khả năng hoạt động trước khi nhiệt độ vượt quá 78 oC nhưng chưa hoạt động cho đến khi nhiệt độ vượt quá 54 oC khi nhiệt độ tăng tới các giới hạn này với tốc độ nhỏ hơn 1 oC trên một phút, khi thử phù hợp với các tiêu chuẩn EN 54: 2001 và IEC 60092-504. Có thể sử dụng các tiêu chuẩn thử khác được nếu được Đăng kiểm xem xét, thống nhất. Ở tốc độ tăng nhiệt độ cao hơn, cảm biến nhiệt phải làm việc trong những giới hạn thỏa mãn yêu cầu của Đăng kiểm có lưu ý đến việc tránh hiện tượng kém nhạy hoặc quá nhạy.
+
+	(4)  Đối với các buồng sấy hoặc các buồng tương tự có nhiệt độ môi trường bình thường cao, nhiệt độ làm việc của các cảm biến nhiệt trong đó thể lên tới 130 oC, thậm chí tới 140 oC đối với các buồng xông hơi.
+
+	(5) Cảm biến lửa phải được thử phù hợp với các tiêu chuẩn EN 54-10: 2001 và IEC 60092-504. Có thể sử dụng các tiêu chuẩn thử khác được nếu được Đăng kiểm xem xét, thống nhất.
+
+	(6) Tất cả cảm biến phải có các kiểu thích hợp để có thể thử hoạt động được và khôi phục lại được khả năng cảm biến bình thường mà không cần thay đổi một bộ phận nào.
+
+	(7) Các hệ thống phát hiện và báo cháy cố định sử dụng cho các ban công phòng ở phải được Đăng kiểm chứng nhận phù hợp theo Thông tư MSC.1/Circ.1242.
+
+	(8) Các cảm biến lắp đặt trong các khu vực nguy hiểm phải được thử và chứng nhận phù hợp với mục đích sử dụng. Các cảm biến theo yêu cầu ở 20.4 và được lắp đặt trong các không gian phù hợp với yêu cầu ở 20.3.2-2 thì không cần phải là loại thích hợp cho sử dụng trong các khu vực nguy hiểm. Các cảm biến lắp đặt trong các không gian chở hàng nguy hiểm, yêu cầu bởi Chương 19, Bảng 5/19.3 phù hợp với các yêu cầu ở 19.3.2, phải phù hợp để sử dụng trong các khu vực nguy hiểm.
+
+	2. Bảng điều khiển
+
+	 Bảng điều khiển của hệ thống phát hiện cháy phải được thử phù hợp với các tiêu chuẩn EN 54-2: 1997, EN 54-4: 1997 và IEC 60092-504: 2001. Có thể sử dụng các tiêu chuẩn thử khác được nếu được Đăng kiểm xem xét, thống nhất.
+
+	3. Cáp điện
+
+	Cáp điện sử dụng trong các mạch điện phải là loại lan truyền lửa chậm phù hợp với tiêu chuẩn IEC 60332-1.
+
+Điều 29.2.3
+
+Chương29
+
+Phần 5
+
+QCVN 21:2025/BGTVT
+
+-
+
+Cụm cảm biến
+
+	(1)  Các cảm biến và các nút báo cháy bằng tay phải được tập trung thành cụm.
+
+	(2) Các cụm cảm biến phục vụ trạm điều khiển, buồng phục vụ hoặc buồng sinh hoạt không được bao gồm cho cả buồng máy loại A hoặc khoang ro-ro. Một cụm các cảm biến cháy phục vụ khoang ro-ro không được bao gồm buồng máy loại A. Đối với hệ thống phát hiện cháy cố định được lắp các cảm biến phát hiện cháy được nhận dạng đơn lẻ và từ xa, thì một cụm có các cảm biến cháy trong các buồng phục vụ, buồng sinh hoạt và trạm điều khiển không được bao gồm cả các cảm biến cháy trong buồng máy loại A hoặc khoang ro-ro.
+
+	(3)  Nếu hệ thống phát hiện và báo cháy cố định không có phương tiện nhận dạng từ xa và riêng lẻ cho từng cảm biến thì thông thường không cho phép một cụm phục vụ nhiều hơn một boong trong khu vực các buồng sinh hoạt, buồng phục vụ và trạm điều khiển trừ trường hợp đối với cụm phục vụ cầu thang kín. Để tránh chậm trễ cho việc xác định nguồn phát lửa, số lượng các khoang kín trong một cụm phải được hạn chế theo yêu cầu của Đăng kiểm. Nếu hệ thống phát hiện cháy có lắp các cảm biến phát hiện cháy được nhận dạng riêng lẻ và từ xa thì các cụm có thể phục vụ nhiều boong và nhiều buồng kín.
 
 Điều 29.2.4
 
@@ -144,23 +296,125 @@ Chương29
 
 Phần 5
 
-QCVN 21:2015/BGTVT
+QCVN 21:2025/BGTVT
 
-Bảng 5/29.1
+-
 
-+
+Vị trí cảm biến
+
+	(1)  Các cảm biến phải bố trí để đạt được khả năng làm việc tối ưu. Cần tránh các vị trí gần xà boong và ống thông gió hoặc những nơi mà luồng không khí có ảnh hưởng xấu tới sự hoạt động và những nơi dễ bị va chạm hoặc hư hỏng cơ học. Các cảm biến phải được bố trí phía trên đỉnh cách xa các vách một khoảng ít nhất 0,5 m ngoại trừ trong hành lang, các kho và cầu thang.
+
+	(2)  Khoảng cách lớn nhất giữa các cảm biến phải phù hợp với Bảng 5/29.1. Đăng kiểm có thể yêu cầu hoặc cho phép các khoảng cách khác đi dựa trên các số liệu thử nghiệm chứng minh các đặc tính của cảm biến. Các cảm biến bố trí phía dưới các boong ro-ro di chuyển được phải phù hợp với Bảng 5/29.1
+
+	(3) Các cảm biến ở cầu thang phải tối thiểu được bố trí ở đỉnh cao nhất của cầu thang và tại mỗi mức thứ hai xuống dưới.
+
+	(4) Nếu các cảm biến được lắp đặt trong các buồng sấy, buồng lạnh, buồng xông hơi, bộ phận của bếp sử dụng để hâm thực phẩm, buồng giặt và các buồng khác có sinh ra hơi, khói thì có thể sử dụng các cảm biến nhiệt.
+
+	(5) Nếu hệ thống phát hiện và báo cháy cố định được yêu cầu bởi 7.5, các buồng có ít hoặc không có nguy cơ cháy không cần thiết phải trang bị cảm biến. Các buồng đó bao gồm các khoang trống không cất giữ các chất dễ cháy, buồng tắm riêng, nhà vệ sinh công cộng, buồng chứa công chất dập cháy, các kho chứa đồ làm vệ sinh (không có chất lỏng dễ cháy), các khoang boong hở và các lối đi khép kín có ít hoặc không có nguy cơ cháy và được thông gió tự nhiên bằng các lỗ khoét cố định.
+
+	Bảng 5/29.1 Khoảng cách giữa các cảm biến
+
+	Kiểu cảm biến
+
+	Diện tích lớn nhất của sàn trên một cảm biến
+
+	Khoảng cách lớn nhất giữa các tâm
+
+	Khoảng cách lớn nhất tính từ vách
+
+	Nhiệt
+
+	37 m2
+
+	9 m
+
+	4,5 m
+
+	Khói
+
+	74 m2
+
+	11 m
+
+	5,5 m
+
+Điều 29.2.4
+
+Chương29
+
+Phần 5
+
+QCVN 21:2025/BGTVT
+
+-
+
+Bố trí cáp điện
+
+	(1)  Cáp điện tạo thành phần của hệ thống phải được bố trí tránh nhà bếp, buồng máy loại A, và những buồng kín có nguy cơ cháy cao khác, trừ khi cần phải bố trí để phát hiện và báo cháy cho chính các buồng ấy hoặc phải nối vào nguồn cấp năng lượng thích hợp.
+
+	(2) Một cụm có khả năng nhận dạng riêng lẻ phải được bố trí sao cho một đám cháy không thể làm nó bị hỏng nhiều hơn một điểm.
+
+Điều 29.2.4
+
+Chương29
+
+Phần 5
+
+QCVN 21:2025/BGTVT
+
+2.5
+
+Hệ thống điều khiển
+
+-
+
+Tín hiệu âm thanh và ánh sáng
+
+	(1)  Hoạt động của một cảm biến hoặc nút báo cháy bằng tay phải tạo ra một tín hiệu báo động cháy bằng âm thanh và ánh sáng ở bảng điều khiển và các thiết bị chỉ báo. Nếu trong 2 phút các tín hiệu đó không có người báo nhận thì báo động cháy bằng âm thanh phải tự phát ra trên khắp các buồng sinh hoạt của thuyền viên, buồng phục vụ, trạm điều khiển và buồng máy loại A. Hệ thống báo động bằng âm thanh này không nhất thiết phải là một phần của hệ thống phát hiện cháy.
+
+	(2)  Bảng điều khiển phải được đặt ở buồng lái hoặc trạm kiểm soát cháy.
+
+	(3)  Một thiết bị chỉ báo phải đặt ở buồng lái nếu bảng điều khiển đặt ở trạm kiểm soát cháy. Với buồng điều khiển hàng, một thiết bị chỉ báo phải được bố trí trong buồng điều khiển hàng. Các thiết bị chỉ báo, tối thiểu phải chỉ rõ được ở cụm nào đã có cảm biến hoặc nút báo cháy bằng tay hoạt động.
+
+	(4)  Ở trên hoặc bên cạnh bảng chỉ báo phải có sơ đồ chỉ rõ các buồng được phục vụ và vị trí của các cụm.
+
+	(5)  Các nguồn cấp năng lượng và mạch điện cần cho sự hoạt động của hệ thống phải được giám sát sự mất nguồn hoặc tình trạng sự cố thích hợp, bao gồm:
+
+	(a) Hở mạch đơn lẻ hoặc lỗi ngắt nguồn gây ra do đứt dây;
+
+	(b) Lỗi chạm mát đơn lẻ gây ra do tiếp xúc của dây dẫn với một bộ phân bằng kim loại; và
+
+	(c) Lỗi chập dây đơn với dây gây ra bởi tiếp xúc của hai hoặc nhiều dây dẫn với
+
+	nhau. Khi xảy ra tình trạng lỗi phải phát động tín hiệu báo lỗi bằng ánh sáng và âm thanh ở bảng điều khiển và phải khác biệt với tín hiệu báo cháy.
+
+	(6) Phương tiện để báo nhận bằng tay mọi tín hiệu báo động và báo lỗi phải được trang bị ở bảng điều khiển. Các thiết bị báo động âm thanh trên bảng điều khiển và thiết bị chỉ báo có thể được tắt âm bằng tay. Bảng điều khiển phải phân biệt rõ ràng giữa các tình trạng  bình thường, báo động, báo động đã được báo nhận, lỗi và đã tắt âm báo.
+
+	(7) Hệ thống phải được bố trí sao cho tự động đặt lại về điều kiện hoạt động thông thường sau khi đã xóa bỏ các tình trạng lỗi và báo động.
+
+	(8) Nếu hệ thống được yêu cầu kích hoạt báo động âm thanh tại chỗ trong phòng ở lắp đặt các cảm biến đó thì không được phép bố trí phương tiện từ bảng điều khiển để tắt âm báo động âm thanh tại chỗ.
+
+	(9) Nói chung, áp suất âm thanh của thiết bị báo động âm thanh tại các vị trí ngủ trong phòng ở và cách nguồn 1 m phải tối thiểu 75 dB(A) và tối thiểu phải lớn hơn mức tiếng ồn ở xung quanh 10 dB(A) trong quá trình hoạt động thiết bị thông thường khi tàu hành trình ở điều kiện thời tiết vừa phải. Mức áp suất âm thanh phải nằm trong 1/3 giải quãng tám tần số cơ sở. Các tín hiệu báo động âm thanh phải không được vượt quá 120 dB(A)
+
+Điều 29.2.5
+
+Chương29
+
+Phần 5
+
+QCVN 21:2025/BGTVT
 
 3
 
-Hệ thống chữa cháy bằng nước
+Hệ thống chữa cháy
 
 3.1
 
 Yêu cầu thiết kế
 
-Các yêu cầu chung: Các tàu phải được trang bị các bơm chữa cháy, ống chữa cháy, họng chữa cháy và vòi rồng chữa cháy.
+Các tàu phải được trang bị các bơm chữa cháy, đường ống nước chữa cháy, họng nước chữa cháy và vòi rồng chữa cháy phù hợp với các yêu cầu tương ứng ở Chương 10
 
-Các buồng máy loại A có thể tích trên 500 m3, ngoài hệ thống dập cháy cố định ở 10.5.1-1, phải được bảo vệ bởi một hệ thống chữa cháy cục bộ cố định bằng nước, hoặc tương đương. Trong trường hợp buồng máy không có người trực thường xuyên, hệ thống chữa cháy phải có khả năng vận hành tự động và bằng tay. Trong trường hợp buồng máy có người trực liên tục, hệ thống chữa cháy chỉ cần có khả năng vận hành bằng tay.
+Các tàu có GT từ 2000 trở lên, các buồng máy loại A có thể tích trên 500 m3, ngoài hệ thống dập cháy cố định nêu ở 10.5.1-1, phải được bảo vệ bởi một hệ thống chữa cháy cục bộ cố định bằng nước, hoặc tương đương, có kiểu được Đăng kiểm chứng nhận phù hợp với Thông tư MSC.1/Circ.1387. Trong trường hợp buồng máy không có người trực thường xuyên, hệ thống chữa cháy phải có khả năng vận hành tự động và bằng tay. Trong trường hợp buồng máy có người trực liên tục, hệ thống chữa cháy chỉ cần có khả năng vận hành bằng tay.
 
 Điều 10.1.2
 
@@ -168,163 +422,192 @@ Chương 10
 
 Phần 5
 
-QCVN 21:2015/BGTVT
+QCVN 21:2025/BGTVT
 
 Khoản 2,
 Điều 10.5.5
 
-+
-
-3.2
-
-Yêu cầu kỹ thuật
-
 -
 
-Số lượng và vị trí
-
-5. Số lượng và vị trí các họng chữa cháy phải sao cho ít nhất 02 tia nước xuất phát từ các họng chữa cháy, trong đó mỗi họng chỉ nối với một đoạn vòi rồng, có thể đến được mọi phần của tàu mà hành khách hoặc thuyền viên thường đến được khi tàu đang hành hải và phải đến được bất cứ phần nào của khoang hàng khi không có hàng, khoang ro-ro, khoang chở ô tô. Ngoài ra, các họng chữa cháy phải được bố trí gần lối ra vào của các khoang được bảo vệ.
-
-Điều 10.2.1 Chương 10
-
-Phần 5
-
-QCVN 21:2015/BGTVT
+Yêu cầu thiết bị dập cháy trong buồng máy
 
 +
 
--
+Các buồng máy có chứa nồi hơi đốt dầu hoặc các thiết bị dầu đốt
 
-Lăng phun
+1. Các hệ thống dập cháy cố định
 
-3. Kích thước và loại của đầu phun
+ Các buồng máy loại A có nồi hơi đốt dầu hoặc các thiết bị dầu đốt phải được trang bị một trong các hệ thống chữa cháy cố định sau. Trong mỗi trường hợp nếu buồng máy và buồng nồi hơi không hoàn toàn tách biệt, hoặc nếu dầu đốt có thể chảy từ buồng nồi hơi vào buồng máy, buồng nồi hơi và máy kết hợp đó phải được coi là một buồng.
 
-(2) Đối với các buồng sinh hoạt và buồng phục vụ, không sử dụng đầu phun có kích thước lớn hơn 12 mm. (3) Đối với các buồng máy và các vị trí bên ngoài, kích thước các đầu phun phải sao cho có thể đạt được sản lượng xả lớn nhất từ hai tia nước ở áp suất nêu ở 10.2.1-6 do bơm nhỏ nhất cấp, với điều kiện không cần sử dụng đầu phun có kích thước lớn hơn 19 mm. (4) Các đầu phun phải là loại hai tác dụng (phun sương và phun tia) được duyệt, có cả thiết bị đóng.
+(1) Hệ thống dập cháy cố định bằng khí phù hợp các yêu cầu ở Chương 25.
 
-Điều 10.2.3
+(2)  Hệ thống dập cháy cố định bằng bọt có độ nở cao phù hợp các yêu cầu ở Chương 26.
+
+(3) Hệ thống dập cháy cố định bằng phun nước áp lực phù hợp với các yêu cầu ở Chương 27.
+
+2. Các thiết bị dập cháy bổ sung
+
+(1) Phải trang bị tối thiểu một thiết bị tạo bọt xách tay phù hợp với các quy định ở Chương 24 cho mỗi buồng nồi hơi hoặc ở lối vào bên ngoài buồng nồi hơi.
+
+(2) Phải trang bị tối thiểu hai bình bọt chữa cháy xách tay hoặc tương đương cho mỗi buồng đốt trong mỗi buồng nồi hơi và trong mỗi buồng có đặt một phần của hệ thống dầu đốt. Phải trang bị tối thiểu một bình bọt loại được duyệt có dung tích tối thiểu 135 lít hoặc tương đương cho mỗi buồng nồi hơi. Các bình này phải có vòi phun trên giá cuốn thích hợp để có thể dẫn đến mọi phần của buồng nồi hơi. Trong trường hợp nồi hơi sinh hoạt có công suất dưới 175 kW, hoặc các nồi hơi được bảo vệ bởi hệ thống chữa cháy cố định cục bộ được quy định ở 10.5.5 không yêu cầu phải trang bị bình bọt loại được duyệt có dung tích 135 lít.
+
+(3) Trong mỗi buồng đốt, phải có két chứa ít nhất 0,1 m3 cát, mùn cưa được ngâm với xút, hoặc vật liệu khô được chấp nhận khác cùng với một xẻng thích hợp để xúc và rải vật liệu này. Có thể thay yêu cầu này bằng một bình chữa cháy xách tay được duyệt.
+
+Điều 10.5.1
 
 Chương 10
 
 Phần 5
 
-QCVN 21:2015/BGTVT
+QCVN 21:2025/BGTVT
 
 +
+
+Các buồng máy loại A có chứa động cơ đốt trong
+
+1. Các hệ thống dập cháy cố định
+
+ Các buồng máy loại A có chứa động cơ đốt trong phải được trang bị một trong các hệ thống dập cháy cố định nêu ở 10.5.1-1.
+
+2. Các thiết bị dập cháy bổ sung
+
+(1) Phải trang bị tối thiểu một thiết bị tạo bọt xách tay phù hợp với các quy định ở Chương 24.
+
+(2) Trong mỗi buồng, phải trang bị các bình bọt loại được duyệt có dung tích mỗi bình tối thiểu 45 lít hoặc tương đương, số lượng các bình phải đủ để có thể hướng được bọt hoặc chất chữa cháy tương đương đến mọi phần của các hệ thống có áp lực của dầu đốt và dầu bôi trơn, cơ cấu truyền động và các vị trí có nguy cơ cháy khác. Ngoài ra, phải trang bị các bình bọt dập cháy xách tay hoặc tương đương với số lượng đủ và được bố trí sao cho không có điểm nào trong buồng cách bình dập cháy xách tay quá 10 m đi bộ, với số lượng tối thiểu cho mỗi buồng là 2 bình đó. Đối với các buồng nhỏ hơn của tàu, Đăng kiểm có thể xem xét và áp dụng linh hoạt yêu cầu này.
+
+Điều 10.5.2
+
+Chương 10
+
+Phần 5
+
+QCVN 21:2025/BGTVT
+
++
+
+Buồng máy có chứa tua bin hơi và động cơ hơi nước kín
+
+1. Các hệ thống dập cháy cố định
+
+ Trong buồng máy có chứa tua bin hơi và động cơ hơi nước kín sử dụng để làm máy chính hoặc các mục đích khác, có tổng công suất các máy không nhỏ hơn 375 kW, phải trang bị một trong các hệ thống dập cháy cố định nêu ở 10.5.1-1 nếu các buồng đó không có người trực canh theo chu kỳ.
+
+2. Các thiết bị dập cháy bổ sung
+
+(1) Phải trang bị các bình bọt loại được duyệt có dung tích mỗi bình tối thiểu 45 lít hoặc tương đương, số lượng các bình phải đủ để có thể hướng được bọt hoặc chất chữa cháy tương đương đến mọi phần của các hệ thống dầu bôi trơn có áp lực, đến mọi phần của vỏ bao các chi tiết được bôi trơn áp lực của tua bin, động cơ hoặc cơ cấu truyền động liên quan và các vị trí có nguy cơ cháy khác. Tuy nhiên, không yêu cầu trang bị các bình chữa cháy đó nếu trong buồng có sự bảo vệ tối thiểu tương đương với các điều kiện như yêu cầu ở mục này bởi hệ thống dập cháy cố định được lắp đặt phù hợp với 10.5.1-1.
+
+(2) Ngoài ra, phải trang bị các bình bọt dập cháy xách tay hoặc tương đương với số lượng đủ và được bố trí sao cho không có điểm nào trong buồng cách bình dập cháy xách tay quá 10 m đi bộ, với số lượng tối thiểu cho mỗi buồng là 2 bình đó, trừ trường hợp không yêu cầu trang bị các bình dập cháy đó để bổ sung cho thiết bị được trang bị phù hợp với 10.5.1-2(2).
+
+Điều 10.5.3
+
+Chương 10
+
+Phần 5
+
+QCVN 21:2025/BGTVT
+
++
+
+Các buồng máy khác
+
+Nếu có nguy cơ cháy trong buồng máy mà không có các quy định riêng về các thiết bị dập cháy nêu ở 10.5.1, 10.5.2 và 10.5.3, phải trang bị trong, hoặc gần với buồng đó các bình dập cháy xách tay được duyệt, với số lượng như quy định ở các điều trên, hoặc các phương tiện dập cháy khác mà Đăng kiểm thấy thỏa đáng
+
+Điều 10.5.4
+
+Chương 10
+
+Phần 5
+
+QCVN 21:2025/BGTVT
 
 -
 
-Cuộn vòi
+Yêu cầu thiết bị dập cháy trong các trạm điều khiển, buồng sinh hoạt và buồng phục vụ
 
-(1) Các vòi rồng chữa cháy phải có chiều dài tối thiểu 10 m, nhưng không dài hơn: (a) 15 m cho các buồng máy; (b) 20 m cho các buồng khác và boong hở; (c) 25 m cho boong hở trên các tàu có chiều rộng lớn nhất vượt quá 30 m
++
 
-Điều 10.2.3
+Hệ thống phun nước tự động
+
+Trong các tàu áp dụng phương pháp IIC nêu ở 9.2.2-1(2), phải trang bị hệ thống phun nước tự động, phát hiện cháy và báo cháy phù hợp với các yêu cầu ở 7.5.1-2.
+
+Điều 10.6.1
 
 Chương 10
 
 Phần 5
 
-QCVN 21:2015/BGTVT
+QCVN 21:2025/BGTVT
 
 +
+
+Các buồng chứa chất lỏng dễ cháy
+
+1. Kho sơn phải được bảo vệ bằng hệ thống dập cháy nêu ở (1) đến (4) sau. Trong mọi trường hợp hệ thống phải vận hành được từ bên ngoài buồng được bảo vệ.
+
+(1) Hệ thống CO2, được thiết kế với thể tích tối thiểu khí tự do bằng 40% thể tích toàn bộ của buồng được bảo vệ.
+
+(2) Hệ thống bột khô, được thiết kế cho tối thiểu 0,5 kg/m3.
+
+(3) Hệ thống phun nước hoặc hệ thống phun nước tự động, được thiết kế cho 5 l/m2 trong một phút (hệ thống phun nước có thể được nối với đường ống cứu hỏa của tàu); hoặc;
+
+(4) Hệ thống có khả năng bảo vệ tương đương do Đăng kiểm quy định.
+
+2. Các ngăn chứa chất lỏng dễ cháy không phải là kho sơn phải được bảo vệ bởi thiết bị dập cháy thích hợp được Đăng kiểm chứng nhận.
+
+3. Đối với các kho sơn có diện tích boong nhỏ hơn 4 m2 và không có lối đi đến các buồng sinh hoạt, có thể thay cho hệ thống cố định bằng bình dập cháy bằng CO2 xách tay có thể tích đủ để cung cấp lượng khí tự do tối thiểu bằng 40% tổng thể tích của buồng. Phải bố trí cửa xả trong kho sơn để có thể xả bình dập cháy mà không cần phải đi vào trong buồng được bảo vệ. Bình dập cháy xách tay theo yêu cầu phải được để gần cửa xả này. Để thay thế, có thể trang bị  một lỗ xả hoặc đầu nối vòi rồng để có thể sử dụng nước từ đường ống chữa cháy chính.
+
+Điều 10.6.2
+
+Chương 10
+
+Phần 5
+
+QCVN 21:2025/BGTVT
 
 -
 
-Áp lực phun
+Yêu cầu thiết bị chữa cháy trong thiết bị rán giòn bằng mỡ
 
-6 Áp suất tại các họng chữa cháy (1) Khi hai bơm cùng hoạt động đồng thời cấp nước qua các vòi phun nêu ở 10.2.3-3, với lượng nước như quy định ở 10.2.1-3, qua các họng gần đó, áp suất tổi thiểu tại tất cả các họng chữa cháy phải đạt được như sau: (a) Tàu có GT (tổng dung tích) từ 6000 trở lên: 0,27 N/mm2 (b) Tàu có GT dưới 6000: 0,25 N/mm2
+Thiết bị rán giòn bằng mỡ phải được lắp các thiết bị sau:
 
-Điều 10.2.1
+(1) Hệ thống dập cháy bằng tay hoặc tự động được thử theo tiêu chuẩn quốc tế được Đăng kiểm xem xét, thống nhất.
+
+(2) Rơ-le nhiệt chính và dự phòng có thiết bị báo động để cảnh báo người vận hành trong
+
+trường hợp hư hỏng một trong các rơ-le nhiệt.
+
+(3) Thiết bị ngắt tự động nguồn điện khi hệ thống dập cháy được kích hoạt.
+
+(4) Thiết bị báo động để chỉ báo hoạt động của hệ thống dập cháy trong bếp có lắp thiết bị rán giòn.
+
+(5) Các phương tiện điều khiển để vận hành bằng tay của hệ thống dập cháy, được gắn nhãn mác rõ ràng để thuyền viên sẵn sàng sử dụng.
+
+Điều 10.6.3
 
 Chương 10
 
 Phần 5
 
-QCVN 21:2015/BGTVT
-
-3.3
-
-Bơm chữa cháy
-
-1 Các bơm có thể sử dụng làm bơm chữa cháy Các bơm dùng chung, bơm hút khô, bơm dằn, bơm nước vệ sinh có thể được sử dụng làm bơm chữa cháy nếu chúng không thường xuyên được dùng để bơm dầu và nếu chúng chỉ thỉnh thoảng được dùng để bơm hoặc vận chuyển dầu đốt thì phải có thiết bị chuyển đổi
-
-Điều 10.2.2
-
-Chương 10
-Phần 5
-
-QCVN 21:2015/BGTVT
-
-+
+QCVN 21:2025/BGTVT
 
 -
 
-Số lượng
-
-2 Số lượng các bơm Các tàu phải được trang bị các bơm chữa cháy như sau: (1) Các tàu có GT từ 1000 trở lên, ít nhất hai bơm được truyền động cơ giới độc lập. (2) Các tàu có GT dưới 1000, ít nhất hai bơm được truyền động cơ giới, trong đó một chiếc được truyền động cơ giới độc lập.
-
-Điều 10.2.2
-
-Chương 10
-
-Phần 5
-
-QCVN 21:2015/BGTVT
+Yêu cầu thiết bị dập cháy trong các khoang hàng
 
 +
 
--
+Các hệ thống dập cháy cố định bằng khí cho hàng tổng hợp
 
-Lưu lượng
+1. Trừ các khoang chở ô tô và ro-ro, các khoang hàng của tàu có GT từ 2000 trở lên phải
 
-2 Sản lượng của bơm hút khô
+được bảo vệ bằng hệ thống dập cháy cố định bằng CO2 hoặc khí trơ tuân theo các quy định của Chương 25 hoặc bằng hệ thống dập cháy có tác dụng tương đương.
 
-Công thức tính: Q = 5,66 d2 x 10-3
+2. Đăng kiểm có thể miễn giảm cho các yêu cầu ở -1 trên và 10.7.2 cho các khoang hàng
 
-Trong đó: Q - Sản lượng bơm quy định (m3/h); d: Đường kính trong của đường ống hút khô chính (mm).
+của các tàu được đóng chỉ dự định để chở quặng, than đá, hàng hạt, gỗ chưa qua xử lý, các hàng không cháy hoặc các hàng có nguy cơ cháy thấp. Việc miễn giảm này chỉ được
 
-4 Sản lượng của các bơm chữa cháy
+thực hiện nếu tàu có nắp miệng khoang hàng bằng thép và có phương tiện hữu hiệu đóng
 
-(1) Không nhỏ hơn 4/3 sản lượng của bơm hút khô tính ở mục 2. Tổng sản lượng theo yêu cầu của các bơm chữa cháy không cần lớn hơn 180 m3/h.
-
-(2) Trong mọi trường hợp sản lượng mỗi bơm không được nhỏ hơn 25 m3/h và trong bất kỳ điều kiện nào mỗi bơm đó phải có khả năng cấp nước được cho ít nhất hai tia nước.
-
-Điều 13.5.4
-
-Chương 13
-
-Phần 3
-
-QCVN
-
-21:2015/BGTVT
-
-Điều 10.2.2
-
-Chương 10
-
-Phần 5
-
-QCVN 21:2015/BGTVT
-
-+
-
-4
-
-Chữa cháy bằng khí CO2
-
-4.1
-
-Yêu cầu thiết kế
-
-*1. Trừ các khoang chở ô tô và ro-ro, các khoang hàng của tàu có GT từ 2000 trở lên phải được bảo vệ bằng hệ thống dập cháy cố định bằng CO2 hoặc khí trơ tuân theo các quy định của Chương 25 hoặc bằng hệ thống dập cháy có tác dụng tương đương.
-
-Buồng máy loại A có chứa động cơ đốt trong phải được trang bị một trong các hệ thống dập cháy cố định nêu ở 10.5.1-1.
-
-*2. Các hệ thống dập cháy cố định bằng khí cho các loại hàng nguy hiểm
-
-Tàu tham gia chở hàng nguy hiểm trong khoang hàng bất kỳ phải được trang bị hệ thống dập cháy cố định bằng CO2 hoặc khí trơ
-
-Hệ thống CO2 phù hợp với các yêu cầu sau: (a) Các thiết bị báo động bằng âm thanh, để cảnh báo việc xả công chất dập cháy, phải an toàn trong sử dụng trong hỗn hợp không khí/hơi hàng dễ cháy; (b) Phải có bản thông báo ở các vị trí điều khiển để thông báo rằng do nguy cơ cháy tĩnh điện, hệ thống chỉ được sử dụng để dập cháy mà không được sử dụng cho các mục đích làm trơ.
+tất cả các thiết bị thông gió và các lỗ khoét thông với các khoang hàng. Trong trường hợp này, phải trình cho Đăng kiểm danh mục các hàng dự định chở.
 
 Điều 10.7.1
 
@@ -332,11 +615,17 @@ Chương 10
 
 Phần 5
 
-QCVN
+QCVN 21:2025/BGTVT
 
-21:2015/BGTVT
++
 
-Điều 10.5.2
+Các hệ thống dập cháy cố định bằng khí cho các loại hàng nguy hiểm
+
+Tàu tham gia chở hàng nguy hiểm trong khoang hàng bất kỳ phải được trang bị hệ thống
+
+dập cháy cố định bằng CO2 hoặc khí trơ phù hợp với các quy định ở Chương 25, hoặc hệ
+
+thống dập cháy có tác dụng bảo vệ tương đương cho các loại hàng được chở
 
 Điều 10.7.2
 
@@ -344,7 +633,111 @@ Chương 10
 
 Phần 5
 
-QCVN 21:2015/BGTVT
+QCVN 21:2025/BGTVT
+
++
+
+Chữa cháy cho các tàu được thiết kế để chở công te nơ trên và bên trên boong
+
+thời tiết
+
+1. Các tàu được thiết kế để chở công te nơ trên hoặc bên trên boong thời tiết phải thỏa mãn với (1) và (2) sau đây:
+
+(1) Ngoài các hệ thống yêu cầu ở 10.1 và 10.2, tàu phải mang theo, ít nhất là một súng phun sương nước có khả năng đâm xuyên (water mist lance), và
+
+(2) Súng phun sương nước có khả năng đâm xuyên là một ống có đầu phun có khả năng xuyên thủng vỏ công te nơ và tạo ra hơi sương nước bên trong không gian kín (trong công te nơ, v.v..) khi nối với đường ống chữa cháy chính.
+
+2. Các tàu được thiết kế để chở từ 5 tầng công te nơ trở lên ở trên hoặc bên trên boong thời tiết phải thỏa mãn với (1) và (2) sau đây:
+
+(1) Tàu phải mang theo các súng phun nước di động (mobile water monitor) mà Đăng kiểm thấy phù hợp với số lượng như sau đây:
+
+(a) Tàu có chiều rộng nhỏ hơn 30 m: ít nhất là hai súng phun nước di động; hoặc
+
+(b) Tàu có chiều rộng từ 30 m trở lên: ít nhất là bốn sung phun nước di động
+
+(2) Súng phun nước di động, tất cả các vòi rồng cần thiết, các phụ tùng đường ống và đồ
+
+gá cần thiết để cố định phải được duy trì ở trạng thái sẵn sàng cho sử dụng ở một vị trí bên ngoài khu vực hàng mà không bị cô lập khi có cháy xảy ra trong khu vực hàng.
+
+(3) Phải trang bị đủ số lượng các họng nước chữa cháy sao cho:
+
+(a) Tất cả các súng phun nước di động có thể hoạt động đồng thời để tạo ra một màn chắn bằng nước hiệu quả ở phía trước và phía sau của mỗi khối công te nơ:
+
+(b) Hai tia nước yêu cầu ở 10.2.1-5 có thể được cung cấp với áp suất yêu cầu ở 10.2.1-6; và
+
+(c) Mỗi một súng phun nước di động được yêu cầu có thể được cung cấp nước từ một họng nước chữa cháy với áp suất cần thiết để vươn tới tầng công te nơ trên cùng ở trên boong.
+
+(4) Các súng phun nước di động có thể được cung cấp nước từ đường ống nước chữa cháy chính, miễn là sản lượng của bơm nước chữa cháy và đường kính ống nước chữa cháy chính đủ để hoạt động đồng thời các súng phun nước di động và hai tia nước từ các vòi rồng chữa cháy với áp suất yêu cầu. Nếu chở hàng nguy hiểm, sản lượng của bơm nước chữa cháy và đường kính ống nước chữa cháy chính cũng phải thỏa mãn, đến mức có thể được, yêu cầu ở 19.3.1-5, đối với khu vực chở hàng trên boong.
+
+(5) Đặc tính hoạt động của mỗi sung phun nước di động phải được thử trên tàu trong quá trình kiểm tra phân cấp thỏa mãn yêu cầu của Đăng kiểm. Việc thử phải xác nhận các vấn đề (a) và (b) sau:
+
+(a) Các súng phun nước di động có thể được cố định chắc chắn với kết cấu tàu để đảm bảo hoạt động an toàn và hiệu quả; và
+
+(b) Khi tất cả các súng phun di động và các vòi rồng chữa cháy hoạt động đồng thời, tia nước của súng phun nước di động vươn tới tầng công te nơ trên cùng.
+
+Điều 10.7.3
+
+Chương 10
+
+Phần 5
+
+QCVN 21:2025/BGTVT
+
+-
+
+Yêu cầu bảo vệ két hàng
+
++
+
+Các hệ thống chữa cháy cố định bằng bọt trên boong
+
+1. Đối với các tàu hàng lỏng có trọng tải (DW) từ 20000 tấn trở lên, phải trang bị hệ thống chữa cháy cố định bằng bọt trên boong phù hợp với các yêu cầu ở Chương 34, trừ khi, thay cho yêu cầu trên, sau khi xem xét đến việc bố trí và thiết bị của tàu, Đăng kiểm có thể chấp nhận các hệ thống cố định khác nếu chúng có tác dụng bảo vệ tương đương với hệ thống trên. Các hệ thống chữa cháy thay thế đó phải tuân theo các yêu cầu ở -2 dưới đây.
+
+2. Theo  mục 1. trên, nếu Đăng kiểm xem xét, thống nhất hệ thống cố định tương đương thay cho hệ thống chữa cháy cố định bằng bọt trên boong thì hệ thống đó phải:
+
+(1) Có khả năng dập cháy cho chất lỏng chảy tràn và ngăn được sự phát cháy của dầu tràn chưa cháy;
+
+(2) Có khả năng chữa cháy cho các két bị vỡ.
+
+3. Các tàu hàng lỏng có DW dưới 20000 tấn phải được trang bị hệ thống chữa cháy bằng bọt trên boong phù hợp với các yêu cầu của Chương 34.
+
+4. Chất tạo bọt phải được giới hạn chỉ sử dụng một loại có tác dụng dập cháy cho các hàng dự định được chở.
+
+Điều 10.8
+
+Chương 10
+
+Phần 5
+
+QCVN 21:2025/BGTVT
+
+-
+
+Yêu cầu bảo vệ các buồng bơm hàng
+
++
+
+Các hệ thống dập cháy cố định
+
+1. Mỗi buồng bơm phải được trang bị một trong các hệ thống dập cháy sau đây, vận hành được từ vị trí dễ đến bên ngoài buồng bơm. Các buồng bơm hàng phải được trang bị hệ thống phù hợp cho buồng máy loại A.
+
+(1) Hệ thống CO2 phù hợp với các quy định ở Chương 25 và với các yêu cầu sau:
+
+(a) Các thiết bị báo động bằng âm thanh thỏa mãn các yêu cầu ở (i) đến (ii) sau, để cảnh báo việc xả công chất dập cháy, phải an toàn trong sử dụng trong hỗn hợp không khí/hơi hàng dễ cháy
+
+(i) Thiết bị báo động hoạt động bằng khí
+
+ Không được sử dụng thiết bị báo động hoạt động bằng khí CO2. Thiết bị báo động hoạt động bằng khí có thể được sử dụng với điều kiện khí cấp phải sạch và khô.
+
+(ii) Thiết bị báo động hoat động bằng điện
+
+ Phải bố trí sao cho cơ cấu kích hoạt điện được bố trí bên ngoài buồng bơm, trừ trường hợp thiết bị báo động được chứng nhận an toàn về bản chất.
+
+(b) Phải có bản thông báo ở các vị trí điều khiển để thông báo rằng do nguy cơ cháy tĩnh điện, hệ thống chỉ được sử dụng để dập cháy mà không được sử dụng cho các mục đích làm trơ.
+
+(2) Hệ thống bọt có độ nở cao tuân theo các quy định ở Chương 26, nếu việc cấp chất tạo bọt phù hợp với việc dập các đám cháy liên quan đến hàng được chở.
+
+(3) Hệ thống phun nước áp lực cố định tuân theo các quy định ở Chương 27.
 
 Điều 10.9.1
 
@@ -352,133 +745,764 @@ Chương 10
 
 Phần 5
 
-QCVN 21:2015/BGTVT
+QCVN 21:2025/BGTVT
 
 +
 
-4.2
+Lượng công chất dập cháy
 
-Lượng khí cần thiết
+Nếu công chất dập cháy sử dụng trong hệ thống buồng bơm hàng cũng được sử dụng trong các hệ thống phục vụ các buồng khác, lượng công chất được trang bị hoặc tỉ lệ cấp của nó không cần phải lớn hơn giá trị lớn nhất yêu cầu cho khoang lớn nhất.
 
-1 Lượng khí chữa cháy
-
-(1) Đối với khoang hàng, nếu không có quy định nào khác, lượng CO2 cần phải đủ để tạo ra một thể tích khí tự do tối thiểu bằng 30% tổng thể tích của khoang hàng lớn nhất cần được bảo vệ ở trên tàu.
-
-(2) Đối với buồng máy, lượng CO2 cần phải đủ để tạo ra một thể tích khí tự do tối thiểu bằng thể tích lớn hơn trong số thể tích sau đây:
-
- (a) 40% tổng thể tích của buồng máy lớn nhất cần bảo vệ, thể tích này không bao gồm phần vách quây buồng máy ở trên độ cao mà tại đó diện tích nằm ngang của phần vách quây bằng hoặc nhỏ hơn 40% diện tích nằm ngang của buồng máy đang xét ở phần giữa của chiều cao từ mặt trên của đáy đôi đến phần thấp nhất của vách quây, hoặc
-
-(b) 35% tổng thể tích của buồng máy lớn nhất cần được bảo vệ, kể cả phần vách quây buồng.
-
-(3) Số % nói trên ở (2) có thể giảm tới 35% và 30% tương ứng cho tàu hàng có GT nhỏ hơn 2000.
-
-(4) Trong chương này thể tích tự do của CO2 phải được lấy bằng 0,56m3/kg.
-
-(5) Đối với buồng máy, hệ thống ống cố định phải sao cho 85% lượng khí có thể phun vào buồng trong 2 phút.
-
-(6) Để phục vụ mục đích của mục này, trong trường hợp có từ hai buồng máy trở lên không hoàn toàn tách biệt thì chúng phải được coi là một buồng.
-
-2 Việc điều khiển hệ thống khí CO2 bảo vệ các khoang hàng ro-ro hoặc các không gian khác thường xuyên có người hoặc thường xuyên có người ra vào phải thỏa mãn các yêu cầu dưới đây:
-
-(1) Phải có hai thiết bị tách biệt điều khiển sự xả khí CO2 vào khoang được bảo vệ và phải đảm bảo sự hoạt động tin cậy của thiết bị báo động. Một thiết bị điều khiển phải được dùng để mở van trên đường ống dẫn khí vào khoang được bảo vệ và thiết bị điều khiển thứ hai phải được sử dụng để xả khí từ các bình chứa. Phải có phương tiện chủ động để sao cho chúng chỉ có thể vận hành được theo thứ tự như vậy, và
-
-(2) Hai thiết bị điều khiển này phải được đặt trong một hộp điều khiển xả có đánh dấu rõ cho từng khoang được bảo vệ. Nếu hộp này có khóa thì chìa khóa phải được đặt ở trong ngăn kính loại có thể đập vỡ được đặt ở vị trí dễ thấy bên cạnh hộp.
-
-3 Trong trường hợp lắp đặt hệ thống CO2 áp suất thấp để thỏa mãn quy định này thì phải thỏa mãn các yêu cầu từ (1) đến (13) sau:
-
-(1) Các thiết bị điều khiển hệ thống và máy làm lạnh phải được bố trí trong cùng một buồng chứa các bình áp lực.
-
-(2) Lượng định mức chất lỏng CO2 phải được chứa trong bình chứa ở áp suất làm việc trong khoảng từ 1,8N/mm2 đến 2,2N/mm2. Việc nạp chất lỏng thông thường cho bình phải được giới hạn ở mức chỉ cung cấp đủ không gian hơi để cho phép giãn nở chất lỏng trong điều kiện nhiệt độ chứa lớn nhất, chứ không phải là có thể đạt đến mức tương ứng với việc đặt các van an toàn, nhưng không được vượt quá 95% thể tích của bình chứa.
-
-(3) Các bình chứa phải được trang bị các thiết bị sau:
-
- (a) Áp kế
-
- (b) Thiết bị báo động áp suất cao (áp suất đặt không được cao hơn áp suất đặt của van an toàn)
-
-(c) Thiết bị báo động áp suất thấp (áp suất đặt không được nhỏ hơn 1,8 Mpa)
-
- (d) Các ống nhánh có van chặn để nạp cho bình
-
- (e) Các ống xả khí CO2
-
- (f) Thiết bị chỉ báo mức chất lỏng CO2 (lắp trên bình)
-
- (g) Hai van an toàn
-
-(4) Hai van an toàn phải được bố trí sao cho một trong hai van có thể đóng lại khi van kia được nối với bình. Áp suất đặt của các van an toàn không được nhỏ hơn 1,1 lần áp suất làm việc. Khả năng của mỗi van phải sao cho các hơi sinh ra trong điều kiện cháy có thể được xả ra với độ tăng áp suất không vượt quá 20% so với áp suất thiết kế. Đầu xả của van an toàn phải được dẫn ra boong hở.
-
-(5) Các bình và các ống dẫn ra từ bình thường xuyên được điền CO2 phải được bọc cách nhiệt ngăn ngừa sự hoạt động của van an toàn trong khoảng thời gian 24 giờ sau khi ngừng nạp cho hệ thống ở nhiệt độ môi trường 45oC và áp suất ban đầu bằng áp suất khởi động của máy lạnh.
-
-(6) Các bình phải được phục vụ bởi hai máy làm lạnh hoàn toàn độc lập và tự động, chỉ sử dụng cho mục đích này, mỗi máy làm lạnh bao gồm một máy nén và động cơ dẫn động thích hợp, giàn bay hơi và ngưng tụ.
-
-(7) Công suất làm lạnh và việc điều khiển tự động của mỗi máy làm lạnh phải sao cho duy trì được nhiệt độ yêu cầu trong các điều kiện hoạt động liên tục trong 24 giờ ở nhiệt độ biển đến 32oC và nhiệt độ môi trường khí đến 45oC.
-
-(8) Mỗi máy làm lạnh hoạt động bằng điện phải được cấp điện từ các thanh cái của bảng điện chính bởi mạch nhánh riêng biệt.
-
-(9) Nước làm mát cấp cho máy làm lạnh (nếu có yêu cầu) phải được cấp từ ít nhất 2 bơm tuần hoàn, một trong hai bơm đó được sử dụng làm bơm dự phòng. Bơm dự phòng có thể là bơm được sử dụng cho mục đích khác sao cho việc sử dụng nó để làm mát không ảnh hưởng đến công việc phục vụ chính khác của tàu. Nước làm mát phải được lấy từ ít nhất hai đầu nối thông biển, nên được phân bố một ở mạn trái và một mạn phải.
-
-(10) Các van an toàn phải được trang bị cho mỗi nhánh ống mà có thể bị cô lập bởi các van khóa và trong đó có thể bị tăng áp suất vượt quá áp suất thiết kế của các bộ phận.
-
-(11) Các thiết bị báo động bằng ánh sáng và âm thanh phải được trang bị trong trạm điều khiển trung tâm hoặc phù hợp với các yêu cầu ở 4.3.3 của Quy phạm hệ thống điều khiển tự động và từ xa, nếu không có trạm điều khiển trung tâm, khi:
-
-(a) Áp suất trong bình đạt đến các giá trị thấp và cao theo (3) (b) hoặc (c) trên;
-
-(b) Một trong các máy làm lạnh bị hỏng không hoạt động, hoặc
-
-(c) Chất lỏng trong bình đạt đến mức cho phép thấp nhất.
-
-(12) Nếu hệ thống phục vụ cho hơn một buồng, phải trang bị phương tiện điều khiển xả lượng CO2 như bộ hẹn giờ tự động hoặc thiết bị chỉ báo mức chính xác bố trí tại trạm điều khiển.
-
-(13) Nếu có trang bị thiết bị tự động điều chỉnh lượng định mức CO2 và buồng được bảo vệ thì phải có khả năng điều chỉnh được lượng xả bằng tay.
-
-Điều 25.2.2
-
-Chương 25
-
-Phần 5
-
-QCVN 21:2015/BGTVT
-
-+
-
-5
-
-Chữa cháy bằng bọt
-
-5.1
-
-Yêu cầu thiết kế
-
-Các hệ thống chữa cháy cố định bằng bọt trên boong
-
-1 Đối với các tàu chở hàng lỏng có DW từ 20000 tấn trở lên, phải trang bị hệ thống chữa cháy cố định bằng bọt trên boong phù hợp với các yêu cầu ở Chương 34, trừ khi, thay cho yêu cầu trên, sau khi xem xét đến việc bố trí và thiết bị của tàu, Đăng kiểm có thể chấp nhận các hệ thống cố định khác nếu chúng có tác dụng bảo vệ tương đương với hệ thống trên.
-
-4 Chất tạo bọt phải được giới hạn chỉ sử dụng một loại có tác dụng dập cháy cho các hàng hóa dự định được chở.
-
-Điều 10.8.1
+Điều 10.9.2
 
 Chương 10
 
 Phần 5
 
-QCVN 21:2015/BGTVT
+QCVN 21:2025/BGTVT
 
 +
 
-5.2
+Các bình dập cháy xách tay
 
-Chất tạo bọt
+Mỗi buồng bơm hàng phải được trang bị tối thiểu hai bình bọt dập cháy xách tay hoặc tương đương, một bình đặt ở vị trí các bơm và một bình đặt ở lối vào buồng bơm
 
-1 Tốc độ cấp dung dịch bọt không được nhỏ hơn giá trị lớn nhất trong các giá trị dưới đây: (1) 0,6 lít/phút trên 1 m2 diện tích boong của két hàng, trong đó diện tích két hàng tính bằng chiều rộng lớn nhất của tàu nhân với tổng chiều dài tính theo chiều dọc tàu của các khoang dầu hàng. (2) 6 lít/phút trên 1 m2 diện tích mặt cắt theo phương nằm ngang của 1 két hàng có diện tích này lớn nhất; hoặc (3) 3 lít/phút trên 1 m2 của diện tích được bảo vệ bởi một đầu phun lớn nhất, diện tích này là toàn bộ phía trước của đầu phun, nhưng không được nhỏ hơn 1250 lít/phút.
+Điều 10.9.3
 
-2 Lượng chất tạo bọt phải đủ để đảm bảo tạo được lượng bọt ít nhất trong 20 phút trên các tàu chở chất lỏng có lắp hệ thống khí trơ hoặc 30 phút trên các tàu không lắp hệ thống khí trơ khi áp dụng tốc độ quy định nêu ở (1), (2) và (3) của -1 trên, lấy giá trị nào lớn hơn. Độ nở của bọt (nghĩa là tỷ số của thể tích bọt sinh ra chia cho thể tích của hỗn hợp nước và chất tạo bọt được cấp) nói chung không được vượt quá 12/1. Nếu hệ thống chủ yếu là cấp ra bọt có độ nở thấp nhưng ở độ nở hơi cao hơn 12/1 thì lượng dung tích bọt sẵn có phải được tính như đối với hệ thống có độ nở bằng 12/1. Nếu dùng bọt có độ nở trung bình (từ 50/1 đến 150/1) thì tốc độ cấp bọt và sản lượng của súng phun phải thoả mãn yêu cầu của Đăng Kiểm.
+Chương 10
 
-3 Bọt từ hệ thống bọt cố định phải được cấp từ các súng phun (mornitor) và thiết bị tạo bọt (applicator). Mỗi súng phun bọt phải cấp được tối thiểu 50% tốc độ cấp dung dịch bọt quy định ở (1) và (2) của 34.2.2-1 trên. Trên các tàu chở chất lỏng có DW dưới 4000 tấn có thể chỉ cần lắp đặt các thiết bị tạo bọt thay cho các súng phun. Tuy nhiên trong trường hợp này, sản lượng của mỗi thiết bị tạo bọt không được nhỏ hơn 25% tốc độ cấp dung dịch bọt theo yêu cầu ở (1) và (2) của 34.2.2-1 ở trên.
+Phần 5
 
-4 Sản lượng bọt của mỗi súng phun không được nhỏ hơn 3 lít/phút trên 1 m2 diện tích boong được súng phun đó bảo vệ, diện tích đó nằm hoàn toàn phía trước đầu phun. Sản lượng đó không được nhỏ hơn 1250 lít/phút
+QCVN 21:2025/BGTVT
 
-5 Sản lượng của mỗi thiết bị tạo bọt không được nhỏ hơn 400 lít/phút và tầm phun của thiết bị tạo bọt trong điều kiện lặng gió không được nhỏ hơn 15 m.
+3.2
+
+Yêu cầu kỹ thuật
+
+-
+
+Cấp nước chữa cháy
+
+2. Đối với những buồng máy không có người trực thường xuyên hoặc chỉ cần một người trực canh, phải có sẵn nước cấp từ hệ thống ống chữa cháy, với áp suất thích hợp, bằng cách khởi động từ xa các bơm chữa cháy từ trên buồng lái hoặc trạm kiểm soát cháy (nếu
+
+có), hoặc bằng cách duy trì áp lực thường xuyên của hệ thống ống chữa cháy bằng một trong các bơm chữa cháy. Đăng kiểm có thể xem xét và bỏ qua yêu cầu này cho các tàu có tổng dung tích nhỏ hơn 1600 nếu thiết bị khởi động bơm chữa cháy trong buồng máy được bố trí ở vị trí dễ tiếp cận
+
+Điều 10.2.1 Chương 10
+
+Phần 5
+
+QCVN 21:2025/BGTVT
+
+-
+
+Đường kính ống
+
+3. Đường kính của đường ống chữa cháy chính
+
+ Đường kính của các đường ống chữa cháy chính và các ống cấp nước phục vụ khác phải
+
+đủ để phân phối hiệu quả nước từ hai bơm chữa cháy hoạt động đồng thời cấp nước ở sản lượng lớn nhất theo yêu cầu, ngoại trừ trường hợp các tàu hàng khác với các tàu nêu ở 10.7.3-2. Đường kính ống này chỉ cần đủ cho lưu lượng xả 140 m3/h
+
+Điều 10.2.1 Chương 10
+
+Phần 5
+
+QCVN 21:2025/BGTVT
+
+-
+
+Van cách ly và van an toàn
+
+4. (1)  Phải trang bị van cách ly để cách ly phần đường ống chữa cháy trong buồng máy có chứa bơm hoặc các bơm chữa cháy chính với phần còn lại của đường ống chữa cháy. Van cách ly này phải được bố trí tại vị trí dễ tiếp cận và bảo vệ được bên ngoài buồng máy. Đường ống chữa cháy phải được bố trí sao cho khi van cách ly được đóng lại, tất cả các họng chữa cháy trên tàu, trừ các họng trong buồng máy nêu ở trên, có thể được cấp nước từ bơm khác hoặc từ bơm chữa cháy sự cố.
+
+Bơm chữa cháy sự cố, miệng hút nước vào của nó, các ống hút, cấp nước và các van cách ly của nó phải được bố trí bên ngoài buồng máy. Nếu không thể bố trí được như vậy, hộp thông biển có thể được lắp đặt trong buồng máy nếu van được điều khiển từ xa từ vị trí trong khoang đặt bơm chữa cháy sự cố và đường ống hút phải càng ngắn càng tốt. Trong trường hợp này, nếu hệ thống điều khiển từ xa van thông biển có thể bị hư hỏng khi cháy thì van thông biển không được là loại đóng khi có sự cố (fail-close type). Nếu van thông biển không phải là loại mở khi có sự cố (fail-open type), phải có biện pháp sao cho van có thể mở được trong trường hợp xảy ra cháy (nghĩa là ống điều khiển, thiết bị và/hoặc cáp điện điều khiển phải được bao bằng hộp thép có chiều dày thích đáng hoặc được bọc chống cháy tương đương kết cấu cấp A-60. Ngoài ra, cáp điện còn phải thỏa mãn quy định 2.9.11-3, Phần 4 của Quy chuẩn.
+
+Các đoạn ống hút và cấp nước ngắn có thể đi trong buồng máy nếu chúng được bao bằng hộp thép có chiều dầy thích đáng hoặc được bọc theo tiêu chuẩn kết cấu cấp "A-60". Việc bọc đường ống theo tiêu chuẩn kết cấu cấp A-60 là bọc và bảo vệ đến mức độ thực tế thích hợp bằng vật liệu cách nhiệt được Đăng kiểm chứng nhận là một phần của kết cấu chống cháy cấp A-60. Tuy nhiên, việc bọc bằng hộp thép hoặc bọc chống cháy cấp A-60 này không cần thiết phải thực hiện đối với các đoạn ống cách, van thông biển và hộp thông biển. Các đường ống này phải có chiều dầy thành thích đáng và trong mọi trường hợp không được nhỏ hơn 11 mm, nối ống phải bằng cách hàn, trừ trường hợp nối bằng bích vào van thông biển.
+
+(2) Phải lắp một van cho mỗi họng chữa cháy sao cho mỗi vòi rồng chữa cháy có thể tháo được ra trong khi các bơm chữa cháy đang hoạt động.
+
+(3) Phải trang bị các van an toàn cho tất cả các bơm chữa cháy nếu các bơm này có khả năng tạo ra áp suất vượt quá áp suất thiết kế của các ống nước phục vụ, các họng chữa cháy và vòi rồng. Các van này phải được bố trí và điều chỉnh sao cho có thể tránh được áp suất cao quá mức trong bất cứ bộ phận nào của hệ thống ống chữa cháy.
+
+(4) Trong các tàu hàng lỏng, phải lắp các van cách ly cho đường ống chữa cháy ở mặt trước thượng tầng tại vị trí được bảo vệ và trên boong của két với các khoảng cách không vượt quá 40 m để duy trì tính nguyên vẹn của hệ thống ống chữa cháy trong trường hợp có cháy hoặc nổ.
+
+Điều 10.2.1 Chương 10
+
+Phần 5
+
+QCVN 21:2025/BGTVT
+
+-
+
+Số lượng và vị trí các họng chữa cháy
+
+Số lượng và vị trí các họng chữa cháy phải sao cho ít nhất hai tia nước không xuất phát từ một họng chữa cháy, trong đó có một họng chỉ nối với một đoạn vòi rồng, có thể đến được mọi phần của tàu mà hành khách hoặc thuyền viên thường đến được khi tàu đang hành hải và hai họng nước phải đến được bất cứ phần nào của khoang hàng khi không có hàng, khoang ro-ro, khoang chở ô tô, trong đó mỗi họng nước chỉ xuất phát từ một đoạn
+
+vòi rồng Ngoài ra, các họng chữa cháy phải được bố trí gần lối ra vào của các khoang
+
+được bảo vệ.
+
+Điều 10.2.1
+
+Chương 10
+
+Phần 5
+
+QCVN 21:2025/BGTVT
+
+-
+
+Áp suất của họng nước chữa cháy
+
+(1) Khi hai bơm cùng hoạt động đồng thời cấp nước qua các vòi phun nêu ở 10.2.3-3, với
+
+lượng nước như quy định ở 10.2.1-3, thông qua các họng chữa cháy gần đó, áp suất tổi thiểu tại tất cả các họng chữa cháy phải đạt được như sau:
+
+(a) Tàu có GT từ 6000 trở lên: 0,27 N/mm2
+
+(b) Tàu có GT dưới 6000: 0,25 N/mm2
+
+(2) Áp suất lớn nhất tại các họng chữa cháy không được vượt quá áp suất mà tại đó còn có thể điều khiển được vòi rồng chữa cháy một cách hiệu quả.
+
+Điều 10.2.1
+
+Chương 10
+
+Phần 5
+
+QCVN 21:2025/BGTVT
+
+-
+
+Đầu nối bờ quốc tế
+
+(1) Các tàu phải được trang bị tối thiểu một đầu nối bờ quốc tế phù hợp với các yêu cầu ở Chương 22.
+
+(2) Phải có phương tiện để có thể sử dụng đầu nối này ở cả hai mạn của tàu.
+
+Điều 10.2.1
+
+Chương 10
+
+Phần 5
+
+QCVN 21:2025/BGTVT
+
+3.3
+
+Bơm chữa cháy
+
+Các bơm có thể sử dụng làm bơm chữa cháy
+
+Các bơm dùng chung, bơm hút khô, bơm dằn, bơm nước vệ sinh có thể được sử dụng làm bơm chữa cháy nếu chúng không thường xuyên được dùng để bơm dầu và nếu chúng chỉ thỉnh thoảng được dùng để bơm hoặc vận chuyển dầu đốt thì phải có thiết bị chuyển đổi thích hợp.
+
+Điều 10.2.2
+
+Chương 10
+Phần 5
+
+QCVN 21:2025/BGTVT
+
+-
+
+Số lượng
+
+Các tàu phải được trang bị các bơm chữa cháy như sau:
+
+(1) Các tàu có GT từ 1000 trở lên, ít nhất hai bơm được truyền động cơ giới độc lập; và.
+
+(2)  Các tàu có GT dưới 1000, ít nhất hai bơm được truyền động cơ giới, trong đó một chiếc được truyền động cơ giới độc lập.
+
+Điều 10.2.2
+
+Chương 10
+
+Phần 5
+
+QCVN 21:2025/BGTVT
+
+-
+
+Bố trí các bơm chữa cháy và đường ống chữa cháy
+
+(1) Đối với việc bố trí các đầu nối lấy nước biển, bơm chữa cháy và nguồn dẫn động chúng, nếu một đám cháy trong một khoang bất kỳ có thể làm cho tất cả các bơm không hoạt động được, phải có phương tiện thay thế bao gồm một bơm chữa cháy sự cố cố định phù hợp với các yêu cầu ở Chương 32. Bơm sự cố này cùng với nguồn dẫn động, đầu nối hút nước biển của nó phải được bố trí bên ngoài buồng đặt các bơm chữa cháy chính hoặc nguồn dẫn động của chúng.
+
+(2) Buồng chứa bơm chữa cháy sự cố không được tiếp giáp với mặt bao của buồng máy loại A hoặc các buồng có chứa bơm chữa cháy chính. Nếu không thể bố trí cách ly với các buồng đó thì vách ngăn chung giữa hai buồng phải được bọc cách nhiệt theo tiêu chuẩn kết cấu chống cháy tương đương với kết cấu yêu cầu cho trạm điều khiển nêu ở 9.2.3.
+
+(3) Không được bố trí lối ra vào trực tiếp giữa buồng máy và buồng chứa bơm chữa cháy
+
+sự cố và nguồn dẫn động của nó. Nếu điều này không thể thực hiện được thì có thể bố trí lối ra vào kiểu khoá khí (air lock) với cửa của buồng máy theo tiêu chuẩn cấp "A-60" còn cửa kia tổi thiểu phải bằng thép, cả hai cửa phải kín khí, tự đóng và không có thiết bị giữ ở vị trí mở. Thay cho bố trí nêu trên, lối ra vào có thể thông qua một cửa kín nước có khả năng vận hành được từ một buồng cách xa buồng máy và buồng đặt bơm chữa cháy sự cố, đồng thời buồng này vẫn có thể tiếp cận được khi có cháy trong các buồng đó. Trong trường hợp này, phải trang bị lối ra vào phụ cho buồng chứa bơm chữa cháy sự cố và nguồn dẫn động của nó.
+
+(4) Các hệ thống thông gió cho các buồng đặt nguồn cung cấp năng lượng độc lập cho bơm chữa cháy sự cố phải sao cho loại trừ được tối đa khả năng khói sinh ra do lửa từ buồng máy lọt vào hoặc bị hút vào buồng này.
+
+(5) Ngoài ra, trong các tàu có lắp các bơm khác như bơm dùng chung, bơm hút khô và bơm dằn v.v... trong buồng máy, phải bố trí đảm bảo sao cho tối thiểu một trong các bơm này, có sản lượng và áp suất như yêu cầu ở 10.2.1-6(1) và 10.2.2-4(2) phải có khả năng cấp nước cho đường ống chữa cháy.
+
+(6) Đối với các tàu mang cấp gia cường đi băng, các bơm chữa cháy phải được bố trí thỏa mãn Đăng kiểm.
+
+Điều 10.2.2
+
+Chương 10
+
+Phần 5
+
+QCVN 21:2025/BGTVT
+
+-
+
+Lưu lượng
+
+- Sản lượng của các bơm chữa cháy
+
+(1) Các bơm chữa cháy theo yêu cầu ở 10.2.2, trừ bơm chữa cháy sự cố, phải đủ khả năng cấp cho mục đích chữa cháy một lượng nước không nhỏ hơn 4/3 lượng nước quy định ở 13.5.4-2, Phần 3 của Quy chuẩn này đối với mỗi bơm hút khô độc lập trên tàu có cùng kích thước khi được dùng để hút khô, ở áp suất nêu ở 10.2.1-6, nhưng tổng sản lượng theo yêu cầu của các bơm chữa cháy không cần lớn hơn 180 m3/h, trừ trường hợp các tàu nêu ở 10.7.3-2.
+
+(2) Mỗi bơm chữa cháy theo yêu cầu ở 10.2.2 (trừ bơm chữa cháy sự cố) phải có sản lượng không nhỏ hơn 80% tổng sản lượng theo yêu cầu ở (1) trên chia cho số lượng các bơm chữa cháy theo yêu cầu ở -2 trên, nhưng trong mọi trường hợp sản lượng mỗi bơm không được nhỏ hơn 25 m3/h và trong bất kỳ điều kiện nào mỗi bơm đó phải có khả năng cấp nước được cho ít nhất hai tia nước như yêu cầu ở 10.2.1-5. Các bơm chữa cháy này phải có khả năng cấp nước cho hệ thống chữa cháy trong các điều kiện nêu ở 10.2.1-- Nếu lắp nhiều bơm hơn yêu cầu ở -2 trên, sản lượng của các bơm lắp thêm đó phải tối thiểu là 25 m3/h và phải có khả năng cấp tối thiểu hai tia nước theo yêu cầu ở 10.2.1-5.
+
+Điều 10.2.2
+
+Chương 10
+
+Phần 5
+
+QCVN 21:2025/BGTVT
+
++
+
+3.4
+
+Vòi rồng và các đầu phun chữa cháy
+
+-
+
+Quy định chung
+
+(1) Vòi rồng chữa cháy cần phải làm bằng vật liệu không bị suy giảm chất lượng theo thời gian, được Đăng kiểm chứng nhận và phải có đủ độ bền để chịu được áp suất có thể xảy ra khi khai thác và phải có đủ chiều dài để hướng tia nước tới bất kỳ không gian nào có thể yêu cầu phải dùng đến chúng. Mỗi vòi rồng phải được trang bị kèm một vòi phun nước chữa cháy và khớp nối cần thiết. Vòi rồng chữa cháy cùng với các dụng cụ và phụ kiện của nó phải bố trí để sẵn sàng sử dụng ở nơi dễ thấy gần các họng hoặc bích cấp nước phục vụ. Các vòi rồng chữa cháy phải có chiều dài tối thiểu 10 m, nhưng không dài hơn:
+
+(a) 15 m cho các buồng máy;
+
+(b) 20 m cho các buồng khác và boong hở;
+
+(c) 25 m cho boong hở trên các tàu có chiều rộng lớn nhất vượt quá 30 m.
+
+(2) Trừ khi một vòi rồng và đầu phun được trang bị riêng cho mỗi họng chữa cháy trên tàu, phải có đủ một bộ lắp lẫn các khớp nối vòi rồng và các vòi phun.
+
+Điều 10.2.3
+
+Chương 10
+
+Phần 5
+
+QCVN 21:2025/BGTVT
+
+-
+
+Số lượng và đường kính của các vòi rồng chữa cháy
+
+Các tàu phải được trang bị các vòi rồng chữa cháy như sau:
+
+(1) Đối với tàu có GT từ 1000 trở lên, số lượng vòi rồng được trang bị gồm một chiếc cho mỗi 30 mét chiều dài của tàu và một chiếc dự trữ, nhưng trong mọi trường hợp không được ít hơn năm chiếc. Số lượng này không bao gồm các vòi rồng yêu cầu cho buồng máy loại A. Khi xét đến loại tàu, đặc điểm khai thác của tàu, Đăng kiểm có thể tăng số lượng các vòi rồng sao cho có thể đảm bảo rằng luôn sẵn có đủ số lượng vòi rồng và luôn có thể tiếp cận được vào mọi thời điểm
+
+(2) Đối với các tàu có GT dưới 1000, số lượng các vòi rồng chữa cháy được trang bị phải
+
+được tính toàn phù hợp với các quy định ở (1) trên. Tuy nhiên, trong mọi trường hợp,
+
+số lượng vòi rồng chữa cháy không được nhỏ hơn ba.
+
+(3) Tất cả các họng chữa cháy trong buồng máy loại A phải được lắp sẵn vòi rồng có đầu
+
+phun.
+
+(4) Đối với các tàu chở hàng nguy hiểm phù hợp với Chương 19, ngoài các yêu cầu trên,
+
+phải được trang bị thêm 3 vòi rồng và đầu phun.
+
+Điều 10.2.3
+
+Chương 10
+
+Phần 5
+
+QCVN 21:2025/BGTVT
+
+-
+
+Kích thước và loại của đầu phun
+
+(1) Để phục vụ mục đích của Chương này, kích thước đầu phun tiêu chuẩn phải là 12 mm, 16 mm, và 19 mm hoặc càng gần với đó càng tốt. Đăng kiểm có thể cho phép các đầu phun có đường kính lớn hơn nếu thấy cần thiết.
+
+(2) Đối với các buồng sinh hoạt và buồng phục vụ, không sử dụng đầu phun có kích thước lớn hơn 12 mm.
+
+(3) Đối với các buồng máy và các vị trí bên ngoài, kích thước các đầu phun phải sao cho có thể đạt được sản lượng xả lớn nhất từ hai tia nước ở áp suất nêu ở 10.2.1-6 do bơm nhỏ nhất cấp, với điều kiện không cần sử dụng đầu phun có kích thước lớn hơn 19 mm.
+
+(4) Các đầu phun phải là loại hai tác dụng (phun sương và phun tia), có cả thiết bị đóng
+
+và được chứng nhận,.
+
+Điều 10.2.3
+
+Chương 10
+
+Phần 5
+
+QCVN 21:2025/BGTVT
+
+3.5
+
+Hệ thống dập cháy cố định
+
+Loại của các hệ thống dập cháy cố định
+
+1. Trừ khi có quy định khác, các yêu cầu 10.4 quy định cho các hệ thống chữa cháy cố định được yêu cầu ở 10.5, 10.7 và 10.9.
+
+2. Nếu lắp đặt hệ thống dập cháy cố định không theo yêu cầu của Chương này thì hệ thống đó phải thỏa mãn các yêu cầu thích hợp của Chương này và các yêu cầu thích hợp của các Chương 22 đến 35.
+
+3. Không được sử dụng các hệ thống dập cháy bằng Halon 1211, 1301 và 2402 và peflorua các bon.
+
+4. Nói chung, không được phép sử dụng hơi nước làm công chất dập cháy trong các hệ thống dập cháy cố định. Nếu được Đăng kiểm xem xét, thống nhất việc sử dụng hơi nước thì chỉ được sử dụng trong các khu vực hạn chế, bổ sung cho hệ thống dập cháy theo yêu cầu và phải tuân theo các yêu cầu ở Chương 25.
+
+5. Khi một hệ thống bơm phục vụ chung cho các hệ thống chữa cháy cố định bằng nước (trừ hệ thống nêu ở 10.6) để bảo vệ các vùng khác nhau, phải chú ý đến sự phù hợp của các thiết bị bao gồm hệ thống chữa cháy, hệ thống bơm v.v... để ngăn ngừa sự hỏng hóc của bất kỳ một hệ thống chữa cháy nào có thể làm ảnh hưởng đến hệ thống chữa cháy khác.
+
+Điều 10.4.1
+
+Chương 10
+
+Phần 5
+
+QCVN 21:2025/BGTVT
+
+3.6
+
+Các hệ thống chữa cháy cố định cục bộ
+
+1. Các yêu cầu ở -2 đến -4 dưới đây được áp dụng cho các tàu có GT từ 2000 trở lên.
+
+2. Các buồng máy loại A có thể tích trên 500 m3, ngoài hệ thống dập cháy cố định nêu ở 10.5.1-1, phải được bảo vệ bởi một hệ thống chữa cháy cục bộ cố định bằng nước, hoặc tương đương, có kiểu được Đăng kiểm chứng nhận phù hợp với Thông tư MSC.1/Circ.1387. Trong trường hợp buồng máy không có người trực thường xuyên, hệ thống chữa cháy phải có khả năng vận hành tự động và bằng tay. Trong trường hợp buồng máy có người trực liên tục, hệ thống chữa cháy chỉ cần có khả năng vận hành bằng tay.
+
+3. Các hệ thống chữa cháy cục bộ cố định phải bảo vệ các khu vực như sau mà không cần
+
+thiết phải dừng máy, sơ tán người hoặc đóng kín buồng đó:
+
+(1) Các vị trí có nguy cơ cháy của động cơ đốt trong
+
+(2) Các mặt phía lửa của nồi hơi
+
+(3) Các vị trí có nguy cơ cháy của thiết bị đốt chất thải
+
+(4) Các thiết bị lọc dầu đốt đã hâm nóng.
+
+4. Việc tác động để hệ thống chữa cháy cục bộ hoạt động phải tạo ra tín hiệu báo động bằng ánh sáng và âm thanh trong buồng được bảo vệ và tại các trạm có người trực liên tục. Thiết bị báo động phải chỉ báo rõ hệ thống nào được vận hành. Các yêu cầu về báo động của hệ thống phải là thêm vào, không phải là để thay thế cho hệ thống phát hiện và báo cháy quy định ở các mục khác của Phần này.
+
+5. Phục vụ yêu cầu ở -3 trên, hệ thống phải được bố trí thỏa mãn các yêu cầu sau:
+
+(1) Các chi tiết nguồn tạo áp lực của hệ thống chữa cháy phải được bố trí tại các vị trí dễ đến bên ngoài khu vực được bảo vệ, khi có cháy. Các thiết bị điện của các chi tiết được lắp đặt trong buồng được bảo vệ phải có cấp bảo vệ tối thiểu IP44.
+
+(2) Các đầu phun và đường ống của hệ thống chữa cháy không được ngăn cản khả năng tiếp cận động cơ và máy để bảo dưỡng thông thường và nói chung phải được bố trí bên ngoài khu vực hoạt động của các tời cẩu. Việc bố trí các đầu phun phải lưu ý đến các vật cản xung quanh có thể gây ảnh hưởng đến việc xả của hệ thống chữa cháy.
+
+(3) Phải lưu ý đến ảnh hưởng của sương nước đến các thiết bị quan trọng cho hoạt động của tàu để sao cho việc xả của hệ thống chữa cháy không làm mất nguồn điện hoặc giảm khả năng điều động của tàu. Các thiết bị điện đó nếu lắp đặt trong khu vực bị ảnh hưởng bởi sương nước phải có cấp bảo vệ tổi thiểu IP44.
+
+(4) Phải giảm tối đa ảnh hưởng của hệ thống thông gió đến khả năng của hệ thống chữa cháy. Phải xem xét để đảm bảo sao cho các hệ thống thông gió mà tự động bị dừng hoặc ngắt khi kích hoạt hệ thống chữa cháy sẽ không làm cho bất kỳ động cơ nào bị dừng.
+
+Điều 10.5.5
+
+Chương 10
+
+Phần 5
+
+QCVN 21:2025/BGTVT
+
+3.7
+
+Hệ thống phát hiện, báo cháy và phun nước tự động
+
+-
+
+Yêu cầu chung
+
+1. Hệ thống phun nước tự động phải là kiểu ống ướt, nhưng các đoạn nhỏ để trần của hệ thống có thể là kiểu ống khô nếu theo ý kiến của Đăng kiểm đó là sự cẩn trọng cần thiết. Các trạm điều khiển, ở nơi nước có thể làm hư hỏng các thiết bị thiết yếu, có thể được lắp đặt một hệ thống ống khô hoặc hệ thống hoạt động trước (pre-action). Các phòng xông hơi phải được trang bị hệ thống ống khô, với đầu phun nước có nhiệt độ khai thác tới 140oC.
+
+2. Hệ thống phun nước tự động tương đương với những hệ thống được nêu trong 28.2.2 đến 28.2.4 phải được Đăng kiểm chứng nhận.
+
+Điều 28.2.1
+
+Chương 28
+
+Phần 5
+
+QCVN 21:2025/BGTVT
+
+-
+
+Nguồn cấp năng lượng
+
+Phải có ít nhất hai nguồn năng lượng cho bơm nước biển và hệ thống phát hiện và báo cháy tự động. Nếu bơm chạy bằng điện thì phải được nối với nguồn điện chính, nguồn này ít nhất phải có 2 máy phát phục vụ. Dây dẫn điện phải được bố trí tránh xa nhà bếp, buồng máy và các buồng kín có nguy cơ cháy cao trừ trường hợp cần thiết phải đấu nối vào bảng điện thích hợp. Một trong số các nguồn điện cấp cho hệ thống phát hiện và báo
+
+cháy phải là nguồn sự cố. Nếu một trong số các nguồn năng lượng cấp cho bơm là động cơ đốt trong thì, ngoài việc phải thỏa mãn điều khoản 28.2.4-3, phải bố trí sao cho một đám cháy trong bất kỳ một buồng được bảo vệ nào cũng không ảnh hưởng tới việc cấp không khí cho buồng máy.
+
+Điều 28.2.2
+
+Chương 28
+
+Phần 5
+
+QCVN 21:2025/BGTVT
+
+-
+
+Đầu phun
+
+(1)  Các đầu phun phải chịu được ăn mòn do môi trường biển. Trong các buồng sinh hoạt
+
+và buồng phục vụ các đầu phun phải hoạt động ở dải nhiệt độ từ 68 oC đến 79 oC, trừ các khu vực có nhiệt độ môi trường cao như phòng sấy thì nhiệt độ làm việc có thể tăng thêm nhưng không được quá 30 oC cao hơn nhiệt độ lớn nhất của boong.
+
+(2)  Phải trang bị một số lượng đầu phun dự trữ cho tất cả các kiểu và công suất như dưới đây. Số lượng đầu phun dự trữ của bất kỳ kiểu nào không cần vượt quá tổng số lượng đầu phun cùng kiểu.
+
+(a)  Trường hợp tổng số đầu phun nhỏ hơn 300, ít nhất phải có 6 đầu dự trữ.
+
+(b)  Trường hợp tổng số đầu phun có từ 300 đến 1000, ít nhất phải có 12 đầu dự trữ.
+
+(c) Trường hợp tổng số đầu phun lớn hơn 1000, ít nhất phải có 24 đầu dự trữ.
+
+Điều 28.2.3
+
+Chương 28
+
+Phần 5
+
+QCVN 21:2025/BGTVT
+
+-
+
+Két áp lực
+
+(1)  Phải trang bị một két áp lực có thể tích ít nhất bằng hai lần lượng nước quy định dưới đây. Két này phải có một lượng nước ngọt thường trực tương đương với lượng nước do bơm được nêu ở 28.2.3-3(2) phun ra trong một phút và phải đặt thiết bị để duy trì áp suất khí trong két sao cho sau khi sử dụng lượng nước ngọt thường trực trong két, áp suất khí trong két vẫn không nhỏ hơn áp suất làm việc của đầu phun cộng với cột áp chênh lệch đo từ đáy két đến đầu phun cao nhất trong hệ thống. Phải có thiết bị thích hợp để bổ sung khí nén và nước ngọt vào két.Phải trang bị thiết bị chỉ báo mức kiểu ống thủy để chỉ thị chính xác mực nước trong két.
+
+(2)  Phải có thiết bị để ngăn không cho nước biển lọt vào trong két
+
+Điều 28.2.3
+
+Chương 28
+
+Phần 5
+
+QCVN 21:2025/BGTVT
+
+-
+
+Bơm phun
+
+(1)  Cần phải lắp một bơm truyền động cơ giới độc lập chỉ nhằm mục đích tự động cấp nước liên tục cho các đầu phun. Bơm phải tự động làm việc bởi sự sụt áp suất trong hệ thống trước khi lượng nước ngọt thường trực trong két áp lực cạn hoàn toàn.
+
+(2)  Bơm và hệ thống ống phải duy trì được áp suất cần thiết cao độ của đầu phun ở vị trí cao nhất để đảm bảo cung cấp một lượng nước liên tục đủ để đồng thời phủ lên một diện tích nhỏ nhất là 280 m2 với tốc độ quy định ở 28.2.5-2(3). Nếu Đăng kiểm thấy cần thiết, phải xác nhận công suất thuỷ lực của hệ thống bằng tính toán thuỷ lực và thử nghiệm hệ thống.
+
+(3)  Phải bố trí trên đầu ra của bơm một van kiểm tra có đoạn ống ngắn hở một đầu. Diện
+
+tích thông qua hiệu dụng của van và ống phải đủ để sản lượng bơm theo yêu cầu thoát ra trong khi vẫn duy trì được áp suất trong hệ thống 28.2.3-2(1).
+
+Điều 28.2.3
+
+Chương 28
+
+Phần 5
+
+QCVN 21:2025/BGTVT
+
+-
+
+Yêu cầu về lắp đặt
+
+1. Những phần của hệ thống có thể đóng băng trong lúc khai thác đều phải được bảo vệ thích hợp tránh đóng băng.
+
+2. Bố trí đường ống
+
+(1)  Các đầu phun phải được gộp thành các cụm riêng biệt, mỗi cụm không được có quá 200 đầu phun.
+
+(2) Mỗi cụm đầu phun phải có khả năng được tách biệt bằng một van chặn. Van chặn trong mỗi cụm phải được đặt ở nơi dễ tiếp cận ở bên ngoài của cụm liên kết hoặc ở bên trong các hộp nằm thành quây cầu thang. Nơi đặt van phải được chỉ báo rõ ràng, thường xuyên. Phải có biện pháp để tránh người không có trách nhiệm sử dụng các van chặn đó.
+
+(3) Phải có một van thử để kiểm tra thiết bị báo động tự động cho từng cụm đầu phun bằng cách xả đi một lượng nước tương đương với một đầu phun làm việc. Van thử của mỗi cụm phải đặt gần van chặn của cụm đó.
+
+(4) Hệ thống phun nước phải nối với hệ thống ống chữa cháy chính của tàu qua van chặn một chiều có thể khoá được ở đầu nối để tránh dòng nước từ hệ thống phun nước chảy ngược trở lại đường ống chữa cháy chính.
+
+(5)  Phải trang bị một đồng hồ áp suất trong hệ thống tại van chặn của mỗi một cụm và tại trạm điều khiển trung tâm.
+
+(6)  Van thông biển của bơm nếu có thể phải đặt trong cùng không gian đặt bơm và phải bố trí sao cho khi tàu ở trạng thái nổi không cần phải ngừng cấp nước biển cho bơm này trong bất kỳ trường hợp nào trừ khi kiểm tra hoặc sửa chữa bơm.
+
+3. Bơm và két của hệ thống phun nước phải được đặt ở vị trí cách xa một cách hợp lý các buồng máy loại A và không được đặt tại các không gian yêu cầu phải bảo vệ bằng hệ thống phun nước.
+
+Điều 28.2.4
+
+Chương 28
+
+Phần 5
+
+QCVN 21:2025/BGTVT
+
+-
+
+Yêu cầu về hệ thống điều khiển
+
+1. Khả năng sẵn sàng
+
+(1)  Bất kỳ hệ thống phát hiện, báo cháy và phun nước tự động nào theo yêu cầu phải có khả năng hoạt động ngay lập tức trong mọi thời điểm và không cần đến tác động của thuyền viên.
+
+(2)  Hệ thống phun tự động phải được giữ ở áp suất cần thiết và phải được bổ sung nước liên tục như yêu cầu trong Chương này.
+
+2. Báo động và chỉ báo
+
+(1)  Mỗi cụm đầu phun phải có cả thiết bị để phát tín hiệu báo động bằng ánh sáng và âm
+
+thanh tự động tại một hoặc nhiều thiết bị chỉ báo vào bất cứ lúc nào khi đầu phun làm việc. Hệ thống báo động đó phải có khả năng thông báo được các lỗi xảy ra trong hệ thống. Các thiết bị chỉ báo phải thông báo được rằng ở cụm nào hệ thống đang có cháy xảy ra và các thiết bị chỉ báo đó phải được đặt tập trung ở buồng lái hoặc ở trạm điều khiển có người trực liên tục, ngoài ra các bộ phận báo động bằng ánh sáng và âm thanh của thiết bị phải được đặt ở một vị trí bên ngoài buồng lái để đảm bảo được rằng thuyền viên nhận được ngay tín hiệu đó.
+
+(2)  Phải có công tắc tại một trong số các vị trí chỉ báo nêu ở (1) trên đây để kiểm tra các thiết bị báo động và đồng hồ chỉ báo của mỗi cụm đầu phun.
+
+(3)  Các đầu phun phải được đặt ở vị trí trên đỉnh và bố trí khoảng cách theo mẫu thích hợp để duy trì tốc độ phun nước trung bình không dưới 5 l/m2 trong một phút lên diện tích phục vụ định mức của đầu phun đó. Để phục vụ mục đích này, diện tích danh nghĩa phải được lấy là toàn bộ diện tích hình chiếu bằng được bao trùm. Tuy nhiên Đăng kiểm có thể cho phép dùng các đầu phun cung cấp một lượng nước khác được phân bố thích hợp không kém hiệu quả hơn so với quy định ở trên.
+
+(4) Cần phải có bảng danh mục hoặc sơ đồ tại từng thiết bị chỉ báo chỉ rõ các buồng được bảo vệ và vị trí khu vực mà từng cụm phục vụ. Phải có các bảng hướng dẫn thử và bảo dưỡng thích hợp.
+
+3. Phải có phương tiện để kiểm tra sự tự động làm việc của bơm khi áp suất trong hệ thống giảm xuống.
+
+Điều 28.2.5
+
+Chương 28
+
+Phần 5
+
+QCVN 21:2025/BGTVT
+
+4
+
+Hệ thống chữa cháy cố định bằng bọt
+
+4.1
+
+Hệ thống dập cháy cố định bằng bọt có độ nở cao
+
+1. Hệ thống phải có khả năng xả bọt bằng tay, và được thiết kể để tạo ra bọt với tốc độ xả yêu cầu trong vòng 1 phút. Không được phép tự động xả bọt trừ khi có các biện pháp thích hợp hoặc khóa liên động để tránh việc một hệ thống chữa cháy cục bộ nào đó theo yêu cầu ở 10.5.5 xen vào làm giảm hiệu quả của hệ thống này.
+
+2. Chất tạo bọt phải được chứng nhận bởi Đăng kiểm. Các loại chất tạo bọt khác nhau không được trộn lẫn trong hệ thống bọt có độ nở cao
+
+3. Hệ thống phải có khả năng dập cháy, được chế tạo và thử nghiệm dựa trên các tiêu chuẩn thỏa mãn yêu cầu của Đăng kiểm.
+
+4. Hệ thống và các chi tiết của nó phải được thiết kế phù hợp để chịu được sự thay đổi nhiệt độ môi trường, rung động, độ ẩm, sốc, tắc nghẽn và ăn mòn thường gặp trên tàu. Đường ống, phụ tùng đường ống và các chi tiết ở bên trong khu vực được bảo vệ (ngoại trừ các đệm kín) phải được thiết kế để chịu được nhiệt độ 925 oC.
+
+5. Hệ thống đường ống, két chứa chất tạo bọt và các chi tiết, phụ tùng đường ống tiếp xúc
+
+với chất tạo bọt phải tương thích với chất tạo bọt và phải được chế tạo từ vật liệu chịu ăn mòn như là thép không gỉ hoặc tương đương. Các đường ống khác và thiết bị tạo bọt phải là thép mạ kẽm toàn bộ hoặc tương đương. Việc bố trí đường ống phân phối phải sao cho có khả năng tự xả.
+
+6. Các áp kế phải được bố trí tại cả cửa vào (cấp nước và chất tạo bọt) và cửa ra của bộ trộn bọt để phục vụ cho việc thử hoạt động của hệ thống và để nhận biết áp suất và lưu lượng yêu cầu. Một van thử phải được lắp đặt trên nhánh đi xuống của bộ trộn bọt, cùng với các lỗ tiết lưu phản ánh mức sụt áp tính toán của hệ thống. Tất cả các đoạn đường ống phải được trang bị các đầu nối để vệ sinh, xả và đuổi khí. Tất cả các vòi phun phải có khả năng tháo ra được để kiểm tra xem có rác hay không.
+
+7. Phải có các phương tiện để thuyền viên có thể kiểm tra lượng chất tạo bọt và định kỳ lấy mẫu bọt một cách an toàn.
+
+8. Hướng dẫn vận hành hệ thống phải được hiển thị ở mỗi vị trí vận hành.
+
+9. Phụ tùng dự trữ phải được trang bị dựa trên hướng dẫn của hãng chế tạo.
+
+10. Nếu một động cơ đốt trong được dùng để bơm nước biển cho hệ thống, két dầu đốt cho động cơ đó phải chứa đủ dầu đốt để bơm có thể chạy ở chế độ toàn tải trong ít nhất 3 h và phải có đủ dầu đốt dự trữ chứa bên ngoài buồng máy loại A để bơm có thể chạy ở chế độ toàn tải thêm 15 h nữa. Nếu két dầu đốt phục vụ đồng thời các động cơ đốt trong khác, tổng dung tích két dầu đốt phải đủ cho tất cả các động cơ đó.
+
+11. Việc bố trí các thiết bị tạo bọt và đường ống bên trong không gian được bảo vệ phải không làm cản trở lối tiếp cận tới các máy móc lắp đặt trong đó để thực hiện các hoạt động bão dưỡng thường xuyên.
+
+12. Nguồn cấp cho hệ thống, nguồn cấp chất tạo bọt và phương tiện điều khiển hệ thống phải luôn tiếp cận được và vận hành đơn giản, và phải được bố trí tại một vị trí bên ngoài
+
+không gian được bảo vệ sao cho không bị vô hiệu hóa khi có cháy xảy ra trong không gian được bảo vệ.
+
+13. Hệ thống đường ống phải có kích thước phù hợp với tính toán thủy lực để đảm bảo luôn có đủ lưu lượng và áp suất yêu cầu cho chức năng hoạt động của hệ thống.
+
+14. Không gian được bảo vệ phải được bố trí sao cho chúng có thể được thông gió khi được điền đầy bởi bọt. Phải có các quy trình để đảm bảo rằng các bướm chặn gió ở tầng trên, cửa và các lỗ mở thích hợp khác được giữ ở trạng thái mở khi có cháy xảy ra. Đối với hệ thống bọt sử dụng khí bên trong, các không gian có thể tích nhỏ hơn 500 m3 không cần tuân thủ yêu cầu này.
+
+15. Phải thiết lập các quy trình trên tàu yêu cầu các nhân viên khi vào lại không gian được bảo vệ sau khi hệ thống đã xả bọt phải đeo thiết bị thở để bảo vệ họ trong bầu không khí thiếu ô-xi và có các sản phẩm cháy đi theo lớp bọt phủ dập cháy.
+
+16. Các bản vẽ lắp đặt và hướng dẫn vận hành phải được cung cấp và luôn sẵn có trên tàu Phải treo một danh sách hoặc bản vẽ chỉ ra các không gian được bảo vệ và vị trí của khu vực ứng với mỗi phần của hệ thống.
+
+17. Các bản vẽ/hướng dẫn lắp đặt, vận hành và bảo dưỡng hệ thống phải bằng ngôn ngữ làm việc của tàu. Nếu ngôn ngữ làm việc của tàu không phải là tiếng Anh, Pháp hoặc Tây Ban Nha thì phải có một bản dịch sang một trong 3 ngôn ngữ vừa nêu.
+
+18. Buồng thiết bị tạo bọt phải được thông gió để bảo vệ quá áp, và phải được sưởi để tránh bị đóng băng.
+
+19. Lượng chất tạo bọt sẵn có phải như (1) hoặc (2) sau đây, chọn giá trị lớn hơn:
+
+(1) Ứng với tỉ số nở danh nghĩa, đủ để tạo ra một thể tích bọt bằng ít nhất 5 lần thể tích của không gian được bảo vệ lớn nhất bao bọc bởi các vách thép, hoặc
+
+(2) Đủ cho 30 phút hoạt động ở không gian được bảo vệ lớn nhất.
+
+20. Buồng máy, buồng bơm hàng, khoang chở xe ô tô và khoang ro-ro phải được trang bị báo động bằng ánh sáng và âm thanh bên trong không gian được bảo vệ để cảnh báo về việc xả bọt của hệ thống. Báo động phải hoạt động trong một khoảng thời gian đủ dài cho việc sơ tán khỏi không gian đó, nhưng trong mọi trường hợp không được ít hơn 20 giây.
+
+Điều 26.3.1
+
+Chương 26
+
+Phần 5
+
+QCVN 21:2025/BGTVT
+
+4.2
+
+Hệ thống bọt sử dụng khí bên trong
+
+1. Hệ thống bảo vệ buồng máy và buồng bơm:
+
+(1)  Hệ thống phải được cấp nguồn từ cả nguồn chính và nguồn sự cố. Nguồn sự cố phải được đặt bên ngoài không gian được bảo vệ.
+
+(2) Phải có đủ sản lượng tạo bọt để đảm bảo đạt được tỉ lệ điền đầy nhỏ nhất theo thiết kế của hệ thống và ngoài ra phải đủ để điền đầy hoàn toàn khoang được bảo vệ lớn nhất trong vòng 10 phút.
+
+(3) Nói chung, việc bố trí các thiết bị tạo bọt phải dựa trên kết quả thử nêu ở 26.3.1-3. Ít nhất hai thiết bị tạo bọt phải được lắp đặt trong mỗi không gian chứa động cơ đốt trong, nồi hơi, máy lọc và các thiết bị tương tự. Các xưởng máy nhỏ và không gian tương tự có thể chỉ cần một thiết bị tạo bọt.
+
+(4) Các thiết bị tạo bọt phải được phân bố đều bên dưới trần của không gian được bảo vệ kể cả thành quây ống khói. Số lượng và vị trí của các thiết bị tạo bọt phải đủ để đảm bảo rằng tất cả các khu vực có nguy cơ cháy cao đều được bảo vệ tại tất cả các phần và ở tất cả các tầng của không gian. Có thể yêu cầu thêm các thiết bị tạo bọt ở các vị trí bị che khuất. Thiết bị tạo bọt phải được bố trí cách xa ít nhất 1 m phía trước của đầu ra của bọt, trừ khi đã thử với khoảng cách ít hơn. Thiết bị tạo bọt phải được đặt phía sau các kết cấu chính, bên trên và cách xa các động cơ và nồi hơi tại nơi không có khả năng bị hư hỏng do nổ.
+
+2. Hệ thống dùng cho các khoang chở xe và khoang ro-ro
+
+(1) Hệ thống phải được cấp nguồn từ nguồn chính của tàu. Không yêu cầu cấp nguồn sự cố.
+
+(2)  Phải có đủ sản lượng tạo bọt để đảm bảo đạt được tỉ lệ điền đầy nhỏ nhất theo thiết kế của hệ thống và ngoài ra phải đủ để điền đầy hoàn toàn khoang được bảo vệ lớn nhất trong vòng 10 phút. Tuy nhiên, với các hệ thống bảo vệ các khoang chở xe ô tô và khoang ro-ro, có các boong kín khí một cách hợp lý, và có chiều cao boong nhỏ hơn hoặc bằng 3 m, tỉ lệ điền đầy phải không được nhỏ hơn 2/3 tỉ lệ điền đầy thiết kế và còn phải đủ để điền đầy khoang lớn nhất được bảo vệ trong vòng 10 phút.
+
+(3) Hệ thống có thể được chia thành các phần riêng biệt cho các không gian khác nhau, tuy nhiên, sản lượng và thiết kế của hệ thống phải dựa trên thể tích bọt lớn nhất cần thiết để bảo vệ khoang. Không cần thiết phải cấp bọt đồng thời cho các khoang được bảo vệ liền kề nhau nếu ngăn cách giữa các khoang đó là cấp A.
+
+(4) Nói chung, việc bố trí các thiết bị tạo bọt được thiết kế dựa trên kết quả thử nêu ở 26.3.1-3. Số lượng thiết bị tạo bọt có thể khác nhau, nhưng tỉ lệ điền đầy tối thiểu được xác định trong quá trình thử nêu ở 26.3.1-3 phải được cung cấp bởi hệ thống. Ít nhất hai thiết bị tạo bọt phải được trang bị cho mỗi không gian. Thiết bị tạo bọt phải được bố trí để phun bọt đều khắp không gian được bảo vệ và việc bố trí phải tính đến đến sự cản trở của hàng khi đã xếp vào khoang. Ít nhất các thiết bị tạo bọt phải được bố trí trên mỗi boong thứ 2, kể cả boong di động. Khoảng cách theo phương nằm ngang giữa các thiết bị tạo bọt phải sao cho đảm bảo nhanh chóng cấp bọt cho mọi phần của không gian được bảo vệ. Điều này được thiết lập dựa trên kết quả thử ở qui mô thực tế.
+
+(5) Thiết bị tạo bọt phải được bố trí sao cho có ít nhất 1 m không gian trống phía trước của đầu xả bọt, trừ khi đã thử với khoảng cách nhỏ hơn.
+
+Điều 26.3.2
+
+Chương 26
+
+Phần 5
+
+QCVN 21:2025/BGTVT
+
+4.3
+
+Hệ thống bọt cấp khí bên ngoài
+
+1. Các hệ thống để bảo vệ buồng máy và buồng bơm hàng:
+
+(1) Hệ thống phải được cấp nguồn bởi cả nguồn điện chính và nguồn điện sự cố. Nguồn điện sự cố phải được cung cấp từ bên ngoài không gian được bảo vệ.
+
+(2) Phải có đủ sản lượng tạo bọt để đảm bảo đáp ứng tỉ lệ điền đầy tối thiểu cho hệ thống và còn phải đủ để điền đầy hoàn toàn không gian lớn nhất được bảo vệ trong vòng 10 phút.
+
+(3) Nói chung, bố trí của các ống cấp bọt phải được thiết kế dựa trên kết quả của việc thử
+
+nêu ở 26.3.1-3. Số lượng các ống cấp có thể khác nhau nhưng tỉ lệ điền đầy thiết kế xác định được trong quá trình việc thử nêu ở 26.3.1-3 phải được trang bị cho hệ thống. Ít nhất 2 ống cấp bọt phải được trang bị cho mỗi không gian chứa các động cơ đốt trong, nồi hơi, máy lọc và các thiết bị tương tự. Đối với các xưởng máy nhỏ hoặc không gian tương tự có thể chỉ cần một ống cấp.
+
+(4) Các ống cấp bọt phải được phân bố đều bên dưới trần boong cao nhất trong không gian được bảo vệ kể cả phần không gian ống khói buồng máy. Số lượng và vị trí của các ống cấp phải đủ để đảm bảo bảo vệ toàn bộ các phần và các tầng trong các không gian có nguy cơ cháy cao. Có thể yêu cầu thêm các ống cấp cho các vị trí bị che khuất. Các ống cấp bọt phải được bố trí với khoảng cách ít nhất 1 m ở phía trước của kênh dẫn bọt, trừ khi đã được thử với khoảng cách nhỏ hơn. Các ống cấp phải được bố trí phía sau các kết cấu chính, bên trên hoặc cách xa các động cơ, nồi hơi tại các vị trí hông có nguy cơ bị hư hỏng do nổ gây ra.
+
+(5) Bố trí của các ống cấp bọt phải sao cho một đám cháy trong không gian được bảo vệ sẽ không làm ảnh hưởng tới thiết bị tạo bọt. Nếu bộ tạo bọt được đặt liền kề không gian được bảo vệ, các ống cấp phải được lắp đặt để có khoảng ngăn cách ít nhất là 450 mm giữa các thiết bị tạo bọt và không gian được bảo vệ, và vách ngăn cách phải là cấp A-60. Các ống cấp bọt phải được làm bằng thép và có chiều dày không nhỏ hơn 5 mm. Ngoài ra, các bướm chặn lửa (loại đơn cánh hay đa cánh) bằng thép không gỉ có chiều dày không nhỏ hơn 3 mm phải được lắp đặt tại các lỗ mở trên vách bao hoặc boong giữa bộ tạo bọt và không gian được bảo vệ. Các bướm chặn lửa phải hoạt động tự động (kiểu điện, khí nén hoặc thủy lực) bằng cách điều khiển từ xa các bộ tạo bọt của chúng, và phải được bố trí để vẫn giữ ở trạng thái đóng cho đến khi bộ tạo bọt bắt đầu hoạt động.
+
+(6) Thiết bị tạo bọt phải được đặt ở vị trí có đủ không khí sạch để cung cấp cho chúng.
+
+2. Hệ thống dùng để bảo vệ các khoang chở xe và khoang ro-ro
+
+(1) Hệ thống phải được cấp điện từ nguồn chính của tàu. Không yêu cầu cấp điện từ nguồn sự cố
+
+(2) Phải có đủ sản lượng tạo bọt để đảm bảo đạt được tỉ lệ điền đầy nhỏ nhất theo thiết kế của hệ thống và còn phải đủ để điền đầy hoàn toàn khoang được bảo vệ lớn nhất trong vòng 10 phút. Tuy nhiên với các hệ  thống bảo vệ các khoảng chở xe và khoang ro-ro, có các boong kín khí một cách hợp lý, và có chiều cao boong nhỏ hơn hoặc bằng 3 m, tỉ lệ điền đầy phải không được nhỏ hơn 2/3 tỉ lệ điền đầy thiết kế và còn phải đủ để điền đầy khoang lớn nhất được bảo vệ trong vòng 10 phút.
+
+(3) Hệ thống có thể được chia thành các phần riêng biệt cho các không gian khác nhau, tuy nhiên, sản lượng và thiết kế của hệ thống phải dựa trên thể tích bọt lớn nhất cần thiết để bảo vệ khoang. Không cần thiết phải cấp bọt đồng thời cho các khoang được bảo vệ liền kề nhau nếu vách ngăn giữa các khoang đó là cấp A.
+
+(4) Nói chung, việc bố trí các thiết bị tạo bọt được thiết kế dựa trên kết quả thử nêu ở 26.3.1-3. Số lượng thiết bị tạo bọt có thể khác nhau, nhưng tỉ lệ điền đầy tối thiểu được xác định trong quá trình thử nêu ở 26.3.1-3 phải được cung cấp bởi hệ thống. Ít nhất hai thiết bị tạo bọt phải được trang bị cho mỗi không gian. Thiết bị tạo bọt phải được bố trí để phun bọt đều khắp không gian được bảo vệ và việc bố trí phải tính đến đến sự cản trở của hàng khi đã xếp vào khoang. Ít nhất các thiết bị tạo bọt phải được bố trí trên mỗi boong thứ 2, kể cả boong boong di động. Khoảng cách theo phương nằm ngang giữa các thiết bị tạo bọt phải sao cho đảm bảo nhanh chóng cấp bọt cho mọi phần của không gian được bảo vệ. Điều này được thiết lập dựa trên kết quả thử ở qui mô thực tế.
+
+ (5) Thiết bị tạo bọt phải được bố trí sao cho có ít nhất 1 m không gian trống phía trước của đầu xả bọt, trừ khi đã thử với khoảng cách nhỏ hơn.
+
+(6) Bố trí của các ống cấp bọt phải sao cho một đám cháy trong không gian được bảo vệ sẽ không làm ảnh hưởng tới thiết bị tạo bọt. Nếu bộ tạo bọt được đặt liền kề không gian được bảo vệ, các ống cấp phải được lắp đặt để có khoảng ngăn cách ít nhất là 450 mm giữa các thiết bị tạo bọt và không gian được bảo vệ, và vách ngăn cách phải là cấp A-60. Các ống cấp bọt phải được làm bằng thép và có chiều dày không nhỏ hơn 5 mm. Ngoài ra, các bướm chặn lửa (loại đơn cánh hay đa cánh) bằng thép không gỉ có chiều dày không nhỏ hơn 3 mm phải được lắp đặt tại các lỗ mở trên vách bao hoặc boong giữa bộ tạo bọt và không gian được bảo vệ. Các bướm chặn lửa phải hoạt động tự động (kiểu điện, khí nén hoặc thủy lực) bằng cách điều khiển từ xa các bộ tạo bọt của chúng, và phải được bố trí để vẫn giữ ở trạng thái đóng cho đến khi bộ tạo bọt bắt đầu hoạt động.
+
+(7) Thiết bị tạo bọt phải được đặt ở vị trí mà có đủ không khí sạch để cung cấp cho chúng.
+
+Điều 26.3.3
+
+Chương 26
+
+Phần 5
+
+QCVN 21:2025/BGTVT
+
+4.4
+
+Hệ thống chữa cháy cố định bằng bọt có độ nở thấp
+
+-
+
+Số lượng và chất tạo bọt
+
+1. Chất tạo bọt của hệ thống dập cháy cố định bằng bọt có độ nở thấp phải là loại được Đăng kiểm chứng nhận. Các loại chất tạo bọt khác nhau không được dùng lẫn trong một hệ thống sử dụng bọt có độ nở thấp. Không được trộn lẫn chất tạo bọt cùng loại của các nhà sản xuất khác nhau trừ khi chúng được chứng nhận tính tương thích.
+
+2. Thông qua các đầu xả cố định, hệ thống phải có khả năng xả toàn bộ lượng bọt đủ để tạo ra một lớp bọt bao phủ hiệu quả trên toàn bộ diện tích bề mặt lớn nhất mà trên đó dầu
+
+nhiên liệu có thể tràn ra, trong vòng không quá 5 phút.
+
+Điều 26.4.1
+
+Chương 26
+
+Phần 5
+
+QCVN 21:2025/BGTVT
+
+-
+
+Yêu cầu về lắp đặt
+
+1. Phải trang bị các phương tiện để phân phối bọt một cách hiệu quả tới các đầu xả bọt thích hợp thông qua hệ thống ống và các van điều khiển cố định, và phải có các phương tiện để bọt được dẫn một cách hiệu quả tới các đầu phun cố định phun bọt lên các vùng có nguy cơ cháy chính bên trong các không gian được bảo vệ. Phương tiện để phân phối bọt một cách hiệu quả phải được xác nhận với Đăng kiểm thông qua việc tính toán hoặc thử nghiệm.
+
+2. Phương tiện để điều khiển một hệ thống như vậy phải luôn có thể tiếp cận được và vận hành đơn giản, các phương tiện điều khiển phải được gom lại thành càng ít nhóm càng tốt đặt tại những nơi không bị chia cắt khi có cháy xảy ra trong không gian được bảo vệ.
+
+Điều 26.4.2
+
+Chương 26
+
+Phần 5
+
+QCVN 21:2025/BGTVT
+
+4.5
+
+Hệ thống bọt cố định trên boong
+
+-
+
+Yêu cầu chung
+
+1. Các hệ thống cấp bọt phải phun được tới toàn bộ khu vực boong của két hàng cũng như vào trong bất kỳ két hàng nào mà có boong bị vỡ.
+
+2. Hệ thống bọt cố định trên boong phải có khả năng vận hành đơn giản và nhanh chóng.
+
+3. Việc vận hành hệ thống bọt trên boong ở sản lượng theo yêu cầu phải cho phép việc sử dụng đồng thời số lượng các tia nước tối thiểu yêu cầu ở áp suất quy định từ đường ống nước chữa cháy. Nếu hệ thống bọt cố định trên boong được cấp bởi đường ống chung từ ống chữa cháy bằng nước, lượng chất tạo bọt bổ sung phải được trang bị cho hoạt động của hai vòi phun trong cùng khoảng thời gian yêu cầu đối với hệ thống bọt. Việc sử dụng
+
+đồng thời các tia nước yêu cầu tối thiểu phải thực hiện được trên boong cho toàn bộ chiều dài tàu, trong các buồng sinh hoạt, buồng phục vụ, trạm điều khiển và buồng máy.
+
+Điều 34.2.1
+
+Chương 34
+
+Phần 5
+
+QCVN 21:2025/BGTVT
+
+-
+
+Yêu cầu về thiết bị
+
++
+
+Dung dịch bọt và chất tạo bọt
+
+(1) Tốc độ cấp dung dịch bọt
+
+(a) Các yêu cầu ở (1) phải áp dụng cho các tàu hàng lỏng chở một trong các hàng từ (i) đến (iii) sau:
+
+(i) Dầu thô hoặc các sản phẩm dầu mỏ có điểm chớp cháy không vượt quá 60oC (thử cốc kín), được xác định bằng thiết bị thử điểm chớp cháy được công nhận và áp suất hơi Reid thấp hơn áp suất khí quyển hoặc các sản phẩm lỏng khác có nguy cơ cháy tương tự, bao gồm cả các hàng nêu trong danh mục ở Chương 18 Phần 8E, có điểm chớp cháy không vượt quá 60 oC (thử cốc kín) mà hệ thống chữa cháy bằng bọt thông thường có hiệu quả (xem 1.2.1 và 10.8)
+
+(ii) Các sản phẩm dầu mỏ có điểm chớp cháy vượt quá 60 oC (thử cốc kín) được xác định bằng thiết bị thử điểm chớp cháy được công nhận (xem 1.2.3-2), hoặc
+
+(iii) Các sản phẩm được nêu trong danh mục ở Chương 17 Phần 8E, có điểm chớp cháy vượt quá 60oC (thử cốc kín) được xác định bằng thiết bị thử điểm chớp cháy được công nhận (xem 11.1.3 Phần 8E và 1.2.3-2)
+
+(b) Tốc độ cấp dung dịch bọt không được nhỏ hơn giá trị lớn nhất trong các giá trị dưới đây:
+
+(i) 0,6 lít/phút trên 1 m2 diện tích boong các két hàng, trong đó diện tích boong các két hàng tính bằng chiều rộng lớn nhất của tàu nhân với tổng chiều dài tính theo chiều dọc tàu của các không gian két hàng.
+
+(ii) 6 lít/phút trên 1 m2 diện tích mặt cắt theo phương nằm ngang của 1 két hàng có diện tích này lớn nhất; hoặc
+
+(iii)  3 lít/phút trên 1 m2 của diện tích được bảo vệ bởi một súng phun lớn nhất, diện tích này là toàn bộ phía trước của súng phun, nhưng không được nhỏ hơn 1250 lít/phút.
+
+(2) Đối với các tàu hàng lỏng chở xô các hóa chất được nêu trong danh mục ở Chương 17, Phần 8E có điểm chớp cháy không vượt quá 60 oC (thử cốc kín), tốc độ cấp dung dịch bọt phải như được quy định ở 11.3.5 Phần 8E.
+
+(3)  Lượng chất tạo bọt phải đủ để đảm bảo tạo được lượng bọt ít nhất trong 20 phút trên các tàu hàng lỏng có lắp hệ thống khí trơ hoặc 30 phút trên các tàu không lắp hệ thống khí trơ. hoặc không yêu cầu sử dụng hệ thống khí trơ.
+
+(4) Chất tạo bọt được cấp trên tàu phải được Đăng kiểm chứng nhận phù hợp với các yêu cầu của Thông tư MSC.1/Circ. 1312 và phù hợp cho các hàng dự định chở. Các chất tạo bọt loại B phải được cấp để bảo vệ dầu thô và các sản phẩm dầu mỏ và các hàng dung môi không phân cực. Các chất tạo bọt loại A phải được cấp cho các loại hàng dung môi phân cực, như được nêu trong Bảng 8E/17.1 của Chương 17 Phần 8E. Chỉ một loại chất tạo bọt phải được cấp, và nó phải hiệu quả cho số lượng lớn nhất có thể các loại hàng dự định chở. Đối với các loại hàng mà bọt không có hiệu quả hoặc không tương thích, phải trang bị bổ sung thỏa mãn yêu cầu của Đăng kiểm.
+
+(5) Các hàng lỏng có điểm chớp cháy không vượt quá 60 oC mà hệ thống chữa cháy bằng bọt thông thường không có hiệu quả thì phải tuân theo các yêu cầu ở 1.2.2-2
 
 Điều 34.2.2
 
@@ -486,15 +1510,35 @@ Chương 34
 
 Phần 5
 
-QCVN 21:2015/BGTVT
+QCVN 21:2025/BGTVT
 
 +
 
-5.3
+Súng phun và thiết bị tạo bọt
 
-Lắp đặt
+(1) Bọt từ hệ thống bọt cố định phải được cấp từ các súng phun (mornitor) và thiết bị tạo bọt (applicator). Thử mẫu đầu tiên của súng phun và thiết bị tạo bọt phải được thực hiện để đảm bảo việc giãn nở bọt và thời gian tiêu thoát bọt sinh ra không sai khác nhiều hơn ±10% các giá trị tương ứng được xác định ở -1(4) trên. Khi sử dụng bọt có tỉ lệ giãn nở trung bình (tỉ lệ giữa 21/1 và 200/1), tỉ lệ tạo bọt và sản lượng của hệ thống súng phun phải thỏa mãn yêu cầu của Thông tư MSC.1/Circ. 1312 và MSC/Circ. 798 của IMO. Mỗi súng phun bọt phải cấp được tối thiểu 50% tốc độ cấp dung dịch bọt. Trên các tàu hàng lỏng có DW dưới 4000 tấn, Đăng kiểm có thể không yêu cầu trang bị các súng phun mà có thể chỉ cần lắp đặt các thiết bị tạo bọt. Tuy nhiên trong trường hợp này, sản lượng của mỗi thiết bị tạo bọt không được nhỏ hơn 25% tốc độ cấp dung dịch bọt yêu cầu.
 
-3 Thiết bị tạo bọt (1) Số lượng thiết bị tạo bọt không được nhỏ hơn 4. Số lượng và vị trí của các họng phun bọt chính phải sao cho bọt từ ít nhất 2 thiết bị tạo bọt có thể tới được bất kỳ phần nào của vùng boong két hàng. (2) Phải trang bị các thiết bị tạo bọt sao cho đảm bảo được sự linh hoạt trong quá trình chữa cháy và phải đảm bảo chữa cháy được toàn bộ bề mặt mà các súng phun không bảo vệ được.
+(2)  Sản lượng của mỗi thiết bị tạo bọt không được nhỏ hơn 400 lít/phút và tầm phun của
+
+thiết bị tạo bọt trong điều kiện lặng gió không được nhỏ hơn 15 m
+
+Điều 34.2.2
+
+Chương 34
+
+Phần 5
+
+QCVN 21:2025/BGTVT
+
+-
+
+Yêu cầu về lắp đặt
+
++
+
+Trạm điều khiển chính
+
+Trạm điều khiển chính của hệ thống phải được đặt thích hợp phía ngoài khu vực hàng, cạnh các buồng sinh hoạt và sẵn sàng tiếp cận và thao tác được trong trường hợp có cháy ở khu vực được bảo vệ
 
 Điều 34.2.3
 
@@ -502,27 +1546,309 @@ Chương 34
 
 Phần 5
 
-QCVN 21:2015/BGTVT
+QCVN 21:2025/BGTVT
 
 +
 
+Các súng phun
+
+(1)  Số lượng và vị trí của súng phun phải sao cho thỏa mãn các yêu cầu ở 34.2.1-1.
+
+(2)  Khoảng cách từ súng phun tới điểm xa nhất của vùng được bảo vệ nằm phía trước súng phun phải không lớn hơn 75% tầm phun của súng phun trong điều kiện lặng gió.
+
+(3) Súng phun và đoạn vòi rồng nối với thiết bị tạo bọt bọt phải được đặt cả mạn trái và mạn phải trước thượng tầng đuôi hoặc các buồng sinh hoạt đối diện với boong các két hàng. Các súng phun và các đầu nối vòi rồng phải ở phía sau các két hàng, nhưng có thể bố trí ở trong khu vực hàng bên trên buồng bơm, khoang cách ly, các két dằn và khoang trống kề với két hàng nếu có thể bảo vệ boong bên dưới và đằng sau của nhau. Trên các tàu hàng lỏng có DW dưới 4000 tấn đoạn vòi rồng nối với thiết bị tạo bọt phải được đặt ở cả mạn trái và mạn phải phía trước thượng tầng đuôi hoặc các buồng sinh hoạt đối diện với boong các két hàng.
+
+Điều 34.2.3
+
+Chương 34
+
+Phần 5
+
+QCVN 21:2025/BGTVT
+
++
+
+Thiết bị tạo bọt
+
+(1)  Tối thiểu 4 thiết bị tạo bọt phải được trang bị cho các tàu hàng lỏng. Số lượng và vị trí của các họng phun bọt chính phải sao cho bọt từ ít nhất 2 thiết bị tạo bọt có thể tới được bất kỳ phần nào của vùng boong két hàng.
+
+(2)  Phải trang bị các thiết bị tạo bọt sao cho đảm bảo được sự linh hoạt trong quá trình chữa cháy và phải đảm bảo chữa cháy được toàn bộ bề mặt mà các súng phun không bảo vệ được.
+
+Điều 34.2.3
+
+Chương 34
+
+Phần 5
+
+QCVN 21:2025/BGTVT
+
++
+
+Van cách ly
+
+Phải lắp các van trên đường ống dẫn bọt chính và trên đường ống chữa cháy chính nếu đường ống này tạo thành một phần của hệ thống bọt trên boong và van này phải được lắp
+
+ngay trước các súng phun về phía mũi để ngăn cách các đoạn bị hỏng của các đường ống đó.
+
+Điều 34.2.3
+
+Chương 34
+
+Phần 5
+
+QCVN 21:2025/BGTVT
+
+5
+
+Hệ thống chữa cháy cố định bằng khí
+
+5.1
+
+Yêu cầu chung
+
+-
+
+Khí chữa cháy
+
+(1)  Nếu lượng khí chữa cháy yêu cầu để bảo vệ nhiều hơn một buồng, thì lượng khí dự trữ không cần nhiều hơn lượng lớn nhất được quy định cho một buồng được bảo vệ. Hệ thống phải được lắp van điều khiển thường ở vị trí đóng để sử dụng xả công chất dập cháy vào không gian cần dập cháy. Các buồng liền kề có các hệ thống thông gió độc lập nhưng không được ngăn cách tối thiểu bằng kết cấu A-0 phải được coi như là cùng không gian.
+
+(2) Thể tích của các bình khí khởi động chuyển đổi thành thể tích của khí tự do phải được cộng vào tổng thể tích của buồng máy khi tính số lượng khí chữa cháy cần thiết. Có thể không cần bổ sung thể tích khí này nếu có lắp ống xả nối từ các van an toàn và dẫn trực tiếp ra ngoài trời.
+
+(3)  Phải lắp thiết bị để thuyền viên kiểm tra một cách an toàn lượng khí chữa cháy trong bình chứa. Không cần thiết phải chuyển hoàn toàn các bình chứa ra khỏi vị trí lắp đặt của chúng để phục vụ mục đích kiểm tra lượng khí. Đối với các hệ thống CO2, các thanh treo để lắp cân bên trên mỗi hàng bình chứa hoặc các phương tiện khác phải được trang bị. Đối với các loại công chất chữa cháy khác, có thể sử dụng các thiết bị chỉ báo bề mặt thích hợp.
+
+(4)  Các bình chứa khí chữa cháy và các bộ phận chịu áp lực đi kèm phải được thiết kế heo áp suất thỏa mãn yêu cầu của Đăng kiểm có xét tới vị trí và nhiệt độ tối đa ở môi trường bên ngoài có thể gặp khi sử dụng.
+
+Điều 25.2.1
+
+Chương 25
+
+Phần 5
+
+QCVN 21:2025/BGTVT
+
+-
+
+Yêu cầu lắp đặt
+
+(1) Cần phải bố trí các ống để phân phối khí chữa cháy và các đầu phun sao cho khí chữa cháy được phân phối đều. Phải thực hiện tính toán lưu lượng của hệ thống trong đó sử dụng phương pháp tính được Đăng kiểm xem xét, thống nhất.
+
+(2)  Trừ khi được sự cho phép của Đăng kiểm, các bình áp lực quy định để chứa công chất chữa cháy, không phải là hơi nước, phải đặt ở bên ngoài các khoang được bảo vệ phù hợp với 10.4.3.
+
+(3)  Các phụ tùng dự trữ của hệ thống phải được cất giữ ở trên tàu và phải thỏa mãn yêu cầu của Đăng kiểm.
+
+(4) Trong các nhánh ống nếu bố trí các van làm cho các phần nhánh ống bị đóng thì các nhánh ống đó phải có van an toàn và đầu ra của các van an toàn đó được dẫn ra boong hở.
+
+(5) Tất cả các ống xả khí, phụ tùng và các đầu phun bố trí trong các khoang được bảo vệ phải được chế tạo bằng vật liệu có nhiệt độ nóng chảy lớn hơn 925 oC. Các ống đó và các thiết bị đi kèm phải được cố định chắc chắn.
+
+(6) Phải lắp đặt phụ tùng trên đường ống xả công chất để thử khí theo yêu cầu của Đăng kiểm.
+
+Điều 25.2.1
+
+Chương 25
+
+Phần 5
+
+QCVN 21:2025/BGTVT
+
+-
+
+Yêu cầu về hệ thống
+
+(1)  Các ống cần thiết để dẫn công chất chữa cháy vào các buồng được bảo vệ phải có van điều khiển được đánh dấu để chỉ rõ các buồng mà ống dẫn vào. Cần phải có thiết bị thích hợp để tránh vô tình xả khí vào khoang. Các ống có thể đi qua buồng sinh hoạt với điều kiện chúng phải có đủ độ dày và độ kín của chúng phải được kiểm tra với áp suất thử sau khi lắp đặt không nhỏ hơn 5 N/mm2. Ngoài ra, các ống đi qua khu vực buồng sinh hoạt chỉ được nối bằng phương pháp hàn và không được bố trí lỗ xả hoặc lỗ mở trong khu vực đó. Các ống đó không được đi qua các khoang lạnh.
+
+(2)  Phải trang bị phương tiện để tự động báo động bằng âm thanh và ánh sáng về việc xả công chất chữa cháy vào bất cứ khoang ro-ro, khoang công te nơ có trang bị các công te nơ lạnh, các khoang có cửa hoặc nắp hầm để đi vào và các khoang khác thường xuyên có người làm việc hoặc có người tới. Các báo động bằng âm thanh phải được bố trí sao cho có thể nghe được trong toàn bộ không gian được bảo vệ trong điều kiện tất cả các máy cùng hoạt động. Các âm thanh báo động đó phải phân biệt được với các âm thanh báo động khác bằng cách điều chỉnh áp suất âm thanh hoặc dạng âm thanh. Thiết bị báo động trước khi xả công chất chữa cháy phải tự động kích hoạt, chẳng hạn bằng cách mở cửa hộp điều khiển xả. Báo động phải hoạt động trong khoảng thời gian cần thiết để sơ tán người khỏi khoang, nhưng trong mọi trường hợp không được ngắn hơn 20 giây trước khi công chất chữa cháy được xả. Đối với khoang chở hàng thông thường và các khoang nhỏ (như buồng máy nén, kho sơn v.v...) chỉ xả công chất cục bộ thì không cần trang bị thiết bị báo động như trên.
+
+(3)  Các phương tiện điều khiển hệ thống chữa cháy cố định phải dễ dàng tiếp cận và đơn
+
+giản khi sử dụng và phải được tập trung với nhau tại càng ít vị trí càng tốt ở những nơi mà không bị ảnh hưởng bởi đám cháy trong buồng được bảo vệ. Tại mỗi vị trí phải có bảng chỉ dẫn rõ ràng cách sử dụng hệ thống có lưu ý đến an toàn cho con người.
+
+(4)  Không được xả tự động khí chữa cháy, trừ trường hợp Đăng kiểm cho phép
+
+Điều 25.2.1
+
+Chương 25
+
+Phần 5
+
+QCVN 21:2025/BGTVT
+
+5.2
+
+Hệ thống khí CO2
+
+-
+
+Lượng khí chữa cháy
+
+(1)  Đối với khoang hàng, nếu không có quy định nào khác, lượng CO2 cần phải đủ để tạo ra một thể tích khí tự do tối thiểu bằng 30% tổng thể tích của khoang hàng lớn nhất cần được bảo vệ ở trên tàu.
+
+(2) Đối với các khoang chở ô tô và các khoang ro-ro, lượng CO2 sẵn có phải tối thiểu đủ để cho thể tích khí tự do bằng 45% tổng thể tích của khoang hàng lớn nhất  có thể đóng kín đó và việc bố trí phải sao cho đảm bảo được tối thiểu hai phần ba lượng khí yêu cầu cho khoang đó phải được xả vào trong khoang trong vòng 10 phút. Không được sử dụng hệ thống CO2 để bảo vệ các khoang đặc biệt
+
+(3)  Đối với buồng máy, lượng CO2 cần phải đủ để tạo ra một thể tích khí tự do tối thiểu bằng thể tích lớn hơn trong số các thể tích sau đây:
+
+(a)  40% tổng thể tích của buồng máy lớn nhất cần bảo vệ, thể tích này không bao gồm phần thành quây ống khói buồng máy ở trên độ cao mà tại đó diện tích nằm ngang của phần vách quây bằng hoặc nhỏ hơn 40% diện tích nằm ngang của buồng máy đang xét ở cao độ ứng với điểm giữa của chiều cao tính từ mặt trên của đáy đôi đến phần thấp nhất của vách quây, hoặc
+
+(b)  35% tổng thể tích của buồng máy lớn nhất cần được bảo vệ, kể cả phần vách quây ống khói.
+
+(4)  Số % nói ở (3) trên có thể giảm tới 35% và 30% tương ứng cho tàu hàng có GT nhỏ hơn 2000.
+
+(5)  Trong Chương này thể tích tự do của CO2 phải được lấy bằng 0,56 m3/kg.
+
+(6)  Đối với buồng máy, hệ thống ống cố định phải sao cho 85% lượng khí có thể phun
+
+vào buồng trong 2 phút.
+
+(7) Để phục vụ mục đích của mục này, trong trường hợp có từ hai buồng máy trở lên không hoàn toàn tách biệt thì chúng phải được coi là một buồng.
+
+(8) Đối với các khoang công te nơ và các khoang hàng tổng hợp (chủ yếu dự định để chở các loại hàng khác nhau được chằng buộc hoặc đóng gói riêng rẽ), hệ thống ống cố định phải sao cho tối thiểu hai phần ba lượng khí có thể xả được vào khoang trong vòng 10 phút. Đối với các khoang chở xô hàng rời , hệ thống ống cố định phải sao cho tối thiểu hai phần ba lượng khí có thể xả được vào khoang trong phạm vi 20 phút. Các điều khiển của hệ thống phải được bố trí để cho phép một phần ba, hai phần ba hoặc toàn bộ lượng khí được xả dựa trên tình trạng chất hàng của khoang
+
+Điều 25.2.2
+
+Chương 25
+
+Phần 5
+
+QCVN 21:2025/BGTVT
+
+-
+
+Khu vực bảo vệ
+
+Hệ thống khí CO2 sử dụng để bảo vệ các khoang hàng ro-ro, khoang công te nơ có trang bị các công te nơ lạnh, các khoang có cửa hoặc nắp hầm để vào và các không gian khác mà bình thường có người làm việc trong đó hoặc có người ra vào phải thỏa mãn các yêu cầu dưới đây:
+
+(1)  Phải có hai thiết bị tách biệt điều khiển sự xả khí CO2 vào khoang được bảo vệ và phải đảm bảo các hoạt độngcủa thiết bị báo động. Một thiết bị điều khiển phải được dùng để mở van trên đường ống dẫn khí vào khoang được bảo vệ và thiết bị điều khiển thứ hai phải được sử dụng để xả khí từ các bình chứa. Phải có phương tiện chủ động (nghĩa là bằng khóa liên động điện hoặc cơ khí, không phụ thuộc vào quy trình vận hành) để sao cho chúng chỉ có thể vận hành được theo thứ tự như vậy, và
+
+(2)  Hai thiết bị điều khiển này phải được đặt trong một hộp điều khiển xả có đánh dấu rõ cho từng khoang được bảo vệ. Nếu hộp này có khóa thì chìa khóa phải được đặt ở trong một ngăn có nắp che bằng kính loại có thể đập vỡ được đặt ở vị trí dễ thấy bên cạnh hộp.
+
+Điều 25.2.2
+
+Chương 25
+
+Phần 5
+
+QCVN 21:2025/BGTVT
+
+-
+
+Hệ thống CO2 áp suất thấp
+
+Trong trường hợp lắp đặt hệ thống CO2 áp suất thấp để thỏa mãn quy định này thì phải thỏa mãn các yêu cầu từ (1) đến (13) sau:
+
+(1) Các thiết bị điều khiển hệ thống và máy làm lạnh phải được bố trí trong cùng một buồng chứa các bình áp lực.
+
+(2) Lượng định mức chất lỏng CO2 phải được chứa trong bình chứa ở áp suất làm việc trong khoảng từ 1,8 N/mm2 đến 2,2 N/mm2. Việc nạp chất lỏng thông thường cho bình phải được giới hạn tới mức vẫn còn có đủ không gian chứa hơi và cho phép chất lỏng giãn nở trong điều kiện nhiệt độ chứa lớn nhất, hơn là (nhiệt độ) có thể đạt đến áp suất đặt của van an toàn, nhưng không được vượt quá 95% dung tích của bình chứa.
+
+(3) Các bình chứa phải được trang bị các thiết bị sau:
+
+(a) Áp kế
+
+(b) Thiết bị báo động áp suất cao (áp suất đặt không được cao hơn áp suất đặt của
+
+van an toàn)
+
+(c) Thiết bị báo động áp suất thấp (áp suất đặt không được nhỏ hơn 1,8 MPa)
+
+(d) Các ống nhánh có van chặn để nạp cho bình
+
+(e) Các ống xả khí CO2
+
+(f) Thiết bị chỉ báo mức chất lỏng CO2 (lắp trên bình)
+
+(g) Hai van an toàn.
+
+(4) Hai van an toàn phải được bố trí sao cho một trong hai van có thể ngắt ra (shut-off) trong khi van kia được nối với bình. Áp suất đặt của các van an toàn không được nhỏ hơn 1,1 lần áp suất làm việc. Khả năng của mỗi van phải sao cho lượng hơi sinh ra trong điều kiện cháy có thể được xả ra với độ tăng áp suất không vượt quá 20% so với áp suất đặt. Đầu xả của van an toàn phải được dẫn ra boong hở.
+
+(5) Các bình chứavà các ống dẫn ra từ bình thường xuyên có khí CO2 phải được bọc cách nhiệt để ngăn ngừa sự hoạt động của van an toàn trong khoảng thời gian 24 giờ sau khi ngừng hệ thống làm lạnh, tại nhiệt độ môi trường buồng chứa là 45 oC và ở áp suất ban đầu bằng áp suất khởi động của máy làm lạnh.
+
+(6) Các bình phải được phục vụ bởi hai máy làm lạnh hoàn toàn độc lập và tự động, chỉ sử dụng cho mục đích này, mỗi máy làm lạnh bao gồm một máy nén và động cơ dẫn động thích hợp, giàn bay hơi và ngưng tụ.
+
+(7) Công suất làm lạnh và việc điều khiển tự động của mỗi máy làm lạnh phải sao cho duy trì được nhiệt độ yêu cầu trong các điều kiện hoạt động liên tục trong 24 giờ ở nhiệt độ biển đến 32 oC và nhiệt độ môi trường khí đến 45 oC.
+
+(8) Mỗi máy làm lạnh hoạt động bằng điện phải được cấp điện từ các thanh cái của bảng điện chính bởi mạch nhánh riêng biệt.
+
+(9) Nước làm mát cấp cho máy làm lạnh (nếu có yêu cầu) phải được cấp từ ít nhất 2 bơm tuần hoàn, một trong hai bơm đó được sử dụng làm bơm dự phòng. Bơm dự phòng có thể là bơm được sử dụng cho mục đích khác sao cho việc sử dụng nó để làm mát không ảnh hưởng đến công việc phục vụ thiết yếu khác của tàu. Nước làm mát phải được lấy từ ít nhất hai đầu nối thông biển, nên được phân bố một ở mạn trái và một mạn phải.
+
+(10) Các van an toàn phải được trang bị cho mỗi nhánh ống mà có thể bị cô lập bởi các van khóa và trong đó có thể bị tăng áp suất vượt quá áp suất thiết kế của các chi tiết.
+
+(11) Các thiết bị báo động bằng ánh sáng và âm thanh phải được trang bị trong trạm điều
+
+khiển trung tâmhoặc, phù hợp với các yêu cầu ở 4.3.3 của Quy chuẩn kỹ thuật quốc gia về hệ thống điều khiển tự động và từ xa, nếu không có trạm điều khiển trung tâm, khi:
+
+(a) Áp suất trong bình đạt đến các giá trị thấp và cao theo (3)(b) hoặc (c) trên;
+
+(b) Một trong các máy làm lạnh bị hỏng không hoạt động, hoặc
+
+(c) Mức chất lỏng trong bình đạt đến mức thấp nhất cho phép.
+
+(12) Nếu hệ thống phục vụ cho hơn một buồng, phải trang bị phương tiện điều khiển xả định lượng khí CO2 ví dụ bộ hẹn giờ tự động hoặc thiết bị chỉ báo mức chính xác bố trí tại trạm điều khiển.
+
+(13)Nếu có trang bị thiết bị tự động điều chỉnh việc xả lượng CO2 yêu cầu vào buồng được bảo vệ thì nó phải có khả năng điều chỉnh được lượng xả bằng tay.
+
+Điều 25.2.2
+
+Chương 25
+
+Phần 5
+
+QCVN 21:2025/BGTVT
+
 6
 
-Bố trí các bình chữa cháy xách tay
+Bảo vệ cho người
 
-6.1
+-
+
+Trang bị cho người chữa cháy
+
+1. Trang bị cho người chữa cháy phải bao gồm những trang thiết bị bảo hộ và thiết bị thở
+
+nêu ở -2 kèm theo dây an toàn nêu ở -3 dưới đây:
+
+(1) Quần áo bảo hộ bằng vật liệu có thể bảo vệ da tránh được sức nóng từ lửa và tránh được bỏng và nóng do hơi nước. Mặt ngoài của áo phải chịu nước;
+
+(2) Ủng cao su hoặc vật liệu không dẫn điện khác;
+
+(3) Mũ cứng có khả năng bảo vệ hiệu quả chống va đập;
+
+(4) Đèn điện an toàn (đèn cầm tay) có kiểu được duyệt có thể sáng được trong thời gian tối thiểu là 3 giờ. Các đèn điện an toàn trên tàu hàng lỏng và các đèn dự định dùng ở các khu vực nguy hiểm phải là kiểu phòng nổ; và
+
+(5) Rìu có cán cầm cách điện ở điện áp cao.
+
+2. Thiết bị thở
+
+ (1) Thiết bị thở phải là loại thiết bị thở có bình khí nén, trong đó thể tích khí chứa trong các bình phải ít nhất là 1200 lít hoặc thiết bị thở có bình khí đi kèm khác có thể dùng để thở trong thời gian ít nhất là 30 phút. Tất cả các bình khí dùng cho thiết bị thở phải là loại có thể thay thế lẫn nhau được.
+
+(2) Thiết bị thở có bình khí nén phải có thiết bị báo động bằng âm thanh và một thiết bị báo động nhìn thấy được hoặc thiết bị khác để báo động cho người sử dụng trước khi thể tích khí trong các bình đã giảm đến không nhỏ hơn 200 lít.
+
+3. Dây an toàn. Đi kèm với mỗi thiết bị thở phải có một dây an toàn chịu lửa, có chiều dài ít nhất là 30m. Dây an toàn phải có đủ độ bền để chịu được tải trọng tĩnh là 3,5 kN trong thời gian 5 phút. Dây an toàn phải có thể gắn được với trang bị đeo của thiết bị thở bằng móc lò xo hoặc với một dây đai riêng để tránh cho thiết bị thở bị rời ra khi sử dụng dây an toàn.
+
+Điều 23.2.1
+
+Chương 23
+
+Phần 5
+
+QCVN 21:2025/BGTVT
+
+7
+
+Bình chữa cháy xách tay
+
+-
 
 Bố trí
 
-1 Phải trang bị các bình chữa cháy xách tay có loại thích hợp và với số lượng đủ theo yêu cầu của Đăng kiểm cho các buồng sinh hoạt, buồng phục vụ và trạm điều khiển. Đối với tàu có GT từ 1000 trở lên, phải trang bị tối thiểu 05 bình chữa cháy xách tay. Tàu có GT dưới 1000 phải được trang bị tối thiểu 04 bình chữa cháy xách tay.
+1. Phải trang bị các bình chữa cháy xách tay có loại thích hợp và với số lượng đủ theo yêu cầu của Đăng kiểm cho các buồng sinh hoạt, buồng phục vụ và trạm điều khiển. Đối với tàu có GT từ 1000 trở lên, phải trang bị tối thiểu năm bình chữa cháy xách tay. Tàu có GT dưới 1000 phải được trang bị tối thiểu bốn bình chữa cháy xách tay.
 
-2 Một trong các bình chữa cháy xách tay dự định để dùng trong buồng bất kỳ phải được để gần lối vào buồng đó.
+2. Một trong các bình chữa cháy xách tay dự định để dùng trong buồng bất kỳ phải được đặt ở gần lối vào buồng đó.
 
-3 Các bình chữa cháy bằng CO2 không được đặt trong các buồng sinh hoạt. Trong các trạm điều khiển và các buồng khác có chứa các thiết bị điện hoặc điện tử hoặc các thiết bị cần thiết cho an toàn của tàu, phải trang bị các bình chữa cháy xách tay có công chất dập cháy không dẫn điện và cũng không gây hư hỏng các trang thiết bị đó.
+3. Các bình chữa cháy bằng CO2 không được đặt trong các khu vực sinh hoạt. Trong các trạm điều khiển và các buồng khác có chứa các thiết bị điện hoặc điện tử hoặc các thiết bị cần thiết cho an toàn của tàu, phải trang bị các bình chữa cháy xách tay có công chất dập cháy không dẫn điện và cũng không gây hư hỏng các trang thiết bị đó.
 
-4 Các bình chữa cháy xách tay phải sẵn sàng để sử dụng và được đặt ở những vị trí dễ nhận biết và có thể nhanh chóng đến được vào mọi thời điểm khi có cháy. Ngoài ra, chúng phải được bố trí sao cho khả năng phục vụ của chúng không bị ảnh hưởng bởi thời tiết, rung động hoặc các nhân tố bên ngoài khác. Các bình chữa cháy xách tay phải có chỉ báo việc chúng đã được sử dụng hoặc chưa được sử dụng.
+4. Các bình chữa cháy xách tay phải sẵn sàng để sử dụng và được đặt ở những vị trí dễ thấy và có thể nhanh chóng đến được vào mọi thời điểm khi có cháy. Ngoài ra, chúng phải được bố trí sao cho khả năng phục vụ của chúng không bị ảnh hưởng bởi thời tiết, rung động hoặc các nhân tố bên ngoài khác. Các bình chữa cháy xách tay phải có chỉ báo
 
-5 Hai bình chữa cháy xách tay được Đăng kiểm cho là phù hợp với loại hàng được chở phải được trang bị trên boong thời tiết trong khu vực hàng của các tàu chở hàng lỏng.
+việc chúng đã được sử dụng hoặc chưa được sử dụng.
+
+5. Hai bình chữa cháy xách tay được Đăng kiểm cho là phù hợp với loại hàng được chở phải được trang bị trên boong thời tiết trong khu vực hàng của các tàu hàng lỏng.
 
 Điều 10.3.2
 
@@ -530,15 +1856,37 @@ Chương 10
 
 Phần 5
 
-QCVN 21:2015/BGTVT
+QCVN 21:2025/BGTVT
 
-+
+-
 
-6.2
+Chất nạp dự trữ
 
-Khối lượng
+1. Đối với các bình chữa cháy xách tay loại có thể nạp lại được trên tàu, phải trang bị các chất nạp dự trữ bằng 100% cho 10 bình chữa cháy xách tay đầu tiên và 50% cho các bình còn lại. Không cần thiết phải trang bị chất nạp dự trữ cho nhiều hơn 60 bình. Phải trang bị các hướng dẫn nạp cho các bình ở trên tàu.
 
-1 Số lượng chất chữa cháy (1) Mỗi bình chữa cháy bằng bột hoặc cacbon dioxit phải có khối lượng tối thiểu là 5 kg, và mỗi bình chữa cháy bằng bọt phải có thể tích ít nhất là 9 lít. Khối lượng của tất cả các bình chữa cháy xách tay không được vượt quá 23 kg và chúng phải có khả năng chữa cháy ít nhất là tương đương với bình chữa cháy bằng chất lỏng loại 9 lít.
+2. Đối với các bình chữa cháy xách tay không thể nạp được ở trên tàu, phải bổ sung các bình chữa cháy xách tay có cùng lượng, chủng loại, dung tích và số bình như được xác định ở -1 trên để thay cho lượng nạp dự trữ.
+
+Điều 10.3.3
+
+Chương 10
+
+Phần 5
+
+QCVN 21:2025/BGTVT
+
+1. Số lượng chất chữa cháy
+
+(1) Mỗi bình chữa cháy bằng bột hoặc CO2 phải có khối lượng tối thiểu là 5 kg, và mỗi bình chữa cháy bằng bọt phải có thể tích ít nhất là 9 lít. Khối lượng của tất cả các bình chữa cháy xách tay không được vượt quá 23 kg và chúng phải có khả năng chữa cháy ít nhất là tương đương với bình chữa cháy bằng chất lỏng loại 9 lít.
+
+(2) Tính tương đương của các bình chữa cháy xách tay được chấp nhận như sau:
+
+(i) Các bình chữa cháy bằng khí CO2 và bột với khối lượng không quá 9,5 kg.
+
+(ii) Các bình chữa cháy bằng chất lỏng không quá 13,5 lít.
+
+2. Nạp lại bình chữa cháy
+
+ Chỉ được phép sử dụng chất nạp lại đã được chứng nhận cho bình chữa cháy đó để nạp lại bình chữa cháy.
 
 Điều 24.2.1
 
@@ -546,42 +1894,138 @@ Chương 24
 
 Phần 5
 
-QCVN 21:2015/BGTVT
-
-+
-
-7
-
-Dụng cụ chữa cháy cá nhân
-
-1. Dụng cụ chữa cháy cá chân phải bao gồm những trang thiết bị bảo hộ và thiết bị thở nêu ở -2 kèm theo dây an toàn nêu ở -3 dưới đây. (1) Quần áo bảo hộ bằng vật liệu có thể bảo vệ da tránh được sức nóng từ lửa và tránh được bỏng và nóng do hơi nước. Mặt ngoài của áo phải chịu nước. (2) Ủng cao su hoặc vật liệu không dẫn điện khác. (3) Mũ cứng có khả năng bảo vệ hiệu quả chống va đập. (4) Đèn điện an toàn (đèn cầm tay) có kiểu được duyệt có thể cháy sáng được trong thời gian tối thiểu là 3 giờ. Các đèn điện an toàn trên tàu chở hàng lỏng và các đèn dự định dùng ở các khu vực nguy hiểm phải là kiểu phòng nổ; và (5) Rìu có cán cầm cách điện ở điện áp cao.
-
-2. Thiết bị thở Thiết bị thở phải là loại thiết bị thở hoạt động bằng không khí, có bình chứa khí nén đi kèm với dung tích không khí chứa trong các bình phải ít nhất là 1200 lít hoặc thiết bị thở có bình khí đi kèm khác có thể dùng để thở trong thời gian ít nhất là 30 phút. Tất cả các bình khí dùng cho thiết bị thở phải là loại có thể thay thế được.
-
-3 Dây an toàn đi kèm với mỗi thiết bị thở phải có một dây an toàn chịu lửa, có chiều dài ít nhất là 30 m. Dây an toàn phải có đủ độ bền để chịu được tải trọng tĩnh là 3,5 kN trong thời gian 5 phút. Dây an toàn phải có thể nối với phần cứng của thiết bị bằng móc lò xo hoặc với một dây đai riêng
-
-Điều 23.2.1 Chương 23
-
-Phần 5
-
-QCVN 21:2015/BGTVT
-
-+
+QCVN 21:2025/BGTVT
 
 8
 
+Thiết bị tạo bọt xách tay
+
+1. Thiết bị tạo bọt xách tay phải có một đầu phun/ ống nhánh, kiểu tự hoàn trộn hoặc kết hợp với một bộ hòa trộn riêng có khả năng lắp vào ống nước chữa cháy bằng vòi rồng chữa cháy cùng với một két chứa xách tay chứa ít nhất 20 lít chất tạo bọt và một két dự trữ chất tạo bọt có cùng dung tích.
+
+2. Dung lượng và tính năng của thiết bị tạo bọt
+
+(1)  Đầu phun/ ống nhánh và bộ tiết lưu phải có khả năng tạo ra lượng bọt thích hợp để chữa cháy do dầu gây ra với lưu lượng ít nhất 200 lít/phút ở áp suất danh nghĩa của đường ống nước chữa cháy.
+
+(2) Chất tạo bọt phải được Đăng kiểm chứng nhận phù hợp với Thông tư MSC.1/Circ.1312 của IMO.
+
+(3) Độ nở của bọt và thời gian xả bọt của thiết bị tạo bọt xách tay không được sai số quá ± 10 % yêu cầu nêu ở (2) trên.
+
+(4) Thiết bị tạo bọt xách tay phải được thiết kế chống tắc, chịu được sự thay đổi nhiệt độ môi trường, dao động, độ ẩm, va đập và ăn mòn thường xảy ra trên tàu.
+
+Điều 24.2.2
+
+Chương 24
+
+Phần 5
+
+QCVN 21:2025/BGTVT
+
+9
+
 Hệ thống chiếu sáng sự cố
 
-3 Hệ thống chiếu sáng sự cố phải cung cấp đủ ánh sáng cần thiết để đảm bảo an toàn cho: (1) Tất cả các nơi tập trung và đưa người lên phương tiện cứu sinh theo yêu cầu ở mục 4, quy định 11, Chương III, phụ lục Công ước SOLAS. (2) Tất cả các hành lang công tác và sinh hoạt, cầu thang, lối thoát, thang máy và tháp nâng. (3) Các không gian đặt máy chính, đặt trạm phát điện chính và các vị	 trí điều khiển chúng; (4) Tất cả các trạm điều khiển, buồng điều khiển máy chính và ở các bảng điện sự cố và bảng điện chính. (5) Tất cả những vị trí cất giữ trang bị dùng cho người chữa cháy. (6) Vị trí máy lái. (7) Vị trí đặt bơm đề cập ở 3.3.2-2(5), bơm phun sương, nếu có thể, cả các vị trí đặt bơm hút khô sự cố và tất cả các vị trí khởi động các động cơ của chúng. (8) Trong các buồng bơm hàng của tàu hàng lỏng dùng để chở xô hàng lỏng hoặc chở xô hoá chất nguy hiểm có điểm chớp cháy không quá 600C, nhưng không phải là khí hoá lỏng.
+Hệ thống chiếu sáng sự cố phải cung cấp đủ ánh sáng cần thiết để đảm bảo an toàn cho:
+
+(1) Tất cả các nơi tập trung và đưa người lên phương tiện cứu sinh theo yêu cầu ở mục 4 quy định 11 Chương III Phụ lục Công ước SOLAS;
+
+(2)  Tất cả các hành lang công tác và sinh hoạt, cầu thang, lối thoát, thang máy và tháp nâng;
+
+(3) Các không gian đặt máy chính, đặt trạm phát điện chính và các vị trí điều khiển chúng;
+
+(4) Tất cả các trạm điều khiển, buồng điều khiển máy chính và ở các bảng điện sự cố và bảng điện chính;
+
+(5)  Tất cả những vị trí cất giữ trang bị dùng cho người chữa cháy;
+
+(6)  Vị trí máy lái;
+
+(7)  Vị trí đặt bơm đề cập ở 3.3.2-2(5), bơm phun sương, nếu có thể, cả các vị trí đặt bơm
+
+hút khô sự cố và tất cả các vị trí khởi động các động cơ của chúng;
+
+(8) Trong các buồng bơm hàng của tàu hàng lỏng dùng để chở xô hàng lỏng hoặc chở xô hoá chất nguy hiểm có điểm chớp cháy không quá 60 °C, nhưng không phải là khí hoá lỏng.
 
 Điều 3.2.3
 
 Chương 3
 
-Phần 5
+Phần 4
 
-QCVN 21:2015/BGTVT
+QCVN 21:2025/BGTVT
+
+10
+
+Nguồn điện sự cố
+
+-
+
+Quy định chung
+
+1. Tàu phải được trang bị một nguồn điện sự cố độc lập hoàn toàn, trừ các tàu có nguồn điện chính là các tổ ắc quy.
+
+2. Nguồn điện sự cố, thiết bị biến đổi đi kèm, nguồn sự cố tạm thời, bảng điện sự cố và bảng chiếu sáng sự cố phải được đặt trên boong liên tục cao nhất và phải dễ dàng tới được từ boong hở. Không được đặt chúng sát vách chống va, trừ khi được sự đồng ý của Đăng kiểm.
+
+3. Vị trí đặt nguồn điện sự cố, thiết bị biến đổi đi kèm, nguồn điện sự cố tạm thời, bảng điện sự cố và bảng chiếu sáng sự cố phải đảm bảo thỏa mãn yêu cầu Đăng kiểm sao cho khi có cháy hoặc bất kỳ sự cố nào khác trong không gian bố trí nguồn điện chính, thiết bị biến đổi đi kèm và bảng điện chính hoặc bất kỳ buồng máy cấp A nào cũng không làm cản trở việc cấp điện, điều khiển và phân phối nguồn điện sự cố. Nếu có thể được, vị trí đặt nguồn điện sự cố, bảng điện sự cố và bảng chiếu sáng sự cố không được tiếp giáp với
+
+buồng máy cấp A hoặc những không gian bố trí nguồn điện chính, thiết bị biến đổi đi kèm và bảng điện chính
+
+Điều 3.3.1
+
+Chương 3
+
+Phần 4
+
+QCVN 21:2025/BGTVT
+
+-
+
+Công suất của nguồn điện sự cố
+
+1. Công suất sẵn sàng của nguồn điện sự cố phải đủ cung cấp cho tất cả các hệ thống điện thiết yếu để đảm bảo an toàn trong trường hợp sự cố, phải quan tâm đến trường hợp có thể nhiều thiết bị hoạt động đồng thời.
+
+2. Nguồn điện sự cố phải có khả năng cung cấp đồng thời tối thiểu cho những thiết bị nêu dưới đây,nếu chúng hoạt động bằng năng lượng điện, có xét đến dòng khởi động và tính chất tạm thời của những tải này:
+
+(1) 3 giờ cho các đèn chiếu sáng sự cố nêu ở 3.2.3-3(1) và yêu cầu ở mục 7 quy định 16 Chương III Phụ lục Công ước SOLAS;
+
+(2) 18 giờ cho các đèn chiếu sáng sự cố yêu cầu ở 3.2.3-3(2) đến (8);
+
+(4) 18 giờ đối với:
+
+(a) Tất cả các thiết bị liên lạc nội bộ yêu cầu trong trường hợp sự cố;
+
+(d) Hệ thống phát hiện và báo cháy;
+
+(e) Hoạt động ngắn hạn lặp lại của đèn tín hiệu ban ngày, còi tàu, thiết bị báo cháy bằng tay và tất cả các hệ thống tín hiệu cần thiết trong trường hợp sự cố trên tàu, trừ khi các hệ thống này được cấp điện bằng một bộ ắc quy độc lập phù hợp để làm việc liên tục trong 18 giờ trong trường hợp sự cố.
+
+Điều 3.3.4
+
+Chương 3
+
+Phần 4
+
+QCVN 21:2025/BGTVT
+
+-
+
+Bố trí nguồn điện sự cố
+
+1. Phải lắp đặt bảng điện sự cố gần nhất có thể với nguồn điện sự cố.
+
+2. Với nguồn điện sự cố là máy phát điện thì phải bố trí máy phát và bảng điện trong cùng một không gian, trừ khi vì thế mà làm hưhỏng bảng điện.
+
+3. Không cho phép đặt bất kỳ tổ ắc quy được trang bị phù hợp với 3.3 trong cùng một không gian với bảng điện sự cố.
+
+4. Phải có thiết bị chỉ báo đặt ở vị trí thích hợp trên bảng điện chính hoặc trong buồng điều khiển máy chính để chỉ báo ắc quy của hoặc nguồn điện sự cố hoặc nguồn điện sự cố tạm thời như yêu cầu ở 3.3.3 (2) hoặc 3.3.4 đang phóng điện.
+
+5. Đường cáp nối giữa bảng điện chính và bảng điện sự cố phải được:
+
+(1) Phải được bảo vệ quá tải và ngắn mạch tại bảng điện chính;
+
+(2) Tự động ngắt ra tại bảng điện sự cố khi mất nguồn điện chính;
+
+(3) Nếu hệ thống được bố trí hoạt động hồi tiếp thì tối thiểu phải được bảo vệ ngắn mạch ở bảng điện sự cố. Đồng thời bảng điện sự cố phải được cấp điện từ bảng điện chính trong điều kiện bình thường.
+
+6. Trường hợp cần thiết, phải có các hệ thống tự động ngắt các mạch không phải là sự cố khỏi bảng điện sự cố để đảm bảo đủ công suất sẵn sàng tự động cấp cho các mạch sự cố.
 
 ..........(3)....................													..........(4)..............
 
-Ghi chú: (1) Tên cơ quan chủ quản trực tiếp;(2) Tên đơn vị thực hiện thẩm định; (3) Họ tên và chữ ký của cán bộ thực hiện; (4) Ghi quyền hạn, chức vụ của người lãnh đạo, chỉ huy đơn vị thẩm định, nếu người ký văn bản là cấp phó của người đứng đầu cơ quan thì ghi chữ viết tắt “KT.” vào trước chức vụ của người đứng đầu, bên dưới ghi chức vụ của người ký văn bản;
+Ghi chú: (1) Tên cơ quan chủ quản trực tiếp; (2) Tên đơn vị thực hiện thẩm định; (3) Họ tên và chữ ký của cán bộ thực hiện; (4) Ghi quyền hạn, chức vụ của người lãnh đạo, chỉ huy đơn vị thẩm định, nếu người ký văn bản là cấp phó của người đứng đầu cơ quan thì ghi chữ viết tắt “KT.” vào trước chức vụ của người đứng đầu, bên dưới ghi chức vụ của người ký văn bản;

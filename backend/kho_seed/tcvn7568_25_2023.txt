@@ -1,0 +1,2886 @@
+[TCVN 7568-25:2023 và TCVN 7568-26:2023 Hệ thống báo cháy, phần 25: các bộ phận sử dụng đường truyền vô tuyến]
+[Hiệu lực: 2023. Trạng thái: ĐANG DÙNG. Nguồn: bộ tài liệu thi cán bộ thẩm định PCCC 2026, bản quét đã nhận dạng chữ (OCR).]
+
+TCVN TIÊỀU CHUẨN QUỐC GIA
+
+Xuất bản lần 1
+
+HỆ THÓNG BÁO CHÁY - PHẦN 25: CÁC BỘ PHẬN SỬ
+
+DỤNG ĐƯỜNG TRUYỀN VÔ TUYẾN
+
+Fire alarm systems - Part 25: COomponents using radio transmission paths
+
+HÀ NỘI - 2023
+
+MỤC LỤC
+
+Lời nói đầu........c....ưsesssvesoxttxVEeostt*tt1K-đ40111002000925000119900-0010/0991VEEEEETSIEREEEYEEEPTEEEEEYIESEPESevtYlsnrttssysn
+
+3. Thuật ngữ và định nghĩa..............................‹.seeeensnsenennnneneenerneneEeeenenensessEneenseveeEseeereeeersresnseesrssess
+
+4. Yêu cầu hộ thống...........................c.---nneeennnnnhnnneeEnkEEEEẢEEEEˆÖE- 00g Önnse-nse--760//-7.57.--7.5..7-10
+
+4.2 Đường truyền vô tuyến.............................nennnen nen nen nen nen nen re se nen nen net nen nen se 10
+
+5. Yêu cầu về các thành phần trong hệ thống.................................cceseseseneeseessseessressreseeesseeresssseese.. 12
+
+51 Tuần {jJ.............e..-.xssvsssxksvsrrvsexvstsxsxexvxvtyete ve*xkvexktväVE~E*EVSxEPEEEPCECELEC tvEEttEVE*ESSCEREEEPEC*EEE†EEEZEPDEEO^ +
+
+LUA Cả SN HRNRAÃREAAAARAAEAAAARARAEAAEREAEEEEEEEREOREEREƯƯSLL
+
+5.4 Các yêu cầu liên quan đến môi trường..........................nvneenenneeneennnnnnensnnnn nen rnnsnnsnsesrnsrsssisss TỔ
+
+LÔ EU án Tuấn TNM PK KEEEREREERPRERARREAEREREREREAEAREPAARERREREEREAERAANAESORREREEOREYRROR L
+
+SN a2 02 Ha là i9 2222220222027272272722972002072222992970029007229/2200229222292729PH2 |
+
+Lời nói đầu
+
+TCVN 7668-25 : 2023 được xây dựng căn cứ trên cơ sở tham khảo ISO 7240-25:2010.
+
+TCVN 7568-25 : 2023 do Cục Cảnh sát phòng-cháy, chữa cháy và cứu nạn, cứu hộ biên soạn, Bộ Công
+
+an đè nghị, Tổng cục Tiêu chuẩn Đo lường Chất lượng thẳm định, Bộ Khoa học và Công nghệ công bé.
+
+Bộ TCVN 7568 (ISO 7240), Hệ thống báo cháy bao gồm các phần sau:
+
+- Phân 1: Quy định chung và định nghĩa;
+
+- Phần 2: Trung tâm báo cháy;
+
+- Phần 3: Thiết bị báo cháy bằng âm thanh;
+
+- Phần 4: Thiết bị cấp nguồn;
+
+- Phần 5: Đầu báo cháy nhiệt kiều điểm;
+
+- Phản 6: Đầu báo cháy khí cacbon monoxit dùng pin điện hóa;
+
+- Phản 7: Đầu báo cháy khói kiểu điểm sử dụng ánh sáng, ánh sáng tán xạ hoặc ion hóa;
+
+- Phần 8: Đầu báo cháy khói kiểu điểm sử dụng cảm biến cacbon monoxit kết hợp với cảm biến nhiệt;
+
+- Phần 9: Đám cháy thử nghiệm cho các đầu báo cháy;
+
+- Phần 10: Đầu báo cháy lửa kiểm điểm;
+
+- Phần 11: Hộp nút ấn báo cháy;
+
+- Phân 12: Đầu báo cháy khói kiểu đường truyền sử dụng chùm tía chiều quang học;
+
+- Phân 13: Đánh giá tính tương thích của các bộ phận trong hệ thống;
+
+- Phản 14; Thiết kế, lắp đặt, vận hành và bảo dưỡng các hệ thống báo cháy trong nhà và xung
+
+quanh nhà;
+
+- Phần 15: Đầu báo cháy khói kiều điểm sử dụng cảm biến khói và cảm biến nhiệt;
+
+- Phản 16: Thiết bị điều khiển và hiển thị hệ thống âm thanh;
+
+- Phần 17: Thiết bị cách ly ngắn mạch;
+
+- Phần 18: Thiết bị vào/ra;
+
+- Phân 19: Thiết kế, lắp đặt, chạy thử và bảo dưỡng các hệ thống âm thanh dùng cho tình huống
+
+khẩn cấp;
+
+- Phần 20: Bộ phát hiện khói công nghệ hút;
+
+- Phần 21: Thiết bị định tuyến;
+
+- Phản 22: Thiết bị phát hiện khói dùng trong các đường ống;
+
+- Phần 23: Thiết bị báo động qua thị giác;
+
+- Phằn-25:.Các bộ phận sử dụng đường truyền vô tuyến.
+
+TIÊU CHUẲN QUỐC GIA TCVN 7568-25:2023
+
+Hệ thống báo cháy - Phần 25: Các bộ phận sử dụng đường truyền
+
+vô tuyến
+
+Fire alarm systems - Part 25: Components using radio transmission paths
+
+1. Phạm vi áp dụng
+
+Tiêu chuẩn này quy định về yêu cầu kỹ thuật, phương pháp thử và các tiêu chí hoạt động của các bộ
+
+phận thuộc hệ thống báo cháy lắp đặt trong và xung quanh nhà và công trình, liên kết với nhau qua
+
+đường truyền vô tuyến (RF). Đồng thời tiêu chuẳn này cũng đưa ra các yêu cầu về việc đánh giá tính
+
+tương thích của các phần tử trong hệ thống báo cháy không dây.
+
+Vì các bộ phận đó làm việc cùng với nhau trong một hệ thống, tiêu chuẳn này cũng đưa ra các yêu cầu
+
+đối với một hệ thống hoàn chỉnh.
+
+Khi một hệ thống báo cháy sử dụng cả đường truyền hữu tuyến và vô tuyến, hệ thống đó phải đồng thời
+
+đáp ứng Tiêu chuẩn quốc gia TCVN 7568. Những yêu cầu liên quan đến đường truyền hữu tuyến sẽ
+
+được thay thế hoặc sửa đổi bằng những yêu cầu được trình bày trong tiêu chuẩn này.
+
+Tiêu chuẳn này không hạn chế:
+
+- Mục đích sử dụng phố vô tuyến, ví dụ: tằn số, công suất phát của thiết bị;
+
+- Số lượng các bộ phận kết nói vô tuyền tối đa cho phép sử dụng trong một hệ thống báo cháy;
+
+- Số lượng các bộ phân tối đa cho phép được mắt kết nối trên một đường truyền hữu tuyến hoặc
+
+vô tuyến.
+
+2. Tài liệu viện dẫn
+
+Các tài liệu viện dẫn sau rất cần thiết cho việc áp dụng tiêu chuẩn này. Đồi với các tài liệu viện dẫn có
+
+ghi năm công bề thì áp dụng phiên bản năm được nêu. Đồi với các tài liệu viện dẫn không ghi năm công
+
+bố thì áp dụng phiên bản mới nhất, bao gồm cả các sửa đổi bổ sung (nếu có).
+
+TCVN 5738 Phòng cháy chữa cháy — Hệ thống báo cháy — Yêu cầu kỹ thuật;
+
+TCVN 7568-1 (ISO 7240-1) Hệ thống báo cháy — Phần 1: Quy định chung và định nghĩa;
+
+TCVN 7568-2 (ISO 7240-2) Hệ thống báo cháy — Phản 2: Trung tâm báo cháy;
+
+TCVN 7588-4 (ISO 7240-4) Hệ thống báo cháy - Phản 4: Thiết bị cấp nguồn;
+
+TCVN 7568-5 (ISO 7240-5) Hệ thống báo cháy - Phần 5: Đâu báo cháy nhiệt kiều điểm;
+
+TCVN 7568-11 (ISO 7240-11) Hệ thống báo cháy - Phân 11: Hộp nút ấn báo cháy;
+
+TCVN 7568-18 (ISO 7240-18) Hệ thống báo cháy - Phân 18: Thiết bị vào/ra;
+
+TCVN 7699-1 (IEC 60068-1) Thử nghiệm môi trường - Phần 1: Quy định chung và hướng dẫn;
+
+TCVN 7699-2-1 (IEC 60068-2-1) Thử nghiệm môi trường— Phần 2-1: Các thử nghiệm — Thử nghiệm A: Lạnh;
+
+TCVN 7699-2-2 (IEC 60088-2-2) Thử nghiệm môi trường - Phần 2-2: Các thử nghiệm - Thử nghiệm B:
+
+Nóng khô,
+
+TCVN 7899-2-6 (IEC 60068-2-8) Thử nghiệm môi trường = Phần 2-6: Các thử nghiệm - Thử nghiệm FC:
+
+Rung (hình sin);
+
+TCVN 7699-2-27 (IEC 60068-2-27) Thử nghiệm môi trường - Phần 2-27: Các thử nghiệm — Thử nghiệm
+
+EA và hướng dẫn: Xóc;
+
+TCVN 7699-2-30 (IEC 60068-2-30) Thử nghiệm môi trường - Phần 2-30: Các thử nghiệm — Thử nghiệm
+
+Db: Nóng ẩm, Chu kỳ (Chu kỳ 12h + 12h);
+
+TCVN 7699-2-42 (IEC 60088-2-42) Thử nghiệm môi trường - Phần 2-42: Các thử nghiệm — Thử nghiệm
+
+Kc: Thử nghiệm bằng lưu huỳnh dioxit đối với các tiếp điểm và mồi nói;
+
+TCVN 7699-2-78 (IEC 60068-2-78) Thử nghiệm môi trường - Phân 2-78: Các thử nghiệm — Thử nghiệm
+
+CAB: Nóng ẩm, không đồi;
+
+TCVN 12527-1 (IEC 61672-1) Điện âm — Máy đo mức âm - Phần 1: Các yêu câu;
+
+ITU-T O.153, Basic parameters for the measuremert of error perforrnance at bit rates below the primary rate;
+
+EN 50130-4, Alarm systems - Part 4: Eleotromagnetic compatibility - Product family standard: Immunity
+
+requiremen(ts for components of fire, intruder and social alarm systems.
+
+3. Thuật ngữ và định nghĩa
+
+Tiêu chuẳn này áp dụng các thuật ngữ định nghĩa và ký hiệu trong TCVN 5738 và TCVN 7568-1 (ISO
+
+7240-1) và các thuật ngữ và định nghĩa sau: :
+
+3.41
+
+Độ chọn lọc kênh lân cận (adjacent channel selectivity)
+
+Khả năng của máy thu nhận được tín hiệu mong muốn trong khi có tin hiệu khác xuất hiện ở vị trí tằn số
+
+kênh lân cận.
+
+3.2
+
+Ăng ten (antenna)
+
+Một bộ phận trong máy thu phát vô tuyến của hệ thống báo cháy, có chức năng két nối vô tuyến giữa
+
+các máy thu phát với nhau.
+
+3.3
+
+Băng tần hoạt động (assigned band)
+
+Dải tằn số mà thiết bị được phép hoạt động.
+
+3.4
+
+Nguồn độc lập (autonomous power source)
+
+Nguồn độc lập là một thiết bị cung cắp nguồn cho các thành phần trong hệ thống mà không kết nối với điện
+
+lưới hay bắt cứ hệ thống tương đương nào khác. Nó không có khả năng tự sạc trong quá trình hoạt động.
+
+Vị DỤ: Pin sơ cắp (Pin không nạp được).
+
+Trạm góc (base station)
+
+Bộ thu phát trung tâm của hệ thống, dùng để giao tiếp với các trạm thu phát khác trong hệ thống.
+
+3.6
+
+Chặn hoặc giảm nhạy (blocking or desensitization)
+
+Khả năng máy thu thu được tín hiệu mong muốn khi có sự xuất hiện thêm tín hiệu không mong muốn
+
+khác ở đầu vào máy thu. Tín hiệu không mong muốn có thể là kênh lân cận hay tằn số bắt kỳ nhưng
+
+khác với đáp ứng giả của máy thu.
+
+CHÚ THÍCH: Tín hiệu không mong muốn (kênh gây nhiễu) có thể là kênh lân cận (kênh gần với kênh cần thu) hay kênh ở bắt
+
+kỷ vị trí có tần số khác với tằn số của đáp ứng giả.
+
+Xung đột (collision)
+
+Sự mắt thông tin vô tuyến do sự tác động lẫn nhau giữa các tín hiệu vô tuyền từ hai hay nhiều máy phát
+
+sóng hoạt động trong cùng một hệ thống.
+
+3.8
+
+Khả năng tương thích (compatibility)
+
+Khả năng hoạt động kết hợp giữa một bộ phận với các bộ phận khác trong cùng một hệ thống và tuân
+
+theo:
+
+- Các thông số giới hạn tương ứng với từng bộ phận;
+
+- Theo các quy định tại bộ TCVN 7568 (nếu có) hoặc của nhà sản xuất nếu không có trong bộ
+
+TCVN 7568;
+
+- Theo các cấu hình cụ thể của hệ thống.
+
+3.3
+
+Hệ thống báo cháy (fire detection and alarm system)
+
+Hệ thống phát hiện và thông báo địa điểm cháy
+
+3.10
+
+Mã định danh (identification code)
+
+Một đoạn mã được sử dụng để nhận dạng một thiết bị thu phát bằng sóng vô tuyến trong cùng hệ thống.
+
+3.11
+
+Thành phần trung gian (intermediate element)
+
+Thiết bị kết nối với đường truyền của một hệ thống báo cháy, được sử dụng để nhận và/hoặc truyền tín
+
+hiệu cần thiết cho hoạt động của hệ thống báo cháy.
+
+CHÚ THÍCH: Một thành phần trung gian phải đáp ứng các yêu cầu vẻ thiết bị đầu vảo/đầu ra theo Tiêu chuản TCVN 7568-18
+
+nhưng không chỉ giới hạn ở các tín hiệu điện.
+
+Dải tằn số giới hạn (limited frequency range)
+
+Dải tằn số giới hạn được xác định bởi công thức (1):
+
+AC TH Ần 2X. ()
+
+Trong đó
+
+fuo. là tằn số của tín hiệu dao động cục bộ được áp dụng cho bộ trộn thứ nhất của máy thu;
+
+f là các tần số trung gian;
+
+rse là băng tàn làm việc.
+
+Nhà sản xuất (manufacturer)
+
+Nhà sản xuất thiết bị hoặc đại diện được nhà sản xuất ủy quyền hoặc nhà cung cắp thiết bị.
+
+3.14
+
+Đường truyền vô tuyến (r.f. transmission path)
+
+Cách thức liên lạc giữa ít nhất hai điểm, sử dụng thu phát sóng vô tuyến.
+
+CHÚ THÍCH: Liên kết vô tuyến tương đương với đường truyền như được định nghĩa trong các phần khác TCVN 7588.
+
+3.15
+
+Thành phần vô tuyến (radio part)
+
+Một bộ phận hoặc một phần của bộ phận cấu thành thiết bị thu và/hoặc phát tín hiệu vô tuyến.
+
+CHÚ THÍCH: Thành phần vô tuyến có thẻ bao gồm nguồn điện, ví dụ: một bộ nguồn độc lập.
+
+3.16
+
+Máy thu (receiver)
+
+Thiết bị nhận tín hiệu vô tuyền tương ứng trong một đường truyền vô tuyến.
+
+CHÚ THÍCH: Máy thu có thể được tích hợp trong một bộ phận của hệ thống báo cháy.
+
+3.17
+
+Miễn nhiễm tằn số vô tuyến (r.f. interference)
+
+Tín hiệu được phát từ một nguồn không thuộc hệ thống báo cháy làm suy hao hoặc triệt tiêu các tín hiệu
+
+cần thu gây lỗi hoặc làm mắt tín hiệu mong muốn mà không phù hợp với định nghĩa về xung đột tín hoặc
+
+thay thế tín hiệu.
+
+3.18
+
+Tuổi thọ nguồn độc lập (service life)
+
+Quãng thời gian làm việc hiệu quả của nguồn độc lập trong các điều kiện cụ thể.
+
+3.419
+
+Suy hao tín hiệu tại hiện trường (site attenuation)
+
+Sự suy giảm của tin hiệu vô tuyến do đường truyền hoặc sự thay đổi môi trường nơi hệ thống báo cháy
+
+được lắp đặt.
+
+CHÚ THÍCH: Sự suy hao tín hiệu tại hiện trường có thể thay đổi khi lắp đặt hoặc thay đỗi vị trí của các vật liệu phản xạ hoặc
+
+hấp thụ.
+
+3.20
+
+Dụng cụ chuyên dụng (special tool)
+
+Dụng cụ không phổ biến trên thị trường (ví dụ: chìa khóa chuyên dụng), thông thường được nhà sản
+
+xuất cung cấp kèm theo, dùng để mở vỏ hộp của một bộ phận nhằm tháo rời ăng ten.
+
+CHÚ THÍCH: Được nhà sản xuất sử dụng nhằm mục đích ngăn chặn việc tự ý tháo ăng ten khỏi thiết bị.
+
+3.21
+
+Triệt đáp ứng giả (spurious response rejection)
+
+Khả năng của máy thu để nhận được tín hiệu mong muốn khi có sự xuất hiện của các tin hiệu không
+
+mong muốn ở bắt kỳ tần số nào khác mà máy thu nhận được.
+
+3.22
+
+Băng tằn làm việc ra (switching range)
+
+Dải tàn số tối đa mà máy thu hoặc máy phát có thể hoạt động mà không cần lập trình lại hoặc căn chỉnh
+
+lại
+
+3.22
+
+Máy phát (transmitter)
+
+Thiết bị phát cho đường truyên vô tuyến (RF)
+
+CHÚ THÍCH: Máy phát có thể được tích hợp trong một bộ phận của hệ thống báo cháy.
+
+4. Yêu cầu hệ thống
+
+4.1 Quy định chung
+
+Các yêu cầu trong tiêu chuẩn này cần phải được áp dụng cùng với các yêu cầu đối với thiết bị tương
+
+ứng trong TCVN 7588. Các thiết bị không dây phải đạt yêu cầu tương tự như thiết bị có dây cùng chức
+
+năng hoạt động nếu không có quy định nào khác trong tiêu chuẩn này.
+
+Ví dụ: Đầu báo nhiệt không dây phải đáp ứng được các yêu cầu trong TCVN 7568-5 hoặc nút nhắn báo
+
+cháy không dây phải đáp ứng các yêu cầu trong TCVN 7588-11.
+
+4.2 Đường truyền vô tuyến
+
+4.2.1 Khả năng loại trừ suy hao theo vị trí
+
+Thiết bị trong hệ thống phải đảm bảo suy hao tín hiệu theo vị trí bồ trí lắp đặt sẽ không làm mắt kết nói
+
+giữa các bộ phận thuộc đường truyền vô tuyến. Việc miễn trừ suy hao tín hiệu theo vị trí phải đáp ứng
+
+như sau:
+
+a) Ít nhất 10db với tằn số 10MHz trở xuống.
+
+b) Với các tần số >40MHz tính theo Phụ lục B
+
+Nhà sản xuất phải cung cắp đủ tài liệu và/hoặc phương tiện để đánh giá đầy đủ các chức năng của thiết
+
+bị. Nếu phương tiện đánh giá này là một phần của thiết bị, người dùng không được phép can thiệp vào
+
+phương tiện này.
+
+Việc thử nghiệm đánh giá thiết bị phải được tiền hành theo quy định ở 8.2.2
+
+4.2.2 Tính toàn vẹn của tín hiệu cảnh báo
+
+Các bộ phận trong hệ thống phải cùng một giao thức truyền tín để đảm bảo rằng không có tín hiệu cảnh
+
+báo nào bị mắt.
+
+Việc thử nghiệm phải được thực hiện theo quy định trong 8.2.3
+
+4.2.3 Định danh các thành phản
+
+4.2.3.1 Mỗi thiết bị kết nói bằng đường truyền vô tuyến phải có một mã định danh riêng khi được lắp đặt
+
+trong một hệ thống báo cháy cụ thể.
+
+4:2:3.2-Nhà sản xuất phải cung-cấp các phương thức để đảm bảo rằng một thành phằn-sử dụng đường
+
+truyền vô tuyến sẽ không được cháp nhận bởi các hệ thống báo cháy khác.
+
+Việc thử nghiệm phải được tiền hành theo quy định trong 8.2.4
+
+4.2.4 Đặc tính của máy thu
+
+Ngoài các quy định bắt buộc của quốc gia, máy thu phải đáp ứng các yêu cầu cho tại Bảng 1.
+
+Bảng 1 — Đặc tính máy thu
+
+Giới hạn, dB | Š8Í lộch n làm việc, CHÚ THÍCH
+
+Khả năng chọn lọc Cho toàn bộ băng thông và
+
+kênh lân cận dạng điều chế
+
+-—¬. ' ! _ - . : | Trong các hệ ng trải phổ
+
+Chặnhogcgiảm | 246 | #2 | chuỗi trực tp thì n số làm
+
+--Gh
+
+Nhà sản xuất máy thu phải cung cáp kết quả thử nghiệm được thực hiện bởi một phòng thí nghiệm đề
+
+chứng minh rằng các yêu cầu trong mục này được đáp ứng. Nếu nhà sản xuất không thể cung cắp tài
+
+liệu chứng minh, cằn phải tiền hành việc thử nghiệm như quy định trong mục 8.2.5. Nhà sản xuất phải
+
+cung cắp phương tiện để tiền hành thử nghiệm.
+
+4.2.5 Khả năng chống nhiễu
+
+4.2.5.1 Yêu cầu chung
+
+ˆ.a) Cần phải thử nghiệm để xác định khả năng chống nhiễu từ các nguyên nhân (hoặc nguồn) sau:
+
+- Ảnh hưởng từ sóng vô tuyến trong hệ thống báo cháy;
+
+- Ảnh hưởng từ sóng vô tuyến từ các nguồn khác ngoài hệ thống.
+
+...b) Các nguyên nhân gây nhiễu sau không được áp dụng:
+
+....* Những tác động ngẫu nhiên do các hiệu ứng điện từ (đã được chỉ dẫn trong tiêu chuẩn EN 50130-4);
+
+- Hành vi có ý phá hoại điện từ vào đường truyền vô tuyến (Tiêu chuẩn TCVN 7568 không yêu cầu khả
+
+năng chồng lại việc phá hoại đồi với hệ thống báo cháy).
+
+4.2.5.2 Tính khả dụng của đường truyền vô tuyến trong tình huống có hai hay nhiều hệ thống
+
+tương tự nhau về mặt kỹ thuật của cùng một nhà sản xuất.
+
+Trong trường hợp có hai hệ thống giống nhau về mặt kỹ thuật của cùng một nhà sản xuất đồng thời hoạt
+
+động trong một dải tằn số vô tuyến, cằn phải đảm bảo rằng các đường truyền vô tuyến không được cản
+
+trở nhau.
+
+Nhà sản xuất phải quy định các cách thức đánh giá, cách thức này phải phù hợp để đảm bảo tính sẵn
+
+có của tắt cả các bộ phận của hệ thống trong tắt cả các cầu hình hệ thống được mong đợi (mục 8.2.6).
+
+"“
+
+4.2.5.3 Tính khả dụng của đường truyền vô tuyến trong tình huống có sự hiện diện của các thiết
+
+bị khác đang hoạt động trong cùng băng tần.
+
+Khí có những thiết bị khác đang cùng hoạt động trong các giới hạn cho phép (về công suất, băng thông,
+
+chu kỳ làm việc ...) trên cùng một dải tằn số vô tuyến (hoặc dải băng con) thì nhiễu tằn số vô tuyến điện
+
+không được ngăn cản việc truyền tín hiệu (mục 8.2.7).
+
+4.2.5.4 Tính toàn vẹn của đường truyền vô tuyến
+
+Việc áp dụng một trong các tín hiệu nhiễu tàn số vô tuyến điện quy định trong mục 8.2.7 cho một trong
+
+các thiết bị thu của hệ thống báo cháy không được gây ra tình trạng báo động hoặc trạng thái cảnh báo
+
+sự có tại tủ trung tâm báo cháy.
+
+4.2.6 Mắt kết nối
+
+Việc hệ thống mắt khả năng truyền thông điệp của bắt kỳ thành phần nào có đường truyền sóng vô tuyến
+
+đến tủ trung tâm báo cháy trong các khoảng thời gian như quy định tại Tiêu chuẳn TCVN 7568-2 phải
+
+được phát hiện dưới 300 giây và phải được chỉ thị trong phạm ví dưới 100 giây.
+
+Thử nghiệm phải được thực hiện theo mục 8.2.8.
+
+4.2.7 Ăng ten
+
+Ăng ten hoặc cáp két nối của nó chỉ có thể tháo ra được bằng cách mở vỏ hộp thiết bị ra hoặc sử dụng
+
+một dụng cụ chuyên dụng do nhà sản xuất cung cắp.
+
+Việc thử nghiệm phải được tiền hành theo quy định tại mục 8.2.9
+
+5. Yêu cầu về các thành phần trong hệ thống
+
+5.1 Tuân thủ
+
+Các thành phần trong hệ thống phải thỏa mãn các yêu cầu tại điều này và phải được đánh giá bằng mắt
+
+thường hoặc biện pháp như quy định trong điều 8.
+
+5.2 Yêu cầu chung
+
+5.2.1 Tắt cả các thành phần phải thỏa mãn các yêu cầu trong các tiêu chuẩn có liên quan thuộc bộ TCVN
+
+7568 và các yêu cầu bổ sung tại 5.3 và 5.4, bao gồm cả về đường truyền tín hiệu.
+
+6.2.2 Các thiết bị thành phần phải được thiết kế sao cho hệ thồng sẽ phát thông báo lỗi khi thiết bị đó
+
+được gỡ ra khỏi hệ thống khi đang hoạt động.
+
+5.2.3 Các thiết bị thành phần hoạt động dựa trên phần mềm nếu muốn đáp ứng yêu cầu của tiêu chuẩn
+
+này phải đáp ứng yêu cầu ở các phản tương ứng khác trong TCVN 7568.
+
+5.3 Thiết bị cung cấp nguồn
+
+5.3.1 Các thành phần trong hệ thống phải được cung cấp nguồn đáp ứng TCVN 7568-4 hoặc một nguồn
+
+độc lập (ví dụ: pin, ắc quy...)
+
+5.3.2 Nguồn độc lập phải được đặt phía trong vỏ hộp của thiết bị đó.
+
+Nhà sản xuất phải thông báo công khai chủng loại nguồn độc lập và thời gian làm việc của nguồn đó
+
+trong tình trạng hoạt động bình thường của thiết bị. Tuổi thọ của nguồn phải được thể hiện bằng bảng
+
+tính. Tính toán này phải tính đến mức tiêu thụ trung bình và điện áp trong điều kiện tĩnh và ở điều kiện
+
+khí quyền tiêu chuẩn. Nguồn độc lập phải đảm bảo thời gian hoạt động tồi thiểu của thiết bị là 36 tháng
+
+và dòng tiêu thụ của thiết bị không được lớn hơn 85 % tổng dung lượng của nguồn.
+
+CHÚ THÍCH: Phần 15 % còn lại của tổng dung lượng là đễ dự phòng cho sự tự tiêu hao của nguồn.
+
+Dòng tiêu thụ của thiết bị phải được tính dựa trên tổng các thành phần điện tử trên mạch.
+
+Nếu tính toán như vậy không thực tế, dòng tiêu thụ của thiết bị phải được tính tại hiệu điện thế định danh
+
+trong 1 giờ ở điều kiện hoạt động tĩnh sau khi thiết bị đã chạy ổn định như hướng dẫn của nhà sản xuất,
+
+Việc xác nhận kết quả tính toán này thực hiện theo quy định ở mục 8.3.3. Ví dụ về việc tính toán thời
+
+gian hoạt động cho một nguồn độc lập được trình bày trong Phụ lục C.
+
+5.3.3 Tắt cả các thiết bị sử dụng nguồn độc lập đều phải có khả năng truyền một tín hiệu báo lỗi (pin
+
+yếu) trước khi sập nguồn. Phải đảm bảo các yêu cầu sau (xem mục 8.3.4):
+
+5.3.3.1 Thiết bị phải có khả năng tạo ra và truyền đi một tín hiệu lỗi trong vòng 60 phút sau khi thay thế
+
+một nguồn độc lập mới hoặc còn tốt bằng một nguồn gần hết dung lượng.
+
+5.3.3.2 Thiết bị phải có khả năng hoạt động bình thường khi nó được kích hoạt trong tình trạng đang sử
+
+dụng một bộ nguồn gần hết dung lượng.
+
+5.3.3.3 Thiết bị phải hoạt động bình thường trong tình trạng có cảnh báo hoặc/và tình trạng bị kích hoạt
+
+khác (nếu không có tình trạng cảnh báo) trong thời gian ít nhát 30 phút.
+
+5.3.4 Hiện tượng sụt nguồn phải được chỉ thị như một tín hiệu lỗi xuất phát từ điểm có gắn thiết bị - theo
+
+như quy định trong TCVN 7568-2. VỊ có rắt nhiều nguồn được sử dụng cho nhiều chức năng khác nhau
+
+trong một thiết bị, cằn phải có mã báo lỗi riêng cho từng nguồn (xem mục 5.3.3).
+
+5.3.5 Thiết bị phải được thiết kế sao cho không thể có khả năng lắp ngược cực của bộ nguồn, hoặc việc
+
+kết nối nguồn vào các cực phải được hướng dẫn rõ ràng, và việc đảo cực không làm hỏng thiết bị (xem
+
+mục 8.3.5).
+
+5.4 Các yêu cầu liên quan đến môi trường
+
+5.4.1 Yêu cầu chung
+
+Các thiết bị cằn phải tuân thủ quy định về thử nghiệm môi trường được đưa ra trong các phần tương
+
+ứng của TCVN 7588. Việc thử nghiệm chức năng hoạt động của các phần vô tuyến trước và sau khi trải
+
+qua thử nghiệm về môi trường phải được thực hiện theo quy định trong mục 8.3, nhà sản xuất phải cung
+
+cắp kết quả kiểm định được thực hiện bởi một phòng thí nghiệm để chứng minh rằng các yêu cầu trong
+
+mục này được đáp ứng. Nếu nhà sản xuất không thể cung cắp tài liệu chứng minh, cần phải tiền hành
+
+việc thử nghiệm như quy định trong mục 8.3.
+
+Cách thức và mức độ thử nghiệm các vấn đề liên quan đến môi trường được mô tả riêng cho các nhóm
+
+thiết bị có sử dụng bộ thu phát:
+
+- Tủ trung tâm báo cháy
+
+- Các thiết bị khác (ví dụ: đàu báo, nút nhắn, thiết bị vào/ra)
+
+5.4.2 Quy trình thử nghiệm chung
+
+5.4.2.1 Trừ khi có quy định khác, các thiết bị trong hệ thống báo cháy có chứa bộ thu và bộ phát phải
+
+được lắp đặt trong các thiết bị thử nghiệm truyền dẫn sóng vô tuyến như được mô tả trong Phụ lục A.
+
+8.4.2.2 Bộ phận phát tín hiệu cảnh báo phải được thử nghiệm cùng với bộ phận thu tín hiệu cảnh báo
+
+đó và ngược lại.
+
+5.4.2.3 Việc đo giá trị suy hao A phải được thực hiện khi thiết bị đang được lắp trong hệ thống thử
+
+nghiệm, và được đóng kín. Tuy nhiên, trong một vài trường hợp có thể để thiết bị thử nghiệm ở trạng
+
+thái mở hoặc không cần lắp thiết bị trong hệ thống thử nghiệm.
+
+5.4.3 Số lượng mẫu thử
+
+Nhà sản xuất phải cung cấp đủ số lượng mẫu cho việc thử nghiệm. Số lượng mẫu được ghi trong
+
+Bảng 2 tùy theo chủng loại thiết bị cằn thử nghiệm.
+
+Bảng 2 - Số lượng mẫu thử nghiệm
+
+Tên thành phần Số lượng mẫu
+
+Tủ trung tâm báo cháy Ít nhất 1 (theo TCVN 7568-2)
+
+Các thành phần khác Ít nhất 16 (theo các phần liên quan trong bộ TOCVN
+
+(vi dụ: đầu báo, nút nhắn, thiết bị vào/ra) 7568)
+
+Các mẫu thử được coi là đại diện cho lô sản phẩm của nhà sản xuất (về mặt cấu trúc và hiệu chuẩn).
+
+Trong trường hợp các mẫu thử bao gồm ít nhất hai phần - phần đề và phần đầu (thân máy) - và bộ phận
+
+vô tuyến và nguồn điện chỉ được đặt ở một trong các phần đó, thì chỉ phàn này phải được thử nghiệm
+
+theo TCVN 7588. Phần còn lại được lắp đặt cùng để tạo ra một thiết bị hoàn chỉnh.
+
+6. Ghi nhãn
+
+6.4 Việc ghi nhãn cần phải tuân theo các quy định về ghi nhãn trong các phần tương ứng của
+
+TCVN 7568
+
+6.2 Những thành phần có sử dụng sóng vô tuyến cần phải bổ sung các nội dung sau:
+
+a) Số hiệu của tiêu chuẩn này.
+
+b) Các nội dung khác theo quy định của quốc gia về ghi nhãn;
+
+6.3 Những thành phần có sử dụng nguồn độc lập cằn phải bổ sung các nội dung sau:
+
+a) Loại nguồn khuyến cáo sử dụng bởi nhà sản xuất. Nội dung này cằn phải được nhìn thầy khi tiền hành
+
+thay nguồn.
+
+b) Tuổi thọ của nguồn độc lập.
+
+7 Tài liệu
+
+7.1 Yêu cầu chung
+
+Nhà sản xuất phải cung cấp đầy đủ tài liệu đánh giá khả năng tương thích trong (các) cầu hình do nhà
+
+sản xuất quy định. Ít nhất phải gồm các tài liệu sau:
+
+a) Danh sách các bộ phận trong hệ thống báo cháy. Danh sách này phải mô tả chức năng hoạt động
+
+của từng bộ phận (trong đó có phần mô tả về phần mềm và phần cứng) và các thông số kỹ thuật của
+
+từng bộ phận để tạo điều kiện cho việc chứng minh tính tương thích của từng hệ thống con trong hệ
+
+thống chung;
+
+b) Các báo cáo kết quả thử nghiệm chứng minh sự phù hợp của các bộ phận, theo hướng dẫn trong
+
+TCVN 75668;
+
+c) Đặc tính đường truyền vô tuyến giữa từng bộ phận với Tủ trung tâm báo cháy;
+
+d) Thuyết minh đáp ứng yêu cầu trong mục 4.2.3;
+
+e) Các giới hạn sử dụng và giới hạn chức năng của hệ thống, ví dụ: cầu hình, số lượng các bộ phận có
+
+thể kết nối với một trạm góc.
+
+7.2 Thiết bị vào/ra
+
+Tài liệu hướng dẫn về các thiết bị vào/ra phải tuân theo yêu cầu trong 7.1.
+
+Các thiết bị vào/ra phải được cung cấp kèm theo đầy đủ hướng dẫn về kỹ thuật, lắp đặt, vận hành và
+
+bảo dưỡng. Nếu tắt cả các thông tin trên không được cung cắp cho từng thiết bị vào/ra, việc tham chiều
+
+đến các tài liệu thích hợp phải được chỉ ra trên mỗi thiết bị hoặc được cung cấp cùng với nó.
+
+Đề thiết bị vào/ra hoạt động hiệu quả, tài liệu phải trình bày chỉ tiết các yêu cầu để xử lý chính xác các
+
+tín hiệu của thiết bị này. Bao gồm chỉ tiết thông số kỹ thuật, giao thức xử lý thích hợp hoặc danh sách
+
+các tủ trung tâm báo cháy có thể được kết nồi, v.v.
+
+CHÚ THÍCH: Các đơn vị đánh giá tiêu chuẩn có thể yêu cầu thêm những tài liệu khác khi đánh giá thiết bị vào/ra theo
+
+TCVN 7668.
+
+8 Thử nghiệm
+
+8.1 Yêu cầu chung
+
+8.1.1 Các thử nghiệm trong phần này của TCVN 7568 có thể được kết hợp với các thử nghiệm khác
+
+được yêu cầu trong các phần còn lại của TCVN 7668.
+
+CHÚ THÍCH: Nếu các mẫu thử nghiệm là các bộ phận có thể tháo rời, tức là bao gồm ít nhắt hai phần: phần đáy (phản đề) và
+
+phần đầu (phần thân), thì ít nhất hai phần đó kết hợp với nhau mới được coi là một thiết bị hoàn chỉnh.
+
+8.1.2 Điều kiện môi trường tiêu chuẩn cho thử nghiệm: Trừ khi có quy định khác trong quy trình thử
+
+nghiệm, các điều kiện được xác định trong phần liên quan của TCVN 7568 sẽ được áp dụng.
+
+8.1.3 Nếu việc thử nghiệm yêu cầu mẫu thử phải hoạt động, thì mẫu thử khi đó phải được cấp nguồn
+
+theo như hướng dẫn của nhà sản xuất và phải được két nối với thiết bị giám sát phù hợp với các đặc
+
+tính theo yêu cầu dữ liệu của nhà sản xuất. Trừ khi có quy định khác trong phương pháp thử nghiệm,
+
+các thông số cung cấp được áp dụng cho mẫu thử phải được đặt trong (các) phạm vi được quy định của
+
+nhà sản xuất và về cơ bản sẽ không đổi trong suốt các thử-nghiệm. Giá trị được chọn cho-mỗi tham số
+
+thường phải là giá trị danh định hoặc giá trị trung bình của phạm vi được quy định.
+
+Các chỉ tiết của thiết bị sử dụng nguồn và thiết bị giám sát, cũng như các chỉ số cảnh báo, phải được ghi
+
+rõ trong báo cáo thử nghiệm.
+
+8.1.4 Các yêu cầu về lắp đặt được xác định trong phần liên quan của TCVN 7568 sẽ được áp dụng.
+
+8.1.5 Các yêu cầu về dung sai theo quy định ở TCVN 7568
+
+8.2 Thử nghiệm hệ thống
+
+8.2.1 Các nội dung thử nghiệm hệ thống
+
+Thứ tự thử nghiệm và số lượng mẫu được đưa ra trong Bảng 3
+
+Bảng 3 - Các nội dung thử nghiệm hệ thống
+
+Số lượng thiết bị thử nghiệm
+
+Nội dung thử nghiệm - .
+
+Tủ trung tâm báo cháy | Các thành phần khác
+
+Quy hao tín hiệu tại hiện wW" Chỉ kiểm tra tài liệu Chỉ kiểm tra tài liệu
+
+trường
+
+„ _. 10 hoặc số lượng tối đa
+
+l ng ven của tín hiệu] g2; 1 thiết bị mà hệ thống có thể
+
+cảnh báo nhận được nếu ít hơn 10.
+
+Định danh của các thiết bị sử . tạ _ -
+
+dụng đường truyền vô tuyến 8.2.4 Chỉ kiểm tra tài liệu Chỉ kiểm tra tài liệu
+
+Chỉ tiêu máy thu Xem Bảng 4 Xem Bảng 4
+
+sE vn 10 hoặc số lượng tối đa
+
+kh hành nệ hêm Ít nhất là 2 thiết bị mà hệ thống có thể
+
+giaetasanxe nhận được nếu ít hơn 10.
+
+Khả nâng tương thích với
+
+mg thiết bị khác cùng băng 8.27 Ít nhất là 1 Ít nhất là 1
+
+tân
+
+828 Ítnhát là 1 g
+
+đường truyền vô tuyến : BI sản xuất . |
+
+16 :
+
+8.2.2 Suy hao tín hiệu tại hiện trường
+
+8.2.2.1 Mục đích của thử nghiệm
+
+Để chứng minh rằng đường truyền vô tuyến đáp ứng được các yêu cầu của mục 4.2.1 trong một môi
+
+trường không có nhiễu và chỉ làm việc trong băng tằn cho phép.
+
+8.2.2.2 Quy trình thử nghiệm
+
+Dựa trên tài liệu của nhà sản xuất, các yêu cầu trong mục 4.2.1 phải được đánh giá về mặt kỹ thuật.
+
+CHÚ THÍCH: Việc đánh giá có tính đến sự khác biệt của các phương pháp tiếp cận kỹ thuật của các nhà sản xuất khác nhau
+
+để tránh việc mắt kết nối do suy hao tín hiệu bên ngoài kênh.
+
+8.2.2.3 Yêu cầu
+
+Đánh giá phải chỉ ra rằng hệ thống đáp ứng hết các yêu cầu ghi trong mục 4.2.1
+
+8.2.3 Tính toàn vẹn của tín hiệu cảnh báo
+
+8.2.3.1 Mục đích của thử nghiệm
+
+Đề chứng minh rằng một tín hiệu cảnh báo gửi đến hoặc phát đi từ một thiết bị không bị mắt do xung đột
+
+hoặc chiếm dụng đường truyền vô tuyến và hệ thống đáp ứng các yêu cầu được xác định trong mục
+
+422.
+
+8.2.3.2 Quy trình thử nghiệm
+
+Kích hoạt tín hiệu đầu vào trên 10 thiết bị cùng một lúc để truyền hoặc nhận tín hiệu cảnh báo bằng các
+
+thiết bị do nhà sản xuất cung cắp. Nếu hệ thống có ít hơn 10 thiết bị, thì kích hoạt số lượng thiết bị
+
+tối đa.
+
+8.2.3.3 Yêu cầu
+
+Tín hiệu cảnh báo đầu tiên phải được thể hiện trong 10 giây và tín hiệu cảnh báo cuối cùng phải thể hiện
+
+trong vòng 100 giây. Không được mắt một tín hiệu cảnh báo nào.
+
+CHÚ THÍCH: Giá trị 100 giây không nhằm mục đích hiển thị sự tuân thủ thời gian phản hỏi cảnh báo hoặc với thời gian phản
+
+hồi lỗi của TCVN 7568-2.
+
+8.2.4 Định danh của các thiết bị sử dụng đường truyền vô tuyến
+
+8.2.4.1 Mục đích của thử nghiệm
+
+Để chứng minh rằng thiết bị đáp ứng các yêu cầu trong mục 4.2.3
+
+8.2.4.2 Quy trình thử nghiệm
+
+Đánh giá tài liệu do nhà sản xuất cung cắp xem có đáp ứng đầy đủ yêu cầu trong các mục 4.2.3.1 và
+
+mục 4.2.3.2
+
+8.2.4.3 Yêu cầu
+
+Nhà sản xuất phải chứng minh rằng định danh của thiết bị có đường truyền vô tuyến đáp ứng các yêu
+
+cầu trong mục 4.2.3.
+
+Xác suất mà thiết bị có đường truyền vô tuyến được nhận dạng và chấp nhận trong một hệ thống khác
+
+của cùng nhà sản xuất một cách ngoài ý muốn phải nhỏ hơn 1:1000000
+
+8.2.5 Yêu cầu với máy thu
+
+8.2.5.1 Khả năng chọn lọc kênh lân cận
+
+8.2.5.1.1 Mục đích của thử nghiệm
+
+Để xác định rằng độ chọn lọc kênh lân cận của máy thu đáp ứng với các yêu cầu trong mục 4.2.4.
+
+8.2.5.1.2 Quy trình thử nghiệm
+
+Thực hiện quy trình thử nghiệm như sau:
+
+a) Thực hiện phép đo trong điều kiện bình thường.
+
+b) Kết nối hai bộ tạo tín hiệu, A (ví dụ: đầu báo cháy) và B, với máy thu (ví dụ: tủ trung tâm báo cháy)
+
+thông qua bộ cộng tín hiệu với giác cắm ăng-ten máy thu hoặc giắc cắm ăng-ten thử nghiệm. Bộ tạo tín
+
+hiệu B ban đầu được tắt.
+
+Thiết lập bộ tạo tín hiệu A như sau:
+
+- Đặt tằn số theo tần số làm việc của máy thu;
+
+— Đặt chế độ điều chế cơ bản cho tín hiệu mong muốn;
+
+— Ở mức tín hiệu thu được của máy thu.
+
+Tăng mức tín hiệu của bộ tạo tín hiệu A thêm 3 dB.
+
+Thiết lập bộ tạo tín hiệu 8 như sau:
+
+- Đặt tàn số theo tằn số làm việc của máy thư;
+
+- Tín hiệu sóng mang không được điều chế;
+
+— Tăng dần mức tín hiệu cho đến khi vượt quá các chỉ tiêu mong muốn.
+
+Lặp lại phép đo với bộ tạo tín hiệu B được đặt ở tần số phát ngay bên dưới tín hiệu mong muốn.
+
+8.2.5.1.3 Các phép đo
+
+Ghi lại các thông số cài đặt của bộ tạo tín hiệu A và bộ tạo tín hiệu B.
+
+Ghi lại khả năng chọn lọc kênh lân cận trên và dưới là tỷ số giữa mức của tín hiệu không mong muốn
+
+với mức của tín hiệu mong muốn, với các tín hiệu được biểu thị bằng dB (decibel).
+
+8.2.5.1.4 Yêu cầu
+
+Khả năng chọn lọc kênh lân cận không được nhỏ hơn tín hiệu không mong muốn như đã nêu trong
+
+Bảng 1.
+
+8.2.5.2 Khả năng chống nhiễu chèn ép
+
+8.2.5.2.1 Mục đích của thử nghiệm
+
+Để chứng minh rằng khả năng chống nhiễu chèn ép của máy thu đáp ứng các yêu cầu của mục 4.2.4.
+
+8.2.5.2.2 Quy trình thử nghiệm
+
+Thực hiện quy trình thử nghiệm như sau.
+
+a) Thực hiện phép đo trong điều kiện bình thường.
+
+b) Kết néi hai bộ tạo tín hiệu, A (ví dụ: đầu báo cháy) vả B, với máy thu (ví dụ: tủ trung tâm báo cháy)
+
+thông qua bộ cộng tín hiệu với giắc cắm ăng-ten máy thu hoặc giắc cắm ăng-ten thử nghiệm. Bộ tạo tín
+
+hiệu B ban đầu được tắt.
+
+c) Thiết lập bộ tạo tín hiệu A như sau:
+
+- Đặt tằn số theo tằn số làm việc của máy thu;
+
+- Đặt chế độ điều chế cơ bản cho tín hiệu mong muốn;
+
+— Ở mức tín hiệu thu được của máy thu.
+
+d) Tăng mức tín hiệu của bộ tạo tín hiệu A thêm 3 dB.
+
+e) Thiết lập bộ tạo tín hiệu B như sau:
+
+- Đặt tằn số phát ở mức cao hơn 1 MHz so với giới hạn trên tàn số làm việc của máy thu;
+
+- Tín hiệu sóng mang không được điều chế;
+
+- Tăng dàn mức tín hiệu cho đến khi vượt quá các chỉ tiêu mong muốn.
+
+f) Lặp lại phép đo với bộ tạo tín hiệu B khi tăng tằn số thêm 2 MHz, sau đó là 5 MHz, sau đó là 10 MHz
+
+so với giới hạn trên của băng tàn danh định.
+
+g) Lặp lại phép đo với bộ tạo tín hiệu B khi giảm tần số đi 1 MHz, sau đó là 2 MHz, sau đó là 5 MHz, sau
+
+đó là 10 MHz so với giới hạn dưới của băng tần danh định.
+
+8.2.5.2.3 Các phép đo
+
+Ghi lại các thông số cài đặt của bộ tạo tín hiệu A và bộ tạo tín hiệu B.
+
+Ghi lại mức của bộ tạo tín hiệu B, là tỷ số giữa mức thắp nhất của tín hiệu không mong muốn với mức
+
+tín hiệu mong muốn, các tín hiệu được biểu thị bằng d8, mà tại đó tín hiệu từ bộ tạo tín hiệu A bị chặn.
+
+8.2.5.2.4 Yêu cầu
+
+Khả năng chống nhiễu chèn ép phải đáp ứng Bảng 1.
+
+8.2.5.3 Triệt đáp ứng giả
+
+8.2.5.3.1 Mục đích của thử nghiệm
+
+Để chứng minh khả năng triệt đáp ứng giả của máy thu đáp ứng các yêu cầu của mục 4.2.4.
+
+8.2.5.3.2 Tính toán sơ bộ :
+
+Tính toán như sau:
+
+a) Dải tằn số giới hạn;
+
+b) Các tằn số nằm ngoài dải tằn số làm việc, tại đó các đáp ứng giả có thể xuất hiện bên ngoài dải tần
+
+số giới hạn với phần còn lại của dải tần số quan tâm, tương ứng (xem mục 8.2.5.3.6 và mục 8.2.5.3.7).
+
+CHÚ THÍCH: Các tằn số nằm ngoài dải tằn làm việc bằng các sóng hải của tằn số, f.o, của bộ dao động bên trong máy thu được
+
+áp dụng cho bộ trộn đầu tiên của máy thu cộng hoặc trừ tần số trung gian đầu tiên, fn, của máy thu. Do đó, tằn số của các đáp
+
+ứng giả này là ní,o ‡ fu, trong đó n là số nguyên không nhỏ hơn 2.
+
+Đồi với các tính toán trong a) và b), nhà sản xuất phải cung cấp tần số của máy thu, tằn số - fuo, được
+
+áp dụng cho bộ trộn thứ nhắt của máy thu, các tằn số trung gian (fu, fa, v.v.), và băng tàn làm việc- rsw,
+
+của máy thu.
+
+Đo giá trị nhận được đầu tiên của máy thu để đánh giá việc tính toán tàn số đáp ứng giả.
+
+8.2.5.3.3 Thiết lập tín hiệu thử nghiệm
+
+Nguồn tín hiệu thử nghiệm đưa tới đầu vào của máy thu phải được kết nối sao cho trở kháng cấp cho
+
+đầu vào máy thu là 50 O (trở kháng không điện kháng).
+
+Yêu cầu này phải được áp dụng cho một hay nhiều tín hiệu sử dụng mạng kết hợp được áp dụng đồng
+
+thời cho máy thu.
+
+Các mức tín hiệu cấp cho đầu vào của máy thu (giác cắm RF) phải được biểu thị.
+
+Ảnh hưởng của bắt kỳ sản phẩm điều chế trung gian nào và nhiễu được tạo ra trong các máy phát thử
+
+nghiệm phải không đáng kể.
+
+8.2.5.3.4 Quy trình thử nghiệm - Phương pháp tìm trên dải tằn số giới hạn
+
+Thực hiện quy trình thử nghiệm như sau:
+
+a) Kết nối hai bộ tạo tín hiệu, A (ví dụ: đầu báo cháy) và B, với máy thu (ví dụ: tủ trung tâm báo cháy)
+
+thông qua mạng kết hợp (xem Hình 1). Bộ tạo tín hiệu B ban đầu được tắt, duy trì trở kháng đầu ra.
+
+59tesSg MA Thiết bị kiểm tra
+
+Bộ cộng tín hiệu Máy thu lỗi bít hoặc đo
+
+bản ti
+
+Bộ tạo tín hiệu B SÁNG
+
+Hình 1 - Bố trí phép đo
+
+b) Thiết lập bộ tạo tín hiệu A như sau:
+
+- Đặt tằn số theo tần số làm việc của máy thu;
+
+- Đặt chế độ điều chế cơ bản cho tín hiệu mong muốn;
+
+— Ở mức tín hiệu thu được của máy thu.
+
+CHÚ THÍCH: Tín hiệu và dạng điều chế của bộ tạo tín hiệu giống với máy thu cần đo.
+
+e) Điều chỉnh mức của bộ tạo tín hiệu A lên 3 dB so với mức độ nhạy của máy thu (tức là 6 dB trên 1 IV
+
+trong điều kiện thử nghiệm bình thường).
+
+d) Thiết lập bộ tạo tin hiệu B như sau:
+
+- Đặt tằn số phát bằng tằn số làm việc của máy thu;
+
+- Điều chế tín hiệu dạng A-M3, bao gồm một tín hiệu vô tuyến, được điều chế bởi một tín hiệu âm tàn
+
+400 Hz với độ lệch phân tách kênh 12%;
+
+- Mức tín hiệu 86 dBuV cho đầu vào của máy thu.
+
+e) Thay đổi tằn số của bộ tạo tín hiệu B ở mức 5 kHz trên dải tần số giới hạn [Mục 8.2.5.3.2a)] và trên
+
+các tần số theo các tính toán bên ngoài dải tằn số này [Mục 8.2.5.3.2b)].
+
+8.2.5.3.5 Các phép đo
+
+Ghi lại tần số của tắt cả đáp ứng giả được phát hiện (ví dụ: bằng cách tăng tỷ lệ lỗi bit), để sử dụng trong
+
+các phép đo theo mục 8.2.5.3.6 và mục 8.2.5.3.7.
+
+Trong trường hợp không thể sử dụng được các chuỗi bit liên tục, thì phải sử dụng một phương pháp
+
+tương tự, ví dụ: làm suy giảm khả năng truyền thành công của thông điệp.
+
+8.2.5.3.6 Quy trình thử nghiệm - Phương pháp đo với các dòng bit liên tục
+
+Tiền hành quy trình thử nghiệm như sau.
+
+a) Kết nối hai bộ tạo tín hiệu, A (vi dụ: đầu báo cháy) và B, với máy thu (ví dụ: tủ trung tâm báo cháy)
+
+thông qua mạng kết hợp (xem Hình 1). Bộ tạo tín hiệu B ban đầu được tắt, duy trì trở kháng đầu ra.
+
+b) Đặt bộ tạo tín hiệu A như sau:
+
+- Đặt tằn số phát bằng tằn số làm việc của máy thu;
+
+- Thiết lập dạng điều chế cơ bản của tín hiệu mong muốn D-M2 hoặc D-M5, trong đó D-M2 bao gồm một
+
+chuỗi bit giả ngẫu nhiên gồm ít nhất 511 bit theo ITU-T O.153.
+
+CHÚ THÍCH: Tín hiệu và dạng điều chế của bộ tạo tín hiệu phải giống với máy thu cần đo.
+
+c) Điều chỉnh mức của bộ tạo tín hiệu A lên 3 dB so với mức độ nhạy của máy thu (tức là 6 dB trên 1 IV
+
+trong điều kiện thử nghiệm bình thường).
+
+d) Thiết lập bộ tạo tín hiệu B như sau:
+
+- Đặt tằn số phát bằng tằn số làm việc của máy thu;
+
+- Điều chế tín hiệu dạng A-M3, bao gồm một tín hiệu vô tuyến, được điều chế bởi một tín hiệu âm tàn
+
+400 Hz với độ lệch phân tách kênh 12%;
+
+e) Tăng mức tín hiệu không mong muốn của bộ tạo tín hiệu B cho đền khi đạt được tỷ lệ lỗi bit 10! hoặc
+
+cao hơn.
+
+†) Giảm mức tín hiệu không mong muốn của bộ tạo tín hiệu B theo các bước 1 dB cho đến khi thu được
+
+tỷ lệ lỗi bit là 10ˆ? hoặc thấp hơn.
+
+g) Lặp lại các phép đo ở tắt cả các tàn số đáp ứng giả được tìm thấy trong quá trình tìm kiếm trên dải
+
+tàn giới hạn [xem 8.2.5.3.2 a)].
+
+h) Lặp lại các phép đo ở các tằn số được tính toán cho phần còn lại của các tàn số đáp ứng giả [xem
+
+8.2.5.3.2 b)] trong dải tằn từ fax / 3,2 hoặc 30 MHz, tùy theo mức nào cao hơn, đến 3,2fax, trong đó fax là
+
+tần số danh định của máy thu.
+
+8.2.5.3.7 Các phép đo
+
+Ghi lại mức tín hiệu, được biểu thị bằng tỷ số giữa mức của tín hiệu không mong muốn với mức của tín
+
+hiệu mong muốn ở đầu vào máy thu, các tín hiệu được biểu thị bằng dB, tại đó thu được tỷ lệ lỗi bit là
+
+107? hoặc thấp hơn.
+
+Việc triệt đáp ứng giả của thiết bị đang được thử nghiệm sẽ được thể hiện dưới dạng giá trị thắp nhất
+
+được ghi nhận.
+
+8.2.5.3.8 Quy trình thử nghiệm - Phương pháp đo bằng tín hiệu thông báo
+
+Tiến hành quy trình thử nghiệm như sau.
+
+a) Kết nối hai bộ tạo tín hiệu, A (ví dụ: đầu báo cháy) và B, với máy thu (ví dụ: tủ trung tâm báo cháy)
+
+thông qua mạng kết hợp (xem Hình 1). Bộ tạo tín hiệu B ban đầu được tắt, duy trì trở kháng đầu ra.
+
+b) Đặt bộ tạo tín hiệu A như sau:
+
+- Đặt tần số theo tần số làm việc của máy thu;
+
+- Đặt chế độ điều chế cơ bản cho tín hiệu mong muốn;
+
+CHÚ THÍCH: Tín hiệu và dạng điều chế của bộ tạo tín hiệu giống với máy thu cần đo.
+
+c) Điều chỉnh mức tín hiệu mong muốn từ máy phát A cao hơn 3 dB so với mức giới hạn của độ nhạy
+
+khả dụng tối đa tại các đầu vào của bộ nhận tín hiệu (ví dụ: 6 dB trên 1uV lực điện từ trong điều kiện thử
+
+nghiệm bình thường).
+
+Điều chỉnh mức của bộ tạo tín hiệu A lên 3 dB so với mức độ nhạy của máy thu (tức là 6 dB trên 1 uV
+
+trong điều kiện thử nghiệm bình thường).
+
+d) Thiết lập bộ tạo tín hiệu B như sau:
+
+— Đặt tằn số phát bằng tần số làm việc của máy thu;
+
+- Điều chế tín hiệu dạng A-M3, bao gồm một tín hiệu tằn số vô tuyến, được điều chế bởi một tín hiệu âm
+
+tần 400 Hz với độ lệch phân tách kênh 12%.;
+
+e) Điều chỉnh mức tín hiệu của bộ truyền tín hiệu không mong muốn B cho đến khi thu được tỷ lệ thông
+
+điệp thành công dưới 10%.
+
+f) Phát lặp lại tín hiệu thử nghiệm bình thường, đồng thời quan sát trong từng trường hợp xem có nhận
+
+thành công thông điệp hay không.
+
+g) Giảm mức tín hiệu không mong muốn đi 2 dB cho mỗi trường hợp không nhận được thành công thông
+
+điệp. Tiếp tục giảm mức tín hiệu cho đến khi nhận thành công ba tín hiệu liên tiếp.
+
+h) Tăng mức tín hiệu không mong muốn thêm 1 dB.
+
+ï) Truyền tín hiệu thử nghiệm bình thường 20 làn. Trong mỗi trường hợp, nếu một thông điệp không
+
+được nhận thành công, thì giảm mức tín hiệu không mong muốn đi 1 dB.
+
+j) Nếu nhận thành công thông điệp, thì không thay đổi mức tín hiệu không mong muốn cho đến khi nhận
+
+được thành công ba thông điệp liên tiếp. Sau đó, tăng tín hiệu không mong muốn thêm 1 dB.
+
+k) Không ghi nhận có mức tín hiệu không mong muốn trừ khi có sự thay đổi mức trước đó.
+
+) Tính giá trị trung bình các giá trị của tín hiệu không mong muốn trong cả hai thử nghiệm để nhận thành
+
+công ba thông điệp liên tiếp, đó là mức tương ứng với tỷ lệ thông điệp thành công là 80%.
+
+m) Lặp lại phép đo ở tắt cả các tàn số gây đáp ứng giả được tìm thầy trong quá trình tìm kiềm trên dải
+
+tằn số giới hạn [xem 8.2.5.3.2 a)] và ở tằn số được tính toán cho phần còn lại của các tằn số đáp ứng
+
+[xem 8.2.5.3.2 b) ] trong dải tần từ fa/3,2 hoặc 30 MHz, tùy theo mức nào cao hơn, đến 3,2fax, trong đó
+
+fax là tần số danh định của máy thu.
+
+8.2.5.3.9 Các phép đo
+
+Đồi với mỗi tằn số, ghi lại các mức tín hiệu, được biểu thị bằng tỷ số giữa mức tín hiệu không mong
+
+muốn với mức tín hiệu mong muốn ở đầu vào máy thu, với các tín hiệu được biểu thị bằng dB.
+
+Ghi lại mức tín hiệu không mong muốn mà tại đó ba thông điệp liên tiếp được nhận thành công.
+
+Ghi lại mức tín hiệu không mong muốn sau khi tăng 1 dB.
+
+Ghi lại mức tín hiệu không mong muốn trong quá trình truyền 20 thông điệp mong muốn.
+
+Ghi lại mức tín hiệu không mong muốn sau khi tăng 1 dB.
+
+Ghi lại giá trị trung bình của tín hiệu không mong muốn.
+
+Việc triệt đáp ứng giả của thiết bị được thử nghiệm phải được thể hiện dưới dạng tỷ lệ truyền lỗi thấp
+
+nhất được ghi nhận.
+
+8.2.5.4 Yêu cầu
+
+Các yêu cầu theo quy trình thử nghiệm như được đưa ra trong Bảng 1 phải được thực hiện đầy đủ.
+
+8.2.6 Xuyên nhiễu giữa các hệ thống của cùng một nhà sản xuất
+
+8.2.6.1 Mục đích của thử nghiệm
+
+Để chứng mình rằng các thiết bị đáp ứng được yêu cầu của 4.2.5.2 và để chứng minh khả năng của
+
+đường truyền vô tuyến có thể truyền tín hiệu ngay cả khi có nhiều thiết bị vô tuyến trong nhiều hệ thống
+
+của cùng một nhà sản xuất hoạt động trong một không gian cụ thể. Thử nghiệm sẽ xác minh chức năng
+
+cơ bản của thiết bị.
+
+8.2.6.2 Quy trình thử nghiệm
+
+8.2.6.2.1 Yêu cầu chung
+
+Kiểm tra tài liệu để thầy rằng tương tác giữa các đường truyền sóng vô tuyến không ảnh hưởng tiêu cực
+
+đến thời gian truyền và thời gian phát hiện lỗi trong quá trình hoạt động bình thường như quy định trong
+
+phần này của TCVN 7568.
+
+8.2.6.2.2 Cấu hình hệ thống
+
+Định cấu hình hai hệ thống độc lập, mỗi hệ thống có năm thiết bị được thiết lập ở khoảng cách tối thiểu
+
+giữa tắt cả các thiết bị được nhà sản xuất cho phép và vận hành phù hợp với thông số kỹ thuật của nhà
+
+sản xuất. Nếu số lượng thiết bị tối đa trên mỗi hệ thống ít hơn năm, hãy định cầu hình số lượng thiết bị
+
+tối đa.
+
+Nhà sản xuất phải cung cấp các phương thức để đảm bảo kích hoạt đồng thời các thiết bị.
+
+8.2.6.2.3 Các phép đo
+
+Giám sát hoạt động của hệ thống trong 48 giờ.
+
+Tiến hành quy trình sau:
+
+a) Kích hoạt hai thông điệp cảnh báo cháy từ hai thiết bị riêng biệt ở một trong hai hệ thống tại một
+
+khoảng thời gian trong vòng 2s.
+
+b) Kích hoạt đồng thời các thông điệp cảnh báo cháy từ 5 thiết bị riêng biệt trong mỗi hệ thống (hoặc số
+
+lượng thông điệp cảnh báo cháy tối đa có thể chấp nhận được nếu Ít hơn 5).
+
+c) Làm ngừng hoạt động một thiết bị trong hệ thống.
+
+Thử nghiệm về tính toàn vẹn của tín hiệu cảnh báo có thể được kết hợp với thử nghiệm này.
+
+8.2.6.3 Yêu cầu
+
+Các hệ thống phải hoạt động không bị lỗi và đáp ứng các tiêu chí sau:
+
+a) Sau khi kích hoạt 2 thông điệp cảnh báo cháy, mỗi thông điệp phải được nhận và/hoặc chỉ thị chính
+
+xác trong vòng 10 giây sau mỗi lằn kích hoạt;
+
+b)-Sau khi-kích-hoạt-đồng-thời-5-thông-điệp-cảnh-báo-cháy-ở-mỗi-hệ thống-(hoặc-số-lượng-thông-điệp
+
+báo động tối đa có thể chấp nhận được nếu ít hơn 5 thông điệp), thông điệp cảnh báo đầu tiên phải được
+
+nhận và/hoặc được chỉ thị chính xác tại tủ trung tâm báo cháy trong vòng 10 giây và các thông điệp cảnh
+
+báo còn lại được kích hoạt sẽ được nhận và chỉ thị chính xác tại tủ trung tâm báo cháy trong vòng
+
+100 giây.
+
+c) Sau khi làm ngừng hoạt động một thiết bị trong hệ thống, lỗi phải được hiển thị chính xác tại tủ trung
+
+tâm báo cháy theo quy định trong mục 4.2.6.
+
+Các tín hiệu lỗi hoặc tin hiệu cảnh báo phải được xử lý chính xác trong hệ thống được chỉ định mà không
+
+tạo ra tín hiệu lỗi hoặc tín hiệu báo động trên hệ thống không được chỉ định.
+
+8.2.7 Khả năng tương thích với những thiết bị khác cùng băng tàn
+
+8.2.7.1 Mục đích của thử nghiệm
+
+Để chứng minh rằng thiết bị đáp ứng các yêu cầu trong mục 4.2.5.3
+
+8.2.7.2 Quy trình thử nghiệm
+
+8.2.7.2.1 Yêu cầu chung
+
+Nhà sản xuất phải cung cấp thiết bị thử nghiệm phù hợp và thông tin đảy đủ về cách thức tiền hành để
+
+đảm bảo tính khả dụng của đường truyền khi có sự hiện diện của các thiết bị khác cùng băng tàn theo
+
+quy định quốc gia nơi sử dụng hệ thống thử nghiệm.
+
+CHÚ Ý: Việc cho phép sử dụng các băng tằn, các băng tần con, các kênh và các tằn số phụ thuộc vào quy định của quốc gia.
+
+Sự suy hao đường truyền giữa các thành phần được thử nghiệm phải nằm trong phạm vi trung bình.
+
+CHÚ THÍCH: Công thức "Mức tín hiệu sẽ nằm trong phạm vì trung bình" đã được chọn vì mức tuyệt đối là không đạt được với
+
+phép đo này. Trong thực tế, mức độ phổ biến từ -80 dBm đến -70 dBm là điển hình.
+
+8.2.7.2.2 Cấu hình hệ thống
+
+- .. Cấu hình đường truyền vô tuyến gồm hai thành phần (tủ trung tâm báo cháy và các thành phần hoặc
+
+„ thiết bị khác như đầu báo) sao cho mức tín hiệu tại điểm nhận được thông điệp nằm trong phạm vi
+
+trung bình.
+
+. .. Nếu có nhiều hơn một thành phần đang được thử nghiệm, hãy cài đặt tắt cả các thành phần trong thiết
+
+bị thử nghiệm.
+
+Nếu một bộ truyền sử dụng nhiều thiết bị trung gian, hãy áp dụng một tín hiệu gây nhiễu cho một máy
+
+thu ở bắt kỳ thời gian nào. Lặp lại thử nghiệm cho từng máy thu.
+
+8.2.7.2.2 Các thiết bị đa kênh
+
+Áp dụng một tín hiệu nhiễu không được điều chế đủ để chặn đường truyền đến máy thu tín hiệu (ví dụ:
+
+tủ trung tâm báo cháy).
+
+CHÚ THÍCH: Nói chung là tín hiệu nhiễu đủ chặn đường truyền nếu mức gây nhiễu trong băng thông làm việc lớn hơn mức tín
+
+hiệu cần thu là > 10 dB.
+
+Tiền hành thử nghiệm trên tắt cả các tằn số được sử dụng bởi thiết bị được thử nghiệm.
+
+Lần lượt chặn mỗi tằn số trong ít nhất 1 giây. Thời gian thay đổi tần số không được vượt quá 1 giây.
+
+Liên tục lặp lại quy trình trong suốt thời gian thử nghiệm.
+
+Sau khi bắt đầu quy trình chặn, kích hoạt năm bản tin cảnh báo riêng biệt không liền kề tại thiết bị truyền.
+
+8.2.7.2.3 Các thiết bị đơn kênh
+
+Tạo tín hiệu nhiễu không được điều chế để giả lập thiết bị gây nhiễu trên kênh mong muốn, đủ để chặn
+
+việc truyền thông điệp đến máy thu (ví dụ: tủ trung tâm báo cháy), với thời gian "BẠT" và thời gian "TẮT"
+
+cho tín hiệu gây nhiễu theo Bảng 4.
+
+Bảng 4 — Các chu trình thử nghiệm
+
+Thời gian Thời Thời
+
+truyền/Tổng gian gian
+
+chutình | “BẬT” | “TÁT”
+
+() (giây) (giây)
+
+Ví dụ: 5 lằn truyền 0,72 giây trong 1 giờ
+
+l< | 3: | 18 | Ví dụ: 10 lần truyền 3,6 giây trong 1 giờ
+
+| <ío-— | 3 | 36 |Vidụ 10 lần truyền 36 giây trong 1 giờ
+
+Thông thường truyền liên tục, nhưng cũng có những chu
+
+< 100 kỳ> 10%
+
+Cảnh báo: Các hệ thống đơn kênh sử dụng tàn số mà trong đó thời gian “BẬT” dài hơn 10 giây thường
+
+sẽ không đạt.
+
+8.2.7.3 Yêu cầu
+
+Các đường truyền vô tuyến phải hoạt động đúng như kì vọng, và
+
+a) Không có lỗi vô ý hoặc tín hiệu cảnh báo giả được chỉ thị tại tủ trung tâm báo cháy khi tín hiệu gây
+
+nhiễu xuất hiện; và
+
+b) tắt cả các tín hiệu dự kiến, ví dụ như tín hiệu cảnh báo, sẽ được xử lý chính xác.
+
+8.2.8 Phát hiện mắt kết nối vô tuyến
+
+8.2.8.1 Mục đích của thử nghiệm
+
+Để chứng mình khả năng của máy thu phát hiện mắt kết nối với máy phát trong hệ thống.
+
+8.2.8.2 Quy trình thử nghiệm
+
+Nhà sản xuất phải cung cắp thiết bị thử nghiệm phù hợp và đủ thông tin về các cách thức tiền hành để
+
+đảm bảo rằng đường truyền vô tuyền hoạt động phù hợp và như dự kiến.
+
+Sự suy giảm chất lượng truyền giữa thiết bị đang được thử nghiệm và các thiết bị đối tác của nó sẽ
+
+không ảnh hưởng đến các đường truyền thông tin. Nếu có một số thiết bị đang được thử nghiệm, hãy
+
+cài đặt tắt cả các thiết bị đó.
+
+TCOVN 7568-25:2023
+
+Chắc chắn rằng các tín hiệu giám sát được nhận chính xác bởi máy thu theo thông số kỹ thuật do nhà
+
+sản xuất cung cắp. Lựa chọn ngẫu nhiên một thiết bị và ngắt việc truyền tín hiệu trong ít nhắt 300 giây,
+
+ví dụ: bằng cách ngắt nguồn điện của máy phát.
+
+Trong quá trình thử nghiệm, số lượng thiết bị tối đa theo quy định của nhà sản xuất phải được kết nói
+
+với trạm gắc.
+
+CHÚ THÍCH: Tùy thuộc vào thiết kế hệ thống, có thể số lượng tối đa thiết bị kết nói với tủ trung tâm báo cháy sẽ lớn hơn số
+
+lượng thiết bị kết nói trực tiếp với trạm gắc.
+
+Lặp lại thử nghiệm 2 làn.
+
+8.2.8.3 Yêu cầu
+
+Tủ trung tâm báo cháy phải hiển thị trạng thái cảnh báo lỗi trong thời gian quy định ở mục 4.2.6
+
+8.2.9 Ăng ten
+
+8.2.9.1 Mục đích thử nghiệm
+
+Để chứng minh rằng ăng ten hoặc cáp không thể dễ dàng tháo rời.
+
+8.2.9.2 Quy trình thử nghiệm
+
+Các yêu cầu trong mục 4.2.7 sẽ được xác minh bằng đánh giá kỹ thuật.
+
+8.2.9.3 Yêu cầu
+
+Ăng ten hoặc dây cáp của nó chỉ có thể tháo rời bằng cách mở vỏ hộp sản phẩm hoặc bằng cách sử
+
+dụng các công cụ đặc biệt do nhà sản xuất cung cắp.
+
+8.3 Thử nghiệm các bộ phận
+
+8.3.1 Yêu cầu chung
+
+Tắt cả các thử nghiệm môi trường phải được thực hiện theo quy định trong các phần liên quan của bộ
+
+TCVN 7568. Đồi với các bộ phận được cấp nguồn điện độc lập các thử nghiệm thực hiện trong điều kiện
+
+nguồn độc lập được sạc đây, trừ các thử nghiệm độ bền. [ví dụ: rung động nguồn ở vị trí ban đầu nhưng
+
+không kết nối, nóng ẩm (trạng thái ổn định) và thử nghiệm ăn mòn sulfur dioxide (SO2)].
+
+Thử nghiệm “sự thay đổi điện áp nguồn” được quy định trong các phần thích hợp của TCVN 7568 phải
+
+tiền hành với các trường hợp nguồn tồi thiểu và tối đa. Giá trị tối thiểu được xem xét là giá trị dẫn đền
+
+tín hiệu lỗi được xác định trong 5.3.3.
+
+Ngoài các thử nghiệm được xác định trong phần có liên quan của TCVN 7568 mà thành phần phải tuân
+
+thủ, các thử nghiệm được xác định trong mục 8.3.3 đến mục 8.3.20 sẽ được áp dụng
+
+8.3.2 Trình tự thử nghiệm cho các thử nghiệm thành phần
+
+Trình tự thử nghiệm được trình bảy trong Bảng 5. Nhà sản xuất có thể cung cấp nhiều hơn một tủ trung
+
+tâm báo cháy cho các thử nghiệm môi trường.
+
+Trong một số trường hợp, thứ tự thử nghiệm có thể được thay đổi để đảm bảo tính kinh té.
+
+Bảng 5 - Trình tự thử nghiệm các bộ phận
+
+Các thử nghiệm ThiếtbjThànhphần | Ghichú
+
+Tủ trung
+
+tâm báo | Thiết bị khác
+
+cháy
+
+Xác mình tuổi thọ nguồn độc lập Tài liệu
+
+(mục 8.3.3)
+
+75--1Ÿ7"V"VTƒTÐ(tTtnn TT NA ICRi:.äp-dụng cho các thành phần sử
+
+Tín hiệu lỗi do nguồn thắp (mục 83.4) | nh mm dụng nguồn điện độc lập
+
+không thử
+
+Đảo ngược cực (mục 8.3.5) ~_
+
+: Nếu có nhiều hơn một tủ trung tâm
+
+Khả năng tái lập (mục 8.3.7) nh 1 đến 16 báo cháy thì cằn thử nghiệm tắt cả
+
+Sự thay đổi của các thông số cung cấp
+
+(mục 8.3.8)
+
+Hoạt động trong điều kiện nóng khô không thử cho đầu báo nhiệt phù hợp với
+
+(mục 8.3.9) nghiệm TCVN 7568-5
+
+Khả năng chịu đựng trong điều kiện không thử cho đầu báo nhiệt phù hợp với
+
+nóng khô (mục 8.3.10) nghiệm TCVN 7868-5, cấp C đến G
+
+Hoạt động trong điều kiện Lạnh (mục
+
+83.11)
+
+Hoạt động trong điều kiện Nóng ẩm theo |...
+
+chu kỳ l N không áp dụng cho đầu báo khói
+
+(mục 8.3.12)
+
+ki ki hi lều kiện Nóng âm ở 4 Chỉ áp dụng cho đầu báo khói và tủ
+
+há
+
+(muc8.3.19) trung tâm báo cháy
+
+Khả năng chịu đựng Nóng ẳm ở trạng
+
+thái ổn định (mục 8.3.14)
+
+Khả năng chịu đi ki
+
+l s SỐ chịu đựng trong điều kiện ăn không thử
+
+(mục 8.3.15) ngờ
+
+Hoạt động trong điều kiện xóc cơ học không thử
+
+(mục 8.3.16) nghiệm
+
+Hoạt động trong điều kiện va đập ư. II
+
+(mục 8.3.17)
+
+Bảng 5 — Trình tự thử nghiệm các bộ phận (két thúc)
+
+Hoạt động trong điều kiện chịu Rung
+
+hình sin
+
+(mục 8.3.18)
+
+Khả năng chịu đựng trong điều kiện chịu
+
+Rung hình sin 1
+
+(mục 8.3.19)
+
+Nhiễu gây ra bởi các trường điện từ
+
+(mục 8.3.20.3c)
+
+Quá trình chuyển tiếp nhanh bằng điện chỉ áp dụng khi có cáp kết nối giữa
+
+1 14b
+
+(mục 8.3.20.3d) các bộ phận
+
+Tăng từ từ điện áp cao 4
+
+(mục 8.3.20.3e)
+
+Thay đổi điện áp nguồn nuôi chính 4 46b chỉ áp dụng cho các bộ phận có
+
+(mục 8.3.20.3Đ) nguồn chính
+
+Nguồn cung cắp bị sụt áp và gián đoạn 4 6b chỉ áp dụng cho các bộ phận có
+
+trong thời gian ngắn (mục 8.3.20.3g) Ủ 1 nguồn chính
+
+® Đồi với thử nghiệm môi trường, việc đánh số các thành phần khác đang được thử nghiệm phải được
+
+điều chỉnh cho phù hợp với phần được đặt trong TCVN 7568.
+
+ò Để tiết kiệm chỉ phí thử nghiệm, được phép sử dụng cùng một mẫu cho nhiều thử nghiệm EMC. Trong
+
+trường hợp đó, (các) thử nghiệm chức năng trung gian trên (các) mẫu thử được sử dụng cho nhiều hơn
+
+một thử nghiệm có thể được loại bỏ và thử nghiệm chức năng được thực hiện ở cuối chuỗi thử nghiệm.
+
+Tuy nhiên, cằn lưu ý rằng trong trường hợp hỏng hóc, có thể không xác định được thử nghiệm nào gây
+
+ra lỗi (xem EN 50130-4).
+
+8.3.3 Xác minh tuổi thọ của nguồn độc lập (nguồn pin)
+
+8.3.3.1 Mục đích của việc xác minh
+
+Chứng minh nguồn điện hoạt động trong thời gian yêu cầu dựa vào việc phân tích và tính toán.
+
+8.3.3.2 Quy trình xác minh
+
+Nhà sản xuất phải cung cắp mức tiêu thụ dòng điện của thành phần được cắp điện trong điều kiện tĩnh.
+
+8.3.3.3 Yêu cầu
+
+Việc tính toán tuổi thọ do nhà sản xuất cung cấp và phải được cơ quan thử nghiệm có thẳm quyền xác
+
+nhận. Các yêu cầu của 5.3.2 phải được đáp ứng.
+
+8.3.4 Tín hiệu lỗi do nguồn thấp
+
+8.3.4.1 Mục đích của thử nghiệm
+
+Để chứng minh nếu thiết bị hoạt động dựa vào nguồn điện độc lập thì khi xảy ra lỗi do nguồn tháp, tín
+
+hiệu lỗi được truyền đi kịp thời trước khi thiết bị này ngừng hoạt động.
+
+8.3.4.2 Quy trình thử nghiệm
+
+Để đạt được mục đích thử nghiệm, nguồn điện độc lập phải được thiết lập trước các điều kiện thử nghiệm
+
+như sau:
+
+a) Kết nối nguồn điện độc lập do nhà sản xuất khuyến nghị với thiết bị. Để rút ngắn thời gian cho đền khí
+
+đạt đến ngưỡng điều kiện nguồn thắp, một tải bỗ sung sẽ được kết nối với nguồn điện độc lập. Điều này
+
+có thể được thực hiện bởi một điện trở hoặc một phần tử tiêu thụ dòng điện không đỗi. Để không thay
+
+đổi hoạt động của pin quá nhiều, dòng điện phải được tính toán để đạt đến ngưỡng trong một thời gian
+
+hợp lý, ví dụ: 30 ngày đến 90 ngày. Chỉ tiết phải được thống nhất giữa bộ phận thử nghiệm và nhà sản
+
+xuất và phải được ghi lại trong báo cáo thử nghiệm. Tín hiệu lỗi phải được theo dõi trên trung tâm báo
+
+cháy thông qua đường truyền thực.
+
+Ngoài ra, để giảm thiểu chỉ phí phục vụ cho việc thỏa mãn điều kiện tại phòng thử nghiệm, nhà sản xuất
+
+có thể cung cấp nguồn điện độc lập đã được thiết lập trước điều kiện thử nghiệm để có thể được sử
+
+dụng bởi phòng thử nghiệm. Tại phòng thử nghiệm, một tải bổ sung đã được thỏa thuận giữa phòng thử
+
+nghiệm và nhà sản xuất sẽ được kết nối lại với nguồn điện độc lập;
+
+b) Sau khi xuất hiện tín hiệu lỗi, duy trì kết nói của tải bổ sung thêm khoảng thời gian 10% số ngày cần
+
+thiết để xả pin.
+
+Tải bỗ sung và nguồn điện độc lập sau đó sẽ bị ngắt kết nói và nguồn điện độc lập sẽ được gắn nhãn là
+
+"nguồn điện tiền điều kiện thử nghiệm" cùng với thành phần mà nó dùng để xả pin.
+
+Ngoài ra, để giảm thiểu hiệu ứng phục hồi của nguồn điện độc lập tiền điều kiện thử nghiệm, các thử
+
+nghiệm sau phải được thực hiện ngay lập tức:
+
+c) Kết nối nguồn điện độc lập tiền điều kiện với thành phần thử nghiệm, và kết nói thành phần thử nghiệm
+
+với thiết bị giám sát.
+
+d) sau khoảng thời gian ít nhất là 60 phút kích hoạt thành phần thử nghiệm ở trạng thái cảnh báo.
+
+e) nếu thành phần được thử nghiệm là một phần tử trung gian, thử nghiệm chức năng phải được thực
+
+hiện theo yêu cầu của nhà sản xuất.
+
+Sau đó kích hoạt tắt cả các đầu vào/đầu ra sao cho công suát tiêu thụ của phần tử trung gian ở mức
+
+tối đa.
+
+8.3.4.3 Yêu cầu
+
+Các yêu cầu sau phải được thỏa mãn hoàn toàn:
+
+30 .
+
+8) sau khi kết nói lại nguồn điện độc lập đã được điều chỉnh trước, thành phần thử nghiệm phải tạo ra
+
+và truyền tín hiệu lỗi trong vòng 60 phút;
+
+b) Sau khi xuất hiện tín hiệu lỗi và làn kích hoạt tiếp theo, thành phản thử nghiệm phải nhận biết và chỉ
+
+thị tình trạng báo động (ví dụ: đầu ra âm thanh) đồng thời phải duy trì tình trạng báo động trong ít nhắt
+
+30 phút.
+
+€) nếu thành phần thử nghiệm là một phần tử trung gian, thì thử nghiệm chức năng phải nằm trong thông
+
+số kỹ thuật của nhà sản xuất.
+
+Các đầu vào/đầu ra được kích hoạt phải giữ nguyên các điều kiện ban đầu trong ít nhắt 30 phút.
+
+8.3.5 Thử nghiệm đảo ngược cực
+
+8.3.5.1 Mục đích của thử nghiệm
+
+Để chứng minh rằng, nếu thành phần được cấp nguồn bằng một nguồn điện độc lập và nếu có thể đảo
+
+ngược cực cơ học, thì sự đảo ngược cực này không làm hỏng thành phần được cắp nguồn.
+
+8.3.5.2 Quy trình thử nghiệm
+
+8.3.5.2.1 Yêu cầu chung
+
+Nếu nhà sản xuất có thể chứng minh rằng việc đảo ngược cực không thẻ ảnh hưởng xấu đến tính năng
+
+của thành phần, thì không cần tiền hành các thử nghiệm ở mục 8.3.5.2.2 và mục 8.3.5.2.3.
+
+8.3.5.2.2 Phần chức năng
+
+Đo phản hồi hoặc tiền hành thử nghiệm chức năng thiết bị được cấp nguồn theo quy định trong phần
+
+liên quan của TCVN 7568.
+
+Nếu có thể, đảo cực cơ học và duy trì trong 2 giờ, trừ khi thiết bị được thử nghiệm truyền tín hiệu lỗi.
+
+Sau khi đảo cực, kết nối nguồn với thiết bị trong điều kiện bình thường và đo phản hồi của thiết bị.
+
+Nếu thành phần được thử nghiệm là một phần tử trung gian thì không đo từng phản hồi mà tiền hành
+
+thử nghiệm chức năng theo yêu cầu của nhà sản xuất.
+
+8.3.5.2.3 Phần vô tuyến
+
+Xác định giá trị ngưỡng truyền trước và sau thử nghiệm đảo cực theo Phụ lục A và ghi lại các giá trị
+
+ngưỡng Avvớc Và Asu cho mỗi phép đo.
+
+8.3.5.3 Yêu cầu
+
+8.3.5.3.1 Phần chức năng
+
+Các giá trị phản hồi (định tính hoặc định lượng) phải phù hợp với các yêu cầu thử nghiệm như được xác
+
+định trong phần liên quan của TCVN 7568 mà thiết bị được thử nghiệm phải tuân thủ.
+
+Nếu thành phần được thử nghiệm là một phần tử trung gian thì phải tuân theo các thông số kỹ thuật của
+
+nhà sản xuất khi tiền hành các thử nghiệm chức năng.
+
+8.3.5.3.2 Phần vô tuyến
+
+Sự sai lệch |Awrøc - Asau| phải nhỏ hơn 6 dB.
+
+8.3.6 Khả năng lặp lại
+
+8.3.6.1 Mục đích của thử nghiệm
+
+Để chứng mình rằng các hành vi truyền là ổn định
+
+8.3.6.2 Quy trình thử nghiệm
+
+Xác định ngưỡng truyền sáu làn theo trình tự của Phụ lục A. Ghi lại các giá trị ngưỡng A cho mỗi lằn đo.
+
+Đặt độ suy giảm tối đa là Amax và độ suy giảm tồi thiều là Am.
+
+8.3.6.3 Yêu cầu
+
+Sự sai lệch | Amax - ma | phải nhỏ hơn 6 dB.
+
+8.3.7 Khả năng tái lập
+
+8.3.7.1 Mục đích của thử nghiệm
+
+Để chứng minh rằng hoạt động truyền không thay đổi quá mức giữa các mẫu thử và thiết lập dữ liệu giá
+
+trị ngưỡng để so sánh với các giá trị ngưỡng được đo sau thử nghiệm môi trường.
+
+8.3.7.2 Quy trình thử nghiệm
+
+Xác định ngưỡng truyền của từng mẫu thử theo Phụ lục A. Ghi lại các giá trị ngưỡng A cho mỗi
+
+phép đo.
+
+Đặt độ suy giảm tồi đa là Anax và độ suy giảm tồi thiểu là Am.
+
+8.3.7.3 Yêu cầu
+
+Sự sai lệch | Âmax - Âma | phải nhỏ hơn 6 dB.
+
+8.3.8 Sự thay đổi của các thông số cung cấp
+
+8.3.8.1 Mục đích của thử nghiệm
+
+Đề chứng minh rằng trong phạm vi xác định của các tham số cung cắp (ví dụ: điện áp), hành vi truyền
+
+không phụ thuộc quá nhiều vào các thông số này.
+
+8.3.8.2 Quy trình thử nghiệm
+
+Xác định ngưỡng truyền của mẫu thử theo Phụ lục A, sử dụng nguồn điện để bàn. Giới hạn trên và dưới
+
+của các dải tham số nguồn cấp phải do nhà sản xuất quy định. Ghi lại các giá trị ngưỡng A cho mỗi
+
+phép đo.
+
+Đặt độ suy giảm tối đa là Ama. và độ suy giảm tồi thiểu là Amn.
+
+8:3:8:3 Yêu cầu
+
+Sự sai lệch | Amax - ma | phải nhỏ hơn 6 dB.
+
+8.3.9 Hoạt động trong điều kiện Nóng khô
+
+8.3.9.1 Mục đích của thử nghiệm
+
+Để chứng minh khả năng của mẫu thử hoạt động chính xác ở môi trường có nhiệt độ cao phù hợp với
+
+môi trường hoạt động dự kiến.
+
+8.3.9.2 Quy trình thử nghiệm
+
+Sử dụng thiết bị thử nghiệm và thực hiện quy trình thử nghiệm như quy định trong TCVN 7699-2-2, thử
+
+nghiệm Bb và theo mục 8.3.9.3 đến mục 8.3.9.5.
+
+8.3.9.3 Điều kiện thử nghiệm
+
+8.3.9.3.1 Trừ khi có quy định khác trong các phần liên quan của TCVN 7568, áp dụng điều kiện sau cho
+
+đầu báo cháy nhiệt:
+
+- nhiệt độ: nhiệt độ môi trường tối đa phù hợp với cấp thích hợp của TCVN 7568-5;
+
+- thời lượng: 2 giờ.
+
+8.3.9.3.2 Trừ khi có quy định khác trong các phần liên quan của TCVN 7568, áp dụng các điều kiện thử
+
+nghiệm sau cho các thành phần trong hệ thống (ngoại trừ đầu báo cháy nhiệt):
+
+- nhiệt độ: (55 ‡ 2) °C khi sử dụng trong nhà hoặc (70 ‡ 2) °C khi sử dụng ngoài trời;
+
+- thời lượng: 16 giờ.
+
+8.3.9.4 Các phép đo trong quá trình thử nghiệm
+
+Theo dõi mẫu thử trong suốt thời gian thử nghiệm để phát hiện mẫu thử có bắt kỳ tín hiệu báo động hoặc
+
+lỗi nào không.
+
+Trong 0,5 giờ cuối cùng của điều kiện thử nghiệm, xác định ngưỡng truyền của mẫu thử theo Phụ lục A.
+
+Ghi lại giá trị ngưỡng Ân tượng.
+
+8.3.9.5 Các phép đo cuối
+
+Sau các phép đo trong quá trình thử nghiệm (mục 8.3.9.4), để mẫu thử phục hồi ít nhắt 1 giờ trong điều
+
+kiện phòng thí nghiệm tiêu chuẩn, đo ngưỡng truyền của mẫu theo Phụ lục A và ghi lại giá trị
+
+ngưỡng Asau.
+
+8.3.9.6 Yêu cầu
+
+Không có tín hiệu báo động hoặc lỗi nào xuất hiện trong quá trình thử nghiệm.
+
+Sự sai lệch | An vượng — A| phải nhỏ hơn 10 dB, trong đó A được đo trong phép thử khả năng tái lập
+
+(mục 8.3.7).
+
+Sự sai lệch | Asu — A| phải nhỏ hơn 6 dB, trong đó A được đo trong phép thử khả năng tái lập
+
+(mục 8.3.7).
+
+8.3.10 Khả năng chịu đựng trong điều kiện Nóng khô
+
+8.3.10.1 Mục đích của thử nghiệm
+
+Để chứng minh khả năng của thành phần thử nghiệm chịu được nhiệt độ cao của môi trường xung
+
+quanh.
+
+8.3.10.2 Quy trình thử nghiệm
+
+8.3.10.2.1 Sử dụng thiết bị thử nghiệm và thực hiện quy trình như quy định trong TCVN 7699-2-2, thử
+
+nghiệm Ba hoặc Bb và như trong mục 8.3.10.2.2 và mục 8.3.10.3.
+
+8.3.10.2.2 Điều kiện thử nghiệm
+
+a. Trừ khi có quy định khác trong các phần liên quan của TCVN 7568, áp dụng điều kiện sau cho đầu
+
+báo cháy nhiệt:
+
+— nhiệt độ: nhiệt độ môi trường tối đa phù hợp với TCVN 7588-5: 2003, cắp C đến G;
+
+— thời lượng: 21 ngày.
+
+b. Trừ khi có quy định khác trong các phần liên quan của TCVN 7568, áp dụng các điều kiện thử nghiệm
+
+sau cho các thành phần trong hệ thống (ngoại trừ đầu báo cháy nhiệt):
+
+- nhiệt độ: (70 + 2) °C;
+
+- thời lượng: 21 ngày.
+
+8.3.10.3 Các phép đo cuối
+
+Sau khi mẫu thử đã đủ 21 ngày trong điều kiện thử nghiệm (mục 10.3.10.2), tiền hành lắy mẫu ra và đặt
+
+trong điều kiện phòng thí nghiệm tiêu chuẩn trong ít nhắt 1 giờ. Đo ngưỡng truyền của mẫu thử theo Phụ
+
+lục A. Ghi lại giá trị ngưỡng Asau.
+
+8.3.10.4 Yêu cầu
+
+Không có tín hiệu báo động hoặc tín hiệu lỗi nào xuất hiện trong quá trình thử nghiệm khả năng chịu
+
+đựng khi kết nối lại mẫu thử.
+
+Sự sai lệch | Asu - A| phải nhỏ hơn 6 dB, trong đó A được đo trong phép thử khả năng tái lập
+
+(mục 8.3.7).
+
+8.3.11 Hoạt động trong điều kiện Lạnh
+
+8.3.11.1 Mục đích của thử nghiệm
+
+Để chứng minh khả năng của mẫu thử hoạt động chính xác ở nhiệt độ môi trường thắp phù hợp với môi
+
+trường hoạt động dự kiền.
+
+8.3.11.2 Quy trình thử nghiệm
+
+8.3.11.2.1 Sử dụng thiết bị thử nghiệm và thực hiện quy trình như quy định trong TCVN 7699-2-1, thử
+
+nghiệm Ab và như trong mục 8.3.11.2.2 đến mục 8.3.11.2.4.
+
+8.3.11.2.2 Điều kiện thử nghiệm
+
+Áp dụng điều kiện sau, trừ khi có quy định khác trong các phần liên quan của TCVN 7688:
+
+- nhiệt độ: (-5 + 3) °C đối với tủ trung tâm báo cháy và (—10 + 3) °C đối với mẫu thử sử dụng trong nhà
+
+hoặc (-25 + 3) °C đối với mẫu thử sử dụng ngoài trời;
+
+- thời lượng: 16 giờ.
+
+Đồi với các nước có nhiệt độ bên ngoài quá lạnh, nhiệt độ thử nghiệm là (-40 + 3) °C nên được áp dụng
+
+cho các mẫu thử sử dụng ngoài trời.
+
+8.3.11.2.3 Các phép đo trong quá trình thử nghiệm
+
+Theo dõi mẫu thử trong suét thời gian thử nghiệm để phát hiện mẫu thử có bát kỳ tín hiệu báo động hoặc
+
+lỗi nào không.
+
+Trong 0,5 giờ cuối cùng của điều kiện thử nghiệm, xác định ngưỡng truyền của mẫu thử theo Phụ lục A.
+
+Ghi lại giá trị ngưỡng Ani lượng.
+
+_. 8.3,11.2.4 Các phép đo cuối
+
+_ Sau khi mẫu thử đã đủ 16 giờ trong điều kiện thử nghiệm (mục 8.3.11.3), tiền hành lầy mẫu ra và để
+
+mẫu thử phục hồi ít nhất 1 giờ trong điều kiện phòng thí nghiệm tiêu chuẩn, đo ngưỡng truyền của mẫu
+
+theo Phụ lục A và ghi lại giá trị ngưỡng Asau.
+
+8.3.11.3 Yêu cầu
+
+Không có tín hiệu báo động hoặc tín hiệu lỗi nào xuất hiện trong quá trình thử nghiệm.
+
+Sự sai lệch | Anø tượng — A| phải nhỏ hơn 10 dB, trong đó A được đo trong phép thử khả năng tái lập
+
+(mục 8.3.7).
+
+Sự sai lệch | Asu — A| phải nhỏ hơn 6 dB, trong đó A được đo trong phép thử khả năng tái lập
+
+(mục8.37).
+
+-...8.3.12 Hoạt động trong điều kiện Nóng ẩm theo chu Kỳ
+
+8.3.12.1 Mục đích của thử nghiệm
+
+Để chứng mình khả năng của mẫu thử hoạt động chính xác ở độ ẳm tương đối cao (có ngưng tụ) có thể
+
+xảy ra trong thời gian ngắn trong môi trường hoạt động dự kiến.
+
+8.3.12.2 Quy trình thử nghiệm
+
+8.3.12.2.4 Sử dụng thiết bị thử nghiệm và thực hiện quy trình thử nghiệm như quy định trong
+
+TCVN 7699-2-30, thử nghiệm Db, sử dụng chu kỳ thử nghiệm Biến thể 1 và các điều kiện phục hồi có
+
+kiểm soát, và như trong mục 8.3.12.2.2 đến mục 8.3.12.2.4.
+
+8.3.12.2.2 Điều kiện thử nghiệm
+
+Áp dụng điều kiện sau, trừ khi có quy định khác trong các phần liên quan của TCVN 7588:
+
+= nhiệt độ thắp hơn: (25 + 3) °C ở > 95% RH;
+
+- nhiệt độ trên: (40 + 5) °C đối với mẫu sử dụng trong nhà hoặc (55 + 2)°C đối với mẫu sử dụng
+
+ngoài trời;
+
+— độ ẩm tương đối ở nhiệt độ trên: (93 + 3)%;
+
+- số chu kỳ: 2.
+
+8.3.12.2.3 Các phép đo trong quá trình thử nghiệm
+
+Theo dõi mẫu thử trong thời gian thử nghiệm để phát hiện mẫu thử có bắt kỳ tín hiệu báo động hoặc lỗi
+
+nào không.
+
+Đo ngưỡng truyền như quy định trong Phụ lục A trong 0,5 giờ cuối cùng của thời gian thử nghiệm và ghi
+
+lại giá trị ngưỡng Âni tượng.
+
+8.3.12.2.4 Các phép đo cuối
+
+Sau khoảng thời gian phục hồi ít nhất 1 giờ trong điều kiện phòng thí nghiệm tiêu chuẩn, đo ngưỡng
+
+truyền của mẫu thử theo Phụ lục A. Ghi lại giá trị ngưỡng As.
+
+8.3.12.3 Yêu cầu
+
+Không có tín hiệu báo động hoặc tín hiệu lỗi nào xuất hiện trong quá trình thử nghiệm.
+
+Sự sai lệch | Anaitượng = A| phải nhỏ hơn 10 dB, trong đó A được đo trong phép thử khả năng tái lập (mục
+
+83.7).
+
+Sự sai lệch | Asuu — A| phải nhỏ hơn 6 dB, trong đó A được đo trong phép thử khả năng tái lập (mục
+
+837).
+
+8.3.13 Hoạt động trong điều kiện Nóng ẩm ở trạng thái ồn định
+
+8.3.13.1 Mục đích của thử nghiệm
+
+Để chứng minh khả năng của mẫu thử hoạt động chính xác ở độ ảm tương đối cao (không ngưng tụ) có
+
+thể xảy ra trong thời gian ngắn trong môi trường hoạt động dự kiến.
+
+8.3.13.2 Quy trình thử nghiệm.
+
+Đồi với tủ trung tâm báo cháy, sử dụng quy trình thử nghiệm như quy định trong TCVN 7699-2-78; đồi
+
+với các thành phần khác, sử dụng thiết bị và quy trình thử nghiệm như quy định trong TCVN 7699-2-78,
+
+thử nghiệm Cab và như trong 8.3.13.3 đến 8.3.13.5.
+
+8.3.13.3 Điều kiện thử nghiệm.
+
+Áp dụng điều kiện sau đối với tủ trung tâm báo cháy và các thành phần khác:
+
+- nhiệt độ: (40 + 2) °C;
+
+-— độ ẩm tương đái: (93 ‡ 3)%;
+
+- thời lượng: 4 ngày.
+
+8.3.13.4 Các phép đo trong quá trình thử nghiệm
+
+Theo dõi mẫu thử trong thời gian thử nghiệm để phát hiện mẫu thử có bắt kỳ tín hiệu báo động hoặc lỗi
+
+nào không.
+
+Đo ngưỡng truyền như quy định trong Phụ lục A trong 0,5 giờ cuối cùng của thời gian thử nghiệm và ghi
+
+lại giá trị ngƯỠng Atơi tượng.
+
+8.3.13.5 Các phép đo cuối
+
+Sau khi mẫu thử đã đủ 4 ngày trong điều kiện thử nghiệm (mục 8.3.13.3), tiền hành lắy mẫu ra và đặt
+
+trong điều kiện phòng thí nghiệm tiêu chuẩn trong ít nhát 1 giờ. Đo ngưỡng truyền của mẫu theo Phụ lục
+
+A và ghi lại giá trị ngưỡng Asau.
+
+8.3.13.6 Yêu cầu
+
+Không có tín hiệu báo động hoặc tín hiệu lỗi nào xuất hiện trong quá trình thử nghiệm.
+
+Sự sai lệch | An tượng = A| phải nhỏ hơn 10 dB, trong đó A được đo trong phép thử khả nắng tái lập
+
+(mục 8.3.7).
+
+Sự sai lệch | Asasu — A| phải nhỏ hơn 6 dB, trong đó A được đo trong phép thử khả năng tái lập
+
+(mục 8.3.7).
+
+8.3.14 Khả nắng chịu đựng Nóng ẳm ở trạng thái ổn định
+
+8.3.14.1 Mục đích của thử nghiệm
+
+Để chứng mình khả năng của mẫu thử chịu được ảnh hưởng lâu dài của độ ẩm trong môi trường
+
+hoạt động.
+
+8.3.14.2 Quy trình thử nghiệm
+
+Không cung cấp nguồn cho mẫu thử trong quá trình thử nghiệm.
+
+Sử dụng thiết bị thử nghiệm và quy trình thử nghiệm theo quy định trong TCVN7899-2-78, thử nghiệm
+
+Cab, và như trong mục 8.3.14.3 đến mục 8.3.14.4.
+
+8.3.14.3 Điều kiện thử nghiệm
+
+Áp dụng điều kiện sau đối với tủ trung tâm báo cháy và các thành phần khác:
+
+- nhiệt độ: (40 + 2) °C;
+
+- độ ẩm tương đồi: (93 + 3)%;
+
+- thời lượng: 21 ngày.
+
+8.3.14.4 Các phép đo cuối
+
+Sau khoảng thời gian phục hồi ít nhất 1 h trong điều kiện phòng thí nghiệm tiêu chuẩn, ngưỡng truyền
+
+của mẫu thử phải được đo lại theo Phụ lục A. Giá trị ngưỡng Asau sẽ được ghi lại. Sau khi mẫu thử đã
+
+đủ 21 ngày trong điều kiện thử nghiệm (mục 8.3.14.3), tiền hành lắy mẫu ra và đặt trong điều kiện phòng
+
+thí nghiệm tiêu chuẩn trong ít nhắt 1 giờ. Đo ngưỡng truyền của mẫu thử theo Phụ lục A. Ghi lại giá trị
+
+ngưỡng Asau.
+
+8.3.14.5 Yêu cầu
+
+Không có tín hiệu báo động hoặc tín hiệu lỗi nào xuất hiện trong quá trình thử nghiệm khả năng chịu
+
+đựng khi kết nói lại mẫu thử.
+
+Sự sai lệch | Asau — A| phải nhỏ hơn 6 dB, trong đó A được đo trong phép thử khả năng tái lập
+
+(mục 8.3.7).
+
+8:3.15 Khả năng chịu đựng trong điều kiện Ăn mòn SO2 -
+
+8.3.15.1 Mục đích của thử nghiệm
+
+Mục đích của thử nghiệm là chứng mình khả năng của mẫu thử chịu được các tác động ăn mòn của
+
+sulfur dioxide - là một chất gây ô nhiễm trong khí quyền.
+
+8.3.15.2 Quy trình thử nghiệm
+
+Không cung cấp nguồn cho mẫu thử trong quá trình thử nghiệm.
+
+Sử dụng thiết bị thử nghiệm và thực hiện quy trình thử nghiệm như quy định trong TCVN 7699-2-42, thử
+
+nghiệm Kc, nhưng tuân thử các điều kiện trong 8.3.15.3.
+
+8.3.15.3 Điều kiện thử nghiệm
+
+Áp dụng các điều kiện sau:
+
+- nhiệt độ: (25 + 2) °C;
+
+-— độ ẩm tương đái: (93 + 3)%;
+
+— Nồng độ SO2: (25+ 5) UI / |;
+
+- thời lượng: 21 ngày.
+
+8.3.15.4 Các phép đo cuối
+
+Khi mẫu thử đã đạt được thời lượng trong điều kiện thử nghiệm, tiền hành lầy mẫu thử và ngay lập tức
+
+sấy khô mẫu thử trong 16 giờ ở (40 + 2) °C và < 50 % RH, sau đó đặt mẫu thử trong điều kiện phòng thí
+
+nghiệm tiêu chuẩn trong ít nhất 1 giờ. Đo ngưỡng truyền của mẫu thử theo Phụ lục A. Ghi lại giá trị
+
+ngưỡng Asau.
+
+8.3.15.5 Yêu cầu
+
+Không có tín hiệu báo động hoặc tín hiệu lỗi nào xuất hiện trong quá trình thử nghiệm khả năng chịu
+
+đựng khi kết nối lại mẫu thử.
+
+Sự sai lệch | Asuu — A| phải nhỏ hơn 6 dB, trong đó A được đo trong phép thử khả năng tái lập
+
+(mục 8.3.7).
+
+8.3.16 Hoạt động trong điều kiện Sốc cơ học
+
+8.3.16.1 Mục đích của thử nghiệm
+
+Để chứng minh khả năng chịu đựng của mẫu thử đối với các cú sốc cơ học có khả năng xảy ra trong
+
+môi trường hoạt động dự kiến.
+
+8.3.16.2 Quy trình thử nghiệm
+
+Sử dụng thiết bị thử nghiệm và thực hiện quy trình thử nghiệm phải theo quy định trong TCVN 7899-2-27,
+
+thử nghiệm Ea, nhưng thực hiện các điều kiện theo quy định trong 8.3.16.3.
+
+8.3.16.3 Điều kiện thử nghiệm
+
+Đồi với mẫu thử có khói lượng < 4,75 kg, áp dụng điều kiện sau:
+
+- loại xung xung kích: nửa sin;
+
+- thời gian xung: 6 ms;
+
+- gia tắc cực đại: 10(100 - 20M) m/sˆ (trong đó M là khối lượng của mẫu tính bằng kilôgam);
+
+- số hướng: sáu;
+
+— xung mỗi hướng: ba.
+
+Không thử mẫu có khói lượng > 4,75 kg.
+
+8.3.16.4 Các phép đo trong quá trình thử nghiệm
+
+Theo dõi mẫu thử trong suốt thời gian thử nghiệm, chờ thêm 2 phút nữa để phát hiện mẫu thử có bắt kỳ
+
+tín hiệu báo động hoặc lỗi nào không.
+
+Sau khi thử nghiệm, đo ngưỡng truyền của mẫu thử theo Phụ lục A. Ghi lại giá trị ngưỡng Asau.
+
+8.3.16,3 Yêu cầu
+
+Không có tín hiệu báo động hoặc tín hiệu lỗi nào xuất hiện trong quá trình thử nghiệm khả năng chịu
+
+đựng khi kết nồi lại mẫu thử.
+
+Sự sai lệch | Assu — A| phải nhỏ hơn 6 dB, trong đó A được đo trong phép thử khả năng tái lập
+
+(mục 8.3.7).
+
+8.3.17 Hoạt động trong điều kiện tác động mạnh
+
+8.3.17.1 Mục đích của thử nghiệm
+
+Để chứng mình khả năng miễn nhiểm của mẫu thử đối với các tác động cơ học lên bè mặt của mẫu mà
+
+mẫu có thể chịu được trong môi trường làm việc bình thường.
+
+8.3.17.2 Quy trình thử nghiệm
+
+8.3.17.3 Điều kiện thử nghiệm
+
+Áp dụng các điều kiện theo các phần liên quan của TCVN 7588.
+
+8.3.17.3.1 Đối với các bộ phận được thử bằng búa lò xo (ví dụ: tủ trung tâm báo cháy), áp dụng điều
+
+kiện sau:
+
+- năng lượng tác động: (0,5 ‡ 0,04) J;
+
+- số lượng tác động: 3.
+
+8.3.17.3.2 Đối với các bộ phận được thử bằng búa thường, áp dụng điều kiện sau:
+
+— năng lượng tác động: (1,9+ 0,1) J;
+
+— vận tốc búa: (1,5 + 0,13) m/s
+
+- số lượng tác động: 1.
+
+8.3.17.4 Các phép đo trong quá trình thử nghiệm
+
+Mẫu thử phải được theo dõi trong suốt thời gian thử nghiệm, chờ thêm 2 phút nữa để phát hiện mẫu thử
+
+có bắt kỳ tín hiệu báo động hoặc lỗi nào không.
+
+8.3.17.5 Các phép đo cuối
+
+Sau khi thử nghiệm, đo ngưỡng truyền của mẫu thử theo Phụ lục A. Ghi lại giá trị ngưỡng Asau.
+
+8.3.17.6 Yêu cầu
+
+Không có tín hiệu báo động hoặc tín hiệu lỗi nào xuất hiện trong quá trình thử nghiệm.
+
+Sự sai lệch | Assu — A| phải nhỏ hơn 6 dB, trong đó A được đo trong phép thử khả năng tái lập
+
+(mục 8.3.7).
+
+8.3.18 Hoạt động trong điều kiện chịu Rung, hình sin
+
+8.3.18.1 Mục đích của thử nghiệm
+
+Để chứng minh khả năng miễn nhiễm của mẫu thử với rung động ở mức được coi là phù hợp với môi
+
+trường làm việc bình thường.
+
+8.3.18.2 Quy trình thử nghiệm
+
+Sử dụng thiết bị thử nghiệm và thực hiện quy trình thử nghiệm như quy định trong TCVN 7899-2-6, thử
+
+nghiệm Fc, và như trong mục 8.3.18.3 đến mục 8.3.18.5
+
+8.3.18.3 Điều kiện thử nghiệm
+
+8.3.18.3.1 Đồi với tủ trung tâm báo cháy, áp dụng điều kiện sau:
+
+- dải tằn: (10 đến 150) Hz;
+
+— biên độ gia tốc: 0,981 m/s° (= 0,5 gn);
+
+— số trục: ba;
+
+- tốc độ quét: 1 octave/phút;
+
+— số chu kỷ quét: 1 chu kỳ/trục.
+
+8.3.18.3.2 Đối với các thành phần khác, áp dụng điều kiện sau:
+
+- dải tằn: (10 đến 150) Hz;
+
+- biên độ gia tốc: 5 m/s° (= 0,5 gn);
+
+~ số trục: ba;
+
+- tốc độ quét: 1 octave/phút;
+
+— số chu kỳ quét: 1 chu kỳ/trục.
+
+8.3.18.4 Các phép đo trong quá trình thử nghiệm
+
+Theo dõi mẫu thử trong suốt thời gian thử nghiệm để phát hiện mẫu thử có bắt kỳ tín hiệu báo động hoặc
+
+tín hiệu lỗi nào không.
+
+8.3.18.5 Các phép đo cuối
+
+Sau khi thử nghiệm, đo ngưỡng truyền của mẫu thử theo Phụ lục A. Ghi lại giá trị ngưỡng Asau.
+
+8.3.18.6 Yêu cầu
+
+Không có tín hiệu báo động hoặc tín hiệu lỗi nào xuất hiện trong quá trình thử nghiệm khả năng chịu
+
+đựng khi kết nối lại mẫu thử.
+
+Sự sai lệch | Asau = A| phải nhỏ hơn 6 dB, trong đó A được đo trong phép thử khả năng tái lập (mục
+
+83.7).
+
+8.3.19 Khả năng chịu đựng trong điều kiện chịu Rung hình sin
+
+8.3.19.1 Mục đích của thử nghiệm
+
+Để chứng minh khả năng của mẫu thử chịu được các tác động lâu dài của rung động ở các mức phù
+
+hợp với môi trường làm việc.
+
+8.3.19.2 Quy trình thử nghiệm
+
+Không cung cấp nguồn cho mẫu thử trong quá trình thử nghiệm.
+
+Sử dụng thiết bị thử nghiệm và thực hiện quy trình thử nghiệm phải theo quy định trong TCVN 7699-2-
+
+6, thử nghiệm Fc, và như trong 8.3.19.3 đến 8.3.19.4
+
+8.3.19.3 Điều kiện thử nghiệm
+
+8.3.19.3.1 Đồi với tủ trung tâm báo cháy, áp dụng điều kiện sau:
+
+- dải tằn: (10 đến 150) Hz;
+
+- biên độ gia tắc: 5 m/sˆ (= 0,5 gn);
+
+- số trục: ba;
+
+- tốc độ quét: 1 octave/phút;
+
+— số chu kỳ quét: 20.
+
+8.3.19.3.2 Đồi với các bộ phận khác, áp dụng điều kiện sau:
+
+- dải tần: (10 đến 150) Hz;
+
+- biên độ gia tốc: 10 m/s° (= 0,5 gn);
+
+- số trục: ba;
+
+- tốc độ quét: 1 octave/phút;
+
+— số chu kỳ quét: 20 chu kỳ/trục.
+
+8.3.19.4 Các phép đo cuối
+
+Sau khi thử nghiệm, đo ngưỡng truyền của mẫu thử theo Phụ lục A. Ghi lại giá trị ngưỡng Asau.
+
+8.3.19.3 Yêu cầu
+
+Không có tín hiệu báo động hoặc tín hiệu lỗi nào xuất hiện trong quá trình thử nghiệm khả năng chịu
+
+đựng khi kết nối lại mẫu thử.
+
+Sự sai lệch |Asau — A| phải nhỏ hơn 6 dB, trong đó A được đo trong phép thử khả năng tái lập (mục 8.3.7).
+
+8.3.20 Thử nghiệm miễn nhiễm tương thích điện từ (EMC)
+
+8.3.20.1 Mục đích của thử nghiệm
+
+Mục đích của thử nghiệm là chứng minh khả năng miễn nhiễm với các nhiễu điện từ có thể xảy ra trong
+
+môi trường làm việc bình thường.
+
+8.3.20.2 Quy trình thử nghiệm
+
+Các thử nghiệm chịu đựng EMC sau đây phải được thực hiện như được mô tả trong EN 50130-4:
+
+a) Phóng tĩnh điện;
+
+b) trường bức xạ điện từ;
+
+c) nhiễu gây ra bởi các trường điện từ;
+
+d) quá trình chuyển tiếp nhanh bằng điện;
+
+e) tăng từ từ điện áp cao;
+
+8 thay đổi điện áp nguồn cung cắp chính;
+
+g) nguồn cung cấp bị sụt áp và gián đoạn trong thời gian ngắn.
+
+8.3.20.3 Các phép đo trong quá trình thử nghiệm
+
+Theo dõi mẫu thử trong suốt thời gian thử nghiệm để phát hiện mẫu thử có bắt kỳ tín hiệu báo động hoặc
+
+lỗi nào nào không.
+
+8.3.20.4 Các phép đo cuối
+
+Sau khi thử nghiệm, đo ngưỡng truyền của mẫu thử theo Phụ lục A. Ghi lại giá trị ngưỡng Asau.
+
+8.3.20.6 Yêu cầu
+
+Đồi với các thử nghiệm này, các tiêu chí yêu cầu được quy định trong EN 50130-4, trong các nội dung
+
+phù hợp của TCVN 7568 và điều sau đây sẽ được áp dụng:
+
+Sự sai lệch | Asa — A| phải nhỏ hơn 6 dB, trong đó A được đo trong phép thử khả năng tái lập
+
+(mục 8.3.7).
+
+Phụ lục A
+
+(Quy định)
+
+Thử nghiệm cấu hình bằng cách sử dụng thiết bị thử nghiệm chắn sóng vô tuyến
+
+A.1 Thiết bị thử nghiệm chắn sóng vô tuyến cho bộ phận truyền tín hiệu cảnh báo
+
+Thành phần truyền tín hiệu cảnh báo phải được lắp tróng thiết bị thử nghiệm như trong Hình A.1, tuân
+
+thủ các điều sau:
+
+a) thiết bị thử nghiệm phải có vỏ kim loại chặn được sóng vô tuyến, nó cung cấp đủ độ suy hao từ máy
+
+phát để tránh sự kích hoạt tín hiệu truyền trong không gian đối với máy thu tương ứng;
+
+b) cộng hưởng khoang của vỏ hộp phải được giảm bằng cách phủ bên trong vỏ bằng vật liệu hấp thụ
+
+sóng vô tuyến (ví dụ: các miếng ferrite) hoặc bằng các phương tiện khác;
+
+©) vị trí cơ học của thành phần truyền tín hiệu cảnh báo phải được tái lập sao cho mức công suất đầu ra
+
+từ thiết bị không thay đổi quá 1 dB sau khi tháo và lắp lại,
+
+d) một lưới tổ ong phải được gắn ở mỗi bên của hộp che chắn sóng vô tuyến và các kết nối được lọc
+
+qua phải có sẵn ở bên cạnh hộp để cho phép thực hiện thử nghiệm chức năng. Thông qua các lưới tổ
+
+ong, có thể kích hoạt đầu báo khói được gắn bên trong bằng cách sử dụng khói thử nghiệm hoặc kích
+
+hoạt đầu báo nhiệt được gắn bên trong bằng cách sử dụng nhiệt từ máy sấy tóc. Các kết nói được lọc
+
+qua cũng phải có sẵn ở bên cạnh hộp che chắn sóng vô tuyền để cho phép tín hiệu điện áp thấp AC/DC
+
+được đưa vào hộp để cấp nguồn cho thành phần truyền tín hiệu cảnh báo.
+
+e) các lỗ nhỏ trên lưới tổ ong có thể được sử dụng để kích hoạt một cách thủ công bên ngoài bằng một
+
+số thanh kích hoạt không dẫn điện, ví dụ: khi sử dụng các loại nút nhắn của các nút nhắn bằng tay;
+
+) thiết bị sẽ không bị ảnh hưởng bởi các kịch bản thử nghiệm môi trường khác nhau đồi với mức đầu ra
+
+lớn hơn + 1 dB, tức là tránh sử dụng vật liệu điện môi làm thay đổi hằng số điện môi tương đối trong các
+
+điều kiện nhiệt độ và độ ẩm khác nhau;
+
+g) ăng ten của thành phần truyền tín hiệu cảnh báo phải được có định ở cùng một vị trí trong tất cả các
+
+thử nghiệm môi trường theo thông số kỹ thuật do nhà sản xuất đưa ra.
+
+CHÚ Ý: Mục đích làm việc với thiết bị thử nghiệm là chuyển đồi trường truyền tự do thành tình huống truyền tín hiệu cáp, trong
+
+đó khả năng tái lập thử nghiệm cao và khả năng miễn nhiễm với môi trường gây nhiều là không đáng kể.
+
+6 -_ ,
+
+LZ⁄ l+
+
+6 _
+
+CHÚ THÍCH:
+
+1- hộp chắn sóng vô tuyến cho hệ thống báo cháy với một thành phần truyền tín hiệu báo động
+
+2- ăng ten
+
+3- vật liệu hấp thụ vô tuyến
+
+4- bộ suy giảm sóng vô tuyến (AT = 0 dB đến 100 dB)
+
+5- hộp chắn sóng vô tuyến cho hệ thống báo cháy với một thành phần nhận tín hiệu báo động
+
+8- đầu vào/đầu ra, ví dụ: nguồn điện hoặc báo hiệu
+
+Hình A.1 - Thiết bị thử nghiệm và các thành phần kết nối với nhau
+
+được che chắn sóng vô tuyến
+
+A.2 Thiết bị thử nghiệm chặn sóng vô tuyến cho thành phần nhận tín hiệu báo động
+
+- .. Thành phần nhận tín hiệu cảnh báo phải được gắn trong thiết bị thử nghiệm như trong Hình A.1, tuân
+
+thủ các điều sau:
+
+a) thiết bị thử nghiệm phải là vỏ kim loại chặn được sóng vô tuyến, nó cung cấp đủ độ suy hao từ máy
+
+phát để tránh sự kích hoạt tín hiệu truyền trong không gian đồi với máy thu tương ứng;
+
+b) cộng hưởng khoang của vỏ hộp phải được giảm bằng cách phủ bên trong vỏ bằng vật liệu hấp thụ
+
+sóng vô tuyến (ví dụ: các miếng ferrite) hoặc bằng các phương tiện khác;
+
+©) vị trí cơ học của thành phần nhận tín hiệu báo động phải được tái lập khi ở mức suy hao rộng cho
+
+80% các thử nghiệm truyền thành công, bộ suy hao sóng vô tuyến được kết nói giữa hai thiết bị thử
+
+nghiệm không thay đổi nhiều hơn +1 dB sau khi tháo và lắp lại;
+
+d) thiết bị sẽ không bị ảnh hưởng bởi các thử nghiệm môi trường khác nhau đối với mức suy giảm đo
+
+được cho 80% các thử nghiệm truyền thành công, được đo bằng bộ suy giảm sóng vô tuyến được kết
+
+nối giữa hai thiết bị thử nghiệm, với hơn +1 dB, tức là tránh sử dụng vật liệu điện môi làm thay đổi hằng
+
+số điện môi tương đối trong các điều kiện nhiệt độ và độ ẩm khác nhau;
+
+e) ăng ten của thành phần nhận tín hiệu cảnh báo phải được có định ở cùng một vị trí trong tắt cả các
+
+thử nghiệm môi trường theo thông số kỹ thuật do nhà sản xuất đưa ra.
+
+CHÚ THÍCH Mục đích làm việc với thiết bị thử nghiệm là chuyển đổi trường truyền tự do giống với truyền tín hiệu cáp, trong đó
+
+khả năng tái lập thử nghiệm cao và khả năng miễn nhiễm với môi trường xung quanh không đáng kể. Đối với thiết bị thử nghiệm
+
+được sử dụng cho thành phần nhận tín hiệu báo động, nhìn chung khó đạt được mức độ sàng lọc cao hơn, vì cáp nguồn
+
+và/hoặc cáp đầu vào/đầu ra được dẫn qua vỏ được sàng lọc.
+
+A.3 Kết nối cáp giữa thiết bị thử nghiệm với thẳnh phần truyền tín hiệu báo động và thiết
+
+bị thử nghiệm với thành phần nhận tín hiệu báo động
+
+Các thiết bị như được mô tả trong A.1 và A.2 được kết nối với nhau bằng các cáp chống nhiễu với bộ
+
+suy hao tần số vô tuyến được kết nói nói tiếp với dây dẫn tín hiệu như trong Hình A.1.
+
+Việc thiết lập thử nghiệm hoàn chỉnh phải cung cấp đủ độ suy hao để tránh tác động tương hỗ trực tiếp
+
+giữa các thành phần được thử nghiệm.
+
+A.4 Xác định ngưỡng truyền A
+
+Ngưỡng truyền A là giá trị suy hao cao nhất mà trong đó tồi thiểu 80% các thử nghiệm truyền báo động
+
+thành công. Giá trị này được xác định bằng cách tác động đến thành phần vô tuyến của thiết bị để thay
+
+đổi từ điều kiện bình thường sang điều kiện cảnh báo bằng cách cung cấp khói, nhiệt, ánh sáng hoặc
+
+bằng chuyển động cơ học của thanh thử.
+
+Trong hầu hết các trường hợp, giá trị A cao nhắt, trong đó 80% thử nghiệm truyền báo động thành công,
+
+giá trị A có thể được xác định mà tại đó 4 trên 5 thử nghiệm truyền dẫn thành công.
+
+Một số thành phần vô tuyến được thử nghiệm tại các khoảng thời gian nhất định bởi thiết bị điều khiển
+
+và chỉ thị liên quan của nó còn một số khác thì chỉ truyền thông báo xác nhận nó còn hoạt động. Nếu
+
+khoảng thời gian giữa các trạng thái truyền này được biết trước và đủ ngắn, và nếu công suất truyền
+
+giống như khi truyền tín hiệu cảnh báo, thì trạng thái tín hiệu truyền có thể được sử dụng để xác minh
+
+giá trị A cao nhắt. Bộ suy hao chỉ đơn giản là tăng cho đến khi có dấu hiệu lỗi do không giao tiếp được
+
+với thành phần vô tuyến trên tủ trung tâm báo cháy. Sau khi xác định giá trị A cao nhất, giá trị A cuối
+
+cùng được xác minh bằng cách thực hiện các thử nghiệm truyền cảnh báo như mô tả ở trên bắt đầu từ
+
+cùng một giá trị A. .
+
+Trạng thái báo động của thành phần vô tuyến đạt được bằng nhiều phương pháp khác nhau tùy thuộc
+
+vào loại thiết bị. Do đó, phương pháp tạo báo động phải phù hợp với loại thiết bị vô tuyền được thử
+
+nghiệm.
+
+Đồi với các đầu báo cháy như đầu báo khói, nhiệt hoặc lửa, có thể sử dụng khói thử nghiệm, bộ tạo nhiệt
+
+hoặc nguồn thử ánh sáng nhấp nháy cho đầu báo thông qua các lưới tổ ong, được lắp đặt ở cả hai phía
+
+của thiết bị thử nghiệm sóng vô tuyến theo A. 1.
+
+Đắi với các điểm nút nhắn bằng tay, phần tử kích hoạt báo động có thể bị ảnh hưởng để thay đổi nó
+
+thành trạng thái báo động bằng cách nhắn hoặc đẩy vào nó bằng một thanh làm bằng vật liệu không dẫn
+
+điện đưa vào qua các lỗ trên lưới tổ ong. Phải đảm bảo rằng trước khi bắt đầu thử nghiệm, đối tượng
+
+thử nghiệm được có định chắc chắn tại tắm lắp bên trong thiết bị thử nghiệm.
+
+Trong thời gian thử nghiệm của các thử nghiệm môi trường, phải đảm bảo rằng các thành phàn được
+
+thử nghiệm phải tiếp xúc với các điều kiện môi trường. Điều này có thẻ đạt được, ví dụ: bằng cách mở
+
+hộp, ngoại trừ phép đo độ suy hao.
+
+Nói chung, điều rất quan trọng là tắt cả các dây cáp cũng như thiết bị được thử phải được có định đúng
+
+cách vào tắm lắp ở cùng một vị trí trong mỗi làn đo ngưỡng truyền A. Nếu không thực hiện đúng, sự sai
+
+lệch các giá trị A theo vị trí có thể ảnh hưởng đến kết quả thử nghiệm.
+
+Phụ lục B
+
+(Quy định)
+
+Tính miễn trừ suy hao theo vị trí (mất đường tuyền)
+
+Kinh nghiệm cho thầy rằng trong thực tế, có thể điều chỉnh sự xuất hiện của biến thiên suy hao tại hiện
+
+trường bằng cách tuân thủ các yêu cầu sau.
+
+Dự phòng suy hao theo yêu cầu trong mục 4.2.1 b) sẽ được tính như sau:
+
+Aag phòng > 10 log (f)
+
+f: tằn số tính bằng MHz
+
+Bằng cách sử dụng một trong các phương pháp trong Bảng B.1, dự phòng suy hao có thể giảm, nhưng
+
+không được nhỏ hơn 10 dB.
+
+Bảng B.1 Các phương pháp giảm dự trữ suy giảm
+
+Phương pháp Dự phòng suy hao tối thiểu
+
+Đường truyền tiêu chuẩn
+
+Tự động thay đổi các đặc tính định hướng của dây ăng ten máy phát n5
+
+hoặc máy thu. uy phòng /1,
+
+Đạt được chênh lệch ít nhất 5 dB (ví dụ: phân tập không gian)
+
+Tự động thay đổi tằn số sóng mang ít nhất 1 MHz
+
+Phân tập không gian tự động Ag 3
+
+Khoảng cách giữa hai ăng ten ít nhắt hai lằn bước sóng lu Lá,
+
+Điểm đến của tín hiệu cảnh báo (trung tâm báo cháy) có thể đạt được Ñ 5
+
+tự động thông qua nhiều tuyến (bộ lặp) dự phòng
+
+Phụ lục C
+
+(Tham khảo)
+
+Dữ liệu và tính toán tuổi thọ của nguồn điện độc lập
+
+Nhà sản xuất phải công bồ loại nguồn năng lượng độc lập và tuổi thọ của nó cho thiết bị hoạt động bình
+
+thường. Tuổi thọ có thể được chứng thực bằng một biểu thức tính toán. Tính toán này phải tính đến mức
+
+tiêu thụ trung bình và điện áp trong điều kiện tĩnh và ở điều kiện khí quyền tiêu chuẩn.
+
+Bảng C.1 cho thấy một ví dụ về dữ liệu được yêu cầu từ nhà sản xuất đầu báo có chức năng âm thanh.
+
+Cách tính toán ví dụ được đưa ra trong Bảng C.2.
+
+Bảng G.1 - Dữ liệu cần thiết để tính tuổi thọ của nguồn điện độc lập
+
+ác biến và cách tính toán | Giátrịvidụ _
+
+THAM SỐ CỦA THÀNH PHẦN .
+
+Dòng tiêu thụ của bộ xử lý mm | 1088 EA
+
+Dòng dò của tụ Tantalum 37 pA
+
+Dòng dò bộ đo điện áp
+
+Dòng dò của bộ ổn áp l
+
+Tổng dòng tiêu thụ ở chế độ chờ lQ=IPR+lCL+lDL+NL| 17,78 BA
+
+Bộ thu —]UƯ
+
+Dòng tiêu thụ của bộ thu
+
+Thời gian thức chờ nhận (không có thông điệp lá ơn | 328ms |
+
+Số lần thức trong một giờ NRW = 3600 s/h/TW 2666,67
+
+Dòng tiêu thụ bộ phát 32,1 mA
+
+Thời gian thức phát (liên lạc định kỳ | mon | 352m |
+
+Thời gian liên lạc định kỳ (¡Tre | 6mn |
+
+Số làn liên lạc định kỳ trong 1 giờ NPGz60mirhTPc | 10 |
+
+.„... ..Ỉ. ...-.
+
+Dòng tiêu thụ
+
+THAMSÓCHOKIẾMTRACHỨCNĂNGĐỊHRỲ | |
+
+.. .. .ỈỄ.. . |
+
+Thời gian loa kêu
+
+Số làn kiểm tra trong 1 tuần NSoundtest Nm_
+
+„ T |
+
+Dòng tiêu thụ khi LED sáng
+
+Thời gian LED sáng nEDon | Smn |
+
+Số lần kiểm tra trong 1 năm NLEDtest Nm_ÃN
+
+Số lần kiểm tra trong 1 tuần NLEDtest(52 weeks/year)
+
+Bảng C.1 - Dữ liệu cần thiết để tính tuổi thọ của nguồn điện độc lập (kết thúc)
+
+THAM SỐ NGUÒN CÁP c‹c+c
+
+Thông tin về pin + + |
+
+Dung lượng danh định của pin 1 7,75 Ah
+
+Dung lượng danh định của pin 2 2.70 An
+
+Tổng dung lượng danh định của các pin Cbatt = Cbatt1 + Cbatt2 10,45 Ah
+
+Bảng C.2 - Ví dụ tính toán tuổi thọ của nguồn điện độc lập
+
+Các biến và cách tính toán Giá trị ví dụ
+
+phần
+
+Loa kêu 30 phút trước khi hét pin Cs=0,5hxIs 25 mAh
+
+độ chờ trong 1 tuần CQ = 1Q x 168 hiweek 2.98 mAh/week
+
+Nhu cầu về sử dụng nguồn pin để liên CP = ÍT x (Ton x NPC/(3 600 s/h) 527 mAhiwesk |
+
+lạc định kỳ trong 1 tuần x 188 hAweek do Go
+
+Nhu cầu về sử dụng nguồn pin để CR=/R x tRon x NRW/(3 600 s/h) | 139 mADiuesk
+
+nhận dữ liệu trong 1 tuần x 168 hAwveek Ni iuNG
+
+Thử cháy 8 phút .ˆ !)! Ú
+
+Nhu cầu về sử dụng nguồn pin để CSounder = /S x test/(60 min/h) 6,98 mAhAweek
+
+loa kêu x NSoundtest
+
+Nhu cầu về sử dụng nguồn pin để LED CLED = ILED x íLEDon/(60 min/h) 90126 mAniveet
+
+sáng x NLEDtest/(52 weeks/year) 9.0128 mAhAWeck
+
+NI lN suất sử dụng ở chế |Cu ai CQ + CP + CR + Csounder + CLED| 29,12 mAhAweek
+
+Tổng công suất theo yêu câu của
+
+thành phần được cấp nguồn trong 30
+
+cuối
+
+30 phút loa kêu trước khi hét pin 0,025 Ah
+
+30 ngày ở chế độ chờ trước khi hết pin C30 = Ctotal x 4 weeks 0,116 Ah
+
+CO NGỊ HỤ khả dụng cho thời Cav = Cbatt - C8 - C30 10,31 Ah
+
+Sử dụng thực té của nguồn điện fLife = Cav/Ctotal
+
+Sử dụng thực tế của nguồn điện tLife = CavlCtotal/(62 weekslyear)
+
+Tài liệu tham khảo
+
+[1] ISO 7240-25:2010 Fire detection and fire alarm systems — Part 25: Components using radio
+
+transmission paths.
+
+[2] BSEN 54-25:2008 Fire detection and fire alarm systems. Components using radio links.

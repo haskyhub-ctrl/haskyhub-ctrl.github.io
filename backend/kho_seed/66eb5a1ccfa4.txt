@@ -1,5 +1,5 @@
 [Bảng đối chiếu thẩm định thiết kế PCCC B6. Bảng đối chiếu Hệ thống chữa cháy tự động bằng nước, bọt]
-[Hiệu lực: 2025. Trạng thái: ĐANG DÙNG.]
+[Hiệu lực: 2026 (bản cập nhật). Trạng thái: ĐANG DÙNG. Nguồn: Bảng đối chiếu cập nhật kỳ thi cán bộ thẩm định PCCC.]
 
 2
 
@@ -9,15 +9,13 @@ BẢNG ĐỐI CHIẾU HỆ THỐNG CHỮA CHÁY TỰ ĐỘNG BẰNG NƯỚC, B�
 
 TT
 
-Nội dung
-
-đối chiếu
+Nội dung đối chiếu
 
 Nội dung thiết kế
 
 Nội dung quy định của tiêu chuẩn, quy chuẩn kỹ thuật
 
-Khoản, điều, tiêu chuẩn, quy chuẩn
+Khoản, Điều
 
 Kết luận
 
@@ -29,9 +27,13 @@ Kết luận
 
 		Khu vực bảo vệ
 
-Sự phù hợp của hệ thống chữa cháy và đối tượng cần bảo vệ
+-
+
+		Sự phù hợp của hệ thống chữa cháy và đối tượng cần bảo vệ
 
 Loại hệ thống chữa cháy tự động, phương pháp chữa cháy, loại chất chữa cháy phải tính đến nguy cơ cháy và tính chất lý hóa của các chất cháy và đặc điểm của đối tượng cần bảo vệ.
+
+-
 
 		Lưu ý:
 
@@ -51,9 +53,9 @@ Loại hệ thống chữa cháy tự động, phương pháp chữa cháy, lo�
 
 Điều 5.4.3 TCVN 7336:2021
 
--
++
 
-Không áp dụng TCVN 7336:2021 để thiết kế đối với các khu vực:
+		Không áp dụng TCVN 7336:2021 để thiết kế đối với các khu vực
 
 Không thiết kế cho:
 
@@ -67,9 +69,9 @@ Không thiết kế cho:
 
 Điều 1.2 TCVN 7336:2021
 
--
++
 
-Không áp dụng TCVN 7336:2021 để thiết kế đối với các chất cháy
+		Không áp dụng TCVN 7336:2021 để thiết kế đối với các chất cháy
 
 Không thiết kế cho đám cháy kim loại cũng như các chất và vật liệu có hoạt tính hóa học mạnh, bao gồm:
 
@@ -85,9 +87,7 @@ Không thiết kế cho đám cháy kim loại cũng như các chất và vật 
 
 -
 
-		Đặc điểm không gian của khu vực bảo vệ
-
-Phạm vi áp dụng
+		Phạm vi áp dụng
 
 Đầu phun Sprinkler được thiết kế cho các gian phòng có chiều cao không quá 20 m
 
@@ -139,7 +139,9 @@ Tính toán theo Phụ lục B (Tham khảo).
 
 Không nhỏ hơn với lưu lượng tối thiểu tại Bảng 1, 2, 3
 
-Nếu khu vực được bảo vệ thực tế (Stt) nhỏ hơn diện tích tính toán tổi thiểu (S) được quy định trong Bảng 1, thì lưu lượng thực tế có thể giảm theo hệ số K = Stt / S
+Nếu khu vực được bảo vệ thực tế (Stt) nhỏ hơn diện tích tính toán tổi thiểu (S) được quy định trong Bảng 1, thì lưu lượng thực tế có thể giảm theo hệ số
+
+K = Stt / S
 
 Điều 5.1.3, Phụ lục B TCVN 7336:2021
 
@@ -155,7 +157,7 @@ Bảng 1
 
 		Áp suất tối đa tại đầu phun
 
-Không lớp hơn1 Mpa, trừ khi có quy định khác đối với đối tượng được bảo vệ cụ thể hoặc nhóm đối tượng tương tự bởi các tài liệu kỹ thuật
+Không lớp hơn 1 Mpa, trừ khi có quy định khác đối với đối tượng được bảo vệ cụ thể hoặc nhóm đối tượng tương tự bởi các tài liệu kỹ thuật
 
 Khi kết hợp với hệ thống họng nước chữa cháy trong nhà thì áp suất tại họng nước không được vượt quá 0,4 MPa; trường hợp áp suất tại họng nước chữa cháy lớn hơn thì phải có giải pháp giảm áp bảo đảm theo yêu cầu.
 
@@ -180,6 +182,30 @@ Phụ lục B TCVN 7336:2021
 Trong một gian phòng phải lắp đặt đầu phun có cùng nhiệt độ tác động (đối với đầu phun Sprinkler), cùng thông số kỹ thuật. Cho phép bố trí trong cùng một phòng các đầu phun của hệ thống Drencher dạng màn nước với thông số đầu phun khác thông số của đầu phun Sprinkler, tất cả các đầu phun Drencher phải có thông số kỹ thuật giống nhau.
 
 Điều 5.1.9 TCVN 7336:2021
+
++
+
+		Nhiệt độ tác động danh định đầu phun
+
+Căn cứ vào nhiệt độ môi trường trong khu vực cần bảo vệ để chọn loại đầu phun có nhiệt độ tác động phù hợp (Bảng 4).
+
+Nhiệt độ môi trường tối đa cho phép trong khu vực của các đầu phun được lấy theo giá trị nhiệt độ tối đa trong các trường hợp sau:
+
+	- Nhiệt độ tối đa có thể phát sinh theo thiết bị công nghệ;
+
+- Do sự gia tăng nhiệt độ trần (mái) của đối tượng được bảo vệ dưới tác động của bức xạ nhiệt mặt trời.
+
+Điều 5.2.17, 5.2.18 TCVN 7336:2021
+
++
+
+		Loại đầu phun
+
+Đối với các gian phòng thuộc nhóm nguy cơ phát sinh cháy nhóm 1 (Phụ lục A) có trần treo có thể lắp đặt đầu phun Sprinkler trần và Sprinkler lắp chìm (âm trần).
+
+Đầu phun trên đường ống ướt có thể được lắp đặt hướng lên trên hoặc hướng xuống dưới hoặc hướng ngang; trên đường ống khô chỉ lắp đặt đầu phun hướng lên trên hoặc hướng ngang
+
+Điều 5.1.13, 5.2.20 TCVN 7336:2021
 
 -
 
@@ -269,11 +295,27 @@ Phải dự phòng tối thiểu số lượng đầu phun Sprinkler và Drenche
 
 -
 
+		Phương pháp kết nối
+
+		Khi đặt đường ống kim loại phía trên trần treo không thể tháo rời, trong các khu vực kín và trong những trường hợp tương tự, chỉ được kết nối ống bằng phương pháp hàn.
+
+Điều 5.5.2 TCVN 7336:2021
+
+-
+
 		Phân chia đường ống chính
 
 		Các đường ống cấp mạng vòng (trong nhà và ngoài nhà) phải chia thành các phần để sửa chữa bằng các van khóa; số lượng bộ điều khiển trong một phần không quá ba; khi tính toán thủy lực của đường ống không cần tính đến việc ngắt các phần sửa chữa của mạng vòng; đường kính của đường ống mạng vòng không được nhỏ hơn đường kính của ống cấp cho các bộ điều khiển.
 
 Điều 5.5.3 TCVN 7336:2021
+
+-
+
+		Số đầu phun trên nhánh đường ống phân phối
+
+		Số lượng đầu phun trên một nhánh đường ống phân phối không bị giới hạn; đồng thời, mạng lưới phân phối hệ thống chữa cháy phải cung cấp lưu lượng và cường độ phun theo yêu cầu.
+
+Điều 5.5.5 TCVN 7336:2021
 
 -
 
@@ -299,11 +341,11 @@ Phải dự phòng tối thiểu số lượng đầu phun Sprinkler và Drenche
 
 		Bố trí van khóa
 
-		Không được phép lắp đặt các van khóa trên đường ống chính và phân phối, trừ các trường hợp được quy định trong tiêu chuẩn này
+		- Khi sử dụng công tắc dòng chảy, cho phép lắp đặt các van khóa phía trước nó.
 
-		Cho phép bố trí trước công tắc dòng chảy
+		- Các van khóa được lắp đặt trên đường ống cấp vào máy bơm chữa cháy, trên đường ống cung cấp và đường ống chính phải có khả năng giám sát trực quan và tự động về trạng thái đóng-mở của chúng.
 
-		Các van khóa được lắp đặt trên đường ống cấp vào máy bơm chữa cháy, trên đường ống cung cấp và đường ống chính phải có khả năng giám sát trực quan và tự động về trạng thái đóng-mở của chúng.
+		- Không được phép lắp đặt các van khóa trên đường ống chính và phân phối, trừ các trường hợp được quy định trong tiêu chuẩn này
 
 Điều 5.1.14, 5.1.15, 5.5.9 TCVN 7336:2021
 
@@ -373,7 +415,7 @@ Phải dự phòng tối thiểu số lượng đầu phun Sprinkler và Drenche
 
 		Yêu cầu với trạm bơm
 
-Lưu ý: trường hợp công trình thuộc phạm vi áp dụng của QCVN 02:2020/BCA thì phải tham khảo thêm bảng đối chiếu B36 để đối chiếu cho trạm bơm
+Lưu ý: trường hợp công trình thuộc phạm vi áp dụng của QCVN 02:2020/BCA thì phải tham khảo thêm bảng đối chiếu B3 để đối chiếu cho trạm bơm
 
 -
 

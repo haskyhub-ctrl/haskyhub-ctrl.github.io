@@ -28,7 +28,7 @@ CASES = [
     ("Ổ cắm điện bị nóng thì phải làm gì?", [["ngắt", "tắt", "rút"]], [], "ok"),
     ("Cơ sở của tôi có phải lập phương án chữa cháy và thoát nạn không?", [["phương án"]], [], "ok"),
     # Câu hóc búa và tình huống thực tế (dữ liệu giả định)
-    ("Tôi mở quán karaoke, nhà 4 tầng, diện tích sàn 85m2, kinh doanh 2 phòng hát tầng 1 và 2. Tôi thuộc quản lý của Phòng Cảnh sát PCCC hay UBND xã?", [["cấp xã", "UBND xã"], ["29/2025"]], [], "ok"),
+    ("Tôi mở quán karaoke, nhà 4 tầng, diện tích sàn 85m2, kinh doanh 2 phòng hát tầng 1 và 2. Tôi thuộc quản lý của Phòng Cảnh sát PCCC hay UBND xã?", [["Công an"], ["Phụ lục"]], [], "ok"),
     ("Tôi đang ly hôn tranh chấp ngôi nhà 6 tầng kinh doanh lưu trú, đã ủy quyền cho công ty lo PCCC đến 7/2027. Tôi có thể làm đơn xin Công an kiểm tra đánh giá điều kiện PCCC không?", [["không"], ["tư vấn", "phản ánh", "tố giác"]], [], "ok"),
     ("Nhà nghỉ 5 tầng 1 tum, sàn 300m2, 57 phòng ngủ ở Quế Võ. Cần điều kiện PCCC gì, hồ sơ ANTT gồm gì, có phải thẩm định nghiệm thu xây dựng không?", [["thẩm duyệt"], ["báo cháy"], ["an ninh", "ANTT"]], ["05 ngày làm việc kiểm tra nghiệm thu"], "ok"),
     ("Chủ đầu tư tự nghiệm thu PCCC thì có phải xin giấy chấp thuận nghiệm thu của Cảnh sát PCCC không?", [["bãi bỏ", "không phải"]], [], "ok"),

@@ -246,6 +246,11 @@
             font-weight: 500;
         }
         
+        .fras-answer-tag { display: inline-block; background: #C0202A; color: #fff; font-size: 0.66rem; font-weight: 700; letter-spacing: .06em; padding: 1px 7px; margin-right: 8px; vertical-align: 1px; }
+        .fras-ask-title { margin: 12px 0 0; padding: 6px 10px 0; background: #ecfdf5; border: 1px solid #6ee7b7; border-bottom: 0; border-left: 4px solid #059669; font-weight: 700; color: #065f46; font-size: 0.78rem; }
+        .fras-ask { padding: 3px 10px 3px 24px; background: #ecfdf5; border: 1px solid #6ee7b7; border-top: 0; border-left: 4px solid #059669; color: #064e3b; font-size: 0.8rem; position: relative; }
+        .fras-ask::before { content: '?'; position: absolute; left: 8px; font-weight: 700; color: #059669; }
+        .fras-cell { margin: 0; padding-left: 16px; } .fras-cell li { margin: 0 0 3px; }
         .fras-steps { list-style: none; counter-reset: step; margin: 6px 0 10px; padding: 0; }
         .fras-steps li { counter-increment: step; position: relative; padding: 5px 0 5px 34px; margin: 0 0 4px; font-size: 0.81rem; line-height: 1.55; }
         .fras-steps li::before { content: attr(data-n); position: absolute; left: 0; top: 4px; min-width: 30px; height: 22px; padding: 0 4px; box-sizing: border-box; background: #1A3A6B; color: #fff; font-weight: 700; font-size: 0.72rem; text-align: center; line-height: 22px; }
@@ -672,6 +677,7 @@
             const link = (m, a, b) => `<a href="${b || a}" target="_blank" rel="noopener noreferrer" style="color:#2563eb;text-decoration:underline;">${a}</a>`;
             const inline = (t) => {
                 let h = this._esc(t);
+                h = h.replace(/&lt;br\s*\/?&gt;/gi, ' ');
                 h = h.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
                 h = h.replace(/==([^=]+)==/g, '<mark>$1</mark>');
                 h = h.replace(/\{\{([^}]+)\}\}/g, '<span class="fras-cite">$1</span>');
@@ -688,7 +694,13 @@
                 const line = lines[i];
                 if (!line.trim()) { closeList(); continue; }
                 let m;
-                if ((m = line.match(/^\s*>>\s+(.*)$/))) { closeList(); out.push(`<div class="fras-answer">${inline(m[1])}</div>`); continue; }
+                if ((m = line.match(/^\s*>>\s+(.*)$/))) { closeList(); out.push(`<div class="fras-answer"><span class="fras-answer-tag">TRẢ LỜI</span>${inline(m[1])}</div>`); continue; }
+                if ((m = line.match(/^\s*\?\?\s+(.*)$/))) {
+                    closeList();
+                    const prev = out[out.length - 1] || '';
+                    out.push(prev.startsWith('<div class="fras-ask">') ? '' : '<div class="fras-ask-title">Bạn bổ sung giúp thông tin để tôi tư vấn chính xác hơn:</div>');
+                    out.push(`<div class="fras-ask">${inline(m[1])}</div>`); continue;
+                }
                 if ((m = line.match(/^\s*##\s+(.*)$/))) {
                     closeList();
                     const rawHead = m[1].trim();
@@ -706,12 +718,13 @@
                 if (/^\s*\|/.test(line) && i + 1 < lines.length && /^\s*\|?[\s:|-]+\|[\s:|-]*$/.test(lines[i + 1]) && /-/.test(lines[i + 1])) {
                     closeList();
                     const cells = (l) => l.trim().replace(/^\||\|$/g, '').split('|').map(c => c.trim());
+                    const cell = (c) => { const parts = c.split(/<br\s*\/?>/i).map(x => x.trim().replace(/^[-•]\s*/, '')).filter(Boolean); return parts.length > 1 ? '<ul class="fras-cell">' + parts.map(x => `<li>${inline(x)}</li>`).join('') + '</ul>' : inline(parts[0] || ''); };
                     const head = cells(line);
                     let j = i + 2;
                     const rows = [];
                     while (j < lines.length && /^\s*\|/.test(lines[j])) { rows.push(cells(lines[j])); j++; }
                     out.push('<table class="fras-table"><thead><tr>' + head.map(c => `<th>${inline(c)}</th>`).join('') + '</tr></thead><tbody>' +
-                        rows.map(r => '<tr>' + r.map(c => `<td>${inline(c)}</td>`).join('') + '</tr>').join('') + '</tbody></table>');
+                        rows.map(r => '<tr>' + r.map(c => `<td>${cell(c)}</td>`).join('') + '</tr>').join('') + '</tbody></table>');
                     i = j - 1;
                     continue;
                 }

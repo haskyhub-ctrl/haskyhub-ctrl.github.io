@@ -44,6 +44,26 @@ def sync_seed() -> dict:
     deleted = _deleted()
     os.makedirs(local_rag.KHO_DIR, exist_ok=True)
     added = updated = 0
+    # Tài liệu đã thay bằng bản mới: gỡ khỏi kho (kể cả bản đã chép vào máy chủ) và không nạp lại
+    try:
+        with open(os.path.join(SEED_DIR, "retired.json"), "r", encoding="utf-8") as f:
+            retired = json.load(f)
+    except Exception:
+        retired = []
+    removed = False
+    for sid in retired:
+        stored = f"seed_{sid}.txt"
+        deleted.add(stored)
+        mark_deleted(stored)
+        if stored in man:
+            man.pop(stored, None)
+            removed = True
+        try:
+            os.remove(os.path.join(local_rag.KHO_DIR, stored))
+        except OSError:
+            pass
+    if removed:
+        local_rag.save_manifest(man)
     for sid, meta in seed.items():
         stored = f"seed_{sid}.txt"
         src = os.path.join(SEED_DIR, f"{sid}.txt")

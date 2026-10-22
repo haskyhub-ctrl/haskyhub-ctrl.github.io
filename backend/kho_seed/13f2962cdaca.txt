@@ -1,10 +1,63 @@
 [Bảng đối chiếu thẩm định thiết kế PCCC B8. Bảng đối chiếu hệ thống chữa cháy bằng khí hóa lỏng]
-[Hiệu lực: 2025. Trạng thái: ĐANG DÙNG.]
+[Hiệu lực: 2026 (bản cập nhật). Trạng thái: ĐANG DÙNG. Nguồn: Bảng đối chiếu cập nhật kỳ thi cán bộ thẩm định PCCC.]
 
 BẢNG ĐỐI CHIẾU HỆ THỐNG CHỮA CHÁY BẰNG KHÍ HÓA LỎNG
 
-TT	Nội dung	Thiết kế	Quy định của quy chuẩn, tiêu chuẩn	Khoản, Điều	Kết luận		1	Yêu cầu trang bị, phạm vi áp dụng						-	HFC-227ea		Tiêu chuẩn này áp dụng cho hệ thống chữa cháy tự động bằng khí HFC-227ea hoạt động tại các áp suất danh nghĩa 25 bar, 42 bar và 50 bar được nén bằng Nitơ. Tiêu chuẩn này cũng có thể áp dụng cho các hệ thống tại các điều kiện áp suất khác.	Đ 1 TCVN
-7161-9:2024			-	FK-5-1-12		Tiêu chuẩn này áp dụng cho hệ thống chữa cháy tự động bằng khí FK-5-1-12 hoạt động tại các áp suất danh nghĩa 25 bar, 34,5 bar, 42 bar và 50 bar được nén bằng nitơ	Điều 1 TCVN 7161-5:2021			2	Lựa chọn chất chữa cháy (xem xét sự phù hợp)
+TT	Nội dung đối chiếu	Nội dung thiết kế	Nội dung quy định của quy chuẩn, tiêu chuẩn	Khoản, Điều	Kết luận		1	Yêu cầu trang bị, phạm vi áp dụng						-	HFC-227ea		Tiêu chuẩn này áp dụng cho hệ thống chữa cháy tự động bằng khí HFC-227ea hoạt động tại các áp suất danh nghĩa 25 bar, 42 bar và 50 bar được nén bằng Nitơ. Tiêu chuẩn này cũng có thể áp dụng cho các hệ thống tại các điều kiện áp suất khác.	Đ 1 TCVN
+7161-9:2024			-	FK-5-1-12		Tiêu chuẩn này áp dụng cho hệ thống chữa cháy tự động bằng khí FK-5-1-12 hoạt động tại các áp suất danh nghĩa 25 bar, 34,5 bar, 42 bar và 50 bar được nén bằng nitơ	Điều 1 TCVN 7161-5:2021			2	Lựa chọn chất chữa cháy (xem xét sự phù hợp) 		Chất chữa cháy
+Hiệu quả chữa cháy các loại đám cháy
+
+A
+B
+C
+D
+E
+
+Nước
+Phun tia
+++
+-
+-
+-
+-
+
+Phun sương
+++
++
+-
+-
++(1)
+
+Chất chữa cháy gốc nước
+Phun tia
++++
++++
+-
+-
+-
+
+Phun sương
++++
++++
+-
+-
+++(1)
+
+Bọt
+Bội số nở thấp
+++
+++
+-
+-
+-
+
+Bội số nở trung bình
++
+++
+-
+-
+-
+
 Chất chữa cháy
 Hiệu quả chữa cháy các loại đám cháy
 
@@ -12,35 +65,62 @@ A
 B
 C
 D
+E
 
-A1
-A2
-B1
-B2
+Bọt
+Bội số nở cao
++
++
+-
+-
+-
 
-D1
-D2
-D3
+Bọt chứa flo
+++
++++
+-
+-
+-
 
-Nitơ, FM200
+Khí
+Khí CO2, Nitơ
 +
 +
 +
 -
++++
 
-Chú thích:
-Dấu “+” Chữa cháy thích hợp.
-Dấu “-“ Chữa cháy không thích hợp.
-A1: Cháy các chất rắn với quá trình cháy âm ỉ (Ví dụ : gỗ, giấy, cỏ khô, rơm rạ, than, sản phẩm dệt)
-A2: Cháy các chất rắn nhưng không có quá trình cháy âm ỉ. (Ví dụ : Chất dẻo)
-B1: Cháy chất lỏng không tan trong nước (Ví dụ : xăng ete, nhiên liệu dầu mỏ); cháy chất rắn hóa lỏng (ví dụ : paraphin)
-B2: Cháy các chất lỏng hòa tan trong nước (ví dụ : rượu, Metanol, glyxêrin)
-C: Cháy các chất khí (ví dụ : Metan, hyđro, Propan...)
-D1: Cháy các chất kim loại nhẹ (Ví dụ: nhôm, manhê và hợp kim của chúng)
-D2: Cháy kim loại kiềm và các kim loại đồng dạng khác (ví dụ: natri, kali)
-D3: Cháy các hợp chất có chứa kim loại (Ví dụ: các hợp chất hữu cơ kim loại, hydrua kim loại)
-Bảng 1 TCVN 3890:2023
-Bảng 1 TCVN 5760:1993			3	Yêu cầu chung						-	Vị trí đặt bình khí		Các bình chứa phải được đặt càng gần với khu vực được bảo vệ càng tốt, nên ưu tiên đặt ngoài khu vực bảo vệ. Các bình chứa chỉ có thể được bố trí bên trong khu vực được bảo vệ nếu có thể giảm tới mức thấp nhất các nguy hiểm do cháy nổ gây ra	Đ 6.2.3.3 TCVN
+Khí Freon (2)
++
+++
++
+-
+++
+
+Aerosol (Sol-khí)
+++
+++
+++
+-
+++
+
+Bột
+++
++++
++++
++++
+++
+
+(1) Tuân thủ các yêu cầu an toàn điện.
+(2) Khí Freon là các khí chữa cháy có thành phần chlorofluorocarbon hoặc hydrofluorocarbon như: HFC-227ea, FK-5-1-12…
+CHÚ THÍCH:
+Dấu “+++” Chữa cháy rất hiệu quả.
+Dấu “++” Chữa cháy hiệu quả.
+Dấu “+” Chữa cháy hiệu quả thấp
+Dấu “-” Chữa cháy không thích hợp.
+Khi nhà, công trình, gian phòng, khu vực có từ hai chất chữa cháy hiệu quả thấp hoặc hiệu quả hoặc rất hiệu quả trở lên thì được phép lựa chọn một trong các chất chữa cháy này nhằm hạn chế việc hư hại các thiết bị, máy móc trong khu vực bảo vệ do chất chữa cháy gây ra. Không được sử dụng chất chữa cháy mà các chất này có thể gây ra phản ứng hóa học với chất có trong khu vực bảo vệ dẫn đến cháy, nổ.
+
+Bảng 2 QCVN 10:2025/BCA			3	Yêu cầu chung						-	Vị trí đặt bình khí		Các bình chứa phải được đặt càng gần với khu vực được bảo vệ càng tốt, nên ưu tiên đặt ngoài khu vực bảo vệ. Các bình chứa chỉ có thể được bố trí bên trong khu vực được bảo vệ nếu có thể giảm tới mức thấp nhất các nguy hiểm do cháy nổ gây ra	Đ 6.2.3.3 TCVN
 7161-1:2022			-	Đường ống		Phải được chế tạo bằng vật liệu không cháy
 
 Không được sử dụng ống gang và ống phi kim loại trừ khi được chấp thuận đạt thử nghiệm áp suất làm việc

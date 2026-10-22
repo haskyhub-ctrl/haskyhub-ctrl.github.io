@@ -1,0 +1,674 @@
+[TCVN 13456:2022 Phòng cháy chữa cháy: phương tiện chiếu sáng sự cố và chỉ dẫn thoát nạn, yêu cầu thiết kế, lắp đặt]
+[Hiệu lực: 2022. Trạng thái: ĐANG DÙNG. Nguồn: bộ tài liệu thi cán bộ thẩm định PCCC 2026, bản quét đã nhận dạng chữ (OCR).]
+
+TOVN TIÊU CHUẢN QUỐC GIA
+
+Xuất bản lần 1
+
+PHÒNG CHÁY CHỮA CHÁY - PHƯƠNG TIỆN
+
+CHIẾU SÁNG SỰ CÓ VÀ CHỈ DẪN THOÁT NẠN -
+
+YÊU CÀU THIẾT KÉ, LẮP ĐẶT
+
+Fire protection - Emergency lighting and Exit sign -
+
+Design, installation requirements
+
+HÀ NỘI - 2022
+
+MỤC LỤC
+
+Trang
+
+S Thuật ngữ, định ngPf8.......ồc.r....c--.s‹vsvsversxsrkkstssssrvsvtatEPx*aExbet*r*~SEV*C*VCv+EkvvvxEx+t*VSt* se E ven TY
+
+5 Yêu cầu thiết kế, lắp đặt...............................................-nnnnnnnnnnnnn nen nen n vn nen n nen nen
+
+5:1 Chiều sáng SỰ ĐỒ. ..---=cs:srttsrstkssrstrertrtoxsErneEGrVsCTSEE-EEES*UNIEEEESKTGEUEEEOCEEIEEEOSESCG+S-EECSUGIYE
+
+52'CH đấn thoát RẠR..............c.-esesxssostsssttnsesettsyerseteastEtisysEGEnroGEseEebviennyetsiESEnkososertv
+
+Phụ lục A (tham khảo): Ví dụ minh họa phương tiện chiều sáng sự cố và chỉ dẫn thoát nạn....... 12
+
+Thư mục tài liệu tham khảo.........................................unnnnnnnnnn nen nen tr nnnn nen nen nen se resseeses.... 18
+
+Lời nói đầu
+
+TCVN 13456:2022 được xây dựng trên cơ sở tham khảo ISO 30061:2007.
+
+TCVN 13456:2022 do Cục Cảnh sát Phòng cháy, chữa cháy và cứu nạn, cứu hộ chủ trì biên soạn,
+
+Bộ Công an đề nghị, Tổng cục Tiêu chuẩn Đo lường chất lượng thầm định, Bộ Khoa học và Công
+
+nghệ công bó.
+
+TIÊU CHUÂN QUỐC GIA TCVN 13456:2022
+
+Phòng cháy chữa cháy - Phương tiện chiều sáng sự có và chỉ dẫn thoát nạn - Yêu cầu
+
+thiết kế, lắp đặt
+
+Fire protection - Emergency lighting and Exit sign - Design, installation requirements
+
+1. Phạm vi áp dụng
+
+Tiêu chuẩn này áp dụng đề thiết kế, lắp đặt phương tiện chiều sáng sự có và chỉ dẫn thoát nạn được
+
+trang bị cho gian phòng, nhà và các công trình xây dựng trong tắt cả các giai đoạn xây dựng mới, cải
+
+tạo, sửa chữa hay thay đổi công năng.
+
+2. Tài liệu viện dẫn
+
+Các tài liệu viện dẫn sau đây là cần thiết cho việc áp dụng tiêu chuẳn. Đồi với các tài liệu ghi năm
+
+công bồ thì áp dụng các bản được nêu. Đồi với các tài liệu không ghi năm công bó thì áp dụng bản
+
+mới nhắt (bao gồm cả các sửa đồi).
+
+TCVN 7722-2-22:2013 (IEC 60698-2-22:2008) Đèn điện- Part 2-22: Yêu cầu cụ thể — Đèn điện cho
+
+chiều sáng khẳn cấp;
+
+ISO 3864-1 Graphical symbols — Safety colours and safety signs - Part 1: Design principles for safety
+
+signs in workplaces and public areas (Ký hiệu đồ họa - Màu sắc an toàn và dầu hiệu an toàn - Phần 1:
+
+Nguyên tắc thiết kế biển báo an toàn nơi làm việc và khu vực công cộng);
+
+TCVN 4879:1989 (ISO 6309:1987) Phòng cháy - Dấu hiệu an toàn;
+
+TCVN 8092:2009 (ISO 7010:2003) Ký hiệu đồ họa - màu sắc an toàn và biển báo an toàn - biển báo
+
+an toàn sử dụng ở nơi làm việc và nơi công cộng;
+
+TCVN 5053:1990 Màu sắc tín hiệu và dầu hiệu an toàn;
+
+3. Thuật ngữ và định nghĩa
+
+Đường thoát nạn (escape route )
+
+Đường di chuyền liên tục và không bị chặn từ một điểm bắt kỳ trong nhà hoặc công trình đền li ra
+
+bên ngoài.
+
+Lối ra thoát nạn (exit access)
+
+Lối ra trên đường thoát nạn dẫn ra khu vực an toàn từ khu vực bị cháy, nổ .
+
+3.3
+
+Chiếu sáng sự có (emergency lighting)
+
+Cung cắp ánh sáng để đảm bảo an toàn cho người sơ tán khỏi khu vực nguy hiểm hoặc phục vụ giải
+
+quyết tình huóng nguy hiểm trước khi sơ tán khỏi khu vực đó khi nguồn cung cấp cho chiếu sáng
+
+thông thường bị sự có. Chiều sáng sự cố bao gồm chiều sáng đường thoát nạn, chiều sáng gian
+
+phòng vả chiều sáng cho các phương tiện phòng cháy và chữa cháy hoạt động.
+
+Chiều sáng đường thoát nạn (escape route lighting)
+
+Cung cấp ánh sáng để đảm bảo dễ dàng nhận biết các đường thoát nạn trong nhà và công trình,
+
+đồng thời giúp phát hiện các vật cản trong quá trình thoát nạn.
+
+3.5
+
+Chiếu sáng sự có gian phòng (open area lighting)
+
+Cung cấp ánh sáng để tránh hoảng sợ khi xảy ra sự cố và đảm bảo cho người tiếp cận đến vị trí có
+
+thể phát hiện ra đường thoát nạn (hay còn gọi là chiều sáng khoảng trống hoặc chiều sáng chống
+
+hoảng loạn).
+
+3.6
+
+Chiếu sáng cho các phương tiện phòng cháy và chữa cháy (emergency lighting for firefighting
+
+facilities)
+
+Cung cấp ánh sáng để đảm bảo cho người vận hành, cũng như người sử dụng có thể thao tác đúng
+
+các quy trình hoạt động của phương tiện phòng cháy và chữa cháy bên trong nhà khi xảy ra sự cố.
+
+Biển báo an toàn (safety sign)
+
+Các biển báo (biển báo chỉ hướng thoát nạn và biển báo chỉ dẫn lồi ra thoát nạn) cung cấp các chỉ
+
+dẫn thoát nạn thông qua sự kết hợp của màu sắc, hình dạng và một số ký hiệu hình học hoặc chữ
+
+(!SO 3864-1 /TCVN 4879:1989 / TCVN 8092:2009). Biển báo an toàn gồm 2 loại: biển báo an toàn
+
+được chiều sáng từ bên ngoài và biển báo an toàn được chiều sáng từ bên trong.
+
+3.8
+
+Biển báo an toàn được chiếu sáng từ bên ngoài (externally illuminated safety sign)
+
+Biển báo được chiều sáng bởi một nguồn sáng từ bên ngoài (xem hình A.1).
+
+3.3
+
+Biển báo an toàn được chiều sáng từ bên trong (internally illuminated safety sign)
+
+Biển báo được chiều sáng bởi một nguồn sáng từ bên trong.
+
+3.10
+
+Biển báo chỉ hướng thoát nạn (direction escape route sign)
+
+Biển báo để đánh dầu hướng của một đường thoát nạn.
+
+Biển báo chỉ dẫn lối ra thoát nạn (exit sign)
+
+Biển báo để đánh dầu lồi ra thoát nạn.
+
+Độ rọi (illuminance)
+
+Độ sáng của một vật được một chùm sáng chiều vào, đơn vị là Lux. 1 Lux là độ sáng của một vật được
+
+một nguồn sáng ở cách xa 1 m có quang thông bằng 1 Lumen chiều trên diện tích bằng 1 m^[3].
+
+Độ chói (luminance)
+
+Đại lượng dẫn xuất trong quang học, đặc trưng cho khả năng bức xạ ánh sáng của nguồn sáng gây
+
+nên cảm giác chói sáng đối với mắt. Đơn vị là cd/m£.
+
+Gian lánh nạn (safe refuge space)
+
+Khu vực bồ trí trong tằng lánh nạn dùng để sơ tán tạm thời khi xảy ra sự có cháy [2].
+
+3.15
+
+Sơ đồ chỉ dẫn thoát nạn (evacuation plan)
+
+Sơ đồ chỉ dẫn lồi ra, đường thoát nạn khi xảy ra cháy, nổ, sự cố.
+
+4. Quy định chung
+
+4.1 Việc thiết kề, lắp đặt phương tiện chiều sáng và chỉ dẫn thoát nạn phải tuân thủ các yêu cầu, quy
+
+định của các quy chuẩn, tiêu chuẩn, quy phạm hiện hành có liên quan.
+
+4.2 Phương tiện chiều sáng sự có và chỉ dẫn thoát nạn bao gồm: đèn chiều sáng sự cố; biển báo an
+
+toàn; sơ đồ chỉ dẫn thoát nạn..
+
+4.3 Phương tiện chiều sáng sự có và chỉ dẫn thoát nạn phải được lựa chọn, trang bị phù hợp để đảm
+
+bảo tằm nhìn thoát nạn, chỉ thị rõ ràng đường thoát nạn, cảnh báo những vị trí có nguy cơ gây nguy
+
+hiểm trong quá trình thoát nạn và nhận biết các vị trí trang bị các thiết bị phòng cháy và chữa cháy.
+
+4.4 Lắp đặt đèn chiều sáng sự cố và biển báo an toàn phải phù hợp theo quy định của TCVN 7722-
+
+2-22:2013. Khi lắp đặt đèn chiều sáng sự cố và biển báo an toàn trong nhà, công trình, hạng mục
+
+công trình có nguy hiểm về nổ hoặc độ ẩm cao phải sử dụng các đèn, biển báo có khả năng chống
+
+nổ hoặc chống ẩm.
+
+4.5 Đèn chiều sáng sự có và biển báo an toàn có nguồn điện dự phòng phải đảm bảo thời gian hoạt
+
+động ồn định liên tục tối thiểu là 120 min khi có sự có cháy, nỏ.
+
+4.6 Biển báo an toàn phải được nhìn thầy rõ ràng các chữ “LÓI RA” hoặc chữ "EXIT", ký hiệu hình học
+
+khác thích hợp. Màu sắc của biển báo an toàn: màu nền là màu xanh lá cây; màu chữ và ký hiệu hình
+
+học là mảu trắng.
+
+5. Yêu cầu thiết kế, lắp đặt
+
+5.1 Chiều sáng sự có
+
+5.1.1 Đèn chiếu sáng sự có phải được lắp đặt cho các khu vực của nhà và công trình tại
+
+các vị trí sau:
+
+a) Cầu thang bộ thoát nạn;
+
+b) Đường thoát nạn và vị trí chuyển hướng thoát nạn, nút giao của hành lang;
+
+hé
+
+c) Vị trí trên đường thoát nạn có thay đổi về cao độ;
+
+d) Cửa, lối ra thoát nạn;
+
+e) Gara để xe;
+
+f) Trong gian phòng có người làm việc và khoảng cách từ điểm xa nhát của gian phòng đến lối ra
+
+thoát nạn gần nhất lớn hơn 13 m. Trường hợp các gian phòng này có bồ trí đường thoát nạn thì có
+
+thể chỉ lắp đặt đèn chiều sáng sự có tại đường thoát nạn đó;
+
+g) Trong phòng đặt trạm biến áp, phòng máy phát điện, phòng kỹ thuật thang máy, gian lánh nạn;
+
+h) Trong phòng trực điều khiển chống cháy, phòng bơm chữa cháy và tại các vị trí trang bị phương
+
+tiện phòng cháy và chữa cháy khác.
+
+Có thể không cần bề trí trong các trường hợp sau:
+
+- Sân vườn, khu vực sân thượng không có mái che;
+
+- Toà nhà cao 01 tằng có diện tích sàn không quá 200 mˆ và diện tích lỗ hở trên tường ngoài nhà đạt
+
+tối thiểu 80%.
+
+5.1.2 Chiều sáng sự có đường thoát nạn
+
+Đồi với những đường thoát nạn có chiều rộng đến 2 m, thì độ rọi trung bình theo phương nằm ngang
+
+trên mặt sàn dọc theo tâm của đường thoát nạn phải lớn hơn hoặc bằng 1 lux và dải ở giữa với
+
+chiều rộng lớn hơn hoặc bằng một nửa chiều rộng của đường thoát nạn phải có được chiều sáng tồi
+
+thiểu 50 % giá trị đó (xem hình A.2).
+
+CHÚ THÍCH : Các đường thoát nạn rộng hơn có thể được xem là một số dải rộng 2m hoặc được xử lý như chiều sáng
+
+khoảng trống (chóng hoảng loạn).
+
+5.1.3 Chiều sáng sự có gian phòng
+
+Độ rọi trung bình theo phương nằm ngang không được nhỏ hơn 0,5 lux tại mặt sàn tại mọi điểm lõi
+
+của khoảng trống, không bao gồm đường viền 0,5 m theo chu vi khu vực (xem hình A.3).
+
+5.1.4 Tỉ lệ giữa độ rọi lớn nhất và độ rọi nhỏ nhất dọc theo đường tâm của đường thoát nạn và chiều
+
+sáng khoảng trồng (chồng hoảng loạn) không được lớn hơn 40:1.
+
+CHÚ THÍCH : Để chứng minh tỉ lệ một hệ thống mạng lưới điện nên được sử dụng theo CIE S 015, chương 4.3.3.
+
+5.1.5 Phải đảm bảo giảm thiểu nguy cơ gây lóa tạm thời bằng cách hạn chế cường độ sáng ở giai đoạn
+
+phát sáng cực đại trong chế độ hoạt động khi có sự cố của mỗi đèn thuộc phạm vi quan sát. Cụ thể:
+
+- Đối với việc chiều sáng đường thoát nạn theo phương ngang so với mặt sàn, chiếu sáng gian
+
+phòng và chiều sáng cho các phương tiện phòng cháy và chữa cháy, cường độ chiều sáng của các
+
+đèn trong phạm vi góc chiều từ 60° đến 90° không được vượt quá giá trị quy định tại Bảng 1 (xem
+
+Hình 1).
+
+- Đối với đường thoát nạn khác, cường độ chiều sáng của các đèn không được vượt quá giá trị tại
+
+Bảng 1 ở bất kỳ góc chiều nào (xem Hình 2).
+
+CHÚ THÍCH : Việc bó trí đèn chiều sáng sự có không phù hợp có thể làm lóa mắt và ngăn cản tầm nhìn của người trong
+
+quá trình di chuyển đến nơi an toàn.
+
+1] - Vùng bị lóa tạm thời
+
+—N TH Ến
+
+Hình 1 - Vùng có nguy cơ gây lóa tạm thời đối với
+
+đường thoát nạn theo phương ngang
+
+1 - Vùng bị lóa tạm thời
+
+Hình 2 - Vùng có nguy cơ gây lóa tạm thời đối với đường thoát nạn khác
+
+Bảng 1 - Giới hạn gây lóa tạm thời
+
+Chiêu cao lắp đặt Cường độ chiêu sáng tôi đa
+
+tính từ mặt sàn đường thoát nạn và gian phòng
+
+(m) (cơ)
+
+NI NNNNN.NGN
+
+—....ỈỖ'..
+
+NA. NNNNGLLNNNNN
+
+5.1.6 Các tủ trung tâm báo cháy, nút ấn báo cháy và các phương tiện chữa cháy phải luôn được chiều
+
+sáng đầy đủ đề có thể dễ dàng xác định vị trí và nều không nằm trên đường thoát nạn hoặc không nằm
+
+trong một phạm vi khoảng trồng thì phải được chiều sáng tối thiều 5 lux tại mặt sàn (xem hình A.4).
+
+5.2 Chỉ dẫn thoát nạn
+
+5.2.1 Biển báo chỉ dẫn lối ra thoát nạn
+
+Lắp đặt biển báo chỉ dẫn lói ra thoát nạn ở tát cả các lồi ra vào của cầu thang bộ thoát nạn, các
+
+đường thoát nạn trên tằng nhà và tắt cả các lồi ra của gian phòng có từ 02 lồi ra thoát nạn trở lên;
+
+Có thể không cần bó trí trong các trường hợp sau:
+
+- Đối với gian phòng có trang bị chiều sáng sự có phải đảm bảo một trong các điều kiện sau:
+
++ Chỉ có 01 lồi ra vào hoặc;
+
++ Có lồi ra trực tiếp ra hành lang bên hoặc không gian ngoài nhà.
+
+- Đối với gian phòng không trang bị chiều sáng sự có phải đảm bảo một trong các điều kiện sau:
+
++ Chỉ có 01 lồi ra vào và khoảng cách từ điểm bắt kỳ của gian phòng đến lồi ra thoát nạn gản nhất
+
+không lớn hơn 7 m;
+
++ Khoảng cách từ điểm bắt kỳ của gian phòng đến cửa ra vào không lớn hơn 13 m và diện tích tối
+
+thiểu phần tường tiếp giáp hành lang đạt 50 % là kính đồng thời đảm bảo một trong các điều kiện sau:
+
+s Cửa mở vào hành lang có bồ trí chiều sáng sự cố;
+
+s Cửa mở hành lang bên hoặc mở trực tiếp ra ngoài nhà.
+
+- Đối với nhà 1 tằng có diện tích sàn không quá 200 mˆ và diện tích lỗ hở trên tường ngoài nhà đạt
+
+tối thiều 80%.
+
+5.2.2 Biển báo chỉ hướng thoát nạn
+
+Lắp đặt biển báo chỉ hướng thoát nạn trên đường thoát nạn, ở trong gian phòng và tắt cả các vị trí
+
+mà tầm nhìn bị che khuất không thể phát hiện được các lồi ra thoát nạn.
+
+Có thể không cần bố trí biển chỉ hướng thoát nạn, trong các trường hợp sau:
+
+- Sân vườn, khu vực sân thượng không có mái che.
+
+- Nhà 1 tằng chỉ có mái che (không có tường bao quanh), với diện tích sàn không quá 200 mˆ và diện
+
+tích lỗ hở chiếm tối thiểu 80% diện tích tường ngoài của nhà.
+
+5.2.3 Biển báo an toàn tằm thấp
+
+Lắp đặt các biển báo chỉ dẫn lồi ra thoát nạn và biển báo chỉ hướng thoát nạn tằm tháp ở các tằng
+
+nhà có bé trí phòng nghỉ của khách sạn cao từ 07 tằng hoặc tổng khói tích 5.000 m° trở lên có hành
+
+lang thoát nạn lớn hơn 10m.
+
+Đáy của biển báo tằm thấp phải lắp cách sàn một khoảng từ 150 mm đến 200 mm. Khoảng cách
+
+giữa các biển báo phải được đặt cách nhau không quá 10 m. Đồi với cửa thoát hiểm, biến báo phải
+
+ở trên cửa hoặc giáp cửa với mép gàn nhát của biển báo trong phạm vi 100 mm tính từ khung cửa
+
+(xem hình A.5).
+
+Các biển báo an toàn ở tằm thấp được thiết kế để hỗ trợ người sinh sống, làm việc trong tòa nhà
+
+đến các lồi ra thoát nạn khi khói che khuất các lồi ra hoặc các biển báo chỉ dẫn lồi ra thoát nạn được
+
+gắn ở phía trên cửa và không thay thế biển báo an toàn tiêu chuẩn.
+
+5.2.4 Độ chói
+
+Độ chói của biển báo an toàn phải bảo đảm như sau:
+
+- Chế độ hoạt động không có sự cố: phải đảm bảo độ chói theo quy định của ISO 3864-1.
+
+- Chế độ hoạt động khi có sự cố: độ chói tối thiểu của biển báo theo tắt cả các hướng phải đạt 2
+
+cd/m2; trường hợp cần thiết nhận thầy tằm nhìn có khả năng bị ảnh hưởng nhiều do khói sinh ra từ
+
+đám cháy, thì độ chói tồi thiều phải đạt 10 cd/m° (xem hình A.8).
+
+5.2.5 Tính đồng đều
+
+- Tính đồng đều của các màu: Tính đồng đều của độ chói trong phạm vi màu an toàn và màu sắc
+
+tương phản, được đo bằng tỉ só giữa độ chói nhỏ nhất và độ chói lớn nhất trong màu đó, phải lớn
+
+hơn 1:5.
+
+CHÚ THÍCH: Nếu độ chói của biển báo an toàn lớn hơn 100 cd/mZ, thì tỉ số giữa độ chói nhỏ nhắt và độ chói lớn nhắt trong
+
+màu đó phải lớn hơn 1:10.
+
+- Tính đồng đều giữa các màu: Tï số của độ chói L mau tượng phản VỚI độ chói liền kề Í mạu an on không
+
+được nhỏ hơn 5:1 và không lớn hơn 15:1 (xem hình A.8).
+
+5.2.6 Biển báo an toàn bố trí dọc theo đường thoát nạn phải đáp ứng TCVN 8092:2009 (ISO
+
+7010:2003): TCVN 5053:1990; ISO 3864-1.
+
+Vị trí lắp đặt giữa các biển báo an toàn (không bao gồm biển báo an toàn tằm thấp) phải đảm bảo
+
+khoảng cách không lớn hơn 25 m.
+
+5.2.7 Chiều cao của biển báo an toàn tương ứng với khoảng cách nhìn
+
+Chiều cao nhỏ nhất của biển báo an toàn được xác định theo công thức sau:
+
+L
+
+h=?
+
+trong đó:
+
+h — chiều cao nhỏ nhất của biển báo an toàn (m);
+
+L — khoảng cách quan sát (m);
+
+Z - hằng só, trong đó Z bằng 100 cho các biển báo an toàn được chiếu sáng từ bên ngoài và
+
+bằng 200 cho các biển báo an toàn chiều sáng từ bên trong.
+
+CHÚ THÍCH: Việc xác định khoảng cách quan sát theo thông số kỹ thuật này đòi hỏi tỉ lệ giữa chiều cao của biển báo an
+
+toàn với chiều cao của ký hiệu phải theo quy định trong ISO 3864-1.
+
+Hình 3 - Xác định chiều cao nhỏ nhất của biển báo
+
+5.2.8 Chiều cao lắp đặt biển báo an toàn
+
+Biển báo an toàn (không bao gồm biển báo an toàn tằm tháp) phải lắp đặt ở độ cao từ 2 m đền 2,7m
+
+so với mặt sàn, hoặc ngay trên cửa nếu cửa có chiều cao lớn hơn 2,7 m. Các khu vực không được
+
+bảo vệ chống khói khiến khói tích tụ có thể che khuất thì biển báo an toàn nên được gắn tháp hơn
+
+trần nhà tối thiểu 0,5 m để tránh bị ngập khói và không được lắp đặt biển báo an toàn được chiều
+
+sáng từ bên ngoài.
+
+6.2.9 Sơ đồ chỉ dẫn thoát nạn
+
+- Tại các tằng có diện tích lớn hơn 1000 m^ hoặc có từ hai lồi ra thoát nạn trở lên phải có sơ đồ chỉ
+
+dẫn thoát nạn (xem hình A.8).
+
+- Trong các phòng nghỉ của của khách sạn và các cơ sở lưu trú, cho thuê phòng ở phải có sơ đò chỉ
+
+dẫn thoát nạn (xem hình A.7).
+
+- Sơ đồ chỉ dẫn thoát nạn gồm hai phần: phần chỉ dẫn bằng chữ và phần ký hiệu hình học. Sơ đỏ chỉ
+
+dẫn thoát nạn phải được niêm yết ở các vị trí dễ nhận biết, dễ thầy và vị trí có người thường xuyên
+
+qua lại (xem hình A.8).
+
++ Phần ký hiệu hình học bao gồm mặt bằng của tàng; lồi ra và chỉ hướng đường thoát nạn; cầu
+
+thang bộ; vị trí của sơ đồ tại tằng; vị trí đặt phương tiện, thiết bị chữa cháy và cứu nạn, cứu hộ (ký
+
+hiệu phù hợp với quy định tại TOVN 4879:1989 và TCVN 5053 : 1990).
+
++ Phần chỉ dẫn bằng chữ gồm nội dung và trình tự xử lý khi có cháy.
+
+- Kích thước của sơ đồ chỉ dẫn thoát nạn phụ thuộc vào đặc tính, tính chất hoạt động; diện tích của
+
+tằng, phòng; phương án thoát nạn nhưng không được nhỏ hơn:
+
++ 600x400 mm - đối với sơ đồ chỉ dẫn tại tằng;
+
++ 400x300 mm ~ đối với sơ đồ chỉ dẫn tại phòng.
+
+- Sơ đồ chỉ dẫn thoát nạn được gắn sao cho mép dưới của sơ đồ chỉ dẫn thoát nạn nằm ở độ cao
+
+1,5m + 0,2 m so với mặt sàn.
+
+Phụ lục A
+
+(tham khảo)
+
+Ví dụ mình hoạ về phương tiện chiều sáng sự cố và chỉ dẫn thoát nạn
+
+ha
+
+sx—= —-—Đèn chiếu sáng sự cố
+
+an 5 X ~ Biến báo an toàn được
+
+chiếu sáng từ bền ngoài
+
+—
+
+Hình A.1 - Biển báo an toàn được chiều sáng từ bên ngoài
+
+_- ị
+
+„ý Đà bè Dị cự trí tâm đường choét sga không nhé Lee Í ur h
+
+: ¡| -s<S=xos..e.. n Eong
+
+tẠ HE chiều rộng đường rhoát uyn phái đám bảo tới thiểu 0,5 hux
+
+Hình A.2 - Độ rọi của chiều sáng sự có đường thoát nạn
+
+IWIIEIIIIIEIIIyyy
+
+E
+
+km
+
+! ]
+
+Hình A.3- Chiều sáng sự có gian phòng (chóng hoảng loạn)
+
+¿ s3 3 .Y TL” "1" tà n0gezggn goi pex,m..r...--
+
+& ii EWN: ›-" .:
+
+Am rĐ: =—_—.
+
+Hình A.4 - Chiều sáng phương tiện phòng cháy và chữa cháy, cứu thương
+
+LZ= sm « v2
+
+= ^9
+
+„⁄%
+
+4E [| sisáoxx LIỐ „Z⁄
+
+| U chát 25 mm ⁄ lu
+
+⁄Z ⁄
+
+„⁄ ⁄
+
+A9 >2 LZ „
+
+LZ~%Z „⁄ ⁄
+
+r „⁄ ⁄
+
+) tá
+
+: Z⁄
+
+„⁄ lá
+
+„⁄ „⁄
+
+~ ⁄Z
+
+K ⁄
+
+I ⁄
+
+„⁄ ⁄
+
+Hình A.5 - Biển báo an toàn tằm thấp
+
+SƠ ĐỒ CHÍ DẪN THOÁT NẠN
+
+TẦNG2
+
+oxi & | HÀ — GV
+
+Ea | | | II
+
+- ĩ ——
+
+| —R z m-
+
+= Ạ -¬ : E
+
+„ỊI! tk §
+
+—„la— AL-. „Alê.„.LL
+
+4 HN H- ._— A <xeome LẠ TU ¡ RUN
+
+HH sene<s % BI Co <.xs [BE] <x«c.=e.
+
+€ 600 mm
+
+Hình A.6 - Sơ đồ chỉ dẫn thoát nạn tại từng tằng
+
+KIELZ Œ
+
+2. |
+
+l„ ~¬. NS K : - là ”. _—
+
+g.—ymm. g ST 181m. s
+
+HE tre uy ZZP*0we c0 ai Flxepsrsxe ễ peusựcó [TS] ĐỀN THOÁT HẠM
+
+AA MÚTÁNBÁO CHÁY - P----~-~~—-* HƯỚNG THOÁT NẠN tED IHH] sexsáo Ax toàn
+
+400mm
+
+Hình A.7- Sơ đồ chỉ dẫn thoát nạn trong phòng
+
+Lhồ U
+
+Tỉ số của độ chói L mạu sơng phán VỚI độ chói liên kể L mau nsoan
+
+không được nhỏ hơn 5:1 và không lớn hơn 15:1
+
+Hình A.8 - Đặc tính của biển báo an toàn
+
+THƯ MỤC TÀI LIỆU THAM KHẢO
+
+[1] ISO 30061:2007 Emergency lighting (Chiều sáng sự cố);
+
+[2] QCVN 06:2021/BXD Quy chuẩn kỹ thuật quốc gia về an toàn cháy cho nhà và công trình;
+
+[3] QCVN 22:2016/BYT Quy chuẩn kỹ thuật quốc gia về chiều sáng - Mức cho phép chiều sáng nơi
+
+làm việc;
+
+[4] TCVN 3890:2009 Phương tiện phòng cháy và chữa cháy cho nhà và công trình - trang bị, bé trí,
+
+kiểm tra, bảo dưỡng;
+
+[5] ISO 16069 Graphical symbols — Safety signs — Safety way guidance systems (SWGS) ( Ký hiệu
+
+đồ họa - Dầu hiệu an toàn - Hệ thống hướng dẫn cách an toàn (SWGS);
+
+[6] Code of Practice for Fire Precautions in Buildings 2018. .

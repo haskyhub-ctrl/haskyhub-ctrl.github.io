@@ -1,0 +1,2290 @@
+[TCVN 7568-14:2025 Hệ thống báo cháy, phần 14: thiết kế, lắp đặt hệ thống báo cháy cho nhà và công trình]
+[Hiệu lực: 2025. Trạng thái: ĐANG DÙNG. Nguồn: bộ tài liệu thi cán bộ thẩm định PCCC 2026, bản quét đã nhận dạng chữ (OCR).]
+
+TCOVN TIÊU CHUẢN QUÓC GIA
+
+Xuất bản lằn 2
+
+HỆ THÓNG BÁO CHÁY - PHÀN 14: THIẾT KÉ, LÁP ĐẶT
+
+CÁC HỆ THÓNG BÁO CHÁY CHO NHÀ VÀ CÔNG TRÌNH
+
+Fire detection and alarm systems - Part 14: Design and installation of fire alarm systems for
+
+Houses and Constructions
+
+HÀ NỘI - 2025
+
+Mục lục
+
+lá Ồ SA AOAREEAEAAAEAAAWAORAAEAARREAROODRAREERERAAARRAÀOORIOƯỜỖICL
+
+L1 ERREAEAAAREAAEOERAEAARREEAEAAAARAOAARAARAERIEEARAAAOEORRERRERMNG
+
+VU Hà Các L4 - 929/AUV ỆS NGEỆCEEEEOAEEEEAEEMEEEREEEEREEEEREERESSNE
+
+2. Tài liệu viện dẫn...........................................Gnnnnnnnnnnnnnnnn nen nen sen se. 1g
+
+3. Thuật ngữ và định nghĩa.......................................GGnnnnnneneeeeeeeeeeeeece sec se seee se, g
+
+5. Thiết kế hệ thống báo cháy .................................................................... 12
+
+Phụ i5 A:(thênYkhôo)..................c....ccczk.stressv.rbvrsvkxZ2CxEGGSnaESYISsrvnsdt^S1EsSsvIkG CI
+
+Phụ lục B (tham khảo)........................................................seeneeeseeeseeeseceees se, 7
+
+Phụ lục C (tham khảo)...................................nnnnnnnneeeneenneeeseeysssesĩe set se se,
+
+Thư mục tài liệu tham khảo........................................Cneeeneeeeeesseeeeeeeeees sec se, 39
+
+Lời nói đầu
+
+TCVN 7568-14:2025 thay thế TCVN 7568-14:2015 và TCVN 5738:2021
+
+TCVN 7568-14:2025 do Cục Cảnh sát phòng cháy, chữa cháy và cứu nạn, cứu hộ biên soạn
+
+trên cơ sở ISO 7240-14:2013, TCVN 5738:2021, Bộ Công an đè nghị, Ủy ban Tiêu chuẳn Đo
+
+lường Chất lượng Quốc gia thẳm định, Bộ Khoa học và Công nghệ công bồ.
+
+Giới thiệu
+
+Bộ TCVN 7568, Hệ thống báo cháy gồm các phần sau:
+
+- TCVN 7568-1:2024 (ISO 7240-1:2014) - Phần 1: Quy định chung và định nghĩa.
+
+- TCVN 7568-2:2013 (ISO 7240-2:2003) - Phần 2: Trung tâm báo cháy.
+
+- TCVN 75868-3:2015 (ISO 7240-3:2010) - Phần 3: Thiết bị báo cháy bằng âm thanh.
+
+- TCVN 7588-4:2013 (ISO 7240-4:2003) — Phần 4: Thiết bị cấp nguồn.
+
+- TCVN 7588-5:2013 (ISO 7240-5:2003) - Phần 5: Đầu báo cháy nhiệt kiều điểm.
+
+- TCVN 7668-6:2013 (ISO 7240-8-2011) - Phản 6: Đầu báo cháy khí cacbon monoxit dùng
+
+pin điện hỏa.
+
+- TCVN 7588-7:2015 (ISO 7240-7-2011) — Phần 7: Đầu báo cháy khói kiểu điểm sử dụng
+
+ánh sáng, ánh sáng tán xạ hoặc ion hóa.
+
+- TCVN 7668-8:2015 (ISO 7240-8:2014) - Phần 8: Đầu báo cháy kiểu điểm sử dụng cảm
+
+biến cacbon monoxit kết hợp với cảm biến nhiệt.
+
+- TCVN 7568-9:2015 (ISO/TS 7240-9:2012) - Phần 9: Đám cháy thử nghiệm cho các đầu
+
+báo cháy.
+
+- TCVN 7568-10-2015 (ISO 7240-10:2012) - Phàn 10: Đầu bảo cháy lửa kiểu điểm.
+
+- TCVN 7588-11:2015 (ISO 7240-11:2011) - Phần 11: Hộp nút ấn báo cháy.
+
+- TCVN 7668-12:2015 (ISO 7240-12:2014) - Phần 12: Đầu báo cháy khói kiều đường truyền
+
+sử dụng chùm tia chiều quang học.
+
+- TCVN 7568-13:2015 (ISO 7240-13:2005) - Phần 13: Đánh giá tính tương thích của các bộ
+
+phận trong hệ thống.
+
+- TCVN 7568-15:2015 (ISO 7240-15:2014) - Phần 15: Đầu báo cháy kiều điểm sử dụng cảm
+
+biến khói và cảm biến nhiệt.
+
+- TCVN 7568-16:2016 (ISO 7240-16:2007) - Phần 16: Thiết bị điều khiển và hiển thị hệ
+
+thống âm thanh.
+
+- TCVN 7568-17:2016 (ISO 7240-17:2009) - Phản 17: Thiết bị cách ly ngắn mạch.
+
+- TCVN 7568-18:2016 (ISO 7240-18:2009) - Phần 18: Thiết bị vào/ra.
+
+- TCVN 7568-19:2018 (ISO 7240-19:2007) - Phần 19: Thiết kế, lắp đặt, chạy thử và bảo
+
+dưỡng các hệ thống âm thanh dùng cho tình huồng khẳn cấp.
+
+- TCVN 7588-20:2016 (ISO 7240-20:2010) - Phản 20: Bộ phát hiện khói công nghệ hút.
+
+- TCVN 7588-21:2016 (ISO 7240-21:2005) - Phần 21: Thiết bị định tuyến.
+
+- TCVN 7668-22:2016 (ISO 7240-22:2007) - Phần 22: Thiết bị phát hiện khói dùng trong các
+
+đường ống.
+
+- TCVN 7568-23:2016 (ISO 7240-23:2013) - Phản 23: Thiết bị báo động qua thị giác.
+
+- TCVN 7588-25:2023 (ISO 7240-25:2010) - Phần 25: Các thành phần sử dụng kết nói bằng
+
+đường truyền vô tuyến.
+
+- TCVN 7568-29:2023 (ISO/TS 7240-29:2017) - Phần 29: Đầu báo cháy video.
+
+Bộ ISO 7240, Fire detetion and alarm systems (Hệ thống báo cháy) còn có các phần sau:
+
+- ISO 7240-24:2010 - Part 24: Soud-system loundspeakers (Loa hệ thống âm thanh).
+
+- ISO 7240-27:2009 - Part 27: Point-type fire detectors using a scattered-light, transmitted-
+
+light or ionization smoke sensor, and electrochemical-cell carbon-monoxide sensor and a
+
+heat sensor (Đầu báo cháy kiểu điểm sử dụng ánh sáng tán xạ, ánh sáng truyền qua hoặc
+
+cảm biến khói lớn ion hóa và cảm biến khí cacbon monoxit pin điện hoá và cảm biến nhiệt).
+
+- ISO 7240-28:2008 - Part 28: Fire protection control equipment (Thiết bị kiểm soát phòng
+
+cháy chữa cháy).
+
+- ISO/TS 7240-30:2022 - Part 30: Fire detection and alarm systems - Design, installation,
+
+commissioning and service of video fire detector systems (Hệ thống báo cháy - Thiết kế, lắp
+
+đặt, vận hành và bảo dưỡng hệ thống báo cháy video).
+
+- ISO 7240-31:2022 - Fire detection and alarm systems — Part 31: Resettable line-type heat
+
+detectors (Hệ thống báo cháy - Phần 31 - Đầu báo cháy nhiệt kiểu dây có thẻ đặt lại).
+
+TIÊU CHUÁN QUỐC GIA TCVN 7568-14:2025
+
+Hệ thống báo cháy - Phần 14: Thiết kế, lắp đặt các hệ thống báo cháy
+
+cho nhà và công trình
+
+Fire detection and alarm systems - Part 14: Design and installation of fire alarm systems for houses
+
+and constructions
+
+1. Phạm vi áp dụng
+
+Tiêu chuẩn này quy định yêu cầu thiết kế, lắp đặt đối với hệ thống báo cháy cho nhà,
+
+công trình.
+
+Tiêu chuẳn này không quy định yêu cầu kỹ thuật đồi với hệ thống báo cháy cho nhà và công
+
+trình được thiết kê theo quy định đặc biệt.
+
+2. Tài liệu viện dẫn
+
+Các tài liệu viện dẫn sau rất càn thiết cho áp dụng tiêu chuản này. Đồi với các tài liệu viện
+
+dẫn có ghi năm công bố thì áp dụng phiên bản đã nêu. Đồi với các tài liệu viện dẫn không
+
+ghi năm công bồ thì áp dụng phiên bản mới nhất, bao gồm cả các sửa đồi.
+
+TCVN 7568 (tắt cả các phần), Hệ thống báo cháy.
+
+3. Thuật ngữ, định nghĩa
+
+Tiêu chuẩn này áp dụng các thuật ngữ vả định nghĩa trong TCVN 75868-1 (ISO 7240-1) và
+
+các thuật ngữ, định nghĩa nêu dưới đây:
+
+Hệ thống báo cháy thường (Conventional fire alarm system)
+
+Hệ thống báo cháy khi báo cháy sẽ báo đến một khu vực, khu vực đó có thể có một hoặc
+
+nhiều đầu báo cháy.
+
+3.2
+
+Hệ thống báo cháy địa chỉ (Addressable fire alarm system)
+
+Hệ thống báo cháy khi báo cháy sẽ báo đến từng thiết bị địa chỉ trong hệ thống (đầu báo
+
+cháy địa chỉ, module, nút ấn báo cháy địa chỉ....).
+
+3.3
+
+Hệ thống báo cháy thông minh (Intelligent fire alarm system)
+
+Hệ thống báo cháy thông minh, ngoài chức năng báo cháy còn có khả năng đo lường các
+
+thông số của đám cháy tại khu vực lắp đặt đầu báo cháy như nhiệt độ, nòng độ khói. Đồng
+
+thời, có thể tự điều chỉnh ngưỡng tác động của các đầu báo cháy để thích nghi với sự thay
+
+đổi của môi trường, nâng cao hiệu quả phát hiện cháy và giảm thiểu báo cháy giả.
+
+Đầu báo cháy tự động (Automatic fire detector)
+
+Thiết bị tự động nhạy cảm với các hiện tượng kèm theo sự cháy (sự tăng nhiệt độ, toả khói,
+
+phát sáng) và truyền tín hiệu thích hợp đến trung tâm báo cháy.
+
+3.5
+
+Đầu báo cháy kiều điểm (Point detector)
+
+Đầu báo cháy đặt trực tiếp trong khu vực được bảo vệ để nhạy cảm với sự tác động của môi
+
+trường xung quanh vị trí lắp đặt đầu báo cháy theo đặc tính của từng loại đầu báo.
+
+3.6
+
+Đầu báo cháy nhiệt (Heat detector)
+
+Đầu báo cháy tự động nhạy cảm với sự gia tăng nhiệt độ của môi trường nơi lắp đặt đầu
+
+báo cháy.
+
+Đầu báo cháy nhiệt có định (Fixed temperature heat detector)
+
+Đầu báo cháy nhiệt cổ định nhạy cảm với nhiệt độ môi trường đạt đến một giá trị xác
+
+định (ngưỡng).
+
+3.8
+
+Đầu báo cháy nhiệt gia tăng (Rate of rise heat detector)
+
+Đầu báo cháy nhiệt, tác động khi tốc độ gia tăng nhiệt độ tại vị trí lắp đặt đầu báo cháy đạt
+
+đên giá trị xác định.
+
+3.9
+
+Đầu báo cháy khói (Smoke detector)
+
+Đầu báo cháy tự động nhạy cảm với tác động của các hạt rắn hoặc lỏng sinh ra từ quá trình
+
+cháy và / hoặc quá trình phân hủy do nhiệt gọi là khói.
+
+3.10
+
+Đầu báo cháy hỗn hợp (Combine detector)
+
+Đầu báo cháy tự động nhạy cảm với ít nhắt 2 hiện tượng kèm theo của sự cháy.
+
+Đầu báo cháy khói kiều hút (Aspirating Smoke Detector)
+
+Đầu báo cháy tự động lắy mẫu thông qua các miệng hút lắy mẫu NI khí trên hệ thống
+
+đường ông và đưa mâu không khí (hút) từ khu vực bảo vệ đền thiết bị đ phân tích và phát
+
+hiện dầu hiệu cháy (khói, thay đổi thành phản hóa học của môi trường). Mỗi miệng hút lắy
+
+mẫu tương đương như một đầu báo cháy khói kiểu điểm.
+
+3.12
+
+Hệ thống báo cháy không dây (Wireless fire alarm system)
+
+Là hệ thống báo cháy sử dụng sóng vô tuyến để truyền và nhận tín hiệu.
+
+3.13
+
+Vùng báo động cháy (alarm zone)
+
+Khu vực được chia theo mục đích thông báo cháy hoặc/và theo công năng sử dụng trong
+
+nhà, công trình, ở đó được lắp đặt một hoặc nhiều thiết bị báo động cháy và được cung cấp
+
+chỉ thị báo động cháy chung.
+
+3.14
+
+Vùng phát hiện cháy (fire detection zone)
+
+Khu vực được chia theo kiến trúc của nhà, công trình, trong đó có lắp đặt đầu báo cháy tại
+
+một hoặc nhiều điểm và được cung cắp chỉ thị phát hiện cháy chung.
+
+3.15
+
+Phạm vì hoạt động (area of coverage)
+
+Vùng bên trong vả/hoặc bên ngoài của nhà hoặc công trình ở đó hệ thống bảo cháy đáp ứng
+
+các yêu cầu của tiêu chuẩn này.
+
+CHÚ THÍCH: Phạm vi hoạt động có thẻ không bao gồm một số bộ phận của vùng bên trong và/hoặc bên ngoài
+
+nhà và công trình.
+
+3.16
+
+Đường thoát nạn (escape route)
+
+Đường di chuyển của người, dẫn trực tiếp ra ngoài hoặc dẫn vào vùng an toàn, tằng lánh
+
+nạn, gian lánh nạn và đáp ứng các yêu câu thoát nạn an toàn của người khi có cháy.
+
+3.18
+
+Điện áp cực tháp (extra low voltage)
+
+mi lẾp cực tháp là điện áp không vượt quá điện áp xoay chiều 50 V hoặc điện áp một chiều
+
+3.419
+
+Khoang cháy (fire compartment)
+
+Thể tích được giới hạn bởi các thành phần xây dựng đề ngăn cản đám cháy và các sản
+
+phẩm cháy lan truyền từ một khoang cháy hoặc từ một gian phòng có đám cháy tới các
+
+khoang cháy hoặc gian phòng khác.
+
+3.20
+
+Bề mặt bằng phẳng (level surface)
+
+Bề mặt, mái hoặc tràn có độ dóc nhỏ hơn hoặc bằng 1/8
+
+Bề mặt dóc (nghiêng) (sloping surface)
+
+Bè mặt, mái hoặc trần có độ dốc lớn hơn 1/8.
+
+CHÚ THÍCH: Bè mặt dốc không thể là bẻ mặt bằng phẳng vả bao gồm các trần dạng vòm - hình trắng.
+
+3.22
+
+Chế độ tĩnh (quiescent condition)
+
+Là trạng thái báo động cháy, cảnh báo lỗi và các trạng thái không hoạt động và thử nghiệm.
+
+4. Quy định chung
+
+4.1. Yêu cầu về thiết kề, lựa chọn hệ thống báo cháy
+
+4.1.1 Việc thiết kế, lắp đặt hệ thống báo cháy phải tuân thủ các yêu cầu, quy định của các
+
+tiêu chuân hiện hành có liên quan.
+
+4.1.2 Hệ thống báo cháy phải đáp ứng những yêu cầu sau:
+
+- Phát hiện cháy nhanh chóng theo chức năng đã được đè ra;
+
+- Chuyển tín hiệu khi phát hiện cháy thành tín hiệu báo động rõ ràng để những người xung
+
+quanh có thê thực hiện ngay các biện pháp thích hợp;
+
+- Có khả năng chồng nhiễu tốt;
+
+- Hệ thống báo hiệu nhanh chóng và rõ ràng mọi trường hợp;
+
+- Không bị ảnh hưởng bởi các hệ thống khác lắp đặt chung hoặc riêng rẽ;
+
+- Không bị tê liệt một phần hay toàn bộ do cháy gây ra trước khi phát hiện ra cháy.
+
+4.1.3 Hệ thống báo cháy phải bảo đảm độ tin cậy và thực hiện đầy đủ các chức năng đã
+
+được thiệt kê.
+
+4.1.4 Những tác động bên ngoài gây ra sự có cho một bộ phận của hệ thóng không được
+
+gây ra những sự cô tiêp theo trong hệ thông.
+
+4.1.5 Khi lựa chọn loại đầu báo cháy cần lưu ý các vần đề sau:
+
+4.1.5.1 Chọn loại đầu báo cháy khói có độ nhạy phù hợp đồi với các loại khói khác nhau.
+
+4.1.5.2 Sử dụng đầu báo lửa tại những nơi:
+
+- Khi xảy ra cháy ở giai đoạn ban đầu của đám cháy có xuất hiện ngọn lửa hoặc bè mặt quá
+
+nhiệt (thường là trên 600 °C),
+
+- Khi xuất hiện ngọn lửa ở các phòng có chiều cao vượt quá giới hạn cho việc sử dụng đầu
+
+báo khói hoặc nhiệt;
+
+- Khi tốc độ phát triển đám cháy nhanh, thời điểm phát hiện cháy bởi các loại đầu báo cháy
+
+khác không bảo đảm yêu câu bảo vệ người và tài sản.
+
+4.1.5.3 Độ nhạy của đầu báo cháy lửa phải tương ứng với phố phát xạ của ngọn lửa tạo bởi
+
+các vật liệu cháy nằm trong vùng bảo vệ.
+
+4.1.5.4 Sử dụng đầu báo nhiệt ở những nơi khi xảy ra cháy ở giai đoạn ban đầu của đám
+
+cháy chủ yếu phát sinh nhiệt và khi sử dụng các đầu báo khác có thẻ xảy ra hiện tượng báo
+
+cháy giả.
+
+4.1.5.5 Không sử dụng đầu báo cháy nhiệt gia tăng hoặc đầu báo cháy nhiệt kép (nhiệt gia
+
+tăng và nhiệt có định) trong môi trường có biến động nhiệt độ đột ngột, bát thường vượt quá
+
+5 °C/min.
+
+Không sử dụng đầu báo cháy nhiệt có định trong môi trường mà nhiệt độ không khí trong
+
+đám cháy có thể không đạt đến nhiệt độ kích hoạt đầu báo cháy hoặc đạt tới ngưỡng tác
+
+động sau một thời gian dài (vượt quá thời gian phát hiện cháy theo quy định).
+
+4.1.5.6 Khi chọn đầu báo cháy nhiệt, cần lưu ý rằng ngưỡng nhiệt độ kích hoạt của đầu báo
+
+cháy nhiệt có định, đầu báo cháy nhiệt kép phải cao hơn ít nhắt 20 °C so với nhiệt độ tối đa
+
+của môi trường tại vị trí lắp đặt đầu báo cháy.
+
+4.1.5.7 Khi không xác định được hiện tượng đặc trưng của sự cháy trong khu vực bảo vệ,
+
+nên sử dụng kết hợp các đầu báo cháy nhạy cảm với các hiện tượng khác nhau của sự
+
+cháy hoặc đâu báo cháy hôn hợp.
+
+CHÚ THÍCH: Hiện tượng đặc trưng của sự cháy là hiện tượng được phát hiện ở giai đoạn ban đầu của đám cháy
+
+(khói, lửa, nhiệt...) trong thời gian ngắn nhất.
+
+4.2 Thiết bị bỏ sung
+
+4.2.1 Thiết bị bỏ sung (ví dụ, các thiết bị đầu cuối điều khiển từ xa hoặc các màn hình hiển
+
+thị) có thể được bao gôm trong thiết ké hệ thống báo cháy hoặc được kết nói với hệ thống
+
+báo cháy.
+
+4.2.2 Các thiết bị bổ sung khi lắp đặt không làm ảnh hưởng đến hoạt động của hệ thống
+
+báo cháy.
+
+4.2.3 Trường hợp các thiết bị bỏ sung hư hỏng không ảnh hưởng đến hoạt động vận hành
+
+của hệ thống báo cháy.
+
+5. Thiết kế hệ thống báo cháy
+
+5.1 Hệ thống báo cháy phải được thiết kế phù hợp với các yêu cầu của tiêu chuản này, các
+
+tiêu chí thiết kế phải thỏa mãn các mục tiêu về an toàn cháy và bao gồm:
+
+- Các điều kiện về môi trường;
+
+- Loại nhà và công trình;
+
+- Phát hiện cháy nhanh chóng theo chức năng đã được đề ra;
+
+- Chuyển tín hiệu khi phát hiện cháy thành tín hiệu báo động rõ ràng để những người xung
+
+quanh có thẻ thực hiện ngay các biện pháp thích hợp;
+
+- Có khả năng chống nhiều tốt;
+
+- Báo hiệu nhanh chóng và rõ ràng mọi trường hợp;
+
+- Không bị ảnh hưởng bởi các hệ thống khác được lắp đặt chung hoặc riêng rẽ;
+
+- Không bị tê liệt một phản hay toàn bộ do cháy gây ra trước khi phát hiện ra cháy.
+
+5.2 Thiết kế có thể loại trừ các vùng không có vật liệu cháy.
+
+5.3 Khi không có yêu cầu thiết ké phát hiện đám cháy cho toàn bộ nhà và công trình (trừ các
+
+vùng được nêu trong 5.2), các khu vực sau có thể được bao gồm trong phạm vi thiết kế:
+
+- Một hoặc nhiều khoang cháy;
+
+- Một phần của khoang cháy;
+
+- Đường thoát nạn (Vùng phát hiện cháy trên đường thoát nạn có thể không phát hiện cháy
+
+từ nơi phát sinh đám cháy);
+
+- Thiết bị trong tòa nhà (Đầu báo cháy được lắp đặt ở trong hoặc liền kề với thiết bị).
+
+5.4 Khi không có yêu cầu tự động phát hiện đám cháy và các quy định khác cho phép có thẻ
+
+lắp đặt một hệ thống các nút ắn báo cháy (xem 5.10).
+
+5.5 Khi thiết kế hệ thống báo cháy bao gồm cả sử dụng các chức năng tùy chọn được quy
+
+định trong các tiêu chuẩn thiết bị có liên quan thì việc sử dụng chức năng tùy chọn và lý do
+
+sử dụng phải được đưa vào trong tài liệu thiết ké.
+
+CHÚ THÍCH: Các quy định khác có thể yêu cầu sử dụng một số chức năng tùy chọn hoặc có thẻ cảm sử dụng
+
+một số chức năng tùy chọn.
+
+5.6 Khi thiết kế phải quan tâm đền tắt cả giới hạn khác bao gồm:
+
+a. Kích thước của các vùng phát hiện cháy và các vùng báo động cháy;
+
+b. Số lượng lớn nhắt của các đầu báo cháy được lắp đặt trong một vùng phát hiện cháy;
+
+c. Các giới hạn của các thiết bị khởi động tự động và khởi động bằng tay trên mạng
+
+báo cháy;
+
+d. Các yêu cầu về giao tiếp đồi với yêu cầu về hệ thồng âm thanh dùng cho các mục đích
+
+khẳn cấp;
+
+e. Các yêu cầu đặc biệt đối với các mạng báo cháy có cả đầu báo cháy và thiết bị báo
+
+động cháy;
+
+f. Các yêu cầu đặc biệt đồi với sự kết hợp của mạng thiết bị khởi động và thiết bị báo động cháy;
+
+g. Các yêu cầu cho các hệ thống truyền tín hiệu báo cháy và tín hiệu cảnh báo lỗi,
+
+h. Sử dụng vật liệu cho lắp đặt như cáp có vỏ bảo vệ các óng dẫn...;
+
+¡. Lắp đặt thiết bị trong các môi trường dễ xảy ra nổ.
+
+5.7 Vùng phát hiện cháy
+
+5.7.1 Quy định chung
+
+Nhà và công trình phải được phân chia thành các vùng phát hiện cháy sao cho có thể xác
+
+định được một cách nhanh chóng nguồn gốc của báo động cháy từ các chỉ báo tại tủ trung
+
+tâm báo cháy và trên các đâu báo cháy.
+
+5.7.2 Các giới hạn của vùng phát hiện cháy
+
+5.7.2.1 Một vùng phát hiện cháy trong nhà, công trình được giới hạn không lớn hơn 2000 m?
+
+diện tích sản liên tục (xem Vùng 1 của Hình 1); đối với khu vực sàn diện tích không liên tục,
+
+một vùng phát hiện cháy không quá 2000 m° (xem Vùng 2 của Hình 1) và phải đảm bảo điều
+
+kiện các lỗi vào của hai khu vực sản liền kề có khoảng cách không lớn hơn 10 m và nhìn
+
+thầy nhau. Kích thước lớn nhất của vùng phát hiện cháy không vượt quá 100 m và được
+
+giới hạn trong một tằng nhà. Các vùng không có lồi vào từ bên trong nhà phải được bó trí
+
+thành các vùng phát hiện cháy độc lập với vùng phát hiện cháy có lỗi vào từ bên trong nhà.
+
+Ví dụ về sự phân bồ vùng phát hiện cháy được giới thiệu trên Hình 1.
+
+Kích thước tính bằng mét
+
+. „z. Diện tích không lớn hơn 2000 m2 `
+
+_— ⁄
+
+1N — Vùng 1 Vùng [ Vòng? .
+
+,. ì Vũng bao quanh 1 H
+
+li : Ị g2 TT 1 |
+
+l Ỉ Vùng bao quanh 2 H
+
+\ . HN
+
+¡ \ : 3đ J
+
+¡ (
+
+H Vùng bao quanh n ˆ \ \¡
+
+Vùng 1 ¡ nh }
+
+; — Z
+
+ị N ⁄
+
+CHÚ DĂN:
+
+— Thiết bị chỉ thị cho gian phòng (chỉ yêu cầu khi các cửa ra vào gian phòng bị khóa)
+
+—© Thiết bị chỉ thị cho gian phòng
+
+(a) Nhà công nghiệp
+
+Hình 1 - Ví dụ về sự phân bố vùng phát hiện cháy cho các khu vực tiếp giáp và không
+
+tiêp giáp
+
+N - + : f;
+
+~
+
+Vũng 7 Vững7 Vũừng7 .
+
+N Vùng 5
+
+zsXx< s ~⁄ “ c
+
+ˆ - ˆ ở hiên
+
+| lá | NHÍ li Zxx
+
+CHÚ DẪN: —Ø Thiết bị chỉ thị cho gian phòng khi lồi vào gian phòng bị hạn chế.
+
+(b) Văn phòng, thương mại, dịch vụ và nhà có công năng tương tự
+
+Hình 1 - Ví dụ về sự phân bố vùng phát hiện cháy cho các khu vực tiếp giáp và không
+
+tiếp giáp (kết thúc)
+
+5.7.2.2 Cho phép dùng chung vùng phát hiện cháy đối với khu vực có tằng lửng, khi tằng
+
+lửng này có thẻ tiếp cận được từ sàn chung.
+
+5.7.2.3 Các đầu báo cháy bảo vệ trong các không gian bị che kín có tổng diện tích không
+
+vượt quá 500 mˆ cho phép kết nói vào vùng phát hiện cháy trên cùng một sàn với điều kiện
+
+là tổng số các đầu báo cháy không vượt quá 40.
+
+5.7.2.4 Các vùng phát hiện cháy có thẻ được chia nhỏ ra sao cho các tín hiệu từ các đầu
+
+báo cháy riêng biệt hoặc nhóm các đầu báo cháy có thể được chỉ thị tại tủ trung tâm báo
+
+cháy, như vậy có thể cung cắp thông tin chỉ tiết về vị trí phát hiện cháy.
+
+5.7.2.5 Một vùng phát hiện cháy chỉ cho phép thuộc một vùng báo động cháy.
+
+Chú thích: nhiều vùng phát hiện cháy có thể chung một vùng báo động cháy nhưng một vùng phát hiện cháy
+
+không chia thành nhiều vùng báo động cháy.
+
+5.8 Vị trí của đầu báo cháy
+
+5.8.1 Quy định chung
+
+Vị trí lắp đặt và khoảng cách giữa các đầu báo cháy dựa trên đặc điểm kiến trúc và nguy cơ
+
+phát sinh cháy bao gồm:
+
+- Chiều cao đền trần:
+
+- Cầu trúc của trần;
+
+- Hàng hóa;
+
+- Sự hiện diện của con người;
+
+- Công năng.
+
+5.8.2 Yêu cầu vị trí lắp đặt đầu báo cháy
+
+5.8.2.1 Quy định chung
+
+5.8.2.1.1 Khi xác định vị trí lắp đặt của các đầu báo cháy tham khảo Phụ lục A và phải bảo
+
+đảm các yêu cầu:
+
+a. Các khu vực phòng ngủ phải lắp đặt đầu báo cháy khói quang điện hoặc khói quang học
+
+hoặc đâu báo cháy CO.
+
+b. Các khu vực như hành lang, đường, lái đi, lồi ra thoát nạn hoặc các khu vực tương tự
+
+khác phải lắp đặt đầu báo cháy khói quang điện hoặc khói tia chiếu.
+
+c. Khi một khu vực được chía thành nhiều phần bởi tường, vách ngăn hoặc các giá kệ hàng
+
+cách tràn (hoặc mặt dưới của dàm ngang) không quá 0,3 m thì mỗi khu vực này được coi
+
+như phòng riêng biệt và phải được trang bị đầu báo cháy đảm bảo theo quy định.
+
+d. Duy trì khoảng trồng xung quanh đầu báo cháy có bán kính tối thiểu là 0,1 m và độ sâu
+
+06m.
+
+CHÚ THÍCH: Đồi với các khu vực có thiết bị điện chiều sáng hoặc các thiết bị khác lắp đặt trên trần, nều không
+
+thể đảm bảo độ sâu 0,6 m, cần ưu tiên đảm bảo bán kính tồi thiểu 0,1 m xung quanh đầu báo cháy. Trong trường
+
+hợp này, cần bồ trí vị trí lắp đặt đầu báo cháy sao cho hạn chế tỏi đa sự che chắn của thiết bị chiều sáng hoặc
+
+thiết bị khác đối với khả năng phát hiện khói/nhiệt của đầu báo.
+
+e. Đèn chỉ thị của đầu báo cháy phải quan sát được từ các lồi đi.
+
+5.8.2.1.2 Khi lắp đặt các đầu báo cháy có trang bị nhiều hơn một cảm biền và đầu báo cháy
+
+được điều chỉnh cải đặt với một cảm biên thì phải áp dụng các yêu câu về lắp đặt cho bộ
+
+phận cảm biên được cài đặt.
+
+5.8.2.2 Các đường dẫn kín
+
+Các đường dẫn kín không được ngăn cháy phục vụ di chuyển giữa các tòa nhà hoặc các
+
+phân của tòa nhà phải được lắp đặt các đâu báo cháy (xem 5.8.2.8).
+
+5.8.2.3 Hệ thóng xử lý không khí
+
+5.8.2.3.1 Phải sử dụng đầu báo cháy khói [xem TCVN 7568-22 (ISO 7240-22)] để giám sát
+
+không khí trong các đường ống dẫn.
+
+5.8.2.3.2 Trong các hệ thống xử lý không khí, các đầu báo cháy phải được lắp đặt ở các vị
+
+trí sau:
+
+a) Nhà và công trình có sử dụng hệ thồng cấp không khí tuần hoàn phục vụ cho nhiều hơn
+
+một khu vực kín, nêu khu vực kín đó không được trang bị đầu báo cháy khói thì phải lắp đặt
+
+các đầu báo cháy khói liền kè với cửa vào của đường óng hút hoặc sử dụng các đầu báo
+
+cháy khói cho đường óng lắy mẫu không khí chung.
+
+Chú thích: có thẻ lắp đặt riêng từng miệng hút hoặc chung tại ống góp đồi với đường ống hút nhiều gian phòng.
+
+b) Các quạt đặt bên trong nhà dùng để cung cấp không khí cho nhiều hơn một tằng nhà đặt
+
+bên trong nhà và công trình cần lắp đặt đầu báo cháy ở vị trí gằn quạt để phát hiện khói ở lồi
+
+vào quạt hút.
+
+CHÚ THÍCH: Dựa trên tín hiệu báo cháy của đầu báo ngắt thiết bị xử lý không khí nhằm ngăn chặn sự lan truyền
+
+của khói bên trong nhà vả công trình.
+
+c) Các đường ống hút - các đường ống được sử dụng đẻ hút mùi khu vực bếp, các hơi dễ
+
+cháy, vật liệu "dạng xơ và các vật liệu tương tự khác phải lắp đặt tôi thiểu một đầu báo cháy
+
+ở điêm xa nhất của đường ông xả.
+
+CHÚ THÍCH: Các đầu báo cháy dùng cho khu vực này cần được lựa chọn đảm bảo điều kiện môi trường để
+
+giảm tín hiệu báo cháy giả nên lựa chọn sử dụng đầu báo cháy nhiệt.
+
+5.8.2.3.3 Các đèn chỉ thị của các đầu báo cháy khói lắp đặt trong hệ thống xử lý không khí
+
+phải được nhìn thấy, trường hợp không nhìn tháy phải lắp đặt các đèn chỉ thị từ xa về trạng
+
+thái hoạt động của các đầu báo (xem 5.8.2.4.3).
+
+5.8.2.4 Không gian bị che kín
+
+5.8.2.4.1 Quy định chung
+
+Các đầu báo cháy phải được lắp đặt ở các khu vực bị che kín. Phải có lồi vào để bảo dưỡng
+
+các đầu báo chảy được lắp đặt trong các khu vực bị che kín. Kích thước của lồi vào không
+
+được nhỏ hơn 0,450 m x 0,350 m.
+
+5.8.2.4.2 Thiết bị điện
+
+- Khu vực bị che kín chứa hệ thống điện chiều sáng hoặc thiết bị điện dùng đề cấp nguồn
+
+được đặt hoàn toàn vào bên trong khu vực bị che kín và được kết nối với nguồn điện vượt quá
+
+điện áp cực thập thì phải lắp đặt đầu báo cháy trên trần của không gian bị che kín đảm bảo
+
+khoảng cách tối đa theo phương ngàng từ thiết bị điện đến đầu báo cháy không quá 1,5 m.
+
+Trong trường hợp bè mặt lắp đặt đầu báo cháy là dạng mặt nghiêng (dóc) thì đầu báo cháy
+
+lắp đặt ở vị trí có chiêu cao lớn hơn.
+
+- Đối với thiết bị điện chiều sáng có công suất danh định không vượt quá 100 Wv, thiết bị
+
+cung cấp nắng lượng dạng có thê tháo rời có công suất danh định dưới 100 W hoặc các
+
+thiết bị khác có công suất danh định dưới 500 W không phải trang bị hệ thống báo cháy
+
+(thiết bị điện không đặt trong các khu vực kín).
+
+CHÚ THÍCH 1: Đường dây điện, máng cáp của thiết bị chiều sáng là vật liệu không cháy thì không được xem là
+
+thiết bị điện.
+
+CHÚ THÍCH 2: Đầu báo cháy được sử dụng để bảo vệ thiết bị điện không yêu cầu phải bảo vệ không gian
+
+bị che kín.
+
+5.8.2.4.3 Thiết bị chỉ thị cho đàu báo cháy
+
+a) Khi đèn chỉ thị của đầu báo cháy không nhìn thầy được ở khu vực thường xuyên có
+
+người, phải sử dụng các thiết bị chỉ thị từ xa để hiển thị trạng thái báo cháy ngoại trừ quy
+
+định tại 5.8.2.4.3 e.
+
+b) Các thiết bị chỉ thị từ xa dùng cho các phòng, các tủ hoặc các khu vực tương tự phải
+
+được lắp đặt liền kè với cửa ra vào để xác định được vị trí đầu báo cháy.
+
+c) Các thiết bị chỉ thị từ xa cho không gian kín phải được lắp đặt ở khu vực có thể tiếp
+
+cận được.
+
+d) Cho phép sử dụng một đèn chỉ thị từ xa đề chỉ thị cho nhiều đầu báo hoặc nhiều miệng
+
+hút của cùng một đầu báo cháy khói kiểu hút khi các thiết bị này lắp đặt chung cho cùng một
+
+phòng, một căn hộ.
+
+e) Không yêu cầu lắp đặt đèn chỉ thị từ xa khi:
+
+- Vị trí của đầu báo cháy hiền thị tại tủ trung tâm báo cháy, hoặc
+
+- Không gian bị che kín có thể tiếp cận được và có chiều cao lớn hơn 2 m, con người có thẻ
+
+đi lại được, hoặc ở bên dưới vật liệu làm sàn tháo ra được (như vật liệu làm sản máy tính).
+
+f) Đồi với đầu báo cháy không dây (đàu báo cháy vô tuyến và đầu báo cháy độc lập) ngoài
+
+đèn chỉ thị khi tác động phải có tín hiệu báo về tình trạng của nguồn cấp.
+
+5.8.2.5 Tủ
+
+5.8.2.5.1 Tủ có thể tích lớn hơn 3 m° phải được lắp đặt các đầu báo cháy. Các tủ được chia
+
+nhỏ bởi các vách ngăn hoặc giá tạo thành các khu vực có thể tích nhỏ hơn 3 m° không yêu
+
+cầu phải lắp đặt đầu báo cháy.
+
+5.8.2.5.2 Tủ với thẻ tích trên 1 m° chứa thiết bị điện hoặc điện tử có điện áp lớn hơn điện áp
+
+cực thấp phải lắp đặt đằu báo cháy (không áp dụng các yêu cầu của 5.8.2.1.1 e).
+
+5.8.2.6 Bè mặt trung gian nằm ngang
+
+5.8.2.6.1 Phải lắp đặt đầu báo cháy ở dưới của các bề mặt trung gian nằm ngang như các
+
+đường ống, sàn thao tác, giá kệ có chiều rộng lớn hơn 3,5 m và bê mặt bên dưới của bè mặt
+
+trung gian cách sàn lớn hơn 0,8m.
+
+5.8.2.6.2 Khi khoảng cách từ mặt bên dưới của các bề mặt trung gian đến tràn nhỏ hơn 0,8m
+
+thì mặt bên dưới của bề mặt trung gian có th được xem là trần và không yêu cầu phải lắp đàu
+
+báo cháy phía trên bè mặt trung gian.
+
+5.8.2.6.3 Nếu ồng gió hay kết cầu cách tường hoặc ống gió hoặc kết cầu lớn hơn 0,8 m thì
+
+đầu báo phải lắp ở vị trí trên tràn nhà (thuận lợi cho việc lắp đặt, bảo trì bảo dưỡng).
+
+5.8.2.7 Trằn dạng lưới hở
+
+5.8.2.7.1 Khi sử dụng đầu báo cháy lửa thì chúng phải được lắp đặt phía trên và phía dưới
+
+tràn dạng lưới hở. Cho phép không lắp đặt đầu báo cháy phía dưới các tràn hở tuần hoàn
+
+khi tổng diện tích lỗ hở lớn hơn hai phân ba diện tích trân của khu vực bảo vệ, khi đã có đâu
+
+báo cháy được lắp đặt phía trên tràn hở.
+
+5.8.2.7.2 Khi một phần bắt kỷ của trần không có lỗ hở nhô xuống và có kích thước tói thiểu
+
+lớn hơn 3,5 m phải áp dụng 5.8.2.6.
+
+5.8.2.7. Phải lắp đặt đầu báo cháy bảo vệ cho phàn không gian phía trên tràn hở nếu có
+
+yêu cầu quy định tại tiêu chuẳn này.
+
+5.8.2.8 Khu vực khó tiếp cận khi có cháy
+
+Khi đầu báo cháy được lắp đặt trong các khu vực khó tiếp cận khi có cháy thì mỗi khu vực
+
+phải được phân chia thành các vùng phát hiện cháy riêng biệt và có đèn chỉ thị từ xa được
+
+lắp đặt bên ngoài (xem Hình 1).
+
+CHÚ THÍCH: Các ví dụ khu vực khó tiếp cận bao gồm các khu vực được khóa: cửa hàng, mái vòm, hằm kiên có,
+
+phòng kỹ thuật thang máy, phòng lạnh, tủ và các phòng tủ điện.
+
+5.8.2.9 Phần nhà sở hữu riêng
+
+5.8.2.9.1 Tín hiệu chỉ thị báo động cho phản nhà được sở hữu riêng (căn hộ, shophouse...)
+
+cần được chỉ thị:
+
+a. Vị trí tại trung tâm báo cháy, hoặc
+
+b. Sử dụng chung vùng phát hiện cháy tại tủ trung tâm báo cháy khi từng khu vực sở hữu
+
+riêng đó lắp đặt đèn chỉ thị từ xa gàn với lỗi vào của từng khu vực sở hữu riêng.
+
+5.8.2.9.2 Khi phản nhà sở hữu riêng được sử dụng để ngủ bao gồm khu vực phòng chính và
+
+một phòng tắm (không được sử dụng cho các mục đính khác, ví dụ giặt ủi) cho phép lắp đặt
+
+một đầu báo cháy khói hoặc một đầu báo cháy hỗn hợp trong phòng chính với điều kiện là
+
+tổng diện tích của toàn bộ khu vực < 80 m.
+
+5.8.2.10 Gian phòng di động sử dụng làm kho hoặc văn phòng làm việc
+
+Bắt kỳ gian phòng kín có thể tích bên trong lớn hơn 10 m® được chế tạo có thể di chuyển
+
+được, sử dụng làm kho hoặc văn phòng làm việc và được đặt trong phạm vi của nhà, công
+
+trình phải được bảo vệ như một phân của nhà, công trình.
+
+5.8.2.11 Yêu cầu bỏ sung cho đầu báo cháy lửa
+
+5.8.2.11.1 Đầu báo cháy lửa phải được lắp đặt sao cho tằm nhìn của đầu báo cháy không bị
+
+hạn chế bởi các bộ phận, cấu trúc của tòa nhà hoặc các vật thể khác.
+
+5.8.2.11.2 Khi đầu báo cháy lửa được đặt trong các môi trường có thẻ dẫn đền sự lắng đọng
+
+của các hạt trên mặt kính của bộ phận cảm biến quang, phải lắp các tắm chắn thích hợp
+
+hoặc thiết bị làm sạch để bảo đảm cho phạm vi độ nhạy của đầu báo cháy được duy trì giữa
+
+các chu kỳ bảo dưỡng.
+
+5.9 Yêu cầu khoảng cách giữa các đầu báo cháy
+
+5.9.1 Đầu báo cháy khói và đầu báo cháy cacbon monoxit (CO)
+
+5.9.1.1 Đầu báo cháy kiểu điểm
+
+5.9.1.1.1 Quy định chung
+
+Đồi với khu vực có chiều cao tràn dưới 4 m, khoảng cách từ bộ phận cảm biến của các đầu
+
+báo cháy kiểu điểm đến trần từ 0,025 m đền 0,3 m. Đồi với khu vực có chiều cao trần từ 4m
+
+đến 15 m, khoảng cách từ bộ phận cảm biến đến trần không quá 0,8 m.
+
+CHÚ THÍCH: Đồi với khu vực có chiều cao trằn lớn hơn 15 m có thẻ tham khảo các loại đầu báo cháy khác.
+
+5.9.1.1.2 Khoảng cách giữa các đầu báo cháy trên trần phẳng
+
+Đồi với các tràn phẳng, khoảng cách từ điểm bắt kỳ trên tràn phẳng đền đầu báo cháy gần
+
+nhất không vượt quá 7,2 m và khoảng cách giữa các đầu báo cháy không được vượt quá
+
+10,2 m (xem Hình 2).
+
+Kích thước tính bằng mét
+
+5đ T NHI HN ri N
+
+Ì Tưng —.—/?óƒcc
+
+¬„ HO
+
+M / A A
+
+/ /R
+
+⁄4 14
+
+` Mổ'
+
+x2 A 2> 2>.
+
+` v4
+
+L Ỗ — G7
+
+Hình 2 - Khoảng cách lớn nhất giữa các đầu báo cháy lắp đặt trên bề mặt bằng
+
+trần phẳng
+
+5.9.1.1.3 Khoảng cách giữa các đầu báo cháy lắp đặt trên bè mặt dốc
+
+Các đầu báo cháy phải được lắp đặt cách đỉnh mái một khoảng giữa 0,5 m và 1,5 m (xem
+
+Hình 6) và khoảng cách lớn nhắt theo chiều dọc giữa các đầu báo cháy là 10,2 m. Các hàng
+
+đầu báo cháy khói bên dưới có khoảng cách không được lớn hơn 10,2 m khi được đo theo
+
+chiêu ngang từ các hàng đầu báo cháy khói liền kê, tường hoặc vách ngăn ngoài. Khoảng
+
+cách giữa các đâu báo cháy trong các hàng bên dưới có thê kéo dài tới 20,4 m với điêu kiện
+
+các đâu báo cháy trên các hàng liền kè được bồ trí sole/ xen kẽ nhau (xem Hình 3).
+
+Kích thước tính bằng mét
+
+ai
+
+m. $ Lớn nhất 10,2 (Xem chủ thích 3)
+
+— |
+
+Ầ 2.
+
+- x >2 |
+
+tiê2) Ai Ñ A , |
+
+ra LA
+
+m mth 5
+
+[ 52
+
++5) !5JI
+
+(Chú thích 1} | 102
+
+r5? I5IJT r
+
+H 102
+
+B*t +E) E1)” rỮ)
+
+IWRUV!
+
++. 'E] ị + F] **
+
+$ LÉ + 5
+
+| 12 ;
+
+rẽ EE=IIEI -()
+
+nh
+
+nà I5]T
+
+I 102
+
+[
+
++g] 5 ¡5† 5] E]
+
+Ị 102
+
+EB iEt g5
+
+H %t
+
+CHÚ THÍCH 1: Các hàng xen kẽ được dịch chuyển.
+
+CHÚ THÍCH 2: Xem 5.9.1.1.7 và 5.9.1.4
+
+CHÚ THÍCH 3: Các yêu cầu của đầu báo cháy trên đỉnh mái, xem 5.9.1.1.3 và Hình 6.
+
+Hình 3 - Ví dụ về các vị trí của đầu báo cháy khói kiểu điểm trên các bề mặt dốc
+
+5.9.1.1.4 Khoảng cách đến tường, vách ngăn lỗ mở cấp không khí
+
+a) Khoảng cách từ hàng của đầu báo cháy gần nhắt tới tường hoặc vách ngăn không được
+
+vượt quá 5,1 m và không nhỏ hơn 0,5 m (xem Hình 2).
+
+b) Khoảng cách từ đầu báo cháy đền mép ngoài gần nhát của cửa cấp không khí không khí
+
+không nhỏ hơn 0,4m.
+
+©) Khoảng cách từ đầu báo cháy đến phía ngoài chu vi của cánh quạt không nhỏ hơn 0,4 m.
+
+5.9.1.1.5 Khu vực có dòng không khí thay đổi ở mức cao
+
+Đồi với khu vực có dòng không khí thay đổi ở mức cao được thông gió cưỡng bức như các
+
+phòng máy tính, phòng sạch thì khoảng cách của các đầu báo cháy giảm xuống phải phù
+
+hợp với Bảng 1.
+
+Bảng 1 - Khoảng cách giữa các đầu báo cháy khói dựa trên mức thay đồi không khí
+
+¡ Bội số trao đỏi khí trên giờ |Khoảng cách giữa các đầu Khoảng cách từ đầu báo cháy
+
+| | báocháy,m |đến tường hoặc vách ngăn, m
+
+| Từ15đếndưới20 | 72
+
+Từ 20 đến dưới 30 6,0 3.0
+
+Từ 30 đến dưới 60 4,8
+
+L_. Từ 60 trở lên 3,6 1,8
+
+5.9.1.1.6 Vị trí của các đầu báo cháy khói trên các bề mặt phẳng có các dầm
+
+Khi các bè mặt bằng phẳng được ngăn bởi kết cầu, cầu kiện làm giảm đối lưu của khói, các
+
+đầu báo cháy phải được lắp đặt bảo đảm khoảng cách giữa các đầu báo cháy phải phù hợp
+
+với 5.9.1.1.2, 5.9.1.1.4 và các điều kiện sau:
+
+a. Đối với các khu vực có độ sâu dàm d < 0,3 m (xem Vùng 1, Hình 4).
+
+b. Đồi với các khu vực có chiều cao h < 2 m và độ sâu của dàm nhà d > 0,3 m (xem Vùng 2,
+
+Hình 4).
+
+c. Đối với các khu vực có chiều cao trằn 2 m <h < 4m, độ sâu của dàm nhà d > 0,3 m (xem
+
+Vùng 3, Hình 4) và khu vực giữa các dàm nhà có diện tích < 4 m°, các đầu báo cháy phải
+
+được lắp trên mặt dưới của các dàm nhà.
+
+d. Đái với các khu vực như đã nêu trong 5.9.1.1.6 c, khi diện tích của khu vực giữa các dầm
+
+nhà > 4 m°, phải lắp đặt ít nhắt là một đâu báo cháy trong mỗi khu vực giữa các dằm nhà.
+
+e. Đồi với các khu vực có chiều cao trằn h > 4 m, độ sâu của dằm nhà d > 0,3 m (xem Vùng 4,
+
+Hình 4) và diện tích của khu vực giữa các dằm nhà < 9 m?, các đầu báo cháy phải được lắp
+
+đặt trên mặt dưới của các dàm nhà.
+
+f. Đối với các khu vực có chiều cao tràn h > 4 m, độ sâu của dàm nhà d > 0,3 m (xem Vùng 4,
+
+Hình 4) và diện tích của khu vực giữa các dàm nhà > 9 m2, các đầu báo cháy phải được lắp
+
+đặt trong các khu vực giữa các dâm nhà.
+
+z”
+
+h
+
+Z4 4 4 ⁄444444Z_ Vừa!
+
+Vòng 4
+
+/ $ 4
+
+“Điện th giữa Vng3
+
+các dàn nhà 2
+
+vừng2
+
+k 30
+
+CHÚ DẪN: h - Chiều cao tràn (m); d - Độ sâu của dàm (m)
+
+Hình 4 - Yêu cầu thiết kế cho các đầu báo cháy khói kiều điểm và các hệ thống đầu
+
+báo cháy khói kiêu hút trong các câu trúc nhà có dâm
+
+5.9.1.1.7 Khoảng cách yêu cầu giữa các đầu báo cháy trong không gian bị che kín
+
+Khi các đầu báo cháy được yêu cầu phù hợp với 5.8.2.4, khoảng cách và vị trí phải phù hợp
+
+với 5.9.1.1.2 đến 5.9.1.1.6, tùy thuộc vào các điêu kiện sau:
+
+a) Đối với trần phẳng có chiều cao tính tới mặt trên của trần vượt quá 2 m, các đầu báo
+
+cháy phải được lắp đặt phù hợp quy định 5.9.1.1.2 và 5.9.1.1.4.
+
+b) Đồi với trằn phẳng có chiều cao tính tới mặt trên của trần nhỏ hơn 2 m và có các cầu
+
+kiện bên dưới như dằm, đường ống có chiều sâu không vượt quá 0,3 m tính từ mặt trên
+
+của trần phẳng thì khoảng cách giữa các đầu báo cháy không vượt quá 15 m và khoảng
+
+cách từ tường hoặc vách ngăn đến đầu báo cháy gần nhát không được vượt quá 10,2 m.
+
+Khi các cầu kiện bên dưới có chiều sâu tính từ mặt trên của trằn phẳng lớn hơn 0,3 m thì
+
+khoảng cách giữa đầu báo cháy lắp đặt theo 5.9.1.1. b.
+
+c) Với các nhà mái đỉnh, đầu báo cháy thấp nhất phải được lắp đặt ở vị trí không lớn hơn
+
+10,2 m được đo theo phương nằm ngang về phia đỉnh (mái) tính từ vị trí chiều cao giữa
+
+các bề mặt phía trên và phía dưới của không gian là 0,8 m (xem Hình 3).
+
+5.9.1.2 Đầu báo cháy khói kiều hút
+
+5.9.1.2.1 Diện tích bảo vệ của một đầu báo cháy khói kiểu hút không lớn hơn một vùng phát
+
+hiện cháy (xem 5.7).
+
+a) Đầu báo cháy khói kiểu hút làm việc phụ thuộc vào độ nhạy của đầu báo và được chia
+
+thành ba loại:
+
+- Loại A - siêu nhạy (độ che mờ do khói dưới 0,8 %/m);
+
+- Loại B - độ nhạy cao (độ che mờ do khói từ 0,8 đền dưới 2,0 %/m);
+
+- Loại C - độ nhạy tiêu chuẳn (độ che mờ do khói từ 2,0 đến 4,5 %/m).
+
+b) Thời gian lấy mẫu không khí từ lỗ hút xa nhất đến đầu báo cháy, tùy thuộc vào độ nhạy
+
+của đầu báo cháy kiểu hút, không được vượt quá:
+
+- 60 s đi với loại A;
+
+- 90 s đối với loại B;
+
+- 120 s đối với loại C.
+
+5.9.1.2.2 Vị trí của các lỗ lấy mẫu phải phù hợp với các yêu cầu về khoảng cách cho các đầu
+
+báo cháy kiểu điểm
+
+Bảng 2 - Quy định lắp đặt đầu báo cháy khói kiểu hút
+
+Ñ | uux ,.„. | Chiều cao tốiđakhu | Bán kính bảo vệ của
+
+(togiA sung |9: 1866 II
+
+losnemeee “(8® | |
+
+|LogiC.dộnhgytêưchuun --—- |12:” -- |66 |
+
+Cho phép sử dụng đâu báo cháy khói kiêu hút đề bảo vệ trong các phòng có chiêu
+
+cao đến 40 m; Trong trường hợp này, các lỗ lắy mẫu phải được bé trí theo hai lớp bảo vệ:
+
+- Lớp bảo vệ thứ nhất: Lỗ lắy mẫu không thấp hơn loại B ở độ cao không quá 30 m
+
+(dưới các tầng giá đỡ):
+
+- Lớp bảo vệ thứ hai: Lỗ lắy mẫu loại A ở độ cao không quá 40 m (dưới tràn nhà).
+
+5.9.1.3 Đầu báo cháy khói kiều tia chiều
+
+5.9.1.3.1 Đầu báo cháy khói tia chiều được lắp đặt cho khu vực có chiều cao trần đến 40 m.
+
+Khoảng cách lắp đặt đầu báo nằm trong khoảng từ 0,025 m đến 0,6 m bến dưới tràn hoặc mái.
+
+5.9.1.3.2 Khoảng cách giữa các tia chiều không được vượt quá 14,4 m (xem Hình 5).
+
+Khoảng cách tia chiều đền tường, vách ngăn không được vượt quá 7,2m.
+
+5.9.1.3.3 Do đặc điểm kiến trúc kết cầu mà không thể lắp đặt đầu báo cháy đảm bảo theo
+
+quy định tại 5.9.1.3.1, thì đầu báo cháy có thẻ được lắp đặt khoảng cách lớn hơn 0,6 m tính
+
+từ trần nhưng cằn đảm bảo khoảng cách giữa các tia chiều được giảm xuống còn 25 %
+
+chiêu cao lặp đặt.
+
+5.9.1.3.4 Trường hợp khói không đối lưu lên tới tràn hoặc mái, yêu cầu lắp đặt bỏ sung đầu
+
+báo cháy tia chiều ở khu vực vực chiều cao trung gian. Khoảng cách giữa các đầu báo cháy
+
+được lắp ở các chiều cao trung gian giảm còn 25 % chiều cao lắp đặt.
+
+CHÚ THÍCH: Các đầu báo cháy khói tia chiều bỏ sung thường được lắp đặt trong các không gian thẳng đứng ở
+
+các mức thắp hơn, ví dụ, đại sảnh của tòa nhà.
+
+Kích thước tính bằng mét
+
+Lớnnhất72m Lớnnhất14,4m Lớn nhất 7,2m
+
+¡ !
+
+g
+
+h ! '
+
+I
+
+|
+
+Ị
+
+|
+
+]
+
+I
+
+[
+
+¡
+
+}
+
+ị
+
+|
+
+}
+
+L
+
+Ị
+
+¡
+
+|
+
+}
+
+ị
+
+Ị
+
+! Ti }
+
+[5]
+
+Hình 5 - Ví dụ về các vị trí của đầu báo cháy khói tia chiều
+
+5.9.1.4 Vị trí của các đầu báo cháy gần trần hoặc các đình bè mặt mái
+
+Phải lắp đặt đầu báo cháy gàn đỉnh của mái dóc, mái hoặc một bè mặt phẳng đề tránh vùng
+
+không khí chét (xem Hình 8).
+
+Kích thước tính bằng mét
+
+(a) Bè mặt dốc khác nhau (b) Trần, mái hoặc bề mặt dạng răng cưa
+
+UAA ~tựa k
+
+v Lá N
+
+Khen mo tồu05 /⁄ Đống nhonenos
+
+⁄LÀ Ể S7
+
+~⁄
+
+Có thể lựa chọn... ⁄ L_;
+
+(c) Bề mặt dốc như nhau
+
+„3,
+
+Không 5
+
+n E
+
+2 % „
+
+Mai l2 tương tự
+
+MỊ
+
+MỊ
+
+BỊ
+
+¡ xơm
+
+(d) Trằn hoặc mái có cửa chớp với (e) Trần, mái hoặc bề mặt có cửa mái
+
+cầu trúc dạng ống đứng có cửa chớp
+
+Hình 6 - Ví dụ về các vị trí của đầu báo cháy khói kiều điểm, tia chiều và đầu báo cháy
+
+khói kiêu hút tại trân, mái hoặc các đỉnh của bê mặt
+
+ị - Thay đổi của
+
+l u.
+
+lu ău,
+
+l Lớn nhất 5 1
+
+§ i U
+
+(f) Dằm nóc có thông gió (g) Đỉnh hẹp
+
+225 |
+
+li mm
+
+L_]j „ 2 ƯA
+
+ý £ ii
+
+J Ñ !
+
+|
+
+~ - `
+
+(h) Lỗ thông của dằm góc hẹp (ï) Lỗ thông của dằm góc rộng
+
+CHÚ DẪN:
+
+X: 10/2 m đối với các đầu báo cháy khói kiểu điểm và các đầu báo cháy khói kiểu hút và 14,4 m đối với các đầu
+
+báo cháy khói tia chiều.
+
+CHÚ THÍCH: Đồi với hình (c), vị trí thay thế được hiển thị bằng biểu tượng có đường viên nét đứt.
+
+Hình 6 - Ví dụ về các vị trí của đầu báo cháy khói kiều điểm, tia chiều và đầu báo cháy
+
+khói kiều hút tại trần, mái hoặc các đỉnh của bề mặt (két thúc)
+
+5.9.2 Đầu báo cháy nhiệt
+
+5.9.2.1 Đầu báo cháy nhiệt kiều điểm
+
+5.9.2.1.1 Quy định chung
+
+Đầu báo cháy nhiệt kiểu điểm được lắp đặt đảm bảo khoảng cách từ bộ phận cảm biến đền
+
+trần hoặc mái nằm trong khoảng từ 0,015 m đền 0,1 m. Trường hợp cầu trúc của mái nhà
+
+làm ảnh hưởng đến khả năng đối lưu của nhiệt từ đám cháy tới đầu báo, thì các đầu báo
+
+cháy này được lắp đặt trên cầu trúc này và đảm bảo bộ phận cảm biến đến mái không lớn
+
+0,35 m khoảng cách đến mái.
+
+5.9.2.1.2 Khoảng cách giữa các đầu báo cháy nhiệt trên bề mặt trần phẳng
+
+Đồi với các bè mặt bằng phẳng, khoảng cách từ bắt cứ điểm nảo trên bè mặt bằng phẳng
+
+đến đầu báo cháy gần nhất cũng không được vượt quá 5,1 m và khoảng cách giữa các đầu
+
+báo cháy không được vượt quá 7,2 m (xem Hình 7).
+
+Kích thước tính bằng mét
+
+lộ XS AC TS. HS
+
+!
+
+lưu ygzzzzzzzzzzzz2z2zzzzzzzzzzzzzZza
+
+:
+
+E; / $ c s
+
+⁄ ⁄
+
+.Ễ /
+
+s ⁄ . N /
+
+⁄ : ; /
+
+4 /
+
+5] ni
+
+li 1⁄4
+
+kì N e $ by /
+
+t 7Zzzzzzzzzzzzzzzz>zzzzzzzzzĐÀÁ
+
+Hình 7 - Khoảng cách lớn nhất giữa các đầu báo cháy nhiệt trên bề mặt bằng phẳng
+
+5.9.2.1.3 Khoảng cách giữa các đầu báo cháy nhiệt trên bè mặt dốc
+
+8) Các đầu báo cháy phải được lắp đặt cách đỉnh (mái) một khoảng giữa 0,5 m và 1,5 m và
+
+khoảng cách lớn nhất theo chiêu dọc giữa các đầu báo cháy là 7,2 m. Các hàng thấp hơn
+
+của các đầu báo cháy nhiệt phải cách nhau không lớn hơn 7,2 m được đo theo phương năm
+
+ngang từ các hàng liền kè, tường bên ngoài hoặc vách ngăn. Khoảng cách giữa các đầu báo
+
+cháy nhiệt trong các hàng thấp hơn có thể kéo dài tới 14,4 m với điều kiện là các đầu báo
+
+cháy được dịch chuyển như nhau giữa các đầu báo cháy trên các hàng liền kè (xem Hình 8).
+
+b) Khi trần có kết cầu dàm hoặc xà có chiều sâu nhỏ hơn 0,3 m, có thể lắp đặt đầu báo cháy
+
+trên mặt bên dưới của kết cầu này.
+
+Kích thước tính bằng mét
+
+am
+
+í s | v<
+
+\:7ểŸ4 Lớn nhất 7 2 (Xem chủ thích 3)
+
+NI 1⁄2
+
+Với khoảng không \Ị 2
+
+thích 2) \j Ị
+
+x—_ ¡
+
+—^vøØ“ |
+
+N=⁄
+
+EB EBf .
+
+ịn
+
+5] 5) !B] 5]
+
+HH Hi
+
+H
+
+Ø =HIimtgm +
+
+—^.
+
+5] isH 1]
+
+5] E) ¡ïBJƑ DJ 5]
+
+1.7
+
+Ị
+
+m mth u
+
+: 3%.
+
+CHÚ THÍCH 1: Các hàng xen kẽ được dịch chuyển
+
+CHÚ THÍCH 2: Xem 5.9.1.2.
+
+CHÚ THÍCH 3: Và các yêu cầu của đầu báo cháy trên đình mái, xem Hình 9
+
+Hình 8 - Ví dụ về các vị trí của đầu báo cháy nhiệt trên bề mặt dốc
+
+56.9.2.1.4 Khoảng cách đến tường, vách ngăn hoặc lỗ mở cấp không khí
+
+a) Khoảng cách từ hàng đầu báo cháy gần nhất tới tường hoặc vách ngăn nằm trong
+
+khoảng từ 0,3 m đền 3,6 m (xem Hình 7).
+
+b) Khoảng cách từ đầu báo cháy đến lỗ mở cấp không khí không nhỏ hơn 0,6m.
+
+5.9.2.1.5 Giảm khoảng cách giữa các đầu báo cháy
+
+Khi tràn được phân chia bởi các kết cầu như dằm, xà hoặc đường óng có độ sâu theo phương
+
+thắng đứng lớn hơn 0,3 m thì khoảng cách giữa các đâu báo cháy được giảm đi 30 %.
+
+5.9.2.1.6 Khoảng cách các đầu báo cháy nhiệt trong không gian được che kín
+
+Đồi với các đầu báo cháy được yêu cầu lắp đặt theo Điều 5.8.2.4 thì khoảng cách và vị trí của
+
+các đầu báo cháy phải đảm bảo theo Điều 5.9.2.1.2 đến 5.9.2.1.5 tùy thuộc điều kiện sau:
+
+a) Chiều cao trần lớn hơn 2 m, khoảng cách giữa các đầu báo cháy phải phù hợp với
+
+5.9.2.1.2và5.9.2.1.4.
+
+b) Chiều cao trần nhỏ hơn 2 m và có các phần nhô ra như các dằm, các ống gió không vượt
+
+quá 0,3m tính từ trằn thì khoảng cách giữa các đầu báo cháy không được vượt quá 10,4 m
+
+và khoảng cách từ đâu báo cháy bắt kỳ đến tường, vách ngăn không được vượt quá 5,1m.
+
+c) Khi các phần nhô ra có chiều sâu lớn hơn 0,3 m tính từ tràn, khoảng cách của các đầu
+
+báo cháy phải đảm bảo với 5.9.2.1.2 và 6.9.2.1.4.
+
+d) Với nhà mái đỉnh, đầu báo cháy ở vị trí tháp nhát được lắp đặt ở vị trí không lớn hơn 7,2
+
+m được tính từ độ cao 0,8 m (khoảng cách bề mặt trên và bè mặt dưới) hướng vè phía đỉnh
+
+mái (xem Hình 8).
+
+5.9.2.2 Đầu báo cháy nhiệt kiểu dây
+
+Lắp đặt đầu báo cháy nhiệt kiểu dây lắp đặt phải tuân theo các yêu cầu của 5.9.2.1.2 đến
+
+5.9.2.1.5 và các yêu cầu sau:
+
+a. Diện tích bảo vệ lớn nhắt của đầu báo cháy nhiệt kiều dây phải phù hợp với giới hạn vùng
+
+phát hiện cháy được quy định trong 5.7.2.
+
+b. Các phàn tử cảm biến của đầu báo cháy nhiệt kiều dây phải được lắp đặt sao cho không
+
+bị hư hỏng cơ học.
+
+c. Các đầu báo cháy kiểu dây phải được bó trí trên khắp diện tích vùng phát hiện cháy sao
+
+cho khoảng cách giữa hai tuyên dây liền kè không lớn hơn 7,2 m và khoảng cách tới bắt cứ
+
+tường hoặc vách ngăn bất kỳ không lớn hơn 3,6m.
+
+d. Đầu báo cháy nhiệt kiểu dây phải được lắp đặt trong từng đỉnh của khoang mái kể cả
+
+trường hợp khoảng cách giữa các đỉnh này có thẻ cách nhau nhỏ hơn 7,2m.
+
+e. Đầu báo cháy nhiệt kiểu dây cầu thành từ nhiều bộ phận khác nhau, khi xác định khoảng
+
+cách mỗi bộ phận này được coi là một đầu báo cháy kiêu điểm.
+
+5.9.2.3. Vị trí của các đầu báo cháy nhiệt gằn mái hoặc đỉnh mái
+
+Phải lắp đặt đầu báo cháy gần đỉnh của mái dốc, mái hoặc một bè mặt phẳng đề tránh vùng
+
+không khí chêt (xem Hình 9).
+
+Kích thước tính bằng mét
+
+*e¿Lớn nhật 15
+
+íI .
+
+><fhond nó tơ) 95 M
+
+Ị
+
+NHÀ. HN —
+
+(a) Bồ mặt dốc khác nhau (b) Trần, mái hoặc bề mặt dạng răng cưa
+
+Hình 9 - Ví dụ về các vị trí của đầu báo cháy nhiệt kiều dây tại trằn, mái hoặc các đình
+
+của bê mặt
+
+lá . ^
+
+(c) Bề mặt dốc như nhau
+
+AI HI
+
+Mũ bảo vệ. xe
+
+NV
+
+Ï
+
+€ to 46
+
+(f) Dàm nóc có thông gió (g) Đỉnh hẹp)
+
+>20
+
+àc ý in
+
+u :
+
+TT xì
+
+` Vị
+
+¡
+
+| Lớn nhất 72 | Lớn nhất 72 |
+
+(h) Lỗ thông của dầm góc hẹp (i) Lỗ thông của dằm góc rộng
+
+Hình 9 - Ví dụ về các vị trí của đầu báo cháy nhiệt kiều dây tại trằn, mái hoặc các đỉnh
+
+của bê mặt (kết thúc)
+
+5.9.3 Đầu báo cháy lửa
+
+Các đầu báo cháy lửa phải được lắp đặt sao cho tằm nhìn của đầu báo cháy không bị hạn
+
+chế bởi các bộ phận cầu trúc của tòa nhà hoặc các vật thể khác.
+
+Các đầu báo cháy lửa [xem TCVN 7588-10 (ISO 7240-10)] phải được đặt cách nhau để bảo
+
+đảm cho các khu vực nguy hiểm được bảo vệ có các chỗ bị che khuất hoặc không phát hiện
+
+được là nhỏ nhất. Khi có nhiều khu vực không được bảo vệ do các đô vật như máy bay,
+
+thiết bị hoặc các giá bảo quản thì phải lắp đặt các đầu báo cháy bỗ sung để bao phủ các khu
+
+vực này.
+
+CHÚ THÍCH: Cằn hiểu các nguyên lý hoạt động của các đầu báo cháy lửa (hồng ngoại hoặc tia cực tím) để có
+
+thẻ lựa chọn và định vị đúng một thiết bị riêng biệt thích hợp với mồi nguy hiểm cháy và mức bảo vệ yêu cầu.
+
+Hướng dẫn lắp đặt của nhà sản xuất cung cáp thông tin quan trọng về kiểu đàu báo cháy được lựa chọn.
+
+5.9.4 Đầu báo cháy hỗn hợp (đa cảm biến)
+
+5.9.4.1 Khi lắp đặt các đầu báo cháy hỗn hợp [ví dụ, TCVN 7568-8 (ISO 7240-8) TCVN
+
+7568-15 (ISO 7240-15) và ISO 7240-27] mà chỉ có cảm biến nhiệt hoạt động thì các đầu báo
+
+cháy lắp đặt đảm bảo theo yêu cầu đói với đầu báo nhiệt.
+
+5.9.4.2 Đồi với các đầu báo cháy thay đổi được thông số kỹ thuật (ngưỡng tác động, thời
+
+gian tác động) thì các giá trị này đảm bảo trong giới hạn cho phép.
+
+5.10 Hộp nút ấn báo cháy
+
+5.10.1 Phải lắp đặt hộp nút án báo cháy ở vị trí có thể nhìn thầy rõ và tiếp cận được dễ dàng
+
+gần với khu vực lồi ra của tàng, công trình tham khảo Phụ lục B.
+
+5.10.2 Cho phép lắp đặt nút ấn báo cháy chung với vùng phát hiện cháy khi các nút án này
+
+được lắp đặt ở bên ngoài.
+
+5.10.3 Khoảng cách giữa các hộp nút ần báo cháy không được vượt quá 45 m.
+
+CHÚ THÍCH: Khi quảng đường di chuyển vượt quá 45 m cần lắp đặt một hộp nút ần báo cháy bổ sung và không
+
+cần áp dụng yêu cầu vẻ vị trí trong 5.10.1.
+
+5.10.4 Hộp nút ấn báo cháy phải được lắp đặt ở chiều cao (1,4 + 0,2) m tính từ mặt đường
+
+đi lại và có một không gian trồng dạng nửa hình cầu bán kính 0,6 m xung quanh mặt trước
+
+của hộp nút ần báo cháy.
+
+5.11 Thiết bị báo cháy
+
+5.11.1 Quy định chung
+
+Các vùng báo cháy có thể bao gồm nhiều hơn một vùng phát hiện cháy.
+
+5.11.2 Thiết bị báo cháy bằng âm thanh
+
+5.11.2.1 Các thiết bị báo cháy bằng âm thanh phải bảo đảm các yêu cầu sau:
+
+- Tín hiệu báo cháy phải phân bố đồng thời trong khoang cháy / nhà và công trình
+
+- Các tín hiệu báo cháy, nghe thầy rõ ở tắt cả các địa điểm trong khoang cháy / nhà và
+
+công trình.
+
+- Mức cường độ âm thanh được tính toán trung bình trong khoảng thời gian 60 s, mức
+
+cường độ âm ở tất cả các vị trí đảm bảo lớn hơn độ ồn của môi trường xung quanh ít nhát là
+
+10 dBA, mức cường độ âm thanh không nhỏ hơn 65 dBA và không lớn hơn 105 dBA.
+
+Tín hiệu báo động bằng âm thanh đối với các khu vực ngủ phải lớn hơn độ ồn của môi
+
+trường xung quanh ít nhát 15 dBA (với điều kiện các cửa ra vào đều đóng) và không nhỏ
+
+hơn 75 dBA.
+
+5.11.2.2 Đối với các khu vực như bệnh viện nơi bệnh nhân không chịu được sự căng thẳng
+
+do các tiếng ồn lớn thì mức cường độ âm thanh và nội dung thông báo phải được bó trí để
+
+đưa ra báo cháy cho các nhân viên của bệnh viện và giảm tới mức tối thiểu sự khủng hoảng
+
+về tinh thằn cho các bệnh nhân.
+
+5.11.3 Thiết bị báo cháy bằng ánh sáng
+
+5.11.3.1. Thiết bị chỉ thị trong nhà:
+
+5.11.3.1.1 Vị trí lắp đặt thiết bị báo cháy bằng ánh sáng:
+
+- Được lắp đặt trên hành lang, lồi ra thoát nạn;
+
+- Nơi người khiếm thính thường ở;
+
+- Nơi có tiếng ồn xung quanh vượt quá 95 dBA;
+
+- Khu vực yêu cầu hạn chế về âm thanh (ví dụ khu vực phòng mỏ trong bệnh viện).
+
+5.11.3.1.2 Thiết bị báo cháy bằng ánh sáng được lắp đặt cho nhà và công trình bảo đảm các
+
+yêu cầu sau:
+
+- Phải lắp đặt trên tràn hoặc tường với số lượng thích hợp sao cho có thẻ nhìn thầy ở tắt cả
+
+các vị trí trong khu vực quy định tại Điều 5.11.3.1.1;
+
+- Khi lắp đặt trên tường chiều cao từ chân tường đến đèn tồi thiểu 2 m¿ khoảng cách giữa
+
+các thiết bị không quá 45 m.
+
+- Thiết bị báo cháy bằng ánh sáng phải là loại chớp nháy và tin hiệu báo cháy bằng ánh
+
+sáng cằn bảo đảm tính đồng bộ khi chớp nháy;
+
+- Sự có của thiết bị báo cháy bằng ánh sáng trong khu vực bắt kỳ không làm ảnh hưởng đến
+
+hoạt động của các thiết bị báo cháy bằng ánh sáng trong khu vực khác.
+
+5.11.3.2 Thiết bị chỉ thị bên ngoài nhà và công trình.
+
+5.11.3.2.1 Thiết bị chỉ thị được đặt bên ngoài gian phòng được nhìn thấy rõ ràng từ các lồi đi
+
+chính, gần các cửa ra vào. Khi được lắp đặt trên tường, chiều cao tối đa không quá 2,4 m
+
+tính từ mặt đường đi lại.
+
+5.11.3.2.2 Từ “FIRE” phải được tích hợp hoặc đặt cạnh đèn chỉ thị đảm bảo chiều cao bằng
+
+chữ không nhỏ hơn 0,025 m trên nền tương phản, chữ viết phải đứng thẳng và đọc được
+
+một cách rõ ràng.
+
+5.11.3.2.3 Thiết bị chỉ thị phải được kết nói với tín hiệu ra giám sát của tủ trung tâm báo cháy.
+
+5.12 Trung tâm báo cháy và thiết bị chỉ thị
+
+5.12.1 Trung tâm báo cháy phải có chức năng tự động kiểm tra tín hiệu từ các đầu báo cháy,
+
+kênh báo cháy và các thiết bị báo cháy khác truyền về đẻ loại trừ các tín hiệu báo cháy giả.
+
+Không được dùng các trung tâm không có chức năng báo cháy làm trung tâm báo cháy. Trung
+
+tâm báo cháy có khả năng giám sát tình trạng hoạt động của các thiết bị trong hệ thống.
+
+5.12.2 Trung tâm báo cháy phải đặt ở những nơi thường xuyên có người trực suốt ngày
+
+đêm. Trong trường hợp không có người trực suốt ngày đêm, trung tâm báo cháy phải có
+
+chức năng truyền các tin hiệu báo cháy và báo sự có đến nơi trực chảy hay nơi có người
+
+thường trực suốt ngày đêm và phải có biện pháp phòng ngừa người không có nhiệm vụ tiếp
+
+xúc với trung tâm báo cháy.
+
+Trung tâm báo cháy phải có chức năng tự động truyền tin báo cháy đến đơn vị Cảnh sát
+
+Phòng cháy, chữa cháy và cứu nạn, cứu hộ.
+
+Nơi đặt các trung tâm báo cháy phải có điện thoại liên lạc trực tiếp với đơn vị Cảnh sát
+
+Phòng cháy, chữa cháy và cứu nạn, cứu hộ hay nơi nhận tin báo cháy.
+
+5.12.3 Trung tâm báo cháy phải được lắp đặt trên tường, vách ngăn, trên bàn tại những nơi
+
+không nguy hiểm về cháy và nổ và có một không gian trồng xung quanh mặt trước của tủ
+
+trung tâm báo cháy tối thiêu là 1,5 m (xem Hình 10).
+
+3%
+
+Kích thước tính bằng mét
+
+_005. _005.
+
+U——._.. Khônggianlàmviệctống _ __—_J |.
+
+Hình 10 - Khoảng hở nhỏ nhất đến kết cầu bao che khu vực bảo vệ
+
+5.12.4 Nếu trung tâm báo cháy được lắp trên các cầu kiện xây dựng bằng vật liệu cháy thì
+
+những cầu kiện này phải được bảo vệ bằng lá kim loại dày từ 0,001 m trở lên hoặc bằng các
+
+vật liệu không cháy khác có độ dầy không dưới 0,01 m. Trong trường hợp này tắm bảo vệ
+
+phải có kích thước sao cho mỗi cạnh của tắm bảo vệ vượt ra ngoài cạnh của trung tâm tối
+
+thiểu 0,1 m về mọi phía.
+
+5.12.5 Khoảng cách giữa các trung tâm báo cháy và trằn nhà bằng vật liệu cháy được không
+
+nhỏ hơn 1,0m.
+
+5.12.6 Trong trường hợp lắp cạnh nhau, khoảng cách giữa các trung tâm báo cháy không
+
+được nhỏ hơn 0,05m.
+
+5.12.7 Nếu trung tâm báo cháy lắp trên tường, cột nhà hoặc giá máy thì khoảng cách từ
+
+phần điều khiển của trung tâm báo cháy đền mặt sản từ không nhỏ hơn 0,75 m và không lớn
+
+hơn 1,85m.
+
+5.12.8 Nhiệt độ và độ ẳm tại nơi đặt trung tâm báo cháy phải phù hợp với tài liệu kỹ thuật và
+
+hướng dẫn sử dụng của trung tâm báo cháy.
+
+5.12.9 Tín hiệu âm thanh, ánh sáng khi báo cháy vả báo sự có phải khác nhau.
+
+5.12.10 Khi lắp các đầu báo cháy với trung tâm báo cháy phải chú ý đến sự phù hợp của hệ
+
+thống (điện áp cấp cho đầu báo cháy, dạng tín hiệu báo cháy, phương pháp phát hiện sự có,
+
+bộ phận kiêm tra đường dây).
+
+5.12.11 Tủ hiện thị phụ
+
+Tủ hiện thị phụ phải lắp đặt ở nơi không có nguồn gây cháy và không lưu trữ chất cháy.
+
+5.12.12 Nối mạng trung tâm báo cháy
+
+Khi các trung tâm báo cháy được nói mạng cần đảm bảo các yêu cầu: Khi đường truyền
+
+giữa một trung tâm bắt kỳ gặp sự số không làm ảnh hưởng đến hoạt động của các trung tâm
+
+báo cháy khác.
+
+5.13 Cấp nguồn
+
+Trung tâm của hệ thống báo cháy phải có hai nguồn điện độc lập: Một nguồn 220 V xoay
+
+chiêu và một nguôn là ắc quy dự phòng.
+
+Dung lượng của ắc quy dự phòng phải bảo đảm ít nhát 24 h cho thiết bị hoạt động ở chế độ
+
+thường trực và 30 min khi có cháy.
+
+Khi sử dụng ắc quy làm nguồn điện, ắc quy phải được nạp điện tự động (Phụ lục C đưa ra
+
+các tính toán dùng làm ví dụ về dung lượng của ác quy, dòng điện nạp và nguồn cáp điện
+
+khi tính toán công suất của nguồn cáp điện, công suất này phải bao gồm bắt cứ các phụ tải
+
+phụ trợ vào được cấp điện bởi thiết bị cấp điện).
+
+5.13.1 Các trung tâm báo cháy phải được tiếp đắt bảo vệ. Việc tiếp đắt bảo vệ phải thỏa
+
+mãn yêu cầu của quy phạm nồi đắt thiết bị điện hiện hành.
+
+5.13.2 Điều khiển hệ thống chữa cháy
+
+Trường hợp hệ thống báo cháy dùng đề điều khiển kích hoạt hệ thống chữa cháy thì mỗi
+
+điểm trong khu vực bảo vệ phải được kiểm soát bằng 2 đầu báo cháy tự động thuộc 2 kênh
+
+hoặc 2 địa chỉ khác nhau.
+
+5.14 Đường truyền
+
+5.14.1 Đường truyền độc lập với hệ thống khác
+
+Dây tín hiệu của hệ thống báo cháy không đi chung với dây cáp nguồn của hệ thống chiều
+
+sáng và hệ thông khác.
+
+Việc lựa chọn cáp và dây tín hiệu của hệ thống báo cháy phải thỏa mãn tiêu chuẳn, quy
+
+phạm lắp đặt thiết bị và dây dẫn điện hiện hành có liên quan phù hợp với yêu cầu kỹ thuật
+
+của tiêu chuẩn này và tài liệu kỹ thuật đối với từng loại thiết bị cụ thể.
+
+5.14.2 Phải có biện pháp bảo vệ cáp và dây tín hiệu của hệ thống báo cháy để chồng chập
+
+hoặc đứt dây (luôn trong óng kim loại hoặc ống bảo vệ khác), chóng chuột cắn, côn trùng
+
+hoặc các nguyên nhân cơ học khác làm hư hỏng cáp và dây tín hiệu. Các lỗ xuyên trần,
+
+tường sau khi thì công xong phải được chèn bịt hoặc xử lý thích hợp để không làm giảm các
+
+chỉ tiêu kỹ thuật về cháy theo yêu cầu của kết cầu.
+
+5.14.3 Các mạch tín hiệu của hệ thống báo cháy phải được kiểm tra tự động về tình trạng kỹ
+
+thuật theo suốt chiều dài của mạch tín hiệu.
+
+5.14.4 Các mạch tín hiệu của hệ thống báo cháy phải sử dụng dây dẫn riêng và cáp có lõi
+
+bằng đồng. Cho phép sử dụng cáp thông tin lõi đồng của mạng thông tin hỗn hợp nhưng
+
+phải tách riêng kênh liên lạc.
+
+5.14.5 Tiết diện lõi đồng của cáp và dây tín hiệu phải được xác định dựa trên độ sụt áp cho
+
+phép của hệ thống báo cháy nhưng không nhỏ hơn 0,75 mm? (tương đương với lõi đông có
+
+đường kính 1 mm) đồi với đường cáp trục chính. Cho phép dùng nhiêu dây dân tết lại nhưng
+
+tổng diện tích tiết diện của các lõi đồng được tết lại không được nhỏ hơn 0,75 mm2. Tiết diện
+
+từng lõi đồng của đường cáp trục chính phải không nhỏ hơn 0,5 mm2. Cho phép dùng cáp
+
+nhiều dây trong một lớp bọc bảo vệ chung nhưng đường kính lõi đồng của mỗi dây không
+
+được nhỏ hơn 0,5 mm.
+
+Tổng điện trở của đường dây tín hiệu trên mỗi kênh báo cháy không được lớn hơn 100 O và
+
+không được lớn hơn giá trị yêu cầu đối với từng loại trung tâm báo cháy.
+
+5.14.6 Cáp tín hiệu điều khiển thiết bị ngoại vi và dây tín hiệu nói từ các đầu báo cháy trong
+
+hệ thống báo cháy dùng đề kích hoạt hệ thống chữa cháy tự động là loại chịu nhiệt cao (cáp,
+
+dây tín hiệu chống cháy có thời gian chịu lửa 30 min). Cho phép sử dụng cáp tín hiệu điều
+
+khiển thiết bị ngoại vi là loại cáp thường nhưng phải có biện pháp bảo vệ khỏi sự tác động
+
+của nhiệt ít nhất trong thời gian 30 min.
+
+5.14.7 Không cho phép lắp đặt chung dây tin hiệu của hệ thóng báo cháy và dây tín hiệu
+
+điều khiển của hệ thống chữa cháy có điện áp nhỏ hơn 60 V với đường dây có điện áp
+
+khác trên 110 V trong cùng một đường ống, một hộp, một bó, một rãnh kín của cầu kiện
+
+xây dựng.
+
+Cho phép lắp đặt chung các mạch trên khi có vách ngăn dọc giữa chúng bằng vật liệu không
+
+cháy có giới hạn chịu lửa không dưới 15 min.
+
+5.14.8 Trong trường hợp mắc hở song song thì khoảng cách giữa dây dẫn của đường điện
+
+chiều sáng và điện động lực với cáp, dây tín hiệu của hệ thống báo cháy không được nhỏ
+
+hơn 0,5 m. Nếu khoảng cách này nhỏ hơn 0,5 m phải có biện pháp chống nhiều điện từ.
+
+%3
+
+5.14.9 Trưởng hợp trong công trình có nguồn phát nhiễu hoặc đói với hệ thồng báo cháy địa
+
+chỉ thì bắt buộc phải sử dụng cáp và dây tín hiệu chống nhiễu. Nếu cáp và dây tín hiệu
+
+không chồng nhiễu thì nhát thiết phải luôn trong ống hoặc hộp kim loại có tiếp đắt.
+
+Đồi với hệ thống báo cháy khuyến khích sử dụng cáp và dây tín hiệu chồng nhiễu hoặc
+
+không chống nhiễu nhưng được luồn trong ông kim loại hoặc hộp kim loại có tiếp đất
+
+5.14.10 Các mồi nối và các đầu kẹp dây
+
+5.14.10.1 Các mồi nối và các đầu kẹp dây phải được chế tạo thích hợp với hộp đầu dây kín
+
+được đánh dấu cho các đầu dây khi sử dụng các đầu kẹp dây có định được tính toán không
+
+nhỏ hơn dây dẫn.
+
+5.14.10.2 Các mồi nói và các đầu kẹp dây cho các dây dẫn lắp trong óng tường thẳng đứng
+
+phải được chế tạo phù hợp với ống dẫn dây.
+
+Đồi với hệ thóng báo cháy địa chỉ phản dây tín hiệu dùng kết nói thiết bị địa chỉ phải là dây
+
+chống nhiễu, chống cháy (cho phép chỉ sử dụng dây chống nhiễu khi thiết bị và trung tâm
+
+báo cháy được kết nói dưới dạng mạch vòng).
+
+5.14.11 Liên kết vô tuyến
+
+Thiết kế có thể bao gồm sử dụng các liên kết vô tuyến (radio) xem TCVN 7568-25 đề liên kết
+
+các thiết bị với tủ trung tâm báo cháy.
+
+Phụ lục A
+
+(tham khảo)
+
+Chọn đầu báo cháy tự động theo tính chất các cơ sở được trang bị
+
+Tính chất cơ sở được trang bị Thiết bị báo cháy
+
+CA |€sởsánxut NI WọC....Í ÑI II
+
+mx Cơ sở sản xuất và bảo quản, lưu trữ _”ỀT
+
+Gỗ và sản phẩm gỗ, hàng dệt, nhựa quần áo may sẵn,
+
+4 | giày da, hàng lông thú, thuốc lá, giầy, xenluloit, bông.
+
+Nhựa tổng hợp, sợi tổng hợp, vật liệu pôlime, cao su, sản | nhiệt, khói, lửa
+
+phẩm cao su, cao su nhân tạo, phim ảnh và phim X
+
+quang dê cháy.
+
+Vecni, sơn, dung môi, chất lỏng cháy, hóa chắt, dầu bôi -~
+
+2 trơn, sản phẩm có cồn. khỏi, lửa
+
+Kim loại kiềm, bột kim loại. lửa;
+
+Bột ngũ cóc, thức ăn tổng hợp và thực phẩm khác, vật —
+
+H liệu toả bụi. nhập ha
+
+CHM |Cgsởsnxéb ^^ “MA |
+
+Giầy, các tông, giầy dán tường, thức ăn gia súc và gia nhiệt, khói hoặc
+
+câm. lửa
+
+côn | Cơ sở bảo quản, lưu trữ: mY
+
+Vật liệu không cháy đựng trong bao bì bằng vật liệu cháy h h
+
+M được, chát rắn cháy được. nhiệt hoặc khói
+
+Khu vực oó thiết bị máy tính, thiết bị radio, tổng đài. Ym
+
+BỊ Công trình chuyên dùng: II
+
+Phòng đặt dây cáp, phòng máy biền thé, thiết bị phân ˆ :
+
+M phối và bảng điện. nhiệt hoặc khói
+
+Phòng để thiết bị và ồng dẫn chát lỏng dễ cháy, chát dầu
+
+2 | mỡ, phòng thử động cơ đốt trong, phòng thử máy nhiên. | nhiệt hoặc lửa
+
+liệu, phòng nạp khí cháy.
+
+Xưởng bảo dưỡng, sửa chữa ôtô, gara để xe. . nhớt hoặc
+
+Nhà và công trình công cộng: ___N
+
+Phòng biểu diễn, phòng tập, giảng đường, phòng đọc và
+
+hội thảo, phòng diễn viên, phòng hoá trang, phòng đẻ
+
+1 | quần áo, nơi sửa chữa, phòng đợi, phòng nghỉ, hành khói
+
+lang, phòng đệm, phòng bảo quản sách, phòng lưu trữ,
+
+không gian phía trên trần treo.
+
+Khu vực hoạt động nghệ thuật, tủ quản áo, xưởng phục ; s
+
+chế, phòng chiều phim và ánh sáng, phòng dụng cụ, ki Ga
+
+phòng tôi.
+
+Phòng ở, phòng bệnh nhân, kho hàng hoá, nhà ăn công
+
+3 | cộng, bếp. Phòng hành chính quản trị, văn phòng, phòng. | nhiệt, khói
+
+máy, phòng điều khiển.
+
+Phòng bệnh, cơ sở thương mại, ăn uống công cộng, dịch nhiệt, khói
+
+vụ, phòng, khách sạn lưu trú và ký túc xá. :
+
+Phòng trưng bày, phòng lưu trữ hiện vật của viện bảo nhiệt, khói hoặc
+
+tàng, triển lãm. lửa
+
+Í_D | Nhà và công trình có thể tích lớn: _N
+
+Khoảng thông tàng, sảnh sản xuất, nhà kho, trung tâm
+
+1 | logistic, cơ sở mua sắm, nhà ga hành khách, sân vận
+
+động và nhà thị đầu thẻ thao, rạp xiếc, v.v.
+
+2 | Phòng máy tính, radio, phòng máy chủ, tng đài, Trung khói
+
+tâm dữ liệu, trung tâm chăm sóc khách hàng.
+
+Phụ lục B
+
+(tham khảo)
+
+Vị trí lắp đặt nút ấn báo cháy tùy thuộc vào mục đích của các tòa nhà và các vị trí
+
+Nơi lắp đặt
+
+1 Công trình công nghiệp, cơ sở vật Dọc các tuyến đường thoát nạn,
+
+chất và cơ sở (nhà xưởng, kho, v.v.) | trong các hành lang, tại lói ra từ nhà
+
+Một tảng xưởng, nhà kho
+
+12 lề như trên và cầu thang của
+
+môi tầng
+
+2 Các công trình cáp (đường hàm, sản, | Ở lồi vào đường hàm, xuống sản, tại
+
+w) lồi thoát hiểm khẳn cáp từ đường
+
+! hằm, tại ngã ba của đường hằm
+
+3 Tòa nhà hành chính và công cộng Trong các hảnh lang, sảnh, tại khu
+
+vực cầu thang, ở lói thoát hiểm của
+
+tòa nhà
+
+Phụ lục C
+
+(tham khảo)
+
+i Tính toán nguôn diện
+
+C.1 Dung lượng của ắc quy i
+
+C.1.1 Yêu câu về dung lượng của ăc quy nên được xác định như sau.
+
+8) Xác định dòng điện ở tải trọng tĩnh, lo. Khi tải trọng có thẻ thay đỏi, phải sử dụng dòng
+
+điện trung bình trong trường hợp xảy ra sự có trong bắt cứ khoảng thời gian 24 h.
+
+b) Xác định dòng điện ở phụ tải toàn tải, lẠ.
+
+c) Xác định hệ số giảm dung lượng Fe của ắc quy khi được phóng điện ở la, có tính đền điện
+
+áp làm việc nhỏ nhất của hệ thống báo cháy.
+
+CHÚ THÍCH: Hệ số giảm dung lượng điền hình là 2. ]
+
+d) Dung lượng của ắc quy có mức phóng điện 20 h, Czs ở 15 °C đến 30 °C phải được xác
+
+định theo công thức (C.1).
+
+Ca = 1,25[(la x To) + Fc(lax TA)] (C.1)
+
+Trong đó:
+
+1,25 Là hệ số gây hư hỏng ắc quy;
+
+lo Là dòng điện tổng ở tải trọng tĩnh;
+
+To Là thời gian của nguồn điện dự phòng ở tải trọng tĩnh (thường là 24 h);
+
+Fc Là hệ số giảm dung lượng của ắc quy ở lạ;
+
+lẠ Là dòng điện tổng ở điều kiện báo cháy;
+
+TA Là thời gian của nguồn điện dự phòng ở phụ tải toàn tải (thường là 0,6 h).
+
+C.1.2 Khi nhiệt độ trung bình của ắc quy vượt ra ngoài phạm vi 15 °C đến 30 °C, phải sử
+
+dụng dữ liệu của nhà sản xuất ắc quy đề xác định bắt cứ các hệ số giảm dung lượng bỏ
+
+sung thêm nào được áp dụng.
+
+C.2 Dòng điện nạp
+
+C.2.1 Dòng điện nạp của ắc quy nên nạp lại cho ắc quy đã phóng điện trong 24 h để có đủ
+
+dung lượng duy trì hệ thống báo cháy trong 5 h với tải trọng tĩnh bình thường, theo sau là 30
+
+min ở điều kiện báo cháy. ,
+
+C.2.2 Một ắc quy đã phóng điện là ắc quy đã đạt tới điện áp vận hành nhỏ nhát của hệ thống
+
+báo cháy hoặc điện áp nhỏ nhất do nhà sản xuất ắc quy quy định khi được phóng điện ở
+
+dòng diện đang định với tải trọng tĩnh
+
+C.2.3 Dòng điện nạp nhỏ nhát Ic được tính toán theo công thức C.2.
+
+. x5)+(Ax05)}
+
+đã 33G
+
+Trong đó:
+
+1/25 là hệ số nâng thêm đề tránh tồn thát trong quá trình nạp;
+
+lo là dòng điện tổng ở tải trọng tĩnh;
+
+Fc Là hệ số giảm dung lượng của ắc quy ở lạ;
+
+là Là dòng điện tổng ở điều kiện báo cháy;
+
+C.3 Tính toán nguồn điện
+
+Dung lượng nguồn điện chính được quy định để đáp ứng các yêu cầu của tiêu chuẩn này.
+
+Một công thức điển hình cho dòng điện tổng, lese, được quy định tới nguồn hệ thống báo
+
+cháy trong điều kiện tĩnh và nạp ắc quy được cho trong công thức (C.3), và dòng điện tông ở
+
+tải trọng tĩnh được cho trong công thức (C.4):
+
+lpse = lạ+ lc (C.3)
+
+lạ = lows + loANc (C.4)
+
+Trong đó:
+
+le là dòng điện nạp;
+
+lạ là dòng điện tổng ở tải trọng tĩnh;
+
+laws là dòng cao nhất ở tải trọng tĩnh của hệ thống báo cháy;
+
+laANe là dòng ở tài trọng tĩnh của phụ tải bắt kỳ.
+
+Thư mục tài liệu tham khảo
+
+- Tiêu chuẳn NFPA 72 National Fire Alarm and Signaling Code.
+
+- lISO 7240-14:2013 Fire detection and alarm systems - Part 14: Design, installation,
+
+commissioning and service of fire detection and fire alarm systems in and around buildings
+
+- CI 484.1311500.2020 CUCTeMbl IDOTUBOHOXXADHOX 32L4MTbiv CMCTeMbl [10XKADHOÙ
+
+CurHai433IMI. 4 2B8TOMGTU32LI4Đ. CACTeM. IDOTUIBODIOXCSDHOÙ, 38U4Tbl HODMbI U ID2BUa
+
+npoeKTupoBaHua.

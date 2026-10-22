@@ -1,5 +1,5 @@
-[Bảng đối chiếu thẩm định thiết kế PCCC B13. Bảng đối chiếu Phương tiện chiếu sáng sự cố và chỉ dẫn thoát nạn và hệ thống loa thông báo và hướng dẫn thoát nạn]
-[Hiệu lực: 2025. Trạng thái: ĐANG DÙNG.]
+[Bảng đối chiếu thẩm định thiết kế PCCC B13. Bảng đối chiếu Phương tiện chiếu sáng sự cố và chỉ dẫn thoát nạn và hệ thống loa thông báo và hướng dẫn thoát nạn - sửa]
+[Hiệu lực: 2026 (bản cập nhật). Trạng thái: ĐANG DÙNG. Nguồn: Bảng đối chiếu cập nhật kỳ thi cán bộ thẩm định PCCC.]
 
 B13: BĐC phương tiện chiếu sáng sự cố và chỉ dẫn thoát nạn và hệ thống loa thông báo và hướng dẫn thoát nạn.
 
@@ -29,9 +29,13 @@ Phương tiện chiếu sáng sự cố và chỉ dẫn thoát nạn
 
 Đối tượng trang bị
 
-Phương tiện chiếu sáng sự cố và chỉ dẫn thoát nạn được trang bị cho tất cả các nhà, công trình (trừ nhà ở riêng lẻ)
+Nhà, công trình phải trang bị phương tiện chiếu sáng sự cố và chỉ dẫn thoát nạn theo quy định tại TCVN 13456.
 
-Điều 5.7.1.1 TCVN 3890:2023
+Việc thiết kế, lắp đặt phương tiện chiếu sáng sự cố và chỉ dẫn thoát nạn được quy định tại TCVN 13456.
+
+Điều 2.2.1 QCVN 10:2025/BCA
+
+Điều 2.2.2 QCVN 10:2025/BCA
 
 2
 
@@ -43,7 +47,7 @@ Phương tiện chiếu sáng sự cố và chỉ dẫn thoát nạn được tr
 
 Đèn chiếu sáng sự cố và biển báo an toàn có nguồn điện dự phòng phải đảm bảo thời gian hoạt động ổn định liên tục tối thiểu là 120 min khi có sự cố cháy, nổ
 
-Nguồn điện sử dụng cho chiếu sáng khẩn cấp phải được kiểm soát tại tủ phân phối. Quy định này không áp dụng cho pin, ắc qui tự nạp.
+Nguồn điện sử dụng cho chiếu sáng khẩn cấp phải được kiểm soát tại tủ phân phối. Quy định này không áp dụng cho pin, ắc qui tự nạp (chỉ áp dụng đối với công trình thuộc phạm vi áp dụng của Quy chuẩn)
 
 Điều 4.5
 
@@ -293,29 +297,45 @@ Quy mô
 
 1.
 
-Nhà và công trình công cộng
+Chung cư, nhà và công trình công cộng thuộc diện quản lý về phòng cháy, chữa cháy
 
 Cao trên 10 tầng hoặc có từ 2 tầng hầm trở lên
 
 2.
 
-Công trình công cộng tập trung đông người: Nhà hát, rạp chiếu phim, nhà kinh doanh dịch vụ karaoke, vũ trường, quán bar, hộp đêm, bệnh viện, viện dưỡng lão và các công trình có công năng tương tự.
+Nhà sử dụng với mục đích kinh doanh dịch vụ karaoke, vũ trường thuộc cơ sở kinh doanh dịch vụ karaoke, vũ trường và nhà có công năng sử dụng tương tự; nhà hát; rạp chiếu phim; bệnh viện; nhà dưỡng lão
 
 Từ 50 người trên 1 tầng trở lên
 
 3.
 
-Gara ô tô, xe máy dạng kín (bao gồm cả gara độc lập và trong nhà có chức năng khác)
+Nhà để xe ô tô, xe máy dạng kín (bao gồm cả nhà để xe độc lập và trong nhà có chức năng khác)
 
-Diện tích từ 18 000 m2 trở lên
+Tổng diện tích sàn từ 18 000 m2 trở lên
 
 4.
 
-Nhà sản xuất, kho
+Nhà sản xuất
 
-Diện tích từ 18 000 m2 trở lên và có từ 50 người trên 1 tầng trở lên
+Tổng diện tích sàn từ 18 000 m2 trở lên và có từ 300 người trên 1 tầng trở lên
 
-Điều 5.7.2.1 TCVN 3890:2023
+5.
+
+Hầm giao thông đường bộ (hầm đường ô tô)
+
+Chiều dài từ 500 m trở lên
+
+6.
+
+Nhà ga hành khách thuộc cảng hàng không; nhà ga hành khách, đề-pô (depot) đường sắt; nhà ga hành khách, đề-pô (depot) đường sắt đô thị
+
+Không phụ thuộc quy mô
+
+2.2.5  Việc thiết kế, lắp đặt hệ thống loa thông báo và hướng dẫn thoát nạn phải bảo đảm các yêu cầu quy định tại H.4.
+
+Điều 2.2.4 QCVN 10:2025/BCA
+
+Điều 2.2.5 QCVN 10:2025/BCA
 
 2
 
@@ -327,34 +347,28 @@ CHÚ THÍCH: Đối với các thiết bị điện có nguồn dự phòng riê
 
 Điều 3.1.10
 
-QCVN 06:2022
+QCVN 06:2022/BXD
 
 3
 
 		Yêu cầu về mức âm thanh
 
-Tín hiệu âm thanh của hệ thống loa thông báo và hướng dẫn thoát nạn phải đảm bảo mức âm thanh tổng thể (mức âm thanh của tiếng ồn thường xuyên cùng với âm thanh từ các tín hiệu cảnh báo tạo ra) không thấp hơn 75 dBA ở khoảng cách 3 m từ tín hiệu cảnh báo, nhưng không quá 120 dBA ở bất kỳ vị trí nào.
+Hệ thống loa thông báo và hướng dẫn thoát nạn:
 
-Tín hiệu âm thanh của hệ thống loa thông báo và hướng dẫn thoát nạn phải tạo ra mức âm thanh cao hơn ít nhất 15 dBA so với mức âm thanh của tiếng ồn thường xuyên tại gian phòng. Việc đo mức âm thanh được thực hiện ở độ cao 1,5 m tính từ sàn nhà.
+- Hệ thống loa thông báo và hướng dẫn thoát nạn phải bảo đảm mọi người trong nhà và công trình có thể nghe rõ thông báo, hướng dẫn khi có sự cố.
 
-Trong phòng ngủ, tín hiệu âm thanh của hệ thống loa thông báo và hướng dẫn thoát nạn phải có mức âm thanh cao hơn ít nhất 15 dBA so với mức âm thanh của tiếng ồn thường xuyên trong phòng, nhưng mức âm thanh tổng thể không nhỏ hơn 70 dBA và không quá 120 dBA. Việc đo mức âm thanh được thực hiện ở vị trí ngang với đầu của người đang ngủ.
+- Tín hiệu âm thanh của hệ thống loa thông báo và hướng dẫn thoát nạn phải đảm bảo mức âm thanh tổng thể (mức âm thanh của tiếng ồn thường xuyên cùng với âm thanh từ các tín hiệu cảnh báo tạo ra) không thấp hơn 75 dBA ở khoảng cách 3 m từ tín hiệu cảnh báo, nhưng không quá 120 dBA ở bất kỳ vị trí nào.
 
-Thiết bị loa cảnh báo cháy và điều khiển thoát nạn gắn trên tường phải được bố trí sao cho phần trên của chúng cách mặt sàn ít nhất 2,3 m và cách trần tối thiểu phải là 0,15 m.
+- Tín hiệu âm thanh của hệ thống loa thông báo và hướng dẫn thoát nạn phải tạo ra mức âm thanh cao hơn ít nhất 15 dBA so với mức âm thanh của tiếng ồn thường xuyên tại gian phòng. Việc đo mức âm thanh được thực hiện ở độ cao 1,5 m tính từ sàn nhà.
 
-Trong các phòng được bảo vệ, nơi có người ở trong các thiết bị chống ồn, cũng như trong các phòng có mức ồn trên 95 dBA, hệ thống loa thông báo và hướng dẫn thoát nạn phải kết hợp với cảnh báo bằng ánh sáng. Việc sử dụng thiết bị cảnh báo nhấp nháy bằng ánh sáng được cho phép.
+- Trong phòng ngủ, tín hiệu âm thanh của hệ thống loa thông báo và hướng dẫn thoát nạn phải có mức âm thanh cao hơn ít nhất 15 dBA so với mức âm thanh của tiếng ồn thường xuyên trong phòng, nhưng mức âm thanh tổng thể không nhỏ hơn 70 dBA và không quá 120 dBA. Việc đo mức âm thanh được thực hiện ở vị trí ngang với đầu của người đang ngủ.
 
-Thiết bị loa cảnh báo và chỉ dẫn thoát nạn bằng giọng nói phải phát ra âm thanh có tần số trong dải từ 200 Hz đến 5 000 Hz.
+- Thiết bị loa cảnh báo cháy và điều khiển thoát nạn gắn trên tường phải được bố trí sao cho phần trên của chúng cách mặt sàn ít nhất 2,3 m và cách trần tối thiểu phải là 0,15 m.
 
-Điều 5.7.2.3 TCVN 3890:2023
+- Trong các phòng được bảo vệ, nơi có người ở trong các thiết bị chống ồn, cũng như trong các phòng có mức ồn trên 95 dBA, hệ thống loa thông báo và hướng dẫn thoát nạn phải kết hợp với cảnh báo bằng ánh sáng. Việc sử dụng thiết bị cảnh báo nhấp nháy bằng ánh sáng được cho phép.
 
-Điều 5.7.2.4 TCVN 3890:2023
+- Thiết bị loa cảnh báo và chỉ dẫn thoát nạn bằng giọng nói phải phát ra âm thanh có tần số trong dải từ 200 Hz đến 5 000 Hz.
 
-Điều 5.7.2.5 TCVN 3890:2023
+- Số lượng thiết bị loa cảnh báo và chỉ dẫn thoát nạn bằng giọng nói, cách bố trí và công suất của chúng phải đảm bảo mức âm thanh ở tất cả khu vực để ở phù hợp với các quy định của Quy chuẩn này.
 
-Điều 5.7.2.6 TCVN 3890:2023
-
-Điều 5.7.2.7
-
-TCVN 3890:2023
-
-Điều 5.7.2.8 TCVN 3890:2023
+H.4 QCVN 10:2025/BCA

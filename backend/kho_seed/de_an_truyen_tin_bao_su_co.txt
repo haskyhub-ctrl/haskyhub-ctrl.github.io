@@ -1,0 +1,19 @@
+YÊU CẦU BẮT BUỘC VỀ THIẾT BỊ TRUYỀN TIN BÁO SỰ CỐ PCCC VÀ CNCH ĐỐI VỚI CƠ SỞ THUỘC DIỆN QUẢN LÝ VỀ PCCC
+
+1. Đề án và cơ quan ban hành
+- Đề án "Xây dựng hệ thống truyền tin, báo sự cố phòng cháy, chữa cháy" do Bộ Công an phê duyệt tại Quyết định số 7481/QĐ-BCA ngày 14/10/2024, giao Cục Cảnh sát PCCC và CNCH chủ trì thực hiện.
+- Hệ thống gồm thiết bị truyền tin báo sự cố đặt tại cơ sở, kết nối về Trung tâm thông tin chỉ huy (Trung tâm thông tin chỉ huy kết nối hệ thống truyền tin, báo sự cố PCCC và ứng dụng Báo cháy 114; ra mắt cấp toàn quốc ngày 15/01/2026). Khi có sự cố, hệ thống cảnh báo tới các số điện thoại của cơ sở và đồng thời báo về lực lượng chữa cháy.
+
+2. Nghĩa vụ của cơ sở
+- Cơ sở thuộc diện quản lý về PCCC (danh mục tại Phụ lục I Nghị định số 105/2025/NĐ-CP) BẮT BUỘC phải lắp đặt thiết bị truyền tin báo sự cố theo Đề án truyền tin báo sự cố của Bộ Công an, kết nối với Trung tâm thông tin chỉ huy và hệ thống Cơ sở dữ liệu về PCCC, CNCH (điểm b khoản 1 Điều 25 Nghị định số 105/2025/NĐ-CP). Người đứng đầu cơ sở tự trang bị, duy trì hoạt động và tự chi trả chi phí duy trì thiết bị.
+- Thời hạn hoàn thành trang bị và kết nối: trước ngày 01/7/2027 (khoản 2 Điều 27 Nghị định số 105/2025/NĐ-CP). Cơ sở mới đưa vào hoạt động phải thực hiện ngay khi vận hành.
+- Đây là yêu cầu bắt buộc, KHÔNG phải khuyến khích. Không thay thế bằng thiết bị báo cháy không dây hoặc đầu báo cháy độc lập dùng pin tự lắp; các thiết bị đó không thay cho thiết bị truyền tin báo sự cố kết nối Trung tâm thông tin chỉ huy.
+
+3. Khai báo thông tin cơ sở
+- Cơ sở khai báo, cập nhật thông tin của cơ sở (điểm a khoản 3 Điều 24 Nghị định số 105/2025/NĐ-CP) vào phần mềm khai báo của hệ thống Cơ sở dữ liệu về PCCC, CNCH và truyền tin báo cháy theo hướng dẫn của Cục Cảnh sát PCCC và CNCH, Bộ Công an, và chịu trách nhiệm về tính chính xác của thông tin.
+- Dữ liệu cơ sở phải bảo đảm 4 tiêu chí "đúng, đủ, sạch, sống": ĐÚNG (chính xác so với thực tế), ĐỦ (đầy đủ các trường thông tin), SẠCH (không trùng lặp, không sai lệch, đã chuẩn hóa), SỐNG (thường xuyên cập nhật khi có thay đổi).
+- Đăng nhập khai báo tại https://thuthapdulieu.csdlcbcs.vn/auth/login (tài khoản do Đội Cảnh sát PCCC và CNCH nơi quản lý cơ sở cung cấp).
+
+4. Cách trình bày khi tư vấn
+- Mọi câu trả lời về trang bị, điều kiện an toàn PCCC của cơ sở thuộc diện quản lý phải nêu mục: lắp đặt thiết bị truyền tin báo sự cố theo Đề án của Bộ Công an (QĐ 7481/QĐ-BCA), kết nối Trung tâm thông tin chỉ huy, khai báo dữ liệu "đúng, đủ, sạch, sống", hạn 01/7/2027.
+- Nếu chưa rõ cơ sở có thuộc diện quản lý (Phụ lục I) hay không thì nêu điều kiện và hỏi lại loại hình, quy mô.

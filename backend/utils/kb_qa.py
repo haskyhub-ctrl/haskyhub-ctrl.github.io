@@ -18,6 +18,23 @@ CRITICAL_ENTITY_KEYWORDS = [
 ]
 
 
+# Ý định của câu hỏi: hai câu cùng chủ đề nhưng khác ý định (hỏi thẩm quyền khác hỏi mức phạt) thì không được dùng chung đáp án
+INTENT_PATTERNS = {
+    "phat": r"(bị phạt|xử phạt|mức phạt|phạt bao nhiêu|phạt tiền|chế tài)",
+    "tham_quyen": r"(ai.*(có thẩm quyền|chịu trách nhiệm|tổ chức|cấp|quản lý|kiểm tra)|thẩm quyền|cơ quan nào|cấp nào|đơn vị nào)",
+    "ho_so": r"(hồ sơ|giấy tờ|thành phần hồ sơ)",
+    "thoi_han": r"(bao lâu|thời hạn|bao nhiêu ngày|mấy năm|bao nhiêu năm|thời gian)",
+    "thu_tuc": r"(thủ tục|quy trình|trình tự|các bước|làm thế nào|cách làm|bắt đầu từ đâu)",
+    "dieu_kien": r"(điều kiện|có cần|có phải|có bắt buộc|phải trang bị|cần trang bị)",
+}
+
+
+def question_intents(text: str) -> set:
+    import re
+    t = (text or "").lower()
+    return {k for k, pat in INTENT_PATTERNS.items() if re.search(pat, t)}
+
+
 def question_key(text: str) -> str:
     toks = sorted(set(_tokens(text)))
     return " ".join(toks)[:490]
@@ -62,6 +79,11 @@ def find_approved(db: Session, message: str):
         overlap = inter / min(len(q), len(t))
         score = 0.5 * jaccard + 0.5 * overlap
         
+        # Khác ý định (phạt / thẩm quyền / hồ sơ / thời hạn...) thì không dùng chung đáp án
+        qi, ti = question_intents(message), question_intents(row.question or "")
+        if (qi or ti) and not (qi & ti):
+            continue
+
         # Kiểm tra tương thích thực thể chủ đề cốt lõi
         target_lower = (row.question or "").lower()
         entity_conflict = False
@@ -94,3 +116,34 @@ def log_unanswered(db: Session, message: str, source: str = "chat") -> None:
     else:
         db.add(KbQuestion(question=message.strip()[:1500], question_key=key, status="pending", source=source, last_asked_at=now))
     db.commit()
+
+
+_SUGGEST_CACHE = {"t": 0.0, "rows": []}
+
+
+def suggest_questions(db: Session, message: str, reply: str = "", n: int = 3) -> list:
+    """Gợi ý câu hỏi tiếp theo, chỉ lấy từ ngân hàng câu hỏi đã có đáp án chuẩn (người dùng bấm vào là có đáp án đúng, trả ngay)."""
+    import time
+    now = time.time()
+    if now - _SUGGEST_CACHE["t"] > 300 or not _SUGGEST_CACHE["rows"]:
+        rows = db.query(KbQuestion.question, KbQuestion.question_key).filter(KbQuestion.status == "approved", KbQuestion.answer.isnot(None)).all()
+        _SUGGEST_CACHE["rows"] = [(q, set((k or "").split())) for q, k in rows if q and len(q) <= 130]
+        _SUGGEST_CACHE["t"] = now
+    q_tok = set(_tokens(message))
+    r_tok = set(_tokens((reply or "")[:700]))
+    asked = question_key(message)
+    scored = []
+    for q, toks in _SUGGEST_CACHE["rows"]:
+        if not toks or " ".join(sorted(toks)) == asked:
+            continue
+        s = 2.0 * len(q_tok & toks) / max(len(toks), 1) + 1.0 * len(r_tok & toks) / max(len(toks), 1)
+        if s > 0.25 and len(q_tok & toks) < len(toks):   # loại câu gần như trùng hẳn câu vừa hỏi
+            scored.append((s, q))
+    scored.sort(reverse=True)
+    out = []
+    for _, q in scored:
+        if q not in out:
+            out.append(q)
+        if len(out) >= n:
+            break
+    return out

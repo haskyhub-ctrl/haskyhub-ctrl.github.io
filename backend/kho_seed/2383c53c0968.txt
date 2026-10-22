@@ -1,12 +1,10 @@
-[Bảng đối chiếu thẩm định thiết kế PCCC B7.  Bảng đối chiếu Hệ thống chữa cháy bằng bọt cố định]
-[Hiệu lực: 2025. Trạng thái: ĐANG DÙNG.]
+[Bảng đối chiếu thẩm định thiết kế PCCC B7. Bảng đối chiếu Hệ thống chữa cháy bằng bọt cố định]
+[Hiệu lực: 2026 (bản cập nhật). Trạng thái: ĐANG DÙNG. Nguồn: Bảng đối chiếu cập nhật kỳ thi cán bộ thẩm định PCCC.]
 
 BẢNG ĐỐI CHIẾU HỆ THỐNG CHỮA CHÁY BẰNG BỌT CỐ ĐỊNH
 
-TT	Nội dung
-đối chiếu	Nội dụng
-Thiết kế	Nội dung quy định của tiêu chuẩn, quy chuẩn kỹ thuật	Khoản, điều, tiêu chuẩn,
-quy chuẩn	Kết luận		1	Yêu cầu trang bị						-	Quy định trang bị hệ thống chữa cháy cố định		- Các bể nổi có đường kính bằng hoặc lớn hơn 18 m;
+TT	Nội dung đối chiếu	Nội dụng thiết kế	Nội dung quy định của tiêu chuẩn, quy chuẩn kỹ thuật	Khoản, Điều
+	Kết luận		1	Yêu cầu trang bị						-	Quy định trang bị hệ thống chữa cháy cố định		- Các bể nổi có đường kính bằng hoặc lớn hơn 18 m;
 - Các bể nổi có dung tích bằng hoặc lớn hơn 2 000 m3;
 - Các bể nổi có chiều cao bằng hoặc lớn hơn 15 m.
 Chú thích - Khi khu bể chứa được phép bố trí ba dãy bể phải thoả mãn điều 5.2.8 của tiêu chuẩn này.	Điều 5.9.5.1
@@ -50,7 +48,6 @@ DM&SPDM có nhiệt độ chớp cháy lớn hơn 37,8 oC đến 93,3 oC
 Dầu thô
 0,068
 55
-
 Chú thích - Lăng tạo bọt áp dụng trong điều khoản này là loại lăng lắp tại thành bể có tấm chắn để hướng bọt hoặc lăng lắp trên mái nổi.
 
 	Bảng 9

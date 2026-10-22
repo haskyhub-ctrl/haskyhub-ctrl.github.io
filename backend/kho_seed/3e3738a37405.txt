@@ -1,5 +1,5 @@
 [Bảng đối chiếu thẩm định thiết kế PCCC B14. Bảng đối chiếu hệ thống điện phục vụ PCCC]
-[Hiệu lực: 2025. Trạng thái: ĐANG DÙNG.]
+[Hiệu lực: 2026 (bản cập nhật). Trạng thái: ĐANG DÙNG. Nguồn: Bảng đối chiếu cập nhật kỳ thi cán bộ thẩm định PCCC.]
 
 B14: Hệ thống điện phục vụ PCCC
 
@@ -7,109 +7,156 @@ BẢNG ĐỐI CHIẾU HỆ THỐNG ĐIỆN PHỤC VỤ PCCC
 
 TT
 
-Nội dung
-
-đối chiếu
+Nội dung đối chiếu
 
 Nội dung thiết kế
 
 Nội dung quy định của tiêu chuẩn, quy chuẩn kỹ thuật
 
-Điều, khoản
+Điều, Khoản
 
 Kết luận
 
-1.
+1
 
-		Các phụ tải được cấp điện ưu tiên phục vụ PCCC
+Yêu cầu chung
+
+1. 1
+
+		Các phụ tải được cấp điện ưu tiên, nguồn dự phòng phục vụ PCCC
 
 Nguồn điện cấp cho các hệ thống gồm:
 
-- Hệ thống báo cháy tự động (thường hoặc địa chỉ)
+- Hệ thống báo cháy tự động
 
 - Hệ thống chữa cháy bằng nước, bọt.
 
 - Hệ thống chữa cháy bằng khí, bột.
 
-- Hệ thống đèn, phương tiện chiếu sáng sự cố, chỉ dẫn thoát nạn.
+- Hệ thống đèn, phương tiện chiếu sáng sự cố, chỉ dẫn thoát nạn (trường hợp không có nguồn ắc quy, pin dự phòng riêng)
 
-- Hệ thống loa thông báo và hướng dẫn thoát nạn.
+- Hệ thống loa thông báo và hướng dẫn thoát nạn. (trường hợp không có nguồn ắc quy, pin dự phòng riêng)
 
-- Hệ thống hút khói,  hệ thống cung cấp không khí bảo vệ chống khói.
+- Hệ thống hút khói, hệ thống cung cấp không khí bảo vệ chống khói.
 
 - Thang máy chữa cháy
 
-- Màn ngăn cháy (trừ màn nước ngăn cháy)
-
-- Rèm ngăn cháy.
-
-- Cửa ngăn cháy điều khiển hoạt động bằng điện.
+- Màn, rèm ngăn cháy, cửa ngăn cháy điều khiển hoạt động bằng điện.
 
 Thiết bị bảo vệ và nguồn điện cấp cho hệ thống phòng cháy chữa cháy, hệ thống hút khói, hệ thống cung cấp không khí bảo vệ chống khói, thang máy chữa cháy, màn ngăn cháy, rèm ngăn cháy, cửa ngăn cháy
 
 Điểm đ, Khoản 2, Điều 9 Nghị định số 105/2025/NĐ-CP
 
-2
+1.2
 
 		Thiết bị bảo vệ và nguồn điện
 
+Phải lắp đặt các thiết bị điều khiển, bảo vệ tại các tủ phân phối điện trừ trường hợp tại điểm bắt đầu rẽ nhánh đã được bảo vệ và khi tủ phân phối điện được cấp điện bằng đường dây riêng.
+
+Hồ sơ thiết kế phải thuyết minh thể hiện yêu cầu kỹ thuật với các nội dung:
+
+- Dòng điện định mức của thiết bị bảo vệ không được nhỏ hơn dòng điện làm việc lâu dài lớn nhất của mạch điện.
+
+- Thiết bị bảo vệ phải có khả năng cắt được dòng ngắn mạch lớn nhất.
+
+- Trường hợp cắt quá tải làm mất nguồn cấp điện có thể gây ra mối nguy hiểm lớn hơn thì thiết bị bảo vệ chống quá tải không được tự động cắt nguồn điện mà phải có biện pháp theo dõi sự xuất hiện của quá tải để khắc phục.
+
+- Bảo vệ chống ngắn mạch và chống điện giật trong điều kiện bình thường và trong trường hợp sự cố phải được đảm bảo ở phương án đấu nối bất kỳ với nguồn cấp điện bình thường và nguồn dùng cho dịch vụ an toàn.
+
+- Thiết bị bảo vệ chống quá dòng phải được chọn và lắp đặt sao cho không để quá dòng trong một mạch làm ảnh hưởng đến hoạt động đúng của mạch dùng cho dịch vụ an toàn.
+
+Các trung tâm báo cháy phải được tiếp đất bảo vệ. Việc tiếp đất bảo vệ phải thỏa mãn yêu cầu của quy phạm nối đất thiết bị điện hiện hành.
+
+Điều 2.1.12.3
+
+QCVN 12:2014/BXD
+
+Điều 2.3.4.1
+
+QCVN 12:2014/BXD
+
+Điều 2.3.4.2
+
+QCVN 12:2014/BXD
+
+Điều 2.3.8.3
+
+QCVN 12:2014/BXD
+
+Điều 2.3.8.4
+
+QCVN 12:2014/BXD
+
+Điều 2.3.8.5
+
+QCVN 12:2014/BXD
+
+Điều 5.13.1
+
+QCVN 12:2014/BXD
+
+1.3
+
+		Dây dẫn
+
+-
+
+		Mạch điện độc lập
+
+Mạch điện của dịch vụ an toàn phải độc lập với các mạch khác
+
+ 2.3.8.1
+
+QCVN 12:2014/BXD
+
+-
+
+		Yêu cầu chống cháy
+
+- Dây dẫn và cáp cấp điện cho các phụ tải phục vụ công tác PCCC, công tác thoát hiểm khi xảy ra hỏa hoạn phải dùng dây dẫn và cáp điện có lớp vỏ là vật liệu chống cháy.
+
+Lưu ý: Trường hợp dùng nguồn phụ là UPS để cấp cho thiết bị ngoại vi (van điện từ, chuông, đèn…) đảm bảo dung lượng, thời gian sử dụng 24h cho thiết bị hoạt động ở chế độ thường trực và 30 phút khi có cháy thì không yêu cầu dây cấp nguồn cho UPS là dây chống cháy, chỉ yêu cầu dây chống cháy từ UPS đến thiết bị sử dụng. Trường hợp chỉ sử dung bộ đổi nguồn (AC sang DC) không có bộ lưu điện thì yêu cầu toàn bộ dây dẫn phải bảo đảm chống cháy theo quy định.
+
+ 5.3
+
+TCVN 9207:2012
+
+-
+
+		Yêu cầu bổ sung đối với nhà chung cư thuộc nhóm nguy hiểm cháy theo công năng F1.3 có chiều cao PCCC
+từ trên 75 m đến 150 m; Nhà (có chiều cao PCCC từ trên 50 m đến 150 m) thuộc nhóm F1.2, F4.2, F4.3 và nhà hỗn hợp
+
+- Dây điện và cáp điện từ thiết bị phân phối đầu vào đến các hệ thống bảo vệ chống cháy (thiết bị điện của hệ thống chữa cháy, báo cháy, hút xả khói, chiếu sáng thoát nạn và tương tự) phải được thực hiện bằng các cáp có khả năng chịu lửa (dây điện và cáp điện có lớp khoáng hoặc dây điện và cáp điện khác có giới hạn chịu lửa không thấp hơn 120 phút)
+
+Lưu ý: không yêu cầu cáp chống cháy dẫn nguồn điện lưới đến đèn chiếu sáng sự cố, chỉ dẫn thoát nạn khi chúng có nguồn ắc quy, pin dự phòng riêng; chỉ yêu cầu đối với dây dẫn từ UPS đến đèn chiếu sáng sự cố, chỉ dẫn thoát nạn khi sử dụng nguồn từ UPS để cấp điện (dây điện và cáp điện có lớp khoáng hoặc dây điện và cáp điện khác có giới hạn chịu lửa không thấp hơn 120 phút)
+
+A.2.28.8 và A.3.1.17
+
+QCVN 06:2022/BXD
+
+2
+
+		Yêu cầu riêng
+
 2.1
 
-		Hệ thống báo cháy (thường hoặc địa chỉ)
-
--
-
-		Công suất của thiết bị
-
-- Công suất của tủ báo cháy địa chỉ:
-
-- Công suất của tủ báo cháy thường:
-
-Nguồn điện dùng cho dịch vụ an toàn (ắcqui, pin, tổ máy phát điện độc lập, lộ riêng độc lập với lộ cấp điện bình thường) phải có đủ công suất, độ tin cậy, thời gian hoạt động đáp ứng cần thiết, thông số đặc trưng và thời gian chuyển đổi thích hợp theo quy định.
-
-Điều 2.3.7.1
-
-QCVN 12:2014
-
--
-
-		Số nguồn điện
-
-02 nguồn: Nguồn điện xoay chiều ưu tiên và nguồn dự phòng cấp cho tủ trung tâm báo cháy.
-
-- Nguồn ưu tiên: Kiểm tra thể hiện trên sơ đồ nguyên lý
-
-- Nguồn dự phòng: Pin hoặc ắc quy (…)
-
-Thể hiện trên sơ đồ nguyên lý:
+		Hệ thống báo cháy
 
 Trung tâm của hệ thống báo cháy phải có hai nguồn điện độc lập: Một nguồn 220 V xoay chiều và một nguồn là ắc quy dự phòng.
 
-Dung lượng của ắc quy dự phòng phải bảo đảm ít nhất 24 h cho thiết bị hoạt động ở chế độ thường trực và 30 min khi có cháy
+Dung lượng của ắc quy dự phòng phải bảo đảm ít nhất 24 giờ cho thiết bị hoạt động ở chế độ thường trực và 30 phút khi có cháy
 
-Khi sử dụng ắc quy làm nguồn điện, ắc quy phải được nạp điện tự động (Phụ lục C đưa ra các tính toán dùng làm ví dụ về dung lượng của ác quy, dòng điện nạp và nguồn cấp điện khi tính toán công suất của nguồn cấp điện, công suất này phải bao gồm bất cứ các phụ tải phụ trợ vào được cấp điện bởi thiết bị cấp điện)
+Khi sử dụng ắc quy làm nguồn điện, ắc quy phải được nạp điện tự động
 
-Điều 5.13 TCVN 7568-14:2025
+Đối với các thiết bị điện có nguồn dự phòng riêng (ví dụ bơm diezen, tủ chống cháy có ắc quy dự phòng) thì chỉ cần một nguồn điện lưới, nhưng nguồn dự phòng riêng này phải đảm bảo hoạt động bình thường khi có cháy.
 
--
+Điều 5.13
 
-		Thiết bị bảo vệ
+TCVN 7568-14:2025
 
-Cầu chì hoặc aptomat hoặc máy cắt thể hiện trên sơ đồ nguyên lý để bảo vệ đóng ngắt điện xoay chiều cho tủ trung tâm báo cháy.
+Điều 3.1.10
 
-Phải sử dụng các loại thiết bị sau để cách ly và đóng cắt mạch điện:
-
-a) Dao cách ly, cầu dao phụ tải, máy cắt;
-
-b) Phích cắm và ổ cắm;
-
-c) Cầu chảy;
-
-d) Các đầu nối chuyên dùng (không cần tháo dây dẫn ra).
-
-Điều 2.3.1
-
-QCVN 12:2014
+QCVN 06:2022/BXD
 
 2.2
 
@@ -117,93 +164,29 @@ QCVN 12:2014
 
 Cấp cho máy bơm nước chữa cháy, máy bơm chất tạo bọt, các thiết bị van đóng mở bằng điện, quạt cấp khí đối với hệ thống phun bọt bội số nở cao.
 
--
+Cấp cho bơm chuyển tiếp nước chữa cháy (nếu có)
 
-		Công suất của thiết bị
+Các máy bơm chữa cháy phải được kết nối với hai nguồn điện độc lập (một từ nguồn điện lưới và một từ máy phát điện) hoặc sử dụng máy bơm động cơ đốt trong. Cho phép không trang bị máy bơm dự phòng hoặc nguồn điện dự phòng khi cấp nước chữa cháy cho nhà sản xuất, nhà kho có bậc chịu lửa I, II và hạng nguy hiểm cháy nổ D, E, với lưu lượng nước chữa cháy ngoài nhà yêu cầu < 20 L/s
 
-- Công suất của  máy bơm nước chữa cháy: - Công suất của máy bơm chất tạo bọt:
+8.1  Nguồn điện cho hệ thống chữa cháy tự động phải là nguồn ưu tiên và có nguồn dự phòng. Cho phép máy bơm chữa cháy chính chỉ đấu nối với một nguồn điện nếu máy bơm dự phòng là máy bơm động cơ đốt trong, nhưng các thiết bị khác của hệ thống vẫn phải bảo đảm có nguồn điện dự phòng.
 
- - Công suất của các thiết bị khác (nếu có):
+8.2  Cho phép sử dụng các máy phát điện diesel làm nguồn điện dự phòng.
 
-Nguồn điện dùng cho dịch vụ an toàn (ắcqui, pin, tổ máy phát điện độc lập, lộ riêng độc lập với lộ cấp điện bình thường) phải có đủ công suất, độ tin cậy, thời gian hoạt động đáp ứng cần thiết, thông số đặc trưng và thời gian chuyển đổi thích hợp theo quy định.
+8.3  Trong trường hợp cấp nguồn cho hệ thống chữa cháy tự động bằng nguồn dự phòng, nếu cần thiết, phải ngắt các phụ tải không ưu tiên của nhà.
 
-Điều 2.3.7.1
-
-QCVN 12:2014
-
--
-
-		Số nguồn điện
-
-02 nguồn: Nguồn điện xoay chiều ưu tiên và nguồn dự phòng.
-
-- Nguồn ưu tiên: Kiểm tra thể hiện trên sơ đồ nguyên lý
-
-- Nguồn dự phòng: máy phát điện dự phòng, pin lưu trữ tập trung.
-
-Các máy bơm chữa cháy phải được kết nối với hai nguồn điện riêng biệt (một từ nguồn điện lưới và một từ máy phát điện) hoặc sử dụng máy bơm động cơ đốt trong. Cho phép không trang bị máy bơm dự phòng hoặc nguồn điện dự phòng khi cấp nước chữa cháy cho nhà sản xuất, nhà kho có bậc chịu lửa I, II và hạng nguy hiểm cháy nổ D, E, với lưu lượng nước chữa cháy ngoài nhà yêu cầu < 20 L/s
+Không sử dụng thiết bị bảo vệ quá nhiệt trong các mạch điều khiển của hệ thống chữa cháy tự động nếu việc ngắt mạch có thể dẫn đến việc không đưa được chất chữa cháy vào đám cháy.
 
 Điều 5.3.1
 
 QCVN 06:2022/BXD
 
--
+Điều 8.1; 8.2; 8.3
 
-		Thiết bị bảo vệ
+TCVN 7336:2021
 
-aptomat hoặc máy cắt thể hiện trên sơ đồ nguyên lý để bảo vệ đóng ngắt điện xoay chiều cho hệ thống….
-
-* Phải sử dụng các loại thiết bị sau để cách ly và đóng cắt mạch điện:
-
-a) Dao cách ly, cầu dao phụ tải, máy cắt;
-
-b) Phích cắm và ổ cắm;
-
-c) Cầu chảy;
-
-d) Các đầu nối chuyên dùng (không cần tháo dây dẫn ra).
-
-*Dòng điện định mức của thiết bị bảo vệ không được nhỏ hơn dòng điện làm việc lâu dài lớn nhất của mạch điện.
-
-Điều 2.3.1
-
-QCVN 12:2014
-
-Điều 2.3.4
-
-QCVN 12:2014
-
-Bảo vệ quá tải
-
-Thiết bị bảo vệ quá tải của máy phát điện dự phòng cho bơm chữa cháy chỉ được đưa tín hiệu cảnh báo bằng chuông hoặc còi, không được tự động cắt điện của máy phát điện này.
-
-Điều 2.9.5
-
-QCVN 12:2014
-
-2.2
+2.3
 
 		Hệ thống chữa cháy bằng khí, bột
-
--
-
-		Công suất của thiết bị
-
-- Công suất của tủ điều khiển xả khí:
-
-- Công suất của tủ điều khiển hệ thống bột:
-
-- Công suất của các thiết bị khác (nếu có):
-
-Phải có hệ thống điện riêng để duy trì hoạt động các bộ phận thiết yếu cho dịch vụ an toàn làm việc ở mọi thời điểm, mọi điều kiện
-
-Điều 2.3.6.1
-
- QCVN 12:2014/BXD
-
--
-
-		Nguồn điện
 
 * Phải có hệ thống điện riêng để duy trì hoạt động các bộ phận thiết yếu cho dịch vụ an toàn làm việc ở mọi thời điểm, mọi điều kiện
 
@@ -213,6 +196,8 @@ Các hệ thống phát hiện đám cháy vận hành bằng điện phải tu�
 
 Khi sử dụng hai hoặc nhiều bộ phát hiện, như là các đầu báo khói hoặc lửa thì hệ thống chỉ nên vận hành sau khi đã nhận được các tín hiệu từ hai bộ phát hiện.
 
+Đối với các thiết bị điện có nguồn dự phòng riêng (ví dụ bơm diezen, tủ chống cháy có ắc quy dự phòng) thì chỉ cần một nguồn điện lưới, nhưng nguồn dự phòng riêng này phải đảm bảo hoạt động bình thường khi có cháy.
+
 Điều 2.3.6.1
 
  QCVN 12:2014/BXD
@@ -221,211 +206,91 @@ Khi sử dụng hai hoặc nhiều bộ phát hiện, như là các đầu báo 
 
 TCVN 13877-2:2023
 
--
+Hoặc 6.4.3.1 TCVN 7161-1:2022
 
-		Thiết bị bảo vệ
-
-Aptomat hoặc cầu chảy
-
-Ngoại trừ như được qui định trong 434.5.1, thiết bị bảo vệ chống cả dòng điện quá tải và dòng điện ngắn mạch phải có khả năng cắt và, đối với áptômát, khả năng đóng quá dòng bất kỳ đến và bằng dòng điện ngắn mạch kỳ vọng tại nơi lắp đặt thiết bị. Thiết bị bảo vệ này có thể là:
-
-- áptômát có bộ nhả quá tải và bộ nhả ngắn mạch;
-
-- áptômát kết hợp với cầu chảy;
-
-- cầu chảy trong đó dây chảy có đặc tính gG.
-
-CHÚ THÍCH 1: Cầu chảy bao gồm tất cả các phần tạo nên một thiết bị bảo vệ hoàn chỉnh.
-
-CHÚ THÍCH 2: Điều này không loại trừ việc sử dụng thiết bị bảo vệ khác nếu đáp ứng các yêu cầu trong 433.1 và 434.5
-
-Điều 432.1
-
-TCVN 7447-4-43:2010
-
-Thiết bị chỉ cung cấp bảo vệ chống dòng điện ngắn mạch phải được lắp đặt ở những nơi đã có bảo vệ quá tải bằng các phương tiện khác hoặc nơi cho phép bỏ qua bảo vệ quá tải theo Điều 433. Thiết bị này phải có khả năng cắt và, đối với áptômát, khả năng đóng dòng điện ngắn mạch đến và bằng dòng điện ngắn mạch kỳ vọng. Thiết bị phải thỏa mãn các yêu cầu của Điều 434.
-
-Thiết bị này có thể là:
-
-- áptômát chỉ có bộ nhả ngắn mạch;
-
-- cầu chảy có các dây chảy loại gM, aM.
-
-Điều 432.3
-
-TCVN 7447-4-43:2010
-
-2.3
+2.4
 
 		Hệ thống đèn, phương tiện chiếu sáng sự cố, chỉ dẫn thoát nạn.
 
--
+- Phải có hệ thống điện riêng để duy trì hoạt động các bộ phận thiết yếu cho dịch vụ an toàn làm việc ở mọi thời điểm, mọi điều kiện
 
-		Công suất của thiết bị
+- Đèn chiếu sáng sự cố và biển báo an toàn có nguồn điện dự phòng phải đảm bảo thời gian hoạt động ổn định liên tục tối thiểu là 120 min khi có sự cố cháy, nổ
 
-- Công suất của các đèn chỉ dẫn thoát nạn:
+Lưu ý: Lựa chọn sử dụng nguồn điện dự phòng (ắc quy/pin). đấu nối với nguồn điện sinh hoạt hoặc sử dụng nguồn ưu tiên tự động chiếu sáng và bảo đảm công suất thời gian hoạt động ổn định liên tục tối thiểu là 120 min khi có sự cố cháy, nổ
 
-Phải có hệ thống điện riêng để duy trì hoạt động các bộ phận thiết yếu cho dịch vụ an toàn làm việc ở mọi thời điểm, mọi điều kiện
+Yêu cầu riêng đối với Nhà (có chiều cao PCCC từ trên 50 m đến 150 m) thuộc nhóm F1.2, F4.2, F4.3 và nhà hỗn hợp
+
+Điện cấp cho các hệ thống thiết bị kỹ thuật nêu dưới đây phải bảo đảm duy trì sự làm việc của các thiết bị đó trong thời gian không ít hơn 3 giờ kể từ khi có cháy và phải được lấy từ 2 nguồn cấp độc lập
 
 Điều 2.3.6.1
 
  QCVN 12:2014/BXD
-
--
-
-		Nguồn điện
-
-Đèn chiếu sáng sự cố và biển báo an toàn có nguồn điện dự phòng phải đảm bảo thời gian hoạt động ổn định liên tục tối thiểu là 120 min khi có sự cố cháy, nổ
 
 Điều 4.5
 
 TCVN 13456:2022
 
--
+Điều A.2.28
 
-		Thiết bị bảo vệ
-
-Ngoại trừ như được qui định trong 434.5.1, thiết bị bảo vệ chống cả dòng điện quá tải và dòng điện ngắn mạch phải có khả năng cắt và, đối với áptômát, khả năng đóng quá dòng bất kỳ đến và bằng dòng điện ngắn mạch kỳ vọng tại nơi lắp đặt thiết bị. Thiết bị bảo vệ này có thể là:
-
-- áptômát có bộ nhả quá tải và bộ nhả ngắn mạch;
-
-- áptômát kết hợp với cầu chảy;
-
-- cầu chảy trong đó dây chảy có đặc tính gG.
-
-CHÚ THÍCH 1: Cầu chảy bao gồm tất cả các phần tạo nên một thiết bị bảo vệ hoàn chỉnh.
-
-CHÚ THÍCH 2: Điều này không loại trừ việc sử dụng thiết bị bảo vệ khác nếu đáp ứng các yêu cầu trong 433.1 và 434.5
-
-Điều 432.1
-
-TCVN 7447-4-43:2010
+ QCVN 06:2022/BXD
 
 2.4
 
 		Hệ thống loa thông báo và hướng dẫn thoát nạn
 
--
-
-		Công suất của thiết bị
-
-Công suất của loa tthông báo hướng dẫn thoát nạn:
-
 Phải có hệ thống điện riêng để duy trì hoạt động các bộ phận thiết yếu cho dịch vụ an toàn làm việc ở mọi thời điểm, mọi điều kiện
-
-Điều 2.3.6.1
-
- QCVN 12:2014/BXD
-
--
-
-		Nguồn điện
 
 Các thiết bị điện của hệ thống bảo vệ chống cháy của nhà phải được cấp điện ưu tiên từ hai nguồn độc lập (một nguồn điện lưới và một nguồn máy phát điện dự phòng).
 
 CHÚ THÍCH: Đối với các thiết bị điện có nguồn dự phòng riêng (ví dụ bơm diezen, tủ chống cháy có ắc quy dự phòng) thì chỉ cần một nguồn điện lưới, nhưng nguồn dự phòng riêng này phải đảm bảo hoạt động bình thường khi có cháy.
 
-Nhà có chiều cao PCCC từ 28 m trở lên phải được trang bị máy phát điện dự phòng với công suất tối thiểu đảm bảo hoạt động của mạng điện ưu tiên gồm: điện cho bơm nước sinh hoạt, bơm nước chữa cháy, hệ thống báo cháy tự động, hệ thống bảo vệ chống khói, thang máy chữa cháy, chiếu sáng công cộng, thiết bị báo cháy, camera quan sát, thông báo cháy và điều khiển thoát nạn và các phụ tải khác theo quy định của tiêu chuẩn thiết kế hiện hành.
+Điều 2.3.6.1
+
+ QCVN 12:2014/BXD
 
 Điều 3.1.10
 
-QCVN 06:2022
-
-2.8.4
-
-QCVN 04:2021/BXD
-
--
-
-		Thiết bị bảo vệ
-
-Ngoại trừ như được qui định trong 434.5.1, thiết bị bảo vệ chống cả dòng điện quá tải và dòng điện ngắn mạch phải có khả năng cắt và, đối với áptômát, khả năng đóng quá dòng bất kỳ đến và bằng dòng điện ngắn mạch kỳ vọng tại nơi lắp đặt thiết bị. Thiết bị bảo vệ này có thể là:
-
-- áptômát có bộ nhả quá tải và bộ nhả ngắn mạch;
-
-- áptômát kết hợp với cầu chảy;
-
-- cầu chảy trong đó dây chảy có đặc tính gG.
-
-CHÚ THÍCH 1: Cầu chảy bao gồm tất cả các phần tạo nên một thiết bị bảo vệ hoàn chỉnh.
-
-CHÚ THÍCH 2: Điều này không loại trừ việc sử dụng thiết bị bảo vệ khác nếu đáp ứng các yêu cầu trong 433.1 và 434.5
-
-Điều 432.1
-
-TCVN 7447-4-43:2010
+QCVN 06:2022/BXD
 
 2.5
 
 		Hệ thống hút khói,  hệ thống cung cấp không khí bảo vệ chống khói
 
--
-
-		Công suất của thiết bị
-
-- Công suất của quạt hút khói:
-
-- Công suất của quạt tăng áp:
-
-- Công suất của quạt cấp khí bù:
-
--  Công suất của các thiết bị khác (nếu có):
-
 Phải có hệ thống điện riêng để duy trì hoạt động các bộ phận thiết yếu cho dịch vụ an toàn làm việc ở mọi thời điểm, mọi điều kiện
+
+Nguồn điện cấp cho thông gió sự cố và cấp cho hệ bảo vệ chống khói phải được cấp từ 02 nguồn độc lập theo quy định về an toàn cháy cho nhà và công trình.
+
+Các thiết bị điện của hệ thống bảo vệ chống cháy của nhà phải được cấp điện ưu tiên từ hai nguồn độc lập (một nguồn điện lưới về một nguồn máy phát điện dự phòng).
 
 Điều 2.3.6.1
 
  QCVN 12:2014/BXD
-
--
-
-		Nguồn điện
-
-Nguồn điện cấp cho các hệ thống thông gió điều hòa không khí phải được xếp loại ngang cấp với hệ thống điện cấp chi mạng công nghệ và mạng kỹ thuật của công trình. Nguồn điện cấp cho thông gió sự cố và cấp cho hệ bảo vệ chống khói phải được cấp từ 02 nguồn độc lập theo quy định về an toàn cháy cho nhà và công trình.
-
-Hệ thống tăng áp cho khoang đệm và buồng thang thoát nạn phải được cấp điện ưu tiên từ hai nguồn độc lập (một nguồn điện lưới và một nguồn máy phát điện dự phòng), bảo đảm duy trì liên tục nguồn điện cho hệ thống hoạt động ổn định khi có cháy xảy ra
 
 Điều 12.1
 
 TCVN 5687:2024
 
-Điều 3.4.13
+Điều 3.1.10
 
 QCVN 06:2022/BXD
-
--
-
-		Thiết bị bảo vệ
-
-aptomat hoặc máy cắt thể hiện trên sơ đồ nguyên lý để bảo vệ đóng ngắt điện xoay chiều cho hệ thống….
-
-Các hệ thống thông gió, điều hòa không khí, đun nước nóng bằng điện trở phải được cấp điện trực tiếp bằng các đường dẫn điện riêng từ tủ phân phối điện và phải có thiết bị bảo vệ cắt điện tự động.
-
-Điều 2.1.14.9
-
-QCVN 12:2014
 
 2.6
 
 		Thang máy chữa cháy
 
--
-
-		Công suất của thiết bị
-
-Công suất của thang máy chữa cháy
-
 Phải có hệ thống điện riêng để duy trì hoạt động các bộ phận thiết yếu cho dịch vụ an toàn làm việc ở mọi thời điểm, mọi điều kiện
+
+Các thiết bị điện của hệ thống bảo vệ chống cháy của nhà phải được cấp điện ưu tiên từ hai nguồn độc lập (một nguồn điện lưới và một nguồn máy phát điện dự phòng).
+
+Hệ thống điện cung cấp cho thang máy và chiếu sáng phải bao gồm có các nguồn điện cung cấp chính và phụ (khẩn cấp, dự phòng, luân phiên). Mức phòng cháy ít nhất phải bằng mức phòng cháy đối với giếng thang (Phụ lục C)
 
 Điều 2.3.6.1
 
  QCVN 12:2014/BXD
 
--
+Điều 3.1.10
 
-		Nguồn điện
-
-Hệ thống điện cung cấp cho thang máy và chiếu sáng phải bao gồm có các nguồn điện cung cấp chính và phụ (khẩn cấp, dự phòng, luân phiên). Mức phòng cháy ít nhất phải bằng mức phòng cháy đối với giếng thang (Phụ lục C)
+QCVN 06:2022/BXD
 
 Điều 5.9.1
 
@@ -435,183 +300,21 @@ Phụ lục C
 
 TCVN 6396-72:2010
 
--
-
-		Thiết bị bảo vệ
-
-Ngoại trừ như được qui định trong 434.5.1, thiết bị bảo vệ chống cả dòng điện quá tải và dòng điện ngắn mạch phải có khả năng cắt và, đối với áptômát, khả năng đóng quá dòng bất kỳ đến và bằng dòng điện ngắn mạch kỳ vọng tại nơi lắp đặt thiết bị. Thiết bị bảo vệ này có thể là:
-
-- áptômát có bộ nhả quá tải và bộ nhả ngắn mạch;
-
-- áptômát kết hợp với cầu chảy;
-
-- cầu chảy trong đó dây chảy có đặc tính gG.
-
-CHÚ THÍCH 1: Cầu chảy bao gồm tất cả các phần tạo nên một thiết bị bảo vệ hoàn chỉnh.
-
-CHÚ THÍCH 2: Điều này không loại trừ việc sử dụng thiết bị bảo vệ khác nếu đáp ứng các yêu cầu trong 433.1 và 434.5
-
-Điều 432.1
-
-TCVN 7447-4-43:2010
-
 2.7
 
-		Màn ngăn cháy (trừ màn nước ngăn cháy)
-
--
-
-		Công suất của thiết bị
-
-Công suất động cơ màn ngăn cháy (cửa sập chống cháy):
+		Màn ngăn cháy (trừ màn nước ngăn cháy), Rèm ngăn cháy, cửa ngăn cháy điều khiển hoạt động bằng điện.
 
 Phải có hệ thống điện riêng để duy trì hoạt động các bộ phận thiết yếu cho dịch vụ an toàn làm việc ở mọi thời điểm, mọi điều kiện
 
-Điều 2.3.6.1
-
- QCVN 12:2014/BXD
-
--
-
-		Nguồn điện
-
-Phải có hệ thống điện riêng để duy trì hoạt động các bộ phận thiết yếu cho dịch vụ an toàn làm việc ở mọi thời điểm, mọi điều kiện
+Các thiết bị điện của hệ thống bảo vệ chống cháy của nhà phải được cấp điện ưu tiên từ hai nguồn độc lập (một nguồn điện lưới và một nguồn máy phát điện dự phòng).
 
 Điều 2.3.6.1
 
  QCVN 12:2014/BXD
 
--
+Điều 3.1.10
 
-		Thiết bị bảo vệ
-
-Ngoại trừ như được qui định trong 434.5.1, thiết bị bảo vệ chống cả dòng điện quá tải và dòng điện ngắn mạch phải có khả năng cắt và, đối với áptômát, khả năng đóng quá dòng bất kỳ đến và bằng dòng điện ngắn mạch kỳ vọng tại nơi lắp đặt thiết bị. Thiết bị bảo vệ này có thể là:
-
-- áptômát có bộ nhả quá tải và bộ nhả ngắn mạch;
-
-- áptômát kết hợp với cầu chảy;
-
-- cầu chảy trong đó dây chảy có đặc tính gG.
-
-CHÚ THÍCH 1: Cầu chảy bao gồm tất cả các phần tạo nên một thiết bị bảo vệ hoàn chỉnh.
-
-CHÚ THÍCH 2: Điều này không loại trừ việc sử dụng thiết bị bảo vệ khác nếu đáp ứng các yêu cầu trong 433.1 và 434.5
-
-Điều 432.1
-
-TCVN 7447-4-43:2010
-
-2.8
-
-		Rèm ngăn cháy
-
--
-
-		Công suất của thiết bị
-
-Công suất động cơ rèn ngăn cháy:
-
-Phải có hệ thống điện riêng để duy trì hoạt động các bộ phận thiết yếu cho dịch vụ an toàn làm việc ở mọi thời điểm, mọi điều kiện
-
-Điều 2.3.6.1
-
- QCVN 12:2014/BXD
-
--
-
-		Nguồn điện
-
-Phải có hệ thống điện riêng để duy trì hoạt động các bộ phận thiết yếu cho dịch vụ an toàn làm việc ở mọi thời điểm, mọi điều kiện
-
-Điều 2.3.6.1
-
- QCVN 12:2014/BXD
-
--
-
-		Thiết bị bảo vệ
-
-Ngoại trừ như được qui định trong 434.5.1, thiết bị bảo vệ chống cả dòng điện quá tải và dòng điện ngắn mạch phải có khả năng cắt và, đối với áptômát, khả năng đóng quá dòng bất kỳ đến và bằng dòng điện ngắn mạch kỳ vọng tại nơi lắp đặt thiết bị. Thiết bị bảo vệ này có thể là:
-
-- áptômát có bộ nhả quá tải và bộ nhả ngắn mạch;
-
-- áptômát kết hợp với cầu chảy;
-
-- cầu chảy trong đó dây chảy có đặc tính gG.
-
-CHÚ THÍCH 1: Cầu chảy bao gồm tất cả các phần tạo nên một thiết bị bảo vệ hoàn chỉnh.
-
-CHÚ THÍCH 2: Điều này không loại trừ việc sử dụng thiết bị bảo vệ khác nếu đáp ứng các yêu cầu trong 433.1 và 434.5
-
-Điều 432.1
-
-TCVN 7447-4-43:2010
-
-2.9
-
-		Cửa ngăn cháy điều khiển hoạt động bằng điện.
-
--
-
-		Công suất của thiết bị
-
-Công suất động cơ của cửa ngăn cháy:
-
-Phải có hệ thống điện riêng để duy trì hoạt động các bộ phận thiết yếu cho dịch vụ an toàn làm việc ở mọi thời điểm, mọi điều kiện
-
-Điều 2.3.6.1
-
- QCVN 12:2014/BXD
-
--
-
-		Nguồn điện
-
-* Phải có hệ thống điện riêng để duy trì hoạt động các bộ phận thiết yếu cho dịch vụ an toàn làm việc ở mọi thời điểm, mọi điều kiện.
-
-* Các thiết bị điện của hệ thống bảo vệ chống cháy của nhà phải được cấp điện ưu tiên từ hai nguồn độc lập (một nguồn điện lưới và một nguồn máy phát điện dự phòng)
-
-CHÚ THÍCH: Đối với các thiết bị điện có nguồn dự phòng riêng (ví dụ bơm diezen, tủ chống cháy có ắc quy dự phòng) thì chỉ cần một nguồn điện lưới, nhưng nguồn dự phòng riêng này phải đảm bảo hoạt động bình thường khi có cháy
-
-- Điện cho hệ thống kỹ thuật dưới đây phải đảm bảo duy trì làm việc của thiết bị đó trong thời gian không ít hơn 3 h kể từ khi có cháy và phải được lấy từ 02 nguồn cấp độc lập:
-
- - Thang máy chữa cháy;
-
-- Các thiết bị của hệ thống bảo vệ chống cháy;
-
-- Hệ thống báo cháy tự động và hướng dẫn thoát nạn;
-
-- Các thiết bị của hệ thống chữa cháy tự động và cấp nước chữa cháy;
-
-- Các thiết bị bảo vệ chống cháy cho hệ thống kỹ thuật;
-
-- Các trang thiết bị phục vụ cứu hộ - cứu nạn.
-
-Điều 2.3.6.1
-
- QCVN 12:2014/BXD
-
-A.2.28.1 QCVN 06:2022/BXD
-
--
-
-		Thiết bị bảo vệ
-
-Ngoại trừ như được qui định trong 434.5.1, thiết bị bảo vệ chống cả dòng điện quá tải và dòng điện ngắn mạch phải có khả năng cắt và, đối với áptômát, khả năng đóng quá dòng bất kỳ đến và bằng dòng điện ngắn mạch kỳ vọng tại nơi lắp đặt thiết bị. Thiết bị bảo vệ này có thể là:
-
-- áptômát có bộ nhả quá tải và bộ nhả ngắn mạch;
-
-- áptômát kết hợp với cầu chảy;
-
-- cầu chảy trong đó dây chảy có đặc tính gG.
-
-CHÚ THÍCH 1: Cầu chảy bao gồm tất cả các phần tạo nên một thiết bị bảo vệ hoàn chỉnh.
-
-CHÚ THÍCH 2: Điều này không loại trừ việc sử dụng thiết bị bảo vệ khác nếu đáp ứng các yêu cầu trong 433.1 và 434.5
-
-Điều 432.1
-
-TCVN 7447-4-43:2010
+QCVN 06:2022/BXD
 
 3
 
@@ -619,7 +322,19 @@ TCVN 7447-4-43:2010
 
 -
 
+		Nhà chung cư
+
+Nhà có chiều cao PCCC từ 28 m trở lên phải được trang bị máy phát điện dự phòng với công suất tối thiểu đảm bảo hoạt động của mạng điện ưu tiên gồm: điện cho bơm nước sinh hoạt, bơm nước chữa cháy, hệ thống báo cháy tự động, hệ thống bảo vệ chống khói, thang máy chữa cháy, chiếu sáng công cộng, thiết bị báo cháy, camera quan sát, thông báo cháy và điều khiển thoát nạn và các phụ tải khác theo quy định của tiêu chuẩn thiết kế hiện hành.
+
+2.8.4
+
+QCVN 04:2021/BXD
+
+-
+
 Tính toán công suất nguồn chính
+
+Tham khảo, thuyết minh cần thể hiện có tính toán
 
 * Phụ tải tính toán của nhóm phụ tải PCCC Ptt (kW) tính theo công thức:
 
@@ -635,7 +350,7 @@ Kyc - Hệ số yêu cầu của phụ tải PCCC,  Kyc = 1
 
 n - Số động cơ;
 
-Pi - Công suất điện định mức (kW) của động cơ bơm nước,  quạt hút khói, tăng áp và các thiết bị khác (Tủ điều khiển trung tâm báo cháy, đèn exit, đèn sự cố, van điện từ...) thứ i.
+Pi - Công suất điện định mức (kW) của động cơ bơm nước, quạt hút khói, tăng áp và các thiết bị khác (Tủ điều khiển trung tâm báo cháy, đèn exit, đèn sự cố, van điện từ...) thứ i.
 
 - Công suất tính toán của nhóm phụ tải thang máy chữa cháy được tính theo công thức:
 
@@ -645,7 +360,9 @@ Pni - Công suất điện định mức (kW) của động cơ kéo thang máy 
 
 Pgi - Công suất (kw) tiêu thụ của các khí cụ điều khiển và các đèn điện trong thang máy chữa cháy thứ i, nếu không có số liệu cụ thể có thể lấy giá trị Pgi = 0,1Pni;
 
-Pvi - Hệ số gián đoạn của động cơ điện theo lí lịch thang máy chữa cháy thứ i nếu không có số liệu cụ thể có thể lấy giá trị của Pvi = 1;
+Pvi - Hệ số gián đoạn của động cơ điện theo lí lịch thang
+
+máy chữa cháy thứ i nếu không có số liệu cụ thể có thể lấy giá trị của Pvi = 1;
 
 Kyc - Hệ số yêu cầu của phụ tải PCCC; Kyc = 1
 
@@ -663,13 +380,13 @@ TCVN 9206:2012
 
 Tính toán công suất nguồn dự phòng
 
-Đối với máy phát điện
+Tham khảo, thuyết minh cần thể hiện có tính toán
 
 Công suất định mức của máy phát điện (SMPĐ​) phải lớn hơn hoặc bằng giá trị lớn nhất giữa công suất vận hành và công suất yêu cầu khi khởi động, đồng thời có một hệ số dự phòng.  SMPĐ ​​≥ max(Stt​,Skđ​) ⋅ kdp​
 
 Trong đó:
 
-Stt  =  ;  Skđ  =
+ Stt  =  ;  Skđ  =
 
 kdp​: Hệ số dự phòng, thường lấy từ 1.1 đến 1.25 để đảm bảo máy hoạt động bền bỉ và có khả năng mở rộng tải trong tương lai.
 
@@ -677,94 +394,45 @@ Quy phạm điện phần 1
 
 11TCN-18-2006
 
-3.2
-
-Sơ đồ cấp điện và đấu nối cho hệ thống PCCC
-
--
-
-Cáp điện
-
-“Các cáp điện từ trạm biến áp và từ nguồn cấp độc lập đến các thiết bị phân phối đầu vào ở mỗi khoang cháy phải được đặt trong các kênh (hộp) riêng biệt với khả năng chịu lửa theo quy định tại A.2.24, hoặc phải là các cáp có khả năng chịu lửa.”
-
-A.2.28.2
-
-QCVN 06:2022/BXD
-
-Dây điện và cáp điện từ thiết bị phân phối đầu vào đến các hệ thống bảo vệ chống cháy (thiết bị điện của hệ thống chữa cháy, báo cháy, hút xả khói, chiếu sáng thoát nạn và tương tự) phải được thực hiện bằng các cáp có khả năng chịu lửa
-
--
-
-Bố trí cáp điện
-
-Quy định này nhấn mạnh việc tách riêng hệ thống dây dẫn và mạch điện của phụ tải an toàn khỏi mạch điện thông thường. Trong thực tế, điều này có nghĩa là dây cáp cấp điện cho các thiết bị an toàn (như đèn exit, bơm chữa cháy, v.v.) phải đi trong tuyến riêng, vào tủ điện riêng dành cho dịch vụ an toàn, không đi chung với cáp của phụ tải thường. Việc thiết kế mạch độc lập giúp tránh ảnh hưởng lẫn nhau: sự cố (ngắn mạch, quá tải) trên mạch phụ tải thường sẽ không làm mất điện các thiết bị an toàn. Đồng thời, nó tạo điều kiện để dễ dàng chuyển đổi nguồn cho nhóm an toàn sang nguồn dự phòng mà không ảnh hưởng đến các mạch khác
-
-Mạch điện của dịch vụ an toàn phải độc lập với các mạch khác.
-
-Điều 2.3.8.1
-
-QCVN 12:2014/BXD
-
 4
-
-		Dây dẫn điện cho hệ thống PCCC
-
--
-
-		Mạch điện độc lập
-
-Mạch điện của dịch vụ an toàn phải độc lập với các mạch khác
-
- 2.3.8.1
-
-QCVN 12:2014/BXD
-
--
-
-		Bố trí mạch điện
-
-- Trong các buồng thang bộ và khoang đệm (nếu có) không cho phép bố trí: Các cáp và dây điện đi hở (trừ dây điện cho thiết bị điện dòng thấp và dây điện cho chiếu sáng hành lang và buồng thang bộ)
-
- 3.4.5
-
-QCVN 06:2022/BXD
-
--
-
-		Yêu cầu cáp chống cháy
-
-- Dây dẫn và cáp cấp điện cho các phụ tải phục vụ công tác PCCC, công tác thoát hiểm khi xảy ra hỏa hoạn phải dùng dây dẫn và cáp điện có lớp vỏ là vật liệu chống cháy. Cụ thể đó là các phụ tải sau: Đèn thoát hiểm, khối xử lý trung tâm báo cháy và chữa cháy tự động, bơm nước cứu hỏa, quạt tăng áp thang, thang máy
-
- 5.3
-
-TCVN 9207:2012
-
-+
-
-		Yêu cầu bổ sung đối với nhà chung cư thuộc nhóm nguy hiểm cháy theo công năng F1.3 có chiều cao PCCC
-từ trên 75 m đến 150 m; Nhà (có chiều cao PCCC từ trên 50 m đến 150 m) thuộc nhóm F1.2, F4.2, F4.3 và nhà hỗn hợp
-
-- Dây điện và cáp điện từ thiết bị phân phối đầu vào đến các hệ thống bảo vệ chống cháy (thiết bị điện của hệ thống chữa cháy, báo cháy, hút xả khói, chiếu sáng thoát nạn và tương tự) phải được thực hiện bằng các cáp có khả năng chịu lửa (dây điện và cáp điện có lớp khoáng hoặc dây điện và cáp điện khác có giới hạn chịu lửa không thấp hơn 120 phút)
-
-A.2.28.8 và A.3.1.17
-
-QCVN 06:2022/BXD
-
-5
-
-		Yêu cầu cắt điện khi có sự cố cháy, nổ
-
-Tín hiệu của hệ thống báo cháy tự động phải điều khiển nguồn điện lưới tự động dừng cấp điện cho các hệ thống điện sinh hoạt, phụ tải và duy trì nguồn điện cho các hệ thống phòng cháy, chữa cháy hoạt động. Trường hợp cắt điện lưới máy phát điện phải tự động hoạt động và tiếp tục cấp điện cho các hệ thống phòng cháy, chữa cháy của công trình
-
-Yêu cầu
-
-6
 
 		Điện phòng nổ
 
-Thiết bị hệ thống PCCC lắp đặt trong môi trường nguy hiểm nổ phải là loại thiết bị chống nổ phù hợp với môi trường theo từng loại công trình
+Thiết bị hệ thống PCCC lắp đặt trong môi trường nguy hiểm nổ phải là loại thiết bị chống nổ phù hợp với môi trường theo từng loại công trình:
 
 Thiết bị điện sử dụng trong các vùng nguy hiểm phải là loại phòng nổ và có cấp nhiệt độ lớn nhất trên bề mặt phù hợp với yêu cầu của từng vị trí lắp đặt, phù hợp với điện áp và tần số danh định của lưới điện.
+
+Các khu vực nguy hiểm nổ
+
+Khu vực hơi, khi (Tham khảo TCVN 5334:2007)
+
+1. Vùng nguy hiểm cấp Z0: Vùng mà môi trường khí nổ xuất hiện, tích tụ một cách thường xuyên, liên tục và/hoặc trong một thời gian dài.
+
+Vùng nguy hiểm cấp Z0 hình thành trong những trường hợp sau:
+
+a) Trong khi vận hành, khai thác bình thường các hạng mục, công trình không hoàn toàn kín dùng để tồn chứa, xuất nhập dầu mỏ và sản phẩm dầu mỏ;
+
+b) Trong các hoạt động sửa chữa, bảo dưỡng công trình, thiết bị tồn chứa, bơm chuyển dầu mỏ và sản phẩm dầu mỏ;
+
+c) Trong trường hợp có sự cố hư hỏng của công trình, thiết bị tồn chứa, bơm chuyển, xuất nhập dẫn tới tràn dầu hoặc rò rỉ, tích tụ khí hoặc hơi chất dễ cháy, kết hợp với không khí tạo thành môi trường khí nổ.
+
+2. Vùng nguy hiểm cấp Z1: Vùng mà môi trường khí nổ có thể xuất hiện nhưng không thường xuyên trong các điều kiện hoạt động bình thường.
+
+Vùng nguy hiểm cấp Z1 hình thành trong những trường hợp sau:
+
+a) Tại khu vực mà dầu mỏ và sản phẩm dầu mỏ thường xuyên được tồn chứa, bảo quản trong các vật chứa hoặc hệ thống đóng kín, nhưng khí hoặc hơi của chúng có thể thoát ra trong những trường hợp có sự cố dẫn tới tràn dầu và/hoặc rò rỉ chất dễ cháy, tạo thành môi trường khí nổ;
+
+b) Tại khu vực có môi trường khí nổ nhưng được thường xuyên thông gió cưỡng bức, hiện tượng tập trung hơi chất dễ cháy để tạo ra môi trường khí nổ chỉ xảy ra khi có hư hỏng hoặc hoạt động không bình thường của thiết bị thông gió;
+
+c) Tại khu vực liền kề với vùng nguy hiểm cấp Z0 và có thể xảy ra sự thông khí với nhau (không thường xuyên), mà không có các biện pháp ngăn chặn sự lưu thông khí đó hoặc không áp dụng các biện pháp thông gió cưỡng bức cần thiết.
+
+3. Vùng nguy hiểm cấp Z2: Vùng mà môi trường khí nổ không có khả năng xuất hiện trong các điều kiện hoạt động bình thường, hoặc nếu xuất hiện thì chỉ tồn tại trong một thời gian ngắn.
+
+Vùng nguy hiểm cấp Z2 thường là những vùng liền kề với vùng nguy hiểm cấp Z1 hoặc khu vực tồn chứa, bảo quản, cấp phát, bơm chuyền dầu mỏ và các sản phẩm dầu mỏ loại 3.
+
+Bụi dễ cháy: (tham khảo TCVN 5279: 1990 an toàn cháy nổ - bụi cháy - yêu cầu chung)
+
+Để phục vụ cho việc lựa chọn, lắp đặt các thiết bị điện phòng nổ, đơn vị thiết kế phải chỉ rõ giới hạn vùng nguy hiểm các cấp theo quy định, và yêu cầu loại phòng nổ của thiết bị điện phù hợp với mỗi vị trí thiết kế lắp đặt.
 
 Điều 14
 
@@ -772,4 +440,4 @@ QCVN 10:2012/BCT
 
 ..........(3)....................													..........(4)..............
 
-Ghi chú: (1) Tên cơ quan chủ quản trực tiếp;(2) Tên đơn vị thực hiện thẩm duyệt; (3) Họ tên và chữ ký của cán bộ thực hiện; (4) Ghi quyền hạn, chức vụ của người lãnh đạo, chỉ huy đơn vị thẩm duyệt, nếu người ký văn bản là cấp phó của người đứng đầu cơ quan thì ghi chữ viết tắt “KT.” vào trước chức vụ của người đứng đầu, bên dưới ghi chức vụ của người ký văn bản;
+Ghi chú: (1) Tên cơ quan chủ quản trực tiếp;(2) Tên đơn vị thực hiện thẩm định; (3) Họ tên và chữ ký của cán bộ thực hiện; (4) Ghi quyền hạn, chức vụ của người lãnh đạo, chỉ huy đơn vị thẩm định, nếu người ký văn bản là cấp phó của người đứng đầu cơ quan thì ghi chữ viết tắt “KT.” vào trước chức vụ của người đứng đầu, bên dưới ghi chức vụ của người ký văn bản;

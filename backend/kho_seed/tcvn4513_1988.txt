@@ -1,0 +1,2304 @@
+[TCVN 4513:1988 Cấp nước bên trong: tiêu chuẩn thiết kế]
+[Hiệu lực: 1988 (tiêu chuẩn cũ, cần đối chiếu hiệu lực). Trạng thái: THAM KHẢO. Nguồn: bộ tài liệu thi cán bộ thẩm định PCCC 2026, bản quét OCR.]
+
+Nhóm H
+
+AC 4. Ị LIXN ^ ° ”S.
+
+Cấp nước bên trong — Tiêu chuẩn thiết kế
+
+Infernal water supply — Design standard
+
+Tiêu chuẩn này thay thế cho TCXD 18 - 64 “Cấp nước bên trong — Tiêu chuẩn thiết kế”.
+
+Tiêu chuẩn này áp dụng để thiết kế hệ thống cấp nước bên trong nhà ở, công trình công
+
+cộng, nhà sản xuất, nhà phụ trợ của xí nghiệp công nghiệp, xây dựng mới hoặc cải tạo.
+
+Chú thích : Khi thiết kế hệ thống cấp nước bên trong, ngoài việc tuân theo các quy định
+
+trong tiêu chuẩn này, còn phải tuân theo các tiêu chuẩn hiện hành có liên quan.
+
+1 Quyđịnh chung.
+
+1.I.. Hệ thống cấp nước bên trong được thiết kế để cấp nước trực tiếp tới các nỉ dùng
+
+nước.
+
+Hệ thống cấp nước bên trong (hệ thống cấp nước ăn uống, sinh hoạt, hệ thống cấp
+
+nước sản xuất, hệ thống cấp nước chữa cháy) bao gồm:
+
+Đường ống dẫn nước vào, hố đồng hồ đo nước, mạng lưới đường ống chính, ống
+
+nhánh, ống phân phối nước dẫn đến các dụng cụ vệ sinh, thiết bị sản xuất và thiết bị
+
+chữa cháy.
+
+Tuỳ theo lưu lượng của áp lực hệ thống cấp nước bên ngoài, chức năng của nhà và
+
+quy trình công nghệ mà hệ thống cấp nước bên trong còn có : máy bơm, két nước áp
+
+lực, két nước khí nén, bể chứa nước được bố trí ở bên trong hay ở gần công trình.
+
+12. Hệ thống cấp nước ăn uống sinh hoạt (gọi tắt là cấp nước sinh hoạt) phải thiết kế
+
+đảm bảo cấp nước có chất lượng theo đúng tiêu chuẩn chất lượng do Nhà nước quy
+
+định cho nước dùng để ăn uống.
+
+Chú thích:
+
+1. Ở các khu vực dân cư và xí nghiệp sản xuất mà nguồn cấp có chất lượng nước ăn uống
+
+không đủ công suất để đảm bảo cho tất cả các nhu cầu dùng nước, cho phép cấp nước
+
+không cần có chất lượng như nước ăn uống tới các chậu tiểu, bình xả, nước chậu xí, máng
+
+tiểu, vòi rửa sàn nhà hay các dụng cụ vệ sinh tương tự khác.
+
+2. Trường hợp không đủ nước có chất lượng nước ăn uống và trong khu vực xây dựng có
+
+nguồn suối nước nóng, sau khi được cơ quan vệ sinh dịch tễ cấp tỉnh, thành phố cho phép có
+
+thể sử dụng nguồn suối nước nóng để cấp nước cho nhu cầu sinh hoạt.
+
+1.3. Hệ thống cấp nước sản xuất phải thiết kế đảm bảo các yêu cầu công nghệ, không làm
+
+ăn mòn đường ống và phụ tùng, không làm lắng cặn và phát triển chất bám... trong
+
+đường ống.
+
+1.4... Hệ thống cấp nước sinh hoạt bên trong lấy từ đường ống cấp nước của thành phố
+
+không được nối cố định với các đường ống cấp nước sinh hoạt lấy từ các nguồn nước
+
+cục bộ.
+
+Chú thích : Cho phép nối với các hệ thống cấp nước cục bộ trong những trường hợp đặc
+
+biệt khi đã có sự thoả thuận với cơ quan quản lí hệ thống cấp nước của thành phố hay địa
+
+phương sở tại.
+
+1.5. Phải thiết kế đường ống cấp nước chữa cháy bên trong nhà trong các trường hợp sau :
+
+a) Trong các nhà sản xuất trừ những quy định trong điều 1.6 của tiêu chuẩn này.
+
+b) Trong nhà ở gia đình từ 4 tầng trở lên, trường học cao từ 3 tầng trở lên.
+
+c) Trong các cơ quan hành chính cao từ 6 tầng trở lên, trường học cao từ 3 tầng trở
+
+lên.
+
+d) Trong nhà ga, kho tàng, các loại công trình công cộng khác, nhà phụ trợ của các
+
+công trình công nghiệp khi khối tích ngôi nhà từ 5000m trở lên.
+
+e) Trong nhà hát, rạp chiếu bóng, hội trường, câu lạcbộ có từ 300 chỗ ngồi trở lên.
+
+Chú thích:
+
+1) Nếu ở các ngôi nhà nêu trong điều kiện (b), (c) có số tầng khác nhau thì chỉ thiết
+
+kế đường ống cấp nước chữa cháy cho phần nhà có số tầng đã quy định ở trên.
+
+2) Trong nhà sản xuất có bậc chịu lửa Ï và H, sản xuất hạng D, E thì hệ thống đường
+
+ống cấp nước chữa cháy chỉ cần đặt ở phần nhà có chứa hay sản xuất những vật liệu
+
+đễ cháy.
+
+3) Trong trường hợp đặc biệt, không thực hiện được những quy định trong điều 1.5
+
+thì phải được sự thoả thuận của Cục phòng cháy chữa cháy — Bộ Nội vụ.
+
+lo. Không thiết kế hệ thống đường ống cấp nước chữa cháy bên trong nhà trong các
+
+trường hợp sau đây :
+
+a) Trong nhà tắm, nhà giặt công cộng.
+
+b) Trong các nhà sản xuất có sử dụng hay bảo quản các chất khi tiếp xúc với nước có
+
+thể sinh ra cháy, nổ, ngọn lửa lan truyền.
+
+c) Trong các nhà sản xuất có bậc chịu lửa I, II và có thiết bị bên trong làm bằng vật
+
+liệu không cháy mà trong đó gia công, vận chuyển, bảo quản thành phẩm, bán thành
+
+phẩm là vật liệu không cháy.
+
+d) Trong các nhà sản xuất hạng E,D có bậc chịu lửa THI, IV, V mà có khối tích không
+
+lớn quá 1.000 m .
+
+e) Trong các nhà kho làm bằng các vật liệu không cháy, chứa các hàng hoá không
+
+cháy.
+
+g) Trong các trạm bơm, trạm làm sạch nước thải.
+
+h) Trong các nhà sản xuất và nhà phụ trợ của công trình công nghiệp, không có
+
+đường ống cấp nước sinh hoạt hay sản xuất và việc cấp nước chữa cháy bên ngoài lấy
+
+ở sông, hồ ao hay bể dự trữ nước.
+
+1.7. Đặt thiết bị chữa cháy tự động trong nhà, do yêu cầu công nghệ quy định.
+
+1.8... Khi thiết kế hệ thống cấp nước chữa cháy bên trong, ngoài việc tuân theo những quy
+
+định trong tiêu chuẩn này, còn phải tuân theo những quy định trong tiêu chuẩn
+
+“Phòng cháy chữa cháy cho nhà và công trình. TOVN 2622 : 1978”.
+
+1.9. Đường ống, phụ tùng, các chi tiết, thiết bị và vật liệu để lắp đặt hệ thống cấp nước
+
+bên trong phải tuân theo các yêu cầu thiết kế của tiêu chuẩn này và các tiêu chuẩn
+
+điệu kiện kĩ thuật hiện hành có liên quan.
+
+2... Hệthống cấp nước bên trong
+
+2.1... Trong các nhà ở, công trình công cộng có thể thiết kế những hệ thống cấp nước sau
+
+đây:
+
+a) Hệ thống cấp nước sinh hoạt và chữa cháy kết hợp.
+
+b) Hệ thống cấp nước sinh hoạt và hệ thống cấp nước chữa cháy đặt riêng hoặc chỉ có
+
+1 trong 2 hệ thống đó.
+
+Trong các nhà sản xuất có thể. thiết kế các hệ thống sau đây:
+
+- Hệ thống cấp nước sinh hoạt kết hợp với hệ thống cấp nước sản xuất và chữa cháy
+
+hoặc hệ thống cấp nước sinh hoạt kết hợp với hệ thống cấp nước sản xuất.
+
+- Hệ thống cấp nước sinh hoạt kết hợp với hệ thống cấp nước chữa cháy hoặc hệ
+
+thống cấp nước sản xuất kết hợp với hệ thống cấp nước chữa cháy.
+
+Các hệ thống cấp nước riêng biệt.
+
+22. Việc lựa chọn hệ thống cấp nước bên trong phải căn cứ vào luận chứng kinh tế kĩ
+
+thuật, các yêu cầu vệ sinh và yêu cầu phòng cháy chữa cháy, kết hợp với các thông
+
+số kĩ thuật của hệ thống cấp nước bên ngoài và các yêu cầu về công nghệ sản xuất.
+
+2.3. Trong các nhà sản xuất và các nhà phụ trợ của xí nghiệp công nghiệp, có thể thiết kế
+
+các hệ thống cấp nước tuần hoàn, hệ thống sử dụng lại, hệ thống cấp nước lạnh, hệ
+
+thống chưng cất nước, hệ thống làm mềm nước...
+
+Việc xác định phương án thiết kế, phải căn cứ vào yêu cầu. của công nghệ sản xuất
+
+và phải phù hợp với các quy định về thiết kế xây dựng của các ngành.
+
+Cân thiết kế hệ thống cấp nước tuần hoàn và hệ thống sử dụng lại nước.
+
+2.4. Đối với nhà ở cao tầng, nhà hành chính, khách sạn, nhà an dưỡng, nhà nghỉ, nhà sản
+
+xuất, nhà phụ trợ, cần nghiên cứu phương án thiết kế hệ thống cấp nước phân vùng.
+
+Chiều cao phân vùng áp lực cấp nước được xác định theo tính toán với áp lực thủy
+
+tĩnh cho phép lớn nhất tại các họng chữa cháy, vòi nước sinh hoạt hoặc tại các vòi
+
+nước sản xuất theo quy định ở điều 3.9 của tiêu chuẩn này.
+
+2.5. Việc cấp nước vào từng vùng có thể sử dụng máy bơm tăng áp, kết nước áp lực hoặc
+
+khí nén và cũng có thể lấy nước trực tiếp từ hệ thống cấp nước bên ngoài.
+
+Áp lực nước của hệ thống cấp nước bên ngoài, phải được sử dụng để cấp nước cho
+
+các tầng dưới của công trình.
+
+3. Tiêu chuẩn dùng nước, áp lực nước tự do
+
+3.1... Tiêu chuẩn tính toán trong ngày dùng nước lớn nhất cho nhu cầu ăn uống sinh hoạt
+
+trong nhà ở, nhà công cộng, nhà sản xuất, nhà phụ trợ lấy theo tính năng sử dụng của
+
+nhà, mức độ trang bị các dụng cụ vệ sinh, điều kiện khí hậu và các điều kiện địa
+
+phương khác, theo bảng 1.
+
+Chú thích:
+
+Tiêu chuẩn dùng nước cho một lần hoặc của một dụng cụ vệ sinh trong nhà ở, nhà công
+
+cộng, nhà sản xuất và nhà phụ trợ lấy theo phụ lục Ï của tiêu chuẩn này.
+
+3.2. Hệ số dùng nước không điều hoà giờ lấy theo quy định trong tiêu chuẩn “Cấp nước
+
+đô thị, Tiêu chuẩn thiết kể”.
+
+Bảng 1
+
+Tiêu chuẩn dùng nước
+
+Nơi dùng nước Đơn vị dùng nước trong ngày dùng nhiều
+
+nhất 1/ngày
+
+Nhà ở bên trong mỗi căn hộ có một vòi
+
+nước sử dụng chung cho các nhu cầu Một người Từ 80 đến 100
+
+sinh hoạt
+
+Nhà ở bên trong có trang thiết bị vệ ,
+
+sinh : vòi tắm, rửa, xí trong 1 căn hộ Một người Từ 100 đến 150
+
+khép kín
+
+Nhà ở bên trong mỗi căn hộ có trang ,
+
+thiết bị vệ sinh : Hương sen tắm, rửa, Một người Từ 150 đến 200
+
+xí, tắm đặc biệt
+
+Nhà ở bên trong mỗi căn hộ có bồn tắm Từ 350 đến 400
+
+và cấp nước nóng cục bộ
+
+Nhà Ở tập thể kí túc xá có xí, tiểu VÒI Một người Từ 75 đến 100
+
+tắm giặt chung đặt ở các tầng
+
+Nhà Ở tập thể có Xí, tiêu, vòi tắm giặt, Một người Từ 100 đến 120
+
+bếp riêng cho từng phòng
+
+Khách sạn — Hạng II Từ 100 đến 120
+
+Từ 150 đến 200
+
+Từ 200 đến 250
+
+Từ 250 đến 300
+
+Bệnh viện, nhà điều dưỡng, nhà nghỉ
+
+(có bồn tắm chung và vòi tắm hương 1 giường bệnh Từ 250 đến 300
+
+sen)
+
+trong tất cả các phòng
+
+Trạm y tế, phòng khám đa khoa Ì bệnh nhân
+
+Từ 60 đến 90
+
+a) Chế biến thức ăn tại chỗ
+
+b) Chế biến thức ăn đem về sa
+
+Ñ 1 món ăn 10
+
+nhà
+
+1 người/ l bữa ăn Từ 18 đến 25
+
+Bể bơi trong ] ngày đèm mm
+
+% dung tích bể
+
+b) Vận động viên (tính cả tắm)
+
+NHI II II
+
+b) Gửi cả đêm
+
+Trụ sở cơ quan hành chính Từ 10 đến 15
+
+Từ 3 đến 5
+
+1 chỗ ngồi hay ] người xem
+
+NI
+
+Trường học, trường phổ thông lhọc sinh hay 1 giáo viên Từ 15 đến 20
+
+s) Vận động viên (kể cả tím)
+
+b)Khán gi
+
+we II
+
+a)Tưới sân thể thao, sân chơi, 1m 1,5
+
+khán đài và các công trình
+
+thể thao ngoài trời, cây xanh
+
+đường sá bên trong khu vực
+
+sân vận động
+
+Người phục vụ nhà công cộng
+
+Chú thích:
+
+1. Đối với các nhà Ở, nước sinh hoạt dùng hàng ngày lấy ở vòi công cộng của đường phố,
+
+tiểu khu, thì tiêu chuẩn dùng nước trung bình mỗi người lấy từ 40đến 60 lingày.
+
+2. Tiêu chuẩn dùng nước cho một giường bệnh trong bệnh viện, nhà an dưỡng, nhà nghỉ và
+
+cho một chỗ trong trường nội trú đã tính đến lượng nước dùng trong nhà ăn, nhà giặt.
+
+3. Tiêu chuẩn dùng nước của một cán bộ làm việc ở trụ sở, cơ quan hành chính gồm cả
+
+lượng nước cho khách. Nước dùng cho nhà ăn cần tính bổ sung.
+
+4. Tiêu chuẩn dùng nước của các thiết bị máy móc đặt bên trong các nhà giặt bằng máy,
+
+các công ty ăn uống, cửa hàng ăn uống và các nhà khác thì quy định theo đồ án thiết kế
+
+kĩ thuật
+
+5. Nước làm nguội máy của các thiết bị lạnh và điều hòa không khí nêu trong tiêu chuẩn
+
+dùng nước trên và cần tính nêng.
+
+6. Khi lấy nước nóng trực tiếp từ mạng lưới cấp nhiệt cũng như từ trạm nồi hơi khu vực, thì
+
+khi tính toán đường ống, lưu lượng nước lạnh phải tính với hệ số 0,7.
+
+7. Tiêu chuẩn nước tưới đường nêu trong bảng Ì đượctính cho Ï lần tưới trong ngày phụ
+
+thuộc vào điều kiện khí hậu.
+
+8. Lưu lượng nước cho thiết bị công nghệ của các cơ sở điều trị không được nêu trong bảng
+
+J thì lấy theo quy định của thiết kế công nghệ.
+
+3.3. Tiêu chuẩn dùng nước và hệ số không điều hòa giờ dùng cho nhu cầu ăn uống và
+
+sinh hoạt trong nhà sản xuất lấy theo bảng 1 và theo TCXD "Cấp nước đô thị. Tiêu
+
+chuẩn thiết kế".
+
+3.4. Tiêu chuẩn nước dùng để rửa xe trong nhà để xe được quy định như sau :
+
+a) Cho l xe con Từ 200 đến 300 lít.
+
+b) Cho l xe lớn Từ 300 đến 500 lít.
+
+Chú thích :
+
+1. Đối với các loại xe chạy trên đường nhựa, áp dụng tiêu chuẩn dùng nước cho các xe
+
+con.
+
+2. Thời gian rửa liên tục cho môi xe là 10 phút.
+
+3. Tiêu chuẩn nước trên ứng với trờng hợp rửa thủ công ống mềm.
+
+3.5... Lưu lượng nước tính toán trong một giây của các dụng cụ vệ sinh, đường kính ống
+
+nối với các dụng cụ vệ sinh và số đương lượng lấy theo bảng 2.
+
+Bảng 2
+
+lượng nước (1/s) ống (mm)
+
+- . Vòi nước của chậu trút nước thải 1 02 Từ 10 đến 15
+
+- . Vòi nước ở chậu rửa mặt 0,33 0,07 Từ 10 đến 15
+
+- . Vòi nớc ở chậu tiểu treo 0,17 0,035 Từ 10 đến 15
+
+- Một mét ống rửa máng tiểu 03 0,06 Từ 10 đến 15
+
+- Vòi xả ở chậu xí Từ 6 đến 7 Từ 1,2 đến 1,4 | Từ 25 đến 32
+
+- Vòi xả ở chậu xí 0,5 0,1 Từ 10 đến 15
+
+- Vòi trộn nước nóng lạnh của bồn tắm 1,5 03 15
+
+dùng nước nóng tập trung
+
+- . Vòi trộn nước nóng lạnh của bồn tắm có 1 02 15
+
+thiết bị đun nước bằng điện
+
+- Một vòi của chậu giặt chậu rửa 1 02 15
+
+- Chậu vệ sinh phụ nữ (biđê và vòi phun 0,35 0,07 Từ 10 đến 15
+
+của chậu)
+
+- Một vòi tắm hương sen trong nhóm thiết 1 02 15
+
+bị vệ sinh
+
+- Một vòi tắm hương sen đặt trong căn hộ 0,67 0,14 15
+
+- Một vòi tắm hương sen ở bể bơi 1 02 15
+
+- Một vòi nước nóng 0,17 0,035 Từ 10 đến 15
+
+- Vòi nước ở chậu trút nước thải trong 0,5 0,1 Từ 10 đến 15
+
+phòng thí nghiệm
+
+- . Vòi ở chậu rửa trong phòng 1 02 15
+
+- Vòi tưới Từ 1,5 đến 2,5 Từ0,3 đến 0,5 | Từ 20 đến 25
+
+Chú thích: Trường hợp không có vòi nước, phụ tùng và ống thép tráng kẽm có đường kính D
+
+= J0mm thì cho phép sử dụng ống có đường kính D = 15 mm.
+
+3.6. Tiêu chuẩn nước dùng cho nhu cầu sản xuất (dây chuyền công nghệ, làm lạnh, rửa
+
+thiết bị, tưới rửa sàn...) và hệ số không điều hoà phải lấy theo yêu cầu công nghệ sản
+
+xuất và theo chỉ dẫn về thiết kế xây dựng riêng cho các ngành công nghiệp.
+
+3.7. Tiêu chuẩn nước chữa cháy và số cột nước chữa cháy bên trong nhà lấy theo bảng 3.
+
+Bảng 3
+
+NI Số cột nước chữa Lượng nước tính
+
+Loại nhà ' _-
+
+: cháy cho môi cột
+
+Nhà hành chính cao từ 6 đến 12 tầng có khối tích 1 25
+
+đến 25.000m” :
+
+Nhà ở gia đình cao từ 4 tầng trở lên, khách sạn và
+
+nhà ở tập thể, nhà công cộng cao từ 5 tầng trở lên l 2,5
+
+có khối tích đến 25.000m”
+
+Bệnh viện, các cơ quan phòng bệnh, nhà trẻ, mẫu
+
+giáo, cửa hàng thương nghiệp, nhà ga, nhà phụ trợ 1 25
+
+của công trình công nghiệp có khối tích từ 5000m” ;
+
+đến 25.000m”
+
+Các phòng bố trí dưới khán đài của sân vận động
+
+có khối tích từ 5000 mŠ đến 25000 mẺ và các gian l 2,5
+
+thể thao có khối tích đến 25.000 mỉ.
+
+Nhà an dưỡng, nhà nghỉ mát, nhà bảo tàng, thư
+
+viện, cơ quan thiết kế có khối tích từ 7.500 mẺ đến ñ 25
+
+25.000 mẺ, nhà triển lãm có diện tích trưng bầy ;
+
+dưới 500m”
+
+Hội trường, các gian khán giả có trang bị máy 1 25
+
+chiếu phim cố định có sức chứa từ 300 đến 800 chỗ :
+
+Nhà ở các loại cao từ 12 đến 16 tầng
+
+Nhà hành chính cao từ 6 đến 12 tầng với khối tích 2 25
+
+trên 25.000 m :
+
+Khách sạn, nhà ở tập thể, nhà an dưỡng, nhà nghỉ,
+
+bệnh viện, nhà triển lãm, các loại cửa hàng, nhà ga, 2 2,5
+
+trường học, có khối tích lớn hơn 25.000 m
+
+Nhà phụ trợ của công trình công nghiệp có khối 2 25
+
+tích lớn hơn 25.000m” :
+
+Các gian phòng bố trí dưới khán đài sân vận động
+
+và các gian thể dục thể thao có khối tích lớn hơn 2 25
+
+25.000m”. Hội trường có sức chứa từ 800 chỗ trở ;
+
+lên.
+
+Nhà hát, rạp chiếu bang, câu lạc bộ, nhà văn hoá,
+
+rạp xiếc, phòng hoà nhạc có trên 800 chỗ, viện 2 2,5
+
+nghiên cứu khoa học
+
+Nhà sản xuất trừ những điều đã quy định trong
+
+LẠ 2 2,5
+
+điều 1.6
+
+Các nhà kho có khối tích từ 5000m” trở lên chứa
+
+vật liệu dễ cháy hoặc vật liệu phòng cháy bảo quản 2 2,5
+
+trong các bao bì dễ chá
+
+Chú thích : Khi tính toán sử dụng các thiết bị chữa cháy cần áp dụng -
+
+1. Nếu ống vòi rồng bằng vải bạt đường kính từ Óómm dài 125m và đường kính đầu phun
+
+của lăng là 19mm thì lưu lượng nước là 5 l/s.
+
+2.Ở những khu dân dụng hay ở các ga xe lửa phụ, trong trường hợp đặc biệt thì ở vị trí bất
+
+lợi nhất áp lực nước tự do có thể hạ thấp xuống 7m.
+
+3.8. Áp lực nước tự do cần thiết của các vòi nước và dụng cụ vệ sinh tối thiểu 1m ; vòi xả
+
+chậu xí kiểu không có bình xả tối thiểu là 3m ; nồi nấu nước uống và mạng lưới
+
+hương sen tắm tối thiểu là 4m.
+
+3.9. Áp lực nước làm việc của các dụng cụ vệ sinh trong hệ thống cấp nước sinh hoạt
+
+không được lớn quá 60m. Trường hợp áp lực trong đường ống quá lớn thì phải thiết
+
+kế phân vùng mạng lưới.
+
+3.10. Áp lực tự do thường xuyên của các họng chữa cháy bên trong nhà, phải đảm bảo có
+
+cột nước phun đầy đặc với chiều cao cần thiết quy định trong bảng 4.
+
+Bảng 4
+
+Tính chất của ngôi nhà và công trình Chiêu cao cần thiết của cột nước phun dầy
+
+đặc (m)
+
+Nhà ở công trình công cộng, nhà phụ có bậc
+
+chiu lửa I, H
+
+Nhà ở, công trình công cộng, nhà phụ và nhà | Chiều cao cần thiết để có thể phun đến một
+
+sản xuất có sử dụng vật liệu dễ cháy và dễ gây | điểm cao nhất và xa nhất của ngôi nhà nhưng
+
+ra chá không được thấp hơn 6m.
+
+Chú thích :
+
+1. Khi tính toán áp lực nước ở đâu lăng phun nước, phải tính đến tổn thất áp lực trong ống vòi
+
+rồng bằng vải bạt dài 10 hay 20 m, đường kính miệng lăng phun nước là 13 ; 16; 19 ;22
+
+mm.
+
+2. Đối với lưu lượng 2,5 lJs, ống vòi rồng dẫn nước phải có đường kính 50 mm và đường kính
+
+đầu phun của lăng ít nhất 13mm. Đối với lưu lượng 5 l/s phải dùng ống vòi rồng có đường
+
+kính Ó5mm và đường kính đầu phun của lăng ít nhất lómm.
+
+3. Đối với các ngôi nhà mà áp lực nước bên ngoài thường xuyên không đủ để cung cấp nước cho
+
+các họng chữa cháy trong nhà thì cần phải đặt máy bơm để tăng áp và có bộ phận điều khiển
+
+máy từ xa, bố trí ở ngay cạnh họng chữa cháy.
+
+3.11. Áp lực do cần thiết ở các thiết bị sản xuất lấy theo đặc trưng công nghệ của thiết bị
+
+đó.
+
+4... Mạng lưới và phụ tùng đường ống cấp nước bên trong
+
+4.1]... Mạng lưới đường ống cấp nước sinh hoạt bên trong, mạng lưới đường ống cấp nước
+
+chữa cháy, mạng lưới đường ống cấp nước sinh hoạt kết hợp với đường ống chữa
+
+cháy và mạng lưới đường ống cấp nứơc sản xuất có chất lượng như nước ăn uống ;
+
+nên dùng ống thép tráng kẽm khi đường kính ống đến 70mm, ống thép không tráng
+
+kẽm ống gang khi đường kính ống lớn hơn 70mm.
+
+Chú thích:
+
+1. Đường ống cấp nước sinh hoạt riêng biệt có thể dùng ống chất dẻo.
+
+2. Đường ống thuộc hệ thống cấp nước chữa cháy riêng biệt cho phép dùng ống thép
+
+không tráng kẽm nhưng không cho phép dùng ống chất dẻo để cấp nước chữa cháy
+
+bên trong.
+
+4.2... Mạng lưới đường ống cấp nước sản xuất không có chất lượng ăn uống mà có yêu cầu
+
+đặc biệt về nước như làm mềm nước, chưng cất nước... có thể dùng ống chất dẻo,
+
+ống thép tráng kẽm, ống thép, ống thủy tình, ống thép lót chất dẻo.
+
+Việc chọn lọc ống tuỳ thuộc vào yêu cầu về chất lượng nước, nhiệt độ, áp lực và yêu
+
+cầu tiết kiệm kim loại.
+
+43. Ống dẫn nước vào nhà cần dùng các loại ống sau đây :
+
+a) Ống gang, khi đường kính ống lớn hơn 50mm.
+
+b) Ống thép tráng kẽm, khi đường kính từ 50 mm trở xuống.
+
+Chú thích:
+
+1. Cho phép dùng ống chất dểo trong những công trình không có hệ thống cấp nước
+
+chữa cháy bên trong và khi có đường kính ống nhỏ hơn 50 mm.
+
+2. Mặt ngoài ống kim loại cần phải có một lớp bảo vệ chống gỉ, chống ăn mòn.
+
+4.4. Ống thép có thể nối hàn, nối ren hoặc nối mặt bích
+
+4.5. Hệ thống cấp nước bên trong được thiết kế theo:
+
+- Mạng cụt, nếu cho phép cấp nước không liên tục;
+
+- Mạng vòng hoặc nối vòng ống dẫn nước vào khi cần bảo đảm cấp nước liên tục, khi
+
+đó mạng lưới vòng phải nối với mạng lưới vòng ngoài nhà ít nhất bằng hai ống dẫn
+
+nước vào nhà;
+
+4.6. Phải thiết kế ít nhất hai ống dẫn nước vào nhà trong các trường hợp sau đây:
+
+- Trong nhà có đặt trên 12 họng chữa cháy;
+
+- Nhà có thiết bị chữa cháy tự động:
+
+- Nhà ở cao trên 16 tầng;
+
+4.7... Trường hợp bố trí từ hai đường ống dẫn nước vào nhà trở lên, nên nối với nhiều mạng
+
+ống khác nhau của mạng lưới cấp nước bên ngoài nhà. Khoảng giữa đoạn ống dẫn
+
+mạng lưới ngoài nhà với mạng lưới trong nhà cần bố trí van khoá để đảm bảo cấp
+
+nước liên tục khi có một trong những đoạn ống của mạng lưới bị hư hỏng.
+
+4.8. Khi đặt hai đường ống dẫn nước vào nhà nếu cần thiết phải đặt bể chứa, máy bơm để
+
+tăng áp lực trong đường ống thì các ống dẫn nước vào nhà phải được nối với nhau
+
+trước máy bơm đặt van một chiều.
+
+Trường hợp trên mỗi đường ống dẫn nước vào có bể chứa, máy bơm riêng thì không
+
+cần phải nối các ống dẫn nước vào với nhau.
+
+4.9. Khi mạng lưới cấp nước bên trong lấy nước từ két nước áp lực đặt trong nhà; và khi
+
+đường ống dẫn nước vào nhà nối với mạng lưới phân phối từ kết nước áp lực cũng
+
+như khi có từ hai đường ống dẫn nước vào nhà phải đặt van một chiều.
+
+4.10. Các phụ tùng và các thiết bị trên đường ống dẫn nước vào nhà phải đặt ở những nơi
+
+dễ kiểm tra và dễ sửa chữa nhất.
+
+4.11. Khoảng cách nhỏ nhất theo mặt bằng nằm ngang của đường ống dẫn nước vào nhà
+
+tới các đường ống khác chôn ngầm dưới đất quy định ở bảng 5.
+
+4.12... Đường ống cấp nước trong nhà chôn ngầm dưới nền nhà mà giao nhau với đường ống
+
+thoát nước thì đường ống cấp nước phải đặt cao hơn đường ống thoát nước. Khoảng
+
+cách giữa mặt ngoài của hai ống phía giáp nhau không được nhỏ hơn 0,01m.
+
+Bảng 5
+
+Khoảng cách nhỏ nhất giữa đường ống dẫn nước vào nhà (m)
+
+Đường kính ống tới
+
+(mm) Đường ống thoát | Đường ống dẫn | Đường ống dẫn hơi áp
+
+nước nhiệt lực trung bình
+
+Nhỏ hơn 200 1,5 1,5 1,5
+
+Lớn hơn 200 3 1,5 1,5
+
+4.13. Ở những chỗ đường ống dẫn nước vào nhà nối với đường ống cấp nước của thành
+
+phố, khu dân cư hay khu xí nghiệp phải thiết kế giếng đặt van khoá nước. Khi đường
+
+kính ống dẫn nước vào nhà từ 40 mm trở xuống đặt van chặn và cho phép không phải
+
+xây giếng van.
+
+4.14. Khi đường ống dẫn nước vào nhà bằng gang và áp lực của đường ống bên ngoài lớn
+
+hơn 50m thì ở những chỗ ngoặt của đường ống dẫn nước vào nhà xây gối đỡ ống.
+
+4.15. Chỗ đường ống dẫn nước vào nhà xuyên qua tường tầng hầm hay tường móng nhà
+
+đều phải đặt trong lỗ chừa sẵn:
+
+- Ở những nơi đất khô ráo khoảng cách từ đỉnh ống tới đỉnh lỗ là 0,15m và bên trong
+
+lỗ phải được nhét đầy vật liệu không thấm nước ( dây đay tẩm dầu).
+
+- Ở những nơi đất ẩm ướt hay có nhiều nước ngầm , phần ống xuyên qua tường phải
+
+hàn lá chắn ngăn nước hoặc đặt trong ống lống bằng thép hay gang và cũng có những
+
+biện pháp ngăn nước khác. Kích thước chừa lỗ phụ thuộc vào đường kính ống xuyên
+
+qua tường.
+
+4.16. Trong nhà ở và nhà công cộng, mạng lưới phân phối của đường ống cấp nước bên
+
+trong được đặt trong tầng hầm, tầng kĩ thuật, rãnh ngầm dưới đất hoặc đặt chung với
+
+các đường ống nước nóng, ống dẫn hơi có nắp đậy. Trường hợp nhà không có tầng
+
+hầm mạng lưới phân phối của đường ống cấp nước bên trong cho phép được đặt trực
+
+tiếp dưới nền đất (nhưng phải sơn chống gỉ ống).
+
+Chú thích:
+
+1. Nêú các đường ống cấp nước đặt chung với đường ống khác trong rãnh ngâm thì các
+
+đường ống dẫn hơi, dẫn nước nóng phải đặt cao hơn đường ống dẫn nước lạnh.
+
+2. Đường ống cấp nước chữa cháy chính không được đặt dọc theo vì kèo cột bằng kim loại.
+
+3. Không được đặt ống cấp nước trong các đường ống thông gió, thông hơi, thông khói.
+
+4.17. Các đường ống chính, ống nhánh, ống phân phối nước dẫn các dụng cụ vệ sinh đều
+
+đặt dốc từ 0,002 đến 0,005 về phía đường ống đứng hay điểm lấy nước. Tại các điểm
+
+thấp nhất của đường ống phải đặt thiết bị xả nước.
+
+4.18. Ống đứng và ống nhánh của hệ thống cấp nước bên trong cần đặt chung với các đư-
+
+ờng ống khác trong hộp panen, biốc, cabin kĩ thuật vệ sinh sản xuất ở nhà máy. Cấu
+
+tạo theo loại này phải đảm bảo có thể thay thế và sửa chữa được đường ống.
+
+Cho phép ống đứng, ống nhánh của hệ thống cấp nước bên trong được đặt hở trên
+
+tường vách ngăn ở phòng vệ sinh xí tấm, rửa và phòng bếp mà không có yêu cầu bố
+
+trí đặc biệt.
+
+4.19. Trong các gian phòng yêu cầu bố trí nội thất đặc biệt thì đường ống cấp nước phải
+
+đặt trong rãnh ngầm trong tường, trong hộp. Mặt ngoài của rãnh, hộp ống cần trất
+
+vữa hoặc lát gạch che kín. Các van đặt trong rãnh ngầm, hộp ống phải chừa những
+
+cửa kiểm tra để tiện cho việc quản lí và sửa chữa. Nắp lỗ cửa có thể làm bằng tôn
+
+sơn cùng màu với tường.
+
+4.20. Các đường ống chính, ống nhánh trong nhà sản xuất phải đặt hở... đặt theo khung
+
+nhà, vì kèo, cột, tường và dưới trần nhà. Trường hợp không thể đặt hở cho phép đặt
+
+đường ống cấp nước trong rãnh chung với các đường ống khác; trừ các đường ống
+
+dẫn các chất khí, chất lỏng dễ bắt lửa hoặc có chất độc.
+
+Chỉ được phép đặt chung đường ống dẫn nước sinh hoạt với đường ống thoát nước
+
+trong rãnh khô.
+
+Cho phép đặt ống cấp nước trong rãnh riêng trong những trường hợp đặc biệt và có lí
+
+do chính đáng.
+
+Đường ống dẫn nước tới thiết bị công nghệ ở cách xa tường cột có thể đặt trên sàn
+
+hoặc dưới sàn.
+
+4.21... Đường ống cấp nước đặt trong rãnh blốc bêtông, panen, buồng vệ sinh khi đặt chung
+
+với đường ống cấp nhiệt cũng như đặt trong các phòng có độ ẩm cao, cần thiết phải
+
+có biện pháp cách li nước chống ẩm.
+
+4.22. Các họng chữa cháy bên trong nhà phải bố trí cạnh lối ra vào, trên chiếu nghỉ cầu
+
+thang, ở sảnh, hành lang và những nơi dễ thấy, dễ sử dụng.
+
+4.23. Tâm của họng chữa cháy trong nhà phải bố trí ở độ cao 1,25 so với mặt sàn. Mỗi
+
+họng chữa cháy trong nhà phải có một ống vòi rồng chiều dài10m hoặc 30m có đủ
+
+đầu nối và một lăng phun nước được đặt trong tủ riêng biệt.
+
+Chú thích:
+
+1. Tủ chữa cháy có thể đặt ngầm trong tường, treo trên tường hay cột nhà nhưng không được
+
+dnh hướng đến lối đi lại và các hoạt động khác trong nhà.
+
+2. Trong cùng một nhà, cấm không được dùng nhiều kiểu đầu nối ống vòi rồng và lăng phun
+
+nước có nhiều kiểu hoặc có đường kính khác nhau.
+
+4.24. Trên đường ống cấp nước vào nhà, nên đặt vòi lấy nước công cộng ở bên ngoài cho
+
+từng đơn nguyên nhà cao tầng. Đường kính vòi nước 20mm hoặc 25mm.
+
+Chú thích: Vòi lấy nước công cộng cần đặt ở sau đồng hồ đo nước của nhà.
+
+4.25. Các van khóa nước của hệ thống đường ống cấp nước bên trong nhà phải đặt ở những
+
+nơi sau:
+
+a) Trên đường ống dẫn nước vào nhà;
+
+b) Trên mạng lưới phân nhánh khép vòng để đảm bảo có thể đóng từng đoạn ống
+
+đem sửa chữa (không quá nửa vòng) và trên mạng vòng của hệ thống cấp nước sản
+
+xuất, theo tính toán đảm bảo cấp nước tới thiết bị hoạt động liên tục từ hai phía;
+
+c) Ở chân ống đứng cấp nước chữa cháy mà có từ 5 họng chữa cháy trở lên, và ở mỗi
+
+đoạn chữa cháy;
+
+d) Ở chân ống đứng cấp nước sinh hoạt hoặc cấp nước sản xuất trong nhà cao từ 3
+
+tầng trở lên;
+
+e) Ở các ống nhánh có từ 5 vòi nước trở lên;
+
+g) Ở các ống nhánh vào từng căn hộ, ở các ống nhánh dẫn nước tới bình xả vòi xả
+
+trên các ống nhánh dẫn nước tới vòi tắm và chậu rửa mặt;
+
+h) Trước vòi nước công cộng, vòi tưới bên ngoài;
+
+1) Trước các thiết bị máy móc đặc biệt (sản xuất thử nghiệm, chữa bệnh...) trong
+
+trường hợp cần thiết;
+
+k) Trên mạng lưới đường ống cấp nước sinh hoạt và chữa cháy vòng kín thì cứ 5
+
+họng chữa cháy có một van khóa cho một tầng;
+
+Chú thích:
+
+l. Khi ống đứng khép vòng theo chiều đứng, van khóa phải đặt ở chân hoặc đỉnh ống đứng.
+
+2. Trên đường ống chạy vòng kín ở bên trong nhà chỉ được phép đặt các thiết bị dẫn nước
+
+theo hai chiều.
+
+3. Các van khóa trên đường ống cấp nước đặt qua cửa hàng, nhà ăn công cộng và các gian
+
+phòng khác xây kết hợp với nhà ở không thể kiểm tra được vào ban đêm, cần bố trí ở bên
+
+ngoài công trình.
+
+4.26. Phụ tùng đường ống, vòi nước, vòi trộn của hệ thống cấp nước sinh hoạt và hệ thống
+
+cấp nước sinh hoạt chữa cháy phải tính với áp lực làm việc 60m. Phụ tùng lắp ở hệ
+
+thống cấp nước sản xuất có áp lực công tác được quy định theo yêu cầu công nghệ.
+
+4.27. Ở những vùng trong mạng lưới cấp nước thành phố có áp lực dư, ở các nhà nhiều
+
+tầng, để giảm áp lực nước và tránh lãng phí nước trên đường ống dẫn nước vào hoặc
+
+trên ống nhánh dẫn nước tới các điểm lấy nước ở mỗi tầng nhà cần đặt thêm các thiết
+
+bị dưới đây:
+
+a) Khi lưu lượng không đổi đặt rông đen (tấm chắn có lỗ);
+
+b) Khi lưu lượng thay đổi, đặt thiết bị điều chỉnh áp lực;
+
+4.28. Khi thiết kế hệ thống cấp nước bên trong cần có biện pháp chống ồn chống rung cho
+
+thiết bị và đường ống, phụ tùng.
+
+5... Đồng hỗ đo nước
+
+5.1. Để đo lưu lượng nước, trên các đường ống dẫn nước vào nhà, vào từng căn hộ, trên
+
+các đường ống nhánh của mạng lưới ống cấp nước chung hay trên các đoạn ống cấp
+
+nước đến các nơi tiêu thụ khác, cần đặt đồng hồ đo nước.
+
+5.2. Việc lựa chọn đồng hồ đo nước (kiểu cánh quạt và kiểu tuốc bin) để lắp đặt trên đư-
+
+ờng ống dẫn nước vào nhà cần căn cứ vào lưu lượng ngày lớn nhất chọn theo bảng 6.
+
+Đồng hồ đo nước đặt trên đường ống dẫn nước vào nhà sản xuất cần được kiểm tra
+
+với lưu lượng giờ lớn nhất.
+
+Chú thích: Trường hợp cấp nước cho các thiết bị chữa cháy tự động cũng như hệ thống cấp
+
+nước chữa cháy riêng biệt phải lấy nước trực tiếp từ đường ống dẫn nước vào (không qua
+
+đồng hồ đo nước).
+
+Bảng 6
+
+Kiểu đồng hồ Lưu lượng Lưu lượng cho phép
+
+lêu GÓnE ĐÔ. Cggônghô | danh nghĩa Lưu lượng lớn | Giới hạn dưới
+
+đo nước (m°/ngày) nhất/ngày 3
+
+15 1 6 0,04
+
+20 1,6 10 0,06
+
+25 2.5 14 0,08
+
+Cánh quạt
+
+32 4 20 0,105
+
+40 63 40 0,170
+
+50 10 60 0,220
+
+50 15 140 3
+
+80 45 500 6
+
+:_t 100 75 880 §
+
+Tuốc bin
+
+150 160 2000 10
+
+200 165 3400 18
+
+250 410 5200 50
+
+Chú thích: Đối với nước có nhiệt độ lớn hơn 30°C thì dùng loại đồng hồ đặc biệt
+
+5.3. Tổn thất áp lực trong đồng hồ đo nước kiểu cánh quạt và kiểu tuốc bin, xác định theo
+
+công thức dưới đây :
+
+h=Sdq (
+
+Trong đó :
+
+h- Tổn thất áp lực (m)
+
+q- Lưu lượng nước tính toán (1/s)
+
+S- Sức cản của đồng hồ, lấy theo bảng 7.
+
+Bảng 7
+
+Đường kính
+
+đồnghồ 15./20|/32 | 40 50 100 150 200
+
+(mm)
+
+Ônghổ (m)
+
+Chú thích: Tổn thất áp lực khi lưu lượng nước sinh hoạt, sản xuất qua đồng hồ kiểu cánh quạt
+
+không được vượt quá 2,5m, qua đồng hồ kiểu tuốc bin không quá Im và khi có cháy tương ứng là
+
+3m và 2,5m.
+
+54. Đồng hồ đo nước phải đặt ở mặt ngoài tường bao của nhà, chỗ đường ống dẫn nước
+
+vào nhà ở những chỗ dễ kiểm tra và dễ sửa chữa nhất.
+
+Chú thích:
+
+1. Không được đặt đồng hồ đo nước trong các phòng ngủ.
+
+2. Đông hồ đo nước phâi đặt trên đường ống cấp nước vào nhà, có đường kính bằng hay nhỏ
+
+hơn đường kính ống cấp nước một cố.
+
+3. Trường hợp không thể đặt đồng hồ đo nước như trên, cho phép đặt ngoài nhà nhưng phải
+
+đặt trong hố riêng có nắp đậy.
+
+5.5... Khi chỉ có một đường ống dẫn nước vào nhà nối với hệ thống cấp nước sinh hoạt và
+
+chữa cháy bên trong thì phải đặt một đường ống vòng qua phía trước đồng hồ.
+
+Lưu lượng nước chảy qua đồng hồ và đường ống vòng phải bằng tổng số lưu lượng
+
+nước sinh hoạt và chữa cháy lớn nhất trong nhà.
+
+Chú thích : Trên đường ống vòng, phải bố trí van khóa kẹp chì niêm phong do cơ
+
+quan cấp nước địa phương quản lí. Chỉ được phép mở van khóa khi có cháy. Vị trí
+
+đặt đồng hồ phải dễ thao tác và có kí hiệu hoặc biển chỉ dẫn.
+
+56. Đồng hồ kiểu cánh quạt phải đặt nằm ngang ; kiểu tuốc bin có thể đặt xiên, nằm
+
+ngang hay đặt đứng khi chiều dòng nước chảy từ dưới lên trên. Mỗi phía của đồng hồ
+
+đo nước phải đặt van khóa. Giữa đồng hồ đo nước và van khóa thứ hai (theo chiều
+
+nước chảy) đặt vòi xả. Trường hợp đồng hồ đo nước kiểu tuốc bin, đặt sau van khóa
+
+cần phải nối l đoạn ống thẳng dài bằng 5 lần đường kính ống cấp nước.
+
+6. Tính toán mạng lưới cấp nước
+
+6.1. Tính toán thủy lực mạng lưới cấp nước bên trong theo lưu lượng lớn nhất trong một
+
+giây.
+
+62. Mạng lưới cấp nước sinh hoạt và mạng lưới cấp nước sản xuất sử dụng để chữa cháy
+
+phải bảo đảm lưu lượng nước chữa cháy khi lưu lượng nước dùng cho sinh hoạt và
+
+sản xuất lớn nhất trong một giây.
+
+Chú thích: Khi xác định lưu lượng giây cho lưu lượng chữa cháy trong nhà sản xuất và nhà
+
+phụ, không tính lưu lượng nước để tắm, rửa sàn và tưới.
+
+63. Mạng lưới cấp nước sinh hoạt, mạng lưới cấp nước sản xuất và mạng lưới cấp nước
+
+chữa cháy phải tính để đảm bảo áp lực cần thiết của dụng cụ vệ sinh, thiết bị, vòi
+
+chữa cháy đặt cao nhất, xa nhất so với ống dẫn nước vào nhà.
+
+64. Đường kính ống cấp nước bên trong được tính toán với khả năng sử dụng tối đa áp
+
+lực có sẵn trên đường ống cấp nước bên ngoài.
+
+6.5... Tốc độ nước chảy trong đường ống thép cấp nước sinh hoạt bên trong nhà không
+
+vượt quá các trị số sau:
+
+- Trong đường ống chính và ống đứng : từ 1,5 đến 2 m/s;
+
+- Ống nhánh nối với các thiết bị vệ sinh 2,5 m/s;
+
+Trường hợp nước dùng cho nhu cầu sản xuất, tốc độ nước trong ống chính và ống
+
+đứng không vượt quá 1,2m/s;
+
+Trường hợp các thiết bị chữa cháy tự động không quá 10 m/s;
+
+6.6. Khi tổng số đương lượng của các dụng cụ vệ sinh từ 20 trở xuống, đường kính ống
+
+cấp nước cho phép lấy theo bảng 8.
+
+Bảng 8
+
+cụ vệ sinh
+
+Đường ống cấp nước
+
+ề 0hế CPP 10.1. 15 |. 20 25 32
+
+(mm)
+
+6.77. Lưu lượng nước tính toán trong một giây cho nhà ở được xác định theo công thức
+
+q=0,2ÄN + KN 2)
+
+Trong đó:
+
+q- Lưu lượng nước tính toán trong một giây (1/s);
+
+a- Trị số phụ thuộc vào tiêu chuẩn dùng nước tính cho 1 người trong một ngày lấy
+
+theo bảng 9.1;
+
+K- Hệ số phụ thuộc vào số đương lượng lấy theo bảng 10;
+
+N- Tổng số đương lượng của dụng cụ vệ sinh trong nhà hay khu vực tính toán (đoạn
+
+ống tính toán);
+
+Chú thích:
+
+1. Lưu lượng nước tính toán trong nhà ở xác định theo công thức (2) với số đương lượng của
+
+các dụng cụ vệ sinh đến 5.000.
+
+2. Lưu lượng nước trong nhà ở xác định theo phụ lục II của tiêu chuẩn này.
+
+3. Lưu lượng nước trong mạng lưới cấp nước bên ngoài đặt ở tiểu khu hoặc ở đường phố lấy
+
+theo tiêu chuẩn cấp nước hiện hành.
+
+4. Số đương lượng dụng cụ vệ sinh xem bảng 2.
+
+Bảng 9
+
+Tiệu chuẩn dùng nƯỚC Ì lop | ¡2s 150, | 200. | 250. | 300 | 350 | 400
+
+của một người 1/ngà
+
+bảng 10
+
+Số đương Đến 300 Từ301 đến | Từ50l đến | TừS80l đến | 1201 và lớn
+
+lượng 500 800 1200 hơn
+
+0.002 0.003 0.004 0.005 0.006
+
+Chú thích: Trong nhà ở có cấp nước nóng tập trung lưu lượng tính toán (l/s) của nước trong
+
+mạng lưới cấp nước nóng và lạnh xác định theo công thức (2) nhân với hệ số 0,7.
+
+6.8. Trường hợp nhà công cộng xây dựng trong nhóm nhà ở thì lưu lượng nước tính toán
+
+trong một giây cần phải xác định theo điều 6.9 và 6.10 của tiêu chuẩn này.
+
+6.9. Lưu lượng nước tính toán trong một giây cho các cơ quan hành chính trụ sở, nhà trọ,
+
+khách sạn, nhà ở tập thể, kí túc xá, nhà trẻ, trường học, cơ quan giáo dục, bệnh viện
+
+đa khoa, nhà tắm công cộng, trại thiếu nhi, xác định theo công thức dưới đây:
+
+q= øœ0,2VN 3)
+
+Trong đó:
+
+q- lưu lượng nước tính toán (1/s);
+
+N - Tổng số đương lượng của các dụng cụ vệ sinh trong nhà hay đoạn ống tính toán;
+
+ø - hệ số phụ tùng chức năng của mỗi loại nhà lấy theo bảng 11;
+
+Bảng 11
+
+Nhàtấm | Bệnh viện, Trụ SỞ CƠ Ì Bệnh viện, Nhà Ở tập
+
+Hệ số công phòng quanhành | Trường học nhà điều thế, nhà
+
+Ñ ` P chính, cửa vàcơquan | dưỡng,nhà | trọ, khách
+
+cộng,nhà | khám đa hà .„ láo d hi trai kí tú
+
+trẻ khoa àng, viện giáo dục nghỉ trại | sạn, kí túc
+
+thiết kế thiếu nhi xá
+
+Ca | 12 | l4 | 15 | l8 | 20 | 25 |
+
+Chú thích:
+
+1. Lưu lượng nước tính toán trong một giây dùng cho nhu cầu sinh hoạt trong các loại nhà
+
+nêu ở điều 6.9, xác định theo phụ lục 3.
+
+2. Lưu lượng nước trong nhà tắm công cộng được xác định theo công thức:
+
+q=2quna (4)
+
+Trong đó:
+
+q- Lưu lượng nước tính toán (l/s);
+
+n- Số dụng cụ vệ sinh cùng loại;
+
+a-Hê số hoạt động đồng thời của các dụng cụ vệ sinh:
+
+Cho bồn tắm : 50%
+
+Vòi tắm hương sen : 100%
+
+Vòi tắm thấp : 100%
+
+Chậu rửa - 30%
+
+qạ- Lưu lượng nước của một dụng cụ vệ sinh cùng loại (l/s);
+
+6.10. Lưu lượng nước tính toán trong một giây cho nhu cầu sinh hoạt trong nhà sản xuất và
+
+các phòng sinh hoạt của xí nghiệp công nghiệp, phòng, gian khán giả, công trình thể
+
+dục thể thao, xí nghiệp ăn uống công cộng, xác định theo công thức:
+
+q=2>qon.a (5)
+
+Trong đó :
+
+q- Lưu lượng nước tính toán (1/s);
+
+qo- Lưu lượng nước của một dụng cụ vệ sinh cùng loại (1/s);
+
+n- Số dụng cụ vệ sinh cùng loại;
+
+p- Hệ số hoạt động đồng thời của dụng cụ vệ sinh lấy theo bảng 12 và bảng 13.
+
+6.11. Hệ số hoạt động đồng thời của các dụng cụ vệ sinh trong nhà sản xuất và các phòng
+
+sinh hoạt của xí nghiệp công nghiệp tùy thuộc vào số lượng dụng cụ vệ sinh lấy theo
+
+bảng 12.
+
+6.12. Hệ số hoạt động đồng thời của các dụng cụ vệ sinh trong các phòng, gian khán giả,
+
+các công trình thể thao, xí nghiệp ăn uống công cộng lấy theo bảng 13.
+
+6.13. Lưu lượng nước tính toán trong ] giây cho nhu cầu sản xuất phải xác định theo phần
+
+công nghệ của thiết kế có kể tới chế độ tiêu thụ nước.
+
+Chú thích: Khi thiết kế các xí nghiệp sản xuất có sản lượng cao nếu có lí do kinh tế - kĩ
+
+thuật thích đáng phù hợp với yêu cầu của công nghệ, lưu lượng cho phép nhân với hệ số từ
+
+1, đến 1,2
+
+Bảng 12
+
+Loni ê sinh Số lượng dụng cụ vệ sinh
+
+oại dụng cụ vệ sin
+
+- Chậu rửa mặt 1 1 1 1 1 1 1 1 1
+
+- Chậu rửa mặt tròn có vòi 1 1 1 1 1 1 1 1 1
+
+phun nước
+
+- Hương sen tắm 1 1 1 1 1 1 1 1 1
+
+động
+
+- Chậu tiểu t
+
+Chịu o 1107/05 | 04.1034 | 03.103 1025| 025
+
+- Châu xe bình xì 1103.1025 | 02 |015 | 01 |0,1| 0,1 | 0,005
+
+¡7T 1 107510651 06 | 05 |045|04| 04 | 04
+
+Chú thích:
+
+1. Khi xác định lưu lượng nước tính toán trong Ì giây không tính lưu lượng nước ở vòi tưới,
+
+vòi phun nước uống biđê
+
+2. Hệ số hoạt động đồng thời của các chậu rửa và các dụng cụ khác không có trong bảng
+
+lấy theo số liệu ở phần công nghệ của thiết kế.
+
+3. Một bình xả dùng đề rửa tự động cho 3 đến 4 chậu tiểu.
+
+6.14. Tổn thất áp lực do ma sát bên trong đường ống cấp nước bằng thép hay gang, xác
+
+định theo bảng tính thủy lực và công thức dưới đây:
+
+1: A.(
+
+Trong đó:
+
+¡ - Tổn thất áp lực do ma sát bên trong đường ống trên 1m chiều dài ống.;
+
+A - sức cản đơn vị phụ thuộc vào đường kính ống cấp nước;
+
+q - Lưu lượng nước tính toán. (1/s);
+
+Bảng 13
+
+Dụng cụ vệ sinh Rạp chiếu bóng, hội Nhà hát, rạp | Cửa hàng ăn uống
+
+trường, Cầu lạc bộ xiếc công cộng
+
+công trình thể thao .
+
+- Chậu rửa mặt 0,8 0,6 0,8
+
+- Bình xả chậu xí 0,7 0,5 0,6
+
+- Chậu tiểu treo 1,0 0,8 0,5
+
+- Vòi tắm hương sen 1,0 1,0 1,0
+
+- Chậu rửa trong quầy
+
+căng tin 10 10
+
+- Máy rửa bát
+
+6.15. Sức cản đơn vị A dùng cho ống thép lấy theo bảng 14 với trường hợp khi tốc độ nước
+
+trong ống là 1,⁄2m/s, và lớn hơn. Còn khi tốc độ nhỏ hơn 1,2m/s trị số A phải nhân với
+
+hệ số K. Hệ số K lấy theo bảng 15.
+
+Bảng 14
+
+mm mm
+
+a) Lưu lượng tính bằng 1/s
+
+10 32,95 50 0,001108
+
+15 8,809 70 0,002993
+
+20 1,643 80 0,001168
+
+25 0.4367 100 0,000267
+
+32 0,09386 125 0,00008623
+
+40 0,04453 150 0,00003395
+
+b) Lưu lượng tính bằng m”/s
+
+175 18,96 300 0,0392
+
+200 9,273 325 0.6088
+
+225 4,822 350 0,4078
+
+250 2.583 400 0,2062
+
+Bảng 15
+
+EJPYPIPHEIESEIEYPJESPHES
+
+m/s
+
+6.16. Khi tính toán mạng lưới cấp nước bên trong cần tính thêm tổn thất áp lực cục bộ lấy
+
+bằng phần trăm tổn thất áp lực do ma sát theo chiều dài ống:
+
+a) Trong mạng lưới cấp nước sinh hoạt cho nhà ở và nhà công cộng 30%;
+
+b) Trong mạng lưới cấp nước sinh hoạt và chữa cháy kết hợp cho nhà ở và nhà công
+
+cộng, trong mạng lưới cấp nước sản xuất 20%;
+
+c) Trong mạng lưới cấp nước sản xuất và chữa cháy kết hợp 15%;
+
+d) Trong mạng lưới cấp nước chữa cháy 10%;
+
+6.17. Trường hợp mạng lưới cấp nước nối với nhiều ống dẫn nước vào, khi tính toán cần tí-
+
+nh với điều kiện đóng một trong các ống dẫn nước vào. Trường hợp có hai ống dẫn
+
+nước vào, mỗi ống phải tính với 100% lưu lượng nước chữa cháy, khi có trên 2 ống,
+
+mỗi ống tính 50% lưu lượng nước chảy qua.
+
+Chú thích: Tỉ số phần trăm về lượng nước tính cho yêu cầu sản xuất trong trường hợp đóng
+
+một trong các ống dẫn nước căn cứ vào luận chứng kinh tế kĩ thuật.
+
+6.18. Áp lực của cột nước chữa cháy phụ thuộc vào đường kính miệng lăng phun nước và
+
+bán kính hoạt động của cột nước dày đặc lấy theo bảng 16.
+
+Chú thích:
+
+1. Bán kính hoạt động của cột nước phun dày đặc phải lấy bằng chiều cao của gian phòng
+
+tính từ nền đến mái nhà hay trần nhà.
+
+2. Trường hợp nhà có nhiều hình khối phức tạp thì chiều cao của gian phòng, tính từ nền
+
+đến mái hay trần của phần cao nhất.
+
+á. Áp lực ở các họng chữa cháy được tính toán cho ống vòi rồng dẫn nước bằng vải bạt.
+
+6.19. Tổn thất áp lực trong ống vòi rồng bằng vải bạt xác định theo công thức:
+
+H=K,„q..l
+
+Trong đó:
+
+h - Tổn thất áp lực trong ống vòi rồng (m);
+
+q - Lưu lượng cột nước chữa cháy (1/s);
+
+K„ - Hệ số sức cản của ống vòi rồng ;
+
+1 - Chiều dài ống vòi rồng (m);
+
+Hệ số K, lấy như sau:
+
+Ống vòi rồng đường kính 50 mm - 0,012;
+
+Ống vòi rồng đường kính 66 mm - 0,00385;
+
+Bảng 16
+
+Chiêu
+
+cao
+
+:
+
+dày | lượng | chga cháy | |ƯƠn | chữa cháy | ÌƯƠnS | chữa cháy | |Ư9PẾ Ï chữa cháy
+
+đặc | leðt | (m)khi | LCÔP | (m)khi | TCØP (m)khi | Í CÔ | (m)khi
+
+chiều | BƯỚC ! gngvòi | BƯỚC gngvòi | HƯỚC gngvòi | BƯỚC | ống vòi
+
+cao | chữa vongdài | CHỮA | rộngdài | CHỮA | rộng dài | CHỮA | rộng dài
+
+phòng | cháy (m) cháy (m) cháy (m) cháy (m)
+
+(m) 1s 1/s 1/s 1s
+
+11213) 4) 5 |617|)1 8 1o|lip| II (2113)
+
+a) Vòi chữa cháy d = 50 mm
+
+6 - - - 26 192 |100J 3⁄4 | 8,8 | 10,4 - - -
+
+8 - - - 29. J120|/130| 41 |129|148 - - -
+
+10 - - - 33. 115,1116⁄4| 4,6 |16,0| 18.5 - - -
+
+12 26 J|202|/21,0| 3,7 |192/210| 5⁄2 |20,6|24,0 - - -
+
+14 28. /236|245| 42 |248|263| 5/7 |245|285 - - -
+
+16 32. 131/61/3281). 406 .|293 131,8 - - - - - -
+
+18 36 .139,0140,6| 5,1 |36,0| 40,0 - - - - - -
+
+20 4,0 |47,7149,7| 5,6 |44,0148,0 - - - - - -
+
+b) Vòi chữa cháy d = 66 mm
+
+6 - - - 26.1898/90/ 34.17814183 |/.45./ 78 | 86
+
+8 - - 29. J110|/114| 41 .|11⁄4|12/4| 5⁄4 |113|12/4
+
+10 - - - 33 J|140|146| 4/6 |143|152| 61 |14/4|15,8
+
+12 26. 4|198/20,2|/ 3,7 |16/0|186| 52 ./|182/199| 6,8 |180|19.8
+
+14 28 ./230/233) 42. |230|/235| 5,7 |21,/8/|23,00| 7⁄4 |21/4|32,5
+
+16 32.13101315) 4/6 ./|27/6/28⁄4|.63.|26,/6/28.0|) 83 |27,0|29,7
+
+18 36 .13801385| 5/1. ./33,81346|.70 ./|32/90/3438| 90 |32,7|34,8
+
+20 4.0 .4J46,4|47,01 5,6. |41,2142/4| 75. 13721397] 8,7 136,7 |40,6
+
+Chú thích: Áp lực vòi chữa cháy được tính với sức cản trong ống vòi rồng bằng vải bạt.
+
+6.20. Tính toán thủy lực cho thiết bị chữa cháy tự động theo chỉ dẫn thiết kế của các thiết
+
+bị đó.
+
+7. Máy bơm cấp nước
+
+7.1. Trường hợp mạng lưới đường ống cấp nước bên ngoài thường xuyên hay từng thời
+
+gian không có đủ áp lực cần thiết để đưa nước lên các tầng của công trình cần phải
+
+thiết kế trạm bơm tăng áp.
+
+Chú thích: Nghiêm cấm việc đặt máy bơm hút trực tiếp trên đường ống dẫn nước vào nhà
+
+mà phải hút qua bể chứa nước điều hòa.
+
+72. Kiểu loại và chế độ làm việc của máy bơm phải được xác định trên cơ sở so sánh
+
+kinh tế kĩ thuật các phương án:
+
+- Mấy bơm hoạt động liên tục;
+
+- Máy bơm hoạt động từng thời kì;
+
+- Máy bơm nước chữa cháy (chỉ hoạt động khi có cháy);
+
+7.3. Cho phép đặt riêng máy bơm cấp nước sinh hoạt và nước chữa cháy trong một trạm
+
+hay kết hợp với các ngôi nhà khác, nhưng phải được ngăn cách bằng tường không
+
+cháy và có lối ra ngoài trực tiếp.
+
+Chú thích: Trạm máy bơm đặt riêng biệt thì phải làm bằng vật liệu có bậc chịu lửa HI.
+
+74. Không cho phép đặt máy bơm trực tiếp dưới các căn hộ, các phòng của nhà trẻ, các
+
+lớp học của trường phổ thông, các phòng điều trị của bệnh viện, phòng hành chính,
+
+các giảng đường của trường đại bọc và các phòng tương tự khác.
+
+75... Máy bơm trong nhà sản xuất nên bố trí ngay trong xưởng dùng nước. Trường hợp
+
+máy bơm đặt trong gian sản xuất phải có thiết kế hàng rào ngăn che.
+
+76. Máy bơm phục vụ cho Ì nhóm nhà ở đặt trong trạm riêng, cũng như. máy bơm sản
+
+xuất cỡ lớn cần thiết kế theo quy định của tiêu chuẩn thiết kế mạng lưới công trình.
+
+7.7. Công suất của máy bơm nước sinh hoạt, sản xuất có bể chứa nước cần tính theo lưu
+
+lượng giờ lớn nhất. Còn đối với máy bơm không có bể chứa nước tính theo lưu lượng
+
+giây.
+
+7.8. Máy bơm có thể điều khiển bằng tay, điều khiển từ xa hay có thiết bị điều khiển tự
+
+động. Khi máy bơm chữa cháy điều khiển từ xa thì nút điều khiển cho máy bơm
+
+chạy phải để gần họng chữa cháy mà tại đó áp lực của đường ống bên ngoài không
+
+đủ để chữa cháy được.
+
+7.9. Cho phép đặt máy bơm chữa cháy mà không cần máy bơm dự phòng trong các
+
+trường hợp sau đây :
+
+a) Trong nhà phụ của kho không có thiết bị chữa cháy tự động và có một cột nước
+
+chữa cháy.
+
+b) Trong các xí nghiệp có hạng sản xuất D, E mà công trình có bậc chịu lửa I, II hoặc
+
+khi lưu lượng nước chữa cháy bên ngoài không vượt quá 201/s.
+
+7.10. Máy bơm của hệ thống cấp nước chữa cháy trong nhà có phân vùng cấp nước, các
+
+công trình đặc biệt, rạp chiếu bóng, câu lạc bộ, nhà văn hóa, phòng họp, hội trường
+
+và công trình có trang bị hệ thống chữa cháy tự động, ngoài việc điều khiển máy
+
+bơm tự động hoặc từ xa, còn cần có thiết bị điều khiển bằng tay.
+
+Chú thích: Khi mở tự động máy bơm chữa cháy đồng thời phải phát tín hiệu (ánh sáng và
+
+âm thanh) vào phòng thường trực hoặc vào phòng thường xuyên có công nhân phục vụ ngày
+
+đêm.
+
+7.11. Máy bơm có két nước khí nén phải thiết kế điều khiển tự động.
+
+7.12. Phải bảo đảm máy bơm vận hành thuận lợi, theo các yêu cầu sau :
+
+a) Mở tự động máy bơm làm việc.
+
+b) Mở tự động máy bơm dự phòng nếu máy bơm làm việc không mở được vì lí do kĩ
+
+thuật.
+
+c) Mở tự động máy bơm chữa cháy.
+
+7.13. Trục máy bơm nước cần đặt thấp hơn mực nước thấp nhất của nguồn nước. Trường
+
+hợp máy bơm đặt cao hơn thì phải có bộ phận mồi nước.
+
+7.14. Khi máy bơm hút nước từ bể chứa có hai máy bơm trở lên thì số lượng ống hút ít
+
+nhất là 2. Mỗi đường ống phải bảo đảm hút được một lượng nước chữa cháy cần thiết
+
+lớn nhất.
+
+Chú thích: Cho phép đặt một ống hút khi không có bơm dự phòng.
+
+7.15. Trên đường ống đẩy ở mỗi máy bơm phải có van khóa, van một chiều và đồng hồ áp
+
+lực, trên đường ống hút chỉ cần đặt van khóa.
+
+7.16. Đối với máy bơm (chữa cháy, sinh hoạt, sản xuất) không cho phép ngừng cấp nước
+
+phải bảo đảm cấp điện liên tục bằng cách nối với hai nguồn điện độc lập. Nếu chỉ có
+
+một nguồn điện, cho phép đặt máy bơm chữa cháy dự phòng chạy bằng động cơ đốt
+
+trong.
+
+7.17. Máy bơm và động cơ điện phải nầm trên cùng trục.
+
+7.18. Máy bơm phải đặt trên bệ móng cao hơn mặt nền nhà tối thiểu là 0,2m.
+
+Chú thích: Trong từng trường hợp, máy bơm cấp nước sản xuất có thể đặt trên khung gỗ
+
+hoặc khung thép mà không cần xây móng.
+
+7.19. Khoảng cách cho phép nhỏ nhất giữa các thiết bị đặt trong phòng máy bơm, theo quy
+
+định sau:
+
+a) Từ cạnh bên của móng đặt máy bơm và động cơ điện đến tường nhà và khoảng
+
+cách giữa các móng là 70 mm;
+
+b) Từ cạnh bệ máy bơm phía ống hút đến mặt tường nhà đối diện là 1000 mm; từ
+
+cạnh bệ máy bơm phía động cơ điện đến mặt tường nhà không được nhỏ hơn khoảng
+
+cách cần thiết để rút rôto của động cơ điện ra mà không cần tháo động cơ điện khỏi
+
+bệ máy.
+
+Chú thích:
+
+1. Máy bơm có đường kính ống đẩy từ 100mm cho phép đặt dọc tường và vách nhà mà
+
+không cần có lối đi giữa máy bơm và tường, nhưng không nhỏ hơn 200mm tính từ móng nhà
+
+đến bệ.
+
+2. Cho phép đặt hai máy bơm trên cùng một móng mà không cần bố trí lối đi lại giữa chúng,
+
+nhưng xung quanh móng phải chừa một lối đi riêng không nhỏ hơn 700mm.
+
+7.20. Chiều cao phòng của trạm bơm có thiết bị nâng cần phải bảo đảm khoảng cách thông
+
+thủy từ đáy vật được nâng đến đỉnh của các thiết bị đặt ở dưới không được nhỏ hơn
+
+500mm.
+
+Chiều cao thông thủy của trạm bơm không có thiết bị nâng thì lấy tối thiểu là 2,2m.
+
+7.21. Phải có cấu tạo cách âm cho máy bơm cấp nước sinh họat trong nhà ở và nhà công
+
+cộng. Máy bơm cần đặt trên nền cách âm như đặt tấm đệm dưới chân máy bơm bằng
+
+cao su hay gỗ mềm. Trên ống hút và ống đẩy phải có đệm lót chống rung dài ít nhất
+
+1m.
+
+7.22... Mạng lưới đường ống cấp nước bên trong tăng áp lực theo phương án máy bơm có
+
+két nước khí nén được thiết kế theo dây chuyền công nghệ và phải đáp ứng các quy
+
+phạm của cơ quan kiểm tra an toàn Nhà nước.
+
+8. Két nước áp lực và bể chứa nước
+
+8.1... Két nước áp lực phải bảo đảm chứa được một khối lượng nước dự trữ để điều chỉnh
+
+chế độ nước không điều hòa và cấp nước chữa cháy. Cần phải có ống phân phối riêng
+
+để đảm bảo lượng nước chữa cháy nguyên vẹn và không sử dụng nước vào các mục
+
+đích khác.
+
+Chú thích:
+
+Í. Trường hợp bên trong mỗi căn hộ của nhà ở cao tầng đã có bể chứa nước dự trữ riêng thì
+
+không cần phải đặt két nước áp lực chung trên mái.
+
+2. Trong mọi trường hợp, dung tích két nước áp lực không được vượt quá từ 20 đến 25m'.
+
+Nếu vượt quá quy định trên phải chia nhỏ mỗi két phục vụ cho một khu vực cấp nước nhất
+
+định.
+
+8.2. Dung tích điều hòa của kết nước áp lực hoặc kết nước khí nén của máy bơm nước
+
+sinh hoạt và sản xuất cần xác định theo công thức :
+
+9.
+
+4.h
+
+(8)
+
+Trong đó :
+
+W - Dung tích điều hòa của két nước (m”);
+
+Q„- Công suất định mức của một máy bơm hay máy bơm có công suất lớn nhất trong
+
+nhóm máy bơm công tắc cùng mở (mŠ/h);
+
+n - Số lần mở máy bơm nhiều nhất trong một giờ. Trị số n lấy như sau:
+
+- Máy bơm ở két hở : n= từ 2 đến 4;
+
+- Máy bơm với két khí nén : n = từ 6 đến 10;
+
+Giá trị lớn dùng cho máy bơm có công suất nhỏ đến 10 KW.
+
+8.3. Kétnước áp lực và bể chứa nước có máy bơm tăng áp dùng để chữa cháy phải dự trữ
+
+một lượng nước như sau:
+
+a) Đối với công trình công nghiệp: lượng nước dự trữ chữa cháy tính với thời gian
+
+dập tắt đám cháy dùng họng chữa cháy bên trong và thiết bị phun nước tự động là 10
+
+phút đầu khi xẩy ra cháy.
+
+b) Đối với công trình dân dụng thì nước dự trữ phải bảo đảm cung cấp nước chữa
+
+cháy bên trong thời gian là l0 phút, đồng thời vẫn phải đảm bảo lượng nước dùng cho
+
+sinh hoạt lớn nhất.
+
+Chú thích: Trường hợp máy bơm chữa cháy điều khiển tự động thì lượng nước dự trữ để
+
+chữa cháy có thể giảm xuống là thời gian chữa cháy liên tục có thể tính là 5 phút.
+
+8.4. Dung tích toàn phần của két nước khí nén cần xác định theo công thức :
+
+v„=W-Ổ-
+
+1-ø (9)
+
+Dung tích toàn phần két nước áp lực có máy bơm chữa cháy tự động tính theo công
+
+thức :
+
+VA=B(w+w) (10)
+
+Trong đó:
+
+Vụ- Dung tích toàn phần của kết nước khí nén (m®);
+
+Vụ. - Dung tích toàn phần của két nước áp lực (m”);
+
+W - Dung tích điều hòa của két nước khí nén hoặc két nước áp lực (m);
+
+Wt- Dung tích nước chữa cháy trong kết (m);
+
+ơ - Tỉ lệ giữa áp suất tuyệt đối nhỏ nhất và áp suất lớn nhất;
+
+Trị số ø lấy từ 0,7 đến 0.8;
+
+B - Hệ số dự trữ lấy từ 1,2 đến 1,3;
+
+8.5... Chiều cao đặt kết nước ấp lực hở và áp lực nhỏ nhất trong két nước khí nén phải bảo
+
+đảm áp lực cần thiết cho tất cả các đơn vị dùng nước. Còn trong hệ thống cấp nước
+
+chữa cháy hoặc hệ thống kết hợp phải đảm bảo áp lực cần thiết ở họng chữa cháy bên
+
+trong tới lúc dùng hết lượng nước chữa cháy dự trữ.
+
+8.6. Két nước áp lực và két nước khí nén chứa nước sinh hoạt làm bằng thép tấm và phải
+
+quét sơn cả trong lẫn ngoài. Sơn quét mặt trong kết nước phải đảm bảo tiêu chuẩn vệ
+
+sinh và phải được cơ quan y tế đồng ý trước khi sử dụng kết.
+
+Chú thích: Két nước áp lực hở cần được thiết kế bằng bê tông cốt thép.
+
+8.7. Kétnước áp lực phải có đầy đủ thiết bị:
+
+a) Ống dẫn nước vào kết: Có đặt van khóa và van phao điều chính. Mép trên của ống
+
+dẫn cách mặt dưới của nắp két từ 100 đến 150mm.
+
+b) Ống phân phối: Nối ở thành kết phải cách tối thiểu 50mm, có đặt van khóa
+
+(Trường hợp ống dẫn nước vào và ống phân phối riêng biệt).
+
+c) Ống dẫn nước tràn: Đặt ở vị trí mức nước cao nhất trong kết. Đường kính phếu thu
+
+nước tràn đặt nằm ngang phải lớn hơn 4 lần đường kính ống dẫn nước nối với phễu.
+
+Đường kính ống dẫn nước tràn phải bằng hoặc lớn hơn đường kính ống dẫn nước vào
+
+két.
+
+d) Ống xả cạn: Nối ở đầy kết phải đặt van khóa trước khi kết hợp với ống dẫn nước
+
+tràn của két.
+
+e) Thước đo hay dụng cụ báo tín hiệu mực nước nối liền với trạm bơm.
+
+Chú thích:
+
+1. Có thể nối ống dẫn nước vào két kết hợp với ống phân phối nhưng phải đặt van một chiều
+
+và van khóa trên đoạn ống phân phối nước.
+
+2. Nếu không có dụng cụ báo tín hiệu mực nước thì cần phải đặt một đường ống báo mực
+
+nước riêng. Đầu trên của đường ống báo mực nước đặt thấp hơn đáy ống dẫn nước tràn
+
+chừng 5cm và đều dưới của đường ống báo mực nước liên hệ với bảng điều khiển máy bơm.
+
+8.8. Trường hợp trong một nhà có nhiều két nước áp lực thì mỗi két phải bố trí đầy đủ
+
+những bộ phận cần thiết đã nêu trong điều 8.7. Nếu các kết thông với nhau, thì
+
+những ống cùng loại ở đáy két có thể nối chung với cùng một đường ống nhánh.
+
+8.9. Két nước chữa cháy phải đặt thiết bị báo mực nước liên lạc với phòng nhân viên chữa
+
+cháy, phòng nhân viên phục vụ hay phòng máy bơm.
+
+8.10. Khoảng cách giữa các két nước áp lực và khoảng cách giữa thành két với các kết cấu
+
+của nhà không được nhỏ hơn khoảng cách quy định trong bảng 17.
+
+Bảng 17
+
+„ . | Khoảng cách giữa thành két và . ; Khoảng cách
+
+Hình dáng của tường khoảng cách lv định két đến
+
+két nước áp P - mg giữa các kết N_s
+
+lực Phía không có | Phía có phao nước áp lực sàn gác phía
+
+phao nối trên
+
+Hình tròn 0,3 0,8 0,7 0,6
+
+Hình chữ nhật 0,7 1,0 07 0,6
+
+8.11. Dung tích điều hòa của bể chứa nước phục vụ cho máy bơm nước sinh hoạt, tăng áp
+
+cho công trình xác định theo công thức :
+
+1,5Ongà
+
+„=>.
+
+” (11)
+
+Trong đó :
+
+Wpc - Dung tích điều hòa lượng nước sinh hoạt của bể chứa nước (m2);
+
+Quay" Lượng nước sinh hoạt cần dùng trong ngày đối với công trình (mạ);
+
+n - Số lần đóng mở bơm bằng tay trong ngày;
+
+8.12. Dung tích toàn phần của bể chứa nước phục vụ cho máy bơm tăng áp cung cấp nước
+
+sinh hoạt cho công trình xác định theo công thức:
+
+Vạc = Wpc + Wị (12
+
+Trong đó :
+
+Vgc- Dung tích toàn phần của bể chứa nước (m®);
+
+Wq - Dung tích nước chữa cháy trong bể chứa (m);
+
+Chú thích - Phải bố trí ống hút của máy bơm sao cho bảo đảm lượng nước chữa cháy trong
+
+bể chứa không được sử dụng vào các nhu cầu khác như sinh hoạt, sản xuất.
+
+8.13. Bể chứa có thể xây dựng bằng bê tông cốt thép hay gạch, vật liệu dùng được quy
+
+định theo dung tích của bể, tình hình địa chất thi công, tình hình nguyên vật liệu địa
+
+phương... Đáy bể chứa phải có độ dốc không nhỏ hơn 1% về phía hố thu nước.
+
+8.14. Bể chứa nước có thể thiết kế theo dạng hình tròn, hình chữ nhật... đặt trong nhà hay
+
+ngoài nhà, đặt nổi hay ngầm.
+
+Bể chứa phải được trang bị ống cấp nước vào bể, ống hút hay ống phân phối nước
+
+ống dẫn nước tràn, ống xả nước bẩn, thước báo mực nước, ống thông hơi, thang và
+
+cửa ra vào bể.
+
+8.15. Két nước khí nén phải có ống dẫn nước vào ống phân phối nước, ống xả van an toàn,
+
+áp lực kế, thiết bị đo nước và thiết bị để bơm và điều chỉnh không khí trong két.
+
+Khoảng cách từ đỉnh két tới trần không nhỏ hơn 0,6m khoảng cách giữa các kết và từ
+
+két tới tường không nhỏ hơn 0,7m.
+
+9. Yêu cần đối với mạng lưới đường ống cấp nước bên trong, xây dựng ở vùng đất yếu
+
+9.1]... Đường ống cấp nước bên trong nhà phải đặt cao hơn mặt sàn tầng ] hoặc tầng hầm,
+
+đặt hở và ở vị trí dễ dàng lui tới kiểm tra và quản lí.
+
+9.2... Đường ống dẫn nước vào hệ thống cấp nước bên trong xây dựng ở vùng đất đã xử lí
+
+lún, cho phép thiết kế như ở vùng đất bình thường.
+
+9.3. Không cho phép đặt đường ống dẫn nước vào nhà ở dưới đáy móng mà chỉ được phép
+
+đi qua tường móng.
+
+94. Trước khi đặt đường ống trong tường móng nhà hoặc tường hầm cần phải chừa lỗ ở
+
+những vị trí đó. Kích thước lỗ tối thiểu là 300 x 300 mm. Vị trí đặt ống từ đỉnh ống
+
+đến đỉnh lỗ không nhỏ hơn 0,15m.
+
+9.5... Không cho phép ngàm cứng đường ống trong tường móng. Sau khi đặt ống, cần chèn
+
+chặt lỗ bằng dây đay tẩm dầu.
+
+9.6... Đường ống dẫn nước vào nhà phải dùng ống thép hoặc ống chất dẻo. Cho phép dùng
+
+ống gang cấp nước với mối nối có lót cao su để khắc phục các biến dạng xuất hiện.
+
+9.7... Khi thiết kế mạng lưới đường ống, cấp nước bên trong xây dựng ở vùng động đất;
+
+ngoài việc tuân theo các quy định trong tiêu chuẩn này, còn phải tuân theo các tiêu
+
+chuẩn thiết kế khác quy định riêng, cho công trình xây dựng ở vùng động đất.
+
+Phụ lục1
+
+Tiêu chuẩn dùng nước cho một lần hay của một dụng cụ vệ sinh
+
+nước (lít)
+
+1. Nhà ở
+
+- Bồn tắm ngồi dài 1.200 mm có vòi tắm hương sen l lần 250
+
+- Bồn tắm (có hương sen tắm) dài từ 1500 đến 1550 mm
+
+- Như trên dài từ 1650 đến 1700 mm 1l lần 275
+
+- Bồn tắm không có hương sen
+
+- Vòi tắm hương sen có khay tắm sâu l lần 300
+
+- Vòi tắm hương sen có khay tắm nông l lần 200
+
+- Chậu rửa mặt l lần 230
+
+- Bình xả của chậu xí l lần Từ 100 đến 120
+
+- Chậu rửa trong nhà bếp 1l lần từ 3 đến 5
+
+- Vòi tắm hương sen tắm trong căn hộ l lần Từ 6 đến 8
+
+2. Công trình công cộng 1l lần Từ 8 đến 10
+
+- Phòng tắm có bồn tắm l lần Từ 40 đến 60
+
+- Phòng tắm có hương sen tắm
+
+- Nước rửa sàn phòng tắm, phòng tắm hơi và buồng khử 1 khách 500
+
+trùng " 400
+
+- Chậu rửa tay trong phòng cắt tóc 1 mê 3 đến 5
+
+- Chậu rửa trong phòng thay quần áo hay phòng vệ sinh
+
+- Chậu rửa trong phòng bác sĩ 1 giờ 10
+
+- Chậu rửa trong cửa hàng " 100
+
+- Chậu rửa trong hiệu thuốc
+
+- Chậu rửa trong phòng vệ sinh công cộng s Từ 300 đến 400
+
+- Chậu xí trong nhà xí công cộng ở nhà ga s 120
+
+- Vòi lấy nước hay chậu rửa ở nhà ăn, quán cà phê, quán 1 ngày 60
+
+giải khát, quầy bánh kẹo, căng tin " 600
+
+" 1000
+
+1 giờ 250
+
+3. Nhà sản xuất và phụ trợ
+
+- Vòi tắm hương sen riêng biệt trong các phòng sinh hoạt 1l lần Từ 40 đến 60
+
+- Vòi tắm hương sen tắm trong nhóm phòng tắm
+
+45 phút 500
+
+Phụ lục 2
+
+Lưu lượng nước 1/s trong nhà ở phụ thuộc
+
+vào số đơn vị đương lượng của thiết bị vệ sinh
+
+Số đương
+
+lượng
+
+ii 2 ) 3 |) 4 Ý s | øs | g7 | g
+
+2 0,28 0,28 0,28 0,28 0,28 0,28 0,29
+
+3 0,34 0,34 034 034 034 0,35 037
+
+4 0,37 0,39 0,39 0,39 0,40 0,41 0,44
+
+5 0,41 0,43 0,43 0,43 0,43 0,46 0,49
+
+6 0,46 0,47 0,48 0,48 0,49 0,50 0,54
+
+7 0,50 0,50 0,50 0,50 0,53 0,54 0,59
+
+$ 0,53 0,54 0,55 0,55 0,57 0,59 0,63
+
+9 0,56 0,57 0,58 0,58 0,60 0,62 0,67
+
+10 0,57 0,60 0,61 0,63 0,64 0,65 071
+
+12 0,64 0,66 0,66 0,66 0,70 071 0,78
+
+14 0,70 0,72 0,73 0,74 0,77 0,78 0,86
+
+16 0,74 0,75 0,76 0,76 0,1 0,83 0,92
+
+18 0,78 0,80 0,1 081 0,86 0,89 0,99
+
+20 0,82 0,84 0,85 0,85 0,90 0,93 1,04
+
+25 0,91 0,93 0,94 0,95 1,01 1,05 1,18
+
+30 1,00 1,02 1,02 1,04 1,11 1,15 1,32
+
+35 1,06 1,11 1,12 1,12 1,12 1,25 1,36
+
+40 1,15 1,19 1,19 1,20 1,19 1,43 1,38
+
+45 1,22 1,25 127 1,28 1,37 1,43 1,64
+
+50 1,28 1,32 1,33 1,34 1,44 1,52 1,75
+
+60 1,50 1,46 1,46 1,47 1,58 1,67 1,96
+
+70 1,50 1,57 1,58 1,60 1,73 1,81 2,12
+
+80 1,61 1,68 1,70 1⁄71 1,86 1,95 2,24
+
+90 1,70 1,79 1,79 1,81 1,98 2,07 2,43
+
+100 1,82 1,88 1,91 1,92 2,10 2,20 2,62
+
+120 2,0 2,06 2,09 2,12 2,30 2,443 2.88
+
+140 221 2229 2,30 2,32 251 2,65 3,17
+
+160 233 2,43 2,44 2,48 270 2,85 3,42
+
+180 2,47 2,56 2,58 2,62 2,84 3,00 3,64
+
+200 2,63 2,74 2,776 2,78 3.04 3⁄23 3,89
+
+220 277 2,86 2,900 2,04 322 3,41 4,08
+
+240 291 3,02 3,06 3,06 3.338 3,58 4234
+
+Phụ lục 2 - (tiếp theo)
+
+ii 2 |) 3 4 | s Í g | 7 | ạ
+
+260 3.03 3,14 3.18 3,20 3.52 3.75 4,52
+
+280 3,15 3.28 3.33 3.534 3,70 3,01 4,47
+
+300 3.26 3,40 3443 3,46 3.83 4,07 4,93
+
+320 3.74 3,87 3.00 3.92 4,30 4,54 5,46
+
+340 3,87 3,99 4,02 4,06 4,46 471 5,67
+
+360 3.99 4,12 4,14 4,20 4,58 4,88 5,88
+
+380 4,12 4/28 4.32 4.32 4.72 5,04 6,07
+
+400 4.25 4,42 4,44 4.48 4,94 5,20 6,40
+
+430 4,63 477 4,80 4,88 5,31 5,59 6,73
+
+500 4,93 5,06 5,06 5,16 5,51 5,17 7,14
+
+550 5,73 5,92 5,94 6,02 632 6,89 8.25
+
+600 6,08 6,26 6,30 634 6,90 7,30 8,68
+
+650 6,46 6,60 6,67 6,70 7,30 7,70 922
+
+700 6,76 7,00 7,03 7,06 7,70 8,09 9,69
+
+750 7,07 733 736 7,40 8.08 8.48 10,10
+
+800 7,40 7,63 771 7,80 8.236 8,86 10,56
+
+850 8.58 881 887 8.96 9,63 10,08 11,85
+
+900 8.793 9,19 922 930 999 10,50 12.28
+
+950 925 9,55 9,63 9,65 10,34 10,91 12,86
+
+1000 9,64 9,92 9,96 10,04 10,64 11,32 13,34
+
+1100 10,20 10,46 10,68 10,78 11,56 12,14 14,83
+
+1200 11,02 11,16 11,41 11,48 12,34 12,93 15,15
+
+1300 13,00 13,32 13,40 13,46 14,36 15,01 17,38
+
+1400 13,80 14,12 14,00 1432 15,26 15,63 18,20
+
+1500 14,54 14,90 14,98 15,08 16,02 16,74 19,10
+
+1600 15,32 15,69 15,78 15,88 16,91 17,60 20,24
+
+1700 16,08 16,46 16,57 16,66 17,73 18,45 21,34
+
+1800 16,84 1723 17,34 17,44 18,54 19.29 22.30
+
+1900 17,58 18,00 18,10 18,21 19,35 20,12 23,24
+
+2000 18,33 18,75 18,86 18,97 20,15 20,94 24,17
+
+2200 1981 20,21 20,37 20,49 21,74 22,58 26,01
+
+2400 21,28 21,74 21,87 22,00 2331 24,20 27.83
+
+2600 22.773 2322 23,35 23,48 24,86 25,80 29,62
+
+2800 24.18 24,69 24,82 24,96 26,41 27.38 31,40
+
+3000 25,61 26,14 26,28 26,43 27,94 28,95 33,15
+
+3200 27,04 2739 27,89 29,00 29,46 30,51 34,89
+
+3400 28,46 29,03 29,18 29,34 30,96 32,06 36,62
+
+3600 29,87 30,46 30,62 30,78 32,46 33,60 38,32
+
+3800 31,28 31,86 32,05 32,22 33,05 35,13 40,02
+
+4000 32,68 33,30 33,47 33,65 35,43 36,65 41,71
+
+4200 34,07 34,772 34,09 35,06 36,90 38,16 43.38
+
+4400 35,46 36,12 36,30 36,48 38.338 39,67 45,04
+
+4600 36,83 37,53 37,71 37,89 39,84 41,16 47,70
+
+4800 3822 38,82 39,11 39,30 41,30 42,66 48,34
+
+5000 39,60 40,32 40,51 40,70 42,75 44,14 49,97
+
+Phụ lục 3
+
+Lưu lượng nước 1/s cho nhu cầu ăn uống sinh hoạt trong nhà
+
+phụ thuộc vào số đơn vị đương lượng của các loại nhà công cộng
+
+Ắ~ Phòng ha Ñ kiêm nhà Khách sảm,
+
+Sốđương | Ahàtấm | Lphámđa | hàhành | Trường điều kí túc xá,
+
+công cộng, ˆ chính và | học trường - - | trường nội
+
+lượng nhà trẻ khoa và lun hàng | phổ thông dưỡng, nhà trú, nhà
+
+ngoại trú nghỉ, trại tro
+
+thiếu nhỉ :
+
+“Ôi ! 2 | 3 | 4 |! s | g | 7
+
+1 02 02 02 02 0,2 02
+
+2 0,35 0,39 0,4 0,4 0,4 0,4
+
+3 0,42 0,48 0,52 0,6 0,6 0,6
+
+4 0,48 0,56 0,6 0,72 0,8 0,8
+
+5 0,54 0,63 0,67 0,81 0,9 1,0
+
+6 0,59 0,69 0,74 0,88 0,98 1,22
+
+7 0,64 0,74 0,80 0,96 1,06 1,32
+
+8 0,67 0,79 0,85 1,02 1,13 1,41
+
+9 0,72 0,84 0,9 1,08 1,20 1,50
+
+10 0,76 0,88 0,05 1,13 1,26 1,58
+
+12 0,83 0,97 1,04 1,24 1,38 1,73
+
+14 0,9 1,05 1,12 1,34 1,50 1,87
+
+16 0,06 1,02 12 1,44 1,60 2,0
+
+18 1,02 1,19 1,27 1,52 1,69 2,12
+
+20 1,07 1,35 1,34 1,61 1,79 2.23
+
+25 12 1,4 1,5 1,8 2.0 2,50
+
+30 1,31 1,53 1,64 1,97 2,2 2,74
+
+35 1,42 1,66 1,78 2,14 2.37 2,96
+
+40 1,52 1,77 1,90 2.28 2.553 3,16
+
+45 1,61 1,88 2,01 2,42 2.68 3,35
+
+50 1,70 1,08 2,12 2,54 2.83 3,54
+
+55 - 2.08 2,22 2,67 2.97 3⁄71
+
+60 - 2,17 2,32 2/79 3,1 3.38
+
+65 - 2,26 2,42 2.90 3.22 4.03
+
+70 - 2,34 2,51 3.02 3.3 4.18
+
+75 - 2,42 2,60 3.12 3,46 4.33
+
+80 - 2,5 2,68 3522 3.58 4.47
+
+85 - 2,58 277 332 3,69 4,61
+
+90 - 2,66 2,84 3⁄42 3,80 4.75
+
+9 - 273 2.93 3,51 3.9 4,88
+
+Phụ lục 3 - (kết thúc)
+
+“i2 ! 2 |! 4 | s | s | 7g
+
+100 2.8 3,00 3,60 4,00 5,00
+
+120 - 3,00 3,94 4.38 5,48
+
+140 - 3,56 4.26 4.73 5,91
+
+160 - 3,8 4,55 5,06 633
+
+180 - 4,03 4,82 5,36 6,71
+
+200 - 4/24 5,08 5,65 7,07
+
+220 - 4.45 5,34 5.93 7,42
+
+240 - 4,61 5,57 6,20 7,74
+
+260 - 4,84 561 6,45 8,06
+
+280 - 5,02 6,02 6,69 8,36
+
+300 - 5,20 6/24 6,93 8,66

@@ -30,3 +30,5 @@ backend/chroma_analysis/
 
 # Công văn và tài liệu nội bộ, không đưa lên git
 van_ban/
+
+backend/kho_seed/*.bak-*.json

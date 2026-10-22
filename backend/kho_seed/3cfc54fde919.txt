@@ -1,9 +1,9 @@
 [Bảng đối chiếu thẩm định thiết kế PCCC B2. Bảng đối chiếu Hệ thống báo cháy loại địa chỉ]
-[Hiệu lực: 2025. Trạng thái: ĐANG DÙNG.]
+[Hiệu lực: 2026 (bản cập nhật). Trạng thái: ĐANG DÙNG. Nguồn: Bảng đối chiếu cập nhật kỳ thi cán bộ thẩm định PCCC.]
 
-B2: BĐC hệ thống báo cháy loại địa chỉ
+21
 
-		18
+		B2: BĐC hệ thống báo cháy loại địa chỉ
 
 	BẢNG ĐỐI CHIẾU HỆ THỐNG BÁO CHÁY LOẠI ĐỊA CHỈ
 
@@ -15,19 +15,9 @@ Nội dung thiết kế
 
 Nội dung quy định của tiêu chuẩn, quy chuẩn kỹ thuật
 
-Khoản, điều, tiêu chuẩn, quy chuẩn
+Khoản, Điều
 
 Kết luận
-
-1
-
-2
-
-3
-
-5
-
-6
 
 1
 
@@ -35,7 +25,7 @@ Chủng loại hệ thống báo cháy
 
 -
 
-Loại hệ thống báo cháy địa chỉ
+Đối tượng bắt buộc trong bị hệ thống báo cháy địa chỉ
 
 Hệ thống báo cháy khi báo cháy sẽ báo đến từng thiết bị địa chỉ trong hệ thống (đầu báo cháy địa chỉ, module, nút ấn báo cháy địa chỉ,…)
 
@@ -62,6 +52,8 @@ Lắp đặt đầu báo cháy gần trần hoặc các đỉnh bề mặt mái
 Phải lắp đặt đầu báo cháy gần đỉnh của mái dốc, mái hoặc một bề mặt phẳng để tránh vùng không khí chết
 
 Hình 6 - Ví dụ về các vị trí của đầu báo cháy khói kiểu điểm, tia chiếu và đầu báo cháy khói kiểu hút tại trần, mái hoặc các đỉnh của bề mặt
+
+Trường hợp lỗ thông của dầm góc > 2 m thì áp dụng theo hình (i)
 
 Hình 9 - Ví dụ về các vị trí của đầu báo cháy nhiệt kiểu dây tại trần, mái hoặc các đỉnh của bề mặt
 
@@ -101,7 +93,7 @@ Khi xác định vị trí lắp đặt của các đầu báo cháy tham khảo
 
 a. Các khu vực phòng ngủ phải lắp đặt đầu báo cháy khói quang điện hoặc khói quang học hoặc đầu báo cháy CO.
 
-b. Các khu vực như hành lang, đường, lối đi, lối ra thoát nạn hoặc các khu vực tương tự khác phải lắp đặt đầu báo cháy khói quang điện hoặc khói tia chiếu.
+b. Các khu vực như hành lang, đường, lối đi, lối ra thoát nạn hoặc các khu vực tương tự khác phải lắp đặt đầu báo cháy khói quang hoặc khói tia chiếu.
 
 c. Khi một khu vực được chia thành nhiều phần bởi tường, vách ngăn hoặc các giá kệ hàng cách trần (hoặc mặt dưới của dầm ngang) không quá 0,3 m thì mỗi khu vực này được coi như phòng riêng biệt và phải được trang bị đầu báo cháy đảm bảo theo quy định.
 
@@ -139,17 +131,23 @@ Khi một phần bất kỳ của trần không có lỗ hở nhô xuống và c
 
 Lắp đặt đầu báo tại các không gian bị che kín
 
-- Khu vực bị che kín chứa hệ thống điện chiếu sáng hoặc thiết bị điện dùng để cấp nguồn được đặt hoàn toàn vào bên trong khu vực bị che kín và được kết nối với nguồn điện vượt quá điện áp cực thấp thì phải lắp đặt đầu báo cháy trên trần của không gian bị che kín đảm bảo khoảng cách tối đa theo phương ngang từ thiết bị điện đến đầu báo cháy ≤ 1,5 m.
+*Trang bị hệ thống báo cháy tự động đối với: Đường ống kỹ thuật được bọc bằng vật liệu có tính cháy Ch2-Ch4; máng cáp (bó cáp) có điện áp từ 220V trở lên và tổng thể tích chất cháy thuộc nhóm Ch2 đến Ch4 từ 0,0015 m3 chiều dài trở lên tại các khu vực:
 
-Trong trường hợp bề mặt lắp đặt đầu báo cháy là dạng mặt nghiêng (dốc) thì đầu báo cháy lắp đặt ở vị trí có chiều cao lớn hơn.
+- Hành lang thoát nạn, hội trường, tiền sảnh;
 
-- Đối với thiết bị điện chiếu sáng có công suất danh định ≤ 100 W, thiết bị cung cấp năng lượng dạng có thể tháo rời có công suất danh định dưới 100 W hoặc các thiết bị khác có công suất danh định dưới 500 W không phải trang bị hệ thống báo cháy (thiết bị điện không đặt trong các khu vực kín).
+- Gian phòng có từ 50 người trở lên;
 
-CHÚ THÍCH 1: Đường dây điện, máng cáp của thiết bị chiếu sáng là vật liệu không cháy thì không được xem là thiết bị điện.
+- Gian phòng cấp nguy hiểm cháy theo công năng nhóm F1.1 và F4.1 và kinh doanh dịch vụ karaoke, vũ trường.
 
-CHÚ THÍCH 2: Đầu báo cháy được sử dụng để bảo vệ thiết bị điện không yêu cầu phải bảo vệ không gian bị che kín.
+Cho phép chỉ bố trí đầu báo cháy tại các vị trí các đường ống kỹ thuật và/hoặc đường máng cáp tại không gian phía trên trần treo và dưới sàn nâng.
 
-Điều 5.8.2.4.2 TCVN 7568-14:2025
+* Cho phép không trang bị hệ thống báo cháy tự động trong các trường hợp sau:
+
+- Cáp được luồn trong ống hoặc được bọc bằng vật liệu không cháy hoặc có tính cháy Ch1;
+
+- Là cáp, dây dẫn điện của hệ thống chiếu sáng, hệ thống thông tin.
+
+Bảng A2 QCVN10:2025/BCA
 
 Đối với các đầu báo cháy nhiệt được yêu cầu lắp đặt theo Điều 5.8.2.4 thì khoảng cách và vị trí của các đầu báo cháy phải đảm bảo theo Điều 5.9.2.1.2 đến 5.9.2.1.5 tùy thuộc điều kiện sau:
 
@@ -207,7 +205,7 @@ Trung tâm báo cháy
 
 Vị trí lắp đặt
 
-- Trung tâm báo cháy phải đặt ở những nơi thường  xuyên có người trực suốt ngày đêm. Trong trường hợp không có người trực suốt ngày đêm, trung tâm báo cháy phải có chức năng truyền các tín hiệu báo cháy và báo sự cố đến nơi trực cháy hay nơi có người thường trực suốt ngày đêm và phải có biện pháp phòng ngừa người không có nhiệm vụ tiếp xúc với trung tâm báo cháy
+- Trung tâm báo cháy phải đặt ở những nơi thường xuyên có người trực suốt ngày đêm. Trong trường hợp không có người trực suốt ngày đêm, trung tâm báo cháy phải có chức năng truyền các tín hiệu báo cháy và báo sự cố đến nơi trực cháy hay nơi có người thường trực suốt ngày đêm và phải có biện pháp phòng ngừa người không có nhiệm vụ tiếp xúc với trung tâm báo cháy
 
 - Trung tâm báo cháy phải có chức năng tự động truyền tin báo cháy đến đơn vị Cảnh sát Phòng cháy, chữa cháy và cứu nạn, cứu hộ.
 
@@ -250,6 +248,8 @@ Các trung tâm báo cháy phải được tiếp đất bảo vệ. Việc ti�
 Điều 5.13 TCVN 7568-14:2025
 
 Điều 5.13.1 TCVN 7568-14:2025
+
+-
 
 Lưu ý đối với nhà nhóm F1.2, F4.2, F4.3 và nhà hỗn hợp có chiều cao PCCC từ 50 đến 150 m
 
@@ -535,8 +535,6 @@ b) Khoảng cách từ đầu báo cháy đến lỗ mở cấp không khí ≥ 
 
 Đầu báo cháy nhiệt kiểu dây
 
--
-
 Lắp đặt đầu báo cháy nhiệt kiểu dây lắp đặt phải tuân theo các yêu cầu của 5.9.2.1.2 đến 5.9.2.1.5 và các yêu cầu sau:
 
 a. Diện tích bảo vệ lớn nhất của đầu báo cháy nhiệt kiểu dây phải phù hợp với giới hạn vùng phát hiện cháy được quy định trong 5.7.2.
@@ -629,56 +627,6 @@ Thiết bị chỉ thị phải được kết nối với tín hiệu ra giám 
 
 7
 
-Chỉ thị cho đầu báo cháy
-
-Đèn chỉ thị của đầu báo cháy phải quan sát được từ các lối đi
-
-Điểm e, Điều 5.8.2.1.1 TCVN 7568-14:2025
-
-Thiết bị chỉ thị cho đầu báo cháy
-
-a) Khi đèn chỉ thị của đầu báo cháy không nhìn thấy được ở khu vực thường xuyên có người, phải sử dụng các thiết bị chỉ thị từ xa để hiển thị trạng thái báo cháy ngoại trừ quy định tại 5.8.2.4.3 e.
-
-b) Các thiết bị chỉ thị từ xa dùng cho các phòng, các tủ hoặc các khu vực tương tự phải được lắp đặt liền kề với cửa ra vào để xác định được vị trí đầu báo cháy.
-
-c) Các thiết bị chỉ thị từ xa cho không gian kín phải được lắp đặt ở khu vực có thể tiếp cận được.
-
-d) Cho phép sử dụng một đèn chỉ thị từ xa để chỉ thị cho nhiều đầu báo hoặc nhiều miệng hút của cùng một đầu báo cháy khói kiểu hút khi các thiết bị này lắp đặt chung cho cùng một phòng, một căn hộ.
-
-e) Không yêu cầu lắp đặt đèn chỉ thị từ xa khi:
-
-- Vị trí của đầu báo cháy hiển thị tại tủ trung tâm báo cháy, hoặc
-
-- Không gian bị che kín có thể tiếp cận được và có chiều cao lớn hơn 2 m, con người có thể đi lại được, hoặc ở bên dưới vật liệu làm sàn tháo ra được (như vật liệu làm sàn máy tính).
-
-f) Đối với đầu báo cháy không dây (đầu báo cháy vô tuyến và đầu báo cháy độc lập) ngoài đèn chỉ thị khi tác động phải có tín hiệu báo về tình trạng của nguồn cấp.
-
-Điều 5.8.2.4.3 TCVN 7568-14:2025
-
-Các đèn chỉ thị của các đầu báo cháy khói lắp đặt trong hệ thống xử lý không khí phải được nhìn thấy, trường hợp không nhìn thấy phải lắp đặt các đèn chỉ thị từ xa về trạng thái hoạt động của các đầu báo
-
-Điều 5.8.2.3.3 TCVN 7568-14:2025
-
-Thiết bị chỉ thị được đặt bên ngoài gian phòng được nhìn thấy rõ ràng từ các lối đi chính, gần các cửa ra vào. Khi được lắp đặt trên tường, chiều cao tối đa không quá 2,4 m tính từ mặt đường đi lại
-
-Điều 5.11.3.2.1 TCVN 7568-14:2025
-
-Thiết bị chỉ thị phải được kết nối với tín hiệu ra giám sát của tủ trung tâm báo cháy
-
-Tín hiệu chỉ thị báo động cho phần nhà được sở hữu riêng (căn hộ, shophouse...)
-
-cần được chỉ thị:
-
-a. Vị trí tại trung tâm báo cháy, hoặc
-
-b. Sử dụng chung vùng phát hiện cháy tại tủ trung tâm báo cháy khi từng khu vực sở hữu riêng đó lắp đặt đèn chỉ thị từ xa gần với lối vào của từng khu vực sở hữu riêng
-
-Điều 5.11.3.2.3 TCVN 7568-14:2025
-
-Điều 5.8.2.9.1 TCVN 7568-14:2025
-
-8
-
 Bộ phận liên kết (dây tín hiệu, cáp tín hiệu)
 
 -
@@ -687,19 +635,21 @@ Giám sát và điều khiển các hệ thống, thiết bị khác
 
 Trường hợp hệ thống báo cháy dùng để điều khiển kích hoạt hệ thống chữa cháy thì mỗi điểm trong khu vực bảo vệ phải được kiểm soát bằng 2 đầu báo cháy tự động thuộc 2 kênh hoặc 2 địa chỉ khác nhau
 
+Lưu ý:
+
+- Trường hợp hệ thống chữa cháy chỉ sử dụng tín hiệu báo cháy để kích hoạt thì bắt buộc mỗi điểm trong khu vực bảo vệ phải được kiểm soát bằng 02 đầu báo cháy tự động thuộc 02 kênh hoặc 02 địa chỉ khác nhau theo quy định tại 5.13.2 TCVN 7568-14:2025;
+
+- Trường hợp hệ thống chữa cháy sử dụng tín hiệu khác (hệ thống Sprinkler; hệ thống dây dẫn động có khóa nóng chảy; cảm biến của thiết bị công nghệ…) kết hợp với tín hiệu báo cháy để kích hoạt thì cho phép mỗi điểm trong khu vực bảo vệ được kiểm soát bằng một đầu báo cháy tự động thuộc một kênh hoặc 1 địa chỉ.
+
 Điều 5.13.2 TCVN 7568-14:2025
 
 -
 
 Cáp, dây tín hiệu điều khiển thiết bị ngoại vi
 
-- Cáp tín hiệu điều khiển thiết bị ngoại vi và dây tín hiệu nối từ các đầu báo cháy trong hệ thống báo cháy dùng để kích hoạt hệ thống chữa cháy tự động là loại chịu nhiệt cao (cáp, dây tín hiệu chống cháy có thời gian chịu lửa 30 min). Cho phép sử dụng cáp tín hiệu điều khiển thiết bị ngoại vi là loại cáp thường nhưng phải có biện pháp bảo vệ khỏi sự tác động của nhiệt ít nhất trong thời gian 30 min
-
 - Trường hợp trong công trình có nguồn phát nhiễu hoặc đối với hệ thống báo cháy địa chỉ thì bắt buộc phải sử dụng cáp và dây tín hiệu chống nhiễu. Nếu cáp và dây tín hiệu không chống nhiễu thì nhất thiết phải luồn trong ống hoặc hộp kim loại có tiếp đất
 
 - Đối với hệ thống báo cháy địa chỉ phần dây tín hiệu dùng kết nối thiết bị địa chỉ phải là dây chống nhiễu, chống cháy (cho phép chỉ sử dụng dây chống nhiễu khi thiết bị và trung tâm báo cháy được kết nối dưới dạng mạch vòng)
-
-Điều 5.14.6 TCVN 7568-14:2025
 
 Điều 5.14.9 TCVN 7568-14:2025
 

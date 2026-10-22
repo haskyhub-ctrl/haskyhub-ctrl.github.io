@@ -1,9 +1,62 @@
 [Bảng đối chiếu thẩm định thiết kế PCCC B10. Bảng đối chiếu Hệ thống chữa cháy tự động bằng khí CO2]
-[Hiệu lực: 2025. Trạng thái: ĐANG DÙNG.]
+[Hiệu lực: 2026 (bản cập nhật). Trạng thái: ĐANG DÙNG. Nguồn: Bảng đối chiếu cập nhật kỳ thi cán bộ thẩm định PCCC.]
 
 BẢNG ĐỐI CHIẾU HỆ THỐNG CHỮA CHÁY BẰNG KHÍ CO2
 *Chú thích: (+) - Đạt; (KN) - Kiến nghị
-TT	Nội dung	Thiết kế	Quy định của quy chuẩn, tiêu chuẩn	Khoản, Điều	Kết luận		-	Yêu cầu trang bị 						-	Lựa chọn chất chữa cháy (xem xét sự phù hợp)
+TT	Nội dung đối chiếu	Nội dung thiết kế	Nội dung quy định của quy chuẩn, tiêu chuẩn	Khoản, Điều	Kết luận		-	Yêu cầu trang bị 						-	Lựa chọn chất chữa cháy (xem xét sự phù hợp) 		Chất chữa cháy
+Hiệu quả chữa cháy các loại đám cháy
+
+A
+B
+C
+D
+E
+
+Nước
+Phun tia
+++
+-
+-
+-
+-
+
+Phun sương
+++
++
+-
+-
++(1)
+
+Chất chữa cháy gốc nước
+Phun tia
++++
++++
+-
+-
+-
+
+Phun sương
++++
++++
+-
+-
+++(1)
+
+Bọt
+Bội số nở thấp
+++
+++
+-
+-
+-
+
+Bội số nở trung bình
++
+++
+-
+-
+-
+
 Chất chữa cháy
 Hiệu quả chữa cháy các loại đám cháy
 
@@ -11,35 +64,62 @@ A
 B
 C
 D
+E
 
-A1
-A2
-B1
-B2
-
-D1
-D2
-D3
-
-Khí CO2
--
+Bọt
+Bội số nở cao
 +
 +
 -
+-
+-
 
-Chú thích:
-Dấu “+” Chữa cháy thích hợp.
-Dấu “-“ Chữa cháy không thích hợp.
-A1: Cháy các chất rắn với quá trình cháy âm ỉ (Ví dụ : gỗ, giấy, cỏ khô, rơm rạ, than, sản phẩm dệt)
-A2: Cháy các chất rắn nhưng không có quá trình cháy âm ỉ. (Ví dụ : Chất dẻo)
-B1: Cháy chất lỏng không tan trong nước (Ví dụ : xăng ete, nhiên liệu dầu mỏ); cháy chất rắn hóa lỏng (ví dụ : paraphin)
-B2: Cháy các chất lỏng hòa tan trong nước (ví dụ : rượu, Metanol, glyxêrin)
-C: Cháy các chất khí (ví dụ : Metan, hyđro, Propan...)
-D1: Cháy các chất kim loại nhẹ (Ví dụ: nhôm, manhê và hợp kim của chúng)
-D2: Cháy kim loại kiềm và các kim loại đồng dạng khác (ví dụ: natri, kali)
-D3: Cháy các hợp chất có chứa kim loại (Ví dụ: các hợp chất hữu cơ kim loại, hydrua kim loại)
-Bảng 1 TCVN 3890:2023
-Bảng 1 TCVN 5760:1993			-	Yêu cầu về khu vực chữa cháy		Việc xây dựng các không gian bao kín phải được bảo vệ bằng các hệ thống chữa cháy thể tích cacbon dioxit phải thực hiện sao cho cacbon dioxit không thể thoát ngay được. Các tường và cửa ra vào phải có khả năng chịu được tác động của lửa trong một thời gian đủ để cho phép sự xả cacbon dioxit được duy trì ở nồng độ thiết kế trong thời gian duy trì.	Mục 7 TCVN 6101:1996			-	Vị trí đặt bình khí		Kho chứa CO2 cùng với các van, các cơ cấu xả và các thiết bị khác cần bố trí trong một buồng không có nguy hiểm về cháy và gần khu vực chữa cháy.	Đ 20 TCVN 6101:1996			-	Van chọn vùng		- Trường hợp có nhiều vùng phải chữa cháy từ một bộ hoặc một hệ thống bình chứa CO2, phải lắp van lựa chọn cho mỗi vùng cần chữa cháy, các van lựa chọn vùng phải được điều khiển mở tự động.
+Bọt chứa flo
+++
++++
+-
+-
+-
+
+Khí
+Khí CO2, Nitơ
++
++
++
+-
++++
+
+Khí Freon (2)
++
+++
++
+-
+++
+
+Aerosol (Sol-khí)
+++
+++
+++
+-
+++
+
+Bột
+++
++++
++++
++++
+++
+
+(1) Tuân thủ các yêu cầu an toàn điện.
+(2) Khí Freon là các khí chữa cháy có thành phần chlorofluorocarbon hoặc hydrofluorocarbon như: HFC-227ea, FK-5-1-12…
+CHÚ THÍCH:
+Dấu “+++” Chữa cháy rất hiệu quả.
+Dấu “++” Chữa cháy hiệu quả.
+Dấu “+” Chữa cháy hiệu quả thấp
+Dấu “-” Chữa cháy không thích hợp.
+Khi nhà, công trình, gian phòng, khu vực có từ hai chất chữa cháy hiệu quả thấp hoặc hiệu quả hoặc rất hiệu quả trở lên thì được phép lựa chọn một trong các chất chữa cháy này nhằm hạn chế việc hư hại các thiết bị, máy móc trong khu vực bảo vệ do chất chữa cháy gây ra. Không được sử dụng chất chữa cháy mà các chất này có thể gây ra phản ứng hóa học với chất có trong khu vực bảo vệ dẫn đến cháy, nổ.
+
+Bảng 2 QCVN 10:2025/BCA			-	Yêu cầu về khu vực chữa cháy		Việc xây dựng các không gian bao kín phải được bảo vệ bằng các hệ thống chữa cháy thể tích cacbon dioxit phải thực hiện sao cho cacbon dioxit không thể thoát ngay được. Các tường và cửa ra vào phải có khả năng chịu được tác động của lửa trong một thời gian đủ để cho phép sự xả cacbon dioxit được duy trì ở nồng độ thiết kế trong thời gian duy trì.	Mục 7 TCVN 6101:1996			-	Vị trí đặt bình khí		Kho chứa CO2 cùng với các van, các cơ cấu xả và các thiết bị khác cần bố trí trong một buồng không có nguy hiểm về cháy và gần khu vực chữa cháy.	Đ 20 TCVN 6101:1996			-	Van chọn vùng		- Trường hợp có nhiều vùng phải chữa cháy từ một bộ hoặc một hệ thống bình chứa CO2, phải lắp van lựa chọn cho mỗi vùng cần chữa cháy, các van lựa chọn vùng phải được điều khiển mở tự động.
 - Các van lựa chọn phải được lắp đặt sao cho có thể chống được cháy. Ở bất kỳ lúc nào cũng có thể kiểm tra được sự hoạt động chính xác của các van lựa chọn và các cơ cấu điều khiển.	Đ 22 TCVN 6101:1996			-	Van an toàn		Khi bố trí các van trong các hệ thống có thể tạo ra các đoạn đường ống kín, thì những đoạn đường ống này phải được trang bị các van an toàn áp suất	Đ 23.8 TCVN 6101:1996			-	Đường ống		- Hệ thống ống dẫn phải làm bằng các vật liệu thuộc dạng không cháy được, không bị biến dạng và hư hỏng khi chịu ứng suất.
 - Các ống có đường kính danh nghĩa nhỏ hơn 50 mm không được nối bằng hàn.
 - Không được dùng các đường ống bằng gang xám.

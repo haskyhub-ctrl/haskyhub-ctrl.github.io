@@ -1,0 +1,3216 @@
+[TCVN 13967:2024 Nhà ở riêng lẻ: yêu cầu chung về thiết kế]
+[Hiệu lực: 2024. Trạng thái: ĐANG DÙNG. Nguồn: bộ tài liệu thi cán bộ thẩm định PCCC 2026, bản quét đã nhận dạng chữ (OCR).]
+
+TOVN TIÊU CHUẲẢN QUÓC GIA
+
+Xuất bản lần 1
+
+NHÀ Ở RIÊNG LẺ - YÊU CÀU CHUNG VÈ THIẾT KÉ
+
+Single dwelling - General design requirements
+
+HÀ NỘI - 2024
+
+Mục lục
+
+Trang
+
+† ;PhạmVápđỤng- reeiiesessiiseesssSEsEOSSYOSIOHEEEAOSYSGTSSSUYHU]
+
+"NA TU 1L EHREEAEAOAARARAEOORAOREARAOAOEAERAEROAEARAAAAAAAA OA AI TH
+
+3 Thuật ngữ và In ROFẾ@1...........xo,es-sssesrnrnrsskssnttnsn nen rnssvevnsatm rEtVPOYO^ TS PEE-E„S tren rrtexettprrs
+
+5 Yêu cầu về quy hoạch và thiết kế kiến trúc................................GGnnG--neG--ne---nnstne sen ren... 18)
+
+§ “Yêucều Về tết cầu và Vật RệU.........--Osrsssessstrene se esttosrnseerEPstttisssnEtSEaS Soi: 19
+
+7 Yêu cầu về hệ thống kỹ thuật bên trong công trình.............................GGnnGG--Gee--nnestnees se... 2Ö
+
+8 Yêu cầu về công tác hoàn thiện................................GHnnnnnnnnnnnn nnn nen nnnnn nen nen se... 23
+
+9 “Yêu còu vềon toàn cháy con rssinrnmttttrtvttIEHIEIHEIE SE YsEGsU II ĐI
+
+Lời nói đầu
+
+TCVN 13987:2024 do Viện Kiến trúc Quốc gia (Bộ Xây dựng)
+
+chủ trì, phối hợp với Viện Khoa học công nghệ xây dựng (Bộ
+
+Xây dựng) và Cục Cảnh sát Phòng cháy, chữa cháy và cứu nạn
+
+cửu hộ (Bộ Công an) biên soạn, Bộ Xây dựng đề nghị, Ủy ban
+
+Tiêu chuẳn Đo lường Chất lượng thảm định, Bộ Khoa học và
+
+Công nghệ công bó.
+
+Lời giới thiệu
+
+Tiêu chuẩn này được xây dựng trên cơ sở tham khảo kinh nghiệm quốc tế và thực tiễn Việt Nam. Với
+
+tính đa dạng của loại hình nhà ở riêng lẻ, đặc biệt là các nhà ở riêng lẻ hiện hữu, nên trong tiêu
+
+chuẩn này chỉ đưa ra các yêu cầu kỹ thuật chung vè thiết kế. Trên cơ sở các yêu cầu này, các cá
+
+nhân, tổ chức có liên quan có thể lựa chọn các giải pháp khác nhau (với các loại vật liệu và kết cấu
+
+thích hợp) để thiết kế nhà ở riêng lẻ đáp ứng nhu cầu sử dụng trên nguyên tắc đảm bảo các yêu cầu
+
+an toàn về khả năng chịu lực và sử dụng, trong đó có yêu cầu về an toàn cháy, v.v.).
+
+Trong tiêu chuẩn này có đưa ra một số giải pháp và hình minh họa cho một số trường hợp đề việc áp
+
+dụng trong thực tế được thuận lợi hơn.
+
+s
+
+TIÊU CHUẢN QUỐC GIÁ TCVN 13967:2024
+
+`. 2 .Ã^ M ˆ Ầ A .Ẩ M
+
+Nhà ở riêng lẻ - Yêu câu chung về thiết kê
+
+Single dwelling - General design requirements
+
+1 Phạmvi áp dụng
+
+1.1 Tiêu chuẩn này đưa ra các yêu cầu kỹ thuật chung về thiết kế nhà ở riêng lẻ khi xây dựng mới.
+
+Khi cải tạo, tuỳ thuộc vào quy mô và tính chát cải tạo có thể tham khảo áp dụng tiêu chuẩn này.
+
+CHỦ THÍCH: Khi xây dựng mới hoặc cải tạo nhà ở riêng lẻ theo kiến trúc dân gian, truyền thống có thể tham khảo tiêu
+
+chuẩn này đề thiết kế.
+
+1.2 Ngoài các yêu cầu nêu trong tiêu chuẩn này, đối với nhà ở liền kè/nhà ở liên kế có thể tham
+
+khảo thêm các yêu cầu trong TCVN 9411.
+
+1.3 Điều 9 áp dụng cho: nhà ở riêng lẻ sử dụng cho mục đích để ở; nhà ở riêng lẻ nằm trong khu
+
+vực hiện hữu có kết hợp các mục đích sử dụng khác phù hợp với quy định pháp luật thỏa mãn đồng
+
+thời các điều kiện sau:
+
+— Có chiều cao dưới 7 tằng (hoặc có chiều cao PCCC dưới 25 m);
+
+— Có khối tích dưới 5 000 mŠ;
+
+- Có 1tằng hằm hoặc 1 tằng nửa/bán hầm.
+
+CHÚ THÍCH 1: Nhà ở riêng lẻ nằm trong khu vực hiện hữu được hiểu là nhà ở riêng lẻ không nằm trong dự án đầu tư xây
+
+dựng nhà ở, dự án đầu tư xây dựng khu đô thị.
+
+CHÚ THÍCH 2: Đi với các nhà (biệt thự du lịch; nhà thương mại liên kế; căn hộ lưu trú; văn phòng kết hợp lưu trú; các
+
+nhà đứng độc lập) có chiều cao dưới 7 tằng, chiều cao PCCC dưới 25 m, khói tích dưới 5 000 m° và có tối đa 1 tằng
+
+hằm (hoặc 1 tằng nửa/bán hằm và không bao gồm tằng hằm) có thể tham khảo các yêu cầu về an toàn cháy nêu tại Điều
+
+9 của tiêu chuẩn này.
+
+CHÚ THÍCH 3: Một số minh họa về cách xác định chiều cao PCCC của nhà xem Hình A.1 đến Hình A.8, Phụ lục A.
+
+2 Tài liệu viện dẫn
+
+Các tài liệu viện dẫn sau là cần thiết cho việc áp dụng tiêu chuẩn này, Đồi với các tài liệu viện dẫn ghi
+
+năm công bồ thì áp dụng phiên bản được nêu. Đồi với các tài liệu viện dẫn không ghi năm công bố
+
+thì áp dụng phiên bản mới nhất, bao gồm cả các sửa đổi, bỏ sung (nếu có).
+
+TCVN 2737, Tải trọng và tác động;
+
+TCVN 3890, Phòng cháy chữa cháy - Phương tiện phòng cháy và chữa cháy cho nhà và công trình -
+
+Trang bị, bô trí;
+
+TCVN 4474, Thoát nước bên trong - Tiêu chuẩn thiết kế;
+
+TCVN 4513, Cấp nước bên trong ~ Tiêu chuẩn thiết kế;
+
+TCVN 5573, Thiết kế kết cầu khói xây;
+
+TCVN 5574, Thiết kế kết cầu bê tông vả bê tông cốt thép;
+
+TCVN 5575, Thiết kế kết cầu thép;
+
+TCVN 5593, Công tác thi công tòa nhà - Sai số hình học cho phép;
+
+TCVN 5871, Hệ thống tài liệu thiết kế xây dựng - Hồ sơ thiết kế kiến trúc;
+
+TCVN 5887, Thông gió và điều hoà không khi - Yêu cầu thiết kế;
+
+TCVN 5738, Phòng cháy chữa cháy — Hệ thống báo cháy tự động — Yêu cầu kỹ thuật;
+
+TCVN 6398-20 (EN 81-20), Yêu cầu an toàn về cầu tạo và lắp đặt thang máy - Thang máy chở người
+
+và hàng - Phân 20: Thang máy chở người và thang máy chở người và hàng;
+
+TCVN 7447-5-52 (IEC 60364-5-52), Hệ thống lắp đặt điện hạ áp - Phần 5-52: Lựa chọn và lắp đặt
+
+thiết bị điện - Hệ thống đi dây;
+
+TCVN 7628-1 (ISO 4190-1), Lắp đặt thang máy ~ Phần 1: Thang máy loại I, II, II và VI;
+
+TCVN 7958, Bảo vệ công trình xây dựng - Phòng chống mi cho công trình xây dựng mới;
+
+TCVN 9255, Tiêu chuẩn tính năng trong lòa nhà — Định nghĩa, phương pháp tính các chỉ số diện tích
+
+và không gian;
+
+TCVN 9359, Nền nhà chống nồm - Thiết kế và thi công;
+
+TCVN 9362, Tiêu chuẩn thiết kế nền nhà và công trình;
+
+TCVN 9377, Công tác hoàn thiện trong xây dựng — Thi công và nghiệm thu;
+
+TCVN 9411, Nhà ở liên kế — Tiêu chuẩn thiết kế;
+
+TCVN 9888, Bảo vệ chóng sét;
+
+TCVN 10304, Móng cọc - Tiêu chuẩn thiết kế;
+
+TCVN 13928, Phòng cháy chữa cháy - Hệ thống chữa cháy đóng gói (package).
+
+3 Thuật ngữ và định nghĩa
+
+Trong tiêu chuẩn này, sử dụng các thuật ngữ và định nghĩa trong [6] và các thuật ngữ, định nghĩa sau:
+
+3.41
+
+Ban công (balcony)
+
+Phần sản có lồi ra, nằm ngoài tường bao của nhà, có lan can bao quanh (xem Hình A.29, Phụ lục A).
+
+3.2
+
+Chỉ giới đường đỏ (red boundary line)
+
+Đường ranh giới được xác định trên bản đồ quy hoạch và thực địa đề phân định ranh giới giữa phản
+
+đắt được xây dựng công trình và phản đắt được dành cho đường giao thông hoặc công trình hạ tằng
+
+kỹ thuật, không gian công cộng khác.
+
+{QCVN 01:2021/BXD, 1.4.22]
+
+3.3
+
+Chỉ giới xây dựng (construction boundary line)
+
+Đường giới hạn cho phép xây dựng công trình chính trên thửa đắt.
+
+[QCVN 01:2021/BXD, 1.4.23]
+
+3.4
+
+Chiều cao nhà (height of building)
+
+Chiều cao được tính từ cao độ mặt đắt đặt nhà tới điểm cao nhất của nhà (kể cả tằng tum hoặc mái
+
+dóc). Đồi với nhà đặt trên mặt đắt có các cao độ mặt đất khác nhau thì chiều cao tính từ cao độ mặt
+
+đắt thấp nhất.
+
+CHÚ THÍCH 1: Các thiết bị kỹ thuật trên mái: cột ắng ten, cột thu sét, thiết bị sử dụng năng lượng mặt trời, bễ nước kim loại,
+
+ống khói, ống thông hơi, chỉ tiết kiến trúc trang trí thì không tính vào chiều cao nhà.
+
+CHÚ THÍCH 2: Cao độ mặt đắt hoặc cao độ mặt đắt đặt nhà lắy theo quy hoạch được duyệt (tại các khu vực chưa có quy
+
+hoạch, lắy theo cao độ thiết kế hoặc cao độ mặt đắt hiện trạng với công trình hiện hữu).
+
+3.5
+
+Chiều cao phòng cháy chữa cháy (chiều cao PCCC) (height for fire prevention and fighting)
+
+Chiều cao PCCC của nhà (không tính tàng kỹ thuật trên cùng) được xác định như sau (xem Hình A.1
+
+và Hình A.2, Phụ lục A):
+
+- . Bằng khoảng cách lớn nhất tính từ mặt đường cho xe chữa cháy tiếp cận đền mép dưới của lỗ
+
+cửa (cửa sổ) mở trên tường ngoài của tằng trên cùng;
+
+- Bằng một nửa tổng khoảng cách tính từ mặt đường cho xe chữa cháy tiếp cận đến mặt sản và
+
+đến trần của tằng trên cùng - khi không có lỗ cửa (cửa sổ).
+
+CHÚ THÍCH 1: Khi mái nhà được khai thác sử dụng thì chiều cao PCCC của nhà được xác định bằng khoảng cách lớn nhắt
+
+từ mặt đường cho xe chữa cháy tiếp cận đến mép trên tường bao của mái.
+
+CHÚ THÍCH 2: Khi xác định chiều cao PCCC thì mái nhà không được tính là có khai thác sử dụng nều con người không có
+
+mặt thường xuyên trên mái.
+
+CHÚ THÍCH 3: Khi có kết cầu bao che hoặc lan can của ban công, lô gia hoặc cửa số thì chiều cao PCCC được tính bằng
+
+khoảng cách lớn nhắt từ mặt đường cho xe chữa cháy tiếp cận đến mép trên của kết cầu bao che hoặc lan can đó.
+
+CHÚ THÍCH 4: Trong trường hợp các mặt đường tiếp cận nhà có cao độ khác nhau thì nhà có thể có các chiều cao PCCC
+
+khác nhau tùy thuộc vào phương án thiết kế an toán cháy cụ thẻ.
+
+[QCVN 06:2022/BXD, 1.4.9 và Sửa đỏi 1:2023 QCVN 06:2022/BXD]
+
+3.6
+
+Chiều cao tằng (height of floor)
+
+Khoảng cách giữa hai sàn nhà, được tính từ mặt sàn tằng dưới đến mặt sản tằng trên kế tiếp.
+
+Chiều cao thông thủy của tầng (clear height of floor)
+
+Chiều cao từ mặt sản hoàn thiện đến mặt dưới của kết cầu dằm, sản hoặc trần đã hoản thiện hoặc
+
+hệ thống kỹ thuật của tằng.
+
+3.8
+
+Diện tích sàn của một tầng (floor area)
+
+Diện tích sàn xây dựng của tằng đó, gồm cả tường bao (hoặc phần tường chung thuộc về nhà) và
+
+diện tích mặt bằng của lô gia, ban công, cầu thang, giếng thang máy, hộp kỹ thuật, ng khói.
+
+CHÚ THÍCH 1: Diện tích sản của tằng hằm, tằng nửa/bán hằm: được đo từ mép ngoài tường xây của tằng hàm, tằng
+
+nửa/bán hằm bao gồm cả phần diện tích đường dốc nằm ngoài tường bao của tằng hằm, tằng nửa/bán hàm (nếu có).
+
+CHỦ THÍCH 2: Diện tích sản của tằng một/trệt: được đo từ mép ngoài tường xây (không bao gồm cổ móng) hoặc tính từ tim
+
+tường ngăn chia các nhà bao gồm cả diện tích ban công, lô gia (nều có) và phần sân, hiện (có mái che) thuộc phạm vi xây
+
+dựng của tằng mộttrệt, Diện tích sản từ tằng hai trở lên (bao gồm cả diện tích tằng tum, tằng áp mái): được đo từ mép
+
+ngoài của tường xây hoặc tính từ tìm tường ngăn chia các nhà bao gồm cả diện tích ban công, lô gia (nều có) và phần sân
+
+hoặc hiên có mái che (chỉ tính khi mái che liền tằng hoặc mái đua, sê nô, diễểm mái của tằng áp mái nằm liên ngay phía trên
+
+của phần sản, hiện đó).
+
+CHÚ THÍCH 3: Diện tích lỗ thang được tính vào diện tích sàn xây dựng, diện tích lỗ thông tằng không tính vào diện tích sản
+
+xây dựng.
+
+3.9
+
+Diện tích sử dụng (usable area)
+
+Diện tích sàn được tính theo kích thước thông thủy: bao gồm diện tích sản bao gồm tường/vách
+
+ngăn các phòng bên trong nhà, diện tích ban công, lô gia, Không bao gồm diện tích phần sản có
+
+cột/vách chịu lực, có hộp kỹ thuật nằm bên trong nhà và diện tích tường bao.
+
+3.10
+
+Đường thoát nạn (escape route)
+
+Đường di chuyển của người, dẫn trực tiếp ra ngoải hoặc dẫn vào vùng an toàn, tằng lánh nạn, gian
+
+lánh nạn và đáp ứng các yêu cầu thoát nạn an toàn của người khi có cháy.
+
+[QCVN 06:2022/BXD, 1.4.16]
+
+Hành lang (corridor)
+
+Không gian dành cho việc giao thông dẫn tới các phòng/không gian khác.
+
+3.12
+
+Hành lang ngoài/hành lang bên (external corridor)
+
+Không gian dành cho việc giao thông dẫn tới các phòng/không gian khác và có ít nhất một mặt tiếp
+
+xúc với không gian bên ngoài.
+
+3.113
+
+Hệ số sử dụng đắt (floor area ratio)
+
+Tỷ lệ của tổng diện tích sản của công trình bao gồm cả tằng hàm, tằng nửa/bán hằm (trừ các diện
+
+tích sản phục vụ cho hệ thống kỹ thuật, phòng cháy chữa cháy, gian lánh nạn và đỗ xe của công
+
+trình) trên tổng diện tích thửa đất/lô đắt.
+
+3.14
+
+Hệ thống báo cháy tự động (automatic fire alarm systerm)
+
+Hệ thồng tự động phát hiện và thông báo địa điểm cháy.
+
+3.15
+
+Khoảng lùi (setback space)
+
+Khoảng không gian giữa chỉ giới đường đỏ và chỉ giới xây dựng.
+
+[QCVN 01:2021/BXD, 1.4.24]
+
+3.16
+
+Kích thước thông thuỷ (clearance dimension)
+
+Kích thước được đo đền mép trong của lớp hoàn thiện tường/vách/đồ kinh/lan can sát mặt sàn (không
+
+bao gồm các chỉ tiết trang trí nội thát như ốp chân tường/gờ/phào, v.v.). Đối với ban công, lô gia thì tính
+
+toàn bộ diện tích sản, trường hợp có mép tưởng chung thì tính theo mép trong của tường chung.
+
+Lô đắt (plot of land)
+
+Bao gồm một hoặc nhiều thửa đắt liền kè có chức năng sử dụng đắt giắng nhau được giới hạn bởi
+
+các tuyến đường giao thông, các đường ranh giới tự nhiên hoặc nhân tạo khác.
+
+[QCVN 01:2021/BXD, 1.4.10]
+
+3.18
+
+Lô gia (Iloggia)
+
+Phần sàn có lồi ra, nằm phía trong tường bao của ngôi nhà (xem Hình A.29, Phụ lục A).
+
+3.19
+
+Lối ra ngoài trực tiếp (final exit)
+
+Cửa hoặc lồi đi qua các vùng an toản trong nhà (cùng tằng với lối ra ngoài trực tiếp) đề dẫn ra ngoài
+
+nhà (ra khỏi các tường bao che của nhà) đến khu vực thoáng mà con người có thể di tản an toàn.
+
+CHÚ THÍCH: Một số trường hợp có thể được coi là lồi đi qua các vùng an toàn trong nhà để dẫn ra ngoài nhà như sau:
+
+3) Đi qua khu vực không có tải trọng cháy hoặc có nguy cơ cháy thấp (ví dụ khu vực này có thể có quầy lễ tân, bản ghế gỗ,
+
+kim loại, quạt cây, hoặc các đồ vật tương tự với số lượng hạn chế), khu vực này được ngăn cách với các hành lang và các
+
+gian phòng tiếp giáp (nếu có) bằng vách ngăn cháy loại 1 có cửa đi với cơ cắu tự đóng và khe cửa được chèn kín, hoặc
+
+ngắn cách bằng giải pháp khác tương đương;
+
+b) Đi qua lỗi đi hở, có thông khí với ngoài trời (ví dụ hành lang bên, ram dốc), được ngắn cách với các gian phỏng, khu vực liền
+
+kề bởi bộ phận ngăn cháy làm bằng vật liệu không cháy với giới hạn chịu lửa ít nhất EI 30 đối với nhà có bậc chịu lửa I, và phải
+
+làm bằng vật liệu không cháy hoặc cháy yếu (Chí) với giới hạn chịu lửa ít nhất El 15 đồi với nhà có bậc chịu lửa II, II, IV;
+
+©) Đi qua các khu vực khác được coi là an toàn đối với con người.
+
+[Sửa đổi 01:2023 QCVN 06:2022/BXD, 1.4.33a]
+
+3.20
+
+Lối ra thoát nạn (exit)
+
+Lối hoặc cửa dẫn vào đường thoát nạn, dẫn ra ngoài trực tiếp hoặc dẫn vào vùng an toàn, tằng lánh
+
+nạn, gian lánh nạn.
+
+[{QCVN 06:2022/BXD, 1.4.33]
+
+3.21
+
+Mật độ xây dựng thuần (net building density)
+
+Tỷ lệ diện tích chiếm đắt của nhà/công trình kiến trúc chính trên diện tích thửa đất/lô đắt (không bao
+
+gồm diện tích chiếm đắt của các công trình ngoài trời như tiều cảnh trang trí, bê bơi, bãi (sân), nhà
+
+để xe, sân thể thao, nhà bảo vệ, lồi lên xuống, bộ phận thông gió tằng hằm có mái che và công trình
+
+hạ tằng kỹ thuật khác).
+
+CHÚ THÍCH 1: Các bộ phận công trình, chỉ tiết kiến trúc trang trí như: sẽ nô, ô văng, mái đua, mái đón, bậc lên xuống, bậu
+
+cửa, hành lang cầu đã tuân thủ các quy định về an toàn cháy, an toàn xây dựng không tính vào diện tích chiếm đắt nều bảo
+
+đảm không gây cản trở lưu thông của người, phương tiện và không kết hợp các công năng sử dụng khác.
+
+CHÚ THÍCH 2: Diện tích chiếm đắt được tính là toàn bộ diện tích của sàn tằng mộtttrệt (xem 3.8) bao gồm cả phản sân
+
+hoặc hiên (có mái che) của tằng một/trệt được chóng đỡ bởi cột hoặc tường chịu lực nhưng không bao gồm diện tích phản
+
+sân hoặc hiện được che bởi ban công. Trường hợp nhà có tường chung thì tính theo tim tường chung.
+
+3.22
+
+Nhà ở riêng lẻ (single dwelling)
+
+Nhà ở được xây dựng trên thửa đấtlô đắt ở riêng biệt thuộc quyền sử dụng của tỏ chức, cá nhân
+
+hoặc trên đắt thuê, đắt mượn của tổ chức, cá nhân, bao gòm nhà biệt thự, nhà ở liền kè và nhà ở
+
+độc lập, được xây dựng với mục đích đề ở hoặc mục đích sử dụng hỗn hợp.
+
+3.23
+
+Phòng ở (dwelling room)
+
+Các phòng trong nhà được sử dụng một hoặc nhiều chức năng. Phòng ở gồm phòng ngủ, phòng
+
+sinh hoạt chung, phòng tiếp khách, phòng làm việc/học tập, v.v.
+
+3.24
+
+Số tằng nhà (number of storeys)
+
+Tổng của tắt cả các tằng trên mặt đắt và tằng nửa/bán hàm nhưng không bao gồm tầng áp mái.
+
+CHÚ THÍCH 1: Tằng tum không tính vào số tằng nhà khi sản mái tum có diện tích không vượt quá 30% diện tích của sản
+
+mái (xem Hình A.27, Phụ lục A).
+
+CHÚ THÍCH 2: Tầng lửng không tính vào số tằng nhà khi có diện tích sản không vượt quá 65% diện tích sản xây dựng của
+
+tằng có công nắng sử dụng chính ngay bên dưới, khi nhà có nhiều hơn một tàng lửng thì chỉ có một tằng lửng không tính
+
+vào số tằng nhà.
+
+CHÚ THÍCH 3: Đồi với nhà có các cao độ mặt đắt khác nhau thì số tằng nhà tính theo cao độ mặt đắt tháp nhất.
+
+CHÚ THÍCH 4: Cách xác định số tằng nhà trong một số trường hợp xem Hình A.20 đến Hình A.23, Phụ lục A.
+
+3.225
+
+Tài liệu chuẩn (normative document)
+
+Bao gồm các tài liệu như các tiêu chuản (standard), quy định kỹ thuật (technical specifications),
+
+quy phạm thực hành (code of practice) và quy chuẩn kỹ thuật (technical regulation) và hướng dẫn
+
+kỹ thuật (guidelines, handbook) trong và ngoài nước được các cơ quan, tổ chức có thẳm quyền
+
+ban hành.
+
+[QCVN 06:2022/BXD,1.4.53 và Sửa đổi 1:2023 QCVN 06:2022/BXD]
+
+3.26
+
+Tầng áp mái (attic)
+
+Tầng nằm bên trong không gian của mái dốc mà toàn bộ hoặc một phần mặt đứng của nó được tạo
+
+bởi bè mặt mái nghiêng hoặc mái gắp, trong đó tường đứng (nếu có) không cao quá mặt sàn 1,5m.
+
+3.27
+
+Tằng hằm (basement)
+
+Tầng mà hơn một nửa chiều cao của nó nằm dưới cao độ mặt đắt đặt công trình.
+
+CHÚ THÍCH: Khi xem xét các yêu cầu về an toàn cháy đỏi với nhà có cao độ mặt đắt xung quanh khác nhau, không xác định
+
+tằng hằm dưới cao độ mặt đắt là tàng hằm néu đường thoát nạn từ tằng đó không ơi chuyển theo hướng từ dưới lên trên.
+
+3.28
+
+Tầng lửng (mezzanine)
+
+Tầng trung gian giữa các tằng mà sàn của nó (sàn tằng lửng) nằm giữa sàn của hai tằng có công
+
+năng sử dụng chính hoặc nằm giữa mái công trình và sản tằng có công năng sử dụng chính ngay
+
+bên dưới; tằng lửng có diện tích sàn nhỏ hơn diện tích sản xây dựng tằng có công năng sử dụng
+
+chính ngay bên dưới.
+
+3.29
+
+Tằng nửa/bán hầm (semi-basement)
+
+Tầng mà một nửa chiều cao của nó nằm trên hoặc bằng cao độ mặt đắt đặt công trình.
+
+3.30
+
+Tầng trên mặt đắt (upper. floor)
+
+Tầng mà cao độ mặt sản của nó cao hơn hoặc bằng cao độ mặt đắt đặt công trình.
+
+3.31
+
+Tầng tum (rooftop access storey)
+
+Tầng trên cùng của nhà sử dụng cho các mục đích bao che lông cầu thang, giếng thang máy, các
+
+thiết bị công trình (nếu có) và phục vụ mục đích lên sàn mái và cứu nạn cứu hộ.
+
+3.32
+
+Thiết bị báo cháy cục bộ (local fire alarms device)
+
+Thiết bị tự động phát hiện và cảnh báo cháy bằng âm thanh.
+
+CHÚ THÍCH: Các thiết bị báo cháy cực bộ khi được lắp đặt trong cùng một nhà và công trình phải được liên kết với nhau,
+
+bảo đảm tắt cả cùng phát tín hiệu báo cháy khi có một thiết bị kích hoạt.
+
+[TCVN 3890:2023, 3.5]
+
+3.33
+
+Thửa đắt (parcel of land)
+
+Phần diện tích đắt được giới hạn bởi ranh giới xác định trên thực địa hoặc được mô tả trên hồ sơ đo
+
+vẽ địa chính hoặc giầy chứng nhận quyền sử dụng đất.
+
+3.34
+
+Tổng diện tích sàn (gross floor area)
+
+Tổng của diện tích sản tắt cả các tằng, bao gồm cả các tàng hàm, tằng nửa/bán hầm, tằng lửng, tàng
+
+kỹ thuật, tằng áp mái và tằng tum, tính cả diện tích tường bao.
+
+CHÚ THÍCH: Tằng kỹ thuật sử dụng để bồ trí các thiết bị kỹ thuật của nhà.
+
+3.35
+
+Vùng an toàn (safety zone)
+
+Vùng mà trong đó con người được bảo vệ khỏi tác động từ các yếu tố nguy hiểm của đám cháy,
+
+hoặc trong đó không có các yếu tố nguy hiểm của đám cháy, hoặc các yếu tố nguy hiểm của đám
+
+cháy không vượt quá các giá trị cho phép.
+
+4 Yêu cầu chung
+
+4.1 Nhà ở riêng lẻ phải phù hợp với quy hoạch xây dựng, quy hoạch đô thị được cấp có thẳm
+
+quyền phê duyệt. Các giải pháp kiến trúc, kỹ thuật bảo đảm mỹ quan, tuân thủ thiết kế đô thị, quy chề
+
+quản lý kiến trúc được duyệt hoặc quy chuẩn địa phương về quy hoạch, kiến trúc (nếu có).
+
+4.2 Trường hợp nhà ở riêng lẻ có kết hợp các mục đích sử dụng khác cần tuân thủ các quy định
+
+pháp luật liên quan các mục đích sử dụng đó và cằn được thiết kế phù hợp với các tiêu chuản hoặc
+
+các tài liệu kỹ thuật được lựa chọn áp dụng.
+
+4.3 Không xây dựng nhà ở riêng lẻ trên các vùng có nguy cơ sạt lở, trượt đắt, vùng có lũ quét,
+
+thường xuyên ngập lụt khi không có giải pháp kỹ thuật bảo đảm an toàn trong quá trình thi công xây
+
+dựng, sử dụng và an toản cho công trình lân cận.
+
+4.4 Nhà ở riêng lẻ cần đáp ứng các yêu cầu sau:
+
+- An toàn sinh mạng và sức khỏe;
+
+— An toàn chịu lực và bảo đảm thời hạn sử dụng theo thiết kế;
+
+- . Bảo đảm kết nối hệ thống hạ tằng kỹ thuật khu vực;
+
+— Phù hợp với phân cấp công trình theo [4].
+
+4.5 Trường hợp nhà ở riêng lẻ có người cao tuổi, người khuyết tật khuyến khích tham khảo các
+
+quy định về xây dựng công trình đảm bảo tiếp cận sử dụng nêu trong [8].
+
+4.6 Giải pháp kiến trúc cằn phù hợp với điều kiện tự nhiên của khu vực, tận dụng tối đa thông gió,
+
+chiều sáng tự nhiên, bèn vững và thân thiện với môi trường. Khuyến khích áp dụng các giải pháp
+
+kiến trúc, kỹ thuật nhằm sử dụng năng lượng, nước tiết kiệm, hiệu quả.
+
+4.7: Phương tiện quảng cáo ngoài trời (nếu có) phải được lắp đặt phù hợp với [11].
+
+4.8 Hồ sơ thiết kế kiến trúc nhà ở riêng lẻ phù hợp với các yêu cầu nêu trong TCVN 5871.
+
+5 Yêu cầu về quy hoạch và thiết kế kiến trúc
+
+5.1 Nhà ở riêng lẻ phải tuân thủ chỉ giới xây dựng, chỉ giới đường đỏ, mật độ xây dựng, hệ số sử
+
+dụng đắt, số tằng cao và các yêu câu khác tại quy hoạch chỉ tiết, thiết kế đô thị, quy chế quản lý kiền
+
+trúc được phê duyệt, quy chuẩn kỹ thuật địa phương (nếu có) và phù hợp với yêu cầu nêu tại 5.5.
+
+5.2 Diện tích thửa đắt xây dựng nhà ở riêng lẻ trong khu vực phát triển mới (nằm trong dự án đầu
+
+tư xây dựng nhà ở, dự án đầu tư xây dựng khu đô thị) không nhỏ hơn 50 m? và chiều rộng mặt tiền
+
+của nhà không nhỏ hơn:
+
+5 m- khi tiếp giáp với đường có chiều rộng không nhỏ hơn 19 m (giới hạn bởi các chỉ giới
+
+đường đỏ);
+
+4 m~- khi tiếp giáp với đường có chiều rộng nhỏ hơn 19m (giới hạn bởi các chỉ giới đường đỏ).
+
+5.3 Khoảng lùi tối thiểu của nhà ở riêng lẻ:
+
+5.3.1 Trong khu vực phát triển mới: khoảng lùi của các công trình tiếp giáp với đường giao thông
+
+được quy định tại đỏ án quy hoạch chỉ tiết và thiết kế đô thị, đồng thời cần tuân thủ yêu cầu về
+
+khoảng lùi của công trình nêu trong [1].
+
+5.3.2. Trong khu vực hiện hữu: khoảng lùi được xác định trong quy hoạch chỉ tiết, đỗ án cải tạo
+
+chỉnh trang (nếu có), thiết kế đô thị, quy chế quản lý kiền trúc được duyệt, phù hợp với các quy định
+
+về quản lý xây dựng của khu vực nhưng cần bảo đảm sự thống nhất trong tổ chức không gian trên
+
+tuyển phó hoặc một đoạn phó.
+
+5.4 Khoảng cách giữa các dãy nhà ở riêng lẻ liền kè được xác định trong đồ án quy hoạch chỉ tiết
+
+hoặc thiết kế đô thị, phù hợp yêu cầu về khoảng cách giữa các công trình nêu trong [1].
+
+5.5 Mật độ xây dựng thuần tối đa của thửa đátUlô đắt xây dựng nhà ở riêng lẻ được quy định tại đỏ
+
+án quy hoạch chỉ tiết và thiết kề đô thị. Trong khu vực hiện hữu, các thửa đátlô đắt xây dựng nhà ở
+
+riêng lẻ có diện tích không lớn hơn 100 m° có thể được xây dựng đền mật độ tối đa là 100 % nhưng
+
+cần bảo đảm chiều cao nhả không lớn hơn 25 m đồng thời phù hợp yêu cầu nêu tại 5.3.2.
+
+5.6 Các phòng/không gian chức năng cơ bản trong nhà ở riêng lẻ gồm:
+
+— Phòng ở: phòng ngủ, phòng sinh hoạt chung, phòng tiếp khách, phòng làm việc/học tập, v.v.
+
+- _ Phòng/không gian khác: phòng bếp, ăn, phòng vệ sinh, chỗ để xe, phòng giặt là, kho, ban công,
+
+lô gia, v.v.;
+
+— _ Không gian giao thông: sảnh, hành lang, cầu thang bộ, thang máy (nếu có), v.v.
+
+5.7 Yêu cầu thiết kế các phòng/không gian chức năng trong nhà ở riêng lẻ:
+
+— Hợp lý về công năng và mục đích sử dụng, kiến trúc hài hoà trong và ngoài nhà;
+
+— Thích ứng với các nhu cầu sử dụng khác nhau, ưu tiên bồ cục mở.
+
+5.8 Các giải pháp thiết kế cần bảo đảm thông gió, chiều sáng tự nhiên tối đa cho các phòng ở,
+
+phòng bếp, ăn; khuyến khích thông gió, chiều sáng tự nhiên cho các phòng/không gian khác.
+
+5.9 Chiều cao thông thủy các phòng/không gian chức năng không nhỏ hơn:
+
+2,6m - đối với các phòng/không gian ở, phòng ăn;
+
+2.3m - đối với phòng bếp, khu vệ sinh, phòng giặt là, kho;
+
+2,0 m- đối với tằng hằm, tằng nửa/bán hằm.
+
+5.10 Diện tích sử dụng tối thiểu một số phòng/không gian chức năng cơ bản được nêu trong Bảng 1.
+
+Bảng 1 - Diện tích sử dụng tối thiểu một số phòng/không gian chức năng cơ bản
+
+T7 NỜNN NHI HN
+
+5.11 Cầu thang bộ trong nhà ở riêng lẻ cằn bảo đảm các yêu cầu sau:
+
+— Chiều rộng của bản thang không nhỏ hơn 700 mm. Chiều rộng thông thủy của chiếu nghỉ, chiều
+
+tới cầu thang không được nhỏ hơn chiều rộng thông thủy của về thang;
+
+CHÚ THÍCH: Chiều rộng tính toán thoát nạn của bản thang xem Hình A.24 và Hình A.25, Phụ lục A.
+
+— _ Chiều cao thông thuỷ cầu thang bộ không nhỏ hơn 2 000 mm (xem Hình A.9, Phụ lục A);
+
+~ _ Chiều rộng mặt bậc thang không nhỏ hơn 250 mm, chiều cao bậc thang không nhỏ hơn 50 mm
+
+và không lớn hơn 220 mm (khuyến khích bậc thang có chiều cao không lớn hơn 190 mm), đồng
+
+thời có tổng của hai lằn chiều cao cộng với chiều rộng bậc thang không nhỏ hơn 550 mm và
+
+không lớn hơn 700 mm (xem Hình A.9, Phụ lục A);
+
+- Trường hợp sử dụng cầu thang có bậc hở thì hình chiều đứng của mặt bậc phải trùm lên nhau ít
+
+nhất 16 mm, chiều cao thông thuỷ khe hở giữa hai bậc thang liền nhau không lớn hơn 100 mm;
+
+- _ Cầu thang bộ cần có tay vịn ở hai bên về thang, trường hợp một bên về thang là tưởng thì có thể
+
+không có tay vịn phía tường;
+
+- Vế thang, chiều tới, chiều nghỉ phải có lan can bảo vệ ở các cạnh hở. Lan can cần có chiều cao
+
+không nhỏ hơn 900 mm, các khe hở của lan can có chiều rộng thông thủy không lớn hơn 100
+
+mm (xem Hình A.26, Phụ lục A).
+
+5.12 Các bộ phận, chỉ tiết kiến trúc của các nhà tiếp giáp với tuyến đường (ban công, õ văng, mái
+
+đua, v.v.) cần tuân thủ quy hoạch chỉ tiết, thiết kế đô thị, quy chế quản lý kiền trúc được duyệt và các
+
+quy định về quản lý xây dựng của khu vực.
+
+5.13 Sàn, nèn nhà:
+
+- _ Cần có sự thống nhất về cao độ sàn, nền nhà tằng một(trệt so với cao độ vỉa hè cho các nhà trên
+
+cùng tuyến phố:
+
+- . Bè mặt không trơn trượt, không có kẽ hở, ít bị mài mòn, dễ làm vệ sinh và không dùng vật liệu
+
+hoặc chắt phụ gia có tính độc hại để làm vật liệu lát;
+
+- _ Thiết kế, thi công nền nhà cần đáp ứng yêu cầu chồng hiện tượng nồm, ẳm phù hợp với yêu cầu
+
+trong nêu TCVN 9359 và phòng chồng mồi phù hợp với yêu cầu nêu trong TCVN 7958;
+
+- _ Nền nhà và phần tường tiếp xúc với đắt nền cằn ngăn được nước và hơi ảm từ dưới đắt thắm
+
+lên phía trên của nên và tường;
+
+- Sản, nền các khu vực dùng nước không được đọng nước, độ dốc không nhỏ hơn 2 % về rãnh
+
+thoát, phễu thu.
+
+5.14 Cửađi cửa số, cửa thông gió, cửa lấy sáng trên tường bao, vách kính trong và ngoài nhà:
+
+— Cần tuân thủ quy hoạch chỉ tiết, thiết kế đô thị và quy chế quản lý kiến trúc được duyệt của
+
+khu vực;
+
+- Bảo đảm nguyên tắc: không làm ảnh hưởng đến hoạt động (sinh hoạt, làm việc, nghỉ ngơi, v.v.)
+
+của người sống trong nhà liền kề; các cửa mở không vi phạm ranh giới đắt của nhà hoặc công
+
+trình lân cận;
+
+— . Cần có giải pháp thiết kế bảo đảm an toàn trong sử dụng, chống va đập và rơi ngã. Khi sử dụng
+
+các giải pháp bảo đảm an ninh cho nhà cần lưu ý để không gây cản trở cho việc thoát nạn khi
+
+xảy ra cháy hoặc tình huống khẳn cắp khác;
+
+- _ Chiều cao thông thủy không nhỏ hơn 2 m từ mặt nền/sản nhà tới bộ phận nh ra quá 0,1 m vào
+
+không gian đi lại của người sử dụng trong và xung quanh nhà (xem Hình A.10, Phụ lục A);
+
+— _ Chiều rộng và chiều cao thông thủy tối thiểu cằn phù hợp với yêu cầu sử dụng và các quy định
+
+về an toàn sinh mạng và sức khỏe [5], an toàn cháy [6], bảo đảm tiếp cận sử dụng [8] (néu có);
+
+- _ Các cửa, vách lớn bằng kinh trong suốt đặt tại những nơi có người thường xuyên sử dụng cản
+
+gắn các dầu hiệu nhận biết.
+
+5.15 Hàng rào, cổng, trụ công:
+
+- Không được phép xây dựng vượt ngoài ranh giới thửa đắt (kể cả móng) và có giải pháp nên
+
+móng và kết cầu bảo đảm an toàn phù hợp với tiêu chuẩn hiện hành có liên quan;
+
+— _ Chiều cao phụ thuộc vào thiết kế đô thị, quy chế quản lý kiến trúc từng khu vực;
+
+- Cánh cổng; mép ngoài trụ cỏng không được phép vi phạm vào chỉ giới đường đỏ, ranh giới
+
+ngõ/hẻm;
+
+— Khuyến khích xây dựng hàng rào thoáng, kết hợp trồng cây xanh tạo cảnh quan đô thị.
+
+5.16 Giới hạn ngoài cùng của các kết cầu ngằm không được vượt quá ranh giới thửa đắt, chỉ giới
+
+đường đỏ.
+
+5.17 Tằng hằm, tằng nửa/bán hầm:
+
+~ . Phải phù hợp với quy hoạch không gian ngằm của khu vực (nêu có) hoặc định hướng quy hoạch
+
+ngằm trong tương lai (nếu có);
+
+— Không nên xây dựng nhà ở riêng lẻ có nhiều hơn một tằng hằm. Chiều cao thông thủy của tằng
+
+hầm, tằng nửa/bán hằm theo yêu cầu nêu tại 5.9.
+
+6 Yêu cầu về kết cầu và vật liệu
+
+6.1 Kết cấu nhà cần được tính toán chịu các tải trọng và tổ hợp tải trọng bắt lợi nhất tác động lên
+
+nó theo các chỉ dẫn nêu trong TCVN 2737:2023 với các số liệu điều kiện tự nhiên dùng trong xây
+
+dựng theo [3].
+
+6.2 Kết cấu nhà cằn được thiết kế phù hợp với các yêu cầu nêu trong các tiêu chuẩn về thiết kế kết
+
+cấu xây dựng, nền và móng tùy theo loại vật liệu sử dụng, như TCVN 5573, TCVN 5574, TCVN
+
+5575, TCVN 9362, TCVN 10304 và các tiêu chuẩn khác có liên quan.
+
+6.3 Ưu tiên sử dụng vật liệu bảo đảm cách âm, cách nhiệt và độ bền lâu dưới tác động của khí
+
+hậu, xâm thực của môi trường xung quanh, các tác nhân sinh học và các tác động có hại khác.
+
+6.4 Vật liệu xây dựng cằn phù hợp với điều kiện tự nhiên, khí hậu của khu vực. Khuyến khích sử
+
+dụng vật liệu tái chế, tái sử dụng và thân thiện với môi trường cũng như các vật liệu địa phương
+
+nhằm giảm giá thành xây dựng.
+
+6.5 Vật liệu xây dựng cho mặt ngoài nhà phải phù hợp với phong cách kiền trúc và hài hòa với kiến
+
+trúc và cảnh quan của khu vực. Ưu tiên sử dụng các loại vật liệu có độ bền cao, ít bám bụi. Hạn chế
+
+sử dụng các loại vật liệu phản quang cho các mặt ngoài nhà tiếp giáp với đường giao thông.
+
+7 Yêu cầu về hệ thống kỹ thuật bên trong công trình
+
+71 Cấpnước
+
+7.1.1 Hệ thống cắp nước cằn được thiết kể đáp ứng nhu cầu sử dụng phù hợp với các yêu cầu nêu
+
+trong TCVN 4513, bảo đảm chất lượng nước sạch sử dụng cho mục đích sinh hoạt [2].
+
+7.1.2: Mạng lưới đường ống cấp nước chính bên trong nhà nên được đặt trong hộp kỹ thuật, hạn
+
+chế bố trí chung với các đường ống thông gió, thông hơi và cấp điện.
+
+7.1.3 Đồi với các nhà có hệ thống cấp nước chữa cháy thì phải tính toán lưu lượng, cột áp bảo đảm
+
+cho hệ thống hoạt động phù hợp yêu cầu về an toàn cháy [6].
+
+7.2 Thoát nước
+
+7.2.1 Hệ thống thoát nước bên trong nhà cần được thiết kế phù hợp với các yêu cầu nêu trong
+
+TCVN 4474.
+
+7.2.2 Không xả nước thải trực tiếp lên mặt hè, đường phố mà phải theo xả vào hệ thống thoát nước
+
+nước thải chung.
+
+7.23 Không xả nước mưa và nước thải sang nhà liền kề.
+
+7.2.4 Hệ thống thoát nước của nhà cần được nói đúng công năng với hệ thống thoát nước chung
+
+của khu dân cư hoặc mạng lưới thoát nước của khu vực.
+
+7.25 Cần bó trí bẻ tự hoại để xử lý nước thải của khu vệ sinh trước khi thải vào vào hệ thống
+
+thoát nước chung của đô thị, khu dân cư. Bề tự hoại cằn bảo đảm độ kin đề không rò rỉ nước thải ra
+
+môi trường xung quanh.
+
+7.2.6. Khuyến khích bề trí hệ thống thu gom, tái sử dụng nước mưa cho các mục đích như tưới cây,
+
+rửa xe, rửa sân, rửa đường.
+
+73 Cấp điện
+
+7.3.1 Hệ thống đường dây dẫn điện cằn được thiết kế độc lập với các hệ thống kỹ thuật khác, dễ
+
+dàng thay thế, sửa chữa khi cần thiết, phù hợp với các yêu cầu nêu trong TCVN 7447-5-52 (IEC
+
+60364-5-52) và các yêu cầu về hệ thống điện [9].
+
+7.3.2 Hệ thống điện cằn được bảo vệ bằng các thiết bị bảo vệ mạch điện.
+
+7.3.3 Tủ phân phối điện cần được:
+
+- Bốtri tại vị trí phù hợp với đường cắp điện vào nhà, bảo đảm mỹ quan, an toàn và thuận tiện khi
+
+cằn sửa chữa và thay thế;
+
+- Làm bằng vật liệu phù hợp với tiêu chuẳn lựa chọn áp dụng, có kích cỡ phù hợp với các loại
+
+mạch điện.
+
+7.3.4 Dây (cáp) điện trong nhà nên đi ngằm trong tường, sàn. Trường hợp dây điện đi nổi trên bè mặt
+
+tường, trần nhà nên được đặt trong ống gen, máng cáp. Hạn chế bồ trí dây (cáp) điện tiếp giáp với thiết
+
+bị, vật dụng dễ cháy, nổ. Trường hợp bó trí tiếp giáp phải ngăn cách bằng vật liệu không cháy.
+
+7.3.5 Các dây (cáp) cấp điện cho các thiết bị điện sử dụng cho mục đích khác càn được:
+
+— . Tách biệt với các dây (cáp) cấp điện cho các thiết bị điện sử dụng cho mục đích để ở;
+
+— . Bảo đảm đúng công suất tiêu thụ của các thiết bị điện;
+
+- . Bảo vệ bằng các thiết bị đóng ngắt riêng cho từng dây (cáp), từng tàng và từng thiết bị tiêu thụ
+
+điện có công suất lớn (ví dụ như bình đun nước nóng, máy điều hòa không khí, bép từ, v.v.).
+
+7.4 Chiếu sáng
+
+7.4.1 Cần tận dụng tối đa chiều sáng tự nhiên, khuyến khích sử dụng thiết bị và áp dụng các biện
+
+pháp nhằm tiết kiệm năng lượng.
+
+7.4.2 Khi thiếu hoặc không có chiều sáng tự nhiên thì chiều sáng nhân tạo cần bảo đảm mọi hoạt
+
+động bình thưởng của người sử dụng.
+
+7.4.3 Khuyến khích bó trí chiều sáng khẳn cấp trên đường thoát nạn [5).
+
+7.4.4 Độ rọi nhỏ nhất tại các khu vực cần phù hợp với quy định nêu trong [9].
+
+7.4.5 Khuyến khích sử dụng hệ thống chiều sáng thông minh.
+
+7.5 Chống sét
+
+Hệ thống chồng sét phù hợp với các yêu cầu nêu trong TCVN 9888.
+
+7.6 Chống ồn
+
+Nhà ở riêng lẻ có kết hợp các mục đích sử dụng khác cần phải bảo đảm các quy định về tiếng ồn nêu
+
+trong [12].
+
+7.7 Thông gió và điều hoà không khí
+
+7.7.1 Hệ thống thông gió và điều hoà không khí cằn phù hợp với các yêu cầu nêu trong TCVN 5887.
+
+7.7.2 Cần bố trí thông gió hút thải cục bộ cho các phòng/không gian phát sinh chắt ô nhiễm như
+
+bếp, phòng tắm, phòng vệ sinh, giặt là.
+
+7.7.3 Sử dụng các giải pháp về công nghệ, kiến trúc, kết cầu hợp lý nhằm bảo đảm yêu câu vệ sinh
+
+môi trường và sử dụng năng lượng tiết kiệm, hiệu quả.
+
+7.7.4 Càn bề trị sẵn các vị trí lắp đặt hệ thống điều hoà, các ồng thoát khi và thoát nước ngưng để
+
+không ảnh hưởng đến kiến trúc của công trình và thửa đắt liền kẻ, bảo đảm an toàn, mỹ quan và vệ
+
+sinh môi trường.
+
+7.8 Thông tin liên lạc, viễn thông
+
+7.8.1 Hệ thống thông tin liên lạc, viễn thông cản được thiết kế đồng bộ trong và ngoài nhà, bảo đảm
+
+an toàn, thuận tiện cho việc sử dụng, đầu nồi với hệ thống của nhà cung cấp, đồng thời dễ dàng thay
+
+thế, sửa chữa, đáp ứng nhu cầu sử dụng.
+
+7.8.2 Nên bố trí sẵn ống cáp dẫn đặt bên trong tường và bảo đảm yêu cầu kỹ thuật, không ảnh
+
+hưởng tới các hệ thống kỹ thuật khác.
+
+7.8.3 Trường hợp sử dụng chảo thu, phát sóng cần lắp đặt tại vị trí theo quy định về quản lý đô thị
+
+của khu vực, bảo đảm an toàn và mỹ quan.
+
+7.8.4 Có thể lắp đặt hệ thống camera an ninh phù hợp với nhu cầu và đặc điểm của nhà.
+
+7.9 Thang máy
+
+7.9.1 Tùy thuộc nhu cầu sử dụng, việc thiết kế, lắp đặt và lựa chọn công suất, tải trọng, vận tốc của
+
+thang máy cần phù hợp với các yêu cầu nêu trong TCVN 6398-20 (EN 81-20), TCVN 7628-1 (ISO
+
+4190-1) và các yêu câu kỹ thuật khác có liên quan.
+
+7.9.2 Thang máy cần bảo đảm tải trọng định mức không nhỏ hơn 200 kg/m? của sản cabin và chịu
+
+được tối thiểu là 115 kg. Vận tốc định mức của cabin thang máy không vượt quá 0,3 m/s.
+
+7.9.3 Không được bồ trí bẻ nước trực tiếp trên giếng thang máy và không cho các đường óng cấp
+
+nước, cắp nhiệt, cắp khí đót đi qua giềng thang máy.
+
+7.9.4 Thang máy phải có thiết bị bảo vệ chống kẹt cửa, bộ cứu hộ tự động và hệ thống điện thoại
+
+nội bộ từ cabin ra ngoài. Thang máy phải bảo đảm chỉ được vận hành khi tất cả các cửa đều đóng và
+
+cần cài đặt chế độ tự chuyển động về tằng một/trệt hoặc tằng phía trên, phía dưới một tằng và phải
+
+tự mở cửa cho người bên trong thoát ra ngoài khi mắt điện hoặc sự có kỹ thuật.
+
+7.9.5 Thang máy cằn bảo đảm an toàn theo các yêu cầu về thang máy và hướng dẫn của nhà
+
+sản xuất.
+
+8 Yêu cầu về công tác hoàn thiện
+
+8.1 Công tác hoàn thiện cằn phù hợp với các yêu cầu nêu trong TCVN 9377.
+
+8.2 Thiết kế mặt ngoài nhà cằn hài hòa giữa các yếu tố như vật liệu, màu sắc, chỉ tiết trang trí, hòa
+
+nhập với cảnh quan khu vực, phù hợp với công năng sử dụng.
+
+8.3 Công tác hoàn thiện ngoại thất, sử dụng vật liệu, màu sắc cằn phải tuân thủ quy hoạch chỉ tiết,
+
+thiết kế đô thị, quy chế quản lý kiến trúc tại khu vực đó.
+
+8.4 Khi lắp đặt, sử dụng bồn nước đặt trên mái cần có giải pháp kết cầu bảo đảm an toàn và che
+
+chắn bảo đảm mỹ quan.
+
+CHÚ THÍCH: Một số minh họa về giải pháp che chắn bồn nước trên mái xem Hình A.30, Phụ lục A.
+
+8.5 Các chỉ tiết kiến trúc của mặt đứng như: cửa sỏ, cửa đi, lan can, ban công, lô gia, gờ phào,
+
+chỉ tiết mái v.v. cằn bảo đảm an toàn cho người sử dụng, không ảnh hưởng đền hoạt động của thiết
+
+bị và phương tiện bảo trì ngoài nhà.
+
+9 Yêu cầu về an toàn cháy
+
+9.1 Yêu cầu chung
+
+9.1.1 Các thuật ngữ, khái niệm, phân loại chung về an toàn cháy được định nghĩa theo [6], ngoại
+
+trừ các trường hợp được nêu riêng trong Điều 9 này.
+
+9.1.2. Khi xem xét áp dụng các yêu cầu về an toàn cháy, số tằng (chiều cao PCCC) của nhà được
+
+tính đến tằng cao nhất có người sử dụng với điều kiện: các tằng phía trên đó không có người sử
+
+dụng và không tập kết hoặc lưu giữ chất, vật liệu cháy được; đồng thời có giải pháp ngăn cháy với
+
+khu vực có người sử dụng và vẫn bảo đảm lồi đi theo thang bộ lên mái qua các tảng này.
+
+9.1.3 Các chỉ tiêu diện tích và không gian của nhà được xác định theo nguyên tắc nêu trong TCVN
+
+9255. Các sai số (nếu có) cằn bảo đảm phù hợp với TCVN 5593 và [6].
+
+9.1.4 Khi xem xét các yêu cầu về an toàn cháy có liên quan đền hành lang bên, nêu tại Điều 9, mặt
+
+tiếp xúc với không gian bên ngoài cằn bảo đảm điều kiện thông gió sau:
+
+- _ Khi hành lang bên được ngăn cách với các gian phòng liền kè bằng các bộ phận ngăn cháy phù
+
+hợp với quy định (8] thì tổng diện tích các lỗ mở (hoặc cửa sỏ có thẻ mở được bằng thủ công) trên
+
+mặt tiếp xúc với không gian bên ngoài không nên nhỏ hơn 15 % diện tích sản củahảnh lang bên;
+
+- Khi hành lang bên không được ngăn cách với các gian phòng liền kè bằng các bộ phận ngăn
+
+cháy thì tổng diện tích các lỗ mở (hoặc cửa sẻ có thẻ mở được bằng thủ công) trên mặt tiếp xúc
+
+với không gian bên ngoài không nên nhỏ hơn 25 % diện tích sàn của hành lang bên.
+
+9.1.5 Các yêu cầu nêu từ 9.1.6 đến 9.1.10 cần áp dụng khi được tham chiều trong các yêu cầu cụ
+
+thể. Để đạt được mục đích an toàn cháy cho nhà, tùy theo quy mô và mục đích sử dụng, cần áp dụng
+
+các yêu cầu cụ thể nêu tại 9.2 và 9.3 hoặc áp dụng các yêu cầu phù hợp với tài liệu chuẩn được lựa
+
+chọn áp dụng hoặc áp dụng các giải pháp thay thẻ khác đáp ứng được các mục đích an toàn cháy
+
+nêu tại 9.2.1và 9.3.1.
+
+CHÚ THÍCH 1: Nhà ở riêng lẻ nhiều tằng, nhiều căn hộ trong đó có thiết kề, xây dựng căn hộ để bán hoặc cho thuê cản thực
+
+hiện các yêu cầu nêu tại 9.3.5.
+
+CHÚ THÍCH 2: Đồi với nhà chỉ có một lỗi ra thoát nạn không nên sử dụng các cửa mở cuốn theo phương đứng.
+
+CHÚ THÍCH 3: Việc trang bị phương tiện phòng cháy chữa cháy cần được thực hiện theo yêu cầu nêu trong TCVN 3890 và
+
+các tài liệu chuản được phép áp dụng.
+
+CHÚ THÍCH 4: Ngoài các yêu cầu nêu tại Điều 9, có thẻ lựa chọn áp dụng thêm các giải pháp tổ chức cũng như phương án
+
+phòng cháy chữa chảy phù hợp với điều kiện cụ thể của mỗi nhà theo hướng dẫn của cơ quan quản lý về phòng cháy chữa
+
+cháy tại địa phương.
+
+9.1.6 Việc ngăn chặn cháy lan sang nhà liền kè (hoặc ngược lại) cằn được thực hiện theo một trong
+
+hai yêu cầu cơ bản sau:
+
+a) Bố trí khoảng cách phòng cháy chống cháy tính từ mặt ngoài của tường hoặc kết cầu bao che
+
+(làm bằng các vật liệu không cháy như tường xây, tường bê tông, kim loại, kính, đắt và tương tự,
+
+không phụ thuộc vào chiều dày) hoặc từ các đỏ vật làm bằng vật liệu cháy được (trường hợp
+
+không có tường hoặc kết cầu bao che) đền đường ranh giới của thửa đắt lớn hơn 1,5 m (tính từ
+
+một điểm bắt kỳ trên tường);
+
+b) Sử dụng các kết cầu bao che có cấu tạo nêu tại 9.1.7.
+
+9.1.7 Cần có giải pháp ngăn chặn, không để lan truyền lửa và các sản phẩm cháy giữa các khu vực
+
+khác nhau trong nhả (ví dụ: để bảo vệ đường thoát nạn, hoặc để ngăn cách khu vực có nguy cơ phát
+
+sinh cháy cao, hoặc để ngăn cách khu vực ở với các khu vực có công năng khác, v.v.). Nếu sử dụng
+
+giải pháp ngăn chặn là bộ phận ngăn cháy (tường, vách) thì có thể tham khảo các giải pháp cầu tạo
+
+sau, hoặc sử dụng kết hợp:
+
+3) Đối với tường/vách chịu lực:
+
+- . Tường/vách xây bằng gạch đắt sét nung, gạch bê tông cốt liệu nhỏ, bê tông khí chưng áp với
+
+chiều dày xác định theo yêu cầu tính toán chịu lực nhưng không nhỏ hơn 100 mm; hoặc
+
+— Tường/vách bê tông cắt thép có chiều dày xác định theo yêu cầu tính toán chịu lực nhưng không
+
+nhỏ hơn 75 mm (lớp bê tông bảo vệ cốt thép chịu lực không nhỏ hơn 25 mm); hoặc
+
+- Các bộ phận ngăn cháy được làm từ các vật liệu khác có giới hạn chịu lửa tôi thiểu REI 30.
+
+b) Đối với tường/vách không chịu lực:
+
+- . Một hoặc kết hợp các giải pháp nêu tại đoạn a);
+
+- . Tưởng xây bằng gạch đắt sét nung chiều dày không nhỏ hơn 75 mm;
+
+- Tường xây bằng gạch bê tông cốt liệu nhỏ chiều dày không nhỏ hơn 50 mm;
+
+— . Rèm hoặc màn ngăn có định hoặc tự động hạ xuống khi có cháy, với giới hạn chịu lửa tối thiểu
+
+EI 30;
+
+- . Các bộ phận ngăn cách được làm từ các vật liệu khác có giới hạn chịu lửa tồi thiểu EI 30 (có thẻ
+
+sử dụng phụ lục F của [8]).
+
+Các cửa đi lắp trên các bộ phận ngăn cháy trong nhà cần có cầu tạo phù hợp đẻ ngăn chặn được sự
+
+lan truyền của các sản phẩm cháy trong một khoảng thời gian nhất định, tương ứng với bộ phận
+
+ngăn cháy mà cửa được lắp vào theo [6], và không nên có giới hạn chịu lửa nhỏ hơn EI 15. Đói với
+
+các vị trí ngăn cách không có tải trọng cháy lớn (ví dụ: căn hộ, phòng khách, sảnh, thang bộ, ...) có
+
+thể tham khảo một số cầu tạo tắm cửa như sau:
+
+- _ Cửa gỗ tự nhiên đặc có tổng chiều dày các lớp gỗ tối thiều 30 mm, hoặc cửa gỗ công nghiệp đặc
+
+với tổng chiều dảy các lớp gỗ tối thiều 50 mm. Khái lượng riêng của gỗ tồi thiểu 450 kg/m°:
+
+— _. Cửa gỗ công nghiệp có tổng chiều dày các lớp tồi thiểu 50 mm, cầu tạo gồm xương gỗ đặc, tắm
+
+vật liệu chồng cháy (thạch cao chống cháy, MgO, Eron, tắm Perlit, v.v.) dày tối thiểu 12 mm, và
+
+lớp hoàn thiện mặt ngoài. Khối lượng riêng của gỗ tối thiểu 450 kg/m°;
+
+- Cửa thép nhiều lớp có tổng chiều dày tối thiểu 46 mm, với các lớp mặt cửa bằng thép có chiều
+
+dày tối thiểu 0,8 mm, bên trong có khung xương và tắm vật liệu chồng cháy (thạch cao chóng
+
+cháy, MgO, Eron, tắm Perlit, v.v.) dày tối thiểu 18 mm.
+
+9.1.8 Để lực lượng chữa cháy có thể tiếp cận và triển khai công tác chữa cháy và cứu nạn một
+
+cách hiệu quả, cần lưu ý các yêu cầu cơ bản sau:
+
+- Bảo đảm giao thông phục vụ tiếp cận và chữa cháy;
+
+— Có giải pháp thích hợp đẻ tiếp cận và triển khai công tác chữa cháy vả cứu nạn.
+
+9.1.9 Bố trí và duy trì các lồi ra khẳn cấp bằng một hoặc kết hợp của các lỗi ra dưới đây (xem Hình
+
+A.13 đến Hình A.15, Phụ lục A):
+
+- _ Lối ra sân thượng thoáng hoặc ra ban công, lô gia thoáng đề từ đó thoát ra ngoài (bao gồm cả
+
+'việc di chuyển được sang các nhà liền kè); trường hợp b trí lồi ra khẳn cấp là các lỗ mở trên
+
+sàn ban công hoặc lô gia thì kích thước lỗ mở không nên nhỏ hơn 0,6 m x 0,8 m. Các cửa nắp
+
+'dùng để che các lỗ mở đó cằn được mở ra một cách dễ dàng khi có cháy (nếu có chót khóa
+
+trong điều kiện sử dụng bình thường);
+
+CHÚ THÍCH: Ban công thoáng hoặc sân thượng thoáng nghĩa là hở ra ngoài trời và bộ phận bao che (nếu có) phải bảo
+
+đảm cho việc thoát nạn, cứu nạn dễ dàng khi lực lượng chữa cháy tiếp cận.
+
+— Lối ra sân thượng thoáng hoặc lồi ra ban công, lô gia thoáng có bồ trí khu vực lánh nạn tạm thời.
+
+Mặt bằng khu vực lánh nạn tạm thời nên có kích thước theo chiều bất kỳ không nhỏ hơn
+
+:600 mm và được ngăn cách với không gian trong nhà bằng các mảng tường xây hoặc vách ngăn
+
+.đặc làm từ vật liệu không cháy. Phần tường xây hoặc vách ngăn đặc nêu trên cần có chiều dài
+
+'không nhỏ hơn 1 200 mm và chiều dày không nhỏ hơn 100 mm (xem Hình A.18, Phụ lục A);
+
+- Các ô cửa số có bồ trí sẵn các phương tiện hỗ trợ thoát nạn (ví dụ: thang phục vụ chữa cháy và
+
+cứu nạn bằng thép, thang ngoài nhà, thang dây, óng tụt, dây thoát hiểm hạ chậm và các thiết bị
+
+hỗ trợ thoát nạn khác).
+
+CHỦ THÍCH: Việc lắp đắt, sử dụng phương tiện hỗ trợ thoát nạn cản thực hiện theo quy trình và hướng dẫn của nhà
+
+sản tuất,
+
+94 40 Khi bố trí lồi ra khẳn cắp theo 9.1.9 cần có thêm các phương tiện, thiết bị hỗ trợ thoát nạn (ví
+
+dụ: thang P1, P2, thang ngoài nhà, thang leo tự hạ qua cửa nắp tại ban công, lô gia, cầu thang tích
+
+hợp lan can tự hạ (xem các hình A.17, A.18 và A.31 trong Phụ lục A), thang dây, ồng tụt và các thiết
+
+bị hỗ trợ thoát nạn khác) để từ đó thoát xuống dưới và di chuyển ra xa nhà. Các thang ngoài nhà có
+
+chiều cao từ 10 m trở lên (đo từ bậc trên cùng xuống mặt đắt tại vị trí đặt thang) phải có biện pháp
+
+bảo vệ an toàn cho người sử dụng (vi dụ: lan can, song sắt, lông bảo vệ, v.v.).
+
+CHỦ THÍCH: Việc lắp đặt, sử dụng phương tiện hỗ trợ thoát nạn cần thực hiện theo quy trình và hướng dẫn của nhà
+
+sản xuất.
+
+9.2 Nhà ở riêng lẻ chỉ sử dụng cho mục đích ở
+
+9.21 Yêu cầu chung
+
+9.211.1 Các giải pháp an toàn cháy cần được xem xét áp dụng phù hợp với các giải pháp an ninh
+
+của nhà (nếu có) để đạt được mục đích về an toàn sinh mạng khi xảy ra cháy, cụ thẻ như sau:
+
+- .Bảo đảm an toàn cháy cho người trong nhà;
+
+- _: Không để cháy lan sang các nhà liền kè, kể cả trong trường hợp nhà đang cháy bị sập đồ.
+
+26:
+
+9.2.1.2. Để bảo đảm an toàn cháy cho người trong nhà, cần thực hiện theo nguyên tắc cơ bản: bồ trí
+
+và duy trì lồi ra thoát nạn (các vị trí cửa ra) và đường thoát nạn (bao gồm các hảnh lang, cầu thang
+
+bộ, buồng thang bộ) để toàn bộ người trong nhà thoát được ra bên ngoài một cách an toàn hoặc di
+
+chuyển sang nhà liền kè. Cửa đi được lắp đặt trên lói ra thoát nạn tại tằng một/trệt cần mở được từ
+
+bên trong dễ dàng, nhanh chóng. Các cửa vận hành bằng điện ở điều kiện nhà hoạt động bình
+
+thường (khi không có cháy) cần mở được nhanh chóng ngay cả khi mắt điện.
+
+9.2.1.3. Nên trang bị các dụng cụ phá dỡ tại gần các vị trí lồi ra thoát nạn hoặc lỏi ra khẳn cắp của
+
+nhà để nhanh chóng mở được các cửa trên lồi ra khi cần thiết.
+
+9.2.2 Bảo đảm an toàn cháy cho người
+
+9.2.2.1 Việc tổ chức thoát nạn có thể thực hiện qua cầu thang bộ bên trong nhà, để hở (cầu thang
+
+bộ loại 2, xem Hình A.19, Phụ lục A).
+
+CHÚ THÍCH: Đối với nhà có từ 4 tằng đến 6 tằng trên mặt đắt, khuyên khích bỏ sung biện pháp ngăn ngừa khói lọt qua các
+
+cửa trên lỗi ra của tắt cả các gian phòng đi vào không gian liên thông với cầu thang bộ loại 2. Ngoài ra, có thể lựa chọn bồ
+
+trí thêm các lỗi ra khẳn cắp nêu tại 9.1.9 để người trong nhà thoát được ra khỏi khu vực chịu các tác động nguy hiểm của
+
+đám cháy (khói, khí độc, nhiệt độ cao) và đến các khu vực lánh nạn tạm thời có tiếp xúc với không khí bên ngoài.
+
+9.2.2.2 Khi trong nhà có bồ trí khu vực có nguy cơ phát sinh cháy cao (ví dụ: khu vực để ô tô, mô tô,
+
+xe gắn máy, xe điện, hay hàng hóa, đồ đạc bằng chát hoặc vật liệu dễ bắt cháy, v.v.) ở tằng một/trệt,
+
+nơi có lối ra thoát nạn của nhà (cửa ra vào chính của nhà) hoặc ở những nơi có ảnh hưởng đến
+
+đường thoát nạn, thì nên lựa chọn áp dụng thêm giải pháp phù hợp với điều kiện cụ thể của nhà để
+
+ngăn ngừa khói và các sản phẩm cháy lan truyền giữa các khu vực khác nhau trong nhà.
+
+9.2.3 Ngăn chặn cháy lan sang nhà liền kề
+
+Để ngăn ngừa cháy lan giữa các nhà liền kè càn lựa chọn áp dụng giải pháp phù hợp theo các nguyên
+
+tắc nêu tại 9.1.8.
+
+9.3 Nhà ở riêng lẻ có kết hợp các mục đích sử dụng khác
+
+9.31 Yêu cầu chung
+
+9.3.1.1 Các giải pháp an toàn cháy cằn được xem xét áp dụng phù hợp với các giải pháp an ninh
+
+của nhà (nếu có) để bảo đảm an toàn sinh mạng khi xảy ra cháy, ngoài các yêu cầu nêu tại 9.2.1.1
+
+cần bổ sung các yêu cầu sau:
+
+— _ Không để lan truyền các sản phẩm cháy (ví dụ: lửa, khói, khí độc, nhiệt độ cao, v.v.) giữa các khu
+
+vực khác nhau trong nhà đến mức có thể gây nguy hiểm cho tính mạng của những người có mặt;
+
+— Lực lượng chữa cháy có thể tiếp cận được đẻ triển khai được công tác chữa cháy và cứu nạn.
+
+CHÚ THÍCH: Chỉ xét đến công tác cứu nạn khi có cháy.
+
+9.3.1.2 Để bảo đảm an toàn cháy cho người trong nhà, ngoài các yêu cầu nêu tại 9.2.1.2, cản lưu ý
+
+thêm các yêu cầu sau:
+
+- _ Khi sử dụng cầu thang bộ loại 3 để làm cầu thang thoát nạn, phần cầu thang trong phạm vi chiều
+
+cao không quá 4,0 m tính từ mặt đắt phía dưới có thẻ được cầu tạo theo hình thức thang leo có
+
+cơ cấu tự động nâng hạ (xem Hình A.13 và Hình A.14, Phụ lục A);
+
+- Bốtrí các lối ra khẳn cấp nêu tại 9.1.9 để người trong nhà thoát được ra khỏi khu vực chịu các
+
+tác động nguy hiểm của đám cháy (khói, khí độc, nhiệt độ cao) và đền các khu vực lánh nạn tạm
+
+thời có tiếp xúc với không khí bên ngoài;
+
+- Lắp đặt các thiết bị phát hiện và báo động cháy sớm, đặc biệt trong các gian phòng, hoặc tại các
+
+khu vực có nguy cơ phát sinh cháy cao (ví dụ khu vực để ô tô, mô tô, xe gắn máy, xe điện, hay
+
+hàng hóa, đồ đạc bằng chắt hoặc vật liệu dễ bắt cháy, v.v.);
+
+- Việc bố trí các khu vực có công năng khác nhau trong nhà ở riêng lẻ cũng như áp dụng các giải
+
+pháp bảo đảm an toàn cháy cằn xét đến trường hợp đám cháy phát sinh ở khu vực có thẻ ngăn
+
+cản người trong nhà thoát ra ngoài qua lồi ra ở tằng mộtttrệt để bỏ sung các giải pháp bảo đảm
+
+an toàn sinh mạng, ví dụ ngăn cách, bảo vệ đường thoát nạn; bồ trí lồi ra riêng và đường thoát
+
+nạn riêng cho khu vực sử dụng với mục đích ở, v.v.;
+
+= Khi không có quy định riêng trong tiêu chuẩn chuyên ngành, cho phép không ngăn cháy giữa khu
+
+vực có công năng khác với các khu vực sau: các gian phòng kỹ thuật nước; các gian phòng
+
+thường xuyên ẩm ướt hoặc có nguy cơ cháy thắp (ví dụ: bể bơi, phòng tắm, phỏng rửa, phòng
+
+vệ sinh và tương tự); phòng kho với diện tích không quá 10 m^ và không chứa các chất khí dễ
+
+cháy và chất lỏng dễ cháy; các gian phòng không có yêu cầu trang bị chữa cháy tự động hoặc
+
+báo cháy tự động theo tài liệu chuẩn; các khu vực chỉ phục vụ ăn uống (không có bếp nấu và kho
+
+lưu trữ thực phẩm); các phòng họp nội bộ; và các khu vực tương tự khác;
+
+- Không bồ trí các gian phòng có sử dụng hoặc lưu giữ các chất khí và chất lỏng cháy cũng như
+
+các vật liệu dễ bắt cháy tại các tằng hằm và tằng nửa hàm, trừ khi khu vực này được ngăn tách
+
+hoàn toàn với các tằng phía trên;
+
+- Việc bố trí các khu vực để phục vụ mục đích kinh doanh thuộc các nhóm nguy hiểm cháy theo
+
+công năng F1.1, F3.4 và F4.1 trong nhà ở riêng lẻ cằn bảo đảm các yêu cầu vè an toàn cháy
+
+tương ứng với các công năng được két hợp.
+
+9.3.1.3. Cần trang bị hệ thống báo cháy hoặc/và thiết bị báo cháy cục bộ trong nhà và bồ trí vị trí đặt
+
+các phương tiện phòng cháy và chữa cháy.
+
+9.3.1.4 Khi nhà có một phần diện tích sản xây dựng được sử dụng đề làm:
+
+- _ Phòng điều trị nội trú của cơ sở khám bệnh, chữa bệnh; các gian phòng của nhà trẻ, trường mẫu
+
+giáo, mầm non; phòng ngủ của các trường nội trú; và các nhà có đặc điểm sử dụng tương tự
+
+(thuộc nhóm F1.1);
+
+- Phòng kinh doanh dịch vụ karaoke, dịch vụ vũ trường và các nhà có đặc điểm sử dụng tương tự
+
+(thuộc nhóm F2.1);
+
+- _. Phòng nhảy và các gian phòng có đặc điểm sử dụng tương tự (thuộc nhóm F2.2),
+
+thì việc bảo đảm an toàn cháy cho nhà cần được thực hiện phù hợp với [8] và các yêu cầu sau:
+
+a) Nhà phải có sân thượng thoáng kết hợp phương án tiếp cận phù hợp đề tổ chức hoạt động chữa
+
+cháy và cứu nạn cứu hộ;
+
+b) Chuông, đèn báo cháy phải được bồ trí trong các hành lang, sảnh chung và trong từng gian phòng
+
+kinh doanh dịch vụ karaoke, dịch vụ vũ trường. Hệ thống điện của dàn âm thanh, hình ảnh phải được
+
+kết nói liên động, đồng thời phải tự động ngắt khi có tin hiệu từ hệ thống báo cháy tự động và điều
+
+khiển ngắt bằng tay (nút điều khiển ngắt bằng tay được đặt tại phòng trực điều khiển chống cháy
+
+hoặc tại khu vực lễ tân, có biển chỉ dẫn) khi có cháy;
+
+c) Các gian phòng thuộc nhóm F2.1 và F2.2 đã nêu ở trên cằn được trang bị phương tiện để hướng
+
+dẫn cho tắt cả các khách hàng về phương án thoát nạn phù hợp với điều kiện thực tế trước khi tham
+
+gia các dịch vụ được cung cắp tại đó.
+
+9.3.2. Các trường hợp kết hợp
+
+Nhà ở riêng lẻ có kết hợp các mục đích kinh doanh (không bao gồm các trường hợp nêu tại 9.3.1.4)
+
+có thể được phân thành các trường hợp, tùy thuộc vảo hệ số T:
+
+- Trườnghợp1:0<T<0,3;
+
+- Trường hợp 2:0,3<7<0,7;
+
+- Trường hợp 3:0,7s7<1,0,
+
+trong đó T được xác định theo công thức:
+
+r- G)
+
+A
+
+với:
+
+T là hệ số, xét đến tỉ lệ tổng số tằng sử dụng cho mục đích kinh doanh trên tổng số tằng của
+
+nhà,0< T<1,0;
+
+Ap là tổng số tằng sử dụng cho mục đích kinh doanh (gồm cả các tằng có khu vực phụ trợ phục
+
+vụ cho mục đích kinh doanh);
+
+As là tổng số tằng (gồm cả tằng hằm và tằng nửa/bán hằm, nếu có) của nhà.
+
+CHÚ THÍCH 1: Đồi với nhà có 1 tảng, trong đó kết hợp cả ở và kinh doanh thì giá trị Ao lấy bằng 0,7.
+
+CHÚ THÍCH 2: Đối với nhà có từ 2 tằng (gồm cả tằng hàm và tằng nửa/bán hằm, nếu có) trở lên, trong đó có một số tằng
+
+SỬ dụng cho mục đích kinh doanh và ở kết hợp kinh doanh thì Ao ly bằng tổng số tằng sử dụng cho mục đích kinh doanh
+
+(gồm cả các tằng sử dụng kết hợp ở và kinh doanh) trừ đi 0,3 (xem thêm các ví dụ dưới đây).
+
+VÍ DỤ 1: Đồi với nhà có 4 tằng, trong đó các tàng 1, 2 và 3 sử dụng đẻ làm nhà hàng và tằng 4 để ở, thì Ao lẫy bằng 3 và khi
+
+đó T =3/4=0,75.
+
+VÍ DỤ 2: Đồi với nhà có 3 tằng, trong đó tằng 1, 2 sử dụng cho mục đích kinh doanh và tằng 3 sử dụng kết hợp, thì Ao lắy
+
+bằng 2,7 và khi đó T =2,7/3= 0,9.
+
+VÍ DỤ 3: Đối với nhà có 3 tằng, trong đó tằng 1 sử dụng cho mục địch kinh doanh và các tằng 2 và 3 sử dụng kết hợp, thì
+
+Ao lấy bằng 2,7 và khi đó T =2,7/3= 0,9
+
+VÍ DỤ 4: Đồi với nhà có 3 tằng nổi và 1 tằng bán hằm, các tằng 1, 2 để kinh doanh café, tầng 3 để ở: nếu tằng bán hằm để
+
+xe của khách và của chủ nhả thì lắy Ao = 2,7; néu tằng bán hằm chỉ để xe của khách thì Áo = 3; nu tằng bán hằm chỉ để xe
+
+của chủ nhà thì lấy Ap = 2.
+
+9.33 Trường hợp 1
+
+9.3.3.1 Xác định các yêu cầu an toản cháy cụ thể dựa trên quy mô sau:
+
+a) Nhà có chiều cao PCCC không lớn hơn 15 m, diện tích sàn xây dựng mỗi tằng không lớn hơn
+
+100 m° (hoặc không lớn hơn 300 m£ khi phản diện tích không dùng cho mục đích ở của nhà chỉ
+
+bố trí đỗ đạc, hàng hoá bằng vật liệu không cháy) và số người sử dụng trên mỗi tằng không quả
+
+20 người;
+
+b) Nhà có quy mô khác với quy mô nêu tại đoạn a).
+
+9.3.3.2 Đối với các nhà nêu tại đoạn a) của 9.3.3.1 cho phép thực hiện theo các yêu cầu nêu tại 9.2.
+
+Đồi với các nhà khác với các nhà nêu tại đoạn a) của 9.3.3.1 - thực hiện theo 9.3.3.3 đến 9.3368.
+
+9.3.3.3 Bảo đảm an toàn cho người
+
+9.3.3.3.1 Lối ra thoát nạn và đường thoát nạn cần phù hợp với các yêu cầu nêu tại các đoạn a), b)
+
+và c) của 9.3.3.3.1 này cùng các yêu cầu nêu từ 9.3.3.3.2 đền 9.3.3.3.4:
+
+CHÚ THÍCH: Không quy định vẻ khoảng cách giới hạn cho phép đến các lói ra thoát nạn.
+
+3) Lối ra thoát nạn cần có chiều rộng thông thủy không nhỏ hơn 0,8 m và chiều cao thông thủy
+
+không nhỏ hơn 1,9m;
+
+b) Chiều rộng thông thủy của các đoạn nằm ngang của đưởng thoát nạn không nhỏ hơn 1,0 m.
+
+Chiều cao thông thủy của đường thoát nạn không nhỏ hơn 2,0 m;
+
+c) Cầu thang bộ có các bậc thang rẻ quạt hoặc bậc chéo, hoặc có độ dốc lớn (bậc thang có chiều
+
+cao lớn, chiều rộng mặt bậc nhỏ), hoặc có chiều cao thông thủy nhỏ hơn 2 m (nhưng không
+
+được nhỏ hơn 1,9 m), v.v., nều được sử dụng làm một phần của đường thoát nạn thì cần có giải
+
+pháp tăng cường giúp nhận biết rõ các mép bậc và các mép dưới của bộ phận chắn ngang phía
+
+trên, ví dụ: chiều sáng hoặc tạo mầu sắc tương phản hoặc dùng các dải đánh dấu bằng sơn
+
+phản quang hoặc tự phát sáng v.v. (xem Hình A.12, Phụ lục A).
+
+9.3.3.3.2 Đối với nhà cao không quá 3 tằng và chiều cao PCCC không quá 15 m có thể tổ chức
+
+thoát nạn qua cầu thang bộ loại 2.
+
+9.3.3.33 Đối với nhà có từ 4 tằng trở lên hoặc chiều cao PCCC lớn hơn 15 m, việc tổ chức thoát
+
+nạn cần thực hiện qua buồng thang bộ (buông thang bộ này phải có lồi ra ngoài trực tiếp); hoặc cầu
+
+thang bộ loại 3: hoặc cầu thang bộ loại 2 đói với nhà có hành lang bên.
+
+Đồi với nhà có từ 4 tằng trở lên hoặc chiều cao PCCC lớn hơn 15 m, không có hành lang bên, cho
+
+phép được thoát nạn qua cầu thang bộ loại 2 khi không gian liên thông với cầu thang bộ đó được
+
+ngăn cách với các gian phòng liền kè bằng giải pháp nêu tại 9.1.7, đồng thời nhà có bồ trí lồi ra khẳn
+
+cắp nêu tại 9.1.9 và được trang bị bồ sung một trong các hệ thống sau:
+
+a) Hệ thống báo cháy hoặc thiết bị báo cháy cục bộ phù hợp với yêu cầu nêu trong TCVN 5738. Khi
+
+đó, ưu tiên lựa chọn đầu báo cháy khói;
+
+b) Các họng nước chữa cháy trong nhà hoặc hệ thống họng nước chữa cháy dạng đóng gói phù
+
+hợp với yêu cầu nêu trong TCVN 13926;
+
+c) Hệ thống chữa cháy tự động hoặc hệ thống chữa cháy tự động đóng gói phù hợp với yêu cầu
+
+nêu trong TCVN 13928 - khi phần nhà dùng cho mục đích khác để ở.
+
+CHÚ THÍCH: Hệ thống nêu tại điều này không được coi là hệ thống được trang bị bỏ sung khi việc trang bị hệ thống đó là
+
+bắt buộc đồi với nhà hoặc phần nhà theo các quy định hiện hành khác.
+
+9.3.3.3.4 Tằng hằm hoặc nửa/bán hầm có diện tích lớn hơn 300 m° hoặc có số người sử dụng trên
+
+15 người cần bồ trí 2 lỗi ra thoát nạn. Cho phép sử dụng đường dốc làm lồi ra thoát nạn của tằng
+
+hầm hoặc nửa/bán hằm.
+
+9.3.3.4 Ngăn chặn cháy lan sang nhà liền kề
+
+Đề ngăn ngừa cháy lan giữa các nhà liền kè cằn lựa chọn áp dụng giải pháp phù hợp theo các
+
+nguyên tắc nêu tại 9.1.8.
+
+9.3.3.5. Ngăn chặn cháy lan trong nhà
+
+9.3.3.5.1 Khi trong nhà có khu vực với nguy cơ phát sinh cháy cao (ví dụ: khu vực đề ô tô, mô tô, xe
+
+gắn máy, xe điện, hay hàng hóa, đồ đạc bằng chát hoặc vật liệu dễ bắt cháy, v.v.) ở tằng mộtftrệt, nơi
+
+có lỗi ra thoát nạn (cửa ra vào chính của nhà) hoặc ở những nơi có ảnh hưởng đến đường thoát nạn,
+
+thì cằn ngăn cách khu vực này với lồi ra thoát nạn, đường thoát nạn bằng các giải pháp nêu tại 9.1.7.
+
+9.3.3.5.2 Cho phép không áp dụng các giải pháp nêu tại 9.1.7 khi bảo đảm một trong các điều
+
+kiện sau:
+
+a) Tổng diện tích khu vực có nguy cơ phát sinh cháy cao (vi dụ: khu vực để ô tô, mô tô, xe máy, xe
+
+điện, hay hàng hóa, đồ đạc bằng chất hoặc vật liệu dễ bắt cháy, v.v.) hoặc khu vực không sử
+
+dụng cho mục đích ở không lớn hơn 10 % diện tích sản xây dựng của tằng có khu vực đó;
+
+b) Phần nhà có khu vực với nguy cơ phát sinh cháy cao (ví dụ: khu vực để ô tô, mô tô, xe gắn máy,
+
+xe điện, hay hàng hóa, đồ đạc bằng chắt hoặc vật liệu dễ bắt cháy, v.v.) được trang bị bỏ sung
+
+một trong các hệ thống sau:
+
+- _ Hệ thống báo cháy hoặc thiết bị báo cháy cục bộ phù hợp với yêu cầu nêu trong TCVN 5738. Khi
+
+đó ưu tiên lựa chọn đầu báo cháy khói;
+
+— Các họng nước chữa cháy trong nhà hoặc hệ thống họng nước chữa cháy đóng gói phù hợp với
+
+yêu cầu nêu trong TCVN 13928;
+
+- _ Hệ thống chữa cháy tự động hoặc hệ thống chữa cháy tự động đóng gói phù hợp với yêu cầu
+
+nêu trong TCVN 13928 - khi phằn nhà dùng cho mục đích khác để ở.
+
+CHÚ THÍCH: Hệ thống nêu tại điều này không được coi là hệ thống được trang bị bố sung khi việc trang bị hệ thống đó là
+
+bắt buộc đồi với nhà hoặc phản nhà theo các quy định hiện hành khác.
+
+9.33.5.3 Đối với các phần giếng thang máy nằm trong tằng hằm hoặc tằng nửa/bán hằm có sản
+
+cách cao độ mặt đắt đặt nhà lớn hơn 0,5 m, cằn bảo đảm ít nhất một trong hai yêu cầu sau:
+
+- _ Bao che giếng thang máy bằng các bộ phận nêu tại 9.1.7 và lỗi ra từ giềng thang máy được bảo vệ
+
+bằng cửa thép (không có lỗ thông qua chiều dày cánh cửa), hoặc bằng màn ngăn cháy tự động hạ
+
+xuống khi có cháy với giới hạn chịu lửa không nhỏ hơn E 15;
+
+- _ Bao che giếng thang máy bằng các bộ phận nêu tại 9.1.7 và lồi ra từ giếng thang máy được bảo
+
+vệ bằng khoang đệm có tăng áp với giới hạn chịu lửa không nhỏ hơn EI 15.
+
+Cầu thang bộ loại 2 không được liên thông với tằng hằm hoặc tằng nửa/bán hằm, nếu liên thông thì
+
+nó cần được bồ trí nằm trong buồng thang bộ hoặc đáp ứng yêu cầu nêu tại 9.3.3.3.3.
+
+9.3.3.5.4 Khu vực để ô tô, mô tô, xe gắn máy (tằng hầm, tằng nửa/bán hầm có sản cách cao độ
+
+mặt đắt đặt nhà lớn hơn 0,5 m) phải được ngăn với khu vực khác, cầu thang bộ, thang máy và các lỗ
+
+thông tằng khác của nhà bằng vách hoặc màn ngăn cháy có giới hạn chịu lửa không thắp hơn EI 45
+
+và có lồi thoát nạn riêng qua đường dóc (xem Hinh A.28, Phụ lục A).
+
+Trường hợp khu vực đề xe ô tô, mô tô, xe gắn máy được bảo vệ bằng hệ thống chữa cháy tự động
+
+thì cần có giải pháp ngăn khói lan truyền sang các khu vực khác.
+
+9.3.3.6 Chữa cháy và cứu nạn
+
+Giao thông phục vụ tiếp cận cho lực lượng chữa cháy cần phù hợp với quy hoạch được các cấp có
+
+thắm quyền phê duyệt cũng như phù hợp với điều kiện địa hình của khu vực xây dựng nhà.
+
+9.3.4 Trường hợp 2
+
+9.3.4.1 Đối với các nhà nêu tại đoạn a) của 9.3.3.1 thì cho phép thực hiện theo 9.2.
+
+9.3.4.2 Đồi với các nhà khác với các nhà nêu tại đoạn a) của 9.3.3.1 - thực hiện các yêu cầu nêu từ
+
+9.3.4.3 đến 9.3.4.6.
+
+9.3.4.3 Bảo đảm an toàn cháy cho người
+
+9.3.4.3.1 Lối ra thoát nạn và đường thoát nạn cần phù hợp với các yêu cầu nêu tại các đoạn a), b)
+
+và œ) của 9.3.3.3.1 cùng các yêu cầu nêu từ 9.3.4.3.2 đến 9.3.4.3.8.
+
+9.3.4.3.2 Đồi với nhà có số lượng người trên mỗi tằng không quá 50 người thì khoảng cách giới
+
+hạn cho phép từ cửa gian phòng (không kể gian phòng nằm bên trong) đến lồi ra thoát nạn gần nhất
+
+không quá 40 m trong trường hợp cửa gian phòng nằm giữa hai cầu thang bộ hoặc 25 m trong
+
+trường hợp cửa gian phòng nằm trên hành lang cụt. Đồi với nhà có số lượng người trên mỗi tằng lớn
+
+hơn 50 người thì khoảng cách giới hạn cho phép từ cửa gian phòng (không kẻ gian phòng nằm bên
+
+trong) đền lói ra thoát nạn gằn nhắt càn phù hợp với quy định {6].
+
+9.3.43.3 Số lối ra thoát nạn của gian phòng, của tằng và của nhà cằn phù hợp với quy định [8].
+
+Trong một số trường hợp cụ thể, có thẻ bồ trí lỗi ra thoát nạn theo các yêu cầu nêu từ 9.3.4.3.4 đền
+
+93.43.6.
+
+9.3.4.3.4 Đối với nhà có 2 tằng mà có bé trị lỗi ra khẳn cấp nêu tại 9.1.9 và số người tại tàng 2
+
+không quá 50 người, thì có thể bồ trí một lồi ra thoát nạn từ tằng 2 qua cầu thang bộ loại 2.
+
+9.3.4.3.5 Đối với nhà có từ 3 tầng trở lên, số lồi ra thoát nạn từ các tằng càn được thực hiện theo
+
+3.2.6 của [6]. Để thoát nạn cằn sử dụng buồng thang bộ có lối ra ngoài trực tiếp; hoặc cầu thang bộ
+
+loại 3; hoặc cầu thang bộ loại 2 đối với nhà có hành lang bên (hoặc không gian liên thông với cầu
+
+thang bộ đó được ngăn cách với các gian phòng liền kè bằng giải pháp nêu tại 9.1.7). Tằng một/trệt
+
+(hoặc tằng có cửa ra ngoài nhà) có thẻ bó trí một lồi thoát nạn ra ngoài nhà, khi đó mỗi tằng trên cần
+
+bồ trí thêm ít nhắt một lồi ra khẳn cấp.
+
+9.3.4.3.6 Khi phần diện tích không dùng cho mục đích ở của nhà chỉ bố trí đồ nội thắt, hàng hoá
+
+bằng vật liệu không cháy hoặc cháy yếu, đồng thời nhà có bồ trí lồi ra khẳn cấp nêu tại 9.1.9, cho
+
+phép tổ chức thoát nạn của nhà được thực hiện theo đoạn a) hoặc b) của điều này:
+
+a) Nhà có chiều cao PCCC đến 15 m, có diện tích sản xây dựng mỗi tằng không lớn hơn 100 m°, có
+
+thể tổ chức thoát nạn từ mỗi tằng bằng một lồi ra thoát nạn qua buồng thang bộ; hoặc cầu thang
+
+bộ loại 3; hoặc cầu thang bộ loại 2 đối với nhà có hành lang bên (hoặc không gian liên thông với
+
+cầu thang bộ đó được ngăn cách với các gian phòng liền kè bằng giải pháp nêu tại 9.1.7);
+
+b) Nhà có diện tích sản xây dựng mỗi tằng không lớn hơn 100 m2, số người lớn nhất trên mỗi tằng
+
+không quá 20 người, có thể tổ chức thoát nạn từ mỗi tằng bằng một lồi ra thoát nạn theo một
+
+trong các giải pháp sau:
+
+— Qua cầu thang bộ đặt trong buồng thang bộ không nhiễm khói loại N1;
+
+- Qua buồng thang bộ (buồng thang bộ này phải có lồi ra ngoài trực tiếp); hoặc cầu thang bộ loại
+
+3; hoặc cầu thang bộ loại 2 đối với nhà có hành lang bên (hoặc không gian liên thông với cầu
+
+thang bộ đó được ngăn cách với các gian phòng liền kè bằng giải pháp nêu tại 9.1.7), đồng thời
+
+được trang bị hệ thống báo cháy hoặc thiết bị báo cháy cục bộ và trang bị bỏ sung một trong các
+
+hệ thống sau:
+
++ Các họng nước chữa cháy trong nhà hoặc hệ thống chữa cháy trong nhà dạng đóng gói phù
+
+hợp với yêu cầu nêu trong TCVN 13928 - khi phần nhà dùng cho mục đích khác để ở;
+
++ Hệ thống chữa cháy tự động hoặc hệ thống chữa cháy trong nhả dạng đóng gói phù hợp với
+
+yêu cầu nêu trong TCVN 13928 - khi phần nhà dùng cho mục đích khác để ở.
+
+9.3.4.4 Ngăn chặn cháy lan sang nhà liền kề
+
+9.3.4.4.1 Để ngăn ngừa cháy lan giữa các nhà liền kè, cằn lựa chọn áp dụng giải pháp phù hợp với
+
+điều kiện cụ thẻ của nhà đáp ứng các nguyên tắc nêu tại 9.1.6.
+
+9.3.44.2 Để bảo đảm giới hạn chịu lửa cần thiết của nhà, bộ phận chịu lực chính của nhà (cột,
+
+dầm đỡ sản, sàn ngăn giữa các tằng hoặc tường chịu lực) cằn được cầu tạo phù hợp để bảo đảm
+
+giới hạn chịu lửa tương ứng với quy mô chiều cao và diện tích, với nhóm nguy hiểm cháy theo công
+
+năng, và với tính nguy hiểm cháy theo công năng của nhà hoặc các khu vực trong nhà [6]; hoặc có
+
+thể thực hiện theo nguyên tắc sau:
+
+a) Đối với nhà có 1 tằng hoặc 2 tằng: sử dụng các loại kết cầu khác nhau và được xây dựng bảo
+
+đảm chịu được tải trọng ở điều kiện nhiệt độ bình thường;
+
+b) Đối với nhà có từ 3 tằng đến 6 tảng: sử dụng kết cấu bê tông cốt thép hoặc kết cầu khối xây và
+
+được cầu tạo phù hợp để bảo đảm chịu tải trọng ở điều kiện nhiệt độ bình thường; sử dụng các
+
+kết cầu khác (gỗ, thép, liên hợp thép - bê tông, v.v.) cằn được lựa chọn, cầu tạo để bảo đảm chịu
+
+được lửa trong khoảng thời gian không ít hơn 90 min.
+
+9.3.4.5. Ngăn chặn cháy lan trong nhà
+
+9.344.5.1 Thực hiện các yêu cầu nêu tại 9.3.3.5.
+
+9.3.4.5.2 Để ngăn cách giữa phản diện tích ở và phần diện tích sử dụng cho mục đích khác có thẻ
+
+lựa chọn sử dụng giải pháp phù hợp với điều kiện của nhà nêu tại 9.1.7 hoặc các bộ phận ngăn cách
+
+có cấu tạo tương đương.
+
+9.3.4.5.3 Trong các tằng hằm và tằng nửa/bán hàm, không bồ trí các gian phòng có sử dụng hoặc
+
+lưu giữ các chất khí và chất lỏng cháy cũng như các vật liệu dễ bắt cháy.
+
+9.3.4.5.4 Cần có giải pháp phù hợp để ngăn cháy, ngăn khói lan giữa các tằng qua cầu thang bộ,
+
+giếng thang máy, trục kỹ thuật và các lỗ thông tằng khác của nhà.
+
+9.3.4.6 Chữa cháy và cứu nạn
+
+9.3.4.6.1 Các yêu cầu về giao thông phục vụ tiếp cận cho lực lượng chữa cháy, cấp nước chữa cháy
+
+và cứu nạn cần phù hợp với quy hoạch được các cấp có thẳm quyền phê duyệt cũng như phù hợp với
+
+điều kiện thực tế của khu vực xây dựng nhà, trên nguyên tắc bảo đảm khả năng tiếp cận của người
+
+cảnh sát PCCC và có đủ lượng nước để chữa cháy (lượng nước chữa cháy có thẻ xác định theo [6]
+
+hoặc hướng dẫn của cơ quan quản lý có thẳm quyền tại địa phương).
+
+9.3.4.6.2 Đối với nhà có chiều cao PCCC không lớn hơn 15 m, khi khoảng cách từ vị trị gằn nhất
+
+để đỗ xe chữa cháy (hoặc phương tiện chuyên dụng) của lực lượng cảnh sát PCCC đến điểm bắt kỳ
+
+trên hình chiều bằng của nhà lớn hơn 400 m thì cần bảo đảm công tác chữa cháy và cứu nạn theo
+
+hướng dẫn của cơ quan quản lý có thẳm quyền tại địa phương;
+
+9.3.4.6.3 Đối với nhà có chiều cao PCCC lớn hơn 15 m đến 25 m:
+
+- _ Cần trang bị tối thiểu một bộ dụng cụ phá dỡ thô sơ ngay tại lồi ra ngoải nhà ở tằng một/trệt gồm
+
+búa, xà beng, kìm để có thể phá khóa, phá dỡ cửa trên lồi ra thoát nạn khi cần;
+
+— Cho phép không cằn áp dụng bỏ sung thêm các giải pháp bảo đảm cho công tác chữa cháy và cứu
+
+nạn khi khoảng cách từ vị trí gằn nhất để đỗ xe chữa cháy (hoặc phương tiện chuyên dụng) của lực
+
+lượng cảnh sát PCCC đến điểm bắt kỳ trên hình chiều bằng của nhà không lớn hơn 200 m;
+
+- Cho phép không cần áp dụng bổ sung thêm các giải pháp bảo đảm cho công tác chữa cháy và
+
+cứu nạn khi khoảng cách từ vị trí gằn nhất để đỗ xe chữa cháy (hoặc phương tiện chuyên dụng)
+
+của lực lượng cảnh sát PCCC đến điểm bát kỳ trên hình chiều bằng của nhà lên đến 300 m khi
+
+bảo đảm đồng thời các yêu cầu sau:
+
++ Số người trên mỗi tằng nhà không quá 30 người,
+
++ Vị trí đỗ xe chữa cháy phải nằm trong bán kính phục vụ không lớn hơn 200 m (đo dọc theo
+
+đường di chuyển của vòi chữa cháy) của các nguồn cung cấp nước khác bảo đảm áp lực và
+
+lưu lượng (như trụ nước chữa cháy, bẻ nước ngoài nhà, hoặc nguồn nước chữa cháy từ công
+
+trình lân cận).
+
+9.3.5 Trường hợp 3
+
+9.3.5.1 Đồối với các nhà nêu tại đoạn a) của 9.3.3.1 thì cho phép thực hiện theo 9.2.
+
+9.3.5.2 Đối với các nhà khác với các nhà nêu tại đoạn a) của 9.3.3.1 - thực hiện các yêu cầu nêu từ
+
+9.3.5.3 đến 9.3.5.7.
+
+9.3.5.3 Bảo đảm an toàn cháy cho người
+
+9.3.5.3.1 Lối ra thoát nạn và đường thoát nạn cằn bảo đảm quy định [6]. Trong một số trường hợp
+
+cụ thể, cho phép bé trí lồi ra thoát nạn nêu từ 9.3.5.3.2 đền 9.3.5.3.4.
+
+9.3.5.3.2 Đối với nhà có 2 tằng mà có lồi ra khẳn cấp nêu tại 9.1.9 và số người trên tằng 2 không
+
+quá 20 người, thì cho phép bồ trí một lồi ra thoát nạn từ tằng 2 qua cầu thang bộ loại 2;
+
+9.3.5.3.3 Đối với nhà có từ 3 tàng trở lên, số lói ra thoát nạn từ các tằng cản thực hiện theo 3.2.6,
+
+3.2.7 và 3.2.8 của [8]. Đề thoát nạn cần sử dụng buồng thang bộ có lồi ra ngoài trực tiếp; hoặc cầu
+
+thang bộ loại 3; hoặc cầu thang bộ loại 2 đối với nhà có hành lang bên (hoặc không gian liên thông
+
+với cầu thang bộ đó được ngăn cách với các gian phòng liền kè bằng giải pháp nêu tại 9.1.7).
+
+9.3.5.3.4 Cho phép nhà có 1 lái ra thoát nạn khi bảo đảm các yêu cầu nêu tại 9.3.4.36.
+
+9.3.5.4 Ngăn chặn cháy lan sang nhà liền kè
+
+9.3.5.4.1 Để ngăn ngừa cháy lan giữa các nhà liền kẻ cần lựa chọn áp dụng giải pháp phủ hợp với
+
+điều kiện cụ thẻ của nhà theo các nguyên tắc nêu tại 9.1.8.
+
+9.3.5.4.2 Đề bảo đảm giới hạn chịu lửa cần thiết của nhà, kết cầu chịu lực cằn được lựa chọn phù
+
+hợp yêu cầu nêu tại 9.3.4.4.2.
+
+9.3.5.5 Ngăn chặn cháy lan trong nhà
+
+9.3.5.5.1 Để ngăn chặn cháy lan trong nhà cằn bảo đảm quy định [6]. Trong một số trường hợp cụ
+
+thể cho phép thực hiện các yêu cầu nêu tại 9.3.5.5.2 và 9.3.5.5.3.
+
+9.3.5.5.2 Đối với các phản giếng thang máy nằm trong tằng hằm hoặc tằng nửa hằm - thực hiện
+
+các giải pháp ngăn cháy theo yêu cầu nêu tại 9.3.3.5.3.
+
+9.3.5.5.3 Không yêu cầu ngăn cách khu vực có bồ trí cằu thang bộ loại 2 nói thông nhiều hơn 2
+
+tằng với các hành lang thông với nó hoặc với các gian phòng khác khi nhà được trang bị bổ sung một
+
+trong các hệ thống nêu tại các đoạn a), b) hoặc c) của 9.3.3.3.3.
+
+9.3.5.6 Bảo vệ chống khói
+
+Ngoài các giải pháp ngắn cản sự lan truyền của khói cũng như các sản phẩm cháy khác trong nhà
+
+nêu tại 9.3.5.5, các khu vực cần được tổ chức thoát khói khi có cháy (6] bằng hệ thống hút, xả khói
+
+theo cơ chế tự nhiên hoặc cưỡng bức với năng lực thoát khói được tính toán theo tiêu chuẩn lựa
+
+chọn áp dụng. Trong một số trường hợp cụ thể, có thể không tính toán thoát khói khi thực hiện các
+
+yêu cầu sau:
+
+3) Từ các hành lang có chiều dải lớn hơn 15 m mà không có thông gió tự nhiên khi có cháy của các
+
+nhà từ 5 tằng trở xuống khi nhà được trang bị một trong các hệ thống sau:
+
+— . Hệ thống báo cháy hoặc thiết bị báo cháy cục bộ phù hợp với yêu cầu nêu trong TCVN 5738. Khi
+
+đó, ưu tiên lựa chọn đầu báo cháy khói;
+
+- _ Các họng nước chữa cháy trong nhả; hoặc hệ thống họng nước chữa cháy đóng gói phù hợp với
+
+TCVN 13928;
+
+- _ Hệ thống chữa cháy tự động hoặc hệ thống chữa cháy tự động đóng gói phù hợp với yêu cầu
+
+nêu trong TCVN 13928 - khi phần nhà dùng cho mục đích khác để ở.
+
+CHÚ THÍCH: Thoát khói tự nhiên khi có cháy có thể được thực hiện theo các giải pháp phù hợp (8).
+
+b) Các gian phòng với công năng công cộng tại tằng mộttàng trệt, có kết cầu ngăn cách với khu
+
+vực ở và có lồi ra thoát nạn trực tiếp ra bên ngoài khi khoảng cách từ điểm xa nhát của gian
+
+phòng đến lỗi ra này không lớn hơn 25 m và diện tích không lớn hơn 800 m;
+
+c) Các gian phòng kho có số người làm việc thường xuyên không quá 5 người và khoảng cách từ
+
+vị trí làm việc đến lồi ra thoát nạn gằn nhắt không lớn hơn 25 m.
+
+CHÚ THÍCH: Gian phòng có người làm việc thường xuyên (hoặc thường xuyên có người) là gian phòng mà con người có
+
+mặt ở đó không ít hơn 2 giờ liên tục hoặc có mặt tổng cộng 6 giờ trong một ngày đêm.
+
+9.3.5.7 Chữa cháy và cứu nạn
+
+Chữa cháy và cứu nạn thực hiện theo các yêu câu nêu tại 9.3.4.6.
+
+Phụ lục A
+
+(tham khảo)
+
+Các hình minh họa
+
+CHÚ THÍCH: Các hình trong Phụ lục này chỉ mang tính chắt minh họa.
+
+Ị B
+
+LH HH
+
+1 1
+
+ï ¡ 8
+
+1 1
+
+: 1
+
+mm ¡
+
+lj 1
+
+l U
+
+' '
+
+l 1
+
+l U
+
+tì
+
+I Ì Ex
+
+1 1
+
+l ¡
+
+l !
+
+= .—
+
+l u
+
+l '
+
+!
+
+A2
+
++ II
+
+1 !
+
+1 !
+
+& /0/029/0/2/ 0 KÔø gi Tầng h. j 2x ời
+
+72222272 NHI Z ”
+
+202772272224 I I : 7
+
+2 x29 ZZZZ X⁄
+
+2H 22226 22272 2 /20920/00/207992222
+
+CHÚ DẪN ———m Gà mg
+
+A1,A2 Mặt đường cho xe chữa cháy
+
+B Một nửa khoảng cách từ sàn đền trần của tằng trên cùng
+
+H1,H2 Chiều cao PCCC
+
+CHỦ THÍCH: Trường hợp các mặt đường tiếp cận nhà có cao độ khác nhau thì nhà có thể có các chiều cao PCCC khác
+
+nhau tùy thuộc vào phương án thiết kế an toàn cháy cụ thể.
+
+Hình A.1 — Ví dụ minh họa cách xác định chiều cao PCCC
+
+cho nhà có mặt đường cho xe chữa cháy tiêp cận ở các cao độ khác nhau
+
+B
+
+5 ' I
+
+l j
+
+I I B
+
+l l
+
+!
+
+I
+
+I I
+
+4 ¡ I
+
+Ỉ Ị
+
+¡ I
+
+g
+
+1 I
+
+3 ' I
+
+¡ I
+
+I !
+
+I h
+
+œ«w
+
+ri I ¬
+
+I I
+
+I I
+
+2 ¡ I
+
+l lj
+
+I lj
+
+1 I
+
+! I
+
+1 I
+
+Ị I
+
+1 I I
+
+I I
+
+I l Ñ
+
+A ¡ !
+
+I Ì
+
+! I
+
+Ñ : I
+
+o7 Rngsosephàn 22 1
+
+2 0 đa — 029/022, 0v
+
+CHÚ DẪN:
+
+A Mặt đường cho xe chữa cháy
+
+B Một nửa khoảng cách từ sản đến trần của tằng trên cùng
+
+H1, H2 Chiều cao PCCC
+
+CHÚ THÍCH: Lựa chọn giá trị lớn hơn giữa H1 và H2 làm chiều cao PCCC của nhà.
+
+Hình A.2 - Ví dụ minh họa cách xác định chiều cao PCCC
+
+cho nhà có tằng nửa/bán hằm
+
+6 1 !
+
+KG RE KHE I
+
+lj I
+
+ĩ I B
+
+ì l -i-..
+
+1 1
+
+1 1
+
+5i
+
+lj !
+
+| 1 | |
+
+l |
+
+! 1
+
+1 l
+
+| ¡ ¡ |
+
+I lị m.
+
+Ị lị
+
+= ! I +
+
+3 ! 1
+
+! 1
+
+I 1
+
+l 1
+
+¡ ¡ |
+
+1 l¡
+
+2]
+
+1 |
+
+1 lị
+
+I I
+
+1 lị
+
+1 l
+
+Ạ 1.1 Ỉ A
+
+| !
+
+I j
+
+CHỦ DẪN:
+
+A Mặt đường cho xe chữa cháy
+
+8 Một nửa khoảng cách từ sàn đến trần của tằng trên cùng
+
+H1,H2 Chiều cao PCCC
+
+CHÚ THÍCH: Lựa chọn giá trị lớn hơn giữa H1 và H2 làm chiều cao PCCC của nhà.
+
+Hình A.3 - Ví dụ mình họa cách xác định chiều cao PCCC
+
+cho nhà không có tằng nửalbán hằm
+
+_...‹ ị
+
+B B
+
+6 I ¡
+
+-1..... CC p E
+
+.__ - l l - —_-
+
+I lj
+
+! lj
+
+Lm
+
+¡ ¡
+
+! l
+
+¡ 1
+
+lj !
+
+lj 1
+
+T : ị
+
+3 ¡ !
+
+H lị
+
+! I
+
+l 1
+
+! ị
+
+¡ |
+
+rm
+
+l lj
+
+1 lj
+
+l [|
+
+1 l
+
+li l
+
+Ñ 101 |
+
+_=
+
+CA ⁄, C4
+
+CHÚ DẪN:
+
+A Mặt đường cho xe chữa cháy
+
+B Một nửa khoảng cách từ sàn đến trần của tằng trên cùng
+
+H Chiều cao PCCC
+
+Hình A.4 - Ví dụ minh họa cách xác định chiều cao PCCC
+
+cho nhà không có lỗ mở (cửa sổ) ở tằng trên cùng
+
+SN SG RE
+
+HE: E¬ S
+
+Tu NI - 4
+
+li iu — 3
+
+Œ 3 =B -
+
+mu: E= 2
+
+CHÚ DẪN:
+
+A Mặt đường cho xe chữa cháy
+
+H Chiều cao PCCC
+
+Hình A.5 - Ví dụ minh họa cách xác định chiều cao PCCC
+
+cho nhà lệch tằng chỉ có đường cho xe chữa cháy tiếp cận ở một phía
+
+mm —::-. mơ: i
+
+L-—-
+
+[<[cn............. B
+
+mm ˆm ca
+
+= 3
+
+--4------_--- c= :
+
+2 —
+
+=— I 1
+
+Ạ = I HA
+
+¡ -H
+
+lj
+
+CHÚ DẮN:
+
+A Mặt đường cho xe chữa cháy
+
+B Một nửa khoảng cách từ sàn đến trần của tằng trên cùng
+
+H1, H2 Chiều cao PCCC
+
+CHÚ THÍCH: Lựa chọn giá trị lớn hơn giữa H1 và H2 làm chiều cao PCCC của nhà.
+
+Hình A.6 - Ví dụ minh họa cách xác định chiều cao PCCC cho nhà lệch tằng có đường cho
+
+xe chữa cháy tiếp cận ở hai phía (một mặt ngoài không có lỗ mở, cửa số ở tầng trên cùng)
+
+>
+
+in = 3 .
+
+T = . t- x
+
+= 2
+
+T TU NỀN NT NG u
+
+CHÚ DẪN:
+
+A Mặt đường cho xe chữa cháy
+
+H1, H2 Chiều cao PCCC
+
+CHÚ THÍCH: Lựa chọn giá trị lớn hơn giữa H1 và H2 làm chiều cao PCCC của nhà.
+
+Hình A.7 - Ví dụ minh họa cách xác định chiều cao PCCC cho nhà lệch tằng có đường cho
+
+xe chữa cháy tiếp cận ở hai phía (hai phía đều có lỗ mở, cửa sẻ ở mặt ngoài tằng trên cùng)
+
+_.”x_. mu.
+
+=—m
+
+ị 1
+
+A 1 Ï
+
+:
+
+CHÚ DẪN:
+
+A Mặt đường cho xe chữa cháy
+
+H Chiều cao PCCC
+
+Hình A.8 -— Ví dụ minh họa cách xác định chiều cao PCCC cho nhà lệch tằng
+
+chỉ có đường cho xe chữa cháy tiếp cận ở một phía và có sân thượng có người sử dụng
+
+Đơn vị tính bằng milimét
+
+^“Aa.
+
+Ht>2000
+
+B>250
+
+Ht>2000 TTII⁄
+
+g Z
+
+SE. 4
+
+x
+
+= 60 < 2H +8 < 700
+
+CHÚ DẪN:
+
+Ht Chiều cao thông thủy cầu thang bộ
+
+H Chiều cao bậc thang
+
+B Chiều rộng bậc thang
+
+Hình A.9 — Ví dụ mình họa chiều cao thông thủy cầu thang bộ;
+
+chiều cao bậc thang và chiều rộng mặt bậc thang
+
+Đơn vị tính bằng milimét
+
+M,
+
+Ÿ / Ti
+
+: ⁄ ⁄4
+
+NA, L7 Z
+
+và | ¬ 5 lốp }
+
+§ 7w.
+
+(@) »2~ »2000 l ⁄ là M
+
+Vq ⁄ di / Ñ Là ai
+
+IF.. ⁄4 m7
+
+l7 ⁄/
+
+Hình A.10 - Ví dụ minh họa chiều cao thông thủy các bộ phận nhô ra
+
+Ạ
+
+a) Bồ trí các ô cửa lầy sáng theo từng tảng
+
+mm
+
+Ens L=C
+
+- &-
+
+b) Chiều sáng tự nhiên đường thoát nạn, lắy sáng từ trên mái
+
+CHÚ DẪN:
+
+A. Ô cửa lắy sáng ở từng tằng
+
+8Ô lắy sáng trên mái
+
+Hình A.11 - Ví dụ minh họa giải pháp chiều sáng tự nhiên cho đường thoát nạn
+
+Ly cà AE A4727
+
+| TL, ử - lân ` V7
+
+6 [ L_¬i Ly -
+
+¡ li ¡ | Ị
+
+CHỦ DẪN:
+
+A Vùng mặt bậc an toàn cho di chuyển
+
+B. Dải đánh dầu mép bậc
+
+Hình A.12 - Ví dụ minh họa tăng cường nhận biết đối với cầu thang
+
+có bậc thang chéo (rẻ quạt)
+
+1⁄27772EZAZZZEZZZZZZT lẽ on ung b
+
+⁄⁄⁄⁄⁄⁄%2 E -
+
+‹ ⁄ đ Z 5 "NHI
+
+Nhà liền kẻ Nhà liền kê 4 li |4DIHIEHHEI H !R
+
+NỘI iu 1A
+
+⁄ d =
+
+7C E! 4 H = L
+
+⁄ B s E3 —
+
+. Bi: E
+
+Ẩ D l
+
+CHÚ DẪN:
+
+A. Thang dùng cho thoát nạn khẳn cấp D Chỉ giới xây dựng
+
+8 Lối ra khẳn cấp qua lỗ mở trên sàn E Chỉ giới đường đỏ
+
+C Thang cơ động dẫn xuống đất
+
+Hình A.13 — Ví dụ minh họa giải pháp bồ trí thang thoát nạn ngoài nhà lắp đặt có định
+
+và lồi ra khẳn cấp qua lỗ mở trên sàn ban công, lô gia
+
+K
+
+HH EHm
+
+IxTIIIL mm) grỸŸT
+
+LH 4 N VN \
+
+L |
+
+Ji SN ĩ
+
+y, ca ñ
+
+Là LLLLLLLLEI s TA 4
+
+a) Mặt đứng b) Phói cảnh
+
+Hình A.14 - Ví dụ minh họa thang thoát nạn ngoài nhà có định
+
+TCWVN 13967:2024
+
+A c
+
+Ý Nhà liền kề ⁄/ / Nhà liền kề ^
+
+[p5 : D
+
+Le... mỰU‹,.—c.—/.tui-
+
+a) Nhà có không gian trồng ở mặt sau b) Nhà có không gian trồng ở bên cạnh
+
+(mặt bằng) (mặt bằng)
+
+^
+
+li
+
+ti
+
+II
+
+HỆ
+
+ẻ|
+
+s]
+
+s|
+
+-#
+
+'il Nhà liền kề
+
+ii
+
+¬
+
+li
+
+H|
+
+li
+
+HE MI
+
+— — — x x x= = vs = HE tơ xe ——
+
+c) Nhà có khoảng lùi ở mặt tiền (mặt bằng)
+
+CHÚ DẪN:
+
+A Thang dùng cho thoát nạn khẳn cấp D Chỉ giới xây dựng
+
+8 Lối ra khẩn cấp có trang bị thiết bị hỗ trợ thoát nạn E Chỉ giới đường đỏ
+
+C Lối thoát ra ngoài
+
+Hình A.15 - Ví dụ minh họa một só giải pháp bó trí lồi ra khẳản cấp
+
+và thang thoát nạn ngoài nhà
+
+Đơn vị tính bằng milimét
+
+ÕL——Áákz=-
+
+| 7⁄2 7⁄22 ⁄⁄ _]
+
+⁄%⁄%⁄Z%⁄⁄ 22274 ộ
+
+⁄7⁄/⁄/ZZ A |
+
+L 7⁄ ⁄⁄⁄
+
+V⁄⁄% ⁄⁄⁄ ?
+
+? ”⁄⁄⁄2⁄⁄%⁄⁄⁄⁄2⁄⁄⁄⁄4
+
+| LI
+
+R ⁄⁄4⁄4 ⁄4 Ñ -
+
+L1
+
+CHÚ DẪN:
+
+A Khu vực lánh nạn tạm thời L2 Chiều rộng thông thủy của ban công (L2 > 600)
+
+L1 Chiều dài của mảng tường đặc (L1 > 1 200) L3. Chiều rộng thông thủy của lô gia (L3 > 600)
+
+Hình A.16 - Ví dụ minh họa bồ trí khu vực lánh nạn tạm thời tại ban công, lô gia
+
+Chỏt ấn để bung thang
+
+th
+
+Sã
+
+u an Nà
+
+Hình A.17 - Ví dụ minh họa thang thoát nạn khẩn cấp tích hợp lan can tự hạ ở mặt ngoài nhà
+
+(trạng thái đóng của một phân đoạn thang trong phạm vi 1 tằng)
+
+=>Ð#
+
+. <1] ~_
+
+1 64k 3
+
+TIM
+
+[guan Ặ !
+
+| - sộ | l
+
+SH.
+
+Hình A.18 - Ví dụ minh họa thang thoát nạn khẳn cáp tích hợp lan can tự hạ ở mặt ngoài nhà
+
+(trạng thái mở đề thoát nạn của một phân đoạn thang trong phạm vi 1 tằng)
+
+Ô lắy ánh sáng trên
+
+tường mỗi tàng Lan can
+
+——.
+
+xZ x mm gan m
+
+: 4 Ị = ki 3 H
+
+| ị Ệ t L4. †
+
+Tường Ï : ' “~
+
+“ngăn cháy ˆ. ng
+
+b
+
+ki SE Kế Sb L ' Cửa ngăn 3
+
+Lị .. .Í Cửa ngăn cháy
+
+ng 2 cháy ặ
+
+mi Tưởng __ &
+
+| ) i ngắn cháy
+
+Ô lấy ánh Willesr= 1
+
+sáng trên mái V4) :,
+
+CHÚ DẪN:
+
+1 Cầu thang bộ loại 1 (cầu thang kín, trong nhà): cầu thang bên trong nhà, được bao che kín bởi kết cấu
+
+buồng thang và cửa ra vào có khả năng chịu lửa (ngăn cháy). Tường phía ngoài có thể có lỗ mở
+
+2 Cầu thang bộ loại 2 (cầu thang bộ hở, trong nhà): cầu thang bên trong nhà, không được bao kín bởi kết cầu
+
+buồng thang, không gian cầu thang thông với các không gian khác của nhà
+
+3 Cầu thang bộ loại 3 (cầu thang bộ hở, ngoài nhà): cầu thang nằm phía ngoài nhà và không có buồng thang
+
+4 Buồng thang bộ loại L1: kết cầu bao che cầu thang bộ trong nhà, có khả năng chịu lửa (ngăn cháy), có lỗ
+
+mở lấy ánh sáng ở tường ngoài trên mỗi tằng
+
+5 Buông thang bộ loại L2: kết cầu bao che cầu thang bộ trong nhà, có khả năng chịu lửa (ngăn cháy), có lỗ
+
+mở lấy ánh sáng từ trên mái của buồng thang
+
+Hình A.19 ~ Ví dụ minh họa các dạng cầu thang và buông thang bộ thông thường
+
+T=6
+
+——ĩ 6
+
++ 5
+
+$ 4
+
++ 3
+
++ 2
+
+Ê $ -
+
+Lối vào chính :
+
+—-— 26x 7 XS 23 K29
+
+7m ST
+
+422220720527 Z 2202/0020722/022/7272
+
+"C7 <
+
+CHÚ DẪN:
+
+A Mặt đắt
+
+T Số tầng nhà
+
+Hình A.20 - Ví dụ minh họa xác định số tằng nhà cho trường hợp nhà không có tằng hầm
+
+hoặc tằng nửa/bán hầm
+
+ng
+
+Tz7
+
+——— L7 1
+
+¡
+
+¡ ¡
+
+——
+
+¡
+
+!
+
+$ mm
+
+Ì !
+
+I I
+
+mu \ |
+
+1 1
+
+! lj
+
+lj
+
+$ L5 1
+
+¡ !
+
+¡ ¡
+
+I l
+
+$ Ô. 44
+
+¡ ï
+
+, l Ỉ
+
+! l
+
+guớc am Ỉ
+
+| |
+
+¡
+
+l Í
+
++ —
+
+I ¡
+
+¡ I
+
+TU I ¡
+
+I !
+
+¡ '
+
+$ l2 II
+
+Lối vào chính I ¡
+
+I ¡
+
+Ñ mm. Ạ
+
+: li l
+
+I LÍ
+
+—— _ Ấn Tầng nừa/bán hầm (1) ¡ —Z=Z—
+
+2/00/02/022/6. 1. h I 0 0900/00
+
+2 Xã XU 2047/27/20 N2 2 2n Ôi Đá
+
+QC 2929202222492925092 2x22
+
+0 0 0 0 3 SG Quy
+
+CHÚ DẪN:
+
+A Mặt đát
+
+T Số tằng nhà
+
+Hình A.21 - Ví dụ minh họa xác định số tằng nhà cho trường hợp nhà có tằng nửafbán hằm
+
+‡ Lo p5
+
+! ! I 5
+
++. j3 M
+
+¡ L
+
+‡ Ắ L
+
+-4- U
+
+L I I + 3
+
+Â ] li + 2 ng
+
+Lỗi vào chínhŸ —_¬. - ơi
+
+TY ¡ ng
+
+Lỗi vào chính |
+
+Ỹ ? 272770070224 VNI CC 1
+
+2/222 S2 2/224 E22 nu 227
+
+//2//02207722/799229/0270072 ụ
+
+CHÚ DẪN:
+
+A1, A2 Mặt đắt
+
+T Số tằng nhà
+
+Hình A.22 - Ví dụ minh họa xác định số tằng nhà cho trường hợp
+
+nhà có các cao độ mặt đắt khác nhau
+
+T=7
+
+—” ——..I...
+
+r CC ng
+
+._I.ỗ.._.._........ẶỌÐ -_
+
+¡ -=—m==
+
+- S E
+
+.vuẬu .u<X”I 1:
+
+Ln 2M
+
+E= II E
+
+ha 1
+
+Ai = A = Ha
+
+Lối vi : in Lôivảo chính : ˆ
+
+00/0/20. 22/0000 /010/2//02./20002.2/0 000)
+
+CHÚ DẪN:
+
+A Mặt đất
+
+T Số tầng nhà
+
+Hình A.23 - Ví dụ mình họa xác định số tằng nhà cho trường hợp nhà lệch tằng
+
+Kích thước tính bằng milimét
+
+| hưệt 580 Li >80 >80 Ạ
+
+1 L Ĩ lê L T
+
+LÓT n3] B li È B
+
+'nỄ. _..... J CC; ị __—.....ổ. Cc
+
+: Ị jj Ì |
+
+Hình A.24 - Cách xác định chiều rộng tính toán thoát nạn của về thang
+
+(trường hợp trồng cả hai bên về thang)
+
+Kích thước tính bằng milimét
+
+u _ <80 A n4 >80 A
+
+LÍ l lười HH
+
+'L Z⁄ . cả
+
+E2 —... nu N
+
+m7 ạ lh B ; k B
+
+CHÚ DẪN:
+
+A Tay vịn lan can D Bản thang
+
+B Thanh lan can L. Chiều rộng tính toán thoát nạn của về thang
+
+C Về thang
+
+Hình A.25 - Ví dụ minh họa cách xác định chiều rộng tính toán thoát nạn của về thang
+
+(trường hợp có tường ở một bên về thang)
+
+Kích thước tính bằng milimét
+
+(rã
+
+ề ⁄
+
+A 4 r| !
+
+((J|NNN
+
+!
+
+L ặ ¡
+
+¬
+
+,
+
+li
+
+-H>900 ¡
+
+-L<100 :
+
+l 1
+
+24 RAORAEEREREAROAAERARRAEEREAEEORRREEREHYƯƯ,
+
+CHÚ DẪN:
+
+A Tayvịn lan can
+
+8B Thanh lan can
+
+H Chiều cao tay vịn lan can
+
+L Chiều rộng khe hở giữa hai thanh lan can
+
+Hình A.26 - Ví dụ minh họa lan can bảo vệ ở các cạnh hở của về thang, chiều tới, chiều nghỉ
+
+:
+
+' 1¬ D i
+
+_ 5 ¬i L =
+
+| ; — E-———1G_iOOÖcDL,———a 8 ! c
+
+- mi mi ho TỰ
+
+là nan r T ` EEEEREEEEHE :
+
+7 ErxrtrH4
+
+kh gi
+
+] I LưE:HiEEHzi
+
+‡ rể] | ti:
+
+lam R Ạ
+
+Z 7 Z 7 - ZZ - kc& < 0,3), khi đó số tằng của nhà là 6
+
+¡ ⁄/Z2Z% 72 ⁄/⁄⁄ 72 — (0,3<-Â" <1), khi đó số tầng của nhà là 7
+
+7/2227 A/UHIIIM An
+
+CHÚ DẪN:
+
+A Mặt đất C Sàn mái tum
+
+Am Diện tích sàn mái D Tầng tum
+
+Ai Diện tích sàn mái tum M1 Mặt bằng tằng
+
+B Sàn mái M2 Mặt bằng mái
+
+Hình A.27 - Ví dụ minh họa cách xác định số tằng nhà trường hợp có tằng tum
+
+Ñ gà NEi H / / /
+
+x> ; / H H /
+
+S SH] mu li / / H Ẩ 7 / / LÀN
+
+F7 LAAAAC.AA
+
+Ñ : CĐSH . v v Pu
+
+x< 1 Mà em Ầ `
+
+@' I CĐMĐ
+
+“
+
+Ñ |
+
+CHÚ DẪN:
+
+1 Vách ngăn cháy hoặc màn ngăn cháy bảo đảm El 45
+
+2 Đường thoát nạn đi qua cầu thang bộ
+
+3 Đường thoát nạn đi qua đường dốc
+
+CĐMĐ Cao độ mặt đắt
+
+CĐSH. Cao độ sàn tằng hằm hoặc tằng nửa/bán hằm
+
+Hình A.28 - Ví dụ minh họa ngăn cách khu vực đẻ xe ở tằng hằm hoặc nửa hằm theo 9.3.3.5.4
+
+AC CE EEEEECROEEOERLEROVREOOORRREEERERREPEECR EU ERET
+
+Í nhá huởn dù qui gi sa Ân sở an Giá sả ưng dày hà tu dua ì
+
+1 Em U
+
+! sa TT E Ti => 1
+
+1 nn —Ÿ << =>
+
+: K TW : S m.
+
+- - cớ (Ra .—NÑN ¡
+
+IE ng nn ng su
+
+l ng Thi ae 1 Ỉ !
+
+I œ an “ NHI NT . !
+
+j ng - bu: ng 0S lời '
+
+ì m ¬
+
+¡ =. ⁄⁄⁄ l4 F
+
+¡ > '
+
+¡ 1
+
+H !
+
+H ‡
+
+H 1
+
+Í 1
+
+1 Ñ ¡
+
+: 1
+
+H 1
+
+¡ : ì
+
+7ee.——— Hi
+
+: hư m: - — _—_ :
+
+¡: | oi va .
+
+bay on bi mm... 1 vn GV Sa x ệ Ỉ
+
+sm..rr “hm:-!T.
+
+^¬i ?,? — Ì
+
+ự Z⁄/ã CN !
+
+¡ 1
+
+! ——— _ _——:
+
+| XP lEEEEEEEEIEEIEEHESEEOEEIEEUEEEEIEEEEEIEEEEOERIEEERIEEAESEEIEEUEESEEIEHEHEHPESEHEEUEEUPHPEPEEEHEOEHNHS
+
+CHÚ DĂN:
+
+1 Ban công
+
+2 Lô gia
+
+Hình A.29 - Ví dụ minh họa ban công, lô gia
+
+| ni NG:
+
+x II ]Ÿ v> S
+
+ị $ BU j i ——X d ⁄ . |
+
+là - ]VWẠ Ù mm.
+
+va px 4<
+
+_
+
+„
+
+SN
+
+ệ. FE=== | bA `*`NN- TÊN
+
+Ầm. TT
+
+1330398885888888588387 HN “É
+
+Hình A.30 — Ví dụ minh họa giải pháp che chắn bổn nước lắp đặt trên mái
+
+,/⁄2 ⁄ l2] ng
+
+An xi : : š ä ZE 5 E KHẾU nh
+
+Lo G2 <2 TL LAI
+
+a) Thang ở trạng thái xếp dọc, ép sát bề mặt tường (vị trí lồi ra khẳn cấp trên cùng)
+
+Z Z>>?ƯỤXy Lm”
+
+Cha á . t9 ZI “Bệ kê Ai
+
+2222 số 4 eu cần :
+
+b) Thang ở trạng thái mờ ra để sử dụng (vị trí lồi ra khẳn cấp trên cùng)
+
+CHÚ THÍCH 1: Loại thang này chỉ nên sử dụng ở các nhà có chiều cao của lồi ra khẳn cắp (mép dưới cửa số, lỗ mở trên
+
+tường ngoài, hoặc mép trên lan can của ban công, lö gia, v.v.) không lớn hơn 4,5 m so với mặt đắt phía dưới;
+
+CHÚ THÍCH 2: Việc lắp đặt, sử dụng và bảo trì thang phải thực hiện theo đúng hướng dẫn của nhà sản xuất.
+
+Hình A.31 — Ví dụ mình họa bồ trí thang xếp dọc gắn tường
+
+Thư mục tài liệu tham khảo
+
+1] OCVN01:2021/BXD, Quy chuẩn kỹ thuật quốc gia về Quy hoạch xây dựng;
+
+2] QCVN 01-1:2018/BYT, Quy chuẩn kỹ thuật quốc gia về Chất lượng nước sạch sử dụng cho
+
+mục đích sinh hoạt;
+
+[3] QCVN 02:2022/BXD, Quy chuẩn kỹ thuật quốc gia về Số liệu điều kiện tự nhiên dùng trong
+
+xây dựng;
+
+[4] QOCVN 03:2022/8XD, Quy chuẩn kỹ thuật quốc gia về Phân cấp công trình phục vụ thiết kế
+
+xây dựng;
+
+[5] QCXDVN 06:2008/BXD, Quy chuẩn xây dựng Việt Nam - Nhà ở và công trình công cộng -
+
+An toàn sinh mạng và sức khỏe;
+
+[6] QCVN 06:2022/8XD, Quy chuẩn kỹ thuật quốc gia về An toàn cháy cho nhà và công trình và
+
+Sửa đỏi 1:2023 QCVN 06:2022/BXD;
+
+{7] QCVN 09:2017/BXD, Quy chuẩn kỹ thuật quốc gia về Các công trình xây dựng sử dụng
+
+năng lượng hiệu quả;
+
+[8] QCVN 10:2024/BXD, Quy chuẩn kỹ thuật quốc gia về Xây dựng công trình đảm bảo tiếp cận
+
+sử dụng;
+
+[9] QCVN 12:2014/BXD, Quy chuân kỹ thuật quốc gia về Hệ thống điện của lòa nhà và công trình;
+
+[10] QCVN 14:2008/BTNMT, Quy chuẩn kỹ thuật quốc gia về Nước thải sinh hoạt;
+
+(11) QCVN 17:2018/BXD, Quy chuẩn kỹ thuật quốc gia về Xây dựng và lắp đặt phương tiện quảng
+
+cáo ngoài trời,
+
+[12] QCVN 286:2010/BTNMT, Quy chuân kỹ thuật quốc gia về Tiếng ôn;
+
+[13] TCVN 7338, Phòng cháy chữa cháy - Hệ thống chữa cháy tự động bằng nước, bọt — Yêu cầu
+
+thiết kế và lắp đặt;
+
+[14] TCVN 9254-1, Nhà và công trình dân dụng - Từ vựng - Phân 1: Thuật ngữ chung;
+
+[15]. TCVN 13456, Phòng cháy chữa cháy — Phương tiện chiếu sáng sự có và chỉ dẫn thoát nạn -
+
+Yêu câu thiết kế, lắp đặt;
+
+[18] SP 486.1311500.2020 /lepedeHb 3ÖaHUŨ, COODyX©HUŨ, [IOM©UJHUU U OØODVOOSaHUF,
+
+noÒnexauIUx 3aujuDie a8mOMamAUUIĐCKUMU VCTIOHOSK@MU (10XXADOmIyYUIeHUR, U: CUCTDIMaMU
+
+IoXapHOÙ cu2Hariu3auuu (Danh mục nhà, công trình, gian phòng và thiết bị phải được bảo vệ
+
+bằng các thiết bị chữa cháy tự động và hệ thống báo cháy)

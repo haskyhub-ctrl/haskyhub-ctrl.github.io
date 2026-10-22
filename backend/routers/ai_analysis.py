@@ -436,7 +436,28 @@ class ChatRequest(BaseModel):
     history: Optional[List[dict]] = None  # [{"role": "user"|"assistant", "content": "..."}]
 
 
+def _vetted_suggestions(fn):
+    """Thay gợi ý câu hỏi của AI bằng các câu đã có đáp án chuẩn trong ngân hàng câu hỏi."""
+    import functools
+
+    @functools.wraps(fn)
+    async def wrapper(*args, **kwargs):
+        res = await fn(*args, **kwargs)
+        try:
+            data, db = kwargs.get("data"), kwargs.get("db")
+            if isinstance(res, dict) and data is not None and db is not None and res.get("source_type") != "scope":
+                from utils.kb_qa import suggest_questions
+                sug = suggest_questions(db, data.message, res.get("reply", ""))
+                if sug:
+                    res["suggestions"] = sug
+        except Exception as e:
+            print(f"[AI Chat] Lỗi gợi ý câu hỏi: {e}")
+        return res
+    return wrapper
+
+
 @router.post("/chat")
+@_vetted_suggestions
 async def ai_chat(
     data: ChatRequest,
     current_user: Optional[User] = Depends(get_optional_user),

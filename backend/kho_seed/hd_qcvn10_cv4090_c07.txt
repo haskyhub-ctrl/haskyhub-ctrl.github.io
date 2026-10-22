@@ -1,0 +1,1337 @@
+[Công văn 4090/C07 ngày 29/12/2025 của Cục C07: hướng dẫn một số nội dung của QCVN 10:2025/BCA]
+[Hiệu lực: 29/12/2025. Trạng thái: ĐANG DÙNG. Nguồn: bộ tài liệu thi cán bộ thẩm định PCCC 2026, bản quét đã nhận dạng chữ (OCR).]
+
+PHỤ LỤC I
+HƯỚNG DẪN MỘT SỐ NỘI DUNG CỦA QCVN 10:2025/BCA
+(Kèm theo Công văn số 4090/C07-P6,P4,P3 ngày 29/12/2025 của C07)
+
+1. Giới thiệu tổng quan về QCVN 10:2025/BCA
+1.1. Bố cục của quy chuẩn
+Ngoài phần mục lục, lời nói đầu, thư mục tài liệu tham khảo, QCVN
+10:2025/BCA được bố cục gồm 04 phần và 08 phụ lục.
+Phần 1: Quy định chung, bao gồm: phạm vi điều chỉnh; đối tượng áp dụng;
+tài liệu viện dẫn; giải thích từ ngữ; yêu cầu chung.
+Phần 2: Quy định về trang bị, bố trí phương tiện, hệ thống PCCC, CNCH
+cho nhà và công trình.
+Phần 3: Quy định về quản lý.
+Phần 4: Tổ chức thực hiện.
+Phụ lục A (Quy định) Quy định về trang bị hệ thống báo cháy tự động,
+thiết bị báo cháy độc lập và hệ thống chữa cháy tự động, thiết bị chữa cháy tự
+động kích hoạt.
+Phụ lục B (Quy định) Quy định về trang bị hệ thống họng nước chữa cháy
+trong nhà.
+Phụ lục C (Quy định) Quy định về trang bị hệ thống cấp nước chữa cháy
+ngoài nhà.
+Phụ lục D (Quy định) Quy định về trang bị phương tiện chữa cháy cơ giới.
+Phụ lục E (Quy định) Quy định về trang bị dụng cụ phá dỡ thô sơ.
+Phụ lục F (Quy định) Quy định về trang bị mặt nạ lọc độc và mặt nạ phòng
+độc cách ly.
+Phụ lục G (Quy định) Quy định về trang bị hệ thống loa thông báo và hướng
+dẫn thoát nạn.
+Phụ lục H (Quy định) Yêu cầu về thiết kế, lắp đặt hệ thống.
+1.2. Những điểm mới của QCVN 10:2025/BCA
+Quy chuẩn được xây dựng trên cơ sở tham khảo TCVN 3890:2023 Phòng
+cháy chữa cháy - Phương tiện phòng cháy và chữa cháy cho nhà và công trình -
+Trang bị, bố trí, tuy nhiên căn cứ vào sự phát triển của khoa học công nghệ, cũng
+như tham khảo quy định của một số nước tiên tiến trên thế giới, Ban soạn thảo
+quy chuẩn đã xây dựng nội dung của quy chuẩn theo hướng giảm nhiều quy định,
+yêu cầu so với TCVN 3890:2023, một số nội dung chính như sau:
+1.2.1. Về quy định trang bị bình chữa cháy: QCVN 10:2025/BCA đã bỏ
+quy định yêu cầu phải dự trữ không ít hơn 10% số lượng bình chữa cháy cho
+nhà, công trình.
+HƯỚ
+Ư NG DẪN M
+(Kèm theo Công văn
+1. Giới thi
+ớ
+ệu tổng
+1 1 Bố
+ủ
+
+1.2.2. Về quy định trang bị hệ thống báo cháy tự động và hệ thống chữa
+cháy tự động
+- Hệ thống báo cháy tự động: QCVN 10:2025/BCA đã giảm loại hình công
+trình thuộc diện phải trang bị hệ thống báo cháy tự động. Theo đó, một số loại
+hình công trình được giảm bớt không phải trang bị hệ thống báo cháy, gồm: nhà
+lưu trữ sách, thư viện có tổng diện tích nhỏ hơn 300 m2; bảo tàng, nhà triển lãm,
+nhà trưng bày có tổng diện tích nhỏ hơn 300 m2; buồng sơn, buồng sấy, thùng, téc
+sử dụng chất lỏng dễ cháy; gian phòng hạng nguy hiểm cháy E, gian phòng hạng
+nguy hiểm cháy C4 trong các nhà sản xuất, nhà kho; công trình cáp trong nhà máy
+điện, trạm biến áp có sử dụng cáp chậm cháy; nhà ở riêng lẻ.
+- Hệ thống chữa cháy tự động: QCVN 10:2025/BCA đã giảm loại hình công
+trình thuộc diện phải trang bị hệ thống chữa cháy tự động. Theo đó, một số loại
+hình công trình được giảm bớt không phải trang bị hệ thống chữa cháy tự động,
+gồm: nhà chung cư có chiều cao phòng cháy và chữa cháy dưới 30 m; Nhà chung
+cư có chiều cao phòng cháy và chữa cháy dưới 100 m không yêu cầu lắp đặt chữa
+cháy tự động trong các phòng ngủ (mà chỉ yêu cầu lắp đặt 01 đầu phun tại cửa căn
+hộ); nhà trẻ, trường mẫu giáo, trường mầm non và cơ sở giáo dục mầm non khác
+theo quy định của pháp luật về giáo dục có quy mô dưới 4 tầng hoặc có tổng diện
+tích sàn dưới 5.000 m2; nhà dưỡng lão, nhà chăm sóc người khuyết tật có tổng
+diện tích sàn dưới 500 m2; bảo tàng, nhà triển lãm, nhà trưng bày có tổng diện tích
+sàn dưới 500 m2; nhà chế biến, lưu trữ nông sản dạng hạt có tổng diện tích sàn
+dưới 3000 m2; gian phòng lưu trữ cao su, hạt nhựa, diêm, kim loại kiềm, sản phẩm
+pháo hoa, len, lông thú có diện tích nhỏ hơn 100 m2 trong các cơ sở công nghiệp;
+buồng sơn, buồng sấy, thùng, téc sử dụng chất lỏng dễ cháy; gian phòng hạng
+nguy hiểm cháy E, Gian phòng hạng nguy hiểm cháy C4 trong các nhà sản xuất,
+nhà kho; công trình cáp trong nhà máy điện, trạm biến áp có sử dụng cáp chậm
+cháy; nhà ở riêng lẻ; khoảng không gian phía trên trần giả hoặc dưới sàn nâng
+trong các gian phòng, nhà thuộc diện trang bị hệ thống chữa cháy tự động và/hoặc
+hệ thống báo cháy tự động; bãi bỏ quy định phải trang bị hệ thống chữa cháy tự
+động cho toàn nhà nếu tổng diện tích các gian phòng trong nhà thuộc diện phải
+chữa cháy tự động bằng hoặc lớn hơn 40 %.
+1.2.3. Về quy định trang bị hệ thống cấp nước chữa cháy ngoài nhà: được
+điều chỉnh trong Phụ lục C theo hướng giảm tối đa, kết hợp với quy định về trách
+nhiệm phải đầu tư hệ thống cấp nước tập trung, cấp nước chữa cháy ngoài nhà
+thuộc về UBND, các chủ đầu tư hạ tầng tại Nghị định 105/2025/NĐ-CP cho kết
+quả giảm đến 99 % số lượng công trình độc lập không còn thuộc diện phải trang
+bị hệ thống cấp nước chữa cháy ngoài nhà, giảm chi phí đầu tư cho người dân,
+doanh nghiệp.
+1.2.4. Về quy định trang bị phương tiện chữa cháy cơ giới:
+- Bỏ quy định về trang bị tàu chữa cháy cho cảng biển; chỉ yêu cầu đối với
+Bến cảng chuyên dùng LNG khi tiếp nhận tàu hoặc thiết bị có dung tích chứa từ
+8.000 m3 trở lên, và cho phép sử dụng tàu lai dắt thay thế cho tàu chữa cháy.
+- Bỏ quy định yêu cầu trang bị xe chữa cháy đối với: kho dự trữ cấp Quốc
+
+gia, Bộ, ngành; nhà máy điện hạt nhân; nhà máy giấy; nhà máy xi măng; nhà máy
+phân đạm; cơ sở khai thác khoáng sản.
+- Nâng quy mô yêu cầu và giảm số lượng xe chữa cháy phải trang bị đối với:
+kho dầu mỏ và sản phẩm dầu mỏ, khu công nghiệp, cụm công nghiệp; nhà máy
+nhiệt điện; nhà máy thủy điện, nhà máy dệt.
+- Bổ sung quy định cho phép các cơ sở sử dụng chung xe chữa cháy; quy
+định cho phép đầu tư xe chữa cháy theo phân kỳ đầu tư dự án, tạo điều kiện thuận
+lợi cho doanh nghiệp.
+1.2.5. Về quy định trang bị hệ thống loa thông báo và hướng dẫn thoát nạn
+- Bỏ quy định trang bị hệ thống loa thông báo và hướng dẫn thoát nạn đối
+với nhà kho có tổng diện tích sàn từ 18.000 m2 và từ 50 người trở lên trên một tầng.
+- Giảm đối tượng phải trang bị hệ thống loa thông báo và hướng dẫn thoát
+nạn đối với nhà sản xuất, theo đó nhà sản xuất có tổng diện tích sàn từ 18.000 m2
+và có từ 50 người đến dưới 300 người trên một tầng (trước đây thuộc diện phải
+trang bị) nay không thuộc diện trang bị hệ thống này.
+2. Phạm vi điều chỉnh và xử lý chuyển tiếp của quy chuẩn
+2.1. Phạm vi điều chỉnh
+Căn cứ quy định tại Điều 1.1.1 QCVN 10:2025/BCA, bắt buộc áp dụng
+QCVN 10:2025/BCA trong một số trường hợp cụ thể như sau:
+- Khi xây dựng mới nhà, công trình, hạ tầng kỹ thuật về phòng cháy, chữa
+cháy của khu đô thị, khu nhà ở, khu dân cư, khu công nghiệp, cụm công nghiệp,
+khu du lịch, khu nghiên cứu, đào tạo, khu thể dục, thể thao.
+- Khi cải tạo làm tăng quy mô của khu đô thị, khu nhà ở, khu công nghiệp,
+cụm công nghiệp, khu du lịch, khu nghiên cứu, đào tạo, khu thể dục, thể thao.
+- Khi cải tạo, thay đổi đối với nhà, công trình:
++ Cải tạo làm tăng quy mô (ví dụ như: tăng số tầng, (kể cả tầng hầm), chiều
+cao PCCC, diện tích, khối tích) hoặc thay đổi công năng sử dụng hoặc thay đổi
+hạng nguy hiểm cháy và cháy nổ của nhà, công trình.
++ Cải tạo làm tăng quy mô (diện tích hoặc khối tích) hoặc thay đổi công
+năng sử dụng hoặc thay đổi hạng nguy hiểm cháy và cháy nổ của gian phòng.
+QCVN 10:2025/BCA không bắt buộc áp dụng đối với: nhà, công trình phục
+vụ mục đích quốc phòng, quân sự, an ninh, trật tự thuộc phạm vi quản lý của Bộ
+Quốc phòng, Bộ Công an. Người quyết định đầu tư, chủ đầu tư được phép lựa
+chọn áp dụng QCVN 10:2025/BCA để trang bị, bố trí phương tiện PCCC và
+CNCH cho các công trình này khi xét thấy phù hợp.
+2.2. Xử lý chuyển tiếp
+- Căn cứ quy định tại khoản 3, khoản 4 Điều 58 Luật ban hành văn bản quy
+phạm pháp luật và quy định tại khoản 2 Điều 2 Thông tư số 103/2025/TT-BCA
+ngày 04/11/2025 ban hành Quy chuẩn kỹ thuật quốc gia về trang bị, bố trí phương
+
+tiện phòng cháy, chữa cháy, cứu nạn, cứu hộ cho nhà và công trình, việc xử lý
+chuyển tiếp được thực hiện như sau:
++ Hồ sơ thiết kế xây dựng đã được cơ quan quản lý nhà nước có thẩm quyền
+thẩm duyệt, thẩm định thiết kế về phòng cháy và chữa cháy trước ngày 30/12/2025
+thì tiếp tục thực hiện theo hồ sơ thiết kế đã được thẩm duyệt, thẩm định. Các công
+trình này có thể lựa chọn tiếp tục thực hiện theo hồ sơ thiết kế đã được thẩm duyệt,
+thẩm định (áp dụng tiêu chuẩn, quy chuẩn về PCCC có hiệu lực tại thời điểm thẩm
+duyệt, thẩm định) hoặc lựa chọn áp dụng các quy định của QCVN 10:2025/BCA
+để thiết kế điều chỉnh, nghiệm thu về PCCC theo quy định.
++ Đối với công trình không thuộc diện phải thẩm định hoặc thẩm duyệt thiết
+kế về phòng cháy và chữa cháy đã được cấp phép xây dựng, tổ chức thi công hoặc
+nghiệm thu đưa vào sử dụng trước ngày 30/12/2025 thì thực hiện việc trang bị, bố
+trí phương tiện phòng cháy, chữa cháy, cứu nạn, cứu hộ theo quy định của tiêu
+chuẩn, quy chuẩn kỹ thuật có hiệu lực tại thời điểm cấp phép xây dựng, tổ chức
+thi công hoặc đưa vào sử dụng. Các công trình này có thể lựa chọn thực hiện theo
+tiêu chuẩn, quy chuẩn kỹ thuật có hiệu lực tại thời điểm cấp phép xây dựng, tổ
+chức thi công hoặc đưa vào sử dụng hoặc lựa chọn áp dụng các quy định của
+QCVN 10:2025/BCA để trang bị, bố trí phương tiện PCCC và CNCH cho phù
+hợp.
+- Căn cứ khoản 3 Điều 2 Thông tư số 103/2025/TT-BCA: Nhà, công trình
+đã được nghiệm thu đưa vào sử dụng theo quy định của pháp luật, khi cải tạo làm
+tăng quy mô hoặc thay đổi công năng sử dụng hoặc thay đổi hạng nguy hiểm cháy
+và cháy nổ của bộ phận, khu vực hoặc cải tạo hệ thống phòng cháy, chữa cháy thì
+cho phép áp dụng các quy định về trang bị phương tiện phòng cháy, chữa cháy,
+cứu nạn, cứu hộ của QCVN 10:2025/BCA đối với các bộ phận, khu vực trực tiếp
+được cải tạo, sửa chữa.
+2.3. Nguyên tắc áp dụng QCVN 10:2025/BCA và các tiêu chuẩn, quy
+chuẩn khác về PCCC
+- Thực hiện theo Luật Phòng cháy, chữa cháy và cứu nạn, cứu hộ và Luật
+Tiêu chuẩn và Quy chuẩn kỹ thuật thì tiêu chuẩn quốc gia được áp dụng trên cơ
+sở tự nguyện, quy chuẩn kỹ thuật được áp dụng bắt buộc. Do đó, kể từ ngày
+30/12/2025, QCVN 10:2025/BCA có hiệu lực thi hành, việc trang bị, bố trí
+phương tiện phòng cháy, chữa cháy, cứu nạn, cứu hộ cho nhà và công trình phải
+áp dụng theo quy định tại QCVN 10:2025/BCA, không áp dụng theo TCVN
+3890:2023.
+- Căn cứ Điều 58 Luật Ban hành văn bản quy phạm pháp luật, việc áp dụng
+QCVN 10:2025/BCA và các quy chuẩn kỹ thuật quốc gia khác như sau:
++ Khi QCVN 10:2025/BCA và các Quy chuẩn kỹ thuật quốc gia khác được
+ban hành trước đó (như: QCVN 06:2022/BXD Quy chuẩn kỹ thuật quốc gia về an
+toàn cháy cho nhà và công trình, Sửa đổi 1:2023 QCVN 06:2022/BXD, QCVN
+01:2019/BCT Quy chuẩn kỹ thuật quốc gia về an toàn trong sản xuất, thử nghiệm,
+nghiệm thu, bảo quản, vận chuyển, sử dụng, tiêu hủy vật liệu nổ công nghiệp và
+
+bảo quản tiền chất thuốc nổ, QCVN 08:2018/BXD Quy chuẩn kỹ thuật quốc gia
+công trình tàu điện ngầm, QCVN 13:2018/BXD Quy chuẩn kỹ thuật quốc gia về
+gara ô-tô…) có quy định cùng một vấn đề thì thực hiện theo quy định của QCVN
+10:2025/BCA. Ví dụ: Phụ lục H của QCVN 10:2025/BCA và Mục 5 của QCVN
+06:2022/BXD, Sửa đổi 1:2023 QCVN 06:2022/BXD, cùng quy định về cấp nước
+chữa cháy (gồm cấp nước chữa cháy ngoài nhà và hệ thống họng nước chữa cháy
+trong nhà), từ ngày 30/12/2025 việc thiết kế hệ thống cấp nước ngoài nhà, hệ
+thống họng nước chữa cháy trong nhà phải thực hiện theo quy định của Phụ lục
+H QCVN 10:2025/BCA (Để tránh việc chồng chéo trong việc áp dụng khi QCVN
+10:2025/BCA có hiệu lực, Bộ Công an đã có Văn bản số 5252/BCA-
+PCCC&CNCH ngày 24/11/2025 gửi Bộ Xây dựng đề nghị bãi bỏ Mục 5 Cấp nước
+chữa cháy QCVN 06:2022/BXD, Sửa đổi 1:2023 QCVN 06:2022/BXD).
++ Đối với nhà (có chiều cao PCCC từ trên 50 m đến 150 m) thuộc nhóm
+F1.2, F4.2, F4.3, nhà hỗn hợp ngoài việc áp dụng các quy định về trang bị, bố trí
+phương tiện PCCC và CNCH theo quy định của QCVN 10:2025/BCA, phải thực
+hiện thêm các quy định bổ sung tại Phụ lục A QCVN 06:2022/BXD, Sửa đổi
+1:2023 QCVN 06:2022/BXD.
++ Đối với nhà chung cư ngoài việc áp dụng các quy định về trang bị, bố trí
+phương tiện PCCC và CNCH theo quy định của QCVN 10:2025/BCA, phải thực
+hiện thêm các quy định bổ sung tại QCVN 04:2021/BXD. Riêng nhà chung cư có
+chiều cao PCCC từ trên 75 m đến 150 m phải thực hiện thêm các quy định bổ
+sung tại Phụ lục A QCVN 06:2022/BXD, Sửa đổi 1:2023 QCVN 06:2022/BXD.
++ Đối với một số loại hình công trình như gara ô tô, tàu điện ngầm, sản
+xuất, thử nghiệm, bảo quản, vận chuyển, sử dụng, tiêu hủy vật liệu nổ công nghiệp
+và bảo quản tiền chất thuốc nổ ngoài việc áp dụng các quy định về trang bị, bố trí
+phương tiện PCCC và CNCH theo quy định của QCVN 10:2025/BCA, còn phải
+áp dụng thêm các quy định bổ sung tại các QCVN 01:2019/BCT, QCVN
+08:2018/BXD, QCVN 13:2018/BXD.
++ Đối với trường hợp Bộ Công an ban hành quy chuẩn kỹ thuật quốc gia
+quy định về trang bị, bố trí phương tiện phòng cháy, chữa cháy, cứu nạn, cứu hộ
+cho từng loại công trình cụ thể thì áp dụng theo quy định của quy chuẩn ban hành
+sau.
+- Căn cứ quy định tại điểm b khoản 2 Điều 10a Luật tiêu chuẩn và quy
+chuẩn kỹ thuật, việc trang bị, bố trí phương tiện PCCC và CNCH phải tuân thủ
+theo các tiêu chuẩn đã được viện dẫn trong QCVN 10:2025/BCA. Trường hợp
+QCVN 10:2025/BCA chưa có quy định thì việc áp dụng tiêu chuẩn quốc gia, tiêu
+chuẩn quốc tế, tiêu chuẩn khu vực, tiêu chuẩn nước ngoài đối với việc trang bị,
+bố trí phương tiện phòng cháy, chữa cháy, cứu nạn, cứu hộ cho nhà, công trình
+thực hiện theo quy định của pháp luật về tiêu chuẩn, quy chuẩn kỹ thuật.
+- Việc thiết kế, lắp đặt hệ thống PCCC và CNCH phải thực hiện theo quy
+định của các tiêu chuẩn tương ứng được viện dẫn trong QCVN 10:2025/BCA.
+Trong một số trường hợp không thể tuân thủ theo các quy định của các tiêu chuẩn
+được viện dẫn trong quy chuẩn hoặc lựa chọn tiêu chuẩn nước ngoài, tiêu chuẩn
+
+quốc tế, tiêu chuẩn khu vực để áp dụng phù hợp với hệ thống công nghệ của công
+trình thì thực hiện theo Điều 1.1.6 QCVN 10:2025/BCA.
+2.4. Hướng dẫn về luận chứng kỹ thuật để xem xét thay thế một số yêu
+cầu của QCVN 10:2025/BCA.
+Luận chứng kỹ thuật theo Điều 1.1.6 QCVN 10:2025/BCA cần trình bày
+các giải pháp kỹ thuật để thay thế, bổ sung một số yêu cầu trang bị, bố trí phương
+tiện PCCC và CNCH của QCVN 10:2025/BCA và cơ sở của các giải pháp kỹ
+thuật đó. Cơ sở của các giải pháp kỹ thuật thay thế có thể là: các tài liệu chuẩn
+(như các tiêu chuẩn (standard), quy định kỹ thuật (technical specifications), quy
+phạm thực hành (code of practice) và quy chuẩn kỹ thuật (technical regulation)
+và hướng dẫn kỹ thuật (guidelines, handbook) trong và ngoài nước được các cơ
+quan, tổ chức có thẩm quyền ban hành); hoặc các giải pháp kỹ thuật phù hợp khác
+(như chứng minh bằng thực nghiệm, thử nghiệm, tính toán theo tiêu chuẩn…).
+Luận chứng này được coi là một trong những nội dung của hồ sơ thiết kế về PCCC.
+Luận chứng theo Điều 1.1.6 QCVN 10:2025/BCA phải được cơ quan quản
+lý về phòng cháy, chữa cháy và cứu nạn, cứu hộ chấp thuận, cụ thể: đối với công
+trình quy định tại khoản 1 Điều 9 Thông tư số 36/2025/TT-BCA ngày 15 tháng 5
+năm 2025 của Bộ trưởng Bộ Công an do Cục Cảnh sát phòng cháy, chữa cháy và
+cứu nạn, cứu hộ chấp thuận; đối với công trình thuộc diện thẩm định thiết kế về
+PCCC quy định tại khoản 2 Điều 9 Thông tư số 36/2025/TT-BCA, công trình
+không thuộc diện thẩm định thiết kế về PCCC (kể cả các công trình thuộc phạm
+vi quản lý của UBND cấp xã) nhưng thuộc đối tượng phải trang bị phương tiện
+PCCC và CNCH do Phòng Cảnh sát PCCC và CNCH Công an cấp tỉnh chấp
+thuận.
+3. Quy định chung
+3.1. Xác định số tầng, chiều cao của nhà
+3.1.1. Xác định chiều cao PCCC của nhà, công trình theo quy định tại Điều
+1.4.23 QCVN 10:2025/BCA. Trong đó lưu ý: Đối với nhà ở riêng lẻ kết hợp sản
+xuất, kinh doanh thuộc phạm vi áp dụng của TCVN 13967, thì xác định chiều cao
+PCCC của nhà được tính đến tầng cao nhất có người sử dụng với điều kiện: các
+tầng phía trên đó không có người sử dụng và không tập kết hoặc lưu giữ chất, vật
+liệu cháy được; đồng thời có giải pháp ngăn cháy với khu vực có người sử dụng
+và vẫn bảo đảm lối đi theo thang bộ lên mái qua các tầng này.
+3.1.2. Xác định số tầng của nhà, công trình theo quy định tại Điều 1.4.24
+QCVN 10:2025/BCA. Trong đó lưu ý:
+- Tầng kỹ thuật là tầng hoặc một phần tầng bố trí các gian kỹ thuật hoặc các
+thiết bị kỹ thuật của tòa nhà. Tầng kỹ thuật có thể là tầng hầm, tầng bán hầm, tầng
+áp mái, tầng trên cùng hoặc tầng thuộc phần giữa của tòa nhà.
+- Tầng áp mái là tầng nằm bên trong không gian của mái dốc mà toàn bộ
+hoặc một phần mặt đứng của nó được tạo bởi bề mặt mái nghiêng hoặc mái gấp,
+trong đó tường bao (nếu có) không cao quá mặt sàn 1,5 m. Trường hợp tường bao
+
+cao hơn 1,5 m thì không được coi là tầng áp mái và tầng này phải được tính vào
+số tầng của nhà.
+- Tầng bán hầm/nửa hầm là tầng mà một nửa chiều cao của nó nằm trên
+hoặc ngang cao độ mặt đất đặt công trình theo quy hoạch được duyệt.
+- Tầng hầm là tầng mà quá một nửa chiều cao của nó nằm dưới cao độ mặt
+đất đặt công trình theo quy hoạch được duyệt. Khi xem xét các yêu cầu về an toàn
+cháy đối với nhà có cao độ mặt đất xung quanh khác nhau, không xác định tầng
+nằm dưới cao độ mặt đất theo quy hoạch được duyệt là tầng hầm nếu đường thoát
+nạn từ tầng đó không di chuyển theo hướng từ dưới lên trên.
+- Đối với nhà ở riêng lẻ kết hợp sản xuất, kinh doanh thuộc phạm vi áp dụng
+của TCVN 13967, thì xác định số tầng của nhà được tính đến tầng cao nhất có
+người sử dụng với điều kiện: các tầng phía trên đó không có người sử dụng và
+không tập kết hoặc lưu giữ chất, vật liệu cháy được; đồng thời có giải pháp ngăn
+cháy với khu vực có người sử dụng và vẫn bảo đảm lối đi theo thang bộ lên mái
+qua các tầng này. Đối với nhà ở riêng lẻ kết hợp sản xuất, kinh doanh thiết kế lệch
+tầng thì xác định số tầng tham khảo theo TCVN 13967.
+- Một số trường hợp tầng tum, tầng lửng không tính vào số tầng của nhà:
++ Tầng tum không tính vào số tầng nhà của công trình khi chỉ có chức năng
+sử dụng để bao che lồng cầu thang bộ/giếng thang máy và che chắn các thiết bị
+kỹ thuật của công trình (nếu có), có diện tích mái tum không vượt quá 30 % diện
+tích sàn mái.
++ Đối với nhà ở riêng lẻ kết hợp sản xuất, kinh doanh, tầng lửng không tính
+vào số tầng của công trình khi diện tích sàn tầng lửng không vượt quá 65 % diện
+tích sàn xây dựng của tầng ngay bên dưới.
++ Đối với công trình nhà kho, nhà sản xuất thì sàn giá đỡ và sàn lửng nằm
+ở cao độ bất kỳ không tính vào số tầng của công trình khi có diện tích không lớn
+hơn 40 % diện tích một tầng của công trình đó.
++ Đối với các công trình nhà, kết cấu dạng nhà, công trình nhiều tầng có
+sàn (không bao gồm nhà ở riêng lẻ kết hợp sản xuất, kinh doanh, nhà kho, nhà sản
+xuất), tầng lửng không tính vào số tầng của công trình khi chỉ bố trí sử dụng làm
+khu kỹ thuật (ví dụ: sàn kỹ thuật đáy bể bơi, sàn đặt máy phát điện, hoặc các thiết
+bị công trình khác), có diện tích sàn xây dựng không vượt quá 10 % diện tích sàn
+xây dựng của tầng ngay bên dưới và không vượt quá 300 m2.
++ Mỗi công trình chỉ được xác định có một tầng lửng không tính vào số
+tầng của công trình.
+3.2. Xác định khối tích, diện tích của gian phòng, nhà, công trình
+- Diện tích của nhà được xác định theo Điều 1.4.26 QCVN 10:2025/BCA,
+trong đó lưu ý một số nội dung sau: Tổng diện tích sàn của nhà và công trình là
+tổng diện tích sàn của tất cả các tầng của nhà, công trình/hạng mục công trình độc
+lập về kết cấu. Các tầng có thể bao gồm các tầng nằm hoàn toàn hoặc một phần
+dưới mặt đất, các tầng phía trên mặt đất, tầng áp mái, hiên, sân thượng, sàn kỹ
+thuật hoặc sàn để làm cho kho chứa theo quy định tại Điều 5.1.3 của TCVN 9255.
+
+Trường hợp các nhà đã bảo đảm về khoảng cách an toàn phòng cháy chữa cháy,
+thoát nạn và ngăn cháy lan, được kết nối với nhau bởi các lối đi (hành lang cầu)
+thì cho phép tính diện tích riêng biệt của từng nhà. Trường hợp này không tính
+diện tích hành lang cầu vào diện tích của nhà.
+- Diện tích của gian phòng theo quy định tại Điều 1.5.10 QCVN
+10:2025/BCA được hiểu là diện tích của một phần tòa nhà được bao quanh bởi
+các bộ phận ngăn cháy với giới hạn chịu lửa: tường ngăn cháy, sàn ngăn cháy có
+giới hạn chịu lửa không thấp hơn REI 45, vách ngăn cháy có giới hạn chịu lửa
+không thấp hơn EI 45 (đối với nhà bậc chịu lửa I, II, III); tường, sàn có giới hạn
+chịu lửa không thấp hơn REI 15, vách có giới hạn chịu lửa không thấp hơn EI 15
+(đối với nhà bậc chịu lửa IV, V). Trường hợp các gian phòng được ngăn cách bằng
+các kết cấu có giới hạn chịu lửa không bảo đảm yêu cầu nêu trên thì diện tích của
+gian phòng là tổng diện tích các gian phòng này, đồng thời xem xét đến phần công
+năng của phòng có yêu cầu trang bị cao nhất theo quy định của Bảng A.3 QCVN
+10:2025/BCA.
+- Khối tích được xác định theo Điều 1.4.25 QCVN 10:2025/BCA, trong đó
+lưu ý một số nội dung sau:
++ Khối tích của nhà, công trình được hiểu là khối tích của nhà, công
+trình/hạng mục công trình độc lập về kết cấu. Trường hợp các nhà đã bảo đảm về
+khoảng cách an toàn phòng cháy chữa cháy, thoát nạn và ngăn cháy lan, được kết
+nối với nhau bởi các lối đi (hành lang cầu) thì cho phép tính diện tích và khối tích
+riêng biệt của từng nhà. Trường hợp này không tính khối tích hành lang cầu vào
+khối tích của nhà;
++ Khối tích quy định trong QCVN 10:2025/BCA được tính theo tổng khối
+tích của tòa nhà hoặc các phần của tòa nhà được bao quanh và được che phủ về
+mọi phía, là tích số giữa tổng diện tích sàn nhân với chiều cao tương ứng theo quy
+định tại Điều 5.2.2.1 của TCVN 9255.
+3.3. Xác định khu vực ẩm ướt
+Theo Điều 1.4.27 QCVN 10:2025/BCA, khu vực có quy trình ướt không
+thuộc đối tượng phải trang bị hệ thống báo cháy tự động và hệ thống chữa cháy tự
+động, bao gồm các khu vực, gian phòng có độ ẩm không khí trong nhà trên 75 % ở
+nhiệt độ từ 12 °C đến 24 °C hoặc trên 60 % ở nhiệt độ trên 24 °C được tạo ra bởi
+hơi nước lưu thông do chính hoạt động của gian phòng (ví dụ hoạt động sinh hoạt
+hoặc sản xuất bình thường của gian phòng có tạo ra nước/hơi nước dưới dạng như:
+phun hơi nước; phun tia nước dạng sương; nước được phun ra trải rộng trên toàn
+bộ không gian phòng).
+3.4. Một số loại hình nhà, công trình, gian phòng quy định trong quy
+chuẩn và nhà, công trình có công năng tương tự chưa được quy định trong
+quy chuẩn
+- Nhà hỗn hợp và nhà chung cư được xây dựng có mục đích sử dụng
+hỗn hợp:
+
++ Căn cứ quy định tại Điều 1.4.18 QCVN 10:2025/BCA, nhà hỗn hợp là
+nhà dân dụng có nhiều công năng sử dụng khác nhau (ví dụ: một nhà được thiết
+kế sử dụng làm văn phòng, dịch vụ thương mại, hoạt động công cộng…), không
+bao gồm nhà ở riêng lẻ kết hợp sản xuất, kinh doanh.
++ Nhà chung cư được xác định theo Điều 1.4.19 QCVN 10:2025/BCA.
++ Nhà hỗn hợp, nhà chung cư được xây dựng có mục đích sử dụng hỗn hợp
+phải áp dụng các quy định về trang bị, bố trí phương tiện, hệ thống phòng cháy,
+chữa cháy, cứu nạn, cứu hộ đối với nhà hỗn hợp, nhà chung cư được xây dựng có
+mục đích sử dụng hỗn hợp khi diện tích sàn xây dựng dùng cho mỗi công năng
+của nhà không vượt quá 70 % tổng diện tích sàn xây dựng của nhà (không bao
+gồm các diện tích sàn dùng cho hệ thống kỹ thuật, phòng cháy, chữa cháy, gian
+lánh nạn và đỗ xe);
++ Nhà hỗn hợp, nhà chung cư được xây dựng có mục đích sử dụng hỗn hợp
+phải áp dụng các quy định về trang bị, bố trí phương tiện, hệ thống phòng cháy,
+chữa cháy, cứu nạn, cứu hộ theo công năng mà có diện tích sàn xây dựng dùng
+cho công năng đó của nhà vượt quá 70 % tổng diện tích sàn xây dựng của nhà
+(không bao gồm các diện tích sàn dùng cho hệ thống kỹ thuật, phòng cháy, chữa
+cháy, gian lánh nạn và đỗ xe).
+- Nhà ở riêng lẻ kết hợp kinh doanh dịch vụ, nhà ở riêng lẻ kết hợp sản xuất,
+kinh doanh hàng hóa dễ cháy (căn cứ Chú dẫn 2 Bảng A1. Phụ lục A QCVN
+10:2025/BCA):
+Đối với nhà ở riêng lẻ kết hợp kinh doanh dịch vụ, nhà ở riêng lẻ kết hợp
+sản xuất, kinh doanh hàng hóa dễ cháy có phần diện tích để sản xuất, kinh doanh
+từ 30 % đến 70 % tổng diện tích sàn của nhà trở lên thì việc trang bị hệ thống báo
+cháy tự động, thiết bị báo cháy độc lập và hệ thống chữa cháy tự động như đối
+với nhà hỗn hợp; trường hợp phần diện tích để sản xuất, kinh doanh trên 70 %
+tổng diện tích sàn của nhà thì việc trang bị hệ thống báo cháy tự động, thiết bị báo
+cháy độc lập và hệ thống chữa cháy tự động thực hiện theo công năng sản xuất,
+kinh doanh.
+- Cửa hàng kinh doanh hàng hóa là chất dễ cháy gồm: cửa hàng kinh doanh
+nội thất, quần áo, chăn nệm, sách báo, vàng mã và các hàng hóa khác có tính chất
+tương tự;
+- Kho lạnh (kho cấp đông): một hoặc nhiều phòng được cách nhiệt và làm
+lạnh có nhiệt độ từ - 30 oC đến + 5 oC để bảo quản thực phẩm, hàng hóa ở nhiệt
+độ quy định. Nếu diện tích sàn của kho không vượt quá 10 m2 và thiết kế của kho
+không cho phép người đi vào thì không được xác định là kho lạnh.
+- Bến cảng biển: là khu vực bao gồm vùng đất và vùng nước thuộc một cảng
+biển, được xây dựng cầu cảng, kho, bãi, nhà xưởng, trụ sở, cơ sở dịch vụ, hệ thống
+giao thông, thông tin liên lạc, điện, nước, vùng nước trước cầu cảng, luồng hàng
+hải và các công trình phụ trợ khác. Lưu ý: cần phân biệt cảng biển với bến cảng
+biển như sau: cảng biển là khu vực tổng thể bao gồm nhiều bến cảng biển và các
+công trình phụ trợ; bến cảng biển là một phần chức năng, chuyên biệt hóa bên
+trong cảng biển.
+
+- Đối với nhà, công trình không được quy định tại các Phụ lục A, B, H thì
+việc trang bị, bố trí phương tiện, hệ thống phòng cháy, chữa cháy, cứu nạn, cứu
+hộ thực hiện như với nhà, công trình có công năng tương tự xác định theo nhóm
+nguy hiểm cháy theo công năng quy định tại QCVN 06:2022/BXD và Sửa đổi
+1:2023 QCVN 06:2022/BXD. Một số ví dụ:
++ Các công trình: câu lạc bộ, hộp đêm, quán bar, phòng hát và các cơ sở
+tương tự khác trong các gian phòng kín không có trong danh mục quy định tại
+Phụ lục A, B, H), căn cứ Bảng 6 QCVN 06:2022/BXD và Sửa đổi 1:2023 QCVN
+06:2022/BXD, các công trình này thuộc nhóm F2.1. Do đó theo quy định tại Điều
+1.5.7 QCVN 10:2025/BCA việc trang bị, bố trí phương tiện PCCC và CNCH cho
+các công trình này thực hiện theo mục 13 Bảng A.1, mục 1.9 Bảng B.1 QCVN
+10:2025/BCA.
++ Các công trình: thẩm mỹ viện, nhà có kinh doanh dịch vụ xoa bóp
+không có trong danh mục quy định tại Phụ lục A, B, H), căn cứ Bảng 6 QCVN
+06:2022/BXD và Sửa đổi 1:2023 QCVN 06:2022/BXD, các công trình này thuộc
+nhóm F3.4. Do đó theo quy định tại Điều 1.5.7 QCVN 10:2025/BCA việc trang
+bị, bố trí phương tiện PCCC và CNCH cho các công trình này thực hiện theo mục
+6 Bảng A.1, mục 1.4 Bảng B.1 QCVN 10:2025/BCA.
+3.5. Xác định chất chữa cháy hiệu quả
+Lựa chọn loại phương tiện, phương pháp chữa cháy, loại chất chữa cháy
+phải phù hợp với tính chất, mức độ nguy hiểm cháy của nhà, công trình, gian
+phòng, thiết bị với từng loại đám cháy, với khả năng, hiệu quả của phương tiện
+chữa cháy và từng loại chất chữa cháy quy định tại Điều 1.5.5 QCVN
+10:2025/BCA. Lưu ý: Khi nhà, công trình, gian phòng, khu vực có từ hai chất
+chữa cháy hiệu quả thấp hoặc hiệu quả hoặc rất hiệu quả trở lên thì được phép lựa
+chọn một trong các chất chữa cháy này nhằm hạn chế việc hư hại các thiết bị, máy
+móc trong khu vực bảo vệ do chất chữa cháy gây ra. Không được sử dụng chất
+chữa cháy mà các chất này có thể gây ra phản ứng hóa học với chất có trong khu
+vực bảo vệ dẫn đến cháy, nổ.
+- Một số ví dụ:
++ Ví dụ 1: Lựa chọn loại bình chữa cháy bố trí cho các khu vực của nhà
+chung cư, căn cứ vào Điều 1.5.5 và Bảng 2 QCVN 10:2025/BCA, chủ đầu tư có
+thể lựa chọn cho các khu vực như sau:
+* Khu vực để xe ô tô, xe máy (tồn tại các chất cháy gồm chất rắn, chất lỏng
+như xăng): có thể chọn một trong các loại bình chữa cháy như: Bình chữa cháy
+bột (như bột ABC …), bình chữa cháy bằng khí, bình chữa cháy gốc nước, bình
+chữa cháy bằng bọt, bình chữa cháy bằng nước (dạng phun sương).
+* Khu vực thương mại, văn phòng (tồn tại các chất cháy chủ yếu là chất
+rắn: có thể chọn một trong các loại bình chữa cháy như: Bình chữa cháy bột (như
+bột ABC …), bình chữa cháy bằng khí, bình chữa cháy gốc nước, bình chữa cháy
+bằng bọt, bình chữa cháy bằng nước…
+
+* Khu vực phòng kỹ thuật điện: có thể chọn một trong các loại bình chữa
+cháy như: Bình chữa cháy bột (như bột ABC …), bình chữa cháy bằng khí,…
+* Khu vực căn hộ (tồn tại chất cháy chủ yếu là chất rắn, chất lỏng, chất khí
+như khí LPG): có thể chọn một trong các loại bình chữa cháy sau: Bình chữa cháy
+bột (như bột ABC …), bình chữa cháy bằng khí,…
+Lưu ý: khi trong một khu vực tồn tại nhiều loại chất cháy khác nhau (như
+rắn, lỏng, khí), chủ đầu tư có thể lựa chọn kết hợp trang bị nhiều loại bình (mỗi
+loại bình hiệu quả cho một loại đám cháy) để bảo đảm khả năng chữa cháy hiệu
+quả cho tất cả các loại đám có thể phát sinh trong khu vực bảo vệ, mà không nhất
+thiết phải lựa chọn 01 loại bình có thể đáp ứng chữa cháy hiệu quả cho tất cả các
+đáp cháy có thể phát sinh.
++ Ví dụ 2: Khi lựa chọn trang bị hệ thống chữa cháy tự động cho phòng tủ
+điện trong nhà văn phòng (nhà có chiều cao PCCC trên 25 m), chủ đầu tư căn cứ
+vào Điều 1.5.5, Bảng 2 của QCVN 10:2025/BCA để lựa chọn hệ thống chữa cháy
+tự động với chất chữa cháy có thể là một trong các chất chữa cháy có hiệu quả
+thấp, hiệu quả cao, hiệu quả rất cao gồm: bằng nước (phun sương), chất gốc nước
+(phun sương), khí CO2, khí N2, khí Freon, Aerosol (sol-khí), bột. Lưu ý khi lựa
+chọn hệ thống chữa cháy bằng nước, gốc nước cần phải thực hiện các yêu cầu về
+an toàn điện: như tự động ngắt nguồn điện trước thời điểm phun chất chữa cháy
+vào đám cháy.
+3.6. Bảo quản, bảo dưỡng phương tiện chữa cháy, cứu nạn, cứu hộ
+Phương tiện, thiết bị, hệ thống PCCC phải được quản lý, bảo quản, bảo
+dưỡng theo quy định Thông tư số 36/2025/TT-BCA ngày 15/5/2025 của Bộ Công
+an quy định chi tiết một số điều của Luật Phòng cháy, chữa cháy và cứu nạn, cứu
+hộ và nghị định số 105/2025/NĐ-CP ngày 15/5/2025 của Chính phủ quy định chi
+tiết một số điều và biện pháp thi hành Luật Phòng cháy, chữa cháy và cứu nạn,
+cứu hộ, cụ thể như sau:
+- Bảo quản, bảo dưỡng phương tiện chữa cháy, cứu nạn, cứu hộ cơ giới,
+dụng cụ phá dỡ thô sơ, mặt nạ lọc độc và mặt nạ phòng độc cách ly thực hiện theo
+khoản 1 Điều 6, Phụ lục II, Phụ lục III Thông tư số 36/2025/TT-BCA ngày
+15/5/2025 của Bộ Công an.
+- Bảo quản, bảo dưỡng hệ thống báo cháy tự động, thiết bị báo cháy độc
+lập; phương tiện chiếu sáng sự cố và chỉ dẫn thoát nạn, hệ thống loa thông báo và
+hướng dẫn thoát nạn; hệ thống cấp nước chữa cháy ngoài nhà; hệ thống họng nước
+chữa cháy trong nhà; hệ thống, thiết bị chữa cháy tự động thực hiện theo quy định
+tại Điều 1.5.13 QCVN 10:2025/BCA, trong đó lưu ý như sau:
++ Bảo dưỡng thực hiện ít nhất một năm một lần đối với: hệ thống báo cháy
+tự động, thiết bị báo cháy độc lập; phương tiện chiếu sáng sự cố và chỉ dẫn thoát
+nạn, hệ thống loa thông báo và hướng dẫn thoát nạn; hệ thống cấp nước chữa cháy
+ngoài nhà; hệ thống họng nước chữa cháy trong nhà; hệ thống, thiết bị chữa cháy
+tự động.
++ Bình chữa cháy được bảo dưỡng ít nhất sáu tháng một lần.
+
++ Nội dung, cách thức bảo dưỡng phương tiện, hệ thống phòng cháy, chữa
+cháy, cứu nạn, cứu hộ được thực hiện theo quy định của pháp luật về phòng cháy,
+chữa cháy và cứu nạn, cứu hộ và các tiêu chuẩn, quy chuẩn kỹ thuật hiện hành
+liên quan.
++ Đối với phương tiện, hệ thống phòng cháy, chữa cháy, cứu nạn, cứu hộ có
+quy định về thời hạn bảo dưỡng trong các tiêu chuẩn, quy chuẩn kỹ thuật ít hơn
+thời hạn quy định tại Quy chuẩn này thì thực hiện theo quy định của tiêu chuẩn,
+quy chuẩn kỹ thuật có liên quan; trường hợp có quy định về thời hạn bảo dưỡng
+nhiều hơn thời hạn quy định tại Quy chuẩn này thì thực hiện theo quy định của Quy
+chuẩn này.
+- Việc theo dõi, quản lý, bảo quản, bảo dưỡng phương tiện PCCC và CNCH
+phải được thể hiện và ghi chép vào Sổ theo dõi phương tiện PCCC và CNCH
+theo Mẫu số 01 Phụ lục VI kèm theo Thông tư số 36/2025/TT-BCA. Sổ theo dõi
+phương tiện PCCC và CNCH là tài liệu trong hồ sơ về PCCC và CNCH của cơ sở
+theo quy định.
+Một số ví dụ:
+- Đối với việc bảo dưỡng trạm bơm chữa cháy của các hệ thống chữa cháy
+bằng nước thực hiện theo quy định trong QCVN 02:2020/BCA Quy chuẩn kỹ thuật
+quốc gia về trạm bơm nước chữa cháy, do quy định tại QCVN 02:2020/BCA về
+thời hạn bảo dưỡng ít hơn so với QCVN 10:2025/BCA.
+- Đối với việc bảo dưỡng hệ thống chữa cháy bằng khí FM200, IG100,
+IG541, FK-5-1-12 thực hiện theo quy định tại TCVN 7161-1:2022 Hệ thống chữa
+cháy bằng khí - Tính chất vật lý và thiết kế hệ thống - Phần 1: yêu cầu chung, do
+quy định của tiêu chuẩn này về thời hạn bảo dưỡng ít hơn so với QCVN
+10:2025/BCA.
+- Đối với việc bảo dưỡng hệ thống chữa cháy bằng Aerosol (sol-khí) thực
+hiện theo quy định của TCVN 13333:2021 Hệ thống chữa cháy bằng sol-khí - Yêu
+cầu về thiết kế, lắp đặt, kiểm tra và bảo dưỡng, do quy định của tiêu chuẩn này về
+thời hạn bảo dưỡng ít hơn so với QCVN 10:2025/BCA.
+4. Quy định cụ thể
+4.1. Trang bị, bố trí hệ thống báo cháy tự động, thiết bị báo cháy độc lập;
+hệ thống, thiết bị chữa cháy tự động
+4.1.1. Các lưu ý chung khi trang bị, bố trí hệ thống báo cháy tự động, thiết
+bị báo cháy độc lập; hệ thống, thiết bị chữa cháy tự động
+4.1.1.1. Nguyên tắc, trình tự xác định đối tượng phải trang bị, bố trí
+- Căn cứ QCVN 10:2025/BCA, QCVN 06:/BXD và các quy định có liên
+quan, xác định các thông tin, dữ liệu có liên quan đến PCCC của nhà, công trình,
+hạng mục/khu vực, gian phòng, thiết bị như: công năng, mục đích sử dụng của
+nhà, gian phòng; số tầng, chiều cao PCCC của nhà; tổng diện tích sàn của nhà,
+gian phòng; phân nhóm nguy hiểm cháy của nhà, gian phòng; phân hạng nguy
+hiểm cháy, nổ của nhà, gian phòng;
+
+- Đối chiếu với danh mục nhà, hạng mục/khu vực, gian phòng, thiết bị được
+quy định tại Phụ lục A để xác định đối tượng phải trang bị báo cháy tự động, thiết
+bị báo cháy độc lập; hệ thống, thiết bị chữa cháy tự động.
+- Khi xác định yêu cầu trang bị hệ thống chữa cháy tự động và/hoặc hệ
+thống báo cháy tự động trước tiên cần xác định yêu cầu trang bị cho toàn bộ nhà
+(Bảng A.1), sau đó cho từng hạng mục/khu vực (Bảng A.2) và gian phòng trong
+nhà (Bảng A.3), cũng như thiết bị nằm trong phạm vi của công trình (Bảng A.4).
+Đối với nhà có phần ngầm và phần trên mặt đất được ngăn thành các khoang được
+ngăn cháy độc lập với nhau và lối ra thoát nạn riêng thì xem xét việc trang bị
+phương tiện phòng cháy, chữa cháy cho từng phần theo quy định của Quy chuẩn
+này.
+- Trường hợp khi xác định toàn bộ nhà không thuộc diện yêu cầu trang bị,
+bố trí theo bảng A1 nhưng có gian phòng trong nhà thuộc diện trang bị theo Bảng
+A.3 thì cần lưu ý như sau:
++ Nếu nhà (bậc chịu lửa I, II, III) được phân chia thành các gian phòng bởi
+kết cấu xây dựng (tường ngăn cháy, sàn ngăn cháy có giới hạn chịu lửa từ REI 45,
+vách ngăn cháy có giới hạn chịu lửa từ EI 45) thì thực hiện trang bị cho gian phòng
+có yêu cầu trang bị.
++ Nếu nhà (bậc chịu lửa IV, V) được phân chia thành các gian phòng bởi
+kết cấu xây dựng (tường ngăn cháy, sàn ngăn cháy có giới hạn chịu lửa từ REI 15,
+vách ngăn cháy có giới hạn chịu lửa từ EI 15) thì thực hiện trang bị cho gian phòng
+có yêu cầu trang bị.
++ Nếu nhà không được phân chia hoặc được phân chia thành các gian phòng
+bởi kết cấu xây dựng không đảm bảo yêu cầu trên thì thực hiện trang bị cho toàn
+nhà nếu như trong nhà có gian phòng thuộc diện trang bị theo Bảng A.3.
+- Đối với nhà ở riêng lẻ kết hợp kinh doanh dịch vụ, nhà ở riêng lẻ kết hợp
+sản xuất, kinh doanh hàng hóa dễ cháy:
++ Trường hợp nhà có phần diện tích để sản xuất, kinh doanh dưới 30% tổng
+diện tích sàn của nhà: áp dụng quy định trang bị tại Mục 1 hoặc Mục 2 Bảng A.1
+tương ứng.
++ Trường hợp nhà có phần diện tích để sản xuất, kinh doanh từ 30% đến
+70% tổng diện tích sàn của nhà: áp dụng các quy định về trang bị phương tiện như
+đối với nhà hỗn hợp (Mục 21 Bảng A.1).
++ Trường hợp phần diện tích để sản xuất, kinh doanh trên 70% tổng diện tích
+sàn của nhà: áp dụng quy định trang bị theo công năng sản xuất, kinh doanh đó.
+- Đối với nhà hỗn hợp, nhà chung cư hỗn hợp:
++ Trường hợp diện tích sàn xây dựng dùng cho mỗi công năng của nhà
+không vượt quá 70% tổng diện tích sàn xây dựng của nhà (không bao gồm diện
+tích sàn dùng cho hệ thống kỹ thuật, PCCC, gian lánh nạn và đỗ xe) thì áp dụng
+quy định trang bị đối với nhà hỗn hợp, nhà chung cư hỗn hợp (Mục 21 Bảng A.1);
++ Trường hợp có diện tích sàn xây dựng dùng cho một công năng vượt quá
+70% tổng diện tích sàn xây dựng của nhà thì áp dụng quy định trang bị theo công
+
+năng đó.
+- Ví dụ minh họa: Nhà sản xuất may mặc diện tích 2500 m2, hạng nguy
+hiểm cháy C, bậc I, trong nhà có bố trí, ngăn chia thành 02 gian phòng sản xuất
+(với 01 gian phòng diện tích 2000 m2, 01 gian phòng diện tích 500 m2 ). Khi xem
+xét nhà sản xuất thì không thuộc Bảng A1, nhưng có 01 gian phòng diện tích 2000
+m2 thuộc diện phải trang bị chữa cháy tự động theo quy định tại Bảng A3. Khi đó
+trường hợp gian phòng này được phân chia bởi kết cấu xây dựng không đảm bảo
+yêu cầu với gian phòng bên cạnh (tường ngăn cháy, sàn ngăn cháy có giới hạn
+chịu lửa từ REI 45, vách ngăn cháy có giới hạn chịu lửa từ EI 45) thì sẽ phải trang
+bị hệ thống báo cháy tự động cho toàn nhà.
+4.1.1.2. Khu vực cho phép không trang bị, bố trí hệ thống báo cháy tự động,
+hệ thống chữa cháy tự động
+- Khi nhà, công trình, hạng mục/khu vực, gian phòng thuộc diện phải trang
+bị hệ thống chữa cháy tự động và/hoặc hệ thống báo cháy tự động theo quy định
+tại Phụ lục A thì phải trang bị cho toàn bộ nhà, công trình, gian phòng, trừ các
+khu vực sau:
++ Khu vực có quy trình ướt, hồ bơi, phòng tắm, phòng rửa, phòng vệ sinh;
++ Gian phòng hạng nguy hiểm cháy E; gian phòng hạng nguy hiểm cháy
+C4 (trừ các gian phòng trong nhà nhóm nguy hiểm cháy theo công năng nhóm
+F1.1, F1.2, F2.1, F4.1, F4.2);
++ Hành lang bên;
++ Cầu thang bộ, buồng thang bộ;
++ Khoang đệm ngăn cháy;
++ Khu vực không có nguy hiểm về cháy.
+- Khu vực không có nguy hiểm về cháy là khu vực không có chất, vật liệu
+cháy được hoặc không có nguồn phát sinh nhiệt để gây cháy (ví dụ: trục đường
+ống nước, bể nước...).
+- Gian phòng hạng nguy hiểm cháy C4 là gian phòng có tải trọng cháy riêng
+từ 1 MJ/m2 đến 180 MJ/m2 (việc xác định hạng nguy hiểm cháy thực hiện theo
+quy định của QCVN 06:/BXD và các tài liệu chuẩn lựa chọn áp dụng).
+4.1.2 Về việc trang bị, bố trí hệ thống báo cháy tự động, thiết bị báo cháy
+độc lập
+4.1.2.1. Phân loại hệ thống, thiết bị
+- Hệ thống báo cháy tự động: Hệ thống tự động phát hiện và thông báo địa
+điểm cháy. Hệ thống báo cháy tự động bao gồm các bộ phận cơ bản: trung tâm
+báo cháy, đầu báo cháy, hộp nút ấn báo cháy, chuông đèn báo cháy, các bộ phận
+liên kết, nguồn điện. Tùy theo yêu cầu, hệ thống báo cháy còn có các module, các
+thiết bị truyền tín hiệu, giám sát, các bộ phận cấu thành có liên quan. Hệ thống
+báo cháy tự động gồm hệ thống báo cháy thường và hệ thống báo cháy địa chỉ.
+- Hệ thống báo cháy thường: Khi báo cháy sẽ báo đến một khu vực và khu
+vực đó có thể có một hoặc nhiều đầu báo cháy.
+
+- Hệ thống báo cháy địa chỉ: Khi báo cháy sẽ báo đến từng thiết bị địa chỉ
+trong hệ thống (đầu báo cháy địa chỉ, module, nút ấn báo cháy địa chỉ...).
+- Thiết bị báo cháy độc lập: Thiết bị tự động phát hiện và cảnh báo cháy
+bằng âm thanh.
+4.1.2.2. Trang bị, bố trí đối với một số loại hình nhà, công trình
+Ngoài thực hiện theo các điểm lưu ý tại mục 5.1.1 nêu trên, trong quá trình
+xem xét trang bị, bố trí hệ thống báo cháy tự động, thiết bị báo cháy độc lập cần
+lưu ý một số nội dung sau:
+a) Trang bị thiết bị báo cháy độc lập: Đối với nhà thuộc diện phải trang bị
+hệ thống báo cháy tự động theo quy định tại Bảng A1, khi có quy mô nhỏ, tính
+chất nguy hiểm cháy nổ không cao, được phép trang bị thiết bị báo cháy độc lập,
+điển hình như:
++ Nhà ở riêng lẻ kết hợp kinh doanh dịch vụ (có phần diện tích để kinh
+doanh dưới 30% tổng diện tích sàn của nhà) cao từ 7 tầng trở lên; Nhà ở riêng lẻ
+kết hợp sản xuất, kinh doanh hàng hóa dễ cháy (có phần diện tích để sản xuất,
+kinh doanh dưới 30 % tổng diện tích sàn của nhà) khi chiều cao thấp hơn 5 tầng
+và tổng diện tích sàn nhỏ hơn 500 m2. Khi đó cho phép chỉ trang bị hệ thống báo
+cháy tự động hoặc thiết bị báo cháy độc lập tại khu vực sản xuất, kinh doanh, tuy
+nhiên tại mỗi tầng của nhà phải có thiết bị cảnh báo âm thanh kết nối liên động
+với hệ thống báo cháy tự động hoặc thiết bị báo cháy độc lập.
++ Chung cư, nhà ở tập thể, ký túc xá thuộc cơ sở giáo dục theo quy định
+của pháp luật về giáo dục khi chiều cao thấp hơn 5 tầng và tổng diện tích sàn nhỏ
+hơn 1500 m2;
++ Nhà hỗn hợp, nhà chung cư được xây dựng có mục đích sử dụng hỗn hợp
+khi chiều cao thấp hơn 5 tầng và tổng diện tích sàn nhỏ hơn 500 m2….
+Lưu ý: Các thiết bị báo cháy độc lập khi được lắp đặt trong cùng một nhà
+và công trình phải được liên kết với nhau, đảm bảo tất cả cùng phát tín hiệu báo
+cháy khi có một thiết bị được kích hoạt. Việc lựa chọn, bố trí thiết bị báo cháy
+độc lập được thực hiện theo quy định như đối với các thiết bị tương tự của hệ
+thống báo cháy tự động.
+b) Phải trang bị hệ thống báo cháy tự động loại địa chỉ (không được dùng
+loại thường) đối với các nhà xây dựng mới có quy mô lớn, tập trung đông người
+quy định tại Chú thích 2 Bảng A.1, bao gồm: Nhà điều trị nội trú có tổng diện tích
+sàn từ 3 000 m2 trở lên, nhà khám, chữa bệnh của bệnh viện tâm thần có tổng diện
+tích sàn từ 3 000 m2 trở lên, nhà dưỡng lão khi có tổng diện tích sàn từ 3 000 m2
+trở lên và các nhà dân dụng có chiều cao PCCC từ 75 m trở lên. Riêng đối với nhà
+hỗn hợp và các nhà thuộc phạm vi áp dụng của Mục A.2 QCVN 06:2022/BXD
+phải trang bị hệ thống báo cháy loại địa chỉ khi chiều cao PCCC từ trên 50 m trở
+lên.
+c) Đối với gian phòng có chiều cao không quá 10 m (chiều cao gian phòng
+được tính từ sàn đến điểm cao nhất của mái dốc, mái chữ A, trần) trong nhà thuộc
+nhóm nguy hiểm cháy theo công năng F5 (không bao gồm các gian phòng F5 nằm
+
+trong nhà thuộc nhóm nguy hiểm cháy theo công năng khác) đã trang bị hệ thống
+chữa cháy tự động, có kết nối liên động với trung tâm báo cháy thì cho phép không
+trang bị đầu báo cháy tự động (các thiết bị khác của hệ thống báo cháy tự động
+phải trang bị bảo đảm theo quy định) và bảo đảm điều khiển các thiết bị ngoại vi
+theo yêu cầu.
+Trường hợp các công tắc dòng chảy hoặc công tắc áp suất hoặc thiết bị có
+chức năng tương tự của hệ thống chữa cháy được sử dụng làm tín hiệu báo cháy
+và được giám sát bởi trung tâm báo cháy thì mỗi thiết bị được coi là một vùng
+phát hiện cháy riêng.
+d) Đối với không gian phía trên trần giả, phía dưới sàn nâng
+Khoảng không gian phía trên trần giả; khoảng không gian phía dưới sàn
+nâng có chiều cao khoảng không gian từ 0,35 m trở lên của các khu vực (Hành
+lang thoát nạn, hội trường, tiền sảnh; Gian phòng có từ 50 người trở lên; Gian
+phòng cấp nguy hiểm cháy theo công năng nhóm F1.1 và F4.1; Gian phòng kinh
+doanh dịch vụ karaoke, vũ trường) trong các gian phòng, nhà thuộc diện trang bị
+hệ thống chữa cháy tự động và/hoặc hệ thống báo cháy tự động phải được trang
+bị hệ thống báo cháy tự động nếu có:
+- Đường ống kỹ thuật được bọc bằng vật liệu có tính cháy Ch2-Ch4, không
+phụ thuộc khối lượng;
+- Máng cáp (bó cáp) có điện áp từ 220 V trở lên và tổng thể tích chất cháy
+thuộc nhóm Ch2 đến Ch4 từ 0,0015 m3 trên một mét chiều dài trở lên;
+đ) Đối với hạng mục cáp, hầm cáp (mương cáp), máng cáp (bó cáp):
+Cho phép không trang bị hệ thống báo cháy tự động trong các trường hợp sau:
+- Cáp được luồn trong ống hoặc được bọc bằng vật liệu không cháy hoặc
+có tính cháy Ch1;
+- Là cáp, dây dẫn điện của hệ thống chiếu sáng, hệ thống thông tin.
+e) Đối với Nhà (sử dụng với mục đích) để xe ô tô, xe máy, trưng bày ô tô,
+xe máy:
+- Trong các nhà để xe ô tô một hoặc hai tầng dạng ngăn (ngăn cách tối thiểu
+bằng vách ngăn cháy loại 1 có lối ra ngoài trời trực tiếp từ từng ngăn chứa), cho
+phép không trang bị hệ thống báo cháy tự động với điều kiện mỗi ngăn không quá
+2 xe.
+- Đối với nhà lưu giữ, trưng bày xe máy cao không quá 02 tầng và diện tích
+không quá 1.000 m2; nhà dạng hở để chế biến, lưu trữ nông sản dạng hạt; gian
+phòng tạm thời được sử dụng cho triển lãm, trưng bày cho phép không trang bị
+hệ thống báo cháy tự động.
+Lưu ý: Nhà được coi là hở nếu công trình có hai cạnh đối diện dài nhất được
+để hở. Cạnh được coi là được để hở nếu tổng diện tích phần để hở dọc theo cạnh
+này chiếm không ít hơn 50 % diện tích mặt ngoài của nó ở trên từng tầng.
+g) Áp dụng tiêu chuẩn thiết kế, lắp đặt: thực hiện theo quy định tại TCVN
+7568-14, TCVN 7568-25 (lưu ý: Việc trang bị đầu báo cháy trong khoảng không
+
+gian phía trên trần giả thực hiện theo mục 7, Bảng A2 QCVN 10:2025/BCA).
+Trường hợp lựa chọn tiêu chuẩn quốc tế, tiêu chuẩn khu vực, tiêu chuẩn nước
+ngoài khác để áp dụng thì thực hiện theo quy định tại Điều 1.1.6.
+4.1.3 Trang bị, bố trí hệ thống, thiết bị chữa cháy tự động
+4.1.3.1. Phân loại hệ thống, thiết bị
+- Hệ thống chữa cháy là tổ hợp các thiết bị kỹ thuật chuyên dùng và chất
+chữa cháy dùng để dập tắt đám cháy.
+- Hệ thống chữa cháy tự động là hệ thống chữa cháy được tự động kích hoạt
+xả chất chữa cháy khi các yếu tố của đám cháy đạt đến giá trị được thiết lập trong
+khu vực bảo vệ, có chức năng giám sát xả và dừng xả/dừng kích hoạt xả chất chữa
+cháy (ví dụ: hệ thống chữa cháy tự động bằng nước, gốc nước; hệ thống chữa cháy
+tự động bằng bọt; hệ thống chữa cháy tự động bằng khí, sol-khí; hệ thống chữa
+cháy tự động bằng bột).
+- Thiết bị chữa cháy tự động kích hoạt gồm bình chứa chất chữa cháy bằng
+khí, bột, sol-khí và các bộ phận khác có liên quan tự động xả chất chữa cháy khi
+có tác động của nhiệt độ đạt đến ngưỡng tác động kích hoạt của bộ phận cảm
+biến nhiệt.
+4.1.3.2. Trang bị, bố trí đối với một số loại hình nhà, công trình
+Ngoài thực hiện theo các điểm lưu ý tại mục 5.1.1 nêu trên, trong quá trình
+xem xét trang bị, bố trí hệ thống, thiết bị chữa cháy tự động cần lưu ý một số nội
+dung sau:
+a) Đối với nhà hỗn hợp và nhà hỗn hợp có bố trí kinh doanh dịch vụ karaoke,
+vũ trường
+- Trường hợp diện tích sàn xây dựng dùng cho mỗi công năng của nhà
+không vượt quá 70% tổng diện tích sàn xây dựng của nhà (không bao gồm diện
+tích sàn dùng cho hệ thống kỹ thuật, PCCC, gian lánh nạn và đỗ xe) thì áp dụng
+quy định trang bị đối với nhà hỗn hợp, nhà chung cư hỗn hợp (Mục 21 Bảng A.1);
+- Trường hợp nhà hỗn hợp không thuộc diện phải trang bị hệ thống chữa
+cháy tự động theo quy định tại Bảng A.1 nhưng phần công năng bất kỳ của nhà
+có quy mô thuộc diện phải trang bị hệ thống chữa cháy tự động theo Bảng A.1 thì
+phải trang bị hệ thống chữa cháy tự động cho phần nhà đó.
+- Khi bố trí kinh doanh karaoke, vũ trường trong nhà hỗn hợp nhưng phần
+kinh doanh karaoke, vũ trường của nhà có quy mô thuộc diện phải trang bị hệ
+thống chữa cháy tự động theo Bảng A.1 hoặc kinh doanh karaoke, vũ trường
+được bố trí từ tầng 3 trở lên thì phải trang bị hệ thống chữa cháy tự động cho toàn
+bộ nhà.
+b) Đối với chợ, trung tâm thương mại, siêu thị:
+- Cho phép không lắp đặt hệ thống chữa cháy tự động tại các khu vực trưng
+bày xoong nồi, thiết bị, hàng hóa, vật liệu không cháy: khu vực lưu trữ và chế biến
+để bán thịt, cá, trái cây và rau quả (trong bao bì không cháy).
+c) Đối với nhà (sử dụng với mục đích) để xe ô tô, xe máy, trưng bày ô tô,
+
+xe máy:
+- Cho phép không bố trí hệ thống chữa cháy tự động trong các nhà để xe
+ngầm một tầng hầm được xây dựng bên dưới khu đất trống khi sức chứa không
+quá 25 chỗ;
+- Trong các nhà để xe ô tô một hoặc hai tầng dạng ngăn (ngăn cách tối thiểu
+bằng vách ngăn cháy loại 1 có lối ra ngoài trời trực tiếp từ từng ngăn chứa), cho
+phép không trang bị hệ thống chữa cháy tự động, với điều kiện mỗi ngăn không
+quá 2 xe;
+- Cho phép không trang bị hệ thống chữa cháy tự động đối với nhà lưu giữ,
+trưng bày xe máy cao không quá 02 tầng và tổng diện tích sàn không quá 1 000 m2.
+d) Đối với nhà chế biến, lưu trữ nông sản dạng hạt dạng hở
+Không yêu cầu trang bị hệ thống chữa cháy tự động đối với nhà dạng hở để
+chế biến, lưu trữ nông sản dạng hạt.
+Lưu ý: Nhà được coi là hở nếu công trình có hai cạnh đối diện dài nhất được
+để hở. Cạnh được coi là được để hở nếu tổng diện tích phần để hở dọc theo cạnh
+này chiếm không ít hơn 50 % diện tích mặt ngoài của nó ở trên từng tầng.
+đ) Đối với hạng mục cáp, hầm cáp (mương cáp):
+Cho phép không trang bị hệ thống chữa cháy tự động trong các trường
+hợp sau:
+- Cáp được luồn trong ống hoặc được bọc bằng vật liệu không cháy hoặc
+có tính cháy Ch1;
+- Là cáp, dây dẫn điện của hệ thống chiếu sáng, hệ thống thông tin.
+e) Đối với căn hộ của nhà nhóm F1.3 khi chiều cao PCCC của nhà không
+quá 100 m cho phép chỉ bố trí đầu phun sprinkler của hệ thống chữa cháy tự động
+bằng nước tại cửa căn hộ (lắp đặt tại vị trí bên trong căn hộ) mà không cần trang
+bị hệ thống chữa cháy tự động.
+f) Đối với các khu vực không thường xuyên có người với diện tích không
+quá 100 m2 cho phép trang bị bình khí, bình sol-khí chữa cháy tự động kích hoạt
+(có chức năng giám sát trạng thái thường trực của thiết bị, giám sát trạng thái khi
+chữa cháy, các tín hiệu này phải được liên động với hệ thống báo cháy tự động)
+thay thế hệ thống chữa cháy tự động.
+4.1.3.3. Lựa chọn loại hệ thống, chất chữa cháy phù hợp
+- Sau khi xác định được nhà, hạng mục/khu vực, gian phòng, thiết bị thuộc
+diện phải trang bị hệ thống, thiết bị chữa cháy tự động thì cần căn cứ vào đặc điểm
+sử dụng, tính chất, mức nguy hiểm cháy, các chất cháy chủ yếu tại nhà, khu vực,
+gian phòng để xác định loại và nhóm đám cháy theo Bảng 1 QCVN 10:2025/BCA
+(ví dụ khu vực bố trí văn phòng, thương mại thường xác định đám cháy A; phòng
+kỹ thuật điện xác định đám cháy E...);
+- Lựa chọn hệ thống, chất chữa cháy phù hợp theo quy định tại Bảng 2
+QCVN 10:2025/BCA, ví dụ như:
+
++ Khu vực bố trí văn phòng (đám cháy A) có thể lựa chọn được các loại hệ
+thống chữa cháy tự động bằng nước, gốc nước; hệ thống chữa cháy tự động bằng
+bọt; hệ thống chữa cháy tự động bằng khí, sol-khí; hệ thống chữa cháy tự động
+bằng bột để chữa cháy.
++ Khu vực phòng kỹ thuật điện có thể lựa chọn hệ thống, thiết bị chữa cháy
+tự động khí bằng khí, sol-khí, bột; chất chữa cháy gốc nước hoặc nước dạng phun
+sương, tuy nhiên khi đó phải tuân thủ yêu cầu an toàn điện (sử dụng hệ thống chữa
+cháy tự động Sprinkler hoặc bọt tham khảo quy định tại Điều 5.1.6 TCVN
+7336:2021).
+4.1.3.4. Áp dụng tiêu chuẩn thiết kế, lắp đặt: Căn cứ theo loại hệ thống,
+thiết bị chữa cháy tự động, thực hiện theo quy định tại các tiêu chuẩn tương ứng,
+bao gồm TCVN 7336, TCVN 13926, TCVN 13657-1, TCVN 13333, TCVN
+6101, TCVN 7161-1, TCVN 7161-5, TCVN 7161-9, TCVN 7161-13, TCVN
+7161-14, TCVN 7161-15, TCVN 13877-2, TCVN 14496, NFPA 15. Trường hợp
+lựa chọn tiêu chuẩn quốc tế, tiêu chuẩn khu vực, tiêu chuẩn nước ngoài khác để
+áp dụng thì thực hiện theo quy định tại Điều 1.1.6.
+Lưu ý: NFPA 15 hiện nay chủ yếu đang được lựa chọn áp dụng để thiết kế
+chữa cháy tự động bằng nước cho các máy biến áp đặt ngoài trời thuộc các trạm
+biến áp, nhà máy điện.
+4.1.4. Trạm bơm cấp nước chữa cháy
+a) Trường hợp hệ thống cấp nước chữa cháy ngoài nhà hoặc họng nước
+chữa cháy trong nhà được cấp nước bởi trạm bơm chữa cháy thì trạm bơm phải
+thiết kế bảo đảm theo quy định tại mục H.3 Phụ lục H QCVN 10:2025/BCA và
+tiêu chuẩn lựa chọn áp dụng, tham khảo khác như TCVN 4513:1988, TCVN
+13606:2023, trong đó lưu ý:
+- Máy bơm cấp nước chữa cháy dù thiết kế riêng biệt hay kết hợp với hệ
+thống nước sinh hoạt, sản xuất đều phải có máy bơm dự phòng, có thông số về
+lưu lượng, áp lực cấp nước không nhỏ hơn máy bơm chính, số lượng máy bơm
+dự phòng được quy định như sau:
++ Khi tính toán cần từ một đến ba máy bơm chữa cháy chính thì phải có ít
+nhất một máy bơm dự phòng;
++ Khi tính toán cần bốn máy bơm chữa cháy chính trở lên thì phải có ít nhất
+hai máy bơm dự phòng;
+- Trạm bơm có từ 02 máy bơm chữa cháy trở lên phải có ít nhất 2 đường
+ống hút, mỗi đường ống hút phải được thiết kế để bảo đảm lưu lượng nước tính
+toán lớn nhất và khi một trong hai đường ống hút bị hỏng hoặc phải bảo trì, sửa
+chữa thì các máy bơm vẫn hút được nước từ đường ống hút còn lại. Trên mỗi
+đường ống hút và đường ống đẩy phải bố trí các van để bảo đảm khả năng thay
+thế hoặc sửa chữa bất kỳ máy bơm nào, van một chiều và van khóa chính cũng
+như kiểm tra các đặc tính của máy bơm. Không quy định số lượng ống hút khi
+trạm bơm sử dụng bơm tua bin trục đứng.
+- Các máy bơm chữa cháy sử dụng động cơ điện phải được kết nối với hai
+
+nguồn điện độc lập từ nguồn điện lưới hoặc nguồn điện từ máy phát điện dự
+phòng. Cho phép sử dụng một nguồn điện khi máy bơm dự phòng là máy bơm sử
+dụng động cơ đốt trong.
+Cho phép không trang bị máy bơm dự phòng khi cấp nước cho nhà sản xuất,
+nhà kho có bậc chịu lửa I, II với hạng nguy hiểm cháy D, E và lưu lượng cấp nước
+chữa cháy ngoài nhà yêu cầu nhỏ hơn 20 L/s.
+- Khi lưu lượng cấp nước cho chữa cháy ngoài nhà yêu cầu từ 25 L/s trở lên
+phải có cơ cấu điều khiển máy bơm chữa cháy tự động hoặc điều khiển từ xa (tại
+phòng trực hoặc trụ cấp nước), ngoài ra phải có cơ cấu điều khiển bằng tay tại
+phòng bơm. Đồng thời, phải bảo đảm cho máy bơm được kích hoạt vận hành trong
+thời gian không chậm quá 3 min kể từ khi có thông tin báo cháy.
+b) Trường hợp trạm bơm cấp nước chữa cháy dùng chung cấp cho cả hệ
+thống chữa cháy tự động Sprinkler thì ngoài đáp ứng yêu cầu theo quy định tại
+mục H.3 Phụ lục H QCVN 10:2025/BCA thì phải bảo đảm theo quy định tại
+TCVN 7336:2021.
+c) Trường hợp trạm bơm cấp nước chữa cháy cấp cho nhà thuộc phạm vi
+áp dụng của QCVN 02:2020/BCA thì ngoài đáp ứng yêu cầu theo quy định tại
+mục H.3 Phụ lục H QCVN 10:2025/BCA thì phải bảo đảm theo quy định tại
+QCVN 02:2020/BCA.
+4.2. Trang bị, bố trí phương tiện chiếu sáng sự cố và chỉ dẫn thoát nạn,
+hệ thống loa thông báo và hướng dẫn thoát nạn
+4.2.1. Trang bị, bố trí phương tiện chiếu sáng sự cố và chỉ dẫn thoát nạn
+Nhà, công trình phải trang bị phương tiện chiếu sáng sự cố và chỉ dẫn thoát
+nạn theo quy định tại TCVN 13456:2022; Việc thiết kế, lắp đặt phương tiện chiếu
+sáng sự cố và chỉ dẫn thoát nạn được quy định tại TCVN 13456:2022, trong đó
+lưu ý:
+- Về trang bị, bố trí phương tiện chiếu sáng sự cố
++ Đèn chiếu sáng sự cố phải được lắp đặt cho các khu vực của nhà và công
+trình theo quy định tại điều 5.1.1 của TCVN 13456:2022, cụ thể: Cầu thang bộ
+thoát nạn; Đường thoát nạn và vị trí chuyển hướng thoát nạn, nút giao của hành
+lang; Vị trí trên đường thoát nạn có thay đổi về cao độ; Cửa, lối ra thoát nạn; Gara
+để xe; Trong gian phòng có người làm việc và khoảng cách từ điểm xa nhất của
+gian phòng đến lối ra thoát nạn gần nhất lớn hơn 13 m. Trường hợp các gian phòng
+này có bố trí đường thoát nạn thì có thể chỉ lắp đặt đèn chiếu sáng sự cố tại đường
+thoát nạn đó; Trong phòng đặt trạm biến áp, phòng máy phát điện, phòng kỹ thuật
+thang máy, gian lánh nạn; Trong phòng trực điều khiển chống cháy, phòng bơm
+chữa cháy và tại các vị trí trang bị phương tiện phòng cháy và chữa cháy khác.
++ Có thể không cần bố trí đèn chiếu sáng sự cố trong các trường hợp sau:
+Sân vườn, khu vực sân thượng không có mái che hoặc toà nhà cao 01 tầng có diện
+tích sàn không quá 200 m2 và diện tích lỗ hở trên tường ngoài nhà đạt tối thiểu
+80%.
+
++ Các tủ trung tâm báo cháy, nút ấn báo cháy và các phương tiện chữa
+cháy (không bao gồm đầu phun chữa cháy) phải luôn được chiếu sáng đầy đủ để
+có thể dễ dàng xác định vị trí và nếu không nằm trên đường thoát nạn hoặc không
+nằm trong một phạm vi khoảng trống thì phải được chiếu sáng tối thiểu 5 lux tại
+mặt sàn.
+- Về trang bị, bố trí biển báo chỉ dẫn thoát nạn
++ Lắp đặt biển báo chỉ dẫn lối ra thoát nạn: ở tất cả các lối ra vào của cầu
+thang bộ thoát nạn, các đường thoát nạn trên tầng nhà và tất cả các lối ra của gian
+phòng có từ 02 lối ra thoát nạn trở lên, cho phép một số khu vực không bố trí
+trong các trường hợp nêu tại Điều 5.2.1 của TCVN 13456:2022.
++ Lắp đặt biển báo chỉ hướng thoát nạn: ở trên đường thoát nạn, ở trong
+gian phòng và tất cả các vị trí mà tầm nhìn bị che khuất không thể phát hiện được
+các lối ra thoát nạn, cho phép một số khu vực không bố trí trong các trường hợp
+nêu tại Điều 5.2.2 của TCVN 13456:2022.
++ Lắp đặt các biển báo chỉ dẫn lối ra thoát nạn và biển báo chỉ hướng thoát
+nạn tầm thấp: ở các tầng nhà có bố trí phòng nghỉ của khách sạn cao từ 07 tầng
+hoặc tổng khối tích 5.000 m3 trở lên có hành lang thoát nạn lớn hơn 10 m;
++ Khoảng cách giữa các biển báo an toàn được xác định phụ thuộc vào chiều
+cao biển báo và khoảng cách nhìn theo quy định tại Điều 5.2.7 của TCVN
+13456:2022, tuy nhiên khoảng cách giữa các biển báo không được vượt quá 25 m.
+- Về trang bị, bố trí sơ đồ chỉ dẫn thoát nạn: tại các tầng có diện tích lớn
+hơn 1.000 m2 hoặc có từ hai lối ra thoát nạn trở lên phải có sơ đồ chỉ dẫn thoát
+nạn và trong các phòng nghỉ của của khách sạn và các cơ sở lưu trú, cho thuê
+phòng ở phải có sơ đồ chỉ dẫn thoát nạn. Thiết kế, lắp đặt sơ đồ chỉ dẫn thoát nạn
+phải đảm bảo theo điều 5.2.9 của TCVN 13456:2022.
+4.2.2. Trang bị, bố trí hệ thống loa thông báo và hướng dẫn thoát nạn
+- Nhà, công trình phải trang bị hệ thống loa thông báo và hướng dẫn thoát
+nạn được quy định tại Phụ lục G (nhà sản xuất có tổng diện tích sàn từ 18.000 m²
+trở lên và có từ 300 người trên 1 tầng trở lên; hầm giao thông đường bộ (hầm
+đường ô tô) có chiều dài từ 500 m trở lên; Nhà ga hành khách thuộc cảng hàng
+không; nhà ga hành khách, đề - pô (depot) đường sắt; nhà ga hành khách, đề - pô
+(depot) đường sắt đô thị...);
+- Việc thiết kế, lắp đặt hệ thống loa thông báo và hướng dẫn thoát nạn phải
+bảo đảm các yêu cầu quy định tại H.4 QCVN 10:2025/BCA, trong đó lưu ý:
++ Hệ thống loa thông báo và hướng dẫn thoát nạn, bảo đảm mọi người trong
+nhà và công trình có thể nghe rõ thông báo, hướng dẫn khi có sự cố.
++ Tín hiệu âm thanh của hệ thống loa thông báo và hướng dẫn thoát nạn phải
+đảm bảo mức âm thanh tổng thể (mức âm thanh của tiếng ồn thường xuyên cùng
+với âm thanh từ các tín hiệu cảnh báo tạo ra) không thấp hơn 75 dBA ở khoảng
+cách 3 m từ tín hiệu cảnh báo, nhưng không quá 120 dBA ở bất kỳ vị trí nào.
++ Tín hiệu âm thanh của hệ thống loa thông báo và hướng dẫn thoát nạn
+phải tạo ra mức âm thanh cao hơn ít nhất 15 dBA so với mức âm thanh của tiếng
+
+ồn thường xuyên tại gian phòng. Việc đo mức âm thanh được thực hiện ở độ cao
+1,5 m tính từ sàn nhà.
++ Trong phòng ngủ, tín hiệu âm thanh của hệ thống loa thông báo và hướng
+dẫn thoát nạn phải có mức âm thanh cao hơn ít nhất 15 dBA so với mức âm thanh
+của tiếng ồn thường xuyên trong phòng, nhưng mức âm thanh tổng thể không nhỏ
+hơn 70 dBA và không quá 120 dBA. Việc đo mức âm thanh được thực hiện ở vị
+trí ngang với đầu của người đang ngủ.
++ Thiết bị loa cảnh báo cháy và điều khiển thoát nạn gắn trên tường phải
+được bố trí sao cho phần trên của chúng cách mặt sàn ít nhất 2,3 m và cách trần
+tối thiểu phải là 0,15 m.
+4.3. Trang bị, bố trí hệ thống cấp nước chữa cháy ngoài nhà
+4.3.1. Đối tượng trang bị
+- Nhà, công trình thuộc danh mục quy định Bảng C.1 Phụ lục C QCVN
+10:2025/BCA phải trang bị hệ thống cấp nước chữa cháy ngoài nhà, trong đó lưu
+ý một số trường hợp không yêu cầu như: các nhà, công trình nêu tại mục 9 Bảng
+C.1 nằm trong các khu công nghiệp, cụm công nghiệp; các kho chứa khí hóa lỏng
+của các cơ sở sản xuất, dân dụng; trạm dừng nghỉ không được quy hoạch theo các
+tuyến đường cao tốc.
+- Hệ thống cấp nước ngoài nhà bằng trụ của khu dân cư trong đô thị và nông
+thôn; khu đô thị, khu nhà ở, khu công nghiệp, cụm công nghiệp, khu du lịch, khu
+nghiên cứu, đào tạo, khu thể dục, thể thao phải bố trí trụ cấp nước chữa cháy ngoài
+nhà dọc theo đường giao thông bảo đảm khoảng cách tối đa giữa các trụ là 150 m.
+- Hệ thống cấp nước ngoài nhà bằng trụ của các nhà, công trình được quy
+định tại mục 1 đến mục 9 Bảng C.1 Phụ lục C phải bố trí các trụ cấp nước chữa
+cháy bảo đảm bán kính phục vụ theo phương ngang không lớn hơn 400 m tính
+đến mọi điểm của nhà. Đối với các nhà, công trình có yêu cầu lưu lượng từ 25 L/s
+trở lên thì phải có tối thiểu 02 trụ bảo đảm bán kính phục vụ không lớn hơn 400
+m tính đến mọi điểm của nhà.
+- Đối với nhà và công trình được quy định tại mục 1 đến mục 9 Bảng C.1
+Phụ lục C QCVN 10:2025/BCA thuộc diện phải trang bị hệ thống cấp nước chữa
+cháy ngoài nhà cho phép không trang bị khi nhà, công trình:
++ Nằm trong bán kính 400 m tính từ trụ cấp nước chữa cháy hoặc từ bến
+lấy nước của các nguồn nước tự nhiên hoặc nhân tạo như ao, hồ, sông, bể nước
+và nguồn nước nhân tạo khác đến mọi điểm của nhà xét theo phương ngang;
++ Lưu lượng/trữ lượng nước chữa cháy phải đảm bảo theo quy định. Trường
+hợp không đảm bảo lưu lượng/trữ lượng nước chữa cháy theo quy định thì phải
+trang bị hệ thống cấp nước chữa cháy ngoài nhà (khi tính toán cho phép tính cộng
+lưu lượng/trữ lượng của hạ tầng cấp nước chữa cháy ngoài nhà hoặc các nguồn
+nước tự nhiên, nhân tạo khác).
+4.3.2. Thiết kế, bố trí, lắp đặt hệ thống cấp nước chữa cháy ngoài nhà
+Bảo đảm theo quy định tại mục H.1 Phụ lục H QCVN 10:2025/BCA, trong
+
+đó lưu ý một số nội dung sau:
+a) Áp suất của hệ thống cấp nước chữa cháy ngoài nhà
+- Hệ thống đường ống cấp nước chữa cháy chia thành:
++ Đường ống áp suất thấp.
++ Đường ống áp suất cao (áp suất cần thiết do máy bơm chữa cháy cố
+định tạo nên, máy bơm phải hoạt động không trễ hơn 5 phút sau khi có tín hiệu
+báo cháy);
+- Áp suất tự do trong đường ống chữa cháy:
++ Đối với đường ống áp suất thấp, áp suất đo ở vị trí cao độ bằng với mặt
+đất khi chữa cháy phải không nhỏ hơn 10 m cột nước;
++ Đối với đường ống áp suất cao, áp suất phải đảm bảo độ cao tia nước đặc
+không nhỏ hơn 10 m cột nước khi lưu lượng yêu cầu chữa cháy tối đa và lăng
+chữa cháy ở điểm cao nhất của nhà.
++ Áp suất tự do trong đường ống kết hợp sinh hoạt hoặc sản xuất không
+nhỏ hơn 10 m cột nước và không lớn hơn 60 m cột nước.
+b) Lưu lượng nước cho chữa cháy ngoài nhà
+- Lưu lượng nước cho chữa cháy ngoài nhà (tính cho 1 đám cháy) và số
+đám cháy đồng thời trong một khu dân cư tính cho mạng đường ống chính nối
+vòng lấy theo Bảng H.1.
+- Lưu lượng nước cho chữa cháy ngoài nhà (cho 1 đám cháy) cho nhà
+thuộc nhóm nguy hiểm cháy theo công năng F1, F2, F3, F4 tính toán cho đường
+ống kết hợp và đường ống phân phối của mạng đường ống, cũng như mạng
+đường ống trong 1 cụm nhỏ (1 xóm, 1 dãy nhà và tương tự) lấy theo giá trị lớn
+nhất của Bảng H.2.
+- Lưu lượng nước cho chữa cháy ngoài nhà cho nhà có nhóm nguy hiểm
+cháy theo công năng F5, tính cho 1 đám cháy, lấy theo nhà có yêu cầu giá trị lớn
+nhất như Bảng H.3 và Bảng H.4.
+c) Số đám cháy tính toán đồng thời
+- Số đám cháy tính toán đồng thời cho một cơ sở công nghiệp hoặc nông
+nghiệp phải được lấy theo diện tích của cơ sở đó, cụ thể như sau: Nếu diện tích
+đến 150 ha lấy là 1 đám cháy; Nếu diện tích trên 150 ha lấy là 2 đám cháy.
++ Số đám cháy tính toán đồng thời tại một khu vực kho dạng hở hoặc kín
+chứa vật liệu từ gỗ, lấy như sau: diện tích kho đến 50 ha lấy là 1 đám cháy; diện
+tích trên 50 ha lấy là 2 đám cháy.
++ Diện tích của cơ sở để tính toán cho hệ thống cấp nước chữa cháy ngoài
+nhà là diện tích khu đất của cơ sở (không bao gồm khu đất rừng, khu đất công
+viên cây xanh, khu đất trồng cây nông nghiệp hay các khu đất tương tự mà trên
+đó không có công trình xây dựng).
+- Khi kết hợp đường ống chữa cháy của khu dân cư và cơ sở công nghiệp
+nằm ngoài khu dân cư thì số đám cháy tính toán đồng thời tính như sau:
+
++ Khi diện tích của cơ sở công nghiệp đến 150 ha và dân số của khu dân cư
+đến 10 000 người, lấy là 1 đám cháy (lấy lưu lượng nước theo bên lớn hơn); tương
+tự với số dân từ 10 000 đến 25 000 người, lấy là 2 đám cháy (1 đám cháy cho cơ
+sở công nghiệp và 1 đám cháy cho khu dân cư);
++ Khi diện tích của cơ sở công nghiệp trên 150 ha và số dân đến 25 000
+người, lấy là 2 đám cháy (2 đám cháy tính cho khu vực cơ sở công nghiệp hoặc 2
+đám cháy tính cho khu dân cư, lấy theo lưu lượng nước yêu cầu của bên lớn hơn);
++ Khi số dân trong khu dân cư lớn hơn 25 000 người, lấy là 2 đám cháy,
+trong đó lưu lượng nước của 1 đám cháy được xác định bằng tổng của lưu lượng
+yêu cầu lớn hơn (tính cho cơ sở công nghiệp hoặc khu dân cư) và 50 % lưu lượng
+yêu cầu nhỏ hơn (tính cho cơ sở công nghiệp hoặc khu dân cư).
+d) Yêu cầu an toàn cháy đối với mạng đường ống
+- Khi lắp đặt từ 2 đường ống cấp trở lên phải lắp đặt van chuyển đổi giữa
+chúng khi đó trong trường hợp ngắt 1 đường cấp hoặc 1 phần của nó thì việc chữa
+cháy vẫn bảo đảm 100 %.
+- Mạng đường ống dẫn nước chữa cháy phải là mạng vòng. Cho phép làm
+các đường ống cụt khi cấp nước cho chữa cháy hoặc sinh hoạt - chữa cháy khi
+chiều dài đường ống không lớn hơn 200 m mà không phụ thuộc vào lưu lượng
+nước chữa cháy yêu cầu. Không cho phép nối vòng mạng đường ống ngoài nhà
+bằng mạng đường ống bên trong nhà và công trình.
+- Đường ống phải được phân chia thành các đoạn bằng các van khóa bảo
+đảm để khi sửa chữa sẽ không ngắt nhiều hơn 05 trụ cấp nước chữa cháy.
+đ) Các yêu cầu đối với bồn, bể trữ nước cho chữa cháy ngoài nhà
+- Thể tích nước chữa cháy trong bồn, bể phải được tính toán để bảo đảm:
++ Thực hiện việc cấp nước chữa cháy từ trụ nước ngoài nhà và các hệ thống
+chữa cháy khác;
++ Cung cấp cho các thiết bị chữa cháy chuyên dụng (sprinkler, drencher và
+tương tự) không có bể riêng;
++ Lượng nước tối đa cho sinh hoạt và sản xuất trong suốt quá trình chữa
+cháy.
+- Các ao, hồ, sông, bể nước... để cho xe chữa cháy hút nước phải có lối tiếp
+cận và có bến lấy nước với bề mặt bảo đảm tải trọng dành cho xe chữa cháy.
+4.4. Trang bị, bố trí hệ thống họng nước chữa cháy trong nhà
+4.4.1. Yêu cầu chung về trang bị, bố trí
+- Nhà và công trình phải trang bị hệ thống họng nước chữa cháy trong nhà
+được quy định tại Phụ lục B.
+- Đối với nhà, công trình không được quy định tại các Phụ lục A, B, H thì
+việc trang bị, bố trí phương tiện, hệ thống phòng cháy, chữa cháy, cứu nạn, cứu
+hộ thực hiện như với nhà, công trình có công năng tương tự xác định theo nhóm
+nguy hiểm cháy theo công năng quy định tại QCVN 06:/BXD.
+
+- Hệ thống họng nước chữa cháy trong nhà và công trình phải có họng chờ
+tiếp nước lắp đặt ở ngoài nhà, có đầu nối với kích cỡ phù hợp (đường kính tối
+thiểu DN65) để kết nối với phương tiện chữa cháy di động. Đối với nhà cao từ 17
+tầng trở lên, họng chờ cấp nước cho hệ thống họng nước chữa cháy phải chia
+thành các vùng theo chiều cao mỗi vùng không quá 50 m. Các họng này phải được
+lắp đặt van một chiều và thể hiện trạng thái đóng/mở.
+- Các công trình thuộc diện trang bị hệ thống họng nước chữa cháy và hệ
+thống chữa cháy sprinkler tự động phải có đường ống kết nối từ trạm bơm cấp
+nước chữa cháy của công trình đến tối thiểu 01 họng lấy nước hai cửa loại DN65
+đặt ở vị trí mặt bên ngoài tường công trình về phía có đường giao thông.
+- Nhà và công trình có chiều cao PCCC lớn hơn 28 m (lớn hơn 50 m đối
+với nhà nhóm F1.3) hoặc nhà có chiều sâu của sàn tầng hầm dưới cùng (tính đến
+cao độ của lối ra thoát nạn ra ngoài) lớn hơn 9 m phải bố trí hệ thống đường ống
+khô có họng chờ cấp nước DN65 được lắp đặt van khóa thường đóng cho lực
+lượng chữa cháy chuyên nghiệp tại các sảnh thang máy chữa cháy hoặc trong các
+khoang đệm của buồng thang bộ không nhiễm khói. Hệ thống đường ống khô phải
+đảm bảo các yêu cầu:
+- Có đường kính ống tối thiểu DN65;
+- Có van một chiều hướng từ ngoài vào hệ thống đường ống tại vị trí họng
+chờ tiếp nước, có đầu nối với kích cỡ phù hợp lắp đặt ở ngoài nhà để đấu nối với
+các bơm áp lực cao của xe chữa cháy;
+- Có van xả khí tại điểm cao nhất của hệ thống đường ống;
+- Có van xả nước tại vị trí thấp nhất của hệ thống đường ống;
+- Tại vị trí họng chờ tiếp nước phải có chỉ thị khu vực phục vụ của hệ thống
+đường ống họng khô.
+- Máy bơm cấp nước chữa cháy của hệ thống họng nước chữa cháy trong
+nhà phải được điều khiển bằng tay hoặc điều khiển tự động hoặc điều khiển từ xa.
+Đối với hệ thống họng nước chữa cháy trong nhà của các nhà sản xuất, nhà kho
+có hạng nguy hiểm cháy và cháy nổ A, B, C1; nhà có chiều cao PCCC từ 25 m
+trở lên; chợ, trung tâm thương mại, siêu thị, khách sạn; nhà sử dụng với mục đích
+kinh doanh dịch vụ karaoke, vũ trường thuộc cơ sở kinh doanh dịch vụ karaoke,
+vũ trường; nhà ga hành khách, nhà ga hàng hóa thuộc cảng hàng không; nhà ga
+hàng hóa, đề-pô (depot) đường sắt; nhà ga cáp treo; nhà ga hành khách, đề-pô
+(depot) đường sắt đô thị; nhà hát, rạp chiếu phim, các nhà dịch vụ thuộc bến cảng
+biển, cảng thủy nội địa thì máy bơm phải được điều khiển bằng tay tại phòng bơm
+và điều khiển tự động.
+4.4.2. Thiết kế, bố trí, lắp đặt hệ thống họng nước chữa cháy trong nhà
+Hệ thống họng nước chữa cháy trong nhà có thể bố trí độc lập hoặc kết hợp
+với hệ thống chữa cháy tự động bằng nước. Khi bố trí kết hợp phải bảo đảm yêu
+cầu theo quy định về hệ thống họng nước chữa cháy trong nhà và hệ thống chữa
+cháy tự động. Thiết kế, lắp đặt phải bảo đảm theo quy định tại mục H.1 Phụ lục
+H QCVN 10:2025/BCA, trong đó lưu ý một số nội dung sau:
+
+a) Xác định phương án trang bị hệ thống họng nước chữa cháy
+Căn cứ điều H.2.1, các họng nước được phân loại thành:
+- Lưu lượng thấp (từ 0,2 L/s đến 1,5 L/s). Thiết bị cho họng nước chữa cháy
+lưu lượng thấp có đường kính là DN 5, DN 10, DN 15, DN 20, DN 25, DN 40;
+- Lưu lượng trung bình (lớn hơn 1,5 L/s).
+Căn cứ điều H.2.18, dựa trên công năng của đối tượng bảo vệ có thể lựa
+chọn các phương án trang bị hệ thống họng nước chữa cháy sau:
+- Phương án 1: sử dụng các họng nước chữa cháy lưu lượng trung bình.
+Phương án này được phép áp dụng với mọi loại hình công trình;
+- Phương án 2: sử dụng các họng nước chữa cháy lưu lượng nhỏ kết hợp
+với trang bị đường ống họng khô. Phương án này được phép áp dụng với nhà ở,
+công trình công cộng;
+- Phương án 3: sử dụng các họng nước chữa cháy lưu lượng nhỏ. Phương
+án này được phép áp dụng với các công trình được trang bị hệ thống chữa cháy tự
+động cho toàn bộ công trình;
+- Phương án 4: sử dụng các họng nước chữa cháy lưu lượng nhỏ kết hợp
+với các họng nước chữa cháy lưu lượng trung bình. Phương án này được phép áp
+dụng với nhà ở, công trình công cộng.
+Trong một công trình cho phép kết hợp nhiều phương án trang bị họng nước
+chữa cháy khác nhau.
+b) Xác định lưu lượng nước tối thiểu và số tia phun chữa cháy
+Để xác định được lưu lượng nước tối thiểu để chữa cháy và số tia phun
+chữa cháy cần tham khảo Bảng H.5 đối với nhà ở, nhà công cộng, nhà hành chính
+- phụ trợ của công trình công nghiệp; Bảng H.6 đối với nhà sản xuất và nhà kho.
+Ngoài ra, khi xác định lưu lượng tối thiểu để chữa cháy cần lưu ý một số
+điểm như sau :
+- Đối với phần nhà trong nhà công cộng nằm ở chiều cao PCCC trên 50 m
+phải lấy tương ứng là 4 tia phun nước chữa cháy, mỗi tia 2,5 L/s ; đối với nhà
+nhóm F5 hạng nguy hiểm cháy nổ A, B, C có chiều cao PCCC trên 50 m lấy tương
+ứng là 4 tia phun chữa cháy, mỗi tia 5 L/s.
+- Đối với nhà chung cư phải bảo đảm quy định tại Điều 2.5.3 QCVN
+04:2021/BXD.
+- Đối với nhà sản xuất và nhà kho sử dụng dạng kết cấu dễ bị hư hỏng khi
+chịu tác động của lửa, theo tương ứng với Bảng H.6, lưu lượng nước tối thiểu để
+tính toán công suất máy bơm và lượng nước dự trữ cho chữa cháy xác định theo
+Bảng H.6 phải được tăng thêm tùy từng trường hợp như sau:
++ Khi sử dụng kết cấu thép không được bảo vệ chống cháy trong các nhà
+bậc chịu lửa III, IV (nhóm S2, S3), cũng như kết cấu gỗ tự nhiên hoặc gỗ ép (trong
+trường hợp này là gỗ đã qua xử lý bảo vệ chống cháy), phải tăng thêm 5 L/s;
++ Khi sử dụng vật liệu là chất cháy bao quanh cấu trúc nhà bậc chịu lửa IV
+
+(nhóm S2, S3), phải tăng thêm 5 L/s với nhà có khối tích đến 10 000 m3 . Khi nhà
+có khối tích lớn hơn 10 000 m3 thì phải tăng thêm 5 L/s cho mỗi 100 000 m3 tăng
+thêm hoặc phần lẻ của 100 000 m3 tăng thêm.
+- Đối với các phần nhà có khu vực công năng khác nhau thì lưu lượng nước
+cho chữa cháy phải tính toán riêng đối với từng phần theo quy định tại H.2.1 và
+H.2.2. Khi đó lưu lượng nước chữa cháy trong nhà tính toán theo quy định sau:
++ Đối với nhà không được ngăn chia bằng các tường ngăn cháy phải tính
+theo khối tích chung;
++ Đối với nhà được ngăn chia bằng các tường ngăn cháy loại 1 hoặc 2 phải
+tính theo khối tích của phần nhà có yêu cầu lưu lượng nước cao hơn.
+Khi liên kết các nhà có bậc chịu lửa I và II bằng các lối đi làm bằng vật liệu
+không cháy và được lắp đặt cửa ngăn cháy thì khối tích của nhà phục vụ việc xác
+định lưu lượng nước chữa cháy được tính là khối tích riêng của từng nhà; khi
+không có cửa ngăn cháy thì tính theo khối tích tổng và theo hạng nguy hiểm cháy
+và cháy nổ cao hơn.
+Đối với công trình có yêu cầu số tia phun bằng hoặc lớn hơn 2 thì số tia
+phun chữa cháy cho mỗi điểm cháy lấy là 2 tia.
+c) Xác định chiều cao tia nước đặc, áp suất của họng nước chữa cháy
+Áp suất tự do của họng nước chữa cháy phải bảo đảm cho chiều cao của tia
+nước đặc cần thiết để chữa cháy vào mọi thời điểm trong ngày đối với khu vực
+cao nhất và xa nhất. Chiều cao tối thiểu và bán kính hoạt động của tia nước đặc
+chữa cháy phải bằng chiều cao của khu vực, tính từ sàn đến điểm cao nhất của xà
+(trần), nhưng không nhỏ hơn các giá trị sau:
+- Đối với nhà ở, nhà công cộng, nhà sản xuất và nhà phụ trợ của công trình
+công nghiệp có chiều cao PCCC đến 50 m không nhỏ hơn 6 m;
+- Đối với nhà ở có chiều cao PCCC trên 50 m không nhỏ hơn 8 m;
+- Đối với nhà công cộng, nhà sản xuất và nhà phụ trợ của công trình công
+nghiệp có chiều cao PCCC trên 50 m không nhỏ hơn 16 m;
+- Đối với hầm đường bộ không nhỏ hơn 6 m.
+Lưu ý: Để nhận tia nước đặc lưu lượng đến 4 L/s thì sử dụng họng nước
+chữa cháy DN 50, đối với lưu lượng lớn hơn phải sử dụng họng DN 65. Khi luận
+chứng kinh tế - kỹ thuật cho phép thì được dùng họng nước chữa cháy DN 50 cho
+lưu lượng trên 4 L/s.
+d) Xác định vị trí, số lượng đường ống đứng và họng nước chữa cháy
+Việc xác định vị trí và số lượng đường ống đứng và họng nước chữa cháy
+phải bảo đảm quy định sau:
+- Cho phép lắp đặt họng kép trên các ống đứng trong nhà sản xuất và nhà
+công cộng khi số lượng tia nước tính toán không nhỏ hơn 3, còn trong nhà ở không
+nhỏ hơn 2;
+- Trong nhà ở với chiều dài hành lang đến 10 m khi số tia nước bằng 2 cho
+mỗi điểm thì cho phép phun 2 tia từ một ống đứng;
+
+- Trong nhà ở với chiều dài hành lang lớn hơn 10 m, cũng như nhà sản xuất
+và nhà công cộng có từ 2 tia nước tính toán trở lên cho mỗi điểm thì phải bố trí 2
+tia phun từ 2 tủ chữa cháy khác nhau (2 ống đứng khác nhau).
+Lưu ý:
+- Phải lắp đặt họng nước chữa cháy trong các tầng kỹ thuật, tầng áp mái và
+tầng hầm kỹ thuật nếu trong đó có vật liệu và kết cấu làm từ vật liệu cháy được.
+- Số tia nước từ mỗi tủ không được lớn hơn 2.
+- Cho phép tăng bán kính phục vụ của các họng nước chữa cháy lưu lượng
+trung bình và lưu lượng thấp bằng việc kết nối các vòi chữa cháy với tổng chiều
+dài đến 40 m. Khi đó các vòi phải treo ở dạng xếp trên giá đỡ và được kết nối sẵn
+với họng nước và lăng phun hoặc treo ở dạng cuộn và cấu tạo của cuộn vòi cho
+phép dẫn nước chữa cháy ngay cả khi vòi đang ở dạng cuộn.
+e) Một số lưu ý khác khi trang bị, bố trí hệ thống họng nước chữa cháy
+trong nhà
+- Áp suất trong hệ thống họng nước chữa cháy trong nhà:
++ Áp suất thủy tĩnh trong hệ thống nước sinh hoạt - chữa cháy đo tại các thiết
+bị vệ sinh - kỹ thuật đặt ở mức nước thấp nhất không được vượt quá 0,45 MPa.
++ Khi tính toán, nếu áp suất trong hệ thống chữa cháy vượt quá 0,45 MPa
+thì phải lắp đặt mạng hệ thống chữa cháy riêng.
++ Áp suất thủy tĩnh của hệ thống chữa cháy riêng biệt đo tại họng nước
+chữa cháy đặt ở mức nước thấp nhất không được vượt quá 0,6 MPa.
++ Khi áp suất giữa van và đầu nối của họng nước chữa cháy lớn hơn 0,45
+MPa thì phải có giải pháp giảm áp lực dư.
+- Xác định thời gian làm việc của hệ thống họng nước chữa cháy trong nhà:
++ Đối với nhà, công trình chỉ trang bị hệ thống họng nước chữa cháy trong
+nhà thì thời gian làm việc của họng nước là 1 h.
++ Đối với hệ thống họng nước chữa cháy trong nhà của các nhà, công trình
+có trang bị hệ thống chữa cháy tự động bằng nước thì thời gian làm việc của họng
+nước lấy bằng thời gian làm việc của hệ thống chữa cháy tự động.
+- Lưu ý khi kết nối hệ thống họng nước chữa cháy trong nhà và hệ thống
+chữa cháy tự động bằng nước:
++ Tại các khu vực được bảo vệ bằng hệ thống chữa cháy tự động, cho phép
+lắp đặt họng nước chữa cháy trong nhà trên các đường ống DN 65 hoặc lớn hơn,
+sau cụm van điều khiển của hệ thống sprinkler bằng nước.
+- Vị trí lắp đặt họng:
++ Họng nước chữa cháy bên trong nhà phải được lắp đặt tại các lối vào phía
+trong hành lang (ở nơi không có nguy cơ nước bị đóng băng) của các buồng thang
+(trừ các buồng thang không nhiễm khói), tại các sảnh, hành lang, lối đi và những
+chỗ dễ tiếp cận khác, khi đó việc bố trí phải bảo đảm không gây cản trở các hoạt
+động thoát nạn.
+
++ Các họng nước chữa cháy được lắp đặt sao cho miệng họng nằm ở độ cao
+1,20 m ± 0,15 m so với mặt sàn và đặt trong các tủ chữa cháy, được dán niêm
+phong. Đối với họng nước chữa cháy kép, cho phép lắp đặt 1 họng nằm trên 1
+họng nằm dưới, khi đó họng nằm dưới phải lắp có chiều cao không nhỏ hơn 1,0
+m tính từ mặt sàn.
+Ngoài những lưu ý trên, cần phải tuân thủ điều H.2.8, H.2.10, H.2.16 và
+Phụ lục H.2 để đảm bảo thiết kế hệ thống họng nước trong nhà đảm bảo các
+yêu cầu.
+4.5. Trang bị, bố trí bình chữa cháy xách tay và bình chữa cháy có
+bánh xe
+Lựa chọn, tính toán trang bị và bố trí bình chữa cháy xách tay và bình chữa
+cháy theo Điều 6.2 QCVN 10:2025/BCA. Trong đó lưu ý:
+- Việc xác định loại mức nguy hiểm để tính toán công suất bình chữa cháy
+được quy định tại bảng D.1 của TCVN 7534-2. Một số thông số trong bảng D.1
+cần xác định như sau: Chiều cao công trình được hiểu là chiều cao PCCC (đơn vị
+tính là m, được xác định theo Điều 1.4.23 QCVN 10:2025/BCA); diện tích bề mặt
+công trình được hiểu là tổng diện tích của nhà, công trình; số lượng người là tổng
+số lượng người trong nhà, công trình; chất lỏng dễ cháy được xác định theo quy
+định tại Điều 1.4.30 QCVN 10:2025/BCA; Chất lỏng cháy được được xác định
+theo quy định tại Điều 1.4.31 QCVN 10:2025/BCA.
+- Căn cứ vào TCVN 7026 (bảng 4, bảng 5) để xác định khối lượng bình
+chữa cháy dựa trên công suất chữa cháy, ví dụ: công suất chữa cháy 2A, 55B
+tương đương bình 4kg bột ABC;
+- Hai bình chữa cháy kiểu nước (gốc nước, bọt) công suất 2-A được bố trí
+liền kề có thể được sử dụng để thực hiện các yêu cầu đối với bình chữa cháy công
+suất 3-A hoặc 4-A. Đối với đám cháy loại B hiện nay TCVN 7435-1 chưa cho
+phép quy đổi tương đương trừ trường hợp sử dụng bình chữa cháy dùng chất tạo
+bọt chữa cháy “Có thể sử dụng tới 3 bình chữa cháy loại AFFF hoặc FFFP, nếu
+tổng công suất của chúng bằng hoặc lớn hơn công suất quy định nhỏ nhất, để thực
+hiện các yêu cầu của một bình chữa cháy với công suất quy định”;
+4.6. Trang bị, bố trí dụng cụ phá dỡ thô sơ, mặt nạ lọc độc và mặt nạ
+phòng độc cách ly
+- Nhà, công trình phải trang bị dụng cụ phá dỡ thô sơ quy định tại Phụ lục
+E QCVN 10:2025/BCA. Lưu ý: Dụng cụ phá dỡ thô sơ trang bị cho nhà, công
+trình được bố trí tại khu vực có người thường xuyên trực về phòng cháy, chữa
+cháy. Đối với công trình có nhiều nhà, hạng mục công trình thuộc diện phải trang
+bị dụng cụ phá dỡ thô sơ theo định tại Phụ lục E QCVN 10:2025/BCA thì có thể
+trang bị dùng chung cho các hạng mục này.
+- Nhà, công trình phải trang bị mặt nạ lọc độc và mặt nạ phòng độc cách ly
+quy định tại Phụ lục F QCVN 10:2025/BCA. Lưu ý: Mặt nạ lọc độc trang bị cho
+nhà, công trình được bố trí tại các tủ phương tiện trên hành lang, đường thoát nạn
+
+từng tầng hoặc trong các gian phòng thường xuyên có người; mặt nạ phòng độc
+cách ly được bố trí tại phòng trực điều khiển chống cháy hoặc khu vực thường
+trực về phòng cháy, chữa cháy tại vị trí dễ thấy, dễ lấy và đảm bảo đúng hướng
+dẫn của nhà sản xuất.
+4.7 Trang bị, bố trí phương tiện chữa cháy cơ giới
+- Các kho, cơ sở sản xuất, cảng hàng không, bến cảng, khu công nghiệp,
+cụm công nghiệp ngoài việc trang bị hệ thống chữa cháy, phải trang bị phương
+tiện chữa cháy cơ giới theo quy định tại Phụ lục D QCVN 10:2025/BCA. Đối với
+đặc tính phương tiện chữa cháy cơ giới phải bảo đảm như sau:
++ Xe ô tô chữa cháy: Phải tuân thủ TCVN 13316 (tất cả các phần). Trong
+đó lưu ý phải là màu đỏ; có kích thước; động cơ phải đảm bảo tỷ lệ công suất
+(kw/t) và thời gian tăng tốc (0-60km/h) phù hợp với tải trọng xe và phải có giấy
+chứng nhận chất lượng an toàn kỹ thuật, bảo vệ môi trường theo quy định tại Điều
+5.2, Điều 5.8.1, Bảng 2 và Bảng 3, Bảng 4 của TCVN 13316-1:2021;
++ Máy bơm chữa cháy khiêng tay: Phải đảm bảo lưu lượng và áp suất tối
+thiểu tương đương loại bơm B-1 theo TCVN 12110;
++ Tàu chữa cháy: Có thể thay thế bằng tàu lai dắt có tích hợp chức năng
+chữa cháy.
+- Một số lưu ý về quy định trang bị phương tiện cơ giới như sau:
+- Đối với các kho dầu mỏ và sản phẩm dầu mỏ không được trang bị các hệ
+thống chữa cháy tự động, hệ thống chữa cháy và làm mát được lắp đặt cố định
+cho bồn chứa, trạm bơm dầu mỏ và sản phẩm dầu mỏ thì phải trang bị phương
+tiện chữa cháy cơ giới bằng hai lần định mức quy định tại mục 1 Bảng D1 Phụ
+lục D QCVN 10:2025/BCA.
+- Các dự án công trình liền kề hoặc có bán kính phục vụ chữa cháy không
+quá 03 km do cùng một đơn vị quản lý vận hành được phép xem xét trang bị
+phương tiện chữa cháy cơ giới chung. Số lượng tính theo dự án có yêu cầu cao
+nhất, dự án còn lại chỉ cần trang bị thêm 01 máy bơm khiêng tay.
+Ví dụ: Dự án Nhà máy thủy điện A có hạng mục Nhà máy thủy điện A có
+công suất 1500MW và Nhà máy thủy điện mở rộng A có công suất 1200MW;
+khoảng cách từ giữa nhà máy thủy điện A và nhà máy thủy điện mở rộng A là
+2km, đồng thời hai nhà máy đều do Công ty A quản lý vận hành thì cho phép chỉ
+trang bị 01 xe chữa cháy tại nhà máy thủy điện A, nhà máy thủy điện mở rộng A
+chỉ cần trang bị 01 máy bơm khiêng tay.
+- Các Khu được phân kỳ đầu tư theo quy định pháp luật xây dựng thì được
+phép trang bị phương tiện theo quy mô của từng phân kỳ.
+Ví dụ: Khu công nghiệp A có diện tích 350ha được thẩm định thiết kế về
+PCCC là 02 xe chữa cháy, trong quá trình đầu tư, chủ đầu tư được chấp thuận
+phân kỳ đầu tư thành giai đoạn 1 là 200ha và giai đoạn 2 là 150ha thì khi kiểm tra
+công tác nghiệm thu về PCCC đối với giai đoạn 1, cho phép chủ đầu tư trang bị
+01 xe chữa cháy theo quy định. Khi kiểm tra công tác nghiệm thu về PCCC đối
+
+với giai đoạn 2 thì yêu cầu chủ đầu tư phải trang bị đầy đủ cho cả dự án là 02 xe
+chữa cháy.
+5. Quy định trang bị phương tiện PCCC và CNCH cho công trình đang
+thi công xây dựng
+Căn cứ quy định tại Điều 2.2.3, Điều 2.4.3 và Điều 2.6.5 QCVN
+10:2025/BCA, công trình đang thi công xây dựng phải trang bị phương tiện PCCC
+và CNCH như sau:
+- Công trình đang thi công xây dựng phải trang bị đèn chiếu sáng sự cố có
+nguồn dự phòng không thấp hơn 1 h tại một số khu vực đã được bố trí trong công
+trình có các chức năng như: phòng máy phát điện; phòng máy biến áp; phòng bơm
+cấp nước chữa cháy. Đèn chiếu sáng sự cố phải đảm bảo độ rọi theo phương nằm
+ngang trên mặt sàn không được nhỏ hơn 0,5 lux.
+- Công trình đang thi công xây dựng có chiều cao từ 10 tầng trở lên hoặc
+có chiều cao PCCC từ 28 m trở lên khi thi công hoàn thiện nội thất, lắp đặt thiết
+bị của hệ thống cơ điện phải có giải pháp cấp nước phục vụ công tác chữa cháy
+đảm bảo các yêu cầu sau: bố trí tối thiểu 01 hệ thống đường ống khô có họng nước
+đến mỗi tầng và kết nối được với xe chữa cháy, máy bơm chữa cháy bằng đầu nối
+được bố trí ở bên ngoài công trình để tiếp nước vào hệ thống. Tại mỗi họng nước
+được trang bị ít nhất 02 cuộn vòi đẩy và 01 lăng phun.
+- Công trình đang thi công xây dựng phải trang bị tối thiểu 01 bình bột chữa
+cháy xách tay loại ABC không nhỏ hơn 4 kg cho mỗi diện tích đến 500 m2 sàn
+xây dựng, xét riêng cho mỗi tầng công trình, kể cả các nhà tạm để phục vụ thi
+công xây dựng công trình (nếu diện tích chưa đủ 500 m2 vẫn phải trang bị tối thiểu
+01 bình bột chữa cháy xách tay loại ABC không nhỏ hơn 4 kg). Số lượng bình
+chữa cháy xách tay phải được trang bị gấp đôi so với số lượng yêu cầu tối thiểu
+khi không thể bố trí đường giao thông dành cho xe chữa cháy tiếp cận đến công
+trình. Các bình chữa cháy xách tay phải bố trí bảo đảm bán kính bảo vệ tối đa của
+bình chữa cháy xách tay là 25 m tại nơi dễ thấy, dễ lấy./.
+
+Mục lục
+1. Giới thiệu tổng quan về QCVN 10:2025/BCA ........................................................... 1
+1.1. Bố cục của quy chuẩn ........................................................................................... 1
+1.2. Những điểm mới của QCVN 10:2025/BCA ......................................................... 1
+2. Phạm vi điều chỉnh và xử lý chuyển tiếp của quy chuẩn ............................................ 3
+2.1. Phạm vi điều chỉnh ............................................................................................... 3
+2.2. Xử lý chuyển tiếp .................................................................................................. 3
+2.3. Nguyên tắc áp dụng QCVN 10:2025/BCA và các tiêu chuẩn, quy chuẩn khác về
+PCCC ........................................................................................................................... 4
+2.4. Hướng dẫn về luận chứng kỹ thuật để xem xét thay thế một số yêu cầu của
+QCVN 10:2025/BCA. .................................................................................................. 6
+3. Quy định chung ........................................................................................................... 6
+3.1. Xác định số tầng, chiều cao của nhà ..................................................................... 6
+3.2. Xác định khối tích, diện tích của gian phòng, nhà, công trình ............................. 7
+3.3. Xác định khu vực ẩm ướt ...................................................................................... 8
+3.4. Một số loại hình nhà, công trình, gian phòng quy định trong quy chuẩn và nhà,
+công trình có công năng tương tự chưa được quy định trong quy chuẩn .................... 8
+3.5. Xác định chất chữa cháy hiệu quả ...................................................................... 10
+3.6. Bảo quản, bảo dưỡng phương tiện chữa cháy, cứu nạn, cứu hộ ......................... 11
+4. Quy định cụ thể.......................................................................................................... 12
+4.1. Trang bị, bố trí hệ thống báo cháy tự động, thiết bị báo cháy độc lập; hệ thống,
+thiết bị chữa cháy tự động .......................................................................................... 12
+4.2. Trang bị, bố trí phương tiện chiếu sáng sự cố và chỉ dẫn thoát nạn, hệ thống loa
+thông báo và hướng dẫn thoát nạn ............................................................................. 20
+4.3. Trang bị, bố trí hệ thống cấp nước chữa cháy ngoài nhà .................................... 22
+4.4. Trang bị, bố trí hệ thống họng nước chữa cháy trong nhà .................................. 24
+4.5. Trang bị, bố trí bình chữa cháy xách tay và bình chữa cháy có bánh xe: ........... 29
+4.6. Trang bị, bố trí dụng cụ phá dỡ thô sơ, mặt nạ lọc độc và mặt nạ phòng độc cách
+ly ................................................................................................................................ 29
+4.7 Trang bị, bố trí phương tiện chữa cháy cơ giới.................................................... 30
+5. Quy định trang bị phương tiện PCCC và CNCH cho công trình đang thi công xây
+dựng ............................................................................................................................... 31
+Mục lục .......................................................................................................................... 32

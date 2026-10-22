@@ -1,9 +1,125 @@
-[Bảng đối chiếu thẩm định thiết kế PCCC B11. Bảng đối chiếu  Hệ thống chữa cháy bằng Sol-khí]
-[Hiệu lực: 2025. Trạng thái: ĐANG DÙNG.]
+[Bảng đối chiếu thẩm định thiết kế PCCC B11. Bảng đối chiếu Hệ thống chữa cháy bằng Sol-khí]
+[Hiệu lực: 2026 (bản cập nhật). Trạng thái: ĐANG DÙNG. Nguồn: Bảng đối chiếu cập nhật kỳ thi cán bộ thẩm định PCCC.]
 
 BẢNG ĐỐI CHIẾU HỆ THỐNG CHỮA CHÁY BẰNG SOL-KHÍ
 *Chú thích: (+) - Đạt; (KN) - Kiến nghị
-TT	Nội dung	Thiết kế	Quy định của quy chuẩn, tiêu chuẩn	Khoản, Điều	Kết luận		1	Mô tả chung 	Xác định vị trí của các khu vực bảo vệ bởi hệ thống chữa cháy bằng Sol-khí					2	Khu vực bảo vệ						-	Phân loại đám cháy của khu vực bảo vệ		Phân loại đám cháy (Classifications for Fires)
+TT	Nội dung đối chiếu	Nội dung thiết kế	Nội dung quy định của quy chuẩn, tiêu chuẩn	Khoản, Điều	Kết luận		1	Mô tả chung 	Xác định vị trí của các khu vực bảo vệ bởi hệ thống chữa cháy bằng Sol-khí					-	Lựa chọn chất chữa cháy (xem xét sự phù hợp) 		Chất chữa cháy
+Hiệu quả chữa cháy các loại đám cháy
+
+A
+B
+C
+D
+E
+
+Nước
+Phun tia
+++
+-
+-
+-
+-
+
+Phun sương
+++
++
+-
+-
++(1)
+
+Chất chữa cháy gốc nước
+Phun tia
++++
++++
+-
+-
+-
+
+Phun sương
++++
++++
+-
+-
+++(1)
+
+Bọt
+Bội số nở thấp
+++
+++
+-
+-
+-
+
+Bội số nở trung bình
++
+++
+-
+-
+-
+
+Chất chữa cháy
+Hiệu quả chữa cháy các loại đám cháy
+
+A
+B
+C
+D
+E
+
+Bọt
+Bội số nở cao
++
++
+-
+-
+-
+
+Bọt chứa flo
+++
++++
+-
+-
+-
+
+Khí
+Khí CO2, Nitơ
++
++
++
+-
++++
+
+Khí Freon (2)
++
+++
++
+-
+++
+
+Aerosol (Sol-khí)
+++
+++
+++
+-
+++
+
+Bột
+++
++++
++++
++++
+++
+
+(1) Tuân thủ các yêu cầu an toàn điện.
+(2) Khí Freon là các khí chữa cháy có thành phần chlorofluorocarbon hoặc hydrofluorocarbon như: HFC-227ea, FK-5-1-12…
+CHÚ THÍCH:
+Dấu “+++” Chữa cháy rất hiệu quả.
+Dấu “++” Chữa cháy hiệu quả.
+Dấu “+” Chữa cháy hiệu quả thấp
+Dấu “-” Chữa cháy không thích hợp.
+Khi nhà, công trình, gian phòng, khu vực có từ hai chất chữa cháy hiệu quả thấp hoặc hiệu quả hoặc rất hiệu quả trở lên thì được phép lựa chọn một trong các chất chữa cháy này nhằm hạn chế việc hư hại các thiết bị, máy móc trong khu vực bảo vệ do chất chữa cháy gây ra. Không được sử dụng chất chữa cháy mà các chất này có thể gây ra phản ứng hóa học với chất có trong khu vực bảo vệ dẫn đến cháy, nổ.
+
+Bảng 2 QCVN 10:2025/BCA			2	Khu vực bảo vệ						-	Phân loại đám cháy của khu vực bảo vệ		Phân loại đám cháy
 3.5.1
  Đám cháy loại A
 Đám cháy các chất rắn, khi cháy thường kèm theo sự tạo ra than hồng (các vật liệu dễ cháy thông thường như gỗ, vải, giấy, cao su và nhiều loại nhựa).
@@ -90,7 +206,7 @@ c) Áp suất môi trường xung quanh thay đổi hơn 11% (tương đương v
 6.1.4.3.2 Bình phun Sol-khí phải được đóng kín để chống bị ăn mòn bởi môi trường sử dụng.
 6.1.4.3.3 Phương pháp đóng kín phải không làm cản trở việc mở thiết bị khi vận hành hệ thống.
 6.1.4.4 Mỗi bình phun Sol-khí phải có nhãn mác cố định chứa thông tin cho biết khối lượng hợp chất tạo Sol-khí được chứa bên trong, nhà sản xuất, ngày sản xuất và ngày bắt buộc thay thế thiết bị căn cứ vào thời hạn sử dụng.
-6.1.4.5 Nhiệt độ lưu trữ và sử dụng phải nằm trong giới hạn quy định của nhà sản xuất.	Điều 6.1.4.3-6.1.4.5 TCVN 13333:2021 			5.3	Hệ thống kích hoạt điều khiển, 						-	Yêu cầu chung		6.2.1.1 Hệ thống phát hiện, kích hoạt, báo động và điều khiển phải được cài đặt, thử nghiệm hoạt động và bảo dưỡng phù hợp với tiêu chuẩn TCVN 5738.
+6.1.4.5 Nhiệt độ lưu trữ và sử dụng phải nằm trong giới hạn quy định của nhà sản xuất.	Điều 6.1.4.3-6.1.4.5 TCVN 13333:2021 			5.3	Hệ thống kích hoạt điều khiển 						-	Yêu cầu chung		6.2.1.1 Hệ thống phát hiện, kích hoạt, báo động và điều khiển phải được cài đặt, thử nghiệm hoạt động và bảo dưỡng phù hợp với tiêu chuẩn TCVN 5738.
 6.2.1.2 Phải cài đặt chế độ tự động phát hiện và tự động kích hoạt. Trong trường hợp hệ thống chỉ có chế độ kích hoạt bằng tay phải được cơ quan có thẩm quyền chấp thuận.
 Trường hợp hệ thống báo cháy dùng để điều khiển kích hoạt hệ thống chữa cháy thì mỗi điểm trong khu vực bảo vệ phải được kiểm soát bằng 2 đầu báo cháy tự động thuộc 2 kênh hoặc 2 địa chỉ khác nhau.	Điều 6.2.1.1, 6.2.1.2 TCVN 13333:2021
 
@@ -129,10 +245,10 @@ TCVN 13333:2021 			5.5	Thiết bị điều khiển		6.2.4.1 Thiết bị điề
 6.2.4.2 Thiết bị điều khiển bằng khí nén
 6.2.4.2.1 Các đường ống phải được bảo vệ khỏi uốn cong và hư hại cơ học khi sử dụng thiết bị điều khiển bằng khí nén.
 6.2.4.2.2 Phải có giải pháp bảo vệ để tránh tổn thất dòng khí nén khi lắp đặt.
-6.2.4.2.3 Thiết bị điều khiển phải được liệt kê cụ thể về số lượng và loại thiết bị kích hoạt được sử dụng và phải liệt kê khả năng tương thích.	Điều 6.2.4.1-6.2.4.2 TCVN 13333:2021 				Thời gian trễ		6.2.5.7.1 Hệ thống chữa cháy bằng Sol-khí phải có báo động và thời gian trễ trước khi phun, đủ để con người thoát nạn.
+6.2.4.2.3 Thiết bị điều khiển phải được liệt kê cụ thể về số lượng và loại thiết bị kích hoạt được sử dụng và phải liệt kê khả năng tương thích.	Điều 6.2.4.1-6.2.4.2 TCVN 13333:2021 			-	Thời gian trễ		6.2.5.7.1 Hệ thống chữa cháy bằng Sol-khí phải có báo động và thời gian trễ trước khi phun, đủ để con người thoát nạn.
 6.2.5.7.2 Với những khu vực nguy hiểm có nguy cơ cháy lan nhanh, mà việc thiết lập thời gian trễ sẽ làm gia tăng nghiêm trọng mối đe dọa đến tính mạng và tài sản thì thời gian trễ được phép bỏ qua.
 6.2.5.7.3 Thời gian trễ chỉ được sử dụng để sơ tán con người hoặc chuẩn bị cho phun chất chữa cháy tại khu vực nguy hiểm.
-6.2.5.7.4 Không sử dụng thời gian trễ làm khoảng thời gian để xác thực độ tin cậy của cảnh báo trước khi hệ thống được kích hoạt tự động.	Điều 6.2.5.7 TCVN 13333:2021 				Nút ấn tạm dừng		Nút ấn tạm dừng phải được bố trí ở khu vực bảo vệ và gần cửa ra vào.
+6.2.5.7.4 Không sử dụng thời gian trễ làm khoảng thời gian để xác thực độ tin cậy của cảnh báo trước khi hệ thống được kích hoạt tự động.	Điều 6.2.5.7 TCVN 13333:2021 			-	Nút ấn tạm dừng		Nút ấn tạm dừng phải được bố trí ở khu vực bảo vệ và gần cửa ra vào.
 6.2.5.4.1 Nút ấn tạm dừng phải là loại nút ấn đòi hỏi phải có tác động liên tục bằng tay để tạo ra tín hiệu tạm dừng kích hoạt.
 6.2.5.4.2 Nút ấn tạm dừng không phải loại vẫn tạm dừng hệ thống khi không có mặt của con người.
 6.2.5.4.3 Trong mọi trường hợp, việc kích hoạt khẩn cấp bằng tay sẽ làm mất hiệu lực của chức năng tạm dừng.

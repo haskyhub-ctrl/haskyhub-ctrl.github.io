@@ -1,0 +1,356 @@
+[Bảng đối chiếu thẩm định thiết kế PCCC B16. Bảng đối chiếu hệ thống chữa cháy bằng bột]
+[Hiệu lực: 2026 (bản cập nhật). Trạng thái: ĐANG DÙNG. Nguồn: Bảng đối chiếu cập nhật kỳ thi cán bộ thẩm định PCCC.]
+
+BẢNG ĐỐI CHIẾU HỆ THỐNG CHỮA CHÁY BẰNG BỘT
+
+TT	Nội dung	Thiết kế	Quy định của quy chuẩn, tiêu chuẩn	Khoản, Điều	Kết luận		1	Yêu cầu trang bị		Phụ lục A	QCVN 10:2025/BCA			2	Phạm vi áp dụng	Lưu ý: hệ thống chữa cháy bằng bột là hệ thống chữa cháy cố định theo khái niệm của QCVN 10:2025/BCA	Tiêu chuẩn này áp dụng đối với các hệ thống chữa cháy cố định bằng bột trang bị cho nhà và công trình xây dựng cũng như các khu vực nguy hiểm cháy ngoài trời.
+Tiêu chuẩn này không áp dụng đối với các hệ thống chữa cháy cố định bằng bột có bình chứa áp suất cố định và các hệ thống thiết kế sẵn có lượng chất chữa cháy lên đến 150 kg, hệ thống đường vòi và giám sát chữa cháy bằng bột, các khu vực có nguy cơ nổ, động đất hoặc có điều kiện môi trường đặc biệt như hàng hải, khai thác mỏ, hàng không hoặc có khả năng xảy ra đám cháy loại D (đám cháy các kim loại theo TCVN 4878 Phòng cháy và chữa cháy - Phân loại cháy).	Điều 1
+TCVN 13877-2:2023			3	Lựa chọn chất chữa cháy (xem xét sự phù hợp) 		Chất chữa cháy
+Hiệu quả chữa cháy các loại đám cháy
+
+A
+B
+C
+D
+E
+
+Nước
+Phun tia
+++
+-
+-
+-
+-
+
+Phun sương
+++
++
+-
+-
++(1)
+
+Chất chữa cháy gốc nước
+Phun tia
++++
++++
+-
+-
+-
+
+Phun sương
++++
++++
+-
+-
+++(1)
+
+Bọt
+Bội số nở thấp
+++
+++
+-
+-
+-
+
+Bội số nở trung bình
++
+++
+-
+-
+-
+
+Bọt
+Bội số nở cao
++
++
+-
+-
+-
+
+Bọt chứa flo
+++
++++
+-
+-
+-
+
+Khí
+Khí CO2, Nitơ
++
++
++
+-
++++
+
+Khí Freon (2)
++
+++
++
+-
+++
+
+Aerosol (Sol-khí)
+++
+++
+++
+-
+++
+
+Bột
+++
++++
++++
++++
+++
+
+(1) Tuân thủ các yêu cầu an toàn điện.
+(2) Khí Freon là các khí chữa cháy có thành phần chlorofluorocarbon hoặc hydrofluorocarbon như: HFC-227ea, FK-5-1-12…
+CHÚ THÍCH:
+Dấu “+++” Chữa cháy rất hiệu quả.
+Dấu “++” Chữa cháy hiệu quả.
+Dấu “+” Chữa cháy hiệu quả thấp
+Dấu “-” Chữa cháy không thích hợp.
+Khi nhà, công trình, gian phòng, khu vực có từ hai chất chữa cháy hiệu quả thấp hoặc hiệu quả hoặc rất hiệu quả trở lên thì được phép lựa chọn một trong các chất chữa cháy này nhằm hạn chế việc hư hại các thiết bị, máy móc trong khu vực bảo vệ do chất chữa cháy gây ra. Không được sử dụng chất chữa cháy mà các chất này có thể gây ra phản ứng hóa học với chất có trong khu vực bảo vệ dẫn đến cháy, nổ.
+
+Bảng 2
+ QCVN 10:2025/BCA			3	Yêu cầu chung						3.1	Lựa chọn loại khí đẩy		Khí
+Hàm lượng nước tối đa (%)
+
+Không khí
+0,006
+
+Argon
+0,006
+
+CO2
+0,015
+
+Heli
+0,006
+
+Nitơ
+0,006
+
+	Bảng 1
+TCVN 13877-2:2023
+					Khí đẩy là CO2	Khi sử dụng CO2 làm khí đẩy, hệ thống phải được thiết kế để bảo đảm rằng nồng độ CO2 nhỏ hơn hoặc bằng 5% thể tích trong không gian kín được bảo vệ và phải phù hợp với TCVN 6100.	Điều 4.2
+TCVN 13877-2:2023
+
+			3.2	Lượng khí đẩy		Lượng khí đẩy phải được tính toán sao cho thời gian xả hết lượng bột không quá thời gian xả tối đa tại khu vực bất lợi nhất về áp suất đẩy trong phạm vi bảo vệ của hệ thống và phải tính thêm lượng khí để đẩy sạch lượng bột còn sót lại trong bình chứa và đường ống trong thời gian ít nhất là 1 phút với áp suất làm việc của hệ thống.	Điều 4.1
+TCVN 13877-2:2023
+			3.3	Bột chữa cháy						-	Số lượng bột và khí đẩy dự phòng		Khi có yêu cầu, lượng dự phòng phải là bội số của lượng cung cấp chính theo quy định của cơ quan có thẩm quyền. Khi cần bảo vệ liên tục, cả hai nguồn cấp chính và dự phòng phải được nối cố định với ống góp và phải được bố trí để dễ dàng chuyển đổi.	Điều 6
+TCVN 13877-2:2023
+			-	Bố trí bình chứa bột và bình khí đẩy	Lưu ý: Ví trí đặt bình chứa bột nên tránh ánh sáng mặt trời chiều trực tiếp vì chiếu trực tiếp có khả năng làm tăng nhiệt độ của bình chứa cao hơn nhiệt độ môi trường.	- Các bình chứa, cụm van và phụ kiện phải được sắp xếp sao cho có thể tiếp cận được để kiểm tra, thử nghiệm và bảo dưỡng khi cần thiết.
+- Các bình chứa phải được lắp đặt chắc chắn và gá đỡ phù hợp với tài liệu hướng dẫn lắp đặt các hệ thống chữa cháy để thuận tiện cho việc bảo dưỡng bình chứa và các thiết bị liên quan.
+- Các bình chứa phải được đặt càng gần với khu vực được bảo vệ càng tốt, nên ưu tiên đặt ngoài khu vực bảo vệ. Các bình chứa chỉ có thể được bố trí bên trong khu vực được bảo vệ nếu có thể giảm tới mức thấp nhất các nguy hiểm do cháy nổ gây ra.
+- Các bình chứa không được bố trí ở nơi chịu ảnh hưởng của thời tiết khắc nghiệt hoặc bị hư hỏng do tác động về cơ học, hóa học hoặc các nguyên nhân khác. Khi các bình chứa tiếp xúc với các nguy cơ dẫn đến hư hỏng hoặc có thể bị can thiệp trái phép thì phải có tường bao hoặc rào chắn thích hợp.	Điều 7
+TCVN 13877-2:2023
+			3.3	An toàn hệ thống						-	Cơ cấu làm trễ thời gian		- Đối với khu vực mà thời gian trễ không làm tăng nguy hiểm đáng kể đến con người và tài sản thì các hệ thống chữa cháy phải có tín hiệu báo động trước khi phun với độ trễ thời gian đủ để cho phép sơ tán người;
+- Cơ cấu làm trễ thời gian chỉ được sử dụng để sơ tán người hoặc để chuẩn bị cho việc phun bột chữa cháy.	Điều 8
+TCVN 13877-2:2023
+			-	Yêu cầu đối với khu vực chữa cháy bột trong nhà		- Đường thoát nạn phải được giữ thông thoáng trong mọi lúc và phải trang bị đầy đủ đèn chiếu sáng sự cố và chỉ dẫn thoát nạn để giảm tới mức nhỏ nhất quãng đường phải đi.
+- Cửa mở ra ngoài có cơ cấu tự đóng có thể mở từ bên trong	Điều 8
+TCVN 13877-2:2023
+			-	Tín hiệu cảnh báo		- Các tín hiệu báo động liên tục bằng ánh sáng và âm thanh bên trong khu vực bảo vệ tại các cửa ra vào và các tín hiệu báo động liên tục bằng ánh sáng bên ngoài khu vực được bảo vệ, phải hoạt động cho tới khi đám cháy ở trong khu vực được bảo vệ đã được dập tắt hoàn toàn;
+- Khi có yêu cầu, các tín hiệu cảnh báo trước khi phun bột chữa cháy phải hoạt động tức thời từ lúc bắt đầu của thời gian trễ. Các tín hiệu này phải có đặc điểm khác so với tất cả các tín hiệu báo động khác	Điều 8
+TCVN 13877-2:2023
+			-	An toàn đối với cong người		- Nên cung cấp thiết bị hô hấp và các nhân viên được đào tạo để sử dụng thiết bị này;
+- Các nhân viên không đi vào trong khu vực được bảo vệ cho tới khi đã được kiểm tra là họ có đủ điều kiện đảm bảo an toàn để làm nhiệm vụ.	Điều 8
+TCVN 13877-2:2023
+			4	Lựa chọn loại hệ thống	Lựa chọn tính toán theo thể tích hoặc theo bề mặt						Trường hợp 1 theo thể tích						4.1	Tính toán theo thể tích						-	Bố trí lỗ mở		Đối với hệ thống chữa cháy theo thể tích, tổng diện tích của các lỗ hở không thể đóng được phải nhỏ hơn hoặc bằng 15% tổng diện tích của các bề mặt không gian được bảo vệ.
+CHÚ THÍCH: Việc thất thoát bột khỏi vùng không gian kín thường làm giảm hiệu quả chữa cháy của hệ thống và cần được tối ưu hóa bằng cách đóng các lỗ hở nếu có thể.	Điều 9.1
+TCVN 13877-2:2023
+			-	Lượng bột chữa cháy	Lưu ý: Thể tích vùng không gian kín được sử dụng tại Điều 9.2 phải là tổng thể tích của vùng không gian đó trừ đi thể tích của bất kỳ phần tử cố định, không thấm khí, không dễ cháy nào ở bên trong vùng không gian kín đó (ví dụ: các bộ phận cấu kiện xây dựng).
+	Lượng bột được xả ra phải đủ để bao phủ toàn bộ vùng không gian kín với một biên độ an toàn thích hợp để bù đắp cho bất kỳ lỗ hở nào không thể đóng lại khi hệ thống được kích hoạt. Việc đóng các lỗ hở phải được thực hiện không muộn hơn thời điểm bắt đầu xả bột.
+Tổng lượng bột tối thiểu phải được tính toán theo công thức sau:
+Q1 = K1 V + K2 AS + K3 AL + K4 Rv t
+Trong đó:
+Q1: Lượng bột, tính bằng kg
+K1: Hệ số lượng cơ bản, tính bằng kg/m3
+V: Tổng thể tích vùng không gian kín, tính bằng m3
+K2: Hệ số lượng bổ sung cho các lỗ hở AS ≤ 5% tổng diện tích AR, tính bằng kg/m2
+AR: Tổng diện tích vùng không gian kín (tường, trần, sàn), tính bằng m2
+AS: Tổng diện tích lỗ hở 1% AR < AS ≤ 5% AR, tính bằng m2
+K3: Hệ số lượng bổ sung cho các lỗ hở AL > 5% tổng diện tích AR, tính bằng kg/m2
+AL: Tổng diện tích lỗ hở 5% AR < AL ≤ 15% AR, tính bằng m2
+K4: Hệ số lượng bổ sung để bù đắp cho bất kỳ hệ thống thông gió nào không được đóng ngắt hoặc tắt trong quá trình xả bột, tính bằng kg/m3
+Rv: Tốc độ dòng thông gió, tính bằng m3/s
+t: Thời gian xả, tính bằng giây (s)
+Đối với đám cháy hydrocacbon, các giá trị hệ số K được lấy như sau:
+K1 = 0,65 kg/m3
+K2 = 2,5 kg/m2
+K3 = 5,0 kg/m2
+K4 = 0,65 kg/m3	Điều 9.2
+TCVN 13877-2:2023
+			-	Thời gian xả khí		Thời gian xả hết lượng bột được tính toán từ khi hệ thống được kích hoạt không được vượt quá 30 s.	Điều 9.3.1
+TCVN 13877-2:2023
+			-	Tốc độ xả khí		Tốc độ xả bột tối thiểu R, tính bằng kg/s, được tính theo công thức:
+
+	Điều 9.3.2
+TCVN 13877-2:2023
+			4.2	Bố trí đầu phun bột		Các đầu phun, bao gồm cả các đầu phun được gắn trực tiếp vào các bình chứa phải được định vị phù hợp với kích thước hình học của khu vực được bảo vệ đang được xem xét.
+Loại đầu phun và việc bố trí các đầu phun phải sao cho:
+a) Đạt được lượng bột tối thiểu trong tất cả các phần của khu vực được bảo vệ;
+b) Tốc độ phun không được ảnh hưởng có hại đến khu vực được bảo vệ hoặc các vật chứa bên trong khu vực được bảo vệ.
+Các đầu phun phải có độ bền thích hợp cho sử dụng với áp suất làm việc qui định và phải có khả năng chịu được sự tác động quá mức về cơ tính danh nghĩa và phải được thiết kế để chịu được nhiệt độ qui định mà không biến dạng.	Điều 9.5.1
+TCVN 13877-2:2023
+					Giảm tác động đối với trần nhẹ	Để giảm tới mức tối thiểu khả năng làm dịch chuyển các lớp trần nhẹ, phải thực hiện các biện pháp giữ chặt các lớp trần nhẹ ở khoảng cách tối thiểu 1,5 m tính từ mỗi đầu phun.
+CHÚ THÍCH: Tốc độ phun được tạo ra bởi kết cấu của các đầu phun có thể là một yếu tố làm dịch chuyển các mái trần nhẹ.	Điều 9.5.2
+TCVN 13877-2:2023
+					Trường hợp 2 tính toán theo bề mặt					4.1	Tính toán bề mặt						-	Lượng bột chữa cháy		Lượng bột không được nhỏ hơn Q2
+Q2 = K5 Vi
+Trong  đó:
+Q2: Lượng bột, tính bằng kg
+Vi: Thể tích giả định, tính bằng m3, xung quanh vùng nguy hiểm được chiếu ở tất cả các phía đến ranh giới rắn gần nhất hoặc cách vùng nguy hiểm 1,5 m, tùy theo giá trị nào nhỏ hơn
+K5: Hệ số lượng cơ bản, có giá trị bằng 1,2 kg/m3.
+	Điều 10.2
+TCVN 13877-2:2023
+			-	Thời gian xả khí		Khoảng thời gian từ khi kích hoạt hệ thống bột đến khi xả lượng bột tính toán phải nhỏ hơn 30 s.	Điều 10.3
+TCVN 13877-2:2023
+			4.2	Bố trí đầu phun		Các đầu phun phải được bố trí theo khuyến nghị của nhà sản xuất. Các ví dụ tính toán được nêu tại Phụ lục A.
+Lượng bột, thời gian xả tối thiểu và tốc độ xả có thể được thiết kế phù hợp với Hình C.1 đến Hình C.4 tùy thuộc vào việc sắp xếp các đầu phun.	Điều 10.4
+TCVN 13877-2:2023
+			5	Các hệ thống phát hiện, 						- 	Loại hệ thống		Các hệ thống phát hiện, vận hành và điều khiển có thể là hệ thống tự động hoặc bằng tay. Các hệ thống tự động cũng phải có khả năng vận hành bằng tay.
+Các hệ thống phát hiện, vận hành, báo động và điều khiển phải được lắp đặt, thử nghiệm và bảo trì phù hợp với các tiêu chuẩn quốc gia tương ứng.	Điều 11.1
+TCVN 13877-2:2023
+			-	Nguồn điện		Nếu trong tiêu chuẩn quốc gia không có qui định nào khác, phải sử dụng các nguồn năng lượng dự phòng tối thiểu là trong 24 h để cung cấp cho các yêu cầu hoạt động về phát hiện, tín hiệu, điều khiển và vận hành của hệ thống.	Điều 11.1
+TCVN 13877-2:2023
+			6	Cơ cấu vận hành						-	Vận hành tự động		Phát hiện tự động phải được thực hiện bằng một phương pháp hoặc thiết bị được cơ quan có thẩm quyền chấp nhận và phải có khả năng phát hiện sớm và chỉ báo mức độ tăng nhiệt, ngọn lửa, khói, các hơi cháy hoặc trạng thái không bình thường trong sự cố tạo ra đám cháy.
+CHÚ THÍCH: Các thiết bị phát hiện, nếu lắp ở khoảng cách lớn nhất cho phép để phát hiện đám cháy có thể gây ra sự chậm trễ quá mức trong việc phun bột chữa cháy, đặc biệt là khi cần nhiều hơn một thiết bị trong trạng thái báo cháy để kích hoạt hệ thống phun.
+- Các hệ thống tự động phải được điều khiển bởi sự phát hiện cháy tự động và kích hoạt các cơ cấu thích hợp cho hệ thống chữa cháy, sự cố cháy và cũng phải được trang bị các cơ cấu vận hành bằng tay.
+Các hệ thống phát hiện đám cháy vận hành bằng điện phải tuân theo tiêu chuẩn quốc gia thích hợp. Nguồn năng lượng điện phải độc lập đối với nguồn điện cung cấp cho vùng có sự cố cháy và phải bao gồm một nguồn điện dự phòng khẩn cấp với bộ chuyển đổi tự động trong trường hợp nguồn điện chính bị hư hỏng.
+Khi sử dụng hai hoặc nhiều bộ phát hiện, như là các đầu báo khói hoặc lửa thì hệ thống chỉ nên vận hành sau khi đã nhận được các tín hiệu từ hai bộ phát hiện.	Điều 11.2
+TCVN 13877-2:2023
+
+Điều 11.3.1
+TCVN 13877-2:2023
+
+			-	Vận hành bằng tay		Phải có phương án vận hành bằng tay đối với hệ thống chữa cháy bằng một bộ điều khiển đặt ở bên ngoài khu vực được bảo vệ hoặc liền kề với lối ra chính từ khu vực này.
+Ngoài cơ cấu vận hành tự động, hệ thống chữa cháy phải có các trang bị sau:
+a) Một hoặc nhiều cơ cấu vận hành bằng tay đặt cách xa các bình chứa;
+b) Một cơ cấu điều khiển bằng tay để điều khiển trực tiếp bằng cơ khí đối với hệ thống hoặc một thiết bị điều khiển bằng tay dùng điện, trong đó có thiết bị giám sát tình trạng nguồn cung cấp điện và báo tín hiệu khi nguồn điện không đảm bảo.
+Vận hành bằng tay phải làm cho các van kích hoạt tự động thích hợp hoạt động đồng thời để xả và phân phối bột chữa cháy.
+CHÚ THÍCH 1: Các tiêu chuẩn quốc gia có thể không yêu cầu xả bằng tay hoặc có thể yêu cầu xả để vận hành thông qua các tín hiệu báo trước khi phun bột chữa cháy và thời gian trễ.
+Cơ cấu vận hành bằng tay phải có các tác động kép hoặc bộ phận an toàn khác để hạn chế sự vận hành bất ngờ. Cơ cấu này phải có bộ phận để ngăn ngừa sự vận hành trong quá trình bảo dưỡng hệ thống chữa cháy.
+CHÚ THÍCH 2: Việc lựa chọn các phương tiện vận hành sẽ phụ thuộc vào tính chất của khu vực được bảo vệ. Hệ thống vận hành bằng tay thường được trang bị hệ thống báo cháy và báo động.	Điều 11.3.2
+TCVN 13877-2:2023
+			7	Thiết bị điều khiển						-	Điều khiển bằng điện		Thiết bị điều khiển bằng điện phải được sử dụng để giám sát các bộ phận phát hiện, bộ phận xả bằng tay và tự động, bộ phận phát tín hiệu, cơ cấu khởi động điện, đường dây dẫn và khi có yêu cầu thì để khởi động vận hành các bộ phận trên. Thiết bị điều khiển phải có khả năng hoạt động cùng với số lượng và kiểu cơ cấu kích hoạt được dùng.	Điều 11.4.1
+TCVN 13877-2:2023
+			-	Điều khiển bằng khí nén		Khi sử dụng thiết bị điều khiển bằng khí nén, đường ống phải được bảo vệ chống bị uốn, gấp và hư hỏng cơ khí. Khi các thiết bị lắp đặt có thể bị hở dẫn đến tổn thất hoặc không bảo đảm tính toàn vẹn của đường ống khí nén, phải đặc biệt chú ý để bảo đảm không xẩy ra tổn thất hoặc mất đi tính toàn vẹn của đường ống.	Điều 11.4.2
+TCVN 13877-2:2023
+			8	Báo động và hiển thị		- Các bộ phận báo động và hiển thị, hoặc cả hai phải được sử dụng để báo sự hoạt động của hệ thống chữa cháy, mối nguy hiểm đối với con người hoặc sự hư hỏng của cơ cấu giám sát. Kiểu (âm thanh, ánh sáng và khứu giác), số lượng và vị trí của các bộ phận này phải bảo đảm sao cho cùng hoàn thành được nhiệm vụ của mình.
+- Các bộ phận báo động bằng âm thanh và ánh sáng trước khi phun bột chữa cháy phải được lắp đặt trong khu vực được bảo vệ để cảnh báo một cách chắc chắn cho việc sắp phun bột chữa cháy; hoạt động của bộ phận cảnh báo phải liên tục ngay từ đầu tới khi việc báo động đã được xác nhận và bắt đầu một hoạt động thích hợp	Điều 11.5.1
+TCVN 13877-2:2023
+
+Điều 11.5.2
+TCVN 13877-2:2023
+			9	Công tắc tạm dừng		Khi trang bị công tắc tạm dừng, phải bố trí trong khu vực được bảo vệ và bố trí gần lối ra của khu vực. Công tắc tạm dừng phải là kiểu có lực điều khiển bằng tay cố định để ngăn chặn sự vận hành của hệ thống. Hoạt động của chức năng tạm dừng phải được thể hiện bằng âm thanh và ánh sáng, khác biệt với tín hiệu báo hỏng của hệ thống. Công tắc tạm dừng hoạt động khi hệ thống ở trạng thái chờ thì tín hiệu nêu trên phải chuyển thành tín hiệu báo lỗi ở thiết bị điều khiển. Công tắc tạm dừng phải được nhận ra một cách rõ ràng để dễ sử dụng.	Điều 11.6
+TCVN 13877-2:2023
+			10	Đường ống						-	Vật liệu làm ống	Lưu ý:
+- Không được sử dụng ống gang và ống phi kim loại trừ khi được chấp thuận đạt thử nghiệm áp suất làm việc
+- Các ống mềm (bao gồm cả các đầu nối) phải được làm bằng vật liệu đã được chấp nhận và phải thích hợp để làm việc ở áp suất cho trước của khí chữa cháy và ở các nhiệt độ lớn nhất và nhỏ nhất.	- Hệ thống đường ống phải được chế tạo bằng vật liệu không cháy có các tính chất vật lý và hóa học sao cho có thể bảo đảm được tính toàn vẹn và độ tin cậy của vật liệu khi chịu tác dụng của ứng suất. Chiều dày của thành ống phải được tính theo tiêu chuẩn quốc gia có liên quan. Áp suất dùng trong tính toán này phải là áp suất được tạo ra ở nhiệt độ bảo quản lớn nhất không nhỏ hơn 50°C. Nếu nhiệt độ làm việc của hệ thống được chấp nhận việc cao hơn cho hệ thống thì áp suất thiết kế phải được điều chỉnh tới áp suất tăng ở nhiệt độ lớn nhất. Khi thực hiện tính toán này phải tính đến tất cả các hệ số tác động của các mối nối, mối ghép ren, dung sai của các rãnh hàn hoặc dung sai hàn.	Điều 12.1.2
+TCVN 13877-2:2023
+			-	Phụ tùng đường ống		Các phụ tùng đường ống phải có áp suất làm việc danh nghĩa tối thiểu bằng áp suất lớn nhất trong bình chứa ở 50°C. Đối với các hệ thống sử dụng một van giảm áp trong ống góp thì các phụ tùng đường ống ở sau van phải có áp suất làm việc danh nghĩa tối thiểu bằng áp suất lớn nhất cho trước trong đường ống sau van.
+Không được dùng các phụ tùng đường ống bằng gang.	Điều 12.2.1
+TCVN 13877-2:2023
+			11	Cân bằng hệ thống		Hệ thống cân bằng phải là hệ thống trong đó:
+a) Chiều dài thực tế hoặc chiều dài tương đương của ống từ bình chứa tới mỗi đầu phun chênh lệch với nhau không quá 10 %;
+b) Lưu lượng phun của mỗi đầu phun đều bằng nhau (xem Hình 3).
+
+Hình 3 – Hệ thống cân bằng điển hình
+CHÚ THÍCH: Các chữ số đậm nét trong ngoặc biểu thị các nút thiết kế cho tính toán. Kích thước tính bằng m
+12.4.2 Bất cứ hệ thống nào không đáp ứng được các yêu cầu này phải được xem là hệ thống không cân bằng (xem Hình 4).
+
+Hình 4 – Hệ thống không cân bằng điển hình
+CHÚ THÍCH: Các chữ số đậm nét trong ngoặc biểu thị các nút thiết kế để tính toán. Kích thước tính bằng m
+	Điều 12.4
+TCVN 13877-2:2023
+			12	Giá treo ống						-	Bố trí giá treo		Các giá treo ống phải được cố định trực tiếp vào công trình hoặc nếu cần thiết, vào máy móc, giá để đồ hoặc các kết cấu khác và không được phép sử dụng để đỡ bất kỳ sự lắp đặt nào khác. Giá treo phải là loại có thể điều chỉnh được để đảm bảo khả năng chịu tải đồng đều, phải bao quanh hoàn toàn đường ống và không được hàn vào đường ống hoặc đầu nối.
+Phần của kết cấu mà các giá đỡ được cố định vào phải có khả năng đỡ đường ống (xem bảng 3). Đường ống có đường kính lớn hơn 50 mm không được phép đỡ từ tấm thép dạng sóng hoặc phiến bê tông ngậm khí.
+Các đường ống phân phối phải có một số điểm cố định thích hợp để tính đến các lực dọc trục.
+Không bộ phận nào của giá treo được phép làm bằng vật liệu dễ cháy. Đinh không được phép sử dụng.
+Giá treo ống đồng phải có lớp lót thích hợp với đủ điện trở để chống ăn mòn tiếp xúc.	Điều 12.5
+TCVN 13877-2:2023
+			-	Khoảng cách giữa các giá treo		Kích cỡ ống (mm)
+Khoảng cách tối đa (m)
+
+12
+1,2
+
+15
+1,5
+
+20
+1,8
+
+25
+2,1
+
+32
+2,4
+
+40
+2,7
+
+50
+3,4
+
+65
+3,4
+
+80
+3,7
+
+100
+4,3
+
+150
+5,0
+
+200
+6,0
+
+Khoảng cách từ bất kỳ đầu phun đầu cuối nào đến giá treo không được nhỏ hơn 0,15 m và không được vượt quá:
+- 0,9 m đối với đường ống có đường kính ≤ 25 mm
+- 1,2 m đối với đường ống có đường kính lớn hơn 25 mm
+Giá treo ống phải được thiết kế phù hợp với các yêu cầu của Bảng 3.	Bảng 2
+TCVN 13877-2:2023
+
+			-	Vật liệu giá treo		Vật liệu của giá treo ống phải dày ít nhất 3 mm. Nếu được mạ kẽm, độ dày 2,5 mm là đạt yêu cầu. Điều này không áp dụng cho các giá treo ống làm bằng vật liệu mạ kẽm nhúng nóng, có thể có kích thước tối thiểu là 25 mm x 1,5 mm đối với hệ đường ống có đường kính danh nghĩa lên tới 50 mm.
+Đường kính ống danh nghĩa d (mm)
+Khả năng chịu tải tối thiểu ở 20°C a (kg)
+Tiết diện tối thiểu b (mm2)
+Chiều dài tối thiểu của bu lông neo c (mm)
+
+d ≤ 50
+200
+30 (M 8)
+30
+
+50 < d ≤ 100
+350
+50 (M 10)
+40
+
+100 < d ≤ 150
+500
+70 (M 12)
+40
+
+150 < d ≤ 200
+850
+125 (M 16)
+50
+
+a: Khi vật liệu được nung nóng đến 200°C, khả năng chịu tải không được phép giảm quá 25%
+b: Tiết diện danh nghĩa của thanh ren phải được tăng lên sao cho vẫn đạt được tiết diện nhỏ nhất.
+c: Chiều dài của bu lông neo phụ thuộc vào loại được sử dụng, chủng loại và chất lượng của vật liệu được cố định vào. Các giá trị nêu trên là đối với bê tông.
+
+	Điều 12.5, Bảng 3
+TCVN 13877-2:2023
+
+2
+
+11
+
+B16: BĐC Hệ thống chữa cháy bằng bột

@@ -41,6 +41,9 @@ def clean_reply(text: str) -> str:
     # Dấu gạch ngang dài
     t = re.sub(r"\s[—–]\s", ", ", t)
     t = t.replace("—", ", ").replace("–", "-")
+    # Thẻ <br> trong ô bảng: thay bằng dấu chấm phẩy; ngoài bảng: xuống dòng
+    t = re.sub(r"^(.*\|.*)$", lambda m: re.sub(r"\s*<br\s*/?>\s*[-•]?\s*", "; ", m.group(1)), t, flags=re.M)
+    t = re.sub(r"<br\s*/?>", "\n", t)
     t = normalize_persona(t)
     t = re.sub(r"[ \t]+\n", "\n", t)
     t = re.sub(r"\n{3,}", "\n\n", t)
