@@ -1,0 +1,215 @@
+{
+ "duration": 103.612,
+ "lead": 0.5,
+ "scenes": [
+  {
+   "id": "s1",
+   "start": 0.5,
+   "audio": 10.92,
+   "end": 11.97,
+   "subs": [
+    {
+     "start": 0.5,
+     "end": 4.558,
+     "text": "Công an thành phố Bắc Ninh giới thiệu Hệ thống FRAS-AI:"
+    },
+    {
+     "start": 4.558,
+     "end": 8.321,
+     "text": "ứng dụng trí tuệ nhân tạo trong khảo sát, đánh giá,"
+    },
+    {
+     "start": 8.321,
+     "end": 11.42,
+     "text": "cảnh báo và tự khắc phục nguy cơ cháy, nổ."
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "start": 11.97,
+   "audio": 13.896,
+   "end": 26.416,
+   "subs": [
+    {
+     "start": 11.97,
+     "end": 15.481,
+     "text": "Phần lớn nguy cơ cháy, nổ đã xuất hiện từ trước:"
+    },
+    {
+     "start": 15.481,
+     "end": 19.649,
+     "text": "ổ cắm quá tải, dây điện xuống cấp, lối thoát nạn bị chắn,"
+    },
+    {
+     "start": 19.649,
+     "end": 21.405,
+     "text": "bình gas đặt sai vị trí."
+    },
+    {
+     "start": 21.405,
+     "end": 25.866,
+     "text": "Phát hiện sớm và khắc phục kịp thời là chìa khóa của an toàn."
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "start": 26.416,
+   "audio": 14.04,
+   "end": 41.006,
+   "subs": [
+    {
+     "start": 26.416,
+     "end": 29.45,
+     "text": "Người dân và cơ sở chỉ cần dùng điện thoại,"
+    },
+    {
+     "start": 29.45,
+     "end": 32.907,
+     "text": "truy cập fras-ai.com, không cần cài đặt phần mềm."
+    },
+    {
+     "start": 32.907,
+     "end": 36.646,
+     "text": "Cơ sở thuộc diện quản lý đăng nhập bằng mã định danh;"
+    },
+    {
+     "start": 36.646,
+     "end": 40.456,
+     "text": "hộ gia đình có thể khảo sát ngay, không cần tài khoản."
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "start": 41.006,
+   "audio": 9.408,
+   "end": 50.964,
+   "subs": [
+    {
+     "start": 41.006,
+     "end": 45.006,
+     "text": "Hệ thống nạp bộ câu hỏi theo từng loại hình hoạt động."
+    },
+    {
+     "start": 45.006,
+     "end": 48.266,
+     "text": "Mỗi câu chỉ cần chọn đáp án sát với thực tế;"
+    },
+    {
+     "start": 48.266,
+     "end": 50.414,
+     "text": "kết quả được tự động lưu lại."
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "start": 50.964,
+   "audio": 13.392,
+   "end": 64.906,
+   "subs": [
+    {
+     "start": 50.964,
+     "end": 55.212,
+     "text": "Ngay sau khi gửi, hệ thống tính tỷ lệ và mức nguy cơ: thấp,"
+    },
+    {
+     "start": 55.212,
+     "end": 57.3,
+     "text": "trung bình, cao hoặc rất cao."
+    },
+    {
+     "start": 57.3,
+     "end": 60.684,
+     "text": "Chỉ cần một nguy cơ đặc biệt ở bất kỳ nhóm nào,"
+    },
+    {
+     "start": 60.684,
+     "end": 64.356,
+     "text": "mức chung sẽ được nâng lên để cơ sở không chủ quan."
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "start": 64.906,
+   "audio": 10.32,
+   "end": 75.776,
+   "subs": [
+    {
+     "start": 64.906,
+     "end": 69.124,
+     "text": "Trí tuệ nhân tạo đọc kết quả, chỉ rõ việc cần làm trước,"
+    },
+    {
+     "start": 69.124,
+     "end": 70.104,
+     "text": "kèm thời hạn,"
+    },
+    {
+     "start": 70.104,
+     "end": 74.623,
+     "text": "danh mục tự kiểm tra hằng ngày và lộ trình khắc phục 30, 60,"
+    },
+    {
+     "start": 74.623,
+     "end": 75.226,
+     "text": "90 ngày."
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "start": 75.776,
+   "audio": 15.144,
+   "end": 91.47,
+   "subs": [
+    {
+     "start": 75.776,
+     "end": 79.044,
+     "text": "Cơ sở cập nhật tiến độ khắc phục ngay trên hệ thống;"
+    },
+    {
+     "start": 79.044,
+     "end": 80.112,
+     "text": "mỗi lần cập nhật,"
+    },
+    {
+     "start": 80.112,
+     "end": 86.207,
+     "text": "mức nguy cơ được tính lại và cơ quan Cảnh sát PCCC nắm bắt tình hình gần như theo thời gian thực."
+    },
+    {
+     "start": 86.207,
+     "end": 90.92,
+     "text": "Mã theo dõi giúp người dân quay lại bảng theo dõi trên bất kỳ thiết bị nào."
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "start": 91.47,
+   "audio": 11.592,
+   "end": 103.612,
+   "subs": [
+    {
+     "start": 91.47,
+     "end": 95.64,
+     "text": "FRAS-AI: đồng hành cùng người dân và doanh nghiệp,"
+    },
+    {
+     "start": 95.64,
+     "end": 99.226,
+     "text": "chủ động phòng ngừa, vì cuộc sống bình yên."
+    },
+    {
+     "start": 99.226,
+     "end": 103.062,
+     "text": "Truy cập fras-ai.com để khảo sát ngay hôm nay."
+    }
+   ]
+  }
+ ]
+}

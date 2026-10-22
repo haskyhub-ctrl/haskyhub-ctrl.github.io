@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8">
+<style>
+:root{--navy:#0F2347;--navy2:#1A3A6B;--red:#C0202A;--gold:#C9962C;--paper:#F4F6FA}
+*{box-sizing:border-box;margin:0;padding:0;border-radius:0 !important}
+html,body{width:1920px;height:1080px;overflow:hidden;background:#0A1530;font-family:"Segoe UI",Arial,sans-serif;color:#fff}
+#stage{position:relative;width:1920px;height:1080px;overflow:hidden;background:
+  radial-gradient(1200px 700px at 70% 20%,#1d3f78 0%,transparent 60%),
+  linear-gradient(160deg,#0B1B3D 0%,#0F2347 55%,#13294f 100%)}
+#grid{position:absolute;inset:0;opacity:.07;background-image:linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px);background-size:80px 80px}
+.scene{position:absolute;inset:0;opacity:0}
+.abs{position:absolute}
+/* khung chung */
+#brand{position:absolute;left:60px;top:36px;display:flex;align-items:center;gap:18px;z-index:20}
+#brand img{width:64px;height:64px;object-fit:contain}
+#brand .t1{font-size:22px;font-weight:700;letter-spacing:1.5px;color:#fff}
+#brand .t2{font-size:18px;color:var(--gold);font-weight:600;letter-spacing:1px;margin-top:2px}
+#redbar{position:absolute;left:0;top:0;width:100%;height:8px;background:linear-gradient(90deg,var(--red),var(--gold));z-index:30}
+#progress{position:absolute;left:0;bottom:0;height:7px;background:var(--gold);z-index:30}
+#sub{position:absolute;left:0;right:0;bottom:64px;display:flex;justify-content:center;z-index:40;pointer-events:none}
+#sub span{display:inline-block;max-width:1560px;padding:12px 30px;background:rgba(5,12,30,.78);border-left:6px solid var(--gold);font-size:42px;line-height:1.35;font-weight:600;text-align:center;text-shadow:0 2px 4px #000}
+/* tiêu đề cảnh */
+.h{position:absolute;left:0;right:0;top:112px;text-align:center;font-size:54px;font-weight:800;letter-spacing:1px;text-transform:uppercase}
+.h small{display:block;font-size:26px;color:var(--gold);font-weight:600;letter-spacing:2px;margin-top:6px;text-transform:none}
+.frame{position:absolute;border:3px solid rgba(255,255,255,.35);box-shadow:0 30px 80px rgba(0,0,0,.55);background:#fff;overflow:hidden}
+.frame img{display:block;width:100%;height:100%;object-fit:cover}
+.phone{position:absolute;border:10px solid #0b0f1a;box-shadow:0 30px 80px rgba(0,0,0,.6);background:#fff;overflow:hidden}
+.phone img{display:block;width:100%;height:100%;object-fit:cover;object-position:top}
+.tag{position:absolute;padding:14px 26px;font-size:32px;font-weight:700;background:var(--navy2);border-left:8px solid var(--gold);color:#fff;box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.tag.red{background:var(--red)}
+.card{position:absolute;width:640px;height:230px;background:rgba(255,255,255,.07);border:2px solid rgba(255,255,255,.22);padding:34px 40px;display:flex;align-items:center;gap:30px}
+.card .ic{font-size:88px;line-height:1}
+.card .tx{font-size:44px;font-weight:700;line-height:1.2}
+.card .tx small{display:block;font-size:26px;font-weight:500;color:#c9d6ee;margin-top:8px}
+.chip{position:absolute;width:300px;padding:18px 0;text-align:center;font-size:34px;font-weight:800;color:#fff;box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.big{font-weight:900;letter-spacing:2px}
+</style></head>
+<body><div id="stage"><div id="grid"></div>
+<div id="redbar"></div>
+<div id="brand"><img src="assets/logo-cand.png"><div><div class="t1">CÔNG AN THÀNH PHỐ BẮC NINH</div><div class="t2">PHÒNG CẢNH SÁT PCCC VÀ CNCH</div></div></div>
+
+<!-- S1 -->
+<div class="scene" id="s1">
+  <img id="s1logo" class="abs" src="assets/logo-cand.png" style="left:810px;top:150px;width:300px;height:300px;object-fit:contain">
+  <div id="s1t" class="abs big" style="left:0;right:0;top:500px;text-align:center;font-size:120px;color:var(--gold)">HỆ THỐNG FRAS-AI</div>
+  <div id="s1l" class="abs" style="left:560px;top:650px;width:800px;height:6px;background:linear-gradient(90deg,var(--red),var(--gold))"></div>
+  <div id="s1s" class="abs" style="left:240px;right:240px;top:690px;text-align:center;font-size:44px;font-weight:600;line-height:1.35">Ứng dụng trí tuệ nhân tạo trong khảo sát, đánh giá, cảnh báo và tự khắc phục nguy cơ cháy, nổ</div>
+</div>
+
+<!-- S2 -->
+<div class="scene" id="s2">
+  <div class="h" id="s2h">Vì sao cần phát hiện sớm?<small>Nguy cơ thường xuất hiện từ trước khi xảy ra sự cố</small></div>
+  <div class="card" id="c1" style="left:240px;top:290px"><div class="ic">🔌</div><div class="tx">Ổ cắm quá tải<small>Nóng, chảy nhựa, mùi khét</small></div></div>
+  <div class="card" id="c2" style="left:1040px;top:290px"><div class="ic">⚡</div><div class="tx">Dây điện xuống cấp<small>Hở vỏ, chắp nối, chuột cắn</small></div></div>
+  <div class="card" id="c3" style="left:240px;top:545px"><div class="ic">🚪</div><div class="tx">Lối thoát nạn bị chắn<small>Hàng hóa, xe cộ, cửa khóa</small></div></div>
+  <div class="card" id="c4" style="left:1040px;top:545px"><div class="ic">🔥</div><div class="tx">Bình gas đặt sai vị trí<small>Gần nguồn nhiệt, thiếu thông gió</small></div></div>
+  <div class="tag red" id="s2b" style="left:410px;top:805px;font-size:38px;width:1100px;text-align:center">PHÁT HIỆN SỚM, KHẮC PHỤC KỊP THỜI</div>
+</div>
+
+<!-- S3 -->
+<div class="scene" id="s3">
+  <div class="h" id="s3h">Truy cập dễ dàng<small>Không cài đặt phần mềm, dùng được trên điện thoại</small></div>
+  <div class="frame" id="s3a" style="left:120px;top:290px;width:1030px;height:520px"><img src="assets/h1.jpg"></div>
+  <div class="frame" id="s3b" style="left:1230px;top:290px;width:570px;height:520px"><img src="assets/h2.jpg" style="object-fit:contain;background:#fff"></div>
+  <div class="frame" id="s3c" style="left:1230px;top:290px;width:570px;height:520px"><img src="assets/h3.jpg" style="object-fit:contain;background:#fff"></div>
+  <div class="tag" id="s3t1" style="left:120px;top:825px;width:1030px">1. Mở fras-ai.com trên điện thoại hoặc máy tính</div>
+  <div class="tag" id="s3t2" style="left:1230px;top:825px;width:570px;font-size:26px">2. Cơ sở quản lý: nhập mã định danh</div>
+  <div class="tag red" id="s3t3" style="left:1230px;top:825px;width:570px;font-size:26px">Hộ gia đình: khảo sát ngay</div>
+</div>
+
+<!-- S4 -->
+<div class="scene" id="s4">
+  <div class="h" id="s4h">Khảo sát theo đúng loại hình<small>Nhà ở, cửa hàng, nhà hàng, khách sạn, kho xưởng, trường học...</small></div>
+  <div class="phone" id="p1" style="left:420px;top:305px;width:300px;height:575px"><img src="assets/m4.jpg"></div>
+  <div class="phone" id="p2" style="left:810px;top:305px;width:300px;height:575px"><img src="assets/m5.jpg"></div>
+  <div class="phone" id="p3" style="left:1200px;top:305px;width:300px;height:575px"><img src="assets/m6.jpg"></div>
+  <div class="tag" id="p1t" style="left:320px;top:240px;width:500px;text-align:center;font-size:30px">Thông tin cơ sở</div>
+  <div class="tag" id="p2t" style="left:710px;top:240px;width:500px;text-align:center;font-size:30px">Trả lời câu hỏi</div>
+  <div class="tag" id="p3t" style="left:1100px;top:240px;width:500px;text-align:center;font-size:30px">Xác nhận và gửi</div>
+</div>
+
+<!-- S5 -->
+<div class="scene" id="s5">
+  <div class="h" id="s5h">Kết quả ngay sau khi gửi<small>Tỷ lệ và mức nguy cơ của cơ sở</small></div>
+  <div class="frame" id="s5a" style="left:310px;top:260px;width:1300px;height:560px"><img src="assets/h7.jpg" style="object-position:top"></div>
+  <div class="chip" id="k1" style="left:220px;top:835px;background:#2E9E57">THẤP</div>
+  <div class="chip" id="k2" style="left:550px;top:835px;background:#D9A21B">TRUNG BÌNH</div>
+  <div class="chip" id="k3" style="left:880px;top:835px;background:#E26A1B">CAO</div>
+  <div class="chip" id="k4" style="left:1210px;top:835px;background:#C0202A">RẤT CAO</div>
+</div>
+
+<!-- S6 -->
+<div class="scene" id="s6">
+  <div class="h" id="s6h">Phân tích và khuyến nghị của AI<small>Cụ thể, kèm thời hạn, dễ thực hiện</small></div>
+  <div class="frame" id="s6a" style="left:360px;top:260px;width:1200px;height:600px"><img src="assets/h8.jpg" style="object-position:top"></div>
+  <div class="tag" id="s6t1" style="left:60px;top:400px;width:300px;font-size:28px">Nhận định tổng quan</div>
+  <div class="tag" id="s6t2" style="left:1560px;top:520px;width:330px;font-size:28px">Khuyến nghị kèm thời hạn</div>
+  <div class="tag red" id="s6t3" style="left:1560px;top:700px;width:330px;font-size:28px">Lộ trình 30 - 60 - 90 ngày</div>
+</div>
+
+<!-- S7 -->
+<div class="scene" id="s7">
+  <div class="h" id="s7h">Theo dõi khắc phục thường xuyên<small>Mỗi lần cập nhật, mức nguy cơ được tính lại</small></div>
+  <div class="frame" id="s7a" style="left:120px;top:262px;width:1120px;height:560px"><img src="assets/h9.jpg" style="object-position:top"></div>
+  <div class="phone" id="s7p" style="left:1420px;top:262px;width:300px;height:560px"><img src="assets/m10.jpg"></div>
+  <div class="tag" id="s7t1" style="left:120px;top:845px;width:530px;font-size:28px">Cập nhật tiến độ khắc phục</div>
+  <div class="tag" id="s7t2" style="left:680px;top:845px;width:560px;font-size:28px">Cơ quan quản lý nắm tình hình</div>
+  <div class="tag red" id="s7t3" style="left:1260px;top:845px;width:540px;font-size:28px;text-align:center">Mã theo dõi, không cần tài khoản</div>
+</div>
+
+<!-- S8 -->
+<div class="scene" id="s8">
+  <img id="s8logo" class="abs" src="assets/logo-cand.png" style="left:850px;top:170px;width:220px;height:220px;object-fit:contain">
+  <div id="s8t" class="abs big" style="left:0;right:0;top:420px;text-align:center;font-size:110px;color:var(--gold)">FRAS-AI</div>
+  <div id="s8s" class="abs" style="left:200px;right:200px;top:570px;text-align:center;font-size:46px;font-weight:600;line-height:1.4">Đồng hành cùng người dân và doanh nghiệp<br>Chủ động phòng ngừa, vì cuộc sống bình yên</div>
+  <div id="s8u" class="abs" style="left:560px;top:790px;width:800px;padding:18px 0;text-align:center;font-size:64px;font-weight:900;background:var(--red);letter-spacing:2px">fras-ai.com</div>
+</div>
+
+<div id="progress"></div>
+<div id="sub"><span id="subtext" style="display:none"></span></div>
+</div>
+<script>
+const TL = /*TIMELINE*/;
+const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const ease=p=>{p=clamp(p);return p<.5?4*p*p*p:1-Math.pow(-2*p+2,3)/2};
+const $=id=>document.getElementById(id);
+const ramp=(u,s,d=.6)=>ease((u-s)/d);                       // 0->1 từ giây s trong d giây
+function put(el,{o=1,x=0,y=0,s=1}={}){const e=$(el);e.style.opacity=o;e.style.transform=`translate(${x}px,${y}px) scale(${s})`}
+function pop(el,u,s,d=.6,dy=40){const r=ramp(u,s,d);put(el,{o:r,y:(1-r)*dy,s:.96+.04*r})}
+function kb(el,u,L,z0=1,z1=1.05){const e=$(el).querySelector('img');e.style.transform=`scale(${z0+(z1-z0)*clamp(u/L)})`;e.style.transformOrigin='50% 20%'}
+
+const A = {
+ s1:(u,L)=>{put('s1logo',{o:ramp(u,0.1,.9),s:.9+.1*ramp(u,.1,.9)});pop('s1t',u,.7,.8,50);
+   $('s1l').style.transform=`scaleX(${ramp(u,1.6,.9)})`;pop('s1s',u,2.2,.9,30)},
+ s2:(u,L)=>{pop('s2h',u,.2,.7);const t=[.1,.3,.5,.68].map(f=>f*L*.92+.8);['c1','c2','c3','c4'].forEach((c,i)=>pop(c,u,t[i],.6,60));pop('s2b',u,L*.78,.7)},
+ s3:(u,L)=>{pop('s3h',u,.2,.7);pop('s3a',u,.5,.8,60);kb('s3a',u,L,1,1.04);pop('s3t1',u,.9,.6,30);
+   const f1=L*.4,f2=L*.72;
+   put('s3b',{o:ramp(u,f1,.7)*(1-ramp(u,f2,.5)),x:(1-ramp(u,f1,.7))*70});
+   put('s3c',{o:ramp(u,f2,.6),x:(1-ramp(u,f2,.6))*70});
+   put('s3t2',{o:ramp(u,f1+.2,.6)*(1-ramp(u,f2,.4)),y:0});put('s3t3',{o:ramp(u,f2+.2,.6),y:0})},
+ s4:(u,L)=>{pop('s4h',u,.2,.7);[['p1','p1t',.6],['p2','p2t',.32],['p3','p3t',.62]].forEach(([p,t,f],i)=>{const st=[.9,L*.27,L*.55][i];pop(p,u,st,.7,70);pop(t,u,st+.2,.5,20)})},
+ s5:(u,L)=>{pop('s5h',u,.2,.7);pop('s5a',u,.7,.8,60);kb('s5a',u,L,1,1.03);[ 'k1','k2','k3','k4'].forEach((k,i)=>pop(k,u,L*.45+i*.5,.5,30))},
+ s6:(u,L)=>{pop('s6h',u,.2,.7);pop('s6a',u,.7,.8,60);kb('s6a',u,L,1,1.05);pop('s6t1',u,L*.2,.6,30);pop('s6t2',u,L*.45,.6,30);pop('s6t3',u,L*.7,.6,30)},
+ s7:(u,L)=>{pop('s7h',u,.2,.7);pop('s7a',u,.7,.8,60);kb('s7a',u,L,1,1.04);pop('s7p',u,L*.55,.8,70);pop('s7t1',u,L*.15,.6,30);pop('s7t2',u,L*.38,.6,30);pop('s7t3',u,L*.62,.6,30)},
+ s8:(u,L)=>{put('s8logo',{o:ramp(u,.1,.8),s:.9+.1*ramp(u,.1,.8)});pop('s8t',u,.5,.8,50);pop('s8s',u,1.4,.9,30);pop('s8u',u,2.6,.8,40)},
+};
+function seek(t){
+  let active=false;
+  TL.scenes.forEach(sc=>{
+    const el=$(sc.id),from=sc.start-.35,to=sc.end+.35;
+    let o=0;if(t>=from&&t<=to){o=Math.min(clamp((t-from)/.35),clamp((to-t)/.35))}
+    el.style.opacity=o;el.style.display=o>0?'block':'none';
+    if(o>0){const L=sc.end-sc.start;A[sc.id](Math.max(0,t-sc.start+.0),L)}
+  });
+  // phụ đề
+  let cur=null;TL.scenes.forEach(sc=>sc.subs.forEach(s=>{if(t>=s.start&&t<s.end)cur=s}));
+  const st=$('subtext');if(cur){st.style.display='inline-block';st.textContent=cur.text}else{st.style.display='none'}
+  $('progress').style.width=(clamp(t/TL.duration)*1920)+'px';
+  return true;
+}
+window.seek=seek;
+</script></body></html>

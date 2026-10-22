@@ -206,17 +206,33 @@
             align-items: center;
             gap: 8px;
             margin: 14px 0 8px;
-            padding: 6px 12px;
-            background: #f8fafc;
+            padding: 6px 10px;
+            background: #f1f5f9;
             border-left: 3px solid #C0202A;
             border-bottom: 1px solid #e2e8f0;
-            color: #991b1b;
+            color: #0f2347;
             font-weight: 700;
-            font-size: 0.77rem;
-            letter-spacing: .4px;
+            font-size: 0.80rem;
+            letter-spacing: .3px;
             text-transform: uppercase;
         }
-        .fras-h-bar { display: none; }
+        .fras-h-num {
+            background: #C0202A;
+            color: #ffffff;
+            font-size: 0.72rem;
+            font-weight: 800;
+            min-width: 20px;
+            height: 20px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 2px;
+            flex-shrink: 0;
+            padding: 0 4px;
+        }
+        .fras-h-title {
+            flex: 1;
+        }
         
         .fras-warn {
             background: #fffbeb;
@@ -668,7 +684,17 @@
                 if (!line.trim()) { closeList(); continue; }
                 let m;
                 if ((m = line.match(/^\s*>>\s+(.*)$/))) { closeList(); out.push(`<div class="fras-answer">${inline(m[1])}</div>`); continue; }
-                if ((m = line.match(/^\s*##\s+(.*)$/))) { closeList(); out.push(`<div class="fras-h">${inline(m[1])}</div>`); continue; }
+                if ((m = line.match(/^\s*##\s+(.*)$/))) {
+                    closeList();
+                    const rawHead = m[1].trim();
+                    const numMatch = rawHead.match(/^(\d+)[\.\:\-]\s*(.*)$/);
+                    if (numMatch) {
+                        out.push(`<div class="fras-h"><span class="fras-h-num">${numMatch[1]}</span><span class="fras-h-title">${inline(numMatch[2])}</span></div>`);
+                    } else {
+                        out.push(`<div class="fras-h"><span class="fras-h-title">${inline(rawHead)}</span></div>`);
+                    }
+                    continue;
+                }
                 if ((m = line.match(/^\s*!!\s+(.*)$/))) { closeList(); out.push(`<div class="fras-warn">⚠ ${inline(m[1])}</div>`); continue; }
                 if ((m = line.match(/^\s*~~\s+(.*)$/))) { closeList(); out.push(`<div class="fras-foot">${inline(m[1])}</div>`); continue; }
                 if (/^\s*\|/.test(line) && i + 1 < lines.length && /^\s*\|?[\s:|-]+\|[\s:|-]*$/.test(lines[i + 1]) && /-/.test(lines[i + 1])) {

@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="vi" data-resolution="landscape">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=1920, height=1080"/>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>:root{--navy:#0F2347;--navy2:#1A3A6B;--red:#C0202A;--gold:#C9962C;--paper:#F4F6FA}
+*{margin:0;padding:0;box-sizing:border-box;border-radius:0 !important}
+html,body{width:1920px;height:1080px;overflow:hidden;background:#0A1530;font-family:"Segoe UI",Arial,sans-serif;color:#fff}
+#root{position:relative;width:1920px;height:1080px;overflow:hidden;background:radial-gradient(1200px 700px at 72% 20%,#1d3f78 0%,transparent 60%),linear-gradient(160deg,#0B1B3D 0%,#0F2347 55%,#13294f 100%)}
+#bg,#grid{position:absolute;inset:0}
+#grid{opacity:.06;background-image:linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px);background-size:80px 80px}
+#redbar{position:absolute;left:0;top:0;width:100%;height:8px;background:linear-gradient(90deg,var(--red),var(--gold));z-index:50}
+#progress{position:absolute;left:0;bottom:0;height:7px;width:0;background:var(--gold);z-index:50}
+#brand{position:absolute;left:60px;top:26px;display:flex;align-items:center;gap:16px;z-index:40}
+#brand img{width:56px;height:56px;object-fit:contain}
+#brand .t1{font-size:20px;font-weight:700;letter-spacing:1.5px}
+#brand .t2{font-size:16px;color:var(--gold);font-weight:600;letter-spacing:1px;margin-top:2px}
+.scene{position:absolute;inset:0;opacity:0}
+.scene>*{position:absolute}
+h2{left:90px;top:158px;width:1250px;font-size:56px;line-height:1.18;font-weight:800}
+.eyebrow{left:90px;top:112px;font-size:24px;font-weight:700;letter-spacing:3px;color:var(--gold)}
+.gold{color:var(--gold);font-weight:900;letter-spacing:3px}
+.bigq{font-size:64px;font-weight:800;line-height:1.22}
+.bigsub{font-size:40px;font-weight:600;line-height:1.4;color:#dbe6fa}
+.logo{object-fit:contain}
+.night{left:0;top:0;width:1920px;height:1080px;background:linear-gradient(180deg,#06102a 0%,#0c1c40 60%,#10234a 100%);opacity:.9}
+.smoke{width:90px;height:90px;background:radial-gradient(circle,rgba(200,210,230,.55),rgba(200,210,230,0) 70%)}
+/* điện thoại */
+.phone{width:400px;height:866px;border:10px solid #0b0f1a;background:#fff;box-shadow:0 30px 80px rgba(0,0,0,.6);overflow:hidden}
+.phone .screen{position:absolute;inset:0;overflow:hidden;background:#fff}
+.phone .shot{position:absolute;left:0;top:0;width:100%;height:auto;display:block}
+.phone .shot:not(:first-child){opacity:0}
+.phone .notch{display:none}
+/* thẻ, nhãn */
+.card{display:flex;align-items:center;gap:26px;padding:20px 34px;background:rgba(255,255,255,.08);border:2px solid rgba(255,255,255,.22);border-left:8px solid var(--gold)}
+.card.alt{border-left-color:var(--red)}
+.card .ic{font-size:64px;line-height:1;min-width:76px;text-align:center}
+.card.num .ic{font-size:70px;font-weight:900;color:var(--gold)}
+.card .tx{font-size:38px;font-weight:800;line-height:1.2}
+.card .tx small{display:block;font-size:25px;font-weight:500;color:#c9d6ee;margin-top:6px}
+.tag{padding:14px 26px;font-size:30px;font-weight:700;background:var(--navy2);border-left:8px solid var(--gold);box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.tag.red{background:var(--red)}
+.chip{width:300px;padding:20px 0;text-align:center;font-size:34px;font-weight:800;color:#fff;box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;width:1240px}
+.chip2{padding:18px 22px;font-size:30px;font-weight:700;background:rgba(255,255,255,.09);border:2px solid rgba(255,255,255,.2)}
+.grid2.sm .chip2{font-size:27px;padding:16px 20px}
+.chip2.wide{grid-column:1 / -1}
+.urlbar{width:640px;padding:18px 26px;font-size:40px;font-weight:800;background:#fff;color:var(--navy);box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.btnred{display:inline-block;padding:20px 44px;font-size:36px;font-weight:900;background:var(--red);color:#fff;letter-spacing:1px;box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.btnzalo{padding:16px 30px;font-size:30px;font-weight:800;background:#0068FF;color:#fff}
+.map{width:1240px;padding:16px 24px;font-size:28px;font-weight:600;background:rgba(255,255,255,.08);border:2px dashed rgba(201,150,44,.7)}
+.map b{color:var(--gold)}
+.pin{font-size:38px}
+.spin{width:90px;height:90px;border:10px solid rgba(255,255,255,.2);border-top-color:var(--gold)}
+.done{width:90px;height:90px;background:#16A34A;color:#fff;font-size:70px;font-weight:900;text-align:center;line-height:90px}
+.levels{display:flex;gap:0}
+.levels span{padding:20px 30px;font-size:30px;font-weight:900;letter-spacing:1px}
+.road{display:flex;align-items:center;gap:14px;font-size:30px;font-weight:800}
+.road span{padding:12px 20px;background:var(--navy2);border-bottom:5px solid var(--gold)}
+.road i{display:block;width:70px;height:4px;background:var(--gold)}
+.road em{font-style:normal;margin-left:20px;font-size:26px;color:#c9d6ee;font-weight:600}
+.checks{font-size:36px;font-weight:700;line-height:1.7;width:1200px}
+.checks b{color:#16A34A;margin-right:12px}
+.meter{display:flex;align-items:center;gap:22px;font-size:30px;font-weight:700;width:1240px}
+.meter .bar{width:560px;height:34px;background:rgba(255,255,255,.15);border:2px solid rgba(255,255,255,.3)}
+.meter .fill{height:100%;width:90%;background:linear-gradient(90deg,#16A34A,#CA8A04,#DC2626)}
+.meter em{font-style:normal;color:var(--gold)}
+.code{padding:18px 30px;font-size:36px;font-weight:700;background:rgba(201,150,44,.16);border:2px solid var(--gold);width:1240px}
+.code b{color:var(--gold);letter-spacing:3px}
+.code small{display:block;font-size:24px;font-weight:500;color:#c9d6ee;margin-top:6px}
+.chat{width:1240px;display:flex;flex-direction:column;gap:18px}
+.chat .b{padding:20px 28px;font-size:30px;font-weight:600;line-height:1.35;max-width:1000px}
+.chat .q{background:var(--navy2);align-self:flex-end;border-right:8px solid var(--gold)}
+.chat .a{background:rgba(255,255,255,.1);border-left:8px solid var(--red)}
+.chat i{color:#c9d6ee}
+.kb{display:grid;grid-template-columns:1fr 1fr;gap:14px;width:1240px}
+.doc{padding:20px 24px;font-size:30px;font-weight:700;background:rgba(255,255,255,.09);border:2px solid rgba(255,255,255,.2)}
+.flow{font-size:26px;font-weight:700;color:var(--gold);width:1240px;text-align:center}
+.courses{display:grid;grid-template-columns:1fr 1fr;gap:16px;width:1240px}
+.co{padding:20px 26px;font-size:28px;font-weight:700;background:rgba(255,255,255,.1);border-left:8px solid var(--gold)}
+.co b{display:block;color:var(--gold);font-size:22px;letter-spacing:2px;margin-bottom:4px}
+.four{display:flex;justify-content:center;gap:22px;font-size:30px;font-weight:700}
+.four span{padding:14px 22px;background:rgba(255,255,255,.1);border-bottom:5px solid var(--gold)}
+.url{text-align:center;font-size:110px;font-weight:900;color:#fff;letter-spacing:3px}
+/* phụ đề */
+.cap{position:absolute;left:80px;bottom:44px;width:1260px;z-index:45;opacity:0}
+.cap span{display:inline-block;padding:12px 26px;background:rgba(5,12,30,.82);border-left:7px solid var(--gold);font-size:34px;line-height:1.35;font-weight:600;text-shadow:0 2px 4px #000}
+
+.eyebrow.red{color:#ff6b6b}
+.card.sos{background:rgba(192,32,42,.28);border-color:#ff6b6b}
+.kb.sm{grid-template-columns:1fr 1fr;width:1250px}.kb.sm .doc{font-size:26px}
+.sos114{display:flex;flex-direction:column;align-items:center;justify-content:center;width:300px;height:380px;background:linear-gradient(160deg,#d62832,#8f1019);box-shadow:0 20px 60px rgba(192,32,42,.55);border:4px solid #ff9a9a}
+.sos114 b{font-size:150px;font-weight:900;line-height:1}
+.sos114 span{font-size:30px;font-weight:800;letter-spacing:3px;text-align:center;margin-top:10px}
+.steps{width:880px;display:flex;flex-direction:column;gap:20px}
+.steps>div{display:flex;align-items:center;gap:22px;padding:20px 26px;font-size:34px;font-weight:700;background:rgba(255,255,255,.09);border-left:8px solid var(--red)}
+.steps i{font-style:normal;min-width:56px;height:56px;line-height:56px;text-align:center;font-size:34px;font-weight:900;background:var(--red)}
+.steps b{color:var(--gold)}.steps em{font-style:normal;font-size:26px;color:#c9d6ee;font-weight:600}
+.flow3{display:flex;align-items:stretch;gap:14px;width:1260px}
+.flow3>div{flex:1;padding:22px 20px;font-size:32px;font-weight:800;line-height:1.25;background:rgba(255,255,255,.1);border-top:6px solid var(--red);text-align:center}
+.flow3>div b{display:block;font-size:64px;margin-bottom:8px}
+.flow3 small{display:block;font-size:22px;font-weight:500;color:#c9d6ee;margin-top:8px}
+.flow3>em{align-self:center;font-style:normal;font-size:40px;color:var(--gold)}
+.four span.hot{background:rgba(192,32,42,.5);border-bottom-color:#ff6b6b}
+.four{flex-wrap:wrap;padding:0 60px}
+</style></head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="150.58" data-width="1920" data-height="1080">
+<div id="bg" class="clip" data-start="0" data-duration="150.58"><div id="grid"></div></div>
+<div id="redbar" class="clip" data-start="0" data-duration="150.58"></div>
+<div id="brand" class="clip" data-start="0" data-duration="150.58"><img src="assets/logo.png"><div><div class="t1">CÔNG AN THÀNH PHỐ BẮC NINH</div><div class="t2">PHÒNG CẢNH SÁT PCCC VÀ CNCH</div></div></div>
+<div id="progress" class="clip" data-start="0" data-duration="150.58"></div>
+
+<div id="s1" class="clip scene" data-start="0.5" data-duration="11.64">
+<img class="logo" data-a="fade" src="assets/logo.png" style="left:90px;top:190px;width:200px;height:200px">
+<div class="eyebrow" data-a style="left:330px;top:200px">CÔNG AN THÀNH PHỐ BẮC NINH GIỚI THIỆU</div>
+<div class="gold" data-a style="left:330px;top:245px;font-size:150px">FRAS-AI</div>
+<div class="bigsub" data-a style="left:330px;top:425px;width:960px;font-size:42px">Ứng dụng trí tuệ nhân tạo giúp phòng ngừa cháy, nổ ngay trên điện thoại</div>
+<div class="tag" data-a="late" style="left:90px;top:700px">📱 Không cần cài đặt phần mềm · mở trình duyệt là dùng</div>
+<div class="url" data-a="later" style="left:90px;top:800px;text-align:left;font-size:84px">fras-ai.com</div>
+<div class="phone" style="left:1400px;top:104px"><div class="screen"><img class="shot" src="assets/shots/home_0.png"></div></div></div>
+<div id="s2" class="clip scene" data-start="12.138" data-duration="9.74"><div class="eyebrow " data-a>TỔNG QUAN</div><h2 data-a>Năm chức năng chính trong một hệ thống</h2><div class="card " data-a style="left:90px;top:360px;width:610px;height:150px"><div class="ic">📋</div><div class="tx">1. Khảo sát nguy cơ<small>từng bước, có kết quả ngay</small></div></div><div class="card alt sos" data-a style="left:730px;top:360px;width:610px;height:150px"><div class="ic">🚨</div><div class="tx">2. Báo cháy 114<small>gửi tin báo khẩn cấp trên điện thoại</small></div></div><div class="card " data-a style="left:90px;top:540px;width:610px;height:150px"><div class="ic">💬</div><div class="tx">3. Trợ lý ảo Chi<small>giải đáp pháp luật PCCC 24/7</small></div></div><div class="card " data-a style="left:730px;top:540px;width:610px;height:150px"><div class="ic">🎓</div><div class="tx">4. Học liệu số<small>khóa học trực tuyến</small></div></div><div class="card " data-a style="left:90px;top:720px;width:1250px;height:150px"><div class="ic">🎮</div><div class="tx">5. Trò chơi PCCC<small>học mà chơi, chơi mà học</small></div></div><div class="phone" style="left:1400px;top:104px"><div class="screen"><img class="shot" src="assets/shots/em_home.png"></div></div></div>
+<div id="s3" class="clip scene" data-start="21.88" data-duration="14.76"><div class="eyebrow " data-a>CHỨC NĂNG 1 · KHẢO SÁT NGUY CƠ</div><h2 data-a>Chọn loại hình, trả lời từng nhóm câu hỏi</h2>
+<div class="grid2 sm" style="left:90px;top:380px">
+  <div class="chip2" data-a>🏠 Nhà ở kết hợp kinh doanh</div><div class="chip2" data-a>🍽️ Nhà hàng, khách sạn</div>
+  <div class="chip2" data-a>📦 Kho hàng</div><div class="chip2" data-a>🏫 Trường học</div>
+  <div class="chip2" data-a>⛽ Cửa hàng xăng dầu</div><div class="chip2" data-a>🏭 Cơ sở sản xuất</div>
+</div>
+<div class="tag" data-a style="left:90px;top:690px">Mỗi câu chọn 1 trong 4 đáp án, sát với thực tế nhất</div>
+<div class="tag red" data-a="late" style="left:90px;top:800px">🏠 Hộ gia đình: khảo sát ngay, không cần tài khoản</div>
+<div class="phone" style="left:1400px;top:104px"><div class="screen"><img class="shot" src="assets/shots/survey_1.png"><img class="shot" src="assets/shots/survey_q1.png"></div></div></div>
+<div id="s4" class="clip scene" data-start="36.638" data-duration="14.3"><div class="eyebrow " data-a>KẾT QUẢ VÀ KHUYẾN NGHỊ CỦA AI</div><h2 data-a>Biết ngay mức nguy cơ, biết rõ việc cần làm</h2>
+<div class="levels" data-a style="left:90px;top:380px">
+  <span style="background:#16A34A">THẤP</span><span style="background:#B45309">TRUNG BÌNH</span><span style="background:#EA580C">CAO</span><span style="background:#DC2626">RẤT CAO</span>
+</div>
+<div class="card " data-a style="left:90px;top:500px;width:1250px;height:120px"><div class="ic">⏱️</div><div class="tx">Việc cần xử lý trước, kèm thời hạn<small></small></div></div><div class="card alt" data-a style="left:90px;top:650px;width:1250px;height:120px"><div class="ic">📝</div><div class="tx">Danh mục tự kiểm tra hằng ngày<small></small></div></div>
+<div class="road" data-a style="left:90px;top:820px"><span>30 ngày</span><i></i><span>60 ngày</span><i></i><span>90 ngày</span><em>Lộ trình khắc phục</em></div>
+<div class="phone" style="left:1400px;top:104px"><div class="screen"><img class="shot" src="assets/shots/result_0.png"><img class="shot" src="assets/shots/result_2.png"></div></div></div>
+<div id="s5" class="clip scene" data-start="50.94" data-duration="11.4"><div class="eyebrow " data-a>THEO DÕI KHẮC PHỤC</div><h2 data-a>Làm tới đâu, tích tới đó</h2>
+<div class="checks" data-a style="left:90px;top:380px">
+  <div><b>☑</b> Thay ổ cắm, dây điện quá tải</div><div><b>☑</b> Dọn lối thoát nạn</div><div><b>☐</b> Bổ sung bình chữa cháy</div>
+</div>
+<div class="meter" data-a style="left:90px;top:640px"><span>Mức nguy cơ</span><div class="bar"><div class="fill"></div></div><em>tính lại ngay</em></div>
+<div class="code" data-a="late" style="left:90px;top:790px">Mã theo dõi: <b>ABCD-EFGH-JK</b><small>Lưu lại để quay về trên bất kỳ thiết bị nào, không cần tài khoản</small></div>
+<div class="phone" style="left:1400px;top:104px"><div class="screen"><img class="shot" src="assets/shots/mit_0.png"><img class="shot" src="assets/shots/mit_1.png"></div></div></div>
+<div id="s6" class="clip scene" data-start="62.338" data-duration="17.18"><div class="eyebrow red" data-a>CHỨC NĂNG 2 · BÁO CHÁY 114</div><h2 data-a>Nút báo cháy luôn ở đầu trang chủ</h2>
+<div class="sos114" data-a style="left:90px;top:330px"><b>114</b><span>BÁO CHÁY<br>KHẨN CẤP</span></div>
+<div class="steps" style="left:420px;top:330px">
+  <div data-a><i>1</i><span>Nhập địa điểm, bấm <b>định vị GPS</b></span></div>
+  <div data-a><i>2</i><span>Chọn loại hình và mức độ cháy</span></div>
+  <div data-a><i>3</i><span>Để lại số điện thoại</span></div>
+  <div data-a="late"><i>4</i><span>Đính kèm ảnh hiện trường <em>(không bắt buộc)</em></span></div>
+</div>
+<div class="tag red" data-a="later" style="left:90px;top:790px">🚨 Bấm “BÁO CHÁY NGAY CHO 114” để gửi</div>
+<div class="phone" style="left:1400px;top:104px"><div class="screen"><img class="shot" src="assets/shots/em_home.png"><img class="shot" src="assets/shots/em_form_0.png"><img class="shot" src="assets/shots/em_form_1.png"></div></div></div>
+<div id="s7" class="clip scene" data-start="79.52" data-duration="19.41"><div class="eyebrow red" data-a>CHỨC NĂNG 2 · BÁO CHÁY 114</div><h2 data-a>Gửi xong, cán bộ trực sẽ gọi lại xác minh</h2>
+<div class="flow3" style="left:90px;top:350px">
+  <div data-a><b>📱</b>Bạn gửi tin báo<small>kèm vị trí nếu đã định vị</small></div>
+  <em data-a>▶</em>
+  <div data-a><b>🖥️</b>Lực lượng trực ban nhận tin<small>chuyển tới ngay khi bạn gửi</small></div>
+  <em data-a="late">▶</em>
+  <div data-a="late"><b>📞</b>Cán bộ gọi lại<small>xác minh thông tin</small></div>
+</div>
+<div class="btnred" data-a="late" style="left:90px;top:640px;font-size:36px">📞 Hoặc bấm gọi thẳng 114 bất cứ lúc nào</div>
+<div class="tag" data-a="later" style="left:90px;top:790px">Chỉ báo khi có cháy thật, để lực lượng đến kịp nơi cần thiết nhất</div>
+<div class="phone" style="left:1400px;top:104px"><div class="screen"><img class="shot" src="assets/shots/em_ok.png"></div></div></div>
+<div id="s8" class="clip scene" data-start="98.934" data-duration="17.59"><div class="eyebrow " data-a>CHỨC NĂNG 3 · TRỢ LÝ ẢO CHI</div><h2 data-a>Hỏi đời thường, trả lời từng bước, nêu căn cứ</h2>
+<div class="chat" style="left:90px;top:370px">
+  <div class="b q" data-a>Cơ sở của tôi cần chuẩn bị hồ sơ gì để được kiểm tra an toàn PCCC?</div>
+  <div class="b a" data-a="late">Bạn chuẩn bị theo từng bước sau: hồ sơ pháp lý của cơ sở, phương án chữa cháy, biên bản kiểm tra… <i>(kèm căn cứ pháp lý)</i></div>
+</div>
+<div class="kb sm" style="left:90px;top:700px">
+  <div class="doc" data-a="later">📚 Luật PCCC và CNCH, nghị định</div><div class="doc" data-a="later">📐 Thông tư, quy chuẩn kỹ thuật</div>
+</div>
+<div class="tag" data-a="later" style="left:90px;top:830px">Hỗ trợ 24/7 · không cần chờ giờ hành chính</div>
+<div class="phone" style="left:1400px;top:104px"><div class="screen"><img class="shot" src="assets/shots/home_1.png"></div></div></div>
+<div id="s9" class="clip scene" data-start="116.524" data-duration="16.41"><div class="eyebrow " data-a>CHỨC NĂNG 4 VÀ 5 · HỌC LIỆU SỐ, TRÒ CHƠI</div><h2 data-a>Vừa học, vừa chơi, mỗi lượt vài phút</h2>
+<div class="grid2 sm" style="left:90px;top:370px">
+  <div class="chip2" data-a>🏘️ Thoát nạn khi cháy nhà ống</div><div class="chip2" data-a>🔌 Sử dụng điện an toàn</div>
+  <div class="chip2" data-a>🧯 Dùng bình chữa cháy xách tay</div><div class="chip2" data-a>❤️ Sơ cứu ngừng hô hấp tuần hoàn</div>
+</div>
+<div class="card " data-a style="left:90px;top:570px;width:1250px;height:100px"><div class="ic">🔥</div><div class="tx">Thoát khỏi đám cháy<small></small></div></div><div class="card alt" data-a style="left:90px;top:690px;width:1250px;height:100px"><div class="ic">❓</div><div class="tx">Đố vui kiến thức PCCC<small></small></div></div><div class="card " data-a style="left:90px;top:810px;width:1250px;height:100px"><div class="ic">🔍</div><div class="tx">Tìm nguy cơ cháy nổ qua hình ảnh<small></small></div></div><div class="phone" style="left:1400px;top:104px"><div class="screen"><img class="shot" src="assets/shots/games_0.png"><img class="shot" src="assets/shots/games_1.png"></div></div></div>
+<div id="s10" class="clip scene" data-start="132.938" data-duration="17.64">
+<img class="logo" data-a="fade" src="assets/logo.png" style="left:830px;top:100px;width:260px;height:260px">
+<div class="four" data-a style="left:0;right:0;top:390px"><span>📋 Khảo sát để thấy rõ nguy cơ</span><span>💬 Hỏi để làm đúng</span><span>🎓 Học để biết ứng phó</span><span class="hot">🚨 Báo cháy 114 khi cần</span></div>
+<div class="gold" data-a style="left:0;right:0;top:520px;text-align:center;font-size:120px">FRAS-AI</div>
+<div class="url" data-a="late" style="left:0;right:0;top:660px">fras-ai.com</div>
+<div class="bigsub" data-a="later" style="left:0;right:0;top:810px;text-align:center;font-size:36px">Đồng hành cùng người dân và doanh nghiệp, vì một cộng đồng an toàn</div>
+</div>
+<div class="cap clip" id="cap0" data-start="0.5" data-duration="3.58"><span>Công an thành phố Bắc Ninh giới thiệu Hệ thống FRAS-AI:</span></div>
+<div class="cap clip" id="cap1" data-start="4.03" data-duration="5.88"><span>ứng dụng trí tuệ nhân tạo giúp người dân và cơ sở phòng ngừa cháy, nổ ngay trên điện thoại,</span></div>
+<div class="cap clip" id="cap2" data-start="9.86" data-duration="1.78"><span>không cần cài đặt phần mềm.</span></div>
+<div class="cap clip" id="cap3" data-start="12.14" data-duration="2.5"><span>Hệ thống có năm chức năng chính:</span></div>
+<div class="cap clip" id="cap4" data-start="14.59" data-duration="6.79"><span>khảo sát nguy cơ, báo cháy 114, trợ lý ảo, học liệu số và trò chơi phòng cháy chữa cháy.</span></div>
+<div class="cap clip" id="cap5" data-start="21.88" data-duration="6.93"><span>Một: khảo sát nguy cơ. Bạn chọn loại hình hoạt động, rồi trả lời các câu hỏi theo từng nhóm,</span></div>
+<div class="cap clip" id="cap6" data-start="28.76" data-duration="3.34"><span>mỗi câu chỉ cần chọn đáp án sát với thực tế.</span></div>
+<div class="cap clip" id="cap7" data-start="32.05" data-duration="4.09"><span>Hộ gia đình có thể khảo sát ngay, không cần tài khoản.</span></div>
+<div class="cap clip" id="cap8" data-start="36.64" data-duration="3.27"><span>Gửi xong, hệ thống cho biết ngay mức nguy cơ:</span></div>
+<div class="cap clip" id="cap9" data-start="39.86" data-duration="2.56"><span>thấp, trung bình, cao hoặc rất cao.</span></div>
+<div class="cap clip" id="cap10" data-start="42.37" data-duration="6.28"><span>Trí tuệ nhân tạo chỉ rõ việc cần làm trước, kèm thời hạn và lộ trình khắc phục ba mươi,</span></div>
+<div class="cap clip" id="cap11" data-start="48.6" data-duration="1.84"><span>sáu mươi, chín mươi ngày.</span></div>
+<div class="cap clip" id="cap12" data-start="50.94" data-duration="4.51"><span>Làm xong việc nào, bạn tích việc đó trong trang Theo dõi khắc phục,</span></div>
+<div class="cap clip" id="cap13" data-start="55.4" data-duration="6.44"><span>mức nguy cơ được tính lại ngay. Mã theo dõi giúp bạn quay lại bảng này trên bất kỳ thiết bị nào.</span></div>
+<div class="cap clip" id="cap14" data-start="62.34" data-duration="5.33"><span>Hai: báo cháy 114. Nút Báo cháy 114 luôn nằm ở đầu trang chủ.</span></div>
+<div class="cap clip" id="cap15" data-start="67.62" data-duration="6.46"><span>Khi có cháy, bạn nhập địa điểm, bấm định vị GPS, chọn loại hình và mức độ,</span></div>
+<div class="cap clip" id="cap16" data-start="74.03" data-duration="4.99"><span>để lại số điện thoại, và có thể đính kèm ảnh hiện trường.</span></div>
+<div class="cap clip" id="cap17" data-start="79.52" data-duration="6.09"><span>Bấm gửi, tin báo được chuyển tới lực lượng trực ban, kèm vị trí nếu bạn đã định vị.</span></div>
+<div class="cap clip" id="cap18" data-start="85.56" data-duration="3.84"><span>Cán bộ sẽ gọi lại số điện thoại của bạn để xác minh.</span></div>
+<div class="cap clip" id="cap19" data-start="89.35" data-duration="3.62"><span>Bạn cũng có thể bấm gọi thẳng 114 bất cứ lúc nào.</span></div>
+<div class="cap clip" id="cap20" data-start="92.92" data-duration="5.51"><span>Hãy chỉ báo khi có cháy thật, để lực lượng kịp thời đến nơi cần thiết nhất.</span></div>
+<div class="cap clip" id="cap21" data-start="98.93" data-duration="3.64"><span>Ba: trợ lý ảo Chi, hỗ trợ hai mươi bốn trên bảy.</span></div>
+<div class="cap clip" id="cap22" data-start="102.52" data-duration="5.36"><span>Bạn hỏi bằng ngôn ngữ đời thường về hồ sơ, trình tự, điều kiện an toàn;</span></div>
+<div class="cap clip" id="cap23" data-start="107.83" data-duration="5.65"><span>Chi trả lời từng bước, kèm căn cứ từ Luật Phòng cháy, chữa cháy và Cứu nạn,</span></div>
+<div class="cap clip" id="cap24" data-start="113.43" data-duration="2.59"><span>cứu hộ cùng các văn bản hướng dẫn.</span></div>
+<div class="cap clip" id="cap25" data-start="116.52" data-duration="6.13"><span>Bốn: học liệu số, với thư viện khóa học phòng cháy chữa cháy trực tuyến. Năm:</span></div>
+<div class="cap clip" id="cap26" data-start="122.6" data-duration="6.68"><span>ba trò chơi ngắn, thoát khỏi đám cháy, đố vui kiến thức và tìm nguy cơ qua hình ảnh.</span></div>
+<div class="cap clip" id="cap27" data-start="129.23" data-duration="3.21"><span>Vừa học vừa chơi, mỗi lượt chỉ vài phút.</span></div>
+<div class="cap clip" id="cap28" data-start="132.94" data-duration="5.97"><span>Khảo sát để thấy rõ nguy cơ, hỏi để làm đúng, học để biết cách ứng phó,</span></div>
+<div class="cap clip" id="cap29" data-start="138.86" data-duration="8.39"><span>và báo cháy 114 khi cần. FRAS-AI đồng hành cùng người dân và doanh nghiệp, vì một cộng đồng an toàn.</span></div>
+<div class="cap clip" id="cap30" data-start="147.2" data-duration="2.88"><span>Truy cập fras-ai.com ngay hôm nay.</span></div>
+<audio id="vo" src="assets/am_thanh.m4a" data-start="0" data-duration="150.58" data-track-index="9" data-volume="1"></audio>
+</div>
+<script>
+const T = [[0.5, 11.59], [12.138, 21.33], [21.88, 36.09], [36.638, 50.39], [50.94, 61.79], [62.338, 78.97], [79.52, 98.38], [98.934, 115.97], [116.524, 132.39], [132.938, 150.03]];
+const TOTAL = 150.58;
+
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({ paused: true });
+tl.fromTo('#progress', { width: '0%' }, { width: '100%', duration: TOTAL, ease: 'none' }, 0);
+document.querySelectorAll('.scene').forEach((sc, i) => {
+  const a = T[i][0], b = T[i][1];
+  const nxt = i < T.length - 1 ? T[i + 1][0] : TOTAL;
+  const span = b - a;
+  tl.fromTo(sc, { opacity: 0 }, { opacity: 1, duration: 0.5, ease: 'power1.out' }, a);
+  if (i < T.length - 1) tl.to(sc, { opacity: 0, duration: 0.45, ease: 'power1.in' }, nxt - 0.5);
+  const els = [...sc.querySelectorAll('[data-a]')].filter(e => !e.dataset.a || e.dataset.a === 'fade');
+  const step = Math.min(0.7, (span * 0.5) / Math.max(1, els.length));
+  els.forEach((el, k) => {
+    const fadeOnly = el.dataset.a === 'fade';
+    tl.fromTo(el, fadeOnly ? { opacity: 0 } : { opacity: 0, y: 34 },
+      fadeOnly ? { opacity: 1, duration: 0.8 } : { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }, a + 0.35 + k * step);
+  });
+  sc.querySelectorAll('[data-a="late"],[data-a="later"]').forEach(el => {
+    const at = a + span * (el.dataset.a === 'late' ? 0.4 : 0.62);
+    tl.fromTo(el, { opacity: 0, y: 34 }, { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }, at);
+  });
+  sc.querySelectorAll('.phone').forEach(ph => {
+    tl.fromTo(ph, { x: 140, opacity: 0 }, { x: 0, opacity: 1, duration: 0.9, ease: 'power3.out' }, a + 0.2);
+    const shots = [...ph.querySelectorAll('.shot')];
+    shots.forEach((im, j) => {
+      if (j === 0) return;
+      const at = a + (span + 1.0) * j / shots.length;
+      tl.to(shots[j - 1], { opacity: 0, duration: 0.5 }, at);
+      tl.to(im, { opacity: 1, duration: 0.5 }, at);
+    });
+  });
+});
+document.querySelectorAll('.cap').forEach(c => {
+  const s = parseFloat(c.dataset.start), d = parseFloat(c.dataset.duration);
+  tl.fromTo(c, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.22 }, s);
+  tl.to(c, { opacity: 0, duration: 0.15 }, s + d - 0.15);
+});
+tl.fromTo('#s5 .fill', { width: '92%' }, { width: '28%', duration: 4, ease: 'power2.inOut' }, T[4][0] + 3.0);
+tl.fromTo('#s6 .sos114', { scale: 1 }, { scale: 1.06, duration: 0.6, repeat: 5, yoyo: true, ease: 'sine.inOut' }, T[5][0] + 1.2);
+window.__timelines['main'] = tl;
+tl.seek(0);
+
+</script></body></html>

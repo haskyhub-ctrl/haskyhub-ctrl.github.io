@@ -1,0 +1,47 @@
+{
+  "voice": "vi-VN-NamMinhNeural",
+  "rate": "-6%",
+  "pitch": "-3Hz",
+  "scenes": [
+    {
+      "id": "s1",
+      "display": "Công an thành phố Bắc Ninh giới thiệu Hệ thống FRAS-AI: ứng dụng trí tuệ nhân tạo trong khảo sát, đánh giá, cảnh báo và tự khắc phục nguy cơ cháy, nổ.",
+      "spoken": "Công an thành phố Bắc Ninh giới thiệu Hệ thống Phờ rát, ây ai: ứng dụng trí tuệ nhân tạo trong khảo sát, đánh giá, cảnh báo và tự khắc phục nguy cơ cháy, nổ."
+    },
+    {
+      "id": "s2",
+      "display": "Phần lớn nguy cơ cháy, nổ đã xuất hiện từ trước: ổ cắm quá tải, dây điện xuống cấp, lối thoát nạn bị chắn, bình gas đặt sai vị trí. Phát hiện sớm và khắc phục kịp thời là chìa khóa của an toàn.",
+      "spoken": "Phần lớn nguy cơ cháy, nổ đã xuất hiện từ trước: ổ cắm quá tải, dây điện xuống cấp, lối thoát nạn bị chắn, bình ga đặt sai vị trí. Phát hiện sớm và khắc phục kịp thời là chìa khóa của an toàn."
+    },
+    {
+      "id": "s3",
+      "display": "Người dân và cơ sở chỉ cần dùng điện thoại, truy cập fras-ai.com, không cần cài đặt phần mềm. Cơ sở thuộc diện quản lý đăng nhập bằng mã định danh; hộ gia đình có thể khảo sát ngay, không cần tài khoản.",
+      "spoken": "Người dân và cơ sở chỉ cần dùng điện thoại, truy cập phờ rát gạch ây ai chấm com, không cần cài đặt phần mềm. Cơ sở thuộc diện quản lý đăng nhập bằng mã định danh; hộ gia đình có thể khảo sát ngay, không cần tài khoản."
+    },
+    {
+      "id": "s4",
+      "display": "Hệ thống nạp bộ câu hỏi theo từng loại hình hoạt động. Mỗi câu chỉ cần chọn đáp án sát với thực tế; kết quả được tự động lưu lại.",
+      "spoken": "Hệ thống nạp bộ câu hỏi theo từng loại hình hoạt động. Mỗi câu chỉ cần chọn đáp án sát với thực tế; kết quả được tự động lưu lại."
+    },
+    {
+      "id": "s5",
+      "display": "Ngay sau khi gửi, hệ thống tính tỷ lệ và mức nguy cơ: thấp, trung bình, cao hoặc rất cao. Chỉ cần một nguy cơ đặc biệt ở bất kỳ nhóm nào, mức chung sẽ được nâng lên để cơ sở không chủ quan.",
+      "spoken": "Ngay sau khi gửi, hệ thống tính tỷ lệ và mức nguy cơ: thấp, trung bình, cao hoặc rất cao. Chỉ cần một nguy cơ đặc biệt ở bất kỳ nhóm nào, mức chung sẽ được nâng lên để cơ sở không chủ quan."
+    },
+    {
+      "id": "s6",
+      "display": "Trí tuệ nhân tạo đọc kết quả, chỉ rõ việc cần làm trước, kèm thời hạn, danh mục tự kiểm tra hằng ngày và lộ trình khắc phục 30, 60, 90 ngày.",
+      "spoken": "Trí tuệ nhân tạo đọc kết quả, chỉ rõ việc cần làm trước, kèm thời hạn, danh mục tự kiểm tra hằng ngày và lộ trình khắc phục ba mươi, sáu mươi, chín mươi ngày."
+    },
+    {
+      "id": "s7",
+      "display": "Cơ sở cập nhật tiến độ khắc phục ngay trên hệ thống; mỗi lần cập nhật, mức nguy cơ được tính lại và cơ quan Cảnh sát PCCC nắm bắt tình hình gần như theo thời gian thực. Mã theo dõi giúp người dân quay lại bảng theo dõi trên bất kỳ thiết bị nào.",
+      "spoken": "Cơ sở cập nhật tiến độ khắc phục ngay trên hệ thống; mỗi lần cập nhật, mức nguy cơ được tính lại và cơ quan Cảnh sát phòng cháy chữa cháy nắm bắt tình hình gần như theo thời gian thực. Mã theo dõi giúp người dân quay lại bảng theo dõi trên bất kỳ thiết bị nào."
+    },
+    {
+      "id": "s8",
+      "display": "FRAS-AI: đồng hành cùng người dân và doanh nghiệp, chủ động phòng ngừa, vì cuộc sống bình yên. Truy cập fras-ai.com để khảo sát ngay hôm nay.",
+      "spoken": "Phờ rát, ây ai: đồng hành cùng người dân và doanh nghiệp, chủ động phòng ngừa, vì cuộc sống bình yên. Truy cập phờ rát gạch ây ai chấm com để khảo sát ngay hôm nay."
+    }
+  ]
+}

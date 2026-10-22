@@ -1,0 +1,51 @@
+CLIP 1
+
+Cảnh 1
+Công an thành phố Bắc Ninh giới thiệu Hệ thống Phờ rát, ây ai: ứng dụng trí tuệ nhân tạo trong khảo sát, đánh giá, cảnh báo và tự khắc phục nguy cơ cháy, nổ.
+
+Cảnh 2
+Phần lớn nguy cơ cháy, nổ đã xuất hiện từ trước: ổ cắm quá tải, dây điện xuống cấp, lối thoát nạn bị chắn, bình ga đặt sai vị trí. Phát hiện sớm và khắc phục kịp thời là chìa khóa của an toàn.
+
+Cảnh 3
+Người dân và cơ sở chỉ cần dùng điện thoại, truy cập phờ rát gạch ây ai chấm com, không cần cài đặt phần mềm. Cơ sở thuộc diện quản lý đăng nhập bằng mã định danh; hộ gia đình có thể khảo sát ngay, không cần tài khoản.
+
+Cảnh 4
+Hệ thống nạp bộ câu hỏi theo từng loại hình hoạt động. Mỗi câu chỉ cần chọn đáp án sát với thực tế; kết quả được tự động lưu lại.
+
+Cảnh 5
+Ngay sau khi gửi, hệ thống tính tỷ lệ và mức nguy cơ: thấp, trung bình, cao hoặc rất cao. Chỉ cần một nguy cơ đặc biệt ở bất kỳ nhóm nào, mức chung sẽ được nâng lên để cơ sở không chủ quan.
+
+Cảnh 6
+Trí tuệ nhân tạo đọc kết quả, chỉ rõ việc cần làm trước, kèm thời hạn, danh mục tự kiểm tra hằng ngày và lộ trình khắc phục ba mươi, sáu mươi, chín mươi ngày.
+
+Cảnh 7
+Cơ sở cập nhật tiến độ khắc phục ngay trên hệ thống; mỗi lần cập nhật, mức nguy cơ được tính lại và cơ quan Cảnh sát phòng cháy chữa cháy nắm bắt tình hình gần như theo thời gian thực. Mã theo dõi giúp người dân quay lại bảng theo dõi trên bất kỳ thiết bị nào.
+
+Cảnh 8
+Phờ rát, ây ai: đồng hành cùng người dân và doanh nghiệp, chủ động phòng ngừa, vì cuộc sống bình yên. Truy cập phờ rát gạch ây ai chấm com để khảo sát ngay hôm nay.
+
+CLIP 2
+
+Cảnh 1
+Ngoài chức năng khảo sát, đánh giá nguy cơ, Hệ thống Phờ rát, ây ai còn cung cấp nhiều tiện ích giúp người dân và cơ sở nâng cao kiến thức, kỹ năng phòng cháy, chữa cháy và cứu nạn, cứu hộ ngay trên điện thoại.
+
+Cảnh 2
+Mục Trò chơi phòng cháy chữa cháy giúp học mà chơi, chơi mà học, với ba trò chơi tương tác, mỗi lượt chơi chỉ từ hai đến năm phút.
+
+Cảnh 3
+Trò chơi thứ nhất, Thoát khỏi đám cháy: người chơi di chuyển trong ngôi nhà đang cháy, thu thập bình chữa cháy, khăn ướt, tránh khói và tìm lối thoát nạn an toàn.
+
+Cảnh 4
+Trò chơi thứ hai, Đố vui kiến thức phòng cháy chữa cháy, thi đua với thời gian để rèn phản xạ và ghi nhớ số điện thoại báo cháy một một bốn. Trò chơi thứ ba, Tìm nguy cơ cháy nổ qua hình ảnh do trí tuệ nhân tạo tạo ra, giúp nhận diện nhanh ổ cắm quá tải, lối thoát nạn bị chắn và nhiều nguy cơ khác.
+
+Cảnh 5
+Mục Học kiến thức, kỹ năng bằng video đưa người học đến thư viện khóa học phòng cháy chữa cháy trực tuyến, với các video hướng dẫn kiến thức và kỹ năng, học được mọi lúc, mọi nơi.
+
+Cảnh 6
+Trợ lý ảo Chi hỗ trợ hai mươi bốn trên bảy, giải đáp tức thì các câu hỏi về thủ tục hành chính trong lĩnh vực phòng cháy chữa cháy: từ hồ sơ, trình tự, thời hạn giải quyết đến điều kiện an toàn, trang bị phương tiện và lối thoát nạn.
+
+Cảnh 7
+Trợ lý ảo tra cứu căn cứ từ Luật Phòng cháy, chữa cháy và Cứu nạn, cứu hộ năm hai nghìn không trăm hai mươi bốn cùng các nghị định, thông tư hướng dẫn mới nhất, giúp người dân hiểu đúng và làm đúng.
+
+Cảnh 8
+Khảo sát, học tập, hỏi đáp: tất cả trong một hệ thống. Phờ rát, ây ai, đồng hành cùng người dân và doanh nghiệp, vì một cộng đồng an toàn. Truy cập phờ rát gạch ây ai chấm com ngay hôm nay.

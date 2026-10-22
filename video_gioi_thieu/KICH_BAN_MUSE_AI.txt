@@ -1,0 +1,82 @@
+KỊCH BẢN LỜI BÌNH - VIDEO GIỚI THIỆU HỆ THỐNG FRAS-AI
+Dùng để tạo giọng đọc trên Muse AI (hoặc công cụ tạo giọng khác)
+======================================================================
+
+YÊU CẦU GIỌNG ĐỌC
+- Giọng NAM, tiếng Việt miền Bắc (chuẩn Hà Nội), phong cách phát thanh viên thời sự: trầm, rõ, chắc, trang trọng.
+- Tốc độ vừa phải, khoảng 130-145 từ mỗi phút; ngắt nghỉ ngắn ở dấu phẩy, nghỉ dài hơn ở dấu chấm. Không đọc kiểu quảng cáo, không lên giọng.
+- Mỗi cảnh xuất ra MỘT FILE ÂM THANH RIÊNG (mp3 hoặc wav), đặt tên s1, s2, ... s8 theo thứ tự dưới đây để ghép đúng hình.
+- Không thêm nhạc nền, không thêm hiệu ứng. Âm lượng đồng đều giữa các file.
+
+CÁCH ĐỌC CÁC TỪ KHÓ (đã viết sẵn theo cách đọc ở phần LỜI ĐỌC)
+- FRAS-AI đọc là: "Phờ rát, ây ai"
+- fras-ai.com đọc là: "phờ rát gạch ây ai chấm com"
+- PCCC đọc đầy đủ là "phòng cháy chữa cháy"; gas đọc là "ga"; 30, 60, 90 đọc là "ba mươi, sáu mươi, chín mươi".
+
+======================================================================
+
+CẢNH S1  (file: s1.mp3)   thời lượng mẫu khoảng 11 giây
+LỜI ĐỌC:
+Công an thành phố Bắc Ninh giới thiệu Hệ thống Phờ rát, ây ai: ứng dụng trí tuệ nhân tạo trong khảo sát, đánh giá, cảnh báo và tự khắc phục nguy cơ cháy, nổ.
+
+PHỤ ĐỀ HIỂN THỊ (đã có trong video, không cần đọc):
+Công an thành phố Bắc Ninh giới thiệu Hệ thống FRAS-AI: ứng dụng trí tuệ nhân tạo trong khảo sát, đánh giá, cảnh báo và tự khắc phục nguy cơ cháy, nổ.
+----------------------------------------------------------------------
+
+CẢNH S2  (file: s2.mp3)   thời lượng mẫu khoảng 14 giây
+LỜI ĐỌC:
+Phần lớn nguy cơ cháy, nổ đã xuất hiện từ trước: ổ cắm quá tải, dây điện xuống cấp, lối thoát nạn bị chắn, bình ga đặt sai vị trí. Phát hiện sớm và khắc phục kịp thời là chìa khóa của an toàn.
+
+PHỤ ĐỀ HIỂN THỊ (đã có trong video, không cần đọc):
+Phần lớn nguy cơ cháy, nổ đã xuất hiện từ trước: ổ cắm quá tải, dây điện xuống cấp, lối thoát nạn bị chắn, bình gas đặt sai vị trí. Phát hiện sớm và khắc phục kịp thời là chìa khóa của an toàn.
+----------------------------------------------------------------------
+
+CẢNH S3  (file: s3.mp3)   thời lượng mẫu khoảng 14 giây
+LỜI ĐỌC:
+Người dân và cơ sở chỉ cần dùng điện thoại, truy cập phờ rát gạch ây ai chấm com, không cần cài đặt phần mềm. Cơ sở thuộc diện quản lý đăng nhập bằng mã định danh; hộ gia đình có thể khảo sát ngay, không cần tài khoản.
+
+PHỤ ĐỀ HIỂN THỊ (đã có trong video, không cần đọc):
+Người dân và cơ sở chỉ cần dùng điện thoại, truy cập fras-ai.com, không cần cài đặt phần mềm. Cơ sở thuộc diện quản lý đăng nhập bằng mã định danh; hộ gia đình có thể khảo sát ngay, không cần tài khoản.
+----------------------------------------------------------------------
+
+CẢNH S4  (file: s4.mp3)   thời lượng mẫu khoảng 9 giây
+LỜI ĐỌC:
+Hệ thống nạp bộ câu hỏi theo từng loại hình hoạt động. Mỗi câu chỉ cần chọn đáp án sát với thực tế; kết quả được tự động lưu lại.
+
+PHỤ ĐỀ HIỂN THỊ (đã có trong video, không cần đọc):
+Hệ thống nạp bộ câu hỏi theo từng loại hình hoạt động. Mỗi câu chỉ cần chọn đáp án sát với thực tế; kết quả được tự động lưu lại.
+----------------------------------------------------------------------
+
+CẢNH S5  (file: s5.mp3)   thời lượng mẫu khoảng 13 giây
+LỜI ĐỌC:
+Ngay sau khi gửi, hệ thống tính tỷ lệ và mức nguy cơ: thấp, trung bình, cao hoặc rất cao. Chỉ cần một nguy cơ đặc biệt ở bất kỳ nhóm nào, mức chung sẽ được nâng lên để cơ sở không chủ quan.
+
+PHỤ ĐỀ HIỂN THỊ (đã có trong video, không cần đọc):
+Ngay sau khi gửi, hệ thống tính tỷ lệ và mức nguy cơ: thấp, trung bình, cao hoặc rất cao. Chỉ cần một nguy cơ đặc biệt ở bất kỳ nhóm nào, mức chung sẽ được nâng lên để cơ sở không chủ quan.
+----------------------------------------------------------------------
+
+CẢNH S6  (file: s6.mp3)   thời lượng mẫu khoảng 10 giây
+LỜI ĐỌC:
+Trí tuệ nhân tạo đọc kết quả, chỉ rõ việc cần làm trước, kèm thời hạn, danh mục tự kiểm tra hằng ngày và lộ trình khắc phục ba mươi, sáu mươi, chín mươi ngày.
+
+PHỤ ĐỀ HIỂN THỊ (đã có trong video, không cần đọc):
+Trí tuệ nhân tạo đọc kết quả, chỉ rõ việc cần làm trước, kèm thời hạn, danh mục tự kiểm tra hằng ngày và lộ trình khắc phục 30, 60, 90 ngày.
+----------------------------------------------------------------------
+
+CẢNH S7  (file: s7.mp3)   thời lượng mẫu khoảng 15 giây
+LỜI ĐỌC:
+Cơ sở cập nhật tiến độ khắc phục ngay trên hệ thống; mỗi lần cập nhật, mức nguy cơ được tính lại và cơ quan Cảnh sát phòng cháy chữa cháy nắm bắt tình hình gần như theo thời gian thực. Mã theo dõi giúp người dân quay lại bảng theo dõi trên bất kỳ thiết bị nào.
+
+PHỤ ĐỀ HIỂN THỊ (đã có trong video, không cần đọc):
+Cơ sở cập nhật tiến độ khắc phục ngay trên hệ thống; mỗi lần cập nhật, mức nguy cơ được tính lại và cơ quan Cảnh sát PCCC nắm bắt tình hình gần như theo thời gian thực. Mã theo dõi giúp người dân quay lại bảng theo dõi trên bất kỳ thiết bị nào.
+----------------------------------------------------------------------
+
+CẢNH S8  (file: s8.mp3)   thời lượng mẫu khoảng 12 giây
+LỜI ĐỌC:
+Phờ rát, ây ai: đồng hành cùng người dân và doanh nghiệp, chủ động phòng ngừa, vì cuộc sống bình yên. Truy cập phờ rát gạch ây ai chấm com để khảo sát ngay hôm nay.
+
+PHỤ ĐỀ HIỂN THỊ (đã có trong video, không cần đọc):
+FRAS-AI: đồng hành cùng người dân và doanh nghiệp, chủ động phòng ngừa, vì cuộc sống bình yên. Truy cập fras-ai.com để khảo sát ngay hôm nay.
+----------------------------------------------------------------------
+
+Tổng thời lượng lời đọc mẫu: khoảng 104 giây. Giọng thật có thể dài hoặc ngắn hơn, hình sẽ được co giãn theo từng file.

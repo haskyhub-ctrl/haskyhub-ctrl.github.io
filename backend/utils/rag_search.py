@@ -89,6 +89,13 @@ QUY ĐỊNH PHÁP LUẬT PCCC MỚI NHẤT (NĂM 2026) - ƯU TIÊN ÁP DỤNG TU
      6. Cá nhân thực hiện nhiều nhiệm vụ thuộc các đối tượng trên:
         + Huấn luyện lần đầu: Từ 24 giờ đến 32 giờ.
         + Bồi dưỡng định kỳ hằng năm: Từ 08 giờ đến 12 giờ.
+
+1e. VỀ PHÂN CÔNG, PHÂN CẤP KIỂM TRA PCCC TẠI TỈNH BẮC NINH (QUYẾT ĐỊNH 29/2025/QĐ-UBND):
+   - Căn cứ: Quyết định số 29/2025/QĐ-UBND ngày 22/9/2025 của UBND tỉnh Bắc Ninh (hiệu lực từ 03/10/2025):
+   - PHÂN CẤP CHO UBND CẤP XÃ: Tổ chức kiểm tra về PCCC đối với các cơ sở có cấp công trình từ cấp III trở xuống quy định tại Phụ lục II Nghị định số 105/2025/NĐ-CP (Điều 22 khoản 2).
+   - PHÂN CÔNG CƠ QUAN CHUYÊN MÔN VỀ XÂY DỰNG CẤP TỈNH (Sở Xây dựng, Sở NN&MT, Sở Công thương...): Tổ chức kiểm tra về PCCC đối với các cơ sở quy định tại Phụ lục II Nghị định số 105/2025/NĐ-CP từ cấp II trở lên (Điều 22 khoản 1).
+   - PHÂN CÔNG KIỂM TRA CÔNG TÁC NGHIỆM THU XÂY DỰNG: Sở Xây dựng, Sở NN&MT, Sở Công thương kiểm tra công trình chuyên ngành; Ban Quản lý các KCN tỉnh kiểm tra công trình trong KCN; UBND cấp xã kiểm tra công trình vốn đầu tư công cấp xã quyết định đầu tư quy mô cấp III trở xuống (Điều 19).
+
 2. CÁC VĂN BẢN HIỆN HÀNH CHÍNH:
    - Nghị định số 347/2026/NĐ-CP ngày 08/9/2026 của Chính phủ (hiệu lực 15/9/2026, sửa đổi NĐ 105/2025/NĐ-CP, bãi bỏ văn bản chấp thuận nghiệm thu PCCC)
    - Nghị quyết số 66.18/2026/NQ-CP ngày 18/5/2026 của Chính phủ (hiệu lực 01/07/2026, bãi bỏ thủ tục kiểm tra nghiệm thu PCCC)
@@ -121,8 +128,10 @@ CURRENT_LEGAL_REFS = [
     "Nghị định số 347/2026/NĐ-CP ngày 08/9/2026 của Chính phủ",
     "Luật Phòng cháy, chữa cháy và Cứu nạn, cứu hộ số 55/2024/QH15",
     "Nghị định 105/2025/NĐ-CP (sửa đổi bởi NĐ 347/2026/NĐ-CP)",
+    "Quyết định số 29/2025/QĐ-UBND ngày 22/9/2025 của UBND tỉnh Bắc Ninh",
+    "Nghị định số 106/2025/NĐ-CP (xử phạt vi phạm hành chính PCCC)",
     "QCVN 06:2022/BXD kèm Sửa đổi 1:2023",
-    "QCVN 10:2025/BCA",
+    "TCVN 3890:2023",
 ]
 
 CHROMA_DB_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "chroma_db")
@@ -279,13 +288,13 @@ def _call_9router(prompt: str, temperature: float = 0.15, max_tokens: int = 2048
     if not router_key:
         raise ValueError("ROUTER_API_KEY chưa được cấu hình")
 
-    primary_model = os.getenv("ROUTER_MODEL", "ag/gemini-3.8-flash-high")
+    primary_model = os.getenv("ROUTER_MODEL", "ag/gemini-3.8-flash-low")
     fallback_models = [
         primary_model,
-        "ag/gemini-3.8-flash-high",
+        "ag/gemini-3.8-flash-low",
         "ag/gemini-3.8-flash",
         "ag/gemini-3.8-flash-medium",
-        "ag/gemini-3.8-flash-low",
+        "ag/gemini-3.8-flash-high",
     ]
     if fast:
         fallback_models = ["ag/gemini-3.8-flash-low", "ag/gemini-3.8-flash"] + fallback_models
@@ -575,17 +584,20 @@ Trả về DUY NHẤT JSON: {{"queries": ["truy vấn 1", "truy vấn 2", "truy 
 
 
 def search_kho(question: str, history_text: str = "") -> str:
-    """Tra cứu kho tài liệu: câu hỏi gốc cộng các cách diễn đạt do AI mở rộng, gộp kết quả, lấy tối đa 6 đoạn."""
+    """Tra cứu kho tài liệu nội bộ BM25 siêu tốc (< 50ms), lấy tối đa 6 đoạn sát nhất."""
     from utils import local_rag
     try:
-        first = local_rag.search_multi([question], k=6)
-        raw_top = local_rag.search(question, k=1)
-        weak = (not raw_top) or raw_top[0][2] < 22 or bool(history_text.strip())
-        queries = [question] + (_expand_queries(question, history_text) if weak else [])
-        hits = local_rag.search_multi(queries, k=6) if len(queries) > 1 else first
+        hits = local_rag.search(question, k=6)
         if hits:
-            _safe_print(f"[RAG cục bộ] {len(queries)} truy vấn, {len(hits)} đoạn")
+            _safe_print(f"[RAG cục bộ] Tìm thấy {len(hits)} đoạn tài liệu liên quan")
             return local_rag.format_hits(hits)
+        # Nếu chưa tìm thấy và có lịch sử, thử kết hợp câu hỏi + từ khóa lịch sử
+        if history_text:
+            combined_q = f"{question} {history_text[-120:]}"
+            hits = local_rag.search(combined_q, k=6)
+            if hits:
+                _safe_print(f"[RAG cục bộ] Tìm thấy {len(hits)} đoạn qua ngữ cảnh lịch sử")
+                return local_rag.format_hits(hits)
     except Exception as e:
         _safe_print(f"[search_kho] {e}")
     return search_chromadb(question)
@@ -799,23 +811,20 @@ CÂU HỎI CỦA NGƯỜI DÙNG: {question}
    - KHÔNG liệt kê các luật cũ, nghị định cũ xa xưa (Luật 2001, Luật 2013, Nghị định 136/2020, Nghị định 50/2024...).
    - Quy định cũ chỉ được đưa ra văn bản gần nhất (nếu thật sự cần thiết để người hỏi không nhầm lẫn) và PHẢI ĐẶT TRONG DẤU NGOẶC ĐƠN THẬT NGẮN GỌN.
 
-3. CÁCH TRÌNH BÀY (bộ hiển thị của hệ thống sẽ tô màu, kẻ khung theo các ký hiệu dưới đây, hãy dùng đúng):
-   - Dòng bắt đầu bằng ">> " là KẾT LUẬN: 1 đến 2 câu trả lời thẳng vào câu hỏi, luôn đặt ở dòng đầu tiên.
-   - Dòng bắt đầu bằng "## " là TIÊU ĐỀ MỤC (ví dụ: ## Việc cần làm, ## Điều kiện áp dụng, ## Lưu ý). Chỉ dùng 2 đến 4 mục, tên mục ngắn.
-   - Dòng bắt đầu bằng "!! " là LƯU Ý QUAN TRỌNG hoặc CẢNH BÁO (rủi ro, hạn chót, điều dễ nhầm). Tối đa 2 dòng.
-   - Các bước làm tuần tự: đánh số "1. ", "2. ", mỗi bước một dòng, bắt đầu bằng động từ.
-   - Ý liệt kê ngang hàng: gạch đầu dòng "- ".
-   - Từ khóa quan trọng (số liệu, thời hạn, tên thủ tục): bao bằng **hai dấu sao**. Chỉ bôi đậm những cụm thật cần chú ý, không bôi tràn lan.
-   - So sánh nhiều phương án hoặc nhiều loại hình: dùng bảng với dòng tiêu đề, ví dụ "| Loại hình | Yêu cầu |" rồi "|---|---|" rồi các dòng "| ... | ... |".
-   - Căn cứ pháp lý: viết trong hai dấu ngoặc nhọn kép, ví dụ {{{{Điều 5 Nghị định 105/2025/NĐ-CP}}}}, đặt ngay sau ý được căn cứ. CHỈ trích điều, khoản, văn bản có thật trong phần tài liệu ở trên; không bịa số điều.
-   - Không dùng đường kẻ ngang (---) ngoài bảng, không dùng dấu gạch ngang dài, không dùng ### hay # ngoài tiêu đề "## ".
-   - Câu hỏi đơn giản: trả lời gọn trong khoảng 80 đến 150 từ. Câu hỏi về thủ tục, quy trình: đủ bước nhưng không quá 500 từ.
+3. CẤU TRÚC ĐẦU MỤC 1, 2, 3, 4 RÕ RÀNG VÀ DỄ NHÌN (BẮT BUỘC TUÂN THỦ):
+   - Mọi câu trả lời PHẢI chia thành các đầu mục lớn có đánh số thứ tự từ 1 đến 4 rõ ràng (dùng "## 1. ", "## 2. ", "## 3. ", "## 4. "):
+     + Dòng đầu tiên luôn là ">> ": KẾT LUẬN TRỰC DIỆN (1 đến 2 câu trả lời thẳng, dứt khoát vào trọng tâm câu hỏi).
+     + "## 1. Căn cứ pháp lý và nguyên tắc chung": Nêu rõ các văn bản quy phạm pháp luật hiện hành điều chỉnh kèm số điều, khoản (đặt trong {{...}}).
+     + "## 2. Quy định chi tiết": Trình bày đầy đủ, cặn kẽ mọi đối tượng, phân loại, tiêu chuẩn kỹ thuật, định mức thời hạn. Dùng bảng biểu (|---|---|) nếu có nhiều đối tượng hoặc nhiều phương án để người đọc dễ theo dõi.
+     + "## 3. Trình tự và các bước thực hiện": Đánh số rõ ràng "1. ", "2. ", "3. ", mỗi bước nêu rõ: AI làm, LÀM GÌ, THỜI HẠN, HỒ SƠ cụ thể.
+     + "## 4. Chế tài xử lý vi phạm và Lưu ý quan trọng": Nêu các lỗi vi phạm phổ biến, mức phạt tiền cụ thể (theo Nghị định 106/2025/NĐ-CP) và các lưu ý an toàn sinh tử. Dòng cảnh báo bắt đầu bằng "!! ".
 
-3a. DIỄN GIẢI ĐẦY ĐỦ NỘI DUNG, KHÔNG CẮT BỎ:
-   - Liệt kê ĐẦY ĐỦ tất cả các đối tượng, nhóm đối tượng, trường hợp có trong tài liệu.
-   - Với câu hỏi về huấn luyện PCCC: liệt kê ĐẦY ĐỦ từng nhóm đối tượng và thời lượng tương ứng (không được bỏ nhóm nào).
-   - Mỗi bước trong danh sách đánh số phải viết thành 2 đến 4 câu hoặc có các ý nhỏ, nêu rõ: AI làm, LÀM GÌ cụ thể, THỜI HẠN nếu có, và căn cứ.
-   - TUYỆT ĐỐI KHÔNG rút gọn hoặc bỏ bớt đối tượng, thời lượng, bước nào có trong tài liệu.
+3a. DIỄN GIẢI ĐẦY ĐỦ, TOÀN DIỆN, TUYỆT ĐỐI KHÔNG VIẾT VẮN TẮT:
+   - Cung cấp đầy đủ, toàn diện mọi thông tin hữu ích để người dân và doanh nghiệp hiểu rõ bản chất và áp dụng được ngay mà không cần phải hỏi lại.
+   - TUYỆT ĐỐI KHÔNG giới hạn câu chữ ngắn, KHÔNG tóm tắt cụt lủn làm thiếu ý.
+   - Liệt kê ĐẦY ĐỦ tất cả các đối tượng, trường hợp, điều kiện, hồ sơ, thời hạn.
+   - Với câu hỏi về huấn luyện PCCC: BẮT BUỘC liệt kê ĐẦY ĐỦ cả 6 nhóm đối tượng và thời lượng huấn luyện lần đầu / bồi dưỡng hằng năm.
+   - Với câu hỏi về kiểm tra, quản lý PCCC tại Bắc Ninh: BẮT BUỘC trích dẫn Quyết định số 29/2025/QĐ-UBND của UBND tỉnh Bắc Ninh (khoản 2 Điều 22 phân cấp cho UBND cấp xã kiểm tra cơ sở cấp III trở xuống thuộc Phụ lục II NĐ 105/2025).
 
 3b. KHI THIẾU THÔNG TIN: nếu đáp án phụ thuộc loại hình, quy mô mà người hỏi chưa nói, hãy trả lời trước cho trường hợp phổ biến, rồi cuối bài thêm một dòng "!! Để có thể tư vấn chính xác hơn, bạn cho biết thêm: ..." (tối đa 2 ý cần hỏi lại).
 
@@ -835,11 +844,11 @@ TRẢ VỀ JSON THUẦN (không dùng ```json):
 }}}}"""
 
         # ── Gọi LLM (9Router Google Pro hoặc Gemini REST API) ───────
-        router_model = os.getenv("ROUTER_MODEL", "ag/gemini-3.8-flash-high")
-        current_model = router_model if use_router and router_key else os.getenv("GEMINI_MODEL", "gemini-3.5-flash")
+        router_model = os.getenv("ROUTER_MODEL", "ag/gemini-3.8-flash-low")
+        current_model = router_model if use_router and router_key else os.getenv("GEMINI_MODEL", "ag/gemini-3.8-flash-low")
         _safe_print(f"[ask_ai_chi] Gọi LLM (ưu tiên {current_model})...")
-        # Sử dụng mô hình cấu hình theo ROUTER_MODEL (ag/gemini-3.8-flash-high)
-        content = _call_llm(template, temperature=0.15, max_tokens=3000, is_json=True, fast=False, timeout=45.0)
+        # Sử dụng mô hình flash tốc độ cao để đảm bảo phản hồi trong 3-6s
+        content = _call_llm(template, temperature=0.15, max_tokens=3000, is_json=True, fast=True, timeout=18.0)
         _safe_print(f"[ask_ai_chi] OK Got {len(content)} chars")
 
         # ── Parse JSON từ phản hồi ───────────────────────────────────

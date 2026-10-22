@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="vi" data-resolution="landscape">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=1920, height=1080"/>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>:root{--navy:#0F2347;--navy2:#1A3A6B;--red:#C0202A;--gold:#C9962C;--paper:#F4F6FA}
+*{margin:0;padding:0;box-sizing:border-box;border-radius:0 !important}
+html,body{width:1920px;height:1080px;overflow:hidden;background:#0A1530;font-family:"Segoe UI",Arial,sans-serif;color:#fff}
+#root{position:relative;width:1920px;height:1080px;overflow:hidden;background:radial-gradient(1200px 700px at 72% 20%,#1d3f78 0%,transparent 60%),linear-gradient(160deg,#0B1B3D 0%,#0F2347 55%,#13294f 100%)}
+#bg,#grid{position:absolute;inset:0}
+#grid{opacity:.06;background-image:linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px);background-size:80px 80px}
+#redbar{position:absolute;left:0;top:0;width:100%;height:8px;background:linear-gradient(90deg,var(--red),var(--gold));z-index:50}
+#progress{position:absolute;left:0;bottom:0;height:7px;width:0;background:var(--gold);z-index:50}
+#brand{position:absolute;left:60px;top:26px;display:flex;align-items:center;gap:16px;z-index:40}
+#brand img{width:56px;height:56px;object-fit:contain}
+#brand .t1{font-size:20px;font-weight:700;letter-spacing:1.5px}
+#brand .t2{font-size:16px;color:var(--gold);font-weight:600;letter-spacing:1px;margin-top:2px}
+.scene{position:absolute;inset:0;opacity:0}
+.scene>*{position:absolute}
+h2{left:90px;top:158px;width:1250px;font-size:56px;line-height:1.18;font-weight:800}
+.eyebrow{left:90px;top:112px;font-size:24px;font-weight:700;letter-spacing:3px;color:var(--gold)}
+.gold{color:var(--gold);font-weight:900;letter-spacing:3px}
+.bigq{font-size:64px;font-weight:800;line-height:1.22}
+.bigsub{font-size:40px;font-weight:600;line-height:1.4;color:#dbe6fa}
+.logo{object-fit:contain}
+.night{left:0;top:0;width:1920px;height:1080px;background:linear-gradient(180deg,#06102a 0%,#0c1c40 60%,#10234a 100%);opacity:.9}
+.smoke{width:90px;height:90px;background:radial-gradient(circle,rgba(200,210,230,.55),rgba(200,210,230,0) 70%)}
+/* điện thoại */
+.phone{width:400px;height:866px;border:10px solid #0b0f1a;background:#fff;box-shadow:0 30px 80px rgba(0,0,0,.6);overflow:hidden}
+.phone .screen{position:absolute;inset:0;overflow:hidden;background:#fff}
+.phone .shot{position:absolute;left:0;top:0;width:100%;height:auto;display:block}
+.phone .shot:not(:first-child){opacity:0}
+.phone .notch{display:none}
+/* thẻ, nhãn */
+.card{display:flex;align-items:center;gap:26px;padding:20px 34px;background:rgba(255,255,255,.08);border:2px solid rgba(255,255,255,.22);border-left:8px solid var(--gold)}
+.card.alt{border-left-color:var(--red)}
+.card .ic{font-size:64px;line-height:1;min-width:76px;text-align:center}
+.card.num .ic{font-size:70px;font-weight:900;color:var(--gold)}
+.card .tx{font-size:38px;font-weight:800;line-height:1.2}
+.card .tx small{display:block;font-size:25px;font-weight:500;color:#c9d6ee;margin-top:6px}
+.tag{padding:14px 26px;font-size:30px;font-weight:700;background:var(--navy2);border-left:8px solid var(--gold);box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.tag.red{background:var(--red)}
+.chip{width:300px;padding:20px 0;text-align:center;font-size:34px;font-weight:800;color:#fff;box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;width:1240px}
+.chip2{padding:18px 22px;font-size:30px;font-weight:700;background:rgba(255,255,255,.09);border:2px solid rgba(255,255,255,.2)}
+.grid2.sm .chip2{font-size:27px;padding:16px 20px}
+.chip2.wide{grid-column:1 / -1}
+.urlbar{width:640px;padding:18px 26px;font-size:40px;font-weight:800;background:#fff;color:var(--navy);box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.btnred{display:inline-block;padding:20px 44px;font-size:36px;font-weight:900;background:var(--red);color:#fff;letter-spacing:1px;box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.btnzalo{padding:16px 30px;font-size:30px;font-weight:800;background:#0068FF;color:#fff}
+.map{width:1240px;padding:16px 24px;font-size:28px;font-weight:600;background:rgba(255,255,255,.08);border:2px dashed rgba(201,150,44,.7)}
+.map b{color:var(--gold)}
+.pin{font-size:38px}
+.spin{width:90px;height:90px;border:10px solid rgba(255,255,255,.2);border-top-color:var(--gold)}
+.done{width:90px;height:90px;background:#16A34A;color:#fff;font-size:70px;font-weight:900;text-align:center;line-height:90px}
+.levels{display:flex;gap:0}
+.levels span{padding:20px 30px;font-size:30px;font-weight:900;letter-spacing:1px}
+.road{display:flex;align-items:center;gap:14px;font-size:30px;font-weight:800}
+.road span{padding:12px 20px;background:var(--navy2);border-bottom:5px solid var(--gold)}
+.road i{display:block;width:70px;height:4px;background:var(--gold)}
+.road em{font-style:normal;margin-left:20px;font-size:26px;color:#c9d6ee;font-weight:600}
+.checks{font-size:36px;font-weight:700;line-height:1.7;width:1200px}
+.checks b{color:#16A34A;margin-right:12px}
+.meter{display:flex;align-items:center;gap:22px;font-size:30px;font-weight:700;width:1240px}
+.meter .bar{width:560px;height:34px;background:rgba(255,255,255,.15);border:2px solid rgba(255,255,255,.3)}
+.meter .fill{height:100%;width:90%;background:linear-gradient(90deg,#16A34A,#CA8A04,#DC2626)}
+.meter em{font-style:normal;color:var(--gold)}
+.code{padding:18px 30px;font-size:36px;font-weight:700;background:rgba(201,150,44,.16);border:2px solid var(--gold);width:1240px}
+.code b{color:var(--gold);letter-spacing:3px}
+.code small{display:block;font-size:24px;font-weight:500;color:#c9d6ee;margin-top:6px}
+.chat{width:1240px;display:flex;flex-direction:column;gap:18px}
+.chat .b{padding:20px 28px;font-size:30px;font-weight:600;line-height:1.35;max-width:1000px}
+.chat .q{background:var(--navy2);align-self:flex-end;border-right:8px solid var(--gold)}
+.chat .a{background:rgba(255,255,255,.1);border-left:8px solid var(--red)}
+.chat i{color:#c9d6ee}
+.kb{display:grid;grid-template-columns:1fr 1fr;gap:14px;width:1240px}
+.doc{padding:20px 24px;font-size:30px;font-weight:700;background:rgba(255,255,255,.09);border:2px solid rgba(255,255,255,.2)}
+.flow{font-size:26px;font-weight:700;color:var(--gold);width:1240px;text-align:center}
+.courses{display:grid;grid-template-columns:1fr 1fr;gap:16px;width:1240px}
+.co{padding:20px 26px;font-size:28px;font-weight:700;background:rgba(255,255,255,.1);border-left:8px solid var(--gold)}
+.co b{display:block;color:var(--gold);font-size:22px;letter-spacing:2px;margin-bottom:4px}
+.four{display:flex;justify-content:center;gap:22px;font-size:30px;font-weight:700}
+.four span{padding:14px 22px;background:rgba(255,255,255,.1);border-bottom:5px solid var(--gold)}
+.url{text-align:center;font-size:110px;font-weight:900;color:#fff;letter-spacing:3px}
+/* phụ đề */
+.cap{position:absolute;left:80px;bottom:44px;width:1260px;z-index:45;opacity:0}
+.cap span{display:inline-block;padding:12px 26px;background:rgba(5,12,30,.82);border-left:7px solid var(--gold);font-size:34px;line-height:1.35;font-weight:600;text-shadow:0 2px 4px #000}
+</style></head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="276.1" data-width="1920" data-height="1080">
+<div id="bg" class="clip" data-start="0" data-duration="276.1"><div id="grid"></div></div>
+<div id="redbar" class="clip" data-start="0" data-duration="276.1"></div>
+<div id="brand" class="clip" data-start="0" data-duration="276.1"><img src="assets/logo.png"><div><div class="t1">CÔNG AN THÀNH PHỐ BẮC NINH</div><div class="t2">PHÒNG CẢNH SÁT PCCC VÀ CNCH</div></div></div>
+<div id="progress" class="clip" data-start="0" data-duration="276.1"></div>
+
+<div id="s1" class="clip scene" data-start="0.0" data-duration="11.58">
+<div class="night"></div>
+<svg class="house" viewBox="0 0 400 300" data-a="fade" style="left:210px;top:380px;width:640px;height:480px">
+  <polygon points="40,150 200,40 360,150" fill="#13294f" stroke="#2c4a82" stroke-width="3"/>
+  <rect x="70" y="150" width="260" height="130" fill="#10224a" stroke="#2c4a82" stroke-width="3"/>
+  <rect x="110" y="185" width="60" height="55" fill="#C9962C" class="win"/>
+  <rect x="230" y="185" width="60" height="55" fill="#2a3f6e"/>
+  <rect x="180" y="215" width="40" height="65" fill="#0a1530"/>
+</svg>
+<div class="smoke" style="left:380px;top:150px"></div><div class="smoke s2" style="left:430px;top:190px"></div><div class="smoke s3" style="left:340px;top:230px"></div>
+<div class="bigq" data-a style="left:80px;top:150px;width:1220px">Nếu ngay lúc này nhà bạn bốc khói,<br><span style="color:var(--gold)">bạn sẽ làm gì trong những phút đầu tiên?</span></div>
+<div class="bigsub" data-a="late" style="left:80px;top:330px;width:1120px">Việc chuẩn bị chỉ cần vài chục phút,<br>ngay trên chiếc điện thoại của bạn.</div>
+<div class="phone " style="left:1400px;top:104px"><div class="notch"></div><div class="screen"><img class="shot" src="assets/shots/home_0.png" data-y0="0" data-y1="0"></div></div></div>
+<div id="s2" class="clip scene" data-start="11.58" data-duration="15.98">
+<img class="logo" data-a="fade" src="assets/logo.png" style="left:90px;top:170px;width:200px;height:200px">
+<div class="eyebrow" data-a style="left:330px;top:180px">CÔNG AN THÀNH PHỐ BẮC NINH GIỚI THIỆU</div>
+<div class="gold" data-a style="left:330px;top:225px;font-size:150px">FRAS-AI</div>
+<div class="bigsub" data-a style="left:330px;top:405px;width:1000px;font-size:42px">Ứng dụng trí tuệ nhân tạo trong khảo sát, đánh giá, cảnh báo và tự khắc phục nguy cơ cháy, nổ</div>
+<div class="card " data-a style="left:90px;top:610px;width:600px"><div class="ic">📋</div><div class="tx">1. Khảo sát nguy cơ<small>từng bước, ngay trên điện thoại</small></div></div><div class="card " data-a style="left:720px;top:610px;width:600px"><div class="ic">💬</div><div class="tx">2. Trợ lý ảo<small>giải đáp pháp luật PCCC</small></div></div><div class="card " data-a style="left:90px;top:790px;width:600px;height:150px"><div class="ic">🎓</div><div class="tx">3. Học liệu số<small>khóa học trực tuyến</small></div></div><div class="card " data-a style="left:720px;top:790px;width:600px;height:150px"><div class="ic">🎮</div><div class="tx">4. Trò chơi PCCC<small>học mà chơi, chơi mà học</small></div></div><div class="phone " style="left:1400px;top:104px"><div class="notch"></div><div class="screen"><img class="shot" src="assets/shots/home_0.png" data-y0="0" data-y1="0"><img class="shot" src="assets/shots/home_1.png" data-y0="0" data-y1="0"></div></div></div>
+<div id="s3" class="clip scene" data-start="27.56" data-duration="19.23"><div class="eyebrow" data-a>PHẦN 1 · KHẢO SÁT NGUY CƠ</div><h2 data-a>Bước 1: mở điện thoại, vào fras-ai.com</h2>
+<div class="chip" data-a style="left:90px;top:420px;background:#1A3A6B">🏠 Nhà ở</div>
+<div class="chip" data-a style="left:420px;top:420px;background:#1A3A6B">🏪 Cửa hàng</div>
+<div class="chip" data-a style="left:750px;top:420px;background:#1A3A6B">🏭 Nhà xưởng</div>
+<div class="urlbar" data-a style="left:90px;top:560px"><span>🔒</span> fras-ai.com</div>
+<div class="btnred" data-a style="left:90px;top:690px">BẮT ĐẦU KHẢO SÁT →</div>
+<div class="tag" data-a style="left:90px;top:810px">Không cần cài đặt bất kỳ phần mềm nào</div>
+<div class="phone " style="left:1400px;top:104px"><div class="notch"></div><div class="screen"><img class="shot" src="assets/shots/home_0.png" data-y0="0" data-y1="0"><img class="shot" src="assets/shots/survey_0.png" data-y0="0" data-y1="0"></div></div></div>
+<div id="s4" class="clip scene" data-start="46.79" data-duration="17.99"><div class="eyebrow" data-a>BƯỚC 2 · CHỌN ĐỐI TƯỢNG</div><h2 data-a>Bạn là cơ sở quản lý, hay hộ gia đình?</h2><div class="card " data-a style="left:90px;top:400px;width:1180px;height:210px"><div class="ic">🏢</div><div class="tx">Cơ sở thuộc diện quản lý PCCC<small>Nhập mã cơ sở 13 chữ số và mật khẩu do cơ quan Công an cung cấp</small></div></div><div class="card alt" data-a style="left:90px;top:650px;width:1180px;height:210px"><div class="ic">🏠</div><div class="tx">Hộ gia đình, nhà ở riêng lẻ, cửa hàng nhỏ<small>Vào khảo sát ngay, không cần tạo tài khoản</small></div></div><div class="phone " style="left:1400px;top:104px"><div class="notch"></div><div class="screen"><img class="shot" src="assets/shots/home_modal.png" data-y0="0" data-y1="0"></div></div></div>
+<div id="s5" class="clip scene" data-start="64.78" data-duration="20.98"><div class="eyebrow" data-a>BƯỚC 3 · KHAI THÔNG TIN CƠ SỞ</div><h2 data-a>Chọn đúng loại hình hoạt động</h2>
+<div class="grid2" style="left:90px;top:410px">
+  <div class="chip2" data-a>🏠 Nhà ở kết hợp kinh doanh</div><div class="chip2" data-a>🍽️ Nhà hàng, khách sạn</div>
+  <div class="chip2" data-a>📦 Kho hàng</div><div class="chip2" data-a>🏫 Trường học</div>
+  <div class="chip2" data-a>⛽ Cửa hàng xăng dầu</div><div class="chip2" data-a>🏭 Cơ sở sản xuất</div>
+</div>
+<div class="tag" data-a style="left:90px;top:720px">Mỗi loại hình có một bộ câu hỏi riêng · chọn được nhiều loại hình</div>
+<div class="map" data-a style="left:90px;top:800px"><span class="pin">📍</span> Lấy vị trí hiện tại, để biết khoảng cách tới trụ nước chữa cháy gần nhất <b>(không bắt buộc)</b></div>
+<div class="phone " style="left:1400px;top:104px"><div class="notch"></div><div class="screen"><img class="shot" src="assets/shots/survey_1.png" data-y0="0" data-y1="0"></div></div></div>
+<div id="s6" class="clip scene" data-start="85.76" data-duration="21.9"><div class="eyebrow" data-a>BƯỚC 4 · TRẢ LỜI CÁC CÂU HỎI</div><h2 data-a>Câu hỏi chia theo từng nhóm</h2>
+<div class="grid2 sm" style="left:90px;top:400px">
+  <div class="chip2" data-a>⚡ Hệ thống điện</div><div class="chip2" data-a>🔥 Nguồn lửa, nguồn nhiệt</div>
+  <div class="chip2" data-a>🚪 Lối thoát nạn, trang bị chữa cháy</div><div class="chip2" data-a>⚙️ Máy móc, thiết bị</div>
+  <div class="chip2" data-a>🌦️ Yếu tố tự nhiên</div><div class="chip2" data-a>🚗 Phương tiện giao thông</div>
+  <div class="chip2 wide" data-a>🎯 Nhóm câu hỏi đặc thù theo loại hình của bạn</div>
+</div>
+<div class="tag red" data-a style="left:90px;top:790px">Mỗi câu chọn 1 trong 4 đáp án, từ an toàn đến cần lưu ý</div>
+<div class="phone " style="left:1400px;top:104px"><div class="notch"></div><div class="screen"><img class="shot" src="assets/shots/survey_q1.png" data-y0="0" data-y1="0"></div></div></div>
+<div id="s7" class="clip scene" data-start="107.66" data-duration="16.84"><div class="eyebrow" data-a>LƯU Ý KHI TRẢ LỜI</div><h2 data-a>Ba điều cần nhớ</h2><div class="card num" data-a style="left:90px;top:380px;width:1240px;height:150px"><div class="ic">1</div><div class="tx">Trả lời đúng thực tế<small>Đây là công cụ giúp chính bạn, không phải bài kiểm tra</small></div></div><div class="card num" data-a style="left:90px;top:570px;width:1240px;height:150px"><div class="ic">2</div><div class="tx">Có thể bấm Quay lại để sửa<small>Hệ thống tự lưu nháp, không lo mất dữ liệu khi bị gián đoạn</small></div></div><div class="card num" data-a style="left:90px;top:760px;width:1240px;height:150px"><div class="ic">3</div><div class="tx">Chỉ mất khoảng 10 đến 15 phút<small>Ngắn gọn, dễ làm, làm lúc nào cũng được</small></div></div><div class="phone " style="left:1400px;top:104px"><div class="notch"></div><div class="screen"><img class="shot" src="assets/shots/survey_q1.png" data-y0="0" data-y1="0"></div></div></div>
+<div id="s8" class="clip scene" data-start="124.5" data-duration="10.53"><div class="eyebrow" data-a>BƯỚC 5 · KIỂM TRA LẠI VÀ GỬI</div><h2 data-a>Xem lại một lượt, rồi bấm Gửi đánh giá</h2>
+<div class="btnred" data-a style="left:90px;top:440px;width:560px;font-size:40px">GỬI ĐÁNH GIÁ</div>
+<div class="spin" data-a="late" style="left:700px;top:430px"></div>
+<div class="done" data-a="later" style="left:700px;top:430px">✓</div>
+<div class="bigsub" data-a="later" style="left:90px;top:620px;width:1100px;font-size:46px">Chỉ sau ít phút, kết quả sẽ hiện ra</div>
+<div class="phone " style="left:1400px;top:104px"><div class="notch"></div><div class="screen"><img class="shot" src="assets/shots/survey_q1.png" data-y0="0" data-y1="0"><img class="shot" src="assets/shots/result_0.png" data-y0="0" data-y1="0"></div></div></div>
+<div id="s9" class="clip scene" data-start="135.03" data-duration="14.61"><div class="eyebrow" data-a>TRANG KẾT QUẢ</div><h2 data-a>Mức nguy cơ hiện ra ngay</h2>
+<div class="levels" data-a style="left:90px;top:400px">
+  <span style="background:#16A34A">THẤP</span><span style="background:#B45309">TRUNG BÌNH</span><span style="background:#EA580C">CAO</span><span style="background:#DC2626">RẤT CAO</span>
+</div>
+<div class="tag" data-a style="left:90px;top:520px">Điểm số từng nhóm và biểu đồ trực quan</div>
+<div class="tag red" data-a style="left:90px;top:630px">Chỉ một nguy cơ đặc biệt cũng nâng mức chung, để không chủ quan</div>
+<div class="tag" data-a style="left:90px;top:740px">📄 Xuất file PDF, in biên bản để lưu hồ sơ</div>
+<div class="phone " style="left:1400px;top:104px"><div class="notch"></div><div class="screen"><img class="shot" src="assets/shots/result_0.png" data-y0="0" data-y1="0"><img class="shot" src="assets/shots/result_1.png" data-y0="0" data-y1="0"><img class="shot" src="assets/shots/result_3.png" data-y0="0" data-y1="0"></div></div></div>
+<div id="s10" class="clip scene" data-start="149.64" data-duration="15.54"><div class="eyebrow" data-a>TRÍ TUỆ NHÂN TẠO PHÂN TÍCH</div><h2 data-a>Nhận định cụ thể, bám sát câu trả lời của bạn</h2><div class="card " data-a style="left:90px;top:400px;width:600px;height:130px"><div class="ic">✅</div><div class="tx">Điểm bạn đang làm tốt<small></small></div></div><div class="card alt" data-a style="left:720px;top:400px;width:620px;height:130px"><div class="ic">⏱️</div><div class="tx">Việc cần xử lý trước, kèm thời hạn<small></small></div></div><div class="card " data-a style="left:90px;top:565px;width:1250px;height:130px"><div class="ic">📝</div><div class="tx">Danh mục tự kiểm tra hằng ngày<small></small></div></div>
+<div class="road" data-a style="left:90px;top:740px"><span>30 ngày</span><i></i><span>60 ngày</span><i></i><span>90 ngày</span><em>Lộ trình khắc phục</em></div>
+<div class="phone " style="left:1400px;top:104px"><div class="notch"></div><div class="screen"><img class="shot" src="assets/shots/result_2.png" data-y0="0" data-y1="0"><img class="shot" src="assets/shots/result_4.png" data-y0="0" data-y1="0"></div></div></div>
+<div id="s11" class="clip scene" data-start="165.18" data-duration="16.1"><div class="eyebrow" data-a>KHẢO SÁT CHỈ LÀ KHỞI ĐẦU</div><h2 data-a>Theo dõi khắc phục: làm tới đâu, tích tới đó</h2>
+<div class="checks" data-a style="left:90px;top:400px">
+  <div><b>☑</b> Thay ổ cắm, dây điện quá tải</div><div><b>☑</b> Dọn lối thoát nạn</div><div><b>☐</b> Bổ sung bình chữa cháy</div>
+</div>
+<div class="meter" data-a style="left:90px;top:640px"><span>Mức nguy cơ</span><div class="bar"><div class="fill"></div></div><em>tính lại ngay</em></div>
+<div class="code" data-a style="left:90px;top:790px">Mã theo dõi: <b>ABCD-EFGH-JK</b><small>Lưu lại để quay về trên bất kỳ thiết bị nào, không cần tài khoản</small></div>
+<div class="phone " style="left:1400px;top:104px"><div class="notch"></div><div class="screen"><img class="shot" src="assets/shots/mit_0.png" data-y0="0" data-y1="0"><img class="shot" src="assets/shots/mit_1.png" data-y0="0" data-y1="0"></div></div></div>
+<div id="s12" class="clip scene" data-start="181.28" data-duration="18.65"><div class="eyebrow" data-a>PHẦN 2 · TRỢ LÝ ẢO</div><h2 data-a>Người hướng dẫn luôn sẵn sàng 24/7</h2>
+<div class="chat" style="left:90px;top:400px">
+  <div class="b q" data-a>Cơ sở của tôi cần chuẩn bị hồ sơ gì để được kiểm tra an toàn PCCC?</div>
+  <div class="b a" data-a="late">Bạn chuẩn bị theo từng bước sau: hồ sơ pháp lý của cơ sở, phương án chữa cháy, biên bản kiểm tra… <i>(trả lời rõ ràng, từng bước)</i></div>
+  <div class="b q" data-a="later">Bao lâu thì có kết quả?</div>
+</div>
+<div class="tag" data-a style="left:90px;top:790px">Không cần chờ giờ hành chính · không cần đi lại · hỏi bằng ngôn ngữ đời thường</div>
+<div class="phone " style="left:1400px;top:104px"><div class="notch"></div><div class="screen"><img class="shot" src="assets/shots/home_1.png" data-y0="0" data-y1="0"></div></div></div>
+<div id="s13" class="clip scene" data-start="199.93" data-duration="28.27"><div class="eyebrow" data-a>SỨC MẠNH Ở NGUỒN TRI THỨC</div><h2 data-a>Trả lời theo văn bản hiện hành, nêu rõ căn cứ pháp lý</h2>
+<div class="kb" style="left:90px;top:390px">
+  <div class="doc" data-a>📚 Luật, nghị định</div><div class="doc" data-a>📐 Quy chuẩn kỹ thuật</div>
+  <div class="doc" data-a>🧾 Tài liệu tập huấn</div><div class="doc" data-a>❓ Hàng trăm câu hỏi đáp thực tế</div>
+</div>
+<div class="flow" data-a style="left:90px;top:590px">▼ đối chiếu · tra cứu thêm khi quy định thay đổi ▼</div>
+<div class="card" data-a style="left:90px;top:650px;width:1240px;height:140px"><div class="ic">🤖</div><div class="tx">Trợ lý ảo<small>Nhớ nội dung vừa hỏi · hiểu tình hình cơ sở · gợi ý sẵn câu hỏi tiếp theo</small></div></div>
+<div class="bigsub" data-a="late" style="left:90px;top:820px;width:1240px;font-size:32px;color:var(--gold)">Một người hướng dẫn pháp luật PCCC ngay trong túi áo của bạn</div>
+<div class="phone " style="left:1400px;top:104px"><div class="notch"></div><div class="screen"><img class="shot" src="assets/shots/home_1.png" data-y0="0" data-y1="0"></div></div></div>
+<div id="s14" class="clip scene" data-start="228.2" data-duration="26.0"><div class="eyebrow" data-a>PHẦN 3 · HỌC LIỆU SỐ</div><h2 data-a>Thư viện khóa học PCCC trực tuyến</h2>
+<div class="courses" style="left:90px;top:390px">
+  <div class="co" data-a><b>Nhóm 1</b>Kiến thức nền tảng và kỹ năng sống còn</div>
+  <div class="co" data-a><b>Nhóm 2</b>Kiến thức chuyên sâu và cộng đồng</div>
+</div>
+<div class="grid2 sm" style="left:90px;top:560px">
+  <div class="chip2" data-a>🏘️ Thoát nạn khi cháy nhà ống</div><div class="chip2" data-a>🔌 Sử dụng điện an toàn</div>
+  <div class="chip2" data-a>🧯 Dùng bình chữa cháy xách tay</div><div class="chip2" data-a>❤️ Sơ cứu ngừng hô hấp tuần hoàn</div>
+  <div class="chip2 wide" data-a>🌊 Phòng ngừa đuối nước</div>
+</div>
+<div class="btnzalo" data-a style="left:90px;top:800px">Đăng nhập nhanh bằng Zalo</div>
+<div class="tag" data-a style="left:520px;top:800px">Phù hợp gia đình, học sinh, tổ liên gia</div>
+<div class="phone " style="left:1400px;top:104px"><div class="notch"></div><div class="screen"><img class="shot" src="assets/shots/home_1.png" data-y0="0" data-y1="0"></div></div></div>
+<div id="s15" class="clip scene" data-start="254.2" data-duration="12.14"><div class="eyebrow" data-a>TRÒ CHƠI PHÒNG CHÁY CHỮA CHÁY</div><h2 data-a>Vừa chơi vừa nhớ kỹ năng cần thiết</h2><div class="card " data-a style="left:90px;top:400px;width:1240px;height:140px"><div class="ic">🔥</div><div class="tx">Thoát khỏi đám cháy<small>tìm lối thoát nạn an toàn</small></div></div><div class="card alt" data-a style="left:90px;top:570px;width:1240px;height:140px"><div class="ic">❓</div><div class="tx">Đố vui kiến thức PCCC<small>thi đua với thời gian, nhớ số 114</small></div></div><div class="card " data-a style="left:90px;top:740px;width:1240px;height:140px"><div class="ic">🔍</div><div class="tx">Tìm nguy cơ cháy nổ qua hình ảnh<small>ảnh do trí tuệ nhân tạo tạo ra</small></div></div><div class="phone " style="left:1400px;top:104px"><div class="notch"></div><div class="screen"><img class="shot" src="assets/shots/games_0.png" data-y0="0" data-y1="0"><img class="shot" src="assets/shots/games_1.png" data-y0="0" data-y1="0"></div></div></div>
+<div id="s16" class="clip scene" data-start="266.34" data-duration="9.76">
+<img class="logo" data-a="fade" src="assets/logo.png" style="left:810px;top:130px;width:300px;height:300px">
+<div class="four" data-a style="left:0;right:0;top:470px"><span>📋 Khảo sát để thấy rõ nguy cơ</span><span>💬 Hỏi để làm đúng</span><span>🎓 Học để biết cách ứng phó</span><span>🎮 Chơi để nhớ lâu</span></div>
+<div class="gold" data-a style="left:0;right:0;top:600px;text-align:center;font-size:130px">FRAS-AI</div>
+<div class="url" data-a="late" style="left:0;right:0;top:770px">fras-ai.com</div>
+<div class="bigsub" data-a="later" style="left:0;right:0;top:860px;text-align:center;font-size:36px">Đồng hành cùng người dân và doanh nghiệp, vì một cộng đồng an toàn · Báo cháy 114</div>
+</div>
+<div class="cap clip" id="cap0" data-start="0.0" data-duration="3.55"><span>Nếu ngay lúc này nhà bạn bốc khói, bạn sẽ làm gì trong những phút đầu tiên?</span></div>
+<div class="cap clip" id="cap1" data-start="3.5" data-duration="3.09"><span>Câu trả lời nằm ở những điều bạn đã biết và đã chuẩn bị từ trước.</span></div>
+<div class="cap clip" id="cap2" data-start="6.54" data-duration="4.11"><span>Và bây giờ, việc chuẩn bị ấy chỉ cần vài chục phút, ngay trên chiếc điện thoại của bạn.</span></div>
+<div class="cap clip" id="cap3" data-start="11.58" data-duration="2.79"><span>Công an thành phố Bắc Ninh giới thiệu Hệ thống FRAS-AI:</span></div>
+<div class="cap clip" id="cap4" data-start="14.32" data-duration="4.73"><span>ứng dụng trí tuệ nhân tạo trong khảo sát, đánh giá, cảnh báo và tự khắc phục nguy cơ cháy, nổ.</span></div>
+<div class="cap clip" id="cap5" data-start="19.0" data-duration="2.54"><span>Trong video này, chúng ta sẽ cùng đi qua bốn phần:</span></div>
+<div class="cap clip" id="cap6" data-start="21.49" data-duration="2.89"><span>khảo sát nguy cơ từng bước, trợ lý ảo giải đáp pháp luật,</span></div>
+<div class="cap clip" id="cap7" data-start="24.33" data-duration="2.29"><span>học liệu số và trò chơi phòng cháy chữa cháy.</span></div>
+<div class="cap clip" id="cap8" data-start="27.56" data-duration="2.97"><span>Bắt đầu với phần quan trọng nhất: khảo sát nguy cơ.</span></div>
+<div class="cap clip" id="cap9" data-start="30.48" data-duration="4.68"><span>Đây là bài tự kiểm tra giúp bạn nhìn thấy những điểm chưa an toàn trong ngôi nhà,</span></div>
+<div class="cap clip" id="cap10" data-start="35.11" data-duration="3.83"><span>cửa hàng hay nhà xưởng của mình, trước khi sự cố xảy ra. Bước một:</span></div>
+<div class="cap clip" id="cap11" data-start="38.89" data-duration="4.8"><span>mở trình duyệt trên điện thoại, Truy cập fras-ai.com, rồi bấm nút Bắt đầu khảo sát.</span></div>
+<div class="cap clip" id="cap12" data-start="43.64" data-duration="2.22"><span>Không cần cài đặt bất cứ phần mềm nào.</span></div>
+<div class="cap clip" id="cap13" data-start="46.79" data-duration="1.5"><span>Bước hai: chọn đối tượng.</span></div>
+<div class="cap clip" id="cap14" data-start="48.24" data-duration="4.64"><span>Nếu là cơ sở thuộc diện quản lý về phòng cháy chữa cháy, bạn chọn mục thứ nhất,</span></div>
+<div class="cap clip" id="cap15" data-start="52.83" data-duration="4.06"><span>nhập mã cơ sở mười ba chữ số và mật khẩu do cơ quan Công an cung cấp.</span></div>
+<div class="cap clip" id="cap16" data-start="56.84" data-duration="3.13"><span>Nếu là hộ gia đình, nhà ở riêng lẻ hoặc cửa hàng nhỏ,</span></div>
+<div class="cap clip" id="cap17" data-start="59.92" data-duration="3.94"><span>bạn chọn mục thứ hai và vào khảo sát ngay, không cần tạo tài khoản.</span></div>
+<div class="cap clip" id="cap18" data-start="64.78" data-duration="1.4"><span>Bước ba: khai thông tin cơ sở.</span></div>
+<div class="cap clip" id="cap19" data-start="66.13" data-duration="4.16"><span>Bạn nhập tên công trình, chọn địa chỉ, và quan trọng nhất là chọn đúng loại hình hoạt động.</span></div>
+<div class="cap clip" id="cap20" data-start="70.24" data-duration="3.93"><span>Nhà ở kết hợp kinh doanh, nhà hàng khách sạn, kho hàng, trường học, cửa hàng xăng dầu,</span></div>
+<div class="cap clip" id="cap21" data-start="74.12" data-duration="1.72"><span>mỗi loại hình sẽ có bộ câu hỏi riêng.</span></div>
+<div class="cap clip" id="cap22" data-start="75.79" data-duration="3.21"><span>Nếu cơ sở hoạt động kết hợp, bạn có thể chọn nhiều loại hình cùng lúc.</span></div>
+<div class="cap clip" id="cap23" data-start="78.95" data-duration="1.85"><span>Bạn cũng có thể bấm lấy vị trí hiện tại,</span></div>
+<div class="cap clip" id="cap24" data-start="80.75" data-duration="2.99"><span>để hệ thống xác định khoảng cách tới trụ nước chữa cháy gần nhất.</span></div>
+<div class="cap clip" id="cap25" data-start="83.69" data-duration="1.13"><span>Bước này không bắt buộc.</span></div>
+<div class="cap clip" id="cap26" data-start="85.76" data-duration="2.54"><span>Bước bốn: trả lời các câu hỏi, chia thành từng nhóm.</span></div>
+<div class="cap clip" id="cap27" data-start="88.25" data-duration="3.02"><span>Nhóm đầu tiên là hệ thống điện, nơi xảy ra nhiều vụ cháy nhất.</span></div>
+<div class="cap clip" id="cap28" data-start="91.22" data-duration="4.42"><span>Tiếp theo là nguồn lửa, nguồn nhiệt, lối thoát nạn và trang bị chữa cháy, máy móc thiết bị,</span></div>
+<div class="cap clip" id="cap29" data-start="95.59" data-duration="2.16"><span>các yếu tố tự nhiên, phương tiện giao thông,</span></div>
+<div class="cap clip" id="cap30" data-start="97.7" data-duration="3.16"><span>và cuối cùng là nhóm câu hỏi đặc thù theo đúng loại hình của bạn.</span></div>
+<div class="cap clip" id="cap31" data-start="100.81" data-duration="4.37"><span>Với mỗi câu, bạn chỉ cần chọn một trong bốn đáp án mô tả mức độ, từ an toàn đến cần lưu ý,</span></div>
+<div class="cap clip" id="cap32" data-start="105.13" data-duration="1.58"><span>đáp án nào sát với thực tế nhất.</span></div>
+<div class="cap clip" id="cap33" data-start="107.66" data-duration="5.12"><span>Có ba điều cần nhớ khi trả lời. Thứ nhất, hãy trả lời đúng thực tế, vì đây là công cụ giúp chính bạn,</span></div>
+<div class="cap clip" id="cap34" data-start="112.73" data-duration="4.06"><span>không phải bài kiểm tra. Thứ hai, bạn có thể bấm Quay lại để sửa bất cứ lúc nào,</span></div>
+<div class="cap clip" id="cap35" data-start="116.74" data-duration="3.46"><span>hệ thống tự động lưu nháp nên không lo mất dữ liệu nếu bị gián đoạn.</span></div>
+<div class="cap clip" id="cap36" data-start="120.15" data-duration="3.41"><span>Thứ ba, toàn bộ bài khảo sát chỉ mất khoảng mười đến mười lăm phút.</span></div>
+<div class="cap clip" id="cap37" data-start="124.5" data-duration="5.43"><span>Bước năm: kiểm tra lại và gửi. Hệ thống hiển thị tóm tắt thông tin cơ sở và kết quả từng nhóm câu hỏi.</span></div>
+<div class="cap clip" id="cap38" data-start="129.88" data-duration="2.31"><span>Bạn xem lại một lượt, rồi bấm Gửi đánh giá.</span></div>
+<div class="cap clip" id="cap39" data-start="132.14" data-duration="1.95"><span>Chỉ sau ít phút, kết quả sẽ hiện ra.</span></div>
+<div class="cap clip" id="cap40" data-start="135.03" data-duration="2.55"><span>Trang kết quả cho bạn biết ngay tỷ lệ và mức nguy cơ:</span></div>
+<div class="cap clip" id="cap41" data-start="137.53" data-duration="4.02"><span>thấp, trung bình, cao hoặc rất cao, cùng điểm số của từng nhóm và biểu đồ trực quan.</span></div>
+<div class="cap clip" id="cap42" data-start="141.5" data-duration="2.28"><span>Chỉ cần một nguy cơ đặc biệt ở bất kỳ nhóm nào,</span></div>
+<div class="cap clip" id="cap43" data-start="143.73" data-duration="2.36"><span>mức chung sẽ được nâng lên để bạn không chủ quan.</span></div>
+<div class="cap clip" id="cap44" data-start="146.04" data-duration="2.65"><span>Bạn có thể xuất file PDF hoặc in biên bản để lưu hồ sơ.</span></div>
+<div class="cap clip" id="cap45" data-start="149.64" data-duration="3.52"><span>Ngay bên dưới, trí tuệ nhân tạo đọc kết quả và đưa ra nhận định tổng quan,</span></div>
+<div class="cap clip" id="cap46" data-start="153.11" data-duration="3.62"><span>những điểm bạn đang làm tốt, những việc cần xử lý trước kèm thời hạn cụ thể,</span></div>
+<div class="cap clip" id="cap47" data-start="156.68" data-duration="4.13"><span>danh mục tự kiểm tra hằng ngày và lộ trình khắc phục ba mươi, sáu mươi, chín mươi ngày.</span></div>
+<div class="cap clip" id="cap48" data-start="160.76" data-duration="3.48"><span>Mọi khuyến nghị đều cụ thể, dễ làm, bám sát đúng những gì bạn đã trả lời.</span></div>
+<div class="cap clip" id="cap49" data-start="165.18" data-duration="3.51"><span>Khảo sát chỉ là khởi đầu. Khi xử lý xong từng hạng mục, bạn vào trang Theo dõi khắc phục,</span></div>
+<div class="cap clip" id="cap50" data-start="168.64" data-duration="1.72"><span>tích chọn những việc đã làm và lưu tiến độ.</span></div>
+<div class="cap clip" id="cap51" data-start="170.31" data-duration="1.73"><span>Hệ thống tính lại mức nguy cơ ngay lập tức,</span></div>
+<div class="cap clip" id="cap52" data-start="171.99" data-duration="3.12"><span>và cơ quan Cảnh sát phòng cháy chữa cháy nắm được tình hình để hỗ trợ kịp thời.</span></div>
+<div class="cap clip" id="cap53" data-start="175.06" data-duration="3.32"><span>Nếu bạn khảo sát không cần tài khoản, hãy lưu lại mã theo dõi hiện ngay sau khi gửi,</span></div>
+<div class="cap clip" id="cap54" data-start="178.33" data-duration="2.03"><span>để quay lại bảng theo dõi trên bất kỳ thiết bị nào.</span></div>
+<div class="cap clip" id="cap55" data-start="181.28" data-duration="4.09"><span>Phần thứ hai: trợ lý ảo, người hướng dẫn luôn sẵn sàng hai mươi bốn trên bảy.</span></div>
+<div class="cap clip" id="cap56" data-start="185.32" data-duration="2.51"><span>Không cần chờ giờ hành chính, không cần đi lại,</span></div>
+<div class="cap clip" id="cap57" data-start="187.78" data-duration="2.56"><span>bạn chỉ cần gõ câu hỏi bằng ngôn ngữ đời thường.</span></div>
+<div class="cap clip" id="cap58" data-start="190.29" data-duration="3.15"><span>Cần chuẩn bị hồ sơ gì, trình tự ra sao, bao lâu có kết quả,</span></div>
+<div class="cap clip" id="cap59" data-start="193.39" data-duration="4.39"><span>cơ sở của mình phải trang bị những gì, trợ lý ảo trả lời thẳng vào vấn đề, rõ ràng,</span></div>
+<div class="cap clip" id="cap60" data-start="197.73" data-duration="1.26"><span>từng bước, dễ làm theo.</span></div>
+<div class="cap clip" id="cap61" data-start="199.93" data-duration="2.62"><span>Sức mạnh của trợ lý ảo nằm ở nguồn tri thức phía sau.</span></div>
+<div class="cap clip" id="cap62" data-start="202.5" data-duration="4.17"><span>Hệ thống đối chiếu câu hỏi của bạn với kho văn bản pháp luật về phòng cháy chữa cháy:</span></div>
+<div class="cap clip" id="cap63" data-start="206.62" data-duration="4.32"><span>luật, nghị định, quy chuẩn kỹ thuật, tài liệu tập huấn và hàng trăm câu hỏi đáp thực tế.</span></div>
+<div class="cap clip" id="cap64" data-start="210.89" data-duration="5.09"><span>Khi quy định vừa thay đổi, trợ lý còn tra cứu thêm thông tin mới để trả lời theo đúng văn bản hiện hành.</span></div>
+<div class="cap clip" id="cap65" data-start="215.93" data-duration="2.82"><span>Trợ lý nhớ nội dung bạn vừa hỏi để trả lời tiếp mạch lạc,</span></div>
+<div class="cap clip" id="cap66" data-start="218.7" data-duration="1.94"><span>hiểu tình hình cơ sở để tư vấn sát hơn,</span></div>
+<div class="cap clip" id="cap67" data-start="220.59" data-duration="2.91"><span>nêu rõ căn cứ pháp lý và gợi ý sẵn những câu hỏi tiếp theo.</span></div>
+<div class="cap clip" id="cap68" data-start="223.45" data-duration="3.83"><span>Một người hướng dẫn pháp luật phòng cháy chữa cháy, ngay trong túi áo của bạn.</span></div>
+<div class="cap clip" id="cap69" data-start="228.2" data-duration="1.22"><span>Phần thứ ba: học liệu số.</span></div>
+<div class="cap clip" id="cap70" data-start="229.37" data-duration="4.04"><span>Chỉ một chạm, hệ thống đưa bạn đến thư viện khóa học phòng cháy chữa cháy trực tuyến,</span></div>
+<div class="cap clip" id="cap71" data-start="233.36" data-duration="4.12"><span>nơi bạn học theo nhịp của riêng mình ngay trên điện thoại và đăng nhập nhanh bằng Zalo.</span></div>
+<div class="cap clip" id="cap72" data-start="237.43" data-duration="1.6"><span>Các học phần chia thành hai nhóm:</span></div>
+<div class="cap clip" id="cap73" data-start="238.98" data-duration="3.71"><span>kiến thức nền tảng và kỹ năng sống còn, rồi kiến thức chuyên sâu và cộng đồng.</span></div>
+<div class="cap clip" id="cap74" data-start="242.64" data-duration="3.37"><span>Bạn có thể học cách thoát nạn khi cháy ở nhà ống, sử dụng điện an toàn,</span></div>
+<div class="cap clip" id="cap75" data-start="245.96" data-duration="3.2"><span>dùng bình chữa cháy xách tay, sơ cứu người ngừng hô hấp, tuần hoàn,</span></div>
+<div class="cap clip" id="cap76" data-start="249.11" data-duration="4.17"><span>hay phòng ngừa đuối nước. Nội dung phù hợp với cả gia đình, học sinh và các tổ liên gia.</span></div>
+<div class="cap clip" id="cap77" data-start="254.2" data-duration="2.74"><span>Cuối cùng là phần thư giãn: trò chơi phòng cháy chữa cháy.</span></div>
+<div class="cap clip" id="cap78" data-start="256.89" data-duration="1.91"><span>Ba trò chơi ngắn, mỗi lượt chỉ vài phút:</span></div>
+<div class="cap clip" id="cap79" data-start="258.75" data-duration="4.75"><span>thoát khỏi đám cháy, đố vui kiến thức và tìm nguy cơ cháy nổ qua hình ảnh do trí tuệ nhân tạo tạo ra.</span></div>
+<div class="cap clip" id="cap80" data-start="263.45" data-duration="1.95"><span>Vừa chơi vừa nhớ những kỹ năng cần thiết.</span></div>
+<div class="cap clip" id="cap81" data-start="266.34" data-duration="3.95"><span>Khảo sát để thấy rõ nguy cơ, hỏi để làm đúng, học để biết cách ứng phó, chơi để nhớ lâu.</span></div>
+<div class="cap clip" id="cap82" data-start="270.24" data-duration="3.25"><span>Tất cả trong Hệ thống FRAS-AI, đồng hành cùng người dân và doanh nghiệp,</span></div>
+<div class="cap clip" id="cap83" data-start="273.44" data-duration="2.71"><span>vì một cộng đồng an toàn. Truy cập fras-ai.com ngay hôm nay.</span></div>
+<audio id="vo" src="assets/am_thanh.m4a" data-start="0" data-duration="276.1" data-track-index="9" data-volume="1"></audio>
+</div>
+<script>
+const T = [[0.0, 10.6], [11.58, 26.57], [27.56, 45.81], [46.79, 63.81], [64.78, 84.77], [85.76, 106.66], [107.66, 123.51], [124.5, 134.04], [135.03, 148.64], [149.64, 164.19], [165.18, 180.31], [181.28, 198.94], [199.93, 227.23], [228.2, 253.23], [254.2, 265.35], [266.34, 276.1]];
+const TOTAL = 276.1;
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({ paused: true });
+
+tl.fromTo('#progress', { width: '0%' }, { width: '100%', duration: TOTAL, ease: 'none' }, 0);
+
+document.querySelectorAll('.scene').forEach((sc, i) => {
+  const a = T[i][0], b = T[i][1];
+  const nxt = i < T.length - 1 ? T[i + 1][0] : TOTAL;
+  const span = b - a;
+  tl.fromTo(sc, { opacity: 0 }, { opacity: 1, duration: 0.5, ease: 'power1.out' }, a);
+  if (i < T.length - 1) tl.to(sc, { opacity: 0, duration: 0.45, ease: 'power1.in' }, nxt - 0.5);
+
+  // các phần tử hiện lần lượt, rải đều trong nửa đầu cảnh (hoặc theo mốc "late", "later")
+  const els = [...sc.querySelectorAll('[data-a]')].filter(e => !e.dataset.a || e.dataset.a === '' || e.dataset.a === 'fade');
+  const step = Math.min(0.7, (span * 0.5) / Math.max(1, els.length));
+  els.forEach((el, k) => {
+    const fadeOnly = el.dataset.a === 'fade';
+    tl.fromTo(el, fadeOnly ? { opacity: 0 } : { opacity: 0, y: 34 },
+      fadeOnly ? { opacity: 1, duration: 0.8 } : { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }, a + 0.35 + k * step);
+  });
+  sc.querySelectorAll('[data-a="late"],[data-a="later"]').forEach(el => {
+    const at = a + span * (el.dataset.a === 'late' ? 0.4 : 0.62);
+    tl.fromTo(el, { opacity: 0, y: 34 }, { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }, at);
+  });
+
+  // điện thoại trượt vào, đổi ảnh dần theo thời gian của cảnh
+  sc.querySelectorAll('.phone').forEach(ph => {
+    tl.fromTo(ph, { x: 140, opacity: 0 }, { x: 0, opacity: 1, duration: 0.9, ease: 'power3.out' }, a + 0.2);
+    const shots = [...ph.querySelectorAll('.shot')];
+    shots.forEach((im, j) => {
+      if (j === 0) return;
+      const at = a + (span + 1.5) * j / shots.length;
+      tl.to(shots[j - 1], { opacity: 0, duration: 0.5 }, at);
+      tl.to(im, { opacity: 1, duration: 0.5 }, at);
+    });
+  });
+});
+
+// cảnh 1: khói bốc lên
+document.querySelectorAll('#s1 .smoke').forEach((s, k) => {
+  tl.fromTo(s, { y: 0, opacity: 0, scale: 0.6 }, { y: -170, opacity: 0.85, scale: 1.8, duration: 3.2, ease: 'power1.out', repeat: 2 }, 0.8 + k * 0.7);
+});
+tl.fromTo('#s1 .win', { opacity: 0.4 }, { opacity: 1, duration: 1.2, repeat: 4, yoyo: true }, 0.5);
+// cảnh 8: vòng xoay rồi dấu tích
+tl.fromTo('#s8 .spin', { rotation: 0 }, { rotation: 720, duration: 2.6, ease: 'none' }, T[7][0] + (T[7][1] - T[7][0]) * 0.4);
+// cảnh 11: thanh nguy cơ giảm dần khi tích việc đã làm
+tl.fromTo('#s11 .fill', { width: '92%' }, { width: '28%', duration: 4, ease: 'power2.inOut' }, T[10][0] + 3.2);
+
+// phụ đề
+document.querySelectorAll('.cap').forEach(c => {
+  const s = parseFloat(c.dataset.start), d = parseFloat(c.dataset.duration);
+  tl.fromTo(c, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.22 }, s);
+  tl.to(c, { opacity: 0, duration: 0.15 }, s + d - 0.15);
+});
+
+window.__timelines['main'] = tl;
+tl.seek(0);
+
+</script></body></html>

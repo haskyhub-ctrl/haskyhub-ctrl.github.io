@@ -1,0 +1,47 @@
+{
+ "voice": "vi-VN-NamMinhNeural",
+ "rate": "-6%",
+ "pitch": "-3Hz",
+ "scenes": [
+  {
+   "id": "s1",
+   "display": "Nếu ngay lúc này nhà bạn bốc khói, bạn sẽ làm gì trong những phút đầu tiên? Câu trả lời nằm ở những điều bạn đã học và đã luyện tập từ trước. Và giờ đây, tất cả đã nằm gọn trong chiếc điện thoại của bạn.",
+   "spoken": "Nếu ngay lúc này nhà bạn bốc khói, bạn sẽ làm gì trong những phút đầu tiên? Câu trả lời nằm ở những điều bạn đã học và đã luyện tập từ trước. Và giờ đây, tất cả đã nằm gọn trong chiếc điện thoại của bạn."
+  },
+  {
+   "id": "s2",
+   "display": "Hệ thống Phờ rát, ây ai không chỉ giúp cơ sở khảo sát, đánh giá nguy cơ. Đây còn là một không gian học tập và hỗ trợ trọn vẹn về phòng cháy, chữa cháy và cứu nạn, cứu hộ, gồm ba phần: trò chơi tương tác, học liệu số và trợ lý ảo giải đáp pháp luật.",
+   "spoken": "Hệ thống Phờ rát, ây ai không chỉ giúp cơ sở khảo sát, đánh giá nguy cơ. Đây còn là một không gian học tập và hỗ trợ trọn vẹn về phòng cháy, chữa cháy và cứu nạn, cứu hộ, gồm ba phần: trò chơi tương tác, học liệu số và trợ lý ảo giải đáp pháp luật."
+  },
+  {
+   "id": "s3",
+   "display": "Phần thứ nhất: trò chơi phòng cháy chữa cháy. Học mà chơi, chơi mà học, mỗi lượt chỉ từ hai đến năm phút. Trò chơi Thoát khỏi đám cháy đưa bạn vào một ngôi nhà đang cháy: thu thập bình chữa cháy, khăn ướt, tránh khói và tìm cho ra lối thoát nạn an toàn. Mỗi lựa chọn của bạn đều là một bài học về cách xử lý khi gặp cháy.",
+   "spoken": "Phần thứ nhất: trò chơi phòng cháy chữa cháy. Học mà chơi, chơi mà học, mỗi lượt chỉ từ hai đến năm phút. Trò chơi Thoát khỏi đám cháy đưa bạn vào một ngôi nhà đang cháy: thu thập bình chữa cháy, khăn ướt, tránh khói và tìm cho ra lối thoát nạn an toàn. Mỗi lựa chọn của bạn đều là một bài học về cách xử lý khi gặp cháy."
+  },
+  {
+   "id": "s4",
+   "display": "Trò chơi Đố vui kiến thức phòng cháy chữa cháy thi đua với thời gian, rèn phản xạ và giúp bạn nhớ số điện thoại báo cháy một một bốn. Còn trò chơi Tìm nguy cơ cháy nổ cho bạn quan sát những tình huống do trí tuệ nhân tạo tạo ra, để phát hiện ổ cắm quá tải, lối thoát nạn bị chắn và nhiều nguy cơ tiềm ẩn khác, đúng những điều cần để tự kiểm tra ngôi nhà của mình.",
+   "spoken": "Trò chơi Đố vui kiến thức phòng cháy chữa cháy thi đua với thời gian, rèn phản xạ và giúp bạn nhớ số điện thoại báo cháy một một bốn. Còn trò chơi Tìm nguy cơ cháy nổ cho bạn quan sát những tình huống do trí tuệ nhân tạo tạo ra, để phát hiện ổ cắm quá tải, lối thoát nạn bị chắn và nhiều nguy cơ tiềm ẩn khác, đúng những điều cần để tự kiểm tra ngôi nhà của mình."
+  },
+  {
+   "id": "s5",
+   "display": "Phần thứ hai: học liệu số. Chỉ một chạm, hệ thống đưa bạn đến thư viện khóa học phòng cháy chữa cháy trực tuyến, nơi bạn học theo nhịp của riêng mình ngay trên điện thoại và đăng nhập nhanh bằng Zalo. Các học phần chia thành hai nhóm: kiến thức nền tảng và kỹ năng sống còn, rồi kiến thức chuyên sâu và cộng đồng. Bạn có thể học cách thoát nạn khi cháy ở nhà ống, sử dụng điện an toàn, dùng bình chữa cháy xách tay, sơ cứu người ngừng hô hấp, tuần hoàn, hay phòng ngừa đuối nước. Nội dung phù hợp với cả gia đình, học sinh và các tổ liên gia. Mỗi người học thêm một chút, cả cộng đồng sẽ an toàn hơn rất nhiều.",
+   "spoken": "Phần thứ hai: học liệu số. Chỉ một chạm, hệ thống đưa bạn đến thư viện khóa học phòng cháy chữa cháy trực tuyến, nơi bạn học theo nhịp của riêng mình ngay trên điện thoại và đăng nhập nhanh bằng Zalo. Các học phần chia thành hai nhóm: kiến thức nền tảng và kỹ năng sống còn, rồi kiến thức chuyên sâu và cộng đồng. Bạn có thể học cách thoát nạn khi cháy ở nhà ống, sử dụng điện an toàn, dùng bình chữa cháy xách tay, sơ cứu người ngừng hô hấp, tuần hoàn, hay phòng ngừa đuối nước. Nội dung phù hợp với cả gia đình, học sinh và các tổ liên gia. Mỗi người học thêm một chút, cả cộng đồng sẽ an toàn hơn rất nhiều."
+  },
+  {
+   "id": "s6",
+   "display": "Phần thứ ba: trợ lý ảo, người hướng dẫn luôn sẵn sàng hai mươi bốn trên bảy. Không cần chờ giờ hành chính, không cần đi lại, bạn chỉ cần gõ câu hỏi bằng ngôn ngữ đời thường. Cần chuẩn bị hồ sơ gì, trình tự ra sao, bao lâu có kết quả, cơ sở của mình phải trang bị những gì, trợ lý ảo trả lời thẳng vào vấn đề, rõ ràng, từng bước, dễ làm theo.",
+   "spoken": "Phần thứ ba: trợ lý ảo, người hướng dẫn luôn sẵn sàng hai mươi bốn trên bảy. Không cần chờ giờ hành chính, không cần đi lại, bạn chỉ cần gõ câu hỏi bằng ngôn ngữ đời thường. Cần chuẩn bị hồ sơ gì, trình tự ra sao, bao lâu có kết quả, cơ sở của mình phải trang bị những gì, trợ lý ảo trả lời thẳng vào vấn đề, rõ ràng, từng bước, dễ làm theo."
+  },
+  {
+   "id": "s7",
+   "display": "Sức mạnh của trợ lý ảo nằm ở nguồn tri thức phía sau. Hệ thống đối chiếu câu hỏi của bạn với kho văn bản pháp luật về phòng cháy chữa cháy: luật, nghị định, quy chuẩn kỹ thuật, tài liệu tập huấn và hàng trăm câu hỏi đáp thực tế. Khi quy định vừa thay đổi, trợ lý còn tra cứu thêm thông tin mới để trả lời theo đúng văn bản hiện hành. Trợ lý nhớ nội dung bạn vừa hỏi để trả lời tiếp mạch lạc, hiểu tình hình cơ sở để tư vấn sát hơn, nêu rõ căn cứ pháp lý và gợi ý sẵn những câu hỏi tiếp theo. Một người hướng dẫn pháp luật phòng cháy chữa cháy, ngay trong túi áo của bạn.",
+   "spoken": "Sức mạnh của trợ lý ảo nằm ở nguồn tri thức phía sau. Hệ thống đối chiếu câu hỏi của bạn với kho văn bản pháp luật về phòng cháy chữa cháy: luật, nghị định, quy chuẩn kỹ thuật, tài liệu tập huấn và hàng trăm câu hỏi đáp thực tế. Khi quy định vừa thay đổi, trợ lý còn tra cứu thêm thông tin mới để trả lời theo đúng văn bản hiện hành. Trợ lý nhớ nội dung bạn vừa hỏi để trả lời tiếp mạch lạc, hiểu tình hình cơ sở để tư vấn sát hơn, nêu rõ căn cứ pháp lý và gợi ý sẵn những câu hỏi tiếp theo. Một người hướng dẫn pháp luật phòng cháy chữa cháy, ngay trong túi áo của bạn."
+  },
+  {
+   "id": "s8",
+   "display": "Chơi để nhớ, học để biết, hỏi để làm đúng, khảo sát để thấy rõ nguy cơ. Tất cả trong Hệ thống Phờ rát, ây ai, đồng hành cùng người dân và doanh nghiệp, vì một cộng đồng an toàn. Truy cập phờ rát gạch ây ai chấm com ngay hôm nay.",
+   "spoken": "Chơi để nhớ, học để biết, hỏi để làm đúng, khảo sát để thấy rõ nguy cơ. Tất cả trong Hệ thống Phờ rát, ây ai, đồng hành cùng người dân và doanh nghiệp, vì một cộng đồng an toàn. Truy cập phờ rát gạch ây ai chấm com ngay hôm nay."
+  }
+ ]
+}

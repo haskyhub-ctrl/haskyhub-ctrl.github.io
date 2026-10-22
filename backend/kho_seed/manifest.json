@@ -1021,5 +1021,16 @@
     "source": "https://congan.ninhbinh.gov.vn (Hướng dẫn sử dụng phần mềm khai báo cơ sở dữ liệu PCCC và CNCH)",
     "seed_rev": 1,
     "weight": 1.5
+  },
+  "qd29_2025_ubnd": {
+    "title": "Quyết định 29/2025/QĐ-UBND của UBND tỉnh Bắc Ninh về phân công, phân cấp quản lý đầu tư xây dựng và kiểm tra PCCC",
+    "tier": 1,
+    "status": "active",
+    "effective_date": "03/10/2025",
+    "note": "Điều 22: Phân cấp UBND cấp xã kiểm tra PCCC cơ sở cấp III trở xuống (Phụ lục II NĐ 105/2025); phân công Sở Xây dựng kiểm tra PCCC",
+    "group": "law",
+    "source": "UBND tỉnh Bắc Ninh",
+    "seed_rev": 1,
+    "weight": 1.5
   }
 }

@@ -1,0 +1,47 @@
+Cảnh 1
+Nếu ngay lúc này nhà bạn bốc khói, bạn sẽ làm gì trong những phút đầu tiên? Câu trả lời nằm ở những điều bạn đã biết và đã chuẩn bị từ trước. Và bây giờ, việc chuẩn bị ấy chỉ cần vài chục phút, ngay trên chiếc điện thoại của bạn.
+
+Cảnh 2
+Công an thành phố Bắc Ninh giới thiệu Hệ thống Phờ rát, ây ai: ứng dụng trí tuệ nhân tạo trong khảo sát, đánh giá, cảnh báo và tự khắc phục nguy cơ cháy, nổ. Trong video này, chúng ta sẽ cùng đi qua bốn phần: khảo sát nguy cơ từng bước, trợ lý ảo giải đáp pháp luật, học liệu số và trò chơi phòng cháy chữa cháy.
+
+Cảnh 3
+Bắt đầu với phần quan trọng nhất: khảo sát nguy cơ. Đây là bài tự kiểm tra giúp bạn nhìn thấy những điểm chưa an toàn trong ngôi nhà, cửa hàng hay nhà xưởng của mình, trước khi sự cố xảy ra. Bước một: mở trình duyệt trên điện thoại, truy cập phờ rát gạch ây ai chấm com, rồi bấm nút Bắt đầu khảo sát. Không cần cài đặt bất cứ phần mềm nào.
+
+Cảnh 4
+Bước hai: chọn đối tượng. Nếu là cơ sở thuộc diện quản lý về phòng cháy chữa cháy, bạn chọn mục thứ nhất, nhập mã cơ sở mười ba chữ số và mật khẩu do cơ quan Công an cung cấp. Nếu là hộ gia đình, nhà ở riêng lẻ hoặc cửa hàng nhỏ, bạn chọn mục thứ hai và vào khảo sát ngay, không cần tạo tài khoản.
+
+Cảnh 5
+Bước ba: khai thông tin cơ sở. Bạn nhập tên công trình, chọn địa chỉ, và quan trọng nhất là chọn đúng loại hình hoạt động. Nhà ở kết hợp kinh doanh, nhà hàng khách sạn, kho hàng, trường học, cửa hàng xăng dầu, mỗi loại hình sẽ có bộ câu hỏi riêng. Nếu cơ sở hoạt động kết hợp, bạn có thể chọn nhiều loại hình cùng lúc. Bạn cũng có thể bấm lấy vị trí hiện tại, để hệ thống xác định khoảng cách tới trụ nước chữa cháy gần nhất. Bước này không bắt buộc.
+
+Cảnh 6
+Bước bốn: trả lời các câu hỏi, chia thành từng nhóm. Nhóm đầu tiên là hệ thống điện, nơi xảy ra nhiều vụ cháy nhất. Tiếp theo là nguồn lửa, nguồn nhiệt, lối thoát nạn và trang bị chữa cháy, máy móc thiết bị, các yếu tố tự nhiên, phương tiện giao thông, và cuối cùng là nhóm câu hỏi đặc thù theo đúng loại hình của bạn. Với mỗi câu, bạn chỉ cần chọn một trong bốn đáp án mô tả mức độ, từ an toàn đến cần lưu ý, đáp án nào sát với thực tế nhất.
+
+Cảnh 7
+Có ba điều cần nhớ khi trả lời. Thứ nhất, hãy trả lời đúng thực tế, vì đây là công cụ giúp chính bạn, không phải bài kiểm tra. Thứ hai, bạn có thể bấm Quay lại để sửa bất cứ lúc nào, hệ thống tự động lưu nháp nên không lo mất dữ liệu nếu bị gián đoạn. Thứ ba, toàn bộ bài khảo sát chỉ mất khoảng mười đến mười lăm phút.
+
+Cảnh 8
+Bước năm: kiểm tra lại và gửi. Hệ thống hiển thị tóm tắt thông tin cơ sở và kết quả từng nhóm câu hỏi. Bạn xem lại một lượt, rồi bấm Gửi đánh giá. Chỉ sau ít phút, kết quả sẽ hiện ra.
+
+Cảnh 9
+Trang kết quả cho bạn biết ngay tỷ lệ và mức nguy cơ: thấp, trung bình, cao hoặc rất cao, cùng điểm số của từng nhóm và biểu đồ trực quan. Chỉ cần một nguy cơ đặc biệt ở bất kỳ nhóm nào, mức chung sẽ được nâng lên để bạn không chủ quan. Bạn có thể xuất file PDF hoặc in biên bản để lưu hồ sơ.
+
+Cảnh 10
+Ngay bên dưới, trí tuệ nhân tạo đọc kết quả và đưa ra nhận định tổng quan, những điểm bạn đang làm tốt, những việc cần xử lý trước kèm thời hạn cụ thể, danh mục tự kiểm tra hằng ngày và lộ trình khắc phục ba mươi, sáu mươi, chín mươi ngày. Mọi khuyến nghị đều cụ thể, dễ làm, bám sát đúng những gì bạn đã trả lời.
+
+Cảnh 11
+Khảo sát chỉ là khởi đầu. Khi xử lý xong từng hạng mục, bạn vào trang Theo dõi khắc phục, tích chọn những việc đã làm và lưu tiến độ. Hệ thống tính lại mức nguy cơ ngay lập tức, và cơ quan Cảnh sát phòng cháy chữa cháy nắm được tình hình để hỗ trợ kịp thời. Nếu bạn khảo sát không cần tài khoản, hãy lưu lại mã theo dõi hiện ngay sau khi gửi, để quay lại bảng theo dõi trên bất kỳ thiết bị nào.
+
+Cảnh 12
+Phần thứ hai: trợ lý ảo, người hướng dẫn luôn sẵn sàng hai mươi bốn trên bảy. Không cần chờ giờ hành chính, không cần đi lại, bạn chỉ cần gõ câu hỏi bằng ngôn ngữ đời thường. Cần chuẩn bị hồ sơ gì, trình tự ra sao, bao lâu có kết quả, cơ sở của mình phải trang bị những gì, trợ lý ảo trả lời thẳng vào vấn đề, rõ ràng, từng bước, dễ làm theo.
+
+Cảnh 13
+Sức mạnh của trợ lý ảo nằm ở nguồn tri thức phía sau. Hệ thống đối chiếu câu hỏi của bạn với kho văn bản pháp luật về phòng cháy chữa cháy: luật, nghị định, quy chuẩn kỹ thuật, tài liệu tập huấn và hàng trăm câu hỏi đáp thực tế. Khi quy định vừa thay đổi, trợ lý còn tra cứu thêm thông tin mới để trả lời theo đúng văn bản hiện hành. Trợ lý nhớ nội dung bạn vừa hỏi để trả lời tiếp mạch lạc, hiểu tình hình cơ sở để tư vấn sát hơn, nêu rõ căn cứ pháp lý và gợi ý sẵn những câu hỏi tiếp theo. Một người hướng dẫn pháp luật phòng cháy chữa cháy, ngay trong túi áo của bạn.
+
+Cảnh 14
+Phần thứ ba: học liệu số. Chỉ một chạm, hệ thống đưa bạn đến thư viện khóa học phòng cháy chữa cháy trực tuyến, nơi bạn học theo nhịp của riêng mình ngay trên điện thoại và đăng nhập nhanh bằng Zalo. Các học phần chia thành hai nhóm: kiến thức nền tảng và kỹ năng sống còn, rồi kiến thức chuyên sâu và cộng đồng. Bạn có thể học cách thoát nạn khi cháy ở nhà ống, sử dụng điện an toàn, dùng bình chữa cháy xách tay, sơ cứu người ngừng hô hấp, tuần hoàn, hay phòng ngừa đuối nước. Nội dung phù hợp với cả gia đình, học sinh và các tổ liên gia.
+
+Cảnh 15
+Cuối cùng là phần thư giãn: trò chơi phòng cháy chữa cháy. Ba trò chơi ngắn, mỗi lượt chỉ vài phút: thoát khỏi đám cháy, đố vui kiến thức và tìm nguy cơ cháy nổ qua hình ảnh do trí tuệ nhân tạo tạo ra. Vừa chơi vừa nhớ những kỹ năng cần thiết.
+
+Cảnh 16
+Khảo sát để thấy rõ nguy cơ, hỏi để làm đúng, học để biết cách ứng phó, chơi để nhớ lâu. Tất cả trong Hệ thống Phờ rát, ây ai, đồng hành cùng người dân và doanh nghiệp, vì một cộng đồng an toàn. Truy cập phờ rát gạch ây ai chấm com ngay hôm nay.

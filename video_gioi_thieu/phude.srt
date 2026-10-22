@@ -1,0 +1,115 @@
+1
+00:00:00,500 --> 00:00:04,558
+Công an thành phố Bắc Ninh giới thiệu Hệ thống FRAS-AI:
+
+2
+00:00:04,558 --> 00:00:08,321
+ứng dụng trí tuệ nhân tạo trong khảo sát, đánh giá,
+
+3
+00:00:08,321 --> 00:00:11,419
+cảnh báo và tự khắc phục nguy cơ cháy, nổ.
+
+4
+00:00:11,970 --> 00:00:15,480
+Phần lớn nguy cơ cháy, nổ đã xuất hiện từ trước:
+
+5
+00:00:15,480 --> 00:00:19,649
+ổ cắm quá tải, dây điện xuống cấp, lối thoát nạn bị chắn,
+
+6
+00:00:19,649 --> 00:00:21,404
+bình gas đặt sai vị trí.
+
+7
+00:00:21,404 --> 00:00:25,865
+Phát hiện sớm và khắc phục kịp thời là chìa khóa của an toàn.
+
+8
+00:00:26,416 --> 00:00:29,449
+Người dân và cơ sở chỉ cần dùng điện thoại,
+
+9
+00:00:29,449 --> 00:00:32,906
+truy cập fras-ai.com, không cần cài đặt phần mềm.
+
+10
+00:00:32,906 --> 00:00:36,646
+Cơ sở thuộc diện quản lý đăng nhập bằng mã định danh;
+
+11
+00:00:36,646 --> 00:00:40,455
+hộ gia đình có thể khảo sát ngay, không cần tài khoản.
+
+12
+00:00:41,006 --> 00:00:45,006
+Hệ thống nạp bộ câu hỏi theo từng loại hình hoạt động.
+
+13
+00:00:45,006 --> 00:00:48,265
+Mỗi câu chỉ cần chọn đáp án sát với thực tế;
+
+14
+00:00:48,265 --> 00:00:50,414
+kết quả được tự động lưu lại.
+
+15
+00:00:50,963 --> 00:00:55,211
+Ngay sau khi gửi, hệ thống tính tỷ lệ và mức nguy cơ: thấp,
+
+16
+00:00:55,211 --> 00:00:57,299
+trung bình, cao hoặc rất cao.
+
+17
+00:00:57,299 --> 00:01:00,683
+Chỉ cần một nguy cơ đặc biệt ở bất kỳ nhóm nào,
+
+18
+00:01:00,683 --> 00:01:04,355
+mức chung sẽ được nâng lên để cơ sở không chủ quan.
+
+19
+00:01:04,906 --> 00:01:09,124
+Trí tuệ nhân tạo đọc kết quả, chỉ rõ việc cần làm trước,
+
+20
+00:01:09,124 --> 00:01:10,103
+kèm thời hạn,
+
+21
+00:01:10,103 --> 00:01:14,623
+danh mục tự kiểm tra hằng ngày và lộ trình khắc phục 30, 60,
+
+22
+00:01:14,623 --> 00:01:15,225
+90 ngày.
+
+23
+00:01:15,776 --> 00:01:19,043
+Cơ sở cập nhật tiến độ khắc phục ngay trên hệ thống;
+
+24
+00:01:19,043 --> 00:01:20,111
+mỗi lần cập nhật,
+
+25
+00:01:20,111 --> 00:01:26,207
+mức nguy cơ được tính lại và cơ quan Cảnh sát PCCC nắm bắt tình hình gần như theo thời gian thực.
+
+26
+00:01:26,207 --> 00:01:30,920
+Mã theo dõi giúp người dân quay lại bảng theo dõi trên bất kỳ thiết bị nào.
+
+27
+00:01:31,470 --> 00:01:35,639
+FRAS-AI: đồng hành cùng người dân và doanh nghiệp,
+
+28
+00:01:35,639 --> 00:01:39,225
+chủ động phòng ngừa, vì cuộc sống bình yên.
+
+29
+00:01:39,225 --> 00:01:43,061
+Truy cập fras-ai.com để khảo sát ngay hôm nay.

@@ -1,0 +1,301 @@
+{
+ "duration": 150.576,
+ "lead": 0.5,
+ "scenes": [
+  {
+   "id": "t1",
+   "start": 0.5,
+   "audio": 11.088,
+   "end": 12.138,
+   "subs": [
+    {
+     "start": 0.5,
+     "end": 4.025,
+     "text": "Công an thành phố Bắc Ninh giới thiệu Hệ thống FRAS-AI:"
+    },
+    {
+     "start": 4.025,
+     "end": 8.255,
+     "text": "ứng dụng trí tuệ nhân tạo giúp người dân và cơ sở phòng ngừa cháy,"
+    },
+    {
+     "start": 8.255,
+     "end": 11.588,
+     "text": "nổ ngay trên điện thoại, không cần cài đặt phần mềm."
+    }
+   ]
+  },
+  {
+   "id": "t2",
+   "start": 12.138,
+   "audio": 9.192,
+   "end": 21.88,
+   "subs": [
+    {
+     "start": 12.138,
+     "end": 16.0,
+     "text": "Hệ thống có năm chức năng chính: khảo sát nguy cơ,"
+    },
+    {
+     "start": 16.0,
+     "end": 17.854,
+     "text": "báo cháy 114, trợ lý ảo,"
+    },
+    {
+     "start": 17.854,
+     "end": 21.33,
+     "text": "học liệu số và trò chơi phòng cháy chữa cháy."
+    }
+   ]
+  },
+  {
+   "id": "t3",
+   "start": 21.88,
+   "audio": 14.208,
+   "end": 36.638,
+   "subs": [
+    {
+     "start": 21.88,
+     "end": 25.789,
+     "text": "Một: khảo sát nguy cơ. Bạn chọn loại hình hoạt động,"
+    },
+    {
+     "start": 25.789,
+     "end": 28.721,
+     "text": "rồi trả lời các câu hỏi theo từng nhóm,"
+    },
+    {
+     "start": 28.721,
+     "end": 32.029,
+     "text": "mỗi câu chỉ cần chọn đáp án sát với thực tế."
+    },
+    {
+     "start": 32.029,
+     "end": 36.088,
+     "text": "Hộ gia đình có thể khảo sát ngay, không cần tài khoản."
+    }
+   ]
+  },
+  {
+   "id": "t4",
+   "start": 36.638,
+   "audio": 13.752,
+   "end": 50.94,
+   "subs": [
+    {
+     "start": 36.638,
+     "end": 40.31,
+     "text": "Gửi xong, hệ thống cho biết ngay mức nguy cơ: thấp,"
+    },
+    {
+     "start": 40.31,
+     "end": 42.398,
+     "text": "trung bình, cao hoặc rất cao."
+    },
+    {
+     "start": 42.398,
+     "end": 45.494,
+     "text": "Trí tuệ nhân tạo chỉ rõ việc cần làm trước,"
+    },
+    {
+     "start": 45.494,
+     "end": 49.31,
+     "text": "kèm thời hạn và lộ trình khắc phục ba mươi, sáu mươi,"
+    },
+    {
+     "start": 49.31,
+     "end": 50.39,
+     "text": "chín mươi ngày."
+    }
+   ]
+  },
+  {
+   "id": "t5",
+   "start": 50.94,
+   "audio": 10.848,
+   "end": 62.338,
+   "subs": [
+    {
+     "start": 50.94,
+     "end": 52.153,
+     "text": "Làm xong việc nào,"
+    },
+    {
+     "start": 52.153,
+     "end": 55.387,
+     "text": "bạn tích việc đó trong trang Theo dõi khắc phục,"
+    },
+    {
+     "start": 55.387,
+     "end": 57.476,
+     "text": "mức nguy cơ được tính lại ngay."
+    },
+    {
+     "start": 57.476,
+     "end": 61.788,
+     "text": "Mã theo dõi giúp bạn quay lại bảng này trên bất kỳ thiết bị nào."
+    }
+   ]
+  },
+  {
+   "id": "t6",
+   "start": 62.338,
+   "audio": 16.632,
+   "end": 79.52,
+   "subs": [
+    {
+     "start": 62.338,
+     "end": 67.65,
+     "text": "Hai: báo cháy 114. Nút Báo cháy 114 luôn nằm ở đầu trang chủ."
+    },
+    {
+     "start": 67.65,
+     "end": 71.83,
+     "text": "Khi có cháy, bạn nhập địa điểm, bấm định vị GPS,"
+    },
+    {
+     "start": 71.83,
+     "end": 75.922,
+     "text": "chọn loại hình và mức độ, để lại số điện thoại,"
+    },
+    {
+     "start": 75.922,
+     "end": 78.97,
+     "text": "và có thể đính kèm ảnh hiện trường."
+    }
+   ]
+  },
+  {
+   "id": "t7",
+   "start": 79.52,
+   "audio": 18.864,
+   "end": 98.934,
+   "subs": [
+    {
+     "start": 79.52,
+     "end": 83.337,
+     "text": "Bấm gửi, tin báo được chuyển tới lực lượng trực ban,"
+    },
+    {
+     "start": 83.337,
+     "end": 85.539,
+     "text": "kèm vị trí nếu bạn đã định vị."
+    },
+    {
+     "start": 85.539,
+     "end": 89.356,
+     "text": "Cán bộ sẽ gọi lại số điện thoại của bạn để xác minh."
+    },
+    {
+     "start": 89.356,
+     "end": 92.952,
+     "text": "Bạn cũng có thể bấm gọi thẳng 114 bất cứ lúc nào."
+    },
+    {
+     "start": 92.952,
+     "end": 95.081,
+     "text": "Hãy chỉ báo khi có cháy thật,"
+    },
+    {
+     "start": 95.081,
+     "end": 98.384,
+     "text": "để lực lượng kịp thời đến nơi cần thiết nhất."
+    }
+   ]
+  },
+  {
+   "id": "t8",
+   "start": 98.934,
+   "audio": 17.04,
+   "end": 116.524,
+   "subs": [
+    {
+     "start": 98.934,
+     "end": 102.537,
+     "text": "Ba: trợ lý ảo Chi, hỗ trợ hai mươi bốn trên bảy."
+    },
+    {
+     "start": 102.537,
+     "end": 106.441,
+     "text": "Bạn hỏi bằng ngôn ngữ đời thường về hồ sơ, trình tự,"
+    },
+    {
+     "start": 106.441,
+     "end": 109.518,
+     "text": "điều kiện an toàn; Chi trả lời từng bước,"
+    },
+    {
+     "start": 109.518,
+     "end": 113.422,
+     "text": "kèm căn cứ từ Luật Phòng cháy, chữa cháy và Cứu nạn,"
+    },
+    {
+     "start": 113.422,
+     "end": 115.974,
+     "text": "cứu hộ cùng các văn bản hướng dẫn."
+    }
+   ]
+  },
+  {
+   "id": "t9",
+   "start": 116.524,
+   "audio": 15.864,
+   "end": 132.938,
+   "subs": [
+    {
+     "start": 116.524,
+     "end": 117.879,
+     "text": "Bốn: học liệu số,"
+    },
+    {
+     "start": 117.879,
+     "end": 122.583,
+     "text": "với thư viện khóa học phòng cháy chữa cháy trực tuyến. Năm:"
+    },
+    {
+     "start": 122.583,
+     "end": 125.612,
+     "text": "ba trò chơi ngắn, thoát khỏi đám cháy,"
+    },
+    {
+     "start": 125.612,
+     "end": 129.199,
+     "text": "đố vui kiến thức và tìm nguy cơ qua hình ảnh."
+    },
+    {
+     "start": 129.199,
+     "end": 132.388,
+     "text": "Vừa học vừa chơi, mỗi lượt chỉ vài phút."
+    }
+   ]
+  },
+  {
+   "id": "t10",
+   "start": 132.938,
+   "audio": 17.088,
+   "end": 150.576,
+   "subs": [
+    {
+     "start": 132.938,
+     "end": 136.707,
+     "text": "Khảo sát để thấy rõ nguy cơ, hỏi để làm đúng,"
+    },
+    {
+     "start": 136.707,
+     "end": 140.896,
+     "text": "học để biết cách ứng phó, và báo cháy 114 khi cần."
+    },
+    {
+     "start": 140.896,
+     "end": 145.0,
+     "text": "FRAS-AI đồng hành cùng người dân và doanh nghiệp,"
+    },
+    {
+     "start": 145.0,
+     "end": 150.026,
+     "text": "vì một cộng đồng an toàn. Truy cập fras-ai.com ngay hôm nay."
+    }
+   ]
+  }
+ ]
+}
