@@ -248,7 +248,11 @@
         
         .fras-steps { list-style: none; counter-reset: step; margin: 6px 0 10px; padding: 0; }
         .fras-steps li { counter-increment: step; position: relative; padding: 5px 0 5px 34px; margin: 0 0 4px; font-size: 0.81rem; line-height: 1.55; }
-        .fras-steps li::before { content: counter(step); position: absolute; left: 0; top: 4px; width: 22px; height: 22px; background: #1A3A6B; color: #fff; font-weight: 700; font-size: 0.75rem; text-align: center; line-height: 22px; }
+        .fras-steps li::before { content: attr(data-n); position: absolute; left: 0; top: 4px; min-width: 30px; height: 22px; padding: 0 4px; box-sizing: border-box; background: #1A3A6B; color: #fff; font-weight: 700; font-size: 0.72rem; text-align: center; line-height: 22px; }
+        .fras-steps li { padding-left: 42px !important; font-weight: 600; color: #0f2347; }
+        .fras-alpha { list-style: none; margin: 2px 0 8px; padding: 0; }
+        .fras-alpha li { position: relative; padding: 2px 0 2px 26px; margin: 0 0 3px; }
+        .fras-alpha li::before { content: attr(data-n); position: absolute; left: 4px; top: 2px; font-weight: 700; color: #C0202A; }
         
         .fras-rich ul { margin: 6px 0 10px; padding-left: 18px; font-size: 0.81rem; line-height: 1.6; }
         .fras-rich ul li { margin: 0 0 5px; }
@@ -678,7 +682,8 @@
             const lines = String(raw).replace(/\r/g, '').split('\n');
             const out = [];
             let list = null;                       // 'ol' hoặc 'ul' đang mở
-            const closeList = () => { if (list) { out.push(`</${list}>`); list = null; } };
+            let sec = '', sub = 0;                 // số mục lớn hiện tại và bộ đếm mục con (3.1, 3.2...)
+            const closeList = () => { if (list) { out.push(list === 'ol' ? '</ol>' : '</ul>'); list = null; } };
             for (let i = 0; i < lines.length; i++) {
                 const line = lines[i];
                 if (!line.trim()) { closeList(); continue; }
@@ -688,6 +693,7 @@
                     closeList();
                     const rawHead = m[1].trim();
                     const numMatch = rawHead.match(/^(\d+)[\.\:\-]\s*(.*)$/);
+                    sec = numMatch ? numMatch[1] : ''; sub = 0;
                     if (numMatch) {
                         out.push(`<div class="fras-h"><span class="fras-h-num">${numMatch[1]}</span><span class="fras-h-title">${inline(numMatch[2])}</span></div>`);
                     } else {
@@ -711,7 +717,15 @@
                 }
                 if ((m = line.match(/^\s*(\d+)[.)]\s+(.*)$/))) {
                     if (list !== 'ol') { closeList(); out.push('<ol class="fras-steps">'); list = 'ol'; }
-                    out.push(`<li>${inline(m[2])}</li>`);
+                    sub++;
+                    const label = sec ? `${sec}.${sub}` : String(sub);
+                    const body = m[2].replace(/^(\*\*)?Bước\s*\d+\s*[:.\-–]\s*/i, '$1');
+                    out.push(`<li data-n="${label}">${inline(body)}</li>`);
+                    continue;
+                }
+                if ((m = line.match(/^\s*([a-zđ])[.)]\s+(.*)$/))) {
+                    if (list !== 'al') { closeList(); out.push('<ul class="fras-alpha">'); list = 'al'; }
+                    out.push(`<li data-n="${m[1]})">${inline(m[2])}</li>`);
                     continue;
                 }
                 if ((m = line.match(/^\s*[-*•]\s+(.*)$/))) {
