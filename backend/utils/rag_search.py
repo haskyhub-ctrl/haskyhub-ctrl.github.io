@@ -96,6 +96,33 @@ QUY ĐỊNH PHÁP LUẬT PCCC MỚI NHẤT (NĂM 2026) - ƯU TIÊN ÁP DỤNG TU
    - PHÂN CÔNG CƠ QUAN CHUYÊN MÔN VỀ XÂY DỰNG CẤP TỈNH (Sở Xây dựng, Sở NN&MT, Sở Công thương...): Tổ chức kiểm tra về PCCC đối với các cơ sở quy định tại Phụ lục II Nghị định số 105/2025/NĐ-CP từ cấp II trở lên (Điều 22 khoản 1).
    - PHÂN CÔNG KIỂM TRA CÔNG TÁC NGHIỆM THU XÂY DỰNG: Sở Xây dựng, Sở NN&MT, Sở Công thương kiểm tra công trình chuyên ngành; Ban Quản lý các KCN tỉnh kiểm tra công trình trong KCN; UBND cấp xã kiểm tra công trình vốn đầu tư công cấp xã quyết định đầu tư quy mô cấp III trở xuống (Điều 19).
 
+1f. VỀ CƠ SỞ KINH DOANH DỊCH VỤ LƯU TRÚ (NHÀ NGHỈ, KHÁCH SẠN) VÀ HỒ SƠ CẤP GIẤY CHỨNG NHẬN ĐỦ ĐIỀU KIỆN AN NINH TRẬT TỰ (ANTT):
+   - Căn cứ pháp lý:
+     + Luật PCCC 55/2024/QH15, Nghị định 105/2025/NĐ-CP (sửa đổi, bổ sung bởi Nghị định 347/2026/NĐ-CP).
+     + TCVN 3890:2023, QCVN 06:2022/BXD (kèm Sửa đổi 1:2023).
+     + Nghị định số 96/2016/NĐ-CP và Nghị định số 56/2023/NĐ-CP về điều kiện an ninh, trật tự đối với một số ngành, nghề đầu tư kinh doanh có điều kiện.
+     + Quyết định số 29/2025/QĐ-UBND ngày 22/9/2025 của UBND tỉnh Bắc Ninh.
+   - PHÂN LOẠI & THẨM DUYỆT THIẾT KẾ PCCC:
+     + Nhà nghỉ, khách sạn có từ 5 tầng trở lên HOẶC có khối tích từ 1.500 m3 trở lên (ví dụ: nhà 5 tầng, 57 phòng ngủ) thuộc Phụ lục II Nghị định 105/2025/NĐ-CP (Cơ sở có nguy hiểm về cháy, nổ do Công an quản lý) và BẮT BUỘC thuộc diện PHẢI THẨM DUYỆT THIẾT KẾ VỀ PCCC trước khi thi công hoặc chuyển đổi mục đích sử dụng.
+   - NỘI DUNG PCCC CƠ SỞ CẦN ĐÁP ỨNG:
+     + Giải pháp thoát nạn: Tối thiểu 02 lối thoát nạn an toàn từ các tầng (thang bộ buồng thang kín hoặc thang sắt hở ngoài trời loại 3); hành lang, cầu thang thoát nạn thông thoáng, không cản trở; cửa phòng ngủ và cửa thang thoát hiểm là cửa chống cháy tự động đóng; không hàn chuồng cọp bịt kín ban công/tum.
+     + Hệ thống báo cháy tự động: Bắt buộc trang bị hệ thống báo cháy tự động (tủ trung tâm báo cháy, đầu báo cháy khói tự động bố trí tại tất cả 57 phòng ngủ, phòng chứa đồ, hành lang; chuông, đèn còi báo cháy, nút ấn báo cháy khẩn cấp).
+     + Hệ thống cấp nước chữa cháy: Trang bị hệ thống họng nước chữa cháy trong nhà (vách tường), máy bơm chữa cháy và bể nước dự trữ theo TCVN 3890:2023.
+     + Phương tiện chữa cháy ban đầu: Bình bột chữa cháy ABC (MFZL4) và bình khí CO2 (MT3/MT5), bố trí tối thiểu 01 bình/50-75 m2 tại mỗi tầng, đặt nơi dễ thấy dễ lấy.
+     + Đèn chiếu sáng sự cố và biển chỉ dẫn thoát nạn (đèn Exit): Bố trí tại tất cả các lối ra, hành lang, cầu thang bộ.
+     + Tổ chức lực lượng và hồ sơ PCCC: Lập hồ sơ quản lý theo dõi PCCC; thành lập Đội PCCC cơ sở; tham gia huấn luyện nghiệp vụ định kỳ (5 năm/lần, bồi dưỡng hằng năm); xây dựng phương án chữa cháy và CNCH.
+     + Tự tổ chức nghiệm thu PCCC hoàn thành: Chủ cơ sở cùng các nhà thầu tự tổ chức nghiệm thu, lập biên bản và KHAI BÁO THÔNG TIN TRÊN HỆ THỐNG CƠ SỞ DỮ LIỆU VỀ PCCC trước khi đưa vào vận hành (theo NQ 66.18/2026/NQ-CP và NĐ 347/2026/NĐ-CP).
+     + Thẩm quyền kiểm tra tại Bắc Ninh: Công trình cấp III (dưới 7 tầng, diện tích sàn dưới 10.000 m2) được phân cấp cho UBND cấp xã (phối hợp Công an) tổ chức kiểm tra định kỳ (khoản 2 Điều 22 Quyết định 29/2025/QĐ-UBND).
+   - HỒ SƠ ĐỀ NGHỊ CẤP GIẤY CHỨNG NHẬN ĐỦ ĐIỀU KIỆN VỀ AN NINH TRẬT TỰ (ANTT):
+     + Cơ quan tiếp nhận và cấp: Đội Cảnh sát Quản lý hành chính về trật tự xã hội (QLHC về TTXH) - Công an cấp huyện / thị xã nơi cơ sở hoạt động (ví dụ: Công an thị xã Quế Võ).
+     + Thành phần hồ sơ gồm:
+       1. Văn bản đề nghị cấp Giấy chứng nhận đủ điều kiện về ANTT (Mẫu số 01 ban hành kèm theo Nghị định số 56/2023/NĐ-CP).
+       2. Bản sao Giấy chứng nhận đăng ký kinh doanh (Đăng ký Hộ kinh doanh cá thể hoặc Giấy chứng nhận đăng ký doanh nghiệp ngành nghề dịch vụ lưu trú/nhà nghỉ).
+       3. Bản sao các tài liệu chứng minh về điều kiện an toàn PCCC (Văn bản thẩm duyệt thiết kế PCCC, Biên bản tự nghiệm thu PCCC và Giấy xác nhận đã khai báo trên Hệ thống cơ sở dữ liệu PCCC).
+       4. Bản khai lý lịch của người chịu trách nhiệm về ANTT của cơ sở (Mẫu số 02 ban hành kèm theo Nghị định số 56/2023/NĐ-CP) kèm theo Phiếu lý lịch tư pháp số 2.
+       5. Phương án bảo đảm an ninh, trật tự của cơ sở kinh doanh dịch vụ lưu trú (Mẫu số 03).
+       6. Bản sao Giấy tờ pháp lý về địa điểm kinh doanh (Giấy chứng nhận quyền sử dụng đất, hợp đồng thuê địa điểm nếu có).
+
 2. CÁC VĂN BẢN HIỆN HÀNH CHÍNH:
    - Nghị định số 347/2026/NĐ-CP ngày 08/9/2026 của Chính phủ (hiệu lực 15/9/2026, sửa đổi NĐ 105/2025/NĐ-CP, bãi bỏ văn bản chấp thuận nghiệm thu PCCC)
    - Nghị quyết số 66.18/2026/NQ-CP ngày 18/5/2026 của Chính phủ (hiệu lực 01/07/2026, bãi bỏ thủ tục kiểm tra nghiệm thu PCCC)
@@ -289,19 +316,21 @@ def _call_9router(prompt: str, temperature: float = 0.15, max_tokens: int = 2048
         raise ValueError("ROUTER_API_KEY chưa được cấu hình")
 
     primary_model = os.getenv("ROUTER_MODEL", "ag/gemini-3.8-flash-low")
-    fallback_models = [
-        primary_model,
-        "ag/gemini-3.8-flash-low",
-        "ag/gemini-3.8-flash",
-        "ag/gemini-3.8-flash-medium",
-        "ag/gemini-3.8-flash-high",
-    ]
     if fast:
-        fallback_models = ["ag/gemini-3.8-flash-low", "ag/gemini-3.8-flash"] + fallback_models
-    models_to_try = []
-    for m in fallback_models:
-        if m not in models_to_try:
-            models_to_try.append(m)
+        models_to_try = [primary_model, "ag/gemini-3.8-flash-low", "ag/gemini-3.8-flash"]
+        models_to_try = list(dict.fromkeys(models_to_try))
+    else:
+        fallback_models = [
+            primary_model,
+            "ag/gemini-3.8-flash-low",
+            "ag/gemini-3.8-flash",
+            "ag/gemini-3.8-flash-medium",
+            "ag/gemini-3.8-flash-high",
+        ]
+        models_to_try = []
+        for m in fallback_models:
+            if m not in models_to_try:
+                models_to_try.append(m)
 
     headers = {
         "Authorization": f"Bearer {router_key}",
@@ -718,7 +747,7 @@ def ask_ai_chi(question: str, history_text: str = "", context: str = "") -> dict
             source_type = "docs"
 
         # ── Lớp 2: Tra cứu Internet ──────────────────────────────────
-        # Kích hoạt khi: kho không có kết quả, HOẶC câu hỏi về văn bản/thủ tục mới
+        # Kích hoạt khi: kho không có kết quả, HOẶC câu hỏi về văn bản pháp luật mới mà kho chưa có
         internet_context = ""
         internet_refs = []
         need_web_search = False
@@ -727,18 +756,23 @@ def ask_ai_chi(question: str, history_text: str = "", context: str = "") -> dict
             need_web_search = True
         else:
             combined = docs_context.lower()
-            doc_codes = re.findall(r'\b(?:\d{2,3}(?:[/\.]\d+)?)\b', question)
+            # Chỉ tra cứu khi nhắc đích danh tên văn bản quy phạm pháp luật cụ thể mà kho nội bộ chưa có
+            doc_codes = re.findall(r'(?:nghị\s*định|thông\s*tư|luật|quyết\s*định|nq)\s*(?:số\s*)?(\d{1,4}(?:[/\.]\d+)?(?:\b|[^\s,]+))', question, re.IGNORECASE)
             for code in doc_codes:
                 if code not in ("2024", "2025", "2026") and code.lower() not in combined:
                     need_web_search = True
                     break
-            reform_keywords = ["66.18", "347", "nghiệm thu", "bãi bỏ", "cải cách", "nộp ở đâu"]
+            reform_keywords = ["66.18", "347"]
             if any(kw in question.lower() for kw in reform_keywords) and "66.18" not in combined:
                 need_web_search = True
 
         if need_web_search:
-            _safe_print(f"[ask_ai_chi] Tra Internet cho: '{question[:40]}'")
-            web_results = search_internet(question, max_results=3)
+            # Làm sạch câu truy vấn (tối đa 8 từ khóa cốt lõi, không gửi cả đoạn văn dài có dữ liệu cá nhân vào máy tìm kiếm)
+            skip_words = {"nguyễn", "loan", "thủy", "thành", "dền", "đào", "viên", "quế", "võ", "thửa", "tờ", "bản", "đồ", "cccd", "địa", "chỉ", "diện", "tích"}
+            clean_words = [w for w in re.split(r'[\s,.;:()]+', question) if len(w) > 2 and not w.isdigit() and w.lower() not in skip_words][:8]
+            clean_search_query = " ".join(clean_words) if clean_words else question[:60]
+            _safe_print(f"[ask_ai_chi] Tra Internet cho: '{clean_search_query}'")
+            web_results = search_internet(clean_search_query, max_results=3)
             if web_results:
                 if not docs_context:
                     source_type = "web"
@@ -847,8 +881,8 @@ TRẢ VỀ JSON THUẦN (không dùng ```json):
         router_model = os.getenv("ROUTER_MODEL", "ag/gemini-3.8-flash-low")
         current_model = router_model if use_router and router_key else os.getenv("GEMINI_MODEL", "ag/gemini-3.8-flash-low")
         _safe_print(f"[ask_ai_chi] Gọi LLM (ưu tiên {current_model})...")
-        # Sử dụng mô hình flash tốc độ cao để đảm bảo phản hồi trong 3-6s
-        content = _call_llm(template, temperature=0.15, max_tokens=3000, is_json=True, fast=True, timeout=18.0)
+        # Sử dụng mô hình flash tốc độ cao để đảm bảo phản hồi trong 8-20s cho bài viết chi tiết
+        content = _call_llm(template, temperature=0.15, max_tokens=3200, is_json=True, fast=True, timeout=30.0)
         _safe_print(f"[ask_ai_chi] OK Got {len(content)} chars")
 
         # ── Parse JSON từ phản hồi ───────────────────────────────────

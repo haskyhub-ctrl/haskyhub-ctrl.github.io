@@ -455,11 +455,22 @@ async def ai_chat(
         from utils.kb_qa import find_approved
         hit = find_approved(db, data.message)
         if hit:
-            res = with_disclaimer({
-                "reply": hit.answer, "suggestions": [], "references": [], "source_type": "curated",
-            }, data.message)
-            _log_chat_history(data.message, hit.answer, source_type="curated", user_email=user_email_str, elapsed_seconds=_time.time() - t_start)
-            return res
+            # BƯỚC KIỂM TRA LẠI: Đảm bảo đáp án khớp thực tế với câu hỏi người dùng
+            q_lower = data.message.lower()
+            ans_lower = (hit.answer or "").lower()
+            mismatched = False
+            for entity in ["nhà nghỉ", "nha nghi", "khách sạn", "khach san", "karaoke", "vũ trường", "chung cư", "chung cu", "nhà trọ", "nha tro", "xăng dầu", "gas", "an ninh trật tự", "antt"]:
+                if entity in q_lower and entity not in ans_lower:
+                    mismatched = True
+                    break
+            if not mismatched:
+                res = with_disclaimer({
+                    "reply": hit.answer, "suggestions": [], "references": [], "source_type": "curated",
+                }, data.message)
+                _log_chat_history(data.message, hit.answer, source_type="curated", user_email=user_email_str, elapsed_seconds=_time.time() - t_start)
+                return res
+            else:
+                print(f"[AI Chat] Bỏ qua FAQ do không khớp thực thể câu hỏi: '{data.message[:50]}'")
     except Exception as e:
         print(f"[AI Chat] Lỗi tra đáp án chuẩn: {e}")
 
