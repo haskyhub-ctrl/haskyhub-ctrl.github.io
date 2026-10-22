@@ -136,7 +136,7 @@ def legal_chunks(text: str):
 def load_manifest() -> dict:
     """{tên tệp lưu: {title, tier, status, effective_date, note, original_name, uploaded_at, chars, chunks}}"""
     try:
-        with open(MANIFEST_PATH, "r", encoding="utf-8") as f:
+        with open(MANIFEST_PATH, "r", encoding="utf-8-sig") as f:
             data = json.load(f)
         return data if isinstance(data, dict) else {}
     except Exception:

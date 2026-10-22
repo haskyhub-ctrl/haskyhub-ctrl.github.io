@@ -404,8 +404,8 @@
         _appendWelcome() {
             const msgs = document.getElementById('fras-messages');
             this._addBubble('ai',
-                '>> Chào bạn, Chi là trợ lý ảo hỗ trợ giải đáp pháp luật và thủ tục hành chính về Phòng cháy chữa cháy và Cứu nạn cứu hộ của Công an TP Bắc Ninh.\n\n' +
-                '## Chi có thể giúp bạn\n' +
+                '>> Chào bạn, tôi là Trợ lý ảo hỗ trợ giải đáp pháp luật và thủ tục hành chính về Phòng cháy chữa cháy và Cứu nạn cứu hộ của Công an thành phố Bắc Ninh.\n\n' +
+                '## Tôi có thể giúp bạn\n' +
                 '• Quy định pháp luật: Luật PCCC và CNCH số 55/2024/QH15, các Nghị định, Thông tư hướng dẫn\n' +
                 '• Thủ tục hành chính: thẩm duyệt thiết kế, nghiệm thu, kiểm tra, cấp giấy chứng nhận, thời hạn giải quyết\n' +
                 '• Điều kiện an toàn PCCC theo từng loại hình cơ sở: nhà ở, chung cư, cơ sở kinh doanh, sản xuất, kho, trường học, bệnh viện...\n' +

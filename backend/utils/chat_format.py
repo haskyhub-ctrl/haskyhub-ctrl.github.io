@@ -7,12 +7,24 @@ import re
 
 
 def normalize_persona(text: str) -> str:
-    """Trợ lý xưng là Chi, gọi người dùng là bạn."""
+    """Trợ lý xưng là Tôi hoặc Trợ lý ảo, gọi người dùng là bạn. Tuyệt đối không xưng Chi."""
     t = text
     t = re.sub(r"(?<![\w])[Aa]nh\s*/\s*chị(?![\w])", "bạn", t)
     t = re.sub(r"(?<![\w])[Qq]uý khách(?![\w])", "bạn", t)
-    t = re.sub(r"(?<![\w])Tôi(?![\w])", "Chi", t)
-    t = re.sub(r"(?<![\w])tôi(?![\w])", "Chi", t)
+    # Loại bỏ triệt để việc tự xưng Chi
+    t = re.sub(r"(?<![\w])Chi xin thông tin(?![\w])", "Tôi xin thông tin", t, flags=re.I)
+    t = re.sub(r"(?<![\w])Chi xin(?![\w])", "Tôi xin", t, flags=re.I)
+    t = re.sub(r"(?<![\w])Chi có thể(?![\w])", "Tôi có thể", t, flags=re.I)
+    t = re.sub(r"(?<![\w])Chi chỉ hỗ trợ(?![\w])", "Tôi chỉ hỗ trợ", t, flags=re.I)
+    t = re.sub(r"(?<![\w])Chi đang(?![\w])", "Tôi đang", t, flags=re.I)
+    t = re.sub(r"(?<![\w])Chi khuyên(?![\w])", "Tôi khuyên", t, flags=re.I)
+    t = re.sub(r"(?<![\w])Chi hướng dẫn(?![\w])", "Tôi hướng dẫn", t, flags=re.I)
+    t = re.sub(r"(?<![\w])hỏi Chi(?![\w])", "hỏi tôi", t, flags=re.I)
+    t = re.sub(r"(?<![\w])cho Chi biết(?![\w])", "cho tôi biết", t, flags=re.I)
+    t = re.sub(r"(?<![\w])của Chi(?![\w])", "của Trợ lý ảo", t, flags=re.I)
+    t = re.sub(r"(?<![\w])tài liệu của Chi(?![\w])", "tài liệu của hệ thống", t, flags=re.I)
+    t = re.sub(r"(?<![\w])Chi chưa đủ căn cứ(?![\w])", "Hiện chưa đủ căn cứ", t, flags=re.I)
+    t = re.sub(r"(?<![\w])Chi\s+(?=(?:sẽ|đã|rất|muốn|khẳng định|nhận thấy))", "Tôi ", t, flags=re.I)
     return t
 
 

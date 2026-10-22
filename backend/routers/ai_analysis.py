@@ -535,7 +535,7 @@ def chat_feedback(data: ChatFeedback, db: Session = Depends(get_db)):
 
 
 def _finish_reply(result):
-    """Chuẩn hóa lần cuối: xưng Chi, gọi bạn, giữ ký hiệu trình bày."""
+    """Chuẩn hóa lần cuối: xưng Tôi/Trợ lý ảo, gọi bạn, giữ ký hiệu trình bày."""
     if isinstance(result, dict) and isinstance(result.get("reply"), str):
         from utils.chat_format import clean_reply
         result["reply"] = clean_reply(result["reply"])

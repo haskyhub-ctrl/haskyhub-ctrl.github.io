@@ -8,10 +8,10 @@ import re
 import unicodedata
 
 OUT_OF_SCOPE_REPLY = (
-    ">> Xin lỗi bạn, câu hỏi này nằm ngoài lĩnh vực mà Chi phụ trách." + chr(10) * 2 +
-    "Chi chỉ hỗ trợ các nội dung về phòng cháy, chữa cháy và cứu nạn, cứu hộ: quy định và thủ tục, "
+    ">> Xin lỗi bạn, câu hỏi này nằm ngoài phạm vi giải đáp của Trợ lý ảo." + chr(10) * 2 +
+    "Hệ thống chỉ hỗ trợ các nội dung về phòng cháy, chữa cháy và cứu nạn, cứu hộ: quy định và thủ tục, "
     "an toàn điện, lối thoát nạn, bình chữa cháy, cách xử lý khi có cháy, và cách dùng Hệ thống FRAS-AI. "
-    "Bạn có thể hỏi Chi về những nội dung này nhé."
+    "Bạn có thể đặt câu hỏi về những nội dung này nhé."
 )
 
 OUT_OF_SCOPE_SUGGESTIONS = [
