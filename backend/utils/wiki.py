@@ -18,6 +18,7 @@ TOPICS = [
     ("thuoc-dien-quan-ly", "Cơ sở thuộc diện quản lý về PCCC", "cơ sở thuộc diện quản lý về phòng cháy chữa cháy Phụ lục I Nghị định 105/2025 danh mục"),
     ("nguy-hiem-chay-no", "Cơ sở có nguy hiểm về cháy nổ (nhóm 1, nhóm 2)", "cơ sở có nguy hiểm về cháy nổ nhóm 1 nhóm 2 Phụ lục II Nghị định 105/2025"),
     ("tham-dinh-thiet-ke", "Thẩm định thiết kế PCCC: đối tượng, thẩm quyền, thủ tục", "thẩm định thiết kế về phòng cháy chữa cháy danh mục công trình thẩm quyền Phụ lục III Nghị định 347/2026"),
+    ("quy-trinh-cong-trinh-moi", "Trình tự PCCC với công trình xây mới, cải tạo: thiết kế, thẩm định, thi công, nghiệm thu, khai báo", "trình tự thiết kế thẩm định thiết kế thi công nghiệm thu khai báo cơ sở dữ liệu đưa vào hoạt động công trình xây mới cải tạo chưa thẩm định"),
     ("nghiem-thu", "Nghiệm thu PCCC theo quy định mới", "nghiệm thu phòng cháy chữa cháy bãi bỏ thủ tục chủ đầu tư tự nghiệm thu khai báo cơ sở dữ liệu"),
     ("phuc-hoi-hoat-dong", "Phục hồi hoạt động sau tạm đình chỉ, đình chỉ", "phục hồi hoạt động tạm đình chỉ đình chỉ hoạt động bãi bỏ thủ tục Nghị quyết 66.18"),
     ("kiem-tra-dinh-ky", "Kiểm tra định kỳ về PCCC: tần suất, nội dung, trình tự", "kiểm tra an toàn về phòng cháy chữa cháy định kỳ đột xuất tần suất nội dung biên bản"),
