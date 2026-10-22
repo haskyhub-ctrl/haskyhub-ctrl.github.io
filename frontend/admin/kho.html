@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 
 <head>
@@ -51,7 +51,7 @@
                     <span id="kho-status" class="tm-updated"></span>
                 </div>
             </div>
-            <p class="kho-intro">Trợ lý Chi chỉ trả lời dựa trên các tài liệu trong kho này. Tài liệu <strong>còn hiệu lực</strong> và thuộc tầng cao hơn được ưu tiên.
+            <p class="kho-intro">Trợ lý ảo chỉ trả lời dựa trên các tài liệu trong kho này. Tài liệu <strong>còn hiệu lực</strong> và thuộc tầng cao hơn được ưu tiên.
                 Câu hỏi mà Trợ lý chưa có căn cứ được gom ở mục <strong>Câu hỏi khó</strong> để cán bộ nhập đáp án chuẩn.</p>
 
             <div class="tm-tabs">
@@ -117,7 +117,7 @@
             <div id="kp-wiki" style="display:none;">
                 <div class="kho-box">
                     <h3>Wiki tri thức PCCC</h3>
-                    <p class="kho-intro" style="margin:0 0 8px;">Mỗi chủ đề là một <strong>trang tổng hợp</strong> do AI biên soạn từ kho tài liệu, có trích dẫn Điều, giúp Trợ lý Chi trả lời nhanh và đúng hơn so với tìm trong văn bản thô.
+                    <p class="kho-intro" style="margin:0 0 8px;">Mỗi chủ đề là một <strong>trang tổng hợp</strong> do AI biên soạn từ kho tài liệu, có trích dẫn Điều, giúp Trợ lý ảo trả lời nhanh và đúng hơn so với tìm trong văn bản thô.
                         Trang mới ở dạng <strong>nháp</strong>: bạn bấm <strong>Xem, sửa</strong> để rà soát, rồi <strong>Bật</strong> thì Trợ lý mới dùng. Nên biên soạn lại khi có văn bản mới.</p>
                     <div class="kho-form">
                         <button class="btn btn-primary btn-sm" onclick="KHO.genWiki()">✨ Biên soạn các chủ đề còn thiếu</button>
@@ -158,7 +158,7 @@
             <!-- Thử tra cứu -->
             <div id="kp-test" style="display:none;">
                 <div class="kho-box">
-                    <h3>Xem Trợ lý Chi sẽ lấy căn cứ nào</h3>
+                    <h3>Xem Trợ lý ảo sẽ lấy căn cứ nào</h3>
                     <div class="kho-form">
                         <label style="flex:1;">Câu hỏi thử<input type="text" id="kt-q" placeholder="VD: Nghiệm thu PCCC hiện nay nộp ở đâu?" onkeydown="if(event.key==='Enter')KHO.test()"></label>
                         <button class="btn btn-primary btn-sm" onclick="KHO.test()">Tra cứu</button>

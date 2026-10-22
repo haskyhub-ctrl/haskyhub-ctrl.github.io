@@ -263,7 +263,7 @@
                 const hits = await api.get('/admin/kho/test-search?q=' + encodeURIComponent(q));
                 box.innerHTML = hits.length ? hits.map(h => `
                     <div class="kt-hit"><small>${esc(h.tier)} · điểm ${h.score}</small><b>${esc(h.source)}</b><br>${esc(h.text)}...</div>`).join('')
-                    : '<p class="tm-empty">Không tìm thấy căn cứ nào trong kho cho câu hỏi này. Trợ lý Chi sẽ phải trả lời từ nguồn ngoài, nên nên bổ sung tài liệu hoặc đáp án chuẩn.</p>';
+                    : '<p class="tm-empty">Không tìm thấy căn cứ nào trong kho cho câu hỏi này. Trợ lý ảo sẽ phải trả lời từ nguồn ngoài, nên nên bổ sung tài liệu hoặc đáp án chuẩn.</p>';
             } catch (e) { box.innerHTML = `<p class="tm-empty">Lỗi: ${esc(e.message || e)}</p>`; }
         },
     };

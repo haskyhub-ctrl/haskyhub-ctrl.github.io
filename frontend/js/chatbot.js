@@ -443,11 +443,11 @@
                         <div class="fras-typing-dot"></div>
                         <div class="fras-typing-dot"></div>
                         <div class="fras-typing-dot"></div>
-                        <span class="fras-status-text" id="${typingId}-t">Chi đang tra cứu văn bản...</span>
+                        <span class="fras-status-text" id="${typingId}-t">Hệ thống đang tra cứu văn bản...</span>
                     </div>
                 </div>`;
             msgs.scrollTop = msgs.scrollHeight;
-            const stages = [[5000, 'Chi đang đối chiếu các quy định...'], [12000, 'Chi đang kiểm tra hiệu lực của căn cứ...'], [22000, 'Sắp xong rồi, Chi đang hoàn thiện câu trả lời...']];
+            const stages = [[5000, 'Hệ thống đang đối chiếu các quy định...'], [12000, 'Đang kiểm tra hiệu lực văn bản...'], [22000, 'Đang hoàn thiện câu trả lời...']];
             const timers = stages.map(([ms, txt]) => setTimeout(() => { const el = document.getElementById(typingId + '-t'); if (el) el.textContent = txt; }, ms));
 
             this.history.push({ role: 'user', content: msg });
@@ -615,7 +615,7 @@
             box.innerHTML = 'Câu trả lời này có giúp được bạn không? <button data-v="1">👍 Có</button> <button data-v="0">👎 Chưa</button>';
             box.querySelectorAll('button').forEach(b => b.addEventListener('click', async () => {
                 const helpful = b.dataset.v === '1';
-                box.textContent = helpful ? 'Cảm ơn bạn đã phản hồi.' : 'Cảm ơn bạn. Chi đã ghi lại để cán bộ bổ sung câu trả lời chuẩn.';
+                box.textContent = helpful ? 'Cảm ơn bạn đã phản hồi.' : 'Cảm ơn bạn. Hệ thống đã ghi nhận để cán bộ kiểm tra, bổ sung.';
                 try {
                     const baseUrl = localStorage.getItem('fras_api_url') || window.location.origin;
                     await fetch(`${baseUrl}/api/ai/chat/feedback`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ message: question, reply: reply.slice(0, 1500), helpful }) });
