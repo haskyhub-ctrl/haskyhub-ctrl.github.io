@@ -355,17 +355,19 @@ def _call_9router(prompt: str, temperature: float = 0.15, max_tokens: int = 2048
     if not router_key:
         raise ValueError("ROUTER_API_KEY chưa được cấu hình")
 
-    primary_model = os.getenv("ROUTER_MODEL", "ag/gemini-3.8-flash-low")
+    # Máy chủ từng đặt ROUTER_MODEL là bản "-high" (chậm, hay quá hạn 30 giây rồi mới chuyển bản nhanh, làm mỗi câu mất thêm 30 giây).
+    # Luôn thử bản nhanh trước; model cấu hình chỉ dùng làm phương án sau cùng.
+    primary_model = "ag/gemini-3.8-flash-low"
+    configured = os.getenv("ROUTER_MODEL", "")
     if fast:
-        models_to_try = [primary_model, "ag/gemini-3.8-flash-low", "ag/gemini-3.8-flash"]
+        models_to_try = [primary_model, "ag/gemini-3.8-flash"]
         models_to_try = list(dict.fromkeys(models_to_try))
     else:
         fallback_models = [
             primary_model,
-            "ag/gemini-3.8-flash-low",
             "ag/gemini-3.8-flash",
             "ag/gemini-3.8-flash-medium",
-            "ag/gemini-3.8-flash-high",
+            configured or "ag/gemini-3.8-flash-high",
         ]
         models_to_try = []
         for m in fallback_models:
