@@ -18,13 +18,46 @@
             this.loadDocs();
             this.loadQs();
             this.loadWatch();
-            this.loadWiki();
+            this.loadFaqAuditStatus();
         },
         tab(name) {
-            ['docs', 'qs', 'wiki', 'watch', 'test'].forEach(t => {
-                document.getElementById('kt-' + t).classList.toggle('active', t === name);
-                document.getElementById('kp-' + t).style.display = t === name ? '' : 'none';
+            ['docs', 'qs', 'logs', 'qa', 'watch', 'test'].forEach(t => {
+                const elT = document.getElementById('kt-' + t);
+                const elP = document.getElementById('kp-' + t);
+                if (elT) elT.classList.toggle('active', t === name);
+                if (elP) elP.style.display = t === name ? '' : 'none';
             });
+            if (name === 'logs') this.loadLogs();
+            if (name === 'qa') this.loadQaReports();
+        },
+
+        // ------------------------------------------------------------ báo cáo vòng lặp rà soát
+        async loadQaReports() {
+            const sel = document.getElementById('qa-select');
+            try {
+                const d = await api.get('/admin/kho/qa-reports');
+                if (!d.reports.length) { sel.innerHTML = ''; document.getElementById('qa-report').innerHTML = '<p>Chưa có báo cáo nào.</p>'; return; }
+                sel.innerHTML = d.reports.map(r => `<option value="${r.id}">${r.id.slice(6, 8)}/${r.id.slice(4, 6)}/${r.id.slice(0, 4)}</option>`).join('');
+                this.loadQaReport(d.reports[0].id);
+            } catch (e) { document.getElementById('qa-report').innerHTML = '<p>Không tải được báo cáo.</p>'; }
+        },
+        async loadQaReport(id) {
+            const box = document.getElementById('qa-report');
+            try {
+                const d = await api.get('/admin/kho/qa-reports/' + id);
+                const inline = (t) => esc(t).replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>').replace(/`([^`]+)`/g, '<code>$1</code>');
+                let html = '', inList = false;
+                for (const line of d.markdown.split(/\r?\n/)) {
+                    const li = line.match(/^\s*[-*]\s+(.*)$/);
+                    if (li) { if (!inList) { html += '<ul>'; inList = true; } html += '<li>' + inline(li[1]) + '</li>'; continue; }
+                    if (inList) { html += '</ul>'; inList = false; }
+                    const h = line.match(/^(#{1,3})\s+(.*)$/);
+                    if (h) html += h[1].length === 1 ? '<h1>' + inline(h[2]) + '</h1>' : '<h2>' + inline(h[2]) + '</h2>';
+                    else if (line.trim()) html += '<p>' + inline(line) + '</p>';
+                }
+                if (inList) html += '</ul>';
+                box.innerHTML = html;
+            } catch (e) { box.innerHTML = '<p>Không tải được báo cáo.</p>'; }
         },
 
         // ------------------------------------------------------------ tài liệu
@@ -98,6 +131,46 @@
         },
 
         // ------------------------------------------------------------ câu hỏi khó
+        
+        // ------------------------------------------------------------ faq audit 1 tuan/lan
+        async loadFaqAuditStatus() {
+            const el = document.getElementById('faq-audit-status');
+            if (!el) return;
+            try {
+                const rep = await api.get('/ai/faq/audit');
+                if (rep && rep.total_faqs) {
+                    el.innerHTML = `Tổng số: <b>${rep.total_faqs}</b> câu chuẩn | Đạt chuẩn: <b style="color:#16a34a;">${rep.valid_count}</b> | Căn cứ cũ: <b style="color:#dc2626;">${rep.outdated_count}</b> | Cần rà soát tuần này: <b>${rep.due_review_count}</b> | Rà soát gần nhất: <em>${rep.timestamp}</em>`;
+                } else {
+                    el.textContent = 'Chưa có dữ liệu rà soát định kỳ.';
+                }
+            } catch (e) {
+                el.textContent = 'Không tải được trạng thái rà soát.';
+            }
+        },
+        async runFaqAudit() {
+            const el = document.getElementById('faq-audit-status');
+            if (el) el.textContent = 'Đang quét toàn bộ 200 câu hỏi và kiểm tra hiệu lực căn cứ pháp lý...';
+            try {
+                const rep = await api.post('/ai/faq/run-audit');
+                alert(`Đã rà soát xong ${rep.total_faqs} câu hỏi!\n- Hợp lệ: ${rep.valid_count}\n- Chứa căn cứ cũ cần sửa: ${rep.outdated_count}\n- Quá 7 ngày cần rà soát: ${rep.due_review_count}`);
+                this.loadFaqAuditStatus();
+                this.loadQs();
+            } catch (e) {
+                alert('Lỗi rà soát: ' + (e.message || e));
+            }
+        },
+        async seedFaq200() {
+            if (!confirm('Bạn có chắc muốn đồng bộ và cập nhật lại 200 câu hỏi - đáp chuẩn PCCC 2026?')) return;
+            try {
+                const res = await api.post('/ai/faq/seed-200');
+                alert(`Đã nạp thành công ${res.added} câu mới và cập nhật ${res.updated} câu chuẩn!`);
+                this.loadFaqAuditStatus();
+                this.loadQs();
+            } catch (e) {
+                alert('Lỗi đồng bộ: ' + (e.message || e));
+            }
+        },
+
         loadQsDebounced: debounce(function () { KHO.loadQs(); }, 350),
         async loadQs() {
             const st = document.getElementById('kq-status').value;
@@ -174,6 +247,7 @@
                 msg(out, activate ? 'Đã lưu và bật dùng.' : 'Đã lưu.', 'ok');
                 this.loadDocs();
                 this.loadWiki();
+            this.loadFaqAuditStatus();
             } catch (e) { msg(out, e.message || String(e), 'err'); }
         },
 
@@ -254,6 +328,42 @@
         },
 
         // ------------------------------------------------------------ thử tra cứu
+
+        // ------------------------------------------------------------ nhat ky hoi dap
+        async loadLogs() {
+            const body = document.getElementById('kl-body');
+            try {
+                const logs = await api.get('/ai/chat/history-logs?limit=100');
+                if (!logs || !logs.length) {
+                    body.innerHTML = '<tr><td colspan="7" class="tm-empty">Chưa có lượt hỏi đáp nào được ghi nhận.</td></tr>';
+                    return;
+                }
+                body.innerHTML = logs.map(x => `
+                    <tr>
+                        <td style="font-size:0.75rem; color:#64748b; white-space:nowrap;">${esc(x.time)}</td>
+                        <td style="font-size:0.75rem;">${esc(x.user)}</td>
+                        <td style="font-weight:600; color:#0F2347;">${esc(x.question)}</td>
+                        <td style="font-size:0.78rem; line-height:1.45; max-height:120px; overflow-y:auto; display:block;">${esc(x.reply ? x.reply.slice(0, 300) + (x.reply.length > 300 ? '...' : '') : '(Không có nội dung)')}</td>
+                        <td><span class="fras-source-badge ${esc(x.source_type)}" style="font-size:0.7rem;">${esc(x.source_type)}</span></td>
+                        <td class="tm-num" style="font-size:0.75rem;">${x.elapsed_seconds ? x.elapsed_seconds + 's' : '-'}</td>
+                        <td>
+                            <button class="btn btn-secondary btn-sm" style="font-size:0.7rem; padding:3px 6px;" onclick="KHO.promoteToApproved('${encodeURIComponent(x.question)}', '${encodeURIComponent(x.reply)}')">Ghim chuẩn</button>
+                        </td>
+                    </tr>
+                `).join('');
+            } catch (e) {
+                body.innerHTML = '<tr><td colspan="7" class="tm-empty">Lỗi tải nhật ký: ' + esc(e.message || e) + '</td></tr>';
+            }
+        },
+        promoteToApproved(encQ, encA) {
+            const q = decodeURIComponent(encQ);
+            const a = decodeURIComponent(encA);
+            this.tab('qs');
+            document.getElementById('kq-new-q').value = q;
+            document.getElementById('kq-new-a').value = a;
+            document.getElementById('kq-new-q').scrollIntoView({ behavior: 'smooth' });
+        },
+
         async test() {
             const q = document.getElementById('kt-q').value.trim();
             const box = document.getElementById('kt-result');
@@ -263,7 +373,7 @@
                 const hits = await api.get('/admin/kho/test-search?q=' + encodeURIComponent(q));
                 box.innerHTML = hits.length ? hits.map(h => `
                     <div class="kt-hit"><small>${esc(h.tier)} · điểm ${h.score}</small><b>${esc(h.source)}</b><br>${esc(h.text)}...</div>`).join('')
-                    : '<p class="tm-empty">Không tìm thấy căn cứ nào trong kho cho câu hỏi này. Trợ lý Chi sẽ phải trả lời từ nguồn ngoài, nên nên bổ sung tài liệu hoặc đáp án chuẩn.</p>';
+                    : '<p class="tm-empty">Không tìm thấy căn cứ nào trong kho cho câu hỏi này. Trợ lý ảo sẽ phải trả lời từ nguồn ngoài, nên nên bổ sung tài liệu hoặc đáp án chuẩn.</p>';
             } catch (e) { box.innerHTML = `<p class="tm-empty">Lỗi: ${esc(e.message || e)}</p>`; }
         },
     };
