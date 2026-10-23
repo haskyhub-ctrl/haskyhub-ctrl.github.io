@@ -456,3 +456,31 @@ def wiki_generate(body: WikiGen, current_user: User = Depends(get_current_user))
 
     threading.Thread(target=job, daemon=True).start()
     return {"started": True, "message": f"Đã bắt đầu biên soạn {len(slugs)} trang, mỗi trang khoảng nửa phút."}
+
+
+# ------------------------------------------------------------------ báo cáo vòng lặp rà soát hằng tuần
+QA_REPORT_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "kho_seed", "qa_reports")
+
+
+@router.get("/qa-reports")
+def qa_reports(current_user: User = Depends(get_current_user)):
+    """Danh sách báo cáo các lần chạy vòng lặp hỏi đáp và rà soát (mới nhất trước)."""
+    _admin(current_user)
+    out = []
+    if os.path.isdir(QA_REPORT_DIR):
+        for fn in sorted(os.listdir(QA_REPORT_DIR), reverse=True):
+            if fn.endswith(".md") and fn[:-3].isdigit():
+                out.append({"id": fn[:-3], "size": os.path.getsize(os.path.join(QA_REPORT_DIR, fn))})
+    return {"reports": out}
+
+
+@router.get("/qa-reports/{rid}")
+def qa_report(rid: str, current_user: User = Depends(get_current_user)):
+    _admin(current_user)
+    if not rid.isdigit():
+        raise HTTPException(status_code=400, detail="Mã báo cáo không hợp lệ")
+    path = os.path.join(QA_REPORT_DIR, rid + ".md")
+    if not os.path.isfile(path):
+        raise HTTPException(status_code=404, detail="Không có báo cáo này")
+    with open(path, "r", encoding="utf-8") as f:
+        return {"id": rid, "markdown": f.read()}

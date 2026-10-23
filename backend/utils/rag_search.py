@@ -681,42 +681,13 @@ def search_chromadb(question: str) -> str:
     """Tra cứu kho tài liệu nội bộ (RAG). Trả về context string hoặc ''.
 
     Ưu tiên tra cứu cục bộ BM25 trên thư mục data_docs (utils/local_rag.py): không cần khóa Gemini, không gọi dịch vụ ngoài.
-    Chỉ khi không tìm được gì và có khóa Gemini mới thử thêm vector ChromaDB như trước.
+    Không dùng vector ChromaDB nữa.
     """
     from utils.local_rag import search_context
     local_ctx = search_context(question, k=4)
     if local_ctx:
         _safe_print("[RAG cục bộ] OK tìm thấy tài liệu liên quan trong kho")
         return local_ctx
-
-    if not os.path.exists(CHROMA_DB_DIR):
-        _safe_print(f"[ChromaDB] Dir not found: {CHROMA_DB_DIR}")
-        return ""
-
-    api_key = os.getenv("GEMINI_API_KEY") or GEMINI_API_KEY
-    if not api_key:
-        return ""
-
-    try:
-        # Import lazy để tránh lỗi khi chromadb/langchain chưa cài
-        from langchain_community.vectorstores import Chroma
-        from langchain_google_genai import GoogleGenerativeAIEmbeddings
-
-        embeddings = GoogleGenerativeAIEmbeddings(
-            model=os.getenv("GEMINI_EMBED_MODEL", GEMINI_EMBED_MODEL),
-            google_api_key=api_key,
-        )
-        vectorstore = Chroma(
-            persist_directory=CHROMA_DB_DIR,
-            embedding_function=embeddings,
-        )
-        docs = vectorstore.similarity_search(question, k=4)
-        if docs:
-            context = "\n\n".join([f"[Tai lieu noi bo]:\n{d.page_content}" for d in docs])
-            _safe_print(f"[ChromaDB] OK Found {len(docs)} chunks")
-            return context
-    except Exception as e:
-        _safe_print(f"[ChromaDB] ERROR: {e}")
 
     return ""
 

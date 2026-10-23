@@ -167,6 +167,8 @@ def _sources() -> list:
         p = os.path.join(KHO_DIR, fn)
         if meta.get("status") != "active" or not os.path.isfile(p):
             continue
+        if meta.get("from_wiki"):          # lớp Wiki đã tắt: tra cứu trực tiếp trong văn bản gốc
+            continue
         tier = meta.get("tier") if meta.get("tier") in TIER_WEIGHT else DEFAULT_TIER
         label = meta.get("title") or meta.get("original_name") or fn
         if meta.get("effective_date"):

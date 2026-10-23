@@ -18,17 +18,46 @@
             this.loadDocs();
             this.loadQs();
             this.loadWatch();
-            this.loadWiki();
             this.loadFaqAuditStatus();
         },
         tab(name) {
-            ['docs', 'qs', 'logs', 'wiki', 'watch', 'test'].forEach(t => {
+            ['docs', 'qs', 'logs', 'qa', 'watch', 'test'].forEach(t => {
                 const elT = document.getElementById('kt-' + t);
                 const elP = document.getElementById('kp-' + t);
                 if (elT) elT.classList.toggle('active', t === name);
                 if (elP) elP.style.display = t === name ? '' : 'none';
             });
             if (name === 'logs') this.loadLogs();
+            if (name === 'qa') this.loadQaReports();
+        },
+
+        // ------------------------------------------------------------ báo cáo vòng lặp rà soát
+        async loadQaReports() {
+            const sel = document.getElementById('qa-select');
+            try {
+                const d = await api.get('/admin/kho/qa-reports');
+                if (!d.reports.length) { sel.innerHTML = ''; document.getElementById('qa-report').innerHTML = '<p>Chưa có báo cáo nào.</p>'; return; }
+                sel.innerHTML = d.reports.map(r => `<option value="${r.id}">${r.id.slice(6, 8)}/${r.id.slice(4, 6)}/${r.id.slice(0, 4)}</option>`).join('');
+                this.loadQaReport(d.reports[0].id);
+            } catch (e) { document.getElementById('qa-report').innerHTML = '<p>Không tải được báo cáo.</p>'; }
+        },
+        async loadQaReport(id) {
+            const box = document.getElementById('qa-report');
+            try {
+                const d = await api.get('/admin/kho/qa-reports/' + id);
+                const inline = (t) => esc(t).replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>').replace(/`([^`]+)`/g, '<code>$1</code>');
+                let html = '', inList = false;
+                for (const line of d.markdown.split(/\r?\n/)) {
+                    const li = line.match(/^\s*[-*]\s+(.*)$/);
+                    if (li) { if (!inList) { html += '<ul>'; inList = true; } html += '<li>' + inline(li[1]) + '</li>'; continue; }
+                    if (inList) { html += '</ul>'; inList = false; }
+                    const h = line.match(/^(#{1,3})\s+(.*)$/);
+                    if (h) html += h[1].length === 1 ? '<h1>' + inline(h[2]) + '</h1>' : '<h2>' + inline(h[2]) + '</h2>';
+                    else if (line.trim()) html += '<p>' + inline(line) + '</p>';
+                }
+                if (inList) html += '</ul>';
+                box.innerHTML = html;
+            } catch (e) { box.innerHTML = '<p>Không tải được báo cáo.</p>'; }
         },
 
         // ------------------------------------------------------------ tài liệu
