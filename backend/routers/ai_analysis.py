@@ -542,7 +542,16 @@ Tỷ lệ nguy cơ: {adata['risk_percentage']}% ({adata['risk_level']}). Điểm
     # Try RAG Gemini
     try:
         import asyncio
-        result = await asyncio.to_thread(ask_ai_chi, question=data.message, history_text=history_text, context=context)
+        def _traced_ask(**kw):
+            import time as _t
+            from utils import rag_search as _rs
+            _rs.LLM_TRACE.items = []
+            _t0 = _t.time()
+            res = ask_ai_chi(**kw)
+            if isinstance(res, dict):
+                res["timing"] = {"ask_total": round(_t.time() - _t0, 1), "llm_attempts": list(_rs.LLM_TRACE.items)}
+            return res
+        result = await asyncio.to_thread(_traced_ask, question=data.message, history_text=history_text, context=context)
         # Bước cuối: thẩm định hiệu lực, đối chiếu văn bản hướng dẫn, thay nội dung đã hết hiệu lực
         unresolved = False
         elapsed = _time.time() - t_start

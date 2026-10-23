@@ -13,6 +13,7 @@ NOTE: Dùng httpx REST API trực tiếp thay LangChain để tránh
       lỗi model override (PERMISSION_DENIED với gemini-2.5-flash).
 """
 import os
+import time
 import json
 import httpx
 import subprocess
@@ -334,6 +335,16 @@ def _call_gemini_sync(prompt: str, temperature: float = 0.15, max_tokens: int = 
     raise ValueError(f"Gemini API tất cả model đều lỗi. Lỗi cuối: {last_error}")
 
 
+import threading as _threading
+LLM_TRACE = _threading.local()
+
+
+def _trace(model: str, secs: float, outcome: str) -> None:
+    if not hasattr(LLM_TRACE, "items"):
+        LLM_TRACE.items = []
+    LLM_TRACE.items.append({"model": model, "secs": round(secs, 1), "outcome": outcome})
+
+
 def _call_9router(prompt: str, temperature: float = 0.15, max_tokens: int = 2048, is_json: bool = False, fast: bool = False, timeout: float = 45.0) -> str:
     """
     Gọi 9Router OpenAI-compatible endpoint qua tài khoản Google Pro (moonshinemylove@gmail.com).
@@ -380,9 +391,11 @@ def _call_9router(prompt: str, temperature: float = 0.15, max_tokens: int = 2048
         if is_json:
             payload["response_format"] = {"type": "json_object"}
 
+        _t_model = time.time()
         try:
             with httpx.Client(timeout=timeout) as client:
                 resp = client.post(router_url, json=payload, headers=headers)
+            _trace(model_name, time.time() - _t_model, f"HTTP {resp.status_code}")
 
             if resp.status_code == 200:
                 raw_text = resp.text
@@ -418,6 +431,7 @@ def _call_9router(prompt: str, temperature: float = 0.15, max_tokens: int = 2048
             else:
                 break
         except httpx.TimeoutException:
+            _trace(model_name, time.time() - _t_model, "timeout")
             _safe_print(f"[9Router] TIMEOUT với model {model_name}, thử model tiếp theo...")
             last_error = f"Timeout ({model_name})"
             continue
