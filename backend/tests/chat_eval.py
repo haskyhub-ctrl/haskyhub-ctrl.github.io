@@ -34,6 +34,10 @@ CASES = [
     ("Chủ đầu tư tự nghiệm thu PCCC thì có phải xin giấy chấp thuận nghiệm thu của Cảnh sát PCCC không?", [["bãi bỏ", "không phải"]], [], "ok"),
     ("Chưa thẩm duyệt thiết kế PCCC mà đã thi công xong thì nghiệm thu được không, bị phạt thế nào?", [["thẩm duyệt"], ["phạt"]], [], "ok"),
     ("Giấy chứng nhận huấn luyện nghiệp vụ PCCC thẻ 5 năm còn cấp không?", [["bãi bỏ", "không còn", "không cấp"]], [], "ok"),
+    # Diện thẩm định thiết kế PCCC (Phụ lục III NĐ 105/2025, sửa đổi NĐ 347/2026): sai ở đây là lỗi nghiêm trọng
+    ("Tôi chuẩn bị thuê một nhà 5 tầng làm ngân hàng, tôi sẽ phải làm gì về PCCC để được đi vào hoạt động đúng quy định", [["3.000"], ["7 tầng"]], ["5.000 m3", "từ 5 tầng trở lên hoặc có tổng khối tích"], "ok"),
+    ("Nhà nghỉ 5 tầng 1 tum, 300 m2 sàn, 57 phòng ngủ có phải thẩm định thiết kế PCCC không?", [["không"], ["7 tầng"]], ["5.000 m3"], "ok"),
+    ("Tòa nhà văn phòng 7 tầng có phải thẩm định thiết kế PCCC không?", [["7 tầng"], ["thẩm định"]], [], "ok"),
     ("Giá vàng hôm nay bao nhiêu?", [["ngoài phạm vi"]], [], "scope"),
     ("Cách nấu phở bò ngon", [["ngoài phạm vi"]], [], "scope"),
 ]

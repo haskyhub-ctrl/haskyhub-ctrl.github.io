@@ -327,3 +327,30 @@ class LawCandidate(Base):
     hint = Column(String(300), nullable=True)
     reviewed_at = Column(DateTime, nullable=True)
     kho_doc_id = Column(String(120), nullable=True)
+
+
+class Feedback(Base):
+    """Hòm thư góp ý, phản ánh bất cập hoặc kiến nghị an toàn PCCC từ người dân/cơ sở."""
+    __tablename__ = "feedbacks"
+
+    id = Column(String(36), primary_key=True, default=generate_uuid)
+    feedback_code = Column(String(20), unique=True, nullable=False, index=True)  # Mã tra cứu: GY261026-ABCD
+    sender_name = Column(String(150), nullable=True)                              # Họ tên hoặc ẩn danh
+    phone = Column(String(20), nullable=True, index=True)
+    email = Column(String(200), nullable=True)
+    facility_name = Column(String(250), nullable=True)                          # Tên cơ sở / đơn vị
+    address = Column(String(300), nullable=True)                                # Phường/Xã, địa chỉ
+    category = Column(String(60), default="Góp ý chung", index=True)            # Phân loại góp ý
+    title = Column(String(300), nullable=False)                                 # Tiêu đề
+    content = Column(Text, nullable=False)                                      # Nội dung phản ánh
+    attachment_url = Column(String(500), nullable=True)                         # Link ảnh/tệp đính kèm
+    attachment_name = Column(String(255), nullable=True)                        # Tên gốc của tệp
+    status = Column(String(30), default="pending", index=True)                  # pending, processing, resolved, rejected
+    admin_response = Column(Text, nullable=True)                                # Phản hồi của cán bộ/BQT
+    responder_name = Column(String(100), nullable=True)                         # Tên cán bộ phản hồi
+    responded_at = Column(DateTime, nullable=True)                              # Thời gian phản hồi
+    ip_address = Column(String(60), nullable=True)
+    user_id = Column(String(36), nullable=True)                                 # ID user nếu đã đăng nhập
+    created_at = Column(DateTime, default=datetime.utcnow, index=True)
+    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+

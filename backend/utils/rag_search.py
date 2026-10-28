@@ -103,11 +103,10 @@ QUY ĐỊNH PHÁP LUẬT PCCC MỚI NHẤT (NĂM 2026) - ƯU TIÊN ÁP DỤNG TU
      + TCVN 3890:2023, QCVN 06:2022/BXD (kèm Sửa đổi 1:2023).
      + Nghị định số 96/2016/NĐ-CP và Nghị định số 56/2023/NĐ-CP về điều kiện an ninh, trật tự đối với một số ngành, nghề đầu tư kinh doanh có điều kiện.
      + Quyết định số 29/2025/QĐ-UBND ngày 22/9/2025 của UBND tỉnh Bắc Ninh.
-   - PHÂN LOẠI & THẨM DUYỆT THIẾT KẾ PCCC:
-     + Nhà nghỉ, khách sạn có từ 5 tầng trở lên HOẶC có khối tích từ 1.500 m3 trở lên (ví dụ: nhà 5 tầng, 57 phòng ngủ) thuộc Phụ lục II Nghị định 105/2025/NĐ-CP (Cơ sở có nguy hiểm về cháy, nổ do Công an quản lý) và BẮT BUỘC thuộc diện PHẢI THẨM DUYỆT THIẾT KẾ VỀ PCCC trước khi thi công hoặc chuyển đổi mục đích sử dụng.
+   - DIỆN THẨM ĐỊNH THIẾT KẾ PCCC (Phụ lục III NĐ 105/2025/NĐ-CP, sửa đổi bởi NĐ 347/2026/NĐ-CP, mục 7): khách sạn, nhà khách, nhà nghỉ và cơ sở lưu trú khác chỉ phải thẩm định thiết kế khi CAO TỪ 7 TẦNG TRỞ LÊN HOẶC có tổng diện tích sàn TỪ 3.000 m2 TRỞ LÊN. Nhà nghỉ 5 tầng dưới 3.000 m2 sàn KHÔNG thuộc diện thẩm định thiết kế (nhưng vẫn là cơ sở thuộc diện quản lý về PCCC và có yêu cầu trang bị, khai báo). Kết luận về diện thẩm định lấy theo "KẾT QUẢ ĐỐI CHIẾU TỰ ĐỘNG" trong câu lệnh, không tự suy ra.
    - NỘI DUNG PCCC CƠ SỞ CẦN ĐÁP ỨNG:
      + Giải pháp thoát nạn: Tối thiểu 02 lối thoát nạn an toàn từ các tầng (thang bộ buồng thang kín hoặc thang sắt hở ngoài trời loại 3); hành lang, cầu thang thoát nạn thông thoáng, không cản trở; cửa phòng ngủ và cửa thang thoát hiểm là cửa chống cháy tự động đóng; không hàn chuồng cọp bịt kín ban công/tum.
-     + Hệ thống báo cháy tự động: Bắt buộc trang bị hệ thống báo cháy tự động (tủ trung tâm báo cháy, đầu báo cháy khói tự động bố trí tại tất cả 57 phòng ngủ, phòng chứa đồ, hành lang; chuông, đèn còi báo cháy, nút ấn báo cháy khẩn cấp).
+     + Hệ thống báo cháy tự động: Bắt buộc trang bị hệ thống báo cháy tự động (tủ trung tâm báo cháy, đầu báo cháy khói tự động bố trí tại tất cả phòng ngủ, phòng chứa đồ, hành lang; chuông, đèn còi báo cháy, nút ấn báo cháy khẩn cấp).
      + Hệ thống cấp nước chữa cháy: Trang bị hệ thống họng nước chữa cháy trong nhà (vách tường), máy bơm chữa cháy và bể nước dự trữ theo TCVN 3890:2023.
      + Phương tiện chữa cháy ban đầu: Bình bột chữa cháy ABC (MFZL4) và bình khí CO2 (MT3/MT5), bố trí tối thiểu 01 bình/50-75 m2 tại mỗi tầng, đặt nơi dễ thấy dễ lấy.
      + Đèn chiếu sáng sự cố và biển chỉ dẫn thoát nạn (đèn Exit): Bố trí tại tất cả các lối ra, hành lang, cầu thang bộ.
@@ -817,6 +816,11 @@ def ask_ai_chi(question: str, history_text: str = "", context: str = "") -> dict
 
         # ── Build prompt ─────────────────────────────────────────────
         legal_refs_str = "\n".join(f"  - {r}" for r in CURRENT_LEGAL_REFS)
+        try:
+            from utils import tham_dinh as _td
+            _td_block = _td.facts_block(question) or (_td.facts_block(f"{history_text[-500:]} {question}") if history_text else "")
+        except Exception:
+            _td, _td_block = None, ""
 
         template = f"""Bạn là Trợ lý ảo hỗ trợ giải đáp pháp luật và thủ tục hành chính (TTHC) về PCCC, chuyên gia tư vấn pháp luật PCCC và an toàn cháy nổ tại Việt Nam (Công an thành phố Bắc Ninh).
 
@@ -832,6 +836,8 @@ NGỮ CẢNH CƠ SỞ (nếu có): {context}
 LỊCH SỬ HỘI THOẠI: {history_text}
 
 CÂU HỎI CỦA NGƯỜI DÙNG: {question}
+
+{_td_block}
 
 ═══ CÁC VĂN BẢN HIỆN HÀNH ═══
 {legal_refs_str}
@@ -910,6 +916,28 @@ TRẢ VỀ JSON THUẦN (không dùng ```json):
 
         # ── Parse JSON từ phản hồi ───────────────────────────────────
         result = _extract_json_block(content)
+        if result and isinstance(result, dict) and "reply" in result and _td is not None:
+            # Kiểm tra bằng quy tắc: kết luận về diện thẩm định thiết kế không được trái Phụ lục III
+            try:
+                _qs = f"{history_text[-500:]} {question}" if (history_text and not _td.evaluate(question)) else question
+                chk = _td.check_reply(_qs, result["reply"])
+                if not chk["ok"]:
+                    _safe_print(f"[tham_dinh] Phát hiện sai lệch: {chk['problem'][:120]}")
+                    fix_prompt = template + chr(10) * 2 + "LỖI CẦN SỬA NGAY (bản trả lời trước bị sai): " + chk["problem"] + chr(10) + "Hãy viết lại toàn bộ câu trả lời, dòng kết luận đầu tiên phải đúng kết quả đối chiếu tự động ở trên."
+                    content2 = _call_llm(fix_prompt, temperature=0.1, max_tokens=3200, is_json=True, fast=True, timeout=30.0)
+                    r2 = _extract_json_block(content2)
+                    if r2 and isinstance(r2, dict) and "reply" in r2 and _td.check_reply(_qs, r2["reply"])["ok"]:
+                        result = r2
+                    else:
+                        ev = _td.evaluate(_qs)
+                        concl = ">> " + ("Theo Phụ lục III Nghị định 105/2025/NĐ-CP (sửa đổi bởi Nghị định 347/2026/NĐ-CP), công trình này " +
+                                         ("THUỘC" if ev["verdict"] == "thuoc" else "KHÔNG thuộc") + " diện thẩm định thiết kế về PCCC: " + ev["why"] + ".")
+                        body = result["reply"]
+                        if body.lstrip().startswith(">>"):
+                            body = body.lstrip().split(chr(10), 1)[1] if chr(10) in body.lstrip() else ""
+                        result["reply"] = concl + chr(10) + body.lstrip()
+            except Exception as _e2:
+                _safe_print(f"[tham_dinh] Lỗi kiểm tra: {_e2}")
         if result and isinstance(result, dict) and "reply" in result:
             result["reply"] = _clean_chat_formatting(result["reply"])
             result["source_type"] = source_type

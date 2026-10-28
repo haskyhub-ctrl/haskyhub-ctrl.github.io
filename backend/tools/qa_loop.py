@@ -110,6 +110,13 @@ def cmd_apply(path):
             continue
         if not _valid_answer(ans):
             skipped += 1; continue
+        # Cổng kiểm tra bắt buộc: kết luận về diện thẩm định thiết kế không được trái Phụ lục III NĐ 105/2025 (sửa đổi NĐ 347/2026)
+        sys.path.insert(0, str(ROOT))
+        from utils.tham_dinh import check_reply
+        gate = check_reply(q, ans)
+        if not gate["ok"]:
+            print("BỊ CHẶN (sai diện thẩm định):", q[:80], "|", gate["problem"][:120])
+            skipped += 1; continue
         if q in by_q:
             if by_q[q]["answer"] != ans:
                 by_q[q]["answer"] = ans; fixed += 1

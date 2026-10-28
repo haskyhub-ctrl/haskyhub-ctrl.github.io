@@ -296,3 +296,57 @@ class UserRoleUpdate(BaseModel):
 
 class UserLockUpdate(BaseModel):
     is_locked: bool
+
+
+# ======================== FEEDBACK SCHEMAS ========================
+
+class FeedbackCreate(BaseModel):
+    sender_name: Optional[str] = None
+    phone: Optional[str] = None
+    email: Optional[str] = None
+    facility_name: Optional[str] = None
+    address: Optional[str] = None
+    category: Optional[str] = 'Góp ý chung'
+    title: str = Field(..., min_length=3, max_length=300)
+    content: str = Field(..., min_length=5)
+    attachment_url: Optional[str] = None
+    attachment_name: Optional[str] = None
+
+
+class FeedbackResponse(BaseModel):
+    id: str
+    feedback_code: str
+    sender_name: Optional[str] = None
+    phone: Optional[str] = None
+    email: Optional[str] = None
+    facility_name: Optional[str] = None
+    address: Optional[str] = None
+    category: str
+    title: str
+    content: str
+    attachment_url: Optional[str] = None
+    attachment_name: Optional[str] = None
+    status: str
+    admin_response: Optional[str] = None
+    responder_name: Optional[str] = None
+    responded_at: Optional[datetime] = None
+    created_at: Optional[datetime] = None
+    updated_at: Optional[datetime] = None
+
+    class Config:
+        from_attributes = True
+
+
+class FeedbackAdminUpdate(BaseModel):
+    status: str
+    admin_response: Optional[str] = None
+    responder_name: Optional[str] = None
+
+
+class FeedbackStats(BaseModel):
+    total: int
+    pending: int
+    processing: int
+    resolved: int
+    rejected: int
+    today: int
