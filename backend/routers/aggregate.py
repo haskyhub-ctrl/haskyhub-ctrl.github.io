@@ -1,7 +1,7 @@
 """
 Aggregate Analysis Router
 Provides locality-wide fire risk assessment reports for administrators.
-Includes AI-powered analysis from the perspective of Phòng Cảnh sát PCCC và CNCH Công an thành phố.
+Includes AI-powered analysis from the perspective of Phòng Cảnh sát PCCC và CNCH Công an tỉnh.
 """
 import os
 import json
@@ -214,18 +214,10 @@ def generate_aggregate_analysis(
             })
     high_risk_facilities.sort(key=lambda x: x["risk_percentage"])
 
-    # ===== 7. Map Points (Heatmap + Dots + thống kê theo xã phường) =====
-    from sqlalchemy import func
-    uids = list({a.user_id for a in assessments if a.user_id})
-    ward_of = {}
-    for i in range(0, len(uids), 900):
-        for uid, w in db.query(User.id, User.ward).filter(User.id.in_(uids[i:i + 900])).all():
-            ward_of[uid] = (w or "").strip()
+    # ===== 7. Map Points (Heatmap + Dots) =====
     map_points = []
-    wards = {}
     for a in assessments:
         if a.latitude and a.longitude:
-            ward = ward_of.get(a.user_id, "")
             map_points.append({
                 "lat": a.latitude,
                 "lng": a.longitude,
@@ -233,31 +225,8 @@ def generate_aggregate_analysis(
                 "risk_percentage": a.risk_percentage,
                 "facility_name": a.facility_name,
                 "facility_type": a.facility_type or "unknown",
-                "ward": ward,
                 "is_demo": getattr(a, "is_demo", False),
             })
-            if ward:
-                w = wards.setdefault(ward, {"ward": ward, "surveyed": 0, "sum_risk": 0.0, "high": 0, "lat": 0.0, "lng": 0.0})
-                w["surveyed"] += 1
-                w["sum_risk"] += a.risk_percentage or 0
-                w["high"] += 1 if a.risk_level in ("high", "critical") else 0
-                w["lat"] += a.latitude
-                w["lng"] += a.longitude
-    totals = dict(
-        db.query(User.ward, func.count(User.id)).filter(User.management_team.isnot(None)).group_by(User.ward).all()
-    )
-    ward_stats = []
-    for w in wards.values():
-        n = w["surveyed"]
-        total_fac = int(totals.get(w["ward"], 0)) or n
-        ward_stats.append({
-            "ward": w["ward"], "surveyed": n, "total_facilities": total_fac,
-            "coverage": round(n * 100.0 / total_fac, 1),
-            "avg_risk": round(w["sum_risk"] / n, 1),
-            "high": w["high"], "high_rate": round(w["high"] * 100.0 / n, 1),
-            "lat": round(w["lat"] / n, 6), "lng": round(w["lng"] / n, 6),
-        })
-    ward_stats.sort(key=lambda x: -x["high_rate"])
 
     # ===== 8. Generate Rule-Based Recommendations =====
     recommendations = _generate_aggregate_recommendations(
@@ -265,9 +234,10 @@ def generate_aggregate_analysis(
         facility_category_stats, category_stats
     )
 
-    # ===== 9. AI Analysis (Gemini) =====
+    # ===== 9. AI Analysis (9Router) =====
     ai_analysis = None
-    if (os.getenv("ROUTER_API_KEY") or os.getenv("GEMINI_API_KEY") or GEMINI_API_KEY) and total > 0:
+    has_llm = (os.getenv("ROUTER_API_KEY") or os.getenv("NINEROUTER_API_KEY")) or (GEMINI_API_KEY and not os.getenv("DISABLE_DIRECT_GEMINI", "false").lower() in ("true", "1", "yes"))
+    if has_llm and total > 0:
         ai_analysis = _generate_ai_aggregate_analysis(
             total, risk_counts, avg_risk, category_analysis, facility_distribution, high_risk_facilities
         )
@@ -289,13 +259,12 @@ def generate_aggregate_analysis(
         "recommendations": recommendations,
         "ai_analysis": ai_analysis,
         "map_points": map_points,
-        "ward_stats": ward_stats,
     }
 
 
 
 def _generate_ai_aggregate_analysis(total, risk_counts, avg_risk, category_analysis, facility_dist, high_risk):
-    """Gọi AI (9router) viết phân tích tổng hợp theo góc nhìn quản lý nhà nước về PCCC."""
+    """Call Gemini API to generate aggregate analysis from PCCC management perspective."""
     try:
         import httpx
 
@@ -303,7 +272,7 @@ def _generate_ai_aggregate_analysis(total, risk_counts, avg_risk, category_analy
         high_critical = risk_counts.get("high", 0) + risk_counts.get("critical", 0)
         high_critical_rate = (high_critical / total * 100) if total > 0 else 0
 
-        prompt = f"""Bạn là chuyên gia Phòng cháy chữa cháy và Cứu nạn cứu hộ (PCCC&CNCH), đang làm việc tại Phòng Cảnh sát PCCC và CNCH, Công an thành phố. 
+        prompt = f"""Bạn là chuyên gia Phòng cháy chữa cháy và Cứu nạn cứu hộ (PCCC&CNCH), đang làm việc tại Phòng Cảnh sát PCCC và CNCH, Công an tỉnh. 
 Hãy phân tích dữ liệu tổng hợp đánh giá nguy cơ cháy nổ dưới đây và đưa ra nhận định, phương hướng, giải pháp với góc nhìn quản lý nhà nước.
 
 ## DỮ LIỆU TỔNG HỢP:
@@ -351,13 +320,36 @@ Trả lời bằng JSON với format sau (tiếng Việt). LưU Ý:
   "kien_nghi": ["Các kiến nghị gửi cấp trên hoặc các ngành liên quan VỚI ĐƠN VỊ CỤ THỂ (2-3 items)"]
 }}"""
 
-        # Gọi AI qua 9router (có dự phòng Gemini trực tiếp nếu có khóa), dùng chung hàm của chatbot
-        from utils.rag_search import _call_llm, _extract_json_block
-        content = _call_llm(prompt, temperature=0.3, max_tokens=4096, is_json=True)
-        data = _extract_json_block(content)
-        if isinstance(data, dict) and data:
-            return data
-        return {"nhan_dinh_chung": (content or "").strip(), "source": "ai_raw"}
+        # Thử gọi 9Router nếu có cấu hình
+        router_url = (os.getenv("ROUTER_BASE_URL") or os.getenv("NINEROUTER_BASE_URL") or "http://127.0.0.1:20128/v1").rstrip("/")
+        router_key = os.getenv("ROUTER_API_KEY") or os.getenv("NINEROUTER_API_KEY") or ""
+        use_router = os.getenv("USE_9ROUTER", "true").lower() in ("true", "1", "yes")
+
+        if use_router and router_key:
+            headers = {"Authorization": f"Bearer {router_key}", "Content-Type": "application/json"}
+            for m in ["ag/gemini-3.8-flash-low", "ag/gemini-3.8-flash", "ag/gemini-3.8-flash-high"]:
+                payload = {
+                    "model": m,
+                    "messages": [{"role": "user", "content": prompt}],
+                    "temperature": 0.3,
+                    "stream": False
+                }
+                try:
+                    with httpx.Client(timeout=45.0) as client:
+                        resp = client.post(f"{router_url}/chat/completions", headers=headers, json=payload)
+                        if resp.status_code == 200:
+                            content = resp.json().get("choices", [{}])[0].get("message", {}).get("content", "")
+                            if "```json" in content:
+                                content = content.split("```json")[1].split("```")[0]
+                            elif "```" in content:
+                                content = content.split("```")[1].split("```")[0]
+                            return json.loads(content)
+                except Exception as ex:
+                    print(f"[AI aggregate 9Router] Model {m} error: {ex}")
+                    continue
+
+        # Direct Gemini API đã bị ngắt triệt để
+        return None
     except Exception as e:
         print(f"AI aggregate analysis error: {e}")
         return None
@@ -434,7 +426,7 @@ def _generate_aggregate_recommendations(total, risk_counts, avg_risk, worst_cats
                 ]
             })
 
-    # Facility type specific recommendations: WITH DETAILED CAUSE ANALYSIS
+    # Facility type specific recommendations — WITH DETAILED CAUSE ANALYSIS
     for ft, fd in facility_dist.items():
         if fd["high_risk_count"] > 0 and fd["count"] > 0:
             hr_rate = fd["high_risk_count"] / fd["count"] * 100

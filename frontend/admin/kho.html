@@ -35,6 +35,7 @@
             <ul class="sidebar-nav">
                 <li><a href="/admin/"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span> Tổng quan</a></li>
                 <li><a href="/admin/kho.html" class="active"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span> Kho tài liệu AI</a></li>
+                <li><a href="/admin/kho.html?tab=logs" onclick="if(window.location.pathname.includes('kho.html')){KHO.tab('logs');return false;}"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span> Nhật ký hỏi - đáp</a></li>
                 <li><a href="/admin/teams.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></span> Theo dõi theo đội</a></li>
                 <li><a href="/admin/users.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span> Người dùng</a></li>
                 <li><a href="/admin/questions.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span> Câu hỏi</a></li>
@@ -128,26 +129,48 @@
 
             <!-- Nhật ký hỏi - đáp -->
             <div id="kp-logs" style="display:none;">
-                <div class="kho-box">
-                    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
+                <div class="kho-box" style="margin-bottom:12px;">
+                    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
                         <div>
-                            <h3 style="margin:0 0 4px;">Nhật ký câu hỏi & câu trả lời của Trợ lý ảo</h3>
-                            <p class="kho-intro" style="margin:0;">Theo dõi toàn bộ các câu hỏi người dùng đặt ra và câu trả lời thực tế của AI để kịp thời rút kinh nghiệm, điều chỉnh tài liệu hoặc ghim đáp án chuẩn.</p>
+                            <h3 style="margin:0 0 4px; display:flex; align-items:center; gap:8px;">
+                                <span>📋 Nhật ký Hỏi - Đáp & Rà Soát Tính Đúng Đắn AI</span>
+                            </h3>
+                            <p class="kho-intro" style="margin:0;">Rà soát toàn bộ câu hỏi thực tế của người dân & câu trả lời của AI để xét tính chuẩn xác theo quy định pháp luật 2026 và trực tiếp hiệu chỉnh.</p>
                         </div>
-                        <button class="btn btn-secondary btn-sm" onclick="KHO.loadLogs()">🔄 Làm mới</button>
+                        <div style="display:flex; gap:12px; align-items:center; flex-wrap:wrap;">
+                            <label style="display:flex; align-items:center; gap:6px; font-size:0.83rem; font-weight:600; color:#0F2347; cursor:pointer; background:#F8FAFC; padding:5px 10px; border-radius:6px; border:1px solid #CBD5E1; user-select:none;">
+                                <input type="checkbox" id="chk-full-content" onchange="KHO.toggleFullContent(this.checked)" checked>
+                                <span>👁️ Hiển thị toàn văn nội dung</span>
+                            </label>
+                            <button class="btn btn-secondary btn-sm" onclick="KHO.loadLogs()">🔄 Làm mới</button>
+                        </div>
+                    </div>
+
+                    <!-- Thanh thống kê & bộ lọc trạng thái -->
+                    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-top:14px; padding-top:12px; border-top:1px solid #E2E8F0;">
+                        <div class="log-filter-chips" style="display:flex; gap:6px; flex-wrap:wrap;">
+                            <button type="button" class="btn btn-sm log-chip-btn active" id="chip-status-all" onclick="KHO.filterLogStatus('all')">Tất cả (<span id="count-log-all">0</span>)</button>
+                            <button type="button" class="btn btn-sm log-chip-btn" id="chip-status-pending" onclick="KHO.filterLogStatus('pending')" style="background:#FFFBEB; color:#B45309; border:1px solid #FDE68A;">⏳ Chưa rà soát (<span id="count-log-pending">0</span>)</button>
+                            <button type="button" class="btn btn-sm log-chip-btn" id="chip-status-verified" onclick="KHO.filterLogStatus('verified')" style="background:#F0FDF4; color:#15803D; border:1px solid #BBF7D0;">✅ Đã chuẩn 2026 (<span id="count-log-verified">0</span>)</button>
+                            <button type="button" class="btn btn-sm log-chip-btn" id="chip-status-adjusted" onclick="KHO.filterLogStatus('adjusted')" style="background:#EFF6FF; color:#1D4ED8; border:1px solid #BFDBFE;">✏️ Đã điều chỉnh (<span id="count-log-adjusted">0</span>)</button>
+                        </div>
+                        <div style="flex:1; min-width:240px; max-width:380px;">
+                            <input type="text" id="log-search-input" placeholder="🔍 Tìm kiếm câu hỏi, nội dung AI trả lời..." oninput="KHO.searchLogsDebounced()" style="width:100%; padding:6px 12px; font-size:0.85rem; border:1px solid #CBD5E1; border-radius:6px; box-sizing:border-box;">
+                        </div>
                     </div>
                 </div>
+
                 <div class="table-wrapper">
                     <table>
                         <thead>
                             <tr>
-                                <th style="width:130px;">Thời gian</th>
-                                <th style="width:120px;">Người hỏi</th>
-                                <th style="width:25%;">Câu hỏi</th>
+                                <th style="width:125px;">Thời gian</th>
+                                <th style="width:110px;">Người hỏi</th>
+                                <th style="width:26%;">Câu hỏi của người dân</th>
                                 <th>Câu trả lời của AI</th>
-                                <th style="width:80px;">Nguồn</th>
-                                <th style="width:65px;" class="tm-num">Độ trễ</th>
-                                <th style="width:110px;">Thao tác</th>
+                                <th style="width:115px; text-align:center;">Trạng thái</th>
+                                <th style="width:75px; text-align:center;">Nguồn</th>
+                                <th style="width:130px; text-align:center;">Thao tác</th>
                             </tr>
                         </thead>
                         <tbody id="kl-body">
@@ -225,6 +248,116 @@
         </main>
     </div>
 
+    <!-- Modal Xem Chi Tiết Toàn Văn & Rà Soát Điều Chỉnh Câu Trả Lời AI -->
+    <div id="modal-review-log" style="display:none; position:fixed; inset:0; background:rgba(15,23,42,0.7); z-index:99999; justify-content:center; align-items:center; padding:16px;">
+        <div style="background:#ffffff; border-radius:12px; max-width:1100px; width:95vw; max-height:92vh; display:flex; flex-direction:column; box-shadow:0 25px 50px -12px rgba(0,0,0,0.25); overflow:hidden;">
+            <!-- Modal Header -->
+            <div style="background:#0F2347; color:#ffffff; padding:14px 20px; display:flex; justify-content:space-between; align-items:center;">
+                <div style="display:flex; align-items:center; gap:10px;">
+                    <span style="font-size:1.35rem;">⚖️</span>
+                    <div>
+                        <h3 style="margin:0; font-size:1.05rem; font-weight:700; color:#ffffff;">Rà Soát Tính Đúng Đắn & Điều Chỉnh Nghiệp Vụ Câu Trả Lời AI</h3>
+                        <p style="margin:0; font-size:0.75rem; color:#94A3B8;">Đối chiếu quy định pháp luật PCCC mới nhất (Nghị quyết 66.18, Nghị định 347/2026, Luật 55/2024)</p>
+                    </div>
+                </div>
+                <button type="button" onclick="KHO.closeReviewModal()" style="background:transparent; border:none; color:#cbd5e1; font-size:1.6rem; cursor:pointer; line-height:1;">&times;</button>
+            </div>
+
+            <!-- Modal Body (Scrollable) -->
+            <div style="padding:20px; overflow-y:auto; flex:1; display:flex; flex-direction:column; gap:16px;">
+                <!-- Meta Info Box -->
+                <div style="display:flex; flex-wrap:wrap; gap:16px; font-size:0.8rem; background:#F8FAFC; padding:10px 14px; border-radius:8px; border:1px solid #E2E8F0;">
+                    <div><strong>🕒 Thời gian:</strong> <span id="rev-time">-</span></div>
+                    <div><strong>👤 Người hỏi:</strong> <span id="rev-user">-</span></div>
+                    <div><strong>🌐 Nguồn:</strong> <span id="rev-source" class="fras-source-badge">-</span></div>
+                    <div><strong>⚡ Độ trễ:</strong> <span id="rev-latency">-</span></div>
+                    <div><strong>🤖 Model:</strong> <span id="rev-model">-</span></div>
+                </div>
+
+                <!-- 1. Question (Full) -->
+                <div>
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+                        <label style="font-weight:700; color:#0F2347; font-size:0.9rem;">
+                            ❓ Câu hỏi của người dân / cơ sở (Toàn văn):
+                        </label>
+                        <button type="button" class="btn btn-secondary btn-sm" onclick="KHO.copyQuestion()" style="font-size:0.75rem; padding:2px 8px;">📋 Sao chép câu hỏi</button>
+                    </div>
+                    <div id="rev-question" style="background:#F1F5F9; border-left:4px solid #2563EB; padding:12px 16px; border-radius:6px; font-size:0.92rem; color:#0F172A; line-height:1.5; white-space:pre-wrap; font-weight:600;"></div>
+                </div>
+
+                <!-- 2. AI Reply (Full text formatted) -->
+                <div>
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+                        <label style="font-weight:700; color:#0F2347; font-size:0.9rem;">
+                            🤖 Câu trả lời thực tế của AI (Toàn văn định dạng chuẩn):
+                        </label>
+                        <button type="button" class="btn btn-secondary btn-sm" onclick="KHO.copyAiReplyToEditor()" style="font-size:0.75rem; padding:2px 8px;">📋 Sao chép sang ô sửa</button>
+                    </div>
+                    <div id="rev-reply" style="background:#F8FAFC; border:1px solid #CBD5E1; padding:16px; border-radius:8px; font-size:0.88rem; color:#1E293B; line-height:1.6; max-height:360px; overflow-y:auto;"></div>
+                </div>
+
+                <!-- 3. Review & Adjust Box -->
+                <div style="background:#FEFCE8; border:1px solid #FEF08A; padding:16px; border-radius:8px;">
+                    <label style="font-weight:700; color:#854D0E; font-size:0.9rem; display:block; margin-bottom:10px;">
+                        ⚖️ Đánh giá tính đúng đắn & Điều chỉnh nghiệp vụ của cán bộ:
+                    </label>
+
+                    <div style="display:flex; gap:16px; margin-bottom:12px; flex-wrap:wrap;">
+                        <label style="display:flex; align-items:center; gap:6px; cursor:pointer; font-weight:600; color:#15803D;">
+                            <input type="radio" name="rev-status-choice" value="verified" onchange="KHO.onStatusChoiceChange(this.value)">
+                            <span>✅ Câu trả lời chuẩn xác (theo QĐ 2026)</span>
+                        </label>
+                        <label style="display:flex; align-items:center; gap:6px; cursor:pointer; font-weight:600; color:#B45309;">
+                            <input type="radio" name="rev-status-choice" value="adjusted" onchange="KHO.onStatusChoiceChange(this.value)">
+                            <span>✏️ Cần điều chỉnh / Sửa đổi cho chuẩn xác</span>
+                        </label>
+                    </div>
+
+                    <!-- Adjusted Reply Editor -->
+                    <div id="rev-adjust-container">
+                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px; flex-wrap:wrap; gap:6px;">
+                            <label style="font-weight:600; color:#0F2347; font-size:0.82rem;">
+                                Nội dung câu trả lời chuẩn sau khi cán bộ điều chỉnh:
+                            </label>
+                            <div style="display:flex; gap:6px; flex-wrap:wrap;">
+                                <button type="button" class="btn btn-secondary btn-sm" onclick="KHO.insertSnippet('nq66')" style="font-size:0.7rem; padding:2px 6px;">+ NQ 66.18 & NĐ 347</button>
+                                <button type="button" class="btn btn-secondary btn-sm" onclick="KHO.insertSnippet('luat55')" style="font-size:0.7rem; padding:2px 6px;">+ Luật 55/2024</button>
+                                <button type="button" class="btn btn-secondary btn-sm" onclick="KHO.insertSnippet('qcvn06')" style="font-size:0.7rem; padding:2px 6px;">+ QCVN 06:2022</button>
+                                <button type="button" class="btn btn-secondary btn-sm" onclick="KHO.insertSnippet('nghiemthu')" style="font-size:0.7rem; padding:2px 6px;">+ Bỏ nộp nghiệm thu</button>
+                            </div>
+                        </div>
+                        <textarea id="rev-adjusted-reply" rows="8" placeholder="Nếu câu trả lời của AI chưa chính xác hoặc thiếu căn cứ mới 2026 (Nghị quyết 66.18, Nghị định 347, Luật 55...), cán bộ hãy nhập hoặc sửa đổi câu trả lời chuẩn tại đây..." style="width:100%; padding:10px; font-size:0.86rem; line-height:1.5; border:1px solid #CBD5E1; border-radius:6px; box-sizing:border-box; font-family:inherit;"></textarea>
+                    </div>
+
+                    <!-- Note -->
+                    <div style="margin-top:10px;">
+                        <label style="font-weight:600; color:#0F2347; font-size:0.82rem; display:block; margin-bottom:4px;">
+                            Ghi chú rà soát của cán bộ:
+                        </label>
+                        <input type="text" id="rev-note" placeholder="VD: Nhắc rõ đã bãi bỏ thủ tục nộp hồ sơ nghiệm thu; hướng dẫn chủ cơ sở tự nghiệm thu và khai báo CSDL." style="width:100%; padding:8px 12px; font-size:0.82rem; border:1px solid #CBD5E1; border-radius:6px; box-sizing:border-box;">
+                    </div>
+
+                    <!-- Promote to FAQ Checkbox -->
+                    <div style="margin-top:12px; padding-top:10px; border-top:1px dashed #E2E8F0;">
+                        <label style="display:flex; align-items:center; gap:8px; cursor:pointer; font-weight:600; color:#1E3A8A; font-size:0.85rem;">
+                            <input type="checkbox" id="rev-promote-faq" checked>
+                            <span>📌 Đồng bộ vào Ngân hàng đáp án mẫu (FAQ chuẩn) để AI ưu tiên trả lời chuẩn cho tất cả người dân về sau</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Footer -->
+            <div style="background:#F1F5F9; padding:12px 20px; display:flex; justify-content:space-between; align-items:center; border-top:1px solid #CBD5E1;">
+                <span id="rev-save-msg" style="font-size:0.82rem; font-weight:600;"></span>
+                <div style="display:flex; gap:10px;">
+                    <button type="button" class="btn btn-secondary btn-sm" onclick="KHO.closeReviewModal()">Đóng</button>
+                    <button type="button" class="btn btn-primary btn-sm" id="btn-save-review" onclick="KHO.saveReview()">💾 Lưu đánh giá & Điều chỉnh</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div id="kd-modal" class="kd-modal" style="display:none;">
         <div class="kd-modal-box">
             <div class="kd-modal-head"><strong id="kd-modal-title"></strong><button class="kd-del" onclick="KHO.closeDoc()">Đóng ✕</button></div>
@@ -240,7 +373,7 @@
 
     <script src="/js/api.js?v=20261021_t1"></script>
     <script src="/js/admin.js"></script>
-    <script src="/js/admin-kho.js?v=20261023_k3"></script>
+    <script src="/js/admin-kho.js?v=20261102_v3_full"></script>
     <script>onReady(() => { setupNavbar(); KHO.init(); });</script>
 </body>
 </html>

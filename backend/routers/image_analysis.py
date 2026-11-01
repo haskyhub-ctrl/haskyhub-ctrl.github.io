@@ -1,5 +1,5 @@
 """
-Image Analysis Router: AI Visual Fire Risk Assessment.
+Image Analysis Router — AI Visual Fire Risk Assessment.
 Upload/capture photos of facilities, Gemini Vision API identifies visible fire hazards.
 """
 import os
@@ -63,8 +63,9 @@ async def analyze_image(
 
     # Call Gemini Vision API
     analysis_result = None
+    disable_direct = os.getenv("DISABLE_DIRECT_GEMINI", "false").lower() in ("true", "1", "yes")
     api_key = os.getenv("GEMINI_API_KEY") or GEMINI_API_KEY
-    if api_key:
+    if api_key and not disable_direct:
         try:
             import httpx
 

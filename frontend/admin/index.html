@@ -1,13 +1,13 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quản trị - FRAS</title>
-    <link rel="stylesheet" href="/css/main.css?v=20261014_gov2">
-    <link rel="stylesheet" href="/css/admin.css?v=20261014_gov2">
-    <link rel="stylesheet" href="/css/dashboard.css?v=20261014_gov2">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/admin.css">
+    <link rel="stylesheet" href="/css/dashboard.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 </head>
 
@@ -16,7 +16,7 @@
         <div class="container">
             <a href="/" class="nav-brand">
                 <span class="logo-icon"><img src="/img/logo-cand.png" alt="CAND" width="38" height="38" style="object-fit:contain;"></span>
-                <div><span>FRAS ADMIN</span><small>Công an thành phố Bắc Ninh • PCCC & CNCH</small></div>
+                <div><span>FRAS ADMIN</span><small>Công an tỉnh Bắc Ninh • PCCC & CNCH</small></div>
             </a>
             <ul class="nav-links" id="nav-links">
                 <li><a href="/"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px;"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Trang chủ</a></li>
@@ -42,12 +42,19 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/admin/kho.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span> Kho tài liệu AI</a>
+                    <a href="/admin/kho.html?tab=logs">
+                        <span class="nav-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                        </span>
+                        Nhật ký hỏi - đáp
+                    </a>
                 </li>
                 <li>
-                    <a href="/admin/teams.html">
-                        <span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></span>
-                        Theo dõi theo đội
+                    <a href="/admin/kho.html">
+                        <span class="nav-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                        </span>
+                        Kho tài liệu AI
                     </a>
                 </li>
                 <li>
@@ -125,7 +132,7 @@
         </main>
     </div>
 
-    <script src="/js/api.js?v=20261019"></script>
+    <script src="/js/api.js"></script>
     <script src="/js/admin.js"></script>
     <script>onReady(() => { setupNavbar(); initAdminDashboard(); });</script>
 </body>

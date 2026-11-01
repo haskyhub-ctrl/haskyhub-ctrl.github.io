@@ -276,8 +276,11 @@ def _extract_json_block(text: str) -> dict | None:
 def _call_gemini_sync(prompt: str, temperature: float = 0.15, max_tokens: int = 2048, is_json: bool = False) -> str:
     """
     Gọi Gemini API qua httpx đồng bộ.
-    Tự động thử các model dự phòng nếu gặp lỗi 404 (model deprecated), 429 (rate limit), 500, 503.
+    Tự động chặn nếu DISABLE_DIRECT_GEMINI=true hoặc không có GEMINI_API_KEY.
     """
+    if os.getenv("DISABLE_DIRECT_GEMINI", "true").lower() in ("true", "1", "yes") or not (os.getenv("GEMINI_API_KEY") or GEMINI_API_KEY):
+        raise ValueError("Direct Gemini API đã bị ngắt triệt để theo yêu cầu hệ thống (ưu tiên 9Router).")
+
     api_key = os.getenv("GEMINI_API_KEY") or GEMINI_API_KEY
     if not api_key:
         raise ValueError("GEMINI_API_KEY chưa được cấu hình")
@@ -448,7 +451,7 @@ def _call_llm(prompt: str, temperature: float = 0.15, max_tokens: int = 2048, is
     """
     Hàm gọi LLM hợp nhất:
     1. Ưu tiên 9Router (Google Pro account: moonshinemylove@gmail.com).
-    2. Tự động fallback sang Google Gemini REST API trực tiếp nếu 9Router tắt hoặc lỗi.
+    2. Nếu 9Router tắt hoặc lỗi, chuyển thẳng sang fallback nội bộ / rule-based (ngắt hoàn toàn Direct Gemini API).
     """
     use_9router = os.getenv("USE_9ROUTER", "true").lower() in ("true", "1", "yes")
     router_key = os.getenv("ROUTER_API_KEY", "")
@@ -457,7 +460,11 @@ def _call_llm(prompt: str, temperature: float = 0.15, max_tokens: int = 2048, is
         try:
             return _call_9router(prompt, temperature=temperature, max_tokens=max_tokens, is_json=is_json, fast=fast, timeout=timeout)
         except Exception as e:
-            _safe_print(f"[LLM Router] 9Router không phản hồi ({e}), tự động chuyển sang Gemini REST API...")
+            _safe_print(f"[LLM Router] 9Router không phản hồi ({e}), chuyển sang fallback nội bộ (Direct Gemini đã ngắt)...")
+            raise ValueError(f"9Router không phản hồi ({e}). Direct Gemini API đã bị ngắt.")
+
+    if os.getenv("DISABLE_DIRECT_GEMINI", "true").lower() in ("true", "1", "yes") or not (os.getenv("GEMINI_API_KEY") or GEMINI_API_KEY):
+        raise ValueError("Direct Gemini API đã bị ngắt. Cần cấu hình 9Router.")
 
     return _call_gemini_sync(prompt, temperature=temperature, max_tokens=max_tokens, is_json=is_json)
 

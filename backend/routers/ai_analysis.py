@@ -12,7 +12,7 @@ import os
 import json
 import asyncio
 from datetime import datetime, timedelta
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Response
 from sqlalchemy.orm import Session
 from sqlalchemy import func
 from typing import Optional, List
@@ -45,26 +45,35 @@ GEMINI_FALLBACK_MODELS = [
 # Dùng chung biến ROUTER_* với chatbot nếu không đặt riêng NINEROUTER_*.
 NINEROUTER_BASE_URL = (os.getenv("NINEROUTER_BASE_URL") or os.getenv("ROUTER_BASE_URL") or "http://127.0.0.1:20128/v1").rstrip("/")
 NINEROUTER_API_KEY = os.getenv("NINEROUTER_API_KEY") or os.getenv("ROUTER_API_KEY") or ""
-GEMINI_MODEL = os.getenv("GEMINI_MODEL", "ag/gemini-3.8-flash")
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "ag/gemini-3.8-flash-low")
 
 
 async def call_gemini(prompt: str, temperature: float = 0.3, system_prompt: str = None, timeout: float = 50.0) -> dict:
-    """Call 9Router (Gemini 3.8 Flash) with fast non-streaming JSON response and robust fallback."""
+    """Gọi 9Router (Google Pro qua tài khoản moonshinemylove@gmail.com) với phản hồi JSON nhanh, ngắt hoàn toàn Direct Gemini API."""
     import httpx
 
-    # 1. Prioritize 9Router VPS (ag/gemini-3.8-flash)
+    # 1. Ưu tiên gọi 9Router VPS
     if NINEROUTER_BASE_URL and NINEROUTER_API_KEY:
-        try:
-            headers = {
-                "Authorization": f"Bearer {NINEROUTER_API_KEY}",
-                "Content-Type": "application/json",
-            }
-            sys_content = system_prompt or (
-                "Bạn là chuyên gia Phòng cháy chữa cháy và Cứu nạn cứu hộ (PCCC&CNCH) hàng đầu tại Việt Nam. "
-                "Hãy luôn trả về kết quả thuần định dạng JSON hợp lệ (không kèm văn bản ngoài khối JSON)."
-            )
+        headers = {
+            "Authorization": f"Bearer {NINEROUTER_API_KEY}",
+            "Content-Type": "application/json",
+        }
+        sys_content = system_prompt or (
+            "Bạn là chuyên gia Phòng cháy chữa cháy và Cứu nạn cứu hộ (PCCC&CNCH) hàng đầu tại Việt Nam. "
+            "Hãy luôn trả về kết quả thuần định dạng JSON hợp lệ (không kèm văn bản ngoài khối JSON)."
+        )
+        models_to_try = [
+            "ag/gemini-3.8-flash-low",
+            "ag/gemini-3.8-flash",
+            "ag/gemini-3.8-flash-medium",
+            "ag/gemini-3.8-flash-high",
+        ]
+        if GEMINI_MODEL and GEMINI_MODEL not in models_to_try:
+            models_to_try.insert(0, GEMINI_MODEL)
+
+        for model_name in models_to_try:
             payload = {
-                "model": GEMINI_MODEL,
+                "model": model_name,
                 "messages": [
                     {"role": "system", "content": sys_content},
                     {"role": "user", "content": prompt}
@@ -72,74 +81,47 @@ async def call_gemini(prompt: str, temperature: float = 0.3, system_prompt: str 
                 "temperature": temperature,
                 "stream": False,
             }
-            # connect ngắn để báo lỗi nhanh khi máy chủ AI ngừng; read dài vì bản phân tích đầy đủ mất ~60 giây
-            async with httpx.AsyncClient(timeout=httpx.Timeout(timeout, connect=10.0)) as client:
-                resp = await client.post(f"{NINEROUTER_BASE_URL}/chat/completions", headers=headers, json=payload)
-                if resp.status_code == 200:
-                    raw_text = resp.text
-                    full_text = ""
-                    if raw_text.startswith("data:") or "text/event-stream" in resp.headers.get("content-type", ""):
-                        parts = []
-                        for line in raw_text.split("\n"):
-                            line = line.strip()
-                            if line.startswith("data:"):
-                                sub = line[5:].strip()
-                                if sub == "[DONE]":
-                                    break
-                                try:
-                                    c = json.loads(sub)
-                                    delta = c.get("choices", [{}])[0].get("delta", {})
-                                    if "content" in delta and delta["content"]:
-                                        parts.append(delta["content"])
-                                except Exception:
-                                    pass
-                        full_text = "".join(parts).strip()
-                    else:
-                        data = resp.json()
-                        full_text = data.get("choices", [{}])[0].get("message", {}).get("content", "")
-                    if full_text:
-                        clean = full_text.strip()
-                        if "```json" in clean:
-                            clean = clean.split("```json")[1].split("```")[0]
-                        elif "```" in clean:
-                            clean = clean.split("```")[1].split("```")[0]
-                        try:
-                            return json.loads(clean.strip())
-                        except json.JSONDecodeError:
-                            return {"raw_text": full_text, "overall_assessment": full_text}
-        except Exception as e:
-            print(f"[9Router Warning] Failed to call 9Router: {e}, falling back...")
-
-    # 2. Fallback to direct Gemini API
-    api_key = os.getenv("GEMINI_API_KEY") or GEMINI_API_KEY
-    if api_key and not api_key.startswith("sk-"):
-        primary_model = "gemini-2.5-flash"
-        models_to_try = [primary_model] + [m for m in GEMINI_FALLBACK_MODELS if m != primary_model]
-        for model_name in models_to_try:
             try:
-                async with httpx.AsyncClient(timeout=25.0) as client:
-                    resp = await client.post(
-                        f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={api_key}",
-                        json={
-                            "contents": [{"parts": [{"text": prompt}]}],
-                            "generationConfig": {"temperature": temperature}
-                        },
-                    )
+                async with httpx.AsyncClient(timeout=httpx.Timeout(timeout, connect=10.0)) as client:
+                    resp = await client.post(f"{NINEROUTER_BASE_URL}/chat/completions", headers=headers, json=payload)
                     if resp.status_code == 200:
-                        data = resp.json()
-                        content = data["candidates"][0]["content"]["parts"][0]["text"]
-                        try:
-                            if "```json" in content:
-                                content = content.split("```json")[1].split("```")[0]
-                            elif "```" in content:
-                                content = content.split("```")[1].split("```")[0]
-                            return json.loads(content)
-                        except json.JSONDecodeError:
-                            return {"raw_text": content}
-            except Exception:
+                        raw_text = resp.text
+                        full_text = ""
+                        if raw_text.startswith("data:") or "text/event-stream" in resp.headers.get("content-type", ""):
+                            parts = []
+                            for line in raw_text.split("\n"):
+                                line = line.strip()
+                                if line.startswith("data:"):
+                                    sub = line[5:].strip()
+                                    if sub == "[DONE]":
+                                        break
+                                    try:
+                                        c = json.loads(sub)
+                                        delta = c.get("choices", [{}])[0].get("delta", {})
+                                        if "content" in delta and delta["content"]:
+                                            parts.append(delta["content"])
+                                    except Exception:
+                                        pass
+                            full_text = "".join(parts).strip()
+                        else:
+                            data = resp.json()
+                            full_text = data.get("choices", [{}])[0].get("message", {}).get("content", "")
+                        if full_text:
+                            clean = full_text.strip()
+                            if "```json" in clean:
+                                clean = clean.split("```json")[1].split("```")[0]
+                            elif "```" in clean:
+                                clean = clean.split("```")[1].split("```")[0]
+                            try:
+                                return json.loads(clean.strip())
+                            except json.JSONDecodeError:
+                                return {"raw_text": full_text, "overall_assessment": full_text}
+            except Exception as e:
+                print(f"[9Router Warning] Model {model_name} không phản hồi: {e}")
                 continue
 
-    raise ValueError("Không thể kết nối dịch vụ AI phân tích")
+    # 2. Direct Gemini API đã bị ngắt triệt để (không phát sinh chi phí hay bắn lỗi)
+    raise ValueError("Dịch vụ 9Router tạm thời không phản hồi, tự động kích hoạt phân tích tập luật nội bộ.")
 
 
 def get_assessment_data(assessment: Assessment, db: Session) -> dict:
@@ -604,31 +586,239 @@ def chat_feedback(data: ChatFeedback, db: Session = Depends(get_db)):
     return {"ok": True}
 
 
+class ChatLogReviewRequest(BaseModel):
+    log_id: str
+    status: str = "verified"  # "verified" | "adjusted"
+    adjusted_reply: Optional[str] = ""
+    review_note: Optional[str] = ""
+    promote_to_faq: bool = False
+
+
+class ChatLogQuickVerifyRequest(BaseModel):
+    log_id: str
+
+
 @router.get("/chat/history-logs")
 def get_chat_history_logs(
-    limit: int = 100,
+    response: Response,
+    limit: int = 500,
+    offset: int = 0,
+    status: Optional[str] = "all",
+    search: Optional[str] = None,
+    format: Optional[str] = None,
     current_user: Optional[User] = Depends(get_optional_user)
 ):
-    """Lấy danh sách các câu hỏi và câu trả lời AI để cán bộ theo dõi, rút kinh nghiệm."""
+    """Lấy danh sách các câu hỏi và câu trả lời AI đầy đủ 100% kèm trạng thái rà soát để cán bộ xét duyệt và điều chỉnh."""
     from pathlib import Path
     import json
+    import hashlib
+
     log_file = Path(__file__).resolve().parent.parent / "data" / "chat_history.jsonl"
     if not log_file.exists():
+        if format in ("envelope", "object"):
+            return {"items": [], "total": 0, "counts": {"total": 0, "pending": 0, "verified": 0, "adjusted": 0}}
         return []
-    lines = []
+
+    all_logs = []
     try:
         with open(log_file, "r", encoding="utf-8") as f:
             for line in f:
-                line = line.strip()
-                if line:
-                    try:
-                        lines.append(json.loads(line))
-                    except Exception:
-                        pass
-        return list(reversed(lines[-limit:]))
+                line_str = line.strip()
+                if not line_str:
+                    continue
+                try:
+                    entry = json.loads(line_str)
+                    if not entry.get("id"):
+                        entry["id"] = hashlib.md5(f"{entry.get('time','')}_{entry.get('question','')[:50]}".encode()).hexdigest()[:12]
+                    if not entry.get("status"):
+                        entry["status"] = "pending"
+                    if not entry.get("adjusted_reply"):
+                        entry["adjusted_reply"] = ""
+                    if not entry.get("review_note"):
+                        entry["review_note"] = ""
+                    all_logs.append(entry)
+                except Exception:
+                    pass
+
+        total_count = len(all_logs)
+        pending_count = sum(1 for x in all_logs if x.get("status") in ("pending", "", None))
+        verified_count = sum(1 for x in all_logs if x.get("status") == "verified")
+        adjusted_count = sum(1 for x in all_logs if x.get("status") == "adjusted")
+
+        reversed_logs = list(reversed(all_logs))
+
+        filtered = reversed_logs
+        if status and status != "all":
+            if status == "pending":
+                filtered = [x for x in filtered if x.get("status") in ("pending", "", None)]
+            else:
+                filtered = [x for x in filtered if x.get("status") == status]
+
+        if search and search.strip():
+            sq = search.strip().lower()
+            filtered = [
+                x for x in filtered
+                if sq in x.get("question", "").lower()
+                or sq in x.get("reply", "").lower()
+                or sq in x.get("adjusted_reply", "").lower()
+                or sq in x.get("user", "").lower()
+            ]
+
+        paged_items = filtered[offset : offset + limit]
+
+        if response:
+            response.headers["X-Total-Count"] = str(total_count)
+            response.headers["X-Pending-Count"] = str(pending_count)
+            response.headers["X-Verified-Count"] = str(verified_count)
+            response.headers["X-Adjusted-Count"] = str(adjusted_count)
+
+        if format in ("envelope", "object"):
+            return {
+                "items": paged_items,
+                "total": len(filtered),
+                "counts": {
+                    "total": total_count,
+                    "pending": pending_count,
+                    "verified": verified_count,
+                    "adjusted": adjusted_count
+                }
+            }
+
+        return paged_items
     except Exception as e:
         print(f"[Chat History] Lỗi đọc log: {e}")
+        if format in ("envelope", "object"):
+            return {"items": [], "total": 0, "counts": {"total": 0, "pending": 0, "verified": 0, "adjusted": 0}}
         return []
+
+
+@router.post("/chat/history-logs/quick-verify")
+def quick_verify_chat_log(
+    data: ChatLogQuickVerifyRequest,
+    current_user: User = Depends(get_current_user)
+):
+    """Xác nhận nhanh câu trả lời AI đã chuẩn xác theo quy định 2026."""
+    from pathlib import Path
+    import json
+    from datetime import datetime
+    import hashlib
+
+    log_file = Path(__file__).resolve().parent.parent / "data" / "chat_history.jsonl"
+    if not log_file.exists():
+        raise HTTPException(status_code=404, detail="Không tìm thấy tệp nhật ký")
+
+    lines = []
+    found = False
+    with open(log_file, "r", encoding="utf-8") as f:
+        for line in f:
+            line_str = line.strip()
+            if not line_str:
+                continue
+            try:
+                entry = json.loads(line_str)
+                eid = entry.get("id") or hashlib.md5(f"{entry.get('time','')}_{entry.get('question','')[:50]}".encode()).hexdigest()[:12]
+                entry["id"] = eid
+                if eid == data.log_id:
+                    entry["status"] = "verified"
+                    entry["reviewed_by"] = getattr(current_user, "full_name", None) or getattr(current_user, "email", "Cán bộ quản trị")
+                    entry["reviewed_at"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                    found = True
+                lines.append(entry)
+            except Exception:
+                pass
+
+    if not found:
+        raise HTTPException(status_code=404, detail="Không tìm thấy bản ghi nhật ký")
+
+    with open(log_file, "w", encoding="utf-8") as f:
+        for entry in lines:
+            f.write(json.dumps(entry, ensure_ascii=False) + "\n")
+
+    return {"ok": True, "message": "Đã xác nhận câu trả lời chuẩn xác 2026!"}
+
+
+@router.post("/chat/history-logs/review")
+def review_chat_log(
+    data: ChatLogReviewRequest,
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    """Cán bộ xét tính đúng đắn và trực tiếp điều chỉnh câu trả lời của AI."""
+    from pathlib import Path
+    import json
+    from datetime import datetime
+    import hashlib
+
+    log_file = Path(__file__).resolve().parent.parent / "data" / "chat_history.jsonl"
+    if not log_file.exists():
+        raise HTTPException(status_code=404, detail="Không tìm thấy tệp nhật ký hỏi đáp")
+
+    lines = []
+    found = False
+    target_q = ""
+    target_a = ""
+
+    with open(log_file, "r", encoding="utf-8") as f:
+        for line in f:
+            line_str = line.strip()
+            if not line_str:
+                continue
+            try:
+                entry = json.loads(line_str)
+                eid = entry.get("id") or hashlib.md5(f"{entry.get('time','')}_{entry.get('question','')[:50]}".encode()).hexdigest()[:12]
+                entry["id"] = eid
+                if eid == data.log_id:
+                    entry["status"] = data.status
+                    entry["adjusted_reply"] = (data.adjusted_reply or "").strip()
+                    entry["review_note"] = (data.review_note or "").strip()
+                    entry["reviewed_by"] = getattr(current_user, "full_name", None) or getattr(current_user, "email", "Cán bộ quản trị")
+                    entry["reviewed_at"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                    found = True
+                    target_q = entry.get("question", "")
+                    target_a = entry["adjusted_reply"] or entry.get("reply", "")
+                lines.append(entry)
+            except Exception:
+                pass
+
+    if not found:
+        raise HTTPException(status_code=404, detail="Không tìm thấy mục nhật ký cần điều chỉnh")
+
+    with open(log_file, "w", encoding="utf-8") as f:
+        for entry in lines:
+            f.write(json.dumps(entry, ensure_ascii=False) + "\n")
+
+    if data.promote_to_faq and target_q and target_a:
+        try:
+            from routers.kho import KbQuestion, question_key
+            q_clean = target_q.strip()[:1500]
+            k = question_key(q_clean)
+            existing = db.query(KbQuestion).filter(KbQuestion.question_key == k).first()
+            now = datetime.utcnow()
+            if existing:
+                existing.answer = target_a.strip()
+                existing.status = "approved"
+                existing.answered_at = now
+                existing.answered_by = current_user.id
+            else:
+                new_q = KbQuestion(
+                    question=q_clean,
+                    question_key=k,
+                    answer=target_a.strip(),
+                    status="approved",
+                    source="review_log",
+                    times_asked=1,
+                    answered_at=now,
+                    answered_by=current_user.id
+                )
+                db.add(new_q)
+            db.commit()
+        except Exception as e:
+            print(f"[Review Chat Log] Lỗi đồng bộ FAQ vào KbQuestion: {e}")
+
+    return {
+        "ok": True,
+        "message": "Đã lưu kết quả rà soát và điều chỉnh câu trả lời thành công!"
+    }
 
 
 @router.get("/faq/audit")
@@ -673,19 +863,26 @@ def _log_chat_history(question: str, reply: str, source_type: str = "docs", user
     try:
         from pathlib import Path
         import json
+        import uuid
         from datetime import datetime
         log_dir = Path(__file__).resolve().parent.parent / "data"
         log_dir.mkdir(parents=True, exist_ok=True)
         log_file = log_dir / "chat_history.jsonl"
         now_vn = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         entry = {
+            "id": str(uuid.uuid4())[:12],
             "time": now_vn,
             "user": user_email or "Khách vãng lai",
             "question": (question or "").strip()[:2000],
             "reply": (reply or "").strip(),
             "source_type": source_type or "docs",
             "elapsed_seconds": round(elapsed_seconds, 2),
-            "model": os.getenv("ROUTER_MODEL", "ag/gemini-3.8-flash-high")
+            "model": os.getenv("ROUTER_MODEL", "ag/gemini-3.8-flash-low"),
+            "status": "pending",
+            "adjusted_reply": "",
+            "review_note": "",
+            "reviewed_by": "",
+            "reviewed_at": ""
         }
         with open(log_file, "a", encoding="utf-8") as f:
             f.write(json.dumps(entry, ensure_ascii=False) + "\n")
