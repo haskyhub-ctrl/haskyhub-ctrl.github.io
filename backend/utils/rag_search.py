@@ -349,7 +349,7 @@ def _trace(model: str, secs: float, outcome: str) -> None:
 
 def _call_9router(prompt: str, temperature: float = 0.15, max_tokens: int = 2048, is_json: bool = False, fast: bool = False, timeout: float = 45.0) -> str:
     """
-    Gọi 9Router OpenAI-compatible endpoint qua tài khoản Google Pro (moonshinemylove@gmail.com).
+    Gọi 9Router OpenAI-compatible endpoint (model cấu hình trong utils/router_models.py).
     """
     base_url = os.getenv("ROUTER_BASE_URL", "http://127.0.0.1:20128/v1").rstrip("/")
     router_url = f"{base_url}/chat/completions"
@@ -357,24 +357,11 @@ def _call_9router(prompt: str, temperature: float = 0.15, max_tokens: int = 2048
     if not router_key:
         raise ValueError("ROUTER_API_KEY chưa được cấu hình")
 
-    # Máy chủ từng đặt ROUTER_MODEL là bản "-high" (chậm, hay quá hạn 30 giây rồi mới chuyển bản nhanh, làm mỗi câu mất thêm 30 giây).
-    # Luôn thử bản nhanh trước; model cấu hình chỉ dùng làm phương án sau cùng.
-    primary_model = "ag/gemini-3.8-flash-low"
-    configured = os.getenv("ROUTER_MODEL", "")
+    # Model lấy từ ROUTER_MODEL / ROUTER_FALLBACK_MODELS (mặc định Nemotron qua OpenRouter trên 9router).
+    from utils.router_models import get_router_models
+    models_to_try = get_router_models()
     if fast:
-        models_to_try = [primary_model, "ag/gemini-3.8-flash"]
-        models_to_try = list(dict.fromkeys(models_to_try))
-    else:
-        fallback_models = [
-            primary_model,
-            "ag/gemini-3.8-flash",
-            "ag/gemini-3.8-flash-medium",
-            configured or "ag/gemini-3.8-flash-high",
-        ]
-        models_to_try = []
-        for m in fallback_models:
-            if m not in models_to_try:
-                models_to_try.append(m)
+        models_to_try = models_to_try[:2]
 
     headers = {
         "Authorization": f"Bearer {router_key}",
@@ -420,11 +407,11 @@ def _call_9router(prompt: str, temperature: float = 0.15, max_tokens: int = 2048
                                 pass
                     full = "".join(collected).strip()
                     if full:
-                        _safe_print(f"[9Router] OK Thành công với model '{model_name}' (Google Pro SSE)")
+                        _safe_print(f"[9Router] OK Thành công với model '{model_name}' (SSE)")
                         return full
                 data = resp.json()
                 text = data["choices"][0]["message"]["content"]
-                _safe_print(f"[9Router] OK Thành công với model '{model_name}' (Google Pro)")
+                _safe_print(f"[9Router] OK Thành công với model '{model_name}'")
                 return text
 
             err = resp.text[:200] if resp.text else "No body"
@@ -450,7 +437,7 @@ def _call_9router(prompt: str, temperature: float = 0.15, max_tokens: int = 2048
 def _call_llm(prompt: str, temperature: float = 0.15, max_tokens: int = 2048, is_json: bool = False, fast: bool = False, timeout: float = 45.0) -> str:
     """
     Hàm gọi LLM hợp nhất:
-    1. Ưu tiên 9Router (Google Pro account: moonshinemylove@gmail.com).
+    1. Ưu tiên 9Router (model trong utils/router_models.py).
     2. Nếu 9Router tắt hoặc lỗi, chuyển thẳng sang fallback nội bộ / rule-based (ngắt hoàn toàn Direct Gemini API).
     """
     use_9router = os.getenv("USE_9ROUTER", "true").lower() in ("true", "1", "yes")
@@ -913,12 +900,12 @@ TRẢ VỀ JSON THUẦN (không dùng ```json):
     "references": ["văn bản pháp lý hiện hành hoặc link nguồn internet"]
 }}}}"""
 
-        # ── Gọi LLM (9Router Google Pro hoặc Gemini REST API) ───────
-        router_model = os.getenv("ROUTER_MODEL", "ag/gemini-3.8-flash-low")
-        current_model = router_model if use_router and router_key else os.getenv("GEMINI_MODEL", "ag/gemini-3.8-flash-low")
+        # ── Gọi LLM (9Router) ───────
+        from utils.router_models import get_router_model
+        current_model = get_router_model()
         _safe_print(f"[ask_ai_chi] Gọi LLM (ưu tiên {current_model})...")
-        # Sử dụng mô hình flash tốc độ cao để đảm bảo phản hồi trong 8-20s cho bài viết chi tiết
-        content = _call_llm(template, temperature=0.15, max_tokens=3200, is_json=True, fast=True, timeout=30.0)
+        # Model miễn phí qua OpenRouter phản hồi chậm hơn Gemini Flash, cho chờ tối đa 60 giây
+        content = _call_llm(template, temperature=0.15, max_tokens=3200, is_json=True, fast=True, timeout=60.0)
         _safe_print(f"[ask_ai_chi] OK Got {len(content)} chars")
 
         # ── Parse JSON từ phản hồi ───────────────────────────────────
@@ -931,7 +918,7 @@ TRẢ VỀ JSON THUẦN (không dùng ```json):
                 if not chk["ok"]:
                     _safe_print(f"[tham_dinh] Phát hiện sai lệch: {chk['problem'][:120]}")
                     fix_prompt = template + chr(10) * 2 + "LỖI CẦN SỬA NGAY (bản trả lời trước bị sai): " + chk["problem"] + chr(10) + "Hãy viết lại toàn bộ câu trả lời, dòng kết luận đầu tiên phải đúng kết quả đối chiếu tự động ở trên."
-                    content2 = _call_llm(fix_prompt, temperature=0.1, max_tokens=3200, is_json=True, fast=True, timeout=30.0)
+                    content2 = _call_llm(fix_prompt, temperature=0.1, max_tokens=3200, is_json=True, fast=True, timeout=60.0)
                     r2 = _extract_json_block(content2)
                     if r2 and isinstance(r2, dict) and "reply" in r2 and _td.check_reply(_qs, r2["reply"])["ok"]:
                         result = r2

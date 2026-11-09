@@ -23,6 +23,7 @@ from middleware.auth_middleware import get_current_user, get_optional_user
 from middleware.rbac import require_role
 from utils.ai_prompt import build_analysis_prompt, build_fallback_analysis
 from utils.ai_rules import sanitize_analysis
+from utils.router_models import get_router_model
 from utils.analysis_library import learn_from_analysis, ensure_red_flag_coverage, normalize_deadline
 
 router = APIRouter(prefix="/api/ai", tags=["AI Analysis"])
@@ -45,11 +46,11 @@ GEMINI_FALLBACK_MODELS = [
 # Dùng chung biến ROUTER_* với chatbot nếu không đặt riêng NINEROUTER_*.
 NINEROUTER_BASE_URL = (os.getenv("NINEROUTER_BASE_URL") or os.getenv("ROUTER_BASE_URL") or "http://127.0.0.1:20128/v1").rstrip("/")
 NINEROUTER_API_KEY = os.getenv("NINEROUTER_API_KEY") or os.getenv("ROUTER_API_KEY") or ""
-GEMINI_MODEL = os.getenv("GEMINI_MODEL", "ag/gemini-3.8-flash-low")
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.5-flash")
 
 
 async def call_gemini(prompt: str, temperature: float = 0.3, system_prompt: str = None, timeout: float = 50.0) -> dict:
-    """Gọi 9Router (Google Pro qua tài khoản moonshinemylove@gmail.com) với phản hồi JSON nhanh, ngắt hoàn toàn Direct Gemini API."""
+    """Gọi 9Router (model cấu hình trong utils/router_models.py) với phản hồi JSON, ngắt hoàn toàn Direct Gemini API."""
     import httpx
 
     # 1. Ưu tiên gọi 9Router VPS
@@ -62,14 +63,8 @@ async def call_gemini(prompt: str, temperature: float = 0.3, system_prompt: str 
             "Bạn là chuyên gia Phòng cháy chữa cháy và Cứu nạn cứu hộ (PCCC&CNCH) hàng đầu tại Việt Nam. "
             "Hãy luôn trả về kết quả thuần định dạng JSON hợp lệ (không kèm văn bản ngoài khối JSON)."
         )
-        models_to_try = [
-            "ag/gemini-3.8-flash-low",
-            "ag/gemini-3.8-flash",
-            "ag/gemini-3.8-flash-medium",
-            "ag/gemini-3.8-flash-high",
-        ]
-        if GEMINI_MODEL and GEMINI_MODEL not in models_to_try:
-            models_to_try.insert(0, GEMINI_MODEL)
+        from utils.router_models import get_router_models
+        models_to_try = get_router_models()
 
         for model_name in models_to_try:
             payload = {
@@ -877,7 +872,7 @@ def _log_chat_history(question: str, reply: str, source_type: str = "docs", user
             "reply": (reply or "").strip(),
             "source_type": source_type or "docs",
             "elapsed_seconds": round(elapsed_seconds, 2),
-            "model": os.getenv("ROUTER_MODEL", "ag/gemini-3.8-flash-low"),
+            "model": get_router_model(),
             "status": "pending",
             "adjusted_reply": "",
             "review_note": "",
