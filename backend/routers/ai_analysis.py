@@ -50,38 +50,10 @@ GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.5-flash")
 
 
 async def call_gemini(prompt: str, temperature: float = 0.3, system_prompt: str = None, timeout: float = 50.0) -> dict:
-    """Gọi AI trả về JSON: Gemini API trực tiếp trước (nếu có GEMINI_API_KEY), sau đó 9Router."""
+    """Gọi 9Router (model cấu hình trong utils/router_models.py) với phản hồi JSON, ngắt hoàn toàn Direct Gemini API."""
     import httpx
-    import asyncio
 
-    def _parse_json_text(full_text: str) -> dict:
-        clean = full_text.strip()
-        if "```json" in clean:
-            clean = clean.split("```json")[1].split("```")[0]
-        elif "```" in clean:
-            clean = clean.split("```")[1].split("```")[0]
-        try:
-            return json.loads(clean.strip())
-        except json.JSONDecodeError:
-            return {"raw_text": full_text, "overall_assessment": full_text}
-
-    # 1. Gemini API trực tiếp (Google AI Studio)
-    from utils.rag_search import direct_gemini_enabled, _call_gemini_sync
-    if direct_gemini_enabled():
-        sys_text = system_prompt or (
-            "Bạn là chuyên gia Phòng cháy chữa cháy và Cứu nạn cứu hộ (PCCC&CNCH) hàng đầu tại Việt Nam. "
-            "Hãy luôn trả về kết quả thuần định dạng JSON hợp lệ (không kèm văn bản ngoài khối JSON)."
-        )
-        try:
-            text = await asyncio.to_thread(
-                _call_gemini_sync, f"{sys_text}\n\n{prompt}", temperature, 8192, True, False, timeout
-            )
-            if text and text.strip():
-                return _parse_json_text(text)
-        except Exception as e:
-            print(f"[Gemini Warning] Gemini trực tiếp lỗi, thử 9Router: {e}")
-
-    # 2. 9Router
+    # 1. Ưu tiên gọi 9Router VPS
     if NINEROUTER_BASE_URL and NINEROUTER_API_KEY:
         headers = {
             "Authorization": f"Bearer {NINEROUTER_API_KEY}",
@@ -143,7 +115,8 @@ async def call_gemini(prompt: str, temperature: float = 0.3, system_prompt: str 
                 print(f"[9Router Warning] Model {model_name} không phản hồi: {e}")
                 continue
 
-    raise ValueError("Dịch vụ AI (Gemini, 9Router) tạm thời không phản hồi, tự động kích hoạt phân tích tập luật nội bộ.")
+    # 2. Direct Gemini API đã bị ngắt triệt để (không phát sinh chi phí hay bắn lỗi)
+    raise ValueError("Dịch vụ 9Router tạm thời không phản hồi, tự động kích hoạt phân tích tập luật nội bộ.")
 
 
 def get_assessment_data(assessment: Assessment, db: Session) -> dict:

@@ -236,7 +236,7 @@ def generate_aggregate_analysis(
 
     # ===== 9. AI Analysis (9Router) =====
     ai_analysis = None
-    has_llm = (os.getenv("ROUTER_API_KEY") or os.getenv("NINEROUTER_API_KEY")) or ((os.getenv("GEMINI_API_KEY") or GEMINI_API_KEY) and not os.getenv("DISABLE_DIRECT_GEMINI", "false").lower() in ("true", "1", "yes"))
+    has_llm = (os.getenv("ROUTER_API_KEY") or os.getenv("NINEROUTER_API_KEY")) or (GEMINI_API_KEY and not os.getenv("DISABLE_DIRECT_GEMINI", "false").lower() in ("true", "1", "yes"))
     if has_llm and total > 0:
         ai_analysis = _generate_ai_aggregate_analysis(
             total, risk_counts, avg_risk, category_analysis, facility_distribution, high_risk_facilities
@@ -320,19 +320,6 @@ Trả lời bằng JSON với format sau (tiếng Việt). LưU Ý:
   "kien_nghi": ["Các kiến nghị gửi cấp trên hoặc các ngành liên quan VỚI ĐƠN VỊ CỤ THỂ (2-3 items)"]
 }}"""
 
-        # Thử Gemini API trực tiếp trước (nếu có GEMINI_API_KEY)
-        try:
-            from utils.rag_search import direct_gemini_enabled, _call_gemini_sync
-            if direct_gemini_enabled():
-                content = _call_gemini_sync(prompt, temperature=0.3, max_tokens=8192, is_json=True, timeout=45.0)
-                if "```json" in content:
-                    content = content.split("```json")[1].split("```")[0]
-                elif "```" in content:
-                    content = content.split("```")[1].split("```")[0]
-                return json.loads(content)
-        except Exception as ex:
-            print(f"[AI aggregate Gemini] lỗi, thử 9Router: {ex}")
-
         # Thử gọi 9Router nếu có cấu hình
         router_url = (os.getenv("ROUTER_BASE_URL") or os.getenv("NINEROUTER_BASE_URL") or "http://127.0.0.1:20128/v1").rstrip("/")
         router_key = os.getenv("ROUTER_API_KEY") or os.getenv("NINEROUTER_API_KEY") or ""
@@ -362,6 +349,7 @@ Trả lời bằng JSON với format sau (tiếng Việt). LưU Ý:
                     print(f"[AI aggregate 9Router] Model {m} error: {ex}")
                     continue
 
+        # Direct Gemini API đã bị ngắt triệt để
         return None
     except Exception as e:
         print(f"AI aggregate analysis error: {e}")
