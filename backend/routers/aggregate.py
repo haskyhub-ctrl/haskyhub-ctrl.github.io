@@ -327,7 +327,8 @@ Trả lời bằng JSON với format sau (tiếng Việt). LưU Ý:
 
         if use_router and router_key:
             headers = {"Authorization": f"Bearer {router_key}", "Content-Type": "application/json"}
-            for m in ["ag/gemini-3.8-flash-low", "ag/gemini-3.8-flash", "ag/gemini-3.8-flash-high"]:
+            from utils.router_models import get_router_models
+            for m in get_router_models():
                 payload = {
                     "model": m,
                     "messages": [{"role": "user", "content": prompt}],
