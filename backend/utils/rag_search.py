@@ -273,20 +273,27 @@ def _extract_json_block(text: str) -> dict | None:
     return None
 
 
-def _call_gemini_sync(prompt: str, temperature: float = 0.15, max_tokens: int = 2048, is_json: bool = False) -> str:
+def direct_gemini_enabled() -> bool:
+    """Gọi thẳng Gemini API khi có GEMINI_API_KEY (tắt bằng DISABLE_DIRECT_GEMINI=true)."""
+    if os.getenv("DISABLE_DIRECT_GEMINI", "false").lower() in ("true", "1", "yes"):
+        return False
+    return bool(os.getenv("GEMINI_API_KEY") or GEMINI_API_KEY)
+
+
+def _call_gemini_sync(prompt: str, temperature: float = 0.15, max_tokens: int = 2048, is_json: bool = False, fast: bool = False, timeout: float = 30.0) -> str:
     """
-    Gọi Gemini API qua httpx đồng bộ.
-    Tự động chặn nếu DISABLE_DIRECT_GEMINI=true hoặc không có GEMINI_API_KEY.
+    Gọi Gemini API (Google AI Studio) qua httpx đồng bộ.
+    Chặn nếu DISABLE_DIRECT_GEMINI=true hoặc không có GEMINI_API_KEY.
     """
-    if os.getenv("DISABLE_DIRECT_GEMINI", "true").lower() in ("true", "1", "yes") or not (os.getenv("GEMINI_API_KEY") or GEMINI_API_KEY):
-        raise ValueError("Direct Gemini API đã bị ngắt triệt để theo yêu cầu hệ thống (ưu tiên 9Router).")
+    if not direct_gemini_enabled():
+        raise ValueError("Gemini API trực tiếp chưa bật (thiếu GEMINI_API_KEY hoặc DISABLE_DIRECT_GEMINI=true).")
 
     api_key = os.getenv("GEMINI_API_KEY") or GEMINI_API_KEY
-    if not api_key:
-        raise ValueError("GEMINI_API_KEY chưa được cấu hình")
 
     primary_model = os.getenv("GEMINI_MODEL") or GEMINI_MODEL or "gemini-3.5-flash"
     models_to_try = [primary_model] + [m for m in GEMINI_FALLBACK_MODELS if m != primary_model]
+    if fast:
+        models_to_try = models_to_try[:3]
 
     gen_config = {
         "temperature": temperature,
@@ -297,35 +304,45 @@ def _call_gemini_sync(prompt: str, temperature: float = 0.15, max_tokens: int = 
 
     last_error = None
     for model_name in models_to_try:
-        url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={api_key}"
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent"
         payload = {
             "contents": [{"parts": [{"text": prompt}]}],
             "generationConfig": gen_config,
         }
 
+        _t_model = time.time()
         try:
-            with httpx.Client(timeout=30.0) as client:
-                resp = client.post(url, json=payload)
+            with httpx.Client(timeout=timeout) as client:
+                resp = client.post(url, json=payload, headers={"x-goog-api-key": api_key})
+            _trace(f"gemini:{model_name}", time.time() - _t_model, f"HTTP {resp.status_code}")
 
             if resp.status_code == 200:
                 data = resp.json()
                 try:
-                    text = data["candidates"][0]["content"]["parts"][0]["text"]
+                    parts = data["candidates"][0]["content"]["parts"]
+                    # Model có chế độ suy luận trả thêm phần "thought": chỉ lấy phần trả lời
+                    text = "".join(p.get("text", "") for p in parts if not p.get("thought"))
+                    if not text.strip():
+                        raise KeyError("phản hồi rỗng")
+                    _safe_print(f"[Gemini REST] OK Thành công với model '{model_name}'")
                     if model_name != primary_model:
                         _safe_print(f"[Gemini REST] Model '{primary_model}' lỗi, đã tự động chuyển sang fallback thành công: '{model_name}'")
                     return text
                 except (KeyError, IndexError) as e:
-                    raise ValueError(f"Gemini API: cấu trúc phản hồi không hợp lệ: {e}")
+                    _safe_print(f"[Gemini REST] Model {model_name} phản hồi không hợp lệ: {e}")
+                    last_error = f"Phản hồi không hợp lệ ({model_name}): {e}"
+                    continue
 
             err = resp.text[:200] if resp.text else "No body"
             _safe_print(f"[Gemini REST] ❌ Model {model_name} HTTP {resp.status_code}: {err}")
             last_error = f"HTTP {resp.status_code} ({model_name}): {err}"
             # Thử model tiếp theo nếu gặp lỗi model deprecated / quota / server error
-            if resp.status_code in (404, 429, 500, 502, 503):
+            if resp.status_code in (400, 404, 429, 500, 502, 503):
                 continue
             else:
                 break
         except httpx.TimeoutException:
+            _trace(f"gemini:{model_name}", time.time() - _t_model, "timeout")
             _safe_print(f"[Gemini REST] TIMEOUT với model {model_name}, thử model kế tiếp...")
             last_error = f"Timeout ({model_name})"
             continue
@@ -436,24 +453,31 @@ def _call_9router(prompt: str, temperature: float = 0.15, max_tokens: int = 2048
 
 def _call_llm(prompt: str, temperature: float = 0.15, max_tokens: int = 2048, is_json: bool = False, fast: bool = False, timeout: float = 45.0) -> str:
     """
-    Hàm gọi LLM hợp nhất:
-    1. Ưu tiên 9Router (model trong utils/router_models.py).
-    2. Nếu 9Router tắt hoặc lỗi, chuyển thẳng sang fallback nội bộ / rule-based (ngắt hoàn toàn Direct Gemini API).
+    Hàm gọi LLM hợp nhất, thử lần lượt:
+    1. Gemini API trực tiếp (Google AI Studio) nếu có GEMINI_API_KEY.
+    2. 9Router (model trong utils/router_models.py) nếu có ROUTER_API_KEY.
+    Tất cả đều lỗi thì báo lỗi để nơi gọi dùng câu trả lời dự phòng.
     """
-    use_9router = os.getenv("USE_9ROUTER", "true").lower() in ("true", "1", "yes")
-    router_key = os.getenv("ROUTER_API_KEY", "")
+    errors = []
 
-    if use_9router and router_key:
+    if direct_gemini_enabled():
+        try:
+            return _call_gemini_sync(prompt, temperature=temperature, max_tokens=max_tokens, is_json=is_json, fast=fast, timeout=timeout)
+        except Exception as e:
+            _safe_print(f"[LLM] Gemini trực tiếp lỗi ({e}), thử 9Router...")
+            errors.append(f"Gemini: {e}")
+
+    use_9router = os.getenv("USE_9ROUTER", "true").lower() in ("true", "1", "yes")
+    if use_9router and os.getenv("ROUTER_API_KEY", ""):
         try:
             return _call_9router(prompt, temperature=temperature, max_tokens=max_tokens, is_json=is_json, fast=fast, timeout=timeout)
         except Exception as e:
-            _safe_print(f"[LLM Router] 9Router không phản hồi ({e}), chuyển sang fallback nội bộ (Direct Gemini đã ngắt)...")
-            raise ValueError(f"9Router không phản hồi ({e}). Direct Gemini API đã bị ngắt.")
+            _safe_print(f"[LLM] 9Router lỗi ({e})")
+            errors.append(f"9Router: {e}")
 
-    if os.getenv("DISABLE_DIRECT_GEMINI", "true").lower() in ("true", "1", "yes") or not (os.getenv("GEMINI_API_KEY") or GEMINI_API_KEY):
-        raise ValueError("Direct Gemini API đã bị ngắt. Cần cấu hình 9Router.")
-
-    return _call_gemini_sync(prompt, temperature=temperature, max_tokens=max_tokens, is_json=is_json)
+    if not errors:
+        raise ValueError("Chưa cấu hình AI: cần GEMINI_API_KEY hoặc ROUTER_API_KEY.")
+    raise ValueError("Tất cả nguồn AI đều lỗi. " + " | ".join(errors))
 
 
 # ════════════════════════════════════════════════════════════════
@@ -902,7 +926,7 @@ TRẢ VỀ JSON THUẦN (không dùng ```json):
 
         # ── Gọi LLM (9Router) ───────
         from utils.router_models import get_router_model
-        current_model = get_router_model()
+        current_model = (os.getenv("GEMINI_MODEL") or GEMINI_MODEL) if direct_gemini_enabled() else get_router_model()
         _safe_print(f"[ask_ai_chi] Gọi LLM (ưu tiên {current_model})...")
         # Model miễn phí qua OpenRouter phản hồi chậm hơn Gemini Flash, cho chờ tối đa 60 giây
         content = _call_llm(template, temperature=0.15, max_tokens=3200, is_json=True, fast=True, timeout=60.0)
