@@ -660,7 +660,7 @@
             setText('rev-user', item.user);
             setText('rev-source', item.source_type || 'docs');
             setText('rev-latency', item.elapsed_seconds ? item.elapsed_seconds + 's' : '-');
-            setText('rev-model', item.model || 'openrouter/nvidia/nemotron-3-ultra-550b-a55b:free');
+            setText('rev-model', item.model || 'cx/gpt-6-luna');
 
             const qEl = document.getElementById('rev-question');
             if (qEl) qEl.textContent = item.question || '';
