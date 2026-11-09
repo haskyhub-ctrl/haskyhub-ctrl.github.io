@@ -970,7 +970,7 @@ def _chat_fallback(message: str) -> dict:
             "suggestions": ["Quy định đèn EXIT?", "Sơ đồ thoát nạn cần gì?", "Xử phạt vi phạm lối thoát nạn?"]
         },
         {
-            "keywords": ["điện", "dây điện", "aptomat", "ổ cắm", "rccb", "chập điện", "quá tải điện"],
+            "keywords": ["an toàn điện", "hệ thống điện", "thiết bị điện", "dây điện", "aptomat", "ổ cắm", "rccb", "chập điện", "quá tải điện", "bảng điện"],
             "reply": "⚡ AN TOÀN ĐIỆN: PHÒNG NGỪA CHÁY NỔ\n\n"
                      "DẤU HIỆU NGUY HIỂM CẦN XỬ LÝ NGAY:\n"
                      "• Ổ cắm nóng hoặc đổi màu khi sử dụng: ngắt nguồn ngay, gọi thợ kiểm tra\n"
@@ -1077,13 +1077,19 @@ def _chat_fallback(message: str) -> dict:
         },
     ]
 
+    # Câu trả lời mẫu chỉ là phương án tạm khi AI không phản hồi: nói rõ để người hỏi không hiểu nhầm là câu trả lời đúng trọng tâm
+    notice = ("⚠️ Hệ thống AI đang tạm gián đoạn nên chưa trả lời trực tiếp được câu hỏi của bạn. "
+              "Bạn vui lòng thử lại sau ít phút.")
+
     for r in responses:
         if any(kw in msg for kw in r["keywords"]):
-            return {"reply": r["reply"], "suggestions": r["suggestions"], "references": []}
+            return {"reply": notice + " Dưới đây là hướng dẫn chung có liên quan:\n\n" + r["reply"],
+                    "suggestions": r["suggestions"], "references": [], "source_type": "fallback"}
 
     # Default response
     return {
-        "reply": "Cảm ơn câu hỏi của bạn! Tôi là trợ lý ảo hỗ trợ giải đáp pháp luật và TTHC về PCCC.\n\nHiện tại tôi có thể tư vấn các vấn đề về PCCC như:\n• ⚡ An toàn hệ thống điện\n• 🔥 Phòng cháy bếp gas, nguồn nhiệt\n• 🧯 Bình chữa cháy và thiết bị PCCC\n• 🚪 Lối thoát nạn\n• 📜 Pháp luật PCCC 2024-2025\n• 🎓 Huấn luyện và diễn tập PCCC\n• 🔍 Dấu hiệu nhận biết nguy cơ cháy\n\nHãy đặt câu hỏi cụ thể hơn để tôi tư vấn chi tiết cho bạn nhé!",
+        "source_type": "fallback",
+        "reply": notice + "\n\nTrong lúc chờ, tôi có thể cung cấp hướng dẫn chung về các vấn đề PCCC như:\n• ⚡ An toàn hệ thống điện\n• 🔥 Phòng cháy bếp gas, nguồn nhiệt\n• 🧯 Bình chữa cháy và thiết bị PCCC\n• 🚪 Lối thoát nạn\n• 📜 Pháp luật PCCC 2024-2025\n• 🎓 Huấn luyện và diễn tập PCCC\n• 🔍 Dấu hiệu nhận biết nguy cơ cháy\n\nHãy đặt câu hỏi cụ thể hơn để tôi tư vấn chi tiết cho bạn nhé!",
         "suggestions": ["Dấu hiệu nào cho thấy hệ thống điện sắp gây cháy?", "Quy định bình chữa cháy?", "Luật PCCC 55/2024 có gì mới?"],
         "references": []
     }
