@@ -1,0 +1,30 @@
+name: Thống kê số liệu FRAS (chỉ đọc)
+
+# Chạy tay: tab Actions -> chọn workflow này -> Run workflow.
+# Chỉ đọc cơ sở dữ liệu và in số đếm tổng hợp, không sửa dữ liệu, không khởi động lại dịch vụ.
+
+on:
+  workflow_dispatch:
+    inputs:
+      tu_ngay:
+        description: "Mốc so sánh (YYYY-MM-DD)"
+        default: "2026-08-12"
+
+jobs:
+  stats:
+    name: Thống kê
+    runs-on: ubuntu-latest
+    steps:
+      - name: Chạy thống kê qua SSH
+        uses: appleboy/ssh-action@v1.0.3
+        env:
+          TU_NGAY: ${{ inputs.tu_ngay }}
+        with:
+          host: ${{ secrets.ORACLE_HOST }}
+          username: ${{ secrets.ORACLE_USER }}
+          key: ${{ secrets.ORACLE_SSH_KEY }}
+          envs: TU_NGAY
+          script: |
+            cd /home/ubuntu/fras/backend
+            case "$TU_NGAY" in [0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]) ;; *) TU_NGAY=2026-08-12 ;; esac
+            venv/bin/python tools/thong_ke_sang_kien.py --tu-ngay "$TU_NGAY"
